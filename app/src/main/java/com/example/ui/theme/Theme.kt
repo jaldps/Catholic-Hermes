@@ -49,13 +49,25 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun SanctaFidesTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    themePreset: String = "LITURGICAL_DYNAMIC",
+    darkModeSetting: String = "SYSTEM",
+    isSerif: Boolean = true,
+    fontScale: Float = 1.0f,
     content: @Composable () -> Unit
 ) {
-    val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme
+    val systemDark = isSystemInDarkTheme()
+    val isDark = when (darkModeSetting) {
+        "DARK" -> true
+        "LIGHT" -> false
+        else -> systemDark
+    }
+
+    val colorScheme = ThemePalettes.getColorScheme(themePreset, isDark)
+    val typography = ThemePalettes.buildScaledTypography(isSerif, fontScale)
+
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = typography,
         content = content
     )
 }
@@ -63,8 +75,11 @@ fun SanctaFidesTheme(
 @Composable
 fun MyApplicationTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = false, // Keep liturgical identity consistent
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
-    SanctaFidesTheme(darkTheme = darkTheme, content = content)
+    SanctaFidesTheme(
+        darkModeSetting = if (darkTheme) "DARK" else "LIGHT",
+        content = content
+    )
 }

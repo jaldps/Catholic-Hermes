@@ -19,6 +19,7 @@ import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.Palette
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Star
@@ -54,6 +55,7 @@ import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.components.LanguageSelectorDialog
+import com.example.ui.components.GuiCustomizerModal
 import androidx.activity.compose.BackHandler
 import androidx.compose.material.icons.filled.Shield
 import com.example.ui.screens.HabitsAndVirtuesScreen
@@ -96,7 +98,9 @@ fun MainApp(
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
     var selectedDestinationIndex by remember { mutableIntStateOf(0) }
+    var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
     var showLanguageSelector by remember { mutableStateOf(false) }
+    var showCustomizerModal by remember { mutableStateOf(false) }
 
     val destinations = AppDestination.values()
 
@@ -115,6 +119,17 @@ fun MainApp(
                     )
                 },
                 actions = {
+                    IconButton(
+                        onClick = { showCustomizerModal = true },
+                        modifier = Modifier.testTag("app_bar_theme_button")
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Palette,
+                            contentDescription = "Personalizar Tema y Apariencia",
+                            tint = SacredBurgundy,
+                            modifier = Modifier.size(22.dp)
+                        )
+                    }
                     IconButton(
                         onClick = { showLanguageSelector = true },
                         modifier = Modifier.testTag("app_bar_lang_button")
@@ -208,7 +223,14 @@ fun MainApp(
                         onNavigateToPrayers = { selectedDestinationIndex = destinations.indexOf(AppDestination.PRAYERS) },
                         onNavigateToPilgrimage = { selectedDestinationIndex = destinations.indexOf(AppDestination.PILGRIMAGE_HABITS) },
                         onNavigateToDoctrine = { selectedDestinationIndex = destinations.indexOf(AppDestination.DOCTRINE) },
-                        onNavigateToSpiritualLife = { selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE) }
+                        onNavigateToSpiritualLife = {
+                            spiritualLifeInitialTab = 0
+                            selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE)
+                        },
+                        onNavigateToQuiz = {
+                            spiritualLifeInitialTab = 1
+                            selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE)
+                        }
                     )
 
                     AppDestination.HABITS_VIRTUES -> HabitsAndVirtuesScreen(
@@ -255,7 +277,8 @@ fun MainApp(
                         repository = repository,
                         dao = dao,
                         ttsManager = ttsManager,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        initialTab = spiritualLifeInitialTab
                     )
                 }
             }
@@ -270,6 +293,13 @@ fun MainApp(
                 ttsManager.setLanguage(newLang)
             },
             onDismissRequest = { showLanguageSelector = false }
+        )
+    }
+
+    if (showCustomizerModal) {
+        GuiCustomizerModal(
+            dao = dao,
+            onDismiss = { showCustomizerModal = false }
         )
     }
 }

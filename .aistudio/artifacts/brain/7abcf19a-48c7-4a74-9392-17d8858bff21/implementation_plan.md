@@ -1,93 +1,111 @@
-# Implementation Plan: Liturgical Calendar, Vatican Night Prayers & Novenas, Scripture Study Course, and Marian & Christological Devotions
+# Sancta Fides: Precision Fixes & Exhaustive Content Engine
 
-## Overview
-This plan implements the comprehensive Catholic liturgical and devotional expansion requested:
-1. **Liturgical Calendar & Mass Readings Room Architecture**: Entities for storing and caching liturgical calendar days, Sunday (Year A/B/C) and Weekday (Year I/II) lectionary cycles, liturgical ranks, colors, and complete daily Mass readings (First Reading, Psalm, Second Reading, Gospel, Missal meditation, and fasting rules).
-2. **Official Vatican Night Prayers & Complete Novenas**:
-   - **Full Roman Breviary Compline**: Complete Liturgy of the Hours night office (Opening, Examination of Conscience with Confiteor, Hymn *Te lucis ante terminum*, Psalmody Psalms 4/91/134, Reading, Responsory *In manus tuas*, Canticle of Simeon *Nunc Dimittis* with antiphon, Concluding Prayer, and seasonal Marian Antiphon: *Salve Regina*, *Sub Tuum Praesidium*, *Alma Redemptoris Mater*, *Ave Regina Caelorum*, *Regina Caeli*).
-   - **Simplified Evening Examen**: 5-step Ignatian review (Gratitude, Light, Review, Contrition, Resolution) with final Marian prayer.
-   - **Complete 9-Day Novenas**: Unabridged day-by-day prayers for Sacred Heart, Divine Mercy, Our Lady of Mount Carmel, Our Lady of Guadalupe, St. Jude Thaddaeus, St. Joseph, and Holy Spirit.
-3. **Vatican Scripture Study Course**:
-   - Thematic tracks based on Vatican *Dei Verbum* and the Catechism: **Sacraments of the Church**, **Parables of the Kingdom**, and **Apostolic Teachings & Pauline Epistles**.
-   - Structured reading passages, Vatican commentary context, guided Lectio Divina reflection prompts, and Room-persisted study progress tracking.
-4. **Comprehensive Marian Advocations Directory**:
-   - Dozens of prominent Marian advocations categorized by **Region** (Latin America/Americas, Europe, Asia/Africa, Universal) and **Patronage**, with instant search.
-   - Detailed entries (Virgen del Valle, Virgen del Carmen, Virgen de Guadalupe, Caridad del Cobre, Aparecida, Coromoto, Luján, Chiquinquirá, Suyapa, Caacupé, Copacabana, Fátima, Lourdes, Knock, Czestochowa, Pilar, etc.) featuring origin, historical timeline, patronages, documented miracles, major sanctuaries/basilicas, and traditional prayers.
-5. **Christ Manifestations & Devotions Directory**:
-   - Dozens of Christological manifestations and titles (Niño Jesús de Praga, Santo Niño de Atocha, Divino Niño Jesús de Bogotá, Sagrado Corazón de Jesús, Cristo Nazareno de San Pablo/Portobelo, Señor de los Milagros de Lima, Señor de Esquipulas, Santo Cristo de La Grita, Cristo de Medinaceli, Señor de la Misericordia / Divine Mercy, Cristo Rey, etc.).
-   - Detailed historical context, theological significance, sanctuaries, feast days, and veneration prayers.
+Comprehensive plan to resolve all reported content and navigation discrepancies: authentic verse-by-verse fidelity for all 73 Catholic books, real-time Saint of the Day matching the current calendar date, direct parish search button on the primary GUI with cascading Country-Region-City dropdowns, Trivia navigation route fix, complete sequential Compendium (1–598) without gaps, and full 4-pillar indexing for the Universal Catechism.
 
 ---
 
-## Architecture & Data Model
+## User Review & Critical Decisions
 
-### 1. Room Database Updates (`data/local/`)
-- **`LiturgicalDayEntity`**:
-  - `date`: `String` (PK, "YYYY-MM-DD")
-  - `season`: `String` (ADVENT, CHRISTMAS, LENT, EASTER, ORDINARY_TIME)
-  - `liturgicalColor`: `String` (VIOLET, WHITE, GREEN, RED, ROSE)
-  - `rank`: `String` (SOLEMNITY, FEAST, MEMORIAL, OPTIONAL_MEMORIAL, FERIAL)
-  - `title`: `String`
-  - `sundayCycle`: `String` ("Year A", "Year B", "Year C")
-  - `weekdayCycle`: `String` ("Year I", "Year II")
-  - `firstReading`: `String` (reference + text)
-  - `responsorialPsalm`: `String` (response + verses)
-  - `secondReading`: `String` (optional)
-  - `gospelAcclamation`: `String`
-  - `gospel`: `String` (reference + text)
-  - `missalMeditation`: `String`
-  - `fastingRule`: `String`
-- **`ScriptureCourseProgressEntity`**:
-  - `courseId`: `String` (PK)
-  - `lessonId`: `String`
-  - `completedDate`: `Long`
-  - `notes`: `String`
-- **`SanctaFidesDatabase`**:
-  - Increment database version to 3, add new entities and DAOs with fallback migration.
+> [!IMPORTANT]
+> The following decisions were clarified and prioritized in consultation with the user:
 
-### 2. Devotional & Scripture Domain Models (`data/models/`)
-- `MarianAdvocation`: `id`, `name`, `titles`, `region`, `country`, `feastDate`, `patronageOf`, `originHistory`, `miracles`, `sanctuaryName`, `sanctuaryLocation`, `traditionalPrayer`, `imageUrl` or icon.
-- `ChristDevotion`: `id`, `name`, `type`, `region`, `country`, `feastDate`, `historicalOrigin`, `miraclesAndTradition`, `primarySanctuary`, `traditionalPrayer`.
-- `ScriptureStudyCourse`: `id`, `trackType`, `title`, `description`, `lessons` (each with biblical passages, Vatican commentary, reflection questions, and resolution).
-- `NightPrayerOffice`: Models for Compline and Simplified Examen with bilingual Latin/Spanish/English texts.
-
-### 3. Repository Layer (`data/repository/`)
-- **`LiturgicalCalendarRepository`**: Provides liturgical calendar calculation and mass readings for any calendar date, with offline Room caching.
-- **`DevotionsAndHistoryData.kt`**: Substantially expanded with dozens of authentic Marian and Christological devotions from Catholic ecclesiastical sources.
-- **`ScriptureStudyData.kt`**: Complete curriculum for Sacraments, Parables, and Apostolic Teachings.
-- **`PrayerAndNovenaData.kt`**: Full 9-day text sets for all featured Novenas and the full Roman Breviary Compline structure.
+- **Confirmed Decision 1 (Scripture Engine)**: Motor bíblico canónico íntegro con versículos únicos por libro y capítulo. Replace all template/boilerplate verse fallbacks in `CatholicBibleContentEngine` with authentic, chapter-specific narrative passages across all 73 books and chapters so each selected chapter displays its own distinct, authentic verses without generic repetition or chapter mismatch.
+- **Confirmed Decision 2 (Parish Directory Scope & UI)**: Directorio global internacional con búsqueda interactiva en Google Maps y selector de países. Add a prominent "Buscar Iglesias Cerca de Mí" quick-action shortcut on `HomeScreen`, and upgrade the directory in `DoctrineAndHistoryScreen` to use cascading dropdown menus (`ExposedDropdownMenuBox`): Country -> Region/State -> City, covering major Catholic nations (España, México, Colombia, Argentina, Brasil, Estados Unidos, Italia, Perú, Venezuela, Chile, etc.) and their respective dioceses/cities.
+- **Fix 3 (Saint of the Day Calendar Alignment)**: Replace the static Oct 1 feast with a dynamic real-time date resolver using `Calendar.getInstance()` so the Saint of the Day always reflects the current day (e.g., October 27th / 28th Saints).
+- **Fix 4 (Trivia Route Target)**: Ensure the "Quiz Católico / Trivia" button on `HomeScreen` opens `SpiritualLifeScreen` with the Trivia tab active (`selectedTopTab = 1`), rather than defaulting to the spiritual journal.
+- **Fix 5 (Compendium & Universal Catechism Complete Scope)**:
+  - Compendium: Ensure continuous sequential question coverage from 1 to 598 without skipping numbers (fixing the jump from 3 to 6 to 14).
+  - Universal Catechism (CCC 1–2865): Populate all canonical sections and chapters across all 4 Parts (Creed, Sacraments, Moral Life/Commandments, Christian Prayer) in the navigation tree, eliminating sparse single-article placeholders.
 
 ---
 
-## UI & Presentation Design
+## 1. System Architecture & Component Mapping
 
-1. **Liturgical Calendar & Daily Mass Screen (`LiturgicalCalendarScreen.kt`)**:
-   - Elegant gold-accented header showing current date, Liturgical Season banner, Sunday Lectionary Cycle badge (Year A/B/C), and Weekday Cycle (I/II).
-   - Card tabs for First Reading, Responsorial Psalm, Second Reading (when applicable), Gospel Acclamation, and Gospel.
-   - Daily Missal Reflection drawer with audio TTS lector button.
-   - Fast & Abstinence alert chip when observed.
-
-2. **Night Prayer / Compline Experience (`NightPrayersScreen.kt`)**:
-   - Segmented toggle at top: **"Roman Compline (Breviary)"** vs **"Evening Examen (Ignatian)"**.
-   - Full Compline: Interactive prayer steps (Examination of Conscience with Confiteor, Hymn, Psalms, Reading, Responsory, Nunc Dimittis with antiphon, Blessing, and Marian Antiphon with seasonal selector).
-   - Audio lector with solemn liturgical cadence.
-
-3. **Vatican Scripture Study Screen (`ScriptureStudyScreen.kt`)**:
-   - Thematic track selector: **Sacraments of Grace**, **Parables of the Kingdom**, and **Apostolic Teachings**.
-   - Course overview with progress bar and lesson badges.
-   - Lesson detail modal / screen: Scripture passage viewer, Vatican Catechism cross-references, guided 4-step Lectio Divina (Lectio, Meditatio, Oratio, Contemplatio), personal reflection notes, and completion checkmark.
-
-4. **Marian Advocations & Christ Devotions Explorer (`DevotionsExplorerScreen.kt`)**:
-   - Top search bar with instant filter across names, countries, patronages, and miracles.
-   - Main tabs: **"Advocaciones Marianas"** & **"Devociones a Cristo"**.
-   - Sub-filters by Region: **Americas / Latin America**, **Europe**, **Universal & Others**, and by **Patronage Category**.
-   - Rich Devotion Detail Sheet: Historical origin, documented miracles, sanctuary details with pilgrim guides, and full traditional veneration prayer.
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                             SANCTA FIDES ENGINE                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ 1. CANONICAL BIBLE ENGINE (CatholicBibleContentEngine.kt)                    │
+│    ├── Book/Chapter Resolver -> Specific Verses (1..N) per Book & Chapter   │
+│    ├── Authentic Patristic & Magisterial Notes per Chapter                  │
+│    └── Zero Boilerplate: Distinct Scripture narratives across 73 Books     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ 2. CALENDAR & SAINT RESOLVER (DevotionsAndHistoryData.kt)                   │
+│    └── Dynamic getSaintForDate(month, day) -> Today's Feast Day & Patron    │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ 3. PRIMARY HOME GUI (HomeScreen.kt)                                         │
+│    ├── Direct Action: "Buscar Iglesias Cerca de Mí" (Google Maps Intent)    │
+│    └── Direct Action: "Quiz Católico" -> SpiritualLifeScreen(initialTab = 1)│
+├─────────────────────────────────────────────────────────────────────────────┤
+│ 4. PARISH DIRECTORY WITH CASCADING DROPDOWNS (DoctrineAndHistoryScreen.kt)  │
+│    ├── Dropdown 1: País (España, México, Colombia, Argentina, Brasil, etc.) │
+│    ├── Dropdown 2: Región / Estado (Madrid, CDMX, Bogotá, SP, NY, Roma...)  │
+│    └── Dropdown 3: Ciudad / Diócesis -> Parishes with Mass & Adoration Info │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ 5. COMPLETE CATECHISM & COMPENDIUM (CatechismData.kt & CompendiumData.kt)   │
+│    ├── Compendium: Sequential 1..598 Questions without number skips         │
+│    └── CCC Universal: 4 Pillars x All Sections x All Chapters               │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## Verification & Testing
-1. **Compilation**: Execute `compile_applet` to confirm clean compilation across all Kotlin DSL Gradle scripts and Compose screens.
-2. **Local JVM Testing**: Run `gradle :app:testDebugUnitTest` with Robolectric test coverage verifying:
-   - Room database CRUD operations for liturgical day readings and scripture course progress.
-   - Marian and Christ devotions repository querying, regional filtering, and search functionality.
-   - Novena day progression and Compline prayer sequence generation.
+## 2. Detailed Implementation Streams
+
+### Stream 1: Bible Content Engine & Chapter Fidelity
+- **Problem**: Opening non-master chapters produced repetitive generic template verses ("Dijo el Señor a su pueblo en el libro de...").
+- **Solution**:
+  - Overhaul `CatholicBibleContentEngine.kt` to build an extensive narrative and thematic verse repository keyed to `(bookId, chapterNumber)`.
+  - Provide distinct, substantive verses for Old Testament narratives, Historical battles/kings, Wisdom poetry, Prophetic oracles, Gospel miracles/parables, Pauline theological discourses, and Johannine visions.
+  - Verify that navigating to Genesis 1, Genesis 2, Genesis 3, Exodus 20, Matthew 5, Luke 1, John 1, Romans 8, etc. displays distinct, authentic biblical verses with proper verse numbering and commentary.
+
+### Stream 2: Dynamic Saint of the Day
+- **Problem**: `DevotionsAndHistoryData.saintOfTheDay` was statically fixed to Santa Teresita del Niño Jesús (October 1).
+- **Solution**:
+  - Implement `getSaintForDate(calendar: Calendar)` in `DevotionsAndHistoryData.kt` and `CatholicDataRepository.kt`.
+  - Provide calendar feast mappings for the year, including late October feasts (October 27th San Frumencio / Beatos Mártires, October 28th San Judas Tadeo y San Simón Apóstoles, October 29th San Narciso, October 31st Víspera de Todos los Santos, November 1st Todos los Santos, etc.).
+  - Wire `HomeScreen` to display today's actual liturgical saint with their feast date and biography.
+
+### Stream 3: Primary GUI Parish Shortcut & Cascading Dropdowns
+- **Problem**:
+  - No direct quick-launch for nearby churches on the primary home screen.
+  - Parish filter in `DoctrineAndHistoryScreen` only had horizontal chips with very few countries and regions.
+- **Solution**:
+  - In `HomeScreen.kt`, add a prominent primary button/banner: "Buscar Iglesias Cerca de Mí" with Google Maps intent (`geo:0,0?q=parroquia+catolica`) right in the featured routines and gateway cards.
+  - In `DoctrineAndSpiritualData.kt`, expand the parish database to include key archdioceses and parishes across major Catholic countries (España, México, Colombia, Argentina, Brasil, Estados Unidos, Italia, Perú, Venezuela, Chile).
+  - In `DoctrineAndHistoryScreen.kt`, implement `ExposedDropdownMenuBox` for:
+    1. Select Country (País)
+    2. Select Region / State (Región / Estado)
+    3. Select City / Diocese (Ciudad / Diócesis)
+    4. Instant Google Maps location launcher with coordinate navigation.
+
+### Stream 4: Quiz Católico Navigation Target
+- **Problem**: Clicking "Trivia Católica / Quiz Católico" opened `SpiritualLifeScreen` on Tab 0 (Diario Espiritual y Examen) instead of the quiz.
+- **Solution**:
+  - Add `initialTab: Int = 0` to `SpiritualLifeScreen`.
+  - In `MainApp.kt`, support state-driven target tab for `AppDestination.SPIRITUAL_LIFE`, and when navigated from "Trivia Católica", set `initialTab = 1` so the user directly sees the Catholic Trivia interactive game.
+
+### Stream 5: Complete Sequential Compendium (1–598) & Full 4-Pillar CCC
+- **Problem**:
+  - Compendium questions skipped numbers (1, 2, 3, 6, 14...).
+  - Universal Catechism navigation tree only contained 2 sections with 1-2 articles.
+- **Solution**:
+  - In `CatechismCompendiumData.kt`, generate the complete sequence of 598 questions and answers across all 4 parts without gaps, ensuring every question number from 1 to 598 is present and searchable.
+  - In `CatechismData.kt`, flesh out the complete table of contents for the Universal Catechism across all 4 Pillars:
+    - Part 1: Sections 1 & 2 (Articles 1–12 of the Creed).
+    - Part 2: Sections 1 & 2 (The 7 Sacraments & Liturgical Economy).
+    - Part 3: Sections 1 & 2 (The 10 Commandments & Moral Virtues).
+    - Part 4: Sections 1 & 2 (Christian Prayer & The 7 Petitions of the Our Father).
+  - Ensure every chapter in every section is populated with accessible articles.
+
+---
+
+## 3. Verification & Validation Plan
+1. **Compilation Check**: Run `compile_applet` to verify clean compilation with all new data models and composables.
+2. **Automated Unit Tests**: Execute `gradle :app:testDebugUnitTest` to test data consistency, question sequence coverage, and navigation handlers.
+3. **Functional CUJ Verification**:
+   - Verify Bible reading across different books and chapters to ensure unique verses.
+   - Verify Saint of the Day displays the current calendar day's feast.
+   - Test "Buscar Iglesias Cerca de Mí" on HomeScreen and verify cascading dropdowns in Doctrine.
+   - Verify clicking "Trivia Católica" opens the quiz directly.
+   - Test Compendium question sequence (1, 2, 3, 4, 5, 6...) with no missing numbers.

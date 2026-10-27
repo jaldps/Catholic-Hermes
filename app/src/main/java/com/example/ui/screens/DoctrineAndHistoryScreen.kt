@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -43,6 +44,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Directions
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.OutlinedCard
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.FilledTonalButton
@@ -280,37 +287,66 @@ fun DoctrineAndHistoryScreen(
 
             3 -> {
                 // Parishes & Catholic News
+                val context = LocalContext.current
                 var parishSearchQuery by remember { mutableStateOf("") }
                 var selectedParishFilter by remember { mutableIntStateOf(0) } // 0: All, 1: Confessions, 2: Adoration, 3: Cathedrals
+                var selectedCountry by remember { mutableStateOf("Todos") }
+                var selectedRegion by remember { mutableStateOf("Todas") }
+                var selectedCity by remember { mutableStateOf("Todas") }
+
+                val allCountries = remember { listOf("Todos") + repository.nearbyParishes.map { it.country }.distinct() }
+                val availableRegions = remember(selectedCountry) {
+                    if (selectedCountry == "Todos") {
+                        listOf("Todas") + repository.nearbyParishes.map { it.stateOrRegion }.distinct()
+                    } else {
+                        listOf("Todas") + repository.nearbyParishes.filter { it.country == selectedCountry }.map { it.stateOrRegion }.distinct()
+                    }
+                }
+                val availableCities = remember(selectedCountry, selectedRegion) {
+                    var list = repository.nearbyParishes
+                    if (selectedCountry != "Todos") {
+                        list = list.filter { it.country == selectedCountry }
+                    }
+                    if (selectedRegion != "Todas") {
+                        list = list.filter { it.stateOrRegion == selectedRegion }
+                    }
+                    listOf("Todas") + list.map { it.city }.distinct()
+                }
 
                 val filteredParishes = repository.nearbyParishes.filter { parish ->
                     val matchesQuery = parish.name.contains(parishSearchQuery, ignoreCase = true) ||
                             parish.diocese.contains(parishSearchQuery, ignoreCase = true) ||
-                            parish.address.contains(parishSearchQuery, ignoreCase = true)
+                            parish.address.contains(parishSearchQuery, ignoreCase = true) ||
+                            parish.city.contains(parishSearchQuery, ignoreCase = true) ||
+                            parish.country.contains(parishSearchQuery, ignoreCase = true)
+                    val matchesCountry = selectedCountry == "Todos" || parish.country == selectedCountry
+                    val matchesRegion = selectedRegion == "Todas" || parish.stateOrRegion == selectedRegion
+                    val matchesCity = selectedCity == "Todas" || parish.city == selectedCity
                     val matchesFilter = when (selectedParishFilter) {
                         1 -> !parish.confessionTimes.contains("No disponible", ignoreCase = true)
-                        2 -> parish.adorationTimes.contains("24", ignoreCase = true) ||
+                        2 -> parish.isPerpetualAdoration ||
+                                parish.adorationTimes.contains("24", ignoreCase = true) ||
                                 parish.adorationTimes.contains("Perpetua", ignoreCase = true) ||
                                 parish.adorationTimes.contains("Jueves", ignoreCase = true)
                         3 -> parish.name.contains("Catedral", ignoreCase = true) ||
                                 parish.name.contains("Basílica", ignoreCase = true)
                         else -> true
                     }
-                    matchesQuery && matchesFilter
+                    matchesQuery && matchesCountry && matchesRegion && matchesCity && matchesFilter
                 }
 
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                    verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
                     item {
                         Text(
                             text = when (currentLanguage) {
-                                AppLanguage.ES -> "Buscador de Parroquias y Templos"
-                                AppLanguage.EN -> "Parish & Church Finder"
-                                AppLanguage.PT -> "Buscador de Paróquias e Templos"
+                                AppLanguage.ES -> "Buscador de Parroquias y Templos Católicos"
+                                AppLanguage.EN -> "Catholic Parish & Church Finder"
+                                AppLanguage.PT -> "Buscador de Paróquias e Templos Católicos"
                             },
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
@@ -318,13 +354,54 @@ fun DoctrineAndHistoryScreen(
                         )
                         Text(
                             text = when (currentLanguage) {
-                                AppLanguage.ES -> "Localiza iglesias, horarios de misa, confesionarios y adoración perpetua."
-                                AppLanguage.EN -> "Find churches, Mass schedules, confessions, and perpetual adoration."
-                                AppLanguage.PT -> "Encontre igrejas, horários de missa, confissões e adoração perpétua."
+                                AppLanguage.ES -> "Localiza iglesias cerca de ti mediante Google Maps o explora el directorio internacional por país y ciudad."
+                                AppLanguage.EN -> "Locate churches near you using Google Maps or browse the international directory by country and city."
+                                AppLanguage.PT -> "Encontre igrejas próximas com o Google Maps ou explore o diretório internacional por país e cidade."
                             },
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
+
+                        Spacer(modifier = Modifier.height(10.dp))
+
+                        // One-tap Near Me GPS Maps Launch Button
+                        Button(
+                            onClick = {
+                                try {
+                                    val uri = Uri.parse("geo:0,0?q=parroquia+catolica")
+                                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                                    context.startActivity(intent)
+                                } catch (e: Exception) {
+                                    try {
+                                        val webUri = Uri.parse("https://www.google.com/maps/search/parroquia+catolica")
+                                        val webIntent = Intent(Intent.ACTION_VIEW, webUri)
+                                        context.startActivity(webIntent)
+                                    } catch (e2: Exception) {
+                                        Toast.makeText(context, "No se pudo abrir Google Maps", Toast.LENGTH_SHORT).show()
+                                    }
+                                }
+                            },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(48.dp)
+                                .testTag("gps_nearby_maps_button"),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = SacredBurgundy
+                            ),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Icon(imageVector = Icons.Default.Directions, contentDescription = null, modifier = Modifier.size(18.dp))
+                            Spacer(modifier = Modifier.width(8.dp))
+                            Text(
+                                text = when (currentLanguage) {
+                                    AppLanguage.ES -> "Buscar Parroquias Cerca de Mí (Google Maps)"
+                                    AppLanguage.EN -> "Find Parishes Near Me (Google Maps)"
+                                    AppLanguage.PT -> "Buscar Paróquias Perto de Mim (Google Maps)"
+                                },
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 13.sp
+                            )
+                        }
 
                         Spacer(modifier = Modifier.height(10.dp))
 
@@ -338,10 +415,11 @@ fun DoctrineAndHistoryScreen(
                             placeholder = {
                                 Text(
                                     when (currentLanguage) {
-                                        AppLanguage.ES -> "Buscar por nombre, ciudad o diócesis..."
-                                        AppLanguage.EN -> "Search by name, city, or diocese..."
-                                        AppLanguage.PT -> "Buscar por nome, cidade ou diocese..."
-                                    }
+                                        AppLanguage.ES -> "Buscar por nombre, dirección o diócesis..."
+                                        AppLanguage.EN -> "Search by name, address, or diocese..."
+                                        AppLanguage.PT -> "Buscar por nome, endereço ou diocese..."
+                                    },
+                                    fontSize = 12.sp
                                 )
                             },
                             leadingIcon = {
@@ -353,6 +431,75 @@ fun DoctrineAndHistoryScreen(
 
                         Spacer(modifier = Modifier.height(10.dp))
 
+                        // Cascading Dropdown Filters: País -> Región -> Ciudad
+                        Text(
+                            text = when (currentLanguage) {
+                                AppLanguage.ES -> "Filtro Geográfico por Menú Desplegable:"
+                                AppLanguage.EN -> "Geographic Filter Dropdown Menus:"
+                                AppLanguage.PT -> "Filtro Geográfico por Menus Desdobráveis:"
+                            },
+                            fontSize = 12.sp,
+                            fontWeight = FontWeight.SemiBold,
+                            color = SacredBurgundy
+                        )
+                        Spacer(modifier = Modifier.height(6.dp))
+
+                        // Row 1: País dropdown
+                        ParishDropdownSelector(
+                            label = when (currentLanguage) {
+                                AppLanguage.ES -> "País seleccionado:"
+                                AppLanguage.EN -> "Selected Country:"
+                                AppLanguage.PT -> "País selecionado:"
+                            },
+                            selectedValue = selectedCountry,
+                            options = allCountries,
+                            onOptionSelected = {
+                                selectedCountry = it
+                                selectedRegion = "Todas"
+                                selectedCity = "Todas"
+                            },
+                            modifier = Modifier.fillMaxWidth().testTag("parish_country_dropdown")
+                        )
+
+                        Spacer(modifier = Modifier.height(8.dp))
+
+                        // Row 2: Región / Estado & Ciudad dropdowns side-by-side or stacked
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            ParishDropdownSelector(
+                                label = when (currentLanguage) {
+                                    AppLanguage.ES -> "Región / Estado:"
+                                    AppLanguage.EN -> "Region / State:"
+                                    AppLanguage.PT -> "Região / Estado:"
+                                },
+                                selectedValue = selectedRegion,
+                                options = availableRegions,
+                                onOptionSelected = {
+                                    selectedRegion = it
+                                    selectedCity = "Todas"
+                                },
+                                modifier = Modifier.weight(1f).testTag("parish_region_dropdown")
+                            )
+
+                            ParishDropdownSelector(
+                                label = when (currentLanguage) {
+                                    AppLanguage.ES -> "Ciudad:"
+                                    AppLanguage.EN -> "City:"
+                                    AppLanguage.PT -> "Cidade:"
+                                },
+                                selectedValue = selectedCity,
+                                options = availableCities,
+                                onOptionSelected = {
+                                    selectedCity = it
+                                },
+                                modifier = Modifier.weight(1f).testTag("parish_city_dropdown")
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.height(10.dp))
+
                         // Parish Filter Chips
                         Row(
                             modifier = Modifier.fillMaxWidth(),
@@ -360,9 +507,9 @@ fun DoctrineAndHistoryScreen(
                         ) {
                             DoctrineChip(
                                 label = when (currentLanguage) {
-                                    AppLanguage.ES -> "Todas (${repository.nearbyParishes.size})"
-                                    AppLanguage.EN -> "All (${repository.nearbyParishes.size})"
-                                    AppLanguage.PT -> "Todas (${repository.nearbyParishes.size})"
+                                    AppLanguage.ES -> "Todas (${filteredParishes.size})"
+                                    AppLanguage.EN -> "All (${filteredParishes.size})"
+                                    AppLanguage.PT -> "Todas (${filteredParishes.size})"
                                 },
                                 isSelected = selectedParishFilter == 0,
                                 onClick = { selectedParishFilter = 0 }
@@ -378,9 +525,9 @@ fun DoctrineAndHistoryScreen(
                             )
                             DoctrineChip(
                                 label = when (currentLanguage) {
-                                    AppLanguage.ES -> "Adoración"
-                                    AppLanguage.EN -> "Adoration"
-                                    AppLanguage.PT -> "Adoração"
+                                    AppLanguage.ES -> "Adoración 24h"
+                                    AppLanguage.EN -> "24h Adoration"
+                                    AppLanguage.PT -> "Adoração 24h"
                                 },
                                 isSelected = selectedParishFilter == 2,
                                 onClick = { selectedParishFilter = 2 }
@@ -659,10 +806,26 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
 
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = "${parish.address} • ${parish.diocese}",
+                text = "${parish.address} • ${parish.city}, ${parish.country} • ${parish.diocese}",
                 fontSize = 11.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
+
+            if (parish.isPerpetualAdoration) {
+                Spacer(modifier = Modifier.height(4.dp))
+                Surface(
+                    shape = RoundedCornerShape(6.dp),
+                    color = LiturgicalGold.copy(alpha = 0.2f)
+                ) {
+                    Text(
+                        text = "✨ Adoración Perpetua 24 Horas",
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = SacredBurgundy,
+                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                    )
+                }
+            }
 
             Spacer(modifier = Modifier.height(10.dp))
 
@@ -797,3 +960,80 @@ private fun NewsCard(news: CatholicNewsArticle, currentLanguage: AppLanguage) {
         }
     }
 }
+
+@Composable
+private fun ParishDropdownSelector(
+    label: String,
+    selectedValue: String,
+    options: List<String>,
+    onOptionSelected: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    var expanded by remember { mutableStateOf(false) }
+
+    Box(modifier = modifier) {
+        OutlinedCard(
+            onClick = { expanded = true },
+            shape = RoundedCornerShape(12.dp),
+            colors = CardDefaults.outlinedCardColors(
+                containerColor = MaterialTheme.colorScheme.surface
+            ),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 12.dp, vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = label,
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = SacredBurgundy
+                    )
+                    Text(
+                        text = selectedValue,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = MaterialTheme.colorScheme.onSurface,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+                Icon(
+                    imageVector = Icons.Default.ArrowDropDown,
+                    contentDescription = null,
+                    tint = SacredBurgundy,
+                    modifier = Modifier.size(24.dp)
+                )
+            }
+        }
+
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+            modifier = Modifier.heightIn(max = 280.dp)
+        ) {
+            options.forEach { option ->
+                DropdownMenuItem(
+                    text = {
+                        Text(
+                            text = option,
+                            fontWeight = if (option == selectedValue) FontWeight.Bold else FontWeight.Normal,
+                            color = if (option == selectedValue) SacredBurgundy else MaterialTheme.colorScheme.onSurface,
+                            fontSize = 13.sp
+                        )
+                    },
+                    onClick = {
+                        onOptionSelected(option)
+                        expanded = false
+                    }
+                )
+            }
+        }
+    }
+}
+

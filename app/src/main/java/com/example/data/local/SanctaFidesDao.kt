@@ -117,5 +117,31 @@ interface SanctaFidesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveScriptureProgress(progress: ScriptureStudyProgressEntity)
+
+    // App Preferences
+    @Query("SELECT * FROM app_preferences WHERE id = :id LIMIT 1")
+    fun getAppPreferences(id: String = "default_preferences"): Flow<AppPreferencesEntity?>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun saveAppPreferences(prefs: AppPreferencesEntity)
+
+    // Bible Downloads
+    @Query("SELECT * FROM bible_downloads")
+    fun getAllBibleDownloads(): Flow<List<BibleDownloadEntity>>
+
+    @Query("SELECT * FROM bible_downloads")
+    suspend fun getAllBibleDownloadsSync(): List<BibleDownloadEntity>
+
+    @Query("SELECT * FROM bible_downloads WHERE versionId = :versionId LIMIT 1")
+    fun getBibleDownload(versionId: String): Flow<BibleDownloadEntity?>
+
+    @Query("SELECT * FROM bible_downloads WHERE versionId = :versionId LIMIT 1")
+    suspend fun getBibleDownloadSync(versionId: String): BibleDownloadEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertOrUpdateBibleDownload(download: BibleDownloadEntity)
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertDefaultBibleDownloads(downloads: List<BibleDownloadEntity>)
 }
 

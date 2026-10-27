@@ -86,9 +86,10 @@ fun SpiritualLifeScreen(
     dao: SanctaFidesDao,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
+    initialTab: Int = 0,
     modifier: Modifier = Modifier
 ) {
-    var selectedTopTab by remember { mutableIntStateOf(0) } // 0 = Diario y Examen, 1 = Trivia Católica, 2 = Vía Crucis, 3 = Canto Gregoriano
+    var selectedTopTab by remember(initialTab) { mutableIntStateOf(initialTab) }
 
     val coroutineScope = rememberCoroutineScope()
     val journalEntries by dao.getAllJournalEntries().collectAsState(initial = emptyList())

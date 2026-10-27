@@ -123,9 +123,20 @@ class CatholicDataRepository {
     val nearbyParishes: List<NearbyParish> get() = DoctrineAndSpiritualData.nearbyParishes
     val catholicNews: List<CatholicNewsArticle> get() = DoctrineAndSpiritualData.catholicNews
 
-    // Catechism of the Catholic Church (CCC) Full Index
+    // Catechism of the Catholic Church (CCC) Full Index & Compendium
     val catechismParts: List<com.example.data.models.CatechismPart> get() = CatechismData.catechismParts
     fun findCatechismArticle(num: Int) = CatechismData.findArticleByNumber(num)
+    fun searchCatechismArticles(query: String) = CatechismData.searchArticles(query)
+    val compendiumQAEntries: List<CompendiumQA> get() = CatechismCompendiumData.keyCompendiumEntries
+    val compendiumPartTitles: List<com.example.data.models.LocalizedText> get() = CatechismCompendiumData.compendiumPartTitles
+    val doctrineFormulas: List<DoctrineFormula> get() = CatechismCompendiumData.doctrineFormulas
+    val officialVaticanLinks: List<CatechismData.OfficialVaticanLink> get() = CatechismData.officialVaticanLinks
+    fun getCompendiumQA(number: Int) = CatechismCompendiumData.getCompendiumQA(number)
+    fun searchCompendium(query: String) = CatechismCompendiumData.searchCompendium(query)
+
+    // Catholic Canon Apologetics & History (73 vs 66 Books)
+    val canonDeuterocanonicalDetails: List<BibleData.DeuterocanonicalBookDetail> get() = BibleData.deuterocanonicalBooksDetail
+    val canonHistoricalMilestones: List<BibleData.CanonHistoricalMilestone> get() = BibleData.canonHistoricalMilestones
 
     // Flagship Additions: Pilgrimages, Habits, Calendar
     val globalPilgrimages: List<com.example.data.models.CatholicPilgrimageSanctuary> get() = PilgrimageAndHabitsData.globalPilgrimages

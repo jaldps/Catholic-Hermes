@@ -111,3 +111,26 @@ data class ScriptureStudyProgressEntity(
     val personalNotes: String = ""
 )
 
+@Entity(tableName = "app_preferences")
+data class AppPreferencesEntity(
+    @PrimaryKey val id: String = "default_preferences",
+    val themePreset: String = "LITURGICAL_DYNAMIC",
+    val fontFamilyChoice: String = "SERIF",
+    val fontSizeScale: Float = 1.0f,
+    val darkModeSetting: String = "SYSTEM", // "SYSTEM", "DARK", "LIGHT"
+    val audioNarrationSpeed: Float = 1.0f,
+    val activeBibleTranslationId: String = "jerusalem",
+    val isFullCccDownloaded: Boolean = false
+)
+
+@Entity(tableName = "bible_downloads")
+data class BibleDownloadEntity(
+    @PrimaryKey val versionId: String,
+    val name: String,
+    val language: String,
+    val sizeDisplay: String,
+    val isDownloaded: Boolean = false,
+    val downloadProgress: Int = 0,
+    val isDownloading: Boolean = false
+)
+

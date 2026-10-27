@@ -62,6 +62,11 @@ import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.ui.components.LiturgicalCalendarWidget
 import com.example.ui.components.LiturgicalHeader
 import com.example.ui.theme.LiturgicalGold
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.material.icons.filled.NearMe
+import androidx.compose.material.icons.filled.LocationOn
 import com.example.ui.theme.SacredBurgundy
 
 @Composable
@@ -76,6 +81,7 @@ fun HomeScreen(
     onNavigateToPrayers: () -> Unit,
     onNavigateToDoctrine: () -> Unit,
     onNavigateToSpiritualLife: () -> Unit,
+    onNavigateToQuiz: () -> Unit = onNavigateToSpiritualLife,
     onNavigateToCatechism: () -> Unit = {},
     onNavigateToPilgrimage: () -> Unit = {},
     onNavigateToHabits: () -> Unit = {},
@@ -497,6 +503,96 @@ fun HomeScreen(
             }
         }
 
+        // Featured Direct GPS Nearby Churches Finder Banner
+        item {
+            val context = LocalContext.current
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 16.dp)
+                    .testTag("home_nearby_churches_banner"),
+                shape = RoundedCornerShape(18.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f)
+                ),
+                border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Box(
+                            modifier = Modifier
+                                .size(44.dp)
+                                .clip(CircleShape)
+                                .background(SacredBurgundy),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.NearMe,
+                                contentDescription = null,
+                                tint = Color.White,
+                                modifier = Modifier.size(24.dp)
+                            )
+                        }
+                        Spacer(modifier = Modifier.width(12.dp))
+                        Column {
+                            Text(
+                                text = when (currentLanguage) {
+                                    AppLanguage.ES -> "Buscar Iglesias Cerca de Mí"
+                                    AppLanguage.EN -> "Find Churches Near Me"
+                                    AppLanguage.PT -> "Buscar Igrejas Perto de Mim"
+                                },
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 14.sp,
+                                color = SacredBurgundy
+                            )
+                            Text(
+                                text = when (currentLanguage) {
+                                    AppLanguage.ES -> "Ubicación en Google Maps y horarios de misa"
+                                    AppLanguage.EN -> "Google Maps nearby & mass times"
+                                    AppLanguage.PT -> "Localização no Google Maps e horários"
+                                },
+                                fontSize = 11.sp,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+
+                    FilledTonalButton(
+                        onClick = {
+                            val mapUri = Uri.parse("geo:0,0?q=parroquia+catolica")
+                            val mapIntent = Intent(Intent.ACTION_VIEW, mapUri)
+                            context.startActivity(mapIntent)
+                        },
+                        colors = ButtonDefaults.filledTonalButtonColors(
+                            containerColor = SacredBurgundy,
+                            contentColor = Color.White
+                        )
+                    ) {
+                        Icon(Icons.Default.LocationOn, contentDescription = null, modifier = Modifier.size(16.dp))
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text(
+                            text = when (currentLanguage) {
+                                AppLanguage.ES -> "Buscar"
+                                AppLanguage.EN -> "Locate"
+                                AppLanguage.PT -> "Localizar"
+                            },
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 11.sp
+                        )
+                    }
+                }
+            }
+        }
+
         // Quick Gateway to Church Finder & Trivia
         item {
             Row(
@@ -507,14 +603,14 @@ fun HomeScreen(
             ) {
                 QuickActionBanner(
                     title = when (currentLanguage) {
-                        AppLanguage.ES -> "Buscar Parroquias"
-                        AppLanguage.EN -> "Parish Finder"
-                        AppLanguage.PT -> "Buscar Paróquias"
+                        AppLanguage.ES -> "Directorio Iglesias"
+                        AppLanguage.EN -> "Church Directory"
+                        AppLanguage.PT -> "Diretório Igrejas"
                     },
                     subtitle = when (currentLanguage) {
-                        AppLanguage.ES -> "Horarios de Misa"
-                        AppLanguage.EN -> "Mass Times"
-                        AppLanguage.PT -> "Horários de Missa"
+                        AppLanguage.ES -> "Por país y ciudad"
+                        AppLanguage.EN -> "By Country & City"
+                        AppLanguage.PT -> "Por país e cidade"
                     },
                     icon = Icons.Default.Church,
                     modifier = Modifier.weight(1f),
@@ -534,7 +630,7 @@ fun HomeScreen(
                     },
                     icon = Icons.Default.Star,
                     modifier = Modifier.weight(1f),
-                    onClick = onNavigateToSpiritualLife
+                    onClick = onNavigateToQuiz
                 )
             }
         }

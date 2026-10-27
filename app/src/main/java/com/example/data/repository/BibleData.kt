@@ -233,92 +233,212 @@ object BibleData {
 
     fun getVersesForBookAndChapter(bookId: String, chapterNumber: Int): List<BibleVerse> {
         val book = catholicCanonBooks.firstOrNull { it.id == bookId } ?: catholicCanonBooks.first()
-
-        return when {
-            bookId == "joh" && chapterNumber == 1 -> listOf(
-                BibleVerse(1, LocalizedText("En el principio era el Verbo, y el Verbo estaba con Dios, y el Verbo era Dios.", "In the beginning was the Word, and the Word was with God, and the Word was God.", "No princípio era o Verbo, e o Verbo estava com Deus, e o Verbo era Deus."),
-                    LocalizedText("San Agustín: El Verbo no fue hecho criatura, sino eternamente engendrado por el Padre.", "St. Augustine: The Word is uncreated Wisdom made manifest.", "Santo Agostinho: O Verbo é gerado eternamente pelo Pai."), "San Agustín"),
-                BibleVerse(2, LocalizedText("Él estaba en el principio con Dios.", "He was in the beginning with God.", "Ele estava no princípio com Deus.")),
-                BibleVerse(3, LocalizedText("Todas las cosas por medio de él fueron hechas, y sin él nada de lo que ha sido hecho fue hecho.", "All things were made through Him, and without Him was not anything made that was made.", "Todas as coisas foram feitas por Ele, e sem Ele nada do que foi feito se fez.")),
-                BibleVerse(4, LocalizedText("En él estaba la vida, y la vida era la luz de los hombres.", "In Him was life, and the life was the light of men.", "Nele estava a vida, e a vida era a luz dos homens.")),
-                BibleVerse(5, LocalizedText("La luz en las tinieblas resplandece, y las tinieblas no prevalecieron contra ella.", "The light shines in the darkness, and the darkness has not overcome it.", "A luz resplandece nas trevas, e as trevas não a derrotaram.")),
-                BibleVerse(14, LocalizedText("Y el Verbo se hizo carne, y habitó entre nosotros, y vimos su gloria.", "And the Word became flesh and dwelt among us, and we saw His glory.", "E o Verbo se fez carne e habitou entre nós, e vimos a sua glória."),
-                    LocalizedText("Santo Tomás de Aquino: El Hijo unigénito asumió nuestra naturaleza para hacernos partícipes de su divinidad.", "St. Thomas Aquinas: He took our nature to make us partakers of His divinity.", "São Tomás de Aquino: O Filho assumiu nossa carne para nos divinizar."), "Santo Tomás de Aquino"),
-                BibleVerse(16, LocalizedText("Porque de su plenitud tomamos todos, y gracia sobre gracia.", "For of His fullness we have all received, and grace upon grace.", "Porque de Sua plenitude todos nós recebemos, graça sobre graça.")),
-                BibleVerse(17, LocalizedText("Pues la Ley por medio de Moisés fue dada, pero la gracia y la verdad vinieron por medio de Jesucristo.", "For the Law was given through Moses; grace and truth came through Jesus Christ.", "Pois a Lei foi dada por Moisés; a graça e a verdade vieram por Jesus Cristo."))
-            )
-
-            bookId == "gen" && chapterNumber == 1 -> listOf(
-                BibleVerse(1, LocalizedText("En el principio creó Dios los cielos y la tierra.", "In the beginning God created the heavens and the earth.", "No princípio, criou Deus os céus e a terra."),
-                    LocalizedText("San Basilio: El inicio temporal del universo creado de la nada por amor soberano.", "St. Basil: The universe created ex nihilo by sovereign divine love.", "São Basílio: O universo criado do nada pela bondade divina."), "San Basilio Magno"),
-                BibleVerse(2, LocalizedText("La tierra estaba desordenada y vacía, y las tinieblas estaban sobre la faz del abismo, y el Espíritu de Dios se movía sobre las aguas.", "The earth was without form and void, and darkness was upon the face of the deep. And the Spirit of God moved upon the waters.", "A terra era sem forma e vazia; o Espírito de Deus pairava sobre as águas.")),
-                BibleVerse(3, LocalizedText("Y dijo Dios: «Sea la luz»; y fue la luz.", "And God said, 'Let there be light'; and there was light.", "E disse Deus: 'Haja luz'; e houve luz.")),
-                BibleVerse(26, LocalizedText("Entonces dijo Dios: «Hagamos al hombre a nuestra imagen, conforme a nuestra semejanza».", "Then God said: 'Let us make man in our image, after our likeness.'", "E disse Deus: 'Façamos o homem à nossa imagem e semelhança'."),
-                    LocalizedText("San Gregorio de Nisa: La dignidad única del ser humano como criatura espiritual libre y amada.", "St. Gregory of Nyssa: The singular dignity of the human person created in divine likeness.", "São Gregório: A dignidade soberana da pessoa humana."), "San Gregorio de Nisa"),
-                BibleVerse(27, LocalizedText("Y creó Dios al hombre a su imagen, a imagen de Dios lo creó; varón y hembra los creó.", "So God created man in His own image, in the image of God created He him; male and female created He them.", "Criou Deus o homem à Sua imagem; homem e mulher os criou.")),
-                BibleVerse(31, LocalizedText("Y vio Dios todo lo que había hecho, y he aquí que era bueno en gran manera.", "And God saw everything that He had made, and behold, it was very good.", "E Deus viu tudo quanto havia feito, e era muito bom."))
-            )
-
-            bookId == "psa" && chapterNumber == 23 -> listOf(
-                BibleVerse(1, LocalizedText("El Señor es mi pastor, nada me faltará.", "The Lord is my shepherd; I shall not want.", "O Senhor é o meu pastor, nada me faltará."),
-                    LocalizedText("San Juan de la Cruz: El alma que se confía enteramente a Cristo encuentra reposo celestial en todo trance.", "St. John of the Cross: The soul entrusted to Christ finds spiritual rest.", "São João da Cruz: A alma confiada a Cristo repousa segura."), "San Juan de la Cruz"),
-                BibleVerse(2, LocalizedText("En lugares de delicados pastos me hará descansar; junto a aguas de reposo me pastoreará.", "He makes me lie down in green pastures; He leads me beside still waters.", "Em verdes prados me faz repousar; conduz-me às águas tranquilas.")),
-                BibleVerse(3, LocalizedText("Confortará mi alma; me guiará por sendas de justicia por amor de su nombre.", "He restores my soul; He leads me in paths of righteousness for His name's sake.", "Restaura a minha alma e guia-me pelos caminhos da justiça.")),
-                BibleVerse(4, LocalizedText("Aunque ande en valle de sombra de muerte, no temeré mal alguno, porque tú estarás conmigo; tu vara y tu cayado me infundirán aliento.", "Even though I walk through the valley of the shadow of death, I will fear no evil, for You are with me; Your rod and Your staff comfort me.", "Ainda que eu ande pelo vale da sombra da morte, não temerei mal algum, porque Tu estás comigo.")),
-                BibleVerse(5, LocalizedText("Aderezas mesa delante de mí en presencia de mis angustiadores; unges mi cabeza con óleo; mi copa está rebosando.", "You prepare a table before me in the presence of my enemies; You anoint my head with oil; my cup overflows.", "Preparas uma mesa diante de mim à vista dos meus adversários; unges a minha cabeça com óleo.")),
-                BibleVerse(6, LocalizedText("Ciertamente el bien y la misericordia me seguirán todos los días de mi vida, y en la casa del Señor moraré por largos días.", "Surely goodness and mercy shall follow me all the days of my life, and I will dwell in the house of the Lord forever.", "Certamente a bondade e a misericórdia me seguirão todos os dias da minha vida."))
-            )
-
-            bookId == "mat" && chapterNumber == 5 -> listOf(
-                BibleVerse(1, LocalizedText("Viendo la multitud, subió al monte; y sentándose, vinieron a él sus discípulos.", "Seeing the crowds, He went up on the mountain, and when He sat down, His disciples came to Him.", "Vendo as multidões, Jesus subiu ao monte e sentou-se.")),
-                BibleVerse(3, LocalizedText("«Bienaventurados los pobres de espíritu, porque de ellos es el reino de los cielos».", "“Blessed are the poor in spirit, for theirs is the kingdom of heaven.”", "“Bem-aventurados os pobres de espírito, porque deles é o Reino dos Céus.”"),
-                    LocalizedText("San Juan Crisóstomo: La pobreza de espíritu es la santa humildad que abre las puertas de la gracia divina.", "St. John Chrysostom: Poverty of spirit is humble detachment that receives divine grace.", "São João Crisóstomo: A humildade evangélica é a porta do Céu."), "San Juan Crisóstomo"),
-                BibleVerse(4, LocalizedText("«Bienaventurados los que lloran, porque ellos recibirán consolación».", "“Blessed are those who mourn, for they shall be comforted.”", "“Bem-aventurados os que choram, porque serão consolados.”")),
-                BibleVerse(5, LocalizedText("«Bienaventurados los mansos, porque ellos heredarán la tierra».", "“Blessed are the meek, for they shall inherit the earth.”", "“Bem-aventurados os mansos, porque herdarão a terra.”")),
-                BibleVerse(6, LocalizedText("«Bienaventurados los que tienen hambre y sed de justicia, porque ellos serán saciados».", "“Blessed are those who hunger and thirst for righteousness, for they shall be satisfied.”", "“Bem-aventurados os que têm fome e sede de justiça, porque serão saciados.”")),
-                BibleVerse(7, LocalizedText("«Bienaventurados los misericordiosos, porque ellos alcanzarán misericordia».", "“Blessed are the merciful, for they shall obtain mercy.”", "“Bem-aventurados os misericordiosos, porque alcançarão misericórdia.”")),
-                BibleVerse(8, LocalizedText("«Bienaventurados los limpios de corazón, porque ellos verán a Dios».", "“Blessed are the pure in heart, for they shall see God.”", "“Bem-aventurados os puros de coração, porque verão a Deus.”"),
-                    LocalizedText("San Agustín: Solo el ojo puro del alma libre de pecado puede contemplar la hermosura increada de Dios.", "St. Augustine: Only the pure heart detached from sin contemplates God's majesty.", "Santo Agostinho: A pureza do coração permite contemplar a glória de Deus."), "San Agustín"),
-                BibleVerse(9, LocalizedText("«Bienaventurados los pacificadores, porque ellos serán llamados hijos de Dios».", "“Blessed are the peacemakers, for they shall be called sons of God.”", "“Bem-aventurados os pacificadores, porque serão chamados filhos de Deus.”"))
-            )
-
-            bookId == "1co" && chapterNumber == 13 -> listOf(
-                BibleVerse(1, LocalizedText("Si yo hablase lenguas humanas y angélicas, y no tengo amor, vengo a ser como metal que resuena, o címbalo que retiñe.", "If I speak in the tongues of men and of angels, but have not love, I am a noisy gong or a clanging cymbal.", "Ainda que eu fale as línguas dos homens e dos anjos, se não tiver caridade, sou como o bronze que soa.")),
-                BibleVerse(4, LocalizedText("El amor es paciente, es benigno; el amor no tiene envidia, el amor no es jactancioso, no se envanece.", "Love is patient and kind; love does not envy or boast; it is not arrogant.", "A caridade é paciente, é benigna; não é invejosa, não é orgulhosa."),
-                    LocalizedText("Santo Tomás de Aquino: La caridad es la reina de todas las virtudes teologales y la forma de la santidad cristiana.", "St. Thomas Aquinas: Charity is the mother and root of all theological virtues.", "São Tomás de Aquino: A caridade é a raiz de todas as virtudes."), "Santo Tomás de Aquino"),
-                BibleVerse(7, LocalizedText("Todo lo sufre, todo lo cree, todo lo espera, todo lo soporta.", "Love bears all things, believes all things, hopes all things, endures all things.", "Tudo sofre, tudo crê, tudo espera, tudo suporta.")),
-                BibleVerse(13, LocalizedText("Y ahora permanecen la fe, la esperanza y el amor, estos tres; pero el mayor de ellos es el amor.", "So now faith, hope, and love abide, these three; but the greatest of these is love.", "Agora, pois, permanecem a fé, a esperança e o amor; mas o maior destes é o amor."))
-            )
-
-            bookId == "wis" && chapterNumber == 3 -> listOf(
-                BibleVerse(1, LocalizedText("Las almas de los justos están en la mano de Dios, y no los tocará el tormento.", "The souls of the righteous are in the hand of God, and no torment shall touch them.", "As almas dos justos estão na mão de Deus, e nenhum tormento as tocará."),
-                    LocalizedText("Padres de la Iglesia: Profecía veterotestamentaria de la inmortalidad del alma y la gloria de los santos.", "Fathers of the Church: OT prophecy of the eternal peace of the holy souls.", "Padres da Igreja: Testemunho da paz perpétua dos santos."), "Tradición de los Santos"),
-                BibleVerse(2, LocalizedText("A los ojos de los insensatos pareció que morían, pero ellos están en paz.", "In the eyes of the foolish they seemed to have died, but they are at peace.", "Aos olhos dos insensatos pareciam mortos, mas estão em paz.")),
-                BibleVerse(3, LocalizedText("Aunque a juicio de los hombres hayan sido castigados, su esperanza está llena de inmortalidad.", "For though in the sight of men they were punished, their hope is full of immortality.", "Sua esperança está repleta de imortalidade."))
-            )
-
-            else -> {
-                // Generates continuous canonical structured reading for any chapter
-                (1..12).map { vNum ->
-                    BibleVerse(
-                        number = vNum,
-                        text = LocalizedText(
-                            "${book.name.es} cap. $chapterNumber, v. $vNum: «Bendigan al Señor todas sus obras; alábenle y ensálcenle por todos los siglos. Porque eterno es su amor y su misericordia perdura de generación en generación».",
-                            "${book.name.en} ch. $chapterNumber, v. $vNum: “Bless the Lord, all you works of the Lord; praise and exalt Him above all forever. For His steadfast love endures forever.”",
-                            "${book.name.pt} cap. $chapterNumber, v. $vNum: “Bendigam ao Senhor todas as Suas obras; louvem-No e exaltem-No para sempre. Pois eterna é a Sua misericórdia”."
-                        ),
-                        commentary = if (vNum == 1) LocalizedText(
-                            "Nota Canónica (${book.name.es}): Este libro forma parte del depósito sagrado de las Escrituras entregado a la Iglesia.",
-                            "Canonical Note (${book.name.en}): This inspired chapter forms part of the sacred deposit of Divine Revelation.",
-                            "Nota Canônica (${book.name.pt}): Texto inspirado pelo Espírito Santo para instrução e edificação da fé."
-                        ) else null,
-                        commentaryAuthor = if (vNum == 1) "Magisterio de la Iglesia" else null
-                    )
-                }
-            }
-        }
+        return CatholicBibleContentEngine.getVersesForChapter(book, chapterNumber)
     }
 
+
+    data class DeuterocanonicalBookDetail(
+        val name: LocalizedText,
+        val abbreviation: String,
+        val chapters: Int,
+        val doctrinalSignificance: LocalizedText,
+        val keyVerse: LocalizedText,
+        val keyReference: String
+    )
+
+    data class CanonHistoricalMilestone(
+        val year: String,
+        val councilOrEvent: LocalizedText,
+        val description: LocalizedText
+    )
+
+    val deuterocanonicalBooksDetail: List<DeuterocanonicalBookDetail> = listOf(
+        DeuterocanonicalBookDetail(
+            name = LocalizedText("Tobías", "Tobit", "Tobias"),
+            abbreviation = "Tob",
+            chapters = 14,
+            doctrinalSignificance = LocalizedText(
+                "Enseña la intercesión de los Santos Ángeles (San Rafael Arcángel presentando oraciones ante el trono de Dios), el valor de la limosna y la santidad del matrimonio cristiano.",
+                "Affirms angelic intercession before God's throne (St. Raphael), the redemptive value of almsgiving, and the sanctity of holy matrimony.",
+                "Ensina a intercessão dos Santos Anjos (São Rafael), a santidade do matrimônio e o valor meritório da esmola."
+            ),
+            keyVerse = LocalizedText(
+                "«Cuando tú orabas con lágrimas y enterrabas a los muertos, yo presentaba tu oración ante la presencia gloriosa del Santo». (Tob 12, 12)",
+                "“When you prayed with tears and buried the dead, I offered your prayer to the Lord.” (Tobit 12:12)",
+                "“Quando tu oravas com lágrimas e sepultavas os mortos, eu apresentava a tua oração ao Senhor”. (Tob 12, 12)"
+            ),
+            keyReference = "Tob 12, 12"
+        ),
+        DeuterocanonicalBookDetail(
+            name = LocalizedText("Judit", "Judith", "Judite"),
+            abbreviation = "Jdt",
+            chapters = 16,
+            doctrinalSignificance = LocalizedText(
+                "Heroína que libra a su pueblo cortando la cabeza de Holofernes; prefiguración mariana de la mujer que aplasta la cabeza de la serpiente (Gén 3, 15).",
+                "A courageous heroine who delivers Israel by beheading Holofernes; an ancient Marian type crushing the serpent's head.",
+                "Heroína da fé que liberta o povo de Deus; figura profética de Nossa Senhora esmagando o dragão infernal."
+            ),
+            keyVerse = LocalizedText(
+                "«¡Bendita seas entre todas las mujeres, hija del Dios Altísimo, y bendito sea el Señor Dios, creador del cielo y de la tierra!». (Jdt 13, 18)",
+                "“Blessed are you, daughter, by the Most High God, above all the women on earth; and blessed be the Lord God.” (Judith 13:18)",
+                "“Bendita és tu, ó filha, pelo Deus Altíssimo, mais do que todas as mulheres da terra”. (Jdt 13, 18)"
+            ),
+            keyReference = "Jdt 13, 18"
+        ),
+        DeuterocanonicalBookDetail(
+            name = LocalizedText("1 Macabeos", "1 Maccabees", "1 Macabeus"),
+            abbreviation = "1 Mac",
+            chapters = 16,
+            doctrinalSignificance = LocalizedText(
+                "Defensa heroica de la fe y de la Ley ante la apostasía pagana helenista; purificación y dedicación del Santo Templo (fiesta de Hanukkah mencionada en Juan 10, 22).",
+                "Historical record of Jewish martyrdom and defense of the Covenant against Antiochus Epiphanes; the Hanukkah rededication attended by Jesus in John 10:22.",
+                "História da resistência dos mártires e purificação do Templo de Jerusalém (festa mencionada em João 10, 22)."
+            ),
+            keyVerse = LocalizedText(
+                "«Aunque todas las naciones obedezcan al rey, yo, mis hijos y mis hermanos nos mantendremos fieles a la Alianza de nuestros padres». (1 Mac 2, 19-20)",
+                "“Even if all nations obey the king, I and my sons and my brothers will keep the covenant of our ancestors.” (1 Macc 2:19-20)",
+                "“Ainda que todas as nações obedeçam ao rei, eu, meus filhos e meus irmãos guardaremos a aliança”. (1 Mac 2, 19-20)"
+            ),
+            keyReference = "1 Mac 2, 19-20"
+        ),
+        DeuterocanonicalBookDetail(
+            name = LocalizedText("2 Macabeos", "2 Maccabees", "2 Macabeus"),
+            abbreviation = "2 Mac",
+            chapters = 15,
+            doctrinalSignificance = LocalizedText(
+                "Fundamento bíblico explícito de la oración por los difuntos y el Purgatorio (cap. 12), la resurrección de la carne, el martirio de los siete hermanos y la intercesión de los santos (Onías y Jeremías en cap. 15).",
+                "Definitive Old Testament foundation for prayer for the departed (Purgatory, ch. 12), resurrection of the flesh, and heavenly intercession of the saints (ch. 15).",
+                "Fundamento bíblico direto da oração pelos defuntos (Purgatório), da ressurreição dos corpos e da intercessão celeste dos santos."
+            ),
+            keyVerse = LocalizedText(
+                "«Santo y piadoso pensamiento es orar por los difuntos, para que sean liberados de sus pecados». (2 Mac 12, 45)",
+                "“It is therefore a holy and wholesome thought to pray for the dead, that they may be loosed from sins.” (2 Macc 12:46)",
+                "“É um pensamento santo e salutar rezar pelos mortos, para que sejam libertos de seus pecados”. (2 Mac 12, 45)"
+            ),
+            keyReference = "2 Mac 12, 45"
+        ),
+        DeuterocanonicalBookDetail(
+            name = LocalizedText("Sabiduría de Salomón", "Wisdom of Solomon", "Sabedoria"),
+            abbreviation = "Sab",
+            chapters = 19,
+            doctrinalSignificance = LocalizedText(
+                "Inmortalidad del alma humana, justicia celestial; contiene la asombrosa profecía de la Pasión de Cristo (Sab 2, 12-20) leída cada Viernes Santo.",
+                "Immortality of the soul, divine justice, and the stunning messianic prophecy of the Passion and Crucifixion of Christ in chapter 2.",
+                "Imortalidade da alma e a profecia da Paixão e Morte de Cristo ultrajado pelos ímpios (cap. 2)."
+            ),
+            keyVerse = LocalizedText(
+                "«Las almas de los justos están en la mano de Dios y no los tocará el tormento... aunque a juicio de los hombres hayan sufrido, su esperanza está llena de inmortalidad». (Sab 3, 1.4)",
+                "“The souls of the righteous are in the hand of God, and no torment shall touch them... their hope is full of immortality.” (Wisdom 3:1,4)",
+                "“As almas dos justos estão na mão de Deus e nenhum tormento as tocará... sua esperança está repleta de imortalidade”. (Sab 3, 1.4)"
+            ),
+            keyReference = "Sab 3, 1-4"
+        ),
+        DeuterocanonicalBookDetail(
+            name = LocalizedText("Sirácida (Eclesiástico)", "Sirach (Ecclesiasticus)", "Eclesiástico (Sirácida)"),
+            abbreviation = "Sir",
+            chapters = 51,
+            doctrinalSignificance = LocalizedText(
+                "Tratado monumental de sabiduría moral, veneración a los padres, temor de Dios, caridad fraternal y la personificación de la Divina Sabiduría que inspiró la liturgia de la Iglesia.",
+                "Comprehensive manual of Catholic moral life, filial devotion, fear of the Lord, friendship, and eternal Wisdom.",
+                "Monumental tesouro de sabedoria moral, honra aos pais, virtudes cristãs e a Sabedoria divina."
+            ),
+            keyVerse = LocalizedText(
+                "«El que honra a su padre expía sus pecados, y el que respeta a su madre es como quien acumula tesoros». (Sir 3, 3-4)",
+                "“Whoever honors his father atones for sins, and whoever glorifies his mother is like one who lays up treasure.” (Sirach 3:3-4)",
+                "“Quem honra seu pai alcança o perdão dos pecados; quem respeita sua mãe é como quem ajunta tesouros”. (Eclo 3, 3-4)"
+            ),
+            keyReference = "Sir 3, 3-4"
+        ),
+        DeuterocanonicalBookDetail(
+            name = LocalizedText("Baruc (con Carta de Jeremías)", "Baruch", "Baruc"),
+            abbreviation = "Bar",
+            chapters = 6,
+            doctrinalSignificance = LocalizedText(
+                "Escrito por el secretario del profeta Jeremías. Profetiza la Encarnación del Verbo viviendo entre los hombres (Bar 3, 38) y el arrepentimiento del Pueblo de Dios.",
+                "Written by Jeremiah's secretary. Explicitly prophecies the Incarnation of God walking upon earth among men (Baruch 3:37).",
+                "Profetiza a Encarnação do Filho de Deus convivendo na terra com os homens (Bar 3, 38) e a consolação de Jerusalém."
+            ),
+            keyVerse = LocalizedText(
+                "«Después de esto, apareció la Sabiduría en la tierra y conversó con los hombres». (Bar 3, 38)",
+                "“Afterward she appeared upon earth, and held converse with men.” (Baruch 3:37)",
+                "“Depois disso, apareceu sobre a terra e viveu entre os homens”. (Bar 3, 38)"
+            ),
+            keyReference = "Bar 3, 38"
+        ),
+        DeuterocanonicalBookDetail(
+            name = LocalizedText("Adiciones a Daniel y Ester", "Additions to Daniel & Esther", "Acréscimos a Daniel e Ester"),
+            abbreviation = "Dan/Est",
+            chapters = 0,
+            doctrinalSignificance = LocalizedText(
+                "En Daniel: La historia de Susana y los ancianos, Bel y el Dragón, y el Cántico de los tres jóvenes (Benedicite en el Breviario). En Ester: Oraciones solemnes de Ester y Mardoqueo reconociendo la soberanía de Dios.",
+                "In Daniel: Susanna and the elders, Bel and the Dragon, and the Song of the Three Youths. In Esther: Sacred prayers of Mordecai and Esther.",
+                "Em Daniel: Susana e os anciãos, o hino dos três jovens na fornalha. Em Ester: As orações de Ester e Mardoqueu."
+            ),
+            keyVerse = LocalizedText(
+                "«¡Bendito eres, Señor, Dios de nuestros padres: alabado y ensalzado por los siglos!». (Dan 3, 52)",
+                "“Blessed are you, O Lord, the God of our ancestors, praiseworthy and exalted above all forever!” (Daniel 3:52)",
+                "“Bendito sejais, Senhor, Deus de nossos pais, digno de louvor e de glória para sempre!” (Dan 3, 52)"
+            ),
+            keyReference = "Dan 3, 52"
+        )
+    )
+
+    val canonHistoricalMilestones: List<CanonHistoricalMilestone> = listOf(
+        CanonHistoricalMilestone(
+            year = "250 a.C.",
+            councilOrEvent = LocalizedText("Traducción de los Setenta (Septuaginta / LXX)", "Septuagint Translation (LXX)", "Tradução dos Setenta (Septuaginta)"),
+            description = LocalizedText(
+                "En Alejandría, 72 sabios judíos traducen las Sagradas Escrituras al griego para la diáspora. Incluye los 46 libros del Antiguo Testamento. Esta fue la Biblia citada por los Apóstoles y evangelistas en el Nuevo Testamento (más del 80% de las citas del AT provienen de la Septuaginta).",
+                "Jewish scholars translated the Hebrew and Aramaic Scriptures into Greek in Alexandria. It contained all 46 OT books and was the standard Bible quoted by Jesus' Apostles and the Early Church.",
+                "Em Alexandria, as Escrituras são traduzidas ao grego incluindo os 46 livros. Esta foi a Bíblia usada pelos Apóstolos e citada no Novo Testamento."
+            )
+        ),
+        CanonHistoricalMilestone(
+            year = "382 d.C.",
+            councilOrEvent = LocalizedText("Concilio de Roma (Papa San Dámaso I)", "Council of Rome (Pope St. Damasus I)", "Concílio de Roma (Papa São Dâmaso I)"),
+            description = LocalizedText(
+                "El Papa San Dámaso I promulga el 'Decretum Damasi' fijando formalmente el canon definitivo de 73 libros (46 AT + 27 NT) y encomienda a San Jerónimo la traducción de la Vulgata Latina oficial.",
+                "Pope Damasus I promulgated the definitive 73-book canon (46 OT + 27 NT) and commissioned St. Jerome to translate the Latin Vulgate.",
+                "O Papa São Dâmaso I publica a lista definitiva dos 73 livros e encarrega São Jerônimo de traduzir a Vulgata Latina."
+            )
+        ),
+        CanonHistoricalMilestone(
+            year = "393 & 397 d.C.",
+            councilOrEvent = LocalizedText("Concilios de Hipona y Cartago (San Agustín)", "Councils of Hippo & Carthage (St. Augustine)", "Concílios de Hipona e Cartago (Santo Agostinho)"),
+            description = LocalizedText(
+                "Bajo el liderazgo teológico de San Agustín, los concilios africanos confirman unánimemente la lista exacta de los 73 libros inspirados, confirmada por el Papa San Inocencio I en el 405 d.C.",
+                "Guided by St. Augustine, the North African councils affirmed the 73 books, later confirmed by Pope Innocent I in 405 AD.",
+                "Guiados por Santo Agostinho, confirmam unanimemente os 73 livros sagrados, confirmados pelo Papa Inocêncio I."
+            )
+        ),
+        CanonHistoricalMilestone(
+            year = "1442 d.C.",
+            councilOrEvent = LocalizedText("Concilio Ecuménico de Florencia", "Council of Florence", "Concílio de Florença"),
+            description = LocalizedText(
+                "En la bula 'Cantate Domino' (Papa Eugenio IV), la Iglesia proclama solemnemente el canon de los 73 libros ante las Iglesias Orientales.",
+                "Pope Eugene IV solemnly reaffirmed the 73 books in the papal bull 'Cantate Domino'.",
+                "O Papa Eugênio IV reafirma solenemente a lista canônica dos 73 livros sagrados."
+            )
+        ),
+        CanonHistoricalMilestone(
+            year = "1534 d.C.",
+            councilOrEvent = LocalizedText("Reforma Protestante (Martín Lutero)", "Protestant Reformation (Martin Luther)", "Reforma Protestante (Martinho Lutero)"),
+            description = LocalizedText(
+                "Martín Lutero decide relegar los 7 libros deuterocanónicos a un apéndice calificándolos de 'apócrifos' porque contradecían sus tesis personales (especialmente 2 Macabeos 12 sobre el Purgatorio y las obras en Santiago). En siglos posteriores, las sociedades bíblicas protestantes los suprimieron por completo, reduciendo la Biblia a 66 libros.",
+                "Luther removed the 7 deuterocanonical books from the OT canon due to doctrinal conflicts (e.g., purgatory in 2 Maccabees). Later Protestant societies omitted them entirely, producing a 66-book volume.",
+                "Lutero retirou os 7 livros deuterocanônicos por contrariarem suas teses (como o Purgatório). Mais tarde, bíblias protestantes os removeram por completo, restando 66 livros."
+            )
+        ),
+        CanonHistoricalMilestone(
+            year = "1546 d.C.",
+            councilOrEvent = LocalizedText("Concilio Ecuménico de Trento (Sesión IV)", "Council of Trent (Fourth Session)", "Concílio de Trento (Sessão IV)"),
+            description = LocalizedText(
+                "Frente a la mutilación de las Escrituras, la Iglesia Católica define dogmáticamente de forma infalible el Canon Sagrado de los 73 libros bajo anatema, preservando intacto el depósito apostólico.",
+                "In response to Protestant omissions, the Catholic Church dogmatically defined the 73-book canon with solemn anathema, protecting apostolic integrity.",
+                "Em resposta às exclusões, o Concílio define dogmaticamente os 73 livros sob anátema, garantindo a integridade da Palavra de Deus."
+            )
+        )
+    )
 
     val bibleVersions: List<BibleVersionInfo> = listOf(
         BibleVersionInfo(

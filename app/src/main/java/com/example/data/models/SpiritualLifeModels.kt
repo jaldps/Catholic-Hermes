@@ -33,12 +33,18 @@ data class NearbyParish(
     val name: String,
     val diocese: String,
     val address: String,
+    val country: String = "España",
+    val stateOrRegion: String = "Madrid",
+    val city: String = "Madrid",
+    val latitude: Double = 40.4168,
+    val longitude: Double = -3.7038,
     val distanceDisplay: String,
     val sundayMasses: String,
     val weekdayMasses: String,
     val confessionTimes: String,
     val adorationTimes: String,
-    val contactPhone: String
+    val contactPhone: String,
+    val isPerpetualAdoration: Boolean = false
 )
 
 data class ViaCrucisStation(

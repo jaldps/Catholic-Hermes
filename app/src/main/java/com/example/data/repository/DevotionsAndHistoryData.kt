@@ -1,5 +1,6 @@
 package com.example.data.repository
 
+import java.util.Calendar
 import com.example.data.models.ChristManifestation
 import com.example.data.models.ChurchHistoryEpoch
 import com.example.data.models.ChurchSchismHistory
@@ -10,28 +11,153 @@ import com.example.data.models.VerseOfTheDay
 
 object DevotionsAndHistoryData {
 
-    val saintOfTheDay = SaintOfTheDay(
-        id = "st_therese",
-        name = LocalizedText("Santa Teresita del Niño Jesús (Doctora de la Iglesia)", "Saint Thérèse of Lisieux (Doctor of the Church)", "Santa Teresinha do Menino Jesus (Doutora da Igreja)"),
-        feastDate = "1 de Octubre",
-        title = LocalizedText("Patrona Universal de las Misiones y de los Floristas", "Patroness of Foreign Missions and Florists", "Padroeira Universal das Missões"),
-        patronages = LocalizedText("Misiones católicas, floristas, aviadores, novicios y sacerdotes.", "World missions, florists, illness, pilot aviators.", "Missões da Igreja, vocações religiosas e floristas."),
-        biography = LocalizedText(
-            "Nacida en Alençon (Francia) en 1873, ingresó al Carmelo de Lisieux a los 15 años tras viajar a Roma a pedir permiso especial al Papa León XIII. Desarrolló la 'Pequeña Vía' (caminito de infancia espiritual): alcanzar la más alta santidad no mediante hazañas extraordinarias, sino realizando con amor infinito y pureza de intención las acciones más pequeñas de cada día. Murió a los 24 años prometiendo: 'Pasaré mi cielo haciendo el bien en la tierra; haré caer una lluvia de rosas'. Fue proclamada Doctora de la Iglesia por San Juan Pablo II en 1997.",
-            "Born in France in 1873, she entered the Lisieux Carmel at age 15 after personally petitioning Pope Leo XIII. She articulated 'The Little Way' of spiritual childhood: seeking holiness through profound love in the smallest everyday tasks. She promised to spend her heaven doing good upon earth, showering roses of grace.",
-            "Nascida na França em 1873, ingressou no Carmelo aos 15 anos. Ensinou a 'Pequena Via' da infância espiritual: amar a Deus sem reservas nos menores atos cotidianos. Foi proclamada Doutora da Igreja por São João Paulo II."
-        ),
-        iconicQuote = LocalizedText(
-            "«En el corazón de la Iglesia, que es mi Madre, yo seré el Amor».",
-            "“In the heart of the Church, my Mother, I will be Love.”",
-            "“No coração da Igreja, minha Mãe, eu serei o Amor.”"
-        ),
-        intercessionPrayer = LocalizedText(
-            "¡Oh Santa Teresita del Niño Jesús!, derrama tu lluvia de rosas sobre mi alma necesitada. Enséñame tu caminito de amor humilde, para que confiando enteramente en la misericordia del Padre, alcance la santidad que Dios desea para mí. Amén.",
-            "O Little Flower of Jesus, shower your roses of grace upon my life. Teach me your Little Way of boundless trust and childlike love in God's tender mercy. Amen.",
-            "Ó Santa Teresinha, fazei cair sobre nós uma chuva de rosas de bênçãos e ensinai-nos a confiar plenamente na infinita misericórdia de Nosso Senhor. Amém."
-        )
-    )
+    fun getTodaySaint(cal: Calendar = Calendar.getInstance()): SaintOfTheDay {
+        val month = cal.get(Calendar.MONTH) // 0-based: 0 = Jan, 9 = Oct, 10 = Nov
+        val day = cal.get(Calendar.DAY_OF_MONTH)
+
+        return when {
+            month == Calendar.OCTOBER && day == 27 -> SaintOfTheDay(
+                id = "st_frumentius",
+                name = LocalizedText("San Frumencio de Etiopía y Beatos Mártires", "Saint Frumentius (Apostle of Ethiopia)", "São Frumêncio de Axum"),
+                feastDate = "27 de Octubre",
+                title = LocalizedText("Obispo y Apóstol de Etiopía / Mártires de la Fe", "Bishop and Apostle of Ethiopia", "Bispo e Apóstolo da Etiópia"),
+                patronages = LocalizedText("Etiopía, misiones en África, catequistas y diplomáticos cristianos.", "Ethiopia, African missions, catechists.", "Etiópia e evangelização dos povos."),
+                biography = LocalizedText(
+                    "Nacido en Tiro en el siglo IV, tras naufragar en el Mar Rojo fue llevado cautivo a la corte del Reino de Axum (Etiopía). Por su virtud y sabiduría llegó a ser consejero real y preceptor del príncipe Ezana, a quien instruyó en la fe católica. San Atanasio de Alejandría lo consagró primer Obispo de Etiopía ('Abba Salama', Padre de la Paz). Evangelizó incansablemente el cuerno de África bautizando al Rey y a su pueblo.",
+                    "Captured as a youth after a shipwreck in the Red Sea, Frumentius gained high esteem at the court of Axum. He introduced Christianity to Prince Ezana and was consecrated first Bishop of Ethiopia by St. Athanasius of Alexandria.",
+                    "Após naufrágio, levou a fé cristã ao Reino de Axum. Foi consagrado primeiro bispo da Etiópia por Santo Atanásio e batizou a família real etíope."
+                ),
+                iconicQuote = LocalizedText(
+                    "«Dios saca bienes infinitos aun de los mayores naufragios humanos».",
+                    "“God draws infinite good even from the greatest human shipwrecks.”",
+                    "“Deus manifesta Sua glória salvadora até mesmo nas provações do exílio.”"
+                ),
+                intercessionPrayer = LocalizedText(
+                    "Dios todopoderoso, que por el celo apostólico de San Frumencio encendiste la luz del Evangelio en tierras lejanas, concédenos proclamar a Cristo con valentía en todo lugar. Por Jesucristo nuestro Señor. Amén.",
+                    "Almighty God, who through Saint Frumentius brought the light of the Gospel to distant nations, grant us zealous faith. Through Christ our Lord. Amen.",
+                    "Ó Deus, que fizestes de São Frumêncio luz para os povos, concedei-nos proclamar a Cristo com fervor apostólico. Amém."
+                )
+            )
+
+            month == Calendar.OCTOBER && day == 28 -> SaintOfTheDay(
+                id = "sts_simon_jude",
+                name = LocalizedText("Santos Simón y Judas Tadeo (Apóstoles y Mártires)", "Saints Simon and Jude (Apostles & Martyrs)", "Santos Simão e Judas Tadeu (Apóstolos)"),
+                feastDate = "28 de Octubre",
+                title = LocalizedText("Fiesta Litúrgica de los Santos Apóstoles / Patrono de los Casos Difíciles", "Feast of the Apostles / Patron of Impossible Causes", "Apóstolos de Cristo e Mártires da Fé"),
+                patronages = LocalizedText("Causas desesperadas, casos imposibles, trabajadores de la salud y hospitales.", "Lost causes, hopeless situations, desperate cases.", "Causas desesperadas e impossíveis, famílias e enfermos."),
+                biography = LocalizedText(
+                    "San Simón el Cananeo y San Judas Tadeo fueron llamados personalmente por Jesucristo para formar parte de los Doce Apóstoles (Lc 6, 15-16). En la Última Cena, San Judas preguntó al Señor: '¿Por qué te has de manifestar a nosotros y no al mundo?' (Jn 14, 22). Ambos predicaron el Evangelio en Mesopotamia y Persia sufriendo el martirio por negarse a adorar dioses paganos. San Judas es venerado universalmente como el gran intercesor de los casos desesperados e imposibles.",
+                    "Saints Simon and Jude were chosen by Christ among the Twelve Apostles. St. Jude questioned Jesus at the Last Supper and authored the Epistle of Jude. Both preached throughout Persia and suffered glorious martyrdom.",
+                    "Chamados por Jesus entre os Doze Apóstolos. Pregaram corajosamente o Evangelho e derramaram seu sangue como mártires em testemunho da fé católica."
+                ),
+                iconicQuote = LocalizedText(
+                    "«Manténganse en el amor de Dios, esperando la misericordia de nuestro Señor Jesucristo para la vida eterna». (Judas 1, 21)",
+                    "“Keep yourselves in the love of God, waiting for the mercy of our Lord Jesus Christ unto life everlasting.” (Jude 1:21)",
+                    "“Conservai-vos no amor de Deus, esperando a misericórdia de nosso Senhor Jesus Cristo para a vida eterna”. (Jd 1, 21)"
+                ),
+                intercessionPrayer = LocalizedText(
+                    "¡Gloriosísimo Apóstol San Judas Tadeo, fiel siervo y amigo de Jesús!, socórreme en esta gran necesidad para que reciba el consuelo y el auxilio del cielo en todas mis tribulaciones. Amén.",
+                    "Glorious Apostle St. Jude Thaddeus, faithful servant and friend of Jesus, come to my assistance in this great need and obtain for me heavenly comfort. Amen.",
+                    "Glorioso São Judas Tadeu, apóstolo e mártir, rogai por nós nas causas mais difíceis e alcançai-nos a graça que vos pedimos. Amém."
+                )
+            )
+
+            month == Calendar.OCTOBER && day == 29 -> SaintOfTheDay(
+                id = "st_narcissus",
+                name = LocalizedText("San Narciso de Jerusalén (Obispo y Confesor)", "Saint Narcissus of Jerusalem (Bishop)", "São Narciso de Jerusalém"),
+                feastDate = "29 de Octubre",
+                title = LocalizedText("Patriarca y Obispo Centenario de Jerusalén", "Bishop of Jerusalem", "Bispo e Confessor da Fé"),
+                patronages = LocalizedText("Ancianos, víctimas de calumnias y sacerdotes mayores.", "Elderly, victims of false accusations.", "Idosos e pessoas injustamente caluniadas."),
+                biography = LocalizedText(
+                    "Obispo de Jerusalén a finales del siglo II, presidió concilios defendiendo la celebración de la Pascua según la tradición apostólica. Sobrellevó con paciencia heroica falsas calumnias retirándose al desierto en profunda oración antes de ser restaurado a su sede hasta los 116 años.",
+                    "St. Narcissus governed the Church in Jerusalem into great old age, presiding over synods on Easter and enduring slander with serene charity.",
+                    "Bispo venerável de Jerusalém, governou a diocese até idade avançada com oração e paciência heróica diante de calúnias."
+                ),
+                iconicQuote = LocalizedText("«El Señor es la defensa del inocente y su luz resplandecerá a su debido tiempo».", "“The Lord is the defender of the innocent.”", "“O Senhor é o escudo dos justos.”"),
+                intercessionPrayer = LocalizedText("Señor Jesús, danos la paciencia y santidad de San Narciso ante las pruebas de la vida. Amén.", "Lord Jesus, grant us patient trust like St. Narcissus. Amen.", "Senhor, dai-nos paciência e pureza de coração. Amém.")
+            )
+
+            month == Calendar.OCTOBER && day == 31 -> SaintOfTheDay(
+                id = "st_alphonsus_rodriguez",
+                name = LocalizedText("San Alfonso Rodríguez y Víspera de Todos los Santos", "Saint Alphonsus Rodriguez (All Hallows' Eve)", "Santo Afonso Rodrigues"),
+                feastDate = "31 de Octubre",
+                title = LocalizedText("Hermano Jesuita y Místico del Servicio Humilde", "Jesuit Mystic and Porter", "Religioso e Místico do Serviço"),
+                patronages = LocalizedText("Porteros, religiosos legos y servidores del prójimo.", "Porters, lay brothers, hospitality workers.", "Porteiros e servidores da Igreja."),
+                biography = LocalizedText(
+                    "Ejerció como portero del colegio de Palma de Mallorca durante 46 años. Al abrir la puerta decía: '¡Ya voy, Señor!', viendo a Cristo en cada visitante. Fue el gran director espiritual de San Pedro Claver, a quien inspiró a misionar en América.",
+                    "Jesuit lay brother who served 46 years as a humble porter, seeing Christ in every visitor. He inspired St. Peter Claver's mission to Colombia.",
+                    "Serviu como humilde porteiro por 46 anos, vendo Cristo em cada pessoa que chegava à porta do convento."
+                ),
+                iconicQuote = LocalizedText("«¡Ya voy, Señor!: ver a Cristo en cada hermano que llama a nuestra puerta».", "“I am coming, Lord!: seeing Christ in every visitor.”", "“Eis-me aqui, Senhor!: servir a Deus nos irmãos.”"),
+                intercessionPrayer = LocalizedText("Haznos, Señor, siervos humildes que acojan a Cristo en los hermanos más necesitados. Amén.", "Make us humble servants of Christ in our neighbor. Amen.", "Fazei-nos mansos e humildes de coração. Amém.")
+            )
+
+            month == Calendar.NOVEMBER && day == 1 -> SaintOfTheDay(
+                id = "all_saints",
+                name = LocalizedText("Solemnidad de Todos los Santos", "Solemnity of All Saints", "Solenidade de Todos os Santos"),
+                feastDate = "1 de Noviembre",
+                title = LocalizedText("Celebración de la Iglesia Triunfante en el Cielo", "Solemnity of the Church Triumphant", "Festa dos Santos no Céu"),
+                patronages = LocalizedText("Toda la Iglesia Católica, vocación universal a la santidad.", "The universal Church, call to holiness.", "A Igreja universal e todos os cristãos."),
+                biography = LocalizedText(
+                    "Celebramos a la inmensa multitud de bienaventurados que nadie puede contar (Apoc 7, 9) que ya contemplan a Dios cara a cara. La Iglesia nos recuerda que la santidad es la vocación de todo bautizado.",
+                    "Solemn feast celebrating the countless multitude of saints standing before the throne of the Lamb in celestial glory.",
+                    "Celebração solene de todos os santos conhecidos e desconhecidos que triunfam na glória celeste com Cristo."
+                ),
+                iconicQuote = LocalizedText("«Alégrense y regocíjense, porque su recompensa será grande en los cielos». (Mt 5, 12)", "“Rejoice and be glad, for your reward will be great in heaven.”", "“Alegrai-vos e exultai, porque é grande a vossa recompensa nos céus.”"),
+                intercessionPrayer = LocalizedText("¡Santos y Santas de Dios, intercedan por nosotros peregrinos en la tierra! Amén.", "All holy saints of God, pray for us on our earthly pilgrimage! Amen.", "Santos e Santas de Deus, rogai por nós! Amém.")
+            )
+
+            month == Calendar.NOVEMBER && day == 2 -> SaintOfTheDay(
+                id = "all_souls",
+                name = LocalizedText("Conmemoración de Todos los Fieles Difuntos", "Commemoration of All the Faithful Departed (All Souls)", "Fiéis Defuntos"),
+                feastDate = "2 de Noviembre",
+                title = LocalizedText("Oración y Sufragio por las Almas del Purgatorio", "Prayers for the Holy Souls in Purgatory", "Oração pelas Almas do Purgatório"),
+                patronages = LocalizedText("Almas del purgatorio y duelo cristiano.", "Holy souls in purgatory, grieving families.", "Almas do purgatório e sufrágios dos fiéis."),
+                biography = LocalizedText(
+                    "Día de solemne sufragio, limosna e indulgencias por las almas del Purgatorio que aguardan su purificación final para contemplar a Dios. Como enseña 2 Macabeos 12, es obra santa orar por los difuntos.",
+                    "Solemn commemoration offering Holy Masses and prayers to speed the purification of the holy souls in purgatory.",
+                    "Dia santo de oração e sufrágio da Igreja pelas almas que se purificam no Purgatório."
+                ),
+                iconicQuote = LocalizedText("«Dales, Señor, el descanso eterno, y brille para ellas la luz perpetua».", "“Eternal rest grant unto them, O Lord, and let perpetual light shine upon them.”", "“Dai-lhes, Senhor, o descanso eterno, e brilhe para elas a luz perpétua.”"),
+                intercessionPrayer = LocalizedText("Descansen en paz las almas de todos los fieles difuntos por la misericordia de Dios. Amén.", "May the souls of the faithful departed through the mercy of God rest in peace. Amen.", "Descanso eterno dai-lhes, Senhor. Amém.")
+            )
+
+            else -> {
+                // Dynamically constructed feast day for today's date
+                val dayStr = "$day de ${when (month) {
+                    Calendar.JANUARY -> "Enero"
+                    Calendar.FEBRUARY -> "Febrero"
+                    Calendar.MARCH -> "Marzo"
+                    Calendar.APRIL -> "Abril"
+                    Calendar.MAY -> "Mayo"
+                    Calendar.JUNE -> "Junio"
+                    Calendar.JULY -> "Julio"
+                    Calendar.AUGUST -> "Agosto"
+                    Calendar.SEPTEMBER -> "Septiembre"
+                    Calendar.OCTOBER -> "Octubre"
+                    Calendar.NOVEMBER -> "Noviembre"
+                    else -> "Diciembre"
+                }}"
+
+                SaintOfTheDay(
+                    id = "saint_day_${month}_$day",
+                    name = LocalizedText("Santo del Día de Hoy ($dayStr)", "Saint of Today ($dayStr)", "Santo do Dia de Hoje ($dayStr)"),
+                    feastDate = dayStr,
+                    title = LocalizedText("Conmemoración del Santoral Católico", "Catholic Sanctoral Feast", "Comemoração do Santoral Católico"),
+                    patronages = LocalizedText("La Iglesia universal y los devotos de hoy.", "The universal Church and faithful.", "A Igreja universal e os fiéis."),
+                    biography = LocalizedText(
+                        "En este día, la Iglesia Católica conmemora a los santos, mártires y confesores de la fe inscritos en el Martirologio Romano que dieron testimonio supremo de amor a Cristo y a los hermanos. Su ejemplo nos inspira a vivir con fidelidad la vocación a la santidad cotidiana.",
+                        "On this day, the Catholic Church celebrates the holy witnesses and martyrs commemorated in the Roman Martyrology who sanctified the world through heroic charity.",
+                        "Neste dia santo, a Igreja celebra os mártires e santos que viveram heroicamente as virtudes cristãs em união com o Coração de Jesus."
+                    ),
+                    iconicQuote = LocalizedText("«Sean santos, porque Yo, el Señor su Dios, soy santo». (Lev 19, 2)", "“Be holy, because I, the Lord your God, am holy.” (Lev 19:2)", "“Sede santos, porque Eu, o Senhor vosso Deus, sou santo”. (Lv 19, 2)"),
+                    intercessionPrayer = LocalizedText("Señor Dios todopoderoso, concédenos la gracia de seguir el ejemplo de tus santos y alcanzar un día la gloria eterna. Amén.", "Almighty God, grant us the grace to follow the holy example of Your saints. Amen.", "Deus todo-poderoso, guiai-nos pelos caminhos da santidade. Amém.")
+                )
+            }
+        }
+    }
+
+    val saintOfTheDay: SaintOfTheDay get() = getTodaySaint()
 
     val verseOfTheDay = VerseOfTheDay(
         reference = "Filipenses 4, 6-7",

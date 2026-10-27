@@ -15,9 +15,11 @@ import androidx.room.RoomDatabase
         HabitCompletionLogEntity::class,
         SinOvercomeLogEntity::class,
         LiturgicalDayEntity::class,
-        ScriptureStudyProgressEntity::class
+        ScriptureStudyProgressEntity::class,
+        AppPreferencesEntity::class,
+        BibleDownloadEntity::class
     ],
-    version = 3,
+    version = 4,
     exportSchema = false
 )
 abstract class SanctaFidesDatabase : RoomDatabase() {

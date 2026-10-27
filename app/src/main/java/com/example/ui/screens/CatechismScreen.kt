@@ -17,7 +17,15 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.material.icons.filled.OpenInNew
+import androidx.compose.material.icons.filled.ExpandMore
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.foundation.shape.RoundedCornerShape
+import com.example.data.repository.CompendiumQA
+import com.example.data.repository.DoctrineFormula
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowForward
@@ -74,6 +82,7 @@ fun CatechismScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier
 ) {
+    var mainMode by remember { mutableIntStateOf(0) } // 0 = Compendio (598), 1 = Catecismo Universal (1-2865), 2 = Fuentes Oficiales
     var selectedPartIndex by remember { mutableIntStateOf(0) } // 0..3 (Parts 1 to 4)
     var selectedChapter by remember { mutableStateOf<CatechismChapter?>(null) }
     var selectedArticleDetail by remember { mutableStateOf<CatechismNumberedArticle?>(null) }
@@ -89,8 +98,71 @@ fun CatechismScreen(
             .fillMaxSize()
             .testTag("catechism_screen")
     ) {
-        // Search bar with CCC number quick search
-        Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp)) {
+        // Top Main Mode Tabs
+        PrimaryTabRow(
+            selectedTabIndex = mainMode,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = SacredBurgundy
+        ) {
+            Tab(
+                selected = mainMode == 0,
+                onClick = { mainMode = 0 },
+                text = {
+                    Text(
+                        text = when (currentLanguage) {
+                            AppLanguage.ES -> "Compendio (598)"
+                            AppLanguage.EN -> "Compendium (598)"
+                            AppLanguage.PT -> "Compêndio (598)"
+                        },
+                        fontWeight = if (mainMode == 0) FontWeight.Bold else FontWeight.Normal,
+                        fontSize = 12.sp
+                    )
+                }
+            )
+            Tab(
+                selected = mainMode == 1,
+                onClick = { mainMode = 1 },
+                text = {
+                    Text(
+                        text = when (currentLanguage) {
+                            AppLanguage.ES -> "Catecismo (1-2865)"
+                            AppLanguage.EN -> "Catechism (1-2865)"
+                            AppLanguage.PT -> "Catecismo (1-2865)"
+                        },
+                        fontWeight = if (mainMode == 1) FontWeight.Bold else FontWeight.Normal,
+                        fontSize = 12.sp
+                    )
+                }
+            )
+            Tab(
+                selected = mainMode == 2,
+                onClick = { mainMode = 2 },
+                text = {
+                    Text(
+                        text = when (currentLanguage) {
+                            AppLanguage.ES -> "Fuentes Vaticano"
+                            AppLanguage.EN -> "Vatican Links"
+                            AppLanguage.PT -> "Fontes Vaticano"
+                        },
+                        fontWeight = if (mainMode == 2) FontWeight.Bold else FontWeight.Normal,
+                        fontSize = 12.sp
+                    )
+                }
+            )
+        }
+
+        when (mainMode) {
+            0 -> {
+                CompendiumView(
+                    repository = repository,
+                    currentLanguage = currentLanguage
+                )
+            }
+            1 -> {
+                // Universal Catechism View
+                Column(modifier = Modifier.fillMaxSize()) {
+                    // Search bar with CCC number quick search
+                    Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp)) {
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
@@ -384,6 +456,15 @@ fun CatechismScreen(
         }
     }
 }
+            2 -> {
+                VaticanOfficialLinksView(
+                    repository = repository,
+                    currentLanguage = currentLanguage
+                )
+            }
+        }
+    }
+}
 
 @Composable
 private fun ArticleItemCard(
@@ -462,6 +543,343 @@ private fun ArticleItemCard(
                             fontSize = 11.sp,
                             color = MaterialTheme.colorScheme.onSurface
                         )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun CompendiumView(
+    repository: CatholicDataRepository,
+    currentLanguage: AppLanguage
+) {
+    var selectedFilterIndex by remember { mutableIntStateOf(0) } // 0 = Todas (598), 1 = Parte I, 2 = Parte II, 3 = Parte III, 4 = Parte IV, 5 = Fórmulas Doctrina
+    var compendiumSearch by remember { mutableStateOf("") }
+    val allQuestions: List<CompendiumQA> = repository.compendiumQAEntries
+
+    val filteredQuestions = remember(selectedFilterIndex, compendiumSearch, currentLanguage) {
+        val byPart = when (selectedFilterIndex) {
+            1 -> allQuestions.filter { it.part == 1 }
+            2 -> allQuestions.filter { it.part == 2 }
+            3 -> allQuestions.filter { it.part == 3 }
+            4 -> allQuestions.filter { it.part == 4 }
+            else -> allQuestions
+        }
+
+        if (compendiumSearch.isBlank()) {
+            byPart
+        } else {
+            val query = compendiumSearch.trim()
+            val num = query.toIntOrNull()
+            if (num != null) {
+                byPart.filter { it.number == num || it.cccReference.contains(query) }
+            } else {
+                byPart.filter {
+                    it.question.get(currentLanguage).contains(query, ignoreCase = true) ||
+                            it.answer.get(currentLanguage).contains(query, ignoreCase = true)
+                }
+            }
+        }
+    }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+    ) {
+        // Search
+        OutlinedTextField(
+            value = compendiumSearch,
+            onValueChange = { compendiumSearch = it },
+            modifier = Modifier
+                .fillMaxWidth()
+                .testTag("compendium_search_input"),
+            placeholder = {
+                Text(
+                    when (currentLanguage) {
+                        AppLanguage.ES -> "Buscar en las 598 preguntas (ej. 1, eucaristía)..."
+                        AppLanguage.EN -> "Search across 598 questions (e.g. 1, eucharist)..."
+                        AppLanguage.PT -> "Buscar nas 598 perguntas (ex. 1, eucaristia)..."
+                    },
+                    fontSize = 12.sp
+                )
+            },
+            leadingIcon = {
+                Icon(imageVector = Icons.Default.Search, contentDescription = null, tint = SacredBurgundy)
+            },
+            trailingIcon = {
+                if (compendiumSearch.isNotBlank()) {
+                    IconButton(onClick = { compendiumSearch = "" }) {
+                        Icon(Icons.Default.Close, contentDescription = "Clear")
+                    }
+                }
+            },
+            shape = RoundedCornerShape(14.dp),
+            singleLine = true
+        )
+
+        Spacer(modifier = Modifier.height(10.dp))
+
+        // Part filter chips
+        ScrollableTabRow(
+            selectedTabIndex = selectedFilterIndex,
+            containerColor = MaterialTheme.colorScheme.surface,
+            contentColor = SacredBurgundy,
+            edgePadding = 4.dp
+        ) {
+            val filterNames = when (currentLanguage) {
+                AppLanguage.ES -> listOf("Todas (598)", "P. I: La Fe", "P. II: Sacramentos", "P. III: Vida en Cristo", "P. IV: Oración", "Fórmulas Doctrinales")
+                AppLanguage.EN -> listOf("All (598)", "P. I: The Faith", "P. II: Sacraments", "P. III: Life in Christ", "P. IV: Prayer", "Doctrinal Formulas")
+                AppLanguage.PT -> listOf("Todas (598)", "P. I: A Fé", "P. II: Sacramentos", "P. III: Vida em Cristo", "P. IV: Oração", "Fórmulas Doutrinais")
+            }
+            filterNames.forEachIndexed { idx, name ->
+                Tab(
+                    selected = selectedFilterIndex == idx,
+                    onClick = { selectedFilterIndex = idx },
+                    text = {
+                        Text(
+                            text = name,
+                            fontSize = 11.sp,
+                            fontWeight = if (selectedFilterIndex == idx) FontWeight.Bold else FontWeight.Normal
+                        )
+                    }
+                )
+            }
+        }
+
+        Spacer(modifier = Modifier.height(10.dp))
+
+        if (selectedFilterIndex == 5) {
+            // Doctrinal formulas
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                item {
+                    Text(
+                        text = "Fórmulas Principales de la Doctrina Católica",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 15.sp,
+                        color = SacredBurgundy
+                    )
+                }
+
+                items(repository.doctrineFormulas) { item ->
+                    Card(
+                        shape = RoundedCornerShape(14.dp),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+                        border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(14.dp)) {
+                            Text(
+                                text = item.title.get(currentLanguage),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 14.sp,
+                                color = SacredBurgundy
+                            )
+                            Spacer(modifier = Modifier.height(6.dp))
+                            Text(
+                                text = item.items.joinToString("\n• ", prefix = "• ") { it.get(currentLanguage) },
+                                style = MaterialTheme.typography.bodyMedium,
+                                lineHeight = 22.sp
+                            )
+                        }
+                    }
+                }
+            }
+        } else {
+            // Questions list
+            LazyColumn(
+                modifier = Modifier.fillMaxSize(),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                item {
+                    Text(
+                        text = "Mostrando ${filteredQuestions.size} preguntas del Compendio Oficial:",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+
+                items(filteredQuestions) { q ->
+                    Card(
+                        shape = RoundedCornerShape(14.dp),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                        border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
+                    ) {
+                        Column(modifier = Modifier.padding(14.dp)) {
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.SpaceBetween,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .clip(RoundedCornerShape(6.dp))
+                                        .background(SacredBurgundy)
+                                        .padding(horizontal = 8.dp, vertical = 3.dp)
+                                ) {
+                                    Text(
+                                        text = "Pregunta ${q.number}",
+                                        fontWeight = FontWeight.Bold,
+                                        fontSize = 11.sp,
+                                        color = Color.White
+                                    )
+                                }
+
+                                Text(
+                                    text = q.cccReference,
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = LiturgicalGold
+                                )
+                            }
+
+                            Spacer(modifier = Modifier.height(8.dp))
+
+                            Text(
+                                text = q.question.get(currentLanguage),
+                                style = MaterialTheme.typography.titleSmall,
+                                fontWeight = FontWeight.Bold,
+                                color = SacredBurgundy
+                            )
+
+                            Spacer(modifier = Modifier.height(8.dp))
+
+                            Text(
+                                text = q.answer.get(currentLanguage),
+                                fontFamily = FontFamily.Serif,
+                                style = MaterialTheme.typography.bodyMedium,
+                                lineHeight = 22.sp,
+                                color = MaterialTheme.colorScheme.onSurface
+                            )
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun VaticanOfficialLinksView(
+    repository: CatholicDataRepository,
+    currentLanguage: AppLanguage
+) {
+    val context = LocalContext.current
+    LazyColumn(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
+    ) {
+        item {
+            ElevatedCard(
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        text = "Fuentes Documentales Oficiales de la Santa Sede",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                        color = SacredBurgundy
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = "Accede a los portales oficiales de la Santa Sede (vatican.va) con los textos completos del Catecismo de la Iglesia Católica y del Compendio en Español, Inglés y Portugués.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+        }
+
+        items(repository.officialVaticanLinks) { item ->
+            Card(
+                shape = RoundedCornerShape(14.dp),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
+            ) {
+                Column(modifier = Modifier.padding(14.dp)) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = "Vatican.va (${item.language})",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 15.sp,
+                            color = SacredBurgundy,
+                            modifier = Modifier.weight(1f)
+                        )
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(6.dp))
+                                .background(LiturgicalGold.copy(alpha = 0.25f))
+                                .padding(horizontal = 8.dp, vertical = 3.dp)
+                        ) {
+                            Text(
+                                text = item.language,
+                                fontSize = 10.sp,
+                                fontWeight = FontWeight.Bold,
+                                color = SacredBurgundy
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Text(
+                        text = "Catecismo de la Iglesia Católica (Texto Completo 1-2865)",
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 13.sp,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Text(
+                        text = item.catechismUrl,
+                        fontSize = 10.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    FilledTonalButton(
+                        onClick = {
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.catechismUrl))
+                            context.startActivity(intent)
+                        },
+                        modifier = Modifier.padding(top = 4.dp)
+                    ) {
+                        Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text("Abrir Catecismo Oficial", fontSize = 11.sp)
+                    }
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Text(
+                        text = "Compendio del Catecismo (598 Preguntas y Respuestas)",
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 13.sp,
+                        color = MaterialTheme.colorScheme.onSurface
+                    )
+                    Text(
+                        text = item.compendiumUrl,
+                        fontSize = 10.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                    FilledTonalButton(
+                        onClick = {
+                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(item.compendiumUrl))
+                            context.startActivity(intent)
+                        },
+                        modifier = Modifier.padding(top = 4.dp)
+                    ) {
+                        Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text("Abrir Compendio Oficial", fontSize = 11.sp)
                     }
                 }
             }
