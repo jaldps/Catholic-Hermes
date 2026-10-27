@@ -1,0 +1,1232 @@
+package com.example.data.repository
+
+import com.example.data.models.LocalizedText
+import com.example.data.models.Novena
+import com.example.data.models.NovenaDay
+
+object NovenaData075 {
+    val novena: Novena = Novena(
+        id = """novena-a-san-francisco-de-sales""",
+        title = LocalizedText("""Novena a San Francisco de Sales""", """St. Francis de Sales Novena""", """Novena a São Francisco de Sales"""),
+        patron = LocalizedText("""Santo patrón de la prensa católica, Columbus (Ohio), los confesores, las personas sordas, los educadores, los escritores y los periodistas""", """Patron saint of Catholic press, Columbus Ohio, confessors, deaf people, educators, writers, and journalists""", """Novena a São Francisco de Sales"""),
+        category = LocalizedText("""Novenas""", """Novenas""", """Novenas"""),
+        description = LocalizedText("""Nacido en una rica familia francesa cerca de Ginebra, Suiza, en 1567, Francisco fue piadoso desde pequeño y estaba dotado de una inteligencia profunda.""", """Born to a rich French family near Geneva, Switzerland in 1567, Francis was devout from an early age and blessed with deep intellect.""", """Santo padroeiro de a imprensa católica, Columbus (Ohio), os confessores, os surdos, os educadores, os escritores e os jornalistas"""),
+        miraculousHistory = LocalizedText("", "", ""),
+        promises = LocalizedText("", "", ""),
+        days = listOf(
+            NovenaDay(
+                dayNumber = 1,
+                theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 2,
+                theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 3,
+                theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 4,
+                theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 5,
+                theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 6,
+                theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 7,
+                theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 8,
+                theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 9,
+                theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul
+(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-francisco-de-sales/'; var pageTitle = "Novena a San Francisco de Sales"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Novena a San Francisco de Sales"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th
+(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-francis-de-sales-novena/'; var pageTitle = "St. Francis de Sales Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "St. Francis de Sales Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set
+(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-francisco-de-sales/'; var pageTitle = "Novena a São Francisco de Sales"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Novena a São Francisco de Sales"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh bienaventurado Francisco, que en tu vida sobresaliste en todas las virtudes, especialmente en el amor a Dios y al prójimo, te pido encarecidamente que me tomes bajo tu inmediata protección y que me obtengas de Dios mi perfecta conversión y la de todos los pecadores.
+Ruega por mí, san Francisco de Sales, para que fije mis ojos en el cielo, para que pise generosamente todo obstáculo que se presente en mi camino y alcance aquel grado de gloria que Dios, en Su misericordia, me ofrece.
+Obtenme también el favor que ahora te pido
+(menciona tu petición aquí…)
+Ayúdanos, Señor, te lo suplicamos, por los méritos de san Francisco de Sales, para que lo que nuestros esfuerzos no pueden obtener nos sea concedido por su intercesión.
+Oh Dios, que para la salvación de las almas quisiste que san Francisco de Sales se hiciera todo para todos, concédenos misericordiosamente que, ayudados por la dulzura de su caridad, guiados por sus enseñanzas y participando de sus méritos, alcancemos la felicidad eterna. Te lo pedimos por Cristo nuestro Señor. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul
+(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-francisco-de-sales/'; var pageTitle = "Novena a San Francisco de Sales"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Novena a San Francisco de Sales"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Blessed Francis, who in your life did excel in all virtues, especially in your love of God and of your neighbor, I earnestly ask you to take me under your immediate protection, to obtain from God my perfect conversion, and that of all sinners.
+Pray for me, St Francis de Sales, to fix my eyes on heaven, that I may generously trample under foot every obstacle that presents itself in my way, and attain that degree of glory which God in His mercy offers to me.
+Obtain also the favor for which I now pray
+(mention request here…)
+Assist us O Lord, we beseech you, through the merits of St. Francis de Sales that, what our endeavors cannot obtain, may be given to us by his intercession.
+O God, who for the salvation of souls, did will that St. Francis de Sales should become all things to all men and women, mercifully grant that we, helped by the gentleness of his charity, guided by his teachings, and sharing in his merits, may obtain eternal happiness. This we ask through Christ our Lord. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th
+(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-francis-de-sales-novena/'; var pageTitle = "St. Francis de Sales Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "St. Francis de Sales Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+Answered Prayers from the Community
+“He came through and gave us some great helpers whether that was students who were amazing or fellow staff!”
+🙏 30
+Esmeralda B.
+·
+🇺🇸
+·
+Jun 13th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Ó bem-aventurado Francisco, que na vossa vida vos distinguistes em todas as virtudes, especialmente no amor a Deus e ao próximo, peço-vos ardentemente que me tomeis sob a vossa proteção imediata e me alcanceis de Deus a minha perfeita conversão e a de todos os pecadores.
+Rogai por mim, São Francisco de Sales, para que eu fixe os olhos no céu, para que pise generosamente todo obstáculo que se apresente no meu caminho e alcance aquele grau de glória que Deus, na Sua misericórdia, me oferece.
+Alcançai-me também a graça pela qual agora rezo
+(mencione o pedido aqui…)
+Assisti-nos, Senhor, nós Vos pedimos, pelos méritos de São Francisco de Sales, para que aquilo que os nossos esforços não podem obter nos seja dado pela sua intercessão.
+Ó Deus, que para a salvação das almas quisestes que São Francisco de Sales se fizesse tudo para todos, concedei-nos benignamente que, ajudados pela doçura da sua caridade, guiados pelos seus ensinamentos e participantes dos seus méritos, alcancemos a felicidade eterna. Nós Vo-lo pedimos por Cristo, nosso Senhor. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set
+(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-francisco-de-sales/'; var pageTitle = "Novena a São Francisco de Sales"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Novena a São Francisco de Sales"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+        ),
+        imageUrl = """https://catholicnovenaapp.com/assets/images/st-francis-de-sales-teaser.png"""
+    )
+}

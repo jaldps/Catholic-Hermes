@@ -1,0 +1,2484 @@
+package com.example.data.repository
+
+import com.example.data.models.LocalizedText
+import com.example.data.models.Novena
+import com.example.data.models.NovenaDay
+
+object NovenaData018 {
+    val novena: Novena = Novena(
+        id = """novena-a-los-martires-de-norteamerica""",
+        title = LocalizedText("""Novena a los Mártires de Norteamérica (Mártires Canadienses)""", """North American Martyrs Novena""", """Novena aos Santos Mártires Norte-Americanos"""),
+        patron = LocalizedText("""Santo patrón de Canadá""", """Patron saint of Canada""", """Novena aos Santos Mártires Norte-Americanos"""),
+        category = LocalizedText("""Novenas""", """Novenas""", """Novenas"""),
+        description = LocalizedText("""Reza esta novena a los Mártires de Norteamérica (también llamados Mártires Canadienses), misioneros jesuitas franceses entre los pueblos nativos que fueron martirizados por su fe. Pide por Canadá y por América del Norte.""", """The North American Martyrs (also known as the Canadian Martyrs) were French Jesuit missionaries to the Native Americans who were martyred for their faith. Pray this novena for Canada and North America.""", """Os Mártires Norte-Americanos (também chamados Mártires Canadenses) foram missionários jesuítas franceses entre os povos indígenas da América do Norte, martirizados por sua fé. Reze esta novena pelo Canadá e pela América do Norte."""),
+        miraculousHistory = LocalizedText("", "", ""),
+        promises = LocalizedText("", "", ""),
+        days = listOf(
+            NovenaDay(
+                dayNumber = 1,
+                theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have seen the Lord's goodness, his mercies and compassion 🙏”
+🙏 552
+Ifuu C.
+·
+🇳🇬
+·
+Oct 19th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have seen the Lord's goodness, his mercies and compassion 🙏”
+🙏 552
+Ifuu C.
+·
+🇳🇬
+·
+Oct 19th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 2,
+                theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I know it has been answered, just not yet. Praying for vocations and pathways”
+🙏 402
+Community Member
+·
+🇺🇸
+·
+Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I know it has been answered, just not yet. Praying for vocations and pathways”
+🙏 402
+Community Member
+·
+🇺🇸
+·
+Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 3,
+                theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“YES, THIS NOVENA ANSWERED MY PRAYER TO BE STRONGER, ENERGETIC AND MORE PASSIONATE OF MY FAITH❤️🙏🕊️🌹”
+🙏 352
+Mark S.
+·
+🇺🇸
+·
+Oct 22nd""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“YES, THIS NOVENA ANSWERED MY PRAYER TO BE STRONGER, ENERGETIC AND MORE PASSIONATE OF MY FAITH❤️🙏🕊️🌹”
+🙏 352
+Mark S.
+·
+🇺🇸
+·
+Oct 22nd""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 4,
+                theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have seen the Hand of God in our mission”
+🙏 301
+Community Member
+·
+🇬🇧
+·
+Oct 18th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have seen the Hand of God in our mission”
+🙏 301
+Community Member
+·
+🇬🇧
+·
+Oct 18th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 5,
+                theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“KINGS”
+🙏 301
+Community Member
+·
+🇵🇭
+·
+Oct 18th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“KINGS”
+🙏 301
+Community Member
+·
+🇵🇭
+·
+Oct 18th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 6,
+                theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have seen the Lord's goodness, his mercies and compassion 🙏”
+🙏 552
+Ifuu C.
+·
+🇳🇬
+·
+Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have seen the Lord's goodness, his mercies and compassion 🙏”
+🙏 552
+Ifuu C.
+·
+🇳🇬
+·
+Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 7,
+                theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I know it has been answered, just not yet. Praying for vocations and pathways”
+🙏 402
+Community Member
+·
+🇺🇸
+·
+Oct 19th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I know it has been answered, just not yet. Praying for vocations and pathways”
+🙏 402
+Community Member
+·
+🇺🇸
+·
+Oct 19th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 8,
+                theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“YES, THIS NOVENA ANSWERED MY PRAYER TO BE STRONGER, ENERGETIC AND MORE PASSIONATE OF MY FAITH❤️🙏🕊️🌹”
+🙏 352
+Mark S.
+·
+🇺🇸
+·
+Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“YES, THIS NOVENA ANSWERED MY PRAYER TO BE STRONGER, ENERGETIC AND MORE PASSIONATE OF MY FAITH❤️🙏🕊️🌹”
+🙏 352
+Mark S.
+·
+🇺🇸
+·
+Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 9,
+                theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul
+(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-los-martires-de-norteamerica/'; var pageTitle = "Mártires de Norteamérica"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Mártires de Norteamérica"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+Novena Relacionada
+Novena a Santa Kateri""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have seen the Hand of God in our mission”
+🙏 301
+Community Member
+·
+🇬🇧
+·
+Oct 18th
+(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/north-american-martyrs-novena/'; var pageTitle = "North American Martyrs Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "North American Martyrs Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+Answered Prayers from the Community
+“I have seen the Lord's goodness, his mercies and compassion 🙏”
+🙏 552
+Ifuu C.
+·
+🇳🇬
+·
+Oct 19th
+“I know it has been answered, just not yet. Praying for vocations and pathways”
+🙏 402
+Community Member
+·
+🇺🇸
+·
+Oct 19th
+“YES, THIS NOVENA ANSWERED MY PRAYER TO BE STRONGER, ENERGETIC AND MORE PASSIONATE OF MY FAITH❤️🙏🕊️🌹”
+🙏 352
+Mark S.
+·
+🇺🇸
+·
+Oct 22nd
+“I have seen the Hand of God in our mission”
+🙏 301
+Community Member
+·
+🇬🇧
+·
+Oct 18th
+“KINGS”
+🙏 301
+Community Member
+·
+🇵🇭
+·
+Oct 18th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set
+(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-aos-martires-norte-americanos/'; var pageTitle = "Mártires Norte-Americanos"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Mártires Norte-Americanos"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+Novena Relacionada
+Novena a Santa Kateri"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Señor, ten piedad de nosotros.
+Cristo, ten piedad de nosotros.
+¡Señor, ten piedad de nosotros!
+Cristo, óyenos.
+Cristo, escúchanos.
+Nuestra Señora, Reina de los Mártires, ruega por nosotros.
+San Isaac Jogues, ruega por nosotros.
+San Juan de Brébeuf, ruega por nosotros.
+San Gabriel Lalemant, ruega por nosotros.
+San Carlos Garnier, ruega por nosotros.
+San Antonio Daniel, ruega por nosotros.
+San Noel Chabanel, ruega por nosotros.
+San Renato Goupil, ruega por nosotros.
+San Juan de Lalande, ruega por nosotros.
+Oremos.
+Oh Dios, que por la predicación y la sangre de tus santos mártires Isaac, Juan y sus compañeros consagraste las primicias de la fe en las vastas regiones de América del Norte, concédenos benignamente que, por su intercesión, la floreciente cosecha de cristianos crezca en todas partes y siempre.
+Por nuestro Señor Jesucristo, que vive y reina contigo en la unidad del Espíritu Santo, un solo Dios, por los siglos de los siglos. Amén.
+Oración de petición
+Oh Dios, que inflamaste los corazones de tus santos mártires con un admirable celo por la salvación de las almas, concédenos, te lo suplicamos, lo que ahora te imploramos:
+(menciona tu petición aquí…)
+para que los favores obtenidos por su intercesión manifiesten ante los hombres el poder y la gloria de tu Nombre. Amén.
+Oración final
+Santos mártires y patronos, proteged esta tierra que bendijisteis con el derramamiento de vuestra sangre.
+Renovad en estos días nuestra fe católica, que ayudasteis a establecer en esta nueva tierra.
+Llevad a todos nuestros conciudadanos al conocimiento y al amor de la verdad.
+Hacednos celosos en la profesión de nuestra fe, para que continuemos y perfeccionemos la obra que comenzasteis con tanto trabajo y sufrimiento.
+Rogad por nuestros hogares, nuestras escuelas, nuestras misiones, por las vocaciones, por la conversión de los pecadores, por el regreso de quienes se han alejado del redil y por la perseverancia de todos los fieles.
+Y fomentad una unidad cada vez más profunda entre todos los cristianos. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+🙏 548
+Camí C.
+·
+🇺🇸
+·
+20 de jul
+(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-los-martires-de-norteamerica/'; var pageTitle = "Mártires de Norteamérica"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Mártires de Norteamérica"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+Novena Relacionada
+Novena a Santa Kateri""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Lord, have mercy on us.
+Christ, have mercy on us.
+Lord, have mercy on us!
+Christ, hear us.
+Christ, graciously hear us.
+Our Lady, Queen of Martyrs, pray for us.
+Saint Isaac Jogues, pray for us.
+Saint John de Brébeuf, pray for us.
+Saint Gabriel Lalemant, pray for us.
+Saint Charles Garnier, pray for us.
+Saint Anthony Daniel, pray for us.
+Saint Noël Chabanel, pray for us.
+Saint René Goupil, pray for us.
+Saint John Lalande, pray for us.
+Let Us Pray.
+O God, who by the preaching and blood of Thy sainted martyrs, Isaac and John and their companions, didst, consecrate the first fruits of the Faith in the vast regions of North America, graciously grant that by their intercession, the flourishing harvest of Christians may everywhere and always be increased.
+Through Our Lord Jesus Christ, Who liveth and reigneth with Thee, in union with the Holy Spirit, one God, world without end. Amen.
+Prayer of Petition
+O God, who didst inflame the hearts of Thy sainted martyrs with an admirable zeal for the salvation of souls, grant us, we beseech Thee what we now implore
+(mention request here…)
+So that the favors obtained through their intercession may make manifest before men the power and glory of Thy Name. Amen.
+Final Prayer
+Holy Martyrs and patrons, protect this land which you have blessed by the shedding of your blood.
+Renew in these days our Catholic faith which you helped to establish in this new land.
+Bring all our fellow citizens to a knowledge and love of the truth.
+Make us zealous in the profession of our faith so that we may continue and perfect the work which you have begun with so much labor and suffering.
+Pray for our homes, our schools, our missions, for vocations, for the conversion of sinners, the return of those who have wandered from the fold, and the perseverance of all the faithful.
+And foster a deeper and increasing unity among all Christians. Amen.
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have seen the Hand of God in our mission”
+🙏 301
+Community Member
+·
+🇬🇧
+·
+Oct 18th
+(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/north-american-martyrs-novena/'; var pageTitle = "North American Martyrs Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "North American Martyrs Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+Answered Prayers from the Community
+“I have seen the Lord's goodness, his mercies and compassion 🙏”
+🙏 552
+Ifuu C.
+·
+🇳🇬
+·
+Oct 19th
+“I know it has been answered, just not yet. Praying for vocations and pathways”
+🙏 402
+Community Member
+·
+🇺🇸
+·
+Oct 19th
+“YES, THIS NOVENA ANSWERED MY PRAYER TO BE STRONGER, ENERGETIC AND MORE PASSIONATE OF MY FAITH❤️🙏🕊️🌹”
+🙏 352
+Mark S.
+·
+🇺🇸
+·
+Oct 22nd
+“I have seen the Hand of God in our mission”
+🙏 301
+Community Member
+·
+🇬🇧
+·
+Oct 18th
+“KINGS”
+🙏 301
+Community Member
+·
+🇵🇭
+·
+Oct 18th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhor, tende piedade de nós.
+Cristo, tende piedade de nós.
+Senhor, tende piedade de nós!
+Cristo, ouvi-nos.
+Cristo, atendei-nos.
+Nossa Senhora, Rainha dos Mártires, rogai por nós.
+Santo Isaac Jogues, rogai por nós.
+São João de Brébeuf, rogai por nós.
+São Gabriel Lalemant, rogai por nós.
+São Carlos Garnier, rogai por nós.
+Santo Antônio Daniel, rogai por nós.
+São Noël Chabanel, rogai por nós.
+São René Goupil, rogai por nós.
+São João de Lalande, rogai por nós.
+Oremos.
+Ó Deus, que pela pregação e pelo sangue dos Vossos santos mártires Isaac, João e seus companheiros consagrastes as primícias da fé nas vastas regiões da América do Norte, concedei benignamente que, por sua intercessão, a florescente messe dos cristãos cresça sempre e em toda parte.
+Por Nosso Senhor Jesus Cristo, que Convosco vive e reina, na unidade do Espírito Santo, Deus, por todos os séculos dos séculos. Amém.
+Oração de súplica
+Ó Deus, que inflamastes os corações dos Vossos santos mártires com admirável zelo pela salvação das almas, concedei-nos, Vos suplicamos, o que agora imploramos:
+(mencione o pedido aqui…)
+para que os favores alcançados por sua intercessão manifestem diante dos homens o poder e a glória do Vosso Nome. Amém.
+Oração final
+Santos Mártires e padroeiros, protegei esta terra que abençoastes com o derramamento do vosso sangue.
+Renovai nestes dias a nossa fé católica, que ajudastes a estabelecer nesta nova terra.
+Conduzi todos os nossos concidadãos ao conhecimento e ao amor da verdade.
+Tornai-nos zelosos na profissão da nossa fé, para que continuemos e aperfeiçoemos a obra que começastes com tanto trabalho e sofrimento.
+Rogai pelos nossos lares, pelas nossas escolas, pelas nossas missões, pelas vocações, pela conversão dos pecadores, pelo retorno dos que se afastaram do rebanho e pela perseverança de todos os fiéis.
+E promovei uma unidade cada vez mais profunda entre todos os cristãos. Amém.
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set
+(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-aos-martires-norte-americanos/'; var pageTitle = "Mártires Norte-Americanos"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Mártires Norte-Americanos"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+Novena Relacionada
+Novena a Santa Kateri"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+        ),
+        imageUrl = """https://catholicnovenaapp.com/assets/images/north-american-martyrs-novena.png"""
+    )
+}

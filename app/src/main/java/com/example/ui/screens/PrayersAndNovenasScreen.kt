@@ -387,7 +387,7 @@ fun PrayersAndNovenasScreen(
                                         verticalAlignment = Alignment.CenterVertically
                                     ) {
                                         Text(
-                                            text = "PROGRESO: DÍA $activeNovenaDay DE 9",
+                                            text = "PROGRESO: DÍA $activeNovenaDay DE ${novena.days.size}",
                                             fontSize = 11.sp,
                                             fontWeight = FontWeight.Bold,
                                             color = LiturgicalGold
@@ -405,7 +405,7 @@ fun PrayersAndNovenasScreen(
                                         modifier = Modifier.fillMaxWidth(),
                                         horizontalArrangement = Arrangement.SpaceBetween
                                     ) {
-                                        (1..9).forEach { dayNum ->
+                                        (1..novena.days.size).forEach { dayNum ->
                                             val isSelected = dayNum == activeNovenaDay
                                             val isCompleted = novenaCompletedDays.contains(dayNum)
 
@@ -458,39 +458,44 @@ fun PrayersAndNovenasScreen(
                                         fontWeight = FontWeight.Bold,
                                         color = SacredBurgundy
                                     )
-                                    Text(
-                                        text = dayData.scripture,
-                                        fontSize = 12.sp,
-                                        fontWeight = FontWeight.Bold,
-                                        color = LiturgicalGold
-                                    )
+                                    if (dayData.scripture.isNotBlank()) {
+                                        Text(
+                                            text = dayData.scripture,
+                                            fontSize = 12.sp,
+                                            fontWeight = FontWeight.Bold,
+                                            color = LiturgicalGold
+                                        )
+                                    }
 
                                     Spacer(modifier = Modifier.height(12.dp))
 
-                                    Text(
-                                        text = dayData.meditation.get(currentLanguage),
-                                        style = MaterialTheme.typography.bodyMedium,
-                                        lineHeight = 22.sp
-                                    )
-
-                                    Spacer(modifier = Modifier.height(14.dp))
+                                    if (dayData.meditation.get(currentLanguage).isNotBlank()) {
+                                        Text(
+                                            text = dayData.meditation.get(currentLanguage),
+                                            style = MaterialTheme.typography.bodyMedium,
+                                            lineHeight = 22.sp
+                                        )
+                                        Spacer(modifier = Modifier.height(14.dp))
+                                    }
 
                                     // Intention guidance
-                                    Surface(
-                                        shape = RoundedCornerShape(10.dp),
-                                        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
-                                    ) {
-                                        Row(
-                                            modifier = Modifier.padding(10.dp),
-                                            verticalAlignment = Alignment.CenterVertically
+                                    if (dayData.intentionGuidance.get(currentLanguage).isNotBlank()) {
+                                        Surface(
+                                            shape = RoundedCornerShape(10.dp),
+                                            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
                                         ) {
-                                            Icon(Icons.Default.Info, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
-                                            Spacer(modifier = Modifier.width(8.dp))
-                                            Text(
-                                                text = dayData.intentionGuidance.get(currentLanguage),
-                                                fontSize = 11.sp,
-                                                color = MaterialTheme.colorScheme.onSurface
-                                            )
+                                            Row(
+                                                modifier = Modifier.padding(10.dp),
+                                                verticalAlignment = Alignment.CenterVertically
+                                            ) {
+                                                Icon(Icons.Default.Info, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
+                                                Spacer(modifier = Modifier.width(8.dp))
+                                                Text(
+                                                    text = dayData.intentionGuidance.get(currentLanguage),
+                                                    fontSize = 11.sp,
+                                                    color = MaterialTheme.colorScheme.onSurface
+                                                )
+                                            }
                                         }
                                     }
                                 }
@@ -548,7 +553,7 @@ fun PrayersAndNovenasScreen(
                                         FilledTonalButton(
                                             onClick = {
                                                 novenaCompletedDays = novenaCompletedDays + activeNovenaDay
-                                                if (activeNovenaDay < 9) activeNovenaDay++
+                                                if (activeNovenaDay < novena.days.size) activeNovenaDay++
                                             },
                                             modifier = Modifier.weight(1f),
                                             colors = ButtonDefaults.filledTonalButtonColors(
@@ -700,7 +705,7 @@ private fun NovenaOverviewCard(
                         .padding(horizontal = 10.dp, vertical = 4.dp)
                 ) {
                     Text(
-                        text = "9 DÍAS",
+                        text = "${novena.days.size} DÍAS",
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
                         color = SacredBurgundy,

@@ -1,0 +1,1554 @@
+package com.example.data.repository
+
+import com.example.data.models.LocalizedText
+import com.example.data.models.Novena
+import com.example.data.models.NovenaDay
+
+object NovenaData213 {
+    val novena: Novena = Novena(
+        id = """novena-al-inmaculado-corazon-de-maria""",
+        title = LocalizedText("""Novena al Inmaculado Corazón de María""", """Immaculate Heart of Mary Novena""", """Novena ao Imaculado Coração de Maria - Consagração"""),
+        patron = LocalizedText("""Santo patrón de Apostolado de la Oración, Alianza de los Sagrados Corazones, Territorios Rusos, Escocia, África Central, República del Congo, Angola, Ecuador, Panamá, Filipinas y Georgia""", """Patron saint of Apostleship of Prayer, Ratnapura Diocese, Alliance of Sacred Hearts, Russian Territories, Scotland, Central Africa, Republic of the Congo, Angola, Ecuador, Panama, Minglanilla, Cebu, Philippines, and, Georgia""", """Novena ao Imaculado Coração de Maria - Consagração"""),
+        category = LocalizedText("""Novenas""", """Novenas""", """Novenas"""),
+        description = LocalizedText("""Devotion to the Immaculate Heart of Mary springs from the Church’s reflection on her life, especially in relation to her Son, Jesus Christ. Pray this novena for greater devotion to Our Lady and Her Son.""", """Devotion to the Immaculate Heart of Mary springs from the Church’s reflection on her life, especially in relation to her Son, Jesus Christ. Pray this novena for greater devotion to Our Lady and Her Son.""", """Santo padroeiro de Apostolado da Oração, Diocese de Ratnapura, Aliança dos Sagrados Corações, Territórios Russos, Escócia, África Central, República do Congo, Angola, Equador, Panamá, Minglanilla, Cebu e Geórgia"""),
+        miraculousHistory = LocalizedText("", "", ""),
+        promises = LocalizedText("", "", ""),
+        days = listOf(
+            NovenaDay(
+                dayNumber = 1,
+                theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“My faith has been growing day by day!”
+🙏 66
+Lorenzo P.
+·
+🇺🇸
+·
+Jun 22nd""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Filha predileta de Deus Pai, em quem Ele pôs todas as suas complacências. Mãe querida, pelo vosso obedientíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, naquela profunda reverência, amor filial e humilde submissão, que fizeram do vosso Coração um espetáculo sublime para o céu e para a terra. Não mais quero ofender ao Pai Celeste, e esforçar-me-ei, a vosso exemplo, por dar-lhe em tudo contentamento e gozo. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“My faith has been growing day by day!”
+🙏 66
+Lorenzo P.
+·
+🇺🇸
+·
+Jun 22nd""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Filha predileta de Deus Pai, em quem Ele pôs todas as suas complacências. Mãe querida, pelo vosso obedientíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, naquela profunda reverência, amor filial e humilde submissão, que fizeram do vosso Coração um espetáculo sublime para o céu e para a terra. Não mais quero ofender ao Pai Celeste, e esforçar-me-ei, a vosso exemplo, por dar-lhe em tudo contentamento e gozo. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 2,
+                theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“Through the intercession of the immaculate heart of Mary, my wife was lead back to the Catholic church, and all of our 4 children baptized this year, including first communion, and confirmations of our 2 oldest. I had prayed for my family to be brought back into communion with the church and the Lord brought them to Him.”
+🙏 59
+Wilfredo G.
+·
+🇺🇸
+·
+Jun 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Mãe virginal de Deus Filho, que fazia transbordar de júbilo o Sagrado Coração de Jesus. Mãe querida, pelo vosso perfeitíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, no conhecimento, amor e imitação cada vez mais perfeitos de Jesus, vosso Filho dileto; e que dia a dia me mostre digno discípulo seu e perfeito cristão. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“Through the intercession of the immaculate heart of Mary, my wife was lead back to the Catholic church, and all of our 4 children baptized this year, including first communion, and confirmations of our 2 oldest. I had prayed for my family to be brought back into communion with the church and the Lord brought them to Him.”
+🙏 59
+Wilfredo G.
+·
+🇺🇸
+·
+Jun 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Mãe virginal de Deus Filho, que fazia transbordar de júbilo o Sagrado Coração de Jesus. Mãe querida, pelo vosso perfeitíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, no conhecimento, amor e imitação cada vez mais perfeitos de Jesus, vosso Filho dileto; e que dia a dia me mostre digno discípulo seu e perfeito cristão. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 3,
+                theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“Prayers heard 🙏🏽 Mother Mary loves us ❤️”
+🙏 54
+Kandace M.
+·
+🇺🇸
+·
+Jun 20th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Esposa castíssima e Templo admirável do Espírito Santo, ornado por Ele de todas as suas virtudes e dons. Mãe querida, pelo vosso santíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, tabernáculo do Divino Hóspede, ornado de sólidas e perfeitas virtudes, como d’Ele exige a perfeição cristã, e de todos os dons do Espírito Santo. Fazei-o puro e dócil, para que ouvindo a sua voz a siga fielmente. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“Prayers heard 🙏🏽 Mother Mary loves us ❤️”
+🙏 54
+Kandace M.
+·
+🇺🇸
+·
+Jun 20th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Esposa castíssima e Templo admirável do Espírito Santo, ornado por Ele de todas as suas virtudes e dons. Mãe querida, pelo vosso santíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, tabernáculo do Divino Hóspede, ornado de sólidas e perfeitas virtudes, como d’Ele exige a perfeição cristã, e de todos os dons do Espírito Santo. Fazei-o puro e dócil, para que ouvindo a sua voz a siga fielmente. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 4,
+                theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“God is forever answering my prayers. He is always working and has given me the Grace to see Him work in all things. Lord have mercy on my soul.”
+🙏 28
+Sarah M.
+·
+🇺🇸
+·
+Jul 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Corredentora do gênero humano e Medianeira de todas as graças, inseparavelmente unida ao do nosso Divino Redentor. Mãe querida, pelo vosso zelosíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso; que infatigavelmente coopere na obra da redenção, por meio de um intenso e santo apostolado; e seja digno mediador entre Deus e os homens pela oração e penitência. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“God is forever answering my prayers. He is always working and has given me the Grace to see Him work in all things. Lord have mercy on my soul.”
+🙏 28
+Sarah M.
+·
+🇺🇸
+·
+Jul 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Corredentora do gênero humano e Medianeira de todas as graças, inseparavelmente unida ao do nosso Divino Redentor. Mãe querida, pelo vosso zelosíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso; que infatigavelmente coopere na obra da redenção, por meio de um intenso e santo apostolado; e seja digno mediador entre Deus e os homens pela oração e penitência. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 5,
+                theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“Always! I see God working which in itself is a gift. He is now and active in all our prayers. Keep you eyes peeled!! Our God is an AWESOME GOD!❤️🙌🏼🙏🏼”
+🙏 21
+Sarah M.
+·
+🇺🇸
+·
+Aug 9th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Refúgio dos pecadores, ainda dos mais miseráveis e abandonados. Mãe querida, pelo vosso misericordioso Coração Vos suplico, fazei o meu coração semelhante ao vosso, cheio daquela compaixão e misericórdia de que ele estava repleto, para que procure, com todos os meus esforços – como pedistes e é vosso desejo – a salvação dos pobres pecadores, que tanto amarguram o Coração Divino de Jesus e o vosso Imaculado Coração. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“Always! I see God working which in itself is a gift. He is now and active in all our prayers. Keep you eyes peeled!! Our God is an AWESOME GOD!❤️🙌🏼🙏🏼”
+🙏 21
+Sarah M.
+·
+🇺🇸
+·
+Aug 9th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, Refúgio dos pecadores, ainda dos mais miseráveis e abandonados. Mãe querida, pelo vosso misericordioso Coração Vos suplico, fazei o meu coração semelhante ao vosso, cheio daquela compaixão e misericórdia de que ele estava repleto, para que procure, com todos os meus esforços – como pedistes e é vosso desejo – a salvação dos pobres pecadores, que tanto amarguram o Coração Divino de Jesus e o vosso Imaculado Coração. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 6,
+                theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“My SIL is doing remarkably well Durinfg her cancer treatment. God is healing her and TU had successful surgery”
+🙏 21
+anne M.
+·
+🇺🇬
+·
+Jul 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, desde o primeiro instante concebida sem mancha de pecado. Mãe querida, pelo vosso inocentíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, no ódio ao pecado, sobretudo de impureza, e na luta fiel e constante contra o dragão infernal, cuja cabeça esmagastes. Permiti que me junte a Vós nesta luta contínua, como verdadeiro soldado vosso e de Jesus Cristo, nosso Divino Rei. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“My SIL is doing remarkably well Durinfg her cancer treatment. God is healing her and TU had successful surgery”
+🙏 21
+anne M.
+·
+🇺🇬
+·
+Jul 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, desde o primeiro instante concebida sem mancha de pecado. Mãe querida, pelo vosso inocentíssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, no ódio ao pecado, sobretudo de impureza, e na luta fiel e constante contra o dragão infernal, cuja cabeça esmagastes. Permiti que me junte a Vós nesta luta contínua, como verdadeiro soldado vosso e de Jesus Cristo, nosso Divino Rei. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 7,
+                theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have been Chaste in thought and action for nine months after a 54yr struggle with an addiction to sex and pornography with one seven year reprieve from my sex addiction. This is only possible with God's grace”
+🙏 20
+Raymond M.
+·
+🇺🇸
+·
+Aug 9th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, onde se reflete o Coração de vosso Divino Filho. Mãe querida, pelo vosso puríssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, puro e casto, a fim de que, pela pureza de alma e coração, com a graça do Senhor, e o vosso auxílio, consiga livrar as almas do fogo do Inferno, e aliviar as do Purgatório, sobretudo as mais abandonadas. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“I have been Chaste in thought and action for nine months after a 54yr struggle with an addiction to sex and pornography with one seven year reprieve from my sex addiction. This is only possible with God's grace”
+🙏 20
+Raymond M.
+·
+🇺🇸
+·
+Aug 9th""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, onde se reflete o Coração de vosso Divino Filho. Mãe querida, pelo vosso puríssimo Coração Vos suplico, fazei o meu coração semelhante ao vosso, puro e casto, a fim de que, pela pureza de alma e coração, com a graça do Senhor, e o vosso auxílio, consiga livrar as almas do fogo do Inferno, e aliviar as do Purgatório, sobretudo as mais abandonadas. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 8,
+                theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“The person I was praying for has intensified her relationship with God, she is utterly grateful for it, I have recovered too, I am grateful to God for always answering my prayers, He is truly a God who listens and how answers❤️”
+🙏 18
+Community Member
+·
+🇬🇧
+·
+Jul 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, nossa Mãe Celeste, sempre tão amante, cuidadosa e vigilante. Mãe querida, pelas ternuras do vosso maternal Coração Vos suplico, fazei o meu coração semelhante ao vosso a fim de que Vos corresponda com sumo respeito, amor e obediência, e não tenha outra preocupação senão a de Vos amar, consolar e desagravar dos espinhos, que em vosso Coração cravam, a todos os momentos, os homens ingratos, com blasfêmias e ingratidões. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“The person I was praying for has intensified her relationship with God, she is utterly grateful for it, I have recovered too, I am grateful to God for always answering my prayers, He is truly a God who listens and how answers❤️”
+🙏 18
+Community Member
+·
+🇬🇧
+·
+Jul 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, nossa Mãe Celeste, sempre tão amante, cuidadosa e vigilante. Mãe querida, pelas ternuras do vosso maternal Coração Vos suplico, fazei o meu coração semelhante ao vosso a fim de que Vos corresponda com sumo respeito, amor e obediência, e não tenha outra preocupação senão a de Vos amar, consolar e desagravar dos espinhos, que em vosso Coração cravam, a todos os momentos, os homens ingratos, com blasfêmias e ingratidões. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+            NovenaDay(
+                dayNumber = 9,
+                theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
+                scripture = "",
+                meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul
+(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-al-inmaculado-corazon-de-maria/'; var pageTitle = "Novena al Inmaculado Corazón de María"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Novena al Inmaculado Corazón de María"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“My prayers were answered. I passed my exams Glory be to God, thank you immaculate mother Mary”
+🙏 7
+uyodhu A.
+·
+🇳🇬
+·
+Aug 23rd
+(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/immaculate-heart-of-mary-novena/'; var pageTitle = "Immaculate Heart of Mary Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Immaculate Heart of Mary Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, excelsa Rainha do Céu e da terra, e nossa celeste Rainha, em quem se reflete a majestade divina. Mãe querida, pela sublimidade do vosso nobre Coração Vos suplico, fazei o meu coração semelhante ao vosso, revestido de santa veneração, dedicação e nobre entusiasmo, para colaborar, com todo o zelo, na propagação do reinado de amor do vosso Imaculado Coração, em nós e em todo o mundo. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set
+(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-ao-imaculado-coracao-de-maria/'; var pageTitle = "Novena ao Imaculado Coração de Maria"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Novena ao Imaculado Coração de Maria"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+                prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+Oh María, digna Madre de Dios y tierna Madre nuestra, que apareciendo en Fátima, nos habéis mostrado nuevamente en vuestro Corazón un asilo y refugio segurísimo, y en vuestro Rosario un arma victoriosa contra el enemigo de nuestras almas, dándonos también rica promesa de paz y vida eterna.
+Con el corazón contrito y humillado por mis culpas, pero lleno de confianza en vuestras bondades, vengo a ofreceros esta Novena de alabanzas y peticiones.
+(menciona tu petición aquí…)
+Recordando, Señora benignísima, las palabras de Jesús en la Cruz, Ahí tienes a tu Madre, os digo con todo afecto: Madre, aquí tenéis a vuestro hijo.
+Recibid mi corazón, y ya que es palabra vuestra, Quien me hallare, hallará la vida, dadme que amándoos con amor filial, halle y goce aquí la vida de la gracia y después la vida de la gloria. Amén.
+Después de la meditación propia del día pídanse las gracias.
+Para alcanzarlas, rezar cinco Avemarías al Inmaculado Corazón de María.
+Oh Corazón de María, el más amable y compasivo de los corazones después del de Jesús, Trono de las misericordias divinas en favor de los miserables pecadores. Yo, reconociéndome sumamente necesitado, acudo a Vos en quien el Señor ha puesto el tesoro de sus bondades con plenísima seguridad de ser por Vos socorrido. Vos sois mi refugio, mi amparo, mi esperanza; por esto os digo y os diré en todos mis apuros y peligros:
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando la enfermedad me aflija, o me oprima la tristeza, o la espina de la tribulación llague mi alma,
+Oh dulce Corazón de María, sed la salvación mía.
+Cuando el mundo, el demonio y mis propias pasiones, coaligados para mi eterna perdición, me persigan con sus tentaciones y quieran hacerme perder el tesoro de la divina gracia,
+Oh dulce Corazón de María, sed la salvación mía.
+En la hora de mi muerte, en aquel momento espantoso del que depende mi eternidad, cuando se aumenten las angustias de mi alma y los ataques de mis enemigos,
+Oh dulce Corazón de María, sed la salvación mía.
+Y cuando mi alma pecadora se presente ante el tribunal de Jesucristo para rendirle cuenta de toda su vida, venid Vos a defenderla y ampararla, y entonces, ahora y siempre,
+Oh dulce Corazón de María, sed la salvación mía.
+Estas gracias espero alcanzar de Vos, oh Corazón amantísimo de mi Madre., a fin de que pueda veros y gozar de Dios en vuestra compañía por toda la eternidad en el cielo. Amén.
+En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+Amén.
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul
+(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-al-inmaculado-corazon-de-maria/'; var pageTitle = "Novena al Inmaculado Corazón de María"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Novena al Inmaculado Corazón de María"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+“Tengo fe que está siendo respondida.”
+🙏 0
+Community Member
+·
+🇭🇳
+·
+2 de jul""", """Continue this novena in the app
+Set reminders so you never miss a day
+OPEN →
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+O Most Blessed Mother, Heart of Love, Heart of Mercy, ever listening, caring, consoling, hear our prayer.
+As your children, we implore your intercession with Jesus, your Son. Receive with understanding and compassion the petitions we place before you today, especially
+(mention request here…)
+We are comforted in knowing your heart is ever open to those who ask for your prayer. We trust to your gentle care and intercession, those whom we love and who are sick or lonely or hurting.
+Help all of us, Holy Mother, to bear our burdens in this life until we may share eternal life and peace with God forever. Amen.
+Our Father
+Hail Mary
+Glory Be
+In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amen.
+Today's prayer complete!
+Share this novena with someone who needs it.
+Link copied!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Answered Prayers from the Community
+“My prayers were answered. I passed my exams Glory be to God, thank you immaculate mother Mary”
+🙏 7
+uyodhu A.
+·
+🇳🇬
+·
+Aug 23rd
+(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/immaculate-heart-of-mary-novena/'; var pageTitle = "Immaculate Heart of Mary Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Immaculate Heart of Mary Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Configure lembretes para não perder nenhum dia
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Senhora do Rosário, que Vos dignastes revelar aos pastorinhos, em Fátima, a devoção ao vosso Imaculado Coração, como fonte de paz e benefícios, recorro eu, hoje, na aflição em que me encontro, confiando ao vosso Coração a graça de que necessito… (pede-se a graça).
+Mãe Santíssima, que num excesso de bondade tranquilizastes a Lúcia assegurando-lhe que nunca a deixaríeis; que o vosso Imaculado Coração seria o seu refúgio seguro, o seu amparo e guia; a Vós me consagro, como coisa inteiramente vossa.
+No vosso coração me escondo, querendo viver num abandono confiante e sempre crescente.
+Abri as vossas mãos generosas, e permiti que os reflexos que delas saem penetrem meu peito e infundam no meu coração um conhecimento e amor intenso para com o vosso Imaculado Coração e o do vosso Divino Filho, como fizestes com os felizes Pastorinhos em Fátima. Amém.
+Três Ave-Marias.
+(mencione o pedido aqui…)
+Bendigo e venero o vosso Imaculado Coração, oh! Maria, excelsa Rainha do Céu e da terra, e nossa celeste Rainha, em quem se reflete a majestade divina. Mãe querida, pela sublimidade do vosso nobre Coração Vos suplico, fazei o meu coração semelhante ao vosso, revestido de santa veneração, dedicação e nobre entusiasmo, para colaborar, com todo o zelo, na propagação do reinado de amor do vosso Imaculado Coração, em nós e em todo o mundo. Amém. Ave-Maria.
+Oh! Imaculado Coração de Maria, em Vos confiamos; não nos deixais neste vale de lágrimas até ver-nos seguros junto a Vós no céu. Assim seja.
+Oh! Maria! Em tuas mãos ponho esta súplica. Abençoai-la depois apresentai a Jesus. Fazei valer vosso amor de Mãe e vossa poder de Rainha. Oh! Maria! Conto com vossa ajuda. Confio em vosso poder. Entrego-me a vossa vontade. Estou seguro de vossa misericórdia. Mãe de Deus e Mãe minha, rogai por mim.
+Doce Coração de Maria sede minha salvação!
+Em nome do Pai, do Filho e do Espírito Santo.
+Amém.
+Oração de hoje completa!
+Compartilhe esta novena com alguém que precisa.
+Link copiado!
+#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+Orações Atendidas da Comunidade
+“Sim”
+🙏 537
+Aylla S.
+·
+🇧🇷
+·
+22 de set
+(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-ao-imaculado-coracao-de-maria/'; var pageTitle = "Novena ao Imaculado Coração de Maria"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+(function() { var novenaTitle = "Novena ao Imaculado Coração de Maria"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+                intentionGuidance = LocalizedText("""""", """""", """""")
+            ),
+        ),
+        imageUrl = """https://catholicnovenaapp.com/assets/images/immaculate-heart-of-mary-novena.png"""
+    )
+}
