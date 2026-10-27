@@ -60,5 +60,7 @@ data class DailyMassReading(
     val gospelRef: String,
     val gospelText: LocalizedText,
     val homilyReflection: LocalizedText,
-    val saintOfFeast: LocalizedText
+    val saintOfFeast: LocalizedText,
+    val sourceName: String = "Vatican News",
+    val sourceUrl: String = "https://www.vaticannews.va/es/evangelio-de-hoy.html"
 )

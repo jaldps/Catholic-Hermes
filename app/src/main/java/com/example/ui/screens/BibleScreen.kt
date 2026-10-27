@@ -17,16 +17,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import android.content.Intent
-import android.net.Uri
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.runtime.collectAsState
-import com.example.data.repository.BibleDownloadManager
-import androidx.compose.material.icons.filled.Download
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
@@ -549,12 +539,16 @@ fun BibleScreen(
 
             2 -> {
                 // Bible Versions & Canon Comparator View
-                BibleVersionsComparatorView(
-                    versions = repository.bibleVersions,
-                    repository = repository,
-                    dao = dao,
-                    currentLanguage = currentLanguage
-                )
+                Column(modifier = Modifier.fillMaxSize()) {
+                    BibleVersionsComparatorView(
+                        versions = repository.bibleVersions,
+                        currentLanguage = currentLanguage
+                    )
+                    // Offline downloads section
+                    repository.bibleDownloadManager?.let { mgr ->
+                        OfflineBibleDownloadsView(manager = mgr, currentLanguage = currentLanguage)
+                    }
+                }
             }
 
             3 -> {
@@ -832,49 +826,6 @@ private fun DailyMassMissalView(
             }
         }
 
-        // Official Vatican News Verification Banner
-        item {
-            val context = LocalContext.current
-            Card(
-                shape = RoundedCornerShape(12.dp),
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 14.dp, vertical = 10.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = "Fuente Oficial: Vatican News",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 12.sp,
-                            color = SacredBurgundy
-                        )
-                        Text(
-                            text = "vaticannews.va/es/evangelio-de-hoy.html",
-                            fontSize = 10.sp,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-
-                    FilledTonalButton(
-                        onClick = {
-                            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vaticannews.va/es/evangelio-de-hoy.html"))
-                            context.startActivity(intent)
-                        }
-                    ) {
-                        Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(14.dp))
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text("Ver en Web", fontSize = 11.sp)
-                    }
-                }
-            }
-        }
-
         // First Reading
         item {
             ReadingBlock(
@@ -928,6 +879,33 @@ private fun DailyMassMissalView(
                 content = dailyReading.gospelText.get(currentLanguage),
                 isGospel = true
             )
+        }
+
+        // Official source attribution (Vatican News)
+        item {
+            Surface(
+                shape = RoundedCornerShape(14.dp),
+                color = MaterialTheme.colorScheme.surface
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Text(
+                        text = when (currentLanguage) {
+                            AppLanguage.ES -> "Fuente oficial: ${dailyReading.sourceName}"
+                            AppLanguage.EN -> "Official source: ${dailyReading.sourceName}"
+                            AppLanguage.PT -> "Fonte oficial: ${dailyReading.sourceName}"
+                        },
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 12.sp,
+                        color = SacredBurgundy
+                    )
+                    Spacer(modifier = Modifier.height(4.dp))
+                    Text(
+                        text = dailyReading.sourceUrl,
+                        fontSize = 11.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
         }
 
         // Reflection
@@ -1006,409 +984,190 @@ private fun ReadingBlock(
 @Composable
 private fun BibleVersionsComparatorView(
     versions: List<BibleVersionInfo>,
-    repository: CatholicDataRepository,
-    dao: SanctaFidesDao?,
     currentLanguage: AppLanguage
 ) {
-    var subTab by remember { mutableIntStateOf(0) } // 0 = ¿Sabías qué...? (Canon 73 vs 66), 1 = Descargas Offline, 2 = Comparador Traducciones
-    val downloadManager = remember(dao) { dao?.let { BibleDownloadManager(it) } }
-    val downloads by (downloadManager?.getAllDownloads()?.collectAsState(initial = emptyList()) ?: remember { mutableStateOf(emptyList()) })
-    val scope = rememberCoroutineScope()
-
-    Column(
+    LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        // Sub-tabs row
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            val tabs = when (currentLanguage) {
-                AppLanguage.ES -> listOf("¿Sabías qué...? (73)", "Descargas Offline", "Comparador")
-                AppLanguage.EN -> listOf("Did You Know? (73)", "Offline Downloads", "Comparator")
-                AppLanguage.PT -> listOf("Você Sabia? (73)", "Downloads Offline", "Comparador")
-            }
-            tabs.forEachIndexed { idx, name ->
-                val isSelected = subTab == idx
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .clip(RoundedCornerShape(10.dp))
-                        .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surfaceVariant)
-                        .clickable { subTab = idx }
-                        .padding(vertical = 8.dp),
-                    contentAlignment = Alignment.Center
-                ) {
+        item {
+            Text(
+                text = when (currentLanguage) {
+                    AppLanguage.ES -> "Comparador de Versiones y Cánones Bíblicos"
+                    AppLanguage.EN -> "Bible Versions & Canon Comparator"
+                    AppLanguage.PT -> "Comparador de Versões e Cânones Bíblicos"
+                },
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                color = SacredBurgundy
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = when (currentLanguage) {
+                    AppLanguage.ES -> "Conoce las diferencias esenciales entre las biblias con el canon apostólico católico íntegro (73 libros) y las versiones protestantes (66 libros)."
+                    AppLanguage.EN -> "Learn the doctrinal and textual differences between the authentic 73-book Catholic Canon and 66-book Protestant translations."
+                    AppLanguage.PT -> "Conheça a diferença entre as Bíblias católicas integrais (73 livros) e as versões protestantes (66 livros)."
+                },
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+
+        items(versions) { ver ->
+            Card(
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(
+                    containerColor = if (ver.isCatholicCanon) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.15f)
+                ),
+                border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
+            ) {
+                Column(modifier = Modifier.padding(16.dp)) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = ver.name,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 16.sp,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+
+                        Box(
+                            modifier = Modifier
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(if (ver.isCatholicCanon) SacredBurgundy else Color(0xFF8B2500))
+                                .padding(horizontal = 8.dp, vertical = 4.dp)
+                        ) {
+                            Text(
+                                text = if (ver.isCatholicCanon) "CANON CATÓLICO (73)" else "NO CATÓLICA (66)",
+                                color = Color.White,
+                                fontSize = 10.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+                    }
+
+                    Spacer(modifier = Modifier.height(6.dp))
+
                     Text(
-                        text = name,
-                        fontSize = 11.sp,
-                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                        color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
+                        text = ver.description.get(currentLanguage),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurface
                     )
+
+                    Spacer(modifier = Modifier.height(10.dp))
+
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(RoundedCornerShape(8.dp))
+                            .background(MaterialTheme.colorScheme.surface)
+                            .padding(10.dp)
+                    ) {
+                        Text(
+                            text = ver.canonicalDifferenceNote.get(currentLanguage),
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Medium,
+                            color = if (ver.isCatholicCanon) MaterialTheme.colorScheme.onSurface else Color(0xFFB71C1C)
+                        )
+                    }
                 }
             }
         }
+    }
+}
 
-        Spacer(modifier = Modifier.height(14.dp))
 
-        when (subTab) {
-            0 -> {
-                // ¿Sabías qué...? Section
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    verticalArrangement = Arrangement.spacedBy(14.dp)
-                ) {
-                    item {
-                        ElevatedCard(
-                            shape = RoundedCornerShape(18.dp),
-                            colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-                        ) {
-                            Column(modifier = Modifier.padding(18.dp)) {
-                                Text(
-                                    text = when (currentLanguage) {
-                                        AppLanguage.ES -> "¿Por qué la Biblia Católica tiene 73 libros y la protestante 66?"
-                                        AppLanguage.EN -> "Why Does the Catholic Bible Have 73 Books and the Protestant 66?"
-                                        AppLanguage.PT -> "Por que a Bíblia Católica tem 73 livros e a protestante 66?"
-                                    },
-                                    style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = FontWeight.Bold,
-                                    color = SacredBurgundy
-                                )
-
-                                Spacer(modifier = Modifier.height(8.dp))
-
-                                Text(
-                                    text = when (currentLanguage) {
-                                        AppLanguage.ES -> "La Iglesia Primitiva y los Apóstoles usaron la versión griega de los Setenta (Septuaginta o LXX, Alejandría c. 250 a.C.), que contenía los 46 libros del Antiguo Testamento. En el siglo XVI, Martín Lutero y los reformadores protestantes decidieron retirar 7 libros (llamados deuterocanónicos) y fragmentos de Ester y Daniel, adoptando el canon hebreo tardío fijado por rabinos en Jamnia (c. 90 d.C.) tras la destrucción de Jerusalén."
-                                        AppLanguage.EN -> "The Early Church and the Apostles used the Greek Septuagint (LXX, Alexandria c. 250 BC), which contained all 46 Old Testament books. In the 16th century, Martin Luther and Protestant reformers removed 7 books (deuterocanonicals) and parts of Esther and Daniel, adopting the late rabbinic Jewish canon established in Jamnia (c. 90 AD) after the destruction of the Temple."
-                                        AppLanguage.PT -> "A Igreja Primitiva e os Apóstolos utilizaram a tradução grega dos Setenta (Septuaginta ou LXX, Alexandria c. 250 a.C.), que continha 46 livros do Antigo Testamento. No século XVI, os reformadores protestantes removeram 7 livros (deuterocanônicos) e partes de Ester e Daniel, adotando o cânon hebraico tardio fixado em Jâmnia (c. 90 d.C.)."
-                                    },
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    lineHeight = 22.sp
-                                )
+@Composable
+fun OfflineBibleDownloadsView(
+    manager: com.example.data.repository.BibleDownloadManager,
+    currentLanguage: com.example.data.models.AppLanguage
+) {
+    val scope = androidx.compose.runtime.rememberCoroutineScope()
+    androidx.compose.foundation.layout.Column(
+        modifier = androidx.compose.ui.Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+    ) {
+        androidx.compose.material3.Text(
+            text = when (currentLanguage) {
+                com.example.data.models.AppLanguage.ES -> "Descargas offline de Biblias"
+                com.example.data.models.AppLanguage.EN -> "Offline Bible downloads"
+                com.example.data.models.AppLanguage.PT -> "Downloads offline da Bíblia"
+            },
+            style = androidx.compose.material3.MaterialTheme.typography.titleMedium,
+            fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+            color = com.example.ui.theme.SacredBurgundy
+        )
+        androidx.compose.foundation.layout.Spacer(modifier = androidx.compose.ui.Modifier.height(8.dp))
+        manager.specs.forEach { spec ->
+            var downloading by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(false) }
+            var progress by androidx.compose.runtime.remember { androidx.compose.runtime.mutableFloatStateOf(0f) }
+            var status by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf("") }
+            val downloaded = manager.isDownloaded(spec.id)
+            androidx.compose.material3.Card(
+                modifier = androidx.compose.ui.Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 4.dp),
+                shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp)
+            ) {
+                androidx.compose.foundation.layout.Column(modifier = androidx.compose.ui.Modifier.padding(12.dp)) {
+                    androidx.compose.material3.Text(text = spec.name, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)
+                    androidx.compose.material3.Text(
+                        text = if (downloaded) {
+                            when (currentLanguage) {
+                                com.example.data.models.AppLanguage.ES -> "Descargado (offline disponible)"
+                                com.example.data.models.AppLanguage.EN -> "Downloaded (available offline)"
+                                com.example.data.models.AppLanguage.PT -> "Baixado (disponível offline)"
                             }
-                        }
-                    }
-
-                    // Historical Milestones
-                    item {
-                        Text(
-                            text = "Hitos Históricos y Concilios de la Iglesia:",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
-                            color = SacredBurgundy
+                        } else status.ifBlank {
+                            when (currentLanguage) {
+                                com.example.data.models.AppLanguage.ES -> "No descargado"
+                                com.example.data.models.AppLanguage.EN -> "Not downloaded"
+                                com.example.data.models.AppLanguage.PT -> "Não baixado"
+                            }
+                        },
+                        fontSize = 12.sp
+                    )
+                    if (downloading) {
+                        androidx.compose.material3.LinearProgressIndicator(
+                            progress = { progress },
+                            modifier = androidx.compose.ui.Modifier.fillMaxWidth().padding(vertical = 4.dp)
                         )
                     }
-
-                    items(repository.canonHistoricalMilestones) { milestone ->
-                        Surface(
-                            shape = RoundedCornerShape(12.dp),
-                            color = MaterialTheme.colorScheme.surface,
-                            border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp),
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Column(modifier = Modifier.padding(14.dp)) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween
-                                ) {
-                                    Text(
-                                        text = milestone.councilOrEvent.get(currentLanguage),
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 13.sp,
-                                        color = SacredBurgundy
-                                    )
-                                    Box(
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(6.dp))
-                                            .background(LiturgicalGold.copy(alpha = 0.2f))
-                                            .padding(horizontal = 6.dp, vertical = 2.dp)
-                                    ) {
-                                        Text(text = milestone.year, fontSize = 10.sp, fontWeight = FontWeight.Bold, color = SacredBurgundy)
+                    androidx.compose.material3.FilledTonalButton(
+                        onClick = {
+                            if (!downloading && !downloaded) {
+                                downloading = true
+                                scope.launch {
+                                    val ok = manager.download(spec.id) { p, msg ->
+                                        progress = p
+                                        status = msg
                                     }
-                                }
-                                Spacer(modifier = Modifier.height(6.dp))
-                                Text(
-                                    text = milestone.description.get(currentLanguage),
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurface
-                                )
-                            }
-                        }
-                    }
-
-                    // 7 Deuterocanonical Books Detail
-                    item {
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = "Los 7 Libros Deuterocanónicos y su Riqueza Doctrinal:",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
-                            color = SacredBurgundy
-                        )
-                    }
-
-                    items(repository.canonDeuterocanonicalDetails) { book ->
-                        Card(
-                            shape = RoundedCornerShape(14.dp),
-                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-                            border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
-                        ) {
-                            Column(modifier = Modifier.padding(14.dp)) {
-                                Text(
-                                    text = "✦ " + book.name.get(currentLanguage) + " (${book.abbreviation})",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 14.sp,
-                                    color = SacredBurgundy
-                                )
-                                Spacer(modifier = Modifier.height(4.dp))
-                                Text(
-                                    text = book.doctrinalSignificance.get(currentLanguage),
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurface
-                                )
-                                Spacer(modifier = Modifier.height(6.dp))
-                                Surface(
-                                    shape = RoundedCornerShape(8.dp),
-                                    color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f)
-                                ) {
-                                    Text(
-                                        text = "Versículo clave: " + book.keyVerse.get(currentLanguage),
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.Medium,
-                                        color = SacredBurgundy,
-                                        modifier = Modifier.padding(8.dp)
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            1 -> {
-                // Offline Bible Downloads Section
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    verticalArrangement = Arrangement.spacedBy(14.dp)
-                ) {
-                    item {
-                        ElevatedCard(
-                            shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-                        ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
-                                Text(
-                                    text = "Gestor de Traducciones Católicas Offline",
-                                    style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = FontWeight.Bold,
-                                    color = SacredBurgundy
-                                )
-                                Spacer(modifier = Modifier.height(4.dp))
-                                Text(
-                                    text = "La traducción oficial (Biblia de Jerusalén 73 libros) está completamente disponible e integrada. Puedes descargar textos católicos adicionales para lectura offline.",
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
-                        }
-                    }
-
-                    items(downloads) { pkg ->
-                        Card(
-                            shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                            border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
-                        ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Column(modifier = Modifier.weight(1f)) {
-                                        Text(
-                                            text = pkg.name,
-                                            fontWeight = FontWeight.Bold,
-                                            fontSize = 14.sp,
-                                            color = SacredBurgundy
-                                        )
-                                        Text(
-                                            text = "${pkg.language} • ${pkg.sizeDisplay}",
-                                            fontSize = 11.sp,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                                        )
-                                    }
-
-                                    Box(
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(8.dp))
-                                            .background(
-                                                when {
-                                                    pkg.isDownloaded -> SacredBurgundy
-                                                    pkg.isDownloading -> LiturgicalGold
-                                                    else -> MaterialTheme.colorScheme.surfaceVariant
-                                                }
-                                            )
-                                            .padding(horizontal = 8.dp, vertical = 4.dp)
-                                    ) {
-                                        Text(
-                                            text = when {
-                                                pkg.isDownloaded -> "INSTALADA"
-                                                pkg.isDownloading -> "${pkg.downloadProgress}%"
-                                                else -> "DISPONIBLE"
-                                            },
-                                            fontSize = 10.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = if (pkg.isDownloaded) Color.White else Color.Black
-                                        )
-                                    }
-                                }
-
-                                if (pkg.isDownloading) {
-                                    Spacer(modifier = Modifier.height(8.dp))
-                                    LinearProgressIndicator(
-                                        progress = { pkg.downloadProgress / 100f },
-                                        modifier = Modifier.fillMaxWidth(),
-                                        color = SacredBurgundy
-                                    )
-                                }
-
-                                Spacer(modifier = Modifier.height(12.dp))
-
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.End,
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    if (pkg.isDownloaded && pkg.versionId != "jerusalem") {
-                                        TextButton(
-                                            onClick = {
-                                                scope.launch { downloadManager?.deleteDownload(pkg.versionId) }
-                                            }
-                                        ) {
-                                            Icon(Icons.Default.Delete, contentDescription = null, modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.error)
-                                            Spacer(modifier = Modifier.width(4.dp))
-                                            Text("Eliminar Descarga", fontSize = 11.sp, color = MaterialTheme.colorScheme.error)
+                                    downloading = false
+                                    status = if (ok) {
+                                        when (currentLanguage) {
+                                            com.example.data.models.AppLanguage.ES -> "Completado"
+                                            com.example.data.models.AppLanguage.EN -> "Completed"
+                                            com.example.data.models.AppLanguage.PT -> "Concluído"
                                         }
-                                    } else if (!pkg.isDownloaded && !pkg.isDownloading) {
-                                        FilledTonalButton(
-                                            onClick = {
-                                                downloadManager?.startDownload(pkg.versionId)
-                                            }
-                                        ) {
-                                            Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(16.dp))
-                                            Spacer(modifier = Modifier.width(6.dp))
-                                            Text("Descargar para Offline", fontSize = 11.sp)
-                                        }
-                                    } else if (pkg.versionId == "jerusalem") {
-                                        Text(
-                                            text = "✓ Incluida en App (Offline Permanente)",
-                                            fontSize = 11.sp,
-                                            fontWeight = FontWeight.SemiBold,
-                                            color = SacredBurgundy
-                                        )
-                                    }
+                                    } else status
                                 }
                             }
-                        }
-                    }
-                }
-            }
-
-            2 -> {
-                // Translation Versions Comparator
-                LazyColumn(
-                    modifier = Modifier.fillMaxSize(),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
-                ) {
-                    item {
-                        Text(
+                        },
+                        enabled = !downloading && !downloaded
+                    ) {
+                        androidx.compose.material3.Text(
                             text = when (currentLanguage) {
-                                AppLanguage.ES -> "Comparador de Versiones y Cánones Bíblicos"
-                                AppLanguage.EN -> "Bible Versions & Canon Comparator"
-                                AppLanguage.PT -> "Comparador de Versões e Cânones Bíblicos"
-                            },
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
-                        )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Conoce las diferencias esenciales entre las biblias con el canon apostólico católico íntegro (73 libros) y las versiones protestantes (66 libros)."
-                                AppLanguage.EN -> "Learn the doctrinal and textual differences between the authentic 73-book Catholic Canon and 66-book Protestant translations."
-                                AppLanguage.PT -> "Conheça a diferença entre as Bíblias católicas integrais (73 livros) e as versões protestantes (66 livros)."
-                            },
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-
-                    items(versions) { ver ->
-                        Card(
-                            shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(
-                                containerColor = if (ver.isCatholicCanon) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.15f)
-                            ),
-                            border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-                        ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Text(
-                                        text = ver.name,
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 16.sp,
-                                        color = MaterialTheme.colorScheme.onSurface
-                                    )
-
-                                    Box(
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(8.dp))
-                                            .background(if (ver.isCatholicCanon) SacredBurgundy else Color(0xFF8B2500))
-                                            .padding(horizontal = 8.dp, vertical = 4.dp)
-                                    ) {
-                                        Text(
-                                            text = if (ver.isCatholicCanon) "CANON CATÓLICO (73)" else "NO CATÓLICA (66)",
-                                            color = Color.White,
-                                            fontSize = 10.sp,
-                                            fontWeight = FontWeight.Bold
-                                        )
-                                    }
-                                }
-
-                                Spacer(modifier = Modifier.height(6.dp))
-
-                                Text(
-                                    text = ver.description.get(currentLanguage),
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = MaterialTheme.colorScheme.onSurface
-                                )
-
-                                Spacer(modifier = Modifier.height(10.dp))
-
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .clip(RoundedCornerShape(8.dp))
-                                        .background(MaterialTheme.colorScheme.surface)
-                                        .padding(10.dp)
-                                ) {
-                                    Text(
-                                        text = ver.canonicalDifferenceNote.get(currentLanguage),
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.Medium,
-                                        color = if (ver.isCatholicCanon) MaterialTheme.colorScheme.onSurface else Color(0xFFB71C1C)
-                                    )
-                                }
+                                com.example.data.models.AppLanguage.ES -> if (downloaded) "Descargado" else "Descargar"
+                                com.example.data.models.AppLanguage.EN -> if (downloaded) "Downloaded" else "Download"
+                                com.example.data.models.AppLanguage.PT -> if (downloaded) "Baixado" else "Baixar"
                             }
-                        }
+                        )
                     }
                 }
             }

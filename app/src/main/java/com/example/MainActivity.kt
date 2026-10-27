@@ -11,8 +11,6 @@ import com.example.data.local.SanctaFidesDatabase
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.MainApp
 import com.example.ui.theme.SanctaFidesTheme
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 
 class MainActivity : ComponentActivity() {
 
@@ -23,7 +21,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        repository = CatholicDataRepository()
+        repository = CatholicDataRepository(this)
         ttsManager = LiturgicalTtsManager(this)
         val database = SanctaFidesDatabase.getInstance(this)
         val dao = database.dao()
@@ -31,22 +29,10 @@ class MainActivity : ComponentActivity() {
         lifecycleScope.launch {
             dao.insertDefaultHabits(com.example.data.repository.PilgrimageAndHabitsData.defaultHabitsToSeed)
             dao.insertLiturgicalDays(com.example.data.repository.PilgrimageAndHabitsData.defaultLiturgicalDaysToSeed)
-            com.example.data.repository.BibleDownloadManager(dao).initializeDefaultBibles()
         }
 
         setContent {
-            val appPreferences by dao.getAppPreferences().collectAsState(initial = null)
-            val themePreset = appPreferences?.themePreset ?: "LITURGICAL_DYNAMIC"
-            val darkModeSetting = appPreferences?.darkModeSetting ?: "SYSTEM"
-            val isSerif = (appPreferences?.fontFamilyChoice ?: "SERIF") == "SERIF"
-            val fontScale = appPreferences?.fontSizeScale ?: 1.0f
-
-            SanctaFidesTheme(
-                themePreset = themePreset,
-                darkModeSetting = darkModeSetting,
-                isSerif = isSerif,
-                fontScale = fontScale
-            ) {
+            SanctaFidesTheme {
                 MainApp(
                     repository = repository,
                     dao = dao,

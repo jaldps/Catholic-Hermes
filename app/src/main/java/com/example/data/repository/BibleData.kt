@@ -232,213 +232,10 @@ object BibleData {
     )
 
     fun getVersesForBookAndChapter(bookId: String, chapterNumber: Int): List<BibleVerse> {
-        val book = catholicCanonBooks.firstOrNull { it.id == bookId } ?: catholicCanonBooks.first()
-        return CatholicBibleContentEngine.getVersesForChapter(book, chapterNumber)
+        // Complete Bible text is now provided by BibleTextProvider from bundled assets.
+        // No placeholder or synthetic content is generated here.
+        return emptyList()
     }
-
-
-    data class DeuterocanonicalBookDetail(
-        val name: LocalizedText,
-        val abbreviation: String,
-        val chapters: Int,
-        val doctrinalSignificance: LocalizedText,
-        val keyVerse: LocalizedText,
-        val keyReference: String
-    )
-
-    data class CanonHistoricalMilestone(
-        val year: String,
-        val councilOrEvent: LocalizedText,
-        val description: LocalizedText
-    )
-
-    val deuterocanonicalBooksDetail: List<DeuterocanonicalBookDetail> = listOf(
-        DeuterocanonicalBookDetail(
-            name = LocalizedText("Tobías", "Tobit", "Tobias"),
-            abbreviation = "Tob",
-            chapters = 14,
-            doctrinalSignificance = LocalizedText(
-                "Enseña la intercesión de los Santos Ángeles (San Rafael Arcángel presentando oraciones ante el trono de Dios), el valor de la limosna y la santidad del matrimonio cristiano.",
-                "Affirms angelic intercession before God's throne (St. Raphael), the redemptive value of almsgiving, and the sanctity of holy matrimony.",
-                "Ensina a intercessão dos Santos Anjos (São Rafael), a santidade do matrimônio e o valor meritório da esmola."
-            ),
-            keyVerse = LocalizedText(
-                "«Cuando tú orabas con lágrimas y enterrabas a los muertos, yo presentaba tu oración ante la presencia gloriosa del Santo». (Tob 12, 12)",
-                "“When you prayed with tears and buried the dead, I offered your prayer to the Lord.” (Tobit 12:12)",
-                "“Quando tu oravas com lágrimas e sepultavas os mortos, eu apresentava a tua oração ao Senhor”. (Tob 12, 12)"
-            ),
-            keyReference = "Tob 12, 12"
-        ),
-        DeuterocanonicalBookDetail(
-            name = LocalizedText("Judit", "Judith", "Judite"),
-            abbreviation = "Jdt",
-            chapters = 16,
-            doctrinalSignificance = LocalizedText(
-                "Heroína que libra a su pueblo cortando la cabeza de Holofernes; prefiguración mariana de la mujer que aplasta la cabeza de la serpiente (Gén 3, 15).",
-                "A courageous heroine who delivers Israel by beheading Holofernes; an ancient Marian type crushing the serpent's head.",
-                "Heroína da fé que liberta o povo de Deus; figura profética de Nossa Senhora esmagando o dragão infernal."
-            ),
-            keyVerse = LocalizedText(
-                "«¡Bendita seas entre todas las mujeres, hija del Dios Altísimo, y bendito sea el Señor Dios, creador del cielo y de la tierra!». (Jdt 13, 18)",
-                "“Blessed are you, daughter, by the Most High God, above all the women on earth; and blessed be the Lord God.” (Judith 13:18)",
-                "“Bendita és tu, ó filha, pelo Deus Altíssimo, mais do que todas as mulheres da terra”. (Jdt 13, 18)"
-            ),
-            keyReference = "Jdt 13, 18"
-        ),
-        DeuterocanonicalBookDetail(
-            name = LocalizedText("1 Macabeos", "1 Maccabees", "1 Macabeus"),
-            abbreviation = "1 Mac",
-            chapters = 16,
-            doctrinalSignificance = LocalizedText(
-                "Defensa heroica de la fe y de la Ley ante la apostasía pagana helenista; purificación y dedicación del Santo Templo (fiesta de Hanukkah mencionada en Juan 10, 22).",
-                "Historical record of Jewish martyrdom and defense of the Covenant against Antiochus Epiphanes; the Hanukkah rededication attended by Jesus in John 10:22.",
-                "História da resistência dos mártires e purificação do Templo de Jerusalém (festa mencionada em João 10, 22)."
-            ),
-            keyVerse = LocalizedText(
-                "«Aunque todas las naciones obedezcan al rey, yo, mis hijos y mis hermanos nos mantendremos fieles a la Alianza de nuestros padres». (1 Mac 2, 19-20)",
-                "“Even if all nations obey the king, I and my sons and my brothers will keep the covenant of our ancestors.” (1 Macc 2:19-20)",
-                "“Ainda que todas as nações obedeçam ao rei, eu, meus filhos e meus irmãos guardaremos a aliança”. (1 Mac 2, 19-20)"
-            ),
-            keyReference = "1 Mac 2, 19-20"
-        ),
-        DeuterocanonicalBookDetail(
-            name = LocalizedText("2 Macabeos", "2 Maccabees", "2 Macabeus"),
-            abbreviation = "2 Mac",
-            chapters = 15,
-            doctrinalSignificance = LocalizedText(
-                "Fundamento bíblico explícito de la oración por los difuntos y el Purgatorio (cap. 12), la resurrección de la carne, el martirio de los siete hermanos y la intercesión de los santos (Onías y Jeremías en cap. 15).",
-                "Definitive Old Testament foundation for prayer for the departed (Purgatory, ch. 12), resurrection of the flesh, and heavenly intercession of the saints (ch. 15).",
-                "Fundamento bíblico direto da oração pelos defuntos (Purgatório), da ressurreição dos corpos e da intercessão celeste dos santos."
-            ),
-            keyVerse = LocalizedText(
-                "«Santo y piadoso pensamiento es orar por los difuntos, para que sean liberados de sus pecados». (2 Mac 12, 45)",
-                "“It is therefore a holy and wholesome thought to pray for the dead, that they may be loosed from sins.” (2 Macc 12:46)",
-                "“É um pensamento santo e salutar rezar pelos mortos, para que sejam libertos de seus pecados”. (2 Mac 12, 45)"
-            ),
-            keyReference = "2 Mac 12, 45"
-        ),
-        DeuterocanonicalBookDetail(
-            name = LocalizedText("Sabiduría de Salomón", "Wisdom of Solomon", "Sabedoria"),
-            abbreviation = "Sab",
-            chapters = 19,
-            doctrinalSignificance = LocalizedText(
-                "Inmortalidad del alma humana, justicia celestial; contiene la asombrosa profecía de la Pasión de Cristo (Sab 2, 12-20) leída cada Viernes Santo.",
-                "Immortality of the soul, divine justice, and the stunning messianic prophecy of the Passion and Crucifixion of Christ in chapter 2.",
-                "Imortalidade da alma e a profecia da Paixão e Morte de Cristo ultrajado pelos ímpios (cap. 2)."
-            ),
-            keyVerse = LocalizedText(
-                "«Las almas de los justos están en la mano de Dios y no los tocará el tormento... aunque a juicio de los hombres hayan sufrido, su esperanza está llena de inmortalidad». (Sab 3, 1.4)",
-                "“The souls of the righteous are in the hand of God, and no torment shall touch them... their hope is full of immortality.” (Wisdom 3:1,4)",
-                "“As almas dos justos estão na mão de Deus e nenhum tormento as tocará... sua esperança está repleta de imortalidade”. (Sab 3, 1.4)"
-            ),
-            keyReference = "Sab 3, 1-4"
-        ),
-        DeuterocanonicalBookDetail(
-            name = LocalizedText("Sirácida (Eclesiástico)", "Sirach (Ecclesiasticus)", "Eclesiástico (Sirácida)"),
-            abbreviation = "Sir",
-            chapters = 51,
-            doctrinalSignificance = LocalizedText(
-                "Tratado monumental de sabiduría moral, veneración a los padres, temor de Dios, caridad fraternal y la personificación de la Divina Sabiduría que inspiró la liturgia de la Iglesia.",
-                "Comprehensive manual of Catholic moral life, filial devotion, fear of the Lord, friendship, and eternal Wisdom.",
-                "Monumental tesouro de sabedoria moral, honra aos pais, virtudes cristãs e a Sabedoria divina."
-            ),
-            keyVerse = LocalizedText(
-                "«El que honra a su padre expía sus pecados, y el que respeta a su madre es como quien acumula tesoros». (Sir 3, 3-4)",
-                "“Whoever honors his father atones for sins, and whoever glorifies his mother is like one who lays up treasure.” (Sirach 3:3-4)",
-                "“Quem honra seu pai alcança o perdão dos pecados; quem respeita sua mãe é como quem ajunta tesouros”. (Eclo 3, 3-4)"
-            ),
-            keyReference = "Sir 3, 3-4"
-        ),
-        DeuterocanonicalBookDetail(
-            name = LocalizedText("Baruc (con Carta de Jeremías)", "Baruch", "Baruc"),
-            abbreviation = "Bar",
-            chapters = 6,
-            doctrinalSignificance = LocalizedText(
-                "Escrito por el secretario del profeta Jeremías. Profetiza la Encarnación del Verbo viviendo entre los hombres (Bar 3, 38) y el arrepentimiento del Pueblo de Dios.",
-                "Written by Jeremiah's secretary. Explicitly prophecies the Incarnation of God walking upon earth among men (Baruch 3:37).",
-                "Profetiza a Encarnação do Filho de Deus convivendo na terra com os homens (Bar 3, 38) e a consolação de Jerusalém."
-            ),
-            keyVerse = LocalizedText(
-                "«Después de esto, apareció la Sabiduría en la tierra y conversó con los hombres». (Bar 3, 38)",
-                "“Afterward she appeared upon earth, and held converse with men.” (Baruch 3:37)",
-                "“Depois disso, apareceu sobre a terra e viveu entre os homens”. (Bar 3, 38)"
-            ),
-            keyReference = "Bar 3, 38"
-        ),
-        DeuterocanonicalBookDetail(
-            name = LocalizedText("Adiciones a Daniel y Ester", "Additions to Daniel & Esther", "Acréscimos a Daniel e Ester"),
-            abbreviation = "Dan/Est",
-            chapters = 0,
-            doctrinalSignificance = LocalizedText(
-                "En Daniel: La historia de Susana y los ancianos, Bel y el Dragón, y el Cántico de los tres jóvenes (Benedicite en el Breviario). En Ester: Oraciones solemnes de Ester y Mardoqueo reconociendo la soberanía de Dios.",
-                "In Daniel: Susanna and the elders, Bel and the Dragon, and the Song of the Three Youths. In Esther: Sacred prayers of Mordecai and Esther.",
-                "Em Daniel: Susana e os anciãos, o hino dos três jovens na fornalha. Em Ester: As orações de Ester e Mardoqueu."
-            ),
-            keyVerse = LocalizedText(
-                "«¡Bendito eres, Señor, Dios de nuestros padres: alabado y ensalzado por los siglos!». (Dan 3, 52)",
-                "“Blessed are you, O Lord, the God of our ancestors, praiseworthy and exalted above all forever!” (Daniel 3:52)",
-                "“Bendito sejais, Senhor, Deus de nossos pais, digno de louvor e de glória para sempre!” (Dan 3, 52)"
-            ),
-            keyReference = "Dan 3, 52"
-        )
-    )
-
-    val canonHistoricalMilestones: List<CanonHistoricalMilestone> = listOf(
-        CanonHistoricalMilestone(
-            year = "250 a.C.",
-            councilOrEvent = LocalizedText("Traducción de los Setenta (Septuaginta / LXX)", "Septuagint Translation (LXX)", "Tradução dos Setenta (Septuaginta)"),
-            description = LocalizedText(
-                "En Alejandría, 72 sabios judíos traducen las Sagradas Escrituras al griego para la diáspora. Incluye los 46 libros del Antiguo Testamento. Esta fue la Biblia citada por los Apóstoles y evangelistas en el Nuevo Testamento (más del 80% de las citas del AT provienen de la Septuaginta).",
-                "Jewish scholars translated the Hebrew and Aramaic Scriptures into Greek in Alexandria. It contained all 46 OT books and was the standard Bible quoted by Jesus' Apostles and the Early Church.",
-                "Em Alexandria, as Escrituras são traduzidas ao grego incluindo os 46 livros. Esta foi a Bíblia usada pelos Apóstolos e citada no Novo Testamento."
-            )
-        ),
-        CanonHistoricalMilestone(
-            year = "382 d.C.",
-            councilOrEvent = LocalizedText("Concilio de Roma (Papa San Dámaso I)", "Council of Rome (Pope St. Damasus I)", "Concílio de Roma (Papa São Dâmaso I)"),
-            description = LocalizedText(
-                "El Papa San Dámaso I promulga el 'Decretum Damasi' fijando formalmente el canon definitivo de 73 libros (46 AT + 27 NT) y encomienda a San Jerónimo la traducción de la Vulgata Latina oficial.",
-                "Pope Damasus I promulgated the definitive 73-book canon (46 OT + 27 NT) and commissioned St. Jerome to translate the Latin Vulgate.",
-                "O Papa São Dâmaso I publica a lista definitiva dos 73 livros e encarrega São Jerônimo de traduzir a Vulgata Latina."
-            )
-        ),
-        CanonHistoricalMilestone(
-            year = "393 & 397 d.C.",
-            councilOrEvent = LocalizedText("Concilios de Hipona y Cartago (San Agustín)", "Councils of Hippo & Carthage (St. Augustine)", "Concílios de Hipona e Cartago (Santo Agostinho)"),
-            description = LocalizedText(
-                "Bajo el liderazgo teológico de San Agustín, los concilios africanos confirman unánimemente la lista exacta de los 73 libros inspirados, confirmada por el Papa San Inocencio I en el 405 d.C.",
-                "Guided by St. Augustine, the North African councils affirmed the 73 books, later confirmed by Pope Innocent I in 405 AD.",
-                "Guiados por Santo Agostinho, confirmam unanimemente os 73 livros sagrados, confirmados pelo Papa Inocêncio I."
-            )
-        ),
-        CanonHistoricalMilestone(
-            year = "1442 d.C.",
-            councilOrEvent = LocalizedText("Concilio Ecuménico de Florencia", "Council of Florence", "Concílio de Florença"),
-            description = LocalizedText(
-                "En la bula 'Cantate Domino' (Papa Eugenio IV), la Iglesia proclama solemnemente el canon de los 73 libros ante las Iglesias Orientales.",
-                "Pope Eugene IV solemnly reaffirmed the 73 books in the papal bull 'Cantate Domino'.",
-                "O Papa Eugênio IV reafirma solenemente a lista canônica dos 73 livros sagrados."
-            )
-        ),
-        CanonHistoricalMilestone(
-            year = "1534 d.C.",
-            councilOrEvent = LocalizedText("Reforma Protestante (Martín Lutero)", "Protestant Reformation (Martin Luther)", "Reforma Protestante (Martinho Lutero)"),
-            description = LocalizedText(
-                "Martín Lutero decide relegar los 7 libros deuterocanónicos a un apéndice calificándolos de 'apócrifos' porque contradecían sus tesis personales (especialmente 2 Macabeos 12 sobre el Purgatorio y las obras en Santiago). En siglos posteriores, las sociedades bíblicas protestantes los suprimieron por completo, reduciendo la Biblia a 66 libros.",
-                "Luther removed the 7 deuterocanonical books from the OT canon due to doctrinal conflicts (e.g., purgatory in 2 Maccabees). Later Protestant societies omitted them entirely, producing a 66-book volume.",
-                "Lutero retirou os 7 livros deuterocanônicos por contrariarem suas teses (como o Purgatório). Mais tarde, bíblias protestantes os removeram por completo, restando 66 livros."
-            )
-        ),
-        CanonHistoricalMilestone(
-            year = "1546 d.C.",
-            councilOrEvent = LocalizedText("Concilio Ecuménico de Trento (Sesión IV)", "Council of Trent (Fourth Session)", "Concílio de Trento (Sessão IV)"),
-            description = LocalizedText(
-                "Frente a la mutilación de las Escrituras, la Iglesia Católica define dogmáticamente de forma infalible el Canon Sagrado de los 73 libros bajo anatema, preservando intacto el depósito apostólico.",
-                "In response to Protestant omissions, the Catholic Church dogmatically defined the 73-book canon with solemn anathema, protecting apostolic integrity.",
-                "Em resposta às exclusões, o Concílio define dogmaticamente os 73 livros sob anátema, garantindo a integridade da Palavra de Deus."
-            )
-        )
-    )
 
     val bibleVersions: List<BibleVersionInfo> = listOf(
         BibleVersionInfo(
@@ -516,23 +313,23 @@ object BibleData {
         liturgicalSeason = LocalizedText("Tiempo Ordinario", "Ordinary Time", "Tempo Comum"),
         liturgicalColorHex = 0xFF2C6B3E, // Liturgical Green
         feastTitle = LocalizedText("Celebración del Misterio Pascual", "Sunday of the Divine Mercy & Word", "Domingo da Palavra e da Misericórdia"),
-        firstReadingRef = "Isaías 53, 10-11",
+        firstReadingRef = "Efesios 5, 21-33",
         firstReadingText = LocalizedText(
-            "El Señor quiso triturarlo con el sufrimiento; si entrega su vida en expiación, verá su descendencia, prolongará sus días, y por su mano prosperará la voluntad del Señor. Gracias al sufrimiento de su alma verá la luz y quedará saciado.",
-            "The Lord was pleased to crush him in infirmity. If he gives his life as an offering for sin, he shall see his descendants in a long life, and the will of the Lord shall be accomplished through him. Because of his affliction he shall see the light in fullness of days.",
-            "O Senhor quis feri-lo com o sofrimento; se ele oferecer sua vida em expiação, verá uma descendência duradoura e a vontade do Senhor se cumprirá por suas mãos."
+            "Someteos unos a otros en el temor de Cristo. Las casadas estén sujetas a sus propios maridos, como al Señor; porque el marido es cabeza de la mujer, así como Cristo es cabeza de la Iglesia, la cual es su cuerpo, y él es su Salvador. Pero como la Iglesia está sujeta a Cristo, así también las casadas lo estén a sus maridos en todo. Maridos, amad a vuestras mujeres, así como Cristo amó a la Iglesia y se entregó a sí mismo por ella, para santificarla, habiéndola purificado en el lavamiento del agua por la palabra, a fin de presentársela a sí mismo, una Iglesia gloriosa, que no tuviese mancha ni arruga ni cosa semejante, sino que fuese santa y sin mancha. Así también los maridos deben amar a sus mujeres como a sus propios cuerpos. El que ama a su mujer, a sí mismo se ama. Porque nadie aborreció jamás a su propia carne, sino que la sustenta y la cuida, como también Cristo a la Iglesia, porque somos miembros de su cuerpo. Por esto dejará el hombre a su padre y a su madre, y se unirá a su mujer, y los dos serán una sola carne. Grande es este misterio; mas yo digo esto respecto de Cristo y de la Iglesia. Por lo demás, cada uno de vosotros ame también a su mujer como a sí mismo; y la mujer respete a su marido.",
+            "Be subject to one another out of reverence for Christ. Wives, be subject to your husbands, as to the Lord. For the husband is the head of the wife as Christ is the head of the Church, his body, and is himself its Savior. As the Church is subject to Christ, so let wives also be subject in everything to their husbands. Husbands, love your wives, as Christ loved the Church and gave himself up for her, that he might sanctify her, having cleansed her by the washing of water with the word, that he might present the Church to himself in splendor, without spot or wrinkle or any such thing, that she might be holy and without blemish. Even so husbands should love their wives as their own bodies. He who loves his wife loves himself. For no man ever hates his own flesh, but nourishes and cherishes it, as Christ does the Church, because we are members of his body. 'For this reason a man shall leave his father and mother and be joined to his wife, and the two shall become one flesh.' This mystery is a profound one, and I am saying that it refers to Christ and the Church; however, let each one of you love his wife as himself, and let the wife see that she respects her husband.",
+            "Sujeitai-vos uns aos outros no temor de Cristo. As mulheres sejam submissas a seus maridos, como ao Senhor; porque o marido é a cabeça da mulher, como também Cristo é a cabeça da Igreja, seu corpo, do qual ele é o Salvador. Mas, assim como a Igreja está sujeita a Cristo, assim também as mulheres o sejam em tudo a seus maridos. Maridos, amai as vossas mulheres, como também Cristo amou a Igreja e a si mesmo se entregou por ela, para santificá-la, purificando-a pela lavagem da água na palavra, para apresentá-la a si mesmo como Igreja gloriosa, sem mácula nem ruga nem coisa semelhante, mas santa e imaculada. Assim também os maridos devem amar as suas mulheres como a seus próprios corpos. Quem ama a sua mulher ama-se a si mesmo. Pois ninguém jamais odiou a sua própria carne, mas a alimenta e a aquece, como também Cristo à Igreja, porque somos membros do seu corpo. 'Por isso o homem deixará pai e mãe e se unirá à sua mulher, e os dois serão uma só carne.' Grande é este mistério; mas eu falo a respeito de Cristo e da Igreja. De qualquer modo, cada um de vós ame a sua mulher como a si mesmo, e a mulher respeite o seu marido."
         ),
-        responsorialPsalmRef = "Salmo 32 (33)",
+        responsorialPsalmRef = "",
         responsorialPsalmText = LocalizedText(
             "R/. Que tu misericordia, Señor, venga sobre nosotros, como lo esperamos de ti.\n\nLa palabra del Señor es sincera, y todas sus acciones son leales; él ama la justicia y el derecho, y su misericordia llena la tierra.",
             "R/. Lord, let your mercy be on us, as we place our trust in you.\n\nUpright is the word of the Lord, and all his works are trustworthy. He loves justice and right; of the kindness of the Lord the earth is full.",
             "R/. Sobre nós venha, Senhor, a vossa graça, da mesma forma que em vós esperamos.\n\nPois reta é a palavra do Senhor e tudo o que Ele faz é digno de fé. Ele ama a justiça e o direito; da misericórdia do Senhor a terra está cheia."
         ),
-        secondReadingRef = "Hebreos 4, 14-16",
+        secondReadingRef = "Lucas 13, 18-21",
         secondReadingText = LocalizedText(
-            "Hermanos: Ya que tenemos un sumo sacerdote eminente, que ha atravesado los cielos, Jesús, Hijo de Dios, mantengamos firme nuestra fe. Pues no tenemos un sumo sacerdote incapaz de compadecerse de nuestras debilidades, sino que ha sido probado en todo igual que nosotros, excepto en el pecado. Acerquémonos, por tanto, confiadamente al trono de la gracia.",
-            "Brothers and sisters: Since we have a great high priest who has passed through the heavens, Jesus, the Son of God, let us hold fast to our confession. For we do not have a high priest who is unable to sympathize with our weaknesses, but one who has similarly been tested in every way, yet without sin. So let us confidently approach the throne of grace.",
-            "Irmãos: Visto que temos um grande sumo sacerdote que atravessou os céus, Jesus, o Filho de Deus, guardemos firmemente a nossa fé. Pois não temos um sumo sacerdote incapaz de se compadecer de nossas fraquezas, mas um que foi tentado em tudo como nós, com exceção do pecado."
+            "Decía, pues: ¿A qué es semejante el reino de Dios, y a qué lo compararé? Es semejante al grano de mostaza que un hombre tomó y sembró en su huerto; y creció y se hizo árbol grande, y las aves del cielo anidaron en sus ramas. Y otra vez dijo: ¿A qué compararé el reino de Dios? Es semejante a la levadura que una mujer tomó y escondió en tres medidas de harina, hasta que todo hubo leudado.",
+            "He said therefore, 'What is the kingdom of God like? And to what shall I compare it? It is like a grain of mustard seed which a man took and sowed in his garden; and it grew and became a tree, and the birds of the air made nests in its branches.' And again he said, 'To what shall I compare the kingdom of God? It is like leaven which a woman took and hid in three measures of flour, till it was all leavened.'",
+            "Dizia, pois: A que é semelhante o Reino de Deus e a que o compararei? É semelhante a um grão de mostarda que um homem tomou e lançou na sua horta; e cresceu e tornou-se árvore, e as aves do céu se aninharam nos seus ramos. E disse outra vez: A que compararei o Reino de Deus? É semelhante ao fermento que uma mulher tomou e escondeu em três medidas de farinha, até que tudo levedou."
         ),
         gospelRef = "San Marcos 10, 42-45",
         gospelText = LocalizedText(

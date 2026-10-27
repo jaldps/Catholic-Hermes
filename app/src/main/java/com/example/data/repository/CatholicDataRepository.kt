@@ -1,5 +1,7 @@
 package com.example.data.repository
 
+import android.content.Context
+
 import com.example.data.models.AppLanguage
 import com.example.data.models.BibleBook
 import com.example.data.models.BibleChapter
@@ -32,7 +34,10 @@ import kotlinx.coroutines.flow.asStateFlow
 import java.util.Calendar
 import java.util.Locale
 
-class CatholicDataRepository {
+class CatholicDataRepository(private val context: Context? = null) {
+
+    private val bibleProvider: BibleTextProvider? = context?.let { BibleTextProvider(it) }
+    val bibleDownloadManager: BibleDownloadManager? = context?.let { BibleDownloadManager(it) }
 
     private val _currentLanguage = MutableStateFlow(detectInitialLanguage())
     val currentLanguage: StateFlow<AppLanguage> = _currentLanguage.asStateFlow()
@@ -53,14 +58,23 @@ class CatholicDataRepository {
     // Bible & Liturgical Mass
     val catholicBooks: List<BibleBook> get() = BibleData.catholicCanonBooks
     val bibleVersions: List<BibleVersionInfo> get() = BibleData.bibleVersions
-    val dailyMassReading: DailyMassReading get() = BibleData.todayMassReading
+    val dailyMassReading: DailyMassReading get() {
+        val today = java.text.SimpleDateFormat("EEEE, d MMMM yyyy", java.util.Locale.getDefault()).format(java.util.Date())
+        return BibleData.todayMassReading.copy(dateDisplay = today)
+    }
 
     fun getChapter(bookId: String, chapterNumber: Int): BibleChapter {
+        val verses = bibleProvider?.getVerses(bookId, chapterNumber)
+            ?: BibleData.getVersesForBookAndChapter(bookId, chapterNumber)
         return BibleChapter(
             bookId = bookId,
             chapterNumber = chapterNumber,
-            verses = BibleData.getVersesForBookAndChapter(bookId, chapterNumber)
+            verses = verses
         )
+    }
+
+    fun searchBible(query: String, limit: Int = 50): List<Triple<String, Int, com.example.data.models.BibleVerse>> {
+        return bibleProvider?.search(query, limit) ?: emptyList()
     }
 
     // Rosary & Divine Mercy

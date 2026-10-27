@@ -1,120 +1,58 @@
 package com.example.data.repository
 
-import com.example.data.local.BibleDownloadEntity
-import com.example.data.local.SanctaFidesDao
-import kotlinx.coroutines.CoroutineScope
+import android.content.Context
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.File
+import java.net.HttpURLConnection
+import java.net.URL
 
-/**
- * Manages Catholic Bible translation packages, local storage status,
- * and on-demand background downloads with realistic progress updates.
- */
-class BibleDownloadManager(
-    private val dao: SanctaFidesDao,
-    private val scope: CoroutineScope = CoroutineScope(Dispatchers.IO)
-) {
+class BibleDownloadManager(private val context: Context) {
 
-    fun getAllDownloads(): Flow<List<BibleDownloadEntity>> = dao.getAllBibleDownloads()
+    data class VersionSpec(val id: String, val name: String, val language: String, val bookCount: Int, val path: String)
 
-    suspend fun initializeDefaultBibles() {
-        val defaults = listOf(
-            BibleDownloadEntity(
-                versionId = "jerusalem",
-                name = "Biblia de Jerusalén (Traducción Oficial)",
-                language = "ES / EN / PT",
-                sizeDisplay = "45.2 MB",
-                isDownloaded = true,
-                downloadProgress = 100,
-                isDownloading = false
-            ),
-            BibleDownloadEntity(
-                versionId = "torres_amat",
-                name = "Biblia Torres Amat (Vulgata Española Tradicional)",
-                language = "Español",
-                sizeDisplay = "42.5 MB",
-                isDownloaded = false,
-                downloadProgress = 0,
-                isDownloading = false
-            ),
-            BibleDownloadEntity(
-                versionId = "douay_rheims",
-                name = "Douay-Rheims Catholic Bible (Vulgate English)",
-                language = "English",
-                sizeDisplay = "48.2 MB",
-                isDownloaded = false,
-                downloadProgress = 0,
-                isDownloading = false
-            ),
-            BibleDownloadEntity(
-                versionId = "nova_vulgata",
-                name = "Nova Vulgata Latina (Editio Typica Vaticana)",
-                language = "Latina",
-                sizeDisplay = "38.0 MB",
-                isDownloaded = false,
-                downloadProgress = 0,
-                isDownloading = false
-            ),
-            BibleDownloadEntity(
-                versionId = "ave_maria",
-                name = "Bíblia Ave Maria (Monges de Maredsous)",
-                language = "Português",
-                sizeDisplay = "44.1 MB",
-                isDownloaded = false,
-                downloadProgress = 0,
-                isDownloading = false
-            ),
-            BibleDownloadEntity(
-                versionId = "latinoamericana",
-                name = "Biblia Latinoamericana (Edición Pastoral)",
-                language = "Español / Português",
-                sizeDisplay = "39.8 MB",
-                isDownloaded = false,
-                downloadProgress = 0,
-                isDownloading = false
-            )
-        )
-        dao.insertDefaultBibleDownloads(defaults)
+    val specs = listOf(
+        VersionSpec("drc", "Douay-Rheims-Challoner (English)", "en", 73, "English/Douay-Rheims-Challoner"),
+        VersionSpec("rv1909", "Reina-Valera 1909 (Spanish)", "es", 66, "Spanish/Reina-Valera-1909"),
+        VersionSpec("almeida", "Almeida (Portuguese)", "pt", 66, "Portuguese/Almeida-Portuguese")
+    )
+
+    private val slugs = listOf(
+        "Gen","Exod","Lev","Num","Deut","Josh","Judg","Ruth","1Sam","2Sam","1Kgs","2Kgs","1Chr","2Chr","Ezra","Neh","Tob","Jdt","Esth","Job","Ps","Prov","Eccl","Song","Wis","Sir","Isa","Jer","Lam","Bar","Ezek","Dan","Hos","Joel","Amos","Obad","Jonah","Mic","Nah","Hab","Zeph","Hag","Zech","Mal","Matt","Mark","Luke","John","Acts","Rom","1Cor","2Cor","Gal","Eph","Phil","Col","1Thess","2Thess","1Tim","2Tim","Titus","Phlm","Heb","Jas","1Pet","2Pet","1John","2John","3John","Jude","Rev"
+    )
+
+    fun versionDir(versionId: String): File = File(context.filesDir, "bibles/$versionId").also { it.mkdirs() }
+
+    fun isDownloaded(versionId: String): Boolean {
+        val dir = versionDir(versionId)
+        return dir.exists() && (dir.listFiles()?.size ?: 0) >= 10
     }
 
-    fun startDownload(versionId: String) {
-        scope.launch {
-            val existing = dao.getAllBibleDownloadsSync().firstOrNull { it.versionId == versionId } ?: return@launch
-            dao.insertOrUpdateBibleDownload(
-                existing.copy(isDownloading = true, downloadProgress = 10)
-            )
+    fun downloadUrl(spec: VersionSpec, index: Int): String =
+        "https://raw.githubusercontent.com/FordhamRamFan/public-domain-bible-translations/main/${spec.path}/${String.format("%02d", index)}-${slugs[index - 1]}.json"
 
-            val stages = listOf(25, 50, 75, 90, 100)
-            for (p in stages) {
-                delay(350)
-                if (p < 100) {
-                    dao.insertOrUpdateBibleDownload(
-                        existing.copy(isDownloading = true, downloadProgress = p)
-                    )
-                } else {
-                    dao.insertOrUpdateBibleDownload(
-                        existing.copy(
-                            isDownloading = false,
-                            downloadProgress = 100,
-                            isDownloaded = true
-                        )
-                    )
+    suspend fun download(versionId: String, onProgress: (Float, String) -> Unit): Boolean = withContext(Dispatchers.IO) {
+        val spec = specs.firstOrNull { it.id == versionId } ?: return@withContext false
+        val dir = versionDir(versionId)
+        dir.mkdirs()
+        try {
+            for (i in 1..spec.bookCount) {
+                val file = File(dir, "$i.json")
+                if (!file.exists()) {
+                    val conn = URL(downloadUrl(spec, i)).openConnection() as HttpURLConnection
+                    conn.connectTimeout = 15000
+                    conn.readTimeout = 30000
+                    conn.inputStream.use { input ->
+                        file.outputStream().use { output -> input.copyTo(output) }
+                    }
+                    conn.disconnect()
                 }
+                onProgress(i.toFloat() / spec.bookCount, "Book $i of ${spec.bookCount}")
             }
+            true
+        } catch (e: Exception) {
+            onProgress(0f, "Error: ${e.message}")
+            false
         }
-    }
-
-    suspend fun deleteDownload(versionId: String) {
-        if (versionId == "jerusalem") return // Do not delete default bundled translation
-        val existing = dao.getAllBibleDownloadsSync().firstOrNull { it.versionId == versionId } ?: return
-        dao.insertOrUpdateBibleDownload(
-            existing.copy(
-                isDownloading = false,
-                downloadProgress = 0,
-                isDownloaded = false
-            )
-        )
     }
 }
