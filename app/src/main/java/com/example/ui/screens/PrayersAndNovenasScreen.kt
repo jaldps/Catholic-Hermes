@@ -56,6 +56,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import coil.compose.AsyncImage
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
@@ -687,22 +689,38 @@ private fun NovenaOverviewCard(
                     text = novena.title.get(currentLanguage),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy
+                    color = SacredBurgundy,
+                    modifier = Modifier.weight(1f)
                 )
 
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
                         .background(LiturgicalGold.copy(alpha = 0.2f))
-                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                        .padding(horizontal = 10.dp, vertical = 4.dp)
                 ) {
                     Text(
                         text = "9 DÍAS",
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy
+                        color = SacredBurgundy,
+                        maxLines = 1,
+                        softWrap = false
                     )
                 }
+            }
+
+            novena.imageUrl?.let { url ->
+                Spacer(modifier = Modifier.height(8.dp))
+                AsyncImage(
+                    model = url,
+                    contentDescription = novena.title.get(currentLanguage),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(140.dp)
+                        .clip(RoundedCornerShape(12.dp)),
+                    contentScale = ContentScale.Crop
+                )
             }
 
             Spacer(modifier = Modifier.height(4.dp))
@@ -719,7 +737,8 @@ private fun NovenaOverviewCard(
             Text(
                 text = novena.description.get(currentLanguage),
                 style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurface
+                color = MaterialTheme.colorScheme.onSurface,
+                maxLines = 4
             )
 
             Spacer(modifier = Modifier.height(12.dp))
