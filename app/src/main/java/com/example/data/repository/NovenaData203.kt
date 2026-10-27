@@ -19,182 +19,310 @@ object NovenaData203 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Oh poderosísimo ángel, tú que eres mi custodio, te suplico, por el aborrecimiento soberano que tienes al pecado, porque ofende a Dios, a quien amas con amor puro y perfecto, que me obtengas un dolor sincero y duradero de mis pecados y un odio implacable a todo pecado, de cualquier clase que sea, para que nunca más ofenda a mi Dios, hasta el último instante de mi vida.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 O most powerful angel, thou who art my guardian, I beseech thee, by the sovereign hatred thou hast for sin, because it offends God, Whom you love with a pure and perfect love, obtain for me a sincere and lasting sorrow for my sins, and an implacable hatred against all sin, of what kind soever, so that I may never more offend my God, till the last moment of my life.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I had some setbacks these last few days and I believe My Angel carried me through them Praise Jesus And Mary Amen 🙏🏽”
+
 🙏 95
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 5th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Ó poderosíssimo anjo, vós que sois o meu guardião, eu vos suplico, pelo ódio soberano que tendes ao pecado, porque ofende a Deus, a quem amais com amor puro e perfeito, alcançai-me uma dor sincera e duradoura dos meus pecados e um ódio implacável a todo pecado, de qualquer espécie, para que eu nunca mais ofenda o meu Deus até o último instante da minha vida.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Oh poderosísimo ángel, tú que eres mi custodio, te suplico, por el aborrecimiento soberano que tienes al pecado, porque ofende a Dios, a quien amas con amor puro y perfecto, que me obtengas un dolor sincero y duradero de mis pecados y un odio implacable a todo pecado, de cualquier clase que sea, para que nunca más ofenda a mi Dios, hasta el último instante de mi vida.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 O most powerful angel, thou who art my guardian, I beseech thee, by the sovereign hatred thou hast for sin, because it offends God, Whom you love with a pure and perfect love, obtain for me a sincere and lasting sorrow for my sins, and an implacable hatred against all sin, of what kind soever, so that I may never more offend my God, till the last moment of my life.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I had some setbacks these last few days and I believe My Angel carried me through them Praise Jesus And Mary Amen 🙏🏽”
+
 🙏 95
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 5th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Ó poderosíssimo anjo, vós que sois o meu guardião, eu vos suplico, pelo ódio soberano que tendes ao pecado, porque ofende a Deus, a quem amais com amor puro e perfeito, alcançai-me uma dor sincera e duradoura dos meus pecados e um ódio implacável a todo pecado, de qualquer espécie, para que eu nunca mais ofenda o meu Deus até o último instante da minha vida.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -203,172 +331,290 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Poderosísimo espíritu, mi ángel custodio, te ruego, por aquella suprema felicidad de que gozas al ver a Dios sin velo, aun mientras velas por mí, que me obtengas la gracia de caminar sin cesar en la presencia de Dios, para que viva como un cristiano perfecto hasta mi último aliento.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Most mighty spirit, my angel-guardian, I pray thee, by that supreme felicity thou dost enjoy in seeing God without a veil, even whilst watching over me, obtain for me grace to walk without ceasing in the presence of God, so that I may live as a perfect Christian till my last breath.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I sleep much more peaceful”
+
 🙏 92
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 6th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Poderosíssimo espírito, meu anjo da guarda, eu vos peço, por aquela suprema felicidade de que gozais vendo Deus sem véu, mesmo enquanto velais por mim, alcançai-me a graça de caminhar sem cessar na presença de Deus, para que eu viva como um cristão perfeito até o meu último suspiro.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Poderosísimo espíritu, mi ángel custodio, te ruego, por aquella suprema felicidad de que gozas al ver a Dios sin velo, aun mientras velas por mí, que me obtengas la gracia de caminar sin cesar en la presencia de Dios, para que viva como un cristiano perfecto hasta mi último aliento.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Most mighty spirit, my angel-guardian, I pray thee, by that supreme felicity thou dost enjoy in seeing God without a veil, even whilst watching over me, obtain for me grace to walk without ceasing in the presence of God, so that I may live as a perfect Christian till my last breath.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I sleep much more peaceful”
+
 🙏 92
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 6th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Poderosíssimo espírito, meu anjo da guarda, eu vos peço, por aquela suprema felicidade de que gozais vendo Deus sem véu, mesmo enquanto velais por mim, alcançai-me a graça de caminhar sem cessar na presença de Deus, para que eu viva como um cristão perfeito até o meu último suspiro.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -377,182 +623,310 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Perfectísimo ejecutor de la Voluntad de Dios, mi fiel custodio, te ruego, por el celo vigilante y amoroso con que cumples el oficio de mi custodia que Dios te ha confiado, que me obtengas la gracia de desear siempre conocer y cumplir perfectamente, hasta el último instante de mi vida, todo lo que Dios me pide.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Most perfect executor of the Will of God, my faithful guardian, I pray thee, by the vigilant and loving eagerness with which thou fulfillest the duty of my guardianship which God has confided to thee, obtain for me the grace of being always anxious to know and accomplish perfectly to the last moment of my life, everything that God asks of me.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thanking my Guardian Angel in advance as he is always guarding, protecting, guiding, inspiring all for the greater glory & honor of God!!!”
+
 🙏 91
+
 Mark T.
-·
-🇺🇸
-·
+
 Oct 5th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Perfeitíssimo executor da vontade de Deus, meu fiel guardião, eu vos peço, pelo zelo vigilante e amoroso com que cumpris o ofício da minha guarda que Deus vos confiou, alcançai-me a graça de desejar sempre conhecer e cumprir perfeitamente, até o último instante da minha vida, tudo o que Deus me pede.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Perfectísimo ejecutor de la Voluntad de Dios, mi fiel custodio, te ruego, por el celo vigilante y amoroso con que cumples el oficio de mi custodia que Dios te ha confiado, que me obtengas la gracia de desear siempre conocer y cumplir perfectamente, hasta el último instante de mi vida, todo lo que Dios me pide.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Most perfect executor of the Will of God, my faithful guardian, I pray thee, by the vigilant and loving eagerness with which thou fulfillest the duty of my guardianship which God has confided to thee, obtain for me the grace of being always anxious to know and accomplish perfectly to the last moment of my life, everything that God asks of me.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thanking my Guardian Angel in advance as he is always guarding, protecting, guiding, inspiring all for the greater glory & honor of God!!!”
+
 🙏 91
+
 Mark T.
-·
-🇺🇸
-·
+
 Oct 5th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Perfeitíssimo executor da vontade de Deus, meu fiel guardião, eu vos peço, pelo zelo vigilante e amoroso com que cumpris o ofício da minha guarda que Deus vos confiou, alcançai-me a graça de desejar sempre conhecer e cumprir perfeitamente, até o último instante da minha vida, tudo o que Deus me pede.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -561,172 +935,290 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Mi celosísimo protector y querido ángel custodio, te ruego, por el encargo que Dios te ha dado de guardarme en todos mis caminos, como una madre lleva en brazos a su hijo amado, que apartes de mí toda ocasión de pecado y me preserves de todos los peligros que podrían hacerme ofender a Dios; y para ello reprime las tentaciones del enemigo infernal y mis propias pasiones, para que, vencidos los enemigos de mi salvación, camine con facilidad, por la gracia de Dios, por el camino de Sus mandamientos hasta la muerte.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 My most zealous protector and dear angel guardian, I pray, thee, by the charge which God hath given thee to guard me in all my ways, as a mother carries in her arms her beloved child, avert from me all occasions of sin, and preserve me from all perils which could make me offend God, and for that, repress the temptations of the infernal enemy and my own passions, so that having conquered the enemies of my salvation, I may walk with ease, by the grace of God, in the way of His commandments, till I die.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes since I started this novena it has felt different in a better way, like I am heard in the heart.”
+
 🙏 48
+
 Community Member
-·
-🇳🇬
-·
+
 Oct 9th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Meu zelosíssimo protetor e querido anjo da guarda, eu vos peço, pelo encargo que Deus vos deu de me guardar em todos os meus caminhos, como uma mãe carrega nos braços o seu filho amado, afastai de mim todas as ocasiões de pecado e preservai-me de todos os perigos que poderiam me fazer ofender a Deus; e para isso reprimi as tentações do inimigo infernal e as minhas próprias paixões, para que, vencidos os inimigos da minha salvação, eu caminhe com facilidade, pela graça de Deus, no caminho dos Seus mandamentos até a morte.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Mi celosísimo protector y querido ángel custodio, te ruego, por el encargo que Dios te ha dado de guardarme en todos mis caminos, como una madre lleva en brazos a su hijo amado, que apartes de mí toda ocasión de pecado y me preserves de todos los peligros que podrían hacerme ofender a Dios; y para ello reprime las tentaciones del enemigo infernal y mis propias pasiones, para que, vencidos los enemigos de mi salvación, camine con facilidad, por la gracia de Dios, por el camino de Sus mandamientos hasta la muerte.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 My most zealous protector and dear angel guardian, I pray, thee, by the charge which God hath given thee to guard me in all my ways, as a mother carries in her arms her beloved child, avert from me all occasions of sin, and preserve me from all perils which could make me offend God, and for that, repress the temptations of the infernal enemy and my own passions, so that having conquered the enemies of my salvation, I may walk with ease, by the grace of God, in the way of His commandments, till I die.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes since I started this novena it has felt different in a better way, like I am heard in the heart.”
+
 🙏 48
+
 Community Member
-·
-🇳🇬
-·
+
 Oct 9th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Meu zelosíssimo protetor e querido anjo da guarda, eu vos peço, pelo encargo que Deus vos deu de me guardar em todos os meus caminhos, como uma mãe carrega nos braços o seu filho amado, afastai de mim todas as ocasiões de pecado e preservai-me de todos os perigos que poderiam me fazer ofender a Deus; e para isso reprimi as tentações do inimigo infernal e as minhas próprias paixões, para que, vencidos os inimigos da minha salvação, eu caminhe com facilidade, pela graça de Deus, no caminho dos Seus mandamentos até a morte.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -735,182 +1227,310 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Fidelísimo guía, mi ángel custodio, te ruego, por la misión que Dios te ha confiado de conducirme por el camino del cielo, que me obtengas la gracia de seguir fiel y constantemente la luz que me has dado sobre el mal que debo evitar y el bien que debo hacer, y no dejes de animarme a la práctica de toda virtud hasta el último instante de mi vida.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Most faithful guide, my angel-guardian, I pray thee, by the mission which God has confided to thee to lead me on the road to heaven, obtain, for me grace to follow faithfully and constantly the light which thou hast shown me, of the evil which I must avoid, and of the good which I must do, and do not cease to excite me to the practice of all virtue, till the last moment of my life.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My prayer is answered by my continued growth in the virtues I've prayed for and my dependence on God.”
+
 🙏 43
+
 Raymond M.
-·
-🇺🇸
-·
+
 Oct 21st""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Fidelíssimo guia, meu anjo da guarda, eu vos peço, pela missão que Deus vos confiou de me conduzir no caminho do céu, alcançai-me a graça de seguir fiel e constantemente a luz que me mostrastes sobre o mal que devo evitar e o bem que devo fazer, e não deixeis de me estimular à prática de toda virtude até o último instante da minha vida.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Fidelísimo guía, mi ángel custodio, te ruego, por la misión que Dios te ha confiado de conducirme por el camino del cielo, que me obtengas la gracia de seguir fiel y constantemente la luz que me has dado sobre el mal que debo evitar y el bien que debo hacer, y no dejes de animarme a la práctica de toda virtud hasta el último instante de mi vida.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Most faithful guide, my angel-guardian, I pray thee, by the mission which God has confided to thee to lead me on the road to heaven, obtain, for me grace to follow faithfully and constantly the light which thou hast shown me, of the evil which I must avoid, and of the good which I must do, and do not cease to excite me to the practice of all virtue, till the last moment of my life.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My prayer is answered by my continued growth in the virtues I've prayed for and my dependence on God.”
+
 🙏 43
+
 Raymond M.
-·
-🇺🇸
-·
+
 Oct 21st""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Fidelíssimo guia, meu anjo da guarda, eu vos peço, pela missão que Deus vos confiou de me conduzir no caminho do céu, alcançai-me a graça de seguir fiel e constantemente a luz que me mostrastes sobre o mal que devo evitar e o bem que devo fazer, e não deixeis de me estimular à prática de toda virtude até o último instante da minha vida.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -919,172 +1539,290 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Queridísimo amigo, mi buen ángel, te ruego, por el gran amor que me tienes, tú que amas a Dios tan ardientemente y que ves cuánto me amó y me sigue amando, que me obtengas el consuelo de rezar siempre, y de rezar bien, en mis dificultades, para que alcance Su misericordia hasta el último instante de mi existencia.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Dearest friend, my good angel, I pray thee, by the great love thou hast for me, thou who lovest God so ardently, and who seest how much He loved me and still loves me, obtain for me the consolation of always praying and praying well in my troubles, so that I may obtain His mercy, till the last moment of my existence.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My prayer was answered my cats blood work all came back stable and I have found peace and strength that my angel will continue to watch over me and heal my heart issues”
+
 🙏 35
+
 Mary G.
-·
-🇺🇸
-·
+
 Oct 18th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Queridíssimo amigo, meu bom anjo, eu vos peço, pelo grande amor que me tendes, vós que amais tão ardentemente a Deus e vedes quanto Ele me amou e ainda me ama, alcançai-me o consolo de rezar sempre, e de rezar bem, nas minhas dificuldades, para que eu alcance a Sua misericórdia até o último instante da minha existência.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Queridísimo amigo, mi buen ángel, te ruego, por el gran amor que me tienes, tú que amas a Dios tan ardientemente y que ves cuánto me amó y me sigue amando, que me obtengas el consuelo de rezar siempre, y de rezar bien, en mis dificultades, para que alcance Su misericordia hasta el último instante de mi existencia.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Dearest friend, my good angel, I pray thee, by the great love thou hast for me, thou who lovest God so ardently, and who seest how much He loved me and still loves me, obtain for me the consolation of always praying and praying well in my troubles, so that I may obtain His mercy, till the last moment of my existence.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My prayer was answered my cats blood work all came back stable and I have found peace and strength that my angel will continue to watch over me and heal my heart issues”
+
 🙏 35
+
 Mary G.
-·
-🇺🇸
-·
+
 Oct 18th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Queridíssimo amigo, meu bom anjo, eu vos peço, pelo grande amor que me tendes, vós que amais tão ardentemente a Deus e vedes quanto Ele me amou e ainda me ama, alcançai-me o consolo de rezar sempre, e de rezar bem, nas minhas dificuldades, para que eu alcance a Sua misericórdia até o último instante da minha existência.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1093,182 +1831,310 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Poderosísimo intercesor, mi fiel custodio, te ruego, por el celo que Dios te ha dado por la salvación eterna de mi alma, que me obtengas la gracia de tener también un celo ardiente y prudente por la salvación de mi prójimo, para que merezca la salvación eterna.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Most powerful intercessor, my faithful guardian, I pray thee, by the zeal which God hath given thee for the eternal salvation of my soul, obtain for me the grace of having also an ardent and prudent zeal for the salvation of my neighbour, so that I may merit eternal salvation.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayed to deepen my relationship with my guardian angel and help me be more mindful of his positive influence and guidance in my life.”
+
 🙏 33
+
 Dianne M.
-·
-🇩🇪
-·
+
 Oct 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Poderosíssimo intercessor, meu fiel guardião, eu vos peço, pelo zelo que Deus vos deu pela salvação eterna da minha alma, alcançai-me a graça de ter também um zelo ardente e prudente pela salvação do meu próximo, para que eu mereça a salvação eterna.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Poderosísimo intercesor, mi fiel custodio, te ruego, por el celo que Dios te ha dado por la salvación eterna de mi alma, que me obtengas la gracia de tener también un celo ardiente y prudente por la salvación de mi prójimo, para que merezca la salvación eterna.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 Most powerful intercessor, my faithful guardian, I pray thee, by the zeal which God hath given thee for the eternal salvation of my soul, obtain for me the grace of having also an ardent and prudent zeal for the salvation of my neighbour, so that I may merit eternal salvation.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayed to deepen my relationship with my guardian angel and help me be more mindful of his positive influence and guidance in my life.”
+
 🙏 33
+
 Dianne M.
-·
-🇩🇪
-·
+
 Oct 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Poderosíssimo intercessor, meu fiel guardião, eu vos peço, pelo zelo que Deus vos deu pela salvação eterna da minha alma, alcançai-me a graça de ter também um zelo ardente e prudente pela salvação do meu próximo, para que eu mereça a salvação eterna.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1277,172 +2143,290 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 ¡Oh purísimo espíritu, querido ángel custodio! Te ruego, por el amor ardiente que tienes a la Inmaculada Virgen Madre de Dios, Reina de los Ángeles, que me obtengas una gran pureza de alma y de cuerpo, para que a mi muerte sea hallado digno de unirme a ti en el Paraíso.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 O! most pure spirit, dear angel-guardian, I pray thee, by the burning love thou hast for the Immaculate Virgin-Mother of God, the Queen of Angels, to obtain for me great purity of soul and body, that at my death I may be found worthy to associate with thee in Paradise.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you Guardian Angel for the interviews I pray an offer comes soon. 🙏🏽”
+
 🙏 21
+
 Community Member
-·
-🇳🇬
-·
+
 Oct 17th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Ó puríssimo espírito, querido anjo da guarda, eu vos peço, pelo amor ardente que tendes à Imaculada Virgem Mãe de Deus, Rainha dos Anjos, que me alcanceis uma grande pureza de alma e de corpo, para que na minha morte eu seja achado digno de me unir a vós no Paraíso.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 ¡Oh purísimo espíritu, querido ángel custodio! Te ruego, por el amor ardiente que tienes a la Inmaculada Virgen Madre de Dios, Reina de los Ángeles, que me obtengas una gran pureza de alma y de cuerpo, para que a mi muerte sea hallado digno de unirme a ti en el Paraíso.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 O! most pure spirit, dear angel-guardian, I pray thee, by the burning love thou hast for the Immaculate Virgin-Mother of God, the Queen of Angels, to obtain for me great purity of soul and body, that at my death I may be found worthy to associate with thee in Paradise.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you Guardian Angel for the interviews I pray an offer comes soon. 🙏🏽”
+
 🙏 21
+
 Community Member
-·
-🇳🇬
-·
+
 Oct 17th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Ó puríssimo espírito, querido anjo da guarda, eu vos peço, pelo amor ardente que tendes à Imaculada Virgem Mãe de Deus, Rainha dos Anjos, que me alcanceis uma grande pureza de alma e de corpo, para que na minha morte eu seja achado digno de me unir a vós no Paraíso.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1451,202 +2435,335 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Oh dulcísimo ángel, mi fiel y amoroso custodio, ¿cómo podré agradecerte lo suficiente el amor ardiente y la fiel vigilancia con que siempre has velado, y velarás, por mí, hasta que me hayas llevado seguro a la dulce presencia de Dios? ¡Ah! Ruega por mí, para que te dé gracias con mi obediencia a tus santas inspiraciones, de modo que, amándote cada día más, merezca estar contigo por toda la eternidad.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-al-angel-de-la-guarda/'; var pageTitle = "Novena al Ángel de la Guarda"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena al Ángel de la Guarda"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 O sweetest angel, my faithful and loving guardian, how can I thank thee sufficiently for the ardent love and faithful vigilance with which thou hast ever watched, and will watch over me, till thou hast led me safely into the sweet presence of God. Ah! pray for me, that I may thank thee by my obedience to thy holy inspirations, so that loving thee daily more and more, I may merit to be with thee for all eternity.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “It's done”
+
 🙏 14
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 11th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/guardian-angel-novena/'; var pageTitle = "Guardian Angel Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Guardian Angel Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Ó dulcíssimo anjo, meu fiel e amoroso guardião, como poderei agradecer-vos suficientemente o amor ardente e a fiel vigilância com que sempre velastes, e velareis, por mim, até me terdes conduzido em segurança à doce presença de Deus? Ah! Rogai por mim, para que eu vos agradeça pela minha obediência às vossas santas inspirações, de modo que, amando-vos cada dia mais, eu mereça estar convosco por toda a eternidade.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-ao-anjo-da-guarda/'; var pageTitle = "Novena ao Anjo da Guarda"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena ao Anjo da Guarda"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a São Gabriel Arcanjo"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh santo ángel, a quien Dios, por efecto de Su bondad y de Su tierno cuidado por mi bien, ha encargado de guiar mi conducta, y que me asistes en todas mis necesidades y me consuelas en todas mis aflicciones, que me sostienes cuando me desanimo y continuamente me obtienes nuevos favores.
+
 Te doy profundas gracias, y te suplico encarecidamente, oh amabilísimo protector, que continúes tu caritativo cuidado y tu defensa de mí contra los malignos ataques de todos mis enemigos.
+
 Te pido especialmente que me apartes de toda ocasión de pecado.
+
 Obtenme la gracia de escuchar atentamente tus santas inspiraciones y de ponerlas fielmente en práctica.
+
 En particular, te suplico que me obtengas el favor que pido en esta novena
+
 (menciona tu petición aquí…)
+
 Protégeme en todas las tentaciones y pruebas de esta vida, pero sobre todo en la hora de mi muerte, y no me dejes hasta que me hayas conducido a la presencia de Dios, en las moradas de la felicidad eterna.
+
 Amén.
+
 Oh dulcísimo ángel, mi fiel y amoroso custodio, ¿cómo podré agradecerte lo suficiente el amor ardiente y la fiel vigilancia con que siempre has velado, y velarás, por mí, hasta que me hayas llevado seguro a la dulce presencia de Dios? ¡Ah! Ruega por mí, para que te dé gracias con mi obediencia a tus santas inspiraciones, de modo que, amándote cada día más, merezca estar contigo por toda la eternidad.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-al-angel-de-la-guarda/'; var pageTitle = "Novena al Ángel de la Guarda"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena al Ángel de la Guarda"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O holy angel, whom God, by the effect of His goodness and His tender regard for my welfare, has charged with the care of my conduct, and who assists me in all my wants and comforts me in all my afflictions, who supports me when I am discouraged and continually obtains for me new favors.
+
 I return thee profound thanks, and I earnestly beseech thee, O most amiable protector, to continue thy charitable care and defense of me against the malignant attacks of all my enemies.
+
 I pray especially that you keep me away from all occasions of sin.
+
 Obtain for me the grace of listening attentively to thy holy inspirations and of faithfully putting them into practice.
+
 In particular, I implore thee to obtain for me the favor which I ask for by this novena
+
 (mention request here…)
+
 Protect me in all the temptations and trials of this life, but more especially at the hour of my death, and do not leave me until thou hast conducted me into the presence of God in the mansions of everlasting happiness.
+
 Amen.
+
 O sweetest angel, my faithful and loving guardian, how can I thank thee sufficiently for the ardent love and faithful vigilance with which thou hast ever watched, and will watch over me, till thou hast led me safely into the sweet presence of God. Ah! pray for me, that I may thank thee by my obedience to thy holy inspirations, so that loving thee daily more and more, I may merit to be with thee for all eternity.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “It's done”
+
 🙏 14
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 11th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/guardian-angel-novena/'; var pageTitle = "Guardian Angel Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Guardian Angel Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó santo anjo, a quem Deus, por efeito da Sua bondade e do Seu terno cuidado pelo meu bem, confiou o cuidado da minha conduta, e que me assistis em todas as minhas necessidades e me consolais em todas as minhas aflições, que me sustentais quando estou desanimado e continuamente me alcançais novos favores.
+
 Eu vos dou profundas graças e vos suplico ardentemente, ó amabilíssimo protetor, que continueis o vosso caridoso cuidado e a vossa defesa de mim contra os ataques malignos de todos os meus inimigos.
+
 Peço-vos especialmente que me afasteis de todas as ocasiões de pecado.
+
 Alcançai-me a graça de ouvir atentamente as vossas santas inspirações e de pô-las fielmente em prática.
+
 Em particular, suplico-vos que me alcanceis a graça que peço nesta novena
+
 (mencione o pedido aqui…)
+
 Protegei-me em todas as tentações e provações desta vida, mas sobretudo na hora da minha morte, e não me deixeis até me terdes conduzido à presença de Deus, nas moradas da felicidade eterna.
+
 Amém.
+
 Ó dulcíssimo anjo, meu fiel e amoroso guardião, como poderei agradecer-vos suficientemente o amor ardente e a fiel vigilância com que sempre velastes, e velareis, por mim, até me terdes conduzido em segurança à doce presença de Deus? Ah! Rogai por mim, para que eu vos agradeça pela minha obediência às vossas santas inspirações, de modo que, amando-vos cada dia mais, eu mereça estar convosco por toda a eternidade.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-ao-anjo-da-guarda/'; var pageTitle = "Novena ao Anjo da Guarda"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena ao Anjo da Guarda"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a São Gabriel Arcanjo"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/guardian-angel-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/guardian-angel-novena.png""",
+        tags = listOf("love", "comfort")
     )
 }

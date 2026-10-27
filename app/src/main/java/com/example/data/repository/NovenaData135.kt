@@ -19,140 +19,226 @@ object NovenaData135 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -161,130 +247,206 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayers are answered in different ways, I am trying to listen to His voice and understand , with patience and faith. Amen.”
+
 🙏 2
+
 maria B.
-·
-🇺🇸
-·
+
 Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayers are answered in different ways, I am trying to listen to His voice and understand , with patience and faith. Amen.”
+
 🙏 2
+
 maria B.
-·
-🇺🇸
-·
+
 Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -293,140 +455,226 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -435,130 +683,206 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayers are answered in different ways, I am trying to listen to His voice and understand , with patience and faith. Amen.”
+
 🙏 2
+
 maria B.
-·
-🇺🇸
-·
+
 Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayers are answered in different ways, I am trying to listen to His voice and understand , with patience and faith. Amen.”
+
 🙏 2
+
 maria B.
-·
-🇺🇸
-·
+
 Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -567,140 +891,226 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -709,130 +1119,206 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayers are answered in different ways, I am trying to listen to His voice and understand , with patience and faith. Amen.”
+
 🙏 2
+
 maria B.
-·
-🇺🇸
-·
+
 Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayers are answered in different ways, I am trying to listen to His voice and understand , with patience and faith. Amen.”
+
 🙏 2
+
 maria B.
-·
-🇺🇸
-·
+
 Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -841,140 +1327,226 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -983,130 +1555,206 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayers are answered in different ways, I am trying to listen to His voice and understand , with patience and faith. Amen.”
+
 🙏 2
+
 maria B.
-·
-🇺🇸
-·
+
 Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Prayers are answered in different ways, I am trying to listen to His voice and understand , with patience and faith. Amen.”
+
 🙏 2
+
 maria B.
-·
-🇺🇸
-·
+
 Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1115,164 +1763,259 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-vicente-ferrer/'; var pageTitle = "Novena a San Vicente Ferrer"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Vicente Ferrer"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Santo Tomás de Aquino""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-vincent-ferrer-novena/'; var pageTitle = "St. Vincent Ferrer Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Vincent Ferrer Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-vicente-ferrer/'; var pageTitle = "Novena a São Vicente Ferrer"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a São Vicente Ferrer"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a São Tomás de Aquino"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh San Vicente Ferrer, protector nuestro, ya que Dios, nuestro Padre eterno, te ha bendecido con una fuente inagotable de gracia y bendición, te rogamos que escuches nuestras oraciones y nos asistas con tu poderosa intercesión, que es aún más eficaz ahora que estás en el cielo que cuando estabas en la tierra.
+
 Llenos de confianza en tu misericordia y compasión, nos arrodillamos ante ti en oración y encomendamos a tu poderosa intercesión todas nuestras necesidades, las de nuestras familias, nuestros amigos, nuestros parientes, y especialmente
+
 (menciona tu petición aquí…)
+
 Glorioso San Vicente Ferrer, no permitas que nuestra esperanza y confianza en tu protección queden defraudadas.
+
 Si nuestras pruebas y tribulaciones en este mundo se multiplican, que sirvan para darnos alegría y felicidad espiritual.
+
 Que Dios nos conceda la gracia de una paciencia cada vez mayor, a fin de que podamos salvar nuestras almas.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-vicente-ferrer/'; var pageTitle = "Novena a San Vicente Ferrer"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Vicente Ferrer"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Santo Tomás de Aquino""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Saint Vincent Ferrer, our guardian, because God our eternal Father has blessed you with an inexhaustible fountain of grace and blessing, we beg you to hear our prayers and to assist us with your powerful intercession which is even more effective now that you are in heaven than it was when you were on earth.
+
 Full of confidence in your mercy and compassion, we kneel in prayer before you, and commend to your powerful intercession all our needs, those of our families, our friends, relatives, and especially
+
 (mention request here…)
+
 Glorious Saint Vincent Ferrer, let not our hope and confidence in your protection be deceived.
+
 If our trials and tribulations in this world multiply, may they serve to give us spiritual joy and happiness.
+
 May God grant us the grace of ever increasing patience, to the end that we may save our souls.
+
 Amen
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I prayed that my roof would be leak free until I could afford the repairs. The money came through and my home had minimal damage. Thank you St. Vincent, for your intercession to the Lord! Thank you Jesus!”
+
 🙏 9
+
 Andrea F.
-·
-🇺🇸
-·
+
 Jul 15th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-vincent-ferrer-novena/'; var pageTitle = "St. Vincent Ferrer Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Vincent Ferrer Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó São Vicente Ferrer, nosso protetor, porque Deus, nosso Pai eterno, vos abençoou com uma fonte inesgotável de graças e bênçãos, nós vos suplicamos que ouçais as nossas orações e nos assistais com a vossa poderosa intercessão, que é ainda mais eficaz agora que estais no céu do que quando estáveis na terra.
+
 Cheios de confiança na vossa misericórdia e compaixão, ajoelhamo-nos em oração diante de vós e recomendamos à vossa poderosa intercessão todas as nossas necessidades, as das nossas famílias, dos nossos amigos, dos nossos parentes e especialmente
+
 (mencione o pedido aqui…)
+
 Glorioso São Vicente Ferrer, não permitais que a nossa esperança e a nossa confiança na vossa proteção sejam frustradas.
+
 Se as nossas provações e tribulações neste mundo se multiplicarem, que elas sirvam para nos dar alegria e felicidade espirituais.
+
 Que Deus nos conceda ao menos a graça de uma paciência sempre crescente, a fim de que possamos salvar as nossas almas.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-vicente-ferrer/'; var pageTitle = "Novena a São Vicente Ferrer"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a São Vicente Ferrer"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a São Tomás de Aquino"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/st-vincent-ferrer-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/st-vincent-ferrer-novena.png""",
+        tags = listOf("blessings", "family")
     )
 }

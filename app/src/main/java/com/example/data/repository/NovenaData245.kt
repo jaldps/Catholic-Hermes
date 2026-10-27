@@ -19,164 +19,274 @@ object NovenaData245 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “NO ANSWER”
+
 🙏 241
+
 Community Member
-·
-🇵🇭
-·
+
 Aug 27th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “NO ANSWER”
+
 🙏 241
+
 Community Member
-·
-🇵🇭
-·
+
 Aug 27th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -185,154 +295,254 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Jesus you're silent but I will keep believing”
+
 🙏 158
+
 Carolyne N.
-·
-🇬🇧
-·
+
 Aug 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Jesus you're silent but I will keep believing”
+
 🙏 158
+
 Carolyne N.
-·
-🇬🇧
-·
+
 Aug 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -341,164 +551,274 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you, My God, for being there for us and demonstrating your love for us by answering our prayers. Amen!🙏🏼”
+
 🙏 152
+
 Melissa R.
-·
-🇺🇸
-·
+
 Aug 26th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you, My God, for being there for us and demonstrating your love for us by answering our prayers. Amen!🙏🏼”
+
 🙏 152
+
 Melissa R.
-·
-🇺🇸
-·
+
 Aug 26th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -507,154 +827,254 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “STILL WAITING ON GOD”
+
 🙏 101
+
 HENRY E.
-·
-🇬🇧
-·
+
 Aug 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “STILL WAITING ON GOD”
+
 🙏 101
+
 HENRY E.
-·
-🇬🇧
-·
+
 Aug 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -663,162 +1083,270 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 🙏 72
+
 FA P.
-·
-🇺🇸
-·
+
 Aug 27th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 🙏 72
+
 FA P.
-·
-🇺🇸
-·
+
 Aug 27th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -827,154 +1355,254 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I think it was my prayer but my friend broke her rosary twice the other day at church. Some guy random came up to her and gave her rosary and put in her hand. My intention had hand in it. I’m glad she felt mother Mary and God love in that moment”
+
 🙏 66
+
 viet N.
-·
-🇺🇸
-·
+
 Aug 28th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I think it was my prayer but my friend broke her rosary twice the other day at church. Some guy random came up to her and gave her rosary and put in her hand. My intention had hand in it. I’m glad she felt mother Mary and God love in that moment”
+
 🙏 66
+
 viet N.
-·
-🇺🇸
-·
+
 Aug 28th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -983,164 +1611,274 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My son has returned! His wife is starting OCIA. Thank you Jesus, Mary and St. Monica! Still praying for my two daughters and their husbands.”
+
 🙏 41
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 28th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My son has returned! His wife is starting OCIA. Thank you Jesus, Mary and St. Monica! Still praying for my two daughters and their husbands.”
+
 🙏 41
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 28th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1149,154 +1887,254 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My daughters friend is very ill. She has been praying for him to get better and is also asking me to also pray for him. Amen!! She does not regularly attend mass and may not regularly pray, but she has experienced Jesus loving hand in her life and when times are troubled she does reach out in her own prayer and asks me to pray as well - small steps 🙏”
+
 🙏 12
+
 Pamela S.
-·
-🇺🇸
-·
+
 Sep 30th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My daughters friend is very ill. She has been praying for him to get better and is also asking me to also pray for him. Amen!! She does not regularly attend mass and may not regularly pray, but she has experienced Jesus loving hand in her life and when times are troubled she does reach out in her own prayer and asks me to pray as well - small steps 🙏”
+
 🙏 12
+
 Pamela S.
-·
-🇺🇸
-·
+
 Sep 30th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1305,320 +2143,451 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-por-los-catolicos-alejados/'; var pageTitle = "Novena por los católicos alejados"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena por los católicos alejados"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My prayers have been answered and I see myself drawing closer to God each day It's beautiful”
+
 🙏 5
+
 Bliss U.
-·
-🇺🇸
-·
+
 Oct 11th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/lapsed-catholics-novena/'; var pageTitle = "Novena for Lapsed Fallen Away Catholics"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena for Lapsed Fallen Away Catholics"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Answered Prayers from the Community
+
 “NO ANSWER”
+
 🙏 241
+
 Community Member
-·
-🇵🇭
-·
+
 Aug 27th
+
 “Jesus you're silent but I will keep believing”
+
 🙏 158
+
 Carolyne N.
-·
-🇬🇧
-·
+
 Aug 26th
+
 “Thank you, My God, for being there for us and demonstrating your love for us by answering our prayers. Amen!🙏🏼”
+
 🙏 152
+
 Melissa R.
-·
-🇺🇸
-·
+
 Aug 26th
+
 “STILL WAITING ON GOD”
+
 🙏 101
+
 HENRY E.
-·
-🇬🇧
-·
+
 Aug 26th
+
 🙏 72
+
 FA P.
-·
-🇺🇸
-·
+
 Aug 27th
+
 “I think it was my prayer but my friend broke her rosary twice the other day at church. Some guy random came up to her and gave her rosary and put in her hand. My intention had hand in it. I’m glad she felt mother Mary and God love in that moment”
+
 🙏 66
+
 viet N.
-·
-🇺🇸
-·
+
 Aug 28th
+
 “My son has returned! His wife is starting OCIA. Thank you Jesus, Mary and St. Monica! Still praying for my two daughters and their husbands.”
+
 🙏 41
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 28th
+
 “My daughters friend is very ill. She has been praying for him to get better and is also asking me to also pray for him. Amen!! She does not regularly attend mass and may not regularly pray, but she has experienced Jesus loving hand in her life and when times are troubled she does reach out in her own prayer and asks me to pray as well - small steps 🙏”
+
 🙏 12
+
 Pamela S.
-·
-🇺🇸
-·
+
 Sep 30th
+
 “My prayers have been answered and I see myself drawing closer to God each day It's beautiful”
+
 🙏 5
+
 Bliss U.
-·
-🇺🇸
-·
+
 Oct 11th
+
 “🙏🙏 I have been praying for months for my daughter to be led a job that brings her pride. Spoke to her last night and she will be starting some part time work in two weeks. She used my exact prayer words saying it filled her with such pride when telling people of her opportunity. She also said that she feels God has answered her prayers with this opportunity!! God is so good to our family! 😍🙏🙏”
+
 🙏 3
+
 Pamela S.
-·
-🇺🇸
-·
+
 Oct 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-pelos-catolicos-afastados/'; var pageTitle = "Novena pelos católicos afastados"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena pelos católicos afastados"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Buen Pastor, tú nunca dejas de buscar a los perdidos, de llamar de vuelta a casa a los descarriados, de consolar a los atemorizados y de vendar a los heridos. Te pido que traigas
+
 (menciona tu petición aquí…)
+
 de vuelta a la práctica de la fe, y que quites todos los obstáculos que les impiden recibir tu abundante misericordia, que fluye sacramentalmente a través del corazón de tu santa Iglesia.
+
 Por la intercesión de María, Madre de Dios, de sus ángeles custodios, de sus santos patronos y de Santa Mónica, siempre fiel en la oración, perdona sus pecados y líbralos de todo lo que les impide volver libremente a casa.
+
 Porque tú, oh Buen Pastor, nos amaste hasta el extremo y te ofreciste al Padre por la salvación de todos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santos y ángeles del cielo, rogad por nosotros!
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-por-los-catolicos-alejados/'; var pageTitle = "Novena por los católicos alejados"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena por los católicos alejados"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Good Shepherd, You never cease to seek out the lost, to call home the stray, to comfort the frightened, and to bind up the wounded. I ask You to bring
+
 (mention request here…)
+
 back to the practice of the Faith, and to remove all obstacles that prevent them from receiving Your abundant mercy, which flows sacramentally through the heart of Your Holy Church.
+
 Through the intercession of Mary, the Mother of God, their Guardian Angels, their Patron Saints and the ever-prayerful St. Monica, may You pardon their sins and unshackle them from whatever hinders their freedom to come Home.
+
 For You, O Good Shepherd, loved us to the end and offered Yourself to the Father for the salvation of all.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 Holy Saints and Angels, pray for us!
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My prayers have been answered and I see myself drawing closer to God each day It's beautiful”
+
 🙏 5
+
 Bliss U.
-·
-🇺🇸
-·
+
 Oct 11th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/lapsed-catholics-novena/'; var pageTitle = "Novena for Lapsed Fallen Away Catholics"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena for Lapsed Fallen Away Catholics"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Answered Prayers from the Community
+
 “NO ANSWER”
+
 🙏 241
+
 Community Member
-·
-🇵🇭
-·
+
 Aug 27th
+
 “Jesus you're silent but I will keep believing”
+
 🙏 158
+
 Carolyne N.
-·
-🇬🇧
-·
+
 Aug 26th
+
 “Thank you, My God, for being there for us and demonstrating your love for us by answering our prayers. Amen!🙏🏼”
+
 🙏 152
+
 Melissa R.
-·
-🇺🇸
-·
+
 Aug 26th
+
 “STILL WAITING ON GOD”
+
 🙏 101
+
 HENRY E.
-·
-🇬🇧
-·
+
 Aug 26th
+
 🙏 72
+
 FA P.
-·
-🇺🇸
-·
+
 Aug 27th
+
 “I think it was my prayer but my friend broke her rosary twice the other day at church. Some guy random came up to her and gave her rosary and put in her hand. My intention had hand in it. I’m glad she felt mother Mary and God love in that moment”
+
 🙏 66
+
 viet N.
-·
-🇺🇸
-·
+
 Aug 28th
+
 “My son has returned! His wife is starting OCIA. Thank you Jesus, Mary and St. Monica! Still praying for my two daughters and their husbands.”
+
 🙏 41
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 28th
+
 “My daughters friend is very ill. She has been praying for him to get better and is also asking me to also pray for him. Amen!! She does not regularly attend mass and may not regularly pray, but she has experienced Jesus loving hand in her life and when times are troubled she does reach out in her own prayer and asks me to pray as well - small steps 🙏”
+
 🙏 12
+
 Pamela S.
-·
-🇺🇸
-·
+
 Sep 30th
+
 “My prayers have been answered and I see myself drawing closer to God each day It's beautiful”
+
 🙏 5
+
 Bliss U.
-·
-🇺🇸
-·
+
 Oct 11th
+
 “🙏🙏 I have been praying for months for my daughter to be led a job that brings her pride. Spoke to her last night and she will be starting some part time work in two weeks. She used my exact prayer words saying it filled her with such pride when telling people of her opportunity. She also said that she feels God has answered her prayers with this opportunity!! God is so good to our family! 😍🙏🙏”
+
 🙏 3
+
 Pamela S.
-·
-🇺🇸
-·
+
 Oct 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Bom Pastor, Vós nunca deixais de procurar os perdidos, de chamar de volta os extraviados, de consolar os amedrontados e de enfaixar os feridos. Peço-Vos que reconduzais
+
 (mencione o pedido aqui…)
+
 à prática da fé, e que removais todos os obstáculos que os impedem de receber a Vossa abundante misericórdia, que flui sacramentalmente do coração da Vossa Santa Igreja.
+
 Pela intercessão de Maria, Mãe de Deus, dos seus Anjos da Guarda, dos seus Santos Padroeiros e de Santa Mônica, sempre perseverante na oração, perdoai os seus pecados e libertai-os de tudo o que impede a sua liberdade de voltar para Casa.
+
 Pois Vós, ó Bom Pastor, nos amastes até o fim e Vos oferecestes ao Pai pela salvação de todos.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santos e Anjos de Deus, rogai por nós!
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-pelos-catolicos-afastados/'; var pageTitle = "Novena pelos católicos afastados"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena pelos católicos afastados"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/lapsed-catholics-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/lapsed-catholics-novena.png""",
+        tags = emptyList()
     )
 }

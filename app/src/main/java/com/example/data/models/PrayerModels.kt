@@ -60,7 +60,8 @@ data class Novena(
     val miraculousHistory: LocalizedText,
     val promises: LocalizedText,
     val days: List<NovenaDay>,
-    val imageUrl: String? = null
+    val imageUrl: String? = null,
+    val tags: List<String> = emptyList()
 )
 
 enum class PrayerCategory(val title: LocalizedText) {

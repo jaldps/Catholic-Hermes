@@ -19,210 +19,366 @@ object NovenaData030 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My mother continues to heal from open heart surgery I continue to pray for this healing and to make sure that her brain heals from the negative effects from anesthesia”
+
 🙏 28
+
 Community Member
-·
-🇺🇸
-·
+
 Sep 7th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My mother continues to heal from open heart surgery I continue to pray for this healing and to make sure that her brain heals from the negative effects from anesthesia”
+
 🙏 28
+
 Community Member
-·
-🇺🇸
-·
+
 Sep 7th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -231,200 +387,346 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you Mama Mary for restoring my health”
+
 🙏 16
+
 Alexandra N.
-·
-🇺🇸
-·
+
 Sep 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you Mama Mary for restoring my health”
+
 🙏 16
+
 Alexandra N.
-·
-🇺🇸
-·
+
 Sep 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -433,210 +735,366 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Still trusting in God for his miracles 🙏”
+
 🙏 12
+
 Comfort M.
-·
-🇬🇧
-·
+
 Sep 8th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Still trusting in God for his miracles 🙏”
+
 🙏 12
+
 Comfort M.
-·
-🇬🇧
-·
+
 Sep 8th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -645,200 +1103,346 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My very bad cold is gone! And painful shower disc has gotten lots better.”
+
 🙏 8
+
 Susan Marie S.
-·
-🇺🇸
-·
+
 Sep 11th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My very bad cold is gone! And painful shower disc has gotten lots better.”
+
 🙏 8
+
 Susan Marie S.
-·
-🇺🇸
-·
+
 Sep 11th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -847,210 +1451,366 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Glory be to God!!”
+
 🙏 8
+
 Community Member
-·
-🇺🇸
-·
+
 Sep 9th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Glory be to God!!”
+
 🙏 8
+
 Community Member
-·
-🇺🇸
-·
+
 Sep 9th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1059,200 +1819,346 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you Blessed Mother for interceding for me to your most holy son Jesus and helping me with my health. Amen 🙏”
+
 🙏 7
+
 Tina T.
-·
-🇺🇸
-·
+
 Sep 17th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you Blessed Mother for interceding for me to your most holy son Jesus and helping me with my health. Amen 🙏”
+
 🙏 7
+
 Tina T.
-·
-🇺🇸
-·
+
 Sep 17th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1261,210 +2167,366 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Husband miraculous healing”
+
 🙏 5
+
 maddy W.
-·
-🇺🇸
-·
+
 Sep 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Husband miraculous healing”
+
 🙏 5
+
 maddy W.
-·
-🇺🇸
-·
+
 Sep 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1473,200 +2535,346 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you blessed mother for all my prayers that have been answered. I love you”
+
 🙏 4
+
 Mary G.
-·
-🇺🇸
-·
+
 Sep 11th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you blessed mother for all my prayers that have been answered. I love you”
+
 🙏 4
+
 Mary G.
-·
-🇺🇸
-·
+
 Sep 11th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1675,226 +2883,383 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-nuestra-senora-de-la-buena-salud/'; var pageTitle = "Novena a la Buena Salud"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a la Buena Salud"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I am beginning to feel relief and I am so grateful for my answered prayers to the Blessed Virgin Mary Mother for her intercession”
+
 🙏 3
+
 Yvonne D.
-·
-🇺🇸
-·
+
 Sep 12th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/our-lady-of-good-health-novena/'; var pageTitle = "Our Lady of Good Health Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Our Lady of Good Health Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-nossa-senhora-da-saude/'; var pageTitle = "Novena a Nossa Senhora da Saúde"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Nossa Senhora da Saúde"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 ¡Oh Virgen Santísima!
+
 Fuiste elegida desde toda la eternidad por la adorabilísima Trinidad para ser la purísima Madre de Jesús.
+
 Permíteme, a mí, tu humilde y devoto servidor, recordarte el gozo que recibiste en el momento de la sacratísima Encarnación de nuestro Divino Señor y durante los nueve meses en que lo llevaste en tu casto seno.
+
 Deseo de todo corazón poder renovar, e incluso aumentar, ese gozo con el fervor de mis oraciones.
+
 ¡Oh tierna Madre de los afligidos! Concédeme en mis necesidades presentes aquella protección especial que has prometido a quienes conmemoran devotamente este gozo inefable.
+
 Confiando en las infinitas misericordias de tu Divino Hijo, seguro de que quien pide recibe, y lleno de confianza en tus poderosas oraciones, te suplico humildemente que intercedas por mí.
+
 Te ruego que me obtengas los favores que pido en esta novena, si es la Santa Voluntad de Dios concedérmelos; y si no, que pidas para mí las gracias que más necesito.
+
 (menciona tu petición aquí…)
+
 Deseo, por medio de esta novena que ahora ofrezco en tu honor, demostrar la viva confianza que tengo en tu intercesión.
+
 Acéptala, te lo suplico, en honor de aquel amor sobrenatural y de aquel gozo de que se llenó tu Inmaculado Corazón mientras tu Divino Hijo moraba en tu seno, en veneración del cual te ofrezco los sentimientos de mi corazón.
+
 Oh Madre de Dios, acepta estos saludos unidos al respeto y a la veneración con que el Ángel Gabriel te saludó por primera vez llena de gracia. Deseo de todo corazón que se conviertan en otras tantas joyas de la corona de tu gloria, que aumentará en brillo hasta el fin del mundo.
+
 Te suplico, oh Consoladora de los afligidos, por el gozo que recibiste cuando el Verbo se hizo carne, que me obtengas los favores y las gracias que ahora imploro por tu poderosa intercesión.
+
 Con este fin te ofrezco todas las buenas obras que jamás se han hecho en tu honor.
+
 Te suplico humildemente, por amor al amable Corazón de Jesús, del que el tuyo estuvo siempre tan inflamado, que escuches mis humildes oraciones y me obtengas lo que pido.
+
 Amén.
+
 ¡Nuestra Señora de la Buena Salud, ruega por nosotros!
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-nuestra-senora-de-la-buena-salud/'; var pageTitle = "Novena a la Buena Salud"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a la Buena Salud"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Most Holy Virgin!
+
 You were chosen by the most Adorable Trinity from all eternity to be the most pure Mother of Jesus.
+
 Permit me, your humble and devoted client, to remind you of the joy you received at the instance of the most Sacred Incarnation of our Divine Lord and during the nine months you carried Him in your chaste womb.
+
 I wish most sincerely that I could renew, or even increase, that joy by the fervor of my prayers.
+
 O Tender Mother of the Afflicted! grant me under my present necessities that special protection you have promised to those who devoutly commemorate this ineffable joy.
+
 I beg you to obtain for me the favors which I petition for in this novena, if it be the Holy Will of God to grant them; and if not, to ask for me whatever graces I most stand in need of.
+
 (mention request here…)
+
 I desire by this Novena, which I now offer in your honor, to prove the lively confidence I have in your intercession.
+
 Accept it, I beseech you, in honor of that supernatural love and joy with which your Immaculate Heart was replenished during the abode of your Divine Son in your womb, in veneration of which, I offer you the sentiments of my heart.
+
 O Mother of God, accept these salutations in union with the respect and veneration with which the Angel Gabriel first hailed you Full of Grace. I wish most sincerely that they may become so many gems in the crown of your glory, which will increase in brightness to the end of the world.
+
 I beseech you, O Comfortress of the Afflicted, by the joy you received when the Word was made flesh, to obtain for me the favors and graces which I now implore through your powerful intercession.
+
 For this end I offer you all the good works which have ever been performed in your honor.
+
 I most humbly entreat you, for the love of the amiable Heart of Jesus with which yours was ever so inflamed, to hear my humble prayers and obtain my requests.
+
 Amen.
+
 Our Lady of Good Health, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I am beginning to feel relief and I am so grateful for my answered prayers to the Blessed Virgin Mary Mother for her intercession”
+
 🙏 3
+
 Yvonne D.
-·
-🇺🇸
-·
+
 Sep 12th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/our-lady-of-good-health-novena/'; var pageTitle = "Our Lady of Good Health Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Our Lady of Good Health Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Virgem Santíssima!
+
 Fostes escolhida pela adorabilíssima Trindade desde toda a eternidade para ser a puríssima Mãe de Jesus.
+
 Permiti a mim, vosso humilde e devoto servo, recordar-vos a alegria que recebestes no instante da sacratíssima Encarnação do nosso divino Senhor e durante os nove meses em que O trouxestes no vosso casto seio.
+
 Desejo sinceramente poder renovar, ou até aumentar, essa alegria com o fervor das minhas orações.
+
 Ó terna Mãe dos aflitos! Concedei-me nas minhas presentes necessidades aquela proteção especial que prometestes aos que comemoram devotamente esta alegria inefável.
+
 Confiando nas infinitas misericórdias do vosso divino Filho, certo de que quem pede recebe, e cheio de confiança nas vossas poderosas orações, suplico-vos humildemente que intercedais por mim.
+
 Peço-vos que me alcanceis as graças que peço nesta novena, se for da santa vontade de Deus concedê-las; e, se não, que peçais para mim as graças de que mais preciso.
+
 (mencione o pedido aqui…)
+
 Desejo, por esta novena que agora ofereço em vossa honra, provar a viva confiança que tenho na vossa intercessão.
+
 Aceitai-a, eu vos suplico, em honra daquele amor sobrenatural e daquela alegria de que se encheu o vosso Imaculado Coração durante a permanência do vosso divino Filho no vosso seio, em veneração dos quais vos ofereço os sentimentos do meu coração.
+
 Ó Mãe de Deus, aceitai estas saudações unidas ao respeito e à veneração com que o Anjo Gabriel vos saudou pela primeira vez cheia de graça. Desejo sinceramente que se tornem outras tantas joias na coroa da vossa glória, que crescerá em brilho até o fim do mundo.
+
 Suplico-vos, ó Consoladora dos aflitos, pela alegria que recebestes quando o Verbo se fez carne, que me alcanceis os favores e as graças que agora imploro pela vossa poderosa intercessão.
+
 Para isso vos ofereço todas as boas obras que já foram feitas em vossa honra.
+
 Peço-vos humildemente, por amor do amável Coração de Jesus, do qual o vosso sempre esteve tão inflamado, que ouçais as minhas humildes orações e me alcanceis os meus pedidos.
+
 Amém.
+
 Nossa Senhora da Saúde, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-nossa-senhora-da-saude/'; var pageTitle = "Novena a Nossa Senhora da Saúde"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Nossa Senhora da Saúde"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/our-lady-of-good-health-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/our-lady-of-good-health-novena.png""",
+        tags = listOf("love", "health")
     )
 }

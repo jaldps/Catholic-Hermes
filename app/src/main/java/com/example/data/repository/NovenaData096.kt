@@ -19,192 +19,330 @@ object NovenaData096 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -213,182 +351,310 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -397,192 +663,330 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -591,182 +995,310 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -775,192 +1307,330 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -969,182 +1639,310 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1153,192 +1951,330 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1347,182 +2283,310 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1531,212 +2595,355 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-juan-bosco/'; var pageTitle = "Novena a San Juan Bosco"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Juan Bosco"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-john-bosco-novena/'; var pageTitle = "St. John Bosco Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. John Bosco Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-joao-bosco/'; var pageTitle = "Novena a São João Bosco"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a São João Bosco"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a São Francisco de Sales"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oración inicial
+
 Te damos gracias, Señor, por Juan Bosco. Le diste un corazón lleno de amor y tan dilatado como las orillas de los mares. En él, millares de hombres y mujeres han podido descubrir que eres tú, Dios del amor, el que estás presente como origen, fuente y meta de todo.
+
 Te damos gracias, Señor, porque has visitado a tu Iglesia con hombres santos como Juan Bosco. Él ha encendido una llama y otros la conservan prendida, para que en el mundo los jóvenes y los niños vean y sientan tu presencia de Dios cercano, de Dios amigo.
+
 Te damos gracias, Señor, por Juan Bosco, padre y maestro de la juventud, profeta de la educación en los tiempos nuevos, amigo entrañable de los jóvenes, que decía: “Me basta que seáis jóvenes para que os quiera”. Bastan testigos así para que muchos creamos que Tú eres el Dios del amor. Amén.
+
 Oración para obtener una gracia
+
 Oh Don Bosco Santo, cuando estabas en esta tierra no había nadie que acudiendo a ti, no fuera, por ti mismo, benignamente recibido, consolado y ayudado. Ahora en el cielo, donde la caridad se perfecciona ¡cuánto debe arder tu gran corazón en amor hacia los necesitados! Mira, pues, mis presentes necesidades y ayúdame obteniéndome del Señor
+
 (menciona tu petición aquí…)
+
 También tú has experimentado durante la vida las privaciones, las enfermedades, las contradicciones, la incertidumbre del porvenir, las ingratitudes, las afrentas, las calumnias, las persecuciones y sabes qué cosa es sufrir.
+
 Por eso, oh Don Bosco Santo, vuelve hacia mí tu bondadosa mirada y obtenme del Señor cuanto te pido, si es ventajoso para mi alma; o si no, alcánzame alguna otra gracia que me sea aún más útil, y una conformidad filial a la divina voluntad en todas las cosas, al mismo tiempo que una vida virtuosa y una santa muerte. Amén.
+
 Se reza un Padrenuestro, Avemaría, Dios te Salve y Gloria.
+
 Oración a Don Bosco
+
 Padre y Maestro de la juventud,
+
 San Juan Bosco,
+
 que, dócil a los dones del Espíritu y abierto a las realidades de tu tiempo
+
 fuiste para los jóvenes, sobre todo para los pequeños y los pobres,
+
 signo del amor y de la predilección de Dios.
+
 Se nuestro guía en el camino de amistad con el Señor Jesús,
+
 de modo que descubramos en Él y en su Evangelio
+
 el sentido de nuestra vida
+
 y la fuente de la verdadera felicidad.
+
 Ayúdanos a responder con generosidad
+
 a la vocación que hemos recibido de Dios,
+
 para ser en la vida cotidiana
+
 constructores de comunión,
+
 y colaborar con entusiasmo,
+
 en comunión con toda la Iglesia,
+
 en la edificación de la civilización del amor.
+
 Obtennos la gracia de la perseverancia
+
 al vivir una cota alta de vida cristiana,
+
 según el espíritu de las bienaventuranzas;
+
 y haz que, guiados por María Auxiliadora,
+
 podamos encontrarnos un día contigo
+
 en la gran familia del cielo. Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-juan-bosco/'; var pageTitle = "Novena a San Juan Bosco"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Juan Bosco"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Saint John Bosco, father and teacher of youth, in need of special help, I appeal with confidence to you, for I require not only spiritual graces, but also temporal ones, particularly
+
 (mention request here…)
+
 May you, who on earth had such great devotion to Jesus in the Blessed Sacrament and to Mary Help of Christians, and who always had compassion for those who were suffering, obtain from Jesus and His Heavenly Mother the grace I now request, and also a sincere resignation to the Will of God.
+
 Saint John Bosco, pray for us!
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-john-bosco-novena/'; var pageTitle = "St. John Bosco Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. John Bosco Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 São João Bosco, pai e mestre da juventude, necessitando de um auxílio especial, recorro com confiança a vós, pois preciso não só de graças espirituais, mas também temporais, particularmente
+
 (mencione o pedido aqui…)
+
 Vós, que na terra tivestes tão grande devoção a Jesus no Santíssimo Sacramento e a Maria Auxiliadora, e que sempre tivestes compaixão dos que sofriam, alcançai-me de Jesus e de Sua Mãe celeste a graça que agora peço, e também uma sincera resignação à Vontade de Deus.
+
 São João Bosco, rogai por nós!
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-joao-bosco/'; var pageTitle = "Novena a São João Bosco"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a São João Bosco"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a São Francisco de Sales"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/st-john-bosco-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/st-john-bosco-novena.png""",
+        tags = listOf("love", "health", "family")
     )
 }

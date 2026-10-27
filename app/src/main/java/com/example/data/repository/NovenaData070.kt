@@ -19,308 +19,562 @@ object NovenaData070 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -329,298 +583,542 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -629,308 +1127,562 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -939,298 +1691,542 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1239,308 +2235,562 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1549,298 +2799,542 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1849,308 +3343,562 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -2159,298 +3907,542 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -2459,328 +4451,587 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-enrique-ii/'; var pageTitle = "Novena a San Enrique II"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Enrique II"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a San Luis Rey de Francia""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-henry-ii-novena/'; var pageTitle = "St. Henry II Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Henry II Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-santo-henrique-ii/'; var pageTitle = "Novena a Santo Henrique II"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santo Henrique II"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Señor, tú llenaste a san Enrique de tu amor
+
 y lo elevaste de los cuidados de un reino terreno
+
 a la felicidad eterna del cielo.
+
 En medio de los cambios de este mundo,
+
 que sus oraciones nos guarden libres de pecado
+
 y nos ayuden en nuestro camino hacia ti.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo
+
 en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oh Dios, cuya abundante gracia preparó a san Enrique
+
 para ser elevado por ti de modo admirable
+
 de los cuidados del gobierno terreno a las realidades celestiales,
+
 concédenos, te rogamos, por su intercesión,
+
 que entre las incertidumbres de este mundo
+
 caminemos presurosos hacia ti con el alma purificada.
+
 Por nuestro Señor Jesucristo, tu Hijo,
+
 que vive y reina contigo en la unidad del Espíritu Santo
+
 y es Dios por los siglos de los siglos.
+
 Amén.
+
 Oración de la Iglesia en la fiesta de san Enrique
+
 Oh Dios, que en este día (13 de julio) trasladaste al bienaventurado Enrique,
+
 tu confesor, de su trono terreno a un reino eterno,
+
 te suplicamos humildemente que, así como con la ayuda de tu gracia
+
 él resistió todas las tentaciones del mundo,
+
 así también nosotros sigamos su ejemplo resistiendo
+
 todos los halagos de este mundo
+
 y te sirvamos con corazón limpio.
+
 Por Cristo nuestro Señor.
+
 Amén.
+
 (menciona tu petición aquí…)
+
 San Enrique II, ruega por nosotros para que llevemos una vida de santidad
+
 y heredemos la felicidad eterna entre los ángeles y los santos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-enrique-ii/'; var pageTitle = "Novena a San Enrique II"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Enrique II"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a San Luis Rey de Francia""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Lord, you filled Saint Henry with your love
+
 and raised him from the cares of an earthly kingdom
+
 to eternal happiness in heaven.
+
 In the midst of the changes of this world,
+
 may his prayers keep us free from sin
+
 and help us on our way towards you.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you
+
 in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 O God, whose abundant grace prepared Saint Henry
+
 to be raised by you in a wonderful way
+
 from the cares of earthly rule to heavenly realms,
+
 grant, we pray, through his intercession,
+
 that amid the uncertainties of this world
+
 we may hasten towards you with minds made pure.
+
 Through our Lord Jesus Christ, your Son,
+
 who lives and reigns with you in the unity of the Holy Spirit,
+
 one God, for ever and ever.
+
 Amen.
+
 Prayer of the Church on the Feast of St. Henry
+
 O God, who didst this day (July 13) remove blessed Henry
+
 Thy confessor from his earthly throne to an eternal kingdom:
+
 we humbly beseech Thee, that as by the assistance of Thy grace,
+
 he was proof against all the temptations of the world,
+
 so we may follow his example in withstanding
+
 all the flatteries of this world,
+
 and serve Thee with clean hearts.
+
 Through Christ our Lord.
+
 Amen.
+
 (mention request here…)
+
 St Henry II, Pray for us that we will live a life of holiness
+
 and inherit eternal happiness among the angels and saints.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “1-Neck issue, pinched nerve affecting throat... difficulty swallowing issue reduced significantly 2-minor aneurysm upper aorta- issue gone 3- Mother's anxiety depression significantly reduced”
+
 🙏 13066
+
 Community Member
-·
-🇺🇸
-·
+
 May 22nd
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-henry-ii-novena/'; var pageTitle = "St. Henry II Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Henry II Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Senhor, Vós enchestes Santo Henrique do Vosso amor
+
 e o elevastes dos cuidados de um reino terreno
+
 à felicidade eterna do céu.
+
 Em meio às mudanças deste mundo,
+
 que as suas orações nos guardem livres do pecado
+
 e nos ajudem no nosso caminho para Vós.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina
+
 na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Ó Deus, cuja abundante graça preparou Santo Henrique
+
 para ser por Vós elevado de modo admirável
+
 dos cuidados do governo terreno às realidades celestes,
+
 concedei-nos, Vos pedimos, por sua intercessão,
+
 que, entre as incertezas deste mundo,
+
 caminhemos depressa para Vós com a alma purificada.
+
 Por nosso Senhor Jesus Cristo, Vosso Filho,
+
 que convosco vive e reina na unidade do Espírito Santo,
+
 Deus, por todos os séculos dos séculos.
+
 Amém.
+
 Oração da Igreja na festa de Santo Henrique
+
 Ó Deus, que neste dia (13 de julho) transferistes o bem-aventurado Henrique,
+
 Vosso confessor, do seu trono terreno para um reino eterno,
+
 humildemente Vos suplicamos que, assim como com o auxílio da Vossa graça
+
 ele resistiu a todas as tentações do mundo,
+
 assim também nós sigamos o seu exemplo, resistindo
+
 a todas as lisonjas deste mundo,
+
 e Vos sirvamos com coração puro.
+
 Por Cristo, nosso Senhor.
+
 Amém.
+
 (mencione o pedido aqui…)
+
 Santo Henrique II, rogai por nós, para que vivamos uma vida de santidade
+
 e herdemos a felicidade eterna entre os anjos e os santos.
+
 Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-santo-henrique-ii/'; var pageTitle = "Novena a Santo Henrique II"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santo Henrique II"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/st-henry-ii-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/st-henry-ii-novena.png""",
+        tags = listOf("love")
     )
 }

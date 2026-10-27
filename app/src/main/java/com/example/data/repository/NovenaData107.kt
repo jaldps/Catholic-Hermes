@@ -19,182 +19,310 @@ object NovenaData107 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thanks for seeing me through”
+
 🙏 20
+
 Eleasar F.
-·
-🇺🇸
-·
+
 Aug 10th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thanks for seeing me through”
+
 🙏 20
+
 Eleasar F.
-·
-🇺🇸
-·
+
 Aug 10th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -203,172 +331,290 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I'm in good health 🙏🏿”
+
 🙏 11
+
 Cs Njuguna K.
-·
-🇰🇪
-·
+
 Aug 15th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I'm in good health 🙏🏿”
+
 🙏 11
+
 Cs Njuguna K.
-·
-🇰🇪
-·
+
 Aug 15th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -377,182 +623,310 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My vocation was made clear.”
+
 🙏 10
+
 Grant J.
-·
-🇺🇸
-·
+
 Sep 26th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My vocation was made clear.”
+
 🙏 10
+
 Grant J.
-·
-🇺🇸
-·
+
 Sep 26th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -561,172 +935,290 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you for prayers answered please continue to hear our prayers”
+
 🙏 10
+
 sarah W.
-·
-🇺🇸
-·
+
 Sep 4th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you for prayers answered please continue to hear our prayers”
+
 🙏 10
+
 sarah W.
-·
-🇺🇸
-·
+
 Sep 4th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -735,182 +1227,310 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Hello hope y’all are having a great day! I love praying to Saint Lawrence for more laughter! Saint Lawrence did not disappoint as I found several very funny (yet appropriate!!) Catholic memes that I could also share with others after this novena. Thank you Saint Lawrence and please help us all to have even more funzies with our great Catholic faith :) Saint Lawrence, pray for us !!! :)”
+
 🙏 10
+
 Ashley T.
-·
-🇺🇸
-·
+
 Aug 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Hello hope y’all are having a great day! I love praying to Saint Lawrence for more laughter! Saint Lawrence did not disappoint as I found several very funny (yet appropriate!!) Catholic memes that I could also share with others after this novena. Thank you Saint Lawrence and please help us all to have even more funzies with our great Catholic faith :) Saint Lawrence, pray for us !!! :)”
+
 🙏 10
+
 Ashley T.
-·
-🇺🇸
-·
+
 Aug 22nd""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -919,172 +1539,290 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes i believe he will answer all soon”
+
 🙏 10
+
 Community Member
-·
-🇬🇧
-·
+
 Aug 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes i believe he will answer all soon”
+
 🙏 10
+
 Community Member
-·
-🇬🇧
-·
+
 Aug 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1093,182 +1831,310 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you st Lawrence for answering my prayers”
+
 🙏 10
+
 stephanie O.
-·
-🇳🇬
-·
+
 Aug 11th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you st Lawrence for answering my prayers”
+
 🙏 10
+
 stephanie O.
-·
-🇳🇬
-·
+
 Aug 11th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1277,168 +2143,290 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My home has been defended and protected from spiritual attacks”
+
 🙏 10
+
 Community Member
-·
+
 Aug 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My home has been defended and protected from spiritual attacks”
+
 🙏 10
+
 Community Member
-·
+
 Aug 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1447,344 +2435,507 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-lorenzo/'; var pageTitle = "Novena a San Lorenzo"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Lorenzo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Santa Águeda""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My friend told me she is giving up mortal sin and giving her life to God”
+
 🙏 10
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 10th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-lawrence-novena/'; var pageTitle = "St Lawrence Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St Lawrence Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Answered Prayers from the Community
+
 “Thanks for seeing me through”
+
 🙏 20
+
 Eleasar F.
-·
-🇺🇸
-·
+
 Aug 10th
+
 “I'm in good health 🙏🏿”
+
 🙏 11
+
 Cs Njuguna K.
-·
-🇰🇪
-·
+
 Aug 15th
+
 “My vocation was made clear.”
+
 🙏 10
+
 Grant J.
-·
-🇺🇸
-·
+
 Sep 26th
+
 “Thank you for prayers answered please continue to hear our prayers”
+
 🙏 10
+
 sarah W.
-·
-🇺🇸
-·
+
 Sep 4th
+
 “Hello hope y’all are having a great day! I love praying to Saint Lawrence for more laughter! Saint Lawrence did not disappoint as I found several very funny (yet appropriate!!) Catholic memes that I could also share with others after this novena. Thank you Saint Lawrence and please help us all to have even more funzies with our great Catholic faith :) Saint Lawrence, pray for us !!! :)”
+
 🙏 10
+
 Ashley T.
-·
-🇺🇸
-·
+
 Aug 22nd
+
 “Yes i believe he will answer all soon”
+
 🙏 10
+
 Community Member
-·
-🇬🇧
-·
+
 Aug 13th
+
 “Thank you st Lawrence for answering my prayers”
+
 🙏 10
+
 stephanie O.
-·
-🇳🇬
-·
+
 Aug 11th
+
 “My home has been defended and protected from spiritual attacks”
+
 🙏 10
+
 Community Member
-·
+
 Aug 10th
+
 “My friend told me she is giving up mortal sin and giving her life to God”
+
 🙏 10
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 10th
+
 “I have found the best job. Exactly what I was praying for. Thank you!”
+
 🙏 1
+
 Astrid V.
-·
-🇳🇱
-·
+
 Sep 12th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-lourenco/'; var pageTitle = "Novena a São Lourenço"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a São Lourenço"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Santa Águeda"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Glorioso mártir San Lorenzo, acudimos a ti con humildad, al contemplar tu grandeza y tu poder de intercesión ante Dios.
+
 Fuiste tan fuerte en tu fe que soportaste de buen grado las torturas de los paganos y moriste con una muerte cruel, convirtiéndote en un testigo insigne de Cristo y de su Iglesia.
+
 Animados por tu firme fe, creemos en tu poderoso patrocinio y te rogamos que nos alcances una fe viva, una esperanza inquebrantable y el amor a Dios y al prójimo.
+
 Ayúdanos en todas nuestras necesidades, especialmente en (menciona tu petición aquí…)
+
 Consérvanos puros y castos. Haznos obedientes a nuestros mayores.
+
 Ayúdanos a socorrer a los pobres, a los oprimidos, a los enfermos y a quienes pasan por pruebas y dificultades.
+
 Toca a los cristianos tibios y enciende en ellos el fuego de la fe, y da a los no cristianos la gracia de la fe en Cristo.
+
 Así como los paganos se conmovieron por tu fe en Jesucristo, que tu fe inmortal haga que los incrédulos abracen la verdadera fe, para que florezca el Reino de Dios.
+
 Asístenos siempre para vencer nuestras pruebas y tentaciones. Concédenos vivir siempre una verdadera vida cristiana y salir finalmente victoriosos en el combate de la fe, para que, siendo verdaderos testigos de Cristo, muramos en Él, nos unamos a ti y a todos los santos y vivamos por toda la eternidad en su Reino, alabando a Dios por los siglos de los siglos.
+
 Amén.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡San Lorenzo, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-lorenzo/'; var pageTitle = "Novena a San Lorenzo"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Lorenzo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Santa Águeda""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Glorious Martyr, St. Lawrence, we come to you in humility as we see your greatness and your power of intercession with God.
+
 You were so strong in your faith that you readily suffered tortures from the pagans and died a cruel death, becoming an outstanding witness to Christ and His Church.
+
 Encouraged by your strong faith, we believe in your powerful patronage and pray that you obtain for us a living faith, an unwavering hope, and love of God and of our neighbor.
+
 Help us in all our needs especially for (mention request here…)
+
 Keep us pure and chaste. Make us obedient to our elders.
+
 Help us to help the poor, the downtrodden, the sick and those in trials and difficulties.
+
 Touch the tepid Christians and enkindle in them the fire of faith, and give the non-Christians the grace of faith in Christ.
+
 As the pagans were moved by your faith in Jesus Christ, so may your immortal faith make the unbelievers embrace the true faith, that the Kingdom of God may flourish.
+
 Assist us always to overcome our trials and temptations. Grant that we may always live a true Christian life and finally be victorious in the battle of faith, that being true witnesses to Christ we may die in Him to join you and all the saints and live for all eternity in His Kingdom, to praise God forever and ever.
+
 Amen.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Lawrence, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My friend told me she is giving up mortal sin and giving her life to God”
+
 🙏 10
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 10th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-lawrence-novena/'; var pageTitle = "St Lawrence Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St Lawrence Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Answered Prayers from the Community
+
 “Thanks for seeing me through”
+
 🙏 20
+
 Eleasar F.
-·
-🇺🇸
-·
+
 Aug 10th
+
 “I'm in good health 🙏🏿”
+
 🙏 11
+
 Cs Njuguna K.
-·
-🇰🇪
-·
+
 Aug 15th
+
 “My vocation was made clear.”
+
 🙏 10
+
 Grant J.
-·
-🇺🇸
-·
+
 Sep 26th
+
 “Thank you for prayers answered please continue to hear our prayers”
+
 🙏 10
+
 sarah W.
-·
-🇺🇸
-·
+
 Sep 4th
+
 “Hello hope y’all are having a great day! I love praying to Saint Lawrence for more laughter! Saint Lawrence did not disappoint as I found several very funny (yet appropriate!!) Catholic memes that I could also share with others after this novena. Thank you Saint Lawrence and please help us all to have even more funzies with our great Catholic faith :) Saint Lawrence, pray for us !!! :)”
+
 🙏 10
+
 Ashley T.
-·
-🇺🇸
-·
+
 Aug 22nd
+
 “Yes i believe he will answer all soon”
+
 🙏 10
+
 Community Member
-·
-🇬🇧
-·
+
 Aug 13th
+
 “Thank you st Lawrence for answering my prayers”
+
 🙏 10
+
 stephanie O.
-·
-🇳🇬
-·
+
 Aug 11th
+
 “My home has been defended and protected from spiritual attacks”
+
 🙏 10
+
 Community Member
-·
+
 Aug 10th
+
 “My friend told me she is giving up mortal sin and giving her life to God”
+
 🙏 10
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 10th
+
 “I have found the best job. Exactly what I was praying for. Thank you!”
+
 🙏 1
+
 Astrid V.
-·
-🇳🇱
-·
+
 Sep 12th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Glorioso Mártir São Lourenço, vimos a vós com humildade, contemplando a vossa grandeza e o vosso poder de intercessão junto de Deus.
+
 Fostes tão forte na fé que suportastes de bom grado as torturas dos pagãos e sofrestes uma morte cruel, tornando-vos uma testemunha eminente de Cristo e da Sua Igreja.
+
 Animados pela vossa fé tão forte, cremos no vosso poderoso patrocínio e vos pedimos que nos alcanceis uma fé viva, uma esperança inabalável e o amor a Deus e ao próximo.
+
 Ajudai-nos em todas as nossas necessidades, especialmente (mencione o pedido aqui…)
+
 Conservai-nos puros e castos. Tornai-nos obedientes aos mais velhos.
+
 Ajudai-nos a socorrer os pobres, os oprimidos, os doentes e os que passam por provações e dificuldades.
+
 Tocai os cristãos tíbios e acendei neles o fogo da fé, e dai aos não cristãos a graça da fé em Cristo.
+
 Assim como os pagãos foram tocados pela vossa fé em Jesus Cristo, que a vossa fé imortal leve os incrédulos a abraçar a verdadeira fé, para que o Reino de Deus floresça.
+
 Assisti-nos sempre para vencermos as nossas provações e tentações. Concedei-nos viver sempre uma verdadeira vida cristã e, por fim, sair vitoriosos na batalha da fé, para que, sendo verdadeiras testemunhas de Cristo, morramos n’Ele, a fim de nos unirmos a vós e a todos os santos e vivermos por toda a eternidade no Seu Reino, louvando a Deus para todo o sempre.
+
 Amém.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 São Lourenço, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-lourenco/'; var pageTitle = "Novena a São Lourenço"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a São Lourenço"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Santa Águeda"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/st-lawrence-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/st-lawrence-novena.png""",
+        tags = listOf("love")
     )
 }

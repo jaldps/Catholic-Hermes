@@ -19,128 +19,202 @@ object NovenaData079 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My dearest St. Gerard, thank you for your beautiful example of humble service and love for Jesus and Mama Mary. I’m grateful to be getting to know you and hope our friendship continues to grow. Teach me to serve faithfully in the ordinary duties entrusted to me, to remain kind when I am misunderstood, and to trust God's providence when I cannot see what lies ahead. Help me care for others with patience and generosity, and never allow difficulties to take away my peace or charity. Keep teaching me to love through little things and to do what is right with a sincere heart. Stay close, dearest St. Gerard, and pray for us. 🤎🙏🏼”
+
 🙏 43
+
 Cealynn F.
-·
-🇺🇸
-·
+
 Oct 16th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My dearest St. Gerard, thank you for your beautiful example of humble service and love for Jesus and Mama Mary. I’m grateful to be getting to know you and hope our friendship continues to grow. Teach me to serve faithfully in the ordinary duties entrusted to me, to remain kind when I am misunderstood, and to trust God's providence when I cannot see what lies ahead. Help me care for others with patience and generosity, and never allow difficulties to take away my peace or charity. Keep teaching me to love through little things and to do what is right with a sincere heart. Stay close, dearest St. Gerard, and pray for us. 🤎🙏🏼”
+
 🙏 43
+
 Cealynn F.
-·
-🇺🇸
-·
+
 Oct 16th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -149,118 +223,182 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Fot baby Kiki”
+
 🙏 21
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 15th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Fot baby Kiki”
+
 🙏 21
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 15th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -269,128 +407,202 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes thank you thank you thank you 🙏🙏🙏💙”
+
 🙏 13
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes thank you thank you thank you 🙏🙏🙏💙”
+
 🙏 13
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -399,118 +611,182 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “The smell in my daughter’s car is reduced, but more importantly she is tolerating it better. This is allowing her to drive her car now. It is a small thing but so important. 🙏🙏”
+
 🙏 12
+
 Pamela S.
-·
-🇺🇸
-·
+
 Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “The smell in my daughter’s car is reduced, but more importantly she is tolerating it better. This is allowing her to drive her car now. It is a small thing but so important. 🙏🙏”
+
 🙏 12
+
 Pamela S.
-·
-🇺🇸
-·
+
 Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -519,128 +795,202 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My son and daughter in law had a beautiful baby girl born October 13th. She had to be induced and over 18 hour labor and delivered a healthy 9lb 1 oz baby! Thank you St. Gerard for hearing our prayers and interceding for this intention.”
+
 🙏 11
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 16th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My son and daughter in law had a beautiful baby girl born October 13th. She had to be induced and over 18 hour labor and delivered a healthy 9lb 1 oz baby! Thank you St. Gerard for hearing our prayers and interceding for this intention.”
+
 🙏 11
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 16th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -649,118 +999,182 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “baby miscarried but we named him Gerald and will continue to pray”
+
 🙏 10
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 21st""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “baby miscarried but we named him Gerald and will continue to pray”
+
 🙏 10
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 21st""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -769,128 +1183,202 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Personal”
+
 🙏 8
+
 john R.
-·
-🇺🇸
-·
+
 Oct 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Personal”
+
 🙏 8
+
 john R.
-·
-🇺🇸
-·
+
 Oct 15th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -899,118 +1387,182 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you Lord for answered prayers 🙏”
+
 🙏 5
+
 Ifuu C.
-·
-🇳🇬
-·
+
 Oct 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you Lord for answered prayers 🙏”
+
 🙏 5
+
 Ifuu C.
-·
-🇳🇬
-·
+
 Oct 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1019,152 +1571,235 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-gerardo-mayela/'; var pageTitle = "Novena a San Gerardo Mayela"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Gerardo Mayela"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Santa Ana""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you lord for answered prayers 🥹🙏🙏”
+
 🙏 4
+
 Community Member
-·
-🇳🇬
-·
+
 Oct 19th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-gerard-majella-novena/'; var pageTitle = "St. Gerard Majella Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Gerard Majella Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-geraldo-majela/'; var pageTitle = "Novena a São Geraldo Majela"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a São Geraldo Majela"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Sant'Ana"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh gran san Gerardo, amado siervo de Jesucristo, perfecto imitador de tu Salvador manso y humilde y devoto hijo de la Madre de Dios, enciende en mi corazón una chispa de aquel fuego celestial de caridad que ardía en el tuyo y que te hizo un ángel de amor.
+
 Oh glorioso san Gerardo, porque, acusado falsamente de un crimen, soportaste como tu Divino Maestro, sin murmurar ni quejarte, las calumnias de hombres malvados, Dios te ha constituido patrono y protector de las futuras madres.
+
 Presérvame del peligro y de los dolores excesivos que acompañan al parto, y protege al niño que ahora llevo en mi seno, para que vea la luz del día y reciba las aguas purificadoras y vivificantes del bautismo, por Jesucristo nuestro Señor. Amén.
+
 (menciona tu petición aquí…)
+
 Dios te salve, María. (3 veces)
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-san-gerardo-mayela/'; var pageTitle = "Novena a San Gerardo Mayela"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a San Gerardo Mayela"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Santa Ana""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O great Saint Gerard, beloved servant of Jesus Christ, perfect imitator of your meek and humble Savior, and devoted child of the Mother of God, enkindle within my heart one spark of that heavenly fire of charity which glowed in your heart and made you an angel of love.
+
 O glorious Saint Gerard, because when falsely accused of crime, you did bear, like your Divine Master, without murmur or complaint, the calumnies of wicked men, you have been raised up by God as the patron and protector of expectant mothers.
+
 Preserve me from danger and from the excessive pains accompanying childbirth, and shield the child which I now carry, that it may see the light of day and receive the purifying and life-giving waters of baptism through Jesus Christ our Lord. Amen.
+
 (mention request here…)
+
 Hail Mary x3
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you lord for answered prayers 🥹🙏🙏”
+
 🙏 4
+
 Community Member
-·
-🇳🇬
-·
+
 Oct 19th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-gerard-majella-novena/'; var pageTitle = "St. Gerard Majella Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Gerard Majella Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó grande São Geraldo, amado servo de Jesus Cristo, perfeito imitador do vosso Salvador manso e humilde e filho devoto da Mãe de Deus, acendei no meu coração uma centelha daquele fogo celeste de caridade que ardia no vosso coração e fez de vós um anjo de amor.
+
 Ó glorioso São Geraldo, porque, quando falsamente acusado de um crime, suportastes, como o vosso divino Mestre, sem murmurar nem vos queixar, as calúnias dos homens maus, fostes elevado por Deus como padroeiro e protetor das gestantes.
+
 Preservai-me do perigo e das dores excessivas que acompanham o parto, e protegei a criança que agora trago no ventre, para que veja a luz do dia e receba as águas purificadoras e vivificantes do Batismo, por Jesus Cristo, nosso Senhor. Amém.
+
 (mencione o pedido aqui…)
+
 Ave-Maria (3 vezes)
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-sao-geraldo-majela/'; var pageTitle = "Novena a São Geraldo Majela"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a São Geraldo Majela"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena a Sant'Ana"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/st-gerard-majella-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/st-gerard-majella-novena.png""",
+        tags = listOf("love")
     )
 }

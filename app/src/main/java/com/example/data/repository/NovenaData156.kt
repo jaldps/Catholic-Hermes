@@ -19,140 +19,226 @@ object NovenaData156 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Was praying for my son to find a new job and today he told me he found a new position! Amen!”
+
 🙏 16
+
 lyn S.
-·
-🇺🇸
-·
+
 Oct 5th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Was praying for my son to find a new job and today he told me he found a new position! Amen!”
+
 🙏 16
+
 lyn S.
-·
-🇺🇸
-·
+
 Oct 5th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -161,130 +247,206 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes my Prayer was answered! I arrived safely in Park City, Utah!!!”
+
 🙏 14
+
 K-Marie D.
-·
-🇺🇸
-·
+
 Oct 8th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes my Prayer was answered! I arrived safely in Park City, Utah!!!”
+
 🙏 14
+
 K-Marie D.
-·
-🇺🇸
-·
+
 Oct 8th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -293,140 +455,226 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Divine Mercy has always been an inspiration for my family and myself , I try to pray every his every day at 3 o’clock pm , it brings me peace and Hope and peace especially when I am down in my spirit , Thank You Lord Jesus for your grace and mercy and Thank you Sister Faustina for your great service and love Amen 🙏🏽”
+
 🙏 13
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 6th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Divine Mercy has always been an inspiration for my family and myself , I try to pray every his every day at 3 o’clock pm , it brings me peace and Hope and peace especially when I am down in my spirit , Thank You Lord Jesus for your grace and mercy and Thank you Sister Faustina for your great service and love Amen 🙏🏽”
+
 🙏 13
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 6th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -435,130 +683,206 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “The house has been sold”
+
 🙏 10
+
 Community Member
-·
-🇨🇦
-·
+
 Oct 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “The house has been sold”
+
 🙏 10
+
 Community Member
-·
-🇨🇦
-·
+
 Oct 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -567,140 +891,226 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “It's done♥️🤍”
+
 🙏 4
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 11th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “It's done♥️🤍”
+
 🙏 4
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 11th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -709,130 +1119,206 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “She always helps me and she help me understand her divine mercy better I readed though her booket”
+
 🙏 3
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 14th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “She always helps me and she help me understand her divine mercy better I readed though her booket”
+
 🙏 3
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 14th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -841,140 +1327,226 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I ended up going to Mass and didn't realize until part way through that it was her feast day. I had prayed for the healing of families and the day after her feast, we had a family dinner that turned out to be quite nice.”
+
 🙏 3
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 8th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I ended up going to Mass and didn't realize until part way through that it was her feast day. I had prayed for the healing of families and the day after her feast, we had a family dinner that turned out to be quite nice.”
+
 🙏 3
+
 Community Member
-·
-🇺🇸
-·
+
 Oct 8th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -983,130 +1555,206 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I received a job offer within 1 week. And I'm currently on the process of starting my new job. 💙💙💙Thank you God. It was a job I didn't expect I would get. Praise the Lord.”
+
 🙏 2
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I received a job offer within 1 week. And I'm currently on the process of starting my new job. 💙💙💙Thank you God. It was a job I didn't expect I would get. Praise the Lord.”
+
 🙏 2
+
 Community Member
-·
-🇬🇧
-·
+
 Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1115,160 +1763,251 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-santa-faustina/'; var pageTitle = "Novena a Santa Faustina"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santa Faustina"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My devotion to the divine mercy greatly increased, also found a relic of St.Faustina during the Pope St JP2 novena, and many more intersessions by both saints to direct my heart to the divine mercy of Jesus”
+
 🙏 2
+
 Daniel B.
-·
-🇦🇺
-·
+
 Oct 19th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-faustina-novena/'; var pageTitle = "St. Faustina Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Faustina Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-santa-faustina/'; var pageTitle = "Novena a Santa Faustina"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santa Faustina"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena à Divina Misericórdia"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Jesús, que llenaste a santa Faustina de una profunda veneración por Tu Misericordia sin límites, dígnate, si es Tu santa voluntad, concederme por su intercesión la gracia que te pido con fervor
+
 (menciona tu petición aquí…)
+
 Mis pecados me hacen indigno de Tu Misericordia, pero acuérdate del espíritu de sacrificio y de abnegación de sor Faustina y recompensa su virtud concediendo la petición que, con confianza de niño, te presento por su intercesión.
+
 Padre nuestro.
+
 Dios te salve, María.
+
 Gloria al Padre.
+
 ¡Santa Faustina, ruega por nosotros!
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-santa-faustina/'; var pageTitle = "Novena a Santa Faustina"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santa Faustina"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O Jesus, who filled Blessed Faustina with profound veneration for Your boundless Mercy, deign, if it be Your Holy will, to grant me, through her intercession, the grace for which I fervently pray
+
 (mention request here…)
+
 My sins render me unworthy of Your Mercy, but be mindful of Sister Faustina’s spirit of sacrifice and self-denial, and reward her virtue by granting the petition which, with childlike trust, I present to You through her intercession.
+
 Our Father
+
 Hail Mary
+
 Glory Be
+
 St Faustina, pray for us!
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My devotion to the divine mercy greatly increased, also found a relic of St.Faustina during the Pope St JP2 novena, and many more intersessions by both saints to direct my heart to the divine mercy of Jesus”
+
 🙏 2
+
 Daniel B.
-·
-🇦🇺
-·
+
 Oct 19th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-faustina-novena/'; var pageTitle = "St. Faustina Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Faustina Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Jesus, que enchestes Santa Faustina de profunda veneração pela Vossa ilimitada Misericórdia, dignai-Vos, se for da Vossa santa vontade, conceder-me por sua intercessão a graça pela qual rezo com fervor
+
 (mencione o pedido aqui…)
+
 Os meus pecados me tornam indigno da Vossa Misericórdia, mas lembrai-Vos do espírito de sacrifício e de abnegação da Irmã Faustina e recompensai a sua virtude concedendo o pedido que, com confiança de criança, Vos apresento por sua intercessão.
+
 Pai-Nosso.
+
 Ave-Maria.
+
 Glória ao Pai.
+
 Santa Faustina, rogai por nós!
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-santa-faustina/'; var pageTitle = "Novena a Santa Faustina"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santa Faustina"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
+
 Novena Relacionada
+
 Novena à Divina Misericórdia"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/st-faustina-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/st-faustina-novena.png""",
+        tags = emptyList()
     )
 }

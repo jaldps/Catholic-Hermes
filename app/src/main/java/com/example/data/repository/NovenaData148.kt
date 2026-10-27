@@ -19,146 +19,238 @@ object NovenaData148 {
                 theme = LocalizedText("""Día 1""", """Day 1""", """Dia 1"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Oh seráfica santa Clara, primera discípula del Pobrecillo de Asís, que abandonaste todas las riquezas y honores por una vida de sacrificio y de altísima pobreza, obtén de Dios para nosotros la gracia que te pedimos (menciona tu petición aquí…), la de someternos siempre a la Divina Voluntad y vivir confiados en la providencia de nuestro Padre celestial. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 O Seraphic Saint Clare, first disciple of the Poor Man of Assisi, who hast abandoned all riches and honours for a life of sacrifice and of highest poverty, obtain from God for us the grace we ask
+
 mention your intentions here
+
 , that of always submitting to the Divine Will and of living confidently in the providence of our Heavenly Father. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I turned to St. Clare to help us get rid of clutter because she lived simply and had no possessions. My prayers were answered: we got rid of a lot of stuff, eventhough there is still plenty left. Thank you St. Clare 🙏”
+
 🙏 261
+
 Rob K.
-·
-🇬🇧
-·
+
 Aug 9th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Ó Seráfica Santa Clara, primeira discípula do Pobre de Assis, que abandonastes todas as riquezas e honras por uma vida de sacrifício e de altíssima pobreza, obtende de Deus para nós a graça que pedimos
+
 mencione suas intenções aqui
+
 , a de sempre nos submetermos à Divina Vontade e de vivermos confiadamente na providência de nosso Pai Celestial. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Oh seráfica santa Clara, primera discípula del Pobrecillo de Asís, que abandonaste todas las riquezas y honores por una vida de sacrificio y de altísima pobreza, obtén de Dios para nosotros la gracia que te pedimos (menciona tu petición aquí…), la de someternos siempre a la Divina Voluntad y vivir confiados en la providencia de nuestro Padre celestial. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 O Seraphic Saint Clare, first disciple of the Poor Man of Assisi, who hast abandoned all riches and honours for a life of sacrifice and of highest poverty, obtain from God for us the grace we ask
+
 mention your intentions here
+
 , that of always submitting to the Divine Will and of living confidently in the providence of our Heavenly Father. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I turned to St. Clare to help us get rid of clutter because she lived simply and had no possessions. My prayers were answered: we got rid of a lot of stuff, eventhough there is still plenty left. Thank you St. Clare 🙏”
+
 🙏 261
+
 Rob K.
-·
-🇬🇧
-·
+
 Aug 9th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Ó Seráfica Santa Clara, primeira discípula do Pobre de Assis, que abandonastes todas as riquezas e honras por uma vida de sacrifício e de altíssima pobreza, obtende de Deus para nós a graça que pedimos
+
 mencione suas intenções aqui
+
 , a de sempre nos submetermos à Divina Vontade e de vivermos confiadamente na providência de nosso Pai Celestial. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-1:hover, #share-native-1:hover, #share-copy-1:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -167,136 +259,218 @@ Aylla S.
                 theme = LocalizedText("""Día 2""", """Day 2""", """Dia 2"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Oh seráfica santa Clara, que, aun viviendo separada del mundo, no olvidaste a los pobres y afligidos, sino que te hiciste madre para ellos, sacrificando por ellos tus riquezas y obrando en su favor innumerables milagros, obtén de Dios para nosotros la gracia que imploramos (menciona tu petición aquí…), la caridad cristiana hacia nuestros hermanos en todas sus necesidades espirituales y temporales. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 O Seraphic Saint Clare who, notwithstanding living separated from the world hast not forgotten the poor and the afflicted, but hast become a mother to them, sacrificing for them your riches and working for them innumerable miracles; obtain from God for us the grace we implore
+
 mention your intentions here
+
 , Christian charity towards our brethren in all their spiritual and temporal needs. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thanks for the blessings each day and the strength”
+
 🙏 146
+
 Eleasar F.
-·
-🇺🇸
-·
+
 Aug 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Ó Seráfica Santa Clara que, apesar de viver separada do mundo, não esquecestes os pobres e os aflitos, mas vos tornastes mãe para eles, sacrificando por eles vossas riquezas e operando para eles inúmeros milagres; obtende de Deus para nós a graça que imploramos
+
 mencione suas intenções aqui
+
 , caridade cristã para com nossos irmãos em todas as suas necessidades espirituais e temporais. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Oh seráfica santa Clara, que, aun viviendo separada del mundo, no olvidaste a los pobres y afligidos, sino que te hiciste madre para ellos, sacrificando por ellos tus riquezas y obrando en su favor innumerables milagros, obtén de Dios para nosotros la gracia que imploramos (menciona tu petición aquí…), la caridad cristiana hacia nuestros hermanos en todas sus necesidades espirituales y temporales. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 O Seraphic Saint Clare who, notwithstanding living separated from the world hast not forgotten the poor and the afflicted, but hast become a mother to them, sacrificing for them your riches and working for them innumerable miracles; obtain from God for us the grace we implore
+
 mention your intentions here
+
 , Christian charity towards our brethren in all their spiritual and temporal needs. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thanks for the blessings each day and the strength”
+
 🙏 146
+
 Eleasar F.
-·
-🇺🇸
-·
+
 Aug 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Ó Seráfica Santa Clara que, apesar de viver separada do mundo, não esquecestes os pobres e os aflitos, mas vos tornastes mãe para eles, sacrificando por eles vossas riquezas e operando para eles inúmeros milagres; obtende de Deus para nós a graça que imploramos
+
 mencione suas intenções aqui
+
 , caridade cristã para com nossos irmãos em todas as suas necessidades espirituais e temporais. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-2:hover, #share-native-2:hover, #share-copy-2:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -305,146 +479,238 @@ Aylla S.
                 theme = LocalizedText("""Día 3""", """Day 3""", """Dia 3"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Oh seráfica santa Clara, luz de tu patria, que libraste a Italia de los invasores bárbaros, obtén de Dios para nosotros la gracia que imploramos (menciona tu petición aquí…), la de vencer todos los ataques del mundo contra la fe y las costumbres, conservando así en nuestras familias la verdadera paz cristiana, con un santo temor de Dios y devoción al Santísimo Sacramento. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 O Seraphic Saint Clare, light of your country, who hast delivered Italy from barbarous invaders; obtain from God for us the grace we implore
+
 mention your intentions here
+
 , that of overcoming all attacks of the world against faith and morals thus preserving in our families true Christian peace with a holy fear of God and a devotion to the Blessed Sacrament. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I'm leaving for my trip tonight and my cough and chest are so much. I know I will continue to heal today and I continue to pray for good health and goodweather and many happy memories for the 4 of us!”
+
 🙏 138
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 11th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Ó Seráfica Santa Clara, luz de vosso país, que livrastes a Itália de invasores bárbaros; obtende de Deus para nós a graça que imploramos
+
 mencione suas intenções aqui
+
 , a de vencer todos os ataques do mundo contra a fé e a moral, preservando assim em nossas famílias a verdadeira paz cristã com um santo temor de Deus e uma devoção ao Santíssimo Sacramento. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Oh seráfica santa Clara, luz de tu patria, que libraste a Italia de los invasores bárbaros, obtén de Dios para nosotros la gracia que imploramos (menciona tu petición aquí…), la de vencer todos los ataques del mundo contra la fe y las costumbres, conservando así en nuestras familias la verdadera paz cristiana, con un santo temor de Dios y devoción al Santísimo Sacramento. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 O Seraphic Saint Clare, light of your country, who hast delivered Italy from barbarous invaders; obtain from God for us the grace we implore
+
 mention your intentions here
+
 , that of overcoming all attacks of the world against faith and morals thus preserving in our families true Christian peace with a holy fear of God and a devotion to the Blessed Sacrament. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I'm leaving for my trip tonight and my cough and chest are so much. I know I will continue to heal today and I continue to pray for good health and goodweather and many happy memories for the 4 of us!”
+
 🙏 138
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 11th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Ó Seráfica Santa Clara, luz de vosso país, que livrastes a Itália de invasores bárbaros; obtende de Deus para nós a graça que imploramos
+
 mencione suas intenções aqui
+
 , a de vencer todos os ataques do mundo contra a fé e a moral, preservando assim em nossas famílias a verdadeira paz cristã com um santo temor de Deus e uma devoção ao Santíssimo Sacramento. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-3:hover, #share-native-3:hover, #share-copy-3:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -453,128 +719,202 @@ Aylla S.
                 theme = LocalizedText("""Día 4""", """Day 4""", """Dia 4"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Bienaventurada santa Clara, cuyo nombre significa luz, ilumina la oscuridad de nuestras mentes y corazones para que veamos lo que Dios quiere que hagamos y lo cumplamos con corazón dispuesto y alegre. Antes de tu nacimiento, una voz celestial anunció que serías una luz que iluminaría el mundo. Sé una luz para nosotros en las penas y ansiedades de esta vida terrena, y llévanos a la luz eterna de nuestro hogar en el Cielo. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Blessed Saint Clare, whose very name means light, illumine the darkness of our minds and hearts so that we might see what God wishes us to do and perform it with a willing and joyful heart. Before your birth, a Heavenly voice foretold that you would be a light illuminating the world. Be a light to us in the sorrows and anxieties of this earthly life, and lead us into the eternal light of our home in Heaven. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes”
+
 🙏 43
+
 Cristina H.
-·
-🇺🇸
-·
+
 Aug 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Bem-aventurada Santa Clara, cujo próprio nome significa luz, iluminai as trevas de nossas mentes e corações para que possamos ver o que Deus deseja que façamos e realizá-lo com um coração disposto e alegre. Antes de vosso nascimento, uma voz celestial predisse que seríeis uma luz iluminando o mundo. Sede uma luz para nós nas tristezas e ansiedades desta vida terrena, e conduzi-nos à luz eterna de nosso lar no Céu. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Bienaventurada santa Clara, cuyo nombre significa luz, ilumina la oscuridad de nuestras mentes y corazones para que veamos lo que Dios quiere que hagamos y lo cumplamos con corazón dispuesto y alegre. Antes de tu nacimiento, una voz celestial anunció que serías una luz que iluminaría el mundo. Sé una luz para nosotros en las penas y ansiedades de esta vida terrena, y llévanos a la luz eterna de nuestro hogar en el Cielo. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Blessed Saint Clare, whose very name means light, illumine the darkness of our minds and hearts so that we might see what God wishes us to do and perform it with a willing and joyful heart. Before your birth, a Heavenly voice foretold that you would be a light illuminating the world. Be a light to us in the sorrows and anxieties of this earthly life, and lead us into the eternal light of our home in Heaven. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Yes”
+
 🙏 43
+
 Cristina H.
-·
-🇺🇸
-·
+
 Aug 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Bem-aventurada Santa Clara, cujo próprio nome significa luz, iluminai as trevas de nossas mentes e corações para que possamos ver o que Deus deseja que façamos e realizá-lo com um coração disposto e alegre. Antes de vosso nascimento, uma voz celestial predisse que seríeis uma luz iluminando o mundo. Sede uma luz para nós nas tristezas e ansiedades desta vida terrena, e conduzi-nos à luz eterna de nosso lar no Céu. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-4:hover, #share-native-4:hover, #share-copy-4:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -583,132 +923,210 @@ Aylla S.
                 theme = LocalizedText("""Día 5""", """Day 5""", """Dia 5"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My sister is pregnant! Baby due March 19th❤️”
+
 🙏 40
+
 carolina H.
-·
-🇺🇸
-·
+
 Aug 11th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “My sister is pregnant! Baby due March 19th❤️”
+
 🙏 40
+
 carolina H.
-·
-🇺🇸
-·
+
 Aug 11th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-5:hover, #share-native-5:hover, #share-copy-5:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -717,128 +1135,202 @@ Aylla S.
                 theme = LocalizedText("""Día 6""", """Day 6""", """Dia 6"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Generosa santa Clara, que dejaste la riqueza, los placeres y todos los bienes terrenos para ser la primera hija espiritual de san Francisco y servir a Dios en el claustro, ayúdanos a entregar nuestra vida a Dios sin límite ni medida, para que Él viva en nosotros y resplandezca desde nosotros en todos aquellos cuyas vidas tocan la nuestra. Tú, que amaste tanto a las almas que hiciste de tu vida un sacrificio continuo por ellas, obtennos las gracias que ahora imploramos y alcánzanos la fuerza para alabar a Dios tanto en el sufrimiento como en la alegría. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Generous Saint Clare, who left wealth and pleasure and all earthly goods to become the first spiritual daughter of Saint Francis and to serve God in the cloister, help us to commit our lives to God without limit or measure so that He may live in us and shine forth from us to all whose lives touch ours. You who loved souls so much as to make your life a continual sacrifice for them, obtain for us the graces we now implore and win for us the strength to praise God in suffering as well as in joy. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “AMEN - thank you St Clare for your tangibly powerful intercession in this Jubilee 800th Year of the Transitus of our Holy Father Saint Francis!!!”
+
 🙏 29
+
 Mark T.
-·
-🇺🇸
-·
+
 Aug 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Generosa Santa Clara, que deixastes a riqueza e o prazer e todos os bens terrenos para vos tornardes a primeira filha espiritual de São Francisco e servir a Deus no claustro, ajudai-nos a comprometer nossas vidas com Deus sem limite ou medida para que Ele possa viver em nós e brilhar de nós para todos aqueles cujas vidas tocam a nossa. Vós que amastes tanto as almas a ponto de fazer de vossa vida um sacrifício contínuo por elas, obtende para nós as graças que agora imploramos e conquistai para nós a força de louvar a Deus no sofrimento assim como na alegria. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Generosa santa Clara, que dejaste la riqueza, los placeres y todos los bienes terrenos para ser la primera hija espiritual de san Francisco y servir a Dios en el claustro, ayúdanos a entregar nuestra vida a Dios sin límite ni medida, para que Él viva en nosotros y resplandezca desde nosotros en todos aquellos cuyas vidas tocan la nuestra. Tú, que amaste tanto a las almas que hiciste de tu vida un sacrificio continuo por ellas, obtennos las gracias que ahora imploramos y alcánzanos la fuerza para alabar a Dios tanto en el sufrimiento como en la alegría. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Generous Saint Clare, who left wealth and pleasure and all earthly goods to become the first spiritual daughter of Saint Francis and to serve God in the cloister, help us to commit our lives to God without limit or measure so that He may live in us and shine forth from us to all whose lives touch ours. You who loved souls so much as to make your life a continual sacrifice for them, obtain for us the graces we now implore and win for us the strength to praise God in suffering as well as in joy. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “AMEN - thank you St Clare for your tangibly powerful intercession in this Jubilee 800th Year of the Transitus of our Holy Father Saint Francis!!!”
+
 🙏 29
+
 Mark T.
-·
-🇺🇸
-·
+
 Aug 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Generosa Santa Clara, que deixastes a riqueza e o prazer e todos os bens terrenos para vos tornardes a primeira filha espiritual de São Francisco e servir a Deus no claustro, ajudai-nos a comprometer nossas vidas com Deus sem limite ou medida para que Ele possa viver em nós e brilhar de nós para todos aqueles cujas vidas tocam a nossa. Vós que amastes tanto as almas a ponto de fazer de vossa vida um sacrifício contínuo por elas, obtende para nós as graças que agora imploramos e conquistai para nós a força de louvar a Deus no sofrimento assim como na alegria. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-6:hover, #share-native-6:hover, #share-copy-6:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -847,132 +1339,210 @@ Aylla S.
                 theme = LocalizedText("""Día 7""", """Day 7""", """Dia 7"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I'm in good health sound mind.”
+
 🙏 25
+
 Cs Njuguna K.
-·
-🇰🇪
-·
+
 Aug 17th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “I'm in good health sound mind.”
+
 🙏 25
+
 Cs Njuguna K.
-·
-🇰🇪
-·
+
 Aug 17th""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-7:hover, #share-native-7:hover, #share-copy-7:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -981,126 +1551,198 @@ Aylla S.
                 theme = LocalizedText("""Día 8""", """Day 8""", """Dia 8"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Valiant Saint Clare, who fearlessly stood alone against the barbarous Saracens, trusting in the Blessed Sacrament as your only protection, enkindle in us a tender love for Jesus Christ; help us to live Eucharistic lives. You who saved your city of Assisi from plunder and ruin, protect our city and archdiocese, plead for our beloved country and the suffering world. A voice from the Sacred Host rewarded your trust with a promise: ‘I will always take care of you.’ Glorious Saint Clare, from your high place in Heaven, take care of us now in our earthly needs and guide us by your light to Heaven. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “The eye surgery went well”
+
 🙏 21
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 15th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Valente Santa Clara, que destemidamente enfrentastes sozinha os bárbaros sarracenos, confiando no Santíssimo Sacramento como vossa única proteção, acendei em nós um terno amor por Jesus Cristo; ajudai-nos a viver vidas Eucarísticas. Vós que salvastes vossa cidade de Assis do saque e da ruína, protegei nossa cidade e arquidiocese, suplicai por nosso amado país e pelo mundo sofredor. Uma voz da Sagrada Hóstia recompensou vossa confiança com uma promessa: ‘Eu sempre cuidarei de ti.’ Gloriosa Santa Clara, de vosso alto lugar no Céu, cuidai de nós agora em nossas necessidades terrenas e guiai-nos por vossa luz ao Céu. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Valiant Saint Clare, who fearlessly stood alone against the barbarous Saracens, trusting in the Blessed Sacrament as your only protection, enkindle in us a tender love for Jesus Christ; help us to live Eucharistic lives. You who saved your city of Assisi from plunder and ruin, protect our city and archdiocese, plead for our beloved country and the suffering world. A voice from the Sacred Host rewarded your trust with a promise: ‘I will always take care of you.’ Glorious Saint Clare, from your high place in Heaven, take care of us now in our earthly needs and guide us by your light to Heaven. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “The eye surgery went well”
+
 🙏 21
+
 Community Member
-·
-🇺🇸
-·
+
 Aug 15th""", """Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Valente Santa Clara, que destemidamente enfrentastes sozinha os bárbaros sarracenos, confiando no Santíssimo Sacramento como vossa única proteção, acendei em nós um terno amor por Jesus Cristo; ajudai-nos a viver vidas Eucarísticas. Vós que salvastes vossa cidade de Assis do saque e da ruína, protegei nossa cidade e arquidiocese, suplicai por nosso amado país e pelo mundo sofredor. Uma voz da Sagrada Hóstia recompensou vossa confiança com uma promessa: ‘Eu sempre cuidarei de ti.’ Gloriosa Santa Clara, de vosso alto lugar no Céu, cuidai de nós agora em nossas necessidades terrenas e guiai-nos por vossa luz ao Céu. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-8:hover, #share-native-8:hover, #share-copy-8:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
@@ -1109,154 +1751,239 @@ Aylla S.
                 theme = LocalizedText("""Día 9""", """Day 9""", """Dia 9"""),
                 scripture = "",
                 meditation = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Bondadosa santa Clara, que realizaste tu vocación de mujer con una vida de amor en la oración y la penitencia, ayúdanos a cumplir nuestro destino para que un día te saludemos en el Cielo. Tú, que fuiste consolada en tu muerte con una visión de Cristo y de Su Madre, obtennos la gracia de morir bajo la protección especial de Dios y de entrar en la vida y la bienaventuranza de que ahora gozas. Ten piedad de nosotros, que luchamos, de nosotros, que lloramos, y alcánzanos los favores de Dios para que, después de esta vida, volvamos a casa, junto a Aquel que vive y reina por los siglos de los siglos. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-santa-clara-de-asis/'; var pageTitle = "Novena a Santa Clara"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santa Clara"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Gracious Saint Clare, who fulfilled your womanhood by a life of love in prayer and penance, help us to fulfill our destiny that we may one day greet you in Heaven. You who were consoled at your death by a vision of Christ and His Mother, obtain for us the grace that we may die under the special protection of God and enter into the life and bliss you now enjoy. Have pity on us who struggle, on us who mourn, and win for us the favours of God so that after this life we may come home to Him who lives and reigns forever and ever. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you for prayers answered please continue to hear our prayers”
+
 🙏 16
+
 sarah W.
-·
-🇺🇸
-·
+
 Sep 4th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-clare-of-assisi-novena/'; var pageTitle = "St. Clare Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Clare Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Graciosa Santa Clara, que cumpristes vossa feminilidade através de uma vida de amor em oração e penitência, ajudai-nos a cumprir nosso destino para que um dia possamos vos saudar no Céu. Vós que fostes consolada em vossa morte por uma visão de Cristo e de Sua Mãe, obtende para nós a graça de que possamos morrer sob a proteção especial de Deus e entrar na vida e na bem-aventurança que agora gozais. Tende piedade de nós que lutamos, de nós que choramos, e conquistai para nós os favores de Deus para que após esta vida possamos voltar para casa junto a Ele que vive e reina para todo o sempre. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-santa-clara/'; var pageTitle = "Novena a Santa Clara"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santa Clara"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
+
 Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre y las maravillas de gracia que has obrado en Tu sierva, santa Clara. Por su poderosa intercesión, concédenos los favores que te pedimos en esta novena, sobre todo la gracia de vivir y morir como ella en Tu santísimo Amor, y también esta intención
+
 (menciona tu petición aquí…)
+
 Amén.
+
 Bondadosa santa Clara, que realizaste tu vocación de mujer con una vida de amor en la oración y la penitencia, ayúdanos a cumplir nuestro destino para que un día te saludemos en el Cielo. Tú, que fuiste consolada en tu muerte con una visión de Cristo y de Su Madre, obtennos la gracia de morir bajo la protección especial de Dios y de entrar en la vida y la bienaventuranza de que ahora gozas. Ten piedad de nosotros, que luchamos, de nosotros, que lloramos, y alcánzanos los favores de Dios para que, después de esta vida, volvamos a casa, junto a Aquel que vive y reina por los siglos de los siglos. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
+
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
+
 Amén.
+
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
+
 Amén.
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 “Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
+
 🙏 548
+
 Camí C.
-·
-🇺🇸
-·
+
 20 de jul
-(function() { var pageUrl = 'https://catholicnovenaapp.com/es/novenas/novena-a-santa-clara-de-asis/'; var pageTitle = "Novena a Santa Clara"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santa Clara"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
+
 Set reminders so you never miss a day
+
 OPEN →
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and the wonders of grace Thou hast worked in Thy servant, Saint Clare. Through her powerful intercession grant us the favours we beg in this novena, above all the grace to live and die as she did in Thy most Holy Love and also this intention
+
 (mention request here…)
+
 Amen.
+
 Gracious Saint Clare, who fulfilled your womanhood by a life of love in prayer and penance, help us to fulfill our destiny that we may one day greet you in Heaven. You who were consoled at your death by a vision of Christ and His Mother, obtain for us the grace that we may die under the special protection of God and enter into the life and bliss you now enjoy. Have pity on us who struggle, on us who mourn, and win for us the favours of God so that after this life we may come home to Him who lives and reigns forever and ever. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
+
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
+
 Amen.
+
 In the Name of the Father, and of the Son, and of the Holy Spirit.
+
 Amen.
+
 Today's prayer complete!
+
 Share this novena with someone who needs it.
+
 Link copied!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Answered Prayers from the Community
+
 “Thank you for prayers answered please continue to hear our prayers”
+
 🙏 16
+
 sarah W.
-·
-🇺🇸
-·
+
 Sep 4th
-(function() { var pageUrl = 'https://catholicnovenaapp.com/novenas/st-clare-of-assisi-novena/'; var pageTitle = "St. Clare Novena"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "St. Clare Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+
 Configure lembretes para não perder nenhum dia
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Ó Santíssima Trindade, Pai, Filho e Espírito Santo, louvamos Vosso Santo Nome e as maravilhas de graça que operastes em Vossa serva, Santa Clara.
+
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
+
 (mencione o pedido aqui…)
+
 Graciosa Santa Clara, que cumpristes vossa feminilidade através de uma vida de amor em oração e penitência, ajudai-nos a cumprir nosso destino para que um dia possamos vos saudar no Céu. Vós que fostes consolada em vossa morte por uma visão de Cristo e de Sua Mãe, obtende para nós a graça de que possamos morrer sob a proteção especial de Deus e entrar na vida e na bem-aventurança que agora gozais. Tende piedade de nós que lutamos, de nós que choramos, e conquistai para nós os favores de Deus para que após esta vida possamos voltar para casa junto a Ele que vive e reina para todo o sempre. Amém.
+
 V. Rogai por nós, Santa Clara.
+
 R. Para que sejamos dignos das promessas de Cristo. Oremos. Nós Vos rogamos, Senhor, concedei a nós Vossos servos que celebramos a festa da bem-aventurada Clara Vossa Virgem, por sua intercessão, sermos participantes das alegrias do céu e co-herdeiros com Vosso Filho unigênito, Que sendo Deus, vive e reina para todo o sempre. Amém.
+
 Em nome do Pai, do Filho e do Espírito Santo.
+
 Amém.
+
 Oração de hoje completa!
+
 Compartilhe esta novena com alguém que precisa.
+
 Link copiado!
-#share-facebook-9:hover, #share-native-9:hover, #share-copy-9:hover { background: #F7F8F6 !important; transform: scale(1.05); }
+
 Orações Atendidas da Comunidade
+
 “Sim”
+
 🙏 537
+
 Aylla S.
-·
-🇧🇷
-·
+
 22 de set
-(function() { var pageUrl = 'https://catholicnovenaapp.com/pt/novenas/novena-a-santa-clara/'; var pageTitle = "Novena a Santa Clara"; function trackShare(day, platform) { if (typeof window.trackEvent !== 'undefined') { window.trackEvent('social_share_clicked', { event_category: 'engagement', novena: pageTitle, day: day, platform: platform, source: 'daily_prayer_share' }); } } function showCopyFeedback(day) { var feedback = document.getElementById('copy-feedback-' + day); if (feedback) { feedback.style.display = 'block'; setTimeout(function() { feedback.style.display = 'none'; }, 2000); } } function copyLink(day) { if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(pageUrl).then(function() { showCopyFeedback(day); }); } else { var textArea = document.createElement('textarea'); textArea.value = pageUrl; textArea.style.position = 'fixed'; textArea.style.left = '-9999px'; document.body.appendChild(textArea); textArea.select(); document.execCommand('copy'); document.body.removeChild(textArea); showCopyFeedback(day); } } function shareFacebook() { var fbUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(pageUrl) + '&quote=' + encodeURIComponent(pageTitle); var left = (screen.width - 600) / 2; var top = (screen.height - 400) / 2; window.open(fbUrl, 'facebook-share', 'width=600,height=400,left=' + left + ',top=' + top); } function shareNative() { if (navigator.share) { navigator.share({ title: pageTitle, url: pageUrl }); } } if (navigator.share) { var nativeButtons = document.querySelectorAll('[data-share-platform="native"]'); for (var i = 0; i < nativeButtons.length; i++) { nativeButtons[i].style.display = 'flex'; } } document.addEventListener('click', function(event) { var btn = event.target.closest ? event.target.closest('[data-share-day]') : null; if (!btn) { return; } var day = btn.getAttribute('data-share-day'); var platform = btn.getAttribute('data-share-platform'); if (platform === 'facebook') { trackShare(day, 'facebook'); shareFacebook(); } else if (platform === 'native') { trackShare(day, 'native'); shareNative(); } else if (platform === 'copy') { trackShare(day, 'copy'); copyLink(day); } }); })();
+
 (function() { var novenaTitle = "Novena a Santa Clara"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
-        imageUrl = """https://catholicnovenaapp.com/assets/images/st-clare-of-assisi-novena.png"""
+        imageUrl = """https://catholicnovenaapp.com/assets/images/st-clare-of-assisi-novena.png""",
+        tags = listOf("love", "health", "family", "peace")
     )
 }

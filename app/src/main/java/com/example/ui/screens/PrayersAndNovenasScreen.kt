@@ -90,6 +90,8 @@ fun PrayersAndNovenasScreen(
 
     // Novenas State
     var selectedNovena by remember { mutableStateOf<Novena?>(null) }
+    var novenaSearchQuery by remember { mutableStateOf("") }
+    var selectedNovenaTag by remember { mutableStateOf<String?>(null) }
     var activeNovenaDay by remember { mutableIntStateOf(1) } // 1..9
     var novenaCompletedDays by remember { mutableStateOf(setOf(1)) }
     var personalIntention by remember { mutableStateOf("") }
@@ -282,6 +284,31 @@ fun PrayersAndNovenasScreen(
                 // Miraculous Novenas View
                 if (selectedNovena == null) {
                     // List of Novenas
+                    val allNovenas = repository.officialNovenas
+                    val availableTags = listOf(
+                        "impossible", "blessings", "love", "money", "comfort", "health", "family", "peace"
+                    ).filter { tag -> allNovenas.any { it.tags.contains(tag) } }
+                    val tagLabels = mapOf(
+                        "impossible" to (when (currentLanguage) { AppLanguage.ES -> "Casos imposibles/difíciles"; AppLanguage.EN -> "Impossible/difficult cases"; AppLanguage.PT -> "Casos impossíveis/difíceis" }),
+                        "blessings" to (when (currentLanguage) { AppLanguage.ES -> "Bendiciones"; AppLanguage.EN -> "Blessings"; AppLanguage.PT -> "Bênçãos" }),
+                        "love" to (when (currentLanguage) { AppLanguage.ES -> "Amor"; AppLanguage.EN -> "Love"; AppLanguage.PT -> "Amor" }),
+                        "money" to (when (currentLanguage) { AppLanguage.ES -> "Dinero/Trabajo"; AppLanguage.EN -> "Money/Work"; AppLanguage.PT -> "Dinheiro/Trabalho" }),
+                        "comfort" to (when (currentLanguage) { AppLanguage.ES -> "Consuelo"; AppLanguage.EN -> "Comfort"; AppLanguage.PT -> "Consolo" }),
+                        "health" to (when (currentLanguage) { AppLanguage.ES -> "Salud/Cura"; AppLanguage.EN -> "Health/Healing"; AppLanguage.PT -> "Saúde/Cura" }),
+                        "family" to (when (currentLanguage) { AppLanguage.ES -> "Familia"; AppLanguage.EN -> "Family"; AppLanguage.PT -> "Família" }),
+                        "peace" to (when (currentLanguage) { AppLanguage.ES -> "Paz"; AppLanguage.EN -> "Peace"; AppLanguage.PT -> "Paz" })
+                    )
+                    val filteredNovenas = allNovenas.filter { novena ->
+                        val matchesSearch = novenaSearchQuery.isBlank() || listOf(
+                            novena.title.get(currentLanguage),
+                            novena.patron.get(currentLanguage),
+                            novena.description.get(currentLanguage)
+                        ).any { it.contains(novenaSearchQuery, ignoreCase = true) } ||
+                            novena.days.any { it.prayer.get(currentLanguage).contains(novenaSearchQuery, ignoreCase = true) || it.meditation.get(currentLanguage).contains(novenaSearchQuery, ignoreCase = true) }
+                        val matchesTag = selectedNovenaTag == null || novena.tags.contains(selectedNovenaTag)
+                        matchesSearch && matchesTag
+                    }
+
                     LazyColumn(
                         modifier = Modifier
                             .fillMaxSize()
@@ -309,9 +336,48 @@ fun PrayersAndNovenasScreen(
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
+                            Spacer(modifier = Modifier.height(10.dp))
+                            OutlinedTextField(
+                                value = novenaSearchQuery,
+                                onValueChange = { novenaSearchQuery = it },
+                                modifier = Modifier.fillMaxWidth(),
+                                placeholder = { Text(when (currentLanguage) { AppLanguage.ES -> "Buscar novena..."; AppLanguage.EN -> "Search novena..."; AppLanguage.PT -> "Buscar novena..." }) },
+                                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
+                                shape = RoundedCornerShape(14.dp),
+                                singleLine = true
+                            )
+                            Spacer(modifier = Modifier.height(8.dp))
+                            LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                                item {
+                                    val isSelected = selectedNovenaTag == null
+                                    Box(
+                                        modifier = Modifier
+                                            .clip(RoundedCornerShape(12.dp))
+                                            .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface)
+                                            .border(1.dp, if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
+                                            .clickable { selectedNovenaTag = null }
+                                            .padding(horizontal = 12.dp, vertical = 6.dp)
+                                    ) {
+                                        Text(text = when (currentLanguage) { AppLanguage.ES -> "Todas"; AppLanguage.EN -> "All"; AppLanguage.PT -> "Todas" }, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
+                                    }
+                                }
+                                items(availableTags) { tag ->
+                                    val isSelected = selectedNovenaTag == tag
+                                    Box(
+                                        modifier = Modifier
+                                            .clip(RoundedCornerShape(12.dp))
+                                            .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface)
+                                            .border(1.dp, if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
+                                            .clickable { selectedNovenaTag = tag }
+                                            .padding(horizontal = 12.dp, vertical = 6.dp)
+                                    ) {
+                                        Text(text = tagLabels[tag] ?: tag, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
+                                    }
+                                }
+                            }
                         }
 
-                        items(repository.officialNovenas) { novena ->
+                        items(filteredNovenas) { novena ->
                             NovenaOverviewCard(
                                 novena = novena,
                                 currentLanguage = currentLanguage,
