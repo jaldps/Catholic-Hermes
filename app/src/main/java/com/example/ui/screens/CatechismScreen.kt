@@ -896,7 +896,6 @@ private fun VaticanOfficialLinksView(
                 }
             }
         }
-    }
 
     webViewUrl?.let { url ->
         InAppBrowserDialog(url = url, onDismiss = { webViewUrl = null })

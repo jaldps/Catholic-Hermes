@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.Compare
 import androidx.compose.material.icons.filled.FormatSize
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ButtonDefaults
@@ -928,10 +929,6 @@ private fun DailyMassMissalView(
             }
         }
 
-        webViewUrl?.let { url ->
-            InAppBrowserDialog(url = url, onDismiss = { webViewUrl = null })
-        }
-
         // Reflection
         item {
             Surface(
@@ -959,6 +956,10 @@ private fun DailyMassMissalView(
                 }
             }
         }
+    }
+
+    webViewUrl?.let { url ->
+        InAppBrowserDialog(url = url, onDismiss = { webViewUrl = null })
     }
 }
 

@@ -148,10 +148,6 @@ class CatholicDataRepository(private val context: Context? = null) {
     fun getCompendiumQA(number: Int) = CatechismCompendiumData.getCompendiumQA(number)
     fun searchCompendium(query: String) = CatechismCompendiumData.searchCompendium(query)
 
-    // Catholic Canon Apologetics & History (73 vs 66 Books)
-    val canonDeuterocanonicalDetails: List<BibleData.DeuterocanonicalBookDetail> get() = BibleData.deuterocanonicalBooksDetail
-    val canonHistoricalMilestones: List<BibleData.CanonHistoricalMilestone> get() = BibleData.canonHistoricalMilestones
-
     // Flagship Additions: Pilgrimages, Habits, Calendar
     val globalPilgrimages: List<com.example.data.models.CatholicPilgrimageSanctuary> get() = PilgrimageAndHabitsData.globalPilgrimages
     val spiritualHabitsList: List<com.example.data.models.SpiritualHabitItem> get() = PilgrimageAndHabitsData.spiritualHabitsList
