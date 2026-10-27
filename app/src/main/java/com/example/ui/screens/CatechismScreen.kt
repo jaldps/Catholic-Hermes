@@ -74,6 +74,7 @@ import com.example.data.models.CatechismPart
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.theme.LiturgicalGold
 import com.example.ui.theme.SacredBurgundy
+import com.example.ui.components.InAppBrowserDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -82,7 +83,7 @@ fun CatechismScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier
 ) {
-    var mainMode by remember { mutableIntStateOf(0) } // 0 = Compendio (598), 1 = Catecismo Universal (1-2865), 2 = Fuentes Oficiales
+    var mainMode by remember { mutableIntStateOf(2) } // 0 = Compendio (598), 1 = Catecismo Universal (1-2865), 2 = Fuentes Oficiales
     var selectedPartIndex by remember { mutableIntStateOf(0) } // 0..3 (Parts 1 to 4)
     var selectedChapter by remember { mutableStateOf<CatechismChapter?>(null) }
     var selectedArticleDetail by remember { mutableStateOf<CatechismNumberedArticle?>(null) }
@@ -770,6 +771,7 @@ private fun VaticanOfficialLinksView(
     currentLanguage: AppLanguage
 ) {
     val context = LocalContext.current
+    var webViewUrl by remember { mutableStateOf<String?>(null) }
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -882,7 +884,21 @@ private fun VaticanOfficialLinksView(
                         Text("Abrir Compendio Oficial", fontSize = 11.sp)
                     }
                 }
+
+                    FilledTonalButton(
+                        onClick = { webViewUrl = item.catechismUrl },
+                        modifier = Modifier.padding(top = 4.dp)
+                    ) {
+                        Icon(Icons.Default.MenuBook, contentDescription = null, modifier = Modifier.size(16.dp))
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text("Ver en la app", fontSize = 11.sp)
+                    }
+                }
             }
         }
+    }
+
+    webViewUrl?.let { url ->
+        InAppBrowserDialog(url = url, onDismiss = { webViewUrl = null })
     }
 }

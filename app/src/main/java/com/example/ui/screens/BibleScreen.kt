@@ -81,6 +81,7 @@ import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
 import kotlinx.coroutines.launch
 import com.example.ui.theme.SacredBurgundy
+import com.example.ui.components.InAppBrowserDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -799,6 +800,7 @@ private fun DailyMassMissalView(
     dailyReading: DailyMassReading,
     currentLanguage: AppLanguage
 ) {
+    var webViewUrl by remember { mutableStateOf<String?>(null) }
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -906,6 +908,28 @@ private fun DailyMassMissalView(
                     )
                 }
             }
+        }
+
+        item {
+            FilledTonalButton(
+                onClick = { webViewUrl = dailyReading.sourceUrl },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
+                Spacer(modifier = Modifier.width(6.dp))
+                Text(
+                    text = when (currentLanguage) {
+                        AppLanguage.ES -> "Ver misal oficial en la app"
+                        AppLanguage.EN -> "View official missal in app"
+                        AppLanguage.PT -> "Ver missal oficial no app"
+                    },
+                    fontSize = 12.sp
+                )
+            }
+        }
+
+        webViewUrl?.let { url ->
+            InAppBrowserDialog(url = url, onDismiss = { webViewUrl = null })
         }
 
         // Reflection

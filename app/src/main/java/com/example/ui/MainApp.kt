@@ -85,6 +85,7 @@ enum class AppDestination(
     PRAYERS("Oraciones", "Prayers", "Orações", Icons.Default.VolunteerActivism, "nav_prayers"),
     PILGRIMAGE_HABITS("Santuarios", "Sanctuaries", "Santuários", Icons.Default.Place, "nav_pilgrimage"),
     DOCTRINE("Doctrina e Iglesias", "Doctrine & Parishes", "Doutrina e Paróquias", Icons.Default.Church, "nav_doctrine"),
+    CHURCHES_NEWS("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias", Icons.Default.Place, "nav_churches_news"),
     SPIRITUAL_LIFE("Diario y Quiz", "Journal & Quiz", "Diário e Quiz", Icons.Default.Star, "nav_spiritual")
 }
 
@@ -271,6 +272,12 @@ fun MainApp(
                     AppDestination.DOCTRINE -> DoctrineAndHistoryScreen(
                         repository = repository,
                         currentLanguage = currentLanguage
+                    )
+
+                    AppDestination.CHURCHES_NEWS -> DoctrineAndHistoryScreen(
+                        repository = repository,
+                        currentLanguage = currentLanguage,
+                        initialTopTab = 3
                     )
 
                     AppDestination.SPIRITUAL_LIFE -> SpiritualLifeScreen(

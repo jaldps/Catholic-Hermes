@@ -27,6 +27,7 @@ import androidx.compose.material.icons.filled.History
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Newspaper
+import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.Star
@@ -59,6 +60,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import java.util.Locale
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -91,9 +93,10 @@ import com.example.ui.theme.SacredBurgundy
 fun DoctrineAndHistoryScreen(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
+    initialTopTab: Int = 0,
     modifier: Modifier = Modifier
 ) {
-    var selectedTopTab by remember { mutableIntStateOf(0) } // 0 = Catecismo y Moral, 1 = Devociones Marianas y Jesús, 2 = Historia y Cismas, 3 = Parroquias y Noticias
+    var selectedTopTab by remember { mutableIntStateOf(initialTopTab) } // 0 = Catecismo y Moral, 1 = Devociones Marianas y Jesús, 2 = Historia y Cismas, 3 = Parroquias y Noticias
     var selectedSubDoctrineTab by remember { mutableIntStateOf(0) } // 0 = Mandamientos, 1 = Preceptos, 2 = Pecados vs Virtudes, 3 = Pecado Mortal vs Venial
 
     Column(
@@ -294,7 +297,12 @@ fun DoctrineAndHistoryScreen(
                 var selectedRegion by remember { mutableStateOf("Todas") }
                 var selectedCity by remember { mutableStateOf("Todas") }
 
-                val allCountries = remember { listOf("Todos") + repository.nearbyParishes.map { it.country }.distinct() }
+                val allCountries = remember {
+                    val isoCountries = Locale.getISOCountries().map { code ->
+                        Locale("", code).getDisplayCountry(Locale("es"))
+                    }.filter { it.isNotBlank() }.distinct().sorted()
+                    listOf("Todos") + isoCountries
+                }
                 val availableRegions = remember(selectedCountry) {
                     if (selectedCountry == "Todos") {
                         listOf("Todas") + repository.nearbyParishes.map { it.stateOrRegion }.distinct()
@@ -540,6 +548,29 @@ fun DoctrineAndHistoryScreen(
                                 },
                                 isSelected = selectedParishFilter == 3,
                                 onClick = { selectedParishFilter = 3 }
+                            )
+                        }
+                    }
+
+                    item {
+                        FilledTonalButton(
+                            onClick = {
+                                val query = listOf(selectedCity, selectedRegion, selectedCountry).filter { it != "Todos" && it != "Todas" }.joinToString(", ")
+                                val url = "https://www.google.com/maps/search/catholic+church+$query"
+                                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                                context.startActivity(intent)
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = when (currentLanguage) {
+                                    AppLanguage.ES -> "Buscar iglesias en Google Maps"
+                                    AppLanguage.EN -> "Find churches on Google Maps"
+                                    AppLanguage.PT -> "Buscar igrejas no Google Maps"
+                                },
+                                fontSize = 12.sp
                             )
                         }
                     }
