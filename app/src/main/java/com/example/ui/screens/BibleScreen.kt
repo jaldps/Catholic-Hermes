@@ -1,5 +1,6 @@
 package com.example.ui.screens
 
+import com.example.ui.components.IdentityTabBar
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -109,73 +110,18 @@ fun BibleScreen(
             .fillMaxSize()
             .testTag("bible_screen")
     ) {
-        // Main Screen Mode Tabs
-        PrimaryTabRow(
-            selectedTabIndex = selectedMainTab,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.primary
-        ) {
-            Tab(
-                selected = selectedMainTab == 0,
-                onClick = { selectedMainTab = 0 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Biblia (73)"
-                            AppLanguage.EN -> "Bible (73)"
-                            AppLanguage.PT -> "Bíblia (73)"
-                        },
-                        fontWeight = if (selectedMainTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedMainTab == 1,
-                onClick = { selectedMainTab = 1 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Misal Diario"
-                            AppLanguage.EN -> "Daily Missal"
-                            AppLanguage.PT -> "Missal Diário"
-                        },
-                        fontWeight = if (selectedMainTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedMainTab == 2,
-                onClick = { selectedMainTab = 2 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Comparador"
-                            AppLanguage.EN -> "Versions"
-                            AppLanguage.PT -> "Versões"
-                        },
-                        fontWeight = if (selectedMainTab == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedMainTab == 3,
-                onClick = { selectedMainTab = 3 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Estudio Bíblico"
-                            AppLanguage.EN -> "Scripture Study"
-                            AppLanguage.PT -> "Estudo Bíblico"
-                        },
-                        fontWeight = if (selectedMainTab == 3) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-        }
+        IdentityTabBar(
+            labels = listOf(
+                when (currentLanguage) { AppLanguage.ES -> "Biblia (73)"; AppLanguage.EN -> "Bible (73)"; AppLanguage.PT -> "Bíblia (73)" },
+                when (currentLanguage) { AppLanguage.ES -> "Misal Diario"; AppLanguage.EN -> "Daily Missal"; AppLanguage.PT -> "Missal Diário" },
+                when (currentLanguage) { AppLanguage.ES -> "Comparador"; AppLanguage.EN -> "Versions"; AppLanguage.PT -> "Versões" },
+                when (currentLanguage) { AppLanguage.ES -> "Estudio Bíblico"; AppLanguage.EN -> "Scripture Study"; AppLanguage.PT -> "Estudo Bíblico" }
+            ),
+            selectedIndex = selectedMainTab,
+            onTabSelected = { selectedMainTab = it },
+            modifier = Modifier.testTag("bible_mode_tabs"),
+            testTags = listOf("bible_tab_canon", "bible_tab_missal", "bible_tab_versions", "bible_tab_study")
+        )
 
         when (selectedMainTab) {
             0 -> {
