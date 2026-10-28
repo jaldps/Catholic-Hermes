@@ -491,7 +491,7 @@ private fun ArticleItemCard(
                     Text(
                         text = "CIC § ${article.cccNumber}",
                         fontWeight = FontWeight.Bold,
-                        color = Color.White,
+                        color = MaterialTheme.colorScheme.onPrimary,
                         fontSize = 11.sp
                     )
                 }
@@ -725,7 +725,7 @@ private fun CompendiumView(
                                         text = "Pregunta ${q.number}",
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 11.sp,
-                                        color = Color.White
+                                        color = MaterialTheme.colorScheme.onPrimary
                                     )
                                 }
 
