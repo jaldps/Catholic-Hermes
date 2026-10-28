@@ -47,6 +47,9 @@ fun LiturgicalHeader(
 ) {
     val seasonColor = Color(dailyReading.liturgicalColorHex)
     val activeIdentity = LocalAppThemePreset.current
+    val isApple = activeIdentity == AppThemePreset.APPLE.id
+    val isMaterial = activeIdentity == AppThemePreset.MATERIAL.id
+    val isVatican = activeIdentity == AppThemePreset.VATICAN.id
     val headerShape = when (activeIdentity) {
         AppThemePreset.APPLE.id -> RoundedCornerShape(bottomStart = 28.dp, bottomEnd = 28.dp)
         AppThemePreset.MATERIAL.id -> RoundedCornerShape(bottomStart = 24.dp, bottomEnd = 24.dp)
@@ -57,14 +60,14 @@ fun LiturgicalHeader(
         modifier = modifier
             .fillMaxWidth()
             .testTag("liturgical_header"),
-        color = MaterialTheme.colorScheme.surface,
-        tonalElevation = if (activeIdentity == AppThemePreset.MATERIAL.id) 3.dp else 0.dp,
+        color = if (isApple) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.surface,
+        tonalElevation = if (isMaterial) 3.dp else 0.dp,
         shape = headerShape
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 14.dp)
+                .padding(horizontal = if (isApple) 20.dp else if (isMaterial) 16.dp else 24.dp, vertical = if (isApple) 18.dp else 14.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -75,10 +78,26 @@ fun LiturgicalHeader(
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
-                        .clip(MaterialTheme.shapes.medium)
-                        .background(seasonColor.copy(alpha = 0.15f))
-                        .border(1.dp, seasonColor.copy(alpha = 0.4f), MaterialTheme.shapes.medium)
-                        .padding(horizontal = 10.dp, vertical = 5.dp)
+                        .clip(when (activeIdentity) {
+                            AppThemePreset.APPLE.id -> MaterialTheme.shapes.large
+                            AppThemePreset.MATERIAL.id -> MaterialTheme.shapes.medium
+                            else -> MaterialTheme.shapes.extraSmall
+                        })
+                        .background(
+                            when {
+                                isApple -> MaterialTheme.colorScheme.surface
+                                isMaterial -> MaterialTheme.colorScheme.secondaryContainer
+                                else -> seasonColor.copy(alpha = 0.15f)
+                            }
+                        )
+                        .then(
+                            if (isVatican) Modifier.border(
+                                1.dp,
+                                seasonColor.copy(alpha = 0.4f),
+                                MaterialTheme.shapes.extraSmall
+                            ) else Modifier
+                        )
+                        .padding(horizontal = if (isApple) 12.dp else 10.dp, vertical = 5.dp)
                 ) {
                     Box(
                         modifier = Modifier
@@ -91,7 +110,7 @@ fun LiturgicalHeader(
                         text = dailyReading.liturgicalSeason.get(currentLanguage).uppercase(),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface,
+                        color = if (isMaterial) MaterialTheme.colorScheme.onSecondaryContainer else MaterialTheme.colorScheme.onSurface,
                         letterSpacing = 0.5.sp
                     )
                 }
@@ -101,8 +120,14 @@ fun LiturgicalHeader(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .testTag("language_selector_button")
-                        .clip(MaterialTheme.shapes.medium)
-                        .background(MaterialTheme.colorScheme.primaryContainer)
+                         .clip(when (activeIdentity) {
+                            AppThemePreset.APPLE.id -> MaterialTheme.shapes.large
+                            AppThemePreset.MATERIAL.id -> MaterialTheme.shapes.medium
+                            else -> MaterialTheme.shapes.extraSmall
+                        })
+                        .background(
+                            if (isApple) MaterialTheme.colorScheme.surface else MaterialTheme.colorScheme.primaryContainer
+                        )
                         .clickable(onClick = onLanguageClick)
                         .padding(horizontal = 10.dp, vertical = 5.dp)
                 ) {
@@ -132,9 +157,9 @@ fun LiturgicalHeader(
             // Feast / Daily Title
             Text(
                 text = dailyReading.feastTitle.get(currentLanguage),
-                style = MaterialTheme.typography.titleLarge,
+                style = if (isApple) MaterialTheme.typography.headlineMedium else MaterialTheme.typography.titleLarge,
                 color = MaterialTheme.colorScheme.primary,
-                fontWeight = FontWeight.Bold
+                fontWeight = if (isApple) FontWeight.SemiBold else FontWeight.Bold
             )
 
             Spacer(modifier = Modifier.height(2.dp))
