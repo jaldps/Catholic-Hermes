@@ -26,6 +26,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.ui.theme.AppThemePreset
@@ -48,7 +49,6 @@ fun IdentityTabBar(
     val identity = LocalAppThemePreset.current
     val isApple = identity == AppThemePreset.APPLE.id
     val isMaterial = identity == AppThemePreset.MATERIAL.id
-    val isVatican = identity == AppThemePreset.VATICAN.id
 
     when {
         isMaterial -> PrimaryTabRow(
@@ -61,7 +61,7 @@ fun IdentityTabBar(
                 Tab(
                     selected = index == selectedIndex,
                     onClick = { onTabSelected(index) },
-                    modifier = testTags.getOrNull(index)?.let { Modifier.then(Modifier) } ?: Modifier,
+                    modifier = testTags.getOrNull(index)?.let { Modifier.testTag(it) } ?: Modifier,
                     text = {
                         Text(
                             text = label,
@@ -93,7 +93,7 @@ fun IdentityTabBar(
                 labels.forEachIndexed { index, label ->
                     val selected = index == selectedIndex
                     Surface(
-                        modifier = Modifier
+                        modifier = (testTags.getOrNull(index)?.let { Modifier.testTag(it) } ?: Modifier)
                             .selectable(
                                 selected = selected,
                                 role = Role.Tab,
@@ -102,7 +102,6 @@ fun IdentityTabBar(
                         shape = MaterialTheme.shapes.medium,
                         color = if (selected) MaterialTheme.colorScheme.surface else MaterialTheme.colorScheme.surfaceVariant,
                         shadowElevation = if (selected) 1.dp else 0.dp,
-                        border = if (selected) null else null
                     ) {
                         Text(
                             text = label,
