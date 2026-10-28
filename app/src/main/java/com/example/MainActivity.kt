@@ -9,6 +9,8 @@ import kotlinx.coroutines.launch
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDatabase
 import com.example.data.repository.CatholicDataRepository
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import com.example.ui.MainApp
 import com.example.ui.theme.SanctaFidesTheme
 
@@ -32,7 +34,14 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            SanctaFidesTheme {
+            val prefs by dao.getAppPreferences().collectAsState(initial = null)
+            val appPrefs = prefs ?: com.example.data.local.AppPreferencesEntity()
+            SanctaFidesTheme(
+                themePreset = appPrefs.themePreset,
+                darkModeSetting = appPrefs.darkModeSetting,
+                isSerif = appPrefs.fontFamilyChoice == "SERIF",
+                fontScale = appPrefs.fontSizeScale
+            ) {
                 MainApp(
                     repository = repository,
                     dao = dao,
