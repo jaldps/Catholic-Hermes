@@ -280,7 +280,7 @@ private fun TrackOverviewView(
                     ) {
                         Box(contentAlignment = Alignment.Center) {
                             if (isDone) {
-                                Icon(Icons.Default.Check, contentDescription = null, tint = Color.Black, modifier = Modifier.size(20.dp))
+                                Icon(Icons.Default.Check, contentDescription = null, tint = MaterialTheme.colorScheme.onSecondary, modifier = Modifier.size(20.dp))
                             } else {
                                 Text(
                                     text = "${lesson.lessonNumber}",
@@ -353,7 +353,7 @@ private fun LessonDetailView(
                     onClick = { onToggleComplete(notesText) },
                     colors = ButtonDefaults.elevatedButtonColors(
                         containerColor = if (isCompleted) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary,
-                        contentColor = if (isCompleted) Color.Black else Color.White
+                        contentColor = if (isCompleted) MaterialTheme.colorScheme.onSecondary else MaterialTheme.colorScheme.onPrimary
                     )
                 ) {
                     Icon(
@@ -573,7 +573,7 @@ private fun LessonDetailView(
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.elevatedButtonColors(
                             containerColor = MaterialTheme.colorScheme.primary,
-                            contentColor = Color.White
+                            contentColor = MaterialTheme.colorScheme.onPrimary
                         )
                     ) {
                         Text(if (isCompleted) "Guardar Cambios" else "Guardar y Completar Lección", fontSize = 13.sp)
