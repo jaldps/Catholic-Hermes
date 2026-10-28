@@ -149,7 +149,7 @@ fun PrayerBeadCounter(
                         text = "PN",
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = if (isLargeActive) Color.White else MaterialTheme.colorScheme.onPrimaryContainer
+                        color = if (isLargeActive) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onPrimaryContainer
                     )
                 }
 
@@ -188,8 +188,8 @@ fun PrayerBeadCounter(
                             fontSize = 9.sp,
                             fontWeight = FontWeight.Bold,
                             color = when {
-                                isActive -> Color.White
-                                isCompleted -> Color.Black
+                                isActive -> MaterialTheme.colorScheme.onPrimary
+                                isCompleted -> MaterialTheme.colorScheme.onSecondary
                                 else -> MaterialTheme.colorScheme.onSurfaceVariant
                             }
                         )
@@ -227,7 +227,7 @@ fun PrayerBeadCounter(
                     modifier = Modifier.testTag("toggle_prayer_audio_button"),
                     colors = ButtonDefaults.elevatedButtonColors(
                         containerColor = MaterialTheme.colorScheme.primary,
-                        contentColor = Color.White
+                        contentColor = MaterialTheme.colorScheme.onPrimary
                     )
                 ) {
                     Icon(
@@ -252,7 +252,7 @@ fun PrayerBeadCounter(
                     modifier = Modifier.testTag("next_bead_button"),
                     colors = ButtonDefaults.filledTonalButtonColors(
                         containerColor = MaterialTheme.colorScheme.secondary,
-                        contentColor = Color.Black
+                        contentColor = MaterialTheme.colorScheme.onSecondary
                     )
                 ) {
                     Text(text = "Siguiente", fontSize = 12.sp, fontWeight = FontWeight.Bold)
