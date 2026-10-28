@@ -1,7 +1,9 @@
 package com.example.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -63,11 +65,13 @@ fun SanctaFidesTheme(
     }
 
     val colorScheme = ThemePalettes.getColorScheme(themePreset, isDark)
-    val typography = ThemePalettes.buildScaledTypography(isSerif, fontScale)
+    val typography = ThemePalettes.buildScaledTypography(isSerif, fontScale, themePreset)
+    val shapes = ThemePalettes.buildShapes(themePreset)
 
     MaterialTheme(
         colorScheme = colorScheme,
         typography = typography,
+        shapes = shapes,
         content = content
     )
 }

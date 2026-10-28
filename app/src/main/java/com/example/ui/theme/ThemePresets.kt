@@ -1,10 +1,13 @@
 package com.example.ui.theme
 
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ColorScheme
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -348,8 +351,36 @@ object ThemePalettes {
         }
     }
 
-    fun buildScaledTypography(isSerif: Boolean, scale: Float): Typography {
-        val family = if (isSerif) FontFamily.Serif else FontFamily.Default
+    fun buildShapes(themePreset: String): Shapes {
+        return when (themePreset) {
+            "APPLE_CLEAN" -> Shapes(
+                extraSmall = RoundedCornerShape(8.dp),
+                small = RoundedCornerShape(12.dp),
+                medium = RoundedCornerShape(16.dp),
+                large = RoundedCornerShape(20.dp),
+                extraLarge = RoundedCornerShape(28.dp)
+            )
+            "MATERIAL_CLEAN" -> Shapes(
+                extraSmall = RoundedCornerShape(4.dp),
+                small = RoundedCornerShape(8.dp),
+                medium = RoundedCornerShape(12.dp),
+                large = RoundedCornerShape(16.dp),
+                extraLarge = RoundedCornerShape(28.dp)
+            )
+            else -> Shapes(
+                extraSmall = RoundedCornerShape(4.dp),
+                small = RoundedCornerShape(8.dp),
+                medium = RoundedCornerShape(12.dp),
+                large = RoundedCornerShape(16.dp),
+                extraLarge = RoundedCornerShape(24.dp)
+            )
+        }
+    }
+
+    fun buildScaledTypography(isSerif: Boolean, scale: Float, themePreset: String = ""): Typography {
+        val apple = themePreset == "APPLE_CLEAN"
+        val material = themePreset == "MATERIAL_CLEAN"
+        val family = if (isSerif && !apple && !material) FontFamily.Serif else FontFamily.Default
         return Typography(
             headlineLarge = TextStyle(
                 fontFamily = family,
