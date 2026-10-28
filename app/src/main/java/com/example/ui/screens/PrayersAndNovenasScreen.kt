@@ -752,9 +752,9 @@ private fun NovenaOverviewCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
+            .clip(MaterialTheme.shapes.large)
             .clickable(onClick = onClick),
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
     ) {
@@ -768,21 +768,21 @@ private fun NovenaOverviewCard(
                     text = novena.title.get(currentLanguage),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.weight(1f)
                 )
 
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .background(LiturgicalGold.copy(alpha = 0.2f))
+                        .clip(MaterialTheme.shapes.small)
+                        .background(MaterialTheme.colorScheme.secondaryContainer)
                         .padding(horizontal = 10.dp, vertical = 4.dp)
                 ) {
                     Text(
                         text = "${novena.days.size} DÍAS",
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.onSecondaryContainer,
                         maxLines = 1,
                         softWrap = false
                     )
@@ -797,7 +797,7 @@ private fun NovenaOverviewCard(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(140.dp)
-                        .clip(RoundedCornerShape(12.dp)),
+                        .clip(MaterialTheme.shapes.medium),
                     contentScale = ContentScale.Crop
                 )
             }
