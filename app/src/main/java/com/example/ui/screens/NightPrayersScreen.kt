@@ -562,7 +562,7 @@ private fun IgnatianExamenView(
                             },
                             colors = ButtonDefaults.elevatedButtonColors(
                                 containerColor = MaterialTheme.colorScheme.primary,
-                                contentColor = Color.White
+                                contentColor = MaterialTheme.colorScheme.onPrimary
                             )
                         ) {
                             Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(14.dp))
