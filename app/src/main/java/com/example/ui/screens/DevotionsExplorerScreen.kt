@@ -62,8 +62,6 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.ChristManifestation
 import com.example.data.models.MarianApparition
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -88,7 +86,7 @@ fun DevotionsExplorerScreen(
         SecondaryTabRow(
             selectedTabIndex = selectedCategoryTab,
             containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-            contentColor = SacredBurgundy
+            contentColor = MaterialTheme.colorScheme.primary
         ) {
             Tab(
                 selected = selectedCategoryTab == 0,
@@ -129,7 +127,7 @@ fun DevotionsExplorerScreen(
                     )
                 },
                 leadingIcon = {
-                    Icon(Icons.Default.Search, contentDescription = null, tint = SacredBurgundy)
+                    Icon(Icons.Default.Search, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                 },
                 singleLine = true
             )
@@ -267,7 +265,7 @@ private fun DetailedMarianCard(
     var showFullPrayer by remember { mutableStateOf(false) }
 
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f))
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
@@ -281,7 +279,7 @@ private fun DetailedMarianCard(
                         text = item.title.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
@@ -292,14 +290,14 @@ private fun DetailedMarianCard(
                 }
 
                 Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = LiturgicalGold.copy(alpha = 0.2f)
+                    shape = MaterialTheme.shapes.small,
+                    color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f)
                 ) {
                     Text(
                         text = item.feastDay,
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                     )
                 }
@@ -309,20 +307,20 @@ private fun DetailedMarianCard(
 
             // Patronage badge
             Surface(
-                shape = RoundedCornerShape(8.dp),
-                color = SacredBurgundy.copy(alpha = 0.08f)
+                shape = MaterialTheme.shapes.small,
+                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.08f)
             ) {
                 Row(
                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Icon(Icons.Default.Star, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(14.dp))
+                    Icon(Icons.Default.Star, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(14.dp))
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
                         text = item.patronageOf.get(currentLanguage),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Medium,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
             }
@@ -340,13 +338,13 @@ private fun DetailedMarianCard(
 
             // Sanctuary
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.Place, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
+                Icon(Icons.Default.Place, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(16.dp))
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(
                     text = "Santuario: ${item.primarySanctuary.get(currentLanguage)}",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = SacredBurgundy
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
 
@@ -372,7 +370,7 @@ private fun DetailedMarianCard(
                     text = if (showFullPrayer) "Ocultar Oración" else "Ver Oración Tradicional",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.clickable { showFullPrayer = !showFullPrayer }
                 )
 
@@ -381,14 +379,14 @@ private fun DetailedMarianCard(
                         onClick = { onSpeakPrayer(item.venerationPrayer.get(currentLanguage)) },
                         modifier = Modifier.size(32.dp)
                     ) {
-                        Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = SacredBurgundy, modifier = Modifier.size(18.dp))
+                        Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(18.dp))
                     }
                 }
             }
 
             AnimatedVisibility(visible = showFullPrayer) {
                 Surface(
-                    shape = RoundedCornerShape(10.dp),
+                    shape = MaterialTheme.shapes.small,
                     color = MaterialTheme.colorScheme.surface,
                     modifier = Modifier
                         .fillMaxWidth()
@@ -399,12 +397,12 @@ private fun DetailedMarianCard(
                             text = "Oración de Veneración e Intercesión:",
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp,
-                            color = LiturgicalGold
+                            color = MaterialTheme.colorScheme.secondary
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
                             text = item.venerationPrayer.get(currentLanguage),
-                            fontFamily = FontFamily.Serif,
+                            fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                             fontSize = 13.sp,
                             lineHeight = 20.sp,
                             color = MaterialTheme.colorScheme.onSurface
@@ -425,7 +423,7 @@ private fun DetailedChristCard(
     var showFullPrayer by remember { mutableStateOf(false) }
 
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
@@ -439,7 +437,7 @@ private fun DetailedChristCard(
                         text = item.title.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
@@ -450,14 +448,14 @@ private fun DetailedChristCard(
                 }
 
                 Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = SacredBurgundy.copy(alpha = 0.1f)
+                    shape = MaterialTheme.shapes.small,
+                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
                 ) {
                     Text(
                         text = item.feastDay.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                     )
                 }
@@ -476,13 +474,13 @@ private fun DetailedChristCard(
 
             // Primary Sanctuary
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.Church, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
+                Icon(Icons.Default.Church, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(16.dp))
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(
                     text = "Santuario Principal: ${item.primarySanctuary.get(currentLanguage)}",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = SacredBurgundy
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
 
@@ -507,7 +505,7 @@ private fun DetailedChristCard(
                     text = if (showFullPrayer) "Ocultar Oración" else "Ver Oración Sagrada",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.clickable { showFullPrayer = !showFullPrayer }
                 )
 
@@ -516,14 +514,14 @@ private fun DetailedChristCard(
                         onClick = { onSpeakPrayer(item.officialPrayer.get(currentLanguage)) },
                         modifier = Modifier.size(32.dp)
                     ) {
-                        Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = SacredBurgundy, modifier = Modifier.size(18.dp))
+                        Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(18.dp))
                     }
                 }
             }
 
             AnimatedVisibility(visible = showFullPrayer) {
                 Surface(
-                    shape = RoundedCornerShape(10.dp),
+                    shape = MaterialTheme.shapes.small,
                     color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
                     modifier = Modifier
                         .fillMaxWidth()
@@ -534,12 +532,12 @@ private fun DetailedChristCard(
                             text = "Oración Oficial:",
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp,
-                            color = LiturgicalGold
+                            color = MaterialTheme.colorScheme.secondary
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
                             text = item.officialPrayer.get(currentLanguage),
-                            fontFamily = FontFamily.Serif,
+                            fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                             fontSize = 13.sp,
                             lineHeight = 20.sp,
                             color = MaterialTheme.colorScheme.onSurface
