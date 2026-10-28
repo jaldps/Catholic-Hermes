@@ -77,11 +77,9 @@ import com.example.data.models.BibleVersionInfo
 import com.example.data.models.DailyMassReading
 import com.example.data.models.Testament
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
 import kotlinx.coroutines.launch
-import com.example.ui.theme.SacredBurgundy
 import com.example.ui.components.InAppBrowserDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -115,7 +113,7 @@ fun BibleScreen(
         PrimaryTabRow(
             selectedTabIndex = selectedMainTab,
             containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy
+            contentColor = MaterialTheme.colorScheme.primary
         ) {
             Tab(
                 selected = selectedMainTab == 0,
@@ -209,7 +207,7 @@ fun BibleScreen(
                                 Icon(imageVector = Icons.Default.Search, contentDescription = null)
                             },
                             singleLine = true,
-                            shape = RoundedCornerShape(14.dp)
+                            shape = MaterialTheme.shapes.medium
                         )
 
                         Spacer(modifier = Modifier.height(10.dp))
@@ -349,15 +347,15 @@ fun BibleScreen(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(vertical = 4.dp),
-                                shape = RoundedCornerShape(10.dp),
-                                color = LiturgicalGold.copy(alpha = 0.12f),
+                                shape = MaterialTheme.shapes.small,
+                                color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f),
                                 border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
                             ) {
                                 Row(
                                     modifier = Modifier.padding(10.dp),
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Icon(Icons.Default.Info, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(18.dp))
+                                    Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(18.dp))
                                     Spacer(modifier = Modifier.width(8.dp))
                                     Text(
                                         text = when (currentLanguage) {
@@ -496,8 +494,8 @@ fun BibleScreen(
                                             Box(
                                                 modifier = Modifier
                                                     .size(44.dp)
-                                                    .clip(RoundedCornerShape(10.dp))
-                                                    .background(if (isCurrent) SacredBurgundy else MaterialTheme.colorScheme.surfaceVariant)
+                                                    .clip(MaterialTheme.shapes.small)
+                                                    .background(if (isCurrent) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant)
                                                     .clickable {
                                                         selectedChapterNumber = chNum
                                                         showChapterSelectorDialog = false
@@ -578,7 +576,7 @@ fun BibleScreen(
                         .padding(horizontal = 20.dp, vertical = 12.dp)
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(imageVector = Icons.Default.Comment, contentDescription = null, tint = SacredBurgundy)
+                        Icon(imageVector = Icons.Default.Comment, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = when (currentLanguage) {
@@ -588,7 +586,7 @@ fun BibleScreen(
                             },
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                     }
 
@@ -596,7 +594,7 @@ fun BibleScreen(
 
                     Text(
                         text = "«${v.text.get(currentLanguage)}» (v. ${v.number})",
-                        fontFamily = FontFamily.Serif,
+                        fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 15.sp,
                         color = MaterialTheme.colorScheme.onSurface
@@ -607,7 +605,7 @@ fun BibleScreen(
                     if (v.commentary != null) {
                         Surface(
                             modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(12.dp),
+                            shape = MaterialTheme.shapes.medium,
                             color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f),
                             border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
                         ) {
@@ -616,7 +614,7 @@ fun BibleScreen(
                                     text = v.commentaryAuthor ?: "Padres de la Iglesia",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 13.sp,
-                                    color = LiturgicalGold
+                                    color = MaterialTheme.colorScheme.secondary
                                 )
                                 Spacer(modifier = Modifier.height(6.dp))
                                 Text(
@@ -643,12 +641,12 @@ private fun FilterChip(
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface)
+            .clip(MaterialTheme.shapes.medium)
+            .background(if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
             .border(
                 1.dp,
-                if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                RoundedCornerShape(12.dp)
+                if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
+                MaterialTheme.shapes.medium
             )
             .clickable(onClick = onClick)
             .padding(horizontal = 10.dp, vertical = 6.dp)
@@ -672,7 +670,7 @@ private fun BookListItem(
         modifier = Modifier
             .fillMaxWidth()
             .testTag("book_item_${book.id}")
-            .clip(RoundedCornerShape(14.dp))
+            .clip(MaterialTheme.shapes.medium)
             .clickable(onClick = onClick),
         color = MaterialTheme.colorScheme.surface,
         tonalElevation = 1.dp,
@@ -688,14 +686,14 @@ private fun BookListItem(
                     modifier = Modifier
                         .size(38.dp)
                         .clip(CircleShape)
-                        .background(if (book.isDeuterocanonical) LiturgicalGold.copy(alpha = 0.2f) else MaterialTheme.colorScheme.primaryContainer),
+                        .background(if (book.isDeuterocanonical) MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f) else MaterialTheme.colorScheme.primaryContainer),
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
                         text = book.abbreviation,
                         fontWeight = FontWeight.Bold,
                         fontSize = 13.sp,
-                        color = if (book.isDeuterocanonical) LiturgicalGold else MaterialTheme.colorScheme.onPrimaryContainer
+                        color = if (book.isDeuterocanonical) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.onPrimaryContainer
                     )
                 }
 
@@ -713,11 +711,11 @@ private fun BookListItem(
                             Spacer(modifier = Modifier.width(6.dp))
                             Box(
                                 modifier = Modifier
-                                    .clip(RoundedCornerShape(6.dp))
-                                    .background(LiturgicalGold.copy(alpha = 0.2f))
+                                    .clip(MaterialTheme.shapes.extraSmall)
+                                    .background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f))
                                     .padding(horizontal = 6.dp, vertical = 2.dp)
                             ) {
-                                Text("Católico", fontSize = 9.sp, fontWeight = FontWeight.Bold, color = SacredBurgundy)
+                                Text("Católico", fontSize = 9.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
                             }
                         }
                     }
@@ -745,7 +743,7 @@ private fun VerseItem(
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(MaterialTheme.shapes.medium)
             .clickable(onClick = onCommentaryClick),
         color = MaterialTheme.colorScheme.surface,
         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
@@ -760,24 +758,24 @@ private fun VerseItem(
                     text = "v. ${verse.number}",
                     fontWeight = FontWeight.Bold,
                     fontSize = (12 * fontSizeMultiplier).sp,
-                    color = LiturgicalGold
+                    color = MaterialTheme.colorScheme.secondary
                 )
 
                 if (verse.commentary != null) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
-                            .clip(RoundedCornerShape(8.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f))
                             .padding(horizontal = 8.dp, vertical = 4.dp)
                     ) {
-                        Icon(imageVector = Icons.Default.Comment, contentDescription = null, modifier = Modifier.size(12.dp), tint = SacredBurgundy)
+                        Icon(imageVector = Icons.Default.Comment, contentDescription = null, modifier = Modifier.size(12.dp), tint = MaterialTheme.colorScheme.primary)
                         Spacer(modifier = Modifier.width(4.dp))
                         Text(
                             text = verse.commentaryAuthor ?: "Comentario",
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                     }
                 }
@@ -787,7 +785,7 @@ private fun VerseItem(
 
             Text(
                 text = verse.text.get(currentLanguage),
-                fontFamily = if (useSerif) FontFamily.Serif else FontFamily.Default,
+                fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
                 fontSize = (15 * fontSizeMultiplier).sp,
                 lineHeight = (24 * fontSizeMultiplier).sp,
                 color = MaterialTheme.colorScheme.onSurface
@@ -810,7 +808,7 @@ private fun DailyMassMissalView(
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
@@ -818,7 +816,7 @@ private fun DailyMassMissalView(
                         text = dailyReading.feastTitle.get(currentLanguage),
                         style = MaterialTheme.typography.titleLarge,
                         fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Text(
                         text = dailyReading.liturgicalSeason.get(currentLanguage) + " • " + dailyReading.dateDisplay,
@@ -887,7 +885,7 @@ private fun DailyMassMissalView(
         // Official source attribution (Vatican News)
         item {
             Surface(
-                shape = RoundedCornerShape(14.dp),
+                shape = MaterialTheme.shapes.medium,
                 color = MaterialTheme.colorScheme.surface
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
@@ -899,7 +897,7 @@ private fun DailyMassMissalView(
                         },
                         fontWeight = FontWeight.Bold,
                         fontSize = 12.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
@@ -932,7 +930,7 @@ private fun DailyMassMissalView(
         // Reflection
         item {
             Surface(
-                shape = RoundedCornerShape(14.dp),
+                shape = MaterialTheme.shapes.medium,
                 color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
                 border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
             ) {
@@ -944,7 +942,7 @@ private fun DailyMassMissalView(
                             AppLanguage.PT -> "Reflexão Homilética"
                         },
                         fontWeight = FontWeight.Bold,
-                        color = LiturgicalGold,
+                        color = MaterialTheme.colorScheme.secondary,
                         fontSize = 14.sp
                     )
                     Spacer(modifier = Modifier.height(6.dp))
@@ -971,7 +969,7 @@ private fun ReadingBlock(
     isGospel: Boolean = false
 ) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(
             containerColor = if (isGospel) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surface
         )
@@ -985,20 +983,20 @@ private fun ReadingBlock(
                 Text(
                     text = title,
                     fontWeight = FontWeight.Bold,
-                    color = if (isGospel) SacredBurgundy else MaterialTheme.colorScheme.primary,
+                    color = if (isGospel) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.primary,
                     style = MaterialTheme.typography.titleMedium
                 )
                 Text(
                     text = citation,
                     fontWeight = FontWeight.Bold,
                     fontSize = 12.sp,
-                    color = LiturgicalGold
+                    color = MaterialTheme.colorScheme.secondary
                 )
             }
             Spacer(modifier = Modifier.height(10.dp))
             Text(
                 text = content,
-                fontFamily = FontFamily.Serif,
+                fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                 style = MaterialTheme.typography.bodyLarge,
                 lineHeight = 24.sp
             )
@@ -1026,7 +1024,7 @@ private fun BibleVersionsComparatorView(
                 },
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
-                color = SacredBurgundy
+                color = MaterialTheme.colorScheme.primary
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
@@ -1042,7 +1040,7 @@ private fun BibleVersionsComparatorView(
 
         items(versions) { ver ->
             Card(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = if (ver.isCatholicCanon) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.15f)
                 ),
@@ -1063,8 +1061,8 @@ private fun BibleVersionsComparatorView(
 
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(8.dp))
-                                .background(if (ver.isCatholicCanon) SacredBurgundy else Color(0xFF8B2500))
+                                .clip(MaterialTheme.shapes.small)
+                                .background(if (ver.isCatholicCanon) MaterialTheme.colorScheme.primary else Color(0xFF8B2500))
                                 .padding(horizontal = 8.dp, vertical = 4.dp)
                         ) {
                             Text(
@@ -1089,7 +1087,7 @@ private fun BibleVersionsComparatorView(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clip(RoundedCornerShape(8.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(MaterialTheme.colorScheme.surface)
                             .padding(10.dp)
                     ) {
@@ -1126,7 +1124,7 @@ fun OfflineBibleDownloadsView(
             },
             style = androidx.compose.material3.MaterialTheme.typography.titleMedium,
             fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
-            color = com.example.ui.theme.SacredBurgundy
+            color = MaterialTheme.colorScheme.primary
         )
         androidx.compose.foundation.layout.Spacer(modifier = androidx.compose.ui.Modifier.height(8.dp))
         manager.specs.forEach { spec ->
@@ -1138,7 +1136,7 @@ fun OfflineBibleDownloadsView(
                 modifier = androidx.compose.ui.Modifier
                     .fillMaxWidth()
                     .padding(vertical = 4.dp),
-                shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp)
+                shape = androidx.compose.foundation.shape.MaterialTheme.shapes.medium
             ) {
                 androidx.compose.foundation.layout.Column(modifier = androidx.compose.ui.Modifier.padding(12.dp)) {
                     androidx.compose.material3.Text(text = spec.name, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)
