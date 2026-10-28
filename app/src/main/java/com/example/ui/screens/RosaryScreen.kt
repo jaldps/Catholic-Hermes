@@ -63,8 +63,6 @@ import com.example.data.models.RosaryDecade
 import com.example.data.models.RosaryMysteryType
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.components.PrayerBeadCounter
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
@@ -121,7 +119,7 @@ fun RosaryScreen(
         PrimaryTabRow(
             selectedTabIndex = selectedTab,
             containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy
+            contentColor = MaterialTheme.colorScheme.primary
         ) {
             Tab(
                 selected = selectedTab == 0,
@@ -174,7 +172,7 @@ fun RosaryScreen(
                                     AppLanguage.PT -> "SELECIONE O MISTÉRIO"
                                 },
                                 style = MaterialTheme.typography.labelLarge,
-                                color = LiturgicalGold,
+                                color = MaterialTheme.colorScheme.secondary,
                                 letterSpacing = 1.sp
                             )
 
@@ -197,7 +195,7 @@ fun RosaryScreen(
                                                 currentDecadeIndex = 0
                                                 currentBeadInDecade = 0
                                             },
-                                        color = if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface,
+                                        color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface,
                                         border = CardDefaults.outlinedCardBorder().copy(width = if (isSelected) 1.5.dp else 0.5.dp)
                                     ) {
                                         Column(
@@ -221,7 +219,7 @@ fun RosaryScreen(
                                                     text = "Hoy",
                                                     fontSize = 9.sp,
                                                     fontWeight = FontWeight.Bold,
-                                                    color = if (isSelected) LiturgicalGold else SacredBurgundy
+                                                    color = if (isSelected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary
                                                 )
                                             }
                                         }
@@ -284,7 +282,7 @@ fun RosaryScreen(
                                         text = "${currentDecade.number}° Misterio: ${currentDecade.title.get(currentLanguage)}",
                                         style = MaterialTheme.typography.titleMedium,
                                         fontWeight = FontWeight.Bold,
-                                        color = SacredBurgundy
+                                        color = MaterialTheme.colorScheme.primary
                                     )
                                 }
 
@@ -294,7 +292,7 @@ fun RosaryScreen(
                                     text = currentDecade.scriptureRef,
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Bold,
-                                    color = LiturgicalGold
+                                    color = MaterialTheme.colorScheme.secondary
                                 )
 
                                 Spacer(modifier = Modifier.height(8.dp))
@@ -303,7 +301,7 @@ fun RosaryScreen(
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .clip(RoundedCornerShape(8.dp))
-                                        .background(LiturgicalGold.copy(alpha = 0.15f))
+                                        .background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.15f))
                                         .padding(8.dp)
                                 ) {
                                     Text(
@@ -338,7 +336,7 @@ fun RosaryScreen(
                                     text = if (currentBeadInDecade == 0) "Oración del Padre Nuestro" else "Oración del Ave María",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 14.sp,
-                                    color = SacredBurgundy
+                                    color = MaterialTheme.colorScheme.primary
                                 )
 
                                 Spacer(modifier = Modifier.height(10.dp))
@@ -379,7 +377,7 @@ fun RosaryScreen(
                     item {
                         Surface(
                             shape = RoundedCornerShape(16.dp),
-                            color = SacredBurgundy,
+                            color = MaterialTheme.colorScheme.primary,
                             tonalElevation = 4.dp
                         ) {
                             Row(
@@ -388,7 +386,7 @@ fun RosaryScreen(
                                     .padding(16.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Icon(Icons.Default.AccessTime, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(28.dp))
+                                Icon(Icons.Default.AccessTime, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(28.dp))
                                 Spacer(modifier = Modifier.width(12.dp))
                                 Column {
                                     Text(
@@ -419,7 +417,7 @@ fun RosaryScreen(
                                 text = "PASO ${mercyStepIndex + 1} DE ${mercySteps.size}",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = LiturgicalGold
+                                color = MaterialTheme.colorScheme.secondary
                             )
 
                             Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -428,7 +426,7 @@ fun RosaryScreen(
                                         modifier = Modifier
                                             .size(if (idx == mercyStepIndex) 10.dp else 6.dp)
                                             .clip(CircleShape)
-                                            .background(if (idx == mercyStepIndex) SacredBurgundy else MaterialTheme.colorScheme.outline)
+                                            .background(if (idx == mercyStepIndex) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline)
                                     )
                                 }
                             }
@@ -446,7 +444,7 @@ fun RosaryScreen(
                                     text = activeStep.title.get(currentLanguage),
                                     style = MaterialTheme.typography.titleMedium,
                                     fontWeight = FontWeight.Bold,
-                                    color = SacredBurgundy
+                                    color = MaterialTheme.colorScheme.primary
                                 )
 
                                 Spacer(modifier = Modifier.height(12.dp))
@@ -464,7 +462,7 @@ fun RosaryScreen(
                                     text = "R/. " + activeStep.responseText.get(currentLanguage),
                                     style = MaterialTheme.typography.bodyMedium,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = LiturgicalGold,
+                                    color = MaterialTheme.colorScheme.secondary,
                                     lineHeight = 22.sp
                                 )
                             }
@@ -498,7 +496,7 @@ fun RosaryScreen(
                                     }
                                 },
                                 colors = ButtonDefaults.elevatedButtonColors(
-                                    containerColor = SacredBurgundy,
+                                    containerColor = MaterialTheme.colorScheme.primary,
                                     contentColor = Color.White
                                 )
                             ) {
@@ -512,7 +510,7 @@ fun RosaryScreen(
                                     if (mercyStepIndex < mercySteps.size - 1) mercyStepIndex++
                                 },
                                 colors = ButtonDefaults.elevatedButtonColors(
-                                    containerColor = LiturgicalGold,
+                                    containerColor = MaterialTheme.colorScheme.secondary,
                                     contentColor = Color.Black
                                 )
                             ) {
