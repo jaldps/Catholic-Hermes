@@ -36,6 +36,21 @@ enum class AppThemePreset(val id: String, val label: LocalizedText, val previewP
         "MARIAN_AZURE",
         LocalizedText("Azul Mariano Celestial (Nuestra Señora)", "Marian Azure & Celestial (Our Lady)", "Azul Mariano Celeste (Nossa Senhora)"),
         Color(0xFF0284C7)
+    ),
+    LITURGICAL_CLEAN(
+        "LITURGICAL_CLEAN",
+        LocalizedText("Litúrgico Limpio (Minimalista)", "Liturgical Clean (Minimalist)", "Litúrgico Limpo (Minimalista)"),
+        Color(0xFF6B1D2F)
+    ),
+    MATERIAL_CLEAN(
+        "MATERIAL_CLEAN",
+        LocalizedText("Material Design Limpio", "Material Clean", "Material Limpo"),
+        Color(0xFF6750A4)
+    ),
+    APPLE_CLEAN(
+        "APPLE_CLEAN",
+        LocalizedText("Apple HIG Limpio", "Apple Clean (HIG)", "Apple Limpo (HIG)"),
+        Color(0xFF007AFF)
     )
 }
 
@@ -222,12 +237,113 @@ object ThemePalettes {
         outline = Color(0xFF263E5A)
     )
 
+    // Clean themes
+    val LiturgicalCleanLight = lightColorScheme(
+        primary = Color(0xFF6B1D2F),
+        onPrimary = Color.White,
+        primaryContainer = Color(0xFFF3E5E8),
+        onPrimaryContainer = Color(0xFF4A101F),
+        secondary = Color(0xFFC59B27),
+        onSecondary = Color.White,
+        secondaryContainer = Color(0xFFF9F1D8),
+        onSecondaryContainer = Color(0xFF420D1A),
+        background = Color(0xFFFAFAF9),
+        onBackground = Color(0xFF1A1A1A),
+        surface = Color(0xFFFFFFFF),
+        onSurface = Color(0xFF1A1A1A),
+        surfaceVariant = Color(0xFFF5F5F4),
+        onSurfaceVariant = Color(0xFF5F5F5F),
+        outline = Color(0xFFE5E5E5)
+    )
+    val LiturgicalCleanDark = darkColorScheme(
+        primary = Color(0xFFE5C158),
+        onPrimary = Color(0xFF4A101F),
+        primaryContainer = Color(0xFF6B1D2F),
+        onPrimaryContainer = Color(0xFFF3E5E8),
+        secondary = Color(0xFFC59B27),
+        onSecondary = Color.Black,
+        background = Color(0xFF121212),
+        onBackground = Color(0xFFEDEDED),
+        surface = Color(0xFF1E1E1E),
+        onSurface = Color(0xFFEDEDED),
+        surfaceVariant = Color(0xFF2A2A2A),
+        onSurfaceVariant = Color(0xFFB0B0B0),
+        outline = Color(0xFF3A3A3A)
+    )
+    val MaterialCleanLight = lightColorScheme(
+        primary = Color(0xFF6750A4),
+        onPrimary = Color.White,
+        primaryContainer = Color(0xFFEADDFF),
+        onPrimaryContainer = Color(0xFF21005D),
+        secondary = Color(0xFF625B71),
+        onSecondary = Color.White,
+        secondaryContainer = Color(0xFFE8DEF8),
+        onSecondaryContainer = Color(0xFF1D192B),
+        background = Color(0xFFFFFBFE),
+        onBackground = Color(0xFF1C1B1F),
+        surface = Color(0xFFFFFBFE),
+        onSurface = Color(0xFF1C1B1F),
+        surfaceVariant = Color(0xFFE7E0EC),
+        onSurfaceVariant = Color(0xFF49454F),
+        outline = Color(0xFF79747E)
+    )
+    val MaterialCleanDark = darkColorScheme(
+        primary = Color(0xFFD0BCFF),
+        onPrimary = Color(0xFF381E72),
+        primaryContainer = Color(0xFF4F378B),
+        onPrimaryContainer = Color(0xFFEADDFF),
+        secondary = Color(0xFFCCC2DC),
+        onSecondary = Color(0xFF332D41),
+        background = Color(0xFF1C1B1F),
+        onBackground = Color(0xFFE6E1E5),
+        surface = Color(0xFF1C1B1F),
+        onSurface = Color(0xFFE6E1E5),
+        surfaceVariant = Color(0xFF49454F),
+        onSurfaceVariant = Color(0xFFCAC4D0),
+        outline = Color(0xFF938F99)
+    )
+    val AppleCleanLight = lightColorScheme(
+        primary = Color(0xFF007AFF),
+        onPrimary = Color.White,
+        primaryContainer = Color(0xFFE5F1FF),
+        onPrimaryContainer = Color(0xFF003366),
+        secondary = Color(0xFF8E8E93),
+        onSecondary = Color.White,
+        secondaryContainer = Color(0xFFF2F2F7),
+        onSecondaryContainer = Color(0xFF1C1C1E),
+        background = Color(0xFFF2F2F7),
+        onBackground = Color(0xFF000000),
+        surface = Color(0xFFFFFFFF),
+        onSurface = Color(0xFF000000),
+        surfaceVariant = Color(0xFFF2F2F7),
+        onSurfaceVariant = Color(0xFF3C3C43),
+        outline = Color(0xFFC7C7CC)
+    )
+    val AppleCleanDark = darkColorScheme(
+        primary = Color(0xFF0A84FF),
+        onPrimary = Color.White,
+        primaryContainer = Color(0xFF003366),
+        onPrimaryContainer = Color(0xFFE5F1FF),
+        secondary = Color(0xFF8E8E93),
+        onSecondary = Color.White,
+        background = Color(0xFF000000),
+        onBackground = Color(0xFFFFFFFF),
+        surface = Color(0xFF1C1C1E),
+        onSurface = Color(0xFFFFFFFF),
+        surfaceVariant = Color(0xFF2C2C2E),
+        onSurfaceVariant = Color(0xFFEBEBF5),
+        outline = Color(0xFF38383A)
+    )
+
     fun getColorScheme(presetId: String, isDark: Boolean): ColorScheme {
         return when (presetId) {
             "MONASTIC_MINIMALIST" -> if (isDark) MonasticDark else MonasticLight
             "VATICAN_NAVY" -> if (isDark) VaticanNavyDark else VaticanNavyLight
             "SACRED_BURGUNDY" -> if (isDark) SacredBurgundyDarkScheme else SacredBurgundyLightScheme
             "MARIAN_AZURE" -> if (isDark) MarianAzureDark else MarianAzureLight
+            "LITURGICAL_CLEAN" -> if (isDark) LiturgicalCleanDark else LiturgicalCleanLight
+            "MATERIAL_CLEAN" -> if (isDark) MaterialCleanDark else MaterialCleanLight
+            "APPLE_CLEAN" -> if (isDark) AppleCleanDark else AppleCleanLight
             else -> if (isDark) LiturgicalGreenDark else LiturgicalGreenLight
         }
     }
