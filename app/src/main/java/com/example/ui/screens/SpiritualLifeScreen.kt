@@ -431,7 +431,7 @@ fun SpiritualLifeScreen(
                                 triviaIndex = (triviaIndex + 1) % triviaList.size
                             },
                             modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = Color.White)
+                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = MaterialTheme.colorScheme.onPrimary)
                         ) {
                             Text("Siguiente Pregunta →", fontWeight = FontWeight.Bold)
                         }
@@ -560,7 +560,7 @@ fun SpiritualLifeScreen(
                                     if (currentStationIndex < stations.size - 1) currentStationIndex++
                                 },
                                 enabled = currentStationIndex < stations.size - 1,
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.secondary, contentColor = Color.Black)
+                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.secondary, contentColor = MaterialTheme.colorScheme.onSecondary)
                             ) {
                                 Text("Siguiente →")
                             }
@@ -690,7 +690,7 @@ fun SpiritualLifeScreen(
                                     Text(
                                         text = cat,
                                         fontSize = 11.sp,
-                                        color = if (newJournalCategory == cat) Color.White else MaterialTheme.colorScheme.onSurface
+                                        color = if (newJournalCategory == cat) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface
                                     )
                                 }
                             }
