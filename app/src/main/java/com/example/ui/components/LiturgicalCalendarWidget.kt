@@ -292,14 +292,14 @@ fun LiturgicalCalendarWidget(
                     Surface(
                         shape = MaterialTheme.shapes.small,
                         color = if (liturgicalDay.isFastOrAbstinence) {
-                            Color(0xFF5E2777).copy(alpha = 0.12f)
+                            MaterialTheme.colorScheme.secondaryContainer
                         } else {
-                            Color(0xFF2C6B3E).copy(alpha = 0.1f)
+                            MaterialTheme.colorScheme.tertiaryContainer
                         },
                         border = androidx.compose.foundation.BorderStroke(
                             1.dp,
-                            if (liturgicalDay.isFastOrAbstinence) Color(0xFF5E2777).copy(alpha = 0.4f)
-                            else Color(0xFF2C6B3E).copy(alpha = 0.4f)
+                            if (liturgicalDay.isFastOrAbstinence) MaterialTheme.colorScheme.secondary.copy(alpha = 0.55f)
+                            else MaterialTheme.colorScheme.tertiary.copy(alpha = 0.55f)
                         )
                     ) {
                         Row(
@@ -310,7 +310,7 @@ fun LiturgicalCalendarWidget(
                                 imageVector = if (liturgicalDay.isFastOrAbstinence) Icons.Default.Restaurant else Icons.Default.Star,
                                 contentDescription = null,
                                 modifier = Modifier.size(11.dp),
-                                tint = if (liturgicalDay.isFastOrAbstinence) Color(0xFF5E2777) else Color(0xFF2C6B3E)
+                                tint = if (liturgicalDay.isFastOrAbstinence) MaterialTheme.colorScheme.onSecondaryContainer else MaterialTheme.colorScheme.onTertiaryContainer
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
@@ -318,7 +318,7 @@ fun LiturgicalCalendarWidget(
                                 fontSize = 11.sp,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
-                                color = if (liturgicalDay.isFastOrAbstinence) Color(0xFF5E2777) else Color(0xFF2C6B3E),
+                                color = if (liturgicalDay.isFastOrAbstinence) MaterialTheme.colorScheme.onSecondaryContainer else MaterialTheme.colorScheme.onTertiaryContainer,
                                 fontWeight = FontWeight.SemiBold
                             )
                         }
