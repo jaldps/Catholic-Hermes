@@ -86,8 +86,6 @@ import com.example.data.models.CommandmentExploration
 import com.example.data.models.MarianApparition
 import com.example.data.models.NearbyParish
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @Composable
 fun DoctrineAndHistoryScreen(
@@ -107,7 +105,7 @@ fun DoctrineAndHistoryScreen(
         ScrollableTabRow(
             selectedTabIndex = selectedTopTab,
             containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy,
+            contentColor = MaterialTheme.colorScheme.primary,
             edgePadding = 12.dp
         ) {
             Tab(
@@ -184,13 +182,13 @@ fun DoctrineAndHistoryScreen(
                             LazyColumn(verticalArrangement = Arrangement.spacedBy(14.dp)) {
                                 item {
                                     ElevatedCard(
-                                        shape = RoundedCornerShape(16.dp),
+                                        shape = MaterialTheme.shapes.large,
                                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                                     ) {
                                         Column(modifier = Modifier.padding(16.dp)) {
-                                            Text("Pecado Venial vs Pecado Mortal", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = SacredBurgundy)
+                                            Text("Pecado Venial vs Pecado Mortal", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
                                             Spacer(modifier = Modifier.height(8.dp))
-                                            Text("✦ Pecado Venial:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = LiturgicalGold)
+                                            Text("✦ Pecado Venial:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.secondary)
                                             Text(st.venialExplanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
                                             Spacer(modifier = Modifier.height(8.dp))
                                             Text("✦ Pecado Mortal:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFFB71C1C))
@@ -201,11 +199,11 @@ fun DoctrineAndHistoryScreen(
 
                                 item {
                                     ElevatedCard(
-                                        shape = RoundedCornerShape(16.dp),
+                                        shape = MaterialTheme.shapes.large,
                                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
                                     ) {
                                         Column(modifier = Modifier.padding(16.dp)) {
-                                            Text("Las 3 Condiciones del Pecado Mortal", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = SacredBurgundy)
+                                            Text("Las 3 Condiciones del Pecado Mortal", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
                                             Text("Para que un pecado sea mortal se requieren simultáneamente tres condiciones:", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                             Spacer(modifier = Modifier.height(10.dp))
                                             st.mortalThreeConditions.forEach { cond ->
@@ -217,11 +215,11 @@ fun DoctrineAndHistoryScreen(
 
                                 item {
                                     ElevatedCard(
-                                        shape = RoundedCornerShape(16.dp),
+                                        shape = MaterialTheme.shapes.large,
                                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f))
                                     ) {
                                         Column(modifier = Modifier.padding(16.dp)) {
-                                            Text("Guía para la Confesión y Examen de Conciencia", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = SacredBurgundy)
+                                            Text("Guía para la Confesión y Examen de Conciencia", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
                                             Spacer(modifier = Modifier.height(8.dp))
                                             Text(st.confessionExamenGuide.get(currentLanguage), fontSize = 13.sp, lineHeight = 22.sp)
                                         }
@@ -254,7 +252,7 @@ fun DoctrineAndHistoryScreen(
                             text = "Línea de Tiempo de la Iglesia Católica",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = "2.000 años de fidelidad al mandato de Cristo desde Pentecostés hasta hoy.",
@@ -273,7 +271,7 @@ fun DoctrineAndHistoryScreen(
                             text = "Los Cismas Históricos y Diferencias Doctrinales",
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = "Explicación teológica católica respetuosa y clara sobre el Cisma de 1054 y la Reforma de 1517.",
@@ -358,7 +356,7 @@ fun DoctrineAndHistoryScreen(
                             },
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = when (currentLanguage) {
@@ -394,9 +392,9 @@ fun DoctrineAndHistoryScreen(
                                 .height(48.dp)
                                 .testTag("gps_nearby_maps_button"),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = SacredBurgundy
+                                containerColor = MaterialTheme.colorScheme.primary
                             ),
-                            shape = RoundedCornerShape(12.dp)
+                            shape = MaterialTheme.shapes.medium
                         ) {
                             Icon(imageVector = Icons.Default.Directions, contentDescription = null, modifier = Modifier.size(18.dp))
                             Spacer(modifier = Modifier.width(8.dp))
@@ -431,10 +429,10 @@ fun DoctrineAndHistoryScreen(
                                 )
                             },
                             leadingIcon = {
-                                Icon(Icons.Default.Search, contentDescription = null, tint = SacredBurgundy)
+                                Icon(Icons.Default.Search, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                             },
                             singleLine = true,
-                            shape = RoundedCornerShape(14.dp)
+                            shape = MaterialTheme.shapes.medium
                         )
 
                         Spacer(modifier = Modifier.height(10.dp))
@@ -448,7 +446,7 @@ fun DoctrineAndHistoryScreen(
                             },
                             fontSize = 12.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Spacer(modifier = Modifier.height(6.dp))
 
@@ -579,7 +577,7 @@ fun DoctrineAndHistoryScreen(
                         item {
                             Surface(
                                 modifier = Modifier.fillMaxWidth(),
-                                shape = RoundedCornerShape(12.dp),
+                                shape = MaterialTheme.shapes.medium,
                                 color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
                             ) {
                                 Text(
@@ -610,7 +608,7 @@ fun DoctrineAndHistoryScreen(
                             },
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                     }
 
@@ -631,12 +629,12 @@ private fun DoctrineChip(
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(10.dp))
-            .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface)
+            .clip(MaterialTheme.shapes.small)
+            .background(if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
             .border(
                 1.dp,
-                if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                RoundedCornerShape(10.dp)
+                if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
+                MaterialTheme.shapes.small
             )
             .clickable(onClick = onClick)
             .padding(horizontal = 10.dp, vertical = 6.dp)
@@ -653,18 +651,18 @@ private fun DoctrineChip(
 @Composable
 private fun CommandmentCard(cmd: CommandmentExploration, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = cmd.title.get(currentLanguage), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = SacredBurgundy)
+            Text(text = cmd.title.get(currentLanguage), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
             Spacer(modifier = Modifier.height(4.dp))
-            Text(text = cmd.biblicalWording.get(currentLanguage), fontSize = 11.sp, fontFamily = FontFamily.Serif, color = LiturgicalGold)
+            Text(text = cmd.biblicalWording.get(currentLanguage), fontSize = 11.sp, fontFamily = MaterialTheme.typography.titleLarge.fontFamily, color = MaterialTheme.colorScheme.secondary)
             Spacer(modifier = Modifier.height(8.dp))
             Text(text = cmd.moralExplanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
             Spacer(modifier = Modifier.height(8.dp))
             Text(text = "❌ Pecados prohibidos: " + cmd.sinsForbidden.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            Text(text = "✓ Virtudes mandadas: " + cmd.virtuesCommanded.get(currentLanguage), fontSize = 11.sp, color = SacredBurgundy, fontWeight = FontWeight.Medium)
+            Text(text = "✓ Virtudes mandadas: " + cmd.virtuesCommanded.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Medium)
         }
     }
 }
@@ -672,15 +670,15 @@ private fun CommandmentCard(cmd: CommandmentExploration, currentLanguage: AppLan
 @Composable
 private fun PreceptCard(prc: ChurchPrecept, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = prc.title.get(currentLanguage), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = SacredBurgundy)
+            Text(text = prc.title.get(currentLanguage), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
             Spacer(modifier = Modifier.height(6.dp))
             Text(text = prc.explanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
             Spacer(modifier = Modifier.height(6.dp))
-            Text(text = "Obligación: " + prc.applicationInLife.get(currentLanguage), fontSize = 12.sp, color = LiturgicalGold, fontWeight = FontWeight.Medium)
+            Text(text = "Obligación: " + prc.applicationInLife.get(currentLanguage), fontSize = 12.sp, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Medium)
         }
     }
 }
@@ -688,18 +686,18 @@ private fun PreceptCard(prc: ChurchPrecept, currentLanguage: AppLanguage) {
 @Composable
 private fun CapitalSinCard(item: CapitalSinVsVirtue, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(text = "Vicio: " + item.capitalSin.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color(0xFFB71C1C))
-                Text(text = "Virtud: " + item.opposingVirtue.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = SacredBurgundy)
+                Text(text = "Virtud: " + item.opposingVirtue.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
             }
             Spacer(modifier = Modifier.height(6.dp))
             Text(text = item.sinMeaning.get(currentLanguage), fontSize = 12.sp)
             Spacer(modifier = Modifier.height(4.dp))
-            Text(text = "Remedio: " + item.virtueRemedy.get(currentLanguage), fontSize = 12.sp, fontWeight = FontWeight.Medium, color = LiturgicalGold)
+            Text(text = "Remedio: " + item.virtueRemedy.get(currentLanguage), fontSize = 12.sp, fontWeight = FontWeight.Medium, color = MaterialTheme.colorScheme.secondary)
             Spacer(modifier = Modifier.height(6.dp))
             Text(text = "💡 Consejo práctico: " + item.practicalAdvice.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
@@ -709,19 +707,19 @@ private fun CapitalSinCard(item: CapitalSinVsVirtue, currentLanguage: AppLanguag
 @Composable
 private fun MarianApparitionCard(item: MarianApparition, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = item.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = SacredBurgundy)
-                Text(text = item.feastDay, fontSize = 11.sp, color = LiturgicalGold, fontWeight = FontWeight.Bold)
+                Text(text = item.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
+                Text(text = item.feastDay, fontSize = 11.sp, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
             }
             Text(text = "${item.location.get(currentLanguage)} • Año ${item.year}", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             Spacer(modifier = Modifier.height(8.dp))
             Text(text = item.historyAndApparition.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
             Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "Promesas: " + item.promises.get(currentLanguage), fontSize = 12.sp, fontFamily = FontFamily.Serif, color = SacredBurgundy)
+            Text(text = "Promesas: " + item.promises.get(currentLanguage), fontSize = 12.sp, fontFamily = MaterialTheme.typography.titleLarge.fontFamily, color = MaterialTheme.colorScheme.primary)
             Spacer(modifier = Modifier.height(4.dp))
             Text(text = "Santuario Principal: " + item.primarySanctuary.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
@@ -731,16 +729,16 @@ private fun MarianApparitionCard(item: MarianApparition, currentLanguage: AppLan
 @Composable
 private fun ChristManifestationCard(item: ChristManifestation, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = item.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = SacredBurgundy)
-            Text(text = "Fiesta: " + item.feastDay.get(currentLanguage), fontSize = 11.sp, color = LiturgicalGold)
+            Text(text = item.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
+            Text(text = "Fiesta: " + item.feastDay.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.secondary)
             Spacer(modifier = Modifier.height(8.dp))
             Text(text = item.originHistory.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
             Spacer(modifier = Modifier.height(6.dp))
-            Text(text = "Promesas: " + item.promises.get(currentLanguage), fontSize = 12.sp, color = SacredBurgundy, fontWeight = FontWeight.Medium)
+            Text(text = "Promesas: " + item.promises.get(currentLanguage), fontSize = 12.sp, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Medium)
         }
     }
 }
@@ -748,12 +746,12 @@ private fun ChristManifestationCard(item: ChristManifestation, currentLanguage: 
 @Composable
 private fun ChurchEpochCard(epoch: ChurchHistoryEpoch, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = epoch.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = SacredBurgundy)
-            Text(text = epoch.centuryRange, fontSize = 11.sp, color = LiturgicalGold, fontWeight = FontWeight.Bold)
+            Text(text = epoch.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
+            Text(text = epoch.centuryRange, fontSize = 11.sp, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
             Spacer(modifier = Modifier.height(8.dp))
             Text(text = epoch.narrative.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
             Spacer(modifier = Modifier.height(8.dp))
@@ -766,19 +764,19 @@ private fun ChurchEpochCard(epoch: ChurchHistoryEpoch, currentLanguage: AppLangu
 @Composable
 private fun SchismCard(schism: ChurchSchismHistory, currentLanguage: AppLanguage) {
     Card(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = schism.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = SacredBurgundy)
-                Text(text = schism.historicalYear, fontWeight = FontWeight.Bold, fontSize = 12.sp, color = LiturgicalGold)
+                Text(text = schism.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
+                Text(text = schism.historicalYear, fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.secondary)
             }
             Spacer(modifier = Modifier.height(6.dp))
             Text(text = schism.context.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
             Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "Diferencias doctrinales claves:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = SacredBurgundy)
+            Text(text = "Diferencias doctrinales claves:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.primary)
             Text(text = schism.theologicalDifferences.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
             Spacer(modifier = Modifier.height(6.dp))
             Text(text = "Perspectiva y Diálogo: " + schism.dialogueAndReconciliation.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
@@ -791,7 +789,7 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
     val context = LocalContext.current
 
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         modifier = Modifier
             .fillMaxWidth()
@@ -810,7 +808,7 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                     Icon(
                         imageVector = Icons.Default.Church,
                         contentDescription = null,
-                        tint = SacredBurgundy,
+                        tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(20.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
@@ -818,18 +816,18 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                         text = parish.name,
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
                 Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = LiturgicalGold.copy(alpha = 0.15f)
+                    shape = MaterialTheme.shapes.small,
+                    color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.15f)
                 ) {
                     Text(
                         text = parish.distanceDisplay,
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                     )
                 }
@@ -845,14 +843,14 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
             if (parish.isPerpetualAdoration) {
                 Spacer(modifier = Modifier.height(4.dp))
                 Surface(
-                    shape = RoundedCornerShape(6.dp),
-                    color = LiturgicalGold.copy(alpha = 0.2f)
+                    shape = MaterialTheme.shapes.extraSmall,
+                    color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f)
                 ) {
                     Text(
                         text = "✨ Adoración Perpetua 24 Horas",
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
                     )
                 }
@@ -862,7 +860,7 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
 
             // Schedule Info Box
             Surface(
-                shape = RoundedCornerShape(12.dp),
+                shape = MaterialTheme.shapes.medium,
                 color = MaterialTheme.colorScheme.surface.copy(alpha = 0.7f),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -878,13 +876,13 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                         text = "🙏 Confesiones: " + parish.confessionTimes,
                         fontSize = 11.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
                         text = "✨ Adoración: " + parish.adorationTimes,
                         fontSize = 11.sp,
-                        color = LiturgicalGold
+                        color = MaterialTheme.colorScheme.secondary
                     )
                 }
             }
@@ -909,13 +907,13 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                     modifier = Modifier
                         .weight(1f)
                         .testTag("call_parish_${parish.id}"),
-                    shape = RoundedCornerShape(10.dp)
+                    shape = MaterialTheme.shapes.small
                 ) {
                     Icon(
                         imageVector = Icons.Default.Call,
                         contentDescription = null,
                         modifier = Modifier.size(16.dp),
-                        tint = SacredBurgundy
+                        tint = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
@@ -925,7 +923,7 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                             AppLanguage.PT -> "Ligar"
                         },
                         fontSize = 12.sp,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.primary,
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -943,17 +941,17 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                     modifier = Modifier
                         .weight(1f)
                         .testTag("map_parish_${parish.id}"),
-                    shape = RoundedCornerShape(10.dp),
+                    shape = MaterialTheme.shapes.small,
                     colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = SacredBurgundy.copy(alpha = 0.12f),
-                        contentColor = SacredBurgundy
+                        containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
+                        contentColor = MaterialTheme.colorScheme.primary
                     )
                 ) {
                     Icon(
                         imageVector = Icons.Default.Directions,
                         contentDescription = null,
                         modifier = Modifier.size(16.dp),
-                        tint = SacredBurgundy
+                        tint = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
@@ -974,16 +972,16 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
 @Composable
 private fun NewsCard(news: CatholicNewsArticle, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = news.category.get(currentLanguage), fontSize = 10.sp, fontWeight = FontWeight.Bold, color = LiturgicalGold)
+                Text(text = news.category.get(currentLanguage), fontSize = 10.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary)
                 Text(text = news.date, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             Spacer(modifier = Modifier.height(4.dp))
-            Text(text = news.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = SacredBurgundy)
+            Text(text = news.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
             Spacer(modifier = Modifier.height(6.dp))
             Text(text = news.summary.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
             Spacer(modifier = Modifier.height(4.dp))
@@ -1005,7 +1003,7 @@ private fun ParishDropdownSelector(
     Box(modifier = modifier) {
         OutlinedCard(
             onClick = { expanded = true },
-            shape = RoundedCornerShape(12.dp),
+            shape = MaterialTheme.shapes.medium,
             colors = CardDefaults.outlinedCardColors(
                 containerColor = MaterialTheme.colorScheme.surface
             ),
@@ -1023,7 +1021,7 @@ private fun ParishDropdownSelector(
                         text = label,
                         fontSize = 10.sp,
                         fontWeight = FontWeight.SemiBold,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Text(
                         text = selectedValue,
@@ -1037,7 +1035,7 @@ private fun ParishDropdownSelector(
                 Icon(
                     imageVector = Icons.Default.ArrowDropDown,
                     contentDescription = null,
-                    tint = SacredBurgundy,
+                    tint = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.size(24.dp)
                 )
             }
@@ -1054,7 +1052,7 @@ private fun ParishDropdownSelector(
                         Text(
                             text = option,
                             fontWeight = if (option == selectedValue) FontWeight.Bold else FontWeight.Normal,
-                            color = if (option == selectedValue) SacredBurgundy else MaterialTheme.colorScheme.onSurface,
+                            color = if (option == selectedValue) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
                             fontSize = 13.sp
                         )
                     },
