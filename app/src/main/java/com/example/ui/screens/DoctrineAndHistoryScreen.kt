@@ -191,7 +191,7 @@ fun DoctrineAndHistoryScreen(
                                             Text("✦ Pecado Venial:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.secondary)
                                             Text(st.venialExplanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
                                             Spacer(modifier = Modifier.height(8.dp))
-                                            Text("✦ Pecado Mortal:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFFB71C1C))
+                                            Text("✦ Pecado Mortal:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.error)
                                             Text(st.mortalExplanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
                                         }
                                     }
@@ -643,7 +643,7 @@ private fun DoctrineChip(
             text = label,
             fontSize = 11.sp,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-            color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface
+            color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface
         )
     }
 }
@@ -691,7 +691,7 @@ private fun CapitalSinCard(item: CapitalSinVsVirtue, currentLanguage: AppLanguag
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = "Vicio: " + item.capitalSin.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color(0xFFB71C1C))
+                Text(text = "Vicio: " + item.capitalSin.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.error)
                 Text(text = "Virtud: " + item.opposingVirtue.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
             }
             Spacer(modifier = Modifier.height(6.dp))
