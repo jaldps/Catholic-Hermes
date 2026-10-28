@@ -301,7 +301,7 @@ fun SpiritualLifeScreen(
                             .padding(20.dp)
                             .testTag("add_journal_entry_fab"),
                         containerColor = MaterialTheme.colorScheme.primary,
-                        contentColor = Color.White
+                        contentColor = MaterialTheme.colorScheme.onPrimary
                     ) {
                         Icon(imageVector = Icons.Default.Add, contentDescription = "Add Journal Entry")
                     }
@@ -365,8 +365,8 @@ fun SpiritualLifeScreen(
                         val isCorrect = idx == currentQ.correctIndex
 
                         val borderCol = when {
-                            hasAnswered && isCorrect -> Color(0xFF2E7D32)
-                            hasAnswered && isSelected && !isCorrect -> Color(0xFFC62828)
+                            hasAnswered && isCorrect -> MaterialTheme.colorScheme.secondary
+                            hasAnswered && isSelected && !isCorrect -> MaterialTheme.colorScheme.error
                             isSelected -> MaterialTheme.colorScheme.primary
                             else -> MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)
                         }
