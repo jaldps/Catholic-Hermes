@@ -36,6 +36,7 @@ jobs:
         run: keytool -genkeypair -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -dname "CN=Android Debug,O=Android,C=US" -keyalg RSA -keysize 2048 -validity 10000
 
       - name: Build debug APK
+        id: build_apk
         run: gradle :app:assembleDebug --stacktrace
 
       - name: Upload debug APK
@@ -50,6 +51,7 @@ jobs:
         run: gradle :app:testDebugUnitTest --stacktrace
 
       - name: Capture all six theme combinations in an emulator
+        if: always() && steps.build_apk.outcome == 'success'
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 35
