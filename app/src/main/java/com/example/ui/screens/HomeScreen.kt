@@ -204,7 +204,7 @@ fun HomeScreen(
 
         // Quick Daily Sanctification Routine Hub
         item {
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+            Column(modifier = Modifier.padding(horizontal = screenGutter)) {
                 Text(
                     text = when (currentLanguage) {
                         AppLanguage.ES -> "RUTINA ESPIRITUAL DIARIA"
@@ -218,101 +218,65 @@ fun HomeScreen(
 
                 Spacer(modifier = Modifier.height(10.dp))
 
-                if (isApple || isMaterial) {
-                    Column(verticalArrangement = Arrangement.spacedBy(if (isApple) 12.dp else 8.dp)) {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else 10.dp)
-                        ) {
-                            RoutineQuickCard(
-                                title = when (currentLanguage) { AppLanguage.ES -> "Laudes"; AppLanguage.EN -> "Morning"; AppLanguage.PT -> "Laudes" },
-                                subtitle = "6:00 AM",
-                                icon = Icons.Default.LightMode,
-                                modifier = Modifier.weight(1f),
-                                onClick = onNavigateToPrayers
-                            )
-                            RoutineQuickCard(
-                                title = when (currentLanguage) { AppLanguage.ES -> "El Ángelus"; AppLanguage.EN -> "The Angelus"; AppLanguage.PT -> "O Angelus" },
-                                subtitle = "12:00 PM",
-                                icon = Icons.Default.WbTwilight,
-                                modifier = Modifier.weight(1f),
-                                onClick = onNavigateToPrayers
-                            )
-                        }
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else 10.dp)
-                        ) {
-                            RoutineQuickCard(
-                                title = when (currentLanguage) { AppLanguage.ES -> "Santo Rosario"; AppLanguage.EN -> "Holy Rosary"; AppLanguage.PT -> "Santo Terço" },
-                                subtitle = when (currentLanguage) { AppLanguage.ES -> "Hoy"; AppLanguage.EN -> "Today"; AppLanguage.PT -> "Hoje" },
-                                icon = Icons.Default.SelfImprovement,
-                                modifier = Modifier.weight(1f),
-                                onClick = onNavigateToRosary
-                            )
-                            RoutineQuickCard(
-                                title = when (currentLanguage) { AppLanguage.ES -> "Completas"; AppLanguage.EN -> "Night Examen"; AppLanguage.PT -> "Completas" },
-                                subtitle = "9:00 PM",
-                                icon = Icons.Default.NightsStay,
-                                modifier = Modifier.weight(1f),
-                                onClick = onNavigateToPrayers
-                            )
-                        }
+                Column(verticalArrangement = Arrangement.spacedBy(if (isApple) 12.dp else if (isMaterial) 8.dp else 10.dp)) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else if (isMaterial) 10.dp else 12.dp)
+                    ) {
+                        RoutineQuickCard(
+                            title = when (currentLanguage) {
+                                AppLanguage.ES -> "Laudes"
+                                AppLanguage.EN -> "Morning"
+                                AppLanguage.PT -> "Laudes"
+                            },
+                            subtitle = "6:00 AM",
+                            icon = Icons.Default.LightMode,
+                            modifier = Modifier.weight(1f),
+                            onClick = onNavigateToPrayers
+                        )
+                        RoutineQuickCard(
+                            title = when (currentLanguage) {
+                                AppLanguage.ES -> "El Ángelus"
+                                AppLanguage.EN -> "The Angelus"
+                                AppLanguage.PT -> "O Angelus"
+                            },
+                            subtitle = "12:00 PM",
+                            icon = Icons.Default.WbTwilight,
+                            modifier = Modifier.weight(1f),
+                            onClick = onNavigateToPrayers
+                        )
                     }
-                } else {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else if (isMaterial) 10.dp else 12.dp)
-                ) {
-                    RoutineQuickCard(
-                        title = when (currentLanguage) {
-                            AppLanguage.ES -> "Laudes"
-                            AppLanguage.EN -> "Morning"
-                            AppLanguage.PT -> "Laudes"
-                        },
-                        subtitle = "6:00 AM",
-                        icon = Icons.Default.LightMode,
-                        modifier = Modifier.weight(1f),
-                        onClick = onNavigateToPrayers
-                    )
-                    RoutineQuickCard(
-                        title = when (currentLanguage) {
-                            AppLanguage.ES -> "El Ángelus"
-                            AppLanguage.EN -> "The Angelus"
-                            AppLanguage.PT -> "O Angelus"
-                        },
-                        subtitle = "12:00 PM",
-                        icon = Icons.Default.WbTwilight,
-                        modifier = Modifier.weight(1f),
-                        onClick = onNavigateToPrayers
-                    )
-                    RoutineQuickCard(
-                        title = when (currentLanguage) {
-                            AppLanguage.ES -> "Santo Rosario"
-                            AppLanguage.EN -> "Holy Rosary"
-                            AppLanguage.PT -> "Santo Terço"
-                        },
-                        subtitle = when (currentLanguage) {
-                            AppLanguage.ES -> "Hoy"
-                            AppLanguage.EN -> "Today"
-                            AppLanguage.PT -> "Hoje"
-                        },
-                        icon = Icons.Default.SelfImprovement,
-                        modifier = Modifier.weight(1f),
-                        onClick = onNavigateToRosary
-                    )
-                    RoutineQuickCard(
-                        title = when (currentLanguage) {
-                            AppLanguage.ES -> "Completas"
-                            AppLanguage.EN -> "Night Examen"
-                            AppLanguage.PT -> "Completas"
-                        },
-                        subtitle = "9:00 PM",
-                        icon = Icons.Default.NightsStay,
-                        modifier = Modifier.weight(1f),
-                        onClick = onNavigateToPrayers
-                    )
-                }
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else if (isMaterial) 10.dp else 12.dp)
+                    ) {
+                        RoutineQuickCard(
+                            title = when (currentLanguage) {
+                                AppLanguage.ES -> "Santo Rosario"
+                                AppLanguage.EN -> "Holy Rosary"
+                                AppLanguage.PT -> "Santo Terço"
+                            },
+                            subtitle = when (currentLanguage) {
+                                AppLanguage.ES -> "Hoy"
+                                AppLanguage.EN -> "Today"
+                                AppLanguage.PT -> "Hoje"
+                            },
+                            icon = Icons.Default.SelfImprovement,
+                            modifier = Modifier.weight(1f),
+                            onClick = onNavigateToRosary
+                        )
+                        RoutineQuickCard(
+                            title = when (currentLanguage) {
+                                AppLanguage.ES -> "Completas"
+                                AppLanguage.EN -> "Night Examen"
+                                AppLanguage.PT -> "Completas"
+                            },
+                            subtitle = "9:00 PM",
+                            icon = Icons.Default.NightsStay,
+                            modifier = Modifier.weight(1f),
+                            onClick = onNavigateToPrayers
+                        )
+                    }
                 }
             }
         }
@@ -833,44 +797,76 @@ private fun RoutineQuickCard(
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
+    val identity = LocalAppThemePreset.current
+    val isApple = identity == AppThemePreset.APPLE.id
+    val isMaterial = identity == AppThemePreset.MATERIAL.id
+    val cardShape = when (identity) {
+        AppThemePreset.APPLE.id -> MaterialTheme.shapes.large
+        AppThemePreset.MATERIAL.id -> MaterialTheme.shapes.medium
+        else -> MaterialTheme.shapes.small
+    }
+    val iconShape = when (identity) {
+        AppThemePreset.APPLE.id -> MaterialTheme.shapes.small
+        AppThemePreset.MATERIAL.id -> CircleShape
+        else -> MaterialTheme.shapes.extraSmall
+    }
+    val iconContainer = when {
+        isApple -> MaterialTheme.colorScheme.surfaceVariant
+        isMaterial -> MaterialTheme.colorScheme.primaryContainer
+        else -> MaterialTheme.colorScheme.secondaryContainer
+    }
+    val iconTint = when {
+        isApple -> MaterialTheme.colorScheme.primary
+        isMaterial -> MaterialTheme.colorScheme.onPrimaryContainer
+        else -> MaterialTheme.colorScheme.secondary
+    }
+
     Surface(
         modifier = modifier
-            .clip(MaterialTheme.shapes.medium)
+            .clip(cardShape)
             .clickable(onClick = onClick),
-        color = MaterialTheme.colorScheme.surface,
-        tonalElevation = 2.dp,
-        border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
+        shape = cardShape,
+        color = when {
+            isApple -> MaterialTheme.colorScheme.surfaceVariant
+            isMaterial -> MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.38f)
+            else -> MaterialTheme.colorScheme.surface
+        },
+        tonalElevation = if (isMaterial) 3.dp else 0.dp,
+        border = if (isApple || isMaterial) null else CardDefaults.outlinedCardBorder().copy(width = 1.dp)
     ) {
         Column(
-            modifier = Modifier.padding(10.dp),
+            modifier = Modifier.fillMaxWidth().padding(horizontal = 10.dp, vertical = if (isApple) 14.dp else 12.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box(
                 modifier = Modifier
-                    .size(36.dp)
-                    .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.primaryContainer),
+                    .size(if (isApple) 40.dp else 36.dp)
+                    .clip(iconShape)
+                    .background(iconContainer),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
                     imageVector = icon,
                     contentDescription = title,
-                    tint = MaterialTheme.colorScheme.onPrimaryContainer,
-                    modifier = Modifier.size(20.dp)
+                    tint = iconTint,
+                    modifier = Modifier.size(if (isApple) 21.dp else 20.dp)
                 )
             }
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(8.dp))
             Text(
                 text = title,
-                fontSize = 11.sp,
-                fontWeight = FontWeight.Bold,
+                style = if (isApple) MaterialTheme.typography.labelLarge else if (isMaterial) MaterialTheme.typography.titleSmall else MaterialTheme.typography.bodyMedium,
+                fontFamily = MaterialTheme.typography.headlineSmall.fontFamily,
+                fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 1
             )
+            Spacer(modifier = Modifier.height(2.dp))
             Text(
                 text = subtitle,
-                fontSize = 10.sp,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                maxLines = 1
             )
         }
     }
