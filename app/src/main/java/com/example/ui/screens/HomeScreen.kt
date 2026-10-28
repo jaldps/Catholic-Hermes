@@ -16,7 +16,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Bookmark
@@ -34,7 +33,6 @@ import androidx.compose.material.icons.filled.WbTwilight
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -91,7 +89,6 @@ fun HomeScreen(
     val activeIdentity = LocalAppThemePreset.current
     val isApple = activeIdentity == AppThemePreset.APPLE.id
     val isMaterial = activeIdentity == AppThemePreset.MATERIAL.id
-    val isVatican = activeIdentity == AppThemePreset.VATICAN.id
     val screenGutter = if (isApple) 20.dp else if (isMaterial) 16.dp else 24.dp
 
     LazyColumn(
@@ -429,15 +426,16 @@ fun HomeScreen(
 
         // Saint of the Day Card
         item {
-            ElevatedCard(
+            Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = screenGutter)
                     .testTag("saint_of_the_day_card"),
                 shape = MaterialTheme.shapes.large,
-                colors = CardDefaults.elevatedCardColors(
+                colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surfaceVariant
-                )
+                ),
+                elevation = CardDefaults.cardElevation(defaultElevation = if (isMaterial) 3.dp else 0.dp)
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
                     Row(
