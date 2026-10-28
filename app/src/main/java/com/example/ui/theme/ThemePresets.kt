@@ -19,7 +19,7 @@ enum class AppThemePreset(val id: String, val label: LocalizedText, val previewP
     VATICAN(
         "VATICAN",
         LocalizedText("Vaticano · Estilo editorial", "Vatican · Ecclesial editorial", "Vaticano · Editorial eclesial"),
-        Color(0xFFA32135)
+        Color(0xFF486F87)
     ),
     APPLE(
         "APPLE",
@@ -71,50 +71,50 @@ object ThemePalettes {
     }
 
     /**
-     * Vatican-inspired identity: warm ivory and stone surfaces, deep crimson
-     * institutional chrome, quiet gold, editorial typography, and a smaller
-     * accent that follows the liturgical time. It is an original design direction,
-     * not an official Vatican product or logo.
+     * Vatican-inspired identity: Roman sky-blue institutional chrome, warm
+     * travertine-like neutrals, restrained gold, editorial typography, and a
+     * smaller accent that follows liturgical time. Original design, not an
+     * official Vatican product or logo.
      */
     fun vatican(isDark: Boolean, season: String): ColorScheme {
         val accent = seasonAccent(season, isDark)
         val accentContainer = seasonContainer(season, isDark)
         return if (isDark) darkColorScheme(
-            primary = Color(0xFFFFB3BD),
-            onPrimary = Color(0xFF4B0A18),
-            primaryContainer = Color(0xFF681D2C),
-            onPrimaryContainer = Color(0xFFFFDEE3),
+            primary = Color(0xFF9BC4D8),
+            onPrimary = Color(0xFF102A36),
+            primaryContainer = Color(0xFF244656),
+            onPrimaryContainer = Color(0xFFDDEFF6),
             secondary = accent,
             onSecondary = Color(0xFF1A1A18),
             secondaryContainer = accentContainer,
             onSecondaryContainer = Color(0xFFF2E9EE),
             tertiary = Color(0xFFE1C78D),
             onTertiary = Color(0xFF30240B),
-            background = Color(0xFF11171B),
+            background = Color(0xFF171A1C),
             onBackground = Color(0xFFE9ECEE),
-            surface = Color(0xFF182126),
+            surface = Color(0xFF202528),
             onSurface = Color(0xFFE9ECEE),
-            surfaceVariant = Color(0xFF24323A),
-            onSurfaceVariant = Color(0xFFB9C6CD),
-            outline = Color(0xFF4A5A62)
+            surfaceVariant = Color(0xFF30373A),
+            onSurfaceVariant = Color(0xFFBEC7CB),
+            outline = Color(0xFF586166)
         ) else lightColorScheme(
-            primary = Color(0xFFA32135),
+            primary = Color(0xFF486F87),
             onPrimary = Color.White,
-            primaryContainer = Color(0xFFF2DDE1),
-            onPrimaryContainer = Color(0xFF4B101B),
+            primaryContainer = Color(0xFFDCEAF0),
+            onPrimaryContainer = Color(0xFF153746),
             secondary = accent,
             onSecondary = Color.White,
             secondaryContainer = accentContainer,
             onSecondaryContainer = Color(0xFF2C2528),
             tertiary = Color(0xFF9A762E),
             onTertiary = Color(0xFF100C03),
-            background = Color(0xFFF6F3ED),
+            background = Color(0xFFF6F1E8),
             onBackground = Color(0xFF252C30),
             surface = Color(0xFFFFFEFC),
             onSurface = Color(0xFF252C30),
-            surfaceVariant = Color(0xFFE8EFF2),
-            onSurfaceVariant = Color(0xFF536169),
-            outline = Color(0xFFC9D4D9)
+            surfaceVariant = Color(0xFFE8E0D5),
+            onSurfaceVariant = Color(0xFF596165),
+            outline = Color(0xFFC9C0B2)
         )
     }
 

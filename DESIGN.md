@@ -44,7 +44,7 @@ This is an original ecclesial direction inspired by Vatican editorial design and
 
 ## Theme contract
 
-- **Palette:** screen components use `MaterialTheme.colorScheme` semantic roles rather than fixed brand colors. The liturgical identity uses `secondary` and `secondaryContainer` for the season-specific accent while preserving crimson institutional chrome.
+- **Palette:** screen components use `MaterialTheme.colorScheme` semantic roles rather than fixed brand colors. The liturgical identity uses `secondary` and `secondaryContainer` for the season-specific accent while preserving Roman sky-blue institutional chrome.
 - **Typography:** screens inherit roles from `MaterialTheme.typography`. Vatican may use the user's serif preference; Apple and Material use the system sans family.
 - **Geometry:** components inherit `MaterialTheme.shapes`. Do not add a fixed `RoundedCornerShape(N.dp)` for ordinary cards or controls.
 - **Depth:** use tonal/elevation surfaces selectively: Material is the most layered, Apple the flattest, Vatican predominantly editorial and border-led.
@@ -62,3 +62,13 @@ Before calling a visual change complete:
 3. Check Spanish and Portuguese labels for clipping, especially bottom navigation and routine tiles.
 4. Check small screens, text scaling, scroll behavior, selected-state clarity, contrast and touch targets.
 5. Build the APK and visually inspect emulator screenshots. Source inspection alone cannot certify spacing, overflow, hit areas, transitions or a production-ready AAA finish.
+
+
+## References and visual-review basis
+
+- Apple Human Interface Guidelines, tab bars: https://developer.apple.com/design/human-interface-guidelines/tab-bars/
+- Apple Human Interface Guidelines, typography: https://developer.apple.com/design/human-interface-guidelines/typography/
+- Android navigation and layout patterns: https://developer.android.com/design/ui/mobile/guides/layout-and-content/layout-and-nav-patterns
+- Vatican.va redesign palette and intent, as described by Vatican News (29 May 2025): https://www.vaticannews.va/en/vatican-city/news/2025-05/vatican-va-papal-magisterium-pope-leo-xiv-new-design.html
+
+The Vatican preset follows the reported Roman-sky-blue, travertine, gold, white and light-gray direction while retaining an independent liturgical-season accent. It remains an original app theme, not an official Vatican design system.
