@@ -17,7 +17,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
@@ -228,7 +227,8 @@ fun GuiCustomizerModal(
 
             Spacer(modifier = Modifier.height(18.dp))
 
-            if (selectedTheme == AppThemePreset.VATICAN.id) {\n            // 3. Vatican editorial typography
+            if (selectedTheme == AppThemePreset.VATICAN.id) {
+            // 3. Vatican editorial typography
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.TextFields, contentDescription = null, modifier = Modifier.size(20.dp), tint = MaterialTheme.colorScheme.primary)
                 Spacer(modifier = Modifier.width(8.dp))
@@ -267,7 +267,9 @@ fun GuiCustomizerModal(
 
             Spacer(modifier = Modifier.height(18.dp))
 
-            }\n\n            // 4. Text Font Scale
+            }
+
+            // 4. Text Font Scale
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.FormatSize, contentDescription = null, modifier = Modifier.size(20.dp), tint = MaterialTheme.colorScheme.primary)
                 Spacer(modifier = Modifier.width(8.dp))
@@ -365,7 +367,7 @@ fun GuiCustomizerModal(
                 colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.primary
                 ),
-                shape = RoundedCornerShape(12.dp)
+                shape = MaterialTheme.shapes.medium
             ) {
                 Text(
                     text = when (currentLanguage) {
