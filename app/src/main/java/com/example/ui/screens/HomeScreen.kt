@@ -61,6 +61,8 @@ import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.ui.components.LiturgicalCalendarWidget
 import com.example.ui.components.LiturgicalHeader
+import com.example.ui.theme.AppThemePreset
+import com.example.ui.theme.LocalAppThemePreset
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.ui.platform.LocalContext
@@ -86,11 +88,17 @@ fun HomeScreen(
     liturgicalDay: LiturgicalCalendarDay = PilgrimageAndHabitsData.upcomingLiturgicalDays.first(),
     modifier: Modifier = Modifier
 ) {
+    val activeIdentity = LocalAppThemePreset.current
+    val isApple = activeIdentity == AppThemePreset.APPLE.id
+    val isMaterial = activeIdentity == AppThemePreset.MATERIAL.id
+    val isVatican = activeIdentity == AppThemePreset.VATICAN.id
+    val screenGutter = if (isApple) 20.dp else if (isMaterial) 16.dp else 24.dp
+
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
             .testTag("home_screen"),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(if (isApple) 22.dp else if (isMaterial) 14.dp else 18.dp)
     ) {
         // Minimalist Gold Liturgical Calendar Widget
         item {
@@ -106,7 +114,7 @@ fun HomeScreen(
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = screenGutter)
                     .clickable(onClick = onNavigateToHabits)
                     .border(
                         1.dp,
@@ -118,7 +126,7 @@ fun HomeScreen(
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 ),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                elevation = CardDefaults.cardElevation(defaultElevation = if (isMaterial) 3.dp else 0.dp)
             ) {
                 Row(
                     modifier = Modifier
@@ -204,7 +212,7 @@ fun HomeScreen(
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else if (isMaterial) 10.dp else 12.dp)
                 ) {
                     RoutineQuickCard(
                         title = when (currentLanguage) {
@@ -260,15 +268,16 @@ fun HomeScreen(
 
         // Daily Mass Reading Featured Card
         item {
-            ElevatedCard(
+            Card(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
                     .testTag("daily_mass_card"),
                 shape = MaterialTheme.shapes.large,
-                colors = CardDefaults.elevatedCardColors(
+                colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surfaceVariant
-                )
+                ),
+                elevation = CardDefaults.cardElevation(defaultElevation = if (isMaterial) 3.dp else 0.dp)
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
                     Row(
