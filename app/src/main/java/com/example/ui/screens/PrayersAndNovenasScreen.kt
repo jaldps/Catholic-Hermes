@@ -1,5 +1,6 @@
 package com.example.ui.screens
 
+import com.example.ui.components.IdentityTabBar
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -101,72 +102,18 @@ fun PrayersAndNovenasScreen(
             .fillMaxSize()
             .testTag("prayers_and_novenas_screen")
     ) {
-        PrimaryTabRow(
-            selectedTabIndex = selectedTab,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.primary
-        ) {
-            Tab(
-                selected = selectedTab == 0,
-                onClick = { selectedTab = 0 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Devocionario"
-                            AppLanguage.EN -> "Prayers"
-                            AppLanguage.PT -> "Devocionário"
-                        },
-                        fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedTab == 1,
-                onClick = { selectedTab = 1 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Coronilla Misericordia"
-                            AppLanguage.EN -> "Divine Mercy Chaplet"
-                            AppLanguage.PT -> "Terço Misericórdia"
-                        },
-                        fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedTab == 2,
-                onClick = { selectedTab = 2 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Novenas"
-                            AppLanguage.EN -> "Novenas"
-                            AppLanguage.PT -> "Novenas"
-                        },
-                        fontWeight = if (selectedTab == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedTab == 3,
-                onClick = { selectedTab = 3 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Completas"
-                            AppLanguage.EN -> "Night Prayer"
-                            AppLanguage.PT -> "Completas"
-                        },
-                        fontWeight = if (selectedTab == 3) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-        }
+        IdentityTabBar(
+            labels = listOf(
+                when (currentLanguage) { AppLanguage.ES -> "Devocionario"; AppLanguage.EN -> "Prayers"; AppLanguage.PT -> "Devocionário" },
+                when (currentLanguage) { AppLanguage.ES -> "Coronilla Misericordia"; AppLanguage.EN -> "Divine Mercy Chaplet"; AppLanguage.PT -> "Terço Misericórdia" },
+                "Novenas",
+                when (currentLanguage) { AppLanguage.ES -> "Completas"; AppLanguage.EN -> "Night Prayer"; AppLanguage.PT -> "Completas" }
+            ),
+            selectedIndex = selectedTab,
+            onTabSelected = { selectedTab = it },
+            modifier = Modifier.testTag("prayer_mode_tabs"),
+            testTags = listOf("prayer_tab_devotions", "prayer_tab_mercy", "prayer_tab_novenas", "prayer_tab_night")
+        )
 
         when (selectedTab) {
             0 -> {
