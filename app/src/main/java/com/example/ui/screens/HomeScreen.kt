@@ -564,7 +564,7 @@ fun HomeScreen(
                             Icon(
                                 imageVector = Icons.Default.NearMe,
                                 contentDescription = null,
-                                tint = Color.White,
+                                tint = MaterialTheme.colorScheme.onPrimary,
                                 modifier = Modifier.size(24.dp)
                             )
                         }
@@ -600,7 +600,7 @@ fun HomeScreen(
                         },
                         colors = ButtonDefaults.filledTonalButtonColors(
                             containerColor = MaterialTheme.colorScheme.primary,
-                            contentColor = Color.White
+                            contentColor = MaterialTheme.colorScheme.onPrimary
                         )
                     ) {
                         Icon(Icons.Default.LocationOn, contentDescription = null, modifier = Modifier.size(16.dp))
