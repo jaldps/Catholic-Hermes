@@ -569,7 +569,7 @@ fun PrayersAndNovenasScreen(
                                             modifier = Modifier.weight(1f),
                                             colors = ButtonDefaults.filledTonalButtonColors(
                                                 containerColor = MaterialTheme.colorScheme.secondary,
-                                                contentColor = MaterialTheme.colorScheme.onSurface
+                                                contentColor = MaterialTheme.colorScheme.onSecondary
                                             )
                                         ) {
                                             Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp))

@@ -33,7 +33,7 @@ This is an Apple-inspired visual mode implemented in Android Jetpack Compose. It
 
 **Intent:** reverent, typographic, restrained and rooted in the liturgical calendar.
 
-- Warm stone/ivory surfaces with Roman sky-blue institutional accents and gold details.
+- Warm ivory and stone surfaces with deep crimson institutional accents, gold details, and seasonal liturgical color.
 - A centered SANCTA FIDES masthead with the current liturgical season.
 - Calendar-first Home hierarchy, editorial serif headings and more formal separators.
 - Tighter corner geometry, low elevation and generous text-reading measure.

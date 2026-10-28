@@ -151,7 +151,7 @@ fun HabitsAndVirtuesScreen(
                 FloatingActionButton(
                     onClick = { showAddHabitDialog = true },
                     containerColor = MaterialTheme.colorScheme.secondary,
-                    contentColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onSecondary,
                     modifier = Modifier.testTag("fab_add_habit")
                 ) {
                     Icon(imageVector = Icons.Default.Add, contentDescription = "Añadir Hábito")
