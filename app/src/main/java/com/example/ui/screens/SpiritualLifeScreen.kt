@@ -76,8 +76,6 @@ import com.example.data.models.GregorianChantItem
 import com.example.data.models.TriviaQuestion
 import com.example.data.models.ViaCrucisStation
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 import kotlinx.coroutines.launch
 
 @Composable
@@ -122,7 +120,7 @@ fun SpiritualLifeScreen(
         ScrollableTabRow(
             selectedTabIndex = selectedTopTab,
             containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy,
+            contentColor = MaterialTheme.colorScheme.primary,
             edgePadding = 12.dp
         ) {
             Tab(
@@ -166,7 +164,7 @@ fun SpiritualLifeScreen(
                                 },
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                             Text(
                                 text = when (currentLanguage) {
@@ -191,7 +189,7 @@ fun SpiritualLifeScreen(
                                         modifier = Modifier.padding(24.dp),
                                         horizontalAlignment = Alignment.CenterHorizontally
                                     ) {
-                                        Icon(imageVector = Icons.Default.Favorite, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(36.dp))
+                                        Icon(imageVector = Icons.Default.Favorite, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(36.dp))
                                         Spacer(modifier = Modifier.height(10.dp))
                                         Text(
                                             text = when (currentLanguage) {
@@ -201,7 +199,7 @@ fun SpiritualLifeScreen(
                                             },
                                             fontWeight = FontWeight.Bold,
                                             fontSize = 15.sp,
-                                            color = SacredBurgundy
+                                            color = MaterialTheme.colorScheme.primary
                                         )
                                         Spacer(modifier = Modifier.height(4.dp))
                                         Text(
@@ -232,14 +230,14 @@ fun SpiritualLifeScreen(
                                                 Box(
                                                     modifier = Modifier
                                                         .clip(RoundedCornerShape(6.dp))
-                                                        .background(if (entry.isAnswered) LiturgicalGold.copy(alpha = 0.2f) else SacredBurgundy.copy(alpha = 0.15f))
+                                                        .background(if (entry.isAnswered) MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f) else MaterialTheme.colorScheme.primary.copy(alpha = 0.15f))
                                                         .padding(horizontal = 8.dp, vertical = 3.dp)
                                                 ) {
                                                     Text(
                                                         text = if (entry.isAnswered) "✓ GRACIA CONCEDIDA" else entry.category.uppercase(),
                                                         fontSize = 10.sp,
                                                         fontWeight = FontWeight.Bold,
-                                                        color = if (entry.isAnswered) LiturgicalGold else SacredBurgundy
+                                                        color = if (entry.isAnswered) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary
                                                     )
                                                 }
                                             }
@@ -285,7 +283,7 @@ fun SpiritualLifeScreen(
                                                     text = if (entry.isAnswered) "Desmarcar concedida" else "Marcar como Gracia Concedida ✓",
                                                     fontSize = 12.sp,
                                                     fontWeight = FontWeight.Bold,
-                                                    color = LiturgicalGold
+                                                    color = MaterialTheme.colorScheme.secondary
                                                 )
                                             }
                                         }
@@ -302,7 +300,7 @@ fun SpiritualLifeScreen(
                             .align(Alignment.BottomEnd)
                             .padding(20.dp)
                             .testTag("add_journal_entry_fab"),
-                        containerColor = SacredBurgundy,
+                        containerColor = MaterialTheme.colorScheme.primary,
                         contentColor = Color.White
                     ) {
                         Icon(imageVector = Icons.Default.Add, contentDescription = "Add Journal Entry")
@@ -329,13 +327,13 @@ fun SpiritualLifeScreen(
                             text = "PREGUNTA ${triviaIndex + 1} DE ${triviaList.size}",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = LiturgicalGold
+                            color = MaterialTheme.colorScheme.secondary
                         )
                         Text(
                             text = "Puntos: $triviaScore",
                             fontSize = 14.sp,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                     }
 
@@ -348,7 +346,7 @@ fun SpiritualLifeScreen(
                                 text = currentQ.category.get(currentLanguage),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = LiturgicalGold
+                                color = MaterialTheme.colorScheme.secondary
                             )
                             Spacer(modifier = Modifier.height(8.dp))
                             Text(
@@ -369,7 +367,7 @@ fun SpiritualLifeScreen(
                         val borderCol = when {
                             hasAnswered && isCorrect -> Color(0xFF2E7D32)
                             hasAnswered && isSelected && !isCorrect -> Color(0xFFC62828)
-                            isSelected -> SacredBurgundy
+                            isSelected -> MaterialTheme.colorScheme.primary
                             else -> MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)
                         }
 
@@ -415,7 +413,7 @@ fun SpiritualLifeScreen(
                                     text = if (selectedOptionIndex == currentQ.correctIndex) "¡Correcto! ✦" else "Doctrina Católica:",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 13.sp,
-                                    color = SacredBurgundy
+                                    color = MaterialTheme.colorScheme.primary
                                 )
                                 Spacer(modifier = Modifier.height(4.dp))
                                 Text(
@@ -433,7 +431,7 @@ fun SpiritualLifeScreen(
                                 triviaIndex = (triviaIndex + 1) % triviaList.size
                             },
                             modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = SacredBurgundy, contentColor = Color.White)
+                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = Color.White)
                         ) {
                             Text("Siguiente Pregunta →", fontWeight = FontWeight.Bold)
                         }
@@ -462,7 +460,7 @@ fun SpiritualLifeScreen(
                                 text = "ESTACIÓN ${currentStation.stationNumber} DE 14",
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = LiturgicalGold
+                                color = MaterialTheme.colorScheme.secondary
                             )
 
                             Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -471,7 +469,7 @@ fun SpiritualLifeScreen(
                                         modifier = Modifier
                                             .size(if (idx == currentStationIndex) 10.dp else 6.dp)
                                             .clip(CircleShape)
-                                            .background(if (idx == currentStationIndex) SacredBurgundy else MaterialTheme.colorScheme.outline)
+                                            .background(if (idx == currentStationIndex) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline)
                                     )
                                 }
                             }
@@ -488,7 +486,7 @@ fun SpiritualLifeScreen(
                                     text = currentStation.title.get(currentLanguage),
                                     style = MaterialTheme.typography.titleLarge,
                                     fontWeight = FontWeight.Bold,
-                                    color = SacredBurgundy
+                                    color = MaterialTheme.colorScheme.primary
                                 )
 
                                 Spacer(modifier = Modifier.height(6.dp))
@@ -497,7 +495,7 @@ fun SpiritualLifeScreen(
                                     text = currentStation.scripture.get(currentLanguage),
                                     fontFamily = FontFamily.Serif,
                                     fontSize = 12.sp,
-                                    color = LiturgicalGold
+                                    color = MaterialTheme.colorScheme.secondary
                                 )
 
                                 Spacer(modifier = Modifier.height(14.dp))
@@ -522,7 +520,7 @@ fun SpiritualLifeScreen(
                                         fontFamily = FontFamily.Serif,
                                         fontWeight = FontWeight.SemiBold,
                                         fontSize = 13.sp,
-                                        color = SacredBurgundy
+                                        color = MaterialTheme.colorScheme.primary
                                     )
                                 }
                             }
@@ -550,7 +548,7 @@ fun SpiritualLifeScreen(
                                         currentStation.prayer.get(currentLanguage)
                                     )
                                 },
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = SacredBurgundy, contentColor = Color.White)
+                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = Color.White)
                             ) {
                                 Icon(if (isPlayingAudio) Icons.Default.Stop else Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(16.dp))
                                 Spacer(modifier = Modifier.width(6.dp))
@@ -562,7 +560,7 @@ fun SpiritualLifeScreen(
                                     if (currentStationIndex < stations.size - 1) currentStationIndex++
                                 },
                                 enabled = currentStationIndex < stations.size - 1,
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = LiturgicalGold, contentColor = Color.Black)
+                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.secondary, contentColor = Color.Black)
                             ) {
                                 Text("Siguiente →")
                             }
@@ -584,7 +582,7 @@ fun SpiritualLifeScreen(
                             text = "Reproductor de Canto Gregoriano y Música Sacra",
                             style = MaterialTheme.typography.titleLarge,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = "Eleva tu alma a Dios con la rica tradición musical milenaria de la Iglesia Católica.",
@@ -614,9 +612,9 @@ fun SpiritualLifeScreen(
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Row(verticalAlignment = Alignment.CenterVertically) {
-                                        Icon(Icons.Default.MusicNote, contentDescription = null, tint = SacredBurgundy)
+                                        Icon(Icons.Default.MusicNote, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                                         Spacer(modifier = Modifier.width(8.dp))
-                                        Text(text = chant.title, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = SacredBurgundy)
+                                        Text(text = chant.title, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
                                     }
 
                                     IconButton(
@@ -630,22 +628,22 @@ fun SpiritualLifeScreen(
                                             }
                                         }
                                     ) {
-                                        Icon(if (isPlayingAudio && isSelected) Icons.Default.Stop else Icons.Default.PlayArrow, contentDescription = "Play Chant", tint = LiturgicalGold)
+                                        Icon(if (isPlayingAudio && isSelected) Icons.Default.Stop else Icons.Default.PlayArrow, contentDescription = "Play Chant", tint = MaterialTheme.colorScheme.secondary)
                                     }
                                 }
 
-                                Text(text = chant.liturgicalSeason.get(currentLanguage), fontSize = 11.sp, color = LiturgicalGold)
+                                Text(text = chant.liturgicalSeason.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.secondary)
                                 Spacer(modifier = Modifier.height(4.dp))
                                 Text(text = chant.description.get(currentLanguage), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
 
                                 Spacer(modifier = Modifier.height(10.dp))
 
-                                Text(text = "Letra en Latín:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = SacredBurgundy)
+                                Text(text = "Letra en Latín:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.primary)
                                 Text(text = chant.latinLyrics, fontFamily = FontFamily.Serif, fontSize = 12.sp, lineHeight = 18.sp)
 
                                 Spacer(modifier = Modifier.height(8.dp))
 
-                                Text(text = "Traducción:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = LiturgicalGold)
+                                Text(text = "Traducción:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.secondary)
                                 Text(text = chant.translatedLyrics.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
                             }
                         }
@@ -666,7 +664,7 @@ fun SpiritualLifeScreen(
                             AppLanguage.PT -> "Nova Intenção / Oração"
                         },
                         fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 },
                 text = {
@@ -684,8 +682,8 @@ fun SpiritualLifeScreen(
                                 Box(
                                     modifier = Modifier
                                         .clip(RoundedCornerShape(8.dp))
-                                        .background(if (newJournalCategory == cat) SacredBurgundy else MaterialTheme.colorScheme.surface)
-                                        .border(1.dp, SacredBurgundy, RoundedCornerShape(8.dp))
+                                        .background(if (newJournalCategory == cat) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
+                                        .border(1.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(8.dp))
                                         .clickable { newJournalCategory = cat }
                                         .padding(horizontal = 8.dp, vertical = 4.dp)
                                 ) {
