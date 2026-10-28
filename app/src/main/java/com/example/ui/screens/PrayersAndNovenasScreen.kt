@@ -356,7 +356,7 @@ fun PrayersAndNovenasScreen(
                                             .clickable { selectedNovenaTag = null }
                                             .padding(horizontal = 12.dp, vertical = 6.dp)
                                     ) {
-                                        Text(text = when (currentLanguage) { AppLanguage.ES -> "Todas"; AppLanguage.EN -> "All"; AppLanguage.PT -> "Todas" }, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
+                                        Text(text = when (currentLanguage) { AppLanguage.ES -> "Todas"; AppLanguage.EN -> "All"; AppLanguage.PT -> "Todas" }, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface)
                                     }
                                 }
                                 items(availableTags) { tag ->
@@ -369,7 +369,7 @@ fun PrayersAndNovenasScreen(
                                             .clickable { selectedNovenaTag = tag }
                                             .padding(horizontal = 12.dp, vertical = 6.dp)
                                     ) {
-                                        Text(text = tagLabels[tag] ?: tag, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
+                                        Text(text = tagLabels[tag] ?: tag, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface)
                                     }
                                 }
                             }
@@ -497,7 +497,7 @@ fun PrayersAndNovenasScreen(
                                                     fontWeight = FontWeight.Bold,
                                                     fontSize = 12.sp,
                                                     color = when {
-                                                        isSelected -> Color.White
+                                                        isSelected -> MaterialTheme.colorScheme.onPrimary
                                                         isCompleted -> MaterialTheme.colorScheme.onSurface
                                                         else -> MaterialTheme.colorScheme.onSurface
                                                     }
@@ -606,7 +606,7 @@ fun PrayersAndNovenasScreen(
                                             modifier = Modifier.weight(1f),
                                             colors = ButtonDefaults.elevatedButtonColors(
                                                 containerColor = MaterialTheme.colorScheme.primary,
-                                                contentColor = Color.White
+                                                contentColor = MaterialTheme.colorScheme.onPrimary
                                             )
                                         ) {
                                             Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(16.dp))
@@ -622,7 +622,7 @@ fun PrayersAndNovenasScreen(
                                             modifier = Modifier.weight(1f),
                                             colors = ButtonDefaults.filledTonalButtonColors(
                                                 containerColor = MaterialTheme.colorScheme.secondary,
-                                                contentColor = Color.Black
+                                                contentColor = MaterialTheme.colorScheme.onSurface
                                             )
                                         ) {
                                             Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp))
@@ -969,7 +969,7 @@ private fun DivineMercyChapletView(
                             text = name,
                             fontSize = 11.sp,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                            color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
+                            color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }
@@ -1005,7 +1005,7 @@ private fun DivineMercyChapletView(
                                 modifier = Modifier.fillMaxWidth(),
                                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
                             ) {
-                                Text("Comenzar 1ª Decena →", color = Color.White)
+                                Text("Comenzar 1ª Decena →", color = MaterialTheme.colorScheme.onPrimary)
                             }
                         }
                     }
@@ -1039,7 +1039,7 @@ private fun DivineMercyChapletView(
                                     text = "${d}ª Dec.",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 12.sp,
-                                    color = if (isCurrentD) Color.Black else MaterialTheme.colorScheme.onSurface
+                                    color = if (isCurrentD) MaterialTheme.colorScheme.onSecondary else MaterialTheme.colorScheme.onSurface
                                 )
                             }
                         }
@@ -1077,7 +1077,7 @@ private fun DivineMercyChapletView(
                                         .clickable { currentBead = 0 },
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Text("G", fontSize = 10.sp, color = if (currentBead == 0) Color.White else Color.Black, fontWeight = FontWeight.Bold)
+                                    Text("G", fontSize = 10.sp, color = if (currentBead == 0) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                                 }
 
                                 for (b in 1..10) {
@@ -1090,7 +1090,7 @@ private fun DivineMercyChapletView(
                                             .clickable { currentBead = b },
                                         contentAlignment = Alignment.Center
                                     ) {
-                                        Text("$b", fontSize = 8.sp, color = if (isSmallCurrent) Color.White else MaterialTheme.colorScheme.onSurface)
+                                        Text("$b", fontSize = 8.sp, color = if (isSmallCurrent) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface)
                                     }
                                 }
                             }
@@ -1177,7 +1177,7 @@ private fun DivineMercyChapletView(
                                 ) {
                                     Text(
                                         text = if (currentBead == 10 && currentDecade == 5) "Ir a Conclusión →" else "Siguiente Cuenta →",
-                                        color = Color.White
+                                        color = MaterialTheme.colorScheme.onPrimary
                                     )
                                 }
                             }
@@ -1214,7 +1214,7 @@ private fun DivineMercyChapletView(
                                 modifier = Modifier.fillMaxWidth(),
                                 colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary)
                             ) {
-                                Text("Rezar la Novena a la Divina Misericordia (9 Días) →", color = Color.Black, fontWeight = FontWeight.Bold)
+                                Text("Rezar la Novena a la Divina Misericordia (9 Días) →", color = MaterialTheme.colorScheme.onSecondary, fontWeight = FontWeight.Bold)
                             }
                         }
                     }
