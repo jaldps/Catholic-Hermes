@@ -15,6 +15,7 @@ The selected identity is persisted in `app_preferences.themePreset`. `AppThemePr
 - Sans-serif typography with restrained semibold display roles.
 - A compact five-destination bottom bar, uncluttered current-screen title and grouped row layouts.
 - The Home screen leads with a single reading hero; secondary destinations use a clean, separated list.
+- Section tabs use a compact segmented control with a distinct selected surface rather than a full-width Android indicator.
 
 This is an Apple-inspired visual mode implemented in Android Jetpack Compose. It is not a native iOS app and does not use proprietary Apple assets.
 
@@ -25,7 +26,7 @@ This is an Apple-inspired visual mode implemented in Android Jetpack Compose. It
 - Tonal surfaces and clear primary/container relationships using a purple/lavender palette.
 - Material NavigationBar with a selected indicator.
 - Visible but restrained elevation, medium corner radii and icon containers.
-- Dense, efficient spacing with two-column routine shortcuts and an adaptive Explore grid.
+- Dense, efficient spacing with two-column routine shortcuts, an adaptive Explore grid and Material-native tab indicators.
 - Sans-serif type roles and a clear distinction between the surface, container and selected states.
 
 ### Vatican — Ecclesial editorial / liturgical
@@ -36,6 +37,7 @@ This is an Apple-inspired visual mode implemented in Android Jetpack Compose. It
 - A centered SANCTA FIDES masthead with the current liturgical season.
 - Calendar-first Home hierarchy, editorial serif headings and more formal separators.
 - Tighter corner geometry, low elevation and generous text-reading measure.
+- Section tabs use editorial type, a restrained liturgical underline and formal rules rather than capsule controls.
 - A seasonal accent changes with Advent/Lent, Christmas/Easter, Ordinary Time and other celebrations.
 
 This is an original ecclesial direction inspired by Vatican editorial design and the Roman liturgical calendar. It is not an official Vatican product, and it does not imply Vatican endorsement.
@@ -46,7 +48,7 @@ This is an original ecclesial direction inspired by Vatican editorial design and
 - **Typography:** screens inherit roles from `MaterialTheme.typography`. Vatican may use the user's serif preference; Apple and Material use the system sans family.
 - **Geometry:** components inherit `MaterialTheme.shapes`. Do not add a fixed `RoundedCornerShape(N.dp)` for ordinary cards or controls.
 - **Depth:** use tonal/elevation surfaces selectively: Material is the most layered, Apple the flattest, Vatican predominantly editorial and border-led.
-- **Navigation:** the shell is identity-aware; secondary routes remain reachable from Explore/More.
+- **Navigation:** the shell and shared `IdentityTabBar` are identity-aware; Apple uses segmented tabs, Material uses a native tab row, and Vatican uses an editorial strip. Secondary routes remain reachable from Explore/More.
 - **Dark mode:** palettes are explicitly paired. Check every foreground against the surface it actually sits on, especially gold, muted labels, icons and selected states.
 - **Language:** English, Spanish and Portuguese remain supported. New user-visible text should be localized to all three.
 - **Functionality:** visual identity must not remove Bible, prayer, liturgical, habit, Catechism, pilgrimage or spiritual-life routes.
