@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
@@ -35,11 +36,6 @@ import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolunteerActivism
-import androidx.compose.material.icons.outlined.AutoStories as AppleBibleIcon
-import androidx.compose.material.icons.outlined.Favorite as ApplePrayerIcon
-import androidx.compose.material.icons.outlined.Home as AppleHomeIcon
-import androidx.compose.material.icons.outlined.MenuBook as AppleLearnIcon
-import androidx.compose.material.icons.outlined.MoreHoriz as AppleMoreIcon
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -123,11 +119,11 @@ private data class PrimaryTab(
 }
 
 private val primaryTabs = listOf(
-    PrimaryTab(AppDestination.HOME, "Inicio", "Home", "Início", AppleHomeIcon),
-    PrimaryTab(AppDestination.BIBLE, "Biblia", "Bible", "Bíblia", AppleBibleIcon),
-    PrimaryTab(AppDestination.ROSARY, "Orar", "Pray", "Rezar", ApplePrayerIcon),
-    PrimaryTab(AppDestination.CATECHISM, "Aprender", "Study", "Estudar", AppleLearnIcon),
-    PrimaryTab(AppDestination.MORE, "Más", "More", "Mais", AppleMoreIcon)
+    PrimaryTab(AppDestination.HOME, "Inicio", "Home", "Início", Icons.Default.Home),
+    PrimaryTab(AppDestination.BIBLE, "Biblia", "Bible", "Bíblia", Icons.Default.AutoStories),
+    PrimaryTab(AppDestination.ROSARY, "Orar", "Pray", "Rezar", Icons.Default.SelfImprovement),
+    PrimaryTab(AppDestination.CATECHISM, "Aprender", "Study", "Estudar", Icons.Default.MenuBook),
+    PrimaryTab(AppDestination.MORE, "Más", "More", "Mais", Icons.Default.MoreHoriz)
 )
 
 private fun primaryIndexFor(destinationIndex: Int): Int = when (destinationIndex) {
