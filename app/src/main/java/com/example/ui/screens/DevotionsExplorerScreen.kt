@@ -267,10 +267,25 @@ private fun DetailedMarianCard(
     onSpeakPrayer: ((String) -> Unit)? = null
 ) {
     var showFullPrayer by remember { mutableStateOf(false) }
+    val identity = LocalAppThemePreset.current
+    val isApple = identity == AppThemePreset.APPLE.id
+    val isMaterial = identity == AppThemePreset.MATERIAL.id
+    val cardShape = when (identity) {
+        AppThemePreset.APPLE.id -> MaterialTheme.shapes.large
+        AppThemePreset.MATERIAL.id -> MaterialTheme.shapes.extraLarge
+        else -> MaterialTheme.shapes.small
+    }
 
     ElevatedCard(
-        shape = MaterialTheme.shapes.large,
-        colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f))
+        shape = cardShape,
+        colors = CardDefaults.elevatedCardColors(
+            containerColor = when {
+                isApple -> MaterialTheme.colorScheme.surfaceVariant
+                isMaterial -> MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.28f)
+                else -> MaterialTheme.colorScheme.surface
+            }
+        ),
+        elevation = CardDefaults.elevatedCardElevation(defaultElevation = if (isMaterial) 3.dp else 0.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(
@@ -425,10 +440,25 @@ private fun DetailedChristCard(
     onSpeakPrayer: ((String) -> Unit)? = null
 ) {
     var showFullPrayer by remember { mutableStateOf(false) }
+    val identity = LocalAppThemePreset.current
+    val isApple = identity == AppThemePreset.APPLE.id
+    val isMaterial = identity == AppThemePreset.MATERIAL.id
+    val cardShape = when (identity) {
+        AppThemePreset.APPLE.id -> MaterialTheme.shapes.large
+        AppThemePreset.MATERIAL.id -> MaterialTheme.shapes.extraLarge
+        else -> MaterialTheme.shapes.small
+    }
 
     ElevatedCard(
-        shape = MaterialTheme.shapes.large,
-        colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
+        shape = cardShape,
+        colors = CardDefaults.elevatedCardColors(
+            containerColor = when {
+                isApple -> MaterialTheme.colorScheme.surfaceVariant
+                isMaterial -> MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.28f)
+                else -> MaterialTheme.colorScheme.surface
+            }
+        ),
+        elevation = CardDefaults.elevatedCardElevation(defaultElevation = if (isMaterial) 3.dp else 0.dp)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(

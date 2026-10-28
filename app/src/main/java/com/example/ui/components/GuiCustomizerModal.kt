@@ -402,7 +402,7 @@ fun GuiCustomizerModal(
                     FilterChip(
                         selected = isSelected,
                         onClick = { selectedAudioSpeed = speed },
-                        label = { Text(label) },
+                        label = { Text(label.label(currentLanguage)) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = MaterialTheme.colorScheme.primary,
                             selectedLabelColor = MaterialTheme.colorScheme.onPrimary
