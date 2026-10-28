@@ -1,5 +1,6 @@
 package com.example.ui
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -24,6 +25,7 @@ import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolunteerActivism
+import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -44,9 +46,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -54,27 +55,24 @@ import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.components.LanguageSelectorDialog
 import com.example.ui.components.GuiCustomizerModal
-import androidx.activity.compose.BackHandler
-import androidx.compose.material.icons.filled.Shield
-import com.example.ui.screens.HabitsAndVirtuesScreen
+import com.example.ui.components.LanguageSelectorDialog
 import com.example.ui.screens.BibleScreen
 import com.example.ui.screens.CatechismScreen
 import com.example.ui.screens.DoctrineAndHistoryScreen
+import com.example.ui.screens.HabitsAndVirtuesScreen
 import com.example.ui.screens.HomeScreen
 import com.example.ui.screens.PilgrimageAndHabitsScreen
 import com.example.ui.screens.PrayersAndNovenasScreen
 import com.example.ui.screens.RosaryScreen
 import com.example.ui.screens.SpiritualLifeScreen
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
+import com.example.ui.theme.AppThemePreset
 
 enum class AppDestination(
     val titleEs: String,
     val titleEn: String,
     val titlePt: String,
-    val icon: ImageVector,
+    val icon: androidx.compose.ui.graphics.vector.ImageVector,
     val tag: String
 ) {
     HOME("Inicio", "Home", "Início", Icons.Default.Home, "nav_home"),
@@ -89,7 +87,6 @@ enum class AppDestination(
     SPIRITUAL_LIFE("Diario y Quiz", "Journal & Quiz", "Diário e Quiz", Icons.Default.Star, "nav_spiritual")
 }
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainApp(
@@ -98,12 +95,17 @@ fun MainApp(
     ttsManager: LiturgicalTtsManager
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
+    val preferences by dao.getAppPreferences().collectAsState(initial = null)
+    val themePreset = preferences?.themePreset ?: AppThemePreset.LITURGICAL.id
+    val isApple = themePreset == AppThemePreset.APPLE.id
     var selectedDestinationIndex by remember { mutableIntStateOf(0) }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCustomizerModal by remember { mutableStateOf(false) }
 
     val destinations = AppDestination.values()
+    val primary = MaterialTheme.colorScheme.primary
+    val surface = MaterialTheme.colorScheme.surface
 
     Scaffold(
         contentWindowInsets = WindowInsets.safeDrawing,
@@ -112,50 +114,39 @@ fun MainApp(
                 title = {
                     Text(
                         text = "SANCTA FIDES",
-                        fontFamily = FontFamily.Serif,
-                        fontWeight = FontWeight.Bold,
-                        letterSpacing = 2.sp,
-                        fontSize = 18.sp,
-                        color = SacredBurgundy
+                        style = MaterialTheme.typography.titleLarge,
+                        fontWeight = if (isApple) FontWeight.SemiBold else FontWeight.Bold,
+                        letterSpacing = if (isApple) 0.2.sp else 2.sp,
+                        color = primary
                     )
                 },
                 actions = {
-                    IconButton(
-                        onClick = { showCustomizerModal = true },
-                        modifier = Modifier.testTag("app_bar_theme_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Palette,
-                            contentDescription = "Personalizar Tema y Apariencia",
-                            tint = SacredBurgundy,
-                            modifier = Modifier.size(22.dp)
-                        )
+                    IconButton(onClick = { showCustomizerModal = true }, modifier = Modifier.testTag("app_bar_theme_button")) {
+                        Icon(Icons.Default.Palette, contentDescription = "Personalizar Tema y Apariencia", tint = primary, modifier = Modifier.size(22.dp))
                     }
-                    IconButton(
-                        onClick = { showLanguageSelector = true },
-                        modifier = Modifier.testTag("app_bar_lang_button")
-                    ) {
+                    IconButton(onClick = { showLanguageSelector = true }, modifier = Modifier.testTag("app_bar_lang_button")) {
                         Text(text = currentLanguage.flag, fontSize = 18.sp)
                     }
                 },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surface
+                    containerColor = if (isApple) surface.copy(alpha = 0.88f) else surface,
+                    scrolledContainerColor = if (isApple) surface.copy(alpha = 0.96f) else surface
                 )
             )
         },
         bottomBar = {
             Surface(
-                modifier = Modifier
-                    .navigationBarsPadding()
-                    .testTag("bottom_nav_bar"),
-                color = MaterialTheme.colorScheme.surface,
-                shadowElevation = 8.dp
+                modifier = Modifier.navigationBarsPadding().testTag("bottom_nav_bar"),
+                color = if (isApple) surface.copy(alpha = 0.94f) else surface,
+                shadowElevation = if (isApple) 0.dp else 8.dp,
+                shape = if (isApple) MaterialTheme.shapes.extraLarge else androidx.compose.foundation.shape.RoundedCornerShape(0.dp)
             ) {
                 ScrollableTabRow(
                     selectedTabIndex = selectedDestinationIndex,
-                    containerColor = MaterialTheme.colorScheme.surface,
-                    contentColor = SacredBurgundy,
-                    edgePadding = 8.dp
+                    containerColor = androidx.compose.ui.graphics.Color.Transparent,
+                    contentColor = primary,
+                    edgePadding = if (isApple) 12.dp else 8.dp,
+                    indicator = {}
                 ) {
                     destinations.forEachIndexed { index, dest ->
                         val isSelected = selectedDestinationIndex == index
@@ -164,29 +155,20 @@ fun MainApp(
                             AppLanguage.EN -> dest.titleEn
                             AppLanguage.PT -> dest.titlePt
                         }
-
                         Tab(
                             selected = isSelected,
                             onClick = { selectedDestinationIndex = index },
                             modifier = Modifier.testTag(dest.tag),
+                            selectedContentColor = primary,
+                            unselectedContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
                             text = {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
-                                    modifier = Modifier.padding(vertical = 4.dp, horizontal = 4.dp)
+                                    modifier = Modifier.padding(vertical = if (isApple) 8.dp else 4.dp, horizontal = 6.dp)
                                 ) {
-                                    Icon(
-                                        imageVector = dest.icon,
-                                        contentDescription = label,
-                                        tint = if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.onSurfaceVariant,
-                                        modifier = Modifier.size(20.dp)
-                                    )
-                                    Spacer(modifier = Modifier.height(2.dp))
-                                    Text(
-                                        text = label,
-                                        fontSize = 11.sp,
-                                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                        color = if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.onSurfaceVariant
-                                    )
+                                    Icon(dest.icon, contentDescription = label, modifier = Modifier.size(if (isApple) 21.dp else 20.dp))
+                                    Spacer(modifier = Modifier.height(3.dp))
+                                    Text(text = label, style = MaterialTheme.typography.labelSmall, fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal)
                                 }
                             }
                         )
@@ -195,15 +177,8 @@ fun MainApp(
             }
         }
     ) { innerPadding ->
-        BackHandler(enabled = selectedDestinationIndex != 0) {
-            selectedDestinationIndex = 0
-        }
-
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-        ) {
+        BackHandler(enabled = selectedDestinationIndex != 0) { selectedDestinationIndex = 0 }
+        Box(modifier = Modifier.fillMaxSize().padding(innerPadding)) {
             AnimatedContent(
                 targetState = selectedDestinationIndex,
                 transitionSpec = { fadeIn() togetherWith fadeOut() },
@@ -224,69 +199,18 @@ fun MainApp(
                         onNavigateToPrayers = { selectedDestinationIndex = destinations.indexOf(AppDestination.PRAYERS) },
                         onNavigateToPilgrimage = { selectedDestinationIndex = destinations.indexOf(AppDestination.PILGRIMAGE_HABITS) },
                         onNavigateToDoctrine = { selectedDestinationIndex = destinations.indexOf(AppDestination.DOCTRINE) },
-                        onNavigateToSpiritualLife = {
-                            spiritualLifeInitialTab = 0
-                            selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE)
-                        },
-                        onNavigateToQuiz = {
-                            spiritualLifeInitialTab = 1
-                            selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE)
-                        }
+                        onNavigateToSpiritualLife = { spiritualLifeInitialTab = 0; selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE) },
+                        onNavigateToQuiz = { spiritualLifeInitialTab = 1; selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE) }
                     )
-
-                    AppDestination.HABITS_VIRTUES -> HabitsAndVirtuesScreen(
-                        repository = repository,
-                        dao = dao,
-                        ttsManager = ttsManager
-                    )
-
-                    AppDestination.BIBLE -> BibleScreen(
-                        repository = repository,
-                        currentLanguage = currentLanguage,
-                        dao = dao,
-                        ttsManager = ttsManager
-                    )
-
-                    AppDestination.CATECHISM -> CatechismScreen(
-                        repository = repository,
-                        currentLanguage = currentLanguage
-                    )
-
-                    AppDestination.ROSARY -> RosaryScreen(
-                        repository = repository,
-                        ttsManager = ttsManager,
-                        currentLanguage = currentLanguage
-                    )
-
-                    AppDestination.PRAYERS -> PrayersAndNovenasScreen(
-                        repository = repository,
-                        ttsManager = ttsManager,
-                        currentLanguage = currentLanguage
-                    )
-
-                    AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(
-                        repository = repository,
-                        currentLanguage = currentLanguage
-                    )
-
-                    AppDestination.DOCTRINE -> DoctrineAndHistoryScreen(
-                        repository = repository,
-                        currentLanguage = currentLanguage
-                    )
-
-                    AppDestination.CHURCHES_NEWS -> DoctrineAndHistoryScreen(
-                        repository = repository,
-                        currentLanguage = currentLanguage,
-                        initialTopTab = 3
-                    )
-
-                    AppDestination.SPIRITUAL_LIFE -> SpiritualLifeScreen(
-                        repository = repository,
-                        dao = dao,
-                        ttsManager = ttsManager,
-                        currentLanguage = currentLanguage,
-                        initialTab = spiritualLifeInitialTab
-                    )
+                    AppDestination.HABITS_VIRTUES -> HabitsAndVirtuesScreen(repository, dao, ttsManager)
+                    AppDestination.BIBLE -> BibleScreen(repository, currentLanguage, dao, ttsManager)
+                    AppDestination.CATECHISM -> CatechismScreen(repository, currentLanguage)
+                    AppDestination.ROSARY -> RosaryScreen(repository, ttsManager, currentLanguage)
+                    AppDestination.PRAYERS -> PrayersAndNovenasScreen(repository, ttsManager, currentLanguage)
+                    AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(repository, currentLanguage)
+                    AppDestination.DOCTRINE -> DoctrineAndHistoryScreen(repository, currentLanguage)
+                    AppDestination.CHURCHES_NEWS -> DoctrineAndHistoryScreen(repository, currentLanguage, initialTopTab = 3)
+                    AppDestination.SPIRITUAL_LIFE -> SpiritualLifeScreen(repository, dao, ttsManager, currentLanguage, spiritualLifeInitialTab)
                 }
             }
         }
@@ -295,18 +219,11 @@ fun MainApp(
     if (showLanguageSelector) {
         LanguageSelectorDialog(
             currentLanguage = currentLanguage,
-            onLanguageSelected = { newLang ->
-                repository.setLanguage(newLang)
-                ttsManager.setLanguage(newLang)
-            },
+            onLanguageSelected = { newLang -> repository.setLanguage(newLang); ttsManager.setLanguage(newLang) },
             onDismissRequest = { showLanguageSelector = false }
         )
     }
-
     if (showCustomizerModal) {
-        GuiCustomizerModal(
-            dao = dao,
-            onDismiss = { showCustomizerModal = false }
-        )
+        GuiCustomizerModal(dao = dao, currentLanguage = currentLanguage, onDismiss = { showCustomizerModal = false })
     }
 }
