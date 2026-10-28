@@ -497,7 +497,7 @@ fun RosaryScreen(
                                 },
                                 colors = ButtonDefaults.elevatedButtonColors(
                                     containerColor = MaterialTheme.colorScheme.primary,
-                                    contentColor = Color.White
+                                    contentColor = MaterialTheme.colorScheme.onPrimary
                                 )
                             ) {
                                 Icon(if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(16.dp))
@@ -511,7 +511,7 @@ fun RosaryScreen(
                                 },
                                 colors = ButtonDefaults.elevatedButtonColors(
                                     containerColor = MaterialTheme.colorScheme.secondary,
-                                    contentColor = Color.Black
+                                    contentColor = MaterialTheme.colorScheme.onSecondary
                                 )
                             ) {
                                 Text("Siguiente Paso")
