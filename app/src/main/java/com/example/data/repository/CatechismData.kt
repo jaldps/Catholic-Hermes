@@ -597,10 +597,10 @@ object CatechismData {
         return CatechismNumberedArticle(
             cccNumber = num,
             title = LocalizedText("Artículo CCC § $num: $partTheme", "Article CCC § $num: $partTheme", "Artigo CIC § $num: $partTheme"),
-            content = LocalizedText(
-                "Enseñanza íntegra de la Iglesia Católica (Catecismo de la Iglesia Católica, numeral § $num, $partNum). Promulgado por San Juan Pablo II con la Constitución Apostólica Fidei Depositum para transmitir con fidelidad el depósito incorruptible de la fe católica, proclamada por la Sagrada Escritura, custodiada por la Sagrada Tradición e interpretada auténticamente por el Magisterio de la Iglesia.",
-                "Official teaching of the Universal Catholic Church (Catechism of the Catholic Church, § $num, $partNum). Promulgated by Pope St. John Paul II through the Apostolic Constitution Fidei Depositum to present the perennial deposit of Catholic faith with clarity and authority.",
-                "Doutrina oficial da Igreja Católica universal (Catecismo da Igreja Católica, número § $num, $partNum). Promulgado por São João Paulo II na Constituição Apostólica Fidei Depositum para guiar os fiéis na verdade eterna."
+            content = CatechismFullData.contentByNumber[num] ?: LocalizedText(
+                "Enseñanza íntegra de la Iglesia Católica (Catecismo de la Iglesia Católica, numeral § $num, $partNum).",
+                "Official teaching of the Universal Catholic Church (Catechism of the Catholic Church, § $num, $partNum).",
+                "Doutrina oficial da Igreja Católica universal (Catecismo da Igreja Católica, número § $num, $partNum)."
             ),
             biblicalReferences = ref,
             inBriefSummary = LocalizedText(
