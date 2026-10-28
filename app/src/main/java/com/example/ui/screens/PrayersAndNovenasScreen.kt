@@ -233,7 +233,7 @@ fun PrayersAndNovenasScreen(
                                     text = tagLabel,
                                     fontSize = 12.sp,
                                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                    color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface
+                                    color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface
                                 )
                             }
                         }
@@ -498,7 +498,7 @@ fun PrayersAndNovenasScreen(
                                                     fontSize = 12.sp,
                                                     color = when {
                                                         isSelected -> Color.White
-                                                        isCompleted -> Color.Black
+                                                        isCompleted -> MaterialTheme.colorScheme.onSurface
                                                         else -> MaterialTheme.colorScheme.onSurface
                                                     }
                                                 )
