@@ -63,8 +63,8 @@ fun LanguageSelectorDialog(
                         modifier = Modifier
                             .fillMaxWidth()
                             .testTag("lang_option_${lang.code}")
-                            .clip(RoundedCornerShape(12.dp))
-                            .border(1.dp, borderColor, RoundedCornerShape(12.dp))
+                            .clip(MaterialTheme.shapes.medium)
+                            .border(1.dp, borderColor, MaterialTheme.shapes.medium)
                             .background(bgColor)
                             .clickable {
                                 onLanguageSelected(lang)
