@@ -39,9 +39,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.SecondaryTabRow
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -62,6 +60,9 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.ChristManifestation
 import com.example.data.models.MarianApparition
 import com.example.data.repository.CatholicDataRepository
+import com.example.ui.components.IdentityTabBar
+import com.example.ui.theme.AppThemePreset
+import com.example.ui.theme.LocalAppThemePreset
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -77,43 +78,37 @@ fun DevotionsExplorerScreen(
 
     val marianList = repository.marianApparitions
     val christList = repository.christManifestations
+    val identity = LocalAppThemePreset.current
+    val isApple = identity == AppThemePreset.APPLE.id
+    val isMaterial = identity == AppThemePreset.MATERIAL.id
+    val screenGutter = if (isApple) 20.dp else if (isMaterial) 16.dp else 24.dp
 
     Column(
         modifier = modifier
             .fillMaxSize()
             .testTag("devotions_explorer_screen")
     ) {
-        SecondaryTabRow(
-            selectedTabIndex = selectedCategoryTab,
-            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-            contentColor = MaterialTheme.colorScheme.primary
-        ) {
-            Tab(
-                selected = selectedCategoryTab == 0,
-                onClick = { selectedCategoryTab = 0 },
-                text = {
-                    Text(
-                        text = "Advocaciones Marianas (${marianList.size})",
-                        fontWeight = if (selectedCategoryTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
+        IdentityTabBar(
+            labels = listOf(
+                when (currentLanguage) {
+                    AppLanguage.ES -> "Advocaciones Marianas (" + marianList.size + ")"
+                    AppLanguage.EN -> "Marian Devotions (" + marianList.size + ")"
+                    AppLanguage.PT -> "Devoções Marianas (" + marianList.size + ")"
+                },
+                when (currentLanguage) {
+                    AppLanguage.ES -> "Devociones a Cristo (" + christList.size + ")"
+                    AppLanguage.EN -> "Devotions to Christ (" + christList.size + ")"
+                    AppLanguage.PT -> "Devoções a Cristo (" + christList.size + ")"
                 }
-            )
-            Tab(
-                selected = selectedCategoryTab == 1,
-                onClick = { selectedCategoryTab = 1 },
-                text = {
-                    Text(
-                        text = "Devociones a Cristo (${christList.size})",
-                        fontWeight = if (selectedCategoryTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-        }
+            ),
+            selectedIndex = selectedCategoryTab,
+            onTabSelected = { selectedCategoryTab = it },
+            modifier = Modifier.padding(top = if (isApple) 4.dp else if (isMaterial) 0.dp else 8.dp),
+            testTags = listOf("devotions_tab_marian", "devotions_tab_christ")
+        )
 
         // Search bar & Region filter chips
-        Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
+        Column(modifier = Modifier.padding(horizontal = screenGutter, vertical = if (isApple) 6.dp else 8.dp)) {
             OutlinedTextField(
                 value = searchQuery,
                 onValueChange = { searchQuery = it },
@@ -122,14 +117,15 @@ fun DevotionsExplorerScreen(
                     .testTag("devotions_search_input"),
                 placeholder = {
                     Text(
-                        text = "Buscar por nombre, país, santuario o milagro...",
+                        text = when (currentLanguage) { AppLanguage.ES -> "Buscar por nombre, país, santuario o milagro..."; AppLanguage.EN -> "Search name, country, shrine or miracle..."; AppLanguage.PT -> "Buscar nome, país, santuário ou milagre..." },
                         fontSize = 12.sp
                     )
                 },
                 leadingIcon = {
                     Icon(Icons.Default.Search, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                 },
-                singleLine = true
+                singleLine = true,
+                shape = if (isApple) MaterialTheme.shapes.large else if (isMaterial) MaterialTheme.shapes.medium else MaterialTheme.shapes.small
             )
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -139,28 +135,28 @@ fun DevotionsExplorerScreen(
                     FilterChip(
                         selected = selectedRegionFilter == "ALL",
                         onClick = { selectedRegionFilter = "ALL" },
-                        label = { Text("Todas", fontSize = 11.sp) }
+                        label = { Text(when (currentLanguage) { AppLanguage.ES -> "Todas"; AppLanguage.EN -> "All"; AppLanguage.PT -> "Todas" }, fontSize = 11.sp) }
                     )
                 }
                 item {
                     FilterChip(
                         selected = selectedRegionFilter == "Americas",
                         onClick = { selectedRegionFilter = "Americas" },
-                        label = { Text("América Latina y el Caribe", fontSize = 11.sp) }
+                        label = { Text(when (currentLanguage) { AppLanguage.ES -> "América Latina y el Caribe"; AppLanguage.EN -> "Americas & Caribbean"; AppLanguage.PT -> "Américas e Caribe" }, fontSize = 11.sp) }
                     )
                 }
                 item {
                     FilterChip(
                         selected = selectedRegionFilter == "Europe",
                         onClick = { selectedRegionFilter = "Europe" },
-                        label = { Text("Europa y Santuarios Históricos", fontSize = 11.sp) }
+                        label = { Text(when (currentLanguage) { AppLanguage.ES -> "Europa y Santuarios Históricos"; AppLanguage.EN -> "Europe & historic shrines"; AppLanguage.PT -> "Europa e santuários históricos" }, fontSize = 11.sp) }
                     )
                 }
                 item {
                     FilterChip(
                         selected = selectedRegionFilter == "Universal",
                         onClick = { selectedRegionFilter = "Universal" },
-                        label = { Text("Devociones Universales", fontSize = 11.sp) }
+                        label = { Text(when (currentLanguage) { AppLanguage.ES -> "Devociones Universales"; AppLanguage.EN -> "Universal devotions"; AppLanguage.PT -> "Devoções universais" }, fontSize = 11.sp) }
                     )
                 }
             }
@@ -188,12 +184,16 @@ fun DevotionsExplorerScreen(
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(horizontal = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                    .padding(horizontal = screenGutter),
+                verticalArrangement = Arrangement.spacedBy(if (isApple) 20.dp else if (isMaterial) 12.dp else 16.dp)
             ) {
                 item {
                     Text(
-                        text = "Mostrando ${filteredMarian.size} advocaciones marianas aprobadas por la Iglesia",
+                        text = when (currentLanguage) {
+                            AppLanguage.ES -> "Mostrando " + filteredMarian.size + " advocaciones marianas aprobadas por la Iglesia"
+                            AppLanguage.EN -> "Showing " + filteredMarian.size + " Church-approved Marian devotions"
+                            AppLanguage.PT -> "Exibindo " + filteredMarian.size + " devoções marianas aprovadas pela Igreja"
+                        },
                         fontSize = 12.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -236,7 +236,11 @@ fun DevotionsExplorerScreen(
             ) {
                 item {
                     Text(
-                        text = "Mostrando ${filteredChrist.size} manifestaciones sagradas de Jesucristo",
+                        text = when (currentLanguage) {
+                            AppLanguage.ES -> "Mostrando " + filteredChrist.size + " manifestaciones sagradas de Jesucristo"
+                            AppLanguage.EN -> "Showing " + filteredChrist.size + " sacred devotions to Jesus Christ"
+                            AppLanguage.PT -> "Exibindo " + filteredChrist.size + " devoções sagradas a Jesus Cristo"
+                        },
                         fontSize = 12.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
