@@ -1,5 +1,6 @@
 package com.example.ui.screens
 
+import com.example.ui.components.IdentityTabBar
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -117,33 +118,17 @@ fun SpiritualLifeScreen(
             .fillMaxSize()
             .testTag("spiritual_life_screen")
     ) {
-        ScrollableTabRow(
-            selectedTabIndex = selectedTopTab,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.primary,
-            edgePadding = 12.dp
-        ) {
-            Tab(
-                selected = selectedTopTab == 0,
-                onClick = { selectedTopTab = 0 },
-                text = { Text("Diario Espiritual", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 1,
-                onClick = { selectedTopTab = 1 },
-                text = { Text("Trivia Católica", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 2,
-                onClick = { selectedTopTab = 2 },
-                text = { Text("Santo Vía Crucis", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 3,
-                onClick = { selectedTopTab = 3 },
-                text = { Text("Canto Gregoriano", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-        }
+        IdentityTabBar(
+            labels = listOf(
+                when (currentLanguage) { AppLanguage.ES -> "Diario Espiritual"; AppLanguage.EN -> "Spiritual Journal"; AppLanguage.PT -> "Diário Espiritual" },
+                when (currentLanguage) { AppLanguage.ES -> "Trivia Católica"; AppLanguage.EN -> "Catholic Trivia"; AppLanguage.PT -> "Quiz Católico" },
+                when (currentLanguage) { AppLanguage.ES -> "Santo Vía Crucis"; AppLanguage.EN -> "Stations of the Cross"; AppLanguage.PT -> "Via-Sacra" },
+                when (currentLanguage) { AppLanguage.ES -> "Canto Gregoriano"; AppLanguage.EN -> "Gregorian Chant"; AppLanguage.PT -> "Canto Gregoriano" }
+            ),
+            selectedIndex = selectedTopTab,
+            onTabSelected = { selectedTopTab = it },
+            modifier = Modifier.testTag("spiritual_mode_tabs")
+        )
 
         when (selectedTopTab) {
             0 -> {
