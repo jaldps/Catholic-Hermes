@@ -19,7 +19,7 @@ enum class AppThemePreset(val id: String, val label: LocalizedText, val previewP
     VATICAN(
         "VATICAN",
         LocalizedText("Vaticano · Estilo editorial", "Vatican · Ecclesial editorial", "Vaticano · Editorial eclesial"),
-        Color(0xFF486F87)
+        Color(0xFFA32135)
     ),
     APPLE(
         "APPLE",
@@ -71,19 +71,19 @@ object ThemePalettes {
     }
 
     /**
-     * Vatican identity: sky-and-stone surfaces, editorial typography, blue
-     * institutional chrome and a smaller accent that follows the liturgical time.
-     * It is inspired by the official Vatican.va visual direction, not an official
-     * Vatican product or logo.
+     * Vatican-inspired identity: warm ivory and stone surfaces, deep crimson
+     * institutional chrome, quiet gold, editorial typography, and a smaller
+     * accent that follows the liturgical time. It is an original design direction,
+     * not an official Vatican product or logo.
      */
     fun vatican(isDark: Boolean, season: String): ColorScheme {
         val accent = seasonAccent(season, isDark)
         val accentContainer = seasonContainer(season, isDark)
         return if (isDark) darkColorScheme(
-            primary = Color(0xFF9BC4D8),
-            onPrimary = Color(0xFF102A36),
-            primaryContainer = Color(0xFF244656),
-            onPrimaryContainer = Color(0xFFDDEFF6),
+            primary = Color(0xFFFFB3BD),
+            onPrimary = Color(0xFF4B0A18),
+            primaryContainer = Color(0xFF681D2C),
+            onPrimaryContainer = Color(0xFFFFDEE3),
             secondary = accent,
             onSecondary = Color(0xFF1A1A18),
             secondaryContainer = accentContainer,
@@ -98,10 +98,10 @@ object ThemePalettes {
             onSurfaceVariant = Color(0xFFB9C6CD),
             outline = Color(0xFF4A5A62)
         ) else lightColorScheme(
-            primary = Color(0xFF486F87),
+            primary = Color(0xFFA32135),
             onPrimary = Color.White,
-            primaryContainer = Color(0xFFDCEAF0),
-            onPrimaryContainer = Color(0xFF153746),
+            primaryContainer = Color(0xFFF2DDE1),
+            onPrimaryContainer = Color(0xFF4B101B),
             secondary = accent,
             onSecondary = Color.White,
             secondaryContainer = accentContainer,
