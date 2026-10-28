@@ -2,72 +2,58 @@ package com.example.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.Shapes
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.graphics.Color
-
-private val DarkColorScheme = darkColorScheme(
-    primary = LiturgicalGoldLight,
-    onPrimary = SacredBurgundyDark,
-    primaryContainer = SacredBurgundy,
-    onPrimaryContainer = LiturgicalGoldLight,
-    secondary = LiturgicalGold,
-    onSecondary = Color.Black,
-    secondaryContainer = GoldContainerDark,
-    onSecondaryContainer = LiturgicalGoldLight,
-    tertiary = SacredBurgundyLight,
-    onTertiary = Color.White,
-    background = DarkSanctuaryBg,
-    onBackground = TextSacredLight,
-    surface = DarkSanctuarySurface,
-    onSurface = TextSacredLight,
-    surfaceVariant = DarkSanctuaryCard,
-    onSurfaceVariant = TextMutedLight,
-    outline = BorderDarkSanctuary
-)
-
-private val LightColorScheme = lightColorScheme(
-    primary = SacredBurgundy,
-    onPrimary = Color.White,
-    primaryContainer = GoldContainerLight,
-    onPrimaryContainer = SacredBurgundyDark,
-    secondary = LiturgicalGold,
-    onSecondary = Color.White,
-    secondaryContainer = ParchmentSurface,
-    onSecondaryContainer = SacredBurgundy,
-    tertiary = SacredBurgundyLight,
-    onTertiary = Color.White,
-    background = WarmAlabasterBg,
-    onBackground = TextSacredDark,
-    surface = ParchmentSurface,
-    onSurface = TextSacredDark,
-    surfaceVariant = ParchmentCard,
-    onSurfaceVariant = TextMutedBrown,
-    outline = BorderParchment
-)
+import androidx.compose.ui.unit.dp
+import androidx.compose.runtime.remember
 
 @Composable
 fun SanctaFidesTheme(
-    themePreset: String = "LITURGICAL_DYNAMIC",
+    themePreset: String = AppThemePreset.LITURGICAL.id,
     darkModeSetting: String = "SYSTEM",
     isSerif: Boolean = true,
     fontScale: Float = 1.0f,
+    liturgicalSeason: String = "Ordinary Time",
     content: @Composable () -> Unit
 ) {
-    val systemDark = isSystemInDarkTheme()
     val isDark = when (darkModeSetting) {
         "DARK" -> true
         "LIGHT" -> false
-        else -> systemDark
+        else -> isSystemInDarkTheme()
     }
 
-    val colorScheme = ThemePalettes.getColorScheme(themePreset, isDark)
-    val typography = ThemePalettes.buildScaledTypography(isSerif, fontScale)
+    val colorScheme = ThemePalettes.getColorScheme(themePreset, isDark, liturgicalSeason)
+    val typography = ThemePalettes.buildScaledTypography(themePreset, isSerif, fontScale)
+    val shapes = remember(themePreset) {
+        when (themePreset) {
+            AppThemePreset.APPLE.id -> Shapes(
+                extraSmall = androidx.compose.foundation.shape.RoundedCornerShape(10.dp),
+                small = androidx.compose.foundation.shape.RoundedCornerShape(14.dp),
+                medium = androidx.compose.foundation.shape.RoundedCornerShape(18.dp),
+                large = androidx.compose.foundation.shape.RoundedCornerShape(22.dp),
+                extraLarge = androidx.compose.foundation.shape.RoundedCornerShape(28.dp)
+            )
+            AppThemePreset.MATERIAL.id -> Shapes(
+                extraSmall = androidx.compose.foundation.shape.RoundedCornerShape(4.dp),
+                small = androidx.compose.foundation.shape.RoundedCornerShape(8.dp),
+                medium = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
+                large = androidx.compose.foundation.shape.RoundedCornerShape(16.dp),
+                extraLarge = androidx.compose.foundation.shape.RoundedCornerShape(28.dp)
+            )
+            else -> Shapes(
+                extraSmall = androidx.compose.foundation.shape.RoundedCornerShape(2.dp),
+                small = androidx.compose.foundation.shape.RoundedCornerShape(4.dp),
+                medium = androidx.compose.foundation.shape.RoundedCornerShape(8.dp),
+                large = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
+                extraLarge = androidx.compose.foundation.shape.RoundedCornerShape(16.dp)
+            )
+        }
+    }
 
     MaterialTheme(
         colorScheme = colorScheme,
         typography = typography,
+        shapes = shapes,
         content = content
     )
 }
