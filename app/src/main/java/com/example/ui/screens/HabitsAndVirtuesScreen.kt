@@ -666,7 +666,7 @@ fun HabitsAndVirtuesScreen(
                                     text = label,
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant,
+                                    color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant,
                                     modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                                 )
                             }
@@ -927,7 +927,7 @@ fun WeeklyHeatmapStrip(
                         Icon(
                             imageVector = Icons.Default.CheckCircle,
                             contentDescription = null,
-                            tint = Color.White,
+                            tint = MaterialTheme.colorScheme.onSecondary,
                             modifier = Modifier.size(14.dp)
                         )
                     }
@@ -1037,7 +1037,7 @@ fun HabitItemCard(
                         Icon(
                             imageVector = Icons.Default.LocalFireDepartment,
                             contentDescription = "Racha",
-                            tint = Color(0xFFE65100),
+                            tint = MaterialTheme.colorScheme.tertiary,
                             modifier = Modifier.size(12.dp)
                         )
                         Spacer(modifier = Modifier.width(3.dp))
