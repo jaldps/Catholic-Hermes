@@ -44,7 +44,7 @@ This is an original ecclesial direction inspired by Vatican editorial design and
 
 ## Theme contract
 
-- **Palette:** screen components use `MaterialTheme.colorScheme` semantic roles rather than fixed brand colors. The liturgical identity uses `secondary` and `secondaryContainer` for the season-specific accent while preserving blue institutional chrome.
+- **Palette:** screen components use `MaterialTheme.colorScheme` semantic roles rather than fixed brand colors. The liturgical identity uses `secondary` and `secondaryContainer` for the season-specific accent while preserving crimson institutional chrome.
 - **Typography:** screens inherit roles from `MaterialTheme.typography`. Vatican may use the user's serif preference; Apple and Material use the system sans family.
 - **Geometry:** components inherit `MaterialTheme.shapes`. Do not add a fixed `RoundedCornerShape(N.dp)` for ordinary cards or controls.
 - **Depth:** use tonal/elevation surfaces selectively: Material is the most layered, Apple the flattest, Vatican predominantly editorial and border-led.
