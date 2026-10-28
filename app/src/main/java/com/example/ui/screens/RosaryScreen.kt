@@ -393,7 +393,7 @@ fun RosaryScreen(
                                         text = "3:00 PM — La Hora de la Gran Misericordia",
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 14.sp,
-                                        color = Color.White
+                                        color = MaterialTheme.colorScheme.onPrimary
                                     )
                                     Text(
                                         text = "«A las tres de la tarde implora mi misericordia... En esta hora nada le será negado al alma que lo pida» (Diario de Santa Faustina).",
