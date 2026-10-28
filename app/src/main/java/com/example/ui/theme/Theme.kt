@@ -68,13 +68,16 @@ fun SanctaFidesTheme(
     val colorScheme = ThemePalettes.getColorScheme(themePreset, isDark)
     val typography = ThemePalettes.buildScaledTypography(isSerif, fontScale, themePreset)
     val shapes = ThemePalettes.buildShapes(themePreset)
+    val spacing = buildSpacing(themePreset)
 
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = typography,
-        shapes = shapes,
-        content = content
-    )
+    CompositionLocalProvider(LocalSpacing provides spacing) {
+        MaterialTheme(
+            colorScheme = colorScheme,
+            typography = typography,
+            shapes = shapes,
+            content = content
+        )
+    }
 }
 
 @Composable
