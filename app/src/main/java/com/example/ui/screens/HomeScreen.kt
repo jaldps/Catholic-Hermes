@@ -61,13 +61,11 @@ import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.ui.components.LiturgicalCalendarWidget
 import com.example.ui.components.LiturgicalHeader
-import com.example.ui.theme.LiturgicalGold
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.material.icons.filled.NearMe
 import androidx.compose.material.icons.filled.LocationOn
-import com.example.ui.theme.SacredBurgundy
 
 @Composable
 fun HomeScreen(
@@ -112,11 +110,11 @@ fun HomeScreen(
                     .clickable(onClick = onNavigateToHabits)
                     .border(
                         1.dp,
-                        LiturgicalGold.copy(alpha = 0.5f),
-                        RoundedCornerShape(16.dp)
+                        MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f),
+                        MaterialTheme.shapes.large
                     )
                     .testTag("home_habit_tracker_card"),
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 ),
@@ -134,7 +132,7 @@ fun HomeScreen(
                             Icon(
                                 imageVector = Icons.Default.Star,
                                 contentDescription = null,
-                                tint = LiturgicalGold,
+                                tint = MaterialTheme.colorScheme.secondary,
                                 modifier = Modifier.size(16.dp)
                             )
                             Spacer(modifier = Modifier.width(6.dp))
@@ -144,11 +142,11 @@ fun HomeScreen(
                                     AppLanguage.EN -> "HABITS & VIRTUES (RULE OF LIFE)"
                                     AppLanguage.PT -> "HÁBITOS E VIRTUDES (REGRA DE VIDA)"
                                 },
-                                fontFamily = FontFamily.Serif,
+                                fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp,
                                 letterSpacing = 1.sp,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                         }
 
@@ -168,9 +166,9 @@ fun HomeScreen(
                     Spacer(modifier = Modifier.width(10.dp))
 
                     Surface(
-                        shape = RoundedCornerShape(10.dp),
-                        color = SacredBurgundy,
-                        modifier = Modifier.clip(RoundedCornerShape(10.dp))
+                        shape = MaterialTheme.shapes.small,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.clip(MaterialTheme.shapes.small)
                     ) {
                         Text(
                             text = when (currentLanguage) {
@@ -198,7 +196,7 @@ fun HomeScreen(
                         AppLanguage.PT -> "ROTINA ESPIRITUAL DIÁRIA"
                     },
                     style = MaterialTheme.typography.labelLarge,
-                    color = LiturgicalGold,
+                    color = MaterialTheme.colorScheme.secondary,
                     letterSpacing = 1.sp
                 )
 
@@ -267,7 +265,7 @@ fun HomeScreen(
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
                     .testTag("daily_mass_card"),
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(
                     containerColor = MaterialTheme.colorScheme.surfaceVariant
                 )
@@ -282,7 +280,7 @@ fun HomeScreen(
                             Icon(
                                 imageVector = Icons.Default.AutoStories,
                                 contentDescription = null,
-                                tint = SacredBurgundy,
+                                tint = MaterialTheme.colorScheme.primary,
                                 modifier = Modifier.size(20.dp)
                             )
                             Spacer(modifier = Modifier.width(8.dp))
@@ -302,7 +300,7 @@ fun HomeScreen(
                             text = dailyReading.gospelRef,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = LiturgicalGold
+                            color = MaterialTheme.colorScheme.secondary
                         )
                     }
 
@@ -350,7 +348,7 @@ fun HomeScreen(
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
                     .testTag("verse_of_the_day_card"),
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 ),
@@ -366,7 +364,7 @@ fun HomeScreen(
                             Icon(
                                 imageVector = Icons.Default.FormatQuote,
                                 contentDescription = null,
-                                tint = LiturgicalGold,
+                                tint = MaterialTheme.colorScheme.secondary,
                                 modifier = Modifier.size(20.dp)
                             )
                             Spacer(modifier = Modifier.width(6.dp))
@@ -377,7 +375,7 @@ fun HomeScreen(
                                     AppLanguage.PT -> "Versículo do Dia"
                                 },
                                 fontWeight = FontWeight.Bold,
-                                color = LiturgicalGold,
+                                color = MaterialTheme.colorScheme.secondary,
                                 style = MaterialTheme.typography.titleMedium
                             )
                         }
@@ -395,7 +393,7 @@ fun HomeScreen(
                     Text(
                         text = verseOfTheDay.text.get(currentLanguage),
                         style = MaterialTheme.typography.bodyLarge,
-                        fontFamily = FontFamily.Serif,
+                        fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                         color = MaterialTheme.colorScheme.onSurface,
                         lineHeight = 25.sp
                     )
@@ -406,7 +404,7 @@ fun HomeScreen(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clip(RoundedCornerShape(10.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f))
                             .padding(10.dp)
                     ) {
@@ -427,7 +425,7 @@ fun HomeScreen(
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
                     .testTag("saint_of_the_day_card"),
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(
                     containerColor = MaterialTheme.colorScheme.surfaceVariant
                 )
@@ -445,7 +443,7 @@ fun HomeScreen(
                                 AppLanguage.PT -> "Santo do Dia"
                             },
                             style = MaterialTheme.typography.labelLarge,
-                            color = LiturgicalGold,
+                            color = MaterialTheme.colorScheme.secondary,
                             letterSpacing = 1.sp
                         )
 
@@ -486,17 +484,17 @@ fun HomeScreen(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clip(RoundedCornerShape(10.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(MaterialTheme.colorScheme.surface)
-                            .border(1.dp, LiturgicalGold.copy(alpha = 0.5f), RoundedCornerShape(10.dp))
+                            .border(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f), MaterialTheme.shapes.small)
                             .padding(12.dp)
                     ) {
                         Text(
                             text = saintOfTheDay.iconicQuote.get(currentLanguage),
-                            fontFamily = FontFamily.Serif,
+                            fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                             fontWeight = FontWeight.Medium,
                             fontSize = 13.sp,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                     }
                 }
@@ -511,7 +509,7 @@ fun HomeScreen(
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
                     .testTag("home_nearby_churches_banner"),
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f)
                 ),
@@ -532,7 +530,7 @@ fun HomeScreen(
                             modifier = Modifier
                                 .size(44.dp)
                                 .clip(CircleShape)
-                                .background(SacredBurgundy),
+                                .background(MaterialTheme.colorScheme.primary),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
@@ -552,7 +550,7 @@ fun HomeScreen(
                                 },
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                             Text(
                                 text = when (currentLanguage) {
@@ -573,7 +571,7 @@ fun HomeScreen(
                             context.startActivity(mapIntent)
                         },
                         colors = ButtonDefaults.filledTonalButtonColors(
-                            containerColor = SacredBurgundy,
+                            containerColor = MaterialTheme.colorScheme.primary,
                             contentColor = Color.White
                         )
                     ) {
@@ -693,7 +691,7 @@ private fun RoutineQuickCard(
 ) {
     Surface(
         modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
+            .clip(MaterialTheme.shapes.medium)
             .clickable(onClick = onClick),
         color = MaterialTheme.colorScheme.surface,
         tonalElevation = 2.dp,
@@ -744,7 +742,7 @@ private fun QuickActionBanner(
 ) {
     Surface(
         modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
+            .clip(MaterialTheme.shapes.medium)
             .clickable(onClick = onClick),
         color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
         border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
@@ -753,7 +751,7 @@ private fun QuickActionBanner(
             modifier = Modifier.padding(14.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(imageVector = icon, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(26.dp))
+            Icon(imageVector = icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(26.dp))
             Spacer(modifier = Modifier.width(10.dp))
             Column {
                 Text(text = title, fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.onPrimaryContainer)
