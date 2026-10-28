@@ -1136,7 +1136,7 @@ fun OfflineBibleDownloadsView(
                 modifier = androidx.compose.ui.Modifier
                     .fillMaxWidth()
                     .padding(vertical = 4.dp),
-                shape = androidx.compose.foundation.shape.MaterialTheme.shapes.medium
+                shape = MaterialTheme.shapes.medium
             ) {
                 androidx.compose.foundation.layout.Column(modifier = androidx.compose.ui.Modifier.padding(12.dp)) {
                     androidx.compose.material3.Text(text = spec.name, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)
