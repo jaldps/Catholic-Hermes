@@ -4,12 +4,15 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.collectAsState
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDatabase
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.MainApp
+import com.example.ui.theme.AppThemePreset
 import com.example.ui.theme.SanctaFidesTheme
 
 class MainActivity : ComponentActivity() {
@@ -32,7 +35,17 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            SanctaFidesTheme {
+            val preferences by dao.getAppPreferences().collectAsState(initial = null)
+            val prefs = preferences ?: com.example.data.local.AppPreferencesEntity()
+            val liturgicalDay = repository.getCurrentLiturgicalDay()
+
+            SanctaFidesTheme(
+                themePreset = prefs.themePreset.ifBlank { AppThemePreset.LITURGICAL.id },
+                darkModeSetting = prefs.darkModeSetting,
+                isSerif = prefs.fontFamilyChoice != "SANS",
+                fontScale = prefs.fontSizeScale,
+                liturgicalSeason = liturgicalDay.seasonName
+            ) {
                 MainApp(
                     repository = repository,
                     dao = dao,
