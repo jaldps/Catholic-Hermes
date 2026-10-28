@@ -72,8 +72,6 @@ import com.example.data.models.CatechismChapter
 import com.example.data.models.CatechismNumberedArticle
 import com.example.data.models.CatechismPart
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 import com.example.ui.components.InAppBrowserDialog
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -103,7 +101,7 @@ fun CatechismScreen(
         PrimaryTabRow(
             selectedTabIndex = mainMode,
             containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy
+            contentColor = MaterialTheme.colorScheme.primary
         ) {
             Tab(
                 selected = mainMode == 0,
@@ -181,7 +179,7 @@ fun CatechismScreen(
                     )
                 },
                 leadingIcon = {
-                    Icon(imageVector = Icons.Default.Search, contentDescription = null, tint = SacredBurgundy)
+                    Icon(imageVector = Icons.Default.Search, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                 },
                 trailingIcon = {
                     if (searchQuery.isNotBlank()) {
@@ -190,7 +188,7 @@ fun CatechismScreen(
                         }
                     }
                 },
-                shape = RoundedCornerShape(14.dp),
+                shape = MaterialTheme.shapes.medium,
                 singleLine = true
             )
         }
@@ -225,14 +223,14 @@ fun CatechismScreen(
                         text = "Resultados encontrados (${searchResults.size}):",
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
 
                 if (searchResults.isEmpty()) {
                     item {
                         Surface(
-                            shape = RoundedCornerShape(14.dp),
+                            shape = MaterialTheme.shapes.medium,
                             color = MaterialTheme.colorScheme.surfaceVariant,
                             modifier = Modifier.fillMaxWidth()
                         ) {
@@ -260,7 +258,7 @@ fun CatechismScreen(
             ScrollableTabRow(
                 selectedTabIndex = selectedPartIndex,
                 containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = SacredBurgundy,
+                contentColor = MaterialTheme.colorScheme.primary,
                 edgePadding = 12.dp
             ) {
                 parts.forEachIndexed { idx, p ->
@@ -287,7 +285,7 @@ fun CatechismScreen(
             ) {
                 item {
                     ElevatedCard(
-                        shape = RoundedCornerShape(18.dp),
+                        shape = MaterialTheme.shapes.large,
                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                     ) {
                         Column(modifier = Modifier.padding(18.dp)) {
@@ -295,13 +293,13 @@ fun CatechismScreen(
                                 text = currentPart.title.get(currentLanguage),
                                 style = MaterialTheme.typography.titleLarge,
                                 fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                             Text(
                                 text = currentPart.subtitle.get(currentLanguage) + " • " + currentPart.cccRange,
                                 fontSize = 12.sp,
                                 fontWeight = FontWeight.SemiBold,
-                                color = LiturgicalGold
+                                color = MaterialTheme.colorScheme.secondary
                             )
                             Spacer(modifier = Modifier.height(8.dp))
                             Text(
@@ -318,7 +316,7 @@ fun CatechismScreen(
                         text = "Índice de Secciones y Capítulos:",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
 
@@ -328,7 +326,7 @@ fun CatechismScreen(
                             text = section.title.get(currentLanguage),
                             fontWeight = FontWeight.Bold,
                             fontSize = 13.sp,
-                            color = LiturgicalGold,
+                            color = MaterialTheme.colorScheme.secondary,
                             modifier = Modifier.padding(top = 4.dp)
                         )
                     }
@@ -337,9 +335,9 @@ fun CatechismScreen(
                         Card(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clip(RoundedCornerShape(14.dp))
+                                .clip(MaterialTheme.shapes.medium)
                                 .clickable { selectedChapter = chapter },
-                            shape = RoundedCornerShape(14.dp),
+                            shape = MaterialTheme.shapes.medium,
                             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                             border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                         ) {
@@ -430,12 +428,12 @@ fun CatechismScreen(
                     text = chapter.title.get(currentLanguage),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy
+                    color = MaterialTheme.colorScheme.primary
                 )
                 Text(
                     text = "Catecismo de la Iglesia Católica: ${chapter.articleRangeDisplay}",
                     fontSize = 11.sp,
-                    color = LiturgicalGold
+                    color = MaterialTheme.colorScheme.secondary
                 )
 
                 Spacer(modifier = Modifier.height(14.dp))
@@ -475,7 +473,7 @@ private fun ArticleItemCard(
     useSerif: Boolean
 ) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
@@ -486,8 +484,8 @@ private fun ArticleItemCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .background(SacredBurgundy)
+                        .clip(MaterialTheme.shapes.small)
+                        .background(MaterialTheme.colorScheme.primary)
                         .padding(horizontal = 8.dp, vertical = 3.dp)
                 ) {
                     Text(
@@ -503,7 +501,7 @@ private fun ArticleItemCard(
                         text = "Ref: ${article.biblicalReferences}",
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
-                        color = LiturgicalGold
+                        color = MaterialTheme.colorScheme.secondary
                     )
                 }
             }
@@ -514,14 +512,14 @@ private fun ArticleItemCard(
                 text = article.title.get(currentLanguage),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
-                color = SacredBurgundy
+                color = MaterialTheme.colorScheme.primary
             )
 
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
                 text = article.content.get(currentLanguage),
-                fontFamily = if (useSerif) FontFamily.Serif else FontFamily.Default,
+                fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
                 fontSize = (14.5f * fontSizeMultiplier).sp,
                 lineHeight = (23 * fontSizeMultiplier).sp,
                 color = MaterialTheme.colorScheme.onSurface
@@ -530,14 +528,14 @@ private fun ArticleItemCard(
             if (article.inBriefSummary != null) {
                 Spacer(modifier = Modifier.height(12.dp))
                 Surface(
-                    shape = RoundedCornerShape(10.dp),
+                    shape = MaterialTheme.shapes.small,
                     color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
                 ) {
                     Row(
                         modifier = Modifier.padding(10.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Icon(Icons.Default.Info, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
+                        Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(16.dp))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = "En Resumen: " + article.inBriefSummary.get(currentLanguage),
@@ -608,7 +606,7 @@ private fun CompendiumView(
                 )
             },
             leadingIcon = {
-                Icon(imageVector = Icons.Default.Search, contentDescription = null, tint = SacredBurgundy)
+                Icon(imageVector = Icons.Default.Search, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
             },
             trailingIcon = {
                 if (compendiumSearch.isNotBlank()) {
@@ -617,7 +615,7 @@ private fun CompendiumView(
                     }
                 }
             },
-            shape = RoundedCornerShape(14.dp),
+            shape = MaterialTheme.shapes.medium,
             singleLine = true
         )
 
@@ -627,7 +625,7 @@ private fun CompendiumView(
         ScrollableTabRow(
             selectedTabIndex = selectedFilterIndex,
             containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy,
+            contentColor = MaterialTheme.colorScheme.primary,
             edgePadding = 4.dp
         ) {
             val filterNames = when (currentLanguage) {
@@ -663,13 +661,13 @@ private fun CompendiumView(
                         text = "Fórmulas Principales de la Doctrina Católica",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
 
                 items(repository.doctrineFormulas) { item ->
                     Card(
-                        shape = RoundedCornerShape(14.dp),
+                        shape = MaterialTheme.shapes.medium,
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                     ) {
@@ -678,7 +676,7 @@ private fun CompendiumView(
                                 text = item.title.get(currentLanguage),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                             Spacer(modifier = Modifier.height(6.dp))
                             Text(
@@ -707,7 +705,7 @@ private fun CompendiumView(
 
                 items(filteredQuestions) { q ->
                     Card(
-                        shape = RoundedCornerShape(14.dp),
+                        shape = MaterialTheme.shapes.medium,
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                     ) {
@@ -719,8 +717,8 @@ private fun CompendiumView(
                             ) {
                                 Box(
                                     modifier = Modifier
-                                        .clip(RoundedCornerShape(6.dp))
-                                        .background(SacredBurgundy)
+                                        .clip(MaterialTheme.shapes.extraSmall)
+                                        .background(MaterialTheme.colorScheme.primary)
                                         .padding(horizontal = 8.dp, vertical = 3.dp)
                                 ) {
                                     Text(
@@ -735,7 +733,7 @@ private fun CompendiumView(
                                     text = q.cccReference,
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold,
-                                    color = LiturgicalGold
+                                    color = MaterialTheme.colorScheme.secondary
                                 )
                             }
 
@@ -745,14 +743,14 @@ private fun CompendiumView(
                                 text = q.question.get(currentLanguage),
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
 
                             Spacer(modifier = Modifier.height(8.dp))
 
                             Text(
                                 text = q.answer.get(currentLanguage),
-                                fontFamily = FontFamily.Serif,
+                                fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                                 style = MaterialTheme.typography.bodyMedium,
                                 lineHeight = 22.sp,
                                 color = MaterialTheme.colorScheme.onSurface
@@ -780,7 +778,7 @@ private fun VaticanOfficialLinksView(
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
@@ -788,7 +786,7 @@ private fun VaticanOfficialLinksView(
                         text = "Fuentes Documentales Oficiales de la Santa Sede",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
@@ -802,7 +800,7 @@ private fun VaticanOfficialLinksView(
 
         items(repository.officialVaticanLinks) { item ->
             Card(
-                shape = RoundedCornerShape(14.dp),
+                shape = MaterialTheme.shapes.medium,
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
             ) {
@@ -816,20 +814,20 @@ private fun VaticanOfficialLinksView(
                             text = "Vatican.va (${item.language})",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.sp,
-                            color = SacredBurgundy,
+                            color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.weight(1f)
                         )
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(6.dp))
-                                .background(LiturgicalGold.copy(alpha = 0.25f))
+                                .clip(MaterialTheme.shapes.extraSmall)
+                                .background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.25f))
                                 .padding(horizontal = 8.dp, vertical = 3.dp)
                         ) {
                             Text(
                                 text = item.language,
                                 fontSize = 10.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                         }
                     }
