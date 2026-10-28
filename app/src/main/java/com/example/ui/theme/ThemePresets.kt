@@ -381,78 +381,92 @@ object ThemePalettes {
         val apple = themePreset == "APPLE_CLEAN"
         val material = themePreset == "MATERIAL_CLEAN"
         val family = if (isSerif && !apple && !material) FontFamily.Serif else FontFamily.Default
+        val titleLetter = if (apple) (-0.3f).sp else if (material) 0.sp else 0.2f.sp
+        val bodyLetter = if (apple) (-0.1f).sp else 0.sp
         return Typography(
             headlineLarge = TextStyle(
                 fontFamily = family,
-                fontWeight = FontWeight.Bold,
+                fontWeight = if (apple) FontWeight.Bold else FontWeight.Bold,
                 fontSize = (30 * scale).sp,
-                lineHeight = (36 * scale).sp
+                lineHeight = (36 * scale).sp,
+                letterSpacing = titleLetter
             ),
             headlineMedium = TextStyle(
                 fontFamily = family,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = (24 * scale).sp,
-                lineHeight = (30 * scale).sp
+                lineHeight = (30 * scale).sp,
+                letterSpacing = titleLetter
             ),
             headlineSmall = TextStyle(
                 fontFamily = family,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = (20 * scale).sp,
-                lineHeight = (26 * scale).sp
+                lineHeight = (26 * scale).sp,
+                letterSpacing = if (apple) (-0.2f).sp else 0.sp
             ),
             titleLarge = TextStyle(
                 fontFamily = family,
-                fontWeight = FontWeight.Bold,
+                fontWeight = if (apple) FontWeight.SemiBold else FontWeight.Bold,
                 fontSize = (19 * scale).sp,
-                lineHeight = (25 * scale).sp
+                lineHeight = (25 * scale).sp,
+                letterSpacing = if (apple) (-0.2f).sp else 0.sp
             ),
             titleMedium = TextStyle(
                 fontFamily = if (isSerif) FontFamily.Serif else FontFamily.Default,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = (16 * scale).sp,
-                lineHeight = (22 * scale).sp
+                lineHeight = (22 * scale).sp,
+                letterSpacing = if (apple) (-0.1f).sp else 0.sp
             ),
             titleSmall = TextStyle(
                 fontFamily = FontFamily.Default,
                 fontWeight = FontWeight.Medium,
                 fontSize = (14 * scale).sp,
-                lineHeight = (20 * scale).sp
+                lineHeight = (20 * scale).sp,
+                letterSpacing = if (material) 0.1f.sp else 0.sp
             ),
             bodyLarge = TextStyle(
                 fontFamily = family,
                 fontWeight = FontWeight.Normal,
                 fontSize = (16 * scale).sp,
-                lineHeight = (26 * scale).sp
+                lineHeight = (26 * scale).sp,
+                letterSpacing = bodyLetter
             ),
             bodyMedium = TextStyle(
                 fontFamily = FontFamily.Default,
                 fontWeight = FontWeight.Normal,
                 fontSize = (14 * scale).sp,
-                lineHeight = (20 * scale).sp
+                lineHeight = (20 * scale).sp,
+                letterSpacing = bodyLetter
             ),
             bodySmall = TextStyle(
                 fontFamily = FontFamily.Default,
                 fontWeight = FontWeight.Normal,
                 fontSize = (12 * scale).sp,
-                lineHeight = (16 * scale).sp
+                lineHeight = (16 * scale).sp,
+                letterSpacing = 0.sp
             ),
             labelLarge = TextStyle(
                 fontFamily = FontFamily.Default,
                 fontWeight = FontWeight.SemiBold,
                 fontSize = (14 * scale).sp,
-                lineHeight = (20 * scale).sp
+                lineHeight = (20 * scale).sp,
+                letterSpacing = if (material) 0.1f.sp else if (apple) (-0.1f).sp else 0.2f.sp
             ),
             labelMedium = TextStyle(
                 fontFamily = FontFamily.Default,
                 fontWeight = FontWeight.Medium,
                 fontSize = (12 * scale).sp,
-                lineHeight = (16 * scale).sp
+                lineHeight = (16 * scale).sp,
+                letterSpacing = if (material) 0.5f.sp else 0.sp
             ),
             labelSmall = TextStyle(
                 fontFamily = FontFamily.Default,
                 fontWeight = FontWeight.Medium,
                 fontSize = (10 * scale).sp,
-                lineHeight = (14 * scale).sp
+                lineHeight = (14 * scale).sp,
+                letterSpacing = if (material) 0.5f.sp else 0.sp
             )
         )
     }
