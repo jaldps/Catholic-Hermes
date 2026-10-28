@@ -68,8 +68,6 @@ import com.example.ui.screens.PilgrimageAndHabitsScreen
 import com.example.ui.screens.PrayersAndNovenasScreen
 import com.example.ui.screens.RosaryScreen
 import com.example.ui.screens.SpiritualLifeScreen
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 enum class AppDestination(
     val titleEs: String,
@@ -118,7 +116,7 @@ fun MainApp(
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 2.sp,
                         fontSize = 18.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 },
                 actions = {
@@ -129,7 +127,7 @@ fun MainApp(
                         Icon(
                             imageVector = Icons.Default.Palette,
                             contentDescription = "Personalizar Tema y Apariencia",
-                            tint = SacredBurgundy,
+                            tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.size(22.dp)
                         )
                     }
@@ -156,7 +154,7 @@ fun MainApp(
                 ScrollableTabRow(
                     selectedTabIndex = selectedDestinationIndex,
                     containerColor = MaterialTheme.colorScheme.surface,
-                    contentColor = SacredBurgundy,
+                    contentColor = MaterialTheme.colorScheme.primary,
                     edgePadding = 8.dp
                 ) {
                     destinations.forEachIndexed { index, dest ->
@@ -179,7 +177,7 @@ fun MainApp(
                                     Icon(
                                         imageVector = dest.icon,
                                         contentDescription = label,
-                                        tint = if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.onSurfaceVariant,
+                                        tint = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
                                         modifier = Modifier.size(20.dp)
                                     )
                                     Spacer(modifier = Modifier.height(2.dp))
@@ -187,7 +185,7 @@ fun MainApp(
                                         text = label,
                                         fontSize = 11.sp,
                                         fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                        color = if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.onSurfaceVariant
+                                        color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant
                                     )
                                 }
                             }
