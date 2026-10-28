@@ -35,8 +35,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
 import com.example.data.models.DailyMassReading
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @Composable
 fun LiturgicalHeader(
@@ -69,9 +67,9 @@ fun LiturgicalHeader(
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
-                        .clip(RoundedCornerShape(12.dp))
+                        .clip(MaterialTheme.shapes.medium)
                         .background(seasonColor.copy(alpha = 0.15f))
-                        .border(1.dp, seasonColor.copy(alpha = 0.4f), RoundedCornerShape(12.dp))
+                        .border(1.dp, seasonColor.copy(alpha = 0.4f), MaterialTheme.shapes.medium)
                         .padding(horizontal = 10.dp, vertical = 5.dp)
                 ) {
                     Box(
@@ -95,7 +93,7 @@ fun LiturgicalHeader(
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .testTag("language_selector_button")
-                        .clip(RoundedCornerShape(12.dp))
+                        .clip(MaterialTheme.shapes.medium)
                         .background(MaterialTheme.colorScheme.primaryContainer)
                         .clickable(onClick = onLanguageClick)
                         .padding(horizontal = 10.dp, vertical = 5.dp)
@@ -139,7 +137,7 @@ fun LiturgicalHeader(
                     imageVector = Icons.Default.Star,
                     contentDescription = null,
                     modifier = Modifier.size(14.dp),
-                    tint = LiturgicalGold
+                    tint = MaterialTheme.colorScheme.secondary
                 )
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
