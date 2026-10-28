@@ -65,8 +65,6 @@ import com.example.data.models.CatholicPilgrimageSanctuary
 import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.models.SpiritualHabitItem
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -95,7 +93,7 @@ fun PilgrimageAndHabitsScreen(
         PrimaryTabRow(
             selectedTabIndex = selectedMainTab,
             containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy
+            contentColor = MaterialTheme.colorScheme.primary
         ) {
             Tab(
                 selected = selectedMainTab == 0,
@@ -162,7 +160,7 @@ fun PilgrimageAndHabitsScreen(
                             },
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = when (currentLanguage) {
@@ -194,7 +192,7 @@ fun PilgrimageAndHabitsScreen(
                 ) {
                     item {
                         ElevatedCard(
-                            shape = RoundedCornerShape(16.dp),
+                            shape = MaterialTheme.shapes.large,
                             colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                         ) {
                             Column(modifier = Modifier.padding(16.dp)) {
@@ -212,7 +210,7 @@ fun PilgrimageAndHabitsScreen(
                                             },
                                             fontWeight = FontWeight.Bold,
                                             fontSize = 15.sp,
-                                            color = SacredBurgundy
+                                            color = MaterialTheme.colorScheme.primary
                                         )
                                         Text(
                                             text = when (currentLanguage) {
@@ -225,14 +223,14 @@ fun PilgrimageAndHabitsScreen(
                                         )
                                     }
                                     Surface(
-                                        shape = RoundedCornerShape(8.dp),
-                                        color = LiturgicalGold.copy(alpha = 0.2f)
+                                        shape = MaterialTheme.shapes.small,
+                                        color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f)
                                     ) {
                                         Text(
                                             text = "$completedCount / $totalHabits",
                                             fontWeight = FontWeight.Bold,
                                             fontSize = 13.sp,
-                                            color = SacredBurgundy,
+                                            color = MaterialTheme.colorScheme.primary,
                                             modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
                                         )
                                     }
@@ -272,7 +270,7 @@ fun PilgrimageAndHabitsScreen(
                             },
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = when (currentLanguage) {
@@ -312,7 +310,7 @@ private fun LiturgicalDayCard(day: LiturgicalCalendarDay, currentLanguage: AppLa
     val liturgicalColor = Color(day.liturgicalColorHex)
 
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -351,7 +349,7 @@ private fun LiturgicalDayCard(day: LiturgicalCalendarDay, currentLanguage: AppLa
                 text = day.celebrationTitle.get(currentLanguage),
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp,
-                color = SacredBurgundy
+                color = MaterialTheme.colorScheme.primary
             )
 
             Spacer(modifier = Modifier.height(6.dp))
@@ -360,7 +358,7 @@ private fun LiturgicalDayCard(day: LiturgicalCalendarDay, currentLanguage: AppLa
                 text = "Rango: " + day.rank.get(currentLanguage),
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Medium,
-                color = LiturgicalGold
+                color = MaterialTheme.colorScheme.secondary
             )
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -395,9 +393,9 @@ private fun HabitItemCard(
     onToggle: () -> Unit
 ) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(
-            containerColor = if (isCompleted) LiturgicalGold.copy(alpha = 0.12f) else MaterialTheme.colorScheme.surface
+            containerColor = if (isCompleted) MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f) else MaterialTheme.colorScheme.surface
         ),
         modifier = Modifier
             .fillMaxWidth()
@@ -414,7 +412,7 @@ private fun HabitItemCard(
                 Icon(
                     imageVector = if (isCompleted) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
                     contentDescription = null,
-                    tint = if (isCompleted) SacredBurgundy else MaterialTheme.colorScheme.outline,
+                    tint = if (isCompleted) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
                     modifier = Modifier.size(26.dp)
                 )
             }
@@ -430,13 +428,13 @@ private fun HabitItemCard(
                         text = habit.title.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
-                        color = if (isCompleted) SacredBurgundy else MaterialTheme.colorScheme.onSurface
+                        color = if (isCompleted) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = habit.category.get(currentLanguage),
                         fontSize = 10.sp,
                         fontWeight = FontWeight.Bold,
-                        color = LiturgicalGold
+                        color = MaterialTheme.colorScheme.secondary
                     )
                 }
 
@@ -455,7 +453,7 @@ private fun HabitItemCard(
                     text = "Sugerencia: " + habit.timeSuggestion,
                     fontSize = 10.sp,
                     fontWeight = FontWeight.Medium,
-                    color = SacredBurgundy
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
         }
@@ -469,7 +467,7 @@ private fun ShrineCard(
     onNavigateMap: () -> Unit
 ) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         modifier = Modifier
             .fillMaxWidth()
@@ -488,7 +486,7 @@ private fun ShrineCard(
                     Icon(
                         imageVector = Icons.Default.Place,
                         contentDescription = null,
-                        tint = SacredBurgundy,
+                        tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(20.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
@@ -496,7 +494,7 @@ private fun ShrineCard(
                         text = shrine.name.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
             }
@@ -506,7 +504,7 @@ private fun ShrineCard(
                 text = shrine.cityCountry.get(currentLanguage),
                 fontSize = 11.sp,
                 fontWeight = FontWeight.Bold,
-                color = LiturgicalGold
+                color = MaterialTheme.colorScheme.secondary
             )
 
             Spacer(modifier = Modifier.height(8.dp))
@@ -526,8 +524,8 @@ private fun ShrineCard(
             Spacer(modifier = Modifier.height(8.dp))
 
             Surface(
-                shape = RoundedCornerShape(10.dp),
-                color = LiturgicalGold.copy(alpha = 0.12f),
+                shape = MaterialTheme.shapes.small,
+                color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(10.dp)) {
@@ -535,7 +533,7 @@ private fun ShrineCard(
                         text = "✨ Indulgencia Plenaria y Gracia:",
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
@@ -551,13 +549,13 @@ private fun ShrineCard(
             FilledTonalButton(
                 onClick = onNavigateMap,
                 modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(10.dp)
+                shape = MaterialTheme.shapes.small
             ) {
                 Icon(
                     imageVector = Icons.Default.Directions,
                     contentDescription = null,
                     modifier = Modifier.size(16.dp),
-                    tint = SacredBurgundy
+                    tint = MaterialTheme.colorScheme.primary
                 )
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(
