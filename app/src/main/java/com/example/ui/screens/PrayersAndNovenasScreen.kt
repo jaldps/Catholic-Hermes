@@ -41,6 +41,8 @@ import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
+import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.PrimaryTabRow
 import androidx.compose.material3.Surface
@@ -80,6 +82,8 @@ fun PrayersAndNovenasScreen(
     repository: CatholicDataRepository,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
+    activeNovena: Novena? = null,
+    onSetActiveNovena: (Novena?) -> Unit = {},
     modifier: Modifier = Modifier
 ) {
     var selectedTab by remember { mutableIntStateOf(0) } // 0 = Devocionario Vaticano, 1 = Novenas Milagrosas
@@ -90,6 +94,9 @@ fun PrayersAndNovenasScreen(
 
     // Novenas State
     var selectedNovena by remember { mutableStateOf<Novena?>(null) }
+    var pendingNovena by remember { mutableStateOf<Novena?>(null) }
+    var showIntentionSheet by remember { mutableStateOf(false) }
+    val sheetState = rememberModalBottomSheetState()
     var novenaSearchQuery by remember { mutableStateOf("") }
     var selectedNovenaTag by remember { mutableStateOf<String?>(null) }
     var activeNovenaDay by remember { mutableIntStateOf(1) } // 1..9
@@ -384,6 +391,7 @@ fun PrayersAndNovenasScreen(
                                 onClick = {
                                     selectedNovena = novena
                                     activeNovenaDay = 1
+                                    onSetActiveNovena(novena)
                                 }
                             )
                         }

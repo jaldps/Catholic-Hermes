@@ -58,6 +58,7 @@ import com.example.data.models.DailyMassReading
 import com.example.data.models.SaintOfTheDay
 import com.example.data.models.VerseOfTheDay
 import com.example.data.models.LiturgicalCalendarDay
+import com.example.data.models.Novena
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.ui.components.LiturgicalCalendarWidget
 import com.example.ui.components.LiturgicalHeader
@@ -85,6 +86,8 @@ fun HomeScreen(
     onNavigateToCatechism: () -> Unit = {},
     onNavigateToPilgrimage: () -> Unit = {},
     onNavigateToHabits: () -> Unit = {},
+    activeNovena: Novena? = null,
+    onContinueNovena: () -> Unit = {},
     liturgicalDay: LiturgicalCalendarDay = PilgrimageAndHabitsData.upcomingLiturgicalDays.first(),
     modifier: Modifier = Modifier
 ) {
@@ -94,6 +97,17 @@ fun HomeScreen(
             .testTag("home_screen"),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        if (activeNovena != null) {
+            item {
+                ElevatedCard(onClick = onContinueNovena, modifier = Modifier.fillMaxWidth()) {
+                    Column(modifier = Modifier.padding(16.dp)) {
+                        Text(text = "Continuar: ${activeNovena.title}", style = MaterialTheme.typography.titleMedium)
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(text = "Toque para continuar", style = MaterialTheme.typography.bodySmall)
+                    }
+                }
+            }
+        }
         // Minimalist Gold Liturgical Calendar Widget
         item {
             LiturgicalCalendarWidget(

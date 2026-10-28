@@ -53,6 +53,7 @@ import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
+import com.example.data.models.Novena
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.components.LanguageSelectorDialog
 import com.example.ui.components.GuiCustomizerModal
@@ -102,6 +103,7 @@ fun MainApp(
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCustomizerModal by remember { mutableStateOf(false) }
+    var activeNovena by remember { mutableStateOf<Novena?>(null) }
 
     val destinations = AppDestination.values()
 
@@ -231,7 +233,9 @@ fun MainApp(
                         onNavigateToQuiz = {
                             spiritualLifeInitialTab = 1
                             selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE)
-                        }
+                        },
+                        activeNovena = activeNovena,
+                        onContinueNovena = { selectedDestinationIndex = destinations.indexOf(AppDestination.PRAYERS) }
                     )
 
                     AppDestination.HABITS_VIRTUES -> HabitsAndVirtuesScreen(
@@ -261,7 +265,9 @@ fun MainApp(
                     AppDestination.PRAYERS -> PrayersAndNovenasScreen(
                         repository = repository,
                         ttsManager = ttsManager,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        activeNovena = activeNovena,
+                        onSetActiveNovena = { activeNovena = it }
                     )
 
                     AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(
