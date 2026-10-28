@@ -48,7 +48,6 @@ jobs:
 
       - name: Run Android unit tests
         run: gradle :app:testDebugUnitTest --stacktrace
-        continue-on-error: true
 
       - name: Capture all six theme combinations in an emulator
         uses: reactivecircus/android-emulator-runner@v2
