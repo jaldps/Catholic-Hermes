@@ -189,7 +189,7 @@ private fun ComplineView(
                             },
                             colors = ButtonDefaults.elevatedButtonColors(
                                 containerColor = MaterialTheme.colorScheme.primary,
-                                contentColor = Color.White
+                                contentColor = MaterialTheme.colorScheme.onPrimary
                             )
                         ) {
                             Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(16.dp))
@@ -588,12 +588,12 @@ private fun IgnatianExamenView(
                     ) {
                         Icon(Icons.Default.CheckCircle, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(36.dp))
                         Spacer(modifier = Modifier.height(8.dp))
-                        Text("¡Examen Completado!", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
+                        Text("¡Examen Completado!", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onPrimary)
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
                             text = "Descansa en la paz y el perdón de Nuestro Señor Jesucristo. Que la Virgen María y los santos Ángeles custodien tu sueño.",
                             fontSize = 12.sp,
-                            color = Color.White.copy(alpha = 0.9f),
+                            color = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.9f),
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center
                         )
                     }
