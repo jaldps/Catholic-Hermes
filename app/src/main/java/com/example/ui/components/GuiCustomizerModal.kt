@@ -73,7 +73,7 @@ fun GuiCustomizerModal(
     val savedPreferences by dao.getAppPreferences().collectAsState(initial = null)
     val currentPreferences = savedPreferences ?: AppPreferencesEntity()
 
-    var selectedTheme by remember(savedPreferences?.themePreset) { mutableStateOf(currentPreferences.themePreset) }
+    var selectedTheme by remember(savedPreferences?.themePreset) { mutableStateOf(AppThemePreset.normalizeId(currentPreferences.themePreset)) }
     var selectedDarkMode by remember(savedPreferences?.darkModeSetting) { mutableStateOf(currentPreferences.darkModeSetting) }
     var selectedTypography by remember(savedPreferences?.fontFamilyChoice) { mutableStateOf(currentPreferences.fontFamilyChoice) }
     var selectedScale by remember(savedPreferences?.fontSizeScale) { mutableFloatStateOf(currentPreferences.fontSizeScale) }
@@ -125,9 +125,9 @@ fun GuiCustomizerModal(
             // 1. Theme Presets Selection
             Text(
                 text = when (currentLanguage) {
-                    AppLanguage.ES -> "Estilo Visual y Paleta Litúrgica"
-                    AppLanguage.EN -> "Visual Style & Liturgical Palette"
-                    AppLanguage.PT -> "Estilo Visual e Paleta Litúrgica"
+                    AppLanguage.ES -> "Identidad visual"
+                    AppLanguage.EN -> "Visual identity"
+                    AppLanguage.PT -> "Identidade visual"
                 },
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.SemiBold,
@@ -146,7 +146,7 @@ fun GuiCustomizerModal(
                     colors = CardDefaults.cardColors(
                         containerColor = if (isSelected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant
                     ),
-                    shape = RoundedCornerShape(12.dp)
+                    shape = MaterialTheme.shapes.medium
                 ) {
                     Row(
                         modifier = Modifier
@@ -228,7 +228,7 @@ fun GuiCustomizerModal(
 
             Spacer(modifier = Modifier.height(18.dp))
 
-            // 3. Typography Style
+            if (selectedTheme == AppThemePreset.VATICAN.id) {\n            // 3. Vatican editorial typography
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.TextFields, contentDescription = null, modifier = Modifier.size(20.dp), tint = MaterialTheme.colorScheme.primary)
                 Spacer(modifier = Modifier.width(8.dp))
@@ -267,7 +267,7 @@ fun GuiCustomizerModal(
 
             Spacer(modifier = Modifier.height(18.dp))
 
-            // 4. Text Font Scale
+            }\n\n            // 4. Text Font Scale
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Icon(Icons.Default.FormatSize, contentDescription = null, modifier = Modifier.size(20.dp), tint = MaterialTheme.colorScheme.primary)
                 Spacer(modifier = Modifier.width(8.dp))
@@ -347,7 +347,7 @@ fun GuiCustomizerModal(
             Button(
                 onClick = {
                     val updated = currentPreferences.copy(
-                        themePreset = selectedTheme,
+                        themePreset = AppThemePreset.normalizeId(selectedTheme),
                         darkModeSetting = selectedDarkMode,
                         fontFamilyChoice = selectedTypography,
                         fontSizeScale = selectedScale,
