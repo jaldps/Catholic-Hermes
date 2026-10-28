@@ -169,7 +169,7 @@ fun GuiCustomizerModal(
                                     .size(26.dp)
                                     .clip(CircleShape)
                                     .background(preset.previewPrimary)
-                                    .border(2.dp, Color.White, CircleShape)
+                                    .border(2.dp, MaterialTheme.colorScheme.outline, CircleShape)
                             )
                             Spacer(modifier = Modifier.width(12.dp))
                             Text(
