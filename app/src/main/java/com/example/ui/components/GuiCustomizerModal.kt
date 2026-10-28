@@ -63,6 +63,19 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.launch
 
+private data class LocalizedThemeOption(
+    val value: String,
+    val es: String,
+    val en: String,
+    val pt: String
+) {
+    fun label(language: AppLanguage): String = when (language) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
+    }
+}
+
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun GuiCustomizerModal(
@@ -146,16 +159,26 @@ fun GuiCustomizerModal(
 
             AppThemePreset.values().forEach { preset ->
                 val isSelected = selectedTheme == preset.id
+                val presetShape = when (preset) {
+                    AppThemePreset.APPLE -> RoundedCornerShape(22.dp)
+                    AppThemePreset.MATERIAL -> RoundedCornerShape(16.dp)
+                    AppThemePreset.VATICAN -> RoundedCornerShape(8.dp)
+                }
                 Card(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(vertical = 4.dp)
                         .clickable { selectedTheme = preset.id }
+                        .border(
+                            width = if (isSelected) 1.5.dp else 0.5.dp,
+                            color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.45f),
+                            shape = presetShape
+                        )
                         .testTag("theme_preset_${preset.id}"),
                     colors = CardDefaults.cardColors(
                         containerColor = if (isSelected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant
                     ),
-                    shape = MaterialTheme.shapes.medium
+                    shape = presetShape
                 ) {
                     Row(
                         modifier = Modifier
@@ -210,9 +233,9 @@ fun GuiCustomizerModal(
             Spacer(modifier = Modifier.height(6.dp))
 
             val modeOptions = listOf(
-                "SYSTEM" to Pair("Sistema", "System"),
-                "LIGHT" to Pair("Claro", "Light"),
-                "DARK" to Pair("Oscuro", "Dark")
+                LocalizedThemeOption("SYSTEM", "Sistema", "System", "Sistema"),
+                LocalizedThemeOption("LIGHT", "Claro", "Light", "Claro"),
+                LocalizedThemeOption("DARK", "Oscuro", "Dark", "Escuro")
             )
             if (selectedTheme == AppThemePreset.APPLE.id) {
                 Row(
@@ -223,7 +246,8 @@ fun GuiCustomizerModal(
                         .padding(4.dp),
                     horizontalArrangement = Arrangement.spacedBy(4.dp)
                 ) {
-                    modeOptions.forEach { (mode, labels) ->
+                    modeOptions.forEach { option ->
+                        val mode = option.value
                         val selected = selectedDarkMode == mode
                         Surface(
                             modifier = Modifier
@@ -235,7 +259,7 @@ fun GuiCustomizerModal(
                             shadowElevation = if (selected) 1.dp else 0.dp
                         ) {
                             Text(
-                                text = if (currentLanguage == AppLanguage.EN) labels.second else labels.first,
+                                text = option.label(currentLanguage),
                                 modifier = Modifier.padding(horizontal = 4.dp, vertical = 10.dp),
                                 style = MaterialTheme.typography.labelMedium,
                                 textAlign = TextAlign.Center,
@@ -247,13 +271,14 @@ fun GuiCustomizerModal(
                 }
             } else {
                 FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    modeOptions.forEach { (mode, labels) ->
+                    modeOptions.forEach { option ->
+                        val mode = option.value
                         val isSelected = selectedDarkMode == mode
                         FilterChip(
                             selected = isSelected,
                             onClick = { selectedDarkMode = mode },
                             label = {
-                                Text(if (currentLanguage == AppLanguage.EN) labels.second else labels.first)
+                                Text(option.label(currentLanguage))
                             },
                             leadingIcon = if (isSelected) {
                                 { Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp)) }
@@ -289,15 +314,16 @@ fun GuiCustomizerModal(
 
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 listOf(
-                    "SERIF" to Pair("Serif Tradicional (Eclesial)", "Traditional Serif (Ecclesial)"),
-                    "SANS" to Pair("Sans Contemporáneo (Limpio)", "Modern Sans (Minimalist)")
-                ).forEach { (style, labels) ->
+                    LocalizedThemeOption("SERIF", "Serif tradicional (eclesial)", "Traditional serif (ecclesial)", "Serif tradicional (eclesial)"),
+                    LocalizedThemeOption("SANS", "Sans contemporánea (limpia)", "Contemporary sans (clean)", "Sans contemporânea (limpa)")
+                ).forEach { option ->
+                    val style = option.value
                     val isSelected = selectedTypography == style
                     FilterChip(
                         selected = isSelected,
                         onClick = { selectedTypography = style },
                         label = {
-                            Text(if (currentLanguage == AppLanguage.EN) labels.second else labels.first)
+                            Text(option.label(currentLanguage))
                         },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = MaterialTheme.colorScheme.primary,
@@ -330,15 +356,15 @@ fun GuiCustomizerModal(
 
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 listOf(
-                    1.0f to "100% (Normal)",
-                    1.15f to "115% (Grande)",
-                    1.30f to "130% (Muy Grande)"
+                    1.0f to LocalizedThemeOption("", "100% (Normal)", "100% (Default)", "100% (Normal)"),
+                    1.15f to LocalizedThemeOption("", "115% (Grande)", "115% (Large)", "115% (Grande)"),
+                    1.30f to LocalizedThemeOption("", "130% (Muy grande)", "130% (Extra large)", "130% (Muito grande)")
                 ).forEach { (scale, label) ->
                     val isSelected = kotlin.math.abs(selectedScale - scale) < 0.05f
                     FilterChip(
                         selected = isSelected,
                         onClick = { selectedScale = scale },
-                        label = { Text(label) },
+                        label = { Text(label.label(currentLanguage)) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = MaterialTheme.colorScheme.primary,
                             selectedLabelColor = MaterialTheme.colorScheme.onPrimary
@@ -368,9 +394,9 @@ fun GuiCustomizerModal(
 
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 listOf(
-                    0.8f to "0.8x (Pausado)",
-                    1.0f to "1.0x (Estándar)",
-                    1.2f to "1.2x (Fluido)"
+                    0.8f to LocalizedThemeOption("", "0,8x (Lento)", "0.8x (Slow)", "0,8x (Lento)"),
+                    1.0f to LocalizedThemeOption("", "1,0x (Estándar)", "1.0x (Standard)", "1,0x (Padrão)"),
+                    1.2f to LocalizedThemeOption("", "1,2x (Fluido)", "1.2x (Smooth)", "1,2x (Fluido)")
                 ).forEach { (speed, label) ->
                     val isSelected = kotlin.math.abs(selectedAudioSpeed - speed) < 0.05f
                     FilterChip(
