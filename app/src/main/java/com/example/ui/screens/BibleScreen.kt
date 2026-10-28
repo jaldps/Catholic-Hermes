@@ -504,7 +504,7 @@ fun BibleScreen(
                                             ) {
                                                 Text(
                                                     text = chNum.toString(),
-                                                    color = if (isCurrent) Color.White else MaterialTheme.colorScheme.onSurface,
+                                                    color = if (isCurrent) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
                                                     fontWeight = if (isCurrent) FontWeight.Bold else FontWeight.Medium,
                                                     fontSize = 13.sp
                                                 )
@@ -655,7 +655,7 @@ private fun FilterChip(
             text = label,
             fontSize = 11.sp,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-            color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface
+            color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface
         )
     }
 }
@@ -1062,12 +1062,12 @@ private fun BibleVersionsComparatorView(
                         Box(
                             modifier = Modifier
                                 .clip(MaterialTheme.shapes.small)
-                                .background(if (ver.isCatholicCanon) MaterialTheme.colorScheme.primary else Color(0xFF8B2500))
+                                .background(if (ver.isCatholicCanon) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.errorContainer)
                                 .padding(horizontal = 8.dp, vertical = 4.dp)
                         ) {
                             Text(
                                 text = if (ver.isCatholicCanon) "CANON CATÓLICO (73)" else "NO CATÓLICA (66)",
-                                color = Color.White,
+                                color = if (ver.isCatholicCanon) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onErrorContainer,
                                 fontSize = 10.sp,
                                 fontWeight = FontWeight.Bold
                             )
@@ -1095,7 +1095,7 @@ private fun BibleVersionsComparatorView(
                             text = ver.canonicalDifferenceNote.get(currentLanguage),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Medium,
-                            color = if (ver.isCatholicCanon) MaterialTheme.colorScheme.onSurface else Color(0xFFB71C1C)
+                            color = if (ver.isCatholicCanon) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.error
                         )
                     }
                 }
