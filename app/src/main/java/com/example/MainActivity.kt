@@ -36,10 +36,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             val prefs by dao.getAppPreferences().collectAsState(initial = null)
             val appPrefs = prefs ?: com.example.data.local.AppPreferencesEntity()
+            val isSerifChoice = appPrefs.fontFamilyChoice == "SERIF" && appPrefs.themePreset !in listOf("APPLE_CLEAN", "MATERIAL_CLEAN")
             SanctaFidesTheme(
                 themePreset = appPrefs.themePreset,
                 darkModeSetting = appPrefs.darkModeSetting,
-                isSerif = appPrefs.fontFamilyChoice == "SERIF",
+                isSerif = isSerifChoice,
                 fontScale = appPrefs.fontSizeScale
             ) {
                 MainApp(

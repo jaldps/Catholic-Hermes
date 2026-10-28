@@ -44,12 +44,12 @@ enum class AppThemePreset(val id: String, val label: LocalizedText, val previewP
     ),
     MATERIAL_CLEAN(
         "MATERIAL_CLEAN",
-        LocalizedText("Material Design Limpio", "Material Clean", "Material Limpo"),
+        LocalizedText("Material Design (Google)", "Material Design (Google)", "Material Design (Google)"),
         Color(0xFF6750A4)
     ),
     APPLE_CLEAN(
         "APPLE_CLEAN",
-        LocalizedText("Apple HIG Limpio", "Apple Clean (HIG)", "Apple Limpo (HIG)"),
+        LocalizedText("Apple Identity (HIG)", "Apple Identity (HIG)", "Identidade Apple (HIG)"),
         Color(0xFF007AFF)
     )
 }
