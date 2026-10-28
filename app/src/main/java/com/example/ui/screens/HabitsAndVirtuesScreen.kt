@@ -1010,7 +1010,7 @@ fun HabitItemCard(
                             text = "${habit.currentStreak} días de fidelidad (Récord: ${habit.bestStreak})",
                             fontSize = 10.sp,
                             fontWeight = FontWeight.Bold,
-                            color = Color(0xFFE65100)
+                            color = MaterialTheme.colorScheme.tertiary
                         )
                     }
                 }
