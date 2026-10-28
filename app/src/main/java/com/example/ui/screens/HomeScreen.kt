@@ -30,6 +30,7 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.WbTwilight
+import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -97,7 +98,17 @@ fun HomeScreen(
             .testTag("home_screen"),
         verticalArrangement = Arrangement.spacedBy(if (isApple) 22.dp else if (isMaterial) 14.dp else 18.dp)
     ) {
-        // Minimalist Gold Liturgical Calendar Widget
+        // Apple leads with a reading-first hero while keeping liturgical context close.
+        if (isApple) {
+            item {
+                AppleReadingHero(
+                    dailyReading = dailyReading,
+                    currentLanguage = currentLanguage,
+                    onNavigateToBible = onNavigateToBible,
+                    horizontalGutter = screenGutter
+                )
+            }
+        }
         item {
             LiturgicalCalendarWidget(
                 liturgicalDay = liturgicalDay,
@@ -207,6 +218,48 @@ fun HomeScreen(
 
                 Spacer(modifier = Modifier.height(10.dp))
 
+                if (isApple || isMaterial) {
+                    Column(verticalArrangement = Arrangement.spacedBy(if (isApple) 12.dp else 8.dp)) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else 10.dp)
+                        ) {
+                            RoutineQuickCard(
+                                title = when (currentLanguage) { AppLanguage.ES -> "Laudes"; AppLanguage.EN -> "Morning"; AppLanguage.PT -> "Laudes" },
+                                subtitle = "6:00 AM",
+                                icon = Icons.Default.LightMode,
+                                modifier = Modifier.weight(1f),
+                                onClick = onNavigateToPrayers
+                            )
+                            RoutineQuickCard(
+                                title = when (currentLanguage) { AppLanguage.ES -> "El Ángelus"; AppLanguage.EN -> "The Angelus"; AppLanguage.PT -> "O Angelus" },
+                                subtitle = "12:00 PM",
+                                icon = Icons.Default.WbTwilight,
+                                modifier = Modifier.weight(1f),
+                                onClick = onNavigateToPrayers
+                            )
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else 10.dp)
+                        ) {
+                            RoutineQuickCard(
+                                title = when (currentLanguage) { AppLanguage.ES -> "Santo Rosario"; AppLanguage.EN -> "Holy Rosary"; AppLanguage.PT -> "Santo Terço" },
+                                subtitle = when (currentLanguage) { AppLanguage.ES -> "Hoy"; AppLanguage.EN -> "Today"; AppLanguage.PT -> "Hoje" },
+                                icon = Icons.Default.SelfImprovement,
+                                modifier = Modifier.weight(1f),
+                                onClick = onNavigateToRosary
+                            )
+                            RoutineQuickCard(
+                                title = when (currentLanguage) { AppLanguage.ES -> "Completas"; AppLanguage.EN -> "Night Examen"; AppLanguage.PT -> "Completas" },
+                                subtitle = "9:00 PM",
+                                icon = Icons.Default.NightsStay,
+                                modifier = Modifier.weight(1f),
+                                onClick = onNavigateToPrayers
+                            )
+                        }
+                    }
+                } else {
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.spacedBy(if (isApple) 14.dp else if (isMaterial) 10.dp else 12.dp)
@@ -260,9 +313,11 @@ fun HomeScreen(
                         onClick = onNavigateToPrayers
                     )
                 }
+                }
             }
         }
 
+        if (!isApple) {
         // Daily Mass Reading Featured Card
         item {
             Card(
@@ -345,6 +400,8 @@ fun HomeScreen(
                     }
                 }
             }
+        }
+
         }
 
         // Verse of the Day Card
@@ -684,6 +741,86 @@ fun HomeScreen(
 
         item {
             Spacer(modifier = Modifier.height(16.dp))
+        }
+    }
+}
+
+@Composable
+private fun AppleReadingHero(
+    dailyReading: DailyMassReading,
+    currentLanguage: AppLanguage,
+    onNavigateToBible: () -> Unit,
+    horizontalGutter: androidx.compose.ui.unit.Dp
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = horizontalGutter)
+            .padding(top = 8.dp)
+    ) {
+        Text(
+            text = dailyReading.dateDisplay.uppercase(),
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.secondary,
+            letterSpacing = 1.1.sp
+        )
+        Spacer(modifier = Modifier.height(6.dp))
+        Text(
+            text = when (currentLanguage) {
+                AppLanguage.ES -> "La Palabra de hoy"
+                AppLanguage.EN -> "Today's Scripture"
+                AppLanguage.PT -> "A Palavra de hoje"
+            },
+            style = MaterialTheme.typography.headlineLarge,
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.onBackground
+        )
+        Spacer(modifier = Modifier.height(12.dp))
+        Card(
+            modifier = Modifier.fillMaxWidth().testTag("apple_daily_reading_hero"),
+            shape = MaterialTheme.shapes.extraLarge,
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
+            elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+        ) {
+            Column(modifier = Modifier.padding(20.dp)) {
+                Text(
+                    text = dailyReading.feastTitle.get(currentLanguage),
+                    style = MaterialTheme.typography.labelMedium,
+                    color = MaterialTheme.colorScheme.primary
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                Text(
+                    text = dailyReading.gospelRef,
+                    style = MaterialTheme.typography.titleLarge,
+                    color = MaterialTheme.colorScheme.secondary
+                )
+                Spacer(modifier = Modifier.height(10.dp))
+                Text(
+                    text = "“${dailyReading.gospelText.get(currentLanguage).take(220).trim()}…”",
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = MaterialTheme.colorScheme.onSurface,
+                    lineHeight = 25.sp
+                )
+                Spacer(modifier = Modifier.height(18.dp))
+                Button(
+                    onClick = onNavigateToBible,
+                    modifier = Modifier.fillMaxWidth().testTag("apple_read_today_button"),
+                    shape = MaterialTheme.shapes.extraLarge,
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        contentColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                ) {
+                    Text(
+                        text = when (currentLanguage) {
+                            AppLanguage.ES -> "Abrir las lecturas"
+                            AppLanguage.EN -> "Read today's passages"
+                            AppLanguage.PT -> "Abrir as leituras"
+                        },
+                        style = MaterialTheme.typography.labelLarge
+                    )
+                }
+            }
         }
     }
 }
