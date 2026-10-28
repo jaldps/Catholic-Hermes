@@ -107,7 +107,7 @@ object ThemePalettes {
             secondaryContainer = accentContainer,
             onSecondaryContainer = Color(0xFF2C2528),
             tertiary = Color(0xFF9A762E),
-            onTertiary = Color(0xFF211A08),
+            onTertiary = Color(0xFF100C03),
             background = Color(0xFFF6F3ED),
             onBackground = Color(0xFF252C30),
             surface = Color(0xFFFFFEFC),
