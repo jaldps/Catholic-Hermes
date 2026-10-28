@@ -90,8 +90,6 @@ import com.example.data.local.SpiritualHabitEntity
 import com.example.data.models.AppLanguage
 import com.example.data.models.SinAvoiderOption
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -151,8 +149,8 @@ fun HabitsAndVirtuesScreen(
             if (selectedTab == 0) {
                 FloatingActionButton(
                     onClick = { showAddHabitDialog = true },
-                    containerColor = LiturgicalGold,
-                    contentColor = SacredBurgundy,
+                    containerColor = MaterialTheme.colorScheme.secondary,
+                    contentColor = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.testTag("fab_add_habit")
                 ) {
                     Icon(imageVector = Icons.Default.Add, contentDescription = "Añadir Hábito")
@@ -170,7 +168,7 @@ fun HabitsAndVirtuesScreen(
             TabRow(
                 selectedTabIndex = selectedTab,
                 containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = SacredBurgundy
+                contentColor = MaterialTheme.colorScheme.primary
             ) {
                 Tab(
                     selected = selectedTab == 0,
@@ -196,7 +194,7 @@ fun HabitsAndVirtuesScreen(
                                 imageVector = Icons.Default.Shield,
                                 contentDescription = null,
                                 modifier = Modifier.size(16.dp),
-                                tint = LiturgicalGold
+                                tint = MaterialTheme.colorScheme.secondary
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
@@ -252,13 +250,13 @@ fun HabitsAndVirtuesScreen(
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 13.sp,
                                 letterSpacing = 1.sp,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                             Text(
                                 text = "${completedHabitIds.size}/${habitsList.size}",
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = LiturgicalGold
+                                color = MaterialTheme.colorScheme.secondary
                             )
                         }
                     }
@@ -345,7 +343,7 @@ fun HabitsAndVirtuesScreen(
                             fontWeight = FontWeight.Bold,
                             fontSize = 13.sp,
                             letterSpacing = 1.sp,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                     }
 
@@ -375,7 +373,7 @@ fun HabitsAndVirtuesScreen(
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 13.sp,
                                 letterSpacing = 1.sp,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                         }
 
@@ -413,7 +411,7 @@ fun HabitsAndVirtuesScreen(
                     Icon(
                         imageVector = Icons.Default.Shield,
                         contentDescription = null,
-                        tint = LiturgicalGold,
+                        tint = MaterialTheme.colorScheme.secondary,
                         modifier = Modifier.size(24.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
@@ -426,7 +424,7 @@ fun HabitsAndVirtuesScreen(
                         fontFamily = FontFamily.Serif,
                         fontWeight = FontWeight.Bold,
                         fontSize = 17.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
             },
@@ -438,7 +436,7 @@ fun HabitsAndVirtuesScreen(
                     Text(
                         text = "${option.title.get(currentLanguage)} ➔ ${option.counterVirtue.get(currentLanguage)}",
                         fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.primary,
                         fontSize = 13.sp
                     )
 
@@ -456,7 +454,7 @@ fun HabitsAndVirtuesScreen(
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier
                             .fillMaxWidth()
-                            .border(1.dp, LiturgicalGold.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
+                            .border(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
                     ) {
                         Column(modifier = Modifier.padding(12.dp)) {
                             Row(
@@ -473,7 +471,7 @@ fun HabitsAndVirtuesScreen(
                                     fontFamily = FontFamily.Serif,
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 11.sp,
-                                    color = LiturgicalGold,
+                                    color = MaterialTheme.colorScheme.secondary,
                                     letterSpacing = 1.sp
                                 )
                                 IconButton(
@@ -486,7 +484,7 @@ fun HabitsAndVirtuesScreen(
                                     Icon(
                                         imageVector = Icons.Default.VolumeUp,
                                         contentDescription = "Escuchar oración",
-                                        tint = SacredBurgundy,
+                                        tint = MaterialTheme.colorScheme.primary,
                                         modifier = Modifier.size(18.dp)
                                     )
                                 }
@@ -537,7 +535,7 @@ fun HabitsAndVirtuesScreen(
                             ttsManager.stop()
                         }
                     },
-                    colors = ButtonDefaults.buttonColors(containerColor = SacredBurgundy),
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
                     modifier = Modifier.testTag("confirm_victory_button")
                 ) {
                     Text(
@@ -579,7 +577,7 @@ fun HabitsAndVirtuesScreen(
                     },
                     fontFamily = FontFamily.Serif,
                     fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy
+                    color = MaterialTheme.colorScheme.primary
                 )
             },
             text = {
@@ -659,7 +657,7 @@ fun HabitsAndVirtuesScreen(
                             }
                             Surface(
                                 shape = RoundedCornerShape(8.dp),
-                                color = if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surfaceVariant,
+                                color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
                                 modifier = Modifier
                                     .clickable { newHabitCategory = cat }
                                     .padding(vertical = 2.dp)
@@ -700,7 +698,7 @@ fun HabitsAndVirtuesScreen(
                             }
                         }
                     },
-                    colors = ButtonDefaults.buttonColors(containerColor = SacredBurgundy),
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
                     modifier = Modifier.testTag("save_custom_habit_button")
                 ) {
                     Text(
@@ -743,7 +741,7 @@ fun HabitProgressCard(
             .fillMaxWidth()
             .border(
                 1.dp,
-                Brush.linearGradient(listOf(LiturgicalGold, LiturgicalGold.copy(alpha = 0.3f))),
+                Brush.linearGradient(listOf(MaterialTheme.colorScheme.secondary, MaterialTheme.colorScheme.secondary.copy(alpha = 0.3f))),
                 RoundedCornerShape(20.dp)
             ),
         shape = RoundedCornerShape(20.dp),
@@ -771,14 +769,14 @@ fun HabitProgressCard(
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
                         letterSpacing = 1.2.sp,
-                        color = LiturgicalGold
+                        color = MaterialTheme.colorScheme.secondary
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
                         text = "$completedCount de $totalCount cumplidos hoy",
                         fontWeight = FontWeight.Bold,
                         fontSize = 17.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
@@ -796,7 +794,7 @@ fun HabitProgressCard(
                     CircularProgressIndicator(
                         progress = { completionRate },
                         modifier = Modifier.size(62.dp),
-                        color = LiturgicalGold,
+                        color = MaterialTheme.colorScheme.secondary,
                         trackColor = MaterialTheme.colorScheme.surfaceVariant,
                         strokeWidth = 6.dp
                     )
@@ -804,7 +802,7 @@ fun HabitProgressCard(
                         text = "${(completionRate * 100).toInt()}%",
                         fontWeight = FontWeight.Bold,
                         fontSize = 13.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                 }
             }
@@ -821,8 +819,8 @@ fun HabitProgressCard(
                     .clip(RoundedCornerShape(12.dp))
                     .clickable(onClick = onOpenSinAvoider)
                     .testTag("grace_sos_quick_button"),
-                color = SacredBurgundy.copy(alpha = 0.08f),
-                border = androidx.compose.foundation.BorderStroke(1.dp, SacredBurgundy.copy(alpha = 0.3f)),
+                color = MaterialTheme.colorScheme.primary.copy(alpha = 0.08f),
+                border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)),
                 shape = RoundedCornerShape(12.dp)
             ) {
                 Row(
@@ -834,7 +832,7 @@ fun HabitProgressCard(
                         Icon(
                             imageVector = Icons.Default.Shield,
                             contentDescription = null,
-                            tint = SacredBurgundy,
+                            tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.size(16.dp)
                         )
                         Spacer(modifier = Modifier.width(8.dp))
@@ -846,7 +844,7 @@ fun HabitProgressCard(
                             },
                             fontWeight = FontWeight.Bold,
                             fontSize = 12.sp,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                     }
 
@@ -854,7 +852,7 @@ fun HabitProgressCard(
                         text = "$totalVictories victorias",
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = LiturgicalGold
+                        color = MaterialTheme.colorScheme.secondary
                     )
                 }
             }
@@ -904,7 +902,7 @@ fun WeeklyHeatmapStrip(
                     text = daysLabels[index % daysLabels.size],
                     fontSize = 10.sp,
                     fontWeight = if (isToday) FontWeight.Bold else FontWeight.Normal,
-                    color = if (isToday) SacredBurgundy else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
+                    color = if (isToday) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
                 )
 
                 Box(
@@ -913,14 +911,14 @@ fun WeeklyHeatmapStrip(
                         .clip(CircleShape)
                         .background(
                             when {
-                                hasActivity -> LiturgicalGold
+                                hasActivity -> MaterialTheme.colorScheme.secondary
                                 isToday -> MaterialTheme.colorScheme.surfaceVariant
                                 else -> MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)
                             }
                         )
                         .border(
                             width = if (isToday) 1.5.dp else 0.dp,
-                            color = if (isToday) SacredBurgundy else Color.Transparent,
+                            color = if (isToday) MaterialTheme.colorScheme.primary else Color.Transparent,
                             shape = CircleShape
                         ),
                     contentAlignment = Alignment.Center
@@ -978,7 +976,7 @@ fun HabitItemCard(
             }
         ),
         border = if (isCompletedToday) {
-            androidx.compose.foundation.BorderStroke(1.dp, LiturgicalGold.copy(alpha = 0.6f))
+            androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.6f))
         } else {
             androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.15f))
         }
@@ -999,7 +997,7 @@ fun HabitItemCard(
                 Icon(
                     imageVector = if (isCompletedToday) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
                     contentDescription = "Completar hábito",
-                    tint = if (isCompletedToday) LiturgicalGold else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
+                    tint = if (isCompletedToday) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
                     modifier = Modifier.size(28.dp)
                 )
             }
@@ -1011,7 +1009,7 @@ fun HabitItemCard(
                     Icon(
                         imageVector = icon,
                         contentDescription = null,
-                        tint = SacredBurgundy,
+                        tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(15.dp)
                     )
                     Spacer(modifier = Modifier.width(6.dp))
@@ -1082,12 +1080,12 @@ fun GraceEmergencyBanner(
             .fillMaxWidth()
             .border(
                 1.5.dp,
-                Brush.linearGradient(listOf(SacredBurgundy, LiturgicalGold)),
+                Brush.linearGradient(listOf(MaterialTheme.colorScheme.primary, MaterialTheme.colorScheme.secondary)),
                 RoundedCornerShape(20.dp)
             ),
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(
-            containerColor = SacredBurgundy.copy(alpha = 0.05f)
+            containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.05f)
         )
     ) {
         Column(
@@ -1105,13 +1103,13 @@ fun GraceEmergencyBanner(
                         modifier = Modifier
                             .size(36.dp)
                             .clip(CircleShape)
-                            .background(SacredBurgundy),
+                            .background(MaterialTheme.colorScheme.primary),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = Icons.Default.Shield,
                             contentDescription = null,
-                            tint = LiturgicalGold,
+                            tint = MaterialTheme.colorScheme.secondary,
                             modifier = Modifier.size(20.dp)
                         )
                     }
@@ -1126,12 +1124,12 @@ fun GraceEmergencyBanner(
                             fontFamily = FontFamily.Serif,
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.sp,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = "$totalVictories tentaciones vencidas en Cristo",
                             fontSize = 11.sp,
-                            color = LiturgicalGold,
+                            color = MaterialTheme.colorScheme.secondary,
                             fontWeight = FontWeight.Bold
                         )
                     }
@@ -1156,7 +1154,7 @@ fun GraceEmergencyBanner(
 
             Button(
                 onClick = onTriggerEmergency,
-                colors = ButtonDefaults.buttonColors(containerColor = SacredBurgundy),
+                colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
                 modifier = Modifier
                     .fillMaxWidth()
                     .testTag("emergency_overcome_button"),
@@ -1165,7 +1163,7 @@ fun GraceEmergencyBanner(
                 Icon(
                     imageVector = Icons.Default.Bolt,
                     contentDescription = null,
-                    tint = LiturgicalGold,
+                    tint = MaterialTheme.colorScheme.secondary,
                     modifier = Modifier.size(16.dp)
                 )
                 Spacer(modifier = Modifier.width(8.dp))
@@ -1216,13 +1214,13 @@ fun SinAvoiderCatalogCard(
 
                 Surface(
                     shape = RoundedCornerShape(8.dp),
-                    color = LiturgicalGold.copy(alpha = 0.15f)
+                    color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.15f)
                 ) {
                     Text(
                         text = "$victoriesCount victorias",
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
                     )
                 }
@@ -1234,7 +1232,7 @@ fun SinAvoiderCatalogCard(
                 text = "Virtud contraria: ${option.counterVirtue.get(currentLanguage)}",
                 fontSize = 12.sp,
                 fontWeight = FontWeight.SemiBold,
-                color = LiturgicalGold
+                color = MaterialTheme.colorScheme.secondary
             )
 
             Spacer(modifier = Modifier.height(4.dp))
@@ -1258,7 +1256,7 @@ fun SinAvoiderCatalogCard(
                 Icon(
                     imageVector = Icons.Default.Favorite,
                     contentDescription = null,
-                    tint = SacredBurgundy,
+                    tint = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.size(14.dp)
                 )
                 Spacer(modifier = Modifier.width(6.dp))
@@ -1269,7 +1267,7 @@ fun SinAvoiderCatalogCard(
                         AppLanguage.PT -> "Registar Vitória + Ave Maria"
                     },
                     fontSize = 12.sp,
-                    color = SacredBurgundy,
+                    color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -1302,7 +1300,7 @@ fun SinVictoryLogItem(
                     text = "Victoria en ${log.counterVirtue}",
                     fontWeight = FontWeight.Bold,
                     fontSize = 12.sp,
-                    color = SacredBurgundy
+                    color = MaterialTheme.colorScheme.primary
                 )
                 if (log.note.isNotBlank()) {
                     Text(
