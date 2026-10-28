@@ -62,8 +62,6 @@ import com.example.data.models.ComplineOffice
 import com.example.data.models.IgnatianExamenStep
 import com.example.data.models.MarianAntiphonItem
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -87,7 +85,7 @@ fun NightPrayersScreen(
         SecondaryTabRow(
             selectedTabIndex = selectedNightOfficeTab,
             containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-            contentColor = SacredBurgundy
+            contentColor = MaterialTheme.colorScheme.primary
         ) {
             Tab(
                 selected = selectedNightOfficeTab == 0,
@@ -149,7 +147,7 @@ private fun ComplineView(
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f))
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
@@ -163,7 +161,7 @@ private fun ComplineView(
                                 text = compline.title.get(currentLanguage),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 16.sp,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                             Text(
                                 text = "Liturgia oficial de la Iglesia antes del reposo de la noche",
@@ -190,7 +188,7 @@ private fun ComplineView(
                                 ttsManager.speakSingle(fullText)
                             },
                             colors = ButtonDefaults.elevatedButtonColors(
-                                containerColor = SacredBurgundy,
+                                containerColor = MaterialTheme.colorScheme.primary,
                                 contentColor = Color.White
                             )
                         ) {
@@ -277,7 +275,7 @@ private fun ComplineView(
         // 8. Antífona Mariana
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
@@ -285,7 +283,7 @@ private fun ComplineView(
                         text = "8. ANTÍFONA MARIANA FINAL",
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = LiturgicalGold,
+                        color = MaterialTheme.colorScheme.secondary,
                         letterSpacing = 1.sp
                     )
                     Spacer(modifier = Modifier.height(8.dp))
@@ -310,7 +308,7 @@ private fun ComplineView(
                         text = currentAntiphon.titleTranslation.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Text(
                         text = currentAntiphon.seasonTag.get(currentLanguage),
@@ -322,7 +320,7 @@ private fun ComplineView(
 
                     Text(
                         text = currentAntiphon.latinText,
-                        fontFamily = FontFamily.Serif,
+                        fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                         fontSize = 13.sp,
                         lineHeight = 20.sp,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f)
@@ -332,7 +330,7 @@ private fun ComplineView(
 
                     Text(
                         text = currentAntiphon.translatedText.get(currentLanguage),
-                        fontFamily = FontFamily.Serif,
+                        fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                         fontSize = 13.sp,
                         lineHeight = 22.sp,
                         color = MaterialTheme.colorScheme.onSurface
@@ -345,7 +343,7 @@ private fun ComplineView(
                             ttsManager.speakSingle(currentAntiphon.translatedText.get(currentLanguage))
                         },
                         colors = ButtonDefaults.elevatedButtonColors(
-                            containerColor = SacredBurgundy,
+                            containerColor = MaterialTheme.colorScheme.primary,
                             contentColor = Color.White
                         )
                     ) {
@@ -370,11 +368,11 @@ private fun ComplineCard(
     var showLatin by remember { mutableStateOf(false) }
 
     Card(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(
-            containerColor = if (isHighlighted) SacredBurgundy.copy(alpha = 0.08f) else MaterialTheme.colorScheme.surface
+            containerColor = if (isHighlighted) MaterialTheme.colorScheme.primary.copy(alpha = 0.08f) else MaterialTheme.colorScheme.surface
         ),
-        border = if (isHighlighted) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(LiturgicalGold)) else null
+        border = if (isHighlighted) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(MaterialTheme.colorScheme.secondary)) else null
     ) {
         Column(modifier = Modifier.padding(16.dp)) {
             Row(
@@ -386,7 +384,7 @@ private fun ComplineCard(
                     text = stepLabel,
                     fontWeight = FontWeight.Bold,
                     fontSize = 11.sp,
-                    color = LiturgicalGold,
+                    color = MaterialTheme.colorScheme.secondary,
                     letterSpacing = 1.sp
                 )
 
@@ -394,7 +392,7 @@ private fun ComplineCard(
                     text = if (showLatin) "Ocultar Latín" else "Ver Latín",
                     fontSize = 11.sp,
                     fontWeight = FontWeight.Medium,
-                    color = SacredBurgundy,
+                    color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.clickable { showLatin = !showLatin }
                 )
             }
@@ -405,7 +403,7 @@ private fun ComplineCard(
                 text = latinTitle,
                 fontWeight = FontWeight.Bold,
                 fontSize = 14.sp,
-                color = SacredBurgundy
+                color = MaterialTheme.colorScheme.primary
             )
 
             AnimatedVisibility(visible = showLatin) {
@@ -413,7 +411,7 @@ private fun ComplineCard(
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
                         text = latinText,
-                        fontFamily = FontFamily.Serif,
+                        fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                         fontSize = 12.sp,
                         lineHeight = 18.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -425,7 +423,7 @@ private fun ComplineCard(
 
             Text(
                 text = translatedText,
-                fontFamily = FontFamily.Serif,
+                fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                 fontSize = 13.sp,
                 lineHeight = 22.sp,
                 color = MaterialTheme.colorScheme.onSurface
@@ -450,7 +448,7 @@ private fun IgnatianExamenView(
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
@@ -458,7 +456,7 @@ private fun IgnatianExamenView(
                         text = "Examen de Conciencia Nocturno (Método de San Ignacio)",
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
@@ -475,7 +473,7 @@ private fun IgnatianExamenView(
                         text = "Progreso del examen: ${completedSteps.size} de ${steps.size} pasos completados (${progressPercent.toInt()}%)",
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = LiturgicalGold
+                        color = MaterialTheme.colorScheme.secondary
                     )
                 }
             }
@@ -485,11 +483,11 @@ private fun IgnatianExamenView(
             val isStepDone = completedSteps.contains(step.stepNumber)
 
             Card(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
-                    containerColor = if (isStepDone) SacredBurgundy.copy(alpha = 0.05f) else MaterialTheme.colorScheme.surface
+                    containerColor = if (isStepDone) MaterialTheme.colorScheme.primary.copy(alpha = 0.05f) else MaterialTheme.colorScheme.surface
                 ),
-                border = if (isStepDone) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(LiturgicalGold)) else CardDefaults.outlinedCardBorder()
+                border = if (isStepDone) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(MaterialTheme.colorScheme.secondary)) else CardDefaults.outlinedCardBorder()
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Row(
@@ -501,7 +499,7 @@ private fun IgnatianExamenView(
                             text = step.title.get(currentLanguage),
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
-                            color = SacredBurgundy,
+                            color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.weight(1f)
                         )
 
@@ -512,7 +510,7 @@ private fun IgnatianExamenView(
                             shape = CircleShape
                         ) {
                             if (isStepDone) {
-                                Icon(Icons.Default.Check, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
+                                Icon(Icons.Default.Check, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(16.dp))
                             } else {
                                 Text("Hecho", fontSize = 11.sp)
                             }
@@ -531,7 +529,7 @@ private fun IgnatianExamenView(
                     Spacer(modifier = Modifier.height(10.dp))
 
                     Surface(
-                        shape = RoundedCornerShape(10.dp),
+                        shape = MaterialTheme.shapes.small,
                         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
                     ) {
                         Column(modifier = Modifier.padding(12.dp)) {
@@ -539,12 +537,12 @@ private fun IgnatianExamenView(
                                 text = "Oración sugerida:",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp,
-                                color = LiturgicalGold
+                                color = MaterialTheme.colorScheme.secondary
                             )
                             Spacer(modifier = Modifier.height(4.dp))
                             Text(
                                 text = step.guidedPrayer.get(currentLanguage),
-                                fontFamily = FontFamily.Serif,
+                                fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                                 fontSize = 13.sp,
                                 lineHeight = 20.sp,
                                 color = MaterialTheme.colorScheme.onSurface
@@ -563,7 +561,7 @@ private fun IgnatianExamenView(
                                 ttsManager.speakSingle(step.guidedPrayer.get(currentLanguage))
                             },
                             colors = ButtonDefaults.elevatedButtonColors(
-                                containerColor = SacredBurgundy,
+                                containerColor = MaterialTheme.colorScheme.primary,
                                 contentColor = Color.White
                             )
                         ) {
@@ -579,8 +577,8 @@ private fun IgnatianExamenView(
         if (completedSteps.size == steps.size) {
             item {
                 ElevatedCard(
-                    shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.elevatedCardColors(containerColor = SacredBurgundy)
+                    shape = MaterialTheme.shapes.large,
+                    colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primary)
                 ) {
                     Column(
                         modifier = Modifier
@@ -588,7 +586,7 @@ private fun IgnatianExamenView(
                             .padding(20.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Icon(Icons.Default.CheckCircle, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(36.dp))
+                        Icon(Icons.Default.CheckCircle, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(36.dp))
                         Spacer(modifier = Modifier.height(8.dp))
                         Text("¡Examen Completado!", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
                         Spacer(modifier = Modifier.height(4.dp))
