@@ -130,7 +130,7 @@ fun IdentityTabBar(
                     labels.forEachIndexed { index, label ->
                         val selected = index == selectedIndex
                         Column(
-                            modifier = Modifier
+                            modifier = (testTags.getOrNull(index)?.let { Modifier.testTag(it) } ?: Modifier)
                                 .width(IntrinsicSize.Max)
                                 .selectable(
                                     selected = selected,
