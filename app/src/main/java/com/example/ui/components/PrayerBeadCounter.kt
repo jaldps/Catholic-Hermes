@@ -50,8 +50,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.audio.RecitationVoiceMode
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @Composable
 fun PrayerBeadCounter(
@@ -86,7 +84,7 @@ fun PrayerBeadCounter(
             .fillMaxWidth()
             .testTag("prayer_bead_counter"),
         color = MaterialTheme.colorScheme.surfaceVariant,
-        shape = RoundedCornerShape(20.dp),
+        shape = MaterialTheme.shapes.extraLarge,
         tonalElevation = 3.dp
     ) {
         Column(
@@ -105,7 +103,7 @@ fun PrayerBeadCounter(
                     text = "MISTERIO / DÉCADA $currentDecade DE 5",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Bold,
-                    color = LiturgicalGold,
+                    color = MaterialTheme.colorScheme.secondary,
                     letterSpacing = 1.sp
                 )
 
@@ -128,7 +126,7 @@ fun PrayerBeadCounter(
                 // Large Our Father bead
                 val isLargeActive = currentBeadInDecade == 0
                 val largeBeadBg by animateColorAsState(
-                    targetValue = if (isLargeActive) LiturgicalGold else MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
+                    targetValue = if (isLargeActive) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
                     label = "largeBead"
                 )
 
@@ -139,7 +137,7 @@ fun PrayerBeadCounter(
                         .background(largeBeadBg)
                         .border(
                             width = if (isLargeActive) 2.dp else 1.dp,
-                            color = if (isLargeActive) SacredBurgundy else MaterialTheme.colorScheme.outline,
+                            color = if (isLargeActive) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
                             shape = CircleShape
                         )
                         .clickable {
@@ -163,8 +161,8 @@ fun PrayerBeadCounter(
                     val isCompleted = currentBeadInDecade > beadNumber
                     val beadBg by animateColorAsState(
                         targetValue = when {
-                            isActive -> SacredBurgundy
-                            isCompleted -> LiturgicalGold
+                            isActive -> MaterialTheme.colorScheme.primary
+                            isCompleted -> MaterialTheme.colorScheme.secondary
                             else -> MaterialTheme.colorScheme.surface
                         },
                         label = "bead_$beadNumber"
@@ -177,7 +175,7 @@ fun PrayerBeadCounter(
                             .background(beadBg)
                             .border(
                                 width = if (isActive) 2.dp else 1.dp,
-                                color = if (isActive) LiturgicalGold else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
+                                color = if (isActive) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
                                 shape = CircleShape
                             )
                             .clickable {
@@ -228,7 +226,7 @@ fun PrayerBeadCounter(
                     },
                     modifier = Modifier.testTag("toggle_prayer_audio_button"),
                     colors = ButtonDefaults.elevatedButtonColors(
-                        containerColor = SacredBurgundy,
+                        containerColor = MaterialTheme.colorScheme.primary,
                         contentColor = Color.White
                     )
                 ) {
@@ -253,7 +251,7 @@ fun PrayerBeadCounter(
                     },
                     modifier = Modifier.testTag("next_bead_button"),
                     colors = ButtonDefaults.filledTonalButtonColors(
-                        containerColor = LiturgicalGold,
+                        containerColor = MaterialTheme.colorScheme.secondary,
                         contentColor = Color.Black
                     )
                 ) {
@@ -271,7 +269,7 @@ fun PrayerBeadCounter(
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Icon(imageVector = Icons.Default.RecordVoiceOver, contentDescription = null, modifier = Modifier.size(14.dp), tint = LiturgicalGold)
+                Icon(imageVector = Icons.Default.RecordVoiceOver, contentDescription = null, modifier = Modifier.size(14.dp), tint = MaterialTheme.colorScheme.secondary)
                 Spacer(modifier = Modifier.width(6.dp))
                 Text(text = "Modo de Voz:", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Spacer(modifier = Modifier.width(8.dp))
@@ -306,12 +304,12 @@ private fun VoiceChip(
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(8.dp))
+            .clip(MaterialTheme.shapes.small)
             .background(if (isSelected) MaterialTheme.colorScheme.primaryContainer else Color.Transparent)
             .border(
                 1.dp,
                 if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.4f),
-                RoundedCornerShape(8.dp)
+                MaterialTheme.shapes.small
             )
             .clickable(onClick = onClick)
             .padding(horizontal = 8.dp, vertical = 4.dp)
