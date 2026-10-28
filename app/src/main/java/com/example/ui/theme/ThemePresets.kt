@@ -24,7 +24,7 @@ enum class AppThemePreset(val id: String, val label: LocalizedText, val previewP
     APPLE(
         "APPLE",
         LocalizedText("Apple · Human Interface", "Apple · Human Interface", "Apple · Human Interface"),
-        Color(0xFF007AFF)
+        Color(0xFF0066CC)
     ),
     MATERIAL(
         "MATERIAL",
@@ -120,7 +120,7 @@ object ThemePalettes {
 
     /** Apple-inspired system gray, blue accents, restrained borders and flat chrome. */
     fun apple(isDark: Boolean): ColorScheme = if (isDark) darkColorScheme(
-        primary = Color(0xFF0A84FF),
+        primary = Color(0xFF0071E3),
         onPrimary = Color.White,
         primaryContainer = Color(0xFF163D62),
         onPrimaryContainer = Color(0xFFD9EAFF),
@@ -138,7 +138,7 @@ object ThemePalettes {
         onSurfaceVariant = Color(0xFFAEAEB2),
         outline = Color(0xFF48484A)
     ) else lightColorScheme(
-        primary = Color(0xFF007AFF),
+        primary = Color(0xFF0066CC),
         onPrimary = Color.White,
         primaryContainer = Color(0xFFDCEBFF),
         onPrimaryContainer = Color(0xFF003D80),
@@ -146,7 +146,7 @@ object ThemePalettes {
         onSecondary = Color.White,
         secondaryContainer = Color(0xFFE8E7FF),
         onSecondaryContainer = Color(0xFF29266F),
-        tertiary = Color(0xFFAF52DE),
+        tertiary = Color(0xFF9850C7),
         onTertiary = Color.White,
         background = Color(0xFFF2F2F7),
         onBackground = Color(0xFF1C1C1E),
