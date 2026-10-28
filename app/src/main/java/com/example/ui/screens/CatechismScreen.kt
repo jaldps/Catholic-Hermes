@@ -1,5 +1,6 @@
 package com.example.ui.screens
 
+import com.example.ui.components.IdentityTabBar
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -97,58 +98,16 @@ fun CatechismScreen(
             .fillMaxSize()
             .testTag("catechism_screen")
     ) {
-        // Top Main Mode Tabs
-        PrimaryTabRow(
-            selectedTabIndex = mainMode,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.primary
-        ) {
-            Tab(
-                selected = mainMode == 0,
-                onClick = { mainMode = 0 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Compendio (598)"
-                            AppLanguage.EN -> "Compendium (598)"
-                            AppLanguage.PT -> "Compêndio (598)"
-                        },
-                        fontWeight = if (mainMode == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = mainMode == 1,
-                onClick = { mainMode = 1 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Catecismo (1-2865)"
-                            AppLanguage.EN -> "Catechism (1-2865)"
-                            AppLanguage.PT -> "Catecismo (1-2865)"
-                        },
-                        fontWeight = if (mainMode == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = mainMode == 2,
-                onClick = { mainMode = 2 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Fuentes Vaticano"
-                            AppLanguage.EN -> "Vatican Links"
-                            AppLanguage.PT -> "Fontes Vaticano"
-                        },
-                        fontWeight = if (mainMode == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-        }
+        IdentityTabBar(
+            labels = listOf(
+                when (currentLanguage) { AppLanguage.ES -> "Compendio (598)"; AppLanguage.EN -> "Compendium (598)"; AppLanguage.PT -> "Compêndio (598)" },
+                when (currentLanguage) { AppLanguage.ES -> "Catecismo (1-2865)"; AppLanguage.EN -> "Catechism (1-2865)"; AppLanguage.PT -> "Catecismo (1-2865)" },
+                when (currentLanguage) { AppLanguage.ES -> "Fuentes Vaticano"; AppLanguage.EN -> "Vatican Links"; AppLanguage.PT -> "Fontes Vaticano" }
+            ),
+            selectedIndex = mainMode,
+            onTabSelected = { mainMode = it },
+            modifier = Modifier.testTag("catechism_mode_tabs")
+        )
 
         when (mainMode) {
             0 -> {
