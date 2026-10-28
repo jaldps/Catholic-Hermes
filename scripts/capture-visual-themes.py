@@ -49,7 +49,9 @@ def tap_visible_text(candidates: list[str], label: str) -> None:
     # Re-dump several times to allow bottom sheets and transitions to settle.
     end = time.time() + 15
     last_nodes = []
+    attempts = 0
     while time.time() < end:
+        attempts += 1
         root = hierarchy()
         matches = []
         for node in root.iter():
@@ -75,7 +77,13 @@ def tap_visible_text(candidates: list[str], label: str) -> None:
             adb("shell", "input", "tap", str(x), str(y), timeout=10)
             wait(1.5)
             return
-        wait(0.6)
+        # The settings sheet is taller than some emulator viewports. Scroll it to
+        # expose the save action instead of repeatedly tapping an off-screen node.
+        if label == "save preferences" and attempts % 2 == 0:
+            adb("shell", "input", "swipe", "540", "2050", "540", "650", "350", timeout=10)
+            wait(0.8)
+        else:
+            wait(0.6)
     raise RuntimeError(f"Could not find {label}. Candidates={candidates}; last={last_nodes}")
 
 
@@ -115,7 +123,7 @@ def main() -> None:
     # Test all three identities explicitly in both brightness modes.
     identities = [
         (
-            ["Vatican · Ecclesial editorial", "Vaticano · Editorial eclesial", "Vatican · Tiempo Litúrgico"],
+            ["Vatican · Ecclesial editorial", "Vaticano · Estilo editorial", "Vaticano · Editorial eclesial"],
             "vatican",
         ),
         (
@@ -128,7 +136,7 @@ def main() -> None:
         ),
     ]
     light_names = ["Light", "Claro"]
-    dark_names = ["Dark", "Oscuro"]
+    dark_names = ["Dark", "Oscuro", "Escuro"]
     save_names = [
         "Apply & Save Preferences",
         "Aplicar y Guardar Preferencias",
