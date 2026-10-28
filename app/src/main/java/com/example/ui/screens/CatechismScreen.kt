@@ -45,10 +45,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.PrimaryTabRow
-import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
 import androidx.activity.compose.BackHandler
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -213,27 +210,19 @@ fun CatechismScreen(
                 }
             }
         } else if (selectedChapter == null) {
-            // 4 Pillars Tabs
-            ScrollableTabRow(
-                selectedTabIndex = selectedPartIndex,
-                containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = MaterialTheme.colorScheme.primary,
-                edgePadding = 12.dp
-            ) {
-                parts.forEachIndexed { idx, p ->
-                    Tab(
-                        selected = selectedPartIndex == idx,
-                        onClick = { selectedPartIndex = idx },
-                        text = {
-                            Text(
-                                text = "Parte ${p.partNumber} (${p.cccRange})",
-                                fontWeight = if (selectedPartIndex == idx) FontWeight.Bold else FontWeight.Normal,
-                                fontSize = 12.sp
-                            )
-                        }
-                    )
-                }
-            }
+            // Four Pillars: identity-specific tab style with scrolling when labels need space.
+            IdentityTabBar(
+                labels = parts.map { part ->
+                    when (currentLanguage) {
+                        AppLanguage.ES -> "Parte ${part.partNumber} (${part.cccRange})"
+                        AppLanguage.EN -> "Part ${part.partNumber} (${part.cccRange})"
+                        AppLanguage.PT -> "Parte ${part.partNumber} (${part.cccRange})"
+                    }
+                },
+                selectedIndex = selectedPartIndex,
+                onTabSelected = { selectedPartIndex = it },
+                modifier = Modifier.testTag("catechism_pillars_tabs")
+            )
 
             // Part Overview & Hierarchical Chapter Tree
             LazyColumn(
@@ -580,32 +569,18 @@ private fun CompendiumView(
 
         Spacer(modifier = Modifier.height(10.dp))
 
-        // Part filter chips
-        ScrollableTabRow(
-            selectedTabIndex = selectedFilterIndex,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.primary,
-            edgePadding = 4.dp
-        ) {
-            val filterNames = when (currentLanguage) {
-                AppLanguage.ES -> listOf("Todas (598)", "P. I: La Fe", "P. II: Sacramentos", "P. III: Vida en Cristo", "P. IV: Oración", "Fórmulas Doctrinales")
-                AppLanguage.EN -> listOf("All (598)", "P. I: The Faith", "P. II: Sacraments", "P. III: Life in Christ", "P. IV: Prayer", "Doctrinal Formulas")
-                AppLanguage.PT -> listOf("Todas (598)", "P. I: A Fé", "P. II: Sacramentos", "P. III: Vida em Cristo", "P. IV: Oração", "Fórmulas Doutrinais")
-            }
-            filterNames.forEachIndexed { idx, name ->
-                Tab(
-                    selected = selectedFilterIndex == idx,
-                    onClick = { selectedFilterIndex = idx },
-                    text = {
-                        Text(
-                            text = name,
-                            fontSize = 11.sp,
-                            fontWeight = if (selectedFilterIndex == idx) FontWeight.Bold else FontWeight.Normal
-                        )
-                    }
-                )
-            }
+        // Compendium filters: keep the long category set usable on compact screens.
+        val filterNames = when (currentLanguage) {
+            AppLanguage.ES -> listOf("Todas (598)", "P. I: La Fe", "P. II: Sacramentos", "P. III: Vida en Cristo", "P. IV: Oración", "Fórmulas Doctrinales")
+            AppLanguage.EN -> listOf("All (598)", "P. I: The Faith", "P. II: Sacraments", "P. III: Life in Christ", "P. IV: Prayer", "Doctrinal Formulas")
+            AppLanguage.PT -> listOf("Todas (598)", "P. I: A Fé", "P. II: Sacramentos", "P. III: Vida em Cristo", "P. IV: Oração", "Fórmulas Doutrinais")
         }
+        IdentityTabBar(
+            labels = filterNames,
+            selectedIndex = selectedFilterIndex,
+            onTabSelected = { selectedFilterIndex = it },
+            modifier = Modifier.testTag("compendium_filter_tabs")
+        )
 
         Spacer(modifier = Modifier.height(10.dp))
 

@@ -17,6 +17,7 @@ import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.PrimaryTabRow
+import androidx.compose.material3.ScrollableTabRow
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
@@ -51,27 +52,56 @@ fun IdentityTabBar(
     val isMaterial = identity == AppThemePreset.MATERIAL.id
 
     when {
-        isMaterial -> PrimaryTabRow(
-            selectedTabIndex = selectedIndex,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.primary,
-            modifier = modifier
-        ) {
-            labels.forEachIndexed { index, label ->
-                Tab(
-                    selected = index == selectedIndex,
-                    onClick = { onTabSelected(index) },
-                    modifier = testTags.getOrNull(index)?.let { Modifier.testTag(it) } ?: Modifier,
-                    text = {
-                        Text(
-                            text = label,
-                            style = MaterialTheme.typography.labelLarge,
-                            fontWeight = if (index == selectedIndex) FontWeight.SemiBold else FontWeight.Medium,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
+        isMaterial -> {
+            if (labels.size <= 3) {
+                PrimaryTabRow(
+                    selectedTabIndex = selectedIndex,
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.primary,
+                    modifier = modifier
+                ) {
+                    labels.forEachIndexed { index, label ->
+                        Tab(
+                            selected = index == selectedIndex,
+                            onClick = { onTabSelected(index) },
+                            modifier = testTags.getOrNull(index)?.let { Modifier.testTag(it) } ?: Modifier,
+                            text = {
+                                Text(
+                                    text = label,
+                                    style = MaterialTheme.typography.labelLarge,
+                                    fontWeight = if (index == selectedIndex) FontWeight.SemiBold else FontWeight.Medium,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
                         )
                     }
-                )
+                }
+            } else {
+                ScrollableTabRow(
+                    selectedTabIndex = selectedIndex,
+                    containerColor = MaterialTheme.colorScheme.surface,
+                    contentColor = MaterialTheme.colorScheme.primary,
+                    edgePadding = 12.dp,
+                    modifier = modifier
+                ) {
+                    labels.forEachIndexed { index, label ->
+                        Tab(
+                            selected = index == selectedIndex,
+                            onClick = { onTabSelected(index) },
+                            modifier = testTags.getOrNull(index)?.let { Modifier.testTag(it) } ?: Modifier,
+                            text = {
+                                Text(
+                                    text = label,
+                                    style = MaterialTheme.typography.labelLarge,
+                                    fontWeight = if (index == selectedIndex) FontWeight.SemiBold else FontWeight.Medium,
+                                    maxLines = 1,
+                                    softWrap = false
+                                )
+                            }
+                        )
+                    }
+                }
             }
         }
 

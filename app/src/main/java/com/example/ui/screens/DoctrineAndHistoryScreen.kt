@@ -1,5 +1,7 @@
 package com.example.ui.screens
 
+import com.example.ui.components.IdentityTabBar
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -36,8 +38,6 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.PrimaryTabRow
-import androidx.compose.material3.ScrollableTabRow
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
@@ -57,7 +57,6 @@ import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import java.util.Locale
@@ -102,33 +101,33 @@ fun DoctrineAndHistoryScreen(
             .fillMaxSize()
             .testTag("doctrine_and_history_screen")
     ) {
-        ScrollableTabRow(
-            selectedTabIndex = selectedTopTab,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = MaterialTheme.colorScheme.primary,
-            edgePadding = 12.dp
-        ) {
-            Tab(
-                selected = selectedTopTab == 0,
-                onClick = { selectedTopTab = 0 },
-                text = { Text("Catecismo y Doctrina", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 1,
-                onClick = { selectedTopTab = 1 },
-                text = { Text("María y Jesucristo", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 2,
-                onClick = { selectedTopTab = 2 },
-                text = { Text("Historia y Cismas", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 3,
-                onClick = { selectedTopTab = 3 },
-                text = { Text("Iglesias y Noticias", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-        }
+        IdentityTabBar(
+            labels = listOf(
+                when (currentLanguage) {
+                    AppLanguage.ES -> "Catecismo y Doctrina"
+                    AppLanguage.EN -> "Catechism & Doctrine"
+                    AppLanguage.PT -> "Catecismo e Doutrina"
+                },
+                when (currentLanguage) {
+                    AppLanguage.ES -> "María y Jesucristo"
+                    AppLanguage.EN -> "Mary & Jesus Christ"
+                    AppLanguage.PT -> "Maria e Jesus Cristo"
+                },
+                when (currentLanguage) {
+                    AppLanguage.ES -> "Historia y Cismas"
+                    AppLanguage.EN -> "History & Schisms"
+                    AppLanguage.PT -> "História e Cismas"
+                },
+                when (currentLanguage) {
+                    AppLanguage.ES -> "Iglesias y Noticias"
+                    AppLanguage.EN -> "Churches & News"
+                    AppLanguage.PT -> "Igrejas e Notícias"
+                }
+            ),
+            selectedIndex = selectedTopTab,
+            onTabSelected = { selectedTopTab = it },
+            modifier = Modifier.testTag("doctrine_top_tabs")
+        )
 
         when (selectedTopTab) {
             0 -> {
