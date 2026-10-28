@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
@@ -50,6 +51,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.local.AppPreferencesEntity
@@ -78,9 +80,16 @@ fun GuiCustomizerModal(
     var selectedScale by remember(savedPreferences?.fontSizeScale) { mutableFloatStateOf(currentPreferences.fontSizeScale) }
     var selectedAudioSpeed by remember(savedPreferences?.audioNarrationSpeed) { mutableFloatStateOf(currentPreferences.audioNarrationSpeed) }
 
+    val sheetShape = when (selectedTheme) {
+        AppThemePreset.APPLE.id -> RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
+        AppThemePreset.MATERIAL.id -> RoundedCornerShape(topStart = 24.dp, topEnd = 24.dp)
+        else -> RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp)
+    }
+
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState,
+        shape = sheetShape,
         containerColor = MaterialTheme.colorScheme.surface,
         modifier = Modifier.testTag("gui_customizer_sheet")
     ) {
@@ -199,29 +208,61 @@ fun GuiCustomizerModal(
             )
             Spacer(modifier = Modifier.height(6.dp))
 
-            FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                listOf(
-                    "SYSTEM" to Pair("Sistema", "System"),
-                    "LIGHT" to Pair("Claro", "Light"),
-                    "DARK" to Pair("Oscuro", "Dark")
-                ).forEach { (mode, labels) ->
-                    val isSelected = selectedDarkMode == mode
-                    FilterChip(
-                        selected = isSelected,
-                        onClick = { selectedDarkMode = mode },
-                        label = {
-                            Text(if (currentLanguage == AppLanguage.EN) labels.second else labels.first)
-                        },
-                        leadingIcon = if (isSelected) {
-                            { Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp)) }
-                        } else null,
-                        colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = MaterialTheme.colorScheme.primary,
-                            selectedLabelColor = MaterialTheme.colorScheme.onPrimary
+            val modeOptions = listOf(
+                "SYSTEM" to Pair("Sistema", "System"),
+                "LIGHT" to Pair("Claro", "Light"),
+                "DARK" to Pair("Oscuro", "Dark")
+            )
+            if (selectedTheme == AppThemePreset.APPLE.id) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(MaterialTheme.shapes.large)
+                        .background(MaterialTheme.colorScheme.surfaceVariant)
+                        .padding(4.dp),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    modeOptions.forEach { (mode, labels) ->
+                        val selected = selectedDarkMode == mode
+                        Surface(
+                            modifier = Modifier
+                                .weight(1f)
+                                .clip(MaterialTheme.shapes.medium)
+                                .clickable { selectedDarkMode = mode },
+                            shape = MaterialTheme.shapes.medium,
+                            color = if (selected) MaterialTheme.colorScheme.surface else Color.Transparent,
+                            shadowElevation = if (selected) 1.dp else 0.dp
+                        ) {
+                            Text(
+                                text = if (currentLanguage == AppLanguage.EN) labels.second else labels.first,
+                                modifier = Modifier.padding(horizontal = 4.dp, vertical = 10.dp),
+                                style = MaterialTheme.typography.labelMedium,
+                                textAlign = TextAlign.Center,
+                                fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal,
+                                color = if (selected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+                }
+            } else {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    modeOptions.forEach { (mode, labels) ->
+                        val isSelected = selectedDarkMode == mode
+                        FilterChip(
+                            selected = isSelected,
+                            onClick = { selectedDarkMode = mode },
+                            label = {
+                                Text(if (currentLanguage == AppLanguage.EN) labels.second else labels.first)
+                            },
+                            leadingIcon = if (isSelected) {
+                                { Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp)) }
+                            } else null,
+                            colors = FilterChipDefaults.filterChipColors(
+                                selectedContainerColor = MaterialTheme.colorScheme.primary,
+                                selectedLabelColor = MaterialTheme.colorScheme.onPrimary
+                            )
                         )
-                    )
+                    }
                 }
             }
 
