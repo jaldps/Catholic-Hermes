@@ -59,8 +59,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
 import com.example.data.models.LiturgicalCalendarDay
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -110,9 +108,9 @@ fun LiturgicalCalendarWidget(
                 width = 1.2.dp,
                 brush = Brush.linearGradient(
                     colors = listOf(
-                        LiturgicalGold.copy(alpha = 0.85f),
-                        LiturgicalGold.copy(alpha = 0.35f),
-                        LiturgicalGold.copy(alpha = 0.85f)
+                        MaterialTheme.colorScheme.secondary.copy(alpha = 0.85f),
+                        MaterialTheme.colorScheme.secondary.copy(alpha = 0.35f),
+                        MaterialTheme.colorScheme.secondary.copy(alpha = 0.85f)
                     )
                 ),
                 shape = RoundedCornerShape(20.dp)
@@ -140,7 +138,7 @@ fun LiturgicalCalendarWidget(
                         modifier = Modifier
                             .size(10.dp)
                             .clip(CircleShape)
-                            .background(LiturgicalGold)
+                            .background(MaterialTheme.colorScheme.secondary)
                     )
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
@@ -148,7 +146,7 @@ fun LiturgicalCalendarWidget(
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 1.2.sp,
-                        color = LiturgicalGold,
+                        color = MaterialTheme.colorScheme.secondary,
                         fontFamily = FontFamily.Serif
                     )
                 }
@@ -188,7 +186,7 @@ fun LiturgicalCalendarWidget(
                 fontFamily = FontFamily.Serif,
                 fontWeight = FontWeight.Bold,
                 fontSize = 19.sp,
-                color = SacredBurgundy,
+                color = MaterialTheme.colorScheme.primary,
                 lineHeight = 24.sp
             )
 
@@ -239,14 +237,14 @@ fun LiturgicalCalendarWidget(
                 liturgicalDay.sundayCycle?.let { cycle ->
                     Surface(
                         shape = RoundedCornerShape(8.dp),
-                        color = LiturgicalGold.copy(alpha = 0.12f),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, LiturgicalGold.copy(alpha = 0.6f))
+                        color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f),
+                        border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.6f))
                     ) {
                         Text(
                             text = cycle.get(currentLanguage),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy,
+                            color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                         )
                     }
@@ -328,7 +326,7 @@ fun LiturgicalCalendarWidget(
                     Icon(
                         imageVector = Icons.Default.AutoStories,
                         contentDescription = "Evangelio",
-                        tint = LiturgicalGold,
+                        tint = MaterialTheme.colorScheme.secondary,
                         modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
@@ -358,13 +356,13 @@ fun LiturgicalCalendarWidget(
                             }
                         },
                         fontSize = 11.sp,
-                        color = LiturgicalGold,
+                        color = MaterialTheme.colorScheme.secondary,
                         fontWeight = FontWeight.Bold
                     )
                     Icon(
                         imageVector = if (isExpanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
                         contentDescription = if (isExpanded) "Colapsar" else "Expandir",
-                        tint = LiturgicalGold,
+                        tint = MaterialTheme.colorScheme.secondary,
                         modifier = Modifier.size(16.dp)
                     )
                 }
@@ -395,7 +393,7 @@ fun LiturgicalCalendarWidget(
                         fontFamily = FontFamily.Serif,
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = SacredBurgundy,
+                        color = MaterialTheme.colorScheme.primary,
                         letterSpacing = 1.sp
                     )
                     Spacer(modifier = Modifier.height(6.dp))

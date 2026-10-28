@@ -35,8 +35,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
 import com.example.data.models.DailyMassReading
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 
 @Composable
 fun LiturgicalHeader(
@@ -139,7 +137,7 @@ fun LiturgicalHeader(
                     imageVector = Icons.Default.Star,
                     contentDescription = null,
                     modifier = Modifier.size(14.dp),
-                    tint = LiturgicalGold
+                    tint = MaterialTheme.colorScheme.secondary
                 )
                 Spacer(modifier = Modifier.width(4.dp))
                 Text(
