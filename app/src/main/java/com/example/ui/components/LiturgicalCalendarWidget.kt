@@ -59,6 +59,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
 import com.example.data.models.LiturgicalCalendarDay
+import com.example.ui.theme.AppThemePreset
+import com.example.ui.theme.LocalAppThemePreset
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
@@ -69,7 +71,16 @@ fun LiturgicalCalendarWidget(
     modifier: Modifier = Modifier
 ) {
     var isExpanded by remember { mutableStateOf(false) }
+    val activeIdentity = LocalAppThemePreset.current
+    val isApple = activeIdentity == AppThemePreset.APPLE.id
+    val isMaterial = activeIdentity == AppThemePreset.MATERIAL.id
+    val isVatican = activeIdentity == AppThemePreset.VATICAN.id
     val liturgicalColor = Color(liturgicalDay.liturgicalColorHex)
+    val calendarShape = when (activeIdentity) {
+        AppThemePreset.APPLE.id -> MaterialTheme.shapes.large
+        AppThemePreset.MATERIAL.id -> MaterialTheme.shapes.extraLarge
+        else -> MaterialTheme.shapes.small
+    }
 
     // Liturgical color name translation
     val colorLabel = when (liturgicalDay.liturgicalColorHex) {
@@ -103,29 +114,38 @@ fun LiturgicalCalendarWidget(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp)
-            .border(
-                width = 1.2.dp,
-                brush = Brush.linearGradient(
-                    colors = listOf(
-                        MaterialTheme.colorScheme.secondary.copy(alpha = 0.85f),
-                        MaterialTheme.colorScheme.secondary.copy(alpha = 0.35f),
-                        MaterialTheme.colorScheme.secondary.copy(alpha = 0.85f)
-                    )
-                ),
-                shape = MaterialTheme.shapes.extraLarge
+            .padding(
+                horizontal = if (isApple) 20.dp else if (isMaterial) 16.dp else 24.dp,
+                vertical = if (isApple) 4.dp else 8.dp
+            )
+            .then(
+                if (isVatican) Modifier.border(
+                    width = 1.dp,
+                    brush = Brush.linearGradient(
+                        colors = listOf(
+                            MaterialTheme.colorScheme.secondary.copy(alpha = 0.78f),
+                            MaterialTheme.colorScheme.secondary.copy(alpha = 0.28f),
+                            MaterialTheme.colorScheme.secondary.copy(alpha = 0.78f)
+                        )
+                    ),
+                    shape = calendarShape
+                ) else Modifier
             )
             .testTag("liturgical_calendar_widget"),
-        shape = MaterialTheme.shapes.extraLarge,
+        shape = calendarShape,
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface
+            containerColor = when {
+                isApple -> MaterialTheme.colorScheme.surfaceVariant
+                isMaterial -> MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
+                else -> MaterialTheme.colorScheme.surface
+            }
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = if (isMaterial) 3.dp else 0.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp)
+                .padding(if (isApple) 18.dp else 16.dp)
         ) {
             // Top Bar: Date, Language Selector & Minimal Gold Cross Motif
             Row(
