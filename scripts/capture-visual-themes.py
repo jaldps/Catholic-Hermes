@@ -111,7 +111,21 @@ def set_theme_and_mode(theme_names: list[str], mode_names: list[str], save_names
     tap_visible_text(mode_names, "light/dark mode")
     tap_visible_text(save_names, "save preferences")
     wait(4.0)
-    screenshot(screenshot_name)
+
+    # Capture actual in-app layouts, not only the theme picker or home palette.
+    tap_visible_text(["Home", "Inicio", "Início"], "Home destination")
+    screenshot(f"{screenshot_name}-home")
+
+    tap_visible_text(["Bible", "Biblia", "Bíblia"], "Bible destination")
+    screenshot(f"{screenshot_name}-bible")
+
+    tap_visible_text(["Pray", "Orar", "Rezar"], "Rosary destination")
+    screenshot(f"{screenshot_name}-rosary")
+
+    tap_visible_text(["More", "Más", "Mais"], "Explore destination")
+    screenshot(f"{screenshot_name}-explore")
+
+    tap_visible_text(["Home", "Inicio", "Início"], "Return to Home")
 
 
 def main() -> None:
