@@ -68,8 +68,6 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.ScriptureCourseTrack
 import com.example.data.models.ScriptureLesson
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -101,7 +99,7 @@ fun ScriptureStudyScreen(
         SecondaryTabRow(
             selectedTabIndex = selectedTrackIndex,
             containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-            contentColor = SacredBurgundy
+            contentColor = MaterialTheme.colorScheme.primary
         ) {
             tracks.forEachIndexed { index, track ->
                 Tab(
@@ -182,18 +180,18 @@ private fun TrackOverviewView(
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f))
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Surface(
                             shape = CircleShape,
-                            color = SacredBurgundy,
+                            color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.size(38.dp)
                         ) {
                             Box(contentAlignment = Alignment.Center) {
-                                Icon(Icons.Default.MenuBook, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(20.dp))
+                                Icon(Icons.Default.MenuBook, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(20.dp))
                             }
                         }
 
@@ -204,7 +202,7 @@ private fun TrackOverviewView(
                                 text = track.title.get(currentLanguage),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 16.sp,
-                                color = SacredBurgundy
+                                color = MaterialTheme.colorScheme.primary
                             )
                             Text(
                                 text = "Alineado con el Catecismo y Dei Verbum del Vaticano",
@@ -234,13 +232,13 @@ private fun TrackOverviewView(
                             text = "Progreso del curso: $completedInTrack de ${track.lessons.size} lecciones",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = "${progressPercent.toInt()}%",
                             fontSize = 12.sp,
                             fontWeight = FontWeight.Bold,
-                            color = LiturgicalGold
+                            color = MaterialTheme.colorScheme.secondary
                         )
                     }
                 }
@@ -252,7 +250,7 @@ private fun TrackOverviewView(
                 text = "Lecciones del Curso",
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp,
-                color = SacredBurgundy
+                color = MaterialTheme.colorScheme.primary
             )
         }
 
@@ -263,11 +261,11 @@ private fun TrackOverviewView(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable { onSelectLesson(lesson) },
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
-                    containerColor = if (isDone) SacredBurgundy.copy(alpha = 0.05f) else MaterialTheme.colorScheme.surface
+                    containerColor = if (isDone) MaterialTheme.colorScheme.primary.copy(alpha = 0.05f) else MaterialTheme.colorScheme.surface
                 ),
-                border = if (isDone) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(LiturgicalGold)) else CardDefaults.outlinedCardBorder()
+                border = if (isDone) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(MaterialTheme.colorScheme.secondary)) else CardDefaults.outlinedCardBorder()
             ) {
                 Row(
                     modifier = Modifier
@@ -277,7 +275,7 @@ private fun TrackOverviewView(
                 ) {
                     Surface(
                         shape = CircleShape,
-                        color = if (isDone) LiturgicalGold else MaterialTheme.colorScheme.surfaceVariant,
+                        color = if (isDone) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.surfaceVariant,
                         modifier = Modifier.size(36.dp)
                     ) {
                         Box(contentAlignment = Alignment.Center) {
@@ -288,7 +286,7 @@ private fun TrackOverviewView(
                                     text = "${lesson.lessonNumber}",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 14.sp,
-                                    color = SacredBurgundy
+                                    color = MaterialTheme.colorScheme.primary
                                 )
                             }
                         }
@@ -301,20 +299,20 @@ private fun TrackOverviewView(
                             text = lesson.title.get(currentLanguage),
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
-                            color = SacredBurgundy
+                            color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = lesson.biblicalReference,
                             fontSize = 12.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            fontFamily = FontFamily.Serif
+                            fontFamily = MaterialTheme.typography.titleLarge.fontFamily
                         )
                     }
 
                     Icon(
                         Icons.Default.AutoStories,
                         contentDescription = "Read lesson",
-                        tint = SacredBurgundy,
+                        tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(20.dp)
                     )
                 }
@@ -354,7 +352,7 @@ private fun LessonDetailView(
                 ElevatedButton(
                     onClick = { onToggleComplete(notesText) },
                     colors = ButtonDefaults.elevatedButtonColors(
-                        containerColor = if (isCompleted) LiturgicalGold else SacredBurgundy,
+                        containerColor = if (isCompleted) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary,
                         contentColor = if (isCompleted) Color.Black else Color.White
                     )
                 ) {
@@ -372,7 +370,7 @@ private fun LessonDetailView(
         // Header
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
@@ -380,7 +378,7 @@ private fun LessonDetailView(
                         text = "LECCIÓN ${lesson.lessonNumber}",
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = LiturgicalGold,
+                        color = MaterialTheme.colorScheme.secondary,
                         letterSpacing = 1.sp
                     )
                     Spacer(modifier = Modifier.height(4.dp))
@@ -388,7 +386,7 @@ private fun LessonDetailView(
                         text = lesson.title.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
@@ -404,7 +402,7 @@ private fun LessonDetailView(
         // 1. Biblical Passage Card
         item {
             Card(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 border = CardDefaults.outlinedCardBorder()
             ) {
@@ -418,7 +416,7 @@ private fun LessonDetailView(
                             text = "PASO 1: LECTURA DE LA ESCRITURA (LECTIO)",
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp,
-                            color = LiturgicalGold
+                            color = MaterialTheme.colorScheme.secondary
                         )
 
                         IconButton(
@@ -426,7 +424,7 @@ private fun LessonDetailView(
                                 ttsManager.speakSingle(lesson.biblicalPassageText.get(currentLanguage))
                             }
                         ) {
-                            Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = SacredBurgundy)
+                            Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = MaterialTheme.colorScheme.primary)
                         }
                     }
 
@@ -434,7 +432,7 @@ private fun LessonDetailView(
 
                     Text(
                         text = lesson.biblicalPassageText.get(currentLanguage),
-                        fontFamily = FontFamily.Serif,
+                        fontFamily = MaterialTheme.typography.titleLarge.fontFamily,
                         fontSize = 14.sp,
                         lineHeight = 24.sp,
                         color = MaterialTheme.colorScheme.onSurface
@@ -446,7 +444,7 @@ private fun LessonDetailView(
         // 2. Vatican Context & Catechism
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f))
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
@@ -454,7 +452,7 @@ private fun LessonDetailView(
                         text = "MAGISTERIO DEL VATICANO Y CATECISMO",
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
@@ -469,14 +467,14 @@ private fun LessonDetailView(
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             lesson.catechismRefs.forEach { ref ->
                                 Surface(
-                                    shape = RoundedCornerShape(8.dp),
-                                    color = SacredBurgundy.copy(alpha = 0.1f)
+                                    shape = MaterialTheme.shapes.small,
+                                    color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
                                 ) {
                                     Text(
                                         text = ref,
                                         fontSize = 11.sp,
                                         fontWeight = FontWeight.Bold,
-                                        color = SacredBurgundy,
+                                        color = MaterialTheme.colorScheme.primary,
                                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
                                     )
                                 }
@@ -490,7 +488,7 @@ private fun LessonDetailView(
         // 3. Four Steps of Lectio Divina
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
@@ -498,7 +496,7 @@ private fun LessonDetailView(
                         text = "GUÍA DE LECTIO DIVINA",
                         fontWeight = FontWeight.Bold,
                         fontSize = 12.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
 
                     Spacer(modifier = Modifier.height(12.dp))
@@ -539,7 +537,7 @@ private fun LessonDetailView(
         // 4. Personal Reflection Notes
         item {
             Card(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 border = CardDefaults.outlinedCardBorder()
             ) {
@@ -548,7 +546,7 @@ private fun LessonDetailView(
                         text = "Mis Notas y Frutos Espirituales",
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
-                        color = SacredBurgundy
+                        color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(6.dp))
                     Text(
@@ -574,7 +572,7 @@ private fun LessonDetailView(
                         onClick = { onToggleComplete(notesText) },
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.elevatedButtonColors(
-                            containerColor = SacredBurgundy,
+                            containerColor = MaterialTheme.colorScheme.primary,
                             contentColor = Color.White
                         )
                     ) {
@@ -593,7 +591,7 @@ private fun LectioStepItem(
     content: String
 ) {
     Surface(
-        shape = RoundedCornerShape(12.dp),
+        shape = MaterialTheme.shapes.medium,
         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
     ) {
         Column(modifier = Modifier.padding(12.dp)) {
@@ -602,14 +600,14 @@ private fun LectioStepItem(
                     text = badge,
                     fontWeight = FontWeight.Bold,
                     fontSize = 11.sp,
-                    color = LiturgicalGold
+                    color = MaterialTheme.colorScheme.secondary
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     text = question,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 12.sp,
-                    color = SacredBurgundy
+                    color = MaterialTheme.colorScheme.primary
                 )
             }
             Spacer(modifier = Modifier.height(4.dp))
