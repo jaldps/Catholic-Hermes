@@ -35,6 +35,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
 import com.example.data.models.DailyMassReading
+import com.example.ui.theme.AppThemePreset
+import com.example.ui.theme.LocalAppThemePreset
 
 @Composable
 fun LiturgicalHeader(
@@ -44,14 +46,20 @@ fun LiturgicalHeader(
     modifier: Modifier = Modifier
 ) {
     val seasonColor = Color(dailyReading.liturgicalColorHex)
+    val activeIdentity = LocalAppThemePreset.current
+    val headerShape = when (activeIdentity) {
+        AppThemePreset.APPLE.id -> RoundedCornerShape(bottomStart = 28.dp, bottomEnd = 28.dp)
+        AppThemePreset.MATERIAL.id -> RoundedCornerShape(bottomStart = 24.dp, bottomEnd = 24.dp)
+        else -> RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp)
+    }
 
     Surface(
         modifier = modifier
             .fillMaxWidth()
             .testTag("liturgical_header"),
         color = MaterialTheme.colorScheme.surface,
-        tonalElevation = 2.dp,
-        shape = RoundedCornerShape(bottomStart = 20.dp, bottomEnd = 20.dp)
+        tonalElevation = if (activeIdentity == AppThemePreset.MATERIAL.id) 3.dp else 0.dp,
+        shape = headerShape
     ) {
         Column(
             modifier = Modifier
@@ -83,7 +91,7 @@ fun LiturgicalHeader(
                         text = dailyReading.liturgicalSeason.get(currentLanguage).uppercase(),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
-                        color = seasonColor,
+                        color = MaterialTheme.colorScheme.onSurface,
                         letterSpacing = 0.5.sp
                     )
                 }
