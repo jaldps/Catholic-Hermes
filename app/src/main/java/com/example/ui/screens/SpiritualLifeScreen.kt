@@ -357,8 +357,8 @@ fun SpiritualLifeScreen(
                         }
 
                         val bgCol = when {
-                            hasAnswered && isCorrect -> Color(0xFF2E7D32).copy(alpha = 0.15f)
-                            hasAnswered && isSelected && !isCorrect -> Color(0xFFC62828).copy(alpha = 0.15f)
+                            hasAnswered && isCorrect -> MaterialTheme.colorScheme.secondaryContainer
+                            hasAnswered && isSelected && !isCorrect -> MaterialTheme.colorScheme.errorContainer
                             isSelected -> MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
                             else -> MaterialTheme.colorScheme.surface
                         }
@@ -533,7 +533,7 @@ fun SpiritualLifeScreen(
                                         currentStation.prayer.get(currentLanguage)
                                     )
                                 },
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = Color.White)
+                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = MaterialTheme.colorScheme.onPrimary)
                             ) {
                                 Icon(if (isPlayingAudio) Icons.Default.Stop else Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(16.dp))
                                 Spacer(modifier = Modifier.width(6.dp))
