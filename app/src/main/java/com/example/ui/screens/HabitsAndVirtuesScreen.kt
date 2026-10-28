@@ -1,5 +1,6 @@
 package com.example.ui.screens
 
+import com.example.ui.components.IdentityTabBar
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -165,51 +166,15 @@ fun HabitsAndVirtuesScreen(
                 .padding(paddingValues)
                 .testTag("habits_and_virtues_screen")
         ) {
-            TabRow(
-                selectedTabIndex = selectedTab,
-                containerColor = MaterialTheme.colorScheme.surface,
-                contentColor = MaterialTheme.colorScheme.primary
-            ) {
-                Tab(
-                    selected = selectedTab == 0,
-                    onClick = { selectedTab = 0 },
-                    text = {
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Regla de Vida y Hábitos"
-                                AppLanguage.EN -> "Rule of Life & Habits"
-                                AppLanguage.PT -> "Regra de Vida e Hábitos"
-                            },
-                            fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal
-                        )
-                    },
-                    modifier = Modifier.testTag("tab_habits_rule")
-                )
-                Tab(
-                    selected = selectedTab == 1,
-                    onClick = { selectedTab = 1 },
-                    text = {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(
-                                imageVector = Icons.Default.Shield,
-                                contentDescription = null,
-                                modifier = Modifier.size(16.dp),
-                                tint = MaterialTheme.colorScheme.secondary
-                            )
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Antídoto de Gracia (S.O.S)"
-                                    AppLanguage.EN -> "Grace Antidote (S.O.S)"
-                                    AppLanguage.PT -> "Antídoto de Graça (S.O.S)"
-                                },
-                                fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Normal
-                            )
-                        }
-                    },
-                    modifier = Modifier.testTag("tab_sin_avoider")
-                )
-            }
+            IdentityTabBar(
+                labels = listOf(
+                    when (currentLanguage) { AppLanguage.ES -> "Regla de Vida y Hábitos"; AppLanguage.EN -> "Rule of Life & Habits"; AppLanguage.PT -> "Regra de Vida e Hábitos" },
+                    when (currentLanguage) { AppLanguage.ES -> "Antídoto de Gracia (S.O.S)"; AppLanguage.EN -> "Grace Antidote (S.O.S)"; AppLanguage.PT -> "Antídoto de Graça (S.O.S)" }
+                ),
+                selectedIndex = selectedTab,
+                onTabSelected = { selectedTab = it },
+                testTags = listOf("tab_habits_rule", "tab_sin_avoider")
+            )
 
             if (selectedTab == 0) {
                 LazyColumn(
