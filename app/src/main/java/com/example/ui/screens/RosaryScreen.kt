@@ -211,7 +211,7 @@ fun RosaryScreen(
                                                 },
                                                 fontSize = 11.sp,
                                                 fontWeight = FontWeight.Bold,
-                                                color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface,
+                                                color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
                                                 maxLines = 1
                                             )
                                             if (isToday) {
@@ -398,7 +398,7 @@ fun RosaryScreen(
                                     Text(
                                         text = "«A las tres de la tarde implora mi misericordia... En esta hora nada le será negado al alma que lo pida» (Diario de Santa Faustina).",
                                         fontSize = 11.sp,
-                                        color = Color.White.copy(alpha = 0.85f),
+                                        color = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.85f),
                                         lineHeight = 16.sp
                                     )
                                 }
