@@ -1,6 +1,7 @@
 package com.example.ui
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.togetherWith
@@ -44,6 +45,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
@@ -68,6 +70,8 @@ import com.example.ui.screens.PilgrimageAndHabitsScreen
 import com.example.ui.screens.PrayersAndNovenasScreen
 import com.example.ui.screens.RosaryScreen
 import com.example.ui.screens.SpiritualLifeScreen
+import com.example.ui.theme.identity
+import com.example.ui.theme.spacing
 
 enum class AppDestination(
     val titleEs: String,
@@ -97,6 +101,10 @@ fun MainApp(
     ttsManager: LiturgicalTtsManager
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
+    // Preset identity/spacing are read once here so non-composable lambdas
+    // (transitionSpec) can consume them without a compose-context error.
+    val identity = MaterialTheme.identity
+    val spacing = MaterialTheme.spacing
     var selectedDestinationIndex by remember { mutableIntStateOf(0) }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
     var showLanguageSelector by remember { mutableStateOf(false) }
@@ -108,54 +116,61 @@ fun MainApp(
     Scaffold(
         contentWindowInsets = WindowInsets.safeDrawing,
         topBar = {
-            CenterAlignedTopAppBar(
-                title = {
-                    Text(
-                        text = "SANCTA FIDES",
-                        fontFamily = FontFamily.Serif,
-                        fontWeight = FontWeight.Bold,
-                        letterSpacing = 2.sp,
-                        fontSize = 18.sp,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-                },
-                actions = {
-                    IconButton(
-                        onClick = { showCustomizerModal = true },
-                        modifier = Modifier.testTag("app_bar_theme_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Palette,
-                            contentDescription = "Personalizar Tema y Apariencia",
-                            tint = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.size(22.dp)
+            Surface(
+                color = MaterialTheme.colorScheme.surface.copy(alpha = identity.topBarAlpha),
+                shadowElevation = identity.topBarElevation,
+                tonalElevation = identity.navTonalElevation
+            ) {
+                CenterAlignedTopAppBar(
+                    title = {
+                        Text(
+                            text = "SANCTA FIDES",
+                            fontFamily = MaterialTheme.typography.titleMedium.fontFamily,
+                            fontWeight = FontWeight.Bold,
+                            letterSpacing = identity.titleTracking,
+                            fontSize = 18.sp,
+                            color = MaterialTheme.colorScheme.primary
                         )
-                    }
-                    IconButton(
-                        onClick = { showLanguageSelector = true },
-                        modifier = Modifier.testTag("app_bar_lang_button")
-                    ) {
-                        Text(text = currentLanguage.flag, fontSize = 18.sp)
-                    }
-                },
-                colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                    containerColor = MaterialTheme.colorScheme.surface
+                    },
+                    actions = {
+                        IconButton(
+                            onClick = { showCustomizerModal = true },
+                            modifier = Modifier.testTag("app_bar_theme_button")
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Palette,
+                                contentDescription = "Personalizar Tema y Apariencia",
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(identity.actionIconSize)
+                            )
+                        }
+                        IconButton(
+                            onClick = { showLanguageSelector = true },
+                            modifier = Modifier.testTag("app_bar_lang_button")
+                        ) {
+                            Text(text = currentLanguage.flag, fontSize = 18.sp)
+                        }
+                    },
+                    colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+                        containerColor = Color.Transparent
+                    )
                 )
-            )
+            }
         },
         bottomBar = {
             Surface(
                 modifier = Modifier
                     .navigationBarsPadding()
                     .testTag("bottom_nav_bar"),
-                color = MaterialTheme.colorScheme.surface,
-                shadowElevation = 8.dp
+                color = MaterialTheme.colorScheme.surface.copy(alpha = identity.navContainerAlpha),
+                shadowElevation = identity.navElevation,
+                tonalElevation = identity.navTonalElevation
             ) {
                 ScrollableTabRow(
                     selectedTabIndex = selectedDestinationIndex,
-                    containerColor = MaterialTheme.colorScheme.surface,
+                    containerColor = Color.Transparent,
                     contentColor = MaterialTheme.colorScheme.primary,
-                    edgePadding = 8.dp
+                    edgePadding = identity.shellEdgePadding
                 ) {
                     destinations.forEachIndexed { index, dest ->
                         val isSelected = selectedDestinationIndex == index
@@ -172,15 +187,26 @@ fun MainApp(
                             text = {
                                 Column(
                                     horizontalAlignment = Alignment.CenterHorizontally,
-                                    modifier = Modifier.padding(vertical = 4.dp, horizontal = 4.dp)
+                                    modifier = Modifier.padding(
+                                        vertical = spacing.xs,
+                                        horizontal = spacing.xs
+                                    )
                                 ) {
                                     Icon(
                                         imageVector = dest.icon,
                                         contentDescription = label,
-                                        tint = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
-                                        modifier = Modifier.size(20.dp)
+                                        tint = if (isSelected) {
+                                            MaterialTheme.colorScheme.primary
+                                        } else {
+                                            MaterialTheme.colorScheme.onSurfaceVariant.copy(
+                                                alpha = identity.unselectedIconAlpha
+                                            )
+                                        },
+                                        modifier = Modifier.size(
+                                            if (isSelected) identity.navIconSize else identity.navIconSize - 1.dp
+                                        )
                                     )
-                                    Spacer(modifier = Modifier.height(2.dp))
+                                    Spacer(modifier = Modifier.height(spacing.xs / 2))
                                     Text(
                                         text = label,
                                         fontSize = 11.sp,
@@ -206,7 +232,10 @@ fun MainApp(
         ) {
             AnimatedContent(
                 targetState = selectedDestinationIndex,
-                transitionSpec = { fadeIn() togetherWith fadeOut() },
+                transitionSpec = {
+                    fadeIn(animationSpec = tween(identity.motionMs)) togetherWith
+                        fadeOut(animationSpec = tween(identity.motionMs))
+                },
                 label = "screen_transition"
             ) { targetIndex ->
                 when (destinations[targetIndex]) {
