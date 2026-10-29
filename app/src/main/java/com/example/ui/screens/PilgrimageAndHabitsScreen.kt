@@ -1,5 +1,7 @@
 package com.example.ui.screens
 
+import com.example.ui.theme.spacing
+import com.example.ui.theme.identity
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
@@ -19,7 +21,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.CheckCircle
@@ -54,10 +55,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
@@ -106,7 +109,7 @@ fun PilgrimageAndHabitsScreen(
                             AppLanguage.PT -> "Calendário"
                         },
                         fontWeight = if (selectedMainTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -121,7 +124,7 @@ fun PilgrimageAndHabitsScreen(
                             AppLanguage.PT -> "Hábitos Diários"
                         },
                         fontWeight = if (selectedMainTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -136,7 +139,7 @@ fun PilgrimageAndHabitsScreen(
                             AppLanguage.PT -> "Santuários"
                         },
                         fontWeight = if (selectedMainTab == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -192,10 +195,10 @@ fun PilgrimageAndHabitsScreen(
                 ) {
                     item {
                         ElevatedCard(
-                            shape = RoundedCornerShape(16.dp),
+                            shape = MaterialTheme.shapes.large,
                             colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                         ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
+                            Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
                                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -209,7 +212,7 @@ fun PilgrimageAndHabitsScreen(
                                                 AppLanguage.PT -> "Regra de Vida e Santos Hábitos"
                                             },
                                             fontWeight = FontWeight.Bold,
-                                            fontSize = 15.sp,
+                                            fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                                             color = MaterialTheme.colorScheme.primary
                                         )
                                         Text(
@@ -218,18 +221,18 @@ fun PilgrimageAndHabitsScreen(
                                                 AppLanguage.EN -> "Daily sanctification step by step"
                                                 AppLanguage.PT -> "A santificação diária passo a passo"
                                             },
-                                            fontSize = 11.sp,
+                                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant
                                         )
                                     }
                                     Surface(
-                                        shape = RoundedCornerShape(8.dp),
+                                        shape = MaterialTheme.shapes.small,
                                         color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f)
                                     ) {
                                         Text(
                                             text = "$completedCount / $totalHabits",
                                             fontWeight = FontWeight.Bold,
-                                            fontSize = 13.sp,
+                                            fontSize = MaterialTheme.typography.bodySmall.fontSize,
                                             color = MaterialTheme.colorScheme.primary,
                                             modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
                                         )
@@ -310,11 +313,11 @@ private fun LiturgicalDayCard(day: LiturgicalCalendarDay, currentLanguage: AppLa
     val liturgicalColor = Color(day.liturgicalColorHex)
 
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         modifier = Modifier.fillMaxWidth()
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -331,37 +334,37 @@ private fun LiturgicalDayCard(day: LiturgicalCalendarDay, currentLanguage: AppLa
                     Text(
                         text = day.seasonName.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         color = liturgicalColor
                     )
                 }
                 Text(
                     text = "${day.dayOfMonth} ${day.monthName}",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
 
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
             Text(
                 text = day.celebrationTitle.get(currentLanguage),
                 fontWeight = FontWeight.Bold,
-                fontSize = 15.sp,
+                fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                 color = MaterialTheme.colorScheme.primary
             )
 
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
             Text(
                 text = "Rango: " + day.rank.get(currentLanguage),
-                fontSize = 12.sp,
+                fontSize = MaterialTheme.typography.labelMedium.fontSize,
                 fontWeight = FontWeight.Medium,
                 color = MaterialTheme.colorScheme.secondary
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -369,14 +372,14 @@ private fun LiturgicalDayCard(day: LiturgicalCalendarDay, currentLanguage: AppLa
             ) {
                 Text(
                     text = "📖 " + day.gospelVerseRef,
-                    fontSize = 11.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.primary
                 )
                 if (day.fastingRule != null) {
                     Text(
                         text = "✦ " + day.fastingRule.get(currentLanguage),
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
@@ -393,7 +396,7 @@ private fun HabitItemCard(
     onToggle: () -> Unit
 ) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(
             containerColor = if (isCompleted) MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f) else MaterialTheme.colorScheme.surface
         ),
@@ -427,22 +430,22 @@ private fun HabitItemCard(
                     Text(
                         text = habit.title.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
+                        fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                         color = if (isCompleted) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = habit.category.get(currentLanguage),
-                        fontSize = 10.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.secondary
                     )
                 }
 
-                Spacer(modifier = Modifier.height(2.dp))
+                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs / 2))
 
                 Text(
                     text = habit.description.get(currentLanguage),
-                    fontSize = 11.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     lineHeight = 16.sp
                 )
@@ -451,7 +454,7 @@ private fun HabitItemCard(
 
                 Text(
                     text = "Sugerencia: " + habit.timeSuggestion,
-                    fontSize = 10.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.primary
                 )
@@ -467,13 +470,13 @@ private fun ShrineCard(
     onNavigateMap: () -> Unit
 ) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         modifier = Modifier
             .fillMaxWidth()
             .testTag("shrine_card_${shrine.id}")
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -493,7 +496,7 @@ private fun ShrineCard(
                     Text(
                         text = shrine.name.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
-                        fontSize = 15.sp,
+                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
@@ -502,29 +505,29 @@ private fun ShrineCard(
             Spacer(modifier = Modifier.height(4.dp))
             Text(
                 text = shrine.cityCountry.get(currentLanguage),
-                fontSize = 11.sp,
+                fontSize = MaterialTheme.typography.labelSmall.fontSize,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.secondary
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
             Text(
                 text = shrine.historicalOrigin.get(currentLanguage),
-                fontSize = 12.sp,
+                fontSize = MaterialTheme.typography.labelMedium.fontSize,
                 lineHeight = 18.sp
             )
 
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
             Text(
                 text = "Reliquias: " + shrine.relicsAndPatron.get(currentLanguage),
-                fontSize = 11.sp,
+                fontSize = MaterialTheme.typography.labelSmall.fontSize,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             Surface(
-                shape = RoundedCornerShape(10.dp),
+                shape = MaterialTheme.shapes.small,
                 color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -532,32 +535,32 @@ private fun ShrineCard(
                     Text(
                         text = "✨ Indulgencia Plenaria y Gracia:",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(2.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs / 2))
                     Text(
                         text = shrine.plenaryIndulgenceNote.get(currentLanguage),
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         lineHeight = 16.sp
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             FilledTonalButton(
                 onClick = onNavigateMap,
                 modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(10.dp)
+                shape = MaterialTheme.shapes.small
             ) {
                 Icon(
                     imageVector = Icons.Default.Directions,
                     contentDescription = null,
-                    modifier = Modifier.size(16.dp),
+                    modifier = Modifier.size(MaterialTheme.spacing.md),
                     tint = MaterialTheme.colorScheme.primary
                 )
-                Spacer(modifier = Modifier.width(6.dp))
+                Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                 Text(
                     text = when (currentLanguage) {
                         AppLanguage.ES -> "Ver ubicación en Mapa"
@@ -565,7 +568,7 @@ private fun ShrineCard(
                         AppLanguage.PT -> "Ver localização no Mapa"
                     },
                     fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp
+                    fontSize = MaterialTheme.typography.labelMedium.fontSize
                 )
             }
         }

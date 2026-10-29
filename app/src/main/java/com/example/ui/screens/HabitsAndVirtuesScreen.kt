@@ -740,7 +740,7 @@ fun HabitProgressCard(
                     Text(
                         text = "$completedCount de $totalCount cumplidos hoy",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 17.sp,
+                        fontSize = MaterialTheme.typography.titleMedium.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
@@ -814,7 +814,7 @@ fun HabitProgressCard(
 
                     Text(
                         text = "$totalVictories victorias",
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.secondary
                     )
@@ -1086,7 +1086,7 @@ fun GraceEmergencyBanner(
                         )
                         Text(
                             text = "$totalVictories tentaciones vencidas en Cristo",
-                            fontSize = 11.sp,
+                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                             color = MaterialTheme.colorScheme.secondary,
                             fontWeight = FontWeight.Bold
                         )
@@ -1170,7 +1170,7 @@ fun SinAvoiderCatalogCard(
                 ) {
                     Text(
                         text = "$victoriesCount victorias",
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.padding(horizontal = MaterialTheme.spacing.xs, vertical = MaterialTheme.spacing.xs)

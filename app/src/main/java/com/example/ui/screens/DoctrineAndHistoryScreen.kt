@@ -1,5 +1,7 @@
 package com.example.ui.screens
 
+import com.example.ui.theme.spacing
+import com.example.ui.theme.identity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -18,7 +20,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBalance
 import androidx.compose.material.icons.filled.Church
@@ -70,9 +71,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
@@ -111,22 +114,22 @@ fun DoctrineAndHistoryScreen(
             Tab(
                 selected = selectedTopTab == 0,
                 onClick = { selectedTopTab = 0 },
-                text = { Text("Catecismo y Doctrina", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
+                text = { Text("Catecismo y Doctrina", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.labelMedium.fontSize) }
             )
             Tab(
                 selected = selectedTopTab == 1,
                 onClick = { selectedTopTab = 1 },
-                text = { Text("María y Jesucristo", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
+                text = { Text("María y Jesucristo", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.labelMedium.fontSize) }
             )
             Tab(
                 selected = selectedTopTab == 2,
                 onClick = { selectedTopTab = 2 },
-                text = { Text("Historia y Cismas", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
+                text = { Text("Historia y Cismas", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.labelMedium.fontSize) }
             )
             Tab(
                 selected = selectedTopTab == 3,
                 onClick = { selectedTopTab = 3 },
-                text = { Text("Iglesias y Noticias", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
+                text = { Text("Iglesias y Noticias", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.labelMedium.fontSize) }
             )
         }
 
@@ -182,32 +185,32 @@ fun DoctrineAndHistoryScreen(
                             LazyColumn(verticalArrangement = Arrangement.spacedBy(14.dp)) {
                                 item {
                                     ElevatedCard(
-                                        shape = RoundedCornerShape(16.dp),
+                                        shape = MaterialTheme.shapes.large,
                                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                                     ) {
-                                        Column(modifier = Modifier.padding(16.dp)) {
+                                        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                             Text("Pecado Venial vs Pecado Mortal", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
-                                            Spacer(modifier = Modifier.height(8.dp))
-                                            Text("✦ Pecado Venial:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.secondary)
-                                            Text(st.venialExplanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
-                                            Spacer(modifier = Modifier.height(8.dp))
-                                            Text("✦ Pecado Mortal:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFFB71C1C))
-                                            Text(st.mortalExplanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
+                                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+                                            Text("✦ Pecado Venial:", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodySmall.fontSize, color = MaterialTheme.colorScheme.secondary)
+                                            Text(st.venialExplanation.get(currentLanguage), fontSize = MaterialTheme.typography.bodySmall.fontSize, lineHeight = MaterialTheme.typography.bodySmall.lineHeight)
+                                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+                                            Text("✦ Pecado Mortal:", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodySmall.fontSize, color = MaterialTheme.colorScheme.error)
+                                            Text(st.mortalExplanation.get(currentLanguage), fontSize = MaterialTheme.typography.bodySmall.fontSize, lineHeight = MaterialTheme.typography.bodySmall.lineHeight)
                                         }
                                     }
                                 }
 
                                 item {
                                     ElevatedCard(
-                                        shape = RoundedCornerShape(16.dp),
+                                        shape = MaterialTheme.shapes.large,
                                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
                                     ) {
-                                        Column(modifier = Modifier.padding(16.dp)) {
-                                            Text("Las 3 Condiciones del Pecado Mortal", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
-                                            Text("Para que un pecado sea mortal se requieren simultáneamente tres condiciones:", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                                            Spacer(modifier = Modifier.height(10.dp))
+                                        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
+                                            Text("Las 3 Condiciones del Pecado Mortal", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyMedium.fontSize, color = MaterialTheme.colorScheme.primary)
+                                            Text("Para que un pecado sea mortal se requieren simultáneamente tres condiciones:", fontSize = MaterialTheme.typography.labelMedium.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                                             st.mortalThreeConditions.forEach { cond ->
-                                                Text("• " + cond.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp, modifier = Modifier.padding(vertical = 3.dp))
+                                                Text("• " + cond.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize, lineHeight = 18.sp, modifier = Modifier.padding(vertical = 3.dp))
                                             }
                                         }
                                     }
@@ -215,13 +218,13 @@ fun DoctrineAndHistoryScreen(
 
                                 item {
                                     ElevatedCard(
-                                        shape = RoundedCornerShape(16.dp),
+                                        shape = MaterialTheme.shapes.large,
                                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f))
                                     ) {
-                                        Column(modifier = Modifier.padding(16.dp)) {
-                                            Text("Guía para la Confesión y Examen de Conciencia", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
-                                            Spacer(modifier = Modifier.height(8.dp))
-                                            Text(st.confessionExamenGuide.get(currentLanguage), fontSize = 13.sp, lineHeight = 22.sp)
+                                        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
+                                            Text("Guía para la Confesión y Examen de Conciencia", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyMedium.fontSize, color = MaterialTheme.colorScheme.primary)
+                                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+                                            Text(st.confessionExamenGuide.get(currentLanguage), fontSize = MaterialTheme.typography.bodySmall.fontSize, lineHeight = MaterialTheme.typography.bodyMedium.lineHeight)
                                         }
                                     }
                                 }
@@ -245,7 +248,7 @@ fun DoctrineAndHistoryScreen(
                     modifier = Modifier
                         .fillMaxSize()
                         .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                 ) {
                     item {
                         Text(
@@ -266,7 +269,7 @@ fun DoctrineAndHistoryScreen(
                     }
 
                     item {
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                         Text(
                             text = "Los Cismas Históricos y Diferencias Doctrinales",
                             style = MaterialTheme.typography.titleMedium,
@@ -368,7 +371,7 @@ fun DoctrineAndHistoryScreen(
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
 
-                        Spacer(modifier = Modifier.height(10.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                         // One-tap Near Me GPS Maps Launch Button
                         Button(
@@ -394,9 +397,9 @@ fun DoctrineAndHistoryScreen(
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = MaterialTheme.colorScheme.primary
                             ),
-                            shape = RoundedCornerShape(12.dp)
+                            shape = MaterialTheme.shapes.medium
                         ) {
-                            Icon(imageVector = Icons.Default.Directions, contentDescription = null, modifier = Modifier.size(18.dp))
+                            Icon(imageVector = Icons.Default.Directions, contentDescription = null, modifier = Modifier.size(MaterialTheme.identity.actionIconSize))
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
                                 text = when (currentLanguage) {
@@ -405,11 +408,11 @@ fun DoctrineAndHistoryScreen(
                                     AppLanguage.PT -> "Buscar Paróquias Perto de Mim (Google Maps)"
                                 },
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 13.sp
+                                fontSize = MaterialTheme.typography.bodySmall.fontSize
                             )
                         }
 
-                        Spacer(modifier = Modifier.height(10.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                         // Search Field
                         OutlinedTextField(
@@ -425,17 +428,17 @@ fun DoctrineAndHistoryScreen(
                                         AppLanguage.EN -> "Search by name, address, or diocese..."
                                         AppLanguage.PT -> "Buscar por nome, endereço ou diocese..."
                                     },
-                                    fontSize = 12.sp
+                                    fontSize = MaterialTheme.typography.labelMedium.fontSize
                                 )
                             },
                             leadingIcon = {
                                 Icon(Icons.Default.Search, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
                             },
                             singleLine = true,
-                            shape = RoundedCornerShape(14.dp)
+                            shape = MaterialTheme.shapes.medium
                         )
 
-                        Spacer(modifier = Modifier.height(10.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                         // Cascading Dropdown Filters: País -> Región -> Ciudad
                         Text(
@@ -444,11 +447,11 @@ fun DoctrineAndHistoryScreen(
                                 AppLanguage.EN -> "Geographic Filter Dropdown Menus:"
                                 AppLanguage.PT -> "Filtro Geográfico por Menus Desdobráveis:"
                             },
-                            fontSize = 12.sp,
+                            fontSize = MaterialTheme.typography.labelMedium.fontSize,
                             fontWeight = FontWeight.SemiBold,
                             color = MaterialTheme.colorScheme.primary
                         )
-                        Spacer(modifier = Modifier.height(6.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
                         // Row 1: País dropdown
                         ParishDropdownSelector(
@@ -467,12 +470,12 @@ fun DoctrineAndHistoryScreen(
                             modifier = Modifier.fillMaxWidth().testTag("parish_country_dropdown")
                         )
 
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                         // Row 2: Región / Estado & Ciudad dropdowns side-by-side or stacked
                         Row(
                             modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm)
                         ) {
                             ParishDropdownSelector(
                                 label = when (currentLanguage) {
@@ -504,7 +507,7 @@ fun DoctrineAndHistoryScreen(
                             )
                         }
 
-                        Spacer(modifier = Modifier.height(10.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                         // Parish Filter Chips
                         Row(
@@ -560,15 +563,15 @@ fun DoctrineAndHistoryScreen(
                             },
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
+                            Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                             Text(
                                 text = when (currentLanguage) {
                                     AppLanguage.ES -> "Buscar iglesias en Google Maps"
                                     AppLanguage.EN -> "Find churches on Google Maps"
                                     AppLanguage.PT -> "Buscar igrejas no Google Maps"
                                 },
-                                fontSize = 12.sp
+                                fontSize = MaterialTheme.typography.labelMedium.fontSize
                             )
                         }
                     }
@@ -577,7 +580,7 @@ fun DoctrineAndHistoryScreen(
                         item {
                             Surface(
                                 modifier = Modifier.fillMaxWidth(),
-                                shape = RoundedCornerShape(12.dp),
+                                shape = MaterialTheme.shapes.medium,
                                 color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
                             ) {
                                 Text(
@@ -586,8 +589,8 @@ fun DoctrineAndHistoryScreen(
                                         AppLanguage.EN -> "No parishes found matching your search."
                                         AppLanguage.PT -> "Nenhuma paróquia encontrada com os critérios pesquisados."
                                     },
-                                    modifier = Modifier.padding(16.dp),
-                                    fontSize = 13.sp,
+                                    modifier = Modifier.padding(MaterialTheme.spacing.lg),
+                                    fontSize = MaterialTheme.typography.bodySmall.fontSize,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
@@ -629,19 +632,19 @@ private fun DoctrineChip(
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(10.dp))
+            .clip(MaterialTheme.shapes.small)
             .background(if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
             .border(
                 1.dp,
                 if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                RoundedCornerShape(10.dp)
+                MaterialTheme.shapes.small
             )
             .clickable(onClick = onClick)
             .padding(horizontal = 10.dp, vertical = 6.dp)
     ) {
         Text(
             text = label,
-            fontSize = 11.sp,
+            fontSize = MaterialTheme.typography.labelSmall.fontSize,
             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
             color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface
         )
@@ -651,18 +654,18 @@ private fun DoctrineChip(
 @Composable
 private fun CommandmentCard(cmd: CommandmentExploration, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Text(text = cmd.title.get(currentLanguage), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(text = cmd.biblicalWording.get(currentLanguage), fontSize = 11.sp, fontFamily = FontFamily.Serif, color = MaterialTheme.colorScheme.secondary)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = cmd.moralExplanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "❌ Pecados prohibidos: " + cmd.sinsForbidden.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            Text(text = "✓ Virtudes mandadas: " + cmd.virtuesCommanded.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Medium)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = cmd.biblicalWording.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, fontFamily = FontFamily.Serif, color = MaterialTheme.colorScheme.secondary)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+            Text(text = cmd.moralExplanation.get(currentLanguage), fontSize = MaterialTheme.typography.bodySmall.fontSize, lineHeight = MaterialTheme.typography.bodySmall.lineHeight)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+            Text(text = "❌ Pecados prohibidos: " + cmd.sinsForbidden.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(text = "✓ Virtudes mandadas: " + cmd.virtuesCommanded.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Medium)
         }
     }
 }
@@ -670,15 +673,15 @@ private fun CommandmentCard(cmd: CommandmentExploration, currentLanguage: AppLan
 @Composable
 private fun PreceptCard(prc: ChurchPrecept, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Text(text = prc.title.get(currentLanguage), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(text = prc.explanation.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(text = "Obligación: " + prc.applicationInLife.get(currentLanguage), fontSize = 12.sp, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Medium)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = prc.explanation.get(currentLanguage), fontSize = MaterialTheme.typography.bodySmall.fontSize, lineHeight = MaterialTheme.typography.bodySmall.lineHeight)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = "Obligación: " + prc.applicationInLife.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Medium)
         }
     }
 }
@@ -686,20 +689,20 @@ private fun PreceptCard(prc: ChurchPrecept, currentLanguage: AppLanguage) {
 @Composable
 private fun CapitalSinCard(item: CapitalSinVsVirtue, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = "Vicio: " + item.capitalSin.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color(0xFFB71C1C))
-                Text(text = "Virtud: " + item.opposingVirtue.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
+                Text(text = "Vicio: " + item.capitalSin.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyMedium.fontSize, color = MaterialTheme.colorScheme.error)
+                Text(text = "Virtud: " + item.opposingVirtue.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyMedium.fontSize, color = MaterialTheme.colorScheme.primary)
             }
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(text = item.sinMeaning.get(currentLanguage), fontSize = 12.sp)
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(text = "Remedio: " + item.virtueRemedy.get(currentLanguage), fontSize = 12.sp, fontWeight = FontWeight.Medium, color = MaterialTheme.colorScheme.secondary)
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(text = "💡 Consejo práctico: " + item.practicalAdvice.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = item.sinMeaning.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = "Remedio: " + item.virtueRemedy.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize, fontWeight = FontWeight.Medium, color = MaterialTheme.colorScheme.secondary)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = "💡 Consejo práctico: " + item.practicalAdvice.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -707,21 +710,21 @@ private fun CapitalSinCard(item: CapitalSinVsVirtue, currentLanguage: AppLanguag
 @Composable
 private fun MarianApparitionCard(item: MarianApparition, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = item.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
-                Text(text = item.feastDay, fontSize = 11.sp, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
+                Text(text = item.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyLarge.fontSize, color = MaterialTheme.colorScheme.primary)
+                Text(text = item.feastDay, fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
             }
-            Text(text = "${item.location.get(currentLanguage)} • Año ${item.year}", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = item.historyAndApparition.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "Promesas: " + item.promises.get(currentLanguage), fontSize = 12.sp, fontFamily = FontFamily.Serif, color = MaterialTheme.colorScheme.primary)
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(text = "Santuario Principal: " + item.primarySanctuary.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(text = "${item.location.get(currentLanguage)} • Año ${item.year}", fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+            Text(text = item.historyAndApparition.get(currentLanguage), fontSize = MaterialTheme.typography.bodySmall.fontSize, lineHeight = MaterialTheme.typography.bodySmall.lineHeight)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+            Text(text = "Promesas: " + item.promises.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize, fontFamily = FontFamily.Serif, color = MaterialTheme.colorScheme.primary)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = "Santuario Principal: " + item.primarySanctuary.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -729,16 +732,16 @@ private fun MarianApparitionCard(item: MarianApparition, currentLanguage: AppLan
 @Composable
 private fun ChristManifestationCard(item: ChristManifestation, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = item.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
-            Text(text = "Fiesta: " + item.feastDay.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.secondary)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = item.originHistory.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(text = "Promesas: " + item.promises.get(currentLanguage), fontSize = 12.sp, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Medium)
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
+            Text(text = item.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyLarge.fontSize, color = MaterialTheme.colorScheme.primary)
+            Text(text = "Fiesta: " + item.feastDay.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.secondary)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+            Text(text = item.originHistory.get(currentLanguage), fontSize = MaterialTheme.typography.bodySmall.fontSize, lineHeight = MaterialTheme.typography.bodySmall.lineHeight)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = "Promesas: " + item.promises.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Medium)
         }
     }
 }
@@ -746,17 +749,17 @@ private fun ChristManifestationCard(item: ChristManifestation, currentLanguage: 
 @Composable
 private fun ChurchEpochCard(epoch: ChurchHistoryEpoch, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text(text = epoch.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
-            Text(text = epoch.centuryRange, fontSize = 11.sp, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = epoch.narrative.get(currentLanguage), fontSize = 13.sp, lineHeight = 20.sp)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "Papas claves: " + epoch.keyPopes.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
-            Text(text = "Concilios: " + epoch.ecumenicalCouncils.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
+            Text(text = epoch.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyLarge.fontSize, color = MaterialTheme.colorScheme.primary)
+            Text(text = epoch.centuryRange, fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.secondary, fontWeight = FontWeight.Bold)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+            Text(text = epoch.narrative.get(currentLanguage), fontSize = MaterialTheme.typography.bodySmall.fontSize, lineHeight = MaterialTheme.typography.bodySmall.lineHeight)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+            Text(text = "Papas claves: " + epoch.keyPopes.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(text = "Concilios: " + epoch.ecumenicalCouncils.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -764,22 +767,22 @@ private fun ChurchEpochCard(epoch: ChurchHistoryEpoch, currentLanguage: AppLangu
 @Composable
 private fun SchismCard(schism: ChurchSchismHistory, currentLanguage: AppLanguage) {
     Card(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = schism.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
-                Text(text = schism.historicalYear, fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.secondary)
+                Text(text = schism.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyMedium.fontSize, color = MaterialTheme.colorScheme.primary)
+                Text(text = schism.historicalYear, fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.labelMedium.fontSize, color = MaterialTheme.colorScheme.secondary)
             }
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(text = schism.context.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
-            Spacer(modifier = Modifier.height(8.dp))
-            Text(text = "Diferencias doctrinales claves:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.primary)
-            Text(text = schism.theologicalDifferences.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(text = "Perspectiva y Diálogo: " + schism.dialogueAndReconciliation.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = schism.context.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize, lineHeight = 18.sp)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+            Text(text = "Diferencias doctrinales claves:", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.labelMedium.fontSize, color = MaterialTheme.colorScheme.primary)
+            Text(text = schism.theologicalDifferences.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize, lineHeight = 18.sp)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = "Perspectiva y Diálogo: " + schism.dialogueAndReconciliation.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -789,13 +792,13 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
     val context = LocalContext.current
 
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         modifier = Modifier
             .fillMaxWidth()
             .testTag("parish_card_${parish.id}")
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -815,40 +818,40 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                     Text(
                         text = parish.name,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 15.sp,
+                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
                 Surface(
-                    shape = RoundedCornerShape(8.dp),
+                    shape = MaterialTheme.shapes.small,
                     color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.15f)
                 ) {
                     Text(
                         text = parish.distanceDisplay,
                         fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                        modifier = Modifier.padding(horizontal = MaterialTheme.spacing.sm, vertical = MaterialTheme.spacing.xs)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
             Text(
                 text = "${parish.address} • ${parish.city}, ${parish.country} • ${parish.diocese}",
-                fontSize = 11.sp,
+                fontSize = MaterialTheme.typography.labelSmall.fontSize,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             if (parish.isPerpetualAdoration) {
-                Spacer(modifier = Modifier.height(4.dp))
+                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                 Surface(
-                    shape = RoundedCornerShape(6.dp),
+                    shape = MaterialTheme.shapes.extraSmall,
                     color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f)
                 ) {
                     Text(
                         text = "✨ Adoración Perpetua 24 Horas",
-                        fontSize = 10.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
@@ -856,32 +859,32 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             // Schedule Info Box
             Surface(
-                shape = RoundedCornerShape(12.dp),
+                shape = MaterialTheme.shapes.medium,
                 color = MaterialTheme.colorScheme.surface.copy(alpha = 0.7f),
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Column(modifier = Modifier.padding(10.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.sm)) {
                     Text(
                         text = "⛪ Misas Dominicales: " + parish.sundayMasses,
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.onSurface
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = "🙏 Confesiones: " + parish.confessionTimes,
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = "✨ Adoración: " + parish.adorationTimes,
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         color = MaterialTheme.colorScheme.secondary
                     )
                 }
@@ -907,22 +910,22 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                     modifier = Modifier
                         .weight(1f)
                         .testTag("call_parish_${parish.id}"),
-                    shape = RoundedCornerShape(10.dp)
+                    shape = MaterialTheme.shapes.small
                 ) {
                     Icon(
                         imageVector = Icons.Default.Call,
                         contentDescription = null,
-                        modifier = Modifier.size(16.dp),
+                        modifier = Modifier.size(MaterialTheme.spacing.md),
                         tint = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.width(6.dp))
+                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                     Text(
                         text = when (currentLanguage) {
                             AppLanguage.ES -> "Llamar"
                             AppLanguage.EN -> "Call"
                             AppLanguage.PT -> "Ligar"
                         },
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         color = MaterialTheme.colorScheme.primary,
                         fontWeight = FontWeight.Bold
                     )
@@ -941,7 +944,7 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                     modifier = Modifier
                         .weight(1f)
                         .testTag("map_parish_${parish.id}"),
-                    shape = RoundedCornerShape(10.dp),
+                    shape = MaterialTheme.shapes.small,
                     colors = ButtonDefaults.filledTonalButtonColors(
                         containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
                         contentColor = MaterialTheme.colorScheme.primary
@@ -950,17 +953,17 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
                     Icon(
                         imageVector = Icons.Default.Directions,
                         contentDescription = null,
-                        modifier = Modifier.size(16.dp),
+                        modifier = Modifier.size(MaterialTheme.spacing.md),
                         tint = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.width(6.dp))
+                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                     Text(
                         text = when (currentLanguage) {
                             AppLanguage.ES -> "Cómo llegar"
                             AppLanguage.EN -> "Directions"
                             AppLanguage.PT -> "Como chegar"
                         },
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -972,20 +975,20 @@ private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
 @Composable
 private fun NewsCard(news: CatholicNewsArticle, currentLanguage: AppLanguage) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text(text = news.category.get(currentLanguage), fontSize = 10.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary)
-                Text(text = news.date, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(text = news.category.get(currentLanguage), fontSize = MaterialTheme.typography.labelSmall.fontSize, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary)
+                Text(text = news.date, fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(text = news.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.primary)
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(text = news.summary.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(text = "Fuente: " + news.source + " • ${news.readTimeMinutes} min lectura", fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = news.title.get(currentLanguage), fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyMedium.fontSize, color = MaterialTheme.colorScheme.primary)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = news.summary.get(currentLanguage), fontSize = MaterialTheme.typography.labelMedium.fontSize, lineHeight = 18.sp)
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+            Text(text = "Fuente: " + news.source + " • ${news.readTimeMinutes} min lectura", fontSize = MaterialTheme.typography.labelSmall.fontSize, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -1003,7 +1006,7 @@ private fun ParishDropdownSelector(
     Box(modifier = modifier) {
         OutlinedCard(
             onClick = { expanded = true },
-            shape = RoundedCornerShape(12.dp),
+            shape = MaterialTheme.shapes.medium,
             colors = CardDefaults.outlinedCardColors(
                 containerColor = MaterialTheme.colorScheme.surface
             ),
@@ -1019,13 +1022,13 @@ private fun ParishDropdownSelector(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = label,
-                        fontSize = 10.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.primary
                     )
                     Text(
                         text = selectedValue,
-                        fontSize = 13.sp,
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
                         fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.onSurface,
                         maxLines = 1,
@@ -1053,7 +1056,7 @@ private fun ParishDropdownSelector(
                             text = option,
                             fontWeight = if (option == selectedValue) FontWeight.Bold else FontWeight.Normal,
                             color = if (option == selectedValue) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface,
-                            fontSize = 13.sp
+                            fontSize = MaterialTheme.typography.bodySmall.fontSize
                         )
                     },
                     onClick = {

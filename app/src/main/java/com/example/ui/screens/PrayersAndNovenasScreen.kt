@@ -1,5 +1,7 @@
 package com.example.ui.screens
 
+import com.example.ui.theme.spacing
+import com.example.ui.theme.identity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -18,7 +20,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Check
@@ -62,9 +63,11 @@ import coil.compose.AsyncImage
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
@@ -124,7 +127,7 @@ fun PrayersAndNovenasScreen(
                             AppLanguage.PT -> "Devocionário"
                         },
                         fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -139,7 +142,7 @@ fun PrayersAndNovenasScreen(
                             AppLanguage.PT -> "Terço Misericórdia"
                         },
                         fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -154,7 +157,7 @@ fun PrayersAndNovenasScreen(
                             AppLanguage.PT -> "Novenas"
                         },
                         fontWeight = if (selectedTab == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -169,7 +172,7 @@ fun PrayersAndNovenasScreen(
                             AppLanguage.PT -> "Completas"
                         },
                         fontWeight = if (selectedTab == 3) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -202,11 +205,11 @@ fun PrayersAndNovenasScreen(
                         leadingIcon = {
                             Icon(imageVector = Icons.Default.Search, contentDescription = null)
                         },
-                        shape = RoundedCornerShape(14.dp),
+                        shape = MaterialTheme.shapes.medium,
                         singleLine = true
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     // Thematic Filter Chips
                     val tags = listOf(
@@ -219,26 +222,26 @@ fun PrayersAndNovenasScreen(
                     )
 
                     LazyRow(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         items(tags) { (tagKey, tagLabel) ->
                             val isSelected = selectedThematicTag == tagKey
                             Box(
                                 modifier = Modifier
-                                    .clip(RoundedCornerShape(12.dp))
+                                    .clip(MaterialTheme.shapes.medium)
                                     .background(if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
                                     .border(
                                         1.dp,
                                         if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                                        RoundedCornerShape(12.dp)
+                                        MaterialTheme.shapes.medium
                                     )
                                     .clickable { selectedThematicTag = tagKey }
                                     .padding(horizontal = 12.dp, vertical = 6.dp)
                             ) {
                                 Text(
                                     text = tagLabel,
-                                    fontSize = 12.sp,
+                                    fontSize = MaterialTheme.typography.labelMedium.fontSize,
                                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                                     color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface
                                 )
@@ -318,7 +321,7 @@ fun PrayersAndNovenasScreen(
                         modifier = Modifier
                             .fillMaxSize()
                             .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                     ) {
                         item {
                             Text(
@@ -331,7 +334,7 @@ fun PrayersAndNovenasScreen(
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.primary
                             )
-                            Spacer(modifier = Modifier.height(4.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                             Text(
                                 text = when (currentLanguage) {
                                     AppLanguage.ES -> "Lleva el seguimiento diario de tus oraciones, registra tus intenciones y recibe consuelo en la promesa de Dios."
@@ -341,42 +344,42 @@ fun PrayersAndNovenasScreen(
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
-                            Spacer(modifier = Modifier.height(10.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                             OutlinedTextField(
                                 value = novenaSearchQuery,
                                 onValueChange = { novenaSearchQuery = it },
                                 modifier = Modifier.fillMaxWidth(),
                                 placeholder = { Text(when (currentLanguage) { AppLanguage.ES -> "Buscar novena..."; AppLanguage.EN -> "Search novena..."; AppLanguage.PT -> "Buscar novena..." }) },
                                 leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                                shape = RoundedCornerShape(14.dp),
+                                shape = MaterialTheme.shapes.medium,
                                 singleLine = true
                             )
-                            Spacer(modifier = Modifier.height(8.dp))
-                            LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+                            LazyRow(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm), modifier = Modifier.fillMaxWidth()) {
                                 item {
                                     val isSelected = selectedNovenaTag == null
                                     Box(
                                         modifier = Modifier
-                                            .clip(RoundedCornerShape(12.dp))
+                                            .clip(MaterialTheme.shapes.medium)
                                             .background(if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
-                                            .border(1.dp, if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
+                                            .border(1.dp, if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), MaterialTheme.shapes.medium)
                                             .clickable { selectedNovenaTag = null }
                                             .padding(horizontal = 12.dp, vertical = 6.dp)
                                     ) {
-                                        Text(text = when (currentLanguage) { AppLanguage.ES -> "Todas"; AppLanguage.EN -> "All"; AppLanguage.PT -> "Todas" }, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
+                                        Text(text = when (currentLanguage) { AppLanguage.ES -> "Todas"; AppLanguage.EN -> "All"; AppLanguage.PT -> "Todas" }, fontSize = MaterialTheme.typography.labelMedium.fontSize, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
                                     }
                                 }
                                 items(availableTags) { tag ->
                                     val isSelected = selectedNovenaTag == tag
                                     Box(
                                         modifier = Modifier
-                                            .clip(RoundedCornerShape(12.dp))
+                                            .clip(MaterialTheme.shapes.medium)
                                             .background(if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
-                                            .border(1.dp, if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
+                                            .border(1.dp, if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), MaterialTheme.shapes.medium)
                                             .clickable { selectedNovenaTag = tag }
                                             .padding(horizontal = 12.dp, vertical = 6.dp)
                                     ) {
-                                        Text(text = tagLabels[tag] ?: tag, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
+                                        Text(text = tagLabels[tag] ?: tag, fontSize = MaterialTheme.typography.labelMedium.fontSize, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
                                     }
                                 }
                             }
@@ -403,7 +406,7 @@ fun PrayersAndNovenasScreen(
                         modifier = Modifier
                             .fillMaxSize()
                             .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(16.dp)
+                        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                     ) {
                         item {
                             Row(
@@ -424,7 +427,7 @@ fun PrayersAndNovenasScreen(
 
                                 Text(
                                     text = novena.category.get(currentLanguage),
-                                    fontSize = 11.sp,
+                                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.secondary
                                 )
@@ -448,7 +451,7 @@ fun PrayersAndNovenasScreen(
                         // Day Selector Circles (1 to 9)
                         item {
                             Surface(
-                                shape = RoundedCornerShape(16.dp),
+                                shape = MaterialTheme.shapes.large,
                                 color = MaterialTheme.colorScheme.surfaceVariant,
                                 tonalElevation = 2.dp
                             ) {
@@ -460,18 +463,18 @@ fun PrayersAndNovenasScreen(
                                     ) {
                                         Text(
                                             text = "PROGRESO: DÍA $activeNovenaDay DE ${novena.days.size}",
-                                            fontSize = 11.sp,
+                                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                             fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.secondary
                                         )
                                         Text(
                                             text = "${novenaCompletedDays.size} rezados",
-                                            fontSize = 11.sp,
+                                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant
                                         )
                                     }
 
-                                    Spacer(modifier = Modifier.height(10.dp))
+                                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                                     Row(
                                         modifier = Modifier.fillMaxWidth(),
@@ -503,7 +506,7 @@ fun PrayersAndNovenasScreen(
                                                 Text(
                                                     text = "$dayNum",
                                                     fontWeight = FontWeight.Bold,
-                                                    fontSize = 12.sp,
+                                                    fontSize = MaterialTheme.typography.labelMedium.fontSize,
                                                     color = when {
                                                         isSelected -> Color.White
                                                         isCompleted -> Color.Black
@@ -520,7 +523,7 @@ fun PrayersAndNovenasScreen(
                         // Daily Scripture & Meditation
                         item {
                             ElevatedCard(
-                                shape = RoundedCornerShape(18.dp),
+                                shape = MaterialTheme.shapes.large,
                                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
                             ) {
                                 Column(modifier = Modifier.padding(18.dp)) {
@@ -533,7 +536,7 @@ fun PrayersAndNovenasScreen(
                                     if (dayData.scripture.isNotBlank()) {
                                         Text(
                                             text = dayData.scripture,
-                                            fontSize = 12.sp,
+                                            fontSize = MaterialTheme.typography.labelMedium.fontSize,
                                             fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.secondary
                                         )
@@ -545,7 +548,7 @@ fun PrayersAndNovenasScreen(
                                         Text(
                                             text = dayData.meditation.get(currentLanguage),
                                             style = MaterialTheme.typography.bodyMedium,
-                                            lineHeight = 22.sp
+                                            lineHeight = MaterialTheme.typography.bodyMedium.lineHeight
                                         )
                                         Spacer(modifier = Modifier.height(14.dp))
                                     }
@@ -553,18 +556,18 @@ fun PrayersAndNovenasScreen(
                                     // Intention guidance
                                     if (dayData.intentionGuidance.get(currentLanguage).isNotBlank()) {
                                         Surface(
-                                            shape = RoundedCornerShape(10.dp),
+                                            shape = MaterialTheme.shapes.small,
                                             color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
                                         ) {
                                             Row(
-                                                modifier = Modifier.padding(10.dp),
+                                                modifier = Modifier.padding(MaterialTheme.spacing.sm),
                                                 verticalAlignment = Alignment.CenterVertically
                                             ) {
-                                                Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(16.dp))
+                                                Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(MaterialTheme.spacing.md))
                                                 Spacer(modifier = Modifier.width(8.dp))
                                                 Text(
                                                     text = dayData.intentionGuidance.get(currentLanguage),
-                                                    fontSize = 11.sp,
+                                                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                                     color = MaterialTheme.colorScheme.onSurface
                                                 )
                                             }
@@ -577,7 +580,7 @@ fun PrayersAndNovenasScreen(
                         // Prayer of the Day & Action to Mark Completed
                         item {
                             ElevatedCard(
-                                shape = RoundedCornerShape(18.dp),
+                                shape = MaterialTheme.shapes.large,
                                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                             ) {
                                 Column(modifier = Modifier.padding(18.dp)) {
@@ -588,11 +591,11 @@ fun PrayersAndNovenasScreen(
                                             AppLanguage.PT -> "Oração do Dia $activeNovenaDay"
                                         },
                                         fontWeight = FontWeight.Bold,
-                                        fontSize = 15.sp,
+                                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                                         color = MaterialTheme.colorScheme.primary
                                     )
 
-                                    Spacer(modifier = Modifier.height(10.dp))
+                                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                                     Text(
                                         text = dayData.prayer.get(currentLanguage),
@@ -617,9 +620,9 @@ fun PrayersAndNovenasScreen(
                                                 contentColor = Color.White
                                             )
                                         ) {
-                                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(16.dp))
-                                            Spacer(modifier = Modifier.width(6.dp))
-                                            Text("Escuchar", fontSize = 12.sp)
+                                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                                            Text("Escuchar", fontSize = MaterialTheme.typography.labelMedium.fontSize)
                                         }
 
                                         FilledTonalButton(
@@ -633,9 +636,9 @@ fun PrayersAndNovenasScreen(
                                                 contentColor = Color.Black
                                             )
                                         ) {
-                                            Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp))
-                                            Spacer(modifier = Modifier.width(6.dp))
-                                            Text("Completar Día", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                                            Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                                            Text("Completar Día", fontSize = MaterialTheme.typography.labelMedium.fontSize, fontWeight = FontWeight.Bold)
                                         }
                                     }
                                 }
@@ -663,11 +666,11 @@ private fun VaticanPrayerCard(
     onPlayAudio: () -> Unit
 ) {
     Card(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -683,7 +686,7 @@ private fun VaticanPrayerCard(
                     if (prayer.latinTitle != null) {
                         Text(
                             text = prayer.latinTitle,
-                            fontSize = 11.sp,
+                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                             fontFamily = FontFamily.Serif,
                             color = MaterialTheme.colorScheme.secondary
                         )
@@ -698,25 +701,25 @@ private fun VaticanPrayerCard(
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             Text(
                 text = "V/. " + prayer.leaderText.get(currentLanguage),
                 fontFamily = FontFamily.Serif,
                 style = MaterialTheme.typography.bodyMedium,
-                lineHeight = 22.sp,
+                lineHeight = MaterialTheme.typography.bodyMedium.lineHeight,
                 color = MaterialTheme.colorScheme.onSurface
             )
 
             if (prayer.responseText != null) {
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                 Text(
                     text = "R/. " + prayer.responseText.get(currentLanguage),
                     fontFamily = FontFamily.Serif,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.secondary,
-                    lineHeight = 22.sp
+                    lineHeight = MaterialTheme.typography.bodyMedium.lineHeight
                 )
             }
 
@@ -724,15 +727,15 @@ private fun VaticanPrayerCard(
 
             Text(
                 text = "⏱ " + prayer.whenToPray.get(currentLanguage),
-                fontSize = 11.sp,
+                fontSize = MaterialTheme.typography.labelSmall.fontSize,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
 
             if (prayer.indulgenceNote != null) {
-                Spacer(modifier = Modifier.height(4.dp))
+                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                 Text(
                     text = "✦ " + prayer.indulgenceNote.get(currentLanguage),
-                    fontSize = 10.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     color = MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Medium
                 )
@@ -756,7 +759,7 @@ private fun NovenaOverviewCard(
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -778,7 +781,7 @@ private fun NovenaOverviewCard(
                 ) {
                     Text(
                         text = "${novena.days.size} DÍAS",
-                        fontSize = 10.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSecondaryContainer,
                         maxLines = 1,
@@ -788,7 +791,7 @@ private fun NovenaOverviewCard(
             }
 
             novena.imageUrl?.let { url ->
-                Spacer(modifier = Modifier.height(8.dp))
+                Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                 AsyncImage(
                     model = url,
                     contentDescription = novena.title.get(currentLanguage),
@@ -800,16 +803,16 @@ private fun NovenaOverviewCard(
                 )
             }
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
             Text(
                 text = novena.patron.get(currentLanguage),
-                fontSize = 11.sp,
+                fontSize = MaterialTheme.typography.labelSmall.fontSize,
                 fontWeight = FontWeight.SemiBold,
                 color = MaterialTheme.colorScheme.secondary
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             Text(
                 text = novena.description.get(currentLanguage),
@@ -827,12 +830,12 @@ private fun NovenaOverviewCard(
             ) {
                 Text(
                     text = "Promesas y Milagros Registrados",
-                    fontSize = 11.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Text(
                     text = "Comenzar / Continuar →",
-                    fontSize = 12.sp,
+                    fontSize = MaterialTheme.typography.labelMedium.fontSize,
                     fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary
                 )
@@ -885,11 +888,11 @@ private fun DivineMercyChapletView(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
@@ -931,12 +934,12 @@ private fun DivineMercyChapletView(
                             AppLanguage.EN -> "Revealed to St. Maria Faustina Kowalska in Vilnius (1935)"
                             AppLanguage.PT -> "Revelada a Santa Faustina Kowalska em Vilna (1935)"
                         },
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.secondary
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = when (currentLanguage) {
@@ -967,7 +970,7 @@ private fun DivineMercyChapletView(
                     Box(
                         modifier = Modifier
                             .weight(1f)
-                            .clip(RoundedCornerShape(10.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant)
                             .clickable { chapletStep = idx }
                             .padding(vertical = 8.dp),
@@ -975,7 +978,7 @@ private fun DivineMercyChapletView(
                     ) {
                         Text(
                             text = name,
-                            fontSize = 11.sp,
+                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                             fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
                             color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -989,18 +992,18 @@ private fun DivineMercyChapletView(
                 // Opening Prayers
                 item {
                     Card(
-                        shape = RoundedCornerShape(16.dp),
+                        shape = MaterialTheme.shapes.large,
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                     ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
+                        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                             Text(
                                 text = "Oraciones Iniciales",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.primary
                             )
-                            Spacer(modifier = Modifier.height(10.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                             Text(
                                 text = openingPrayer,
                                 fontFamily = FontFamily.Serif,
@@ -1026,16 +1029,16 @@ private fun DivineMercyChapletView(
                     // Decade selector tabs (1..5)
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm)
                     ) {
                         for (d in 1..5) {
                             val isCurrentD = currentDecade == d
                             Box(
                                 modifier = Modifier
                                     .weight(1f)
-                                    .clip(RoundedCornerShape(12.dp))
+                                    .clip(MaterialTheme.shapes.medium)
                                     .background(if (isCurrentD) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.surface)
-                                    .border(1.dp, if (isCurrentD) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.outline.copy(alpha = 0.4f), RoundedCornerShape(12.dp))
+                                    .border(1.dp, if (isCurrentD) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.outline.copy(alpha = 0.4f), MaterialTheme.shapes.medium)
                                     .clickable {
                                         currentDecade = d
                                         currentBead = 0
@@ -1046,7 +1049,7 @@ private fun DivineMercyChapletView(
                                 Text(
                                     text = "${d}ª Dec.",
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 12.sp,
+                                    fontSize = MaterialTheme.typography.labelMedium.fontSize,
                                     color = if (isCurrentD) Color.Black else MaterialTheme.colorScheme.onSurface
                                 )
                             }
@@ -1057,7 +1060,7 @@ private fun DivineMercyChapletView(
                 // Bead Dots Progress (0 = Large, 1..10 = Small)
                 item {
                     Surface(
-                        shape = RoundedCornerShape(14.dp),
+                        shape = MaterialTheme.shapes.medium,
                         color = MaterialTheme.colorScheme.surfaceVariant,
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -1068,12 +1071,12 @@ private fun DivineMercyChapletView(
                             Text(
                                 text = if (currentBead == 0) "Cuenta Principal: Padre Eterno" else "Cuenta $currentBead de 10: Dolorosa Pasión",
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp,
+                                fontSize = MaterialTheme.typography.labelMedium.fontSize,
                                 color = MaterialTheme.colorScheme.primary
                             )
-                            Spacer(modifier = Modifier.height(10.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                             Row(
-                                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 // Large bead
@@ -1085,7 +1088,7 @@ private fun DivineMercyChapletView(
                                         .clickable { currentBead = 0 },
                                     contentAlignment = Alignment.Center
                                 ) {
-                                    Text("G", fontSize = 10.sp, color = if (currentBead == 0) Color.White else Color.Black, fontWeight = FontWeight.Bold)
+                                    Text("G", fontSize = MaterialTheme.typography.labelSmall.fontSize, color = if (currentBead == 0) Color.White else Color.Black, fontWeight = FontWeight.Bold)
                                 }
 
                                 for (b in 1..10) {
@@ -1109,7 +1112,7 @@ private fun DivineMercyChapletView(
                 // Active Bead Prayer Card
                 item {
                     ElevatedCard(
-                        shape = RoundedCornerShape(16.dp),
+                        shape = MaterialTheme.shapes.large,
                         colors = CardDefaults.elevatedCardColors(
                             containerColor = if (currentBead == 0) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surface
                         )
@@ -1123,7 +1126,7 @@ private fun DivineMercyChapletView(
                                 Text(
                                     text = if (currentBead == 0) "Cuenta Grande (Decena $currentDecade)" else "Cuenta Pequeña ($currentBead/10)",
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 14.sp,
+                                    fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                                     color = MaterialTheme.colorScheme.primary
                                 )
 
@@ -1137,7 +1140,7 @@ private fun DivineMercyChapletView(
                                 }
                             }
 
-                            Spacer(modifier = Modifier.height(10.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                             Text(
                                 text = if (currentBead == 0) largeBeadPrayer else smallBeadPrayer,
@@ -1198,18 +1201,18 @@ private fun DivineMercyChapletView(
                 // Closing Prayers
                 item {
                     Card(
-                        shape = RoundedCornerShape(16.dp),
+                        shape = MaterialTheme.shapes.large,
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                     ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
+                        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                             Text(
                                 text = "Doxología Trinitaria y Conclusión",
                                 style = MaterialTheme.typography.titleMedium,
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.primary
                             )
-                            Spacer(modifier = Modifier.height(10.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                             Text(
                                 text = closingPrayer,
                                 fontFamily = FontFamily.Serif,
@@ -1233,7 +1236,7 @@ private fun DivineMercyChapletView(
                 // Hour of Mercy
                 item {
                     Surface(
-                        shape = RoundedCornerShape(16.dp),
+                        shape = MaterialTheme.shapes.large,
                         color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f),
                         border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
                     ) {
@@ -1246,7 +1249,7 @@ private fun DivineMercyChapletView(
                                 Text(
                                     text = "La Hora de la Misericordia (3:00 PM)",
                                     fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
+                                    fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                                     color = MaterialTheme.colorScheme.primary
                                 )
 
@@ -1255,7 +1258,7 @@ private fun DivineMercyChapletView(
                                 }
                             }
 
-                            Spacer(modifier = Modifier.height(10.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                             Text(
                                 text = hourOfMercyText,

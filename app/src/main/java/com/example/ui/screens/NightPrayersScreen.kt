@@ -1,5 +1,7 @@
 package com.example.ui.screens
 
+import com.example.ui.theme.spacing
+import com.example.ui.theme.identity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -19,7 +21,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
@@ -51,9 +52,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
@@ -84,7 +87,7 @@ fun NightPrayersScreen(
     ) {
         SecondaryTabRow(
             selectedTabIndex = selectedNightOfficeTab,
-            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+            containerColor = MaterialTheme.colorScheme.surfaceVariant,
             contentColor = MaterialTheme.colorScheme.primary
         ) {
             Tab(
@@ -92,15 +95,15 @@ fun NightPrayersScreen(
                 onClick = { selectedNightOfficeTab = 0 },
                 text = {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.NightsStay, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Icon(Icons.Default.NightsStay, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                         Text(
                             text = when (currentLanguage) {
                                 AppLanguage.ES -> "Completas (Breviario)"
                                 AppLanguage.EN -> "Roman Compline"
                                 AppLanguage.PT -> "Completas (Breviário)"
                             },
-                            fontSize = 12.sp,
+                            fontSize = MaterialTheme.typography.labelMedium.fontSize,
                             fontWeight = if (selectedNightOfficeTab == 0) FontWeight.Bold else FontWeight.Normal
                         )
                     }
@@ -116,7 +119,7 @@ fun NightPrayersScreen(
                             AppLanguage.EN -> "Ignatian Examen"
                             AppLanguage.PT -> "Exame Inaciano"
                         },
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontWeight = if (selectedNightOfficeTab == 1) FontWeight.Bold else FontWeight.Normal
                     )
                 }
@@ -143,11 +146,11 @@ private fun ComplineView(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f))
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
@@ -160,12 +163,12 @@ private fun ComplineView(
                             Text(
                                 text = compline.title.get(currentLanguage),
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 16.sp,
+                                fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                                 color = MaterialTheme.colorScheme.primary
                             )
                             Text(
                                 text = "Liturgia oficial de la Iglesia antes del reposo de la noche",
-                                fontSize = 12.sp,
+                                fontSize = MaterialTheme.typography.labelMedium.fontSize,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
@@ -192,9 +195,9 @@ private fun ComplineView(
                                 contentColor = Color.White
                             )
                         ) {
-                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(16.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Rezar", fontSize = 12.sp)
+                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                            Text("Rezar", fontSize = MaterialTheme.typography.labelMedium.fontSize)
                         }
                     }
                 }
@@ -275,20 +278,20 @@ private fun ComplineView(
         // 8. Antífona Mariana
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Text(
                         text = "8. ANTÍFONA MARIANA FINAL",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         color = MaterialTheme.colorScheme.secondary,
                         letterSpacing = 1.sp
                     )
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
-                    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    LazyRow(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm)) {
                         items(compline.marianAntiphons) { antiphon ->
                             val isSelected = antiphon.id == currentAntiphon.id
                             FilterChip(
@@ -297,7 +300,7 @@ private fun ComplineView(
                                     val idx = compline.marianAntiphons.indexOf(antiphon)
                                     selectedMarianAntiphonIndex = idx
                                 },
-                                label = { Text(antiphon.titleLatin, fontSize = 12.sp) }
+                                label = { Text(antiphon.titleLatin, fontSize = MaterialTheme.typography.labelMedium.fontSize) }
                             )
                         }
                     }
@@ -307,32 +310,32 @@ private fun ComplineView(
                     Text(
                         text = currentAntiphon.titleTranslation.get(currentLanguage),
                         fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
+                        fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
                     Text(
                         text = currentAntiphon.seasonTag.get(currentLanguage),
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = currentAntiphon.latinText,
                         fontFamily = FontFamily.Serif,
-                        fontSize = 13.sp,
-                        lineHeight = 20.sp,
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                        lineHeight = MaterialTheme.typography.bodySmall.lineHeight,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f)
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = currentAntiphon.translatedText.get(currentLanguage),
                         fontFamily = FontFamily.Serif,
-                        fontSize = 13.sp,
-                        lineHeight = 22.sp,
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                        lineHeight = MaterialTheme.typography.bodyMedium.lineHeight,
                         color = MaterialTheme.colorScheme.onSurface
                     )
 
@@ -347,9 +350,9 @@ private fun ComplineView(
                             contentColor = Color.White
                         )
                     ) {
-                        Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text("Escuchar ${currentAntiphon.titleLatin}", fontSize = 12.sp)
+                        Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                        Text("Escuchar ${currentAntiphon.titleLatin}", fontSize = MaterialTheme.typography.labelMedium.fontSize)
                     }
                 }
             }
@@ -368,13 +371,13 @@ private fun ComplineCard(
     var showLatin by remember { mutableStateOf(false) }
 
     Card(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(
             containerColor = if (isHighlighted) MaterialTheme.colorScheme.primary.copy(alpha = 0.08f) else MaterialTheme.colorScheme.surface
         ),
         border = if (isHighlighted) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(MaterialTheme.colorScheme.secondary)) else null
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -383,49 +386,49 @@ private fun ComplineCard(
                 Text(
                     text = stepLabel,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     color = MaterialTheme.colorScheme.secondary,
                     letterSpacing = 1.sp
                 )
 
                 Text(
                     text = if (showLatin) "Ocultar Latín" else "Ver Latín",
-                    fontSize = 11.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.primary,
                     modifier = Modifier.clickable { showLatin = !showLatin }
                 )
             }
 
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
             Text(
                 text = latinTitle,
                 fontWeight = FontWeight.Bold,
-                fontSize = 14.sp,
+                fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                 color = MaterialTheme.colorScheme.primary
             )
 
             AnimatedVisibility(visible = showLatin) {
                 Column {
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                     Text(
                         text = latinText,
                         fontFamily = FontFamily.Serif,
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         lineHeight = 18.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             Text(
                 text = translatedText,
                 fontFamily = FontFamily.Serif,
-                fontSize = 13.sp,
-                lineHeight = 22.sp,
+                fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                lineHeight = MaterialTheme.typography.bodyMedium.lineHeight,
                 color = MaterialTheme.colorScheme.onSurface
             )
         }
@@ -444,24 +447,24 @@ private fun IgnatianExamenView(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
                 Column(modifier = Modifier.padding(18.dp)) {
                     Text(
                         text = "Examen de Conciencia Nocturno (Método de San Ignacio)",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
+                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = "5 pasos para revisar el día con sinceridad ante Dios antes de dormir y recibir la paz de Cristo.",
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         lineHeight = 18.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -471,7 +474,7 @@ private fun IgnatianExamenView(
                     val progressPercent = (completedSteps.size.toFloat() / steps.size.toFloat()) * 100f
                     Text(
                         text = "Progreso del examen: ${completedSteps.size} de ${steps.size} pasos completados (${progressPercent.toInt()}%)",
-                        fontSize = 11.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.secondary
                     )
@@ -483,13 +486,13 @@ private fun IgnatianExamenView(
             val isStepDone = completedSteps.contains(step.stepNumber)
 
             Card(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = if (isStepDone) MaterialTheme.colorScheme.primary.copy(alpha = 0.05f) else MaterialTheme.colorScheme.surface
                 ),
                 border = if (isStepDone) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(MaterialTheme.colorScheme.secondary)) else CardDefaults.outlinedCardBorder()
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -498,7 +501,7 @@ private fun IgnatianExamenView(
                         Text(
                             text = step.title.get(currentLanguage),
                             fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
+                            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                             color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.weight(1f)
                         )
@@ -510,47 +513,47 @@ private fun IgnatianExamenView(
                             shape = CircleShape
                         ) {
                             if (isStepDone) {
-                                Icon(Icons.Default.Check, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(16.dp))
+                                Icon(Icons.Default.Check, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(MaterialTheme.spacing.md))
                             } else {
-                                Text("Hecho", fontSize = 11.sp)
+                                Text("Hecho", fontSize = MaterialTheme.typography.labelSmall.fontSize)
                             }
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = step.description.get(currentLanguage),
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         lineHeight = 18.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Surface(
-                        shape = RoundedCornerShape(10.dp),
+                        shape = MaterialTheme.shapes.small,
                         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
                     ) {
-                        Column(modifier = Modifier.padding(12.dp)) {
+                        Column(modifier = Modifier.padding(MaterialTheme.spacing.md)) {
                             Text(
                                 text = "Oración sugerida:",
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 11.sp,
+                                fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                 color = MaterialTheme.colorScheme.secondary
                             )
-                            Spacer(modifier = Modifier.height(4.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                             Text(
                                 text = step.guidedPrayer.get(currentLanguage),
                                 fontFamily = FontFamily.Serif,
-                                fontSize = 13.sp,
-                                lineHeight = 20.sp,
+                                fontSize = MaterialTheme.typography.bodySmall.fontSize,
+                                lineHeight = MaterialTheme.typography.bodySmall.lineHeight,
                                 color = MaterialTheme.colorScheme.onSurface
                             )
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -565,9 +568,9 @@ private fun IgnatianExamenView(
                                 contentColor = Color.White
                             )
                         ) {
-                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(14.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Escuchar", fontSize = 11.sp)
+                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                            Text("Escuchar", fontSize = MaterialTheme.typography.labelSmall.fontSize)
                         }
                     }
                 }
@@ -577,7 +580,7 @@ private fun IgnatianExamenView(
         if (completedSteps.size == steps.size) {
             item {
                 ElevatedCard(
-                    shape = RoundedCornerShape(16.dp),
+                    shape = MaterialTheme.shapes.large,
                     colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primary)
                 ) {
                     Column(
@@ -587,12 +590,12 @@ private fun IgnatianExamenView(
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Icon(Icons.Default.CheckCircle, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(36.dp))
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Text("¡Examen Completado!", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
-                        Spacer(modifier = Modifier.height(4.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+                        Text("¡Examen Completado!", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyLarge.fontSize, color = Color.White)
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                         Text(
                             text = "Descansa en la paz y el perdón de Nuestro Señor Jesucristo. Que la Virgen María y los santos Ángeles custodien tu sueño.",
-                            fontSize = 12.sp,
+                            fontSize = MaterialTheme.typography.labelMedium.fontSize,
                             color = Color.White.copy(alpha = 0.9f),
                             textAlign = androidx.compose.ui.text.style.TextAlign.Center
                         )

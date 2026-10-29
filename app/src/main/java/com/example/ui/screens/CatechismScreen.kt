@@ -1,5 +1,7 @@
 package com.example.ui.screens
 
+import com.example.ui.theme.spacing
+import com.example.ui.theme.identity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -23,7 +25,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material3.FilledTonalButton
-import androidx.compose.foundation.shape.RoundedCornerShape
 import com.example.data.repository.CompendiumQA
 import com.example.data.repository.DoctrineFormula
 import androidx.compose.material.icons.Icons
@@ -62,9 +63,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
@@ -114,7 +117,7 @@ fun CatechismScreen(
                             AppLanguage.PT -> "Compêndio (598)"
                         },
                         fontWeight = if (mainMode == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -129,7 +132,7 @@ fun CatechismScreen(
                             AppLanguage.PT -> "Catecismo (1-2865)"
                         },
                         fontWeight = if (mainMode == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -144,7 +147,7 @@ fun CatechismScreen(
                             AppLanguage.PT -> "Fontes Vaticano"
                         },
                         fontWeight = if (mainMode == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize
                     )
                 }
             )
@@ -175,7 +178,7 @@ fun CatechismScreen(
                             AppLanguage.EN -> "Search by CCC # (e.g. 1324) or topic..."
                             AppLanguage.PT -> "Buscar por nº art. (ex. 1324) ou tema..."
                         },
-                        fontSize = 13.sp
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize
                     )
                 },
                 leadingIcon = {
@@ -188,7 +191,7 @@ fun CatechismScreen(
                         }
                     }
                 },
-                shape = RoundedCornerShape(14.dp),
+                shape = MaterialTheme.shapes.medium,
                 singleLine = true
             )
         }
@@ -222,7 +225,7 @@ fun CatechismScreen(
                     Text(
                         text = "Resultados encontrados (${searchResults.size}):",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
+                        fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
@@ -230,14 +233,14 @@ fun CatechismScreen(
                 if (searchResults.isEmpty()) {
                     item {
                         Surface(
-                            shape = RoundedCornerShape(14.dp),
+                            shape = MaterialTheme.shapes.medium,
                             color = MaterialTheme.colorScheme.surfaceVariant,
                             modifier = Modifier.fillMaxWidth()
                         ) {
                             Text(
                                 text = "No se encontraron artículos con ese criterio de búsqueda.",
                                 modifier = Modifier.padding(18.dp),
-                                fontSize = 13.sp,
+                                fontSize = MaterialTheme.typography.bodySmall.fontSize,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
@@ -269,7 +272,7 @@ fun CatechismScreen(
                             Text(
                                 text = "Parte ${p.partNumber} (${p.cccRange})",
                                 fontWeight = if (selectedPartIndex == idx) FontWeight.Bold else FontWeight.Normal,
-                                fontSize = 12.sp
+                                fontSize = MaterialTheme.typography.labelMedium.fontSize
                             )
                         }
                     )
@@ -281,11 +284,11 @@ fun CatechismScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(16.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
             ) {
                 item {
                     ElevatedCard(
-                        shape = RoundedCornerShape(18.dp),
+                        shape = MaterialTheme.shapes.large,
                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                     ) {
                         Column(modifier = Modifier.padding(18.dp)) {
@@ -297,11 +300,11 @@ fun CatechismScreen(
                             )
                             Text(
                                 text = currentPart.subtitle.get(currentLanguage) + " • " + currentPart.cccRange,
-                                fontSize = 12.sp,
+                                fontSize = MaterialTheme.typography.labelMedium.fontSize,
                                 fontWeight = FontWeight.SemiBold,
                                 color = MaterialTheme.colorScheme.secondary
                             )
-                            Spacer(modifier = Modifier.height(8.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                             Text(
                                 text = currentPart.description.get(currentLanguage),
                                 style = MaterialTheme.typography.bodySmall,
@@ -315,7 +318,7 @@ fun CatechismScreen(
                     Text(
                         text = "Índice de Secciones y Capítulos:",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 15.sp,
+                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
@@ -325,7 +328,7 @@ fun CatechismScreen(
                         Text(
                             text = section.title.get(currentLanguage),
                             fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp,
+                            fontSize = MaterialTheme.typography.bodySmall.fontSize,
                             color = MaterialTheme.colorScheme.secondary,
                             modifier = Modifier.padding(top = 4.dp)
                         )
@@ -335,9 +338,9 @@ fun CatechismScreen(
                         Card(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clip(RoundedCornerShape(14.dp))
+                                .clip(MaterialTheme.shapes.medium)
                                 .clickable { selectedChapter = chapter },
-                            shape = RoundedCornerShape(14.dp),
+                            shape = MaterialTheme.shapes.medium,
                             colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                             border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                         ) {
@@ -357,7 +360,7 @@ fun CatechismScreen(
                                         Text(
                                             text = "§",
                                             fontWeight = FontWeight.Bold,
-                                            fontSize = 14.sp,
+                                            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                                             color = MaterialTheme.colorScheme.onPrimaryContainer
                                         )
                                     }
@@ -368,18 +371,18 @@ fun CatechismScreen(
                                         Text(
                                             text = chapter.title.get(currentLanguage),
                                             fontWeight = FontWeight.Bold,
-                                            fontSize = 14.sp,
+                                            fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                                             color = MaterialTheme.colorScheme.onSurface
                                         )
                                         Text(
                                             text = "Artículos: ${chapter.articleRangeDisplay} (${chapter.articles.size} destacados)",
-                                            fontSize = 11.sp,
+                                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant
                                         )
                                     }
                                 }
 
-                                Text("Leer →", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                                Text("Leer →", fontSize = MaterialTheme.typography.labelMedium.fontSize, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
                             }
                         }
                     }
@@ -413,13 +416,13 @@ fun CatechismScreen(
 
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         IconButton(onClick = { if (fontSizeMultiplier > 0.85f) fontSizeMultiplier -= 0.15f }) {
-                            Text("A-", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                            Text("A-", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.labelMedium.fontSize)
                         }
                         IconButton(onClick = { if (fontSizeMultiplier < 1.45f) fontSizeMultiplier += 0.15f }) {
-                            Text("A+", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                            Text("A+", fontWeight = FontWeight.Bold, fontSize = MaterialTheme.typography.bodyLarge.fontSize)
                         }
                         IconButton(onClick = { useSerifFont = !useSerifFont }) {
-                            Text(if (useSerifFont) "Serif" else "Sans", fontSize = 11.sp)
+                            Text(if (useSerifFont) "Serif" else "Sans", fontSize = MaterialTheme.typography.labelSmall.fontSize)
                         }
                     }
                 }
@@ -432,7 +435,7 @@ fun CatechismScreen(
                 )
                 Text(
                     text = "Catecismo de la Iglesia Católica: ${chapter.articleRangeDisplay}",
-                    fontSize = 11.sp,
+                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                     color = MaterialTheme.colorScheme.secondary
                 )
 
@@ -440,7 +443,7 @@ fun CatechismScreen(
 
                 LazyColumn(
                     modifier = Modifier.fillMaxSize(),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                 ) {
                     items(chapter.articles) { article ->
                         ArticleItemCard(
@@ -473,10 +476,10 @@ private fun ArticleItemCard(
     useSerif: Boolean
 ) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -484,7 +487,7 @@ private fun ArticleItemCard(
             ) {
                 Box(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
+                        .clip(MaterialTheme.shapes.small)
                         .background(MaterialTheme.colorScheme.primary)
                         .padding(horizontal = 8.dp, vertical = 3.dp)
                 ) {
@@ -492,21 +495,21 @@ private fun ArticleItemCard(
                         text = "CIC § ${article.cccNumber}",
                         fontWeight = FontWeight.Bold,
                         color = Color.White,
-                        fontSize = 11.sp
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize
                     )
                 }
 
                 if (article.biblicalReferences != null) {
                     Text(
                         text = "Ref: ${article.biblicalReferences}",
-                        fontSize = 10.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.secondary
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             Text(
                 text = article.title.get(currentLanguage),
@@ -515,7 +518,7 @@ private fun ArticleItemCard(
                 color = MaterialTheme.colorScheme.primary
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             Text(
                 text = article.content.get(currentLanguage),
@@ -528,18 +531,18 @@ private fun ArticleItemCard(
             if (article.inBriefSummary != null) {
                 Spacer(modifier = Modifier.height(12.dp))
                 Surface(
-                    shape = RoundedCornerShape(10.dp),
+                    shape = MaterialTheme.shapes.small,
                     color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
                 ) {
                     Row(
-                        modifier = Modifier.padding(10.dp),
+                        modifier = Modifier.padding(MaterialTheme.spacing.sm),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(16.dp))
+                        Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(MaterialTheme.spacing.md))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(
                             text = "En Resumen: " + article.inBriefSummary.get(currentLanguage),
-                            fontSize = 11.sp,
+                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                             color = MaterialTheme.colorScheme.onSurface
                         )
                     }
@@ -602,7 +605,7 @@ private fun CompendiumView(
                         AppLanguage.EN -> "Search across 598 questions (e.g. 1, eucharist)..."
                         AppLanguage.PT -> "Buscar nas 598 perguntas (ex. 1, eucaristia)..."
                     },
-                    fontSize = 12.sp
+                    fontSize = MaterialTheme.typography.labelMedium.fontSize
                 )
             },
             leadingIcon = {
@@ -615,11 +618,11 @@ private fun CompendiumView(
                     }
                 }
             },
-            shape = RoundedCornerShape(14.dp),
+            shape = MaterialTheme.shapes.medium,
             singleLine = true
         )
 
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
         // Part filter chips
         ScrollableTabRow(
@@ -640,7 +643,7 @@ private fun CompendiumView(
                     text = {
                         Text(
                             text = name,
-                            fontSize = 11.sp,
+                            fontSize = MaterialTheme.typography.labelSmall.fontSize,
                             fontWeight = if (selectedFilterIndex == idx) FontWeight.Bold else FontWeight.Normal
                         )
                     }
@@ -648,7 +651,7 @@ private fun CompendiumView(
             }
         }
 
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
         if (selectedFilterIndex == 5) {
             // Doctrinal formulas
@@ -660,14 +663,14 @@ private fun CompendiumView(
                     Text(
                         text = "Fórmulas Principales de la Doctrina Católica",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 15.sp,
+                        fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
 
                 items(repository.doctrineFormulas) { item ->
                     Card(
-                        shape = RoundedCornerShape(14.dp),
+                        shape = MaterialTheme.shapes.medium,
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
                         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                     ) {
@@ -675,14 +678,14 @@ private fun CompendiumView(
                             Text(
                                 text = item.title.get(currentLanguage),
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 14.sp,
+                                fontSize = MaterialTheme.typography.bodyMedium.fontSize,
                                 color = MaterialTheme.colorScheme.primary
                             )
-                            Spacer(modifier = Modifier.height(6.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                             Text(
                                 text = item.items.joinToString("\n• ", prefix = "• ") { it.get(currentLanguage) },
                                 style = MaterialTheme.typography.bodyMedium,
-                                lineHeight = 22.sp
+                                lineHeight = MaterialTheme.typography.bodyMedium.lineHeight
                             )
                         }
                     }
@@ -697,7 +700,7 @@ private fun CompendiumView(
                 item {
                     Text(
                         text = "Mostrando ${filteredQuestions.size} preguntas del Compendio Oficial:",
-                        fontSize = 12.sp,
+                        fontSize = MaterialTheme.typography.labelMedium.fontSize,
                         fontWeight = FontWeight.SemiBold,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -705,7 +708,7 @@ private fun CompendiumView(
 
                 items(filteredQuestions) { q ->
                     Card(
-                        shape = RoundedCornerShape(14.dp),
+                        shape = MaterialTheme.shapes.medium,
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                     ) {
@@ -717,27 +720,27 @@ private fun CompendiumView(
                             ) {
                                 Box(
                                     modifier = Modifier
-                                        .clip(RoundedCornerShape(6.dp))
+                                        .clip(MaterialTheme.shapes.extraSmall)
                                         .background(MaterialTheme.colorScheme.primary)
                                         .padding(horizontal = 8.dp, vertical = 3.dp)
                                 ) {
                                     Text(
                                         text = "Pregunta ${q.number}",
                                         fontWeight = FontWeight.Bold,
-                                        fontSize = 11.sp,
+                                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                         color = Color.White
                                     )
                                 }
 
                                 Text(
                                     text = q.cccReference,
-                                    fontSize = 11.sp,
+                                    fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                     fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.secondary
                                 )
                             }
 
-                            Spacer(modifier = Modifier.height(8.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                             Text(
                                 text = q.question.get(currentLanguage),
@@ -746,13 +749,13 @@ private fun CompendiumView(
                                 color = MaterialTheme.colorScheme.primary
                             )
 
-                            Spacer(modifier = Modifier.height(8.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                             Text(
                                 text = q.answer.get(currentLanguage),
                                 fontFamily = FontFamily.Serif,
                                 style = MaterialTheme.typography.bodyMedium,
-                                lineHeight = 22.sp,
+                                lineHeight = MaterialTheme.typography.bodyMedium.lineHeight,
                                 color = MaterialTheme.colorScheme.onSurface
                             )
                         }
@@ -778,17 +781,17 @@ private fun VaticanOfficialLinksView(
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Text(
                         text = "Fuentes Documentales Oficiales de la Santa Sede",
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = "Accede a los portales oficiales de la Santa Sede (vatican.va) con los textos completos del Catecismo de la Iglesia Católica y del Compendio en Español, Inglés y Portugués.",
                         style = MaterialTheme.typography.bodySmall,
@@ -800,7 +803,7 @@ private fun VaticanOfficialLinksView(
 
         items(repository.officialVaticanLinks) { item ->
             Card(
-                shape = RoundedCornerShape(14.dp),
+                shape = MaterialTheme.shapes.medium,
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
             ) {
@@ -813,36 +816,36 @@ private fun VaticanOfficialLinksView(
                         Text(
                             text = "Vatican.va (${item.language})",
                             fontWeight = FontWeight.Bold,
-                            fontSize = 15.sp,
+                            fontSize = MaterialTheme.typography.bodyLarge.fontSize,
                             color = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.weight(1f)
                         )
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(6.dp))
+                                .clip(MaterialTheme.shapes.extraSmall)
                                 .background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.25f))
                                 .padding(horizontal = 8.dp, vertical = 3.dp)
                         ) {
                             Text(
                                 text = item.language,
-                                fontSize = 10.sp,
+                                fontSize = MaterialTheme.typography.labelSmall.fontSize,
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.primary
                             )
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = "Catecismo de la Iglesia Católica (Texto Completo 1-2865)",
                         fontWeight = FontWeight.SemiBold,
-                        fontSize = 13.sp,
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = item.catechismUrl,
-                        fontSize = 10.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     FilledTonalButton(
@@ -852,22 +855,22 @@ private fun VaticanOfficialLinksView(
                         },
                         modifier = Modifier.padding(top = 4.dp)
                     ) {
-                        Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text("Abrir Catecismo Oficial", fontSize = 11.sp)
+                        Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                        Text("Abrir Catecismo Oficial", fontSize = MaterialTheme.typography.labelSmall.fontSize)
                     }
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = "Compendio del Catecismo (598 Preguntas y Respuestas)",
                         fontWeight = FontWeight.SemiBold,
-                        fontSize = 13.sp,
+                        fontSize = MaterialTheme.typography.bodySmall.fontSize,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = item.compendiumUrl,
-                        fontSize = 10.sp,
+                        fontSize = MaterialTheme.typography.labelSmall.fontSize,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     FilledTonalButton(
@@ -877,9 +880,9 @@ private fun VaticanOfficialLinksView(
                         },
                         modifier = Modifier.padding(top = 4.dp)
                     ) {
-                        Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text("Abrir Compendio Oficial", fontSize = 11.sp)
+                        Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                        Text("Abrir Compendio Oficial", fontSize = MaterialTheme.typography.labelSmall.fontSize)
                     }
                 }
 
@@ -887,9 +890,9 @@ private fun VaticanOfficialLinksView(
                         onClick = { webViewUrl = item.catechismUrl },
                         modifier = Modifier.padding(top = 4.dp)
                     ) {
-                        Icon(Icons.Default.MenuBook, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text("Ver en la app", fontSize = 11.sp)
+                        Icon(Icons.Default.MenuBook, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.md))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                        Text("Ver en la app", fontSize = MaterialTheme.typography.labelSmall.fontSize)
                     }
                 }
             }
