@@ -19,7 +19,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Bookmark
@@ -55,12 +54,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.example.ui.theme.spacing
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
 import com.example.data.local.ScriptureStudyProgressEntity
@@ -115,8 +110,7 @@ fun ScriptureStudyScreen(
                                 1 -> "2. Parábolas"
                                 else -> "3. Cartas Paulinas"
                             },
-                            fontWeight = if (selectedTrackIndex == index) FontWeight.Bold else FontWeight.Normal,
-                            fontSize = 12.sp
+                            style = if (selectedTrackIndex == index) MaterialTheme.typography.labelLarge else MaterialTheme.typography.bodySmall
                         )
                     }
                 )
@@ -175,53 +169,51 @@ private fun TrackOverviewView(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .padding(MaterialTheme.spacing.lg),
+        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f))
             ) {
-                Column(modifier = Modifier.padding(18.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Surface(
                             shape = CircleShape,
                             color = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.size(38.dp)
+                            modifier = Modifier.size(MaterialTheme.spacing.xl + MaterialTheme.spacing.md)
                         ) {
                             Box(contentAlignment = Alignment.Center) {
-                                Icon(Icons.Default.MenuBook, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(20.dp))
+                                Icon(Icons.Default.MenuBook, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(MaterialTheme.spacing.md))
                             }
                         }
 
-                        Spacer(modifier = Modifier.width(12.dp))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm + MaterialTheme.spacing.xs))
 
                         Column {
                             Text(
                                 text = track.title.get(currentLanguage),
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 16.sp,
+                                style = MaterialTheme.typography.titleMedium,
                                 color = MaterialTheme.colorScheme.primary
                             )
                             Text(
                                 text = "Alineado con el Catecismo y Dei Verbum del Vaticano",
-                                fontSize = 11.sp,
+                                style = MaterialTheme.typography.labelSmall,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     Text(
                         text = track.description.get(currentLanguage),
-                        fontSize = 12.sp,
-                        lineHeight = 18.sp,
+                        style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurface
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -230,14 +222,12 @@ private fun TrackOverviewView(
                     ) {
                         Text(
                             text = "Progreso del curso: $completedInTrack de ${track.lessons.size} lecciones",
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.labelLarge,
                             color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = "${progressPercent.toInt()}%",
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.labelLarge,
                             color = MaterialTheme.colorScheme.secondary
                         )
                     }
@@ -248,8 +238,7 @@ private fun TrackOverviewView(
         item {
             Text(
                 text = "Lecciones del Curso",
-                fontWeight = FontWeight.Bold,
-                fontSize = 15.sp,
+                style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.primary
             )
         }
@@ -261,7 +250,7 @@ private fun TrackOverviewView(
                 modifier = Modifier
                     .fillMaxWidth()
                     .clickable { onSelectLesson(lesson) },
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = if (isDone) MaterialTheme.colorScheme.primary.copy(alpha = 0.05f) else MaterialTheme.colorScheme.surface
                 ),
@@ -270,42 +259,39 @@ private fun TrackOverviewView(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp),
+                        .padding(MaterialTheme.spacing.lg),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Surface(
                         shape = CircleShape,
                         color = if (isDone) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.surfaceVariant,
-                        modifier = Modifier.size(36.dp)
+                        modifier = Modifier.size(MaterialTheme.spacing.xl + MaterialTheme.spacing.md)
                     ) {
                         Box(contentAlignment = Alignment.Center) {
                             if (isDone) {
-                                Icon(Icons.Default.Check, contentDescription = null, tint = Color.Black, modifier = Modifier.size(20.dp))
+                                Icon(Icons.Default.Check, contentDescription = null, tint = MaterialTheme.colorScheme.onSurface, modifier = Modifier.size(MaterialTheme.spacing.md))
                             } else {
                                 Text(
                                     text = "${lesson.lessonNumber}",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 14.sp,
+                                    style = MaterialTheme.typography.titleSmall,
                                     color = MaterialTheme.colorScheme.primary
                                 )
                             }
                         }
                     }
 
-                    Spacer(modifier = Modifier.width(14.dp))
+                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.md - MaterialTheme.spacing.xs))
 
                     Column(modifier = Modifier.weight(1f)) {
                         Text(
                             text = lesson.title.get(currentLanguage),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
+                            style = MaterialTheme.typography.titleSmall,
                             color = MaterialTheme.colorScheme.primary
                         )
                         Text(
                             text = lesson.biblicalReference,
-                            fontSize = 12.sp,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant,
-                            fontFamily = FontFamily.Serif
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
 
@@ -313,7 +299,7 @@ private fun TrackOverviewView(
                         Icons.Default.AutoStories,
                         contentDescription = "Read lesson",
                         tint = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.size(20.dp)
+                        modifier = Modifier.size(MaterialTheme.spacing.md)
                     )
                 }
             }
@@ -336,8 +322,8 @@ private fun LessonDetailView(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .padding(MaterialTheme.spacing.lg),
+        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
     ) {
         item {
             Row(
@@ -346,23 +332,23 @@ private fun LessonDetailView(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 FilledTonalButton(onClick = onBack) {
-                    Text("← Volver al Curso", fontSize = 12.sp)
+                    Text("← Volver al Curso", style = MaterialTheme.typography.bodySmall)
                 }
 
                 ElevatedButton(
                     onClick = { onToggleComplete(notesText) },
                     colors = ButtonDefaults.elevatedButtonColors(
                         containerColor = if (isCompleted) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary,
-                        contentColor = if (isCompleted) Color.Black else Color.White
+                        contentColor = MaterialTheme.colorScheme.onPrimary
                     )
                 ) {
                     Icon(
                         imageVector = if (isCompleted) Icons.Default.CheckCircle else Icons.Default.Check,
                         contentDescription = null,
-                        modifier = Modifier.size(16.dp)
+                        modifier = Modifier.size(MaterialTheme.spacing.md)
                     )
-                    Spacer(modifier = Modifier.width(6.dp))
-                    Text(if (isCompleted) "Completada" else "Marcar Hecha", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                    Text(if (isCompleted) "Completada" else "Marcar Hecha", style = MaterialTheme.typography.labelLarge)
                 }
             }
         }
@@ -370,29 +356,25 @@ private fun LessonDetailView(
         // Header
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
-                Column(modifier = Modifier.padding(18.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Text(
                         text = "LECCIÓN ${lesson.lessonNumber}",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
-                        color = MaterialTheme.colorScheme.secondary,
-                        letterSpacing = 1.sp
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.secondary
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = lesson.title.get(currentLanguage),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 18.sp,
+                        style = MaterialTheme.typography.titleLarge,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = lesson.biblicalReference,
-                        fontSize = 13.sp,
-                        fontWeight = FontWeight.Medium,
+                        style = MaterialTheme.typography.titleSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
@@ -402,11 +384,11 @@ private fun LessonDetailView(
         // 1. Biblical Passage Card
         item {
             Card(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 border = CardDefaults.outlinedCardBorder()
             ) {
-                Column(modifier = Modifier.padding(18.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -414,8 +396,7 @@ private fun LessonDetailView(
                     ) {
                         Text(
                             text = "PASO 1: LECTURA DE LA ESCRITURA (LECTIO)",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp,
+                            style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.secondary
                         )
 
@@ -428,13 +409,11 @@ private fun LessonDetailView(
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = lesson.biblicalPassageText.get(currentLanguage),
-                        fontFamily = FontFamily.Serif,
-                        fontSize = 14.sp,
-                        lineHeight = 24.sp,
+                        style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                 }
@@ -444,38 +423,35 @@ private fun LessonDetailView(
         // 2. Vatican Context & Catechism
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f))
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.md)) {
                     Text(
                         text = "MAGISTERIO DEL VATICANO Y CATECISMO",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
+                        style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = lesson.vaticanContext.get(currentLanguage),
-                        fontSize = 13.sp,
-                        lineHeight = 20.sp,
+                        style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurface
                     )
 
                     if (lesson.catechismRefs.isNotEmpty()) {
-                        Spacer(modifier = Modifier.height(10.dp))
-                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
+                        Row(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm)) {
                             lesson.catechismRefs.forEach { ref ->
                                 Surface(
-                                    shape = RoundedCornerShape(8.dp),
+                                    shape = MaterialTheme.shapes.small,
                                     color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
                                 ) {
                                     Text(
                                         text = ref,
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.Bold,
+                                        style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.primary,
-                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                                        modifier = Modifier.padding(horizontal = MaterialTheme.spacing.sm, vertical = MaterialTheme.spacing.xs)
                                     )
                                 }
                             }
@@ -488,18 +464,17 @@ private fun LessonDetailView(
         // 3. Four Steps of Lectio Divina
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.md)) {
                     Text(
                         text = "GUÍA DE LECTIO DIVINA",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 12.sp,
+                        style = MaterialTheme.typography.labelMedium,
                         color = MaterialTheme.colorScheme.primary
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     LectioStepItem(
                         badge = "1. LECTIO",
@@ -507,7 +482,7 @@ private fun LessonDetailView(
                         content = lesson.lectioStep.get(currentLanguage)
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     LectioStepItem(
                         badge = "2. MEDITATIO",
@@ -515,7 +490,7 @@ private fun LessonDetailView(
                         content = lesson.meditatioStep.get(currentLanguage)
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     LectioStepItem(
                         badge = "3. ORATIO",
@@ -523,7 +498,7 @@ private fun LessonDetailView(
                         content = lesson.oratioStep.get(currentLanguage)
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     LectioStepItem(
                         badge = "4. CONTEMPLATIO",
@@ -537,46 +512,45 @@ private fun LessonDetailView(
         // 4. Personal Reflection Notes
         item {
             Card(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 border = CardDefaults.outlinedCardBorder()
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.md)) {
                     Text(
                         text = "Mis Notas y Frutos Espirituales",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
+                        style = MaterialTheme.typography.titleSmall,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = "Escribe una breve resolución o lo que Dios te ha inspirado en esta lección.",
-                        fontSize = 12.sp,
+                        style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     OutlinedTextField(
                         value = notesText,
                         onValueChange = { notesText = it },
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(100.dp),
-                        placeholder = { Text("Mi resolución de hoy...", fontSize = 12.sp) }
+                            .height(MaterialTheme.spacing.xxl * 3 + MaterialTheme.spacing.xs),
+                        placeholder = { Text("Mi resolución de hoy...", style = MaterialTheme.typography.bodySmall) }
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     ElevatedButton(
                         onClick = { onToggleComplete(notesText) },
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.elevatedButtonColors(
                             containerColor = MaterialTheme.colorScheme.primary,
-                            contentColor = Color.White
+                            contentColor = MaterialTheme.colorScheme.onPrimary
                         )
                     ) {
-                        Text(if (isCompleted) "Guardar Cambios" else "Guardar y Completar Lección", fontSize = 13.sp)
+                        Text(if (isCompleted) "Guardar Cambios" else "Guardar y Completar Lección", style = MaterialTheme.typography.bodyMedium)
                     }
                 }
             }
@@ -591,30 +565,27 @@ private fun LectioStepItem(
     content: String
 ) {
     Surface(
-        shape = RoundedCornerShape(12.dp),
+        shape = MaterialTheme.shapes.medium,
         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
     ) {
-        Column(modifier = Modifier.padding(12.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.md)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
                     text = badge,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp,
+                    style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.secondary
                 )
-                Spacer(modifier = Modifier.width(8.dp))
+                Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
                 Text(
                     text = question,
-                    fontWeight = FontWeight.SemiBold,
-                    fontSize = 12.sp,
+                    style = MaterialTheme.typography.labelMedium,
                     color = MaterialTheme.colorScheme.primary
                 )
             }
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
             Text(
                 text = content,
-                fontSize = 12.sp,
-                lineHeight = 18.sp,
+                style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurface
             )
         }

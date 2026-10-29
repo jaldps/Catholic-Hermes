@@ -1,5 +1,9 @@
 package com.example.ui.screens
 
+import com.example.ui.theme.spacing
+import com.example.ui.theme.identity
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.unit.sp
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -75,13 +79,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.HabitCompletionLogEntity
 import com.example.data.local.SanctaFidesDao
@@ -170,8 +171,7 @@ fun HabitsAndVirtuesScreen(
                 containerColor = MaterialTheme.colorScheme.surface,
                 contentColor = MaterialTheme.colorScheme.primary
             ) {
-                Tab(
-                    selected = selectedTab == 0,
+                Tab(selected = selectedTab == 0,
                     onClick = { selectedTab = 0 },
                     text = {
                         Text(
@@ -180,7 +180,9 @@ fun HabitsAndVirtuesScreen(
                                 AppLanguage.EN -> "Rule of Life & Habits"
                                 AppLanguage.PT -> "Regra de Vida e Hábitos"
                             },
-                            fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal
+                            style = MaterialTheme.typography.labelLarge.copy(
+                                fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Medium
+                            )
                         )
                     },
                     modifier = Modifier.testTag("tab_habits_rule")
@@ -193,10 +195,10 @@ fun HabitsAndVirtuesScreen(
                             Icon(
                                 imageVector = Icons.Default.Shield,
                                 contentDescription = null,
-                                modifier = Modifier.size(16.dp),
+                                modifier = Modifier.size(MaterialTheme.spacing.lg),
                                 tint = MaterialTheme.colorScheme.secondary
                             )
-                            Spacer(modifier = Modifier.width(4.dp))
+                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                             Text(
                                 text = when (currentLanguage) {
                                     AppLanguage.ES -> "Antídoto de Gracia (S.O.S)"
@@ -215,11 +217,11 @@ fun HabitsAndVirtuesScreen(
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(horizontal = 16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(horizontal = MaterialTheme.spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                 ) {
                     item {
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                         HabitProgressCard(
                             completedCount = completedHabitIds.size,
                             totalCount = habitsList.size,
@@ -240,24 +242,18 @@ fun HabitsAndVirtuesScreen(
                             horizontalArrangement = Arrangement.SpaceBetween,
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "PRÁCTICAS Y DEVOCIONES DIARIAS"
+                            Text(text = when (currentLanguage) { AppLanguage.ES -> "PRÁCTICAS Y DEVOCIONES DIARIAS"
                                     AppLanguage.EN -> "DAILY PRACTICES & DEVOTIONS"
                                     AppLanguage.PT -> "PRÁTICAS E DEVOÇÕES DIÁRIAS"
                                 },
-                                fontFamily = FontFamily.Serif,
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 13.sp,
-                                letterSpacing = 1.sp,
-                                color = MaterialTheme.colorScheme.primary
-                            )
-                            Text(
-                                text = "${completedHabitIds.size}/${habitsList.size}",
-                                fontSize = 13.sp,
+                            style = MaterialTheme.typography.titleSmall.copy(color = MaterialTheme.colorScheme.primary)
+                        )
+                            Text(text = "${completedHabitIds.size}/${habitsList.size}",
+                            style = MaterialTheme.typography.titleSmall.copy(
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.secondary
                             )
+                        )
                         }
                     }
 
@@ -310,18 +306,18 @@ fun HabitsAndVirtuesScreen(
                     }
 
                     item {
-                        Spacer(modifier = Modifier.height(72.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.xxl))
                     }
                 }
             } else {
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(horizontal = 16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(horizontal = MaterialTheme.spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                 ) {
                     item {
-                        Spacer(modifier = Modifier.height(8.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                         GraceEmergencyBanner(
                             totalVictories = totalVictories,
                             currentLanguage = currentLanguage,
@@ -333,17 +329,11 @@ fun HabitsAndVirtuesScreen(
                     }
 
                     item {
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "LAS 7 RAÍCES DE PECADO Y SUS VIRTUDES"
-                                AppLanguage.EN -> "THE 7 CAPITAL SINS & REMEDY VIRTUES"
-                                AppLanguage.PT -> "AS 7 RAÍZES DO PECADO E SUAS VIRTUDES"
-                            },
-                            fontFamily = FontFamily.Serif,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp,
-                            letterSpacing = 1.sp,
-                            color = MaterialTheme.colorScheme.primary
+                        Text(text = when (currentLanguage) { AppLanguage.ES -> "LAS 7 RAÍCES DE PECADO Y SUS VIRTUDES"
+                                    AppLanguage.EN -> "THE 7 CAPITAL SINS & REMEDY VIRTUES"
+                                    AppLanguage.PT -> "AS 7 RAÍZES DO PECADO E SUAS VIRTUDES"
+                                },
+                            style = MaterialTheme.typography.titleSmall.copy(color = MaterialTheme.colorScheme.primary)
                         )
                     }
 
@@ -362,19 +352,13 @@ fun HabitsAndVirtuesScreen(
 
                     if (sinOvercomeLogs.isNotEmpty()) {
                         item {
-                            Spacer(modifier = Modifier.height(8.dp))
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "HISTORIAL DE VICTORIAS EN CRISTO"
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
+                            Text(text = when (currentLanguage) { AppLanguage.ES -> "HISTORIAL DE VICTORIAS EN CRISTO"
                                     AppLanguage.EN -> "VICTORIES RECORD IN CHRIST"
                                     AppLanguage.PT -> "HISTÓRICO DE VITÓRIAS EM CRISTO"
                                 },
-                                fontFamily = FontFamily.Serif,
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 13.sp,
-                                letterSpacing = 1.sp,
-                                color = MaterialTheme.colorScheme.primary
-                            )
+                            style = MaterialTheme.typography.titleSmall.copy(color = MaterialTheme.colorScheme.primary)
+                        )
                         }
 
                         items(sinOvercomeLogs.take(10), key = { it.id }) { log ->
@@ -386,7 +370,7 @@ fun HabitsAndVirtuesScreen(
                     }
 
                     item {
-                        Spacer(modifier = Modifier.height(72.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.xxl))
                     }
                 }
             }
@@ -412,91 +396,83 @@ fun HabitsAndVirtuesScreen(
                         imageVector = Icons.Default.Shield,
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.secondary,
-                        modifier = Modifier.size(24.dp)
+                        modifier = Modifier.size(MaterialTheme.spacing.xl)
                     )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "¡Victoria sobre la Tentación!"
-                            AppLanguage.EN -> "Victory Over Temptation!"
-                            AppLanguage.PT -> "Vitória sobre a Tentação!"
-                        },
-                        fontFamily = FontFamily.Serif,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 17.sp,
-                        color = MaterialTheme.colorScheme.primary
-                    )
+                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
+                    Text(text = when (currentLanguage) { AppLanguage.ES -> "¡Victoria sobre la Tentación!"
+                                    AppLanguage.EN -> "Victory Over Temptation!"
+                                    AppLanguage.PT -> "Vitória sobre a Tentação!"
+                                },
+                            style = MaterialTheme.typography.titleMedium.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        )
                 }
             },
             text = {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.md)
                 ) {
-                    Text(
-                        text = "${option.title.get(currentLanguage)} ➔ ${option.counterVirtue.get(currentLanguage)}",
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.primary,
-                        fontSize = 13.sp
-                    )
+                    Text(text = "${option.title.get(currentLanguage)} ➔ ${option.counterVirtue.get(currentLanguage)}",
+                            style = MaterialTheme.typography.titleSmall.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        )
 
-                    Text(
-                        text = option.advice.get(currentLanguage),
-                        fontSize = 12.sp,
-                        lineHeight = 17.sp,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f)
-                    )
+                    Text(text = option.advice.get(currentLanguage),
+                            style = MaterialTheme.typography.bodySmall.copy(
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f)
+                            )
+                        )
 
                     Card(
                         colors = CardDefaults.cardColors(
                             containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
                         ),
-                        shape = RoundedCornerShape(12.dp),
+                        shape = MaterialTheme.shapes.medium,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .border(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
+                            .border(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f), MaterialTheme.shapes.medium)
                     ) {
-                        Column(modifier = Modifier.padding(12.dp)) {
+                        Column(modifier = Modifier.padding(MaterialTheme.spacing.md)) {
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(
-                                    text = when (currentLanguage) {
-                                        AppLanguage.ES -> "REZA UN AVE MARÍA AHORA"
+                                Text(text = when (currentLanguage) { AppLanguage.ES -> "REZA UN AVE MARÍA AHORA"
                                         AppLanguage.EN -> "PRAY ONE HAIL MARY NOW"
                                         AppLanguage.PT -> "REZE UMA AVE MARIA AGORA"
                                     },
-                                    fontFamily = FontFamily.Serif,
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 11.sp,
-                                    color = MaterialTheme.colorScheme.secondary,
-                                    letterSpacing = 1.sp
-                                )
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.secondary
+                            )
+                        )
                                 IconButton(
                                     onClick = {
                                         ttsManager.setLanguage(currentLanguage)
                                         ttsManager.speakSingle(hailMaryPrayer, isFemaleVoice = true)
                                     },
-                                    modifier = Modifier.size(28.dp)
+                                    modifier = Modifier.size(MaterialTheme.spacing.xl)
                                 ) {
                                     Icon(
                                         imageVector = Icons.Default.VolumeUp,
                                         contentDescription = "Escuchar oración",
                                         tint = MaterialTheme.colorScheme.primary,
-                                        modifier = Modifier.size(18.dp)
+                                        modifier = Modifier.size(MaterialTheme.spacing.lg)
                                     )
                                 }
                             }
-                            Spacer(modifier = Modifier.height(4.dp))
-                            Text(
-                                text = hailMaryPrayer,
-                                fontSize = 12.sp,
-                                lineHeight = 17.sp,
-                                fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
-                                color = MaterialTheme.colorScheme.onSurface
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+                            Text(text = hailMaryPrayer,
+                            style = MaterialTheme.typography.bodySmall.copy(
+                                fontStyle = FontStyle.Italic
                             )
+                        )
                         }
                     }
 
@@ -504,14 +480,12 @@ fun HabitsAndVirtuesScreen(
                         value = victoryNote,
                         onValueChange = { victoryNote = it },
                         label = {
-                            Text(
-                                when (currentLanguage) {
-                                    AppLanguage.ES -> "Nota u ofrenda (opcional)"
-                                    AppLanguage.EN -> "Note or offering (optional)"
-                                    AppLanguage.PT -> "Nota ou oferta (opcional)"
-                                },
-                                fontSize = 11.sp
-                            )
+                            Text(when (currentLanguage) { AppLanguage.ES -> "Nota u ofrenda (opcional)"
+                                AppLanguage.EN -> "Note or offering (optional)"
+                                AppLanguage.PT -> "Nota ou oferta (opcional)"
+                            },
+                            style = MaterialTheme.typography.labelSmall
+                        )
                         },
                         modifier = Modifier.fillMaxWidth(),
                         maxLines = 2
@@ -538,13 +512,11 @@ fun HabitsAndVirtuesScreen(
                     colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary),
                     modifier = Modifier.testTag("confirm_victory_button")
                 ) {
-                    Text(
-                        when (currentLanguage) {
-                            AppLanguage.ES -> "Registrar Victoria"
+                    Text(when (currentLanguage) { AppLanguage.ES -> "Registrar Victoria"
                             AppLanguage.EN -> "Record Victory"
                             AppLanguage.PT -> "Registar Vitória"
                         },
-                        fontWeight = FontWeight.Bold
+                        style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold)
                     )
                 }
             },
@@ -569,21 +541,20 @@ fun HabitsAndVirtuesScreen(
         AlertDialog(
             onDismissRequest = { showAddHabitDialog = false },
             title = {
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "Nuevo Hábito Espiritual"
-                        AppLanguage.EN -> "New Spiritual Habit"
-                        AppLanguage.PT -> "Novo Hábito Espiritual"
-                    },
-                    fontFamily = FontFamily.Serif,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.primary
-                )
+                Text(text = when (currentLanguage) { AppLanguage.ES -> "Nuevo Hábito Espiritual"
+                                AppLanguage.EN -> "New Spiritual Habit"
+                                AppLanguage.PT -> "Novo Hábito Espiritual"
+                            },
+                            style = MaterialTheme.typography.titleLarge.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        )
             },
             text = {
                 Column(
                     modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(10.dp)
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.md)
                 ) {
                     OutlinedTextField(
                         value = newHabitTitle,
@@ -635,17 +606,14 @@ fun HabitsAndVirtuesScreen(
                         singleLine = true
                     )
 
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Categoría:"
+                    Text(text = when (currentLanguage) { AppLanguage.ES -> "Categoría:"
                             AppLanguage.EN -> "Category:"
                             AppLanguage.PT -> "Categoria:"
                         },
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.SemiBold
-                    )
+                            style = MaterialTheme.typography.labelMedium
+                        )
 
-                    FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.xs)) {
                         listOf("PRAYER", "FASTING", "SACRAMENT", "CHARITY", "VIRTUE").forEach { cat ->
                             val isSelected = newHabitCategory == cat
                             val label = when (cat) {
@@ -656,19 +624,19 @@ fun HabitsAndVirtuesScreen(
                                 else -> "Virtud"
                             }
                             Surface(
-                                shape = RoundedCornerShape(8.dp),
+                                shape = MaterialTheme.shapes.small,
                                 color = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant,
                                 modifier = Modifier
                                     .clickable { newHabitCategory = cat }
-                                    .padding(vertical = 2.dp)
+                                    .padding(vertical = MaterialTheme.spacing.xs)
                             ) {
-                                Text(
-                                    text = label,
-                                    fontSize = 11.sp,
-                                    fontWeight = FontWeight.SemiBold,
-                                    color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant,
-                                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                                )
+                                Text(text = label,
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = FontWeight.SemiBold,
+                                color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant
+                            ),
+                            modifier = Modifier.padding(horizontal = MaterialTheme.spacing.sm, vertical = MaterialTheme.spacing.xs)
+                        )
                             }
                         }
                     }
@@ -742,16 +710,16 @@ fun HabitProgressCard(
             .border(
                 1.dp,
                 Brush.linearGradient(listOf(MaterialTheme.colorScheme.secondary, MaterialTheme.colorScheme.secondary.copy(alpha = 0.3f))),
-                RoundedCornerShape(20.dp)
+                MaterialTheme.shapes.large
             ),
-        shape = RoundedCornerShape(20.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp)
+                .padding(MaterialTheme.spacing.lg)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -759,72 +727,69 @@ fun HabitProgressCard(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "FIDELIDAD ESPIRITUAL"
+                    Text(text = when (currentLanguage) { AppLanguage.ES -> "FIDELIDAD ESPIRITUAL"
                             AppLanguage.EN -> "SPIRITUAL FIDELITY"
                             AppLanguage.PT -> "FIDELIDADE ESPIRITUAL"
                         },
-                        fontFamily = FontFamily.Serif,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
-                        letterSpacing = 1.2.sp,
-                        color = MaterialTheme.colorScheme.secondary
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.secondary
+                            )
+                        )
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = "$completedCount de $totalCount cumplidos hoy",
                         fontWeight = FontWeight.Bold,
                         fontSize = 17.sp,
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Text(
-                        text = when {
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+                    Text(text = when {
                             completionRate >= 1.0f -> "¡Día consagrado en plenitud!"
                             completionRate >= 0.5f -> "Buen camino, persevera hasta la noche."
                             else -> "Empieza con un ofrecimiento de obras."
                         },
-                        fontSize = 12.sp,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+                        style = MaterialTheme.typography.bodySmall.copy(
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+                        )
                     )
                 }
 
                 Box(contentAlignment = Alignment.Center) {
                     CircularProgressIndicator(
                         progress = { completionRate },
-                        modifier = Modifier.size(62.dp),
+                        modifier = Modifier.size(MaterialTheme.spacing.xxl),
                         color = MaterialTheme.colorScheme.secondary,
                         trackColor = MaterialTheme.colorScheme.surfaceVariant,
                         strokeWidth = 6.dp
                     )
-                    Text(
-                        text = "${(completionRate * 100).toInt()}%",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 13.sp,
-                        color = MaterialTheme.colorScheme.primary
-                    )
+                    Text(text = "${(completionRate * 100).toInt()}%",
+                            style = MaterialTheme.typography.labelMedium.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        )
                 }
             }
 
-            Spacer(modifier = Modifier.height(14.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.lg))
 
             WeeklyHeatmapStrip(allCompletions = allCompletions, currentLanguage = currentLanguage)
 
-            Spacer(modifier = Modifier.height(14.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.lg))
 
             Surface(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(12.dp))
+                    .clip(MaterialTheme.shapes.medium)
                     .clickable(onClick = onOpenSinAvoider)
                     .testTag("grace_sos_quick_button"),
                 color = MaterialTheme.colorScheme.primary.copy(alpha = 0.08f),
                 border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.3f)),
-                shape = RoundedCornerShape(12.dp)
+                shape = MaterialTheme.shapes.medium
             ) {
                 Row(
-                    modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
+                    modifier = Modifier.padding(horizontal = MaterialTheme.spacing.md, vertical = MaterialTheme.spacing.sm),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -833,18 +798,17 @@ fun HabitProgressCard(
                             imageVector = Icons.Default.Shield,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.primary,
-                            modifier = Modifier.size(16.dp)
+                            modifier = Modifier.size(MaterialTheme.spacing.lg)
                         )
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "S.O.S. Tentación: Rezar Ave María"
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
+                        Text(text = when (currentLanguage) { AppLanguage.ES -> "S.O.S. Tentación: Rezar Ave María"
                                 AppLanguage.EN -> "S.O.S. Temptation: Pray Hail Mary"
                                 AppLanguage.PT -> "S.O.S. Tentação: Rezar Ave Maria"
                             },
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 12.sp,
-                            color = MaterialTheme.colorScheme.primary
+                            style = MaterialTheme.typography.labelMedium.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
                         )
                     }
 
@@ -896,18 +860,17 @@ fun WeeklyHeatmapStrip(
 
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+                verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.xs)
             ) {
-                Text(
-                    text = daysLabels[index % daysLabels.size],
-                    fontSize = 10.sp,
-                    fontWeight = if (isToday) FontWeight.Bold else FontWeight.Normal,
-                    color = if (isToday) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
-                )
+                Text(text = daysLabels[index % daysLabels.size],
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = if (isToday) FontWeight.Bold else FontWeight.Normal
+                            )
+                        )
 
                 Box(
                     modifier = Modifier
-                        .size(24.dp)
+                        .size(MaterialTheme.spacing.xl)
                         .clip(CircleShape)
                         .background(
                             when {
@@ -918,7 +881,7 @@ fun WeeklyHeatmapStrip(
                         )
                         .border(
                             width = if (isToday) 1.5.dp else 0.dp,
-                            color = if (isToday) MaterialTheme.colorScheme.primary else Color.Transparent,
+                            color = if (isToday) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0f),
                             shape = CircleShape
                         ),
                     contentAlignment = Alignment.Center
@@ -927,8 +890,8 @@ fun WeeklyHeatmapStrip(
                         Icon(
                             imageVector = Icons.Default.CheckCircle,
                             contentDescription = null,
-                            tint = Color.White,
-                            modifier = Modifier.size(14.dp)
+                            tint = MaterialTheme.colorScheme.onPrimary,
+                            modifier = Modifier.size(MaterialTheme.spacing.md)
                         )
                     }
                 }
@@ -967,7 +930,7 @@ fun HabitItemCard(
         modifier = modifier
             .fillMaxWidth()
             .testTag("habit_card_${habit.id}"),
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(
             containerColor = if (isCompletedToday) {
                 MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
@@ -984,25 +947,25 @@ fun HabitItemCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(14.dp),
+                .padding(MaterialTheme.spacing.lg),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             IconButton(
                 onClick = onToggleCompletion,
                 modifier = Modifier
-                    .size(36.dp)
+                    .size(MaterialTheme.spacing.xxl)
                     .testTag("toggle_habit_${habit.id}")
             ) {
                 Icon(
                     imageVector = if (isCompletedToday) Icons.Default.CheckCircle else Icons.Default.RadioButtonUnchecked,
                     contentDescription = "Completar hábito",
                     tint = if (isCompletedToday) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.4f),
-                    modifier = Modifier.size(28.dp)
+                    modifier = Modifier.size(MaterialTheme.spacing.xl)
                 )
             }
 
-            Spacer(modifier = Modifier.width(8.dp))
+            Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
 
             Column(modifier = Modifier.weight(1f)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -1012,40 +975,37 @@ fun HabitItemCard(
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(15.dp)
                     )
-                    Spacer(modifier = Modifier.width(6.dp))
-                    Text(
-                        text = title,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
+                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                    Text(text = title,
+                            style = MaterialTheme.typography.titleSmall
+                        )
                 }
 
-                Spacer(modifier = Modifier.height(2.dp))
+                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
-                Text(
-                    text = "${habit.timeSuggestion} • ${habit.description}",
-                    fontSize = 11.sp,
-                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
-                )
+                Text(text = "${habit.timeSuggestion} • ${habit.description}",
+                            style = MaterialTheme.typography.bodySmall.copy(
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+                            ),
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis
+                        )
 
                 if (habit.currentStreak > 0) {
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(
                             imageVector = Icons.Default.LocalFireDepartment,
                             contentDescription = "Racha",
-                            tint = Color(0xFFE65100),
-                            modifier = Modifier.size(12.dp)
+                            tint = MaterialTheme.colorScheme.secondary,
+                            modifier = Modifier.size(MaterialTheme.spacing.md)
                         )
-                        Spacer(modifier = Modifier.width(3.dp))
-                        Text(
-                            text = "${habit.currentStreak} días de fidelidad (Récord: ${habit.bestStreak})",
-                            fontSize = 10.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color(0xFFE65100)
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                        Text(text = "${habit.currentStreak} días de fidelidad (Récord: ${habit.bestStreak})",
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.secondary
+                            )
                         )
                     }
                 }
@@ -1054,13 +1014,13 @@ fun HabitItemCard(
             if (onDeleteCustomHabit != null) {
                 IconButton(
                     onClick = onDeleteCustomHabit,
-                    modifier = Modifier.size(32.dp)
+                    modifier = Modifier.size(MaterialTheme.spacing.xxl)
                 ) {
                     Icon(
                         imageVector = Icons.Default.Delete,
                         contentDescription = "Eliminar hábito personalizado",
                         tint = MaterialTheme.colorScheme.error.copy(alpha = 0.6f),
-                        modifier = Modifier.size(16.dp)
+                        modifier = Modifier.size(MaterialTheme.spacing.lg)
                     )
                 }
             }
@@ -1081,9 +1041,9 @@ fun GraceEmergencyBanner(
             .border(
                 1.5.dp,
                 Brush.linearGradient(listOf(MaterialTheme.colorScheme.primary, MaterialTheme.colorScheme.secondary)),
-                RoundedCornerShape(20.dp)
+                MaterialTheme.shapes.large
             ),
-        shape = RoundedCornerShape(20.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.05f)
         )
@@ -1091,7 +1051,7 @@ fun GraceEmergencyBanner(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp)
+                .padding(MaterialTheme.spacing.lg)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -1101,7 +1061,7 @@ fun GraceEmergencyBanner(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .size(36.dp)
+                            .size(MaterialTheme.spacing.xxl)
                             .clip(CircleShape)
                             .background(MaterialTheme.colorScheme.primary),
                         contentAlignment = Alignment.Center
@@ -1110,21 +1070,19 @@ fun GraceEmergencyBanner(
                             imageVector = Icons.Default.Shield,
                             contentDescription = null,
                             tint = MaterialTheme.colorScheme.secondary,
-                            modifier = Modifier.size(20.dp)
+                            modifier = Modifier.size(MaterialTheme.spacing.xl)
                         )
                     }
-                    Spacer(modifier = Modifier.width(10.dp))
+                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.md))
                     Column {
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "ANTÍDOTO DE GRACIA"
+                        Text(text = when (currentLanguage) { AppLanguage.ES -> "ANTÍDOTO DE GRACIA"
                                 AppLanguage.EN -> "GRACE ANTIDOTE"
                                 AppLanguage.PT -> "ANTÍDOTO DE GRAÇA"
                             },
-                            fontFamily = FontFamily.Serif,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 15.sp,
-                            color = MaterialTheme.colorScheme.primary
+                            style = MaterialTheme.typography.titleMedium.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
                         )
                         Text(
                             text = "$totalVictories tentaciones vencidas en Cristo",
@@ -1136,21 +1094,19 @@ fun GraceEmergencyBanner(
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
-            Text(
-                text = when (currentLanguage) {
-                    AppLanguage.ES -> "«Si sientes la tentación de caer (ira, lujuria, gula, pereza), detente de inmediato, reza un Ave María y vence con la gracia de Dios»."
-                    AppLanguage.EN -> "“If you feel temptation striking (lust, anger, gluttony, sloth), stop immediately, pray one Hail Mary, and triumph with God's grace.”"
-                    AppLanguage.PT -> "“Se sentir a tentação bater (ira, luxúria, gula, preguiça), pare de imediato, reze uma Ave Maria e vença com a graça de Deus.”"
-                },
-                fontSize = 12.sp,
-                lineHeight = 17.sp,
-                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.85f),
-                fontStyle = androidx.compose.ui.text.font.FontStyle.Italic
-            )
+            Text(text = when (currentLanguage) { AppLanguage.ES -> "«Si sientes la tentación de caer (ira, lujuria, gula, pereza), detente de inmediato, reza un Ave María y vence con la gracia de Dios»."
+                                AppLanguage.EN -> "If you feel temptation striking (lust, anger, gluttony, sloth), stop immediately, pray one Hail Mary, and triumph with God\'s grace."
+                                AppLanguage.PT -> "Se sentir a tentação bater (ira, luxúria, gula, preguiça), pare de imediato, reze uma Ave Maria e vença com a graça de Deus."
+                            },
+                            style = MaterialTheme.typography.bodySmall.copy(
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.85f),
+                                fontStyle = FontStyle.Italic
+                            )
+                        )
 
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
             Button(
                 onClick = onTriggerEmergency,
@@ -1158,24 +1114,23 @@ fun GraceEmergencyBanner(
                 modifier = Modifier
                     .fillMaxWidth()
                     .testTag("emergency_overcome_button"),
-                shape = RoundedCornerShape(12.dp)
+                shape = MaterialTheme.shapes.medium
             ) {
                 Icon(
                     imageVector = Icons.Default.Bolt,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.secondary,
-                    modifier = Modifier.size(16.dp)
+                    modifier = Modifier.size(MaterialTheme.spacing.lg)
                 )
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "¡Sentí tentación y la vencí! (Ave María)"
-                        AppLanguage.EN -> "Felt temptation & overcame it! (Hail Mary)"
-                        AppLanguage.PT -> "Senti tentação e venci! (Ave Maria)"
-                    },
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 13.sp
-                )
+                Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
+                Text(text = when (currentLanguage) { AppLanguage.ES -> "¡Sentí tentación y la vencí! (Ave María)"
+                                AppLanguage.EN -> "Felt temptation & overcame it! (Hail Mary)"
+                                AppLanguage.PT -> "Senti tentação e venci! (Ave Maria)"
+                            },
+                            style = MaterialTheme.typography.labelMedium.copy(
+                                fontWeight = FontWeight.Bold
+                            )
+                        )
             }
         }
     }
@@ -1191,29 +1146,26 @@ fun SinAvoiderCatalogCard(
 ) {
     Card(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(14.dp)
+                .padding(MaterialTheme.spacing.lg)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text(
-                    text = option.title.get(currentLanguage),
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 14.sp,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
+                Text(text = option.title.get(currentLanguage),
+                            style = MaterialTheme.typography.titleSmall
+                        )
 
                 Surface(
-                    shape = RoundedCornerShape(8.dp),
+                    shape = MaterialTheme.shapes.small,
                     color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.15f)
                 ) {
                     Text(
@@ -1221,55 +1173,50 @@ fun SinAvoiderCatalogCard(
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
+                        modifier = Modifier.padding(horizontal = MaterialTheme.spacing.xs, vertical = MaterialTheme.spacing.xs)
                     )
                 }
             }
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
-            Text(
-                text = "Virtud contraria: ${option.counterVirtue.get(currentLanguage)}",
-                fontSize = 12.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.secondary
-            )
+            Text(text = "Virtud contraria: ${option.counterVirtue.get(currentLanguage)}",
+                            style = MaterialTheme.typography.labelMedium
+                        )
 
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
-            Text(
-                text = option.advice.get(currentLanguage),
-                fontSize = 11.sp,
-                lineHeight = 16.sp,
-                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f)
-            )
+            Text(text = option.advice.get(currentLanguage),
+                            style = MaterialTheme.typography.bodySmall.copy(
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f)
+                            )
+                        )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
             OutlinedButton(
                 onClick = onOvercomeClicked,
                 modifier = Modifier
                     .fillMaxWidth()
                     .testTag("card_overcome_${option.sinKey}"),
-                shape = RoundedCornerShape(10.dp)
+                shape = MaterialTheme.shapes.small
             ) {
                 Icon(
                     imageVector = Icons.Default.Favorite,
                     contentDescription = null,
                     tint = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.size(14.dp)
+                    modifier = Modifier.size(MaterialTheme.spacing.md)
                 )
-                Spacer(modifier = Modifier.width(6.dp))
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "Registrar Victoria + Ave María"
-                        AppLanguage.EN -> "Record Victory + Hail Mary"
-                        AppLanguage.PT -> "Registar Vitória + Ave Maria"
-                    },
-                    fontSize = 12.sp,
-                    color = MaterialTheme.colorScheme.primary,
-                    fontWeight = FontWeight.Bold
-                )
+                Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
+                Text(text = when (currentLanguage) { AppLanguage.ES -> "Registrar Victoria + Ave María"
+                                AppLanguage.EN -> "Record Victory + Hail Mary"
+                                AppLanguage.PT -> "Registar Vitória + Ave Maria"
+                            },
+                            style = MaterialTheme.typography.labelMedium.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        )
             }
         }
     }
@@ -1287,36 +1234,36 @@ fun SinVictoryLogItem(
 
     Surface(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(10.dp),
+        shape = MaterialTheme.shapes.small,
         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)
     ) {
         Row(
-            modifier = Modifier.padding(10.dp),
+            modifier = Modifier.padding(MaterialTheme.spacing.md),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = "Victoria en ${log.counterVirtue}",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp,
-                    color = MaterialTheme.colorScheme.primary
-                )
+                Text(text = "Victoria en ${log.counterVirtue}",
+                            style = MaterialTheme.typography.labelMedium.copy(
+                                fontWeight = FontWeight.Bold,
+                                color = MaterialTheme.colorScheme.primary
+                            )
+                        )
                 if (log.note.isNotBlank()) {
-                    Text(
-                        text = "«${log.note}»",
-                        fontSize = 11.sp,
-                        fontStyle = androidx.compose.ui.text.font.FontStyle.Italic,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
-                    )
+                    Text(text = "${log.note}",
+                            style = MaterialTheme.typography.bodySmall.copy(
+                                fontStyle = FontStyle.Italic,
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+                            )
+                        )
                 }
             }
 
-            Text(
-                text = dateStr,
-                fontSize = 10.sp,
-                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
-            )
+            Text(text = dateStr,
+                            style = MaterialTheme.typography.labelSmall.copy(
+                                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+                            )
+                        )
         }
     }
 }

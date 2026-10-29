@@ -16,18 +16,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccessTime
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.RecordVoiceOver
-import androidx.compose.material.icons.filled.SelfImprovement
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -49,9 +41,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -63,6 +53,8 @@ import com.example.data.models.RosaryDecade
 import com.example.data.models.RosaryMysteryType
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.components.PrayerBeadCounter
+import com.example.ui.theme.identity
+import com.example.ui.theme.spacing
 
 @OptIn(androidx.compose.material3.ExperimentalMaterial3Api::class)
 @Composable
@@ -125,30 +117,28 @@ fun RosaryScreen(
                 selected = selectedTab == 0,
                 onClick = { selectedTab = 0 },
                 text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "El Santo Rosario"
-                            AppLanguage.EN -> "The Holy Rosary"
-                            AppLanguage.PT -> "O Santo Terço"
-                        },
-                        fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 13.sp
-                    )
+                Text(
+                    text = when (currentLanguage) {
+                        AppLanguage.ES -> "El Santo Rosario"
+                        AppLanguage.EN -> "The Holy Rosary"
+                        AppLanguage.PT -> "O Santo Terço"
+                    },
+                    style = if (selectedTab == 0) MaterialTheme.typography.labelLarge else MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Normal)
+                )
                 }
-            )
-            Tab(
+                )
+                Tab(
                 selected = selectedTab == 1,
                 onClick = { selectedTab = 1 },
                 text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Divina Misericordia"
-                            AppLanguage.EN -> "Divine Mercy"
-                            AppLanguage.PT -> "Divina Misericórdia"
-                        },
-                        fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 13.sp
-                    )
+                Text(
+                    text = when (currentLanguage) {
+                        AppLanguage.ES -> "Divina Misericordia"
+                        AppLanguage.EN -> "Divine Mercy"
+                        AppLanguage.PT -> "Divina Misericórdia"
+                    },
+                    style = if (selectedTab == 1) MaterialTheme.typography.labelLarge else MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Normal)
+                )
                 }
             )
         }
@@ -159,8 +149,8 @@ fun RosaryScreen(
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(MaterialTheme.spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                 ) {
                     // Mystery Selector Chips
                     item {
@@ -172,15 +162,14 @@ fun RosaryScreen(
                                     AppLanguage.PT -> "SELECIONE O MISTÉRIO"
                                 },
                                 style = MaterialTheme.typography.labelLarge,
-                                color = MaterialTheme.colorScheme.secondary,
-                                letterSpacing = 1.sp
+                                color = MaterialTheme.colorScheme.secondary
                             )
 
-                            Spacer(modifier = Modifier.height(8.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(6.dp)
+                                horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.xs)
                             ) {
                                 RosaryMysteryType.values().forEach { mType ->
                                     val isSelected = mType == selectedMysteryType
@@ -189,7 +178,7 @@ fun RosaryScreen(
                                     Surface(
                                         modifier = Modifier
                                             .weight(1f)
-                                            .clip(RoundedCornerShape(10.dp))
+                                            .clip(MaterialTheme.shapes.small)
                                             .clickable {
                                                 selectedMysteryType = mType
                                                 currentDecadeIndex = 0
@@ -199,7 +188,7 @@ fun RosaryScreen(
                                         border = CardDefaults.outlinedCardBorder().copy(width = if (isSelected) 1.5.dp else 0.5.dp)
                                     ) {
                                         Column(
-                                            modifier = Modifier.padding(horizontal = 4.dp, vertical = 8.dp),
+                                            modifier = Modifier.padding(horizontal = MaterialTheme.spacing.xs, vertical = MaterialTheme.spacing.sm),
                                             horizontalAlignment = Alignment.CenterHorizontally
                                         ) {
                                             Text(
@@ -209,16 +198,14 @@ fun RosaryScreen(
                                                     RosaryMysteryType.GLORIOUS -> "Gloriosos"
                                                     RosaryMysteryType.LUMINOUS -> "Luminosos"
                                                 },
-                                                fontSize = 11.sp,
-                                                fontWeight = FontWeight.Bold,
-                                                color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface,
+                                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
+                                                color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
                                                 maxLines = 1
                                             )
                                             if (isToday) {
                                                 Text(
                                                     text = "Hoy",
-                                                    fontSize = 9.sp,
-                                                    fontWeight = FontWeight.Bold,
+                                                    style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold),
                                                     color = if (isSelected) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary
                                                 )
                                             }
@@ -269,10 +256,10 @@ fun RosaryScreen(
                     item {
                         ElevatedCard(
                             modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(18.dp),
+                            shape = MaterialTheme.shapes.large,
                             colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                         ) {
-                            Column(modifier = Modifier.padding(18.dp)) {
+                            Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
                                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -280,45 +267,40 @@ fun RosaryScreen(
                                 ) {
                                     Text(
                                         text = "${currentDecade.number}° Misterio: ${currentDecade.title.get(currentLanguage)}",
-                                        style = MaterialTheme.typography.titleMedium,
-                                        fontWeight = FontWeight.Bold,
+                                        style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                                         color = MaterialTheme.colorScheme.primary
                                     )
                                 }
 
-                                Spacer(modifier = Modifier.height(4.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
                                 Text(
                                     text = currentDecade.scriptureRef,
-                                    fontSize = 12.sp,
-                                    fontWeight = FontWeight.Bold,
+                                    style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                                     color = MaterialTheme.colorScheme.secondary
                                 )
 
-                                Spacer(modifier = Modifier.height(8.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                                 Box(
                                     modifier = Modifier
                                         .fillMaxWidth()
-                                        .clip(RoundedCornerShape(8.dp))
+                                        .clip(MaterialTheme.shapes.small)
                                         .background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.15f))
-                                        .padding(8.dp)
+                                        .padding(MaterialTheme.spacing.sm)
                                 ) {
                                     Text(
                                         text = currentDecade.fruitOfMystery.get(currentLanguage),
-                                        fontSize = 12.sp,
-                                        fontWeight = FontWeight.SemiBold,
+                                        style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
                                         color = MaterialTheme.colorScheme.onSurface
                                     )
                                 }
 
-                                Spacer(modifier = Modifier.height(12.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                                 Text(
                                     text = currentDecade.meditation.get(currentLanguage),
-                                    fontFamily = FontFamily.Serif,
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    lineHeight = 22.sp
+                                    style = MaterialTheme.typography.bodyLarge
                                 )
                             }
                         }
@@ -328,32 +310,29 @@ fun RosaryScreen(
                     item {
                         ElevatedCard(
                             modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(16.dp),
+                            shape = MaterialTheme.shapes.medium,
                             colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
                         ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
+                            Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                 Text(
                                     text = if (currentBeadInDecade == 0) "Oración del Padre Nuestro" else "Oración del Ave María",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 14.sp,
+                                    style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
                                     color = MaterialTheme.colorScheme.primary
                                 )
 
-                                Spacer(modifier = Modifier.height(10.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                                 Text(
                                     text = "V/. " + currentDecade.leaderPrayer.get(currentLanguage),
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Medium,
+                                    style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Medium),
                                     color = MaterialTheme.colorScheme.onSurface
                                 )
 
-                                Spacer(modifier = Modifier.height(8.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                                 Text(
                                     text = "R/. " + currentDecade.congregationResponse.get(currentLanguage),
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Normal,
+                                    style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Normal),
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
@@ -370,36 +349,34 @@ fun RosaryScreen(
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(MaterialTheme.spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                 ) {
                     // 3:00 PM Callout
                     item {
                         Surface(
-                            shape = RoundedCornerShape(16.dp),
+                            shape = MaterialTheme.shapes.medium,
                             color = MaterialTheme.colorScheme.primary,
                             tonalElevation = 4.dp
                         ) {
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(16.dp),
+                                    .padding(MaterialTheme.spacing.lg),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Icon(Icons.Default.AccessTime, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(28.dp))
-                                Spacer(modifier = Modifier.width(12.dp))
+                                Icon(Icons.Default.AccessTime, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(MaterialTheme.identity.actionIconSize))
+                                Spacer(modifier = Modifier.width(MaterialTheme.spacing.md))
                                 Column {
                                     Text(
                                         text = "3:00 PM — La Hora de la Gran Misericordia",
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 14.sp,
-                                        color = Color.White
+                                        style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                                        color = MaterialTheme.colorScheme.onPrimary
                                     )
                                     Text(
                                         text = "«A las tres de la tarde implora mi misericordia... En esta hora nada le será negado al alma que lo pida» (Diario de Santa Faustina).",
-                                        fontSize = 11.sp,
-                                        color = Color.White.copy(alpha = 0.85f),
-                                        lineHeight = 16.sp
+                                        style = MaterialTheme.typography.labelMedium,
+                                        color = MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.85f)
                                     )
                                 }
                             }
@@ -415,12 +392,11 @@ fun RosaryScreen(
                         ) {
                             Text(
                                 text = "PASO ${mercyStepIndex + 1} DE ${mercySteps.size}",
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Bold,
+                                style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                                 color = MaterialTheme.colorScheme.secondary
                             )
 
-                            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            Row(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.xs)) {
                                 mercySteps.indices.forEach { idx ->
                                     Box(
                                         modifier = Modifier
@@ -436,34 +412,30 @@ fun RosaryScreen(
                     // Active Step Card
                     item {
                         ElevatedCard(
-                            shape = RoundedCornerShape(18.dp),
+                            shape = MaterialTheme.shapes.large,
                             colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                         ) {
-                            Column(modifier = Modifier.padding(18.dp)) {
+                            Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                 Text(
                                     text = activeStep.title.get(currentLanguage),
-                                    style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = FontWeight.Bold,
+                                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                                     color = MaterialTheme.colorScheme.primary
                                 )
 
-                                Spacer(modifier = Modifier.height(12.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                                 Text(
                                     text = "V/. " + activeStep.leaderText.get(currentLanguage),
                                     style = MaterialTheme.typography.bodyLarge,
-                                    fontFamily = FontFamily.Serif,
-                                    lineHeight = 24.sp
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
 
-                                Spacer(modifier = Modifier.height(10.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                                 Text(
                                     text = "R/. " + activeStep.responseText.get(currentLanguage),
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    fontWeight = FontWeight.SemiBold,
-                                    color = MaterialTheme.colorScheme.secondary,
-                                    lineHeight = 22.sp
+                                    style = MaterialTheme.typography.bodyMedium.copy(fontWeight = FontWeight.SemiBold),
+                                    color = MaterialTheme.colorScheme.secondary
                                 )
                             }
                         }
@@ -497,11 +469,11 @@ fun RosaryScreen(
                                 },
                                 colors = ButtonDefaults.elevatedButtonColors(
                                     containerColor = MaterialTheme.colorScheme.primary,
-                                    contentColor = Color.White
+                                    contentColor = MaterialTheme.colorScheme.onPrimary
                                 )
                             ) {
-                                Icon(if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(16.dp))
-                                Spacer(modifier = Modifier.width(6.dp))
+                                Icon(if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(MaterialTheme.identity.actionIconSize))
+                                Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                                 Text(if (isPlayingAudio) "Pausar" else "Rezar")
                             }
 
@@ -511,7 +483,7 @@ fun RosaryScreen(
                                 },
                                 colors = ButtonDefaults.elevatedButtonColors(
                                     containerColor = MaterialTheme.colorScheme.secondary,
-                                    contentColor = Color.Black
+                                    contentColor = MaterialTheme.colorScheme.onSecondary
                                 )
                             ) {
                                 Text("Siguiente Paso")

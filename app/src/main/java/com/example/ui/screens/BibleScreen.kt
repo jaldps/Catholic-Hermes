@@ -1,5 +1,6 @@
 package com.example.ui.screens
 
+import com.example.ui.theme.spacing
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -64,7 +65,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -91,8 +91,8 @@ fun BibleScreen(
     ttsManager: LiturgicalTtsManager? = null,
     modifier: Modifier = Modifier
 ) {
-    var selectedMainTab by remember { mutableIntStateOf(0) } // 0 = Bible Canon & Reader, 1 = Daily Mass Missal, 2 = Versions Comparator, 3 = Scripture Study
-    var selectedTestamentTab by remember { mutableIntStateOf(0) } // 0 = All 73 books, 1 = OT (46), 2 = NT (27), 3 = Deuterocanonical (7)
+    var selectedMainTab by remember { mutableIntStateOf(0) }
+    var selectedTestamentTab by remember { mutableIntStateOf(0) }
     var selectedBook by remember { mutableStateOf<BibleBook?>(null) }
     var selectedChapterNumber by remember(selectedBook?.id) { mutableIntStateOf(1) }
     var showChapterSelectorDialog by remember { mutableStateOf(false) }
@@ -109,7 +109,6 @@ fun BibleScreen(
             .fillMaxSize()
             .testTag("bible_screen")
     ) {
-        // Main Screen Mode Tabs
         PrimaryTabRow(
             selectedTabIndex = selectedMainTab,
             containerColor = MaterialTheme.colorScheme.surface,
@@ -125,8 +124,9 @@ fun BibleScreen(
                             AppLanguage.EN -> "Bible (73)"
                             AppLanguage.PT -> "Bíblia (73)"
                         },
-                        fontWeight = if (selectedMainTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        style = MaterialTheme.typography.labelMedium.copy(
+                            fontWeight = if (selectedMainTab == 0) FontWeight.Bold else FontWeight.Normal
+                        )
                     )
                 }
             )
@@ -140,8 +140,9 @@ fun BibleScreen(
                             AppLanguage.EN -> "Daily Missal"
                             AppLanguage.PT -> "Missal Diário"
                         },
-                        fontWeight = if (selectedMainTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        style = MaterialTheme.typography.labelMedium.copy(
+                            fontWeight = if (selectedMainTab == 1) FontWeight.Bold else FontWeight.Normal
+                        )
                     )
                 }
             )
@@ -155,8 +156,9 @@ fun BibleScreen(
                             AppLanguage.EN -> "Versions"
                             AppLanguage.PT -> "Versões"
                         },
-                        fontWeight = if (selectedMainTab == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        style = MaterialTheme.typography.labelMedium.copy(
+                            fontWeight = if (selectedMainTab == 2) FontWeight.Bold else FontWeight.Normal
+                        )
                     )
                 }
             )
@@ -170,8 +172,9 @@ fun BibleScreen(
                             AppLanguage.EN -> "Scripture Study"
                             AppLanguage.PT -> "Estudo Bíblico"
                         },
-                        fontWeight = if (selectedMainTab == 3) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
+                        style = MaterialTheme.typography.labelMedium.copy(
+                            fontWeight = if (selectedMainTab == 3) FontWeight.Bold else FontWeight.Normal
+                        )
                     )
                 }
             )
@@ -179,15 +182,12 @@ fun BibleScreen(
 
         when (selectedMainTab) {
             0 -> {
-                // Bible Reader View
                 if (selectedBook == null) {
-                    // Books Directory
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(horizontal = 16.dp, vertical = 10.dp)
+                            .padding(horizontal = MaterialTheme.spacing.lg, vertical = MaterialTheme.spacing.md)
                     ) {
-                        // Search bar
                         OutlinedTextField(
                             value = searchQuery,
                             onValueChange = { searchQuery = it },
@@ -207,15 +207,14 @@ fun BibleScreen(
                                 Icon(imageVector = Icons.Default.Search, contentDescription = null)
                             },
                             singleLine = true,
-                            shape = RoundedCornerShape(14.dp)
+                            shape = MaterialTheme.shapes.large
                         )
 
-                        Spacer(modifier = Modifier.height(10.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
-                        // Filter Subtabs: All (73), OT (46), NT (27), Deuterocanonical (7)
                         Row(
                             modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(6.dp)
+                            horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.xs)
                         ) {
                             FilterChip(
                                 label = when (currentLanguage) {
@@ -255,7 +254,7 @@ fun BibleScreen(
                             )
                         }
 
-                        Spacer(modifier = Modifier.height(10.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                         val filteredBooks = repository.catholicBooks.filter { book ->
                             val matchesSearch = book.name.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
@@ -270,7 +269,7 @@ fun BibleScreen(
                         }
 
                         LazyColumn(
-                            verticalArrangement = Arrangement.spacedBy(10.dp),
+                            verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.md),
                             modifier = Modifier.fillMaxSize()
                         ) {
                             items(filteredBooks) { book ->
@@ -283,7 +282,6 @@ fun BibleScreen(
                         }
                     }
                 } else {
-                    // Open Book Reading View
                     val currentBook = selectedBook!!
                     val chapter = repository.getChapter(currentBook.id, selectedChapterNumber)
 
@@ -294,9 +292,8 @@ fun BibleScreen(
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(16.dp)
+                            .padding(MaterialTheme.spacing.lg)
                     ) {
-                        // Header with back button, chapter chooser & font controls
                         Row(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.SpaceBetween,
@@ -306,7 +303,7 @@ fun BibleScreen(
                                 onClick = { selectedBook = null },
                                 modifier = Modifier.testTag("back_to_books_button")
                             ) {
-                                Text("← " + currentBook.name.get(currentLanguage), fontWeight = FontWeight.Bold)
+                                Text("← " + currentBook.name.get(currentLanguage), style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold))
                             }
 
                             FilledTonalButton(
@@ -319,8 +316,7 @@ fun BibleScreen(
                                         AppLanguage.EN -> "Ch. $selectedChapterNumber / ${currentBook.chaptersCount} ▼"
                                         AppLanguage.PT -> "Cap. $selectedChapterNumber / ${currentBook.chaptersCount} ▼"
                                     },
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 12.sp
+                                    style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold)
                                 )
                             }
 
@@ -328,56 +324,54 @@ fun BibleScreen(
                                 IconButton(onClick = {
                                     if (fontSizeMultiplier > 0.85f) fontSizeMultiplier -= 0.15f
                                 }) {
-                                    Text("A-", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                    Text("A-", style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold))
                                 }
                                 IconButton(onClick = {
                                     if (fontSizeMultiplier < 1.45f) fontSizeMultiplier += 0.15f
                                 }) {
-                                    Text("A+", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                                    Text("A+", style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold))
                                 }
                                 IconButton(onClick = { useSerifFont = !useSerifFont }) {
-                                    Text(if (useSerifFont) "Serif" else "Sans", fontSize = 11.sp)
+                                    Text(if (useSerifFont) "Serif" else "Sans", style = MaterialTheme.typography.labelSmall)
                                 }
                             }
                         }
 
-                        // Deuterocanonical explanation tag if applicable
                         if (currentBook.isDeuterocanonical) {
                             Surface(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(vertical = 4.dp),
-                                shape = RoundedCornerShape(10.dp),
+                                    .padding(vertical = MaterialTheme.spacing.xs),
+                                shape = MaterialTheme.shapes.medium,
                                 color = MaterialTheme.colorScheme.secondary.copy(alpha = 0.12f),
                                 border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
                             ) {
                                 Row(
-                                    modifier = Modifier.padding(10.dp),
+                                    modifier = Modifier.padding(MaterialTheme.spacing.md),
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(18.dp))
-                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Icon(Icons.Default.Info, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(MaterialTheme.spacing.sm))
+                                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
                                     Text(
                                         text = when (currentLanguage) {
                                             AppLanguage.ES -> "Libro Deuterocanónico: Conservado en el canon católico desde los Concilios de Roma (382) e Hipona (393)."
                                             AppLanguage.EN -> "Deuterocanonical Book: Preserved in the Catholic Canon since the Councils of Rome (382) & Hippo (393)."
                                             AppLanguage.PT -> "Livro Deuterocanônico: Conservado no cânon católico desde os Concílios de Roma (382) e Hipona (393)."
                                         },
-                                        fontSize = 11.sp,
+                                        style = MaterialTheme.typography.labelSmall,
                                         color = MaterialTheme.colorScheme.onSurface
                                     )
                                 }
                             }
                         }
 
-                        Spacer(modifier = Modifier.height(10.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
-                        // Verses List with Tap to Commentary
                         LazyColumn(
                             modifier = Modifier
                                 .weight(1f)
                                 .fillMaxWidth(),
-                            verticalArrangement = Arrangement.spacedBy(14.dp)
+                            verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                         ) {
                             item {
                                 Text(
@@ -387,16 +381,15 @@ fun BibleScreen(
                                         AppLanguage.PT -> "Capítulo $selectedChapterNumber"
                                     }}",
                                     style = MaterialTheme.typography.titleLarge,
-                                    fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.primary
                                 )
-                                Spacer(modifier = Modifier.height(6.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                                 Text(
                                     text = currentBook.summary.get(currentLanguage),
                                     style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
-                                Spacer(modifier = Modifier.height(12.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
                             }
 
                             items(chapter.verses) { verse ->
@@ -412,15 +405,14 @@ fun BibleScreen(
                             }
 
                             item {
-                                Spacer(modifier = Modifier.height(16.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.lg))
                             }
                         }
 
-                        // Bottom Chapter Navigation Bar
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(vertical = 6.dp),
+                                .padding(vertical = MaterialTheme.spacing.xs),
                             horizontalArrangement = Arrangement.SpaceBetween,
                             verticalAlignment = Alignment.CenterVertically
                         ) {
@@ -435,7 +427,7 @@ fun BibleScreen(
                                         AppLanguage.EN -> "← Ch. ${selectedChapterNumber - 1}"
                                         AppLanguage.PT -> "← Cap. ${selectedChapterNumber - 1}"
                                     },
-                                    fontSize = 12.sp
+                                    style = MaterialTheme.typography.labelMedium
                                 )
                             }
 
@@ -444,8 +436,7 @@ fun BibleScreen(
                             ) {
                                 Text(
                                     text = "$selectedChapterNumber / ${currentBook.chaptersCount}",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 12.sp
+                                    style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold)
                                 )
                             }
 
@@ -460,13 +451,12 @@ fun BibleScreen(
                                         AppLanguage.EN -> "Ch. ${selectedChapterNumber + 1} →"
                                         AppLanguage.PT -> "Cap. ${selectedChapterNumber + 1} →"
                                     },
-                                    fontSize = 12.sp
+                                    style = MaterialTheme.typography.labelMedium
                                 )
                             }
                         }
                     }
 
-                    // Chapter Selection Dialog
                     if (showChapterSelectorDialog) {
                         AlertDialog(
                             onDismissRequest = { showChapterSelectorDialog = false },
@@ -477,16 +467,15 @@ fun BibleScreen(
                                         AppLanguage.EN -> "Select Chapter"
                                         AppLanguage.PT -> "Selecionar Capítulo"
                                     }}",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp
+                                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold)
                                 )
                             },
                             text = {
                                 Box(modifier = Modifier.size(width = 300.dp, height = 340.dp)) {
                                     LazyVerticalGrid(
                                         columns = GridCells.Fixed(5),
-                                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                                        horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm),
+                                        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm),
                                         modifier = Modifier.fillMaxSize()
                                     ) {
                                         items((1..currentBook.chaptersCount).toList()) { chNum ->
@@ -494,7 +483,7 @@ fun BibleScreen(
                                             Box(
                                                 modifier = Modifier
                                                     .size(44.dp)
-                                                    .clip(RoundedCornerShape(10.dp))
+                                                    .clip(MaterialTheme.shapes.medium)
                                                     .background(if (isCurrent) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant)
                                                     .clickable {
                                                         selectedChapterNumber = chNum
@@ -504,9 +493,8 @@ fun BibleScreen(
                                             ) {
                                                 Text(
                                                     text = chNum.toString(),
-                                                    color = if (isCurrent) Color.White else MaterialTheme.colorScheme.onSurface,
-                                                    fontWeight = if (isCurrent) FontWeight.Bold else FontWeight.Medium,
-                                                    fontSize = 13.sp
+                                                    color = if (isCurrent) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
+                                                    style = MaterialTheme.typography.labelMedium.copy(fontWeight = if (isCurrent) FontWeight.Bold else FontWeight.Medium, fontSize = 13.sp)
                                                 )
                                             }
                                         }
@@ -530,7 +518,6 @@ fun BibleScreen(
             }
 
             1 -> {
-                // Daily Mass Readings Full View
                 DailyMassMissalView(
                     dailyReading = repository.dailyMassReading,
                     currentLanguage = currentLanguage
@@ -538,13 +525,11 @@ fun BibleScreen(
             }
 
             2 -> {
-                // Bible Versions & Canon Comparator View
                 Column(modifier = Modifier.fillMaxSize()) {
                     BibleVersionsComparatorView(
                         versions = repository.bibleVersions,
                         currentLanguage = currentLanguage
                     )
-                    // Offline downloads section
                     repository.bibleDownloadManager?.let { mgr ->
                         OfflineBibleDownloadsView(manager = mgr, currentLanguage = currentLanguage)
                     }
@@ -563,7 +548,6 @@ fun BibleScreen(
             }
         }
 
-        // Patristic Commentary Bottom Sheet
         if (selectedVerseForCommentary != null) {
             val v = selectedVerseForCommentary!!
             ModalBottomSheet(
@@ -573,60 +557,56 @@ fun BibleScreen(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 20.dp, vertical = 12.dp)
+                        .padding(horizontal = MaterialTheme.spacing.xl, vertical = MaterialTheme.spacing.md)
                 ) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(imageVector = Icons.Default.Comment, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
-                        Spacer(modifier = Modifier.width(8.dp))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
                         Text(
                             text = when (currentLanguage) {
                                 AppLanguage.ES -> "Comentario Patrístico y Litúrgico"
                                 AppLanguage.EN -> "Patristic & Liturgical Commentary"
                                 AppLanguage.PT -> "Comentário Patrístico e Litúrgico"
                             },
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
                             color = MaterialTheme.colorScheme.primary
                         )
                     }
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     Text(
                         text = "«${v.text.get(currentLanguage)}» (v. ${v.number})",
-                        fontFamily = FontFamily.Serif,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 15.sp,
+                        style = MaterialTheme.typography.titleSmall.copy(fontFamily = FontFamily.Serif, fontWeight = FontWeight.SemiBold, fontSize = 15.sp),
                         color = MaterialTheme.colorScheme.onSurface
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     if (v.commentary != null) {
                         Surface(
                             modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(12.dp),
+                            shape = MaterialTheme.shapes.medium,
                             color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f),
                             border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
                         ) {
-                            Column(modifier = Modifier.padding(14.dp)) {
+                            Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                 Text(
                                     text = v.commentaryAuthor ?: "Padres de la Iglesia",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 13.sp,
+                                    style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold, fontSize = 13.sp),
                                     color = MaterialTheme.colorScheme.secondary
                                 )
-                                Spacer(modifier = Modifier.height(6.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                                 Text(
                                     text = v.commentary.get(currentLanguage),
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    lineHeight = 22.sp
+                                    style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 22.sp),
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
                             }
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(18.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.lg))
                 }
             }
         }
@@ -641,21 +621,20 @@ private fun FilterChip(
 ) {
     Box(
         modifier = Modifier
-            .clip(RoundedCornerShape(12.dp))
+            .clip(MaterialTheme.shapes.medium)
             .background(if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
             .border(
                 1.dp,
                 if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                RoundedCornerShape(12.dp)
+                MaterialTheme.shapes.medium
             )
             .clickable(onClick = onClick)
-            .padding(horizontal = 10.dp, vertical = 6.dp)
+            .padding(horizontal = MaterialTheme.spacing.md, vertical = MaterialTheme.spacing.xs)
     ) {
         Text(
             text = label,
-            fontSize = 11.sp,
-            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-            color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface
+            style = MaterialTheme.typography.labelSmall.copy(fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal),
+            color = if (isSelected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface
         )
     }
 }
@@ -670,14 +649,14 @@ private fun BookListItem(
         modifier = Modifier
             .fillMaxWidth()
             .testTag("book_item_${book.id}")
-            .clip(RoundedCornerShape(14.dp))
+            .clip(MaterialTheme.shapes.large)
             .clickable(onClick = onClick),
         color = MaterialTheme.colorScheme.surface,
         tonalElevation = 1.dp,
         border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
     ) {
         Row(
-            modifier = Modifier.padding(14.dp),
+            modifier = Modifier.padding(MaterialTheme.spacing.lg),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
@@ -691,43 +670,41 @@ private fun BookListItem(
                 ) {
                     Text(
                         text = book.abbreviation,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 13.sp,
+                        style = MaterialTheme.typography.labelMedium.copy(fontSize = 13.sp, fontWeight = FontWeight.Bold),
                         color = if (book.isDeuterocanonical) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.onPrimaryContainer
                     )
                 }
 
-                Spacer(modifier = Modifier.width(12.dp))
+                Spacer(modifier = Modifier.width(MaterialTheme.spacing.md))
 
                 Column {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
                             text = book.name.get(currentLanguage),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 15.sp,
+                            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold, fontSize = 15.sp),
                             color = MaterialTheme.colorScheme.onSurface
                         )
                         if (book.isDeuterocanonical) {
-                            Spacer(modifier = Modifier.width(6.dp))
+                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                             Box(
                                 modifier = Modifier
-                                    .clip(RoundedCornerShape(6.dp))
+                                    .clip(MaterialTheme.shapes.extraSmall)
                                     .background(MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f))
-                                    .padding(horizontal = 6.dp, vertical = 2.dp)
+                                    .padding(horizontal = MaterialTheme.spacing.xs, vertical = 2.dp)
                             ) {
-                                Text("Católico", fontSize = 9.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                                Text("Católico", style = MaterialTheme.typography.labelSmall.copy(fontSize = 9.sp, fontWeight = FontWeight.Bold), color = MaterialTheme.colorScheme.primary)
                             }
                         }
                     }
                     Text(
                         text = "${book.chaptersCount} capítulos • " + book.category.displayName.get(currentLanguage),
-                        fontSize = 11.sp,
+                        style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
 
-            Text("Leer →", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+            Text("Leer →", style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold), color = MaterialTheme.colorScheme.primary)
         }
     }
 }
@@ -743,12 +720,12 @@ private fun VerseItem(
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
+            .clip(MaterialTheme.shapes.medium)
             .clickable(onClick = onCommentaryClick),
         color = MaterialTheme.colorScheme.surface,
         border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
     ) {
-        Column(modifier = Modifier.padding(14.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -756,7 +733,7 @@ private fun VerseItem(
             ) {
                 Text(
                     text = "v. ${verse.number}",
-                    fontWeight = FontWeight.Bold,
+                    style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                     fontSize = (12 * fontSizeMultiplier).sp,
                     color = MaterialTheme.colorScheme.secondary
                 )
@@ -765,29 +742,30 @@ private fun VerseItem(
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         modifier = Modifier
-                            .clip(RoundedCornerShape(8.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f))
-                            .padding(horizontal = 8.dp, vertical = 4.dp)
+                            .padding(horizontal = MaterialTheme.spacing.sm, vertical = MaterialTheme.spacing.xs)
                     ) {
-                        Icon(imageVector = Icons.Default.Comment, contentDescription = null, modifier = Modifier.size(12.dp), tint = MaterialTheme.colorScheme.primary)
-                        Spacer(modifier = Modifier.width(4.dp))
+                        Icon(imageVector = Icons.Default.Comment, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.sm), tint = MaterialTheme.colorScheme.primary)
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                         Text(
                             text = verse.commentaryAuthor ?: "Comentario",
-                            fontSize = 10.sp,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.labelSmall.copy(fontSize = 10.sp, fontWeight = FontWeight.Bold),
                             color = MaterialTheme.colorScheme.primary
                         )
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
             Text(
                 text = verse.text.get(currentLanguage),
-                fontFamily = if (useSerif) FontFamily.Serif else FontFamily.Default,
-                fontSize = (15 * fontSizeMultiplier).sp,
-                lineHeight = (24 * fontSizeMultiplier).sp,
+                style = MaterialTheme.typography.bodyLarge.copy(
+                    fontFamily = if (useSerif) FontFamily.Serif else FontFamily.Default,
+                    fontSize = (15 * fontSizeMultiplier).sp,
+                    lineHeight = (24 * fontSizeMultiplier).sp
+                ),
                 color = MaterialTheme.colorScheme.onSurface
             )
         }
@@ -803,19 +781,18 @@ private fun DailyMassMissalView(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .padding(MaterialTheme.spacing.lg),
+        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
     ) {
         item {
             ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Text(
                         text = dailyReading.feastTitle.get(currentLanguage),
                         style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary
                     )
                     Text(
@@ -827,7 +804,6 @@ private fun DailyMassMissalView(
             }
         }
 
-        // First Reading
         item {
             ReadingBlock(
                 title = when (currentLanguage) {
@@ -840,7 +816,6 @@ private fun DailyMassMissalView(
             )
         }
 
-        // Responsorial Psalm
         item {
             ReadingBlock(
                 title = when (currentLanguage) {
@@ -853,7 +828,6 @@ private fun DailyMassMissalView(
             )
         }
 
-        // Second Reading
         if (dailyReading.secondReadingRef != null && dailyReading.secondReadingText != null) {
             item {
                 ReadingBlock(
@@ -868,7 +842,6 @@ private fun DailyMassMissalView(
             }
         }
 
-        // Holy Gospel
         item {
             ReadingBlock(
                 title = when (currentLanguage) {
@@ -882,27 +855,25 @@ private fun DailyMassMissalView(
             )
         }
 
-        // Official source attribution (Vatican News)
         item {
             Surface(
-                shape = RoundedCornerShape(14.dp),
+                shape = MaterialTheme.shapes.large,
                 color = MaterialTheme.colorScheme.surface
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Text(
                         text = when (currentLanguage) {
                             AppLanguage.ES -> "Fuente oficial: ${dailyReading.sourceName}"
                             AppLanguage.EN -> "Official source: ${dailyReading.sourceName}"
                             AppLanguage.PT -> "Fonte oficial: ${dailyReading.sourceName}"
                         },
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 12.sp,
+                        style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                         color = MaterialTheme.colorScheme.primary
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = dailyReading.sourceUrl,
-                        fontSize = 11.sp,
+                        style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
@@ -914,42 +885,40 @@ private fun DailyMassMissalView(
                 onClick = { webViewUrl = dailyReading.sourceUrl },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
-                Spacer(modifier = Modifier.width(6.dp))
+                Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(MaterialTheme.spacing.lg))
+                Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                 Text(
                     text = when (currentLanguage) {
                         AppLanguage.ES -> "Ver misal oficial en la app"
                         AppLanguage.EN -> "View official missal in app"
                         AppLanguage.PT -> "Ver missal oficial no app"
                     },
-                    fontSize = 12.sp
+                    style = MaterialTheme.typography.labelMedium
                 )
             }
         }
 
-        // Reflection
         item {
             Surface(
-                shape = RoundedCornerShape(14.dp),
+                shape = MaterialTheme.shapes.large,
                 color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
                 border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Text(
                         text = when (currentLanguage) {
                             AppLanguage.ES -> "Reflexión Homilética"
                             AppLanguage.EN -> "Homiletic Reflection"
                             AppLanguage.PT -> "Reflexão Homilética"
                         },
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.secondary,
-                        fontSize = 14.sp
+                        style = MaterialTheme.typography.labelLarge.copy(fontWeight = FontWeight.Bold),
+                        color = MaterialTheme.colorScheme.secondary
                     )
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                     Text(
                         text = dailyReading.homilyReflection.get(currentLanguage),
-                        style = MaterialTheme.typography.bodyMedium,
-                        lineHeight = 22.sp
+                        style = MaterialTheme.typography.bodyMedium.copy(lineHeight = 22.sp),
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                 }
             }
@@ -969,12 +938,12 @@ private fun ReadingBlock(
     isGospel: Boolean = false
 ) {
     ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
+        shape = MaterialTheme.shapes.large,
         colors = CardDefaults.elevatedCardColors(
             containerColor = if (isGospel) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surface
         )
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -982,23 +951,20 @@ private fun ReadingBlock(
             ) {
                 Text(
                     text = title,
-                    fontWeight = FontWeight.Bold,
-                    color = if (isGospel) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.primary,
-                    style = MaterialTheme.typography.titleMedium
+                    style = MaterialTheme.typography.titleMedium.copy(fontWeight = FontWeight.Bold),
+                    color = MaterialTheme.colorScheme.primary
                 )
                 Text(
                     text = citation,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp,
+                    style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                     color = MaterialTheme.colorScheme.secondary
                 )
             }
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
             Text(
                 text = content,
-                fontFamily = FontFamily.Serif,
-                style = MaterialTheme.typography.bodyLarge,
-                lineHeight = 24.sp
+                style = MaterialTheme.typography.bodyLarge.copy(fontFamily = FontFamily.Serif, lineHeight = 24.sp),
+                color = MaterialTheme.colorScheme.onSurface
             )
         }
     }
@@ -1012,8 +978,8 @@ private fun BibleVersionsComparatorView(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .padding(MaterialTheme.spacing.lg),
+        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
     ) {
         item {
             Text(
@@ -1022,11 +988,10 @@ private fun BibleVersionsComparatorView(
                     AppLanguage.EN -> "Bible Versions & Canon Comparator"
                     AppLanguage.PT -> "Comparador de Versões e Cânones Bíblicos"
                 },
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
+                style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
                 color = MaterialTheme.colorScheme.primary
             )
-            Spacer(modifier = Modifier.height(4.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
             Text(
                 text = when (currentLanguage) {
                     AppLanguage.ES -> "Conoce las diferencias esenciales entre las biblias con el canon apostólico católico íntegro (73 libros) y las versiones protestantes (66 libros)."
@@ -1040,13 +1005,13 @@ private fun BibleVersionsComparatorView(
 
         items(versions) { ver ->
             Card(
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = if (ver.isCatholicCanon) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.15f)
                 ),
                 border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -1054,27 +1019,25 @@ private fun BibleVersionsComparatorView(
                     ) {
                         Text(
                             text = ver.name,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp,
+                            style = MaterialTheme.typography.titleSmall.copy(fontSize = 16.sp, fontWeight = FontWeight.Bold),
                             color = MaterialTheme.colorScheme.onSurface
                         )
 
                         Box(
                             modifier = Modifier
-                                .clip(RoundedCornerShape(8.dp))
-                                .background(if (ver.isCatholicCanon) MaterialTheme.colorScheme.primary else Color(0xFF8B2500))
-                                .padding(horizontal = 8.dp, vertical = 4.dp)
+                                .clip(MaterialTheme.shapes.small)
+                                .background(if (ver.isCatholicCanon) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.error)
+                                .padding(horizontal = MaterialTheme.spacing.sm, vertical = MaterialTheme.spacing.xs)
                         ) {
                             Text(
                                 text = if (ver.isCatholicCanon) "CANON CATÓLICO (73)" else "NO CATÓLICA (66)",
-                                color = Color.White,
-                                fontSize = 10.sp,
-                                fontWeight = FontWeight.Bold
+                                color = MaterialTheme.colorScheme.onError,
+                                style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Bold, fontSize = 10.sp)
                             )
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
                     Text(
                         text = ver.description.get(currentLanguage),
@@ -1082,20 +1045,19 @@ private fun BibleVersionsComparatorView(
                         color = MaterialTheme.colorScheme.onSurface
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clip(RoundedCornerShape(8.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(MaterialTheme.colorScheme.surface)
-                            .padding(10.dp)
+                            .padding(MaterialTheme.spacing.md)
                     ) {
                         Text(
                             text = ver.canonicalDifferenceNote.get(currentLanguage),
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Medium,
-                            color = if (ver.isCatholicCanon) MaterialTheme.colorScheme.onSurface else Color(0xFFB71C1C)
+                            style = MaterialTheme.typography.labelSmall.copy(fontWeight = FontWeight.Medium, fontSize = 11.sp),
+                            color = if (ver.isCatholicCanon) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.error
                         )
                     }
                 }
@@ -1114,7 +1076,7 @@ fun OfflineBibleDownloadsView(
     androidx.compose.foundation.layout.Column(
         modifier = androidx.compose.ui.Modifier
             .fillMaxWidth()
-            .padding(16.dp)
+            .padding(MaterialTheme.spacing.lg)
     ) {
         androidx.compose.material3.Text(
             text = when (currentLanguage) {
@@ -1122,11 +1084,10 @@ fun OfflineBibleDownloadsView(
                 com.example.data.models.AppLanguage.EN -> "Offline Bible downloads"
                 com.example.data.models.AppLanguage.PT -> "Downloads offline da Bíblia"
             },
-            style = androidx.compose.material3.MaterialTheme.typography.titleMedium,
-            fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
+            style = androidx.compose.material3.MaterialTheme.typography.titleMedium.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Bold),
             color = androidx.compose.material3.MaterialTheme.colorScheme.primary
         )
-        androidx.compose.foundation.layout.Spacer(modifier = androidx.compose.ui.Modifier.height(8.dp))
+        androidx.compose.foundation.layout.Spacer(modifier = androidx.compose.ui.Modifier.height(MaterialTheme.spacing.sm))
         manager.specs.forEach { spec ->
             var downloading by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(false) }
             var progress by androidx.compose.runtime.remember { androidx.compose.runtime.mutableFloatStateOf(0f) }
@@ -1135,11 +1096,11 @@ fun OfflineBibleDownloadsView(
             androidx.compose.material3.Card(
                 modifier = androidx.compose.ui.Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 4.dp),
-                shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp)
+                    .padding(vertical = MaterialTheme.spacing.xs),
+                shape = MaterialTheme.shapes.medium
             ) {
-                androidx.compose.foundation.layout.Column(modifier = androidx.compose.ui.Modifier.padding(12.dp)) {
-                    androidx.compose.material3.Text(text = spec.name, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)
+                androidx.compose.foundation.layout.Column(modifier = androidx.compose.ui.Modifier.padding(MaterialTheme.spacing.md)) {
+                    androidx.compose.material3.Text(text = spec.name, style = androidx.compose.material3.MaterialTheme.typography.titleSmall.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Bold))
                     androidx.compose.material3.Text(
                         text = if (downloaded) {
                             when (currentLanguage) {
@@ -1154,12 +1115,12 @@ fun OfflineBibleDownloadsView(
                                 com.example.data.models.AppLanguage.PT -> "Não baixado"
                             }
                         },
-                        fontSize = 12.sp
+                        style = MaterialTheme.typography.labelMedium
                     )
                     if (downloading) {
                         androidx.compose.material3.LinearProgressIndicator(
                             progress = { progress },
-                            modifier = androidx.compose.ui.Modifier.fillMaxWidth().padding(vertical = 4.dp)
+                            modifier = androidx.compose.ui.Modifier.fillMaxWidth().padding(vertical = MaterialTheme.spacing.xs)
                         )
                     }
                     androidx.compose.material3.FilledTonalButton(

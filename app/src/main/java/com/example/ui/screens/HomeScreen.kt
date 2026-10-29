@@ -1,5 +1,7 @@
 package com.example.ui.screens
 
+import com.example.ui.theme.spacing
+import com.example.ui.theme.identity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -93,14 +95,14 @@ fun HomeScreen(
         modifier = modifier
             .fillMaxSize()
             .testTag("home_screen"),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
     ) {
         if (activeNovena != null) {
             item {
                 ElevatedCard(onClick = onContinueNovena, modifier = Modifier.fillMaxWidth()) {
-                    Column(modifier = Modifier.padding(16.dp)) {
+                    Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                         Text(text = "Continuar: ${activeNovena.title}", style = MaterialTheme.typography.titleMedium)
-                        Spacer(modifier = Modifier.height(4.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                         Text(text = "Toque para continuar", style = MaterialTheme.typography.bodySmall)
                     }
                 }
@@ -120,15 +122,15 @@ fun HomeScreen(
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = MaterialTheme.spacing.lg)
                     .clickable(onClick = onNavigateToHabits)
                     .border(
                         1.dp,
                         MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f),
-                        RoundedCornerShape(16.dp)
+                        MaterialTheme.shapes.large
                     )
                     .testTag("home_habit_tracker_card"),
-                shape = RoundedCornerShape(16.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 ),
@@ -137,7 +139,7 @@ fun HomeScreen(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(14.dp),
+                        .padding(MaterialTheme.spacing.md),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -147,24 +149,22 @@ fun HomeScreen(
                                 imageVector = Icons.Default.Star,
                                 contentDescription = null,
                                 tint = MaterialTheme.colorScheme.secondary,
-                                modifier = Modifier.size(16.dp)
+                                modifier = Modifier.size(MaterialTheme.identity.actionIconSize)
                             )
-                            Spacer(modifier = Modifier.width(6.dp))
+                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                             Text(
                                 text = when (currentLanguage) {
                                     AppLanguage.ES -> "HÁBITOS Y VIRTUDES (REGLA DE VIDA)"
                                     AppLanguage.EN -> "HABITS & VIRTUES (RULE OF LIFE)"
                                     AppLanguage.PT -> "HÁBITOS E VIRTUDES (REGRA DE VIDA)"
                                 },
-                                fontFamily = FontFamily.Serif,
+                                style = MaterialTheme.typography.labelSmall,
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 11.sp,
-                                letterSpacing = 1.sp,
                                 color = MaterialTheme.colorScheme.primary
                             )
                         }
 
-                        Spacer(modifier = Modifier.height(4.dp))
+                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
                         Text(
                             text = when (currentLanguage) {
@@ -172,17 +172,17 @@ fun HomeScreen(
                                 AppLanguage.EN -> "Track your daily devotions, fasting, and Grace Antidote against sins."
                                 AppLanguage.PT -> "Acompanhe suas práticas diárias, jejum e o Antídoto contra o pecado."
                             },
-                            fontSize = 12.sp,
+                            style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f)
                         )
                     }
 
-                    Spacer(modifier = Modifier.width(10.dp))
+                    Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
 
                     Surface(
-                        shape = RoundedCornerShape(10.dp),
+                        shape = MaterialTheme.shapes.small,
                         color = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.clip(RoundedCornerShape(10.dp))
+                        modifier = Modifier.clip(MaterialTheme.shapes.small)
                     ) {
                         Text(
                             text = when (currentLanguage) {
@@ -190,10 +190,10 @@ fun HomeScreen(
                                 AppLanguage.EN -> "Dashboard"
                                 AppLanguage.PT -> "Painel"
                             },
-                            fontSize = 11.sp,
+                            style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold,
-                            color = Color.White,
-                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                            color = MaterialTheme.colorScheme.onPrimary,
+                            modifier = Modifier.padding(horizontal = MaterialTheme.spacing.sm, vertical = MaterialTheme.spacing.xs)
                         )
                     }
                 }
@@ -202,7 +202,7 @@ fun HomeScreen(
 
         // Quick Daily Sanctification Routine Hub
         item {
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
+            Column(modifier = Modifier.padding(horizontal = MaterialTheme.spacing.lg)) {
                 Text(
                     text = when (currentLanguage) {
                         AppLanguage.ES -> "RUTINA ESPIRITUAL DIARIA"
@@ -210,15 +210,14 @@ fun HomeScreen(
                         AppLanguage.PT -> "ROTINA ESPIRITUAL DIÁRIA"
                     },
                     style = MaterialTheme.typography.labelLarge,
-                    color = MaterialTheme.colorScheme.secondary,
-                    letterSpacing = 1.sp
+                    color = MaterialTheme.colorScheme.secondary
                 )
 
-                Spacer(modifier = Modifier.height(10.dp))
+                Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm)
                 ) {
                     RoutineQuickCard(
                         title = when (currentLanguage) {
@@ -277,14 +276,14 @@ fun HomeScreen(
             ElevatedCard(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = MaterialTheme.spacing.lg)
                     .testTag("daily_mass_card"),
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(
                     containerColor = MaterialTheme.colorScheme.surfaceVariant
                 )
             ) {
-                Column(modifier = Modifier.padding(18.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -295,16 +294,15 @@ fun HomeScreen(
                                 imageVector = Icons.Default.AutoStories,
                                 contentDescription = null,
                                 tint = MaterialTheme.colorScheme.primary,
-                                modifier = Modifier.size(20.dp)
+                                modifier = Modifier.size(MaterialTheme.identity.actionIconSize)
                             )
-                            Spacer(modifier = Modifier.width(8.dp))
+                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
                             Text(
                                 text = when (currentLanguage) {
                                     AppLanguage.ES -> "Lecturas de la Misa de Hoy"
                                     AppLanguage.EN -> "Today's Mass Readings"
                                     AppLanguage.PT -> "Leituras da Santa Missa"
                                 },
-                                fontWeight = FontWeight.Bold,
                                 style = MaterialTheme.typography.titleMedium,
                                 color = MaterialTheme.colorScheme.primary
                             )
@@ -312,22 +310,21 @@ fun HomeScreen(
 
                         Text(
                             text = dailyReading.gospelRef,
-                            fontSize = 11.sp,
+                            style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.SemiBold,
                             color = MaterialTheme.colorScheme.secondary
                         )
                     }
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = "«${dailyReading.gospelText.get(currentLanguage).take(190)}...»",
                         style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        lineHeight = 22.sp
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
 
-                    Spacer(modifier = Modifier.height(14.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     FilledTonalButton(
                         onClick = onNavigateToBible,
@@ -339,16 +336,16 @@ fun HomeScreen(
                             contentColor = MaterialTheme.colorScheme.onPrimaryContainer
                         )
                     ) {
-                        Icon(imageVector = Icons.Default.AutoStories, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Icon(imageVector = Icons.Default.AutoStories, contentDescription = null, modifier = Modifier.size(MaterialTheme.identity.actionIconSize))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                         Text(
                             text = when (currentLanguage) {
                                 AppLanguage.ES -> "Leer Misa Completa y Comentarios"
                                 AppLanguage.EN -> "Read Full Mass & Commentaries"
                                 AppLanguage.PT -> "Ler Missa Completa e Reflexões"
                             },
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp
+                            style = MaterialTheme.typography.labelLarge,
+                            fontWeight = FontWeight.Bold
                         )
                     }
                 }
@@ -360,15 +357,15 @@ fun HomeScreen(
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = MaterialTheme.spacing.lg)
                     .testTag("verse_of_the_day_card"),
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.surface
                 ),
                 border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
             ) {
-                Column(modifier = Modifier.padding(18.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -379,52 +376,49 @@ fun HomeScreen(
                                 imageVector = Icons.Default.FormatQuote,
                                 contentDescription = null,
                                 tint = MaterialTheme.colorScheme.secondary,
-                                modifier = Modifier.size(20.dp)
+                                modifier = Modifier.size(MaterialTheme.identity.actionIconSize)
                             )
-                            Spacer(modifier = Modifier.width(6.dp))
+                            Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                             Text(
                                 text = when (currentLanguage) {
                                     AppLanguage.ES -> "Versículo del Día"
                                     AppLanguage.EN -> "Verse of the Day"
                                     AppLanguage.PT -> "Versículo do Dia"
                                 },
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.secondary,
-                                style = MaterialTheme.typography.titleMedium
+                                style = MaterialTheme.typography.titleMedium,
+                                color = MaterialTheme.colorScheme.secondary
                             )
                         }
 
                         Text(
                             text = verseOfTheDay.reference,
-                            fontSize = 12.sp,
+                            style = MaterialTheme.typography.bodySmall,
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary
                         )
                     }
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = verseOfTheDay.text.get(currentLanguage),
                         style = MaterialTheme.typography.bodyLarge,
-                        fontFamily = FontFamily.Serif,
-                        color = MaterialTheme.colorScheme.onSurface,
-                        lineHeight = 25.sp
+                        color = MaterialTheme.colorScheme.onSurface
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     // Spiritual challenge
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clip(RoundedCornerShape(10.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f))
-                            .padding(10.dp)
+                            .padding(MaterialTheme.spacing.sm)
                     ) {
                         Text(
                             text = "💡 " + verseOfTheDay.spiritualChallenge.get(currentLanguage),
-                            fontSize = 12.sp,
+                            style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurface
                         )
                     }
@@ -437,14 +431,14 @@ fun HomeScreen(
             ElevatedCard(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = MaterialTheme.spacing.lg)
                     .testTag("saint_of_the_day_card"),
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.elevatedCardColors(
                     containerColor = MaterialTheme.colorScheme.surfaceVariant
                 )
             ) {
-                Column(modifier = Modifier.padding(18.dp)) {
+                Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.SpaceBetween,
@@ -457,24 +451,22 @@ fun HomeScreen(
                                 AppLanguage.PT -> "Santo do Dia"
                             },
                             style = MaterialTheme.typography.labelLarge,
-                            color = MaterialTheme.colorScheme.secondary,
-                            letterSpacing = 1.sp
+                            color = MaterialTheme.colorScheme.secondary
                         )
 
                         Text(
                             text = saintOfTheDay.feastDate,
-                            fontSize = 11.sp,
+                            style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.SemiBold,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
 
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
 
                     Text(
                         text = saintOfTheDay.name.get(currentLanguage),
                         style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary
                     )
 
@@ -484,7 +476,7 @@ fun HomeScreen(
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                     Text(
                         text = saintOfTheDay.biography.get(currentLanguage).take(220) + "...",
@@ -492,22 +484,21 @@ fun HomeScreen(
                         color = MaterialTheme.colorScheme.onSurface
                     )
 
-                    Spacer(modifier = Modifier.height(12.dp))
+                    Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                     // Saint Quote
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .clip(RoundedCornerShape(10.dp))
+                            .clip(MaterialTheme.shapes.small)
                             .background(MaterialTheme.colorScheme.surface)
-                            .border(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f), RoundedCornerShape(10.dp))
-                            .padding(12.dp)
+                            .border(1.dp, MaterialTheme.colorScheme.secondary.copy(alpha = 0.5f), MaterialTheme.shapes.small)
+                            .padding(MaterialTheme.spacing.md)
                     ) {
                         Text(
                             text = saintOfTheDay.iconicQuote.get(currentLanguage),
-                            fontFamily = FontFamily.Serif,
+                            style = MaterialTheme.typography.labelLarge,
                             fontWeight = FontWeight.Medium,
-                            fontSize = 13.sp,
                             color = MaterialTheme.colorScheme.primary
                         )
                     }
@@ -521,9 +512,9 @@ fun HomeScreen(
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = MaterialTheme.spacing.lg)
                     .testTag("home_nearby_churches_banner"),
-                shape = RoundedCornerShape(18.dp),
+                shape = MaterialTheme.shapes.large,
                 colors = CardDefaults.cardColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f)
                 ),
@@ -532,7 +523,7 @@ fun HomeScreen(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(16.dp),
+                        .padding(MaterialTheme.spacing.lg),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
@@ -543,18 +534,18 @@ fun HomeScreen(
                         Box(
                             modifier = Modifier
                                 .size(44.dp)
-                                .clip(CircleShape)
+                                .clip(MaterialTheme.shapes.extraLarge)
                                 .background(MaterialTheme.colorScheme.primary),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = Icons.Default.NearMe,
                                 contentDescription = null,
-                                tint = Color.White,
-                                modifier = Modifier.size(24.dp)
+                                tint = MaterialTheme.colorScheme.onPrimary,
+                                modifier = Modifier.size(MaterialTheme.identity.actionIconSize)
                             )
                         }
-                        Spacer(modifier = Modifier.width(12.dp))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.md))
                         Column {
                             Text(
                                 text = when (currentLanguage) {
@@ -562,8 +553,8 @@ fun HomeScreen(
                                     AppLanguage.EN -> "Find Churches Near Me"
                                     AppLanguage.PT -> "Buscar Igrejas Perto de Mim"
                                 },
+                                style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 14.sp,
                                 color = MaterialTheme.colorScheme.primary
                             )
                             Text(
@@ -572,7 +563,7 @@ fun HomeScreen(
                                     AppLanguage.EN -> "Google Maps nearby & mass times"
                                     AppLanguage.PT -> "Localização no Google Maps e horários"
                                 },
-                                fontSize = 11.sp,
+                                style = MaterialTheme.typography.labelMedium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
@@ -586,19 +577,19 @@ fun HomeScreen(
                         },
                         colors = ButtonDefaults.filledTonalButtonColors(
                             containerColor = MaterialTheme.colorScheme.primary,
-                            contentColor = Color.White
+                            contentColor = MaterialTheme.colorScheme.onPrimary
                         )
                     ) {
-                        Icon(Icons.Default.LocationOn, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(4.dp))
+                        Icon(Icons.Default.LocationOn, contentDescription = null, modifier = Modifier.size(MaterialTheme.identity.actionIconSize))
+                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.xs))
                         Text(
                             text = when (currentLanguage) {
                                 AppLanguage.ES -> "Buscar"
                                 AppLanguage.EN -> "Locate"
                                 AppLanguage.PT -> "Localizar"
                             },
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = FontWeight.Bold
                         )
                     }
                 }
@@ -610,8 +601,8 @@ fun HomeScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    .padding(horizontal = MaterialTheme.spacing.lg),
+                horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.md)
             ) {
                 QuickActionBanner(
                     title = when (currentLanguage) {
@@ -652,8 +643,8 @@ fun HomeScreen(
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    .padding(horizontal = MaterialTheme.spacing.lg),
+                horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.md)
             ) {
                 QuickActionBanner(
                     title = when (currentLanguage) {
@@ -690,7 +681,7 @@ fun HomeScreen(
         }
 
         item {
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.lg))
         }
     }
 }
@@ -705,20 +696,20 @@ private fun RoutineQuickCard(
 ) {
     Surface(
         modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
+            .clip(MaterialTheme.shapes.medium)
             .clickable(onClick = onClick),
         color = MaterialTheme.colorScheme.surface,
         tonalElevation = 2.dp,
         border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
     ) {
         Column(
-            modifier = Modifier.padding(10.dp),
+            modifier = Modifier.padding(MaterialTheme.spacing.sm),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box(
                 modifier = Modifier
                     .size(36.dp)
-                    .clip(CircleShape)
+                    .clip(MaterialTheme.shapes.extraLarge)
                     .background(MaterialTheme.colorScheme.primaryContainer),
                 contentAlignment = Alignment.Center
             ) {
@@ -726,20 +717,20 @@ private fun RoutineQuickCard(
                     imageVector = icon,
                     contentDescription = title,
                     tint = MaterialTheme.colorScheme.onPrimaryContainer,
-                    modifier = Modifier.size(20.dp)
+                    modifier = Modifier.size(MaterialTheme.identity.actionIconSize)
                 )
             }
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
             Text(
                 text = title,
-                fontSize = 11.sp,
+                style = MaterialTheme.typography.labelSmall,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 1
             )
             Text(
                 text = subtitle,
-                fontSize = 10.sp,
+                style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
@@ -756,20 +747,20 @@ private fun QuickActionBanner(
 ) {
     Surface(
         modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
+            .clip(MaterialTheme.shapes.medium)
             .clickable(onClick = onClick),
         color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
         border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
     ) {
         Row(
-            modifier = Modifier.padding(14.dp),
+            modifier = Modifier.padding(MaterialTheme.spacing.md),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(imageVector = icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(26.dp))
-            Spacer(modifier = Modifier.width(10.dp))
+            Icon(imageVector = icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(MaterialTheme.identity.actionIconSize))
+            Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
             Column {
-                Text(text = title, fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.onPrimaryContainer)
-                Text(text = subtitle, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(text = title, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onPrimaryContainer)
+                Text(text = subtitle, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
     }

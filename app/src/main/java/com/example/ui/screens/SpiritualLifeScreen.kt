@@ -17,7 +17,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
@@ -62,12 +61,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.example.ui.theme.spacing
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.JournalEntryEntity
 import com.example.data.local.SanctaFidesDao
@@ -121,27 +118,27 @@ fun SpiritualLifeScreen(
             selectedTabIndex = selectedTopTab,
             containerColor = MaterialTheme.colorScheme.surface,
             contentColor = MaterialTheme.colorScheme.primary,
-            edgePadding = 12.dp
+            edgePadding = MaterialTheme.spacing.md
         ) {
             Tab(
                 selected = selectedTopTab == 0,
                 onClick = { selectedTopTab = 0 },
-                text = { Text("Diario Espiritual", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
+                text = { Text("Diario Espiritual", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold) }
             )
             Tab(
                 selected = selectedTopTab == 1,
                 onClick = { selectedTopTab = 1 },
-                text = { Text("Trivia Católica", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
+                text = { Text("Trivia Católica", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold) }
             )
             Tab(
                 selected = selectedTopTab == 2,
                 onClick = { selectedTopTab = 2 },
-                text = { Text("Santo Vía Crucis", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
+                text = { Text("Santo Vía Crucis", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold) }
             )
             Tab(
                 selected = selectedTopTab == 3,
                 onClick = { selectedTopTab = 3 },
-                text = { Text("Canto Gregoriano", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
+                text = { Text("Canto Gregoriano", style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold) }
             )
         }
 
@@ -152,8 +149,8 @@ fun SpiritualLifeScreen(
                     LazyColumn(
                         modifier = Modifier
                             .fillMaxSize()
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(14.dp)
+                            .padding(MaterialTheme.spacing.lg),
+                        verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.md)
                     ) {
                         item {
                             Text(
@@ -163,7 +160,6 @@ fun SpiritualLifeScreen(
                                     AppLanguage.PT -> "Diário Espiritual Católico"
                                 },
                                 style = MaterialTheme.typography.titleLarge,
-                                fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.primary
                             )
                             Text(
@@ -181,34 +177,33 @@ fun SpiritualLifeScreen(
                             item {
                                 Surface(
                                     modifier = Modifier.fillMaxWidth(),
-                                    shape = RoundedCornerShape(16.dp),
+                                    shape = MaterialTheme.shapes.large,
                                     color = MaterialTheme.colorScheme.surfaceVariant,
                                     border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
                                 ) {
                                     Column(
-                                        modifier = Modifier.padding(24.dp),
+                                        modifier = Modifier.padding(MaterialTheme.spacing.xl),
                                         horizontalAlignment = Alignment.CenterHorizontally
                                     ) {
                                         Icon(imageVector = Icons.Default.Favorite, contentDescription = null, tint = MaterialTheme.colorScheme.secondary, modifier = Modifier.size(36.dp))
-                                        Spacer(modifier = Modifier.height(10.dp))
+                                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                                         Text(
                                             text = when (currentLanguage) {
                                                 AppLanguage.ES -> "Tu diario espiritual está vacío"
                                                 AppLanguage.EN -> "Your spiritual journal is empty"
                                                 AppLanguage.PT -> "Seu diário espiritual está vazio"
                                             },
-                                            fontWeight = FontWeight.Bold,
-                                            fontSize = 15.sp,
+                                            style = MaterialTheme.typography.titleSmall,
                                             color = MaterialTheme.colorScheme.primary
                                         )
-                                        Spacer(modifier = Modifier.height(4.dp))
+                                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                                         Text(
                                             text = when (currentLanguage) {
                                                 AppLanguage.ES -> "Toca el botón '+' abajo para registrar tu primera intención o agradecimiento."
                                                 AppLanguage.EN -> "Tap '+' below to write your first prayer intention or thanksgiving."
                                                 AppLanguage.PT -> "Toque no botão '+' abaixo para anotar sua intenção de oração."
                                             },
-                                            fontSize = 12.sp,
+                                            style = MaterialTheme.typography.bodySmall,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant
                                         )
                                     }
@@ -217,10 +212,10 @@ fun SpiritualLifeScreen(
                         } else {
                             items(journalEntries) { entry ->
                                 ElevatedCard(
-                                    shape = RoundedCornerShape(16.dp),
+                                    shape = MaterialTheme.shapes.large,
                                     colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
                                 ) {
-                                    Column(modifier = Modifier.padding(16.dp)) {
+                                    Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                         Row(
                                             modifier = Modifier.fillMaxWidth(),
                                             horizontalArrangement = Arrangement.SpaceBetween,
@@ -229,14 +224,13 @@ fun SpiritualLifeScreen(
                                             Row(verticalAlignment = Alignment.CenterVertically) {
                                                 Box(
                                                     modifier = Modifier
-                                                        .clip(RoundedCornerShape(6.dp))
+                                                        .clip(MaterialTheme.shapes.extraSmall)
                                                         .background(if (entry.isAnswered) MaterialTheme.colorScheme.secondary.copy(alpha = 0.2f) else MaterialTheme.colorScheme.primary.copy(alpha = 0.15f))
-                                                        .padding(horizontal = 8.dp, vertical = 3.dp)
+                                                        .padding(horizontal = MaterialTheme.spacing.sm, vertical = MaterialTheme.spacing.xs)
                                                 ) {
                                                     Text(
                                                         text = if (entry.isAnswered) "✓ GRACIA CONCEDIDA" else entry.category.uppercase(),
-                                                        fontSize = 10.sp,
-                                                        fontWeight = FontWeight.Bold,
+                                                        style = MaterialTheme.typography.labelSmall,
                                                         color = if (entry.isAnswered) MaterialTheme.colorScheme.secondary else MaterialTheme.colorScheme.primary
                                                     )
                                                 }
@@ -249,24 +243,23 @@ fun SpiritualLifeScreen(
                                             }
                                         }
 
-                                        Spacer(modifier = Modifier.height(6.dp))
+                                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                                         Text(
                                             text = entry.title,
                                             style = MaterialTheme.typography.titleMedium,
-                                            fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onSurface
                                         )
 
-                                        Spacer(modifier = Modifier.height(6.dp))
+                                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                                         Text(
                                             text = entry.content,
                                             style = MaterialTheme.typography.bodyMedium,
-                                            lineHeight = 20.sp
+                                            color = MaterialTheme.colorScheme.onSurface
                                         )
 
-                                        Spacer(modifier = Modifier.height(10.dp))
+                                        Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                                         Row(
                                             modifier = Modifier.fillMaxWidth(),
@@ -281,8 +274,7 @@ fun SpiritualLifeScreen(
                                             ) {
                                                 Text(
                                                     text = if (entry.isAnswered) "Desmarcar concedida" else "Marcar como Gracia Concedida ✓",
-                                                    fontSize = 12.sp,
-                                                    fontWeight = FontWeight.Bold,
+                                                    style = MaterialTheme.typography.labelMedium,
                                                     color = MaterialTheme.colorScheme.secondary
                                                 )
                                             }
@@ -298,10 +290,10 @@ fun SpiritualLifeScreen(
                         onClick = { showAddJournalDialog = true },
                         modifier = Modifier
                             .align(Alignment.BottomEnd)
-                            .padding(20.dp)
+                            .padding(MaterialTheme.spacing.lg)
                             .testTag("add_journal_entry_fab"),
                         containerColor = MaterialTheme.colorScheme.primary,
-                        contentColor = Color.White
+                        contentColor = MaterialTheme.colorScheme.onPrimary
                     ) {
                         Icon(imageVector = Icons.Default.Add, contentDescription = "Add Journal Entry")
                     }
@@ -315,8 +307,8 @@ fun SpiritualLifeScreen(
                 Column(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(14.dp)
+                        .padding(MaterialTheme.spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.md)
                 ) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
@@ -325,36 +317,31 @@ fun SpiritualLifeScreen(
                     ) {
                         Text(
                             text = "PREGUNTA ${triviaIndex + 1} DE ${triviaList.size}",
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.labelLarge,
                             color = MaterialTheme.colorScheme.secondary
                         )
                         Text(
                             text = "Puntos: $triviaScore",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.Bold,
+                            style = MaterialTheme.typography.titleSmall,
                             color = MaterialTheme.colorScheme.primary
                         )
                     }
 
                     ElevatedCard(
-                        shape = RoundedCornerShape(18.dp),
+                        shape = MaterialTheme.shapes.large,
                         colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                     ) {
-                        Column(modifier = Modifier.padding(18.dp)) {
+                        Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                             Text(
                                 text = currentQ.category.get(currentLanguage),
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Bold,
+                                style = MaterialTheme.typography.labelMedium,
                                 color = MaterialTheme.colorScheme.secondary
                             )
-                            Spacer(modifier = Modifier.height(8.dp))
+                            Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
                             Text(
                                 text = currentQ.question.get(currentLanguage),
                                 style = MaterialTheme.typography.titleLarge,
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.onSurface,
-                                lineHeight = 26.sp
+                                color = MaterialTheme.colorScheme.onSurface
                             )
                         }
                     }
@@ -365,15 +352,15 @@ fun SpiritualLifeScreen(
                         val isCorrect = idx == currentQ.correctIndex
 
                         val borderCol = when {
-                            hasAnswered && isCorrect -> Color(0xFF2E7D32)
-                            hasAnswered && isSelected && !isCorrect -> Color(0xFFC62828)
+                            hasAnswered && isCorrect -> MaterialTheme.colorScheme.tertiary
+                            hasAnswered && isSelected && !isCorrect -> MaterialTheme.colorScheme.error
                             isSelected -> MaterialTheme.colorScheme.primary
                             else -> MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)
                         }
 
                         val bgCol = when {
-                            hasAnswered && isCorrect -> Color(0xFF2E7D32).copy(alpha = 0.15f)
-                            hasAnswered && isSelected && !isCorrect -> Color(0xFFC62828).copy(alpha = 0.15f)
+                            hasAnswered && isCorrect -> MaterialTheme.colorScheme.tertiary.copy(alpha = 0.15f)
+                            hasAnswered && isSelected && !isCorrect -> MaterialTheme.colorScheme.error.copy(alpha = 0.15f)
                             isSelected -> MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
                             else -> MaterialTheme.colorScheme.surface
                         }
@@ -381,8 +368,8 @@ fun SpiritualLifeScreen(
                         Surface(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clip(RoundedCornerShape(14.dp))
-                                .border(1.5.dp, borderCol, RoundedCornerShape(14.dp))
+                                .clip(MaterialTheme.shapes.medium)
+                                .border(1.5.dp, borderCol, MaterialTheme.shapes.medium)
                                 .background(bgCol)
                                 .clickable(enabled = !hasAnswered) {
                                     selectedOptionIndex = idx
@@ -391,11 +378,11 @@ fun SpiritualLifeScreen(
                                         triviaScore += 10
                                     }
                                 }
-                                .padding(14.dp)
+                                .padding(MaterialTheme.spacing.md)
                         ) {
                             Text(
                                 text = opt.get(currentLanguage),
-                                fontSize = 14.sp,
+                                style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
                                 color = MaterialTheme.colorScheme.onSurface
                             )
@@ -405,21 +392,20 @@ fun SpiritualLifeScreen(
                     // Doctrinal Explanation when answered
                     if (hasAnswered) {
                         ElevatedCard(
-                            shape = RoundedCornerShape(14.dp),
+                            shape = MaterialTheme.shapes.medium,
                             colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f))
                         ) {
-                            Column(modifier = Modifier.padding(14.dp)) {
+                            Column(modifier = Modifier.padding(MaterialTheme.spacing.md)) {
                                 Text(
                                     text = if (selectedOptionIndex == currentQ.correctIndex) "¡Correcto! ✦" else "Doctrina Católica:",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 13.sp,
+                                    style = MaterialTheme.typography.labelLarge,
                                     color = MaterialTheme.colorScheme.primary
                                 )
-                                Spacer(modifier = Modifier.height(4.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
                                 Text(
                                     text = currentQ.doctrinalExplanation.get(currentLanguage),
-                                    fontSize = 12.sp,
-                                    lineHeight = 18.sp
+                                    style = MaterialTheme.typography.bodySmall,
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
                             }
                         }
@@ -431,9 +417,9 @@ fun SpiritualLifeScreen(
                                 triviaIndex = (triviaIndex + 1) % triviaList.size
                             },
                             modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = Color.White)
+                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = MaterialTheme.colorScheme.onPrimary)
                         ) {
-                            Text("Siguiente Pregunta →", fontWeight = FontWeight.Bold)
+                            Text("Siguiente Pregunta →", style = MaterialTheme.typography.labelLarge)
                         }
                     }
                 }
@@ -447,8 +433,8 @@ fun SpiritualLifeScreen(
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(MaterialTheme.spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                 ) {
                     item {
                         Row(
@@ -458,12 +444,11 @@ fun SpiritualLifeScreen(
                         ) {
                             Text(
                                 text = "ESTACIÓN ${currentStation.stationNumber} DE 14",
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Bold,
+                                style = MaterialTheme.typography.labelLarge,
                                 color = MaterialTheme.colorScheme.secondary
                             )
 
-                            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                            Row(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm)) {
                                 stations.indices.forEach { idx ->
                                     Box(
                                         modifier = Modifier
@@ -478,48 +463,44 @@ fun SpiritualLifeScreen(
 
                     item {
                         ElevatedCard(
-                            shape = RoundedCornerShape(18.dp),
+                            shape = MaterialTheme.shapes.large,
                             colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
                         ) {
-                            Column(modifier = Modifier.padding(18.dp)) {
+                            Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                 Text(
                                     text = currentStation.title.get(currentLanguage),
                                     style = MaterialTheme.typography.titleLarge,
-                                    fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.primary
                                 )
 
-                                Spacer(modifier = Modifier.height(6.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
                                 Text(
                                     text = currentStation.scripture.get(currentLanguage),
-                                    fontFamily = FontFamily.Serif,
-                                    fontSize = 12.sp,
+                                    style = MaterialTheme.typography.bodySmall,
                                     color = MaterialTheme.colorScheme.secondary
                                 )
 
-                                Spacer(modifier = Modifier.height(14.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.md))
 
                                 Text(
                                     text = currentStation.meditation.get(currentLanguage),
                                     style = MaterialTheme.typography.bodyLarge,
-                                    lineHeight = 24.sp
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
 
-                                Spacer(modifier = Modifier.height(16.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.lg))
 
                                 Box(
                                     modifier = Modifier
                                         .fillMaxWidth()
-                                        .clip(RoundedCornerShape(12.dp))
+                                        .clip(MaterialTheme.shapes.medium)
                                         .background(MaterialTheme.colorScheme.surface)
-                                        .padding(12.dp)
+                                        .padding(MaterialTheme.spacing.md)
                                 ) {
                                     Text(
                                         text = currentStation.prayer.get(currentLanguage),
-                                        fontFamily = FontFamily.Serif,
-                                        fontWeight = FontWeight.SemiBold,
-                                        fontSize = 13.sp,
+                                        style = MaterialTheme.typography.labelLarge,
                                         color = MaterialTheme.colorScheme.primary
                                     )
                                 }
@@ -548,10 +529,10 @@ fun SpiritualLifeScreen(
                                         currentStation.prayer.get(currentLanguage)
                                     )
                                 },
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = Color.White)
+                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.primary, contentColor = MaterialTheme.colorScheme.onPrimary)
                             ) {
                                 Icon(if (isPlayingAudio) Icons.Default.Stop else Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(16.dp))
-                                Spacer(modifier = Modifier.width(6.dp))
+                                Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
                                 Text("Rezar Estación")
                             }
 
@@ -560,7 +541,7 @@ fun SpiritualLifeScreen(
                                     if (currentStationIndex < stations.size - 1) currentStationIndex++
                                 },
                                 enabled = currentStationIndex < stations.size - 1,
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.secondary, contentColor = Color.Black)
+                                colors = ButtonDefaults.elevatedButtonColors(containerColor = MaterialTheme.colorScheme.secondary, contentColor = MaterialTheme.colorScheme.onSecondary)
                             ) {
                                 Text("Siguiente →")
                             }
@@ -574,14 +555,13 @@ fun SpiritualLifeScreen(
                 LazyColumn(
                     modifier = Modifier
                         .fillMaxSize()
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                        .padding(MaterialTheme.spacing.lg),
+                    verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.lg)
                 ) {
                     item {
                         Text(
                             text = "Reproductor de Canto Gregoriano y Música Sacra",
                             style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.primary
                         )
                         Text(
@@ -597,15 +577,15 @@ fun SpiritualLifeScreen(
                         Card(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clip(RoundedCornerShape(16.dp))
+                                .clip(MaterialTheme.shapes.large)
                                 .clickable { selectedChant = chant },
-                            shape = RoundedCornerShape(16.dp),
+                            shape = MaterialTheme.shapes.large,
                             colors = CardDefaults.cardColors(
                                 containerColor = if (isSelected) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f) else MaterialTheme.colorScheme.surfaceVariant
                             ),
                             border = CardDefaults.outlinedCardBorder().copy(width = if (isSelected) 1.5.dp else 0.5.dp)
                         ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
+                            Column(modifier = Modifier.padding(MaterialTheme.spacing.lg)) {
                                 Row(
                                     modifier = Modifier.fillMaxWidth(),
                                     horizontalArrangement = Arrangement.SpaceBetween,
@@ -613,8 +593,8 @@ fun SpiritualLifeScreen(
                                 ) {
                                     Row(verticalAlignment = Alignment.CenterVertically) {
                                         Icon(Icons.Default.MusicNote, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
-                                        Spacer(modifier = Modifier.width(8.dp))
-                                        Text(text = chant.title, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.primary)
+                                        Spacer(modifier = Modifier.width(MaterialTheme.spacing.sm))
+                                        Text(text = chant.title, style = MaterialTheme.typography.titleSmall, color = MaterialTheme.colorScheme.primary)
                                     }
 
                                     IconButton(
@@ -632,19 +612,19 @@ fun SpiritualLifeScreen(
                                     }
                                 }
 
-                                Text(text = chant.liturgicalSeason.get(currentLanguage), fontSize = 11.sp, color = MaterialTheme.colorScheme.secondary)
-                                Spacer(modifier = Modifier.height(4.dp))
-                                Text(text = chant.description.get(currentLanguage), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                Text(text = chant.liturgicalSeason.get(currentLanguage), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.secondary)
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.xs))
+                                Text(text = chant.description.get(currentLanguage), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
 
-                                Spacer(modifier = Modifier.height(10.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
-                                Text(text = "Letra en Latín:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.primary)
-                                Text(text = chant.latinLyrics, fontFamily = FontFamily.Serif, fontSize = 12.sp, lineHeight = 18.sp)
+                                Text(text = "Letra en Latín:", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
+                                Text(text = chant.latinLyrics, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface)
 
-                                Spacer(modifier = Modifier.height(8.dp))
+                                Spacer(modifier = Modifier.height(MaterialTheme.spacing.sm))
 
-                                Text(text = "Traducción:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.secondary)
-                                Text(text = chant.translatedLyrics.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
+                                Text(text = "Traducción:", style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.secondary)
+                                Text(text = chant.translatedLyrics.get(currentLanguage), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface)
                             }
                         }
                     }
@@ -663,12 +643,12 @@ fun SpiritualLifeScreen(
                             AppLanguage.EN -> "New Prayer / Intention"
                             AppLanguage.PT -> "Nova Intenção / Oração"
                         },
-                        fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.titleLarge,
                         color = MaterialTheme.colorScheme.primary
                     )
                 },
                 text = {
-                    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Column(verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm)) {
                         OutlinedTextField(
                             value = newJournalTitle,
                             onValueChange = { newJournalTitle = it },
@@ -677,20 +657,20 @@ fun SpiritualLifeScreen(
                             singleLine = true
                         )
 
-                        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                        Row(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.sm)) {
                             listOf("Intención", "Agradecimiento", "Examen", "Gracia").forEach { cat ->
                                 Box(
                                     modifier = Modifier
-                                        .clip(RoundedCornerShape(8.dp))
+                                        .clip(MaterialTheme.shapes.small)
                                         .background(if (newJournalCategory == cat) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surface)
-                                        .border(1.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(8.dp))
+                                        .border(1.dp, MaterialTheme.colorScheme.primary, MaterialTheme.shapes.small)
                                         .clickable { newJournalCategory = cat }
-                                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                                        .padding(horizontal = MaterialTheme.spacing.sm, vertical = MaterialTheme.spacing.xs)
                                 ) {
                                     Text(
                                         text = cat,
-                                        fontSize = 11.sp,
-                                        color = if (newJournalCategory == cat) Color.White else MaterialTheme.colorScheme.onSurface
+                                        style = MaterialTheme.typography.labelMedium,
+                                        color = if (newJournalCategory == cat) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface
                                     )
                                 }
                             }
@@ -726,12 +706,12 @@ fun SpiritualLifeScreen(
                             }
                         }
                     ) {
-                        Text("Guardar en el Diario", fontWeight = FontWeight.Bold)
+                        Text("Guardar en el Diario", style = MaterialTheme.typography.labelLarge)
                     }
                 },
                 dismissButton = {
                     TextButton(onClick = { showAddJournalDialog = false }) {
-                        Text("Cancelar")
+                        Text("Cancelar", style = MaterialTheme.typography.labelLarge)
                     }
                 }
             )
