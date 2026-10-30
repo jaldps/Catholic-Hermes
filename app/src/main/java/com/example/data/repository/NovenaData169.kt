@@ -56,21 +56,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -108,23 +94,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Peace of mind”
-
-🙏 181
-
-Cs Njuguna K.
-
-Jun 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -166,23 +136,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -221,21 +175,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -273,23 +213,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Peace of mind”
-
-🙏 181
-
-Cs Njuguna K.
-
-Jun 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -331,23 +255,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -392,15 +300,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -438,23 +338,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“He will soon”
-
-🙏 87
-
-Priscilla E.
-
-Jul 1st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -492,23 +376,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -547,15 +415,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -593,23 +453,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“He will soon”
-
-🙏 87
-
-Priscilla E.
-
-Jul 1st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -647,23 +491,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -708,21 +536,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -760,23 +574,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“HOLY WOMAN”
-
-🙏 53
-
-Community Member
-
-Jul 3rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -818,23 +616,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -873,21 +655,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -925,23 +693,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“HOLY WOMAN”
-
-🙏 53
-
-Community Member
-
-Jul 3rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -983,23 +735,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1044,15 +780,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1090,23 +818,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you, Saint Elizabeth of Portugal, for being there for us and showing us how much you love us by answering our prayers of need. Amen!🙏🏼”
-
-🙏 46
-
-Melissa R.
-
-Jul 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1144,23 +856,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1199,15 +895,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1245,23 +933,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you, Saint Elizabeth of Portugal, for being there for us and showing us how much you love us by answering our prayers of need. Amen!🙏🏼”
-
-🙏 46
-
-Melissa R.
-
-Jul 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1299,23 +971,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1360,21 +1016,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1412,23 +1054,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed for my goddaughter and l can see signs of blessings on her and her family. Thanks be to God.🙏”
-
-🙏 44
-
-Lillian N.
-
-Jul 3rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1470,23 +1096,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1525,21 +1135,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1577,23 +1173,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed for my goddaughter and l can see signs of blessings on her and her family. Thanks be to God.🙏”
-
-🙏 44
-
-Lillian N.
-
-Jul 3rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1635,23 +1215,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1696,15 +1260,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1742,23 +1298,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“He is healing my body and making me stronger everyday. I am blessed!ll”
-
-🙏 0
-
-gwendolyn S.
-
-Aug 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1796,23 +1336,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1851,15 +1375,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1897,23 +1413,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“He is healing my body and making me stronger everyday. I am blessed!ll”
-
-🙏 0
-
-gwendolyn S.
-
-Aug 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1951,23 +1451,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2012,21 +1496,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2064,23 +1534,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“yes, prayers answered and guidance given. Praise God!”
-
-🙏 0
-
-Jennifer T.
-
-Aug 11th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2122,23 +1576,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2177,21 +1615,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2229,23 +1653,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“yes, prayers answered and guidance given. Praise God!”
-
-🙏 0
-
-Jennifer T.
-
-Aug 11th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2287,23 +1695,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2348,15 +1740,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2394,23 +1778,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Peace of mind”
-
-🙏 181
-
-Cs Njuguna K.
-
-Jun 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2448,23 +1816,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2503,15 +1855,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2549,23 +1893,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Peace of mind”
-
-🙏 181
-
-Cs Njuguna K.
-
-Jun 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2603,23 +1931,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2664,27 +1976,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a Santa Isabel de Portugal"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Santa Isabel de Hungría""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2722,83 +2014,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“He will soon”
-
-🙏 87
-
-Priscilla E.
-
-Jul 1st
-
-(function() { var novenaTitle = "St Elizabeth of Portugal Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“Peace of mind”
-
-🙏 181
-
-Cs Njuguna K.
-
-Jun 27th
-
-“He will soon”
-
-🙏 87
-
-Priscilla E.
-
-Jul 1st
-
-“HOLY WOMAN”
-
-🙏 53
-
-Community Member
-
-Jul 3rd
-
-“Thank you, Saint Elizabeth of Portugal, for being there for us and showing us how much you love us by answering our prayers of need. Amen!🙏🏼”
-
-🙏 46
-
-Melissa R.
-
-Jul 3rd
-
-“I prayed for my goddaughter and l can see signs of blessings on her and her family. Thanks be to God.🙏”
-
-🙏 44
-
-Lillian N.
-
-Jul 3rd
-
-“He is healing my body and making me stronger everyday. I am blessed!ll”
-
-🙏 0
-
-gwendolyn S.
-
-Aug 13th
-
-“yes, prayers answered and guidance given. Praise God!”
-
-🙏 0
-
-Jennifer T.
-
-Aug 11th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2840,29 +2056,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena à Rainha Santa Isabel"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Santa Isabel da Hungria"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2901,27 +2095,7 @@ Santa Isabel de Portugal, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a Santa Isabel de Portugal"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Santa Isabel de Hungría""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2959,83 +2133,7 @@ St Elizabeth of Portugal, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“He will soon”
-
-🙏 87
-
-Priscilla E.
-
-Jul 1st
-
-(function() { var novenaTitle = "St Elizabeth of Portugal Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“Peace of mind”
-
-🙏 181
-
-Cs Njuguna K.
-
-Jun 27th
-
-“He will soon”
-
-🙏 87
-
-Priscilla E.
-
-Jul 1st
-
-“HOLY WOMAN”
-
-🙏 53
-
-Community Member
-
-Jul 3rd
-
-“Thank you, Saint Elizabeth of Portugal, for being there for us and showing us how much you love us by answering our prayers of need. Amen!🙏🏼”
-
-🙏 46
-
-Melissa R.
-
-Jul 3rd
-
-“I prayed for my goddaughter and l can see signs of blessings on her and her family. Thanks be to God.🙏”
-
-🙏 44
-
-Lillian N.
-
-Jul 3rd
-
-“He is healing my body and making me stronger everyday. I am blessed!ll”
-
-🙏 0
-
-gwendolyn S.
-
-Aug 13th
-
-“yes, prayers answered and guidance given. Praise God!”
-
-🙏 0
-
-Jennifer T.
-
-Aug 11th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3077,29 +2175,7 @@ Rainha Santa Isabel, rogai por nós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena à Rainha Santa Isabel"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Santa Isabel da Hungria"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

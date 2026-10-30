@@ -46,21 +46,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -88,23 +74,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I am inspired to renew my Catholic group on social media.”
-
-🙏 29
-
-Jessica G.
-
-Oct 7th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -136,23 +106,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -181,21 +135,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -223,23 +163,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I am inspired to renew my Catholic group on social media.”
-
-🙏 29
-
-Jessica G.
-
-Oct 7th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -271,23 +195,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -322,15 +230,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -358,23 +258,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Partly my immediate need was answered…. But I am still hopeful and expecting the miracle to come soon….”
-
-🙏 29
-
-ALMA D.
-
-Oct 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -402,23 +286,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -447,15 +315,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -483,23 +343,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Partly my immediate need was answered…. But I am still hopeful and expecting the miracle to come soon….”
-
-🙏 29
-
-ALMA D.
-
-Oct 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -527,23 +371,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -578,21 +406,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -620,23 +434,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes thank you thank you thank you 💯🙏🙏🙏”
-
-🙏 10
-
-Community Member
-
-Oct 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -668,23 +466,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -713,21 +495,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -755,23 +523,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes thank you thank you thank you 💯🙏🙏🙏”
-
-🙏 10
-
-Community Member
-
-Oct 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -803,23 +555,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -854,15 +590,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -890,23 +618,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My health is better than before concerning my legs”
-
-🙏 9
-
-addie F.
-
-Oct 8th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -934,23 +646,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -979,15 +675,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1015,23 +703,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My health is better than before concerning my legs”
-
-🙏 9
-
-addie F.
-
-Oct 8th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1059,23 +731,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1110,21 +766,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1152,23 +794,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I begin efforts of working from Joseph. He begins talking more and planning with me. I am grateful to your constant love Mother.”
-
-🙏 8
-
-Community Member
-
-Oct 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1200,23 +826,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1245,21 +855,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1287,23 +883,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I begin efforts of working from Joseph. He begins talking more and planning with me. I am grateful to your constant love Mother.”
-
-🙏 8
-
-Community Member
-
-Oct 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1335,23 +915,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1386,15 +950,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1422,23 +978,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“M dad survived heart valve replacement surgery and his kidneys began functioning again.”
-
-🙏 4
-
-jennifer J.
-
-Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1466,23 +1006,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1511,15 +1035,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1547,23 +1063,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“M dad survived heart valve replacement surgery and his kidneys began functioning again.”
-
-🙏 4
-
-jennifer J.
-
-Oct 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1591,23 +1091,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1642,21 +1126,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1684,23 +1154,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Our Lady of Champion I love you!!”
-
-🙏 4
-
-Liz C.
-
-Oct 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1732,23 +1186,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1777,21 +1215,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1819,23 +1243,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Our Lady of Champion I love you!!”
-
-🙏 4
-
-Liz C.
-
-Oct 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1867,23 +1275,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1918,15 +1310,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1954,23 +1338,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I received a job offer within 3 days. And I'm currently on the process of starting my new job along with visa sponsorship for my job. 💙💙💙Thank you God. It was a job I didn't expect I would get. Praise the Lord.”
-
-🙏 1
-
-Community Member
-
-Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1998,23 +1366,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2043,15 +1395,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2079,23 +1423,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I received a job offer within 3 days. And I'm currently on the process of starting my new job along with visa sponsorship for my job. 💙💙💙Thank you God. It was a job I didn't expect I would get. Praise the Lord.”
-
-🙏 1
-
-Community Member
-
-Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2123,23 +1451,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2174,27 +1486,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a la Virgen de Champion"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Santa Isabel Ana Seton""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2222,107 +1514,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed for good results on my leg biopsy and it was granted. I am ever so thankful”
-
-🙏 1
-
-Simone G.
-
-Oct 18th
-
-(function() { var novenaTitle = "Our Lady of Champion Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“I am inspired to renew my Catholic group on social media.”
-
-🙏 29
-
-Jessica G.
-
-Oct 7th
-
-“Partly my immediate need was answered…. But I am still hopeful and expecting the miracle to come soon….”
-
-🙏 29
-
-ALMA D.
-
-Oct 7th
-
-“Yes thank you thank you thank you 💯🙏🙏🙏”
-
-🙏 10
-
-Community Member
-
-Oct 8th
-
-“My health is better than before concerning my legs”
-
-🙏 9
-
-addie F.
-
-Oct 8th
-
-“I begin efforts of working from Joseph. He begins talking more and planning with me. I am grateful to your constant love Mother.”
-
-🙏 8
-
-Community Member
-
-Oct 8th
-
-“M dad survived heart valve replacement surgery and his kidneys began functioning again.”
-
-🙏 4
-
-jennifer J.
-
-Oct 10th
-
-“Thank you Our Lady of Champion I love you!!”
-
-🙏 4
-
-Liz C.
-
-Oct 8th
-
-“I received a job offer within 3 days. And I'm currently on the process of starting my new job along with visa sponsorship for my job. 💙💙💙Thank you God. It was a job I didn't expect I would get. Praise the Lord.”
-
-🙏 1
-
-Community Member
-
-Oct 22nd
-
-“I prayed for good results on my leg biopsy and it was granted. I am ever so thankful”
-
-🙏 1
-
-Simone G.
-
-Oct 18th
-
-“I just received the offer today and should be starting my new job in just a free weeks! 🙏”
-
-🙏 0
-
-Danielle B.
-
-Oct 23rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2354,29 +1546,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Nossa Senhora de Champion"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Santa Elizabeth Seton"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2405,27 +1575,7 @@ Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a la Virgen de Champion"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Santa Isabel Ana Seton""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2453,107 +1603,7 @@ Our Lady of Champion, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed for good results on my leg biopsy and it was granted. I am ever so thankful”
-
-🙏 1
-
-Simone G.
-
-Oct 18th
-
-(function() { var novenaTitle = "Our Lady of Champion Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“I am inspired to renew my Catholic group on social media.”
-
-🙏 29
-
-Jessica G.
-
-Oct 7th
-
-“Partly my immediate need was answered…. But I am still hopeful and expecting the miracle to come soon….”
-
-🙏 29
-
-ALMA D.
-
-Oct 7th
-
-“Yes thank you thank you thank you 💯🙏🙏🙏”
-
-🙏 10
-
-Community Member
-
-Oct 8th
-
-“My health is better than before concerning my legs”
-
-🙏 9
-
-addie F.
-
-Oct 8th
-
-“I begin efforts of working from Joseph. He begins talking more and planning with me. I am grateful to your constant love Mother.”
-
-🙏 8
-
-Community Member
-
-Oct 8th
-
-“M dad survived heart valve replacement surgery and his kidneys began functioning again.”
-
-🙏 4
-
-jennifer J.
-
-Oct 10th
-
-“Thank you Our Lady of Champion I love you!!”
-
-🙏 4
-
-Liz C.
-
-Oct 8th
-
-“I received a job offer within 3 days. And I'm currently on the process of starting my new job along with visa sponsorship for my job. 💙💙💙Thank you God. It was a job I didn't expect I would get. Praise the Lord.”
-
-🙏 1
-
-Community Member
-
-Oct 22nd
-
-“I prayed for good results on my leg biopsy and it was granted. I am ever so thankful”
-
-🙏 1
-
-Simone G.
-
-Oct 18th
-
-“I just received the offer today and should be starting my new job in just a free weeks! 🙏”
-
-🙏 0
-
-Danielle B.
-
-Oct 23rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2585,29 +1635,7 @@ Nossa Senhora de Champion, rogai por nós!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Nossa Senhora de Champion"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Santa Elizabeth Seton"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

@@ -42,21 +42,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -80,23 +66,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I was praying for a new job within my industry. After many failed interviews, an old friend who I havent spoken to for years phoned me today and told me about many opportunities for work in a different sector to where I was searching. It has given me a different angle to my job search now! Praise our Lord God Almighty for His guidance 🙏”
-
-🙏 37
-
-Community Member
-
-Jun 26th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -124,23 +94,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -165,21 +119,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -203,23 +143,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I was praying for a new job within my industry. After many failed interviews, an old friend who I havent spoken to for years phoned me today and told me about many opportunities for work in a different sector to where I was searching. It has given me a different angle to my job search now! Praise our Lord God Almighty for His guidance 🙏”
-
-🙏 37
-
-Community Member
-
-Jun 26th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -247,23 +171,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -294,15 +202,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -326,23 +226,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“This novena to break the power of addiction in my life has helped me to stay within my guardrails of temperance and not over-consume.”
-
-🙏 32
-
-Amy ⛵.
-
-Jun 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -366,23 +250,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -407,15 +275,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -439,23 +299,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“This novena to break the power of addiction in my life has helped me to stay within my guardrails of temperance and not over-consume.”
-
-🙏 32
-
-Amy ⛵.
-
-Jun 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -479,23 +323,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -526,21 +354,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -564,23 +378,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you, My Lotd and my God, for my answered prayer. My youngesst child won in the contest he joined and had a fulfilling experience.”
-
-🙏 28
-
-Agnes M.
-
-Aug 12th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -608,23 +406,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -649,21 +431,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -687,23 +455,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you, My Lotd and my God, for my answered prayer. My youngesst child won in the contest he joined and had a fulfilling experience.”
-
-🙏 28
-
-Agnes M.
-
-Aug 12th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -731,23 +483,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -778,15 +514,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -810,23 +538,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have had multiple recruiters reach out to me in the last few days, and one has even submitted me for a job opportunity that fits my skills and interests. I am continuing to pray that it will turn into a job offer soon!”
-
-🙏 25
-
-Mallory T.
-
-Jun 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -850,23 +562,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -891,15 +587,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -923,23 +611,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have had multiple recruiters reach out to me in the last few days, and one has even submitted me for a job opportunity that fits my skills and interests. I am continuing to pray that it will turn into a job offer soon!”
-
-🙏 25
-
-Mallory T.
-
-Jun 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -963,23 +635,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1010,21 +666,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1048,23 +690,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My exact prayer is answered. I got the job I have been praying for. Glory to the most High God. Thank you Jesus. Amen. 🙏🏼❤️”
-
-🙏 9
-
-Hope R.
-
-Jul 15th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1092,23 +718,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1133,21 +743,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1171,23 +767,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My exact prayer is answered. I got the job I have been praying for. Glory to the most High God. Thank you Jesus. Amen. 🙏🏼❤️”
-
-🙏 9
-
-Hope R.
-
-Jul 15th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1215,23 +795,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1262,15 +826,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1294,23 +850,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I got the Trader Joe’s job.”
-
-🙏 4
-
-Natalie H.
-
-Jul 9th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1334,23 +874,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1375,15 +899,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1407,23 +923,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I got the Trader Joe’s job.”
-
-🙏 4
-
-Natalie H.
-
-Jul 9th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1447,23 +947,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1494,21 +978,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1532,23 +1002,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My son in law job searching looks promising. The called him to complete a Q@A for a job!! Thank you St. Jose Maria🙏🏻”
-
-🙏 2
-
-Ana Maria S.
-
-Aug 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1576,23 +1030,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1617,21 +1055,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1655,23 +1079,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My son in law job searching looks promising. The called him to complete a Q@A for a job!! Thank you St. Jose Maria🙏🏻”
-
-🙏 2
-
-Ana Maria S.
-
-Aug 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1699,23 +1107,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1746,15 +1138,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1778,23 +1162,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“During this novena, one of my prayer intentions was for my wife to get a promotion or to get a pay raise. Initially it seemed bleak to get even one of these, but, through St. Josemaria's intercession, she was able to get both! Thank you, Lord Jesus, and thank you for interceding, St. Josemaria and all the saints. Amen.”
-
-🙏 1
-
-JP O.
-
-Sep 25th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1818,23 +1186,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1859,15 +1211,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1891,23 +1235,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“During this novena, one of my prayer intentions was for my wife to get a promotion or to get a pay raise. Initially it seemed bleak to get even one of these, but, through St. Josemaria's intercession, she was able to get both! Thank you, Lord Jesus, and thank you for interceding, St. Josemaria and all the saints. Amen.”
-
-🙏 1
-
-JP O.
-
-Sep 25th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1931,23 +1259,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1978,27 +1290,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a San Josemaría"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a San Juan Pablo II""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2022,25 +1314,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-🙏 1
-
-Chinwe O.
-
-Aug 26th
-
-(function() { var novenaTitle = "St. Josemaria Escriva Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-My niece had an interview and was offered an internship for this summer!""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2068,29 +1342,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a São Josemaria Escrivá"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a São João Paulo II"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2115,27 +1367,7 @@ Padre nuestro, Dios te salve, María, Gloria al Padre.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a San Josemaría"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a San Juan Pablo II""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2159,25 +1391,7 @@ Our Father, Hail Mary, Glory Be.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-🙏 1
-
-Chinwe O.
-
-Aug 26th
-
-(function() { var novenaTitle = "St. Josemaria Escriva Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-My niece had an interview and was offered an internship for this summer!""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2205,29 +1419,7 @@ Pai-Nosso, Ave-Maria, Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a São Josemaria Escrivá"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a São João Paulo II"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

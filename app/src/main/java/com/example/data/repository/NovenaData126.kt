@@ -50,21 +50,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -86,23 +72,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Prayed for my dad’s cancer to not have spread, test results show it is isolated and he can begin treatment with optimistic outcome, thank you Jesus!”
-
-🙏 43
-
-Perri V.
-
-Sep 3rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -126,23 +96,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -175,21 +129,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -211,23 +151,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Prayed for my dad’s cancer to not have spread, test results show it is isolated and he can begin treatment with optimistic outcome, thank you Jesus!”
-
-🙏 43
-
-Perri V.
-
-Sep 3rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -251,23 +175,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -306,15 +214,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -336,23 +236,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“A very good friend of the family had a very large concerning nodule in his lung. It was not cancer and my mom's cancer did not metastasize, Praise God through the intercession of St. Peregrine!”
-
-🙏 36
-
-Veronica
-
-Sep 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -372,23 +256,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -421,15 +289,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -451,23 +311,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“A very good friend of the family had a very large concerning nodule in his lung. It was not cancer and my mom's cancer did not metastasize, Praise God through the intercession of St. Peregrine!”
-
-🙏 36
-
-Veronica
-
-Sep 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -487,23 +331,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -542,21 +370,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -576,23 +390,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“After a great deal of worry, my prayers were answered and my wife didn’t have the tumour that the doctors were looking for.”
-
-🙏 36
-
-Francis N.
-
-Aug 29th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -614,23 +412,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -663,21 +445,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -697,23 +465,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“After a great deal of worry, my prayers were answered and my wife didn’t have the tumour that the doctors were looking for.”
-
-🙏 36
-
-Francis N.
-
-Aug 29th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -735,23 +487,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -790,15 +526,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -820,23 +548,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My mom's cancer did not metastasize, Praise God through the intercession of St. Peregrine!”
-
-🙏 32
-
-Veronica
-
-Sep 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -856,23 +568,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -905,15 +601,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -935,23 +623,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My mom's cancer did not metastasize, Praise God through the intercession of St. Peregrine!”
-
-🙏 32
-
-Veronica
-
-Sep 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -971,23 +643,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1026,21 +682,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1060,23 +702,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“A very good friend of the family had a very large concerning nodule in his lung. It was not cancer and my mom's cancer did not metastasize, Praise God through the intercession of St. Peregrine!”
-
-🙏 26
-
-Veronica
-
-Sep 16th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1098,23 +724,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1147,21 +757,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1181,23 +777,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“A very good friend of the family had a very large concerning nodule in his lung. It was not cancer and my mom's cancer did not metastasize, Praise God through the intercession of St. Peregrine!”
-
-🙏 26
-
-Veronica
-
-Sep 16th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1219,23 +799,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1274,15 +838,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1304,23 +860,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My mom's cancer did not metastasize, Praise God through the intercession of St. Peregrine!”
-
-🙏 18
-
-Veronica
-
-Sep 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1340,23 +880,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1389,15 +913,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1419,23 +935,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My mom's cancer did not metastasize, Praise God through the intercession of St. Peregrine!”
-
-🙏 18
-
-Veronica
-
-Sep 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1455,23 +955,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1510,21 +994,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1546,23 +1016,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Friend had cancer for over six years. Aggressive. Quit treatment. Just had scan, cancer gone!”
-
-🙏 15
-
-Katy R.
-
-Sep 25th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1586,23 +1040,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1635,21 +1073,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1671,23 +1095,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Friend had cancer for over six years. Aggressive. Quit treatment. Just had scan, cancer gone!”
-
-🙏 15
-
-Katy R.
-
-Sep 25th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1711,23 +1119,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1766,15 +1158,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1796,23 +1180,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes. I was diagnosed with prostrate cancer. After prayer and radiation, it’s no longer there.”
-
-🙏 12
-
-Brian D.
-
-Oct 8th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1832,23 +1200,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1881,15 +1233,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1911,23 +1255,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes. I was diagnosed with prostrate cancer. After prayer and radiation, it’s no longer there.”
-
-🙏 12
-
-Brian D.
-
-Oct 8th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1947,23 +1275,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2002,23 +1314,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun
-
-(function() { var novenaTitle = "Novena a San Peregrino"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2038,25 +1334,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Mummy’s growth has reduced.. just got out from the post chemo crash this week.. pray the next session would have lesser adverse impact”
-
-🙏 4
-
-Faith K.
-
-Oct 17th
-
-(function() { var novenaTitle = "St. Peregrine Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2080,35 +1358,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago
-
-(function() { var novenaTitle = "São Peregrino"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2141,23 +1391,7 @@ San Peregrino, ayudame a imitarte en tu sufrimiento, a unirme a Jesús Crucifica
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, tengo la oportunidad de seguir luchando.”
-
-🙏 200
-
-Iván G.
-
-29 de jun
-
-(function() { var novenaTitle = "Novena a San Peregrino"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2177,25 +1411,7 @@ Obtain for me also a perfect resignation to the sufferings it may please God to 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Mummy’s growth has reduced.. just got out from the post chemo crash this week.. pray the next session would have lesser adverse impact”
-
-🙏 4
-
-Faith K.
-
-Oct 17th
-
-(function() { var novenaTitle = "St. Peregrine Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2219,35 +1435,7 @@ Obtende também para mim uma perfeita resignação aos sofrimentos que possa agr
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago
-
-(function() { var novenaTitle = "São Peregrino"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-“Sim minha oração foi atendida Obrigada São Peregrino por sua intercessão junto ao nosso ao nosso Senhor.”
-
-🙏 11
-
-Community Member
-
-19 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

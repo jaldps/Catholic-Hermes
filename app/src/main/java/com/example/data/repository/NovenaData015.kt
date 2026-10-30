@@ -40,21 +40,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -84,23 +70,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Still waiting for response and I strongly believe my prayers will be answered . 🙏”
-
-🙏 100
-
-Chidinma J.
-
-Jul 21st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -134,23 +104,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -173,21 +127,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -217,23 +157,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Still waiting for response and I strongly believe my prayers will be answered . 🙏”
-
-🙏 100
-
-Chidinma J.
-
-Jul 21st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -267,23 +191,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -312,15 +220,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -350,23 +250,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Guidance and protection in daily operations”
-
-🙏 36
-
-Katherine K.
-
-Jul 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -396,23 +280,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -435,15 +303,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -473,23 +333,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Guidance and protection in daily operations”
-
-🙏 36
-
-Katherine K.
-
-Jul 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -519,23 +363,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -564,21 +392,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -608,23 +422,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“When the company I worked for began heavily embracing gender ideology, I started praying for a new position elsewhere. An opportunity came up at a Catholic school, and I prayed, fasted, and said many novenas. I didn’t get the job. I was angry and bitter for a long time but I kept telling myself to trust in God’s will. Less than a year later, the same school had another position open up, and they reached out to me. Again I prayed for the position, and eventually, I got it. It is actually the supervisory role for the first position that I didn’t get. God is so great! Jesus, I trust in You!”
-
-🙏 16
-
-Community Member
-
-Jul 21st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -658,23 +456,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -697,21 +479,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -741,23 +509,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“When the company I worked for began heavily embracing gender ideology, I started praying for a new position elsewhere. An opportunity came up at a Catholic school, and I prayed, fasted, and said many novenas. I didn’t get the job. I was angry and bitter for a long time but I kept telling myself to trust in God’s will. Less than a year later, the same school had another position open up, and they reached out to me. Again I prayed for the position, and eventually, I got it. It is actually the supervisory role for the first position that I didn’t get. God is so great! Jesus, I trust in You!”
-
-🙏 16
-
-Community Member
-
-Jul 21st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -791,23 +543,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -836,15 +572,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -874,23 +602,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I had doubts about asking but the priest I asked said Yes to giving me spiritual direction today”
-
-🙏 11
-
-Community Member
-
-Aug 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -920,23 +632,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -959,15 +655,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -997,23 +685,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I had doubts about asking but the priest I asked said Yes to giving me spiritual direction today”
-
-🙏 11
-
-Community Member
-
-Aug 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1043,23 +715,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1088,21 +744,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1132,23 +774,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you”
-
-🙏 10
-
-Eleasar F.
-
-Aug 10th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1182,23 +808,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1221,21 +831,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1265,23 +861,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you”
-
-🙏 10
-
-Eleasar F.
-
-Aug 10th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1315,23 +895,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1360,15 +924,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1398,23 +954,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have good health.”
-
-🙏 10
-
-Cs Njuguna K.
-
-Jul 21st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1444,23 +984,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1483,15 +1007,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1521,23 +1037,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have good health.”
-
-🙏 10
-
-Cs Njuguna K.
-
-Jul 21st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1567,23 +1067,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1612,21 +1096,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1656,23 +1126,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I got an important form approved for a nonprofit I'm starting! Thank you Momma!”
-
-🙏 7
-
-Community Member
-
-Jul 23rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1706,23 +1160,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1745,21 +1183,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1789,23 +1213,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I got an important form approved for a nonprofit I'm starting! Thank you Momma!”
-
-🙏 7
-
-Community Member
-
-Jul 23rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1839,23 +1247,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1884,15 +1276,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1922,23 +1306,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My daughter who suffers with a serious mental illness left our home and was living in an unsafe situation. Our Lady intervened and got her to sign herself in to the hospital. She is doing much better now and has returned home. Thank you Jesus and flower of Carmel.”
-
-🙏 6
-
-Community Member
-
-Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1968,23 +1336,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2007,15 +1359,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2045,23 +1389,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My daughter who suffers with a serious mental illness left our home and was living in an unsafe situation. Our Lady intervened and got her to sign herself in to the hospital. She is doing much better now and has returned home. Thank you Jesus and flower of Carmel.”
-
-🙏 6
-
-Community Member
-
-Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2091,23 +1419,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2136,37 +1448,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a la Virgen del Carmen"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul
-
-El Monte Carmelo es donde el profeta Elías luchó contra 450 sacerdotes de Baal y Dios le concedió la victoria sobre ellos (1 Reyes 18:19-40).
-
-En el siglo XII, los eremitas vivían en el Monte Carmelo, en el norte de Israel (cerca de la actual Haifa), donde dedicaron una capilla a Nuestra Señora. Estos se convirtieron en los primeros carmelitas. Con el tiempo, la mayoría huyó, ya que el Monte Carmelo fue tomado por los musulmanes en 1291, y los hermanos restantes fueron asesinados y el convento incendiado. Los carmelitas son únicos porque se consideran especialmente “hermanos de Nuestra Señora”, enfatizando su fraternidad espiritual con ella.
-
-María se apareció a San Simón Stock, uno de los primeros carmelitas, y le entregó un escapulario marrón, que representaba parte de su propia vestimenta como protección especial e instaba a quienes lo llevaban a consagrarse a ella de una manera especial. El escapulario nos recuerda la llamada del Evangelio a la oración y la penitencia.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2196,25 +1478,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I passed my exam and my job is guaranteed. Thank you, blessed Mother! Praise God!”
-
-🙏 6
-
-Community Member
-
-Jul 24th
-
-(function() { var novenaTitle = "Our Lady of Mt. Carmel Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2248,29 +1512,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Nossa Senhora do Carmo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Our Lady of Monte Berico Novena"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2293,37 +1535,7 @@ Virgen santísima del Carmen; yo deseo que todos sin excepción se cobijen bajo 
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a la Virgen del Carmen"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Me concedió un un empleo. Gracias Padre.”
-
-🙏 11
-
-Community Member
-
-20 de jul
-
-El Monte Carmelo es donde el profeta Elías luchó contra 450 sacerdotes de Baal y Dios le concedió la victoria sobre ellos (1 Reyes 18:19-40).
-
-En el siglo XII, los eremitas vivían en el Monte Carmelo, en el norte de Israel (cerca de la actual Haifa), donde dedicaron una capilla a Nuestra Señora. Estos se convirtieron en los primeros carmelitas. Con el tiempo, la mayoría huyó, ya que el Monte Carmelo fue tomado por los musulmanes en 1291, y los hermanos restantes fueron asesinados y el convento incendiado. Los carmelitas son únicos porque se consideran especialmente “hermanos de Nuestra Señora”, enfatizando su fraternidad espiritual con ella.
-
-María se apareció a San Simón Stock, uno de los primeros carmelitas, y le entregó un escapulario marrón, que representaba parte de su propia vestimenta como protección especial e instaba a quienes lo llevaban a consagrarse a ella de una manera especial. El escapulario nos recuerda la llamada del Evangelio a la oración y la penitencia.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2353,25 +1565,7 @@ Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I passed my exam and my job is guaranteed. Thank you, blessed Mother! Praise God!”
-
-🙏 6
-
-Community Member
-
-Jul 24th
-
-(function() { var novenaTitle = "Our Lady of Mt. Carmel Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2405,29 +1599,7 @@ Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome 
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Nossa Senhora do Carmo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Our Lady of Monte Berico Novena"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

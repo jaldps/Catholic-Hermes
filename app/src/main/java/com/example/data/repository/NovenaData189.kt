@@ -56,21 +56,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -88,23 +74,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have seen improvement in my family life”
-
-🙏 93
-
-Community Member
-
-Aug 26th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -126,23 +96,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Consegui tirar notas boas na escola 💗”
-
-🙏 41
-
-Aylla S.
-
-26 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -181,21 +135,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -213,23 +153,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have seen improvement in my family life”
-
-🙏 93
-
-Community Member
-
-Aug 26th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -251,23 +175,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Consegui tirar notas boas na escola 💗”
-
-🙏 41
-
-Aylla S.
-
-26 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -312,15 +220,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -338,23 +238,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank You Father God for answering my prayers, and thank you Saint Rita for the intercession. My husband now is employed after months of being unemployed. Continue to guide and bless us with the wisdom, protection, we need daily. Amen”
-
-🙏 24
-
-Cherry P.
-
-Sep 28th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -372,23 +256,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Orações atendidas!”
-
-🙏 4
-
-Cínthia S.
-
-24 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -427,15 +295,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -453,23 +313,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank You Father God for answering my prayers, and thank you Saint Rita for the intercession. My husband now is employed after months of being unemployed. Continue to guide and bless us with the wisdom, protection, we need daily. Amen”
-
-🙏 24
-
-Cherry P.
-
-Sep 28th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -487,23 +331,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Orações atendidas!”
-
-🙏 4
-
-Cínthia S.
-
-24 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -548,21 +376,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -580,23 +394,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you for the intercession of St Rita for clarity on a sensitive issue with a family menber.”
-
-🙏 21
-
-Colleen C.
-
-Sep 10th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -618,21 +416,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 2
-
-Aryane M.
-
-4 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -671,21 +455,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -703,23 +473,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you for the intercession of St Rita for clarity on a sensitive issue with a family menber.”
-
-🙏 21
-
-Colleen C.
-
-Sep 10th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -741,21 +495,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 2
-
-Aryane M.
-
-4 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -800,15 +540,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -824,23 +556,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Dearest St. Rita helped me almost miraculously!! She helped me to accomplish something I NEVER could have done without her help.”
-
-🙏 21
-
-Alyce M.
-
-Sep 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -858,23 +574,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Consegui tirar notas boas na escola 💗”
-
-🙏 41
-
-Aylla S.
-
-26 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -913,15 +613,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -937,23 +629,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Dearest St. Rita helped me almost miraculously!! She helped me to accomplish something I NEVER could have done without her help.”
-
-🙏 21
-
-Alyce M.
-
-Sep 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -971,23 +647,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Consegui tirar notas boas na escola 💗”
-
-🙏 41
-
-Aylla S.
-
-26 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1032,21 +692,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1064,23 +710,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St.Rita I love you!!”
-
-🙏 14
-
-Liz C.
-
-Sep 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1100,23 +730,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Orações atendidas!”
-
-🙏 4
-
-Cínthia S.
-
-24 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1155,21 +769,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1187,23 +787,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St.Rita I love you!!”
-
-🙏 14
-
-Liz C.
-
-Sep 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1223,23 +807,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Orações atendidas!”
-
-🙏 4
-
-Cínthia S.
-
-24 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1284,15 +852,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1310,23 +870,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St.Rita for your intercession!!”
-
-🙏 12
-
-Liz C.
-
-Oct 1st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1344,21 +888,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 2
-
-Aryane M.
-
-4 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1397,15 +927,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1423,23 +945,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St.Rita for your intercession!!”
-
-🙏 12
-
-Liz C.
-
-Oct 1st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1457,21 +963,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 2
-
-Aryane M.
-
-4 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1516,21 +1008,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1548,23 +1026,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St. Rita for your intercession! My prayers for my daughter to pass the NCLEX Exam has been granted! Thank you Lord Jesus!🙏🙏🙏”
-
-🙏 10
-
-veej O.
-
-Sep 24th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1586,23 +1048,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Consegui tirar notas boas na escola 💗”
-
-🙏 41
-
-Aylla S.
-
-26 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1641,21 +1087,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1673,23 +1105,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St. Rita for your intercession! My prayers for my daughter to pass the NCLEX Exam has been granted! Thank you Lord Jesus!🙏🙏🙏”
-
-🙏 10
-
-veej O.
-
-Sep 24th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1711,23 +1127,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Consegui tirar notas boas na escola 💗”
-
-🙏 41
-
-Aylla S.
-
-26 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1772,15 +1172,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1796,23 +1188,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Melanoma was discovered in time and completely removed! Glory be to God!”
-
-🙏 5
-
-Joseph
-
-Sep 23rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1830,23 +1206,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Orações atendidas!”
-
-🙏 4
-
-Cínthia S.
-
-24 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1885,15 +1245,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1909,23 +1261,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Melanoma was discovered in time and completely removed! Glory be to God!”
-
-🙏 5
-
-Joseph
-
-Sep 23rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1943,23 +1279,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Orações atendidas!”
-
-🙏 4
-
-Cínthia S.
-
-24 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2004,31 +1324,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may
-
-(function() { var novenaTitle = "Novena a Santa Rita de Cássia"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2044,25 +1340,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“No:(”
-
-🙏 1
-
-Charlene C.
-
-Oct 26th
-
-(function() { var novenaTitle = "St. Rita Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2084,47 +1362,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 2
-
-Aryane M.
-
-4 de set
-
-(function() { var novenaTitle = "Novena a Santa Rita de Cássia"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-“Consegui tirar notas boas na escola 💗”
-
-🙏 41
-
-Aylla S.
-
-26 de mai
-
-“Orações atendidas!”
-
-🙏 4
-
-Cínthia S.
-
-24 de ago
-
-🙏 2
-
-Aryane M.
-
-4 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2163,31 +1401,7 @@ Oh Dios omnipotente, que te dignaste conceder a Santa Rita tanta gracia, a fin d
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may
-
-(function() { var novenaTitle = "Novena a Santa Rita de Cássia"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Sí”
-
-🙏 437
-
-Ethan D.
-
-25 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2203,25 +1417,7 @@ Pray for us, O holy Saint Rita, that we may be made worthy of the promises of Ch
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“No:(”
-
-🙏 1
-
-Charlene C.
-
-Oct 26th
-
-(function() { var novenaTitle = "St. Rita Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2243,47 +1439,7 @@ Reza-se 1 Pai Nosso; 1 Ave-Maria e 1 Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 2
-
-Aryane M.
-
-4 de set
-
-(function() { var novenaTitle = "Novena a Santa Rita de Cássia"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-“Consegui tirar notas boas na escola 💗”
-
-🙏 41
-
-Aylla S.
-
-26 de mai
-
-“Orações atendidas!”
-
-🙏 4
-
-Cínthia S.
-
-24 de ago
-
-🙏 2
-
-Aryane M.
-
-4 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

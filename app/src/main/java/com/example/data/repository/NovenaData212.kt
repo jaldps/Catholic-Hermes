@@ -72,21 +72,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -136,23 +122,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you to my DEAR JESUS CHRIST for hearing my prayers and fulfilling my wishes.. I am now a BSN-RN in Philippines and soon a USRN.. My FAITH is Bigger than my FEARS Lord.. I surrender All to you..”
-
-🙏 155
-
-Community Member
-
-Oct 4th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -230,23 +200,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -301,21 +255,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -365,23 +305,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you to my DEAR JESUS CHRIST for hearing my prayers and fulfilling my wishes.. I am now a BSN-RN in Philippines and soon a USRN.. My FAITH is Bigger than my FEARS Lord.. I surrender All to you..”
-
-🙏 155
-
-Community Member
-
-Oct 4th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -459,23 +383,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -538,15 +446,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -596,23 +496,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“God has answered my prayers and petitions through the Holy Spirit, He always does according to his purpose, God is good All the time🙏🙏🙏 Thank you my Heavenly Father, the son and the Holy Spirit.....”
-
-🙏 114
-
-Community Member
-
-Sep 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -688,23 +572,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -761,15 +629,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -819,23 +679,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“God has answered my prayers and petitions through the Holy Spirit, He always does according to his purpose, God is good All the time🙏🙏🙏 Thank you my Heavenly Father, the son and the Holy Spirit.....”
-
-🙏 114
-
-Community Member
-
-Sep 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -911,23 +755,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -990,21 +818,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1054,23 +868,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank You, O Holy Spirit 💖 You've answered my Prayer 🥰💕💓💝🙏🏽”
-
-🙏 111
-
-Community Member
-
-Sep 2nd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1148,23 +946,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1221,21 +1003,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1285,23 +1053,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank You, O Holy Spirit 💖 You've answered my Prayer 🥰💕💓💝🙏🏽”
-
-🙏 111
-
-Community Member
-
-Sep 2nd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1379,23 +1131,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1458,15 +1194,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1516,23 +1244,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Holy Spirit for helping me find out and discern what mt charisms are! (Leader, helps) Godspeed!! 🕊️”
-
-🙏 55
-
-Roselle B.
-
-Sep 14th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1606,23 +1318,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1679,15 +1375,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1737,23 +1425,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Holy Spirit for helping me find out and discern what mt charisms are! (Leader, helps) Godspeed!! 🕊️”
-
-🙏 55
-
-Roselle B.
-
-Sep 14th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1827,23 +1499,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1906,21 +1562,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1970,23 +1612,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Approximately the second day of my Holy Spirit novena I received great peace. I believe in my novena and in the Holy Spirit who I give all my thanks and praise for answered prayers.”
-
-🙏 51
-
-Community Member
-
-Oct 5th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2064,23 +1690,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2137,21 +1747,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2201,23 +1797,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Approximately the second day of my Holy Spirit novena I received great peace. I believe in my novena and in the Holy Spirit who I give all my thanks and praise for answered prayers.”
-
-🙏 51
-
-Community Member
-
-Oct 5th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2295,23 +1875,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2374,15 +1938,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2432,23 +1988,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Inspiration to begin writing my book. Guidance and revelations.”
-
-🙏 50
-
-Edith B.
-
-Sep 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2522,23 +2062,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2595,15 +2119,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2653,23 +2169,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Inspiration to begin writing my book. Guidance and revelations.”
-
-🙏 50
-
-Edith B.
-
-Sep 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2743,23 +2243,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2822,21 +2306,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2886,23 +2356,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank You O Holy Spirit, You've answered my prayers 🥰💓💞💕”
-
-🙏 44
-
-Community Member
-
-Sep 11th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2980,23 +2434,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3053,21 +2491,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3117,23 +2541,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank You O Holy Spirit, You've answered my prayers 🥰💓💞💕”
-
-🙏 44
-
-Community Member
-
-Sep 11th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3211,23 +2619,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3290,15 +2682,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3348,23 +2732,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“This has been a difficult year with many finacial needs however, by his grace, my cup has not stopped flowing. Expenses are covered in a way I dont understand. Thank you Lord for generousity.”
-
-🙏 20
-
-Community Member
-
-Oct 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3442,23 +2810,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3515,15 +2867,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3573,23 +2917,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“This has been a difficult year with many finacial needs however, by his grace, my cup has not stopped flowing. Expenses are covered in a way I dont understand. Thank you Lord for generousity.”
-
-🙏 20
-
-Community Member
-
-Oct 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3667,23 +2995,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3746,51 +3058,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may
-
-(function() { var novenaTitle = "Novena al Espíritu Santo Pentecostés"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may
-
-Esta novena es la original y más antigua de la Iglesia.
-
-Jesús mismo instituyó esta novena cuando, tras su Ascensión, les dijo a sus apóstoles que fueran a Jerusalén a orar durante nueve días antes de recibir el Espíritu Santo en Pentecostés.
-
-Así, a lo largo de los siglos, se han desarrollado en la Iglesia novenas de oración de nueve días, y los católicos las rezan por intenciones específicas.
-
-En la novena al Espíritu Santo, la intención principal es recibir los siete dones del Espíritu Santo: sabiduría, entendimiento, conocimiento, consejo, fortaleza, piedad y temor de Dios.
-
-El Espíritu Santo concede estos dones a los fieles, comenzando en el Bautismo y aumentando en la Confirmación.
-
-Pentecostés
-
-Pentecostés proviene del griego y significa quincuagésimo, en referencia al quincuagésimo día desde la Pascua judía.
-
-En Hechos, capítulo 2, San Lucas escribe que los apóstoles y seguidores de Cristo estaban todos reunidos en un mismo lugar el día de Pentecostés, y se levantó un viento fuerte, símbolo del Espíritu Santo, y aparecieron lenguas de fuego que se posaron sobre cada uno de ellos.
-
-Los apóstoles pudieron entonces hablar en otros idiomas y entenderlos también. Este milagro demostró que Dios estaba revirtiendo la maldición de la Torre de Babel, donde confundió las lenguas de la gente para que no pudieran entenderse.
-
-Reza la novena al Espíritu Santo para que sus siete dones aumenten en tu vida.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3840,25 +3108,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My anxiety is getting much better. I also think I have finally been given the answer about some health issues and it's much better than expected! Praise be to God;”
-
-🙏 7
-
-Community Member
-
-Oct 14th
-
-(function() { var novenaTitle = "Novena to the Holy Spirit"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3940,25 +3190,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena do Espírito Santo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -4015,51 +3247,7 @@ Te pedimos, Señor, que según la promesa de tu Hijo, el Espíritu Santo nos lle
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may
-
-(function() { var novenaTitle = "Novena al Espíritu Santo Pentecostés"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“A tu tiempo, Señor 🙏🏻❤️... confío”
-
-🙏 87
-
-Zulay Josefina S.
-
-23 de may
-
-Esta novena es la original y más antigua de la Iglesia.
-
-Jesús mismo instituyó esta novena cuando, tras su Ascensión, les dijo a sus apóstoles que fueran a Jerusalén a orar durante nueve días antes de recibir el Espíritu Santo en Pentecostés.
-
-Así, a lo largo de los siglos, se han desarrollado en la Iglesia novenas de oración de nueve días, y los católicos las rezan por intenciones específicas.
-
-En la novena al Espíritu Santo, la intención principal es recibir los siete dones del Espíritu Santo: sabiduría, entendimiento, conocimiento, consejo, fortaleza, piedad y temor de Dios.
-
-El Espíritu Santo concede estos dones a los fieles, comenzando en el Bautismo y aumentando en la Confirmación.
-
-Pentecostés
-
-Pentecostés proviene del griego y significa quincuagésimo, en referencia al quincuagésimo día desde la Pascua judía.
-
-En Hechos, capítulo 2, San Lucas escribe que los apóstoles y seguidores de Cristo estaban todos reunidos en un mismo lugar el día de Pentecostés, y se levantó un viento fuerte, símbolo del Espíritu Santo, y aparecieron lenguas de fuego que se posaron sobre cada uno de ellos.
-
-Los apóstoles pudieron entonces hablar en otros idiomas y entenderlos también. Este milagro demostró que Dios estaba revirtiendo la maldición de la Torre de Babel, donde confundió las lenguas de la gente para que no pudieran entenderse.
-
-Reza la novena al Espíritu Santo para que sus siete dones aumenten en tu vida.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -4109,25 +3297,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My anxiety is getting much better. I also think I have finally been given the answer about some health issues and it's much better than expected! Praise be to God;”
-
-🙏 7
-
-Community Member
-
-Oct 14th
-
-(function() { var novenaTitle = "Novena to the Holy Spirit"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -4209,25 +3379,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena do Espírito Santo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

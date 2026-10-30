@@ -44,21 +44,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -84,23 +70,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“The morning after my last day of novena , I had a dream of a male voice telling me “get ready for a baby”. Waiting to see Gods timing .”
-
-🙏 131
-
-Sarah K.
-
-Sep 1st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -294,23 +264,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -337,21 +291,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -377,23 +317,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“The morning after my last day of novena , I had a dream of a male voice telling me “get ready for a baby”. Waiting to see Gods timing .”
-
-🙏 131
-
-Sarah K.
-
-Sep 1st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -587,23 +511,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -636,15 +544,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -670,23 +570,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“St Anthony saved me from a terrible situation. Thank you St Anthony.”
-
-🙏 112
-
-Community Member
-
-Aug 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -876,23 +760,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -919,15 +787,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -953,23 +813,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“St Anthony saved me from a terrible situation. Thank you St Anthony.”
-
-🙏 112
-
-Community Member
-
-Aug 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1159,23 +1003,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1208,21 +1036,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1246,23 +1060,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Part of my prayer was answered on Day 8 of the novena. My elderly friend made progress in a health concern and is in better spirits again.”
-
-🙏 72
-
-Audrey R.
-
-Sep 1st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1456,23 +1254,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1499,21 +1281,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1537,23 +1305,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Part of my prayer was answered on Day 8 of the novena. My elderly friend made progress in a health concern and is in better spirits again.”
-
-🙏 72
-
-Audrey R.
-
-Sep 1st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1747,23 +1499,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1796,15 +1532,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1830,23 +1558,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“We have not heard anything yet, but we know Saint Anthony is working hard for us to find a good and honest buyer for our small business. 😀🥰🙏”
-
-🙏 44
-
-Lydia S.
-
-Oct 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2036,23 +1748,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2079,15 +1775,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2113,23 +1801,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“We have not heard anything yet, but we know Saint Anthony is working hard for us to find a good and honest buyer for our small business. 😀🥰🙏”
-
-🙏 44
-
-Lydia S.
-
-Oct 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2319,23 +1991,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2368,21 +2024,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2408,23 +2050,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have passed my exam despite not being able to attempt all questions and I was asked questions i knew. Glory be to God. Thank you st Anthony”
-
-🙏 19
-
-uyodhu A.
-
-Sep 4th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2618,23 +2244,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2661,21 +2271,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2701,23 +2297,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have passed my exam despite not being able to attempt all questions and I was asked questions i knew. Glory be to God. Thank you st Anthony”
-
-🙏 19
-
-uyodhu A.
-
-Sep 4th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2911,23 +2491,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2960,15 +2524,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2994,23 +2550,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank u st Anthony for always interceding for me 🩵💕the priest who blessed me today was named Anthony”
-
-🙏 17
-
-Community Member
-
-Sep 11th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3200,23 +2740,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3243,15 +2767,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3277,23 +2793,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank u st Anthony for always interceding for me 🩵💕the priest who blessed me today was named Anthony”
-
-🙏 17
-
-Community Member
-
-Sep 11th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3483,23 +2983,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3532,21 +3016,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3572,23 +3042,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you dear St. Anthony! Day after I completed my novena, my prayer was answered. You have truly helped me find my pearls 🙏🏻”
-
-🙏 9
-
-Myrna T.
-
-Sep 13th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3782,23 +3236,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3825,21 +3263,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3865,23 +3289,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you dear St. Anthony! Day after I completed my novena, my prayer was answered. You have truly helped me find my pearls 🙏🏻”
-
-🙏 9
-
-Myrna T.
-
-Sep 13th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -4075,23 +3483,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -4124,15 +3516,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -4158,23 +3542,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My divorce was finalized.”
-
-🙏 8
-
-Breanna N.
-
-Sep 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -4364,23 +3732,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -4407,15 +3759,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -4441,23 +3785,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My divorce was finalized.”
-
-🙏 8
-
-Breanna N.
-
-Sep 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -4647,23 +3975,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -4696,69 +4008,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago
-
-(function() { var novenaTitle = "Novena a San Antonio de Padua"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago
-
-¿Qué hizo San Antonio?
-
-San Antonio de Padua nació como Fernando Martins de Bulhões en Lisboa, Portugal.
-
-Su familia era adinerada, pero también fiel, y recibió estudios en la escuela Catedral de su localidad.
-
-Su Primera Comunidad Religiosa
-
-Ingresó en los Canónigos Regulares de la Orden de la Santa Cruz con apenas quince años. Pero debido a las distracciones de las frecuentes visitas de familiares, pidió que lo trasladaran a Coimbra, donde se encontraba la casa matriz de la congregación.
-
-Fue ordenado sacerdote, pero poco después una nueva comunidad religiosa, los Franciscanos, instaló una ermita cerca de Coimbra y, atraído por su carisma, creyó que estaba llamado a unirse a ellos.
-
-Sus superiores estuvieron de acuerdo, y fue entonces cuando cambió su nombre a Antonio.
-
-Antonio como Franciscano
-
-Antonio comenzó a viajar para evangelizar, pero se enfermó, y tras varias aventuras llegó a la Toscana, Italia, donde vivió en la ermita de San Paolo, creciendo en oración y sabiduría.
-
-Algún tiempo después, en 1222, en Forli, Italia, algunos frailes dominicos llegaron al pueblo de visita, pero no se sabía quién debía predicar la homilía para una ordenación.
-
-Sus hermanos Franciscanos preguntaron a Antonio si estaba dispuesto a dar la homilía, de la manera que el Espíritu Santo le indicara.
-
-La poderosa homilía de Antonio sorprendió y agradó tanto a los Dominicos como a los Franciscanos. Su elocuencia llegó incluso a oídos de Francisco de Asís, y los dos se conocieron, convirtiéndose rápidamente en amigos.
-
-Dos años más tarde, San Francisco nombró a Antonio director de estudios para todos los Franciscanos.
-
-San Antonio, Patrono de los objetos perdidos
-
-San Antonio se convirtió en el santo patrono de los objetos perdidos de esta manera: Antonio tenía un libro de Salmos que usaba con el propósito de estudiar y enseñar, pero un novicio Franciscano robó el libro, apartándose de la comunidad en el proceso. Antonio oró para recuperar el libro perdido y, milagrosamente, el novicio devolvió el libro robado y se arrepintió de haber dejado la comunidad Franciscana.
-
-Con frecuencia se representa a San Antonio sosteniendo al niño Jesús debido a esta anécdota: Una noche, Antonio estaba estudiando la Biblia, cuando el Niño Jesús se le acercó. Jesús tocó el rostro de San Antonio, un gesto de gran amor para el santo que predicaba con tanta elocuencia acerca de Cristo.
-
-Santo y Doctor de la Iglesia
-
-San Antonio tenía 36 años cuando murió. El Papa Gregorio IX lo canonizó un año después en Spoleto, Italia.
-
-Fue declarado Doctor de la Iglesia el 16 de enero de 1946.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -4782,25 +4032,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Hold a blessed child”
-
-🙏 4
-
-john R.
-
-Oct 15th
-
-(function() { var novenaTitle = "St. Anthony Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -4994,25 +4226,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Santo Antônio de Pádua e de Lisboa"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -5039,69 +4253,7 @@ R. Para que por tu intercesión alcancemos los gozos de la vida.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago
-
-(function() { var novenaTitle = "Novena a San Antonio de Padua"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Juan Manuel le envío un mensaje a mi hermana, y le pidió perdón. No sé han iniciado nada pero si envío mensaje durante la novena”
-
-🙏 20
-
-Community Member
-
-14 de ago
-
-¿Qué hizo San Antonio?
-
-San Antonio de Padua nació como Fernando Martins de Bulhões en Lisboa, Portugal.
-
-Su familia era adinerada, pero también fiel, y recibió estudios en la escuela Catedral de su localidad.
-
-Su Primera Comunidad Religiosa
-
-Ingresó en los Canónigos Regulares de la Orden de la Santa Cruz con apenas quince años. Pero debido a las distracciones de las frecuentes visitas de familiares, pidió que lo trasladaran a Coimbra, donde se encontraba la casa matriz de la congregación.
-
-Fue ordenado sacerdote, pero poco después una nueva comunidad religiosa, los Franciscanos, instaló una ermita cerca de Coimbra y, atraído por su carisma, creyó que estaba llamado a unirse a ellos.
-
-Sus superiores estuvieron de acuerdo, y fue entonces cuando cambió su nombre a Antonio.
-
-Antonio como Franciscano
-
-Antonio comenzó a viajar para evangelizar, pero se enfermó, y tras varias aventuras llegó a la Toscana, Italia, donde vivió en la ermita de San Paolo, creciendo en oración y sabiduría.
-
-Algún tiempo después, en 1222, en Forli, Italia, algunos frailes dominicos llegaron al pueblo de visita, pero no se sabía quién debía predicar la homilía para una ordenación.
-
-Sus hermanos Franciscanos preguntaron a Antonio si estaba dispuesto a dar la homilía, de la manera que el Espíritu Santo le indicara.
-
-La poderosa homilía de Antonio sorprendió y agradó tanto a los Dominicos como a los Franciscanos. Su elocuencia llegó incluso a oídos de Francisco de Asís, y los dos se conocieron, convirtiéndose rápidamente en amigos.
-
-Dos años más tarde, San Francisco nombró a Antonio director de estudios para todos los Franciscanos.
-
-San Antonio, Patrono de los objetos perdidos
-
-San Antonio se convirtió en el santo patrono de los objetos perdidos de esta manera: Antonio tenía un libro de Salmos que usaba con el propósito de estudiar y enseñar, pero un novicio Franciscano robó el libro, apartándose de la comunidad en el proceso. Antonio oró para recuperar el libro perdido y, milagrosamente, el novicio devolvió el libro robado y se arrepintió de haber dejado la comunidad Franciscana.
-
-Con frecuencia se representa a San Antonio sosteniendo al niño Jesús debido a esta anécdota: Una noche, Antonio estaba estudiando la Biblia, cuando el Niño Jesús se le acercó. Jesús tocó el rostro de San Antonio, un gesto de gran amor para el santo que predicaba con tanta elocuencia acerca de Cristo.
-
-Santo y Doctor de la Iglesia
-
-San Antonio tenía 36 años cuando murió. El Papa Gregorio IX lo canonizó un año después en Spoleto, Italia.
-
-Fue declarado Doctor de la Iglesia el 16 de enero de 1946.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -5125,25 +4277,7 @@ O God, may the votive commemoration of blessed Anthony, Thy confessor, be a sour
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Hold a blessed child”
-
-🙏 4
-
-john R.
-
-Oct 15th
-
-(function() { var novenaTitle = "St. Anthony Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -5337,25 +4471,7 @@ Oremos: Alegre, Senhor Deus, a vossa Igreja a solenidade votiva de Santo Antôni
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Santo Antônio de Pádua e de Lisboa"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

@@ -42,21 +42,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -80,23 +66,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My case at work was resolved and I was generously compensated. I leave my position knowing that it was on a good basis with my name cleared. Thank you Lord my God!!”
-
-🙏 87
-
-Margarita M.
-
-May 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -126,23 +96,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -167,21 +121,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -205,23 +145,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My case at work was resolved and I was generously compensated. I leave my position knowing that it was on a good basis with my name cleared. Thank you Lord my God!!”
-
-🙏 87
-
-Margarita M.
-
-May 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -251,23 +175,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -298,15 +206,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -330,23 +230,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Sometimes one does not get the answer straightaway but I am at peace”
-
-🙏 69
-
-Annette F.
-
-May 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -372,23 +256,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -413,15 +281,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -445,23 +305,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Sometimes one does not get the answer straightaway but I am at peace”
-
-🙏 69
-
-Annette F.
-
-May 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -487,23 +331,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -534,21 +362,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -572,23 +386,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I initially received an A in all my classes except physics with a C+ but then I emailed the professor (first time I do this) and he ended up changing it to a B-! Now I can apply to dental school with a stronger GPA! Thanks be to God”
-
-🙏 15
-
-Serena H.
-
-May 25th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -618,23 +416,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -659,21 +441,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -697,23 +465,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I initially received an A in all my classes except physics with a C+ but then I emailed the professor (first time I do this) and he ended up changing it to a B-! Now I can apply to dental school with a stronger GPA! Thanks be to God”
-
-🙏 15
-
-Serena H.
-
-May 25th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -743,23 +495,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -790,15 +526,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -822,23 +550,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have felt that my strength against temptations to sin have decreased since. I definitely attribute it to our lady our queen. 🙏🏽❤️”
-
-🙏 4
-
-Yordany M.
-
-May 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -864,23 +576,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -905,15 +601,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -937,23 +625,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have felt that my strength against temptations to sin have decreased since. I definitely attribute it to our lady our queen. 🙏🏽❤️”
-
-🙏 4
-
-Yordany M.
-
-May 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -979,23 +651,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1026,21 +682,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1064,23 +706,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed for a role as an Assistant Educational Psychologist. I attended the interview, received a rejection then they told me they had funding for a second person to join the team. I start September 2026. Thanks be to God.”
-
-🙏 3
-
-Community Member
-
-Jul 29th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1110,23 +736,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1151,21 +761,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1189,23 +785,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed for a role as an Assistant Educational Psychologist. I attended the interview, received a rejection then they told me they had funding for a second person to join the team. I start September 2026. Thanks be to God.”
-
-🙏 3
-
-Community Member
-
-Jul 29th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1235,23 +815,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1282,15 +846,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1314,23 +870,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Our daughter has been healed of miscarriage, she conceived and is almost at her 2nd trimester. Her doctor said that there is very little chance of a miscarriage at this point. Her due date is Christmas Day! Thank you Our Lady of Fatima 🌹”
-
-🙏 3
-
-Lorraine G.
-
-Jun 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1356,23 +896,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1397,15 +921,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1429,23 +945,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Our daughter has been healed of miscarriage, she conceived and is almost at her 2nd trimester. Her doctor said that there is very little chance of a miscarriage at this point. Her due date is Christmas Day! Thank you Our Lady of Fatima 🌹”
-
-🙏 3
-
-Lorraine G.
-
-Jun 7th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1471,23 +971,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1518,21 +1002,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1556,23 +1026,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I asked for our company to have more clients and help to sustain it came. Thank you Mother Mary for the intercession.”
-
-🙏 1
-
-Community Member
-
-Sep 9th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1602,23 +1056,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1643,21 +1081,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1681,23 +1105,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I asked for our company to have more clients and help to sustain it came. Thank you Mother Mary for the intercession.”
-
-🙏 1
-
-Community Member
-
-Sep 9th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1727,23 +1135,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1774,15 +1166,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1806,23 +1190,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My hatred of my habitual sin has grown, and while I still struggle, I do think it has gotten easier.”
-
-🙏 1
-
-John H.
-
-Jun 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1848,23 +1216,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1889,15 +1241,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1921,23 +1265,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My hatred of my habitual sin has grown, and while I still struggle, I do think it has gotten easier.”
-
-🙏 1
-
-John H.
-
-Jun 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1963,23 +1291,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2010,63 +1322,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may
-
-(function() { var novenaTitle = "Novena a la Virgen de Fátima"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may
-
-¿Por qué es importante Nuestra Señora de Fátima?
-
-La Santísima Virgen María se apareció en 1917 a tres niños portugueses: Lucía, Francisco y Jacinta. Del 13 de mayo al 13 de octubre, se apareció seis veces en el pequeño pueblo de Fátima, Portugal.
-
-La Primera Guerra Mundial, o la Gran Guerra, como se la conocía entonces, estaba en curso y causaba devastación en toda Europa. Nuestra Señora de Fátima llegó en este momento crucial, anunciando a los niños que la paz era posible si la gente atendía a sus advertencias.
-
-Lucía, Francisco y Jacinta se criaron en hogares católicos fieles, en un pueblo que se mantuvo fiel a la Iglesia en medio de la persecución gubernamental. Lucía de Jesús Santos y sus primos hermanos, Francisco y Jacinta Marto, eran niños devotos. Gracias a las apariciones de Nuestra Señora, los niños crecieron en santidad y sabiduría, algo que contradecía su corta edad.
-
-Francisco y Jacinta fallecieron unos años después, como les había informado Nuestra Señora, mientras que Lucía vivió hasta los 97 años. El Papa Francisco canonizó a Jacinta y Francisco el 13 de mayo de 2017 en Fátima, en el centenario de las apariciones.
-
-El Milagro del Sol ocurrió el 13 de octubre de 1917, presenciado por 70.000 personas. Nuestra Señora de Fátima les había dicho a los niños la fecha y el lugar.
-
-Todos pudieron mirar directamente al sol sin sufrir daño alguno en los ojos. El sol aumentó de tamaño, se encogió, giró y dio vueltas, como si bailara. Incluso personas no católicas e incrédulas presenciaron sus milagros, y muchos se convirtieron inmediatamente a Dios y pidieron perdón por sus pecados.
-
-La Iglesia, a través del obispo local, declaró las apariciones dignas de fe en octubre de 1930.
-
-¿Cuáles son los Tres Secretos de Fátima?
-
-El primer secreto fue una visión del infierno, donde se veían almas como brasas sumergiéndose en un mar de fuego, junto con demonios.
-
-El segundo secreto predijo que la Primera Guerra Mundial terminaría, pero que Rusia debía consagrarse al Inmaculado Corazón de María y convertirse o, de lo contrario, se desataría una guerra aún peor. (La Segunda Guerra Mundial fue esa segunda guerra terrible y, por supuesto, terminó ocurriendo).
-
-El tercer secreto mostraba a un obispo vestido de blanco, el Papa, junto con otros clérigos y religiosos subiendo una montaña rodeados de destrucción, siendo atacados por soldados y balas. Algunos han dicho que predijo el intento de asesinato contra el Papa Juan Pablo II en 1981, el día de Nuestra Señora de Fátima (13 de mayo).""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2090,107 +1346,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My husband got a job and will start this June 8. Thank you Our Lady of Fatima.”
-
-🙏 1
-
-Nikki T.
-
-May 29th
-
-(function() { var novenaTitle = "Our Lady of Fatima Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“My case at work was resolved and I was generously compensated. I leave my position knowing that it was on a good basis with my name cleared. Thank you Lord my God!!”
-
-🙏 87
-
-Margarita M.
-
-May 17th
-
-“Sometimes one does not get the answer straightaway but I am at peace”
-
-🙏 69
-
-Annette F.
-
-May 16th
-
-“I initially received an A in all my classes except physics with a C+ but then I emailed the professor (first time I do this) and he ended up changing it to a B-! Now I can apply to dental school with a stronger GPA! Thanks be to God”
-
-🙏 15
-
-Serena H.
-
-May 25th
-
-“I have felt that my strength against temptations to sin have decreased since. I definitely attribute it to our lady our queen. 🙏🏽❤️”
-
-🙏 4
-
-Yordany M.
-
-May 20th
-
-“I prayed for a role as an Assistant Educational Psychologist. I attended the interview, received a rejection then they told me they had funding for a second person to join the team. I start September 2026. Thanks be to God.”
-
-🙏 3
-
-Community Member
-
-Jul 29th
-
-“Our daughter has been healed of miscarriage, she conceived and is almost at her 2nd trimester. Her doctor said that there is very little chance of a miscarriage at this point. Her due date is Christmas Day! Thank you Our Lady of Fatima 🌹”
-
-🙏 3
-
-Lorraine G.
-
-Jun 7th
-
-“I asked for our company to have more clients and help to sustain it came. Thank you Mother Mary for the intercession.”
-
-🙏 1
-
-Community Member
-
-Sep 9th
-
-“My hatred of my habitual sin has grown, and while I still struggle, I do think it has gotten easier.”
-
-🙏 1
-
-John H.
-
-Jun 3rd
-
-“My husband got a job and will start this June 8. Thank you Our Lady of Fatima.”
-
-🙏 1
-
-Nikki T.
-
-May 29th
-
-“i have been given spiritual guidance from both Sr. Charlotte and the priest at St. Olha in the last few days. their spiritual guidance has stuck with me and i am ready to take action with calling the Archdiocese. Fr. reminded me to look at the glass half full, not half empty. in doing so, i focused on the positives of my relationship with Chris and the fruits of the Holy Spirit instead of his shortcomings. and when I did so, the Holy Sprit spoke to me. updated: even though the relationship ended, i am still grateful that the Holy Spirit led me to see the glass half full. I can carry this into my future relationship.”
-
-🙏 0
-
-Hannah W.
-
-Oct 20th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2220,51 +1376,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai
-
-(function() { var novenaTitle = "Novena a Nossa Senhora de Fátima"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai
-
-Sobre Nossa Senhora de Fátima
-
-A abençoada Virgem Maria apareceu em 1917 a três crianças portuguesas: Lucia, Francisco e Jacinta. De 13 de maio a 13 de outubro, ela apareceu seis vezes na pequena vila de Fátima, Portugal.
-
-A Primeira Guerra Mundial ou a Grande Guerra, como era conhecida na época, estava em andamento, deixando a devastação em toda a Europa. Nossa Senhora de Fátima chegou neste momento crucial dizendo às crianças que a paz era possível se as pessoas prestassem atenção aos avisos dela.
-
-Lucia, Francisco e Jacinta foram criados em fiéis lares católicos, em uma cidade que permaneceu fiel à igreja em meio à perseguição ao governo. Lucia de Jesus Santos e seus primos em primeiro lugar, Francisco e Jacinta Marto, eram filhos devotos. Através das aparições de Nossa Senhora, as crianças cresceram em santidade e sabedoria que desmentiam sua idade jovem.
-
-Francisco e Jacinta morreram alguns anos depois, como Nossa Senhora os havia informado, enquanto Lucia viveu 97 anos. O Papa Francisco canonizou Jacinta e Francisco em 13 de maio de 2017, em Fátima, no centésimo aniversário das aparições.
-
-O milagre do sol ocorreu em 13 de outubro de 1917, testemunhado por 70.000 pessoas. Nossa Senhora de Fátima havia dito aos filhos da data e lugar que ocorreria.
-
-Todos poderiam olhar diretamente para o sol sem nenhum ferimento nos olhos. O sol cresceu de tamanho, encolhido, girado e girado, parecendo que estava dançando. Até os não-católicos e incrédulos testemunharam seus milagres, e muitos imediatamente foram convertidos a Deus e pediram perdão por seus pecados.
-
-A igreja através do bispo local declarou as aparições dignas de crença em outubro de 1930."""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2289,63 +1401,7 @@ ORACIÓN FINAL
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may
-
-(function() { var novenaTitle = "Novena a la Virgen de Fátima"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“La persona por quien recé ésta novena volvió a la Iglesia, tal como se lo pedí a Nuestra Santa Señora de Fátima”
-
-🙏 24
-
-Community Member
-
-12 de may
-
-“Virgen de Fátima iluminanls y dantificanos”
-
-🙏 13
-
-Liliana M.
-
-14 de may
-
-¿Por qué es importante Nuestra Señora de Fátima?
-
-La Santísima Virgen María se apareció en 1917 a tres niños portugueses: Lucía, Francisco y Jacinta. Del 13 de mayo al 13 de octubre, se apareció seis veces en el pequeño pueblo de Fátima, Portugal.
-
-La Primera Guerra Mundial, o la Gran Guerra, como se la conocía entonces, estaba en curso y causaba devastación en toda Europa. Nuestra Señora de Fátima llegó en este momento crucial, anunciando a los niños que la paz era posible si la gente atendía a sus advertencias.
-
-Lucía, Francisco y Jacinta se criaron en hogares católicos fieles, en un pueblo que se mantuvo fiel a la Iglesia en medio de la persecución gubernamental. Lucía de Jesús Santos y sus primos hermanos, Francisco y Jacinta Marto, eran niños devotos. Gracias a las apariciones de Nuestra Señora, los niños crecieron en santidad y sabiduría, algo que contradecía su corta edad.
-
-Francisco y Jacinta fallecieron unos años después, como les había informado Nuestra Señora, mientras que Lucía vivió hasta los 97 años. El Papa Francisco canonizó a Jacinta y Francisco el 13 de mayo de 2017 en Fátima, en el centenario de las apariciones.
-
-El Milagro del Sol ocurrió el 13 de octubre de 1917, presenciado por 70.000 personas. Nuestra Señora de Fátima les había dicho a los niños la fecha y el lugar.
-
-Todos pudieron mirar directamente al sol sin sufrir daño alguno en los ojos. El sol aumentó de tamaño, se encogió, giró y dio vueltas, como si bailara. Incluso personas no católicas e incrédulas presenciaron sus milagros, y muchos se convirtieron inmediatamente a Dios y pidieron perdón por sus pecados.
-
-La Iglesia, a través del obispo local, declaró las apariciones dignas de fe en octubre de 1930.
-
-¿Cuáles son los Tres Secretos de Fátima?
-
-El primer secreto fue una visión del infierno, donde se veían almas como brasas sumergiéndose en un mar de fuego, junto con demonios.
-
-El segundo secreto predijo que la Primera Guerra Mundial terminaría, pero que Rusia debía consagrarse al Inmaculado Corazón de María y convertirse o, de lo contrario, se desataría una guerra aún peor. (La Segunda Guerra Mundial fue esa segunda guerra terrible y, por supuesto, terminó ocurriendo).
-
-El tercer secreto mostraba a un obispo vestido de blanco, el Papa, junto con otros clérigos y religiosos subiendo una montaña rodeados de destrucción, siendo atacados por soldados y balas. Algunos han dicho que predijo el intento de asesinato contra el Papa Juan Pablo II en 1981, el día de Nuestra Señora de Fátima (13 de mayo).""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2369,107 +1425,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My husband got a job and will start this June 8. Thank you Our Lady of Fatima.”
-
-🙏 1
-
-Nikki T.
-
-May 29th
-
-(function() { var novenaTitle = "Our Lady of Fatima Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“My case at work was resolved and I was generously compensated. I leave my position knowing that it was on a good basis with my name cleared. Thank you Lord my God!!”
-
-🙏 87
-
-Margarita M.
-
-May 17th
-
-“Sometimes one does not get the answer straightaway but I am at peace”
-
-🙏 69
-
-Annette F.
-
-May 16th
-
-“I initially received an A in all my classes except physics with a C+ but then I emailed the professor (first time I do this) and he ended up changing it to a B-! Now I can apply to dental school with a stronger GPA! Thanks be to God”
-
-🙏 15
-
-Serena H.
-
-May 25th
-
-“I have felt that my strength against temptations to sin have decreased since. I definitely attribute it to our lady our queen. 🙏🏽❤️”
-
-🙏 4
-
-Yordany M.
-
-May 20th
-
-“I prayed for a role as an Assistant Educational Psychologist. I attended the interview, received a rejection then they told me they had funding for a second person to join the team. I start September 2026. Thanks be to God.”
-
-🙏 3
-
-Community Member
-
-Jul 29th
-
-“Our daughter has been healed of miscarriage, she conceived and is almost at her 2nd trimester. Her doctor said that there is very little chance of a miscarriage at this point. Her due date is Christmas Day! Thank you Our Lady of Fatima 🌹”
-
-🙏 3
-
-Lorraine G.
-
-Jun 7th
-
-“I asked for our company to have more clients and help to sustain it came. Thank you Mother Mary for the intercession.”
-
-🙏 1
-
-Community Member
-
-Sep 9th
-
-“My hatred of my habitual sin has grown, and while I still struggle, I do think it has gotten easier.”
-
-🙏 1
-
-John H.
-
-Jun 3rd
-
-“My husband got a job and will start this June 8. Thank you Our Lady of Fatima.”
-
-🙏 1
-
-Nikki T.
-
-May 29th
-
-“i have been given spiritual guidance from both Sr. Charlotte and the priest at St. Olha in the last few days. their spiritual guidance has stuck with me and i am ready to take action with calling the Archdiocese. Fr. reminded me to look at the glass half full, not half empty. in doing so, i focused on the positives of my relationship with Chris and the fruits of the Holy Spirit instead of his shortcomings. and when I did so, the Holy Sprit spoke to me. updated: even though the relationship ended, i am still grateful that the Holy Spirit led me to see the glass half full. I can carry this into my future relationship.”
-
-🙏 0
-
-Hannah W.
-
-Oct 20th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2499,51 +1455,7 @@ Concedei-nos as graças de que necessitamos para cumprir fielmente vossa mensage
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai
-
-(function() { var novenaTitle = "Novena a Nossa Senhora de Fátima"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-“Meu filho esta ficando mais calmo, a saude da minha filha melhorou e oportunidades de trabalho estão surgindo.”
-
-🙏 41
-
-Leandro S.
-
-13 de mai
-
-Sobre Nossa Senhora de Fátima
-
-A abençoada Virgem Maria apareceu em 1917 a três crianças portuguesas: Lucia, Francisco e Jacinta. De 13 de maio a 13 de outubro, ela apareceu seis vezes na pequena vila de Fátima, Portugal.
-
-A Primeira Guerra Mundial ou a Grande Guerra, como era conhecida na época, estava em andamento, deixando a devastação em toda a Europa. Nossa Senhora de Fátima chegou neste momento crucial dizendo às crianças que a paz era possível se as pessoas prestassem atenção aos avisos dela.
-
-Lucia, Francisco e Jacinta foram criados em fiéis lares católicos, em uma cidade que permaneceu fiel à igreja em meio à perseguição ao governo. Lucia de Jesus Santos e seus primos em primeiro lugar, Francisco e Jacinta Marto, eram filhos devotos. Através das aparições de Nossa Senhora, as crianças cresceram em santidade e sabedoria que desmentiam sua idade jovem.
-
-Francisco e Jacinta morreram alguns anos depois, como Nossa Senhora os havia informado, enquanto Lucia viveu 97 anos. O Papa Francisco canonizou Jacinta e Francisco em 13 de maio de 2017, em Fátima, no centésimo aniversário das aparições.
-
-O milagre do sol ocorreu em 13 de outubro de 1917, testemunhado por 70.000 pessoas. Nossa Senhora de Fátima havia dito aos filhos da data e lugar que ocorreria.
-
-Todos poderiam olhar diretamente para o sol sem nenhum ferimento nos olhos. O sol cresceu de tamanho, encolhido, girado e girado, parecendo que estava dançando. Até os não-católicos e incrédulos testemunharam seus milagres, e muitos imediatamente foram convertidos a Deus e pediram perdão por seus pecados.
-
-A igreja através do bispo local declarou as aparições dignas de crença em outubro de 1930."""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

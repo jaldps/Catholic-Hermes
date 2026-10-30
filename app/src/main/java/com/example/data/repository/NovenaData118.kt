@@ -44,21 +44,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me siento libre me siento contento y agradecido con el arcángel Miguel interceptor ante Dios nuestros señor, se han abierto mis caminos mi fe a aumentado, gracias Dios bendito seas”
-
-🙏 519
-
-Community Member
-
-18 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -82,23 +68,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I believe my prayers are answered 🙏”
-
-🙏 21
-
-Community Member
-
-Sep 28th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -144,23 +114,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -187,21 +141,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me siento libre me siento contento y agradecido con el arcángel Miguel interceptor ante Dios nuestros señor, se han abierto mis caminos mi fe a aumentado, gracias Dios bendito seas”
-
-🙏 519
-
-Community Member
-
-18 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -225,23 +165,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I believe my prayers are answered 🙏”
-
-🙏 21
-
-Community Member
-
-Sep 28th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -287,23 +211,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -336,15 +244,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias San Miguel, mañana tengo una entrevista de trabajo y confío plenamente que el empleo que tanto anhelo se dará.”
-
-🙏 114
-
-Community Member
-
-29 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -368,23 +268,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My world was coming down on me with work, home and everywhere almost like an evil curse and once I started this Novena everything cleared up. It took all that negativity and bad stuff away. It’s hard to explain but it worked for me.”
-
-🙏 19
-
-Maria A.
-
-Oct 2nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -426,23 +310,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -469,15 +337,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias San Miguel, mañana tengo una entrevista de trabajo y confío plenamente que el empleo que tanto anhelo se dará.”
-
-🙏 114
-
-Community Member
-
-29 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -501,23 +361,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My world was coming down on me with work, home and everywhere almost like an evil curse and once I started this Novena everything cleared up. It took all that negativity and bad stuff away. It’s hard to explain but it worked for me.”
-
-🙏 19
-
-Maria A.
-
-Oct 2nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -559,23 +403,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -608,21 +436,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Confío en su pronta respuesta amén”
-
-🙏 5
-
-Diana V.
-
-12 de oct""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -646,23 +460,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have suffered from seizures, collapsing, and panic disorder since i was young. i’ve only been catholic 1.5 years and finally felt called to talk to the priest. he gave me annointing of the sick and i just know that God is working.”
-
-🙏 19
-
-Hannah W.
-
-Sep 30th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -708,23 +506,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -751,21 +533,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Confío en su pronta respuesta amén”
-
-🙏 5
-
-Diana V.
-
-12 de oct""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -789,23 +557,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have suffered from seizures, collapsing, and panic disorder since i was young. i’ve only been catholic 1.5 years and finally felt called to talk to the priest. he gave me annointing of the sick and i just know that God is working.”
-
-🙏 19
-
-Hannah W.
-
-Sep 30th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -851,23 +603,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -900,15 +636,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me siento libre me siento contento y agradecido con el arcángel Miguel interceptor ante Dios nuestros señor, se han abierto mis caminos mi fe a aumentado, gracias Dios bendito seas”
-
-🙏 519
-
-Community Member
-
-18 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -932,23 +660,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Guidance and protection of my children and grandchildren! I could see St Michael the Archangel doing what God has instructed him to do with me and my family! Thank You Lord! 🙏❤️🙏”
-
-🙏 17
-
-Community Member
-
-Sep 30th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -990,23 +702,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1033,15 +729,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me siento libre me siento contento y agradecido con el arcángel Miguel interceptor ante Dios nuestros señor, se han abierto mis caminos mi fe a aumentado, gracias Dios bendito seas”
-
-🙏 519
-
-Community Member
-
-18 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1065,23 +753,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Guidance and protection of my children and grandchildren! I could see St Michael the Archangel doing what God has instructed him to do with me and my family! Thank You Lord! 🙏❤️🙏”
-
-🙏 17
-
-Community Member
-
-Sep 30th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1123,23 +795,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1172,21 +828,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias San Miguel, mañana tengo una entrevista de trabajo y confío plenamente que el empleo que tanto anhelo se dará.”
-
-🙏 114
-
-Community Member
-
-29 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1210,23 +852,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Safe and healthy delivery for Michael Francis!”
-
-🙏 16
-
-Community Member
-
-Oct 2nd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1272,23 +898,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1315,21 +925,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias San Miguel, mañana tengo una entrevista de trabajo y confío plenamente que el empleo que tanto anhelo se dará.”
-
-🙏 114
-
-Community Member
-
-29 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1353,23 +949,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Safe and healthy delivery for Michael Francis!”
-
-🙏 16
-
-Community Member
-
-Oct 2nd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1415,23 +995,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1464,15 +1028,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Confío en su pronta respuesta amén”
-
-🙏 5
-
-Diana V.
-
-12 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1496,23 +1052,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My financial situation has not changed unfortunately. I did receive almost $200 in my bank account while I was finishing the last prayer of the novena.”
-
-🙏 16
-
-God F.
-
-Sep 30th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1554,23 +1094,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1597,15 +1121,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Confío en su pronta respuesta amén”
-
-🙏 5
-
-Diana V.
-
-12 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1629,23 +1145,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My financial situation has not changed unfortunately. I did receive almost $200 in my bank account while I was finishing the last prayer of the novena.”
-
-🙏 16
-
-God F.
-
-Sep 30th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1687,23 +1187,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1736,21 +1220,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me siento libre me siento contento y agradecido con el arcángel Miguel interceptor ante Dios nuestros señor, se han abierto mis caminos mi fe a aumentado, gracias Dios bendito seas”
-
-🙏 519
-
-Community Member
-
-18 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1774,23 +1244,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you for your intercession and protection St.Michael”
-
-🙏 15
-
-Liz C.
-
-Sep 28th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1836,23 +1290,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1879,21 +1317,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Me siento libre me siento contento y agradecido con el arcángel Miguel interceptor ante Dios nuestros señor, se han abierto mis caminos mi fe a aumentado, gracias Dios bendito seas”
-
-🙏 519
-
-Community Member
-
-18 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1917,23 +1341,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you for your intercession and protection St.Michael”
-
-🙏 15
-
-Liz C.
-
-Sep 28th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1979,23 +1387,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2028,15 +1420,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias San Miguel, mañana tengo una entrevista de trabajo y confío plenamente que el empleo que tanto anhelo se dará.”
-
-🙏 114
-
-Community Member
-
-29 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2060,23 +1444,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Cathy's husband is now cancer free.”
-
-🙏 15
-
-Thomas R.
-
-Sep 28th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2118,23 +1486,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2161,15 +1513,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias San Miguel, mañana tengo una entrevista de trabajo y confío plenamente que el empleo que tanto anhelo se dará.”
-
-🙏 114
-
-Community Member
-
-29 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2193,23 +1537,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Cathy's husband is now cancer free.”
-
-🙏 15
-
-Thomas R.
-
-Sep 28th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2251,23 +1579,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2300,47 +1612,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Confío en su pronta respuesta amén”
-
-🙏 5
-
-Diana V.
-
-12 de oct
-
-(function() { var novenaTitle = "Novena a San Miguel Arcángel"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Me siento libre me siento contento y agradecido con el arcángel Miguel interceptor ante Dios nuestros señor, se han abierto mis caminos mi fe a aumentado, gracias Dios bendito seas”
-
-🙏 519
-
-Community Member
-
-18 de ago
-
-“Gracias San Miguel, mañana tengo una entrevista de trabajo y confío plenamente que el empleo que tanto anhelo se dará.”
-
-🙏 114
-
-Community Member
-
-29 de sep
-
-“Confío en su pronta respuesta amén”
-
-🙏 5
-
-Diana V.
-
-12 de oct""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2364,25 +1636,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes”
-
-🙏 5
-
-Ifeoma F.
-
-Oct 6th
-
-(function() { var novenaTitle = "St. Michael Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2428,25 +1682,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena aos Arcanjos"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2473,47 +1709,7 @@ Bendito y alabado sea el Santísimo Sacramento del Altar, la Inmaculada Concepci
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Confío en su pronta respuesta amén”
-
-🙏 5
-
-Diana V.
-
-12 de oct
-
-(function() { var novenaTitle = "Novena a San Miguel Arcángel"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Me siento libre me siento contento y agradecido con el arcángel Miguel interceptor ante Dios nuestros señor, se han abierto mis caminos mi fe a aumentado, gracias Dios bendito seas”
-
-🙏 519
-
-Community Member
-
-18 de ago
-
-“Gracias San Miguel, mañana tengo una entrevista de trabajo y confío plenamente que el empleo que tanto anhelo se dará.”
-
-🙏 114
-
-Community Member
-
-29 de sep
-
-“Confío en su pronta respuesta amén”
-
-🙏 5
-
-Diana V.
-
-12 de oct""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2537,25 +1733,7 @@ And do thou, O Prince of the Heavenly Hosts, by the power of God, cast into hell
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes”
-
-🙏 5
-
-Ifeoma F.
-
-Oct 6th
-
-(function() { var novenaTitle = "St. Michael Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2601,25 +1779,7 @@ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena aos Arcanjos"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

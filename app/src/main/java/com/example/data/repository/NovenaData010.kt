@@ -40,21 +40,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -84,23 +70,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Our GOD is an awesome GOD. I have been blessed with an awesome wife who adores me, with a large family that loves me, I have lived a long life and experienced many happy and sad times. During my life I have not always received the things I prayed for at the time I wanted them but I have received what I needed and, often much more, at the right time, thanks be to GOD.”
-
-🙏 38
-
-Community Member
-
-Aug 6th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -134,23 +104,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -173,21 +127,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -217,23 +157,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Our GOD is an awesome GOD. I have been blessed with an awesome wife who adores me, with a large family that loves me, I have lived a long life and experienced many happy and sad times. During my life I have not always received the things I prayed for at the time I wanted them but I have received what I needed and, often much more, at the right time, thanks be to GOD.”
-
-🙏 38
-
-Community Member
-
-Aug 6th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -267,23 +191,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -312,15 +220,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -350,23 +250,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My daughter was granted her visa for a trip and now we can all be together 🖤”
-
-🙏 32
-
-Millie D.
-
-Jul 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -396,23 +280,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -435,15 +303,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -473,23 +333,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My daughter was granted her visa for a trip and now we can all be together 🖤”
-
-🙏 32
-
-Millie D.
-
-Jul 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -519,23 +363,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -564,21 +392,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -608,23 +422,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“For healing”
-
-🙏 22
-
-Community Member
-
-Aug 6th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -658,23 +456,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -697,21 +479,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -741,23 +509,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“For healing”
-
-🙏 22
-
-Community Member
-
-Aug 6th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -791,23 +543,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -836,15 +572,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -874,23 +602,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“The negative decisions about the fire department reversed. Joy was blessed he was able to resign instead of be fired though I’m still asking for someone very special Christian friend somebody can talk to a part-time job to make more money to live on his relationship with Halli and being closer to you .”
-
-🙏 18
-
-mary E.
-
-Aug 31st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -920,23 +632,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -959,15 +655,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -997,23 +685,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“The negative decisions about the fire department reversed. Joy was blessed he was able to resign instead of be fired though I’m still asking for someone very special Christian friend somebody can talk to a part-time job to make more money to live on his relationship with Halli and being closer to you .”
-
-🙏 18
-
-mary E.
-
-Aug 31st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1043,23 +715,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1088,21 +744,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1132,23 +774,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My job went ok. I was still not happy”
-
-🙏 16
-
-Community Member
-
-Aug 7th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1182,23 +808,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1221,21 +831,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1265,23 +861,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My job went ok. I was still not happy”
-
-🙏 16
-
-Community Member
-
-Aug 7th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1315,23 +895,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1360,15 +924,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1398,23 +954,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Our Lady of Guadalupe I love you❤️”
-
-🙏 15
-
-Liz C.
-
-Aug 23rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1444,23 +984,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1483,15 +1007,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1521,23 +1037,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Our Lady of Guadalupe I love you❤️”
-
-🙏 15
-
-Liz C.
-
-Aug 23rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1567,23 +1067,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1612,21 +1096,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1656,23 +1126,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Guadalupe, my baby inside my womb has progress, embryo, normal heartbeat. I hope my final interview tomorrow for my promotion will become successful and I will be chosen to be the successful applicant.”
-
-🙏 12
-
-Community Member
-
-Sep 13th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1706,23 +1160,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1745,21 +1183,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1789,23 +1213,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Guadalupe, my baby inside my womb has progress, embryo, normal heartbeat. I hope my final interview tomorrow for my promotion will become successful and I will be chosen to be the successful applicant.”
-
-🙏 12
-
-Community Member
-
-Sep 13th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1839,23 +1247,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1884,15 +1276,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1922,23 +1306,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Are blessed mother is so powerful continue praying thank u Guadalupe for always interceding for me and my answered prayer 💕🩵”
-
-🙏 9
-
-Community Member
-
-Sep 11th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1968,23 +1336,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2007,15 +1359,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2045,23 +1389,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Are blessed mother is so powerful continue praying thank u Guadalupe for always interceding for me and my answered prayer 💕🩵”
-
-🙏 9
-
-Community Member
-
-Sep 11th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2091,23 +1419,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2136,41 +1448,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul
-
-(function() { var novenaTitle = "Novena a la Virgen de Guadalupe"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul
-
-Más datos sobre Nuestra Señora de Guadalupe
-
-Nuestra Señora se apareció en el año 1531 a Juan Diego, un sencillo campesino de ascendencia azteca converso al catolicismo. Ella le pidió que consiguiera que el obispo construyera una iglesia en la colina donde ella se apareció, y Juan Diego obedientemente se lo dijo al obispo, pero al principio no le creyó; en cambio, exigió una señal milagrosa para probar que era Nuestra Señora.
-
-Nuestra Señora obró la señal milagrosa al hacer crecer rosas en este cerro en pleno invierno, luego colocó las rosas en la tilma (una túnica larga) de Juan Diego, y cuando Juan Diego le mostró al obispo al dejar que las rosas cayeran al suelo, no solo las rosas en sí mismas demostraron la autenticidad de la apariencia, sino aún más el hecho de que había aparecido milagrosamente una imagen de Nuestra Señora de Guadalupe en su tilma.
-
-El obispo creyó de inmediato, se construyó una iglesia en la colina y se alcanzó la conversión masiva de millones de personas del pueblo azteca.
-
-La tilma permanece intacta hasta el día de hoy, casi quinientos años después, otro testimonio de la naturaleza milagrosa de la misma, ya que la fibra debería haberse descompuesto hace mucho tiempo. Juan Diego fue posteriormente canonizado como testamento de su santidad.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2200,25 +1478,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Jesus, for watching over our Matthew and Jennifer.”
-
-🙏 7
-
-Rosemary C.
-
-Oct 9th
-
-(function() { var novenaTitle = "Our Lady of Guadalupe Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2252,29 +1512,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Nossa Senhora de Guadalupe"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Nossa Senhora de Fátima"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2297,41 +1535,7 @@ Rece cuatro Ave Marías en memoria de las cuatro apariciones y luego rece la ora
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul
-
-(function() { var novenaTitle = "Novena a la Virgen de Guadalupe"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“aún no mi señor Jesús”
-
-🙏 14
-
-Astrid R.
-
-5 de jul
-
-Más datos sobre Nuestra Señora de Guadalupe
-
-Nuestra Señora se apareció en el año 1531 a Juan Diego, un sencillo campesino de ascendencia azteca converso al catolicismo. Ella le pidió que consiguiera que el obispo construyera una iglesia en la colina donde ella se apareció, y Juan Diego obedientemente se lo dijo al obispo, pero al principio no le creyó; en cambio, exigió una señal milagrosa para probar que era Nuestra Señora.
-
-Nuestra Señora obró la señal milagrosa al hacer crecer rosas en este cerro en pleno invierno, luego colocó las rosas en la tilma (una túnica larga) de Juan Diego, y cuando Juan Diego le mostró al obispo al dejar que las rosas cayeran al suelo, no solo las rosas en sí mismas demostraron la autenticidad de la apariencia, sino aún más el hecho de que había aparecido milagrosamente una imagen de Nuestra Señora de Guadalupe en su tilma.
-
-El obispo creyó de inmediato, se construyó una iglesia en la colina y se alcanzó la conversión masiva de millones de personas del pueblo azteca.
-
-La tilma permanece intacta hasta el día de hoy, casi quinientos años después, otro testimonio de la naturaleza milagrosa de la misma, ya que la fibra debería haberse descompuesto hace mucho tiempo. Juan Diego fue posteriormente canonizado como testamento de su santidad.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2361,25 +1565,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Jesus, for watching over our Matthew and Jennifer.”
-
-🙏 7
-
-Rosemary C.
-
-Oct 9th
-
-(function() { var novenaTitle = "Our Lady of Guadalupe Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2413,29 +1599,7 @@ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Nossa Senhora de Guadalupe"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a Nossa Senhora de Fátima"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

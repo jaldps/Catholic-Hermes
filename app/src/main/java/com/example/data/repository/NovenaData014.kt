@@ -54,21 +54,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -94,23 +80,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Our Lady of Sorrows relieved me of my woes and instilled in me a sense of peace. 🙏🙏”
-
-🙏 107
-
-Meghan O.
-
-Sep 23rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -142,23 +112,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -195,21 +149,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -235,23 +175,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Our Lady of Sorrows relieved me of my woes and instilled in me a sense of peace. 🙏🙏”
-
-🙏 107
-
-Meghan O.
-
-Sep 23rd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -283,23 +207,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -342,15 +250,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -378,23 +278,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I decided to consecrate myself to Mary under her title of Our Lady of Sorrows, it has been ny favorite Marian devotion since I often find consolation uniting my sorrows to hers. I of course included the novena in my consecration prep, and on the day of professing my consecration at the OLS bascillica in Chicago, the second I said "Amen" after kneeling at the altar saying the words of consecration, the church bells immediately started ringing and I recieved interior consolation that she has accepted my consecration. That day, I still had not yet received an answer to a prayer of the conversion of a loved one I had been uniting my sorrows to Mary for, but I still trusted her intercession and God's timing with radical confidence. The NEXT DAY the loved one I was praying for (for years!) T…”
-
-🙏 9
-
-Mandi M.
-
-Sep 18th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -422,23 +306,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -475,15 +343,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -511,23 +371,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I decided to consecrate myself to Mary under her title of Our Lady of Sorrows, it has been ny favorite Marian devotion since I often find consolation uniting my sorrows to hers. I of course included the novena in my consecration prep, and on the day of professing my consecration at the OLS bascillica in Chicago, the second I said "Amen" after kneeling at the altar saying the words of consecration, the church bells immediately started ringing and I recieved interior consolation that she has accepted my consecration. That day, I still had not yet received an answer to a prayer of the conversion of a loved one I had been uniting my sorrows to Mary for, but I still trusted her intercession and God's timing with radical confidence. The NEXT DAY the loved one I was praying for (for years!) T…”
-
-🙏 9
-
-Mandi M.
-
-Sep 18th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -555,23 +399,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -614,21 +442,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -656,23 +470,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“She has helped saved my relationship when we’re at the verge of breaking up.”
-
-🙏 6
-
-Community Member
-
-Sep 18th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -704,23 +502,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -757,21 +539,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -799,23 +567,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“She has helped saved my relationship when we’re at the verge of breaking up.”
-
-🙏 6
-
-Community Member
-
-Sep 18th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -847,23 +599,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -906,15 +642,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -942,23 +670,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed for my mom to have strength to finish her ac chemo. Her oncologist stated that she doesnt believe its necesarry for mom to finish the last cycle of chemo bc moms cancer responded so well to chemo that we can go straight to surgery. Praise be to God!”
-
-🙏 4
-
-Angela B.
-
-Sep 23rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -986,23 +698,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1039,15 +735,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1075,23 +763,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed for my mom to have strength to finish her ac chemo. Her oncologist stated that she doesnt believe its necesarry for mom to finish the last cycle of chemo bc moms cancer responded so well to chemo that we can go straight to surgery. Praise be to God!”
-
-🙏 4
-
-Angela B.
-
-Sep 23rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1119,23 +791,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1178,21 +834,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1220,23 +862,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My test results came back normal!”
-
-🙏 3
-
-Tara D.
-
-Sep 18th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1268,23 +894,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1321,21 +931,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1363,23 +959,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My test results came back normal!”
-
-🙏 3
-
-Tara D.
-
-Sep 18th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1411,23 +991,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1470,15 +1034,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1506,23 +1062,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Was praying for wisdom and where my family should move to, and got a very clear answer after the novena ended .”
-
-🙏 1
-
-jared M.
-
-Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1550,23 +1090,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1603,15 +1127,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1639,23 +1155,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Was praying for wisdom and where my family should move to, and got a very clear answer after the novena ended .”
-
-🙏 1
-
-jared M.
-
-Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1683,23 +1183,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1742,21 +1226,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1784,23 +1254,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Mary awareness of my daughter’s illness.”
-
-🙏 0
-
-Colleen C.
-
-Oct 25th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1832,23 +1286,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1885,21 +1323,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1927,23 +1351,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Mary awareness of my daughter’s illness.”
-
-🙏 0
-
-Colleen C.
-
-Oct 25th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1975,23 +1383,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2034,15 +1426,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2072,23 +1456,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you, our lady of sorrows for your prayers and intercessions for my family members and that our Lord in his mercy kept them safe, healthy and happy and returned them home safely healthy and happy from their trip”
-
-🙏 0
-
-Pat M.
-
-Oct 25th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2118,23 +1486,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2171,15 +1523,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2209,23 +1553,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you, our lady of sorrows for your prayers and intercessions for my family members and that our Lord in his mercy kept them safe, healthy and happy and returned them home safely healthy and happy from their trip”
-
-🙏 0
-
-Pat M.
-
-Oct 25th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2255,23 +1583,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2314,59 +1626,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep
-
-(function() { var novenaTitle = "Novena a la Virgen de los Dolores"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep
-
-Acerca de Nuestra Señora de los Dolores
-
-En esta novena recordamos los dolores que nuestra Santísima Madre sufrió durante su vida. Vivimos en un valle de lágrimas hasta que lleguemos a nuestra patria celestial, y por eso le pedimos a nuestra Señora que interceda por nosotros.
-
-Sufrió mucho y puede consolarnos en nuestros sufrimientos, obteniendo para nosotros la gracia de Dios. Sus siete dolores fueron:
-
-La profecía de Simeón
-
-La huida a Egipto
-
-La pérdida del niño Jesús en el Templo
-
-El encuentro de María y Jesús camino al Calvario
-
-La crucifixión y muerte de Jesús
-
-El costado traspasado de Jesús y su descenso de la cruz
-
-El entierro de Jesús""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2410,25 +1670,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Blessed Mother, our Lady of Sorrows, for your intercession and I thank our Lord for granting my request.”
-
-🙏 0
-
-Pat M.
-
-Oct 13th
-
-(function() { var novenaTitle = "Our Lady of Sorrows Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2476,25 +1718,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Nossa Senhora das Dores"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2531,59 +1755,7 @@ San José, ruega por nosotros.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep
-
-(function() { var novenaTitle = "Novena a la Virgen de los Dolores"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Si en alguno de los días de la novena, los primeros díase di cuenta de ciertos pensamientos, y situaciones con un nuevo ciclo eni vida, nuevos cambios que no quería enfrentar, y en el transcurso de la novena para mí sorpresa fui sanando, lo que me ha permitido continuar con esos cambios de una manera más optimista, y más abierta. Gracias Madre de los Dolores.Aunque tengo años haciendo novenase gustan mucho, la aplicación me ha encantado,su recordatorio,lo practica de las oraciones,lo amigable de la App, y se siente uno acompañado. Gracias”
-
-🙏 102
-
-Anett P.
-
-15 de sep
-
-“Aun no..”
-
-🙏 49
-
-Community Member
-
-14 de sep
-
-Acerca de Nuestra Señora de los Dolores
-
-En esta novena recordamos los dolores que nuestra Santísima Madre sufrió durante su vida. Vivimos en un valle de lágrimas hasta que lleguemos a nuestra patria celestial, y por eso le pedimos a nuestra Señora que interceda por nosotros.
-
-Sufrió mucho y puede consolarnos en nuestros sufrimientos, obteniendo para nosotros la gracia de Dios. Sus siete dolores fueron:
-
-La profecía de Simeón
-
-La huida a Egipto
-
-La pérdida del niño Jesús en el Templo
-
-El encuentro de María y Jesús camino al Calvario
-
-La crucifixión y muerte de Jesús
-
-El costado traspasado de Jesús y su descenso de la cruz
-
-El entierro de Jesús""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2627,25 +1799,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Blessed Mother, our Lady of Sorrows, for your intercession and I thank our Lord for granting my request.”
-
-🙏 0
-
-Pat M.
-
-Oct 13th
-
-(function() { var novenaTitle = "Our Lady of Sorrows Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2693,25 +1847,7 @@ Não rejeiteis as minhas súplicas, ó Mãe do Verbo de Deus humanado, mas digna
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Nossa Senhora das Dores"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

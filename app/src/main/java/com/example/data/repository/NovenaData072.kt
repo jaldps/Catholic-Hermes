@@ -140,21 +140,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -174,23 +160,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Like the caption says, answers don't always arrive the way we imagined and that's exactly how it happened. I was preparing for my second semester exam but it was a crash program and I was so scared and told myself that I won't pass the exam because I didn't write well and it gave me thoughts. Finally, the results came out and I checked and I passed and I'm still in shock because I don't know how it happened. I'm grateful to God for answering my prayers through the intercession of St. Expeditus and I pray that my professional exams that will be coming up in two weeks or less, I will be among the successful candidates, Amen❤️”
-
-🙏 54
-
-Mary P.
-
-Oct 20th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -218,21 +188,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 7
-
-maribel D.
-
-3 de jul"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -355,21 +311,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -389,23 +331,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Like the caption says, answers don't always arrive the way we imagined and that's exactly how it happened. I was preparing for my second semester exam but it was a crash program and I was so scared and told myself that I won't pass the exam because I didn't write well and it gave me thoughts. Finally, the results came out and I checked and I passed and I'm still in shock because I don't know how it happened. I'm grateful to God for answering my prayers through the intercession of St. Expeditus and I pray that my professional exams that will be coming up in two weeks or less, I will be among the successful candidates, Amen❤️”
-
-🙏 54
-
-Mary P.
-
-Oct 20th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -433,21 +359,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 7
-
-maribel D.
-
-3 de jul"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -576,15 +488,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -604,23 +508,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been praying for Admission and to the glory of God I have been admitted into the university of ilorin”
-
-🙏 18
-
-Christiana O.
-
-Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -644,23 +532,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Eu tirei 3,0 na prova de ciências”
-
-🙏 2
-
-Community Member
-
-13 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -783,15 +655,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -811,23 +675,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been praying for Admission and to the glory of God I have been admitted into the university of ilorin”
-
-🙏 18
-
-Christiana O.
-
-Oct 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -851,23 +699,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Eu tirei 3,0 na prova de ciências”
-
-🙏 2
-
-Community Member
-
-13 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -996,21 +828,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1030,23 +848,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Through Saint Expeditus my prayer intentions have been answered, I got a job I really wanted and prayed for even though I thought it was above my pay grade, for my husband was has also been successful in getting a new job. May our great God be praised, amen.”
-
-🙏 16
-
-Community Member
-
-Oct 20th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1074,23 +876,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 2
-
-Community Member
-
-1 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1213,21 +999,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1247,23 +1019,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Through Saint Expeditus my prayer intentions have been answered, I got a job I really wanted and prayed for even though I thought it was above my pay grade, for my husband was has also been successful in getting a new job. May our great God be praised, amen.”
-
-🙏 16
-
-Community Member
-
-Oct 20th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1291,23 +1047,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 2
-
-Community Member
-
-1 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1436,15 +1176,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1464,23 +1196,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“One of my intentions was answered. I believe others will be answered too. Amen!”
-
-🙏 16
-
-Community Member
-
-Oct 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1504,21 +1220,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 7
-
-maribel D.
-
-3 de jul"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1641,15 +1343,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1669,23 +1363,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“One of my intentions was answered. I believe others will be answered too. Amen!”
-
-🙏 16
-
-Community Member
-
-Oct 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1709,21 +1387,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 7
-
-maribel D.
-
-3 de jul"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1852,21 +1516,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1886,23 +1536,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I am a resin/gypsum artist.my business has wen suffering with low sales that I have already ran out of work materials so,i prayed for business growth and to my greatest surprise when I least expected it I got a new idea,an additional creative art to build up my business again and even before I officially launch my new niche I got customer already”
-
-🙏 15
-
-vivian Z.
-
-Oct 21st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1930,23 +1564,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Eu tirei 3,0 na prova de ciências”
-
-🙏 2
-
-Community Member
-
-13 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2069,21 +1687,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2103,23 +1707,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I am a resin/gypsum artist.my business has wen suffering with low sales that I have already ran out of work materials so,i prayed for business growth and to my greatest surprise when I least expected it I got a new idea,an additional creative art to build up my business again and even before I officially launch my new niche I got customer already”
-
-🙏 15
-
-vivian Z.
-
-Oct 21st""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2147,23 +1735,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Eu tirei 3,0 na prova de ciências”
-
-🙏 2
-
-Community Member
-
-13 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2292,15 +1864,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2320,23 +1884,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Our center is now free from monetary debt!”
-
-🙏 12
-
-Christie S.
-
-Oct 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2360,23 +1908,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 2
-
-Community Member
-
-1 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2499,15 +2031,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2527,23 +2051,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Our center is now free from monetary debt!”
-
-🙏 12
-
-Christie S.
-
-Oct 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2567,23 +2075,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 2
-
-Community Member
-
-1 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2712,21 +2204,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2746,23 +2224,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes one But still believing God for the other🙏”
-
-🙏 10
-
-Community Member
-
-Oct 22nd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2788,21 +2250,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 7
-
-maribel D.
-
-3 de jul"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2925,21 +2373,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2959,23 +2393,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes one But still believing God for the other🙏”
-
-🙏 10
-
-Community Member
-
-Oct 22nd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3001,21 +2419,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-🙏 7
-
-maribel D.
-
-3 de jul"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3144,15 +2548,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3172,23 +2568,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have gotten my full Uk driving licence. Thank you Jesus! Thank you to all my petrol saints! Still hoping that my other hear desires will be answered soonest. Amen”
-
-🙏 9
-
-Community Member
-
-Oct 24th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3212,23 +2592,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Eu tirei 3,0 na prova de ciências”
-
-🙏 2
-
-Community Member
-
-13 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3351,15 +2715,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3379,23 +2735,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have gotten my full Uk driving licence. Thank you Jesus! Thank you to all my petrol saints! Still hoping that my other hear desires will be answered soonest. Amen”
-
-🙏 9
-
-Community Member
-
-Oct 24th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3419,23 +2759,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Eu tirei 3,0 na prova de ciências”
-
-🙏 2
-
-Community Member
-
-13 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3564,31 +2888,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago
-
-(function() { var novenaTitle = "Novena a San Expedito"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3608,25 +2908,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes oo my prayer had been answered 🙏 thank you Lord Jesus I am supper grateful”
-
-🙏 8
-
-Community Member
-
-Oct 21st
-
-(function() { var novenaTitle = "St. Expeditus Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3654,49 +2936,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 2
-
-Community Member
-
-1 de ago
-
-(function() { var novenaTitle = "Novena a Santo Expedito"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-🙏 7
-
-maribel D.
-
-3 de jul
-
-“Eu tirei 3,0 na prova de ciências”
-
-🙏 2
-
-Community Member
-
-13 de out
-
-“Sim”
-
-🙏 2
-
-Community Member
-
-1 de ago"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3819,31 +3059,7 @@ Comienzo de la Novena, leer las oraciones y lecturas en el orden marcado.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago
-
-(function() { var novenaTitle = "Novena a San Expedito"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Gracias san expedito bendito, por tu santa intercesión nos salió el apartamento idóneo que te pedí. Gracias infinitas 🙏🏻”
-
-🙏 111
-
-Viviana R.
-
-19 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3863,25 +3079,7 @@ Please ask Our Lord, through the intercession of the Blessed Virgin, for the for
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Yes oo my prayer had been answered 🙏 thank you Lord Jesus I am supper grateful”
-
-🙏 8
-
-Community Member
-
-Oct 21st
-
-(function() { var novenaTitle = "St. Expeditus Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3909,49 +3107,7 @@ e prometo seguir vosso exemplo e propagar esta devoção a vós.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 2
-
-Community Member
-
-1 de ago
-
-(function() { var novenaTitle = "Novena a Santo Expedito"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-🙏 7
-
-maribel D.
-
-3 de jul
-
-“Eu tirei 3,0 na prova de ciências”
-
-🙏 2
-
-Community Member
-
-13 de out
-
-“Sim”
-
-🙏 2
-
-Community Member
-
-1 de ago"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

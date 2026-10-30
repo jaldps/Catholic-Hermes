@@ -82,21 +82,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -144,23 +130,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been praying for the baptism of my granddaughter for almost a year. This will finally happen in 3 weeks!! God is good - praise be!!”
-
-🙏 912
-
-Pamela S.
-
-Jul 16th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -212,23 +182,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -293,21 +247,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -355,23 +295,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been praying for the baptism of my granddaughter for almost a year. This will finally happen in 3 weeks!! God is good - praise be!!”
-
-🙏 912
-
-Pamela S.
-
-Jul 16th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -423,23 +347,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -510,15 +418,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -566,23 +466,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed fervently to the Holy Souls for a special request concerning a medical procedure. The outcome was better than expected. While praying before the Blessed Sacrament, I received an internal message that I interpreted as my healing occurring through their intercession.”
-
-🙏 641
-
-John D.
-
-Jul 17th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -630,23 +514,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -711,15 +579,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -767,23 +627,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed fervently to the Holy Souls for a special request concerning a medical procedure. The outcome was better than expected. While praying before the Blessed Sacrament, I received an internal message that I interpreted as my healing occurring through their intercession.”
-
-🙏 641
-
-John D.
-
-Jul 17th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -831,23 +675,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -918,21 +746,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -980,23 +794,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“In Thanksgiving for the baptism of my granddaughter, my husbands bloodwork showing no clotting disorders, and testing showing sleep apnea treatment is working, the smell in daughter’s car dissipating, no cancer for my niece and meds from the doctor are helping my daughter’s morning sickness! Praise be to God!!”
-
-🙏 585
-
-Pamela S.
-
-Aug 20th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1048,23 +846,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1129,21 +911,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1191,23 +959,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“In Thanksgiving for the baptism of my granddaughter, my husbands bloodwork showing no clotting disorders, and testing showing sleep apnea treatment is working, the smell in daughter’s car dissipating, no cancer for my niece and meds from the doctor are helping my daughter’s morning sickness! Praise be to God!!”
-
-🙏 585
-
-Pamela S.
-
-Aug 20th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1259,23 +1011,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1346,15 +1082,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1402,23 +1130,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Holy souls for your prayers for our family and I thank you Lord for your mercy and kindness”
-
-🙏 311
-
-Pat M.
-
-Oct 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1466,23 +1178,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1547,15 +1243,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1603,23 +1291,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Holy souls for your prayers for our family and I thank you Lord for your mercy and kindness”
-
-🙏 311
-
-Pat M.
-
-Oct 13th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1667,23 +1339,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1754,21 +1410,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1816,23 +1458,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I am now devoted to the Holy Souls in Purgatory.”
-
-🙏 310
-
-J R.
-
-Oct 22nd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1884,23 +1510,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1965,21 +1575,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2027,23 +1623,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I am now devoted to the Holy Souls in Purgatory.”
-
-🙏 310
-
-J R.
-
-Oct 22nd""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2095,23 +1675,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2182,15 +1746,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2238,23 +1794,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been praying for the baptism of my granddaughter for almost a year. This will finally happen in 3 weeks!! God is good - praise be!!”
-
-🙏 912
-
-Pamela S.
-
-Jul 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2302,23 +1842,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2383,15 +1907,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2439,23 +1955,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been praying for the baptism of my granddaughter for almost a year. This will finally happen in 3 weeks!! God is good - praise be!!”
-
-🙏 912
-
-Pamela S.
-
-Jul 16th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2503,23 +2003,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2590,21 +2074,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2652,23 +2122,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed fervently to the Holy Souls for a special request concerning a medical procedure. The outcome was better than expected. While praying before the Blessed Sacrament, I received an internal message that I interpreted as my healing occurring through their intercession.”
-
-🙏 641
-
-John D.
-
-Jul 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2720,23 +2174,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2801,21 +2239,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2863,23 +2287,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I prayed fervently to the Holy Souls for a special request concerning a medical procedure. The outcome was better than expected. While praying before the Blessed Sacrament, I received an internal message that I interpreted as my healing occurring through their intercession.”
-
-🙏 641
-
-John D.
-
-Jul 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2931,23 +2339,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3018,15 +2410,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3074,23 +2458,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“In Thanksgiving for the baptism of my granddaughter, my husbands bloodwork showing no clotting disorders, and testing showing sleep apnea treatment is working, the smell in daughter’s car dissipating, no cancer for my niece and meds from the doctor are helping my daughter’s morning sickness! Praise be to God!!”
-
-🙏 585
-
-Pamela S.
-
-Aug 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3138,23 +2506,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3219,15 +2571,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3275,23 +2619,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“In Thanksgiving for the baptism of my granddaughter, my husbands bloodwork showing no clotting disorders, and testing showing sleep apnea treatment is working, the smell in daughter’s car dissipating, no cancer for my niece and meds from the doctor are helping my daughter’s morning sickness! Praise be to God!!”
-
-🙏 585
-
-Pamela S.
-
-Aug 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3339,23 +2667,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3426,31 +2738,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun
-
-(function() { var novenaTitle = "Novena por las Almas del Purgatorio"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3498,45 +2786,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Holy souls for your prayers for our family and I thank you Lord for your mercy and kindness”
-
-🙏 311
-
-Pat M.
-
-Oct 13th
-
-(function() { var novenaTitle = "Holy Souls in Purgatory Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Prayer to Our Suffering Saviour for the Holy Souls in Purgatory
-
-O most sweet Jesus, through the bloody sweat which Thou didst suffer in the Garden of Gethsemani, have mercy on these Blessed Souls. Have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer during Thy most cruel scourging, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer in Thy most painful crowning with thorns, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer in carrying Thy cross to Calvary, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer during Thy most cruel Crucifixion, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer in Thy most bitter agony on the Cross, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the immense pain which Thou didst suffer in breathing forth Thy Blessed Soul, have mercy on them. R. Have mercy on them, O Lord.
-
-Recommend yourself to the Souls in Purgatory and mention your intentions here.
-
-Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, and who are secure of never losing Him, to pray for me a miserable sinner, who is in danger of being damned, and of losing God forever. Amen.""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3588,29 +2838,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena pelas Almas do Purgatório"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a São José"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3675,31 +2903,7 @@ María, Madre de Dios, y Madre de misericordia, ruega por nosotros y por todos l
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun
-
-(function() { var novenaTitle = "Novena por las Almas del Purgatorio"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Mis pensamientos han mejorado!”
-
-🙏 83
-
-Vale G.
-
-14 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3747,45 +2951,7 @@ Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Holy souls for your prayers for our family and I thank you Lord for your mercy and kindness”
-
-🙏 311
-
-Pat M.
-
-Oct 13th
-
-(function() { var novenaTitle = "Holy Souls in Purgatory Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Prayer to Our Suffering Saviour for the Holy Souls in Purgatory
-
-O most sweet Jesus, through the bloody sweat which Thou didst suffer in the Garden of Gethsemani, have mercy on these Blessed Souls. Have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer during Thy most cruel scourging, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer in Thy most painful crowning with thorns, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer in carrying Thy cross to Calvary, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer during Thy most cruel Crucifixion, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the pains which Thou didst suffer in Thy most bitter agony on the Cross, have mercy on them. R. Have mercy on them, O Lord.
-
-O most sweet Jesus, through the immense pain which Thou didst suffer in breathing forth Thy Blessed Soul, have mercy on them. R. Have mercy on them, O Lord.
-
-Recommend yourself to the Souls in Purgatory and mention your intentions here.
-
-Blessed Souls, I have prayed for thee; I entreat thee, who are so dear to God, and who are secure of never losing Him, to pray for me a miserable sinner, who is in danger of being damned, and of losing God forever. Amen.""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3837,29 +3003,7 @@ Almas benditas, eu rezei por vós; suplico-vos, vós que sois tão queridas de D
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena pelas Almas do Purgatório"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena a São José"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

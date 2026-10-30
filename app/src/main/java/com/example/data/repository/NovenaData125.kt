@@ -80,21 +80,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -120,23 +106,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My father's cancer is in remission and no longer needs radiation.”
-
-🙏 26
-
-Community Member
-
-Jun 29th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -166,23 +136,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -245,21 +199,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -285,23 +225,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My father's cancer is in remission and no longer needs radiation.”
-
-🙏 26
-
-Community Member
-
-Jun 29th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -331,23 +255,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -416,15 +324,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -450,23 +350,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Before I finished the novena one of my intentions have been answered. Glory to God. I patiently await the manifestation of my other intentions because I believe it has been answered already.”
-
-🙏 9
-
-mary E.
-
-Jul 1st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -492,23 +376,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -571,15 +439,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -605,23 +465,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Before I finished the novena one of my intentions have been answered. Glory to God. I patiently await the manifestation of my other intentions because I believe it has been answered already.”
-
-🙏 9
-
-mary E.
-
-Jul 1st""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -647,23 +491,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -732,21 +560,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -772,23 +586,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Pray for God to answer my orayers Amen”
-
-🙏 8
-
-Bambi M.
-
-Jul 7th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -818,23 +616,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -897,21 +679,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -937,23 +705,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Pray for God to answer my orayers Amen”
-
-🙏 8
-
-Bambi M.
-
-Jul 7th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -983,23 +735,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1068,15 +804,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1102,23 +830,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My Belgian visa was approved”
-
-🙏 6
-
-Community Member
-
-Jun 28th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1144,23 +856,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1223,15 +919,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1257,23 +945,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My Belgian visa was approved”
-
-🙏 6
-
-Community Member
-
-Jun 28th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1299,23 +971,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1384,21 +1040,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1424,23 +1066,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“We asked for a sign and God provided a clear sign”
-
-🙏 5
-
-Community Member
-
-Jul 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1470,23 +1096,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1549,21 +1159,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1589,23 +1185,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“We asked for a sign and God provided a clear sign”
-
-🙏 5
-
-Community Member
-
-Jul 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1635,23 +1215,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1720,15 +1284,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1754,23 +1310,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I’m very pleased , my faith and love for our lord Jesus Christ is stronger than before, and I’ll continue praying for my love to grow Even More amen”
-
-🙏 5
-
-Community Member
-
-Jun 30th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1796,23 +1336,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1875,15 +1399,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1909,23 +1425,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I’m very pleased , my faith and love for our lord Jesus Christ is stronger than before, and I’ll continue praying for my love to grow Even More amen”
-
-🙏 5
-
-Community Member
-
-Jun 30th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1951,23 +1451,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2036,21 +1520,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2076,23 +1546,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Adjustments to my granddaughter 's college were made to better suit her mother's budget on the 4th day of praying this novena. Glory be to God and thanksgiving to Sts. Peter and Paul.”
-
-🙏 4
-
-Community Member
-
-Jul 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2122,23 +1576,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2201,21 +1639,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2241,23 +1665,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Adjustments to my granddaughter 's college were made to better suit her mother's budget on the 4th day of praying this novena. Glory be to God and thanksgiving to Sts. Peter and Paul.”
-
-🙏 4
-
-Community Member
-
-Jul 8th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2287,23 +1695,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2372,15 +1764,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2406,23 +1790,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been Loved by the church and on July 18th holy sacrifice of the mass on Saturday will be helped in my name”
-
-🙏 3
-
-Kathryne T.
-
-Jul 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2448,23 +1816,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2527,15 +1879,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2561,23 +1905,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been Loved by the church and on July 18th holy sacrifice of the mass on Saturday will be helped in my name”
-
-🙏 3
-
-Kathryne T.
-
-Jul 3rd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2603,23 +1931,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2688,31 +2000,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun
-
-(function() { var novenaTitle = "Novena a San Pedro y San Pablo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2738,107 +2026,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Sts Peter and Paul for interceding for my pregnant daughter who delivered a healthy baby girl. They are first time parents and no elders to guide them. Thank you Sts Peter and Paul.”
-
-🙏 1
-
-Freda D.
-
-Aug 17th
-
-(function() { var novenaTitle = "St. Peter and Paul Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“My father's cancer is in remission and no longer needs radiation.”
-
-🙏 26
-
-Community Member
-
-Jun 29th
-
-“Before I finished the novena one of my intentions have been answered. Glory to God. I patiently await the manifestation of my other intentions because I believe it has been answered already.”
-
-🙏 9
-
-mary E.
-
-Jul 1st
-
-“Pray for God to answer my orayers Amen”
-
-🙏 8
-
-Bambi M.
-
-Jul 7th
-
-“My Belgian visa was approved”
-
-🙏 6
-
-Community Member
-
-Jun 28th
-
-“We asked for a sign and God provided a clear sign”
-
-🙏 5
-
-Community Member
-
-Jul 17th
-
-“I’m very pleased , my faith and love for our lord Jesus Christ is stronger than before, and I’ll continue praying for my love to grow Even More amen”
-
-🙏 5
-
-Community Member
-
-Jun 30th
-
-“Adjustments to my granddaughter 's college were made to better suit her mother's budget on the 4th day of praying this novena. Glory be to God and thanksgiving to Sts. Peter and Paul.”
-
-🙏 4
-
-Community Member
-
-Jul 8th
-
-“I have been Loved by the church and on July 18th holy sacrifice of the mass on Saturday will be helped in my name”
-
-🙏 3
-
-Kathryne T.
-
-Jul 3rd
-
-“Thank you Sts Peter and Paul for interceding for my pregnant daughter who delivered a healthy baby girl. They are first time parents and no elders to guide them. Thank you Sts Peter and Paul.”
-
-🙏 1
-
-Freda D.
-
-Aug 17th
-
-“I continue to want to know God and have been flooded with new revelations and lessons about my younger self”
-
-🙏 1
-
-Community Member
-
-Jul 24th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2868,25 +2056,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a São Pedro e São Paulo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2949,31 +2119,7 @@ Oh Dios, cuya diestra levantó al bienaventurado Pedro cuando caminaba sobre las
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun
-
-(function() { var novenaTitle = "Novena a San Pedro y San Pablo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Si, siempre.”
-
-🙏 14
-
-Iván G.
-
-29 de jun""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2999,107 +2145,7 @@ O God, Whose right hand raised up blessed Peter, when he walked upon the water a
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you Sts Peter and Paul for interceding for my pregnant daughter who delivered a healthy baby girl. They are first time parents and no elders to guide them. Thank you Sts Peter and Paul.”
-
-🙏 1
-
-Freda D.
-
-Aug 17th
-
-(function() { var novenaTitle = "St. Peter and Paul Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“My father's cancer is in remission and no longer needs radiation.”
-
-🙏 26
-
-Community Member
-
-Jun 29th
-
-“Before I finished the novena one of my intentions have been answered. Glory to God. I patiently await the manifestation of my other intentions because I believe it has been answered already.”
-
-🙏 9
-
-mary E.
-
-Jul 1st
-
-“Pray for God to answer my orayers Amen”
-
-🙏 8
-
-Bambi M.
-
-Jul 7th
-
-“My Belgian visa was approved”
-
-🙏 6
-
-Community Member
-
-Jun 28th
-
-“We asked for a sign and God provided a clear sign”
-
-🙏 5
-
-Community Member
-
-Jul 17th
-
-“I’m very pleased , my faith and love for our lord Jesus Christ is stronger than before, and I’ll continue praying for my love to grow Even More amen”
-
-🙏 5
-
-Community Member
-
-Jun 30th
-
-“Adjustments to my granddaughter 's college were made to better suit her mother's budget on the 4th day of praying this novena. Glory be to God and thanksgiving to Sts. Peter and Paul.”
-
-🙏 4
-
-Community Member
-
-Jul 8th
-
-“I have been Loved by the church and on July 18th holy sacrifice of the mass on Saturday will be helped in my name”
-
-🙏 3
-
-Kathryne T.
-
-Jul 3rd
-
-“Thank you Sts Peter and Paul for interceding for my pregnant daughter who delivered a healthy baby girl. They are first time parents and no elders to guide them. Thank you Sts Peter and Paul.”
-
-🙏 1
-
-Freda D.
-
-Aug 17th
-
-“I continue to want to know God and have been flooded with new revelations and lessons about my younger self”
-
-🙏 1
-
-Community Member
-
-Jul 24th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3129,25 +2175,7 @@ R. Eles se lembrarão do Vosso nome, Senhor.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a São Pedro e São Paulo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

@@ -36,21 +36,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -74,23 +60,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank God, and thank you Saint Benedict for your intercession. My neighbourhood is peaceful.”
-
-🙏 48
-
-Lestari H.
-
-Jul 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -112,23 +82,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -147,21 +101,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -185,23 +125,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank God, and thank you Saint Benedict for your intercession. My neighbourhood is peaceful.”
-
-🙏 48
-
-Lestari H.
-
-Jul 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -223,23 +147,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -264,15 +172,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -296,23 +196,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Unsure praying for salvation of a friend who is at the end of his life here on earth.”
-
-🙏 16
-
-Missy D.
-
-Jul 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -330,23 +214,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -365,15 +233,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -397,23 +257,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Unsure praying for salvation of a friend who is at the end of his life here on earth.”
-
-🙏 16
-
-Missy D.
-
-Jul 22nd""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -431,23 +275,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -472,21 +300,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -510,23 +324,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St Benedict.”
-
-🙏 13
-
-Community Member
-
-Jul 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -548,23 +346,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -583,21 +365,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -621,23 +389,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St Benedict.”
-
-🙏 13
-
-Community Member
-
-Jul 17th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -659,23 +411,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -700,15 +436,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -732,23 +460,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My marriage is improving.”
-
-🙏 7
-
-George F.
-
-Aug 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -766,23 +478,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -801,15 +497,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -833,23 +521,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My marriage is improving.”
-
-🙏 7
-
-George F.
-
-Aug 10th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -867,23 +539,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -908,21 +564,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -946,23 +588,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“The Lord has delivered me from impure thoughts and attraction to another man, who is not my spouse. I have been set free. Praise The Lord! Hallelujah!”
-
-🙏 5
-
-Chinwe O.
-
-Aug 26th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -984,23 +610,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1019,21 +629,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1057,23 +653,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“The Lord has delivered me from impure thoughts and attraction to another man, who is not my spouse. I have been set free. Praise The Lord! Hallelujah!”
-
-🙏 5
-
-Chinwe O.
-
-Aug 26th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1095,23 +675,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1136,15 +700,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1168,23 +724,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I was able to break a bad habit”
-
-🙏 3
-
-Community Member
-
-Sep 6th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1202,23 +742,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1237,15 +761,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1269,23 +785,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I was able to break a bad habit”
-
-🙏 3
-
-Community Member
-
-Sep 6th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1303,23 +803,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1344,21 +828,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1382,23 +852,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Baby healed of kidney infection, no abnormalities in scan, and no discernable scarring from infection! 🙌🏼”
-
-🙏 2
-
-Community Member
-
-Sep 24th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1420,23 +874,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1455,21 +893,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1493,23 +917,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Baby healed of kidney infection, no abnormalities in scan, and no discernable scarring from infection! 🙌🏼”
-
-🙏 2
-
-Community Member
-
-Sep 24th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1531,23 +939,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1572,15 +964,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1604,23 +988,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My prayers have not all been answered, still have faith that Jesus will answer all my prayers”
-
-🙏 1
-
-Darline S.
-
-Sep 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1638,23 +1006,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1673,15 +1025,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1705,23 +1049,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My prayers have not all been answered, still have faith that Jesus will answer all my prayers”
-
-🙏 1
-
-Darline S.
-
-Sep 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1739,23 +1067,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1780,39 +1092,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul
-
-(function() { var novenaTitle = "Novena a San Benito de Nursia"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1836,107 +1116,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have more strength and less anxiety this school year.”
-
-🙏 1
-
-Community Member
-
-Aug 25th
-
-(function() { var novenaTitle = "St. Benedict Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“Thank God, and thank you Saint Benedict for your intercession. My neighbourhood is peaceful.”
-
-🙏 48
-
-Lestari H.
-
-Jul 17th
-
-“Unsure praying for salvation of a friend who is at the end of his life here on earth.”
-
-🙏 16
-
-Missy D.
-
-Jul 22nd
-
-“Thank you St Benedict.”
-
-🙏 13
-
-Community Member
-
-Jul 17th
-
-“My marriage is improving.”
-
-🙏 7
-
-George F.
-
-Aug 10th
-
-“The Lord has delivered me from impure thoughts and attraction to another man, who is not my spouse. I have been set free. Praise The Lord! Hallelujah!”
-
-🙏 5
-
-Chinwe O.
-
-Aug 26th
-
-“I was able to break a bad habit”
-
-🙏 3
-
-Community Member
-
-Sep 6th
-
-“Baby healed of kidney infection, no abnormalities in scan, and no discernable scarring from infection! 🙌🏼”
-
-🙏 2
-
-Community Member
-
-Sep 24th
-
-“My prayers have not all been answered, still have faith that Jesus will answer all my prayers”
-
-🙏 1
-
-Darline S.
-
-Sep 20th
-
-“I have more strength and less anxiety this school year.”
-
-🙏 1
-
-Community Member
-
-Aug 25th
-
-“Amen!”
-
-🙏 1
-
-Eleasar F.
-
-Aug 10th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1958,25 +1138,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a São Bento"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1995,39 +1157,7 @@ Concluir con un Padrenuestro, Avemaría y Gloria.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul
-
-(function() { var novenaTitle = "Novena a San Benito de Nursia"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Gtacias por escuchar nuestra súplica protegernos de todo mal y peligro”
-
-🙏 11
-
-Yoliany D.
-
-11 de jul
-
-“Durante esta novena mi madre ingresó al hospital, el día de hoy le harán un procedimiento que confiamos sea para mejorar su calidad de vida si es voluntad De Dios”
-
-🙏 10
-
-Community Member
-
-11 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2051,107 +1181,7 @@ Help me, O great St. Benedict, to live and die as a faithful child of God, to be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have more strength and less anxiety this school year.”
-
-🙏 1
-
-Community Member
-
-Aug 25th
-
-(function() { var novenaTitle = "St. Benedict Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Answered Prayers from the Community
-
-“Thank God, and thank you Saint Benedict for your intercession. My neighbourhood is peaceful.”
-
-🙏 48
-
-Lestari H.
-
-Jul 17th
-
-“Unsure praying for salvation of a friend who is at the end of his life here on earth.”
-
-🙏 16
-
-Missy D.
-
-Jul 22nd
-
-“Thank you St Benedict.”
-
-🙏 13
-
-Community Member
-
-Jul 17th
-
-“My marriage is improving.”
-
-🙏 7
-
-George F.
-
-Aug 10th
-
-“The Lord has delivered me from impure thoughts and attraction to another man, who is not my spouse. I have been set free. Praise The Lord! Hallelujah!”
-
-🙏 5
-
-Chinwe O.
-
-Aug 26th
-
-“I was able to break a bad habit”
-
-🙏 3
-
-Community Member
-
-Sep 6th
-
-“Baby healed of kidney infection, no abnormalities in scan, and no discernable scarring from infection! 🙌🏼”
-
-🙏 2
-
-Community Member
-
-Sep 24th
-
-“My prayers have not all been answered, still have faith that Jesus will answer all my prayers”
-
-🙏 1
-
-Darline S.
-
-Sep 20th
-
-“I have more strength and less anxiety this school year.”
-
-🙏 1
-
-Community Member
-
-Aug 25th
-
-“Amen!”
-
-🙏 1
-
-Eleasar F.
-
-Aug 10th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2173,25 +1203,7 @@ Pai-Nosso e Ave-Maria e Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a São Bento"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

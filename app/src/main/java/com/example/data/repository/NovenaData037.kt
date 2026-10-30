@@ -44,21 +44,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -82,23 +68,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“This was thanksgiving Novena . During the feast of our lady of Lourdes , Feb 11, 2026, a Catholic priest prayed for me , my daughter, my nephew and my husband. Through intercession of Blessed Virgin Mary Mother of God, our lady of Lourdes , I received healing together with my daughter. In gratitude recited the Novena .”
-
-🙏 125
-
-Community Member
-
-May 15th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -124,23 +94,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -167,21 +121,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -205,23 +145,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“This was thanksgiving Novena . During the feast of our lady of Lourdes , Feb 11, 2026, a Catholic priest prayed for me , my daughter, my nephew and my husband. Through intercession of Blessed Virgin Mary Mother of God, our lady of Lourdes , I received healing together with my daughter. In gratitude recited the Novena .”
-
-🙏 125
-
-Community Member
-
-May 15th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -247,23 +171,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -296,15 +204,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -328,23 +228,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been a devotee of Our Lady of Lourdes since I was diagnosed with breast cancer in August 2025. After months of praying for her intercession, I received a clear CT scan — no spread to any of my body’s organs — even though I was unable to undergo surgery due to financial constraints. My tumor has shrunk. I thank you, Our Lady of Lourdes, and through your Son, Jesus Christ — my Divine Healer, my Savior, my Lord and my God. I believe I will be declared cancer-free. Amen. 🙏”
-
-🙏 73
-
-Anna Karina D.
-
-Jul 24th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -366,23 +250,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -409,15 +277,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -441,23 +301,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been a devotee of Our Lady of Lourdes since I was diagnosed with breast cancer in August 2025. After months of praying for her intercession, I received a clear CT scan — no spread to any of my body’s organs — even though I was unable to undergo surgery due to financial constraints. My tumor has shrunk. I thank you, Our Lady of Lourdes, and through your Son, Jesus Christ — my Divine Healer, my Savior, my Lord and my God. I believe I will be declared cancer-free. Amen. 🙏”
-
-🙏 73
-
-Anna Karina D.
-
-Jul 24th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -479,23 +323,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -528,21 +356,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -566,23 +380,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I found the courage through the Holy Spirit to step out in faith and believe that my seizures were healed so i skipped my medication one night. after seizing that night, i learned that clearly it wasn’t my time yet, and i was briefly discouraged and dissapoinged, but im not anymore because I want Gods will and i know it’s better than my own. maybe he won’t heal me in this lifetime, but I am confident that he will in the next. Amen 🙏 update: christian has been curious about catholicism, left the new age movement, and has learned about the Lourdes water and believes in it!!!! 🙏”
-
-🙏 4
-
-Hannah W.
-
-Sep 26th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -608,23 +406,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -651,21 +433,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -689,23 +457,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I found the courage through the Holy Spirit to step out in faith and believe that my seizures were healed so i skipped my medication one night. after seizing that night, i learned that clearly it wasn’t my time yet, and i was briefly discouraged and dissapoinged, but im not anymore because I want Gods will and i know it’s better than my own. maybe he won’t heal me in this lifetime, but I am confident that he will in the next. Amen 🙏 update: christian has been curious about catholicism, left the new age movement, and has learned about the Lourdes water and believes in it!!!! 🙏”
-
-🙏 4
-
-Hannah W.
-
-Sep 26th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -731,23 +483,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -780,15 +516,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -812,23 +540,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“For 4 years my son’s left foot/leg did not heal. Recently, he had a below knee amputation, which literally saved his life. I gave him some Lourdes water and have been praying Our Lady of Lourdes Novena. He is happy, no pain, no antibiotics and will be fitted for his prosthesis in the next couple of months. Our prayers have been answered. Thank you, Our Lady of Lourdes for your intercession. 🙏”
-
-🙏 1
-
-pamela J.
-
-Oct 12th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -850,23 +562,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -893,15 +589,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -925,23 +613,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“For 4 years my son’s left foot/leg did not heal. Recently, he had a below knee amputation, which literally saved his life. I gave him some Lourdes water and have been praying Our Lady of Lourdes Novena. He is happy, no pain, no antibiotics and will be fitted for his prosthesis in the next couple of months. Our prayers have been answered. Thank you, Our Lady of Lourdes for your intercession. 🙏”
-
-🙏 1
-
-pamela J.
-
-Oct 12th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -963,23 +635,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1012,21 +668,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1050,23 +692,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“We feel the love of God in our lives”
-
-🙏 0
-
-Astrid V.
-
-Sep 12th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1092,23 +718,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1135,21 +745,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1173,23 +769,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“We feel the love of God in our lives”
-
-🙏 0
-
-Astrid V.
-
-Sep 12th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1215,23 +795,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1264,15 +828,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1296,23 +852,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“This was thanksgiving Novena . During the feast of our lady of Lourdes , Feb 11, 2026, a Catholic priest prayed for me , my daughter, my nephew and my husband. Through intercession of Blessed Virgin Mary Mother of God, our lady of Lourdes , I received healing together with my daughter. In gratitude recited the Novena .”
-
-🙏 125
-
-Community Member
-
-May 15th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1334,23 +874,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1377,15 +901,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1409,23 +925,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“This was thanksgiving Novena . During the feast of our lady of Lourdes , Feb 11, 2026, a Catholic priest prayed for me , my daughter, my nephew and my husband. Through intercession of Blessed Virgin Mary Mother of God, our lady of Lourdes , I received healing together with my daughter. In gratitude recited the Novena .”
-
-🙏 125
-
-Community Member
-
-May 15th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1447,23 +947,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1496,21 +980,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1532,23 +1002,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been a devotee of Our Lady of Lourdes since I was diagnosed with breast cancer in August 2025. After months of praying for her intercession, I received a clear CT scan — no spread to any of my body’s organs — even though I was unable to undergo surgery due to financial constraints. My tumor has shrunk. I thank you, Our Lady of Lourdes, and through your Son, Jesus Christ — my Divine Healer, my Savior, my Lord and my God. I believe I will be declared cancer-free. Amen. 🙏”
-
-🙏 73
-
-Anna Karina D.
-
-Jul 24th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1574,23 +1028,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1617,21 +1055,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1653,23 +1077,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have been a devotee of Our Lady of Lourdes since I was diagnosed with breast cancer in August 2025. After months of praying for her intercession, I received a clear CT scan — no spread to any of my body’s organs — even though I was unable to undergo surgery due to financial constraints. My tumor has shrunk. I thank you, Our Lady of Lourdes, and through your Son, Jesus Christ — my Divine Healer, my Savior, my Lord and my God. I believe I will be declared cancer-free. Amen. 🙏”
-
-🙏 73
-
-Anna Karina D.
-
-Jul 24th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1695,23 +1103,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1744,15 +1136,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1776,23 +1160,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I found the courage through the Holy Spirit to step out in faith and believe that my seizures were healed so i skipped my medication one night. after seizing that night, i learned that clearly it wasn’t my time yet, and i was briefly discouraged and dissapoinged, but im not anymore because I want Gods will and i know it’s better than my own. maybe he won’t heal me in this lifetime, but I am confident that he will in the next. Amen 🙏 update: christian has been curious about catholicism, left the new age movement, and has learned about the Lourdes water and believes in it!!!! 🙏”
-
-🙏 4
-
-Hannah W.
-
-Sep 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1814,23 +1182,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1857,15 +1209,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1889,23 +1233,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I found the courage through the Holy Spirit to step out in faith and believe that my seizures were healed so i skipped my medication one night. after seizing that night, i learned that clearly it wasn’t my time yet, and i was briefly discouraged and dissapoinged, but im not anymore because I want Gods will and i know it’s better than my own. maybe he won’t heal me in this lifetime, but I am confident that he will in the next. Amen 🙏 update: christian has been curious about catholicism, left the new age movement, and has learned about the Lourdes water and believes in it!!!! 🙏”
-
-🙏 4
-
-Hannah W.
-
-Sep 26th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1927,23 +1255,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1976,29 +1288,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a Nuestra Señora de Lourdes"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Nuestra Señora se apareció a Santa Bernadette Soubirous dieciocho veces en Lourdes, Francia, en 1858, tan solo cuatro años después de que el Papa declarara dogma la Inmaculada Concepción.
-
-Bernadette era una campesina pobre, y muchos en su pueblo desconocían que la Virgen María se le hubiera aparecido. Pero Nuestra Señora le dijo que cavara en la gruta, y al hacerlo, brotó un manantial. Al bañarse en el manantial, la gente recibía curaciones milagrosas inexplicables para los médicos.
-
-Cuando Bernadette preguntó el nombre de la Señora, ella respondió: «Soy la Inmaculada Concepción». Bernadette ingresó en las Hermanas de la Caridad de Nevers, sufrió mucho físicamente y murió con tan solo 35 años. Fue canonizada en 1933.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2022,109 +1312,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“For 4 years my son’s left foot/leg did not heal. Recently, he had a below knee amputation, which literally saved his life. I gave him some Lourdes water and have been praying Our Lady of Lourdes Novena. He is happy, no pain, no antibiotics and will be fitted for his prosthesis in the next couple of months. Our prayers have been answered. Thank you, Our Lady of Lourdes for your intercession. 🙏”
-
-🙏 1
-
-pamela J.
-
-Oct 12th
-
-(function() { var novenaTitle = "Our Lady of Lourdes Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-More About Our Lady of Lourdes
-
-Our Lady appeared to St. Bernadette Soubirous eighteen times in Lourdes, France in 1858, just four years after the Pope had declared the Immaculate Conception to be dogma.
-
-Bernadette was a poor peasant girl, and many in her town disbelieved that the Virgin Mary had actually appeared to her. But Our Lady told Bernadette to dig in the grotto, and when she did a spring of water spilled forth. When people washed in the spring they received miraculous healings unexplainable by doctors.
-
-When Bernadette asked what the Lady’s name was, she answered “I am the Immaculate Conception.” Bernadette went on to enter the Sisters of Charity of Nevers, suffered a great deal physically, and died at just 35 years old. She was canonized in 1933.
-
-Prayers Answered Through Our Lady of Lourdes
-
-For me, it wasnt anything in particular I was praying during this novena. However, Last Thursday my daughter cut her hand by accident and she was 1 milimeter of hurting a nerve or tendon. The hand surgeon said it was a miracle.
-
-from V.S.
-
-Our Grandson Flynn was born 2/10/2020 with a critical heart defect. He coded 2 twice at 2 days old after a surgery…..he has 2 more surgeries before age 4. I prayered to Mother Mary every night. Doctors talked about heart transplant and all but we still prayed.
-
-My husband and I went to Lourdes and prayed constantly while there. Came back in October and used Mother Mary’s water on Flynn. FLYNN had a Doctor Appointment and my son in November was told things looked a little better. Well in January after some test they were told his heart is functioning normal and some medication might be able to stop. Now as he grows they say things could change but I say MARY CAME TO HIS RESCUE… SHE TALKED TO JESUS!!!! I know for sure.
-
-from E.K.
-
-Thank you our dear Lady of Lourdes for healing the bump on my forehead.
-
-from O.G.
-
-Thank you Mary for helping with and healing my thyroid.
-
-from V.B.
-
-Thank you Our Lady of Lourdes for interceding and answering my prayer!
-
-from S.S.
-
-I had acute kidney injury, and my kidney function is now back within normal limits.
-
-from P.O.
-
-Today on the Feast of Our Lady of Lourdes my husband finally tested negative for covid after experiencing a covid rebound!
-
-Thank you to Our Lady of Lourdes for obtaining this favor from her Son, Jesus! She is forever our loving Mother.
-
-“My husband and I experienced a healing from Lourdes water last year. My husband was diagnosed with spinal stenosis and was having difficulty getting around. We tried everything. He went to therapy, massage, and acupuncture. Out of the blue we remembered the Lourdes water in the hall closet, which we’ve had for many years from a trip my husband took. We bathed his back in the Lourdes water and he is free from pain and walking normally now.”
-
-Answered Prayers from the Community
-
-“This was thanksgiving Novena . During the feast of our lady of Lourdes , Feb 11, 2026, a Catholic priest prayed for me , my daughter, my nephew and my husband. Through intercession of Blessed Virgin Mary Mother of God, our lady of Lourdes , I received healing together with my daughter. In gratitude recited the Novena .”
-
-🙏 125
-
-Community Member
-
-May 15th
-
-“I have been a devotee of Our Lady of Lourdes since I was diagnosed with breast cancer in August 2025. After months of praying for her intercession, I received a clear CT scan — no spread to any of my body’s organs — even though I was unable to undergo surgery due to financial constraints. My tumor has shrunk. I thank you, Our Lady of Lourdes, and through your Son, Jesus Christ — my Divine Healer, my Savior, my Lord and my God. I believe I will be declared cancer-free. Amen. 🙏”
-
-🙏 73
-
-Anna Karina D.
-
-Jul 24th
-
-“I found the courage through the Holy Spirit to step out in faith and believe that my seizures were healed so i skipped my medication one night. after seizing that night, i learned that clearly it wasn’t my time yet, and i was briefly discouraged and dissapoinged, but im not anymore because I want Gods will and i know it’s better than my own. maybe he won’t heal me in this lifetime, but I am confident that he will in the next. Amen 🙏 update: christian has been curious about catholicism, left the new age movement, and has learned about the Lourdes water and believes in it!!!! 🙏”
-
-🙏 4
-
-Hannah W.
-
-Sep 26th
-
-“For 4 years my son’s left foot/leg did not heal. Recently, he had a below knee amputation, which literally saved his life. I gave him some Lourdes water and have been praying Our Lady of Lourdes Novena. He is happy, no pain, no antibiotics and will be fitted for his prosthesis in the next couple of months. Our prayers have been answered. Thank you, Our Lady of Lourdes for your intercession. 🙏”
-
-🙏 1
-
-pamela J.
-
-Oct 12th
-
-“We feel the love of God in our lives”
-
-🙏 0
-
-Astrid V.
-
-Sep 12th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2150,33 +1338,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Nossa Senhora de Lourdes"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Sobre Nossa Senhora de Lourdes
-
-Nossa Senhora apareceu a Santa Bernadette Soubirous dezoito vezes em Lourdes, França, em 1858, apenas quatro anos após o Papa declarar a Imaculada Conceição como dogma.
-
-Bernadette era uma camponesa pobre, e muitos em sua cidade não acreditavam que a Virgem Maria tivesse realmente aparecido a ela. Mas Nossa Senhora disse a Bernadette para cavar na gruta, e quando ela o fez, uma fonte de água jorrou. Quando as pessoas se lavavam na fonte, recebiam curas milagrosas inexplicáveis pelos médicos.
-
-Quando Bernadette perguntou qual era o nome da Senhora, ela respondeu: “Eu sou a Imaculada Conceição”. Bernadette ingressou nas Irmãs da Caridade de Nevers, sofreu muito fisicamente e morreu com apenas 35 anos. Foi canonizada em 1933."""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2203,29 +1365,7 @@ R. Para que seamos dignos de las promesas de Jesucristo.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a Nuestra Señora de Lourdes"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Nuestra Señora se apareció a Santa Bernadette Soubirous dieciocho veces en Lourdes, Francia, en 1858, tan solo cuatro años después de que el Papa declarara dogma la Inmaculada Concepción.
-
-Bernadette era una campesina pobre, y muchos en su pueblo desconocían que la Virgen María se le hubiera aparecido. Pero Nuestra Señora le dijo que cavara en la gruta, y al hacerlo, brotó un manantial. Al bañarse en el manantial, la gente recibía curaciones milagrosas inexplicables para los médicos.
-
-Cuando Bernadette preguntó el nombre de la Señora, ella respondió: «Soy la Inmaculada Concepción». Bernadette ingresó en las Hermanas de la Caridad de Nevers, sufrió mucho físicamente y murió con tan solo 35 años. Fue canonizada en 1933.""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2249,109 +1389,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“For 4 years my son’s left foot/leg did not heal. Recently, he had a below knee amputation, which literally saved his life. I gave him some Lourdes water and have been praying Our Lady of Lourdes Novena. He is happy, no pain, no antibiotics and will be fitted for his prosthesis in the next couple of months. Our prayers have been answered. Thank you, Our Lady of Lourdes for your intercession. 🙏”
-
-🙏 1
-
-pamela J.
-
-Oct 12th
-
-(function() { var novenaTitle = "Our Lady of Lourdes Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-More About Our Lady of Lourdes
-
-Our Lady appeared to St. Bernadette Soubirous eighteen times in Lourdes, France in 1858, just four years after the Pope had declared the Immaculate Conception to be dogma.
-
-Bernadette was a poor peasant girl, and many in her town disbelieved that the Virgin Mary had actually appeared to her. But Our Lady told Bernadette to dig in the grotto, and when she did a spring of water spilled forth. When people washed in the spring they received miraculous healings unexplainable by doctors.
-
-When Bernadette asked what the Lady’s name was, she answered “I am the Immaculate Conception.” Bernadette went on to enter the Sisters of Charity of Nevers, suffered a great deal physically, and died at just 35 years old. She was canonized in 1933.
-
-Prayers Answered Through Our Lady of Lourdes
-
-For me, it wasnt anything in particular I was praying during this novena. However, Last Thursday my daughter cut her hand by accident and she was 1 milimeter of hurting a nerve or tendon. The hand surgeon said it was a miracle.
-
-from V.S.
-
-Our Grandson Flynn was born 2/10/2020 with a critical heart defect. He coded 2 twice at 2 days old after a surgery…..he has 2 more surgeries before age 4. I prayered to Mother Mary every night. Doctors talked about heart transplant and all but we still prayed.
-
-My husband and I went to Lourdes and prayed constantly while there. Came back in October and used Mother Mary’s water on Flynn. FLYNN had a Doctor Appointment and my son in November was told things looked a little better. Well in January after some test they were told his heart is functioning normal and some medication might be able to stop. Now as he grows they say things could change but I say MARY CAME TO HIS RESCUE… SHE TALKED TO JESUS!!!! I know for sure.
-
-from E.K.
-
-Thank you our dear Lady of Lourdes for healing the bump on my forehead.
-
-from O.G.
-
-Thank you Mary for helping with and healing my thyroid.
-
-from V.B.
-
-Thank you Our Lady of Lourdes for interceding and answering my prayer!
-
-from S.S.
-
-I had acute kidney injury, and my kidney function is now back within normal limits.
-
-from P.O.
-
-Today on the Feast of Our Lady of Lourdes my husband finally tested negative for covid after experiencing a covid rebound!
-
-Thank you to Our Lady of Lourdes for obtaining this favor from her Son, Jesus! She is forever our loving Mother.
-
-“My husband and I experienced a healing from Lourdes water last year. My husband was diagnosed with spinal stenosis and was having difficulty getting around. We tried everything. He went to therapy, massage, and acupuncture. Out of the blue we remembered the Lourdes water in the hall closet, which we’ve had for many years from a trip my husband took. We bathed his back in the Lourdes water and he is free from pain and walking normally now.”
-
-Answered Prayers from the Community
-
-“This was thanksgiving Novena . During the feast of our lady of Lourdes , Feb 11, 2026, a Catholic priest prayed for me , my daughter, my nephew and my husband. Through intercession of Blessed Virgin Mary Mother of God, our lady of Lourdes , I received healing together with my daughter. In gratitude recited the Novena .”
-
-🙏 125
-
-Community Member
-
-May 15th
-
-“I have been a devotee of Our Lady of Lourdes since I was diagnosed with breast cancer in August 2025. After months of praying for her intercession, I received a clear CT scan — no spread to any of my body’s organs — even though I was unable to undergo surgery due to financial constraints. My tumor has shrunk. I thank you, Our Lady of Lourdes, and through your Son, Jesus Christ — my Divine Healer, my Savior, my Lord and my God. I believe I will be declared cancer-free. Amen. 🙏”
-
-🙏 73
-
-Anna Karina D.
-
-Jul 24th
-
-“I found the courage through the Holy Spirit to step out in faith and believe that my seizures were healed so i skipped my medication one night. after seizing that night, i learned that clearly it wasn’t my time yet, and i was briefly discouraged and dissapoinged, but im not anymore because I want Gods will and i know it’s better than my own. maybe he won’t heal me in this lifetime, but I am confident that he will in the next. Amen 🙏 update: christian has been curious about catholicism, left the new age movement, and has learned about the Lourdes water and believes in it!!!! 🙏”
-
-🙏 4
-
-Hannah W.
-
-Sep 26th
-
-“For 4 years my son’s left foot/leg did not heal. Recently, he had a below knee amputation, which literally saved his life. I gave him some Lourdes water and have been praying Our Lady of Lourdes Novena. He is happy, no pain, no antibiotics and will be fitted for his prosthesis in the next couple of months. Our prayers have been answered. Thank you, Our Lady of Lourdes for your intercession. 🙏”
-
-🙏 1
-
-pamela J.
-
-Oct 12th
-
-“We feel the love of God in our lives”
-
-🙏 0
-
-Astrid V.
-
-Sep 12th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2377,33 +1415,7 @@ R. Para que sejamos dignos das promessas de Jesus Cristo.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a Nossa Senhora de Lourdes"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Sobre Nossa Senhora de Lourdes
-
-Nossa Senhora apareceu a Santa Bernadette Soubirous dezoito vezes em Lourdes, França, em 1858, apenas quatro anos após o Papa declarar a Imaculada Conceição como dogma.
-
-Bernadette era uma camponesa pobre, e muitos em sua cidade não acreditavam que a Virgem Maria tivesse realmente aparecido a ela. Mas Nossa Senhora disse a Bernadette para cavar na gruta, e quando ela o fez, uma fonte de água jorrou. Quando as pessoas se lavavam na fonte, recebiam curas milagrosas inexplicáveis pelos médicos.
-
-Quando Bernadette perguntou qual era o nome da Senhora, ela respondeu: “Eu sou a Imaculada Conceição”. Bernadette ingressou nas Irmãs da Caridade de Nevers, sofreu muito fisicamente e morreu com apenas 35 anos. Foi canonizada em 1933."""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

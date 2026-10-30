@@ -120,21 +120,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -168,23 +154,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My prayers were answered by day 5 or 6 of this novena. Everything I prayed for I received speedily. Thank you Jesus and thank you St. Jude for your intercession.”
-
-🙏 25
-
-Bose O.
-
-Oct 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -218,23 +188,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -337,21 +291,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -385,23 +325,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My prayers were answered by day 5 or 6 of this novena. Everything I prayed for I received speedily. Thank you Jesus and thank you St. Jude for your intercession.”
-
-🙏 25
-
-Bose O.
-
-Oct 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -435,23 +359,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -560,15 +468,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A veces la oración también nos lleva a aceptar la voluntad De Dios.”
-
-🙏 427
-
-Community Member
-
-13 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -602,23 +502,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St Jude for giving my daughter a very good and well paid job. I know at God's time my other petitions will be granted. 🙏🏾”
-
-🙏 23
-
-Onome O.
-
-Oct 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -648,23 +532,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -767,15 +635,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A veces la oración también nos lleva a aceptar la voluntad De Dios.”
-
-🙏 427
-
-Community Member
-
-13 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -809,23 +669,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you St Jude for giving my daughter a very good and well paid job. I know at God's time my other petitions will be granted. 🙏🏾”
-
-🙏 23
-
-Onome O.
-
-Oct 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -855,23 +699,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -980,21 +808,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1028,23 +842,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have recieved much peace since praying the novena, an immense sense of reassurance that all my worries will be okay in the end. My faith in God has increased and letting his will be. Faithful that my prayers will be heard 🙏”
-
-🙏 21
-
-karina M.
-
-Oct 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1078,23 +876,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1197,21 +979,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1245,23 +1013,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I have recieved much peace since praying the novena, an immense sense of reassurance that all my worries will be okay in the end. My faith in God has increased and letting his will be. Faithful that my prayers will be heard 🙏”
-
-🙏 21
-
-karina M.
-
-Oct 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1295,23 +1047,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1420,15 +1156,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A veces la oración también nos lleva a aceptar la voluntad De Dios.”
-
-🙏 427
-
-Community Member
-
-13 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1462,23 +1190,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Bullying/social isolation of my kids at school has already improved! My throat is also almost completely normal after months of it feeling bad”
-
-🙏 18
-
-Community Member
-
-Oct 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1508,23 +1220,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1627,15 +1323,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A veces la oración también nos lleva a aceptar la voluntad De Dios.”
-
-🙏 427
-
-Community Member
-
-13 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1669,23 +1357,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Bullying/social isolation of my kids at school has already improved! My throat is also almost completely normal after months of it feeling bad”
-
-🙏 18
-
-Community Member
-
-Oct 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1715,23 +1387,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1840,21 +1496,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1888,23 +1530,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you for your intercession!! St.Jude I love you💗💚”
-
-🙏 12
-
-Liz C.
-
-Oct 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1938,23 +1564,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2057,21 +1667,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2105,23 +1701,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you for your intercession!! St.Jude I love you💗💚”
-
-🙏 12
-
-Liz C.
-
-Oct 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2155,23 +1735,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2280,15 +1844,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A veces la oración también nos lleva a aceptar la voluntad De Dios.”
-
-🙏 427
-
-Community Member
-
-13 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2322,23 +1878,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Dearest St Jude, thank you for your intercession and answered prayers 🙏”
-
-🙏 11
-
-Ifuu C.
-
-Oct 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2368,23 +1908,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2487,15 +2011,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A veces la oración también nos lleva a aceptar la voluntad De Dios.”
-
-🙏 427
-
-Community Member
-
-13 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2529,23 +2045,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Dearest St Jude, thank you for your intercession and answered prayers 🙏”
-
-🙏 11
-
-Ifuu C.
-
-Oct 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2575,23 +2075,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -2700,21 +2184,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2748,23 +2218,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“We were able to go for confession and by the Lord's mercy we will not sin again. Thank you for interceding for us St. Jude.”
-
-🙏 4
-
-Beldine A.
-
-Oct 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2798,23 +2252,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2917,21 +2355,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2965,23 +2389,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“We were able to go for confession and by the Lord's mercy we will not sin again. Thank you for interceding for us St. Jude.”
-
-🙏 4
-
-Beldine A.
-
-Oct 27th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3015,23 +2423,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3140,15 +2532,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A veces la oración también nos lleva a aceptar la voluntad De Dios.”
-
-🙏 427
-
-Community Member
-
-13 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3182,23 +2566,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you oh Saint Jude🙏”
-
-🙏 3
-
-Community Member
-
-Oct 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3228,23 +2596,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3347,15 +2699,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“A veces la oración también nos lleva a aceptar la voluntad De Dios.”
-
-🙏 427
-
-Community Member
-
-13 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3389,23 +2733,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Thank you oh Saint Jude🙏”
-
-🙏 3
-
-Community Member
-
-Oct 27th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3435,23 +2763,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -3560,23 +2872,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago
-
-(function() { var novenaTitle = "Novena a San Judas Tadeo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3610,25 +2906,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Soon I believe”
-
-🙏 0
-
-Daniella N.
-
-Oct 27th
-
-(function() { var novenaTitle = "St. Jude Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3662,35 +2940,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out
-
-(function() { var novenaTitle = "Novena a São Judas Tadeu"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -3793,23 +3043,7 @@ Oh Dios, que nos concediste la gracia de que lleguemos a conocer tu santo nombre
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Fue respondida con mucha paz y tranquilidad en mi ser y se que mi petición está resuelta en el nombre poderoso de Dios”
-
-🙏 453
-
-Community Member
-
-26 de ago
-
-(function() { var novenaTitle = "Novena a San Judas Tadeo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -3843,25 +3077,7 @@ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Soon I believe”
-
-🙏 0
-
-Daniella N.
-
-Oct 27th
-
-(function() { var novenaTitle = "St. Jude Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -3895,35 +3111,7 @@ Bendito seja São Judas Tadeu, em todo o mundo e por toda a Eternidade.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out
-
-(function() { var novenaTitle = "Novena a São Judas Tadeu"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Orações Atendidas da Comunidade
-
-“Infel até o momento continuo na súplica que minhas orações sejam atendidas”
-
-🙏 5
-
-Community Member
-
-25 de out"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),

@@ -44,21 +44,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -80,23 +66,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I got a customer who did her brows and my mother’s health from the last prayer is okay now. Thank you St Raphael ( medicine of God ).”
-
-🙏 39
-
-Annabel N.
-
-Oct 16th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -122,23 +92,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -165,21 +119,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -201,23 +141,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I got a customer who did her brows and my mother’s health from the last prayer is okay now. Thank you St Raphael ( medicine of God ).”
-
-🙏 39
-
-Annabel N.
-
-Oct 16th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -243,23 +167,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -292,15 +200,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sufría de cólicos menstruales muy fuertes. Mis ecografías salían perfectas, con mi útero y ovarios limpios, al punto que el doctor no se explicaba por qué me dolía tanto si todo estaba bien. ​El 30 de julio terminé la novena a San Rafael Arcángel pidiéndole que me acompañara en mi búsqueda laboral, que fuera él mi guía en todo y que sanara mi cuerpo, alma y corazón, sin mencionarle directamente este dolor. ​Al día siguiente me vino el periodo y me preparé para lo peor. Sin embargo, para mi absoluta sorpresa, pasé todo el ciclo sin un solo cólico, con total tranquilidad. ​San Rafael, Medicina de Dios, actuó donde más lo necesitaba. ¡Infinitas gracias a Dios y a San Rafael Arcángel por este milagro”
-
-🙏 236
-
-Piedy B.
-
-3 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -322,23 +222,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“God brought me to my future husband A good Catholic man who loves me and loves Jesus & Mary.”
-
-🙏 37
-
-Christie S.
-
-Oct 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -360,23 +244,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -403,15 +271,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sufría de cólicos menstruales muy fuertes. Mis ecografías salían perfectas, con mi útero y ovarios limpios, al punto que el doctor no se explicaba por qué me dolía tanto si todo estaba bien. ​El 30 de julio terminé la novena a San Rafael Arcángel pidiéndole que me acompañara en mi búsqueda laboral, que fuera él mi guía en todo y que sanara mi cuerpo, alma y corazón, sin mencionarle directamente este dolor. ​Al día siguiente me vino el periodo y me preparé para lo peor. Sin embargo, para mi absoluta sorpresa, pasé todo el ciclo sin un solo cólico, con total tranquilidad. ​San Rafael, Medicina de Dios, actuó donde más lo necesitaba. ¡Infinitas gracias a Dios y a San Rafael Arcángel por este milagro”
-
-🙏 236
-
-Piedy B.
-
-3 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -433,23 +293,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“God brought me to my future husband A good Catholic man who loves me and loves Jesus & Mary.”
-
-🙏 37
-
-Christie S.
-
-Oct 20th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -471,23 +315,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -520,21 +348,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“No niego que desde que comencé con esta novena me ha dolido menos la cabeza, he empezado a regular mejor mis emociones y todo el desánimo que sentía se convirtió en convicción para seguir adelante, no se cómo pero mi salud mental mejoro bastante desde que comencé, una fuerza extraña que ni yo puedo explicar. La intersección de San Rafael arcángel me ha ayudado”
-
-🙏 163
-
-Marie P.
-
-27 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -556,23 +370,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I will surely testify this year on my petitions oh Great Raphael 🙏”
-
-🙏 31
-
-Winifred W.
-
-Oct 13th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -598,23 +396,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -641,21 +423,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“No niego que desde que comencé con esta novena me ha dolido menos la cabeza, he empezado a regular mejor mis emociones y todo el desánimo que sentía se convirtió en convicción para seguir adelante, no se cómo pero mi salud mental mejoro bastante desde que comencé, una fuerza extraña que ni yo puedo explicar. La intersección de San Rafael arcángel me ha ayudado”
-
-🙏 163
-
-Marie P.
-
-27 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -677,23 +445,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I will surely testify this year on my petitions oh Great Raphael 🙏”
-
-🙏 31
-
-Winifred W.
-
-Oct 13th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -719,23 +471,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -768,15 +504,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, mi oración a sido respondia, cuando empiece esta novena tenía una fiebre horrible, pero ahora, me siento mucho mejor, gracias a la santa intercesión de San Rafael arcángel”
-
-🙏 0
-
-Pedro L.
-
-24 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -798,23 +526,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I just finished my novena,i have always seen this whenever I ask Saint Raphael for intercession during the prayer I feel someone massaging my head and I feel my anxieties are out and it's like such a great peace in my heart.I totally believed my intentions would be heard by The Lord.I love Saint Raphael So much.💛💛💛💛”
-
-🙏 27
-
-Sunny H.
-
-Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -836,23 +548,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -879,15 +575,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, mi oración a sido respondia, cuando empiece esta novena tenía una fiebre horrible, pero ahora, me siento mucho mejor, gracias a la santa intercesión de San Rafael arcángel”
-
-🙏 0
-
-Pedro L.
-
-24 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -909,23 +597,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“I just finished my novena,i have always seen this whenever I ask Saint Raphael for intercession during the prayer I feel someone massaging my head and I feel my anxieties are out and it's like such a great peace in my heart.I totally believed my intentions would be heard by The Lord.I love Saint Raphael So much.💛💛💛💛”
-
-🙏 27
-
-Sunny H.
-
-Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -947,23 +619,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -996,21 +652,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1032,23 +674,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Healing and protection”
-
-🙏 25
-
-john R.
-
-Oct 15th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1074,23 +700,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1117,21 +727,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1153,23 +749,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Healing and protection”
-
-🙏 25
-
-john R.
-
-Oct 15th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1195,23 +775,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1244,15 +808,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sufría de cólicos menstruales muy fuertes. Mis ecografías salían perfectas, con mi útero y ovarios limpios, al punto que el doctor no se explicaba por qué me dolía tanto si todo estaba bien. ​El 30 de julio terminé la novena a San Rafael Arcángel pidiéndole que me acompañara en mi búsqueda laboral, que fuera él mi guía en todo y que sanara mi cuerpo, alma y corazón, sin mencionarle directamente este dolor. ​Al día siguiente me vino el periodo y me preparé para lo peor. Sin embargo, para mi absoluta sorpresa, pasé todo el ciclo sin un solo cólico, con total tranquilidad. ​San Rafael, Medicina de Dios, actuó donde más lo necesitaba. ¡Infinitas gracias a Dios y a San Rafael Arcángel por este milagro”
-
-🙏 236
-
-Piedy B.
-
-3 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1274,23 +830,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Just heard she is home safe and her home was fine when she got there. St Rafael is my go to for travelers and illness for a reason.”
-
-🙏 23
-
-Kathryn K.
-
-Oct 18th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1312,23 +852,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1355,15 +879,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Sufría de cólicos menstruales muy fuertes. Mis ecografías salían perfectas, con mi útero y ovarios limpios, al punto que el doctor no se explicaba por qué me dolía tanto si todo estaba bien. ​El 30 de julio terminé la novena a San Rafael Arcángel pidiéndole que me acompañara en mi búsqueda laboral, que fuera él mi guía en todo y que sanara mi cuerpo, alma y corazón, sin mencionarle directamente este dolor. ​Al día siguiente me vino el periodo y me preparé para lo peor. Sin embargo, para mi absoluta sorpresa, pasé todo el ciclo sin un solo cólico, con total tranquilidad. ​San Rafael, Medicina de Dios, actuó donde más lo necesitaba. ¡Infinitas gracias a Dios y a San Rafael Arcángel por este milagro”
-
-🙏 236
-
-Piedy B.
-
-3 de ago""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1385,23 +901,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“Just heard she is home safe and her home was fine when she got there. St Rafael is my go to for travelers and illness for a reason.”
-
-🙏 23
-
-Kathryn K.
-
-Oct 18th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1423,23 +923,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1472,21 +956,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“No niego que desde que comencé con esta novena me ha dolido menos la cabeza, he empezado a regular mejor mis emociones y todo el desánimo que sentía se convirtió en convicción para seguir adelante, no se cómo pero mi salud mental mejoro bastante desde que comencé, una fuerza extraña que ni yo puedo explicar. La intersección de San Rafael arcángel me ha ayudado”
-
-🙏 163
-
-Marie P.
-
-27 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1508,23 +978,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My A1C is down from 14 something to 6.8. My Mobility since the strokes steadily improves and what used to feel like one big lump in my head now feels normal. My mental clarity is at 29 on that test our president brags about testing at 30 on and I still function despite some disibility at pretty much independent levels and am trusting God for continuing improvement in all areas of my health.”
-
-🙏 18
-
-Kathryn K.
-
-Oct 18th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1550,23 +1004,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1593,21 +1031,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“No niego que desde que comencé con esta novena me ha dolido menos la cabeza, he empezado a regular mejor mis emociones y todo el desánimo que sentía se convirtió en convicción para seguir adelante, no se cómo pero mi salud mental mejoro bastante desde que comencé, una fuerza extraña que ni yo puedo explicar. La intersección de San Rafael arcángel me ha ayudado”
-
-🙏 163
-
-Marie P.
-
-27 de sep""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1629,23 +1053,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“My A1C is down from 14 something to 6.8. My Mobility since the strokes steadily improves and what used to feel like one big lump in my head now feels normal. My mental clarity is at 29 on that test our president brags about testing at 30 on and I still function despite some disibility at pretty much independent levels and am trusting God for continuing improvement in all areas of my health.”
-
-🙏 18
-
-Kathryn K.
-
-Oct 18th""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -1671,23 +1079,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1720,15 +1112,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, mi oración a sido respondia, cuando empiece esta novena tenía una fiebre horrible, pero ahora, me siento mucho mejor, gracias a la santa intercesión de San Rafael arcángel”
-
-🙏 0
-
-Pedro L.
-
-24 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1750,23 +1134,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“PR granted to my brother.”
-
-🙏 16
-
-Community Member
-
-Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1788,23 +1156,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -1831,15 +1183,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Si, mi oración a sido respondia, cuando empiece esta novena tenía una fiebre horrible, pero ahora, me siento mucho mejor, gracias a la santa intercesión de San Rafael arcángel”
-
-🙏 0
-
-Pedro L.
-
-24 de oct""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -1861,23 +1205,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“PR granted to my brother.”
-
-🙏 16
-
-Community Member
-
-Oct 19th""", """Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1899,23 +1227,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
             NovenaDay(
@@ -1948,55 +1260,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a San Rafael Arcángel"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-“Sufría de cólicos menstruales muy fuertes. Mis ecografías salían perfectas, con mi útero y ovarios limpios, al punto que el doctor no se explicaba por qué me dolía tanto si todo estaba bien. ​El 30 de julio terminé la novena a San Rafael Arcángel pidiéndole que me acompañara en mi búsqueda laboral, que fuera él mi guía en todo y que sanara mi cuerpo, alma y corazón, sin mencionarle directamente este dolor. ​Al día siguiente me vino el periodo y me preparé para lo peor. Sin embargo, para mi absoluta sorpresa, pasé todo el ciclo sin un solo cólico, con total tranquilidad. ​San Rafael, Medicina de Dios, actuó donde más lo necesitaba. ¡Infinitas gracias a Dios y a San Rafael Arcángel por este milagro”
-
-🙏 236
-
-Piedy B.
-
-3 de ago
-
-“No niego que desde que comencé con esta novena me ha dolido menos la cabeza, he empezado a regular mejor mis emociones y todo el desánimo que sentía se convirtió en convicción para seguir adelante, no se cómo pero mi salud mental mejoro bastante desde que comencé, una fuerza extraña que ni yo puedo explicar. La intersección de San Rafael arcángel me ha ayudado”
-
-🙏 163
-
-Marie P.
-
-27 de sep
-
-“Si, mi oración a sido respondia, cuando empiece esta novena tenía una fiebre horrible, pero ahora, me siento mucho mejor, gracias a la santa intercesión de San Rafael arcángel”
-
-🙏 0
-
-Pedro L.
-
-24 de oct""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2018,25 +1282,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“God granted my visa and led me safely to my new vessel but I'm still believing God to save me from waist and leg pains and grant me the desired healing I need in Jesus Name, Amen.”
-
-🙏 11
-
-Gabriel B.
-
-Oct 24th
-
-(function() { var novenaTitle = "St. Raphael Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2062,29 +1308,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a São Rafael Arcanjo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena aos Arcanjos"""),
+Amém."""),
                 prayer = LocalizedText("""En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
 Amén.
@@ -2111,55 +1335,7 @@ Serenísima Reina de los ángeles, medicina de la medicina, porque, Señora, sin
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
-Amén.
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-(function() { var novenaTitle = "Novena a San Rafael Arcángel"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-“Hoy iba con mi hijo en una moto y me quedé sin frenod bajando una loma, muy concurrida lleno de buses y de carros.yo me raspé y a él no le pasó absolutamente nada .Estoy segura que el arcángel Rafael estuvo ahí protegiéndonos . Porque en ese instante que perdimos los frenos no había ni un solo carro, súpe reaccionar.Y eso pasó justo hoy !!Dios es fiel solo puedo agradecer🙇🏼‍♀️🙌🏻🥹🤌🏻🤌🏻🙏🏻 hoy volvimos a vivir los dos🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🙇🏼‍♀️🙌🏻🥹”
-
-🙏 548
-
-Camí C.
-
-20 de jul
-
-“Sufría de cólicos menstruales muy fuertes. Mis ecografías salían perfectas, con mi útero y ovarios limpios, al punto que el doctor no se explicaba por qué me dolía tanto si todo estaba bien. ​El 30 de julio terminé la novena a San Rafael Arcángel pidiéndole que me acompañara en mi búsqueda laboral, que fuera él mi guía en todo y que sanara mi cuerpo, alma y corazón, sin mencionarle directamente este dolor. ​Al día siguiente me vino el periodo y me preparé para lo peor. Sin embargo, para mi absoluta sorpresa, pasé todo el ciclo sin un solo cólico, con total tranquilidad. ​San Rafael, Medicina de Dios, actuó donde más lo necesitaba. ¡Infinitas gracias a Dios y a San Rafael Arcángel por este milagro”
-
-🙏 236
-
-Piedy B.
-
-3 de ago
-
-“No niego que desde que comencé con esta novena me ha dolido menos la cabeza, he empezado a regular mejor mis emociones y todo el desánimo que sentía se convirtió en convicción para seguir adelante, no se cómo pero mi salud mental mejoro bastante desde que comencé, una fuerza extraña que ni yo puedo explicar. La intersección de San Rafael arcángel me ha ayudado”
-
-🙏 163
-
-Marie P.
-
-27 de sep
-
-“Si, mi oración a sido respondia, cuando empiece esta novena tenía una fiebre horrible, pero ahora, me siento mucho mejor, gracias a la santa intercesión de San Rafael arcángel”
-
-🙏 0
-
-Pedro L.
-
-24 de oct""", """Continue this novena in the app
-
-Set reminders so you never miss a day
-
-OPEN →
-
-In the Name of the Father, and of the Son, and of the Holy Spirit.
+Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 
 Amen.
 
@@ -2181,25 +1357,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.
-
-Today's prayer complete!
-
-Share this novena with someone who needs it.
-
-Link copied!
-
-Answered Prayers from the Community
-
-“God granted my visa and led me safely to my new vessel but I'm still believing God to save me from waist and leg pains and grant me the desired healing I need in Jesus Name, Amen.”
-
-🙏 11
-
-Gabriel B.
-
-Oct 24th
-
-(function() { var novenaTitle = "St. Raphael Novena"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();""", """Continue esta novena no app
+Amen.""", """Continue esta novena no app
 
 Configure lembretes para não perder nenhum dia
 
@@ -2225,29 +1383,7 @@ Amém
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
-Amém.
-
-Oração de hoje completa!
-
-Compartilhe esta novena com alguém que precisa.
-
-Link copiado!
-
-Orações Atendidas da Comunidade
-
-“Sim”
-
-🙏 537
-
-Aylla S.
-
-22 de set
-
-(function() { var novenaTitle = "Novena a São Rafael Arcanjo"; document.addEventListener('click', function(event) { var link = event.target.closest ? event.target.closest('[data-cta-day]') : null; if (!link) { return; } if (typeof window.trackEvent === 'undefined') { return; } window.trackEvent('daily_prayer_cta_clicked', { event_category: 'conversion', novena: novenaTitle, day: link.getAttribute('data-cta-day'), novena_slug: link.getAttribute('data-cta-slug'), source: 'daily_prayer_cta' }); }); })();
-
-Novena Relacionada
-
-Novena aos Arcanjos"""),
+Amém."""),
                 intentionGuidance = LocalizedText("""""", """""", """""")
             ),
         ),
