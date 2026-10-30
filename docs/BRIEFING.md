@@ -199,9 +199,13 @@ offline fallback.
   Vatican News page — and its cookie banner — may not be needed at all.
 - The versions comparator's buttons were reworked during migration but not
   checked against the original complaint.
+- The button to read the official mass readings from the Vatican in-app shows an unformatted web view of the Vatican site, which means the cookie banner uses too much of the screen and tehre is no option to close that banner. There needs to be a workaround for this.  
 - The parish region filter does not list all options per country.
 - The Via Crucis screen has the same squeezed-button problem the Rosary had; it
   lives in `DoctrineAndHistoryScreen`, which is not yet migrated.
+  - The button to use the GPS location doesn't produce results. It gets stuck in loading.
+  - The Geographical filter with menus does not show the proper options for each country/region/city.
+  - Vatican News and Catholic Bulletins, doesn't show what the Vatican updates. Either delete this is the content cannot be fetched, of find a way to fetch news from the day published by the Vatican
 
 ### Dead code to delete
 `LiturgicalCalendarWidget.kt`, `PrayerBeadCounter.kt` and `LiturgicalHeader.kt`
@@ -227,9 +231,7 @@ across screens and are worth adding to `AppKit`:
 6. **`AppProgressRail`** — every devotional screen re-invents the bead counter.
 
 **Data and correctness**
-- Source a genuinely Catholic Spanish and Portuguese text, or at minimum
-  normalise "Jehová" → "el Señor" and backfill the two missing deuterocanonical
-  passages.
+- Source a genuinely Catholic Spanish and Portuguese text.
 - Extend the lectionary to ferial weekdays (Year I/II), which the calendar
   already distinguishes.
 - Add proper **Room migrations**: the database still uses
