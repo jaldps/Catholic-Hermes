@@ -900,6 +900,10 @@ object AppleKit : AppKit {
                     text = caption,
                     style = styles.rowSubtitle.copy(fontWeight = FontWeight.SemiBold),
                     color = scheme.primary,
+                    // Always two lines tall, so a caption that wraps does not
+                    // push its figure below the figures beside it. Tiles in a
+                    // row have to share a baseline to read as one group.
+                    minLines = 2,
                     maxLines = 2
                 )
             }

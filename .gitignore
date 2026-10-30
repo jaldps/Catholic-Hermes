@@ -20,3 +20,5 @@ debug.keystore
 # Local build environment
 /local.properties
 /app/build/screenshots/
+*.jks
+*.keystore

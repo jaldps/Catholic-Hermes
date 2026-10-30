@@ -21,21 +21,36 @@ class ExampleRobolectricTest {
   }
 
   @Test
-  fun `verify full catholic 73 books and multi-chapter generation`() {
-    val repo = com.example.data.repository.CatholicDataRepository()
+  fun `verify full catholic 73 books and real chapter text`() {
+    // Built with a Context so the bundled Bible assets are read. Without one
+    // there is no text at all: the synthetic placeholder verses this test was
+    // originally written against have been removed.
+    val repo = com.example.data.repository.CatholicDataRepository(
+      androidx.test.core.app.ApplicationProvider.getApplicationContext()
+    )
     assertEquals(73, repo.catholicBooks.size)
 
     val genesis = repo.catholicBooks.first { it.id == "gen" }
     assertEquals(50, genesis.chaptersCount)
 
-    // Verify chapter 1 and chapter 15 generation
     val ch1 = repo.getChapter("gen", 1)
     assertEquals(1, ch1.chapterNumber)
-    org.junit.Assert.assertTrue(ch1.verses.isNotEmpty())
+    org.junit.Assert.assertTrue(
+      "Genesis 1:1 was: ${ch1.verses.firstOrNull()?.text?.en}",
+      ch1.verses.first().text.en.startsWith("In the beginning God created heaven")
+    )
 
     val ch15 = repo.getChapter("gen", 15)
     assertEquals(15, ch15.chapterNumber)
-    org.junit.Assert.assertTrue(ch15.verses.isNotEmpty())
+    org.junit.Assert.assertTrue(ch15.verses.size > 5)
+
+    // The last chapter of the last book must be reachable too — the defect
+    // this guards against made every book after Esther return another's text.
+    val revelation = repo.getChapter("rev", 22)
+    org.junit.Assert.assertTrue(
+      "Revelation 22 was: ${revelation.verses.firstOrNull()?.text?.en}",
+      revelation.verses.isNotEmpty()
+    )
   }
 
   @Test

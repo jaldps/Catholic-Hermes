@@ -44,6 +44,7 @@ import com.example.ui.screens.CatechismScreen
 import com.example.ui.screens.DoctrineAndHistoryScreen
 import com.example.ui.screens.HabitsAndVirtuesScreen
 import com.example.ui.screens.HomeScreen
+import com.example.ui.screens.ParishFinderScreen
 import com.example.ui.screens.PilgrimageAndHabitsScreen
 import com.example.ui.screens.PrayersAndNovenasScreen
 import com.example.ui.screens.RosaryScreen
@@ -65,6 +66,7 @@ enum class AppDestination(
     PRAYERS("Oraciones", "Prayers", "Orações", AppIconSlot.PRAYERS, "nav_prayers"),
     PILGRIMAGE_HABITS("Santuarios", "Sanctuaries", "Santuários", AppIconSlot.PILGRIMAGE, "nav_pilgrimage"),
     DOCTRINE("Doctrina e Iglesias", "Doctrine & Parishes", "Doutrina e Paróquias", AppIconSlot.DOCTRINE, "nav_doctrine"),
+    PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PILGRIMAGE, "nav_parishes"),
     CHURCHES_NEWS("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias", AppIconSlot.NEWS, "nav_churches_news"),
     SPIRITUAL_LIFE("Diario y Quiz", "Journal & Quiz", "Diário e Quiz", AppIconSlot.JOURNAL, "nav_spiritual");
 
@@ -208,6 +210,11 @@ fun MainApp(
                     )
 
                     AppDestination.DOCTRINE -> DoctrineAndHistoryScreen(
+                        repository = repository,
+                        currentLanguage = currentLanguage
+                    )
+
+                    AppDestination.PARISHES -> ParishFinderScreen(
                         repository = repository,
                         currentLanguage = currentLanguage
                     )
