@@ -242,9 +242,11 @@ object DesignTokens {
     private val MaterialSpacing = AppSpacing(
         gutter = 16.dp,
         sectionGap = 24.dp,
-        cardPadding = 20.dp,
+        cardPadding = 16.dp,
         cardGap = 12.dp,
-        rowMinHeight = 56.dp,
+        // 72dp is M3's two-line list item; 56dp is the one-line height and was
+        // squeezing every row that carries a subtitle.
+        rowMinHeight = 72.dp,
         rowPaddingVertical = 12.dp,
         listItemGap = 8.dp,
         headerTopGap = 12.dp,
@@ -282,7 +284,9 @@ object DesignTokens {
     )
 
     private val MaterialDepth = AppDepth(
-        cardElevation = 1.dp,
+        // A filled M3 card sits at 0dp; 1dp is the *elevated* card. Tone
+        // carries the separation here, not shadow.
+        cardElevation = 0.dp,
         cardBorderWidth = 0.dp,
         appBarElevation = 0.dp,
         navElevation = 3.dp,
@@ -410,35 +414,39 @@ object DesignTokens {
         selectionTint = Color(0xFF3A3A3C)
     )
 
-    // Material 3 tonal surfaces.
+    // Material 3 tonal surfaces. In a seeded M3 scheme every container and
+    // neutral is struck from the seed's tonal palette, so these are the
+    // liturgical accent at neutral chroma rather than the baseline purple —
+    // baseline containers under a green primary produced lilac discs holding
+    // green glyphs, a pairing no M3 app has.
     private val MaterialPaletteLight = AppPalette(
-        canvas = Color(0xFFF7F2F9),
-        groupedSurface = Color(0xFFFFFBFE),
-        raised = Color(0xFFF3EDF7),
-        hairline = Color(0xFFCAC4D0),
-        accent = Color(0xFF6750A4),
-        accentMuted = Color(0xFFEADDFF),
+        canvas = Color(0xFFF4FBF6),
+        groupedSurface = Color(0xFFFCFFFD),
+        raised = Color(0xFFEBF2ED),
+        hairline = Color(0xFFC2CCC5),
+        accent = Color(0xFF2C6B3E),
+        accentMuted = Color(0xFFC0DEC9),
         gold = Color(0xFF8A6B12),
         textPrimary = Color(0xFF1D1B20),
-        textSecondary = Color(0xFF49454F),
-        textTertiary = Color(0xFF79747E),
+        textSecondary = Color(0xFF414941),
+        textTertiary = Color(0xFF717A74),
         scrim = Color(0x52000000),
-        selectionTint = Color(0xFFE8DEF8)
+        selectionTint = Color(0xFFDAE8DE)
     )
 
     private val MaterialPaletteDark = AppPalette(
-        canvas = Color(0xFF141218),
-        groupedSurface = Color(0xFF211F26),
-        raised = Color(0xFF2B2930),
-        hairline = Color(0xFF49454F),
-        accent = Color(0xFFD0BCFF),
-        accentMuted = Color(0xFF4F378B),
+        canvas = Color(0xFF0E1410),
+        groupedSurface = Color(0xFF161D18),
+        raised = Color(0xFF212A24),
+        hairline = Color(0xFF414A44),
+        accent = Color(0xFF81C784),
+        accentMuted = Color(0xFF2A4432),
         gold = Color(0xFFE5C158),
         textPrimary = Color(0xFFE6E0E9),
-        textSecondary = Color(0xFFCAC4D0),
-        textTertiary = Color(0xFF938F99),
+        textSecondary = Color(0xFFC2CCC5),
+        textTertiary = Color(0xFF8C968F),
         scrim = Color(0x7A000000),
-        selectionTint = Color(0xFF4A4458)
+        selectionTint = Color(0xFF34453A)
     )
 
     // Parchment, ink and gold leaf.

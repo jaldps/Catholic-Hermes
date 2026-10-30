@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
 
 val LocalAppTextStyles = staticCompositionLocalOf {
     AppTypographyFactory.build(DesignLanguage.VATICAN, serifPreferred = true, scale = 1f).second
@@ -119,10 +120,14 @@ private fun buildColorScheme(
             onSurface = palette.textPrimary,
             surfaceVariant = palette.raised,
             onSurfaceVariant = palette.textSecondary,
+            // Five distinct steps, not two values spread over five roles.
+            // Material separates layers by tone rather than by shadow, so a
+            // collapsed ladder leaves dark mode with no visible hierarchy at
+            // all — every card, row and tile renders the same colour.
             surfaceContainerLowest = palette.groupedSurface,
-            surfaceContainerLow = palette.groupedSurface,
-            surfaceContainer = palette.raised,
-            surfaceContainerHigh = palette.raised,
+            surfaceContainerLow = lerp(palette.groupedSurface, palette.raised, 0.25f),
+            surfaceContainer = lerp(palette.groupedSurface, palette.raised, 0.5f),
+            surfaceContainerHigh = lerp(palette.groupedSurface, palette.raised, 0.75f),
             surfaceContainerHighest = palette.raised,
             outline = palette.hairline,
             outlineVariant = palette.hairline,

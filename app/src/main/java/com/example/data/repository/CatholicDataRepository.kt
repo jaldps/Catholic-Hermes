@@ -234,6 +234,11 @@ class CatholicDataRepository(
     val compendiumPartTitles: List<com.example.data.models.LocalizedText> get() = CatechismCompendiumData.compendiumPartTitles
     val doctrineFormulas: List<DoctrineFormula> get() = CatechismCompendiumData.doctrineFormulas
     val officialVaticanLinks: List<CatechismData.OfficialVaticanLink> get() = CatechismData.officialVaticanLinks
+
+    /** A browsable index reaching all 2,865 paragraphs of the Catechism. */
+    val catechismOutline: List<CatechismOutlineSection> get() = CatechismOutline.sections
+    val catechismParagraphCount: Int get() = CatechismOutline.totalParagraphs
+    fun catechismSectionFor(number: Int) = CatechismOutline.sectionFor(number)
     fun getCompendiumQA(number: Int) = CatechismCompendiumData.getCompendiumQA(number)
     fun searchCompendium(query: String) = CatechismCompendiumData.searchCompendium(query)
 

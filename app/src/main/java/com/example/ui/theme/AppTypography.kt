@@ -170,7 +170,9 @@ object AppTypographyFactory {
             rowSubtitle = style(14.0, 20.0, FontWeight.Normal, 0.25),
             navLabel = style(12.0, 16.0, FontWeight.Medium, 0.5),
             buttonLabel = style(14.0, 20.0, FontWeight.Medium, 0.1),
-            metric = style(36.0, 44.0, FontWeight.Normal, 0.0),
+            // headlineMedium, not displaySmall: 36sp does not fit a figure
+            // like "1,328" in a third-width stat tile.
+            metric = style(28.0, 36.0, FontWeight.Normal, 0.0),
             quote = style(16.0, 26.0, FontWeight.Normal, 0.3, reading)
         )
         return typography to extras

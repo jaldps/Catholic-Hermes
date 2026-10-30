@@ -1,8 +1,9 @@
 package com.example.ui.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -11,78 +12,118 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AutoStories
-import androidx.compose.material.icons.filled.Bookmark
-import androidx.compose.material.icons.filled.Comment
-import androidx.compose.material.icons.filled.Compare
-import androidx.compose.material.icons.filled.FormatSize
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.MenuBook
-import androidx.compose.material.icons.filled.OpenInNew
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.PrimaryTabRow
-import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowForward
-import androidx.compose.material3.Button
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
+import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.Comment
+import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.AutoStories
+import androidx.compose.material.icons.filled.Download
+import androidx.compose.material.icons.filled.SearchOff
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.unit.isSpecified
+import com.example.data.audio.LiturgicalTtsManager
+import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
 import com.example.data.models.BibleBook
 import com.example.data.models.BibleVerse
 import com.example.data.models.BibleVersionInfo
 import com.example.data.models.DailyMassReading
 import com.example.data.models.Testament
+import com.example.data.repository.BibleDownloadManager
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.data.audio.LiturgicalTtsManager
-import com.example.data.local.SanctaFidesDao
-import kotlinx.coroutines.launch
-import com.example.ui.theme.SacredBurgundy
 import com.example.ui.components.InAppBrowserDialog
+import com.example.ui.design.AppBanner
+import com.example.ui.design.AppCard
+import com.example.ui.design.AppChip
+import com.example.ui.design.AppDivider
+import com.example.ui.design.AppEmptyState
+import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppListRow
+import com.example.ui.design.AppOrnament
+import com.example.ui.design.AppPrimaryButton
+import com.example.ui.design.AppScreenTitle
+import com.example.ui.design.AppSearchField
+import com.example.ui.design.AppSecondaryButton
+import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.design.AppVerseRow
+import com.example.ui.theme.AppFonts
+import com.example.ui.theme.DesignLanguage
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
+    AppLanguage.ES -> es
+    AppLanguage.EN -> en
+    AppLanguage.PT -> pt
+}
+
+/** Reader type size: the bounds and step the A-/A+ pair moves between. */
+private const val MinFontScale = 0.85f
+private const val MaxFontScale = 1.45f
+private const val FontScaleStep = 0.15f
+
+/** Verse search only runs once the query is long enough to mean something. */
+private const val MinSearchLength = 3
+
+private fun TextUnit.scaledBy(factor: Float): TextUnit =
+    if (isSpecified) this * factor else this
+
+/** A reading style re-cut for the reader's own size and face preference. */
+private fun TextStyle.asReading(family: FontFamily?, factor: Float): TextStyle = copy(
+    fontFamily = family ?: fontFamily,
+    fontSize = fontSize.scaledBy(factor),
+    lineHeight = lineHeight.scaledBy(factor)
+)
+
+/** One lesson of the day's Mass, as the missal lays it out. */
+private data class MassLesson(
+    val label: String,
+    val reference: String,
+    val text: String
+)
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -93,10 +134,12 @@ fun BibleScreen(
     ttsManager: LiturgicalTtsManager? = null,
     modifier: Modifier = Modifier
 ) {
-    var selectedMainTab by remember { mutableIntStateOf(0) } // 0 = Bible Canon & Reader, 1 = Daily Mass Missal, 2 = Versions Comparator, 3 = Scripture Study
-    var selectedTestamentTab by remember { mutableIntStateOf(0) } // 0 = All 73 books, 1 = OT (46), 2 = NT (27), 3 = Deuterocanonical (7)
+    val design = LocalAppDesign.current
+
+    var selectedMainTab by remember { mutableIntStateOf(0) }
+    var selectedTestamentTab by remember { mutableIntStateOf(0) }
     var selectedBook by remember { mutableStateOf<BibleBook?>(null) }
-    var selectedChapterNumber by remember(selectedBook?.id) { mutableIntStateOf(1) }
+    var selectedChapterNumber by remember { mutableIntStateOf(1) }
     var showChapterSelectorDialog by remember { mutableStateOf(false) }
     var selectedVerseForCommentary by remember { mutableStateOf<BibleVerse?>(null) }
     var searchQuery by remember { mutableStateOf("") }
@@ -104,858 +147,884 @@ fun BibleScreen(
     var useSerifFont by remember { mutableStateOf(true) }
 
     val bottomSheetState = rememberModalBottomSheetState()
-    val scope = rememberCoroutineScope()
 
     Column(
         modifier = modifier
             .fillMaxSize()
+            .background(design.palette.canvas)
             .testTag("bible_screen")
     ) {
-        // Main Screen Mode Tabs
-        PrimaryTabRow(
-            selectedTabIndex = selectedMainTab,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy
-        ) {
-            Tab(
-                selected = selectedMainTab == 0,
-                onClick = { selectedMainTab = 0 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Biblia (73)"
-                            AppLanguage.EN -> "Bible (73)"
-                            AppLanguage.PT -> "Bíblia (73)"
-                        },
-                        fontWeight = if (selectedMainTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedMainTab == 1,
-                onClick = { selectedMainTab = 1 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Misal Diario"
-                            AppLanguage.EN -> "Daily Missal"
-                            AppLanguage.PT -> "Missal Diário"
-                        },
-                        fontWeight = if (selectedMainTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedMainTab == 2,
-                onClick = { selectedMainTab = 2 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Comparador"
-                            AppLanguage.EN -> "Versions"
-                            AppLanguage.PT -> "Versões"
-                        },
-                        fontWeight = if (selectedMainTab == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedMainTab == 3,
-                onClick = { selectedMainTab = 3 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Estudio Bíblico"
-                            AppLanguage.EN -> "Scripture Study"
-                            AppLanguage.PT -> "Estudo Bíblico"
-                        },
-                        fontWeight = if (selectedMainTab == 3) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-        }
+        AppSegmentedTabs(
+            options = listOf(
+                currentLanguage.pick("Biblia (73)", "Bible (73)", "Bíblia (73)"),
+                currentLanguage.pick("Misal", "Missal", "Missal"),
+                currentLanguage.pick("Comparador", "Versions", "Versões"),
+                currentLanguage.pick("Estudio", "Study", "Estudo")
+            ),
+            selectedIndex = selectedMainTab,
+            onSelect = { selectedMainTab = it },
+            modifier = Modifier
+                .padding(horizontal = design.spacing.gutter)
+                .padding(top = design.spacing.headerTopGap / 2)
+        )
 
         when (selectedMainTab) {
             0 -> {
-                // Bible Reader View
-                if (selectedBook == null) {
-                    // Books Directory
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(horizontal = 16.dp, vertical = 10.dp)
-                    ) {
-                        // Search bar
-                        OutlinedTextField(
-                            value = searchQuery,
-                            onValueChange = { searchQuery = it },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .testTag("bible_search_input"),
-                            placeholder = {
-                                Text(
-                                    when (currentLanguage) {
-                                        AppLanguage.ES -> "Buscar libro bíblico..."
-                                        AppLanguage.EN -> "Search biblical book..."
-                                        AppLanguage.PT -> "Buscar livro bíblico..."
-                                    }
-                                )
-                            },
-                            leadingIcon = {
-                                Icon(imageVector = Icons.Default.Search, contentDescription = null)
-                            },
-                            singleLine = true,
-                            shape = RoundedCornerShape(14.dp)
-                        )
-
-                        Spacer(modifier = Modifier.height(10.dp))
-
-                        // Filter Subtabs: All (73), OT (46), NT (27), Deuterocanonical (7)
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(6.dp)
-                        ) {
-                            FilterChip(
-                                label = when (currentLanguage) {
-                                    AppLanguage.ES -> "Todos (73)"
-                                    AppLanguage.EN -> "All (73)"
-                                    AppLanguage.PT -> "Todos (73)"
-                                },
-                                isSelected = selectedTestamentTab == 0,
-                                onClick = { selectedTestamentTab = 0 }
-                            )
-                            FilterChip(
-                                label = when (currentLanguage) {
-                                    AppLanguage.ES -> "A.T. (46)"
-                                    AppLanguage.EN -> "O.T. (46)"
-                                    AppLanguage.PT -> "A.T. (46)"
-                                },
-                                isSelected = selectedTestamentTab == 1,
-                                onClick = { selectedTestamentTab = 1 }
-                            )
-                            FilterChip(
-                                label = when (currentLanguage) {
-                                    AppLanguage.ES -> "N.T. (27)"
-                                    AppLanguage.EN -> "N.T. (27)"
-                                    AppLanguage.PT -> "N.T. (27)"
-                                },
-                                isSelected = selectedTestamentTab == 2,
-                                onClick = { selectedTestamentTab = 2 }
-                            )
-                            FilterChip(
-                                label = when (currentLanguage) {
-                                    AppLanguage.ES -> "Deuterocanónicos"
-                                    AppLanguage.EN -> "Deuterocanon"
-                                    AppLanguage.PT -> "Deuterocanônicos"
-                                },
-                                isSelected = selectedTestamentTab == 3,
-                                onClick = { selectedTestamentTab = 3 }
-                            )
+                val book = selectedBook
+                if (book == null) {
+                    BookDirectory(
+                        repository = repository,
+                        currentLanguage = currentLanguage,
+                        searchQuery = searchQuery,
+                        onSearchQueryChange = { searchQuery = it },
+                        selectedFilter = selectedTestamentTab,
+                        onFilterChange = { selectedTestamentTab = it },
+                        onOpenBook = { opened, chapter ->
+                            selectedBook = opened
+                            selectedChapterNumber = chapter
                         }
-
-                        Spacer(modifier = Modifier.height(10.dp))
-
-                        val filteredBooks = repository.catholicBooks.filter { book ->
-                            val matchesSearch = book.name.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
-                                    book.abbreviation.contains(searchQuery, ignoreCase = true)
-                            val matchesTab = when (selectedTestamentTab) {
-                                1 -> book.testament == Testament.OLD
-                                2 -> book.testament == Testament.NEW
-                                3 -> book.isDeuterocanonical
-                                else -> true
-                            }
-                            matchesSearch && matchesTab
-                        }
-
-                        LazyColumn(
-                            verticalArrangement = Arrangement.spacedBy(10.dp),
-                            modifier = Modifier.fillMaxSize()
-                        ) {
-                            items(filteredBooks) { book ->
-                                BookListItem(
-                                    book = book,
-                                    currentLanguage = currentLanguage,
-                                    onClick = { selectedBook = book }
-                                )
-                            }
-                        }
-                    }
+                    )
                 } else {
-                    // Open Book Reading View
-                    val currentBook = selectedBook!!
-                    val chapter = repository.getChapter(currentBook.id, selectedChapterNumber)
-
-                    BackHandler {
-                        selectedBook = null
+                    val chapterCount = remember(book.id, currentLanguage) {
+                        repository.getChapterCount(book.id, currentLanguage).coerceAtLeast(1)
+                    }
+                    val chapterNumber = selectedChapterNumber.coerceIn(1, chapterCount)
+                    val verses = remember(book.id, chapterNumber, currentLanguage) {
+                        repository.getChapter(book.id, chapterNumber, currentLanguage).verses
                     }
 
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(16.dp)
-                    ) {
-                        // Header with back button, chapter chooser & font controls
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            TextButton(
-                                onClick = { selectedBook = null },
-                                modifier = Modifier.testTag("back_to_books_button")
-                            ) {
-                                Text("← " + currentBook.name.get(currentLanguage), fontWeight = FontWeight.Bold)
-                            }
+                    BackHandler { selectedBook = null }
 
-                            FilledTonalButton(
-                                onClick = { showChapterSelectorDialog = true },
-                                modifier = Modifier.testTag("choose_chapter_header_button")
-                            ) {
-                                Text(
-                                    text = when (currentLanguage) {
-                                        AppLanguage.ES -> "Cap. $selectedChapterNumber / ${currentBook.chaptersCount} ▼"
-                                        AppLanguage.EN -> "Ch. $selectedChapterNumber / ${currentBook.chaptersCount} ▼"
-                                        AppLanguage.PT -> "Cap. $selectedChapterNumber / ${currentBook.chaptersCount} ▼"
-                                    },
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 12.sp
-                                )
-                            }
+                    ChapterReader(
+                        book = book,
+                        chapterNumber = chapterNumber,
+                        chapterCount = chapterCount,
+                        verses = verses,
+                        currentLanguage = currentLanguage,
+                        fontScale = fontSizeMultiplier,
+                        serif = useSerifFont,
+                        onBack = { selectedBook = null },
+                        onChooseChapter = { showChapterSelectorDialog = true },
+                        onFontScaleChange = { fontSizeMultiplier = it },
+                        onSerifToggle = { useSerifFont = !useSerifFont },
+                        onChapterChange = { selectedChapterNumber = it },
+                        onVerseClick = { selectedVerseForCommentary = it }
+                    )
 
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                IconButton(onClick = {
-                                    if (fontSizeMultiplier > 0.85f) fontSizeMultiplier -= 0.15f
-                                }) {
-                                    Text("A-", fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                                }
-                                IconButton(onClick = {
-                                    if (fontSizeMultiplier < 1.45f) fontSizeMultiplier += 0.15f
-                                }) {
-                                    Text("A+", fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                                }
-                                IconButton(onClick = { useSerifFont = !useSerifFont }) {
-                                    Text(if (useSerifFont) "Serif" else "Sans", fontSize = 11.sp)
-                                }
-                            }
-                        }
-
-                        // Deuterocanonical explanation tag if applicable
-                        if (currentBook.isDeuterocanonical) {
-                            Surface(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(vertical = 4.dp),
-                                shape = RoundedCornerShape(10.dp),
-                                color = LiturgicalGold.copy(alpha = 0.12f),
-                                border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-                            ) {
-                                Row(
-                                    modifier = Modifier.padding(10.dp),
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Icon(Icons.Default.Info, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(18.dp))
-                                    Spacer(modifier = Modifier.width(8.dp))
-                                    Text(
-                                        text = when (currentLanguage) {
-                                            AppLanguage.ES -> "Libro Deuterocanónico: Conservado en el canon católico desde los Concilios de Roma (382) e Hipona (393)."
-                                            AppLanguage.EN -> "Deuterocanonical Book: Preserved in the Catholic Canon since the Councils of Rome (382) & Hippo (393)."
-                                            AppLanguage.PT -> "Livro Deuterocanônico: Conservado no cânon católico desde os Concílios de Roma (382) e Hipona (393)."
-                                        },
-                                        fontSize = 11.sp,
-                                        color = MaterialTheme.colorScheme.onSurface
-                                    )
-                                }
-                            }
-                        }
-
-                        Spacer(modifier = Modifier.height(10.dp))
-
-                        // Verses List with Tap to Commentary
-                        LazyColumn(
-                            modifier = Modifier
-                                .weight(1f)
-                                .fillMaxWidth(),
-                            verticalArrangement = Arrangement.spacedBy(14.dp)
-                        ) {
-                            item {
-                                Text(
-                                    text = "${currentBook.name.get(currentLanguage)} - ${when (currentLanguage) {
-                                        AppLanguage.ES -> "Capítulo $selectedChapterNumber"
-                                        AppLanguage.EN -> "Chapter $selectedChapterNumber"
-                                        AppLanguage.PT -> "Capítulo $selectedChapterNumber"
-                                    }}",
-                                    style = MaterialTheme.typography.titleLarge,
-                                    fontWeight = FontWeight.Bold,
-                                    color = MaterialTheme.colorScheme.primary
-                                )
-                                Spacer(modifier = Modifier.height(6.dp))
-                                Text(
-                                    text = currentBook.summary.get(currentLanguage),
-                                    style = MaterialTheme.typography.bodySmall,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                                Spacer(modifier = Modifier.height(12.dp))
-                            }
-
-                            items(chapter.verses) { verse ->
-                                VerseItem(
-                                    verse = verse,
-                                    currentLanguage = currentLanguage,
-                                    fontSizeMultiplier = fontSizeMultiplier,
-                                    useSerif = useSerifFont,
-                                    onCommentaryClick = {
-                                        selectedVerseForCommentary = verse
-                                    }
-                                )
-                            }
-
-                            item {
-                                Spacer(modifier = Modifier.height(16.dp))
-                            }
-                        }
-
-                        // Bottom Chapter Navigation Bar
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(vertical = 6.dp),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            FilledTonalButton(
-                                enabled = selectedChapterNumber > 1,
-                                onClick = { selectedChapterNumber-- },
-                                modifier = Modifier.testTag("prev_chapter_button")
-                            ) {
-                                Text(
-                                    text = when (currentLanguage) {
-                                        AppLanguage.ES -> "← Cap. ${selectedChapterNumber - 1}"
-                                        AppLanguage.EN -> "← Ch. ${selectedChapterNumber - 1}"
-                                        AppLanguage.PT -> "← Cap. ${selectedChapterNumber - 1}"
-                                    },
-                                    fontSize = 12.sp
-                                )
-                            }
-
-                            FilledTonalButton(
-                                onClick = { showChapterSelectorDialog = true }
-                            ) {
-                                Text(
-                                    text = "$selectedChapterNumber / ${currentBook.chaptersCount}",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 12.sp
-                                )
-                            }
-
-                            FilledTonalButton(
-                                enabled = selectedChapterNumber < currentBook.chaptersCount,
-                                onClick = { selectedChapterNumber++ },
-                                modifier = Modifier.testTag("next_chapter_button")
-                            ) {
-                                Text(
-                                    text = when (currentLanguage) {
-                                        AppLanguage.ES -> "Cap. ${selectedChapterNumber + 1} →"
-                                        AppLanguage.EN -> "Ch. ${selectedChapterNumber + 1} →"
-                                        AppLanguage.PT -> "Cap. ${selectedChapterNumber + 1} →"
-                                    },
-                                    fontSize = 12.sp
-                                )
-                            }
-                        }
-                    }
-
-                    // Chapter Selection Dialog
                     if (showChapterSelectorDialog) {
-                        AlertDialog(
-                            onDismissRequest = { showChapterSelectorDialog = false },
-                            title = {
-                                Text(
-                                    text = "${currentBook.name.get(currentLanguage)} - ${when (currentLanguage) {
-                                        AppLanguage.ES -> "Seleccionar Capítulo"
-                                        AppLanguage.EN -> "Select Chapter"
-                                        AppLanguage.PT -> "Selecionar Capítulo"
-                                    }}",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 16.sp
-                                )
+                        ChapterSelectorDialog(
+                            book = book,
+                            chapterNumber = chapterNumber,
+                            chapterCount = chapterCount,
+                            currentLanguage = currentLanguage,
+                            onSelect = {
+                                selectedChapterNumber = it
+                                showChapterSelectorDialog = false
                             },
-                            text = {
-                                Box(modifier = Modifier.size(width = 300.dp, height = 340.dp)) {
-                                    LazyVerticalGrid(
-                                        columns = GridCells.Fixed(5),
-                                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                        verticalArrangement = Arrangement.spacedBy(8.dp),
-                                        modifier = Modifier.fillMaxSize()
-                                    ) {
-                                        items((1..currentBook.chaptersCount).toList()) { chNum ->
-                                            val isCurrent = chNum == selectedChapterNumber
-                                            Box(
-                                                modifier = Modifier
-                                                    .size(44.dp)
-                                                    .clip(RoundedCornerShape(10.dp))
-                                                    .background(if (isCurrent) SacredBurgundy else MaterialTheme.colorScheme.surfaceVariant)
-                                                    .clickable {
-                                                        selectedChapterNumber = chNum
-                                                        showChapterSelectorDialog = false
-                                                    },
-                                                contentAlignment = Alignment.Center
-                                            ) {
-                                                Text(
-                                                    text = chNum.toString(),
-                                                    color = if (isCurrent) Color.White else MaterialTheme.colorScheme.onSurface,
-                                                    fontWeight = if (isCurrent) FontWeight.Bold else FontWeight.Medium,
-                                                    fontSize = 13.sp
-                                                )
-                                            }
-                                        }
-                                    }
-                                }
-                            },
-                            confirmButton = {
-                                TextButton(onClick = { showChapterSelectorDialog = false }) {
-                                    Text(
-                                        when (currentLanguage) {
-                                            AppLanguage.ES -> "Cerrar"
-                                            AppLanguage.EN -> "Close"
-                                            AppLanguage.PT -> "Fechar"
-                                        }
-                                    )
-                                }
-                            }
+                            onDismiss = { showChapterSelectorDialog = false }
                         )
                     }
                 }
             }
 
-            1 -> {
-                // Daily Mass Readings Full View
-                DailyMassMissalView(
-                    dailyReading = repository.dailyMassReading,
+            1 -> DailyMissalView(
+                reading = repository.dailyMassReading,
+                currentLanguage = currentLanguage
+            )
+
+            2 -> VersionsView(
+                versions = repository.bibleVersions,
+                downloadManager = repository.bibleDownloadManager,
+                currentLanguage = currentLanguage
+            )
+
+            3 -> if (dao != null && ttsManager != null) {
+                ScriptureStudyScreen(
+                    repository = repository,
+                    dao = dao,
+                    ttsManager = ttsManager,
                     currentLanguage = currentLanguage
                 )
-            }
-
-            2 -> {
-                // Bible Versions & Canon Comparator View
-                Column(modifier = Modifier.fillMaxSize()) {
-                    BibleVersionsComparatorView(
-                        versions = repository.bibleVersions,
-                        currentLanguage = currentLanguage
-                    )
-                    // Offline downloads section
-                    repository.bibleDownloadManager?.let { mgr ->
-                        OfflineBibleDownloadsView(manager = mgr, currentLanguage = currentLanguage)
-                    }
-                }
-            }
-
-            3 -> {
-                if (dao != null && ttsManager != null) {
-                    ScriptureStudyScreen(
-                        repository = repository,
-                        dao = dao,
-                        ttsManager = ttsManager,
-                        currentLanguage = currentLanguage
-                    )
-                }
+            } else {
+                AppEmptyState(
+                    title = currentLanguage.pick(
+                        "Estudio Bíblico",
+                        "Scripture Study",
+                        "Estudo Bíblico"
+                    ),
+                    body = currentLanguage.pick(
+                        "Los itinerarios de estudio necesitan el almacenamiento local del dispositivo.",
+                        "The study tracks need the device's local storage.",
+                        "Os itinerários de estudo precisam do armazenamento local do dispositivo."
+                    ),
+                    icon = Icons.AutoMirrored.Filled.MenuBook
+                )
             }
         }
+    }
 
-        // Patristic Commentary Bottom Sheet
-        if (selectedVerseForCommentary != null) {
-            val v = selectedVerseForCommentary!!
-            ModalBottomSheet(
-                onDismissRequest = { selectedVerseForCommentary = null },
-                sheetState = bottomSheetState
-            ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = 20.dp, vertical = 12.dp)
-                ) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(imageVector = Icons.Default.Comment, contentDescription = null, tint = SacredBurgundy)
-                        Spacer(modifier = Modifier.width(8.dp))
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Comentario Patrístico y Litúrgico"
-                                AppLanguage.EN -> "Patristic & Liturgical Commentary"
-                                AppLanguage.PT -> "Comentário Patrístico e Litúrgico"
-                            },
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    Text(
-                        text = "«${v.text.get(currentLanguage)}» (v. ${v.number})",
-                        fontFamily = FontFamily.Serif,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 15.sp,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    if (v.commentary != null) {
-                        Surface(
-                            modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(12.dp),
-                            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f),
-                            border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-                        ) {
-                            Column(modifier = Modifier.padding(14.dp)) {
-                                Text(
-                                    text = v.commentaryAuthor ?: "Padres de la Iglesia",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 13.sp,
-                                    color = LiturgicalGold
-                                )
-                                Spacer(modifier = Modifier.height(6.dp))
-                                Text(
-                                    text = v.commentary.get(currentLanguage),
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    lineHeight = 22.sp
-                                )
-                            }
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(18.dp))
-                }
-            }
+    selectedVerseForCommentary?.let { verse ->
+        ModalBottomSheet(
+            onDismissRequest = { selectedVerseForCommentary = null },
+            sheetState = bottomSheetState,
+            shape = design.shapes.sheet,
+            containerColor = design.palette.groupedSurface,
+            scrimColor = design.palette.scrim
+        ) {
+            CommentarySheet(verse = verse, currentLanguage = currentLanguage)
         }
     }
 }
 
+// ------------------------------------------------------------------ directory
+
 @Composable
-private fun FilterChip(
-    label: String,
-    isSelected: Boolean,
-    onClick: () -> Unit
+private fun BookDirectory(
+    repository: CatholicDataRepository,
+    currentLanguage: AppLanguage,
+    searchQuery: String,
+    onSearchQueryChange: (String) -> Unit,
+    selectedFilter: Int,
+    onFilterChange: (Int) -> Unit,
+    onOpenBook: (BibleBook, Int) -> Unit
 ) {
-    Box(
-        modifier = Modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface)
-            .border(
-                1.dp,
-                if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                RoundedCornerShape(12.dp)
-            )
-            .clickable(onClick = onClick)
-            .padding(horizontal = 10.dp, vertical = 6.dp)
+    val design = LocalAppDesign.current
+
+    // The declared chapter count and the one actually present in the assets can
+    // differ, so the directory reports what the repaired data really holds —
+    // once per language rather than once per row.
+    val chapterCounts = remember(currentLanguage) {
+        repository.catholicBooks.associate { it.id to repository.getChapterCount(it.id, currentLanguage) }
+    }
+    val booksById = remember { repository.catholicBooks.associateBy { it.id } }
+
+    val filteredBooks = remember(searchQuery, selectedFilter, currentLanguage) {
+        repository.catholicBooks.filter { book ->
+            val matchesSearch = book.name.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
+                book.abbreviation.contains(searchQuery, ignoreCase = true)
+            val matchesTab = when (selectedFilter) {
+                1 -> book.testament == Testament.OLD
+                2 -> book.testament == Testament.NEW
+                3 -> book.isDeuterocanonical
+                else -> true
+            }
+            matchesSearch && matchesTab
+        }
+    }
+    val grouped = remember(filteredBooks) { filteredBooks.groupBy { it.category } }
+
+    // Full-text search runs off the composition thread: it walks the whole
+    // bundled bible and would otherwise stall every keystroke.
+    val verseMatches by produceState(
+        emptyList<Triple<String, Int, BibleVerse>>(),
+        searchQuery,
+        currentLanguage
     ) {
-        Text(
-            text = label,
-            fontSize = 11.sp,
-            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-            color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface
+        val query = searchQuery.trim()
+        value = if (query.length < MinSearchLength) {
+            emptyList()
+        } else {
+            withContext(Dispatchers.Default) { repository.searchBible(query, 20, currentLanguage) }
+        }
+    }
+
+    LazyColumn(Modifier.fillMaxSize()) {
+        item {
+            AppScreenTitle(
+                title = currentLanguage.pick(
+                    "Sagrada Escritura",
+                    "Sacred Scripture",
+                    "Sagrada Escritura"
+                ),
+                subtitle = currentLanguage.pick(
+                    "El canon católico íntegro: 73 libros, del Génesis al Apocalipsis.",
+                    "The whole Catholic canon: 73 books, from Genesis to Revelation.",
+                    "O cânon católico íntegro: 73 livros, do Génesis ao Apocalipse."
+                )
+            )
+        }
+
+        item {
+            AppSearchField(
+                value = searchQuery,
+                onValueChange = onSearchQueryChange,
+                placeholder = currentLanguage.pick(
+                    "Buscar libro bíblico...",
+                    "Search biblical book...",
+                    "Buscar livro bíblico..."
+                ),
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("bible_search_input")
+            )
+        }
+
+        item {
+            val filters = listOf(
+                currentLanguage.pick("Todos (73)", "All (73)", "Todos (73)"),
+                currentLanguage.pick("A.T. (46)", "O.T. (46)", "A.T. (46)"),
+                currentLanguage.pick("N.T. (27)", "N.T. (27)", "N.T. (27)"),
+                currentLanguage.pick("Deuterocanónicos", "Deuterocanon", "Deuterocanônicos")
+            )
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState())
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.cardGap),
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                filters.forEachIndexed { index, label ->
+                    AppChip(
+                        label = label,
+                        selected = selectedFilter == index,
+                        onClick = { onFilterChange(index) }
+                    )
+                }
+            }
+        }
+
+        if (filteredBooks.isEmpty() && verseMatches.isEmpty()) {
+            item {
+                AppEmptyState(
+                    title = currentLanguage.pick(
+                        "Sin resultados",
+                        "Nothing found",
+                        "Sem resultados"
+                    ),
+                    body = currentLanguage.pick(
+                        "Ningún libro ni versículo coincide con «$searchQuery».",
+                        "No book or verse matches “$searchQuery”.",
+                        "Nenhum livro ou versículo corresponde a “$searchQuery”."
+                    ),
+                    icon = Icons.Default.SearchOff
+                )
+            }
+        }
+
+        grouped.forEach { (category, books) ->
+            item(key = "header_${category.name}") {
+                AppSectionHeader(
+                    title = category.displayName.get(currentLanguage),
+                    subtitle = currentLanguage.pick(
+                        "${books.size} libros",
+                        "${books.size} books",
+                        "${books.size} livros"
+                    )
+                )
+            }
+            item(key = "group_${category.name}") {
+                AppListGroup {
+                    books.forEach { book ->
+                        val chapters = chapterCounts[book.id] ?: book.chaptersCount
+                        AppListRow(
+                            title = book.name.get(currentLanguage),
+                            subtitle = buildString {
+                                append(
+                                    currentLanguage.pick(
+                                        "$chapters capítulos",
+                                        "$chapters chapters",
+                                        "$chapters capítulos"
+                                    )
+                                )
+                                if (book.isDeuterocanonical) {
+                                    append(" · ")
+                                    append(
+                                        currentLanguage.pick(
+                                            "Deuterocanónico",
+                                            "Deuterocanonical",
+                                            "Deuterocanônico"
+                                        )
+                                    )
+                                }
+                            },
+                            trailingText = book.abbreviation,
+                            onClick = { onOpenBook(book, 1) },
+                            modifier = Modifier.testTag("book_item_${book.id}")
+                        )
+                    }
+                }
+            }
+        }
+
+        if (verseMatches.isNotEmpty()) {
+            item { AppOrnament() }
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick("Versículos", "Verses", "Versículos"),
+                    subtitle = currentLanguage.pick(
+                        "Coincidencias en el texto sagrado",
+                        "Matches in the sacred text",
+                        "Correspondências no texto sagrado"
+                    )
+                )
+            }
+            item {
+                AppListGroup {
+                    verseMatches.forEach { (bookId, chapter, verse) ->
+                        val book = booksById[bookId] ?: return@forEach
+                        val snippet = verse.text.get(currentLanguage).let {
+                            if (it.length > 140) it.take(140).trimEnd() + "…" else it
+                        }
+                        AppListRow(
+                            title = "${book.name.get(currentLanguage)} $chapter,${verse.number}",
+                            subtitle = snippet,
+                            onClick = { onOpenBook(book, chapter) }
+                        )
+                    }
+                }
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+// --------------------------------------------------------------------- reader
+
+@Composable
+private fun ChapterReader(
+    book: BibleBook,
+    chapterNumber: Int,
+    chapterCount: Int,
+    verses: List<BibleVerse>,
+    currentLanguage: AppLanguage,
+    fontScale: Float,
+    serif: Boolean,
+    onBack: () -> Unit,
+    onChooseChapter: () -> Unit,
+    onFontScaleChange: (Float) -> Unit,
+    onSerifToggle: () -> Unit,
+    onChapterChange: (Int) -> Unit,
+    onVerseClick: (BibleVerse) -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val centred = design.decor.titleAlignment == Alignment.CenterHorizontally
+    val reading = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+
+    val chapterLabel = currentLanguage.pick(
+        "Cap. $chapterNumber / $chapterCount",
+        "Ch. $chapterNumber / $chapterCount",
+        "Cap. $chapterNumber / $chapterCount"
+    )
+
+    Column(Modifier.fillMaxSize()) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .heightIn(min = design.spacing.rowMinHeight)
+                .padding(start = 4.dp, end = design.spacing.gutter),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(
+                onClick = onBack,
+                modifier = Modifier.testTag("back_to_books_button")
+            ) {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                    contentDescription = currentLanguage.pick(
+                        "Volver a los libros",
+                        "Back to the books",
+                        "Voltar aos livros"
+                    ),
+                    tint = palette.textSecondary
+                )
+            }
+            Text(
+                text = book.name.get(currentLanguage),
+                style = styles.rowTitle,
+                color = palette.textPrimary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f)
+            )
+            Spacer(Modifier.width(10.dp))
+            AppChip(
+                label = chapterLabel,
+                selected = false,
+                onClick = onChooseChapter,
+                modifier = Modifier.testTag("choose_chapter_header_button")
+            )
+        }
+
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+                .padding(bottom = 10.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.End),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            AppChip(
+                label = "A-",
+                selected = false,
+                onClick = {
+                    if (fontScale > MinFontScale) onFontScaleChange(fontScale - FontScaleStep)
+                }
+            )
+            AppChip(
+                label = "A+",
+                selected = false,
+                onClick = {
+                    if (fontScale < MaxFontScale) onFontScaleChange(fontScale + FontScaleStep)
+                }
+            )
+            AppChip(
+                label = if (serif) "Serif" else "Sans",
+                selected = serif,
+                onClick = onSerifToggle
+            )
+        }
+
+        AppDivider()
+
+        ReadingTypography(scale = fontScale, serif = serif) {
+            LazyColumn(
+                modifier = Modifier
+                    .weight(1f)
+                    .fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                item {
+                    AppScreenTitle(
+                        title = book.name.get(currentLanguage),
+                        subtitle = currentLanguage.pick(
+                            "Capítulo $chapterNumber",
+                            "Chapter $chapterNumber",
+                            "Capítulo $chapterNumber"
+                        ),
+                        modifier = reading
+                    )
+                }
+
+                item {
+                    Text(
+                        text = book.summary.get(currentLanguage),
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary,
+                        textAlign = if (centred) TextAlign.Center else TextAlign.Start,
+                        modifier = reading
+                            .fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
+                    )
+                }
+
+                if (book.isDeuterocanonical) {
+                    item {
+                        AppBanner(
+                            title = currentLanguage.pick(
+                                "Libro Deuterocanónico",
+                                "Deuterocanonical Book",
+                                "Livro Deuterocanônico"
+                            ),
+                            body = currentLanguage.pick(
+                                "Conservado en el canon católico desde los Concilios de Roma (382) e Hipona (393).",
+                                "Preserved in the Catholic Canon since the Councils of Rome (382) & Hippo (393).",
+                                "Conservado no cânon católico desde os Concílios de Roma (382) e Hipona (393)."
+                            ),
+                            modifier = reading.padding(top = design.spacing.sectionGap / 2)
+                        )
+                    }
+                }
+
+                item { AppOrnament(reading) }
+
+                if (verses.isEmpty()) {
+                    item {
+                        AppEmptyState(
+                            title = currentLanguage.pick(
+                                "Capítulo no disponible",
+                                "Chapter unavailable",
+                                "Capítulo não disponível"
+                            ),
+                            body = currentLanguage.pick(
+                                "Este capítulo no está en la edición incluida en este idioma.",
+                                "This chapter is not in the bundled edition for this language.",
+                                "Este capítulo não está na edição incluída neste idioma."
+                            ),
+                            icon = Icons.Default.AutoStories,
+                            modifier = reading
+                        )
+                    }
+                } else {
+                    itemsIndexed(verses, key = { _, verse -> verse.number }) { index, verse ->
+                        AppVerseRow(
+                            number = verse.number,
+                            text = verse.text.get(currentLanguage),
+                            isFirstOfChapter = index == 0,
+                            hasCommentary = verse.commentary != null,
+                            onClick = { onVerseClick(verse) },
+                            modifier = reading
+                        )
+                    }
+                }
+
+                item { Spacer(Modifier.height(design.spacing.sectionGap)) }
+            }
+        }
+
+        AppDivider()
+
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+                .padding(vertical = 10.dp),
+            horizontalArrangement = Arrangement.spacedBy(10.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            AppSecondaryButton(
+                label = currentLanguage.pick(
+                    "← Cap. ${chapterNumber - 1}",
+                    "← Ch. ${chapterNumber - 1}",
+                    "← Cap. ${chapterNumber - 1}"
+                ),
+                onClick = { onChapterChange(chapterNumber - 1) },
+                enabled = chapterNumber > 1,
+                modifier = Modifier
+                    .weight(1f)
+                    .testTag("prev_chapter_button")
+            )
+            AppSecondaryButton(
+                label = currentLanguage.pick(
+                    "Cap. ${chapterNumber + 1} →",
+                    "Ch. ${chapterNumber + 1} →",
+                    "Cap. ${chapterNumber + 1} →"
+                ),
+                onClick = { onChapterChange(chapterNumber + 1) },
+                enabled = chapterNumber < chapterCount,
+                modifier = Modifier
+                    .weight(1f)
+                    .testTag("next_chapter_button")
+            )
+        }
+    }
+}
+
+/**
+ * Applies the reader's own type size and serif preference to the scripture
+ * styles, so the kit's verse rows — drop cap, superscript figure, tonal badge —
+ * all follow the A-/A+ pair instead of each identity being re-implemented here.
+ * Only the reading faces move; the chrome keeps its identity's voice.
+ */
+@Composable
+private fun ReadingTypography(
+    scale: Float,
+    serif: Boolean,
+    content: @Composable () -> Unit
+) {
+    val language = LocalAppDesign.current.language
+    val base = LocalAppTextStyles.current
+    val styles = remember(base, scale, serif, language) {
+        val readingFamily = when {
+            serif -> AppFonts.EbGaramond
+            language == DesignLanguage.MATERIAL -> AppFonts.Roboto
+            else -> AppFonts.Inter
+        }
+        base.copy(
+            scripture = base.scripture.asReading(readingFamily, scale),
+            quote = base.quote.asReading(readingFamily, scale),
+            verseNumber = base.verseNumber.asReading(null, scale)
         )
     }
+    CompositionLocalProvider(LocalAppTextStyles provides styles, content = content)
 }
 
 @Composable
-private fun BookListItem(
+private fun ChapterSelectorDialog(
     book: BibleBook,
+    chapterNumber: Int,
+    chapterCount: Int,
     currentLanguage: AppLanguage,
-    onClick: () -> Unit
+    onSelect: (Int) -> Unit,
+    onDismiss: () -> Unit
 ) {
-    Surface(
-        modifier = Modifier
-            .fillMaxWidth()
-            .testTag("book_item_${book.id}")
-            .clip(RoundedCornerShape(14.dp))
-            .clickable(onClick = onClick),
-        color = MaterialTheme.colorScheme.surface,
-        tonalElevation = 1.dp,
-        border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-    ) {
-        Row(
-            modifier = Modifier.padding(14.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(
-                    modifier = Modifier
-                        .size(38.dp)
-                        .clip(CircleShape)
-                        .background(if (book.isDeuterocanonical) LiturgicalGold.copy(alpha = 0.2f) else MaterialTheme.colorScheme.primaryContainer),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = book.abbreviation,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 13.sp,
-                        color = if (book.isDeuterocanonical) LiturgicalGold else MaterialTheme.colorScheme.onPrimaryContainer
-                    )
-                }
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val scheme = MaterialTheme.colorScheme
 
-                Spacer(modifier = Modifier.width(12.dp))
-
-                Column {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(
-                            text = book.name.get(currentLanguage),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 15.sp,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                        if (book.isDeuterocanonical) {
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Box(
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(6.dp))
-                                    .background(LiturgicalGold.copy(alpha = 0.2f))
-                                    .padding(horizontal = 6.dp, vertical = 2.dp)
-                            ) {
-                                Text("Católico", fontSize = 9.sp, fontWeight = FontWeight.Bold, color = SacredBurgundy)
-                            }
-                        }
-                    }
-                    Text(
-                        text = "${book.chaptersCount} capítulos • " + book.category.displayName.get(currentLanguage),
-                        fontSize = 11.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-
-            Text("Leer →", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.primary)
-        }
-    }
-}
-
-@Composable
-private fun VerseItem(
-    verse: BibleVerse,
-    currentLanguage: AppLanguage,
-    fontSizeMultiplier: Float,
-    useSerif: Boolean,
-    onCommentaryClick: () -> Unit
-) {
-    Surface(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(12.dp))
-            .clickable(onClick = onCommentaryClick),
-        color = MaterialTheme.colorScheme.surface,
-        border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
-    ) {
-        Column(modifier = Modifier.padding(14.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = "v. ${verse.number}",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = (12 * fontSizeMultiplier).sp,
-                    color = LiturgicalGold
-                )
-
-                if (verse.commentary != null) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f))
-                            .padding(horizontal = 8.dp, vertical = 4.dp)
-                    ) {
-                        Icon(imageVector = Icons.Default.Comment, contentDescription = null, modifier = Modifier.size(12.dp), tint = SacredBurgundy)
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text(
-                            text = verse.commentaryAuthor ?: "Comentario",
-                            fontSize = 10.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
-                        )
-                    }
-                }
-            }
-
-            Spacer(modifier = Modifier.height(6.dp))
-
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        shape = design.shapes.dialog,
+        containerColor = palette.groupedSurface,
+        title = {
             Text(
-                text = verse.text.get(currentLanguage),
-                fontFamily = if (useSerif) FontFamily.Serif else FontFamily.Default,
-                fontSize = (15 * fontSizeMultiplier).sp,
-                lineHeight = (24 * fontSizeMultiplier).sp,
-                color = MaterialTheme.colorScheme.onSurface
+                text = book.name.get(currentLanguage) + " — " + currentLanguage.pick(
+                    "Seleccionar Capítulo",
+                    "Select Chapter",
+                    "Selecionar Capítulo"
+                ),
+                style = styles.sectionTitle,
+                color = palette.textPrimary
+            )
+        },
+        text = {
+            LazyVerticalGrid(
+                columns = GridCells.Adaptive(minSize = 52.dp),
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .heightIn(max = 320.dp)
+            ) {
+                items(chapterCount) { index ->
+                    val number = index + 1
+                    val isCurrent = number == chapterNumber
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(44.dp)
+                            .clip(design.shapes.buttonSmall)
+                            .background(
+                                if (isCurrent) scheme.primary
+                                else palette.selectionTint.copy(alpha = if (design.isDark) 1f else 0.55f)
+                            )
+                            .clickable { onSelect(number) },
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(
+                            text = number.toString(),
+                            style = styles.rowSubtitle.copy(
+                                fontWeight = if (isCurrent) FontWeight.Bold else FontWeight.Medium
+                            ),
+                            color = if (isCurrent) scheme.onPrimary else palette.textPrimary
+                        )
+                    }
+                }
+            }
+        },
+        confirmButton = {
+            AppSecondaryButton(
+                label = currentLanguage.pick("Cerrar", "Close", "Fechar"),
+                onClick = onDismiss
             )
         }
-    }
+    )
 }
 
 @Composable
-private fun DailyMassMissalView(
-    dailyReading: DailyMassReading,
+private fun CommentarySheet(
+    verse: BibleVerse,
     currentLanguage: AppLanguage
 ) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val reading = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(bottom = design.spacing.contentBottomGap)
+    ) {
+        AppSectionHeader(
+            title = currentLanguage.pick(
+                "Comentario Patrístico y Litúrgico",
+                "Patristic & Liturgical Commentary",
+                "Comentário Patrístico e Litúrgico"
+            ),
+            subtitle = currentLanguage.pick(
+                "v. ${verse.number}",
+                "v. ${verse.number}",
+                "v. ${verse.number}"
+            )
+        )
+
+        Text(
+            text = "«${verse.text.get(currentLanguage)}»",
+            style = styles.quote,
+            color = palette.textPrimary,
+            modifier = reading
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+        )
+
+        Spacer(Modifier.height(design.spacing.sectionGap / 2))
+
+        val commentary = verse.commentary
+        if (commentary == null) {
+            AppEmptyState(
+                title = currentLanguage.pick(
+                    "Sin comentario",
+                    "No commentary",
+                    "Sem comentário"
+                ),
+                body = currentLanguage.pick(
+                    "Este versículo aún no tiene glosa patrística en la edición incluida.",
+                    "This verse has no patristic gloss in the bundled edition yet.",
+                    "Este versículo ainda não tem glosa patrística na edição incluída."
+                ),
+                icon = Icons.AutoMirrored.Filled.Comment
+            )
+        } else {
+            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                Text(
+                    text = verse.commentaryAuthor ?: currentLanguage.pick(
+                        "Padres de la Iglesia",
+                        "Church Fathers",
+                        "Padres da Igreja"
+                    ),
+                    style = styles.sectionEyebrow,
+                    color = palette.gold
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Text(
+                    text = commentary.get(currentLanguage),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = palette.textPrimary
+                )
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------- daily missal
+
+@Composable
+private fun DailyMissalView(
+    reading: DailyMassReading,
+    currentLanguage: AppLanguage
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val readingClamp = Modifier.widthIn(max = design.spacing.readingMaxWidth)
     var webViewUrl by remember { mutableStateOf<String?>(null) }
+
+    // On a ferial weekday the bundled lectionary legitimately has no entry: the
+    // citation and the passage both come back empty. Such a lesson is dropped
+    // rather than drawn as an empty row, and nothing is invented in its place.
+    val lessons = listOf(
+        MassLesson(
+            currentLanguage.pick("Primera Lectura", "First Reading", "Primeira Leitura"),
+            reading.firstReadingRef,
+            reading.firstReadingText.get(currentLanguage)
+        ),
+        MassLesson(
+            currentLanguage.pick("Salmo Responsorial", "Responsorial Psalm", "Salmo Responsorial"),
+            reading.responsorialPsalmRef,
+            reading.responsorialPsalmText.get(currentLanguage)
+        ),
+        MassLesson(
+            currentLanguage.pick("Segunda Lectura", "Second Reading", "Segunda Leitura"),
+            reading.secondReadingRef.orEmpty(),
+            reading.secondReadingText?.get(currentLanguage).orEmpty()
+        ),
+        MassLesson(
+            currentLanguage.pick("Santo Evangelio", "Holy Gospel", "Santo Evangelho"),
+            reading.gospelRef,
+            reading.gospelText.get(currentLanguage)
+        )
+    ).filter { it.reference.isNotBlank() || it.text.isNotBlank() }
+
     LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         item {
-            ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-            ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Text(
-                        text = dailyReading.feastTitle.get(currentLanguage),
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy
-                    )
-                    Text(
-                        text = dailyReading.liturgicalSeason.get(currentLanguage) + " • " + dailyReading.dateDisplay,
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-        }
-
-        // First Reading
-        item {
-            ReadingBlock(
-                title = when (currentLanguage) {
-                    AppLanguage.ES -> "Primera Lectura"
-                    AppLanguage.EN -> "First Reading"
-                    AppLanguage.PT -> "Primeira Leitura"
-                },
-                citation = dailyReading.firstReadingRef,
-                content = dailyReading.firstReadingText.get(currentLanguage)
+            AppScreenTitle(
+                title = currentLanguage.pick("Misal Diario", "Daily Missal", "Missal Diário"),
+                subtitle = reading.dateDisplay
             )
         }
 
-        // Responsorial Psalm
         item {
-            ReadingBlock(
-                title = when (currentLanguage) {
-                    AppLanguage.ES -> "Salmo Responsorial"
-                    AppLanguage.EN -> "Responsorial Psalm"
-                    AppLanguage.PT -> "Salmo Responsorial"
-                },
-                citation = dailyReading.responsorialPsalmRef,
-                content = dailyReading.responsorialPsalmText.get(currentLanguage)
+            AppBanner(
+                title = reading.liturgicalSeason.get(currentLanguage),
+                body = reading.feastTitle.get(currentLanguage),
+                accentColorHex = reading.liturgicalColorHex
             )
         }
 
-        // Second Reading
-        if (dailyReading.secondReadingRef != null && dailyReading.secondReadingText != null) {
+        if (lessons.isEmpty()) {
             item {
-                ReadingBlock(
-                    title = when (currentLanguage) {
-                        AppLanguage.ES -> "Segunda Lectura"
-                        AppLanguage.EN -> "Second Reading"
-                        AppLanguage.PT -> "Segunda Leitura"
-                    },
-                    citation = dailyReading.secondReadingRef,
-                    content = dailyReading.secondReadingText.get(currentLanguage)
+                AppEmptyState(
+                    title = currentLanguage.pick(
+                        "Feria sin lecturas propias",
+                        "Ferial day without proper readings",
+                        "Féria sem leituras próprias"
+                    ),
+                    body = currentLanguage.pick(
+                        "El leccionario incluido no trae las lecturas de esta feria. El día litúrgico es el de arriba; consulta el misal oficial para las lecturas de hoy.",
+                        "The bundled lectionary carries no readings for this ferial day. The liturgical day stands above; see the official missal for today's readings.",
+                        "O lecionário incluído não traz as leituras desta féria. O dia litúrgico é o de cima; consulte o missal oficial para as leituras de hoje."
+                    ),
+                    icon = Icons.AutoMirrored.Filled.MenuBook
                 )
+            }
+        } else {
+            // A missal does not box its lessons: the label is the rubric, the
+            // citation sits under it, and the passage runs at reading measure.
+            items(lessons, key = { it.label }) { lesson ->
+                AppSectionHeader(
+                    title = lesson.label,
+                    subtitle = lesson.reference.ifBlank { null }
+                )
+                if (lesson.text.isNotBlank()) {
+                    Text(
+                        text = lesson.text,
+                        style = styles.scripture,
+                        color = palette.textPrimary,
+                        modifier = readingClamp
+                            .fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
+                    )
+                }
             }
         }
 
-        // Holy Gospel
+        item { AppOrnament() }
+
         item {
-            ReadingBlock(
-                title = when (currentLanguage) {
-                    AppLanguage.ES -> "Santo Evangelio"
-                    AppLanguage.EN -> "Holy Gospel"
-                    AppLanguage.PT -> "Santo Evangelho"
-                },
-                citation = dailyReading.gospelRef,
-                content = dailyReading.gospelText.get(currentLanguage),
-                isGospel = true
+            AppSectionHeader(
+                title = currentLanguage.pick(
+                    "Reflexión Homilética",
+                    "Homiletic Reflection",
+                    "Reflexão Homilética"
+                )
             )
         }
 
-        // Official source attribution (Vatican News)
         item {
-            Surface(
-                shape = RoundedCornerShape(14.dp),
-                color = MaterialTheme.colorScheme.surface
-            ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Fuente oficial: ${dailyReading.sourceName}"
-                            AppLanguage.EN -> "Official source: ${dailyReading.sourceName}"
-                            AppLanguage.PT -> "Fonte oficial: ${dailyReading.sourceName}"
-                        },
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 12.sp,
-                        color = SacredBurgundy
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = dailyReading.sourceUrl,
-                        fontSize = 11.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-        }
-
-        item {
-            FilledTonalButton(
-                onClick = { webViewUrl = dailyReading.sourceUrl },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Icon(Icons.Default.OpenInNew, contentDescription = null, modifier = Modifier.size(16.dp))
-                Spacer(modifier = Modifier.width(6.dp))
+            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                 Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "Ver misal oficial en la app"
-                        AppLanguage.EN -> "View official missal in app"
-                        AppLanguage.PT -> "Ver missal oficial no app"
-                    },
-                    fontSize = 12.sp
+                    text = reading.homilyReflection.get(currentLanguage),
+                    style = styles.quote,
+                    color = palette.textPrimary,
+                    modifier = readingClamp
                 )
             }
         }
 
-        // Reflection
         item {
-            Surface(
-                shape = RoundedCornerShape(14.dp),
-                color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
-                border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-            ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Reflexión Homilética"
-                            AppLanguage.EN -> "Homiletic Reflection"
-                            AppLanguage.PT -> "Reflexão Homilética"
-                        },
-                        fontWeight = FontWeight.Bold,
-                        color = LiturgicalGold,
-                        fontSize = 14.sp
-                    )
-                    Spacer(modifier = Modifier.height(6.dp))
-                    Text(
-                        text = dailyReading.homilyReflection.get(currentLanguage),
-                        style = MaterialTheme.typography.bodyMedium,
-                        lineHeight = 22.sp
-                    )
-                }
-            }
+            AppSectionHeader(
+                title = currentLanguage.pick(
+                    "Fuente oficial: ${reading.sourceName}",
+                    "Official source: ${reading.sourceName}",
+                    "Fonte oficial: ${reading.sourceName}"
+                ),
+                subtitle = reading.sourceUrl
+            )
         }
+
+        item {
+            AppSecondaryButton(
+                label = currentLanguage.pick(
+                    "Ver misal oficial en la app",
+                    "View official missal in app",
+                    "Ver missal oficial no app"
+                ),
+                onClick = { webViewUrl = reading.sourceUrl },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+            )
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 
     webViewUrl?.let { url ->
@@ -963,239 +1032,226 @@ private fun DailyMassMissalView(
     }
 }
 
-@Composable
-private fun ReadingBlock(
-    title: String,
-    citation: String,
-    content: String,
-    isGospel: Boolean = false
-) {
-    ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.elevatedCardColors(
-            containerColor = if (isGospel) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.2f) else MaterialTheme.colorScheme.surface
-        )
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = title,
-                    fontWeight = FontWeight.Bold,
-                    color = if (isGospel) SacredBurgundy else MaterialTheme.colorScheme.primary,
-                    style = MaterialTheme.typography.titleMedium
-                )
-                Text(
-                    text = citation,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 12.sp,
-                    color = LiturgicalGold
-                )
-            }
-            Spacer(modifier = Modifier.height(10.dp))
-            Text(
-                text = content,
-                fontFamily = FontFamily.Serif,
-                style = MaterialTheme.typography.bodyLarge,
-                lineHeight = 24.sp
-            )
-        }
-    }
-}
+// ------------------------------------------------------------------- versions
 
 @Composable
-private fun BibleVersionsComparatorView(
+private fun VersionsView(
     versions: List<BibleVersionInfo>,
+    downloadManager: BibleDownloadManager?,
     currentLanguage: AppLanguage
 ) {
-    LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val scheme = MaterialTheme.colorScheme
+
+    LazyColumn(Modifier.fillMaxSize()) {
         item {
-            Text(
-                text = when (currentLanguage) {
-                    AppLanguage.ES -> "Comparador de Versiones y Cánones Bíblicos"
-                    AppLanguage.EN -> "Bible Versions & Canon Comparator"
-                    AppLanguage.PT -> "Comparador de Versões e Cânones Bíblicos"
-                },
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                color = SacredBurgundy
-            )
-            Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = when (currentLanguage) {
-                    AppLanguage.ES -> "Conoce las diferencias esenciales entre las biblias con el canon apostólico católico íntegro (73 libros) y las versiones protestantes (66 libros)."
-                    AppLanguage.EN -> "Learn the doctrinal and textual differences between the authentic 73-book Catholic Canon and 66-book Protestant translations."
-                    AppLanguage.PT -> "Conheça a diferença entre as Bíblias católicas integrais (73 livros) e as versões protestantes (66 livros)."
-                },
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+            AppScreenTitle(
+                title = currentLanguage.pick(
+                    "Comparador de Versiones y Cánones Bíblicos",
+                    "Bible Versions & Canon Comparator",
+                    "Comparador de Versões e Cânones Bíblicos"
+                ),
+                subtitle = currentLanguage.pick(
+                    "Conoce las diferencias esenciales entre las biblias con el canon apostólico católico íntegro (73 libros) y las versiones protestantes (66 libros).",
+                    "Learn the doctrinal and textual differences between the authentic 73-book Catholic Canon and 66-book Protestant translations.",
+                    "Conheça a diferença entre as Bíblias católicas integrais (73 livros) e as versões protestantes (66 livros)."
+                )
             )
         }
 
-        items(versions) { ver ->
-            Card(
-                shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = if (ver.isCatholicCanon) MaterialTheme.colorScheme.surfaceVariant else MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.15f)
-                ),
-                border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-            ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = ver.name,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
+        items(versions, key = { it.id }) { version ->
+            val canonColor = if (version.isCatholicCanon) scheme.primary else scheme.error
+            val canonLabel = if (version.isCatholicCanon) {
+                currentLanguage.pick(
+                    "Canon católico (73)",
+                    "Catholic canon (73)",
+                    "Cânon católico (73)"
+                )
+            } else {
+                currentLanguage.pick(
+                    "No católica (66)",
+                    "Not Catholic (66)",
+                    "Não católica (66)"
+                )
+            }
 
-                        Box(
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(8.dp))
-                                .background(if (ver.isCatholicCanon) SacredBurgundy else Color(0xFF8B2500))
-                                .padding(horizontal = 8.dp, vertical = 4.dp)
-                        ) {
-                            Text(
-                                text = if (ver.isCatholicCanon) "CANON CATÓLICO (73)" else "NO CATÓLICA (66)",
-                                color = Color.White,
-                                fontSize = 10.sp,
-                                fontWeight = FontWeight.Bold
-                            )
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(6.dp))
-
-                    Text(
-                        text = ver.description.get(currentLanguage),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
+            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                Text(
+                    text = version.name,
+                    style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+                    color = palette.textPrimary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                ) {
                     Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(MaterialTheme.colorScheme.surface)
-                            .padding(10.dp)
+                        Modifier
+                            .background(canonColor.copy(alpha = 0.14f), design.shapes.badge)
+                            .padding(horizontal = 10.dp, vertical = 5.dp)
                     ) {
                         Text(
-                            text = ver.canonicalDifferenceNote.get(currentLanguage),
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Medium,
-                            color = if (ver.isCatholicCanon) MaterialTheme.colorScheme.onSurface else Color(0xFFB71C1C)
+                            text = if (design.decor.usesAllCapsLabels) canonLabel.uppercase() else canonLabel,
+                            style = styles.sectionEyebrow,
+                            color = canonColor
                         )
                     }
+                    Text(
+                        text = "${version.abbreviation} · ${version.language.uppercase()}",
+                        style = styles.rowSubtitle,
+                        color = palette.textTertiary
+                    )
                 }
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = version.description.get(currentLanguage),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = palette.textSecondary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                // AppDivider is inset to the gutter in Cupertino, which reads
+                // as a mistake inside a card's own padding — so the rule that
+                // closes a card is drawn to the card's measure.
+                Box(
+                    Modifier
+                        .fillMaxWidth()
+                        .height(1.dp)
+                        .background(palette.hairline)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = version.canonicalDifferenceNote.get(currentLanguage),
+                    style = styles.rowSubtitle,
+                    color = if (version.isCatholicCanon) palette.textSecondary else scheme.error
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
+        if (downloadManager != null) {
+            item { AppOrnament() }
+            item {
+                OfflineBibleDownloadsView(
+                    manager = downloadManager,
+                    currentLanguage = currentLanguage
+                )
             }
         }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
-
+/**
+ * Whole-bible downloads for offline reading. The progress bar has no kit
+ * equivalent, so it is built from tokens around the Material indicator.
+ */
 @Composable
 fun OfflineBibleDownloadsView(
-    manager: com.example.data.repository.BibleDownloadManager,
-    currentLanguage: com.example.data.models.AppLanguage
+    manager: BibleDownloadManager,
+    currentLanguage: AppLanguage
 ) {
-    val scope = androidx.compose.runtime.rememberCoroutineScope()
-    androidx.compose.foundation.layout.Column(
-        modifier = androidx.compose.ui.Modifier
-            .fillMaxWidth()
-            .padding(16.dp)
-    ) {
-        androidx.compose.material3.Text(
-            text = when (currentLanguage) {
-                com.example.data.models.AppLanguage.ES -> "Descargas offline de Biblias"
-                com.example.data.models.AppLanguage.EN -> "Offline Bible downloads"
-                com.example.data.models.AppLanguage.PT -> "Downloads offline da Bíblia"
-            },
-            style = androidx.compose.material3.MaterialTheme.typography.titleMedium,
-            fontWeight = androidx.compose.ui.text.font.FontWeight.Bold,
-            color = com.example.ui.theme.SacredBurgundy
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val scheme = MaterialTheme.colorScheme
+    val scope = rememberCoroutineScope()
+
+    Column(Modifier.fillMaxWidth()) {
+        AppSectionHeader(
+            title = currentLanguage.pick(
+                "Descargas offline de Biblias",
+                "Offline Bible downloads",
+                "Downloads offline da Bíblia"
+            ),
+            subtitle = currentLanguage.pick(
+                "Guarda una versión completa en el dispositivo para leerla sin conexión.",
+                "Keep a whole version on the device to read it without a connection.",
+                "Guarde uma versão completa no dispositivo para ler sem conexão."
+            )
         )
-        androidx.compose.foundation.layout.Spacer(modifier = androidx.compose.ui.Modifier.height(8.dp))
+
         manager.specs.forEach { spec ->
-            var downloading by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf(false) }
-            var progress by androidx.compose.runtime.remember { androidx.compose.runtime.mutableFloatStateOf(0f) }
-            var status by androidx.compose.runtime.remember { androidx.compose.runtime.mutableStateOf("") }
-            val downloaded = manager.isDownloaded(spec.id)
-            androidx.compose.material3.Card(
-                modifier = androidx.compose.ui.Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 4.dp),
-                shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp)
-            ) {
-                androidx.compose.foundation.layout.Column(modifier = androidx.compose.ui.Modifier.padding(12.dp)) {
-                    androidx.compose.material3.Text(text = spec.name, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold)
-                    androidx.compose.material3.Text(
-                        text = if (downloaded) {
-                            when (currentLanguage) {
-                                com.example.data.models.AppLanguage.ES -> "Descargado (offline disponible)"
-                                com.example.data.models.AppLanguage.EN -> "Downloaded (available offline)"
-                                com.example.data.models.AppLanguage.PT -> "Baixado (disponível offline)"
-                            }
-                        } else status.ifBlank {
-                            when (currentLanguage) {
-                                com.example.data.models.AppLanguage.ES -> "No descargado"
-                                com.example.data.models.AppLanguage.EN -> "Not downloaded"
-                                com.example.data.models.AppLanguage.PT -> "Não baixado"
-                            }
-                        },
-                        fontSize = 12.sp
-                    )
-                    if (downloading) {
-                        androidx.compose.material3.LinearProgressIndicator(
-                            progress = { progress },
-                            modifier = androidx.compose.ui.Modifier.fillMaxWidth().padding(vertical = 4.dp)
+            var downloading by remember(spec.id) { mutableStateOf(false) }
+            var progress by remember(spec.id) { mutableFloatStateOf(0f) }
+            var status by remember(spec.id) { mutableStateOf("") }
+            val downloaded = remember(spec.id, downloading) { manager.isDownloaded(spec.id) }
+
+            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                Text(
+                    text = spec.name,
+                    style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+                    color = palette.textPrimary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Text(
+                    text = if (downloaded) {
+                        currentLanguage.pick(
+                            "Descargado (offline disponible)",
+                            "Downloaded (available offline)",
+                            "Baixado (disponível offline)"
                         )
-                    }
-                    androidx.compose.material3.FilledTonalButton(
+                    } else {
+                        status.ifBlank {
+                            currentLanguage.pick(
+                                "No descargado",
+                                "Not downloaded",
+                                "Não baixado"
+                            )
+                        }
+                    },
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+                if (downloading) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    LinearProgressIndicator(
+                        progress = { progress },
+                        modifier = Modifier.fillMaxWidth(),
+                        color = scheme.primary,
+                        trackColor = palette.selectionTint
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+                if (downloaded) {
+                    AppSecondaryButton(
+                        label = currentLanguage.pick("Descargado", "Downloaded", "Baixado"),
+                        onClick = {},
+                        enabled = false,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                } else {
+                    AppPrimaryButton(
+                        label = currentLanguage.pick("Descargar", "Download", "Baixar"),
                         onClick = {
-                            if (!downloading && !downloaded) {
+                            if (!downloading) {
                                 downloading = true
                                 scope.launch {
-                                    val ok = manager.download(spec.id) { p, msg ->
-                                        progress = p
-                                        status = msg
+                                    val ok = manager.download(spec.id) { fraction, message ->
+                                        progress = fraction
+                                        status = message
                                     }
                                     downloading = false
-                                    status = if (ok) {
-                                        when (currentLanguage) {
-                                            com.example.data.models.AppLanguage.ES -> "Completado"
-                                            com.example.data.models.AppLanguage.EN -> "Completed"
-                                            com.example.data.models.AppLanguage.PT -> "Concluído"
-                                        }
-                                    } else status
+                                    if (ok) {
+                                        status = currentLanguage.pick(
+                                            "Completado",
+                                            "Completed",
+                                            "Concluído"
+                                        )
+                                    }
                                 }
                             }
                         },
-                        enabled = !downloading && !downloaded
-                    ) {
-                        androidx.compose.material3.Text(
-                            text = when (currentLanguage) {
-                                com.example.data.models.AppLanguage.ES -> if (downloaded) "Descargado" else "Descargar"
-                                com.example.data.models.AppLanguage.EN -> if (downloaded) "Downloaded" else "Download"
-                                com.example.data.models.AppLanguage.PT -> if (downloaded) "Baixado" else "Baixar"
-                            }
-                        )
-                    }
+                        enabled = !downloading,
+                        leadingIcon = Icons.Default.Download,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
+            Spacer(Modifier.height(design.spacing.cardGap))
         }
     }
 }

@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
@@ -199,7 +200,7 @@ object VaticanKit : AppKit {
             containerColor = palette.canvas,
             topBar = {
                 Surface(color = palette.canvas) {
-                    Column {
+                    Column(Modifier.statusBarsPadding()) {
                         Row(
                             Modifier
                                 .fillMaxWidth()

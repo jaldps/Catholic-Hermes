@@ -1,74 +1,94 @@
 package com.example.ui.screens
 
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
-import androidx.compose.material.icons.filled.Bookmark
 import androidx.compose.material.icons.filled.Church
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.FormatQuote
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.LightMode
+import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.MenuBook
+import androidx.compose.material.icons.filled.NearMe
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Place
-import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.WbTwilight
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.example.data.liturgy.LiturgicalColor
 import com.example.data.models.AppLanguage
 import com.example.data.models.DailyMassReading
+import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.models.SaintOfTheDay
 import com.example.data.models.VerseOfTheDay
-import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.repository.PilgrimageAndHabitsData
-import com.example.ui.components.LiturgicalCalendarWidget
-import com.example.ui.components.LiturgicalHeader
-import com.example.ui.theme.LiturgicalGold
-import android.content.Intent
-import android.net.Uri
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.material.icons.filled.NearMe
-import androidx.compose.material.icons.filled.LocationOn
-import com.example.ui.theme.SacredBurgundy
+import com.example.ui.design.AppBanner
+import com.example.ui.design.AppCard
+import com.example.ui.design.AppDivider
+import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppListRow
+import com.example.ui.design.AppOrnament
+import com.example.ui.design.AppPrimaryButton
+import com.example.ui.design.AppScreenTitle
+import com.example.ui.design.AppSecondaryButton
+import com.example.ui.design.AppSectionHeader
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 
+/**
+ * The app's front door: today's liturgical day, the Mass of the day, the verse
+ * and saint of the day, the daily routine and the gateways to the rest of the
+ * app — all of it set in whichever identity is in force.
+ */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun HomeScreen(
     dailyReading: DailyMassReading,
@@ -88,677 +108,667 @@ fun HomeScreen(
     liturgicalDay: LiturgicalCalendarDay = PilgrimageAndHabitsData.upcomingLiturgicalDays.first(),
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    // Hoisted out of the list so the disclosure survives being scrolled off.
+    var meditationExpanded by rememberSaveable { mutableStateOf(false) }
+
+    fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
+    }
+
+    val liturgicalPigment = pigment(Color(liturgicalDay.liturgicalColorHex), design.isDark, palette.textPrimary)
+    val colorLabel = LiturgicalColor.entries
+        .firstOrNull { it.hex == liturgicalDay.liturgicalColorHex }
+        ?.displayName?.get(currentLanguage)
+        ?: strings("Color Litúrgico", "Liturgical Color", "Cor Litúrgica")
+
+    // Both of these are empty on a ferial weekday the bundled lectionary does
+    // not carry, so the day's gospel line and its disclosure appear only when
+    // there is something behind them.
+    val meditation = liturgicalDay.missalMeditation?.get(currentLanguage)
+        ?.takeIf { it.isNotBlank() }
+    val gospelOfRecord = liturgicalDay.gospelVerseRef.takeIf { it.isNotBlank() }
+
+    // A ferial weekday is not in the bundled lectionary, and the repository
+    // leaves its citations empty rather than borrowing another day's readings.
+    val massCitations = listOfNotNull(
+        strings("Primera lectura", "First reading", "Primeira leitura") to dailyReading.firstReadingRef,
+        strings("Salmo responsorial", "Responsorial psalm", "Salmo responsorial")
+            to dailyReading.responsorialPsalmRef,
+        dailyReading.secondReadingRef?.let {
+            strings("Segunda lectura", "Second reading", "Segunda leitura") to it
+        },
+        strings("Evangelio", "Gospel", "Evangelho") to dailyReading.gospelRef
+    ).filter { it.second.isNotBlank() }
+    val gospelExcerpt = dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
+
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
-            .testTag("home_screen"),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+            .testTag("home_screen")
     ) {
-        // Minimalist Gold Liturgical Calendar Widget
         item {
-            LiturgicalCalendarWidget(
-                liturgicalDay = liturgicalDay,
-                currentLanguage = currentLanguage,
-                onOpenLanguageSelector = onOpenLanguageSelector
+            AppScreenTitle(
+                title = strings("Hoy", "Today", "Hoje"),
+                subtitle = strings(
+                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName}",
+                    "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
+                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName}"
+                )
             )
         }
 
-        // Habit & Virtue Tracker Quick Summary Card
+        // The liturgical colour is the one literal colour the data owns, and
+        // the banner is where each identity decides what to do with it.
         item {
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-                    .clickable(onClick = onNavigateToHabits)
-                    .border(
-                        1.dp,
-                        LiturgicalGold.copy(alpha = 0.5f),
-                        RoundedCornerShape(16.dp)
-                    )
-                    .testTag("home_habit_tracker_card"),
-                shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.surface
-                ),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(14.dp),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Column(modifier = Modifier.weight(1f)) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(
-                                imageVector = Icons.Default.Star,
-                                contentDescription = null,
-                                tint = LiturgicalGold,
-                                modifier = Modifier.size(16.dp)
-                            )
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "HÁBITOS Y VIRTUDES (REGLA DE VIDA)"
-                                    AppLanguage.EN -> "HABITS & VIRTUES (RULE OF LIFE)"
-                                    AppLanguage.PT -> "HÁBITOS E VIRTUDES (REGRA DE VIDA)"
-                                },
-                                fontFamily = FontFamily.Serif,
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 11.sp,
-                                letterSpacing = 1.sp,
-                                color = SacredBurgundy
-                            )
-                        }
-
-                        Spacer(modifier = Modifier.height(4.dp))
-
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Sigue tus devociones diarias, ayuno y el Antídoto contra la tentación."
-                                AppLanguage.EN -> "Track your daily devotions, fasting, and Grace Antidote against sins."
-                                AppLanguage.PT -> "Acompanhe suas práticas diárias, jejum e o Antídoto contra o pecado."
-                            },
-                            fontSize = 12.sp,
-                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f)
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.width(10.dp))
-
-                    Surface(
-                        shape = RoundedCornerShape(10.dp),
-                        color = SacredBurgundy,
-                        modifier = Modifier.clip(RoundedCornerShape(10.dp))
-                    ) {
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Ver Panel"
-                                AppLanguage.EN -> "Dashboard"
-                                AppLanguage.PT -> "Painel"
-                            },
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = Color.White,
-                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
-                        )
-                    }
-                }
-            }
+            AppBanner(
+                title = liturgicalDay.seasonName.get(currentLanguage),
+                body = liturgicalDay.celebrationTitle.get(currentLanguage),
+                accentColorHex = liturgicalDay.liturgicalColorHex,
+                modifier = Modifier.testTag("liturgical_calendar_widget")
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // Quick Daily Sanctification Routine Hub
         item {
-            Column(modifier = Modifier.padding(horizontal = 16.dp)) {
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "RUTINA ESPIRITUAL DIARIA"
-                        AppLanguage.EN -> "DAILY SPIRITUAL ROUTINE"
-                        AppLanguage.PT -> "ROTINA ESPIRITUAL DIÁRIA"
-                    },
-                    style = MaterialTheme.typography.labelLarge,
-                    color = LiturgicalGold,
-                    letterSpacing = 1.sp
-                )
-
-                Spacer(modifier = Modifier.height(10.dp))
-
-                Row(
+            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                FlowRow(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    RoutineQuickCard(
-                        title = when (currentLanguage) {
-                            AppLanguage.ES -> "Laudes"
-                            AppLanguage.EN -> "Morning"
-                            AppLanguage.PT -> "Laudes"
-                        },
-                        subtitle = "6:00 AM",
-                        icon = Icons.Default.LightMode,
-                        modifier = Modifier.weight(1f),
-                        onClick = onNavigateToPrayers
+                    DayBadge(label = colorLabel, tint = liturgicalPigment)
+                    DayBadge(
+                        label = liturgicalDay.rank.get(currentLanguage),
+                        tint = palette.textSecondary
                     )
-                    RoutineQuickCard(
-                        title = when (currentLanguage) {
-                            AppLanguage.ES -> "El Ángelus"
-                            AppLanguage.EN -> "The Angelus"
-                            AppLanguage.PT -> "O Angelus"
-                        },
-                        subtitle = "12:00 PM",
-                        icon = Icons.Default.WbTwilight,
-                        modifier = Modifier.weight(1f),
-                        onClick = onNavigateToPrayers
-                    )
-                    RoutineQuickCard(
-                        title = when (currentLanguage) {
-                            AppLanguage.ES -> "Santo Rosario"
-                            AppLanguage.EN -> "Holy Rosary"
-                            AppLanguage.PT -> "Santo Terço"
-                        },
-                        subtitle = when (currentLanguage) {
-                            AppLanguage.ES -> "Hoy"
-                            AppLanguage.EN -> "Today"
-                            AppLanguage.PT -> "Hoje"
-                        },
-                        icon = Icons.Default.SelfImprovement,
-                        modifier = Modifier.weight(1f),
-                        onClick = onNavigateToRosary
-                    )
-                    RoutineQuickCard(
-                        title = when (currentLanguage) {
-                            AppLanguage.ES -> "Completas"
-                            AppLanguage.EN -> "Night Examen"
-                            AppLanguage.PT -> "Completas"
-                        },
-                        subtitle = "9:00 PM",
-                        icon = Icons.Default.NightsStay,
-                        modifier = Modifier.weight(1f),
-                        onClick = onNavigateToPrayers
-                    )
+                    liturgicalDay.sundayCycle?.let {
+                        DayBadge(label = it.get(currentLanguage), tint = palette.textSecondary)
+                    }
+                    liturgicalDay.weekdayCycle?.let {
+                        DayBadge(label = it.get(currentLanguage), tint = palette.textSecondary)
+                    }
+                    liturgicalDay.fastingRule?.let {
+                        DayBadge(
+                            label = it.get(currentLanguage),
+                            tint = palette.accent,
+                            icon = if (liturgicalDay.isFastOrAbstinence) {
+                                Icons.Default.Restaurant
+                            } else {
+                                Icons.Default.Star
+                            }
+                        )
+                    }
                 }
-            }
-        }
 
-        // Daily Mass Reading Featured Card
-        item {
-            ElevatedCard(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-                    .testTag("daily_mass_card"),
-                shape = RoundedCornerShape(18.dp),
-                colors = CardDefaults.elevatedCardColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant
-                )
-            ) {
-                Column(modifier = Modifier.padding(18.dp)) {
+                if (gospelOfRecord != null) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppDivider()
                     Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(design.shapes.buttonSmall)
+                            .then(
+                                if (meditation != null) {
+                                    Modifier.clickable {
+                                        meditationExpanded = !meditationExpanded
+                                    }
+                                } else {
+                                    Modifier
+                                }
+                            )
+                            .padding(vertical = 12.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(
-                                imageVector = Icons.Default.AutoStories,
-                                contentDescription = null,
-                                tint = SacredBurgundy,
-                                modifier = Modifier.size(20.dp)
-                            )
-                            Spacer(modifier = Modifier.width(8.dp))
+                        Icon(
+                            imageVector = Icons.Default.AutoStories,
+                            contentDescription = null,
+                            tint = palette.textTertiary,
+                            modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
+                        )
+                        Spacer(Modifier.width(design.spacing.iconLabelGap))
+                        Text(
+                            text = gospelOfRecord,
+                            style = styles.rowSubtitle,
+                            color = palette.textPrimary,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.weight(1f)
+                        )
+                        if (meditation != null) {
+                            Spacer(Modifier.width(12.dp))
                             Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Lecturas de la Misa de Hoy"
-                                    AppLanguage.EN -> "Today's Mass Readings"
-                                    AppLanguage.PT -> "Leituras da Santa Missa"
-                                },
-                                fontWeight = FontWeight.Bold,
-                                style = MaterialTheme.typography.titleMedium,
-                                color = MaterialTheme.colorScheme.primary
+                                text = if (meditationExpanded) {
+                                    strings("Ocultar", "Hide", "Ocultar")
+                                } else {
+                                    strings("Meditación", "Meditation", "Meditação")
+                                }.uppercase(),
+                                style = styles.sectionEyebrow,
+                                color = palette.accent,
+                                maxLines = 1
                             )
-                        }
-
-                        Text(
-                            text = dailyReading.gospelRef,
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = LiturgicalGold
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    Text(
-                        text = "«${dailyReading.gospelText.get(currentLanguage).take(190)}...»",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        lineHeight = 22.sp
-                    )
-
-                    Spacer(modifier = Modifier.height(14.dp))
-
-                    FilledTonalButton(
-                        onClick = onNavigateToBible,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .testTag("read_mass_full_button"),
-                        colors = ButtonDefaults.filledTonalButtonColors(
-                            containerColor = MaterialTheme.colorScheme.primaryContainer,
-                            contentColor = MaterialTheme.colorScheme.onPrimaryContainer
-                        )
-                    ) {
-                        Icon(imageVector = Icons.Default.AutoStories, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Leer Misa Completa y Comentarios"
-                                AppLanguage.EN -> "Read Full Mass & Commentaries"
-                                AppLanguage.PT -> "Ler Missa Completa e Reflexões"
-                            },
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 13.sp
-                        )
-                    }
-                }
-            }
-        }
-
-        // Verse of the Day Card
-        item {
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-                    .testTag("verse_of_the_day_card"),
-                shape = RoundedCornerShape(18.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.surface
-                ),
-                border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-            ) {
-                Column(modifier = Modifier.padding(18.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
                             Icon(
-                                imageVector = Icons.Default.FormatQuote,
-                                contentDescription = null,
-                                tint = LiturgicalGold,
-                                modifier = Modifier.size(20.dp)
-                            )
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Versículo del Día"
-                                    AppLanguage.EN -> "Verse of the Day"
-                                    AppLanguage.PT -> "Versículo do Dia"
+                                imageVector = if (meditationExpanded) {
+                                    Icons.Default.KeyboardArrowUp
+                                } else {
+                                    Icons.Default.KeyboardArrowDown
                                 },
-                                fontWeight = FontWeight.Bold,
-                                color = LiturgicalGold,
-                                style = MaterialTheme.typography.titleMedium
-                            )
-                        }
-
-                        Text(
-                            text = verseOfTheDay.reference,
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = MaterialTheme.colorScheme.primary
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    Text(
-                        text = verseOfTheDay.text.get(currentLanguage),
-                        style = MaterialTheme.typography.bodyLarge,
-                        fontFamily = FontFamily.Serif,
-                        color = MaterialTheme.colorScheme.onSurface,
-                        lineHeight = 25.sp
-                    )
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    // Spiritual challenge
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(10.dp))
-                            .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f))
-                            .padding(10.dp)
-                    ) {
-                        Text(
-                            text = "💡 " + verseOfTheDay.spiritualChallenge.get(currentLanguage),
-                            fontSize = 12.sp,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                    }
-                }
-            }
-        }
-
-        // Saint of the Day Card
-        item {
-            ElevatedCard(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-                    .testTag("saint_of_the_day_card"),
-                shape = RoundedCornerShape(18.dp),
-                colors = CardDefaults.elevatedCardColors(
-                    containerColor = MaterialTheme.colorScheme.surfaceVariant
-                )
-            ) {
-                Column(modifier = Modifier.padding(18.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Santo del Día"
-                                AppLanguage.EN -> "Saint of the Day"
-                                AppLanguage.PT -> "Santo do Dia"
-                            },
-                            style = MaterialTheme.typography.labelLarge,
-                            color = LiturgicalGold,
-                            letterSpacing = 1.sp
-                        )
-
-                        Text(
-                            text = saintOfTheDay.feastDate,
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.SemiBold,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-
-                    Spacer(modifier = Modifier.height(6.dp))
-
-                    Text(
-                        text = saintOfTheDay.name.get(currentLanguage),
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.primary
-                    )
-
-                    Text(
-                        text = saintOfTheDay.title.get(currentLanguage),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    Text(
-                        text = saintOfTheDay.biography.get(currentLanguage).take(220) + "...",
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    // Saint Quote
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(10.dp))
-                            .background(MaterialTheme.colorScheme.surface)
-                            .border(1.dp, LiturgicalGold.copy(alpha = 0.5f), RoundedCornerShape(10.dp))
-                            .padding(12.dp)
-                    ) {
-                        Text(
-                            text = saintOfTheDay.iconicQuote.get(currentLanguage),
-                            fontFamily = FontFamily.Serif,
-                            fontWeight = FontWeight.Medium,
-                            fontSize = 13.sp,
-                            color = SacredBurgundy
-                        )
-                    }
-                }
-            }
-        }
-
-        // Featured Direct GPS Nearby Churches Finder Banner
-        item {
-            val context = LocalContext.current
-            Card(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp)
-                    .testTag("home_nearby_churches_banner"),
-                shape = RoundedCornerShape(18.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f)
-                ),
-                border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Row(
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier.weight(1f)
-                    ) {
-                        Box(
-                            modifier = Modifier
-                                .size(44.dp)
-                                .clip(CircleShape)
-                                .background(SacredBurgundy),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.NearMe,
                                 contentDescription = null,
-                                tint = Color.White,
-                                modifier = Modifier.size(24.dp)
+                                tint = palette.accent,
+                                modifier = Modifier.size(18.dp)
                             )
                         }
-                        Spacer(modifier = Modifier.width(12.dp))
+                    }
+
+                    AnimatedVisibility(
+                        visible = meditationExpanded && meditation != null,
+                        enter = expandVertically(
+                            tween(design.motion.mediumMillis, easing = design.motion.standardEasing)
+                        ) + fadeIn(tween(design.motion.fastMillis)),
+                        exit = shrinkVertically(
+                            tween(design.motion.fastMillis, easing = design.motion.standardEasing)
+                        ) + fadeOut(tween(design.motion.fastMillis))
+                    ) {
                         Column {
                             Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Buscar Iglesias Cerca de Mí"
-                                    AppLanguage.EN -> "Find Churches Near Me"
-                                    AppLanguage.PT -> "Buscar Igrejas Perto de Mim"
-                                },
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 14.sp,
-                                color = SacredBurgundy
+                                text = strings(
+                                    "Meditación litúrgica del día",
+                                    "Liturgical meditation of the day",
+                                    "Meditação litúrgica do dia"
+                                ).uppercase(),
+                                style = styles.sectionEyebrow,
+                                color = palette.textSecondary
                             )
+                            Spacer(Modifier.height(10.dp))
                             Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Ubicación en Google Maps y horarios de misa"
-                                    AppLanguage.EN -> "Google Maps nearby & mass times"
-                                    AppLanguage.PT -> "Localização no Google Maps e horários"
-                                },
-                                fontSize = 11.sp,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                                text = meditation.orEmpty(),
+                                style = styles.scripture,
+                                color = palette.textPrimary,
+                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                             )
+                            Spacer(Modifier.height(4.dp))
                         }
-                    }
-
-                    FilledTonalButton(
-                        onClick = {
-                            val mapUri = Uri.parse("geo:0,0?q=parroquia+catolica")
-                            val mapIntent = Intent(Intent.ACTION_VIEW, mapUri)
-                            context.startActivity(mapIntent)
-                        },
-                        colors = ButtonDefaults.filledTonalButtonColors(
-                            containerColor = SacredBurgundy,
-                            contentColor = Color.White
-                        )
-                    ) {
-                        Icon(Icons.Default.LocationOn, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Buscar"
-                                AppLanguage.EN -> "Locate"
-                                AppLanguage.PT -> "Localizar"
-                            },
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp
-                        )
                     }
                 }
             }
+            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // Quick Gateway to Church Finder & Trivia
+        // Habit & virtue tracker summary.
         item {
-            Row(
+            AppCard(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("home_habit_tracker_card"),
+                onClick = onNavigateToHabits
             ) {
-                QuickActionBanner(
-                    title = when (currentLanguage) {
-                        AppLanguage.ES -> "Directorio Iglesias"
-                        AppLanguage.EN -> "Church Directory"
-                        AppLanguage.PT -> "Diretório Igrejas"
-                    },
-                    subtitle = when (currentLanguage) {
-                        AppLanguage.ES -> "Por país y ciudad"
-                        AppLanguage.EN -> "By Country & City"
-                        AppLanguage.PT -> "Por país e cidade"
-                    },
-                    icon = Icons.Default.Church,
-                    modifier = Modifier.weight(1f),
+                CardHeading(
+                    label = strings(
+                        "Hábitos y Virtudes (Regla de Vida)",
+                        "Habits & Virtues (Rule of Life)",
+                        "Hábitos e Virtudes (Regra de Vida)"
+                    ),
+                    icon = Icons.Default.Star,
+                    trailing = strings("Ver Panel", "Dashboard", "Painel"),
+                    trailingColor = palette.accent
+                )
+                Spacer(Modifier.height(10.dp))
+                Text(
+                    text = strings(
+                        "Sigue tus devociones diarias, ayuno y el Antídoto contra la tentación.",
+                        "Track your daily devotions, fasting, and Grace Antidote against sins.",
+                        "Acompanhe suas práticas diárias, jejum e o Antídoto contra o pecado."
+                    ),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = palette.textSecondary
+                )
+            }
+        }
+
+        // Daily sanctification routine. Four rows rather than four tiles: the
+        // Spanish and Portuguese hour names do not survive a 4-across grid.
+        item {
+            AppSectionHeader(
+                title = strings(
+                    "Rutina espiritual diaria",
+                    "Daily spiritual routine",
+                    "Rotina espiritual diária"
+                )
+            )
+        }
+
+        item {
+            AppListGroup {
+                AppListRow(
+                    title = strings("Laudes", "Morning", "Laudes"),
+                    leadingIcon = Icons.Default.LightMode,
+                    trailingText = "6:00 AM",
+                    onClick = onNavigateToPrayers
+                )
+                AppListRow(
+                    title = strings("El Ángelus", "The Angelus", "O Angelus"),
+                    leadingIcon = Icons.Default.WbTwilight,
+                    trailingText = "12:00 PM",
+                    onClick = onNavigateToPrayers
+                )
+                AppListRow(
+                    title = strings("Santo Rosario", "Holy Rosary", "Santo Terço"),
+                    leadingIcon = Icons.Default.SelfImprovement,
+                    trailingText = strings("Hoy", "Today", "Hoje"),
+                    onClick = onNavigateToRosary
+                )
+                AppListRow(
+                    title = strings("Completas", "Night Examen", "Completas"),
+                    leadingIcon = Icons.Default.NightsStay,
+                    trailingText = "9:00 PM",
+                    onClick = onNavigateToPrayers
+                )
+            }
+            Spacer(Modifier.height(design.spacing.sectionGap / 2))
+        }
+
+        // Mass of the day.
+        item {
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("daily_mass_card")
+            ) {
+                CardHeading(
+                    label = strings(
+                        "Lecturas de la Misa de Hoy",
+                        "Today's Mass Readings",
+                        "Leituras da Santa Missa"
+                    ),
+                    icon = Icons.Default.AutoStories
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+
+                if (massCitations.isEmpty()) {
+                    Text(
+                        text = strings(
+                            "El leccionario incluido no trae las lecturas de esta feria. " +
+                                "La celebración del día queda indicada arriba.",
+                            "The bundled lectionary has no readings for this weekday. " +
+                                "The day's celebration is given above.",
+                            "O lecionário incluído não traz as leituras desta féria. " +
+                                "A celebração do dia está indicada acima."
+                        ),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = palette.textSecondary,
+                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                    )
+                } else {
+                    // Stacked rather than two-column: a resolved citation
+                    // carries the book's full name and would crush a label
+                    // sharing its line.
+                    massCitations.forEachIndexed { index, (label, reference) ->
+                        if (index > 0) Spacer(Modifier.height(12.dp))
+                        Text(
+                            text = label.uppercase(),
+                            style = styles.sectionEyebrow,
+                            color = palette.textTertiary
+                        )
+                        Spacer(Modifier.height(3.dp))
+                        Text(
+                            text = reference,
+                            style = styles.rowSubtitle,
+                            color = palette.textPrimary
+                        )
+                    }
+
+                    if (gospelExcerpt != null) {
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Text(
+                            text = "«$gospelExcerpt»",
+                            style = styles.scripture,
+                            color = palette.textPrimary,
+                            maxLines = 4,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+                    }
+                }
+
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppPrimaryButton(
+                    label = strings(
+                        "Leer Misa Completa y Comentarios",
+                        "Read Full Mass & Commentaries",
+                        "Ler Missa Completa e Reflexões"
+                    ),
+                    onClick = onNavigateToBible,
+                    leadingIcon = Icons.Default.AutoStories,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("read_mass_full_button")
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
+        // Verse of the day: the screen's hero pull quote.
+        item {
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("verse_of_the_day_card")
+            ) {
+                CardHeading(
+                    label = strings("Versículo del Día", "Verse of the Day", "Versículo do Dia"),
+                    icon = Icons.Default.FormatQuote,
+                    trailing = verseOfTheDay.reference
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = verseOfTheDay.text.get(currentLanguage),
+                    style = styles.quote,
+                    color = palette.textPrimary,
+                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppDivider()
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = "💡 " + verseOfTheDay.spiritualChallenge.get(currentLanguage),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = palette.textSecondary
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
+        // Saint of the day.
+        item {
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("saint_of_the_day_card")
+            ) {
+                CardHeading(
+                    label = strings("Santo del Día", "Saint of the Day", "Santo do Dia"),
+                    trailing = saintOfTheDay.feastDate
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = saintOfTheDay.name.get(currentLanguage),
+                    style = styles.sectionTitle,
+                    color = palette.textPrimary
+                )
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    text = saintOfTheDay.title.get(currentLanguage),
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = saintOfTheDay.biography.get(currentLanguage),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = palette.textPrimary,
+                    maxLines = 6,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppDivider()
+                Spacer(Modifier.height(design.spacing.cardGap))
+                MarginalQuote(
+                    text = saintOfTheDay.iconicQuote.get(currentLanguage),
+                    attribution = saintOfTheDay.name.get(currentLanguage)
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
+        // Nearby parishes, straight out to the device's map app.
+        item {
+            val openNearbyChurches = {
+                runCatching {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=parroquia+catolica"))
+                    )
+                }
+                Unit
+            }
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("home_nearby_churches_banner"),
+                onClick = openNearbyChurches
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.NearMe,
+                        contentDescription = null,
+                        tint = palette.accent,
+                        modifier = Modifier.size(design.decor.rowIconSize)
+                    )
+                    Spacer(Modifier.width(design.spacing.iconLabelGap))
+                    Column(Modifier.weight(1f)) {
+                        Text(
+                            text = strings(
+                                "Buscar Iglesias Cerca de Mí",
+                                "Find Churches Near Me",
+                                "Buscar Igrejas Perto de Mim"
+                            ),
+                            style = styles.rowTitle,
+                            color = palette.textPrimary
+                        )
+                        Spacer(Modifier.height(4.dp))
+                        Text(
+                            text = strings(
+                                "Ubicación en Google Maps y horarios de misa",
+                                "Google Maps nearby & mass times",
+                                "Localização no Google Maps e horários"
+                            ),
+                            style = styles.rowSubtitle,
+                            color = palette.textSecondary
+                        )
+                    }
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppSecondaryButton(
+                    label = strings("Buscar", "Locate", "Localizar"),
+                    onClick = openNearbyChurches,
+                    leadingIcon = Icons.Default.LocationOn,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+        }
+
+        item { AppOrnament() }
+
+        item {
+            AppSectionHeader(
+                title = strings("Explorar la Fe", "Explore the Faith", "Explorar a Fé")
+            )
+        }
+
+        item {
+            AppListGroup {
+                AppListRow(
+                    title = strings("Directorio Iglesias", "Church Directory", "Diretório Igrejas"),
+                    subtitle = strings("Por país y ciudad", "By Country & City", "Por país e cidade"),
+                    leadingIcon = Icons.Default.Church,
                     onClick = onNavigateToDoctrine
                 )
-
-                QuickActionBanner(
-                    title = when (currentLanguage) {
-                        AppLanguage.ES -> "Trivia Católica"
-                        AppLanguage.EN -> "Catholic Trivia"
-                        AppLanguage.PT -> "Quiz Católico"
-                    },
-                    subtitle = when (currentLanguage) {
-                        AppLanguage.ES -> "Aprende jugando"
-                        AppLanguage.EN -> "Test Your Faith"
-                        AppLanguage.PT -> "Aprenda a Fé"
-                    },
-                    icon = Icons.Default.Star,
-                    modifier = Modifier.weight(1f),
+                AppListRow(
+                    title = strings("Trivia Católica", "Catholic Trivia", "Quiz Católico"),
+                    subtitle = strings("Aprende jugando", "Test Your Faith", "Aprenda a Fé"),
+                    leadingIcon = Icons.Default.Star,
                     onClick = onNavigateToQuiz
                 )
-            }
-        }
-
-        // Quick Gateway to Catechism & Pilgrimages
-        item {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                QuickActionBanner(
-                    title = when (currentLanguage) {
-                        AppLanguage.ES -> "Catecismo (CCC)"
-                        AppLanguage.EN -> "Catechism (CCC)"
-                        AppLanguage.PT -> "Catecismo (CIC)"
-                    },
-                    subtitle = when (currentLanguage) {
-                        AppLanguage.ES -> "4 Pilares de la Fe"
-                        AppLanguage.EN -> "4 Pillars of Faith"
-                        AppLanguage.PT -> "4 Pilares da Fé"
-                    },
-                    icon = Icons.Default.MenuBook,
-                    modifier = Modifier.weight(1f),
+                AppListRow(
+                    title = strings("Catecismo (CCC)", "Catechism (CCC)", "Catecismo (CIC)"),
+                    subtitle = strings("4 Pilares de la Fe", "4 Pillars of Faith", "4 Pilares da Fé"),
+                    leadingIcon = Icons.Default.MenuBook,
                     onClick = onNavigateToCatechism
                 )
-
-                QuickActionBanner(
-                    title = when (currentLanguage) {
-                        AppLanguage.ES -> "Santuarios y Fe"
-                        AppLanguage.EN -> "Shrines & Pilgrims"
-                        AppLanguage.PT -> "Santuários e Fé"
-                    },
-                    subtitle = when (currentLanguage) {
-                        AppLanguage.ES -> "Indulgencias y Rutas"
-                        AppLanguage.EN -> "Indulgences & Maps"
-                        AppLanguage.PT -> "Indulgências e Rotas"
-                    },
-                    icon = Icons.Default.Place,
-                    modifier = Modifier.weight(1f),
+                AppListRow(
+                    title = strings("Santuarios y Fe", "Shrines & Pilgrims", "Santuários e Fé"),
+                    subtitle = strings("Indulgencias y Rutas", "Indulgences & Maps", "Indulgências e Rotas"),
+                    leadingIcon = Icons.Default.Place,
                     onClick = onNavigateToPilgrimage
                 )
-            }
-        }
-
-        item {
-            Spacer(modifier = Modifier.height(16.dp))
-        }
-    }
-}
-
-@Composable
-private fun RoutineQuickCard(
-    title: String,
-    subtitle: String,
-    icon: ImageVector,
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit
-) {
-    Surface(
-        modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
-            .clickable(onClick = onClick),
-        color = MaterialTheme.colorScheme.surface,
-        tonalElevation = 2.dp,
-        border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-    ) {
-        Column(
-            modifier = Modifier.padding(10.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(36.dp)
-                    .clip(CircleShape)
-                    .background(MaterialTheme.colorScheme.primaryContainer),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = title,
-                    tint = MaterialTheme.colorScheme.onPrimaryContainer,
-                    modifier = Modifier.size(20.dp)
+                AppListRow(
+                    title = strings("Idioma", "Language", "Idioma"),
+                    subtitle = currentLanguage.displayName,
+                    leadingIcon = Icons.Default.Language,
+                    trailingText = "${currentLanguage.flag} ${currentLanguage.code.uppercase()}",
+                    onClick = onOpenLanguageSelector,
+                    modifier = Modifier.testTag("widget_lang_button")
                 )
             }
-            Spacer(modifier = Modifier.height(6.dp))
-            Text(
-                text = title,
-                fontSize = 11.sp,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.onSurface,
-                maxLines = 1
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+/**
+ * Eyebrow line that opens a card, with an optional trailing value. Kept out of
+ * [AppSectionHeader] because that component owns the screen gutter and would
+ * inset itself a second time inside a card.
+ */
+@Composable
+private fun CardHeading(
+    label: String,
+    icon: ImageVector? = null,
+    trailing: String? = null,
+    trailingColor: Color? = null
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        if (icon != null) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = design.palette.textSecondary,
+                modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
             )
+            Spacer(Modifier.width(8.dp))
+        }
+        Text(
+            text = label.uppercase(),
+            style = styles.sectionEyebrow,
+            color = design.palette.textSecondary,
+            modifier = Modifier.weight(1f)
+        )
+        if (trailing != null) {
+            Spacer(Modifier.width(12.dp))
             Text(
-                text = subtitle,
-                fontSize = 10.sp,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                text = trailing.uppercase(),
+                style = styles.sectionEyebrow,
+                color = trailingColor ?: design.palette.textTertiary,
+                maxLines = 1
             )
         }
     }
 }
 
+/**
+ * A quote hung off a rule in the margin. The kit has no pull-quote component,
+ * so the rule is drawn from tokens and the voice comes from `styles.quote`,
+ * which is a different face in every identity.
+ */
 @Composable
-private fun QuickActionBanner(
-    title: String,
-    subtitle: String,
-    icon: ImageVector,
-    modifier: Modifier = Modifier,
-    onClick: () -> Unit
-) {
-    Surface(
-        modifier = modifier
-            .clip(RoundedCornerShape(14.dp))
-            .clickable(onClick = onClick),
-        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
-        border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
+private fun MarginalQuote(text: String, attribution: String? = null) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(IntrinsicSize.Min)
     ) {
-        Row(
-            modifier = Modifier.padding(14.dp),
-            verticalAlignment = Alignment.CenterVertically
+        Box(
+            Modifier
+                .width(2.dp)
+                .fillMaxHeight()
+                .background(design.palette.accent)
+        )
+        Column(
+            Modifier
+                .weight(1f)
+                .padding(start = design.spacing.iconLabelGap)
+                .widthIn(max = design.spacing.readingMaxWidth)
         ) {
-            Icon(imageVector = icon, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(26.dp))
-            Spacer(modifier = Modifier.width(10.dp))
-            Column {
-                Text(text = title, fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.onPrimaryContainer)
-                Text(text = subtitle, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(text = text, style = styles.quote, color = design.palette.textPrimary)
+            if (attribution != null) {
+                Spacer(Modifier.height(10.dp))
+                Text(
+                    text = attribution.uppercase(),
+                    style = styles.sectionEyebrow,
+                    color = design.palette.textSecondary
+                )
             }
         }
     }
 }
+
+/**
+ * A badge stating one fact about the liturgical day. The kit's chip is a filter
+ * control and demands a click; these are read-only, so they are built from the
+ * identity's chip shape, its eyebrow style and a tint.
+ */
+@Composable
+private fun DayBadge(
+    label: String,
+    tint: Color,
+    icon: ImageVector? = null,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Row(
+        modifier = modifier
+            .clip(design.shapes.chip)
+            .background(tint.copy(alpha = if (design.isDark) 0.20f else 0.10f))
+            .border(
+                width = design.depth.cardBorderWidth.coerceAtLeast(0.75.dp),
+                color = tint.copy(alpha = 0.40f),
+                shape = design.shapes.chip
+            )
+            .padding(horizontal = 10.dp, vertical = 5.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        if (icon != null) {
+            Icon(
+                imageVector = icon,
+                contentDescription = null,
+                tint = tint,
+                modifier = Modifier.size(12.dp)
+            )
+            Spacer(Modifier.width(6.dp))
+        }
+        Text(
+            text = if (design.decor.usesAllCapsLabels) label.uppercase() else label,
+            style = styles.sectionEyebrow,
+            color = tint,
+            // "Ayuno y abstinencia de carne" at Vatican's tracking is wider
+            // than the card, so a badge is allowed to set on two lines.
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis
+        )
+    }
+}
+
+/**
+ * Lifts a liturgical colour until it reads as pigment on a dark ground; violet
+ * and green at their printed values disappear into a night canvas.
+ */
+private fun pigment(color: Color, isDark: Boolean, ink: Color): Color =
+    if (isDark) lerp(color, ink, 0.45f) else color
