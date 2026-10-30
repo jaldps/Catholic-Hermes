@@ -1,11 +1,16 @@
 package com.example.ui.screens
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,39 +19,19 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Bookmark
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.VolumeUp
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.PrimaryTabRow
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -56,25 +41,70 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import coil.compose.AsyncImage
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.models.AppLanguage
 import com.example.data.models.Novena
-import com.example.data.models.PrayerCategory
 import com.example.data.models.VaticanPrayer
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
+import com.example.ui.design.AppBanner
+import com.example.ui.design.AppCard
+import com.example.ui.design.AppChip
+import com.example.ui.design.AppDivider
+import com.example.ui.design.AppEmptyState
+import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppListRow
+import com.example.ui.design.AppOrnament
+import com.example.ui.design.AppPrimaryButton
+import com.example.ui.design.AppScreenTitle
+import com.example.ui.design.AppSearchField
+import com.example.ui.design.AppSecondaryButton
+import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.theme.DesignLanguage
+import com.example.ui.theme.ListStyle
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 
-@OptIn(ExperimentalMaterial3Api::class)
+/** The chaplet: a lead bead and ten small ones, five times over. */
+private const val ChapletDecades = 5
+private const val ChapletBeadsPerDecade = 10
+
+/** The lead bead of a decade is cut larger than the ten that follow it. */
+private const val ChapletLeadBeadScale = 1.6f
+
+/** Ring weight where the identity rules its bead edges rather than filling them. */
+private val BeadRingHairline = 0.5.dp
+
+/**
+ * How many entries of the novena index share one list group.
+ *
+ * There are 246 novenas, so the index has to stay lazy; but a group is what
+ * gives Cupertino its inset block and Vatican its head rule, and neither can
+ * straddle two lazy items. Blocking the index is the compromise: it scrolls
+ * cheaply and still reads as grouped rows rather than 246 loose ones.
+ */
+private const val NovenaIndexBlock = 20
+
+/** The frontispiece plate at the head of a novena that ships with an image. */
+private val NovenaPlateHeight = 176.dp
+
+/**
+ * The Vatican devotional, the chaplet of Divine Mercy, the 246 official novenas
+ * and the night office, behind one selector.
+ *
+ * Almost all of it is reading rather than operating: a prayer, a meditation and
+ * a promise are set in the identity's reading face and held to its reading
+ * measure, exactly as scripture is. The novenas are an index of 246 entries,
+ * not a menu, so they are ruled rows carrying their own progress — and the day
+ * of a novena opens as a page, with the nine days listed under it.
+ */
 @Composable
 fun PrayersAndNovenasScreen(
     repository: CatholicDataRepository,
@@ -82,571 +112,238 @@ fun PrayersAndNovenasScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier
 ) {
-    var selectedTab by remember { mutableIntStateOf(0) } // 0 = Devocionario Vaticano, 1 = Novenas Milagrosas
+    val design = LocalAppDesign.current
 
-    // Devocionario State
+    var selectedTab by remember { mutableIntStateOf(0) }
+
+    // Devotional
     var prayerSearchQuery by remember { mutableStateOf("") }
     var selectedThematicTag by remember { mutableStateOf<String?>(null) }
 
-    // Novenas State
+    // Novenas
     var selectedNovena by remember { mutableStateOf<Novena?>(null) }
     var novenaSearchQuery by remember { mutableStateOf("") }
     var selectedNovenaTag by remember { mutableStateOf<String?>(null) }
-    var activeNovenaDay by remember { mutableIntStateOf(1) } // 1..9
-    var novenaCompletedDays by remember { mutableStateOf(setOf(1)) }
+    var activeNovenaDay by remember { mutableIntStateOf(1) }
+    // Keyed by novena id: a single shared set of day numbers reported the same
+    // progress for all 246 of them, so every row read "day 1 of 9".
+    var daysPrayed by remember { mutableStateOf(emptyMap<String, Set<Int>>()) }
+    // The intention `NovenaProgressEntity` carries alongside the day count. No
+    // control writes it yet; it is held here so that wiring has one home.
     var personalIntention by remember { mutableStateOf("") }
 
-    val isPlayingAudio by ttsManager.isPlaying.collectAsState()
+    val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
+
+    val tabsInset = segmentedTabsInset()
 
     Column(
         modifier = modifier
             .fillMaxSize()
+            .background(design.palette.canvas)
             .testTag("prayers_and_novenas_screen")
     ) {
-        PrimaryTabRow(
-            selectedTabIndex = selectedTab,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy
-        ) {
-            Tab(
-                selected = selectedTab == 0,
-                onClick = { selectedTab = 0 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Devocionario"
-                            AppLanguage.EN -> "Prayers"
-                            AppLanguage.PT -> "Devocionário"
-                        },
-                        fontWeight = if (selectedTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
+        AppSegmentedTabs(
+            options = listOf(
+                currentLanguage.pick("Devocionario", "Prayers", "Devocionário"),
+                currentLanguage.pick("Misericordia", "Divine Mercy", "Misericórdia"),
+                currentLanguage.pick("Novenas", "Novenas", "Novenas"),
+                currentLanguage.pick("Completas", "Night Prayer", "Completas")
+            ),
+            selectedIndex = selectedTab,
+            onSelect = { selectedTab = it },
+            modifier = Modifier.padding(
+                start = tabsInset,
+                end = tabsInset,
+                top = design.spacing.cardGap / 2
             )
-            Tab(
-                selected = selectedTab == 1,
-                onClick = { selectedTab = 1 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Coronilla Misericordia"
-                            AppLanguage.EN -> "Divine Mercy Chaplet"
-                            AppLanguage.PT -> "Terço Misericórdia"
-                        },
-                        fontWeight = if (selectedTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedTab == 2,
-                onClick = { selectedTab = 2 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Novenas"
-                            AppLanguage.EN -> "Novenas"
-                            AppLanguage.PT -> "Novenas"
-                        },
-                        fontWeight = if (selectedTab == 2) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedTab == 3,
-                onClick = { selectedTab = 3 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Completas"
-                            AppLanguage.EN -> "Night Prayer"
-                            AppLanguage.PT -> "Completas"
-                        },
-                        fontWeight = if (selectedTab == 3) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-        }
+        )
 
         when (selectedTab) {
-            0 -> {
-                // Vatican Devocionario View
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 16.dp, vertical = 10.dp)
-                ) {
-                    // Search box
-                    OutlinedTextField(
-                        value = prayerSearchQuery,
-                        onValueChange = { prayerSearchQuery = it },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .testTag("prayer_search_input"),
-                        placeholder = {
-                            Text(
-                                when (currentLanguage) {
-                                    AppLanguage.ES -> "Buscar oración o necesidad..."
-                                    AppLanguage.EN -> "Search prayer or petition..."
-                                    AppLanguage.PT -> "Buscar oração ou intenção..."
-                                }
-                            )
-                        },
-                        leadingIcon = {
-                            Icon(imageVector = Icons.Default.Search, contentDescription = null)
-                        },
-                        shape = RoundedCornerShape(14.dp),
-                        singleLine = true
+            0 -> VaticanDevotionalView(
+                repository = repository,
+                currentLanguage = currentLanguage,
+                searchQuery = prayerSearchQuery,
+                onSearchQueryChange = { prayerSearchQuery = it },
+                selectedTag = selectedThematicTag,
+                onSelectTag = { selectedThematicTag = it },
+                currentlySpeaking = currentlySpeaking,
+                onPlayPrayer = { prayer ->
+                    ttsManager.speakDialogue(
+                        prayer.leaderText.get(currentLanguage),
+                        prayer.responseText?.get(currentLanguage) ?: ""
                     )
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    // Thematic Filter Chips
-                    val tags = listOf(
-                        null to when (currentLanguage) { AppLanguage.ES -> "Todas"; AppLanguage.EN -> "All"; AppLanguage.PT -> "Todas" },
-                        "health" to when (currentLanguage) { AppLanguage.ES -> "Salud y Sanación"; AppLanguage.EN -> "Health & Healing"; AppLanguage.PT -> "Saúde e Cura" },
-                        "peace" to when (currentLanguage) { AppLanguage.ES -> "Paz y Serenidad"; AppLanguage.EN -> "Peace of Mind"; AppLanguage.PT -> "Paz de Espírito" },
-                        "family" to when (currentLanguage) { AppLanguage.ES -> "Familia"; AppLanguage.EN -> "Family"; AppLanguage.PT -> "Família" },
-                        "protection" to when (currentLanguage) { AppLanguage.ES -> "Protección"; AppLanguage.EN -> "Protection"; AppLanguage.PT -> "Proteção" },
-                        "forgiveness" to when (currentLanguage) { AppLanguage.ES -> "Perdón y Confesión"; AppLanguage.EN -> "Forgiveness"; AppLanguage.PT -> "Perdão" }
-                    )
-
-                    LazyRow(
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        items(tags) { (tagKey, tagLabel) ->
-                            val isSelected = selectedThematicTag == tagKey
-                            Box(
-                                modifier = Modifier
-                                    .clip(RoundedCornerShape(12.dp))
-                                    .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface)
-                                    .border(
-                                        1.dp,
-                                        if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                                        RoundedCornerShape(12.dp)
-                                    )
-                                    .clickable { selectedThematicTag = tagKey }
-                                    .padding(horizontal = 12.dp, vertical = 6.dp)
-                            ) {
-                                Text(
-                                    text = tagLabel,
-                                    fontSize = 12.sp,
-                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                                    color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface
-                                )
-                            }
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    val filteredPrayers = repository.searchPrayers(
-                        query = prayerSearchQuery,
-                        tag = selectedThematicTag
-                    )
-
-                    LazyColumn(
-                        verticalArrangement = Arrangement.spacedBy(14.dp),
-                        modifier = Modifier.fillMaxSize()
-                    ) {
-                        items(filteredPrayers) { prayer ->
-                            VaticanPrayerCard(
-                                prayer = prayer,
-                                currentLanguage = currentLanguage,
-                                onPlayAudio = {
-                                    ttsManager.speakDialogue(
-                                        prayer.leaderText.get(currentLanguage),
-                                        prayer.responseText?.get(currentLanguage) ?: ""
-                                    )
-                                }
-                            )
-                        }
-                    }
                 }
-            }
+            )
 
-            1 -> {
-                DivineMercyChapletView(
-                    ttsManager = ttsManager,
-                    currentLanguage = currentLanguage,
-                    onOpenNovena = {
-                        selectedTab = 2
-                        selectedNovena = repository.officialNovenas.firstOrNull { it.id == "divine_mercy" } ?: repository.officialNovenas.firstOrNull()
-                        activeNovenaDay = 1
-                    }
-                )
-            }
+            1 -> DivineMercyChapletView(
+                ttsManager = ttsManager,
+                currentLanguage = currentLanguage,
+                onOpenNovena = {
+                    selectedTab = 2
+                    selectedNovena = repository.officialNovenas
+                        .firstOrNull { it.id == "divine_mercy" }
+                        ?: repository.officialNovenas.firstOrNull()
+                    activeNovenaDay = 1
+                }
+            )
 
             2 -> {
-                // Miraculous Novenas View
-                if (selectedNovena == null) {
-                    // List of Novenas
-                    val allNovenas = repository.officialNovenas
-                    val availableTags = listOf(
-                        "impossible", "blessings", "love", "money", "comfort", "health", "family", "peace"
-                    ).filter { tag -> allNovenas.any { it.tags.contains(tag) } }
-                    val tagLabels = mapOf(
-                        "impossible" to (when (currentLanguage) { AppLanguage.ES -> "Casos imposibles/difíciles"; AppLanguage.EN -> "Impossible/difficult cases"; AppLanguage.PT -> "Casos impossíveis/difíceis" }),
-                        "blessings" to (when (currentLanguage) { AppLanguage.ES -> "Bendiciones"; AppLanguage.EN -> "Blessings"; AppLanguage.PT -> "Bênçãos" }),
-                        "love" to (when (currentLanguage) { AppLanguage.ES -> "Amor"; AppLanguage.EN -> "Love"; AppLanguage.PT -> "Amor" }),
-                        "money" to (when (currentLanguage) { AppLanguage.ES -> "Dinero/Trabajo"; AppLanguage.EN -> "Money/Work"; AppLanguage.PT -> "Dinheiro/Trabalho" }),
-                        "comfort" to (when (currentLanguage) { AppLanguage.ES -> "Consuelo"; AppLanguage.EN -> "Comfort"; AppLanguage.PT -> "Consolo" }),
-                        "health" to (when (currentLanguage) { AppLanguage.ES -> "Salud/Cura"; AppLanguage.EN -> "Health/Healing"; AppLanguage.PT -> "Saúde/Cura" }),
-                        "family" to (when (currentLanguage) { AppLanguage.ES -> "Familia"; AppLanguage.EN -> "Family"; AppLanguage.PT -> "Família" }),
-                        "peace" to (when (currentLanguage) { AppLanguage.ES -> "Paz"; AppLanguage.EN -> "Peace"; AppLanguage.PT -> "Paz" })
+                val novena = selectedNovena
+                if (novena == null) {
+                    NovenaIndexView(
+                        novenas = repository.officialNovenas,
+                        currentLanguage = currentLanguage,
+                        searchQuery = novenaSearchQuery,
+                        onSearchQueryChange = { novenaSearchQuery = it },
+                        selectedTag = selectedNovenaTag,
+                        onSelectTag = { selectedNovenaTag = it },
+                        daysPrayed = daysPrayed,
+                        onOpenNovena = {
+                            selectedNovena = it
+                            activeNovenaDay = 1
+                        }
                     )
-                    val filteredNovenas = allNovenas.filter { novena ->
-                        val matchesSearch = novenaSearchQuery.isBlank() || listOf(
-                            novena.title.get(currentLanguage),
-                            novena.patron.get(currentLanguage),
-                            novena.description.get(currentLanguage)
-                        ).any { it.contains(novenaSearchQuery, ignoreCase = true) } ||
-                            novena.days.any { it.prayer.get(currentLanguage).contains(novenaSearchQuery, ignoreCase = true) || it.meditation.get(currentLanguage).contains(novenaSearchQuery, ignoreCase = true) }
-                        val matchesTag = selectedNovenaTag == null || novena.tags.contains(selectedNovenaTag)
-                        matchesSearch && matchesTag
-                    }
-
-                    LazyColumn(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(16.dp)
-                    ) {
-                        item {
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Novenas Oficiales con Control de 9 Días"
-                                    AppLanguage.EN -> "Official Novenas with 9-Day Tracker"
-                                    AppLanguage.PT -> "Novenas Oficiais com Controle de 9 Dias"
-                                },
-                                style = MaterialTheme.typography.titleLarge,
-                                fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
-                            )
-                            Spacer(modifier = Modifier.height(4.dp))
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Lleva el seguimiento diario de tus oraciones, registra tus intenciones y recibe consuelo en la promesa de Dios."
-                                    AppLanguage.EN -> "Track your 9-day prayer progress, record your deepest intentions, and receive divine consolation."
-                                    AppLanguage.PT -> "Acompanhe diariamente suas novenas com registro de intenções e perseverança na oração."
-                                },
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                            Spacer(modifier = Modifier.height(10.dp))
-                            OutlinedTextField(
-                                value = novenaSearchQuery,
-                                onValueChange = { novenaSearchQuery = it },
-                                modifier = Modifier.fillMaxWidth(),
-                                placeholder = { Text(when (currentLanguage) { AppLanguage.ES -> "Buscar novena..."; AppLanguage.EN -> "Search novena..."; AppLanguage.PT -> "Buscar novena..." }) },
-                                leadingIcon = { Icon(Icons.Default.Search, contentDescription = null) },
-                                shape = RoundedCornerShape(14.dp),
-                                singleLine = true
-                            )
-                            Spacer(modifier = Modifier.height(8.dp))
-                            LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
-                                item {
-                                    val isSelected = selectedNovenaTag == null
-                                    Box(
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(12.dp))
-                                            .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface)
-                                            .border(1.dp, if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
-                                            .clickable { selectedNovenaTag = null }
-                                            .padding(horizontal = 12.dp, vertical = 6.dp)
-                                    ) {
-                                        Text(text = when (currentLanguage) { AppLanguage.ES -> "Todas"; AppLanguage.EN -> "All"; AppLanguage.PT -> "Todas" }, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
-                                    }
-                                }
-                                items(availableTags) { tag ->
-                                    val isSelected = selectedNovenaTag == tag
-                                    Box(
-                                        modifier = Modifier
-                                            .clip(RoundedCornerShape(12.dp))
-                                            .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surface)
-                                            .border(1.dp, if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
-                                            .clickable { selectedNovenaTag = tag }
-                                            .padding(horizontal = 12.dp, vertical = 6.dp)
-                                    ) {
-                                        Text(text = tagLabels[tag] ?: tag, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal, color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurface)
-                                    }
-                                }
-                            }
-                        }
-
-                        items(filteredNovenas) { novena ->
-                            NovenaOverviewCard(
-                                novena = novena,
-                                currentLanguage = currentLanguage,
-                                onClick = {
-                                    selectedNovena = novena
-                                    activeNovenaDay = 1
-                                }
-                            )
-                        }
-                    }
                 } else {
-                    // Open Novena Day Tracker View
-                    val novena = selectedNovena!!
-                    val dayData = novena.days.firstOrNull { it.dayNumber == activeNovenaDay } ?: novena.days.first()
-
-                    LazyColumn(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(16.dp)
-                    ) {
-                        item {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                TextButton(
-                                    onClick = { selectedNovena = null },
-                                    modifier = Modifier.testTag("back_to_novenas_button")
-                                ) {
-                                    Text("← " + when (currentLanguage) {
-                                        AppLanguage.ES -> "Lista de Novenas"
-                                        AppLanguage.EN -> "All Novenas"
-                                        AppLanguage.PT -> "Todas as Novenas"
-                                    }, fontWeight = FontWeight.Bold)
-                                }
-
-                                Text(
-                                    text = novena.category.get(currentLanguage),
-                                    fontSize = 11.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = LiturgicalGold
-                                )
-                            }
-                        }
-
-                        item {
-                            Text(
-                                text = novena.title.get(currentLanguage),
-                                style = MaterialTheme.typography.titleLarge,
-                                fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
-                            )
-                            Text(
-                                text = novena.patron.get(currentLanguage),
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-
-                        // Day Selector Circles (1 to 9)
-                        item {
-                            Surface(
-                                shape = RoundedCornerShape(16.dp),
-                                color = MaterialTheme.colorScheme.surfaceVariant,
-                                tonalElevation = 2.dp
-                            ) {
-                                Column(modifier = Modifier.padding(14.dp)) {
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween,
-                                        verticalAlignment = Alignment.CenterVertically
-                                    ) {
-                                        Text(
-                                            text = "PROGRESO: DÍA $activeNovenaDay DE ${novena.days.size}",
-                                            fontSize = 11.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = LiturgicalGold
-                                        )
-                                        Text(
-                                            text = "${novenaCompletedDays.size} rezados",
-                                            fontSize = 11.sp,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                                        )
-                                    }
-
-                                    Spacer(modifier = Modifier.height(10.dp))
-
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.SpaceBetween
-                                    ) {
-                                        (1..novena.days.size).forEach { dayNum ->
-                                            val isSelected = dayNum == activeNovenaDay
-                                            val isCompleted = novenaCompletedDays.contains(dayNum)
-
-                                            Box(
-                                                modifier = Modifier
-                                                    .size(32.dp)
-                                                    .clip(CircleShape)
-                                                    .background(
-                                                        when {
-                                                            isSelected -> SacredBurgundy
-                                                            isCompleted -> LiturgicalGold
-                                                            else -> MaterialTheme.colorScheme.surface
-                                                        }
-                                                    )
-                                                    .border(
-                                                        1.dp,
-                                                        if (isSelected) LiturgicalGold else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
-                                                        CircleShape
-                                                    )
-                                                    .clickable { activeNovenaDay = dayNum },
-                                                contentAlignment = Alignment.Center
-                                            ) {
-                                                Text(
-                                                    text = "$dayNum",
-                                                    fontWeight = FontWeight.Bold,
-                                                    fontSize = 12.sp,
-                                                    color = when {
-                                                        isSelected -> Color.White
-                                                        isCompleted -> Color.Black
-                                                        else -> MaterialTheme.colorScheme.onSurface
-                                                    }
-                                                )
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        // Daily Scripture & Meditation
-                        item {
-                            ElevatedCard(
-                                shape = RoundedCornerShape(18.dp),
-                                colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
-                            ) {
-                                Column(modifier = Modifier.padding(18.dp)) {
-                                    Text(
-                                        text = dayData.theme.get(currentLanguage),
-                                        style = MaterialTheme.typography.titleMedium,
-                                        fontWeight = FontWeight.Bold,
-                                        color = SacredBurgundy
-                                    )
-                                    if (dayData.scripture.isNotBlank()) {
-                                        Text(
-                                            text = dayData.scripture,
-                                            fontSize = 12.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = LiturgicalGold
-                                        )
-                                    }
-
-                                    Spacer(modifier = Modifier.height(12.dp))
-
-                                    if (dayData.meditation.get(currentLanguage).isNotBlank()) {
-                                        Text(
-                                            text = dayData.meditation.get(currentLanguage),
-                                            style = MaterialTheme.typography.bodyMedium,
-                                            lineHeight = 22.sp
-                                        )
-                                        Spacer(modifier = Modifier.height(14.dp))
-                                    }
-
-                                    // Intention guidance
-                                    if (dayData.intentionGuidance.get(currentLanguage).isNotBlank()) {
-                                        Surface(
-                                            shape = RoundedCornerShape(10.dp),
-                                            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
-                                        ) {
-                                            Row(
-                                                modifier = Modifier.padding(10.dp),
-                                                verticalAlignment = Alignment.CenterVertically
-                                            ) {
-                                                Icon(Icons.Default.Info, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
-                                                Spacer(modifier = Modifier.width(8.dp))
-                                                Text(
-                                                    text = dayData.intentionGuidance.get(currentLanguage),
-                                                    fontSize = 11.sp,
-                                                    color = MaterialTheme.colorScheme.onSurface
-                                                )
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        // Prayer of the Day & Action to Mark Completed
-                        item {
-                            ElevatedCard(
-                                shape = RoundedCornerShape(18.dp),
-                                colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-                            ) {
-                                Column(modifier = Modifier.padding(18.dp)) {
-                                    Text(
-                                        text = when (currentLanguage) {
-                                            AppLanguage.ES -> "Oración del Día $activeNovenaDay"
-                                            AppLanguage.EN -> "Prayer for Day $activeNovenaDay"
-                                            AppLanguage.PT -> "Oração do Dia $activeNovenaDay"
-                                        },
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 15.sp,
-                                        color = SacredBurgundy
-                                    )
-
-                                    Spacer(modifier = Modifier.height(10.dp))
-
-                                    Text(
-                                        text = dayData.prayer.get(currentLanguage),
-                                        fontFamily = FontFamily.Serif,
-                                        style = MaterialTheme.typography.bodyLarge,
-                                        lineHeight = 24.sp
-                                    )
-
-                                    Spacer(modifier = Modifier.height(16.dp))
-
-                                    Row(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        horizontalArrangement = Arrangement.spacedBy(10.dp)
-                                    ) {
-                                        ElevatedButton(
-                                            onClick = {
-                                                ttsManager.speakSingle(dayData.prayer.get(currentLanguage))
-                                            },
-                                            modifier = Modifier.weight(1f),
-                                            colors = ButtonDefaults.elevatedButtonColors(
-                                                containerColor = SacredBurgundy,
-                                                contentColor = Color.White
-                                            )
-                                        ) {
-                                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(16.dp))
-                                            Spacer(modifier = Modifier.width(6.dp))
-                                            Text("Escuchar", fontSize = 12.sp)
-                                        }
-
-                                        FilledTonalButton(
-                                            onClick = {
-                                                novenaCompletedDays = novenaCompletedDays + activeNovenaDay
-                                                if (activeNovenaDay < novena.days.size) activeNovenaDay++
-                                            },
-                                            modifier = Modifier.weight(1f),
-                                            colors = ButtonDefaults.filledTonalButtonColors(
-                                                containerColor = LiturgicalGold,
-                                                contentColor = Color.Black
-                                            )
-                                        ) {
-                                            Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp))
-                                            Spacer(modifier = Modifier.width(6.dp))
-                                            Text("Completar Día", fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    NovenaDayView(
+                        novena = novena,
+                        currentLanguage = currentLanguage,
+                        activeDay = activeNovenaDay,
+                        onSelectDay = { activeNovenaDay = it },
+                        daysPrayed = daysPrayed[novena.id].orEmpty(),
+                        currentlySpeaking = currentlySpeaking,
+                        onListen = { ttsManager.speakSingle(it) },
+                        onMarkDayPrayed = {
+                            val prayed = daysPrayed[novena.id].orEmpty() + activeNovenaDay
+                            daysPrayed = daysPrayed + (novena.id to prayed)
+                            if (activeNovenaDay < novena.days.size) activeNovenaDay++
+                        },
+                        onBack = { selectedNovena = null }
+                    )
                 }
             }
 
-            3 -> {
-                NightPrayersScreen(
-                    repository = repository,
-                    ttsManager = ttsManager,
-                    currentLanguage = currentLanguage
+            3 -> NightPrayersScreen(
+                repository = repository,
+                ttsManager = ttsManager,
+                currentLanguage = currentLanguage
+            )
+        }
+    }
+}
+
+// ----------------------------------------------------------------- devotional
+
+@Composable
+private fun VaticanDevotionalView(
+    repository: CatholicDataRepository,
+    currentLanguage: AppLanguage,
+    searchQuery: String,
+    onSearchQueryChange: (String) -> Unit,
+    selectedTag: String?,
+    onSelectTag: (String?) -> Unit,
+    currentlySpeaking: String?,
+    onPlayPrayer: (VaticanPrayer) -> Unit
+) {
+    val design = LocalAppDesign.current
+    val themeScroll = rememberScrollState()
+
+    val themes = listOf(
+        null to currentLanguage.pick("Todas", "All", "Todas"),
+        "health" to currentLanguage.pick("Salud y Sanación", "Health & Healing", "Saúde e Cura"),
+        "peace" to currentLanguage.pick("Paz y Serenidad", "Peace of Mind", "Paz de Espírito"),
+        "family" to currentLanguage.pick("Familia", "Family", "Família"),
+        "protection" to currentLanguage.pick("Protección", "Protection", "Proteção"),
+        "forgiveness" to currentLanguage.pick("Perdón y Confesión", "Forgiveness", "Perdão")
+    )
+
+    val prayers = repository.searchPrayers(query = searchQuery, tag = selectedTag)
+
+    LazyColumn(Modifier.fillMaxSize()) {
+        item {
+            AppScreenTitle(
+                title = currentLanguage.pick("Devocionario", "The Devotional", "Devocionário"),
+                subtitle = currentLanguage.pick(
+                    "Las oraciones del Vaticano, con su versículo, su respuesta y su indulgencia.",
+                    "The prayers of the Holy See, with versicle, response and indulgence.",
+                    "As orações do Vaticano, com versículo, resposta e indulgência."
                 )
+            )
+        }
+
+        item {
+            AppSearchField(
+                value = searchQuery,
+                onValueChange = onSearchQueryChange,
+                placeholder = currentLanguage.pick(
+                    "Buscar oración o necesidad...",
+                    "Search prayer or petition...",
+                    "Buscar oração ou intenção..."
+                ),
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("prayer_search_input")
+            )
+        }
+
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick("Según tu necesidad", "By what you need", "Conforme a necessidade")
+            )
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(themeScroll)
+                    .padding(horizontal = design.spacing.gutter),
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+            ) {
+                themes.forEach { (key, label) ->
+                    AppChip(
+                        label = label,
+                        selected = selectedTag == key,
+                        onClick = { onSelectTag(key) }
+                    )
+                }
             }
         }
+
+        if (prayers.isEmpty()) {
+            item {
+                AppEmptyState(
+                    title = currentLanguage.pick("Sin oraciones", "No prayers", "Sem orações"),
+                    body = currentLanguage.pick(
+                        "Ninguna oración responde a esa búsqueda. Prueba otra palabra o quita el tema.",
+                        "No prayer answers that search. Try another word, or clear the theme.",
+                        "Nenhuma oração responde a essa busca. Tente outra palavra ou remova o tema."
+                    ),
+                    icon = Icons.Default.SearchOff
+                )
+            }
+        } else {
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick("Oraciones", "Prayers", "Orações"),
+                    subtitle = currentLanguage.pick(
+                        "${prayers.size} oraciones",
+                        "${prayers.size} prayers",
+                        "${prayers.size} orações"
+                    )
+                )
+            }
+
+            items(prayers, key = { it.id }) { prayer ->
+                ReadingColumn {
+                    VaticanPrayerCard(
+                        prayer = prayer,
+                        currentLanguage = currentLanguage,
+                        currentlySpeaking = currentlySpeaking,
+                        onPlayAudio = { onPlayPrayer(prayer) }
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
@@ -654,186 +351,64 @@ fun PrayersAndNovenasScreen(
 private fun VaticanPrayerCard(
     prayer: VaticanPrayer,
     currentLanguage: AppLanguage,
+    currentlySpeaking: String?,
     onPlayAudio: () -> Unit
 ) {
-    Card(
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = prayer.title.get(currentLanguage),
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy
-                    )
-                    if (prayer.latinTitle != null) {
-                        Text(
-                            text = prayer.latinTitle,
-                            fontSize = 11.sp,
-                            fontFamily = FontFamily.Serif,
-                            color = LiturgicalGold
-                        )
-                    }
-                }
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
 
-                IconButton(
-                    onClick = onPlayAudio,
-                    modifier = Modifier.testTag("play_prayer_audio_${prayer.id}")
-                ) {
-                    Icon(imageVector = Icons.Default.VolumeUp, contentDescription = "Listen to Prayer", tint = SacredBurgundy)
-                }
-            }
+    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+        BlockHeading(
+            eyebrow = prayer.category.title.get(currentLanguage),
+            detail = prayer.latinTitle
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        Text(
+            text = prayer.title.get(currentLanguage),
+            style = styles.sectionTitle,
+            color = design.palette.textPrimary
+        )
 
-            Spacer(modifier = Modifier.height(10.dp))
+        Spacer(Modifier.height(design.spacing.cardGap))
 
-            Text(
-                text = "V/. " + prayer.leaderText.get(currentLanguage),
-                fontFamily = FontFamily.Serif,
-                style = MaterialTheme.typography.bodyMedium,
-                lineHeight = 22.sp,
-                color = MaterialTheme.colorScheme.onSurface
+        VersicleAndResponse(
+            leaderText = prayer.leaderText.get(currentLanguage),
+            responseText = prayer.responseText?.get(currentLanguage),
+            spokenNow = currentlySpeaking
+        )
+
+        Spacer(Modifier.height(design.spacing.cardPadding))
+        AppDivider()
+        Spacer(Modifier.height(design.spacing.cardGap))
+
+        NoteBlock(
+            label = currentLanguage.pick("Cuándo rezarla", "When to pray it", "Quando rezá-la"),
+            text = prayer.whenToPray.get(currentLanguage)
+        )
+
+        prayer.indulgenceNote?.let { note ->
+            Spacer(Modifier.height(design.spacing.cardGap))
+            NoteBlock(
+                label = currentLanguage.pick("Indulgencia", "Indulgence", "Indulgência"),
+                text = note.get(currentLanguage),
+                textColor = design.palette.accent
             )
-
-            if (prayer.responseText != null) {
-                Spacer(modifier = Modifier.height(8.dp))
-                Text(
-                    text = "R/. " + prayer.responseText.get(currentLanguage),
-                    fontFamily = FontFamily.Serif,
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    color = LiturgicalGold,
-                    lineHeight = 22.sp
-                )
-            }
-
-            Spacer(modifier = Modifier.height(12.dp))
-
-            Text(
-                text = "⏱ " + prayer.whenToPray.get(currentLanguage),
-                fontSize = 11.sp,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-
-            if (prayer.indulgenceNote != null) {
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = "✦ " + prayer.indulgenceNote.get(currentLanguage),
-                    fontSize = 10.sp,
-                    color = SacredBurgundy,
-                    fontWeight = FontWeight.Medium
-                )
-            }
         }
+
+        Spacer(Modifier.height(design.spacing.cardPadding))
+
+        AppSecondaryButton(
+            label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
+            onClick = onPlayAudio,
+            leadingIcon = Icons.Default.VolumeUp,
+            modifier = Modifier
+                .fillMaxWidth()
+                .testTag("play_prayer_audio_${prayer.id}")
+        )
     }
 }
 
-@Composable
-private fun NovenaOverviewCard(
-    novena: Novena,
-    currentLanguage: AppLanguage,
-    onClick: () -> Unit
-) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clip(RoundedCornerShape(16.dp))
-            .clickable(onClick = onClick),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-        border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = novena.title.get(currentLanguage),
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy,
-                    modifier = Modifier.weight(1f)
-                )
-
-                Box(
-                    modifier = Modifier
-                        .clip(RoundedCornerShape(8.dp))
-                        .background(LiturgicalGold.copy(alpha = 0.2f))
-                        .padding(horizontal = 10.dp, vertical = 4.dp)
-                ) {
-                    Text(
-                        text = "${novena.days.size} DÍAS",
-                        fontSize = 10.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy,
-                        maxLines = 1,
-                        softWrap = false
-                    )
-                }
-            }
-
-            novena.imageUrl?.let { url ->
-                Spacer(modifier = Modifier.height(8.dp))
-                AsyncImage(
-                    model = url,
-                    contentDescription = novena.title.get(currentLanguage),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(140.dp)
-                        .clip(RoundedCornerShape(12.dp)),
-                    contentScale = ContentScale.Crop
-                )
-            }
-
-            Spacer(modifier = Modifier.height(4.dp))
-
-            Text(
-                text = novena.patron.get(currentLanguage),
-                fontSize = 11.sp,
-                fontWeight = FontWeight.SemiBold,
-                color = LiturgicalGold
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            Text(
-                text = novena.description.get(currentLanguage),
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onSurface,
-                maxLines = 4
-            )
-
-            Spacer(modifier = Modifier.height(12.dp))
-
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = "Promesas y Milagros Registrados",
-                    fontSize = 11.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-                Text(
-                    text = "Comenzar / Continuar →",
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = MaterialTheme.colorScheme.primary
-                )
-            }
-        }
-    }
-}
+// --------------------------------------------------------------- the chaplet
 
 @Composable
 private fun DivineMercyChapletView(
@@ -841,9 +416,16 @@ private fun DivineMercyChapletView(
     currentLanguage: AppLanguage,
     onOpenNovena: () -> Unit
 ) {
-    var chapletStep by remember { mutableIntStateOf(1) } // 0 = Oraciones Iniciales, 1 = Decenas (1..5), 2 = Conclusión, 3 = Hora 3:00 PM
-    var currentDecade by remember { mutableIntStateOf(1) } // 1..5
-    var currentBead by remember { mutableIntStateOf(0) } // 0 = Cuenta Grande (Padre Eterno), 1..10 = Cuentas Pequeñas (Dolorosa Pasión)
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    // 0 = opening prayers, 1 = the five decades, 2 = conclusion, 3 = 3:00 PM
+    var chapletStep by remember { mutableIntStateOf(1) }
+    var currentDecade by remember { mutableIntStateOf(1) }
+    // 0 = the lead bead (Eternal Father), 1..10 = the small ones (His Passion)
+    var currentBead by remember { mutableIntStateOf(0) }
+
+    val decadeScroll = rememberScrollState()
 
     val openingPrayer = when (currentLanguage) {
         AppLanguage.ES -> "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.\n\n«Expiraste, Jesús, pero la fuente de vida brotó para las almas y el mar de misericordia se abrió para el mundo entero. ¡Oh fuente de vida, insondable Misericordia Divina!, abarca al mundo entero y derrámate sobre nosotros.\n\n¡Oh Sangre y Agua que brotaste del Corazón de Jesús como una fuente de misericordia para nosotros, en Ti confío! (repetir 3 veces)»\n\n[Padre Nuestro, Ave María, Credo de los Apóstoles]"
@@ -875,393 +457,1013 @@ private fun DivineMercyChapletView(
         AppLanguage.PT -> "«Às três horas da tarde implora a Minha misericórdia, especialmente para os pecadores e, ao menos por um breve momento, aprofunda-te na Minha Paixão, particularmente no Meu desamparo no momento da agonia. Esta é a hora da grande misericórdia para o mundo inteiro. Nesta hora nada negarei à alma que Me pedir pelos méritos da Minha Paixão» (Diário, 1320)."
     }
 
-    LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
+    val stepNames = when (currentLanguage) {
+        AppLanguage.ES -> listOf("Inicio", "5 Decenas", "Cierre", "Hora 3:00 PM")
+        AppLanguage.EN -> listOf("Opening", "5 Decades", "Closing", "3:00 PM Hour")
+        AppLanguage.PT -> listOf("Início", "5 Dezenas", "Fechamento", "Hora 15:00")
+    }
+
+    val beadPrayer = if (currentBead == 0) largeBeadPrayer else smallBeadPrayer
+    val stepText = when (chapletStep) {
+        0 -> openingPrayer
+        1 -> beadPrayer
+        2 -> closingPrayer
+        else -> hourOfMercyText
+    }
+    val listenLabel = currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+
+    LazyColumn(Modifier.fillMaxSize()) {
         item {
-            ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
-                colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-            ) {
-                Column(modifier = Modifier.padding(18.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Coronilla de la Divina Misericordia"
-                                AppLanguage.EN -> "Chaplet of Divine Mercy"
-                                AppLanguage.PT -> "Terço da Divina Misericórdia"
-                            },
-                            style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
-                        )
+            AppScreenTitle(
+                title = currentLanguage.pick(
+                    "Coronilla de la Divina Misericordia",
+                    "Chaplet of Divine Mercy",
+                    "Terço da Divina Misericórdia"
+                ),
+                subtitle = currentLanguage.pick(
+                    "Revelada a Santa Faustina Kowalska en Vilna (1935)",
+                    "Revealed to St. Maria Faustina Kowalska in Vilnius (1935)",
+                    "Revelada a Santa Faustina Kowalska em Vilna (1935)"
+                )
+            )
+        }
 
-                        IconButton(
-                            onClick = {
-                                val currentText = when (chapletStep) {
-                                    0 -> openingPrayer
-                                    1 -> if (currentBead == 0) largeBeadPrayer else smallBeadPrayer
-                                    2 -> closingPrayer
-                                    else -> hourOfMercyText
-                                }
-                                ttsManager.speakSingle(currentText)
-                            },
-                            modifier = Modifier.testTag("chaplet_tts_button")
-                        ) {
-                            Icon(Icons.Default.VolumeUp, contentDescription = "Escuchar con Voz", tint = SacredBurgundy)
-                        }
-                    }
-
+        item {
+            ReadingColumn {
+                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                     Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Revelada a Santa Faustina Kowalska en Vilna (1935)"
-                            AppLanguage.EN -> "Revealed to St. Maria Faustina Kowalska in Vilnius (1935)"
-                            AppLanguage.PT -> "Revelada a Santa Faustina Kowalska em Vilna (1935)"
-                        },
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        color = LiturgicalGold
+                        text = currentLanguage.pick(
+                            "Promesa de Nuestro Señor: «Quienquiera que la rece recibirá gran misericordia a la hora de la muerte... Defenderé como Mi propia gloria a cada alma que rece esta coronilla» (Diario, 687).",
+                            "Our Lord's Promise: «Whoever will recite it will receive great mercy at the hour of death... I will defend as My own glory every soul that will say this chaplet» (Diary, 687).",
+                            "Promessa de Nosso Senhor: «Quem quer que a recite receberá grande misericórdia na hora da morte... Defenderei como Minha própria glória cada alma que recitar este terço» (Diário, 687)."
+                        ),
+                        style = styles.quote,
+                        color = design.palette.textPrimary,
+                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                     )
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Promesa de Nuestro Señor: «Quienquiera que la rece recibirá gran misericordia a la hora de la muerte... Defenderé como Mi propia gloria a cada alma que rece esta coronilla» (Diario, 687)."
-                            AppLanguage.EN -> "Our Lord's Promise: «Whoever will recite it will receive great mercy at the hour of death... I will defend as My own glory every soul that will say this chaplet» (Diary, 687)."
-                            AppLanguage.PT -> "Promessa de Nosso Senhor: «Quem quer que a recite receberá grande misericórdia na hora da morte... Defenderei como Minha própria glória cada alma que recitar este terço» (Diário, 687)."
-                        },
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    Spacer(Modifier.height(design.spacing.cardPadding))
+                    AppSecondaryButton(
+                        label = listenLabel,
+                        onClick = { ttsManager.speakSingle(stepText) },
+                        leadingIcon = Icons.Default.VolumeUp,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .testTag("chaplet_tts_button")
                     )
                 }
             }
         }
 
-        // Chaplet Step Selector
         item {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(6.dp)
-            ) {
-                val stepNames = when (currentLanguage) {
-                    AppLanguage.ES -> listOf("Inicio", "5 Decenas", "Cierre", "Hora 3:00 PM")
-                    AppLanguage.EN -> listOf("Opening", "5 Decades", "Closing", "3:00 PM Hour")
-                    AppLanguage.PT -> listOf("Início", "5 Dezenas", "Fechamento", "Hora 15:00")
-                }
-                stepNames.forEachIndexed { idx, name ->
-                    val isSelected = chapletStep == idx
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .clip(RoundedCornerShape(10.dp))
-                            .background(if (isSelected) SacredBurgundy else MaterialTheme.colorScheme.surfaceVariant)
-                            .clickable { chapletStep = idx }
-                            .padding(vertical = 8.dp),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = name,
-                            fontSize = 11.sp,
-                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                            color = if (isSelected) Color.White else MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                }
-            }
+            AppSectionHeader(
+                title = currentLanguage.pick("Partes de la coronilla", "Parts of the chaplet", "Partes do terço")
+            )
+            AppSegmentedTabs(
+                options = stepNames,
+                selectedIndex = chapletStep,
+                onSelect = { chapletStep = it },
+                modifier = Modifier.padding(horizontal = segmentedTabsInset())
+            )
         }
 
         when (chapletStep) {
-            0 -> {
-                // Opening Prayers
-                item {
-                    Card(
-                        shape = RoundedCornerShape(16.dp),
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                        border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
-                    ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
-                            Text(
-                                text = "Oraciones Iniciales",
-                                style = MaterialTheme.typography.titleMedium,
-                                fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
-                            )
-                            Spacer(modifier = Modifier.height(10.dp))
-                            Text(
-                                text = openingPrayer,
-                                fontFamily = FontFamily.Serif,
-                                style = MaterialTheme.typography.bodyMedium,
-                                lineHeight = 24.sp
-                            )
-                            Spacer(modifier = Modifier.height(16.dp))
-                            Button(
-                                onClick = { chapletStep = 1; currentDecade = 1; currentBead = 0 },
-                                modifier = Modifier.fillMaxWidth(),
-                                colors = ButtonDefaults.buttonColors(containerColor = SacredBurgundy)
-                            ) {
-                                Text("Comenzar 1ª Decena →", color = Color.White)
-                            }
-                        }
+            0 -> item {
+                Spacer(Modifier.height(design.spacing.cardGap))
+                ReadingColumn {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        BlockHeading(
+                            eyebrow = currentLanguage.pick(
+                                "Oraciones iniciales",
+                                "Opening prayers",
+                                "Orações iniciais"
+                            ),
+                            detail = null
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Text(
+                            text = openingPrayer,
+                            style = styles.quote,
+                            color = design.palette.textPrimary,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        AppPrimaryButton(
+                            label = currentLanguage.pick(
+                                "Comenzar la 1ª decena",
+                                "Begin the 1st decade",
+                                "Começar a 1ª dezena"
+                            ),
+                            onClick = {
+                                chapletStep = 1
+                                currentDecade = 1
+                                currentBead = 0
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        )
                     }
                 }
             }
 
             1 -> {
-                // 5 Decades Interactive Stepper
                 item {
-                    // Decade selector tabs (1..5)
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
-                    ) {
-                        for (d in 1..5) {
-                            val isCurrentD = currentDecade == d
-                            Box(
-                                modifier = Modifier
-                                    .weight(1f)
-                                    .clip(RoundedCornerShape(12.dp))
-                                    .background(if (isCurrentD) LiturgicalGold else MaterialTheme.colorScheme.surface)
-                                    .border(1.dp, if (isCurrentD) LiturgicalGold else MaterialTheme.colorScheme.outline.copy(alpha = 0.4f), RoundedCornerShape(12.dp))
-                                    .clickable {
-                                        currentDecade = d
-                                        currentBead = 0
-                                    }
-                                    .padding(vertical = 8.dp),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Text(
-                                    text = "${d}ª Dec.",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 12.sp,
-                                    color = if (isCurrentD) Color.Black else MaterialTheme.colorScheme.onSurface
-                                )
-                            }
-                        }
-                    }
-                }
-
-                // Bead Dots Progress (0 = Large, 1..10 = Small)
-                item {
-                    Surface(
-                        shape = RoundedCornerShape(14.dp),
-                        color = MaterialTheme.colorScheme.surfaceVariant,
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Column(
-                            modifier = Modifier.padding(14.dp),
-                            horizontalAlignment = Alignment.CenterHorizontally
-                        ) {
-                            Text(
-                                text = if (currentBead == 0) "Cuenta Principal: Padre Eterno" else "Cuenta $currentBead de 10: Dolorosa Pasión",
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp,
-                                color = SacredBurgundy
-                            )
-                            Spacer(modifier = Modifier.height(10.dp))
-                            Row(
-                                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                // Large bead
-                                Box(
-                                    modifier = Modifier
-                                        .size(24.dp)
-                                        .clip(CircleShape)
-                                        .background(if (currentBead == 0) SacredBurgundy else LiturgicalGold.copy(alpha = 0.35f))
-                                        .clickable { currentBead = 0 },
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Text("G", fontSize = 10.sp, color = if (currentBead == 0) Color.White else Color.Black, fontWeight = FontWeight.Bold)
-                                }
-
-                                for (b in 1..10) {
-                                    val isSmallCurrent = currentBead == b
-                                    Box(
-                                        modifier = Modifier
-                                            .size(18.dp)
-                                            .clip(CircleShape)
-                                            .background(if (isSmallCurrent) SacredBurgundy else if (currentBead > b) LiturgicalGold else MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
-                                            .clickable { currentBead = b },
-                                        contentAlignment = Alignment.Center
-                                    ) {
-                                        Text("$b", fontSize = 8.sp, color = if (isSmallCurrent) Color.White else MaterialTheme.colorScheme.onSurface)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                // Active Bead Prayer Card
-                item {
-                    ElevatedCard(
-                        shape = RoundedCornerShape(16.dp),
-                        colors = CardDefaults.elevatedCardColors(
-                            containerColor = if (currentBead == 0) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.25f) else MaterialTheme.colorScheme.surface
+                    AppSectionHeader(
+                        title = currentLanguage.pick("Decena", "Decade", "Dezena"),
+                        subtitle = currentLanguage.pick(
+                            "Decena $currentDecade de $ChapletDecades",
+                            "Decade $currentDecade of $ChapletDecades",
+                            "Dezena $currentDecade de $ChapletDecades"
                         )
+                    )
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(decadeScroll)
+                            .padding(horizontal = design.spacing.gutter),
+                        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
                     ) {
-                        Column(modifier = Modifier.padding(18.dp)) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Text(
-                                    text = if (currentBead == 0) "Cuenta Grande (Decena $currentDecade)" else "Cuenta Pequeña ($currentBead/10)",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 14.sp,
-                                    color = SacredBurgundy
-                                )
-
-                                IconButton(
-                                    onClick = {
-                                        val text = if (currentBead == 0) largeBeadPrayer else smallBeadPrayer
-                                        ttsManager.speakSingle(text)
-                                    }
-                                ) {
-                                    Icon(Icons.Default.VolumeUp, contentDescription = "Escuchar", tint = SacredBurgundy)
+                        (1..ChapletDecades).forEach { decade ->
+                            AppChip(
+                                label = currentLanguage.pick(
+                                    "Decena $decade",
+                                    "Decade $decade",
+                                    "Dezena $decade"
+                                ),
+                                selected = decade == currentDecade,
+                                onClick = {
+                                    currentDecade = decade
+                                    currentBead = 0
                                 }
-                            }
-
-                            Spacer(modifier = Modifier.height(10.dp))
-
-                            Text(
-                                text = if (currentBead == 0) largeBeadPrayer else smallBeadPrayer,
-                                fontFamily = FontFamily.Serif,
-                                style = MaterialTheme.typography.bodyLarge,
-                                lineHeight = 26.sp,
-                                color = MaterialTheme.colorScheme.onSurface
                             )
+                        }
+                    }
+                }
 
-                            Spacer(modifier = Modifier.height(18.dp))
+                item {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        BlockHeading(
+                            eyebrow = if (currentBead == 0) {
+                                currentLanguage.pick(
+                                    "Cuenta grande · Padre Eterno",
+                                    "Lead bead · Eternal Father",
+                                    "Conta grande · Eterno Pai"
+                                )
+                            } else {
+                                currentLanguage.pick(
+                                    "Cuenta pequeña · Dolorosa Pasión",
+                                    "Small bead · His sorrowful Passion",
+                                    "Conta pequena · Dolorosa Paixão"
+                                )
+                            },
+                            detail = if (currentBead == 0) {
+                                currentLanguage.pick(
+                                    "Decena $currentDecade",
+                                    "Decade $currentDecade",
+                                    "Dezena $currentDecade"
+                                )
+                            } else {
+                                currentLanguage.pick(
+                                    "Cuenta $currentBead de $ChapletBeadsPerDecade",
+                                    "Bead $currentBead of $ChapletBeadsPerDecade",
+                                    "Conta $currentBead de $ChapletBeadsPerDecade"
+                                )
+                            }
+                        )
 
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(10.dp)
-                            ) {
-                                if (currentBead > 0 || currentDecade > 1) {
-                                    FilledTonalButton(
-                                        onClick = {
-                                            if (currentBead > 0) {
-                                                currentBead--
-                                            } else if (currentDecade > 1) {
-                                                currentDecade--
-                                                currentBead = 10
-                                            }
-                                        },
-                                        modifier = Modifier.weight(1f)
-                                    ) {
-                                        Text("← Anterior")
-                                    }
-                                }
+                        Spacer(Modifier.height(design.spacing.cardGap))
 
-                                Button(
+                        DevotionRail(
+                            count = ChapletBeadsPerDecade + 1,
+                            activeIndex = currentBead,
+                            isTold = { it < currentBead },
+                            hasLeadBead = true,
+                            onSelect = { currentBead = it }
+                        )
+
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+
+                        Text(
+                            text = beadPrayer,
+                            style = styles.quote,
+                            color = design.palette.textPrimary,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+
+                        AppSecondaryButton(
+                            label = listenLabel,
+                            onClick = { ttsManager.speakSingle(beadPrayer) },
+                            leadingIcon = Icons.Default.VolumeUp,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+
+                        val atLastBead = currentBead == ChapletBeadsPerDecade &&
+                            currentDecade == ChapletDecades
+                        val canGoBack = currentBead > 0 || currentDecade > 1
+
+                        // Two abreast at most, and only words short enough to
+                        // survive Roman capitals at 360dp in all three languages.
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+                        ) {
+                            if (canGoBack) {
+                                AppSecondaryButton(
+                                    label = currentLanguage.pick("Atrás", "Back", "Voltar"),
                                     onClick = {
-                                        if (currentBead < 10) {
-                                            currentBead++
-                                        } else if (currentDecade < 5) {
-                                            currentDecade++
-                                            currentBead = 0
+                                        if (currentBead > 0) {
+                                            currentBead--
                                         } else {
-                                            chapletStep = 2 // Done 5 decades, go to closing
+                                            currentDecade--
+                                            currentBead = ChapletBeadsPerDecade
                                         }
                                     },
-                                    modifier = Modifier.weight(1f),
-                                    colors = ButtonDefaults.buttonColors(containerColor = SacredBurgundy)
-                                ) {
-                                    Text(
-                                        text = if (currentBead == 10 && currentDecade == 5) "Ir a Conclusión →" else "Siguiente Cuenta →",
-                                        color = Color.White
-                                    )
-                                }
+                                    modifier = Modifier.weight(1f)
+                                )
                             }
+                            if (!atLastBead) {
+                                AppPrimaryButton(
+                                    label = currentLanguage.pick("Avanzar", "Next", "Avançar"),
+                                    onClick = {
+                                        if (currentBead < ChapletBeadsPerDecade) {
+                                            currentBead++
+                                        } else {
+                                            currentDecade++
+                                            currentBead = 0
+                                        }
+                                    },
+                                    modifier = Modifier.weight(1f)
+                                )
+                            }
+                        }
+
+                        if (atLastBead) {
+                            Spacer(Modifier.height(design.spacing.cardGap / 2))
+                            AppPrimaryButton(
+                                label = currentLanguage.pick(
+                                    "Ir a la conclusión",
+                                    "Go to the conclusion",
+                                    "Ir à conclusão"
+                                ),
+                                onClick = { chapletStep = 2 },
+                                modifier = Modifier.fillMaxWidth()
+                            )
                         }
                     }
                 }
             }
 
-            2 -> {
-                // Closing Prayers
-                item {
-                    Card(
-                        shape = RoundedCornerShape(16.dp),
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                        border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
-                    ) {
-                        Column(modifier = Modifier.padding(16.dp)) {
-                            Text(
-                                text = "Doxología Trinitaria y Conclusión",
-                                style = MaterialTheme.typography.titleMedium,
-                                fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
-                            )
-                            Spacer(modifier = Modifier.height(10.dp))
-                            Text(
-                                text = closingPrayer,
-                                fontFamily = FontFamily.Serif,
-                                style = MaterialTheme.typography.bodyMedium,
-                                lineHeight = 24.sp
-                            )
-                            Spacer(modifier = Modifier.height(16.dp))
-                            Button(
-                                onClick = onOpenNovena,
-                                modifier = Modifier.fillMaxWidth(),
-                                colors = ButtonDefaults.buttonColors(containerColor = LiturgicalGold)
-                            ) {
-                                Text("Rezar la Novena a la Divina Misericordia (9 Días) →", color = Color.Black, fontWeight = FontWeight.Bold)
-                            }
-                        }
+            2 -> item {
+                Spacer(Modifier.height(design.spacing.cardGap))
+                ReadingColumn {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        BlockHeading(
+                            eyebrow = currentLanguage.pick(
+                                "Doxología trinitaria y conclusión",
+                                "Trinitarian doxology and conclusion",
+                                "Doxologia trinitária e conclusão"
+                            ),
+                            detail = null
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Text(
+                            text = closingPrayer,
+                            style = styles.quote,
+                            color = design.palette.textPrimary,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        AppPrimaryButton(
+                            label = currentLanguage.pick(
+                                "Rezar la novena de 9 días",
+                                "Pray the 9-day novena",
+                                "Rezar a novena de 9 dias"
+                            ),
+                            onClick = onOpenNovena,
+                            modifier = Modifier.fillMaxWidth()
+                        )
                     }
                 }
             }
 
             3 -> {
-                // Hour of Mercy
                 item {
-                    Surface(
-                        shape = RoundedCornerShape(16.dp),
-                        color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f),
-                        border = CardDefaults.outlinedCardBorder().copy(width = 1.dp)
-                    ) {
-                        Column(modifier = Modifier.padding(18.dp)) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Text(
-                                    text = "La Hora de la Misericordia (3:00 PM)",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 15.sp,
-                                    color = SacredBurgundy
-                                )
-
-                                IconButton(onClick = { ttsManager.speakSingle(hourOfMercyText) }) {
-                                    Icon(Icons.Default.VolumeUp, contentDescription = "Escuchar", tint = SacredBurgundy)
-                                }
-                            }
-
-                            Spacer(modifier = Modifier.height(10.dp))
-
+                    Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                    AppBanner(
+                        title = "3:00 PM",
+                        body = currentLanguage.pick(
+                            "La Hora de la Misericordia",
+                            "The Hour of Mercy",
+                            "A Hora da Misericórdia"
+                        )
+                    )
+                }
+                item {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    ReadingColumn {
+                        AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                             Text(
                                 text = hourOfMercyText,
-                                fontFamily = FontFamily.Serif,
-                                style = MaterialTheme.typography.bodyMedium,
-                                lineHeight = 24.sp,
-                                color = MaterialTheme.colorScheme.onSurface
+                                style = styles.quote,
+                                color = design.palette.textPrimary,
+                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                            )
+                            Spacer(Modifier.height(design.spacing.cardPadding))
+                            AppSecondaryButton(
+                                label = listenLabel,
+                                onClick = { ttsManager.speakSingle(hourOfMercyText) },
+                                leadingIcon = Icons.Default.VolumeUp,
+                                modifier = Modifier.fillMaxWidth()
                             )
                         }
                     }
                 }
             }
         }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
+}
+
+// ----------------------------------------------------------- novena index
+
+@Composable
+private fun NovenaIndexView(
+    novenas: List<Novena>,
+    currentLanguage: AppLanguage,
+    searchQuery: String,
+    onSearchQueryChange: (String) -> Unit,
+    selectedTag: String?,
+    onSelectTag: (String?) -> Unit,
+    daysPrayed: Map<String, Set<Int>>,
+    onOpenNovena: (Novena) -> Unit
+) {
+    val design = LocalAppDesign.current
+    val tagScroll = rememberScrollState()
+
+    val tagLabels = mapOf(
+        "impossible" to currentLanguage.pick("Casos imposibles/difíciles", "Impossible/difficult cases", "Casos impossíveis/difíceis"),
+        "blessings" to currentLanguage.pick("Bendiciones", "Blessings", "Bênçãos"),
+        "love" to currentLanguage.pick("Amor", "Love", "Amor"),
+        "money" to currentLanguage.pick("Dinero/Trabajo", "Money/Work", "Dinheiro/Trabalho"),
+        "comfort" to currentLanguage.pick("Consuelo", "Comfort", "Consolo"),
+        "health" to currentLanguage.pick("Salud/Cura", "Health/Healing", "Saúde/Cura"),
+        "family" to currentLanguage.pick("Familia", "Family", "Família"),
+        "peace" to currentLanguage.pick("Paz", "Peace", "Paz")
+    )
+
+    // Keyed on the size, not on the list: the catalogue is a singleton, and
+    // comparing 246 novenas by value costs more than the work being cached.
+    val availableTags = remember(novenas.size) {
+        listOf("impossible", "blessings", "love", "money", "comfort", "health", "family", "peace")
+            .filter { tag -> novenas.any { it.tags.contains(tag) } }
+    }
+
+    // 246 novenas, each with nine days of prayer and meditation to scan: far
+    // too much to redo on every recomposition of the list.
+    val filtered = remember(novenas.size, searchQuery, selectedTag, currentLanguage) {
+        novenas.filter { novena ->
+            val matchesSearch = searchQuery.isBlank() || listOf(
+                novena.title.get(currentLanguage),
+                novena.patron.get(currentLanguage),
+                novena.description.get(currentLanguage)
+            ).any { it.contains(searchQuery, ignoreCase = true) } ||
+                novena.days.any {
+                    it.prayer.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
+                        it.meditation.get(currentLanguage).contains(searchQuery, ignoreCase = true)
+                }
+            val matchesTag = selectedTag == null || novena.tags.contains(selectedTag)
+            matchesSearch && matchesTag
+        }
+    }
+
+    val blockGap = if (design.decor.listStyle == ListStyle.INSET_GROUPED) {
+        design.spacing.insetGroupGap
+    } else {
+        design.spacing.listItemGap
+    }
+
+    LazyColumn(Modifier.fillMaxSize()) {
+        item {
+            AppScreenTitle(
+                title = currentLanguage.pick(
+                    "Novenas Oficiales con Control de 9 Días",
+                    "Official Novenas with 9-Day Tracker",
+                    "Novenas Oficiais com Controle de 9 Dias"
+                ),
+                subtitle = currentLanguage.pick(
+                    "Lleva el seguimiento diario de tus oraciones, registra tus intenciones y recibe consuelo en la promesa de Dios.",
+                    "Track your 9-day prayer progress, record your deepest intentions, and receive divine consolation.",
+                    "Acompanhe diariamente suas novenas com registro de intenções e perseverança na oração."
+                )
+            )
+        }
+
+        item {
+            AppSearchField(
+                value = searchQuery,
+                onValueChange = onSearchQueryChange,
+                placeholder = currentLanguage.pick(
+                    "Buscar novena...",
+                    "Search novena...",
+                    "Buscar novena..."
+                ),
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("novena_search_input")
+            )
+        }
+
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick("Intención", "Intention", "Intenção")
+            )
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(tagScroll)
+                    .padding(horizontal = design.spacing.gutter),
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+            ) {
+                AppChip(
+                    label = currentLanguage.pick("Todas", "All", "Todas"),
+                    selected = selectedTag == null,
+                    onClick = { onSelectTag(null) }
+                )
+                availableTags.forEach { tag ->
+                    AppChip(
+                        label = tagLabels[tag] ?: tag,
+                        selected = selectedTag == tag,
+                        onClick = { onSelectTag(tag) }
+                    )
+                }
+            }
+        }
+
+        if (filtered.isEmpty()) {
+            item {
+                AppEmptyState(
+                    title = currentLanguage.pick("Sin novenas", "No novenas", "Sem novenas"),
+                    body = currentLanguage.pick(
+                        "Ninguna novena responde a esa búsqueda. Prueba otra palabra o quita la intención.",
+                        "No novena answers that search. Try another word, or clear the intention.",
+                        "Nenhuma novena responde a essa busca. Tente outra palavra ou remova a intenção."
+                    ),
+                    icon = Icons.Default.SearchOff
+                )
+            }
+        } else {
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick("Índice", "Index", "Índice"),
+                    subtitle = currentLanguage.pick(
+                        "${filtered.size} de ${novenas.size} novenas",
+                        "${filtered.size} of ${novenas.size} novenas",
+                        "${filtered.size} de ${novenas.size} novenas"
+                    )
+                )
+            }
+
+            items(filtered.chunked(NovenaIndexBlock)) { block ->
+                AppListGroup {
+                    block.forEach { novena ->
+                        val lastPrayed = daysPrayed[novena.id].orEmpty().maxOrNull()
+                        AppListRow(
+                            title = novena.title.get(currentLanguage),
+                            subtitle = novena.patron.get(currentLanguage),
+                            trailingText = if (lastPrayed == null) {
+                                currentLanguage.pick(
+                                    "${novena.days.size} días",
+                                    "${novena.days.size} days",
+                                    "${novena.days.size} dias"
+                                )
+                            } else {
+                                currentLanguage.pick(
+                                    "Día $lastPrayed de ${novena.days.size}",
+                                    "Day $lastPrayed of ${novena.days.size}",
+                                    "Dia $lastPrayed de ${novena.days.size}"
+                                )
+                            },
+                            onClick = { onOpenNovena(novena) }
+                        )
+                    }
+                }
+                Spacer(Modifier.height(blockGap))
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+// ------------------------------------------------------------- novena page
+
+@Composable
+private fun NovenaDayView(
+    novena: Novena,
+    currentLanguage: AppLanguage,
+    activeDay: Int,
+    onSelectDay: (Int) -> Unit,
+    daysPrayed: Set<Int>,
+    currentlySpeaking: String?,
+    onListen: (String) -> Unit,
+    onMarkDayPrayed: () -> Unit,
+    onBack: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    val dayData = novena.days.firstOrNull { it.dayNumber == activeDay } ?: novena.days.first()
+    val prayerText = dayData.prayer.get(currentLanguage)
+    val meditation = dayData.meditation.get(currentLanguage)
+    val guidance = dayData.intentionGuidance.get(currentLanguage)
+    val description = novena.description.get(currentLanguage)
+
+    LazyColumn(Modifier.fillMaxSize()) {
+        item {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.cardGap),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Row(
+                    Modifier
+                        .weight(1f)
+                        .clickable(onClick = onBack)
+                        .padding(vertical = design.spacing.rowPaddingVertical)
+                        .testTag("back_to_novenas_button"),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = null,
+                        tint = design.palette.accent,
+                        modifier = Modifier.size(design.decor.rowIconSize)
+                    )
+                    Spacer(Modifier.width(design.spacing.iconLabelGap / 2))
+                    Text(
+                        text = caps(
+                            currentLanguage.pick(
+                                "Lista de Novenas",
+                                "All Novenas",
+                                "Todas as Novenas"
+                            )
+                        ),
+                        style = styles.buttonLabel,
+                        color = design.palette.accent,
+                        maxLines = 1
+                    )
+                }
+                Spacer(Modifier.width(design.spacing.cardGap))
+                Text(
+                    text = caps(novena.category.get(currentLanguage)),
+                    style = styles.sectionEyebrow,
+                    color = design.palette.gold,
+                    maxLines = 1
+                )
+            }
+        }
+
+        item {
+            AppScreenTitle(
+                title = novena.title.get(currentLanguage),
+                subtitle = novena.patron.get(currentLanguage)
+            )
+        }
+
+        novena.imageUrl?.let { url ->
+            item {
+                AsyncImage(
+                    model = url,
+                    contentDescription = novena.title.get(currentLanguage),
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .height(NovenaPlateHeight)
+                        .clip(design.shapes.cardLarge)
+                )
+                Spacer(Modifier.height(design.spacing.sectionGap / 2))
+            }
+        }
+
+        if (description.isNotBlank()) {
+            item {
+                ReadingColumn {
+                    Text(
+                        text = description,
+                        style = styles.quote,
+                        color = design.palette.textSecondary,
+                        modifier = Modifier
+                            .padding(horizontal = design.spacing.gutter)
+                            .widthIn(max = design.spacing.readingMaxWidth)
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.sectionGap / 2))
+            }
+        }
+
+        item {
+            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                BlockHeading(
+                    eyebrow = currentLanguage.pick(
+                        "Progreso: día $activeDay de ${novena.days.size}",
+                        "Progress: day $activeDay of ${novena.days.size}",
+                        "Progresso: dia $activeDay de ${novena.days.size}"
+                    ),
+                    detail = currentLanguage.pick(
+                        "${daysPrayed.size} rezados",
+                        "${daysPrayed.size} prayed",
+                        "${daysPrayed.size} rezados"
+                    )
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                DevotionRail(
+                    count = novena.days.size,
+                    activeIndex = activeDay - 1,
+                    isTold = { daysPrayed.contains(it + 1) },
+                    label = { "${it + 1}" },
+                    onSelect = { onSelectDay(it + 1) }
+                )
+            }
+        }
+
+        item {
+            Spacer(Modifier.height(design.spacing.cardGap))
+            ReadingColumn {
+                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                    BlockHeading(
+                        eyebrow = currentLanguage.pick(
+                            "Día $activeDay",
+                            "Day $activeDay",
+                            "Dia $activeDay"
+                        ),
+                        detail = dayData.scripture.ifBlank { null }
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Text(
+                        text = dayData.theme.get(currentLanguage),
+                        style = styles.sectionTitle,
+                        color = design.palette.textPrimary
+                    )
+
+                    if (meditation.isNotBlank()) {
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Text(
+                            text = meditation,
+                            style = styles.quote,
+                            color = design.palette.textPrimary,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+                    }
+
+                    if (guidance.isNotBlank()) {
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        AppDivider()
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Row(Modifier.fillMaxWidth()) {
+                            Icon(
+                                imageVector = Icons.Default.Info,
+                                contentDescription = null,
+                                tint = design.palette.textTertiary,
+                                modifier = Modifier.size(design.decor.rowIconSize)
+                            )
+                            Spacer(Modifier.width(design.spacing.iconLabelGap))
+                            NoteBlock(
+                                label = currentLanguage.pick(
+                                    "Tu intención",
+                                    "Your intention",
+                                    "Sua intenção"
+                                ),
+                                text = guidance,
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        item {
+            Spacer(Modifier.height(design.spacing.cardGap))
+            ReadingColumn {
+                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                    BlockHeading(
+                        eyebrow = currentLanguage.pick(
+                            "Oración del Día $activeDay",
+                            "Prayer for Day $activeDay",
+                            "Oração do Dia $activeDay"
+                        ),
+                        detail = null
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    Text(
+                        text = prayerText,
+                        style = styles.scripture,
+                        color = if (currentlySpeaking == prayerText) {
+                            design.palette.accent
+                        } else {
+                            design.palette.textPrimary
+                        },
+                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                    )
+
+                    Spacer(Modifier.height(design.spacing.cardPadding))
+
+                    // Stacked rather than set two-across: "Completar día" in
+                    // tracked Roman capitals needs the full measure at 360dp.
+                    AppSecondaryButton(
+                        label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
+                        onClick = { onListen(prayerText) },
+                        leadingIcon = Icons.Default.VolumeUp,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .testTag("novena_listen_button")
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    AppPrimaryButton(
+                        label = if (daysPrayed.contains(activeDay)) {
+                            currentLanguage.pick("Día rezado", "Day prayed", "Dia rezado")
+                        } else {
+                            currentLanguage.pick("Completar día", "Complete day", "Completar dia")
+                        },
+                        onClick = onMarkDayPrayed,
+                        leadingIcon = Icons.Default.Check,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .testTag("complete_novena_day_button")
+                    )
+                }
+            }
+        }
+
+        item { AppOrnament() }
+
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick("Los nueve días", "The nine days", "Os nove dias")
+            )
+            AppListGroup {
+                novena.days.forEach { day ->
+                    val prayed = daysPrayed.contains(day.dayNumber)
+                    AppListRow(
+                        title = day.theme.get(currentLanguage),
+                        subtitle = day.scripture.ifBlank { null },
+                        trailingText = if (prayed) "✓ ${day.dayNumber}" else "${day.dayNumber}",
+                        showsNavigationAffordance = false,
+                        selected = day.dayNumber == activeDay,
+                        onClick = { onSelectDay(day.dayNumber) }
+                    )
+                }
+            }
+        }
+
+        val promises = novena.promises.get(currentLanguage)
+        val history = novena.miraculousHistory.get(currentLanguage)
+        if (promises.isNotBlank() || history.isNotBlank()) {
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick(
+                        "Promesas y milagros registrados",
+                        "Recorded promises and miracles",
+                        "Promessas e milagres registrados"
+                    )
+                )
+                ReadingColumn {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        if (promises.isNotBlank()) {
+                            Text(
+                                text = promises,
+                                style = styles.quote,
+                                color = design.palette.textPrimary,
+                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                            )
+                        }
+                        if (promises.isNotBlank() && history.isNotBlank()) {
+                            Spacer(Modifier.height(design.spacing.cardPadding))
+                            AppDivider()
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                        }
+                        if (history.isNotBlank()) {
+                            Text(
+                                text = history,
+                                style = styles.quote,
+                                color = design.palette.textSecondary,
+                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+// ------------------------------------------------------------------ pieces
+
+/**
+ * A run of beads or of days: the nine days of a novena, or the lead bead and
+ * ten small ones of a decade.
+ *
+ * No kit component can express a decade, so this is drawn here — but from
+ * tokens, so the bead is a filled circle on glass and an unfilled ring of leaf
+ * on paper, and nothing has to know which identity is in force.
+ */
+@Composable
+private fun DevotionRail(
+    count: Int,
+    activeIndex: Int,
+    isTold: (Int) -> Boolean,
+    onSelect: (Int) -> Unit,
+    label: ((Int) -> String)? = null,
+    hasLeadBead: Boolean = false,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    val engraved = design.depth.cardBorderWidth > 0.dp
+    val ringWidth = maxOf(
+        design.depth.cardBorderWidth,
+        if (design.depth.usesHairlines) BeadRingHairline else 0.dp
+    )
+
+    BoxWithConstraints(modifier.fillMaxWidth()) {
+        val gap = design.spacing.cardGap / 3
+        val slots = count + (if (hasLeadBead) ChapletLeadBeadScale - 1f else 0f)
+        val bead = ((maxWidth - gap * (count - 1)) / slots)
+            .coerceIn(0.dp, design.spacing.rowMinHeight / 2)
+
+        Row(
+            Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(gap, Alignment.CenterHorizontally),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            repeat(count) { index ->
+                val isActive = index == activeIndex
+                val told = isTold(index)
+                val fill by animateColorAsState(
+                    targetValue = when {
+                        isActive -> palette.accent
+                        engraved -> Color.Transparent
+                        told -> palette.accent.copy(alpha = 0.32f)
+                        else -> palette.selectionTint
+                    },
+                    animationSpec = tween(
+                        durationMillis = design.motion.fastMillis,
+                        easing = design.motion.standardEasing
+                    ),
+                    label = "beadFill"
+                )
+                val ring = when {
+                    engraved && (isActive || told) -> palette.gold
+                    engraved -> palette.gold.copy(alpha = 0.45f)
+                    design.depth.usesHairlines && !isActive -> palette.hairline
+                    else -> Color.Transparent
+                }
+                Box(
+                    Modifier
+                        .size(if (hasLeadBead && index == 0) bead * ChapletLeadBeadScale else bead)
+                        .clip(CircleShape)
+                        .background(fill)
+                        .border(ringWidth, ring, CircleShape)
+                        .clickable { onSelect(index) },
+                    contentAlignment = Alignment.Center
+                ) {
+                    if (label != null) {
+                        Text(
+                            text = label(index),
+                            style = styles.verseNumber,
+                            color = if (isActive) palette.raised else palette.textSecondary,
+                            maxLines = 1
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+/** Leader and response, with whichever line the voice is on set in rubric. */
+@Composable
+private fun VersicleAndResponse(
+    leaderText: String,
+    responseText: String?,
+    spokenNow: String?
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
+        Text(
+            text = "V/. $leaderText",
+            style = styles.quote,
+            color = if (spokenNow == leaderText) design.palette.accent else design.palette.textPrimary
+        )
+        if (responseText != null) {
+            Spacer(Modifier.height(design.spacing.cardGap / 2))
+            Text(
+                text = "R/. $responseText",
+                style = styles.quote,
+                color = if (spokenNow == responseText) design.palette.accent else design.palette.textSecondary
+            )
+        }
+    }
+}
+
+/** An eyebrow over a card, with its reference or count on the line below. */
+@Composable
+private fun BlockHeading(eyebrow: String, detail: String?) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    Column {
+        Text(
+            text = caps(eyebrow),
+            style = styles.sectionEyebrow,
+            color = design.palette.textSecondary
+        )
+        if (detail != null) {
+            Spacer(Modifier.height(design.spacing.cardGap / 3))
+            Text(
+                text = detail,
+                style = styles.rowSubtitle,
+                color = design.palette.textTertiary
+            )
+        }
+    }
+}
+
+/** A small label with its line of apparatus under it. */
+@Composable
+private fun NoteBlock(
+    label: String,
+    text: String,
+    textColor: Color? = null,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    Column(modifier.fillMaxWidth()) {
+        Text(
+            text = caps(label),
+            style = styles.sectionEyebrow,
+            color = design.palette.textTertiary
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 3))
+        Text(
+            text = text,
+            style = styles.rowSubtitle,
+            color = textColor ?: design.palette.textSecondary
+        )
+    }
+}
+
+/**
+ * Holds long-form text to the identity's reading measure and centres it, so a
+ * wide screen reads as the column of a book instead of a wall of type. The two
+ * gutters are added back because the card inside carries them itself.
+ */
+@Composable
+private fun ReadingColumn(content: @Composable ColumnScope.() -> Unit) {
+    val design = LocalAppDesign.current
+    Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
+        Column(
+            Modifier
+                .widthIn(max = design.spacing.readingMaxWidth + design.spacing.gutter * 2)
+                .fillMaxWidth(),
+            content = content
+        )
+    }
+}
+
+/**
+ * No kit insets its own segmented control, so the gutter is the caller's to
+ * give. Vatican is the exception: its strip is a ruled band whose hairline runs
+ * the full width of the leaf, and inset it stops meeting the edges.
+ */
+@Composable
+private fun segmentedTabsInset(): Dp {
+    val design = LocalAppDesign.current
+    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+}
+
+/** Vatican sets its labels as inscriptional capitals; the other two do not. */
+@Composable
+private fun caps(text: String): String =
+    if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
+
+private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
+    AppLanguage.ES -> es
+    AppLanguage.EN -> en
+    AppLanguage.PT -> pt
 }

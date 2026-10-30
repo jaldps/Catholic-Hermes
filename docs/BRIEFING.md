@@ -187,11 +187,11 @@ offline fallback.
   the source incomplete (§2349 has no Spanish or English, §2357 no Portuguese);
   those fall back to a language that has the text rather than rendering empty.
   Guarded by `CatechismCoverageTest`.
-- **Screen migration: 5 of 13.** Migrated: Home, Bible, Catechism, Rosary,
-  Parishes. Not migrated: Habits & Virtues, Prayers & Novenas, Doctrine &
-  History, Spiritual Life, Scripture Study, Night Prayers, Pilgrimage,
-  Devotions Explorer. Unmigrated screens still inherit each identity's colour,
-  type and shape, but not its structural idiom.
+- **Screen migration: 9 of 13.** Migrated: Home, Bible, Catechism, Rosary,
+  Parishes, Doctrine & History, Habits & Virtues, Prayers & Novenas, Spiritual
+  Life. Not migrated: Scripture Study, Night Prayers, Pilgrimage, Devotions
+  Explorer. Unmigrated screens still inherit each identity's colour, type and
+  shape, but not its structural idiom.
 - **The critic loop ran one round.** Apple and Vatican were revised by it;
   Material's findings were applied to the shared tokens.
 
@@ -229,6 +229,21 @@ offline fallback.
     tapping through to the article. Rendering it natively also sidesteps the
     cookie banner entirely. Guarded by `VaticanNewsTest` against a real capture
     of the feed.
+
+### Found during migration, worth knowing
+- **Novena progress has never been persisted.** `NovenaProgressEntity`, its
+  table and three DAO methods all exist, but nothing in the app reads or writes
+  them — progress lived in a `remember` and died with the screen. It is now at
+  least kept per novena rather than shared across all 246, but wiring it to Room
+  is a real outstanding task.
+- Journal categories are stored in Room **in Spanish**; the label is now
+  translated while the stored key is left alone, so existing rows still match.
+- The weekly fidelity strip indexed its weekday letters by position, so the
+  letters were wrong on any day but Sunday.
+- Two screens had a `FloatingActionButton` nested inside the kit's scaffold.
+  No identity in the kit owns a FAB — a Material FAB is wrong in Cupertino and
+  on a Vatican leaf — so both became pinned full-width buttons. Same action,
+  same test tag, but it is a visible change to the add affordance.
 
 ### Dead code to delete
 `LiturgicalCalendarWidget.kt`, `PrayerBeadCounter.kt` and `LiturgicalHeader.kt`

@@ -3,9 +3,11 @@ package com.example.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,47 +16,27 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowForward
-import androidx.compose.material.icons.filled.Bookmark
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.FilledTonalButton
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.PrimaryTabRow
-import androidx.compose.material3.ScrollableTabRow
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -62,12 +44,12 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.JournalEntryEntity
 import com.example.data.local.SanctaFidesDao
@@ -76,10 +58,151 @@ import com.example.data.models.GregorianChantItem
 import com.example.data.models.TriviaQuestion
 import com.example.data.models.ViaCrucisStation
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
+import com.example.ui.design.AppCard
+import com.example.ui.design.AppChip
+import com.example.ui.design.AppDivider
+import com.example.ui.design.AppEmptyState
+import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppListRow
+import com.example.ui.design.AppMetricTile
+import com.example.ui.design.AppOrnament
+import com.example.ui.design.AppPrimaryButton
+import com.example.ui.design.AppScreenTitle
+import com.example.ui.design.AppSecondaryButton
+import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.theme.DesignLanguage
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
 
+private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
+    AppLanguage.ES -> es
+    AppLanguage.EN -> en
+    AppLanguage.PT -> pt
+}
+
+/**
+ * A journal category as it is stored and as it is read.
+ *
+ * [key] is what Room holds and has always held — Spanish — so entries written
+ * before the app spoke three languages keep matching their category. Only the
+ * label is translated.
+ */
+private data class JournalCategory(
+    val key: String,
+    val es: String,
+    val en: String,
+    val pt: String
+)
+
+private val JournalCategories = listOf(
+    JournalCategory("Intención", "Intención", "Intention", "Intenção"),
+    JournalCategory("Agradecimiento", "Agradecimiento", "Thanksgiving", "Agradecimento"),
+    JournalCategory("Examen", "Examen", "Examen", "Exame"),
+    JournalCategory("Gracia", "Gracia", "Grace", "Graça")
+)
+
+/** Falls back to the stored value, so a category from an older build still reads. */
+private fun journalCategoryLabel(key: String, language: AppLanguage): String =
+    JournalCategories.firstOrNull { it.key == key }
+        ?.let { language.pick(it.es, it.en, it.pt) }
+        ?: key
+
+/**
+ * No kit insets its own segmented control, so the gutter is the caller's to
+ * give. Vatican is the exception: its strip is a ruled band whose hairline runs
+ * the full width of the leaf, and inset it stops meeting the edges.
+ */
+@Composable
+private fun tabStripInset(): Dp {
+    val design = LocalAppDesign.current
+    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+}
+
+/**
+ * Holds long-form text to the identity's reading measure and centres it, so a
+ * wide screen reads as a column of a book instead of a wall of type. The two
+ * gutters are added back because the block inside carries them itself.
+ */
+@Composable
+private fun ReadingMeasure(content: @Composable ColumnScope.() -> Unit) {
+    val design = LocalAppDesign.current
+    Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
+        Column(
+            Modifier
+                .widthIn(max = design.spacing.readingMaxWidth + design.spacing.gutter * 2)
+                .fillMaxWidth(),
+            content = content
+        )
+    }
+}
+
+/**
+ * The journal's own input.
+ *
+ * The kit's search field is single-line and wears a magnifier, and neither
+ * suits a title line or a page of writing, so this is cut from the identity's
+ * own field shape, rule weight and type instead.
+ */
+@Composable
+private fun JournalField(
+    value: String,
+    onValueChange: (String) -> Unit,
+    label: String,
+    placeholder: String,
+    minLines: Int = 1,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    Column(modifier.fillMaxWidth()) {
+        Text(text = label, style = styles.sectionEyebrow, color = palette.textSecondary)
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        BasicTextField(
+            value = value,
+            onValueChange = onValueChange,
+            modifier = Modifier.fillMaxWidth(),
+            textStyle = styles.rowTitle.copy(color = palette.textPrimary),
+            minLines = minLines,
+            cursorBrush = SolidColor(palette.accent),
+            decorationBox = { inner ->
+                Box(
+                    Modifier
+                        .fillMaxWidth()
+                        .clip(design.shapes.field)
+                        .background(
+                            palette.selectionTint.copy(alpha = if (design.isDark) 1f else 0.5f)
+                        )
+                        .border(
+                            design.depth.cardBorderWidth.coerceAtLeast(0.75.dp),
+                            palette.hairline,
+                            design.shapes.field
+                        )
+                        .padding(horizontal = 12.dp, vertical = 10.dp)
+                ) {
+                    if (value.isEmpty()) {
+                        Text(
+                            text = placeholder,
+                            style = styles.rowTitle,
+                            color = palette.textTertiary
+                        )
+                    }
+                    inner()
+                }
+            }
+        )
+    }
+}
+
+/**
+ * Journal, trivia, the Via Crucis and the chant player.
+ *
+ * [initialTab] lets Home open the quiz directly rather than landing on the
+ * journal first.
+ */
 @Composable
 fun SpiritualLifeScreen(
     repository: CatholicDataRepository,
@@ -89,688 +212,918 @@ fun SpiritualLifeScreen(
     initialTab: Int = 0,
     modifier: Modifier = Modifier
 ) {
-    var selectedTopTab by remember(initialTab) { mutableIntStateOf(initialTab) }
-
+    val design = LocalAppDesign.current
     val coroutineScope = rememberCoroutineScope()
     val journalEntries by dao.getAllJournalEntries().collectAsState(initial = emptyList())
 
-    // Journal Dialog State
+    var selectedTopTab by remember(initialTab) { mutableIntStateOf(initialTab) }
+
     var showAddJournalDialog by remember { mutableStateOf(false) }
     var newJournalTitle by remember { mutableStateOf("") }
-    var newJournalCategory by remember { mutableStateOf("Intención") }
+    var newJournalCategory by remember { mutableStateOf(JournalCategories.first().key) }
     var newJournalContent by remember { mutableStateOf("") }
 
-    // Trivia State
     val triviaList = repository.triviaQuestions
     var triviaIndex by remember { mutableIntStateOf(0) }
     var selectedOptionIndex by remember { mutableStateOf<Int?>(null) }
     var triviaScore by remember { mutableIntStateOf(0) }
     var hasAnswered by remember { mutableStateOf(false) }
 
-    // Via Crucis State
     var currentStationIndex by remember { mutableIntStateOf(0) }
 
-    // Chant State
-    var selectedChant by remember { mutableStateOf<GregorianChantItem?>(repository.gregorianChants.firstOrNull()) }
+    var selectedChant by remember {
+        mutableStateOf<GregorianChantItem?>(repository.gregorianChants.firstOrNull())
+    }
     val isPlayingAudio by ttsManager.isPlaying.collectAsState()
 
     Column(
         modifier = modifier
             .fillMaxSize()
+            .background(design.palette.canvas)
             .testTag("spiritual_life_screen")
     ) {
-        ScrollableTabRow(
-            selectedTabIndex = selectedTopTab,
-            containerColor = MaterialTheme.colorScheme.surface,
-            contentColor = SacredBurgundy,
-            edgePadding = 12.dp
-        ) {
-            Tab(
-                selected = selectedTopTab == 0,
-                onClick = { selectedTopTab = 0 },
-                text = { Text("Diario Espiritual", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 1,
-                onClick = { selectedTopTab = 1 },
-                text = { Text("Trivia Católica", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 2,
-                onClick = { selectedTopTab = 2 },
-                text = { Text("Santo Vía Crucis", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-            Tab(
-                selected = selectedTopTab == 3,
-                onClick = { selectedTopTab = 3 },
-                text = { Text("Canto Gregoriano", fontWeight = FontWeight.Bold, fontSize = 12.sp) }
-            )
-        }
+        AppSegmentedTabs(
+            options = listOf(
+                currentLanguage.pick("Diario Espiritual", "Spiritual Journal", "Diário Espiritual"),
+                currentLanguage.pick("Trivia Católica", "Catholic Trivia", "Quiz Católico"),
+                currentLanguage.pick("Santo Vía Crucis", "Stations of the Cross", "Santa Via-Sacra"),
+                currentLanguage.pick("Canto Gregoriano", "Gregorian Chant", "Canto Gregoriano")
+            ),
+            selectedIndex = selectedTopTab,
+            onSelect = { selectedTopTab = it },
+            modifier = Modifier
+                .padding(horizontal = tabStripInset())
+                .padding(top = design.spacing.headerTopGap / 2)
+        )
 
         when (selectedTopTab) {
-            0 -> {
-                // Catholic Spiritual Diary & Examen
-                Box(modifier = Modifier.fillMaxSize()) {
-                    LazyColumn(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .padding(16.dp),
-                        verticalArrangement = Arrangement.spacedBy(14.dp)
-                    ) {
-                        item {
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Diario Católico y Peticiones"
-                                    AppLanguage.EN -> "Catholic Spiritual Journal"
-                                    AppLanguage.PT -> "Diário Espiritual Católico"
-                                },
-                                style = MaterialTheme.typography.titleLarge,
-                                fontWeight = FontWeight.Bold,
-                                color = SacredBurgundy
-                            )
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> "Anota tus intenciones al Señor, tus agradecimientos, las gracias concedidas y el examen de conciencia."
-                                    AppLanguage.EN -> "Record your prayers, graces received, answered petitions, and daily examination of conscience."
-                                    AppLanguage.PT -> "Registre suas intenções de oração, graças alcançadas e exame diário de consciência."
-                                },
-                                style = MaterialTheme.typography.bodySmall,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
-
-                        if (journalEntries.isEmpty()) {
-                            item {
-                                Surface(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    shape = RoundedCornerShape(16.dp),
-                                    color = MaterialTheme.colorScheme.surfaceVariant,
-                                    border = CardDefaults.outlinedCardBorder().copy(width = 0.5.dp)
-                                ) {
-                                    Column(
-                                        modifier = Modifier.padding(24.dp),
-                                        horizontalAlignment = Alignment.CenterHorizontally
-                                    ) {
-                                        Icon(imageVector = Icons.Default.Favorite, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(36.dp))
-                                        Spacer(modifier = Modifier.height(10.dp))
-                                        Text(
-                                            text = when (currentLanguage) {
-                                                AppLanguage.ES -> "Tu diario espiritual está vacío"
-                                                AppLanguage.EN -> "Your spiritual journal is empty"
-                                                AppLanguage.PT -> "Seu diário espiritual está vazio"
-                                            },
-                                            fontWeight = FontWeight.Bold,
-                                            fontSize = 15.sp,
-                                            color = SacredBurgundy
-                                        )
-                                        Spacer(modifier = Modifier.height(4.dp))
-                                        Text(
-                                            text = when (currentLanguage) {
-                                                AppLanguage.ES -> "Toca el botón '+' abajo para registrar tu primera intención o agradecimiento."
-                                                AppLanguage.EN -> "Tap '+' below to write your first prayer intention or thanksgiving."
-                                                AppLanguage.PT -> "Toque no botão '+' abaixo para anotar sua intenção de oração."
-                                            },
-                                            fontSize = 12.sp,
-                                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                                        )
-                                    }
-                                }
-                            }
-                        } else {
-                            items(journalEntries) { entry ->
-                                ElevatedCard(
-                                    shape = RoundedCornerShape(16.dp),
-                                    colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
-                                ) {
-                                    Column(modifier = Modifier.padding(16.dp)) {
-                                        Row(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            horizontalArrangement = Arrangement.SpaceBetween,
-                                            verticalAlignment = Alignment.CenterVertically
-                                        ) {
-                                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                                Box(
-                                                    modifier = Modifier
-                                                        .clip(RoundedCornerShape(6.dp))
-                                                        .background(if (entry.isAnswered) LiturgicalGold.copy(alpha = 0.2f) else SacredBurgundy.copy(alpha = 0.15f))
-                                                        .padding(horizontal = 8.dp, vertical = 3.dp)
-                                                ) {
-                                                    Text(
-                                                        text = if (entry.isAnswered) "✓ GRACIA CONCEDIDA" else entry.category.uppercase(),
-                                                        fontSize = 10.sp,
-                                                        fontWeight = FontWeight.Bold,
-                                                        color = if (entry.isAnswered) LiturgicalGold else SacredBurgundy
-                                                    )
-                                                }
-                                            }
-
-                                            IconButton(onClick = {
-                                                coroutineScope.launch { dao.deleteJournalEntry(entry) }
-                                            }) {
-                                                Icon(Icons.Default.Delete, contentDescription = "Delete", tint = MaterialTheme.colorScheme.error, modifier = Modifier.size(18.dp))
-                                            }
-                                        }
-
-                                        Spacer(modifier = Modifier.height(6.dp))
-
-                                        Text(
-                                            text = entry.title,
-                                            style = MaterialTheme.typography.titleMedium,
-                                            fontWeight = FontWeight.Bold,
-                                            color = MaterialTheme.colorScheme.onSurface
-                                        )
-
-                                        Spacer(modifier = Modifier.height(6.dp))
-
-                                        Text(
-                                            text = entry.content,
-                                            style = MaterialTheme.typography.bodyMedium,
-                                            lineHeight = 20.sp
-                                        )
-
-                                        Spacer(modifier = Modifier.height(10.dp))
-
-                                        Row(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            horizontalArrangement = Arrangement.End
-                                        ) {
-                                            TextButton(
-                                                onClick = {
-                                                    coroutineScope.launch {
-                                                        dao.updateJournalEntry(entry.copy(isAnswered = !entry.isAnswered))
-                                                    }
-                                                }
-                                            ) {
-                                                Text(
-                                                    text = if (entry.isAnswered) "Desmarcar concedida" else "Marcar como Gracia Concedida ✓",
-                                                    fontSize = 12.sp,
-                                                    fontWeight = FontWeight.Bold,
-                                                    color = LiturgicalGold
-                                                )
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
+            0 -> JournalTab(
+                entries = journalEntries,
+                currentLanguage = currentLanguage,
+                onToggleAnswered = { entry ->
+                    coroutineScope.launch {
+                        dao.updateJournalEntry(entry.copy(isAnswered = !entry.isAnswered))
                     }
+                },
+                onDelete = { entry ->
+                    coroutineScope.launch { dao.deleteJournalEntry(entry) }
+                },
+                onAdd = { showAddJournalDialog = true }
+            )
 
-                    // Floating Action Button to Add New Entry
-                    FloatingActionButton(
-                        onClick = { showAddJournalDialog = true },
-                        modifier = Modifier
-                            .align(Alignment.BottomEnd)
-                            .padding(20.dp)
-                            .testTag("add_journal_entry_fab"),
-                        containerColor = SacredBurgundy,
-                        contentColor = Color.White
-                    ) {
-                        Icon(imageVector = Icons.Default.Add, contentDescription = "Add Journal Entry")
+            1 -> TriviaTab(
+                questions = triviaList,
+                index = triviaIndex,
+                score = triviaScore,
+                selectedOptionIndex = selectedOptionIndex,
+                hasAnswered = hasAnswered,
+                currentLanguage = currentLanguage,
+                onAnswer = { optionIndex ->
+                    selectedOptionIndex = optionIndex
+                    hasAnswered = true
+                    val correct = triviaList[triviaIndex.coerceIn(triviaList.indices)].correctIndex
+                    if (optionIndex == correct) {
+                        triviaScore += 10
+                    }
+                },
+                onNext = {
+                    selectedOptionIndex = null
+                    hasAnswered = false
+                    if (triviaList.isNotEmpty()) {
+                        triviaIndex = (triviaIndex + 1) % triviaList.size
                     }
                 }
-            }
-
-            1 -> {
-                // Catholic Trivia & Learning Game
-                val currentQ = triviaList[triviaIndex]
-
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(14.dp)
-                ) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = "PREGUNTA ${triviaIndex + 1} DE ${triviaList.size}",
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = LiturgicalGold
-                        )
-                        Text(
-                            text = "Puntos: $triviaScore",
-                            fontSize = 14.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
-                        )
-                    }
-
-                    ElevatedCard(
-                        shape = RoundedCornerShape(18.dp),
-                        colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-                    ) {
-                        Column(modifier = Modifier.padding(18.dp)) {
-                            Text(
-                                text = currentQ.category.get(currentLanguage),
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = LiturgicalGold
-                            )
-                            Spacer(modifier = Modifier.height(8.dp))
-                            Text(
-                                text = currentQ.question.get(currentLanguage),
-                                style = MaterialTheme.typography.titleLarge,
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.onSurface,
-                                lineHeight = 26.sp
-                            )
-                        }
-                    }
-
-                    // 4 Options
-                    currentQ.options.forEachIndexed { idx, opt ->
-                        val isSelected = selectedOptionIndex == idx
-                        val isCorrect = idx == currentQ.correctIndex
-
-                        val borderCol = when {
-                            hasAnswered && isCorrect -> Color(0xFF2E7D32)
-                            hasAnswered && isSelected && !isCorrect -> Color(0xFFC62828)
-                            isSelected -> SacredBurgundy
-                            else -> MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)
-                        }
-
-                        val bgCol = when {
-                            hasAnswered && isCorrect -> Color(0xFF2E7D32).copy(alpha = 0.15f)
-                            hasAnswered && isSelected && !isCorrect -> Color(0xFFC62828).copy(alpha = 0.15f)
-                            isSelected -> MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
-                            else -> MaterialTheme.colorScheme.surface
-                        }
-
-                        Surface(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(RoundedCornerShape(14.dp))
-                                .border(1.5.dp, borderCol, RoundedCornerShape(14.dp))
-                                .background(bgCol)
-                                .clickable(enabled = !hasAnswered) {
-                                    selectedOptionIndex = idx
-                                    hasAnswered = true
-                                    if (idx == currentQ.correctIndex) {
-                                        triviaScore += 10
-                                    }
-                                }
-                                .padding(14.dp)
-                        ) {
-                            Text(
-                                text = opt.get(currentLanguage),
-                                fontSize = 14.sp,
-                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                                color = MaterialTheme.colorScheme.onSurface
-                            )
-                        }
-                    }
-
-                    // Doctrinal Explanation when answered
-                    if (hasAnswered) {
-                        ElevatedCard(
-                            shape = RoundedCornerShape(14.dp),
-                            colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f))
-                        ) {
-                            Column(modifier = Modifier.padding(14.dp)) {
-                                Text(
-                                    text = if (selectedOptionIndex == currentQ.correctIndex) "¡Correcto! ✦" else "Doctrina Católica:",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 13.sp,
-                                    color = SacredBurgundy
-                                )
-                                Spacer(modifier = Modifier.height(4.dp))
-                                Text(
-                                    text = currentQ.doctrinalExplanation.get(currentLanguage),
-                                    fontSize = 12.sp,
-                                    lineHeight = 18.sp
-                                )
-                            }
-                        }
-
-                        FilledTonalButton(
-                            onClick = {
-                                selectedOptionIndex = null
-                                hasAnswered = false
-                                triviaIndex = (triviaIndex + 1) % triviaList.size
-                            },
-                            modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = SacredBurgundy, contentColor = Color.White)
-                        ) {
-                            Text("Siguiente Pregunta →", fontWeight = FontWeight.Bold)
-                        }
-                    }
-                }
-            }
+            )
 
             2 -> {
-                // Via Crucis (Stations of the Cross)
                 val stations = repository.viaCrucisStations
-                val currentStation = stations[currentStationIndex]
-
-                LazyColumn(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
-                ) {
-                    item {
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Text(
-                                text = "ESTACIÓN ${currentStation.stationNumber} DE 14",
-                                fontSize = 12.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = LiturgicalGold
-                            )
-
-                            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                                stations.indices.forEach { idx ->
-                                    Box(
-                                        modifier = Modifier
-                                            .size(if (idx == currentStationIndex) 10.dp else 6.dp)
-                                            .clip(CircleShape)
-                                            .background(if (idx == currentStationIndex) SacredBurgundy else MaterialTheme.colorScheme.outline)
-                                    )
-                                }
-                            }
-                        }
+                ViaCrucisTab(
+                    stations = stations,
+                    currentIndex = currentStationIndex,
+                    isPlayingAudio = isPlayingAudio,
+                    currentLanguage = currentLanguage,
+                    onPrevious = { if (currentStationIndex > 0) currentStationIndex-- },
+                    onNext = {
+                        if (currentStationIndex < stations.size - 1) currentStationIndex++
+                    },
+                    onNarrate = { station ->
+                        ttsManager.speakDialogue(
+                            station.meditation.get(currentLanguage),
+                            station.prayer.get(currentLanguage)
+                        )
                     }
-
-                    item {
-                        ElevatedCard(
-                            shape = RoundedCornerShape(18.dp),
-                            colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-                        ) {
-                            Column(modifier = Modifier.padding(18.dp)) {
-                                Text(
-                                    text = currentStation.title.get(currentLanguage),
-                                    style = MaterialTheme.typography.titleLarge,
-                                    fontWeight = FontWeight.Bold,
-                                    color = SacredBurgundy
-                                )
-
-                                Spacer(modifier = Modifier.height(6.dp))
-
-                                Text(
-                                    text = currentStation.scripture.get(currentLanguage),
-                                    fontFamily = FontFamily.Serif,
-                                    fontSize = 12.sp,
-                                    color = LiturgicalGold
-                                )
-
-                                Spacer(modifier = Modifier.height(14.dp))
-
-                                Text(
-                                    text = currentStation.meditation.get(currentLanguage),
-                                    style = MaterialTheme.typography.bodyLarge,
-                                    lineHeight = 24.sp
-                                )
-
-                                Spacer(modifier = Modifier.height(16.dp))
-
-                                Box(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .clip(RoundedCornerShape(12.dp))
-                                        .background(MaterialTheme.colorScheme.surface)
-                                        .padding(12.dp)
-                                ) {
-                                    Text(
-                                        text = currentStation.prayer.get(currentLanguage),
-                                        fontFamily = FontFamily.Serif,
-                                        fontWeight = FontWeight.SemiBold,
-                                        fontSize = 13.sp,
-                                        color = SacredBurgundy
-                                    )
-                                }
-                            }
-                        }
-                    }
-
-                    item {
-                        // Three buttons abreast left no room for their labels,
-                        // so each word wrapped to one character per line. Prev
-                        // and next share a row and the narration button takes
-                        // its own, which also survives the longer Portuguese
-                        // strings.
-                        Column(
-                            modifier = Modifier.fillMaxWidth(),
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.spacedBy(8.dp)
-                            ) {
-                                ElevatedButton(
-                                    onClick = {
-                                        if (currentStationIndex > 0) currentStationIndex--
-                                    },
-                                    enabled = currentStationIndex > 0,
-                                    modifier = Modifier.weight(1f)
-                                ) {
-                                    Text(
-                                        text = when (currentLanguage) {
-                                            AppLanguage.ES -> "← Anterior"
-                                            AppLanguage.EN -> "← Previous"
-                                            AppLanguage.PT -> "← Anterior"
-                                        },
-                                        maxLines = 1
-                                    )
-                                }
-
-                                ElevatedButton(
-                                    onClick = {
-                                        if (currentStationIndex < stations.size - 1) currentStationIndex++
-                                    },
-                                    enabled = currentStationIndex < stations.size - 1,
-                                    colors = ButtonDefaults.elevatedButtonColors(containerColor = LiturgicalGold, contentColor = Color.Black),
-                                    modifier = Modifier.weight(1f)
-                                ) {
-                                    Text(
-                                        text = when (currentLanguage) {
-                                            AppLanguage.ES -> "Siguiente →"
-                                            AppLanguage.EN -> "Next →"
-                                            AppLanguage.PT -> "Seguinte →"
-                                        },
-                                        maxLines = 1
-                                    )
-                                }
-                            }
-
-                            ElevatedButton(
-                                onClick = {
-                                    ttsManager.speakDialogue(
-                                        currentStation.meditation.get(currentLanguage),
-                                        currentStation.prayer.get(currentLanguage)
-                                    )
-                                },
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = SacredBurgundy, contentColor = Color.White),
-                                modifier = Modifier.fillMaxWidth()
-                            ) {
-                                Icon(if (isPlayingAudio) Icons.Default.Stop else Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(16.dp))
-                                Spacer(modifier = Modifier.width(6.dp))
-                                Text(
-                                    text = when (currentLanguage) {
-                                        AppLanguage.ES -> "Rezar estación"
-                                        AppLanguage.EN -> "Pray this station"
-                                        AppLanguage.PT -> "Rezar estação"
-                                    },
-                                    maxLines = 1
-                                )
-                            }
-                        }
-                    }
-                }
+                )
             }
 
-            3 -> {
-                // Gregorian Chant & Sacred Music Player
-                LazyColumn(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
-                ) {
-                    item {
-                        Text(
-                            text = "Reproductor de Canto Gregoriano y Música Sacra",
-                            style = MaterialTheme.typography.titleLarge,
-                            fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy
-                        )
-                        Text(
-                            text = "Eleva tu alma a Dios con la rica tradición musical milenaria de la Iglesia Católica.",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-
-                    items(repository.gregorianChants) { chant ->
-                        val isSelected = selectedChant?.id == chant.id
-
-                        Card(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clip(RoundedCornerShape(16.dp))
-                                .clickable { selectedChant = chant },
-                            shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(
-                                containerColor = if (isSelected) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f) else MaterialTheme.colorScheme.surfaceVariant
-                            ),
-                            border = CardDefaults.outlinedCardBorder().copy(width = if (isSelected) 1.5.dp else 0.5.dp)
-                        ) {
-                            Column(modifier = Modifier.padding(16.dp)) {
-                                Row(
-                                    modifier = Modifier.fillMaxWidth(),
-                                    horizontalArrangement = Arrangement.SpaceBetween,
-                                    verticalAlignment = Alignment.CenterVertically
-                                ) {
-                                    Row(verticalAlignment = Alignment.CenterVertically) {
-                                        Icon(Icons.Default.MusicNote, contentDescription = null, tint = SacredBurgundy)
-                                        Spacer(modifier = Modifier.width(8.dp))
-                                        Text(text = chant.title, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = SacredBurgundy)
-                                    }
-
-                                    IconButton(
-                                        onClick = {
-                                            selectedChant = chant
-                                            if (isPlayingAudio) {
-                                                ttsManager.stop()
-                                            } else {
-                                                ttsManager.playSacredChime()
-                                                ttsManager.speakSingle(chant.latinLyrics)
-                                            }
-                                        }
-                                    ) {
-                                        Icon(if (isPlayingAudio && isSelected) Icons.Default.Stop else Icons.Default.PlayArrow, contentDescription = "Play Chant", tint = LiturgicalGold)
-                                    }
-                                }
-
-                                Text(text = chant.liturgicalSeason.get(currentLanguage), fontSize = 11.sp, color = LiturgicalGold)
-                                Spacer(modifier = Modifier.height(4.dp))
-                                Text(text = chant.description.get(currentLanguage), fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
-
-                                Spacer(modifier = Modifier.height(10.dp))
-
-                                Text(text = "Letra en Latín:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = SacredBurgundy)
-                                Text(text = chant.latinLyrics, fontFamily = FontFamily.Serif, fontSize = 12.sp, lineHeight = 18.sp)
-
-                                Spacer(modifier = Modifier.height(8.dp))
-
-                                Text(text = "Traducción:", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = LiturgicalGold)
-                                Text(text = chant.translatedLyrics.get(currentLanguage), fontSize = 12.sp, lineHeight = 18.sp)
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        // Add Journal Entry Modal Dialog
-        if (showAddJournalDialog) {
-            AlertDialog(
-                onDismissRequest = { showAddJournalDialog = false },
-                title = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Nueva Intención / Reflexión"
-                            AppLanguage.EN -> "New Prayer / Intention"
-                            AppLanguage.PT -> "Nova Intenção / Oração"
-                        },
-                        fontWeight = FontWeight.Bold,
-                        color = SacredBurgundy
-                    )
-                },
-                text = {
-                    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        OutlinedTextField(
-                            value = newJournalTitle,
-                            onValueChange = { newJournalTitle = it },
-                            label = { Text("Título de la intención o gracia") },
-                            modifier = Modifier.fillMaxWidth(),
-                            singleLine = true
-                        )
-
-                        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                            listOf("Intención", "Agradecimiento", "Examen", "Gracia").forEach { cat ->
-                                Box(
-                                    modifier = Modifier
-                                        .clip(RoundedCornerShape(8.dp))
-                                        .background(if (newJournalCategory == cat) SacredBurgundy else MaterialTheme.colorScheme.surface)
-                                        .border(1.dp, SacredBurgundy, RoundedCornerShape(8.dp))
-                                        .clickable { newJournalCategory = cat }
-                                        .padding(horizontal = 8.dp, vertical = 4.dp)
-                                ) {
-                                    Text(
-                                        text = cat,
-                                        fontSize = 11.sp,
-                                        color = if (newJournalCategory == cat) Color.White else MaterialTheme.colorScheme.onSurface
-                                    )
-                                }
-                            }
-                        }
-
-                        OutlinedTextField(
-                            value = newJournalContent,
-                            onValueChange = { newJournalContent = it },
-                            label = { Text("Escribe tus palabras al Señor...") },
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(120.dp),
-                            maxLines = 5
-                        )
-                    }
-                },
-                confirmButton = {
-                    TextButton(
-                        onClick = {
-                            if (newJournalTitle.isNotBlank()) {
-                                coroutineScope.launch {
-                                    dao.insertJournalEntry(
-                                        JournalEntryEntity(
-                                            title = newJournalTitle,
-                                            category = newJournalCategory,
-                                            content = newJournalContent
-                                        )
-                                    )
-                                    newJournalTitle = ""
-                                    newJournalContent = ""
-                                    showAddJournalDialog = false
-                                }
-                            }
-                        }
-                    ) {
-                        Text("Guardar en el Diario", fontWeight = FontWeight.Bold)
-                    }
-                },
-                dismissButton = {
-                    TextButton(onClick = { showAddJournalDialog = false }) {
-                        Text("Cancelar")
+            3 -> ChantTab(
+                chants = repository.gregorianChants,
+                selectedChantId = selectedChant?.id,
+                isPlayingAudio = isPlayingAudio,
+                currentLanguage = currentLanguage,
+                onSelect = { selectedChant = it },
+                onTogglePlayback = { chant ->
+                    selectedChant = chant
+                    if (isPlayingAudio) {
+                        ttsManager.stop()
+                    } else {
+                        ttsManager.playSacredChime()
+                        ttsManager.speakSingle(chant.latinLyrics)
                     }
                 }
             )
         }
+    }
+
+    if (showAddJournalDialog) {
+        AddJournalEntryDialog(
+            currentLanguage = currentLanguage,
+            title = newJournalTitle,
+            onTitleChange = { newJournalTitle = it },
+            category = newJournalCategory,
+            onCategoryChange = { newJournalCategory = it },
+            content = newJournalContent,
+            onContentChange = { newJournalContent = it },
+            onSave = {
+                if (newJournalTitle.isNotBlank()) {
+                    coroutineScope.launch {
+                        dao.insertJournalEntry(
+                            JournalEntryEntity(
+                                title = newJournalTitle,
+                                category = newJournalCategory,
+                                content = newJournalContent
+                            )
+                        )
+                        newJournalTitle = ""
+                        newJournalContent = ""
+                        showAddJournalDialog = false
+                    }
+                }
+            },
+            onDismiss = { showAddJournalDialog = false }
+        )
+    }
+}
+
+// ------------------------------------------------------------------- journal
+
+@Composable
+private fun JournalTab(
+    entries: List<JournalEntryEntity>,
+    currentLanguage: AppLanguage,
+    onToggleAnswered: (JournalEntryEntity) -> Unit,
+    onDelete: (JournalEntryEntity) -> Unit,
+    onAdd: () -> Unit
+) {
+    val design = LocalAppDesign.current
+
+    Column(Modifier.fillMaxSize()) {
+        LazyColumn(
+            Modifier
+                .fillMaxWidth()
+                .weight(1f)
+        ) {
+            item {
+                AppScreenTitle(
+                    title = currentLanguage.pick(
+                        "Diario Católico y Peticiones",
+                        "Catholic Spiritual Journal",
+                        "Diário Espiritual Católico"
+                    ),
+                    subtitle = currentLanguage.pick(
+                        "Anota tus intenciones al Señor, tus agradecimientos, las gracias concedidas y el examen de conciencia.",
+                        "Record your prayers, graces received, answered petitions, and daily examination of conscience.",
+                        "Registre suas intenções de oração, graças alcançadas e exame diário de consciência."
+                    )
+                )
+            }
+
+            if (entries.isEmpty()) {
+                item {
+                    AppEmptyState(
+                        title = currentLanguage.pick(
+                            "Tu diario espiritual está vacío",
+                            "Your spiritual journal is empty",
+                            "Seu diário espiritual está vazio"
+                        ),
+                        body = currentLanguage.pick(
+                            "Toca el botón de abajo para registrar tu primera intención o agradecimiento.",
+                            "Use the button below to write your first prayer intention or thanksgiving.",
+                            "Use o botão abaixo para anotar sua primeira intenção de oração."
+                        ),
+                        icon = Icons.Default.Favorite
+                    )
+                }
+            } else {
+                item {
+                    AppSectionHeader(
+                        title = currentLanguage.pick("Tus entradas", "Your entries", "Suas entradas"),
+                        subtitle = currentLanguage.pick(
+                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas",
+                            "${entries.size} written · ${entries.count { it.isAnswered }} granted",
+                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas"
+                        )
+                    )
+                }
+
+                itemsIndexed(entries, key = { _, entry -> entry.id }) { index, entry ->
+                    JournalEntry(
+                        entry = entry,
+                        currentLanguage = currentLanguage,
+                        onToggleAnswered = { onToggleAnswered(entry) },
+                        onDelete = { onDelete(entry) }
+                    )
+                    if (index < entries.lastIndex) AppOrnament()
+                }
+            }
+
+            item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+        }
+
+        // The add affordance is pinned rather than floating: no identity here
+        // owns a floating action button, and from the foot of the leaf it stays
+        // reachable however long the journal grows.
+        AppDivider()
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+                .padding(vertical = design.spacing.cardGap)
+        ) {
+            AppPrimaryButton(
+                label = currentLanguage.pick("Nueva entrada", "New entry", "Nova entrada"),
+                onClick = onAdd,
+                leadingIcon = Icons.Default.Add,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .testTag("add_journal_entry_fab")
+            )
+        }
+    }
+}
+
+@Composable
+private fun JournalEntry(
+    entry: JournalEntryEntity,
+    currentLanguage: AppLanguage,
+    onToggleAnswered: () -> Unit,
+    onDelete: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    AppListGroup {
+        AppListRow(
+            title = entry.title,
+            subtitle = if (entry.isAnswered) {
+                currentLanguage.pick(
+                    "✓ Gracia concedida",
+                    "✓ Grace granted",
+                    "✓ Graça concedida"
+                )
+            } else {
+                journalCategoryLabel(entry.category, currentLanguage)
+            },
+            selected = entry.isAnswered,
+            showsNavigationAffordance = false
+        )
+    }
+
+    // The entry's own words are the most valuable text in the app, so they are
+    // set in the reading face at the reading measure rather than squeezed into
+    // a row subtitle.
+    if (entry.content.isNotBlank()) {
+        ReadingMeasure {
+            Text(
+                text = entry.content,
+                style = styles.quote,
+                color = palette.textPrimary,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.cardGap)
+            )
+        }
+    }
+
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .padding(top = design.spacing.cardGap),
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        AppSecondaryButton(
+            label = if (entry.isAnswered) {
+                currentLanguage.pick(
+                    "Desmarcar concedida",
+                    "Unmark as granted",
+                    "Desmarcar concedida"
+                )
+            } else {
+                currentLanguage.pick(
+                    "Marcar como Gracia Concedida ✓",
+                    "Mark as grace granted ✓",
+                    "Marcar como graça concedida ✓"
+                )
+            },
+            onClick = onToggleAnswered,
+            modifier = Modifier.weight(1f)
+        )
+        Box(
+            Modifier
+                .size(48.dp)
+                .clip(design.shapes.buttonSmall)
+                .clickable(onClick = onDelete),
+            contentAlignment = Alignment.Center
+        ) {
+            Icon(
+                imageVector = Icons.Default.Delete,
+                contentDescription = currentLanguage.pick(
+                    "Eliminar entrada",
+                    "Delete entry",
+                    "Excluir entrada"
+                ),
+                tint = MaterialTheme.colorScheme.error,
+                modifier = Modifier.size(20.dp)
+            )
+        }
+    }
+}
+
+@Composable
+private fun AddJournalEntryDialog(
+    currentLanguage: AppLanguage,
+    title: String,
+    onTitleChange: (String) -> Unit,
+    category: String,
+    onCategoryChange: (String) -> Unit,
+    content: String,
+    onContentChange: (String) -> Unit,
+    onSave: () -> Unit,
+    onDismiss: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        shape = design.shapes.dialog,
+        containerColor = palette.groupedSurface,
+        title = {
+            Text(
+                text = currentLanguage.pick(
+                    "Nueva Intención / Reflexión",
+                    "New Prayer / Intention",
+                    "Nova Intenção / Oração"
+                ),
+                style = styles.sectionTitle,
+                color = palette.textPrimary
+            )
+        },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)) {
+                JournalField(
+                    value = title,
+                    onValueChange = onTitleChange,
+                    label = currentLanguage.pick("Título", "Title", "Título"),
+                    placeholder = currentLanguage.pick(
+                        "Título de la intención o gracia",
+                        "Title of the intention or grace",
+                        "Título da intenção ou graça"
+                    )
+                )
+
+                Column(verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)) {
+                    Text(
+                        text = currentLanguage.pick("Categoría", "Category", "Categoria"),
+                        style = styles.sectionEyebrow,
+                        color = palette.textSecondary
+                    )
+                    // Four categories do not fit a dialog's measure in any of
+                    // the three languages, so the run scrolls instead of being
+                    // clipped at the edge.
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .horizontalScroll(rememberScrollState()),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        JournalCategories.forEach { option ->
+                            AppChip(
+                                label = currentLanguage.pick(option.es, option.en, option.pt),
+                                selected = category == option.key,
+                                onClick = { onCategoryChange(option.key) }
+                            )
+                        }
+                    }
+                }
+
+                JournalField(
+                    value = content,
+                    onValueChange = onContentChange,
+                    label = currentLanguage.pick("Tu escrito", "Your writing", "Seu texto"),
+                    placeholder = currentLanguage.pick(
+                        "Escribe tus palabras al Señor...",
+                        "Write your words to the Lord...",
+                        "Escreva suas palavras ao Senhor..."
+                    ),
+                    minLines = 5
+                )
+            }
+        },
+        confirmButton = {
+            AppPrimaryButton(
+                label = currentLanguage.pick(
+                    "Guardar en el Diario",
+                    "Save to journal",
+                    "Salvar no Diário"
+                ),
+                onClick = onSave,
+                enabled = title.isNotBlank()
+            )
+        },
+        dismissButton = {
+            AppSecondaryButton(
+                label = currentLanguage.pick("Cancelar", "Cancel", "Cancelar"),
+                onClick = onDismiss
+            )
+        }
+    )
+}
+
+// -------------------------------------------------------------------- trivia
+
+@Composable
+private fun TriviaTab(
+    questions: List<TriviaQuestion>,
+    index: Int,
+    score: Int,
+    selectedOptionIndex: Int?,
+    hasAnswered: Boolean,
+    currentLanguage: AppLanguage,
+    onAnswer: (Int) -> Unit,
+    onNext: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    if (questions.isEmpty()) {
+        AppEmptyState(
+            title = currentLanguage.pick("Sin preguntas", "No questions", "Sem perguntas"),
+            body = currentLanguage.pick(
+                "El cuestionario no tiene preguntas disponibles.",
+                "The quiz has no questions available.",
+                "O questionário não tem perguntas disponíveis."
+            ),
+            icon = Icons.Default.Lightbulb
+        )
+        return
+    }
+
+    val question = questions[index.coerceIn(questions.indices)]
+    val answeredCorrectly = selectedOptionIndex == question.correctIndex
+
+    LazyColumn(Modifier.fillMaxSize()) {
+        item {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.sectionGap / 2),
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.gutter)
+            ) {
+                AppMetricTile(
+                    value = "${index + 1}/${questions.size}",
+                    caption = currentLanguage.pick("Pregunta", "Question", "Pergunta"),
+                    modifier = Modifier.weight(1f)
+                )
+                AppMetricTile(
+                    value = score.toString(),
+                    caption = currentLanguage.pick("Puntos", "Points", "Pontos"),
+                    modifier = Modifier.weight(1f)
+                )
+            }
+        }
+
+        item { AppSectionHeader(title = question.category.get(currentLanguage)) }
+
+        item {
+            ReadingMeasure {
+                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                    Text(
+                        text = question.question.get(currentLanguage),
+                        style = styles.quote,
+                        color = palette.textPrimary
+                    )
+                }
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.cardGap)) }
+
+        item {
+            AppListGroup {
+                question.options.forEachIndexed { optionIndex, option ->
+                    val chosen = selectedOptionIndex == optionIndex
+                    val isCorrect = optionIndex == question.correctIndex
+                    AppListRow(
+                        title = option.get(currentLanguage),
+                        // Once answered the kit marks the right answer as the
+                        // selected row, so the mark only has to say which of
+                        // the two it is.
+                        trailingText = when {
+                            !hasAnswered -> null
+                            isCorrect -> "✓"
+                            chosen -> "✗"
+                            else -> null
+                        },
+                        showsNavigationAffordance = false,
+                        selected = if (hasAnswered) isCorrect else chosen,
+                        onClick = if (hasAnswered) null else ({ onAnswer(optionIndex) })
+                    )
+                }
+            }
+        }
+
+        if (hasAnswered) {
+            item {
+                ReadingMeasure {
+                    AppCard(
+                        modifier = Modifier
+                            .padding(horizontal = design.spacing.gutter)
+                            .padding(top = design.spacing.sectionGap / 2)
+                    ) {
+                        Text(
+                            text = if (answeredCorrectly) {
+                                currentLanguage.pick("¡Correcto! ✦", "Correct! ✦", "Correto! ✦")
+                            } else {
+                                currentLanguage.pick(
+                                    "Doctrina Católica:",
+                                    "Catholic doctrine:",
+                                    "Doutrina Católica:"
+                                )
+                            },
+                            style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+                            color = if (answeredCorrectly) palette.gold else palette.accent
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Text(
+                            text = question.doctrinalExplanation.get(currentLanguage),
+                            style = styles.quote,
+                            color = palette.textSecondary
+                        )
+                    }
+                }
+            }
+
+            item {
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .padding(top = design.spacing.cardGap)
+                ) {
+                    AppPrimaryButton(
+                        label = currentLanguage.pick(
+                            "Siguiente Pregunta →",
+                            "Next question →",
+                            "Próxima pergunta →"
+                        ),
+                        onClick = onNext,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .testTag("next_trivia_question_button")
+                    )
+                }
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+// --------------------------------------------------------------- via crucis
+
+/**
+ * Fourteen stations as a run of marks. No kit component counts a devotion, so
+ * it is drawn — but from the identity's own badge shape, so Cupertino and
+ * Material get discs and Vatican gets the squared marks of a printed leaf.
+ */
+@Composable
+private fun StationProgress(
+    count: Int,
+    currentIndex: Int,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    Row(
+        modifier,
+        horizontalArrangement = Arrangement.spacedBy(6.dp, Alignment.CenterHorizontally),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        repeat(count) { index ->
+            val isCurrent = index == currentIndex
+            Box(
+                Modifier
+                    .size(if (isCurrent) 9.dp else 5.dp)
+                    .clip(design.shapes.badge)
+                    .background(
+                        if (isCurrent) design.palette.accent else design.palette.hairline
+                    )
+            )
+        }
+    }
+}
+
+@Composable
+private fun ViaCrucisTab(
+    stations: List<ViaCrucisStation>,
+    currentIndex: Int,
+    isPlayingAudio: Boolean,
+    currentLanguage: AppLanguage,
+    onPrevious: () -> Unit,
+    onNext: () -> Unit,
+    onNarrate: (ViaCrucisStation) -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val centred = design.decor.titleAlignment == Alignment.CenterHorizontally
+
+    if (stations.isEmpty()) {
+        AppEmptyState(
+            title = currentLanguage.pick("Sin estaciones", "No stations", "Sem estações"),
+            body = currentLanguage.pick(
+                "El Vía Crucis no está disponible.",
+                "The Stations of the Cross are not available.",
+                "A Via-Sacra não está disponível."
+            )
+        )
+        return
+    }
+
+    val index = currentIndex.coerceIn(stations.indices)
+    val station = stations[index]
+
+    LazyColumn(Modifier.fillMaxSize()) {
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick(
+                    "Estación ${station.stationNumber} de ${stations.size}",
+                    "Station ${station.stationNumber} of ${stations.size}",
+                    "Estação ${station.stationNumber} de ${stations.size}"
+                )
+            )
+        }
+
+        item {
+            StationProgress(
+                count = stations.size,
+                currentIndex = index,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+            )
+        }
+
+        item {
+            ReadingMeasure {
+                AppCard(
+                    modifier = Modifier
+                        .padding(horizontal = design.spacing.gutter)
+                        .padding(top = design.spacing.sectionGap / 2)
+                ) {
+                    Text(
+                        text = station.title.get(currentLanguage),
+                        style = styles.sectionTitle,
+                        color = palette.textPrimary,
+                        textAlign = if (centred) TextAlign.Center else TextAlign.Start,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    // Lesson, meditation and prayer are the three movements of
+                    // a station, so each is ruled off from the next.
+                    Text(
+                        text = station.scripture.get(currentLanguage),
+                        style = styles.scripture,
+                        color = palette.textSecondary
+                    )
+                    Spacer(Modifier.height(design.spacing.cardPadding))
+                    AppDivider()
+                    Spacer(Modifier.height(design.spacing.cardPadding))
+                    Text(
+                        text = station.meditation.get(currentLanguage),
+                        style = styles.quote,
+                        color = palette.textPrimary
+                    )
+                    Spacer(Modifier.height(design.spacing.cardPadding))
+                    AppDivider()
+                    Spacer(Modifier.height(design.spacing.cardPadding))
+                    Text(
+                        text = station.prayer.get(currentLanguage),
+                        style = styles.quote,
+                        color = palette.accent
+                    )
+                }
+            }
+        }
+
+        item {
+            // Three labelled buttons abreast left no room for their words: at
+            // 360dp, in tracked Roman capitals and in Portuguese, each label
+            // broke to one character per line. Previous and next share a row
+            // and narration keeps a row of its own.
+            Column(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.sectionGap / 2),
+                verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+            ) {
+                Row(
+                    Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    AppSecondaryButton(
+                        label = currentLanguage.pick("← Anterior", "← Previous", "← Anterior"),
+                        onClick = onPrevious,
+                        enabled = index > 0,
+                        modifier = Modifier
+                            .weight(1f)
+                            .testTag("via_crucis_previous_button")
+                    )
+                    AppSecondaryButton(
+                        label = currentLanguage.pick("Siguiente →", "Next →", "Seguinte →"),
+                        onClick = onNext,
+                        enabled = index < stations.size - 1,
+                        modifier = Modifier
+                            .weight(1f)
+                            .testTag("via_crucis_next_button")
+                    )
+                }
+                AppPrimaryButton(
+                    label = currentLanguage.pick(
+                        "Rezar estación",
+                        "Pray this station",
+                        "Rezar estação"
+                    ),
+                    onClick = { onNarrate(station) },
+                    leadingIcon = if (isPlayingAudio) Icons.Default.Stop else Icons.Default.PlayArrow,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("via_crucis_narrate_button")
+                )
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+// --------------------------------------------------------------------- chant
+
+@Composable
+private fun ChantTab(
+    chants: List<GregorianChantItem>,
+    selectedChantId: String?,
+    isPlayingAudio: Boolean,
+    currentLanguage: AppLanguage,
+    onSelect: (GregorianChantItem) -> Unit,
+    onTogglePlayback: (GregorianChantItem) -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    LazyColumn(Modifier.fillMaxSize()) {
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick(
+                    "Reproductor de Canto Gregoriano y Música Sacra",
+                    "Gregorian Chant & Sacred Music Player",
+                    "Reprodutor de Canto Gregoriano e Música Sacra"
+                ),
+                subtitle = currentLanguage.pick(
+                    "Eleva tu alma a Dios con la rica tradición musical milenaria de la Iglesia Católica.",
+                    "Lift your soul to God with the Church's thousand-year musical tradition.",
+                    "Eleve sua alma a Deus com a rica tradição musical milenar da Igreja Católica."
+                )
+            )
+        }
+
+        if (chants.isEmpty()) {
+            item {
+                AppEmptyState(
+                    title = currentLanguage.pick("Sin cantos", "No chants", "Sem cantos"),
+                    body = currentLanguage.pick(
+                        "El repertorio no está disponible.",
+                        "The repertoire is not available.",
+                        "O repertório não está disponível."
+                    ),
+                    icon = Icons.Default.MusicNote
+                )
+            }
+        } else {
+            itemsIndexed(chants, key = { _, chant -> chant.id }) { index, chant ->
+                val isSelected = chant.id == selectedChantId
+                val isPlayingThis = isPlayingAudio && isSelected
+
+                ReadingMeasure {
+                    AppCard(
+                        modifier = Modifier.padding(horizontal = design.spacing.gutter),
+                        onClick = { onSelect(chant) }
+                    ) {
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.MusicNote,
+                                contentDescription = null,
+                                tint = if (isSelected) palette.accent else palette.textTertiary,
+                                modifier = Modifier.size(design.decor.rowIconSize)
+                            )
+                            Spacer(Modifier.width(design.spacing.iconLabelGap))
+                            Text(
+                                text = chant.title,
+                                style = styles.sectionTitle,
+                                color = if (isSelected) palette.accent else palette.textPrimary,
+                                modifier = Modifier.weight(1f)
+                            )
+                        }
+
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Text(
+                            text = chant.liturgicalSeason.get(currentLanguage),
+                            style = styles.sectionEyebrow,
+                            color = palette.textSecondary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        Text(
+                            text = chant.description.get(currentLanguage),
+                            style = styles.rowSubtitle,
+                            color = palette.textSecondary
+                        )
+
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        AppDivider()
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+
+                        Text(
+                            text = currentLanguage.pick(
+                                "Letra en Latín:",
+                                "Latin text:",
+                                "Letra em latim:"
+                            ),
+                            style = styles.sectionEyebrow,
+                            color = palette.textSecondary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        Text(
+                            text = chant.latinLyrics,
+                            style = styles.scripture,
+                            color = palette.textPrimary
+                        )
+
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        Text(
+                            text = currentLanguage.pick("Traducción:", "Translation:", "Tradução:"),
+                            style = styles.sectionEyebrow,
+                            color = palette.textSecondary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        Text(
+                            text = chant.translatedLyrics.get(currentLanguage),
+                            style = styles.quote,
+                            color = palette.textSecondary
+                        )
+
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        AppSecondaryButton(
+                            label = if (isPlayingThis) {
+                                currentLanguage.pick("Detener", "Stop", "Parar")
+                            } else {
+                                currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+                            },
+                            onClick = { onTogglePlayback(chant) },
+                            leadingIcon = if (isPlayingThis) {
+                                Icons.Default.Stop
+                            } else {
+                                Icons.Default.PlayArrow
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    }
+                }
+
+                if (index < chants.lastIndex) AppOrnament()
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
