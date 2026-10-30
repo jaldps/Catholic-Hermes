@@ -14,7 +14,7 @@ data class SaintOfTheDay(
 data class MarianApparition(
     val id: String,
     val title: LocalizedText,
-    val feastDay: String,
+    val feastDay: LocalizedText,
     val year: String,
     val location: LocalizedText,
     val primarySanctuary: LocalizedText,

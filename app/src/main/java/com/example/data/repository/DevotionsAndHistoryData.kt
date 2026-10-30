@@ -182,7 +182,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "virgen_del_valle",
             title = LocalizedText("Nuestra Señora del Valle (Virgen del Valle)", "Our Lady of the Valley", "Nossa Senhora do Vale"),
-            feastDay = "8 de Septiembre",
+            feastDay = LocalizedText("8 de Septiembre", "8 September", "8 de Setembro"),
             year = "1530",
             location = LocalizedText("El Valle del Espíritu Santo, Isla de Margarita, Venezuela", "Margarita Island, Venezuela", "Ilha de Margarita, Venezuela"),
             primarySanctuary = LocalizedText("Basílica Menor de Nuestra Señora del Valle", "Minor Basilica of Our Lady of the Valley", "Basílica Menor de Nossa Senhora do Vale"),
@@ -213,7 +213,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "virgen_del_carmen",
             title = LocalizedText("Nuestra Señora del Carmen (Virgen del Monte Carmelo)", "Our Lady of Mount Carmel", "Nossa Senhora do Carmo"),
-            feastDay = "16 de Julio",
+            feastDay = LocalizedText("16 de Julio", "16 July", "16 de Julho"),
             year = "1251",
             location = LocalizedText("Aylesford, Inglaterra / Monte Carmelo, Tierra Santa", "Mount Carmel, Holy Land / England", "Monte Carmelo / Inglaterra"),
             primarySanctuary = LocalizedText("Santuario Stella Maris (Monte Carmelo, Israel) y Templo Votivo de Maipú (Chile)", "Stella Maris Monastery & National Votive Shrine of Maipú", "Santuário Stella Maris e Basílica de Maipú"),
@@ -244,7 +244,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "guadalupe",
             title = LocalizedText("Nuestra Señora de Guadalupe", "Our Lady of Guadalupe", "Nossa Senhora de Guadalupe"),
-            feastDay = "12 de Diciembre",
+            feastDay = LocalizedText("12 de Diciembre", "12 December", "12 de Dezembro"),
             year = "1531",
             location = LocalizedText("Cerro del Tepeyac, Ciudad de México", "Tepeyac Hill, Mexico City", "Monte Tepeyac, Cidade do México"),
             primarySanctuary = LocalizedText("Insigne y Nacional Basílica de Santa María de Guadalupe", "Basilica of Our Lady of Guadalupe", "Basílica de Nossa Senhora de Guadalupe"),
@@ -275,7 +275,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "caridad_del_cobre",
             title = LocalizedText("Nuestra Señora de la Caridad del Cobre (Cachita)", "Our Lady of Charity of El Cobre", "Nossa Senhora da Caridade do Cobre"),
-            feastDay = "8 de Septiembre",
+            feastDay = LocalizedText("8 de Septiembre", "8 September", "8 de Setembro"),
             year = "1612",
             location = LocalizedText("Bahía de Nipe y El Cobre, Santiago de Cuba", "El Cobre, Santiago de Cuba", "El Cobre, Santiago de Cuba"),
             primarySanctuary = LocalizedText("Basílica Santuario Nacional de Nuestra Señora de la Caridad del Cobre", "National Shrine of Our Lady of Charity", "Basílica Santuário Nacional da Caridade do Cobre"),
@@ -306,7 +306,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "aparecida",
             title = LocalizedText("Nuestra Señora de la Concepción Aparecida", "Our Lady of Aparecida", "Nossa Senhora da Conceição Aparecida"),
-            feastDay = "12 de Octubre",
+            feastDay = LocalizedText("12 de Octubre", "12 October", "12 de Outubro"),
             year = "1717",
             location = LocalizedText("Río Paraíba do Sul, São Paulo, Brasil", "Paraíba River, São Paulo, Brazil", "Rio Paraíba do Sul, São Paulo, Brasil"),
             primarySanctuary = LocalizedText("Santuario Nacional de Nuestra Señora de la Concepción Aparecida", "National Shrine of Our Lady of Aparecida", "Santuário Nacional de Nossa Senhora Aparecida"),
@@ -337,7 +337,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "coromoto",
             title = LocalizedText("Nuestra Señora de Coromoto", "Our Lady of Coromoto", "Nossa Senhora de Coromoto"),
-            feastDay = "8 de Septiembre y 11 de Septiembre",
+            feastDay = LocalizedText("8 de Septiembre y 11 de Septiembre", "8 September and 11 September", "8 de Setembro e 11 de Setembro"),
             year = "1652",
             location = LocalizedText("Guanare, Estado Portuguesa, Venezuela", "Guanare, Venezuela", "Guanare, Venezuela"),
             primarySanctuary = LocalizedText("Basílica Menor Santuario Nacional de Nuestra Señora de Coromoto", "National Shrine of Our Lady of Coromoto", "Santuário Nacional de Nossa Senhora de Coromoto"),
@@ -368,7 +368,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "lujan",
             title = LocalizedText("Nuestra Señora de Luján", "Our Lady of Luján", "Nossa Senhora de Luján"),
-            feastDay = "8 de Mayo",
+            feastDay = LocalizedText("8 de Mayo", "8 May", "8 de Maio"),
             year = "1630",
             location = LocalizedText("Río Luján, Buenos Aires, Argentina", "Luján, Argentina", "Luján, Argentina"),
             primarySanctuary = LocalizedText("Basílica Nacional de Nuestra Señora de Luján", "National Basilica of Our Lady of Luján", "Basílica Nacional de Nossa Senhora de Luján"),
@@ -399,7 +399,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "chiquinquira",
             title = LocalizedText("Nuestra Señora del Rosario de Chiquinquirá (La Chinita)", "Our Lady of the Rosary of Chiquinquirá", "Nossa Senhora de Chiquinquirá"),
-            feastDay = "9 de Julio y 18 de Noviembre",
+            feastDay = LocalizedText("9 de Julio y 18 de Noviembre", "9 July and 18 November", "9 de Julho e 18 de Novembro"),
             year = "1586",
             location = LocalizedText("Chiquinquirá, Boyacá, Colombia / Maracaibo, Venezuela", "Chiquinquirá, Colombia / Maracaibo", "Chiquinquirá, Colômbia"),
             primarySanctuary = LocalizedText("Basílica de Nuestra Señora del Rosario de Chiquinquirá (Colombia y Zulia)", "Basilica of Our Lady of the Rosary of Chiquinquirá", "Basílica de Nossa Senhora de Chiquinquirá"),
@@ -430,7 +430,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "fatima",
             title = LocalizedText("Nuestra Señora del Rosario de Fátima", "Our Lady of the Rosary of Fatima", "Nossa Senhora de Fátima"),
-            feastDay = "13 de Mayo",
+            feastDay = LocalizedText("13 de Mayo", "13 May", "13 de Maio"),
             year = "1917",
             location = LocalizedText("Cova da Iria, Fátima, Portugal", "Cova da Iria, Fatima, Portugal", "Cova da Iria, Fátima, Portugal"),
             primarySanctuary = LocalizedText("Santuario de Nuestra Señora del Rosario de Fátima", "Sanctuary of Our Lady of Fatima", "Santuário de Fátima"),
@@ -461,7 +461,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "lourdes",
             title = LocalizedText("Nuestra Señora de Lourdes", "Our Lady of Lourdes", "Nossa Senhora de Lourdes"),
-            feastDay = "11 de Febrero",
+            feastDay = LocalizedText("11 de Febrero", "11 February", "11 de Fevereiro"),
             year = "1858",
             location = LocalizedText("Gruta de Massabielle, Lourdes, Francia", "Grotto of Massabielle, Lourdes, France", "Gruta de Massabielle, Lourdes, França"),
             primarySanctuary = LocalizedText("Santuario de Nuestra Señora de Lourdes", "Sanctuary of Our Lady of Lourdes", "Santuário de Nossa Senhora de Lourdes"),
@@ -492,7 +492,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "virgen_del_pilar",
             title = LocalizedText("Nuestra Señora del Pilar", "Our Lady of the Pillar", "Nossa Senhora do Pilar"),
-            feastDay = "12 de Octubre",
+            feastDay = LocalizedText("12 de Octubre", "12 October", "12 de Outubro"),
             year = "40 d.C.",
             location = LocalizedText("Zaragoza, España", "Zaragoza, Spain", "Saragoça, Espanha"),
             primarySanctuary = LocalizedText("Catedral-Basílica de Nuestra Señora del Pilar", "Cathedral-Basilica of Our Lady of the Pillar", "Catedral-Basílica de Nossa Senhora do Pilar"),
@@ -523,7 +523,7 @@ object DevotionsAndHistoryData {
         MarianApparition(
             id = "medalla_milagrosa",
             title = LocalizedText("Nuestra Señora de la Medalla Milagrosa", "Our Lady of the Miraculous Medal", "Nossa Senhora das Graças da Medalha Milagrosa"),
-            feastDay = "27 de Noviembre",
+            feastDay = LocalizedText("27 de Noviembre", "27 November", "27 de Novembro"),
             year = "1830",
             location = LocalizedText("Rue du Bac, París, Francia", "Rue du Bac, Paris, France", "Rue du Bac, Paris, França"),
             primarySanctuary = LocalizedText("Capilla de Nuestra Señora de la Medalla Milagrosa (París)", "Chapel of Our Lady of the Miraculous Medal", "Capela da Medalha Milagrosa em Paris"),

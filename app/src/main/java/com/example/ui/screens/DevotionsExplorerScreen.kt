@@ -1,47 +1,31 @@
 package com.example.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.ScrollState
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Church
-import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.Info
-import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolumeUp
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.SecondaryTabRow
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -51,21 +35,36 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import androidx.compose.ui.text.TextStyle
 import com.example.data.models.AppLanguage
 import com.example.data.models.ChristManifestation
 import com.example.data.models.MarianApparition
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
+import com.example.ui.design.AppCard
+import com.example.ui.design.AppChip
+import com.example.ui.design.AppEmptyState
+import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppListRow
+import com.example.ui.design.AppSearchField
+import com.example.ui.design.AppSecondaryButton
+import com.example.ui.design.AppSectionHeader
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 
-@OptIn(ExperimentalMaterial3Api::class)
+/** Sentinel for "every region", so the chip's label can be translated freely. */
+private const val EVERY_REGION = "ALL"
+
+/**
+ * The Marian advocations and the manifestations of Christ, each one set as a
+ * folio entry: a ruled index line carrying the name, the place and the year,
+ * and beneath it the account itself held to the reading measure.
+ *
+ * This is a pane of [DoctrineAndHistoryScreen], not a destination — the parent
+ * owns the tab strip, so the two bodies of devotion are chosen with chips and
+ * the pane opens straight into its own running head rather than a second strip.
+ */
 @Composable
 fun DevotionsExplorerScreen(
     repository: CatholicDataRepository,
@@ -73,480 +72,523 @@ fun DevotionsExplorerScreen(
     onSpeakText: ((String) -> Unit)? = null,
     modifier: Modifier = Modifier
 ) {
-    var selectedCategoryTab by remember { mutableIntStateOf(0) } // 0 = Marian Advocations, 1 = Christ Devotions
+    val design = LocalAppDesign.current
+
+    // 0 = Marian advocations, 1 = devotions to Christ.
+    var selectedCategoryTab by remember { mutableIntStateOf(0) }
     var searchQuery by remember { mutableStateOf("") }
-    var selectedRegionFilter by remember { mutableStateOf("ALL") } // "ALL", "Americas", "Europe", "Universal"
+    var selectedRegionFilter by remember { mutableStateOf(EVERY_REGION) }
+
+    // Held outside the list: a rail that scrolled off screen would otherwise
+    // come back rewound, with the chosen chip hidden off to the right.
+    val categoryScroll = rememberScrollState()
+    val regionScroll = rememberScrollState()
 
     val marianList = repository.marianApparitions
     val christList = repository.christManifestations
+
+    val categories = listOf(
+        currentLanguage.pick(
+            "Advocaciones Marianas (${marianList.size})",
+            "Marian Advocations (${marianList.size})",
+            "Advocações Marianas (${marianList.size})"
+        ),
+        currentLanguage.pick(
+            "Devociones a Cristo (${christList.size})",
+            "Devotions to Christ (${christList.size})",
+            "Devoções a Cristo (${christList.size})"
+        )
+    )
+
+    val regions = listOf(
+        EVERY_REGION to currentLanguage.pick("Todas", "All", "Todas"),
+        "Americas" to currentLanguage.pick(
+            "América Latina y el Caribe",
+            "Latin America and the Caribbean",
+            "América Latina e o Caribe"
+        ),
+        "Europe" to currentLanguage.pick(
+            "Europa y Santuarios Históricos",
+            "Europe and historic shrines",
+            "Europa e Santuários Históricos"
+        ),
+        "Universal" to currentLanguage.pick(
+            "Devociones Universales",
+            "Universal devotions",
+            "Devoções Universais"
+        )
+    )
+
+    val query = searchQuery.trim().lowercase()
+
+    fun matches(region: String, vararg fields: String): Boolean {
+        val inRegion = selectedRegionFilter == EVERY_REGION || region == selectedRegionFilter
+        return inRegion && (query.isEmpty() || fields.any { it.lowercase().contains(query) })
+    }
+
+    val filteredMarian = marianList.filter { item ->
+        matches(
+            item.region,
+            item.title.get(currentLanguage),
+            item.country.get(currentLanguage),
+            item.location.get(currentLanguage),
+            item.patronageOf.get(currentLanguage),
+            item.primarySanctuary.get(currentLanguage),
+            item.recordedMiracles.get(currentLanguage)
+        )
+    }
+
+    val filteredChrist = christList.filter { item ->
+        matches(
+            item.region,
+            item.title.get(currentLanguage),
+            item.country.get(currentLanguage),
+            item.primarySanctuary.get(currentLanguage),
+            item.originHistory.get(currentLanguage),
+            item.recordedMiracles.get(currentLanguage)
+        )
+    }
+
+    val showingMarian = selectedCategoryTab == 0
 
     Column(
         modifier = modifier
             .fillMaxSize()
             .testTag("devotions_explorer_screen")
     ) {
-        SecondaryTabRow(
-            selectedTabIndex = selectedCategoryTab,
-            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-            contentColor = SacredBurgundy
-        ) {
-            Tab(
-                selected = selectedCategoryTab == 0,
-                onClick = { selectedCategoryTab = 0 },
-                text = {
-                    Text(
-                        text = "Advocaciones Marianas (${marianList.size})",
-                        fontWeight = if (selectedCategoryTab == 0) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-            Tab(
-                selected = selectedCategoryTab == 1,
-                onClick = { selectedCategoryTab = 1 },
-                text = {
-                    Text(
-                        text = "Devociones a Cristo (${christList.size})",
-                        fontWeight = if (selectedCategoryTab == 1) FontWeight.Bold else FontWeight.Normal,
-                        fontSize = 12.sp
-                    )
-                }
-            )
-        }
-
-        // Search bar & Region filter chips
-        Column(modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
-            OutlinedTextField(
-                value = searchQuery,
-                onValueChange = { searchQuery = it },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .testTag("devotions_search_input"),
-                placeholder = {
-                    Text(
-                        text = "Buscar por nombre, país, santuario o milagro...",
-                        fontSize = 12.sp
-                    )
-                },
-                leadingIcon = {
-                    Icon(Icons.Default.Search, contentDescription = null, tint = SacredBurgundy)
-                },
-                singleLine = true
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                item {
-                    FilterChip(
-                        selected = selectedRegionFilter == "ALL",
-                        onClick = { selectedRegionFilter = "ALL" },
-                        label = { Text("Todas", fontSize = 11.sp) }
-                    )
-                }
-                item {
-                    FilterChip(
-                        selected = selectedRegionFilter == "Americas",
-                        onClick = { selectedRegionFilter = "Americas" },
-                        label = { Text("América Latina y el Caribe", fontSize = 11.sp) }
-                    )
-                }
-                item {
-                    FilterChip(
-                        selected = selectedRegionFilter == "Europe",
-                        onClick = { selectedRegionFilter = "Europe" },
-                        label = { Text("Europa y Santuarios Históricos", fontSize = 11.sp) }
-                    )
-                }
-                item {
-                    FilterChip(
-                        selected = selectedRegionFilter == "Universal",
-                        onClick = { selectedRegionFilter = "Universal" },
-                        label = { Text("Devociones Universales", fontSize = 11.sp) }
+        // Either label fills the leaf on its own in tracked capitals, so the
+        // two never sit abreast: the rail scrolls instead.
+        ReadingColumn {
+            ChipRail(scroll = categoryScroll) {
+                categories.forEachIndexed { index, label ->
+                    AppChip(
+                        label = label,
+                        selected = selectedCategoryTab == index,
+                        onClick = { selectedCategoryTab = index }
                     )
                 }
             }
         }
 
-        if (selectedCategoryTab == 0) {
-            val filteredMarian = marianList.filter { item ->
-                val matchesRegion = when (selectedRegionFilter) {
-                    "Americas" -> item.region == "Americas"
-                    "Europe" -> item.region == "Europe"
-                    "Universal" -> item.region == "Universal"
-                    else -> true
-                }
-                val q = searchQuery.trim().lowercase()
-                val matchesQuery = q.isEmpty() ||
-                        item.title.get(currentLanguage).lowercase().contains(q) ||
-                        item.country.get(currentLanguage).lowercase().contains(q) ||
-                        item.patronageOf.get(currentLanguage).lowercase().contains(q) ||
-                        item.primarySanctuary.get(currentLanguage).lowercase().contains(q) ||
-                        item.recordedMiracles.get(currentLanguage).lowercase().contains(q)
-
-                matchesRegion && matchesQuery
-            }
-
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(horizontal = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                item {
-                    Text(
-                        text = "Mostrando ${filteredMarian.size} advocaciones marianas aprobadas por la Iglesia",
-                        fontSize = 12.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+        LazyColumn(Modifier.fillMaxSize()) {
+            item {
+                ReadingColumn {
+                    AppSearchField(
+                        value = searchQuery,
+                        onValueChange = { searchQuery = it },
+                        placeholder = currentLanguage.pick(
+                            "Buscar por nombre, país, santuario o milagro...",
+                            "Search by name, country, sanctuary or miracle…",
+                            "Buscar por nome, país, santuário ou milagre…"
+                        ),
+                        modifier = Modifier
+                            .padding(horizontal = design.spacing.gutter)
+                            .testTag("devotions_search_input")
                     )
                 }
+            }
 
-                items(filteredMarian) { apparition ->
-                    DetailedMarianCard(
+            item {
+                ReadingColumn {
+                    ChipRail(scroll = regionScroll) {
+                        regions.forEach { (id, label) ->
+                            AppChip(
+                                label = label,
+                                selected = selectedRegionFilter == id,
+                                onClick = { selectedRegionFilter = id }
+                            )
+                        }
+                    }
+                }
+            }
+
+            item {
+                ReadingColumn {
+                    if (showingMarian) {
+                        AppSectionHeader(
+                            title = currentLanguage.pick(
+                                "Advocaciones Marianas",
+                                "Marian Advocations",
+                                "Advocações Marianas"
+                            ),
+                            subtitle = currentLanguage.pick(
+                                "Mostrando ${filteredMarian.size} advocaciones marianas aprobadas por la Iglesia",
+                                "Showing ${filteredMarian.size} Marian advocations approved by the Church",
+                                "Mostrando ${filteredMarian.size} advocações marianas aprovadas pela Igreja"
+                            )
+                        )
+                    } else {
+                        AppSectionHeader(
+                            title = currentLanguage.pick(
+                                "Devociones a Cristo",
+                                "Devotions to Christ",
+                                "Devoções a Cristo"
+                            ),
+                            subtitle = currentLanguage.pick(
+                                "Mostrando ${filteredChrist.size} manifestaciones sagradas de Jesucristo",
+                                "Showing ${filteredChrist.size} sacred manifestations of Jesus Christ",
+                                "Mostrando ${filteredChrist.size} manifestações sagradas de Jesus Cristo"
+                            )
+                        )
+                    }
+                }
+            }
+
+            val shownCount = if (showingMarian) filteredMarian.size else filteredChrist.size
+            if (shownCount == 0) {
+                item {
+                    ReadingColumn {
+                        AppEmptyState(
+                            title = currentLanguage.pick(
+                                "Sin resultados",
+                                "Nothing found",
+                                "Sem resultados"
+                            ),
+                            body = currentLanguage.pick(
+                                "Prueba otro nombre o elige otra región.",
+                                "Try another name, or choose a different region.",
+                                "Tente outro nome ou escolha outra região."
+                            ),
+                            icon = Icons.Default.Search
+                        )
+                    }
+                }
+            } else if (showingMarian) {
+                items(filteredMarian, key = { it.id }) { apparition ->
+                    ApparitionEntry(
                         item = apparition,
                         currentLanguage = currentLanguage,
-                        onSpeakPrayer = onSpeakText
+                        onSpeakText = onSpeakText
                     )
+                    Spacer(Modifier.height(design.spacing.sectionGap / 2))
                 }
-
-                item { Spacer(modifier = Modifier.height(24.dp)) }
-            }
-        } else {
-            val filteredChrist = christList.filter { item ->
-                val matchesRegion = when (selectedRegionFilter) {
-                    "Americas" -> item.region == "Americas"
-                    "Europe" -> item.region == "Europe"
-                    "Universal" -> item.region == "Universal"
-                    else -> true
-                }
-                val q = searchQuery.trim().lowercase()
-                val matchesQuery = q.isEmpty() ||
-                        item.title.get(currentLanguage).lowercase().contains(q) ||
-                        item.country.get(currentLanguage).lowercase().contains(q) ||
-                        item.primarySanctuary.get(currentLanguage).lowercase().contains(q) ||
-                        item.originHistory.get(currentLanguage).lowercase().contains(q) ||
-                        item.recordedMiracles.get(currentLanguage).lowercase().contains(q)
-
-                matchesRegion && matchesQuery
-            }
-
-            LazyColumn(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(horizontal = 16.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
-            ) {
-                item {
-                    Text(
-                        text = "Mostrando ${filteredChrist.size} manifestaciones sagradas de Jesucristo",
-                        fontSize = 12.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-
-                items(filteredChrist) { manifestation ->
-                    DetailedChristCard(
+            } else {
+                items(filteredChrist, key = { it.id }) { manifestation ->
+                    ManifestationEntry(
                         item = manifestation,
                         currentLanguage = currentLanguage,
-                        onSpeakPrayer = onSpeakText
+                        onSpeakText = onSpeakText
                     )
+                    Spacer(Modifier.height(design.spacing.sectionGap / 2))
                 }
-
-                item { Spacer(modifier = Modifier.height(24.dp)) }
             }
+
+            item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
         }
     }
 }
 
+// ------------------------------------------------------- the Marian advocations
+
 @Composable
-private fun DetailedMarianCard(
+private fun ApparitionEntry(
     item: MarianApparition,
     currentLanguage: AppLanguage,
-    onSpeakPrayer: ((String) -> Unit)? = null
+    onSpeakText: ((String) -> Unit)?
 ) {
-    var showFullPrayer by remember { mutableStateOf(false) }
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
 
-    ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.6f))
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
+    ReadingColumn {
+        AppListGroup {
+            AppListRow(
+                title = item.title.get(currentLanguage),
+                subtitle = item.location.get(currentLanguage),
+                trailingText = item.year,
+                showsNavigationAffordance = false
+            )
+        }
+
+        EntryBody {
+            // The feast and the country are a line each, so they read as the
+            // two columns of a printed header rather than as two more notes.
             Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.Top
+                Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
             ) {
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = item.title.get(currentLanguage),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
-                        color = SacredBurgundy
-                    )
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Text(
-                        text = "País: ${item.country.get(currentLanguage)} • Año ${item.year}",
-                        fontSize = 11.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-
-                Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = LiturgicalGold.copy(alpha = 0.2f)
-                ) {
-                    Text(
-                        text = item.feastDay,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
-                        color = SacredBurgundy,
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                    )
-                }
+                Note(
+                    label = currentLanguage.pick("Fiesta", "Feast day", "Festa"),
+                    body = item.feastDay.get(currentLanguage),
+                    labelColor = design.palette.gold,
+                    modifier = Modifier.weight(1f)
+                )
+                Note(
+                    label = currentLanguage.pick("País", "Country", "País"),
+                    body = item.country.get(currentLanguage),
+                    modifier = Modifier.weight(1f)
+                )
             }
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            // Patronage badge
-            Surface(
-                shape = RoundedCornerShape(8.dp),
-                color = SacredBurgundy.copy(alpha = 0.08f)
-            ) {
-                Row(
-                    modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(Icons.Default.Star, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(14.dp))
-                    Spacer(modifier = Modifier.width(6.dp))
-                    Text(
-                        text = item.patronageOf.get(currentLanguage),
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.Medium,
-                        color = SacredBurgundy
-                    )
-                }
-            }
-
-            Spacer(modifier = Modifier.height(10.dp))
-
+            Spacer(Modifier.height(design.spacing.cardGap))
             Text(
                 text = item.historyAndApparition.get(currentLanguage),
-                fontSize = 13.sp,
-                lineHeight = 20.sp,
-                color = MaterialTheme.colorScheme.onSurface
+                style = styles.scripture,
+                color = design.palette.textPrimary
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = currentLanguage.pick("Patronazgo", "Patronage", "Padroado"),
+                body = item.patronageOf.get(currentLanguage)
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = currentLanguage.pick("Santuario", "Shrine", "Santuário"),
+                body = item.primarySanctuary.get(currentLanguage),
+                labelColor = design.palette.accent
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = currentLanguage.pick("Promesas", "Promises", "Promessas"),
+                body = item.promises.get(currentLanguage),
+                bodyStyle = styles.quote
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = currentLanguage.pick(
+                    "Milagros destacados",
+                    "Recorded miracles",
+                    "Milagres registados"
+                ),
+                body = item.recordedMiracles.get(currentLanguage)
             )
 
-            Spacer(modifier = Modifier.height(10.dp))
+            PrayerDisclosure(
+                title = currentLanguage.pick(
+                    "Oración de Veneración e Intercesión",
+                    "Prayer of veneration and intercession",
+                    "Oração de Veneração e Intercessão"
+                ),
+                prayer = item.venerationPrayer.get(currentLanguage),
+                currentLanguage = currentLanguage,
+                onSpeakText = onSpeakText
+            )
+        }
+    }
+}
 
-            // Sanctuary
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.Place, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
-                Spacer(modifier = Modifier.width(6.dp))
-                Text(
-                    text = "Santuario: ${item.primarySanctuary.get(currentLanguage)}",
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    color = SacredBurgundy
-                )
-            }
+// ------------------------------------------------- the manifestations of Christ
 
-            Spacer(modifier = Modifier.height(6.dp))
+@Composable
+private fun ManifestationEntry(
+    item: ChristManifestation,
+    currentLanguage: AppLanguage,
+    onSpeakText: ((String) -> Unit)?
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
 
-            // Miracles
+    ReadingColumn {
+        AppListGroup {
+            AppListRow(
+                title = item.title.get(currentLanguage),
+                subtitle = item.country.get(currentLanguage),
+                showsNavigationAffordance = false
+            )
+        }
+
+        EntryBody {
+            Note(
+                label = currentLanguage.pick("Fiesta", "Feast day", "Festa"),
+                body = item.feastDay.get(currentLanguage),
+                labelColor = design.palette.gold
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
             Text(
-                text = "Milagros destacados: " + item.recordedMiracles.get(currentLanguage),
-                fontSize = 12.sp,
-                lineHeight = 18.sp,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                text = item.originHistory.get(currentLanguage),
+                style = styles.scripture,
+                color = design.palette.textPrimary
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = currentLanguage.pick(
+                    "Sentido teológico",
+                    "Theological meaning",
+                    "Sentido teológico"
+                ),
+                body = item.theologicalMeaning.get(currentLanguage)
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = currentLanguage.pick(
+                    "Santuario Principal",
+                    "Principal shrine",
+                    "Santuário principal"
+                ),
+                body = item.primarySanctuary.get(currentLanguage),
+                labelColor = design.palette.accent
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = currentLanguage.pick("Promesas", "Promises", "Promessas"),
+                body = item.promises.get(currentLanguage),
+                bodyStyle = styles.quote
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = currentLanguage.pick("Milagros", "Miracles", "Milagres"),
+                body = item.recordedMiracles.get(currentLanguage)
             )
 
-            Spacer(modifier = Modifier.height(8.dp))
+            PrayerDisclosure(
+                title = currentLanguage.pick("Oración Oficial", "Official prayer", "Oração Oficial"),
+                prayer = item.officialPrayer.get(currentLanguage),
+                currentLanguage = currentLanguage,
+                onSpeakText = onSpeakText
+            )
+        }
+    }
+}
 
-            // Traditional Prayer Toggle
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
+// ------------------------------------------------------------------- fittings
+
+/**
+ * The prayer each devotion closes with, kept folded until asked for. The labels
+ * are one word apiece: at 360dp, in tracked capitals, anything longer breaks.
+ */
+@Composable
+private fun PrayerDisclosure(
+    title: String,
+    prayer: String,
+    currentLanguage: AppLanguage,
+    onSpeakText: ((String) -> Unit)?
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    var open by remember { mutableStateOf(false) }
+
+    Spacer(Modifier.height(design.spacing.cardGap))
+    AppSecondaryButton(
+        label = if (open) {
+            currentLanguage.pick("Ocultar", "Hide", "Ocultar")
+        } else {
+            currentLanguage.pick("Oración", "Prayer", "Oração")
+        },
+        onClick = { open = !open },
+        modifier = Modifier.fillMaxWidth()
+    )
+
+    AnimatedVisibility(
+        visible = open,
+        enter = fadeIn(tween(design.motion.mediumMillis, easing = design.motion.standardEasing)) +
+            expandVertically(
+                tween(design.motion.mediumMillis, easing = design.motion.standardEasing)
+            ),
+        exit = fadeOut(tween(design.motion.fastMillis)) +
+            shrinkVertically(tween(design.motion.fastMillis))
+    ) {
+        Column(Modifier.padding(top = design.spacing.cardGap)) {
+            AppCard {
                 Text(
-                    text = if (showFullPrayer) "Ocultar Oración" else "Ver Oración Tradicional",
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy,
-                    modifier = Modifier.clickable { showFullPrayer = !showFullPrayer }
+                    text = caps(title),
+                    style = styles.sectionEyebrow,
+                    color = design.palette.gold
                 )
-
-                if (onSpeakPrayer != null) {
-                    IconButton(
-                        onClick = { onSpeakPrayer(item.venerationPrayer.get(currentLanguage)) },
-                        modifier = Modifier.size(32.dp)
-                    ) {
-                        Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = SacredBurgundy, modifier = Modifier.size(18.dp))
-                    }
-                }
-            }
-
-            AnimatedVisibility(visible = showFullPrayer) {
-                Surface(
-                    shape = RoundedCornerShape(10.dp),
-                    color = MaterialTheme.colorScheme.surface,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 8.dp)
-                ) {
-                    Column(modifier = Modifier.padding(12.dp)) {
-                        Text(
-                            text = "Oración de Veneración e Intercesión:",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp,
-                            color = LiturgicalGold
-                        )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = item.venerationPrayer.get(currentLanguage),
-                            fontFamily = FontFamily.Serif,
-                            fontSize = 13.sp,
-                            lineHeight = 20.sp,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                    }
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Text(
+                    text = prayer,
+                    style = styles.quote,
+                    color = design.palette.textPrimary
+                )
+                if (onSpeakText != null) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppSecondaryButton(
+                        label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
+                        onClick = { onSpeakText(prayer) },
+                        leadingIcon = Icons.Default.VolumeUp,
+                        modifier = Modifier.fillMaxWidth()
+                    )
                 }
             }
         }
     }
 }
 
+/** The prose under an index line, inset to the same measure as the line itself. */
 @Composable
-private fun DetailedChristCard(
-    item: ChristManifestation,
-    currentLanguage: AppLanguage,
-    onSpeakPrayer: ((String) -> Unit)? = null
+private fun EntryBody(content: @Composable ColumnScope.() -> Unit) {
+    val design = LocalAppDesign.current
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .padding(top = design.spacing.cardGap),
+        content = content
+    )
+}
+
+/** A rail of chips that scrolls rather than wrapping a label to one letter. */
+@Composable
+private fun ChipRail(
+    scroll: ScrollState,
+    content: @Composable () -> Unit
 ) {
-    var showFullPrayer by remember { mutableStateOf(false) }
-
-    ElevatedCard(
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
+    val design = LocalAppDesign.current
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .horizontalScroll(scroll)
+            .padding(
+                horizontal = design.spacing.gutter,
+                vertical = design.spacing.cardGap / 2
+            ),
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
+        verticalAlignment = Alignment.CenterVertically
     ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.Top
-            ) {
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = item.title.get(currentLanguage),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
-                        color = SacredBurgundy
-                    )
-                    Spacer(modifier = Modifier.height(2.dp))
-                    Text(
-                        text = "País / Región: ${item.country.get(currentLanguage)}",
-                        fontSize = 11.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-
-                Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = SacredBurgundy.copy(alpha = 0.1f)
-                ) {
-                    Text(
-                        text = item.feastDay.get(currentLanguage),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
-                        color = SacredBurgundy,
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                    )
-                }
-            }
-
-            Spacer(modifier = Modifier.height(10.dp))
-
-            Text(
-                text = item.originHistory.get(currentLanguage),
-                fontSize = 13.sp,
-                lineHeight = 20.sp,
-                color = MaterialTheme.colorScheme.onSurface
-            )
-
-            Spacer(modifier = Modifier.height(10.dp))
-
-            // Primary Sanctuary
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.Church, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
-                Spacer(modifier = Modifier.width(6.dp))
-                Text(
-                    text = "Santuario Principal: ${item.primarySanctuary.get(currentLanguage)}",
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    color = SacredBurgundy
-                )
-            }
-
-            Spacer(modifier = Modifier.height(6.dp))
-
-            // Miracles and promises
-            Text(
-                text = "Milagros y Promesas: " + item.promises.get(currentLanguage),
-                fontSize = 12.sp,
-                lineHeight = 18.sp,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-
-            Spacer(modifier = Modifier.height(8.dp))
-
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = if (showFullPrayer) "Ocultar Oración" else "Ver Oración Sagrada",
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = SacredBurgundy,
-                    modifier = Modifier.clickable { showFullPrayer = !showFullPrayer }
-                )
-
-                if (onSpeakPrayer != null) {
-                    IconButton(
-                        onClick = { onSpeakPrayer(item.officialPrayer.get(currentLanguage)) },
-                        modifier = Modifier.size(32.dp)
-                    ) {
-                        Icon(Icons.Default.VolumeUp, contentDescription = "Listen", tint = SacredBurgundy, modifier = Modifier.size(18.dp))
-                    }
-                }
-            }
-
-            AnimatedVisibility(visible = showFullPrayer) {
-                Surface(
-                    shape = RoundedCornerShape(10.dp),
-                    color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 8.dp)
-                ) {
-                    Column(modifier = Modifier.padding(12.dp)) {
-                        Text(
-                            text = "Oración Oficial:",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp,
-                            color = LiturgicalGold
-                        )
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = item.officialPrayer.get(currentLanguage),
-                            fontFamily = FontFamily.Serif,
-                            fontSize = 13.sp,
-                            lineHeight = 20.sp,
-                            color = MaterialTheme.colorScheme.onSurface
-                        )
-                    }
-                }
-            }
-        }
+        content()
     }
+}
+
+/** An eyebrow label over the passage it introduces — an entry's unit of content. */
+@Composable
+private fun Note(
+    label: String,
+    body: String,
+    modifier: Modifier = Modifier,
+    labelColor: Color? = null,
+    bodyStyle: TextStyle? = null
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    Column(modifier.fillMaxWidth()) {
+        Text(
+            text = caps(label),
+            style = styles.sectionEyebrow,
+            color = labelColor ?: design.palette.textSecondary
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 4))
+        Text(
+            text = body,
+            style = bodyStyle ?: MaterialTheme.typography.bodyMedium,
+            color = design.palette.textPrimary
+        )
+    }
+}
+
+/**
+ * Holds long-form text to the identity's reading measure and centres it, so a
+ * wide screen reads as the column of a book instead of a wall of type. The two
+ * gutters are added back because the content inside carries them itself.
+ */
+@Composable
+private fun ReadingColumn(content: @Composable ColumnScope.() -> Unit) {
+    val design = LocalAppDesign.current
+    Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
+        Column(
+            Modifier
+                .widthIn(max = design.spacing.readingMaxWidth + design.spacing.gutter * 2)
+                .fillMaxWidth(),
+            content = content
+        )
+    }
+}
+
+/** Vatican sets its labels as inscriptional capitals; the other two do not. */
+@Composable
+private fun caps(text: String): String =
+    if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
+
+private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
+    AppLanguage.ES -> es
+    AppLanguage.EN -> en
+    AppLanguage.PT -> pt
 }

@@ -1,12 +1,12 @@
 package com.example.ui.screens
 
 import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -14,31 +14,15 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.VolumeUp
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ElevatedButton
-import androidx.compose.material3.ElevatedCard
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilledTonalButton
-import androidx.compose.material3.FilterChip
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.PrimaryTabRow
-import androidx.compose.material3.SecondaryTabRow
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -49,23 +33,70 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.models.AppLanguage
 import com.example.data.models.ComplineOffice
 import com.example.data.models.IgnatianExamenStep
-import com.example.data.models.MarianAntiphonItem
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
+import com.example.ui.design.AppCard
+import com.example.ui.design.AppChip
+import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppListRow
+import com.example.ui.design.AppMetricTile
+import com.example.ui.design.AppOrnament
+import com.example.ui.design.AppPrimaryButton
+import com.example.ui.design.AppScreenTitle
+import com.example.ui.design.AppSecondaryButton
+import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.design.AppVerseRow
+import com.example.ui.theme.DesignLanguage
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 
-@OptIn(ExperimentalMaterial3Api::class)
+private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
+    AppLanguage.ES -> es
+    AppLanguage.EN -> en
+    AppLanguage.PT -> pt
+}
+
+/** The sigla the office prints before the two voices of a versicle. */
+private const val VersicleSigil = "V/."
+private const val ResponseSigil = "R/."
+private val Sigla = listOf(VersicleSigil, ResponseSigil)
+
+/** The Nunc Dimittis is Luke 2, 29-32, so its stichs carry the Gospel's figures. */
+private const val NuncDimittisFirstVerse = 29
+
+/**
+ * Latin the office prints but the bundled office does not carry as data: the
+ * Confiteor, the opening of Psalm 91 and the final blessing.
+ */
+private const val ConfiteorLatin =
+    "Confíteor Deo omnipoténti, et vobis, fratres, quia peccávi nimis cogitatióne, " +
+        "verbo, ópere et omissióne: mea culpa, mea culpa, mea máxima culpa..."
+private const val PsalmLatin =
+    "Qui hábitat in protectióne Altíssimi, in umbra Omnipoténtis commorábitur. " +
+        "Dicet Dómino: Refúgium meum et fortitúdo mea, Deus meus, in quo confídam..."
+private const val ConcludingLatin =
+    "Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens. Amen."
+
+/**
+ * Compline — the Church's own night prayer — and the Ignatian examen.
+ *
+ * Both are read rather than operated, so the office is set as a continuous page
+ * held to the identity's reading measure: a rubric heading opens each part, the
+ * text follows in the reading face, and the controls are single full-width
+ * actions rather than a bank of buttons. Nothing here is a dashboard.
+ */
 @Composable
 fun NightPrayersScreen(
     repository: CatholicDataRepository,
@@ -73,534 +104,798 @@ fun NightPrayersScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier
 ) {
+    val design = LocalAppDesign.current
+
     var selectedNightOfficeTab by remember { mutableIntStateOf(0) } // 0 = Roman Compline, 1 = Ignatian Examen
 
     val compline = repository.complineOffice
     val examenSteps = repository.ignatianExamenSteps
     val isPlayingAudio by ttsManager.isPlaying.collectAsState()
 
+    val tabsInset = segmentedTabsInset()
+
     Column(
         modifier = modifier
             .fillMaxSize()
             .testTag("night_prayers_screen")
     ) {
-        SecondaryTabRow(
-            selectedTabIndex = selectedNightOfficeTab,
-            containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-            contentColor = SacredBurgundy
-        ) {
-            Tab(
-                selected = selectedNightOfficeTab == 0,
-                onClick = { selectedNightOfficeTab = 0 },
-                text = {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Default.NightsStay, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text(
-                            text = when (currentLanguage) {
-                                AppLanguage.ES -> "Completas (Breviario)"
-                                AppLanguage.EN -> "Roman Compline"
-                                AppLanguage.PT -> "Completas (Breviário)"
-                            },
-                            fontSize = 12.sp,
-                            fontWeight = if (selectedNightOfficeTab == 0) FontWeight.Bold else FontWeight.Normal
-                        )
-                    }
-                }
+        AppSegmentedTabs(
+            options = listOf(
+                currentLanguage.pick("Completas (Breviario)", "Roman Compline", "Completas (Breviário)"),
+                currentLanguage.pick("Examen Ignaciano", "Ignatian Examen", "Exame Inaciano")
+            ),
+            selectedIndex = selectedNightOfficeTab,
+            onSelect = { selectedNightOfficeTab = it },
+            modifier = Modifier.padding(
+                start = tabsInset,
+                end = tabsInset,
+                top = design.spacing.cardGap / 2
             )
-            Tab(
-                selected = selectedNightOfficeTab == 1,
-                onClick = { selectedNightOfficeTab = 1 },
-                text = {
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Examen Ignaciano"
-                            AppLanguage.EN -> "Ignatian Examen"
-                            AppLanguage.PT -> "Exame Inaciano"
-                        },
-                        fontSize = 12.sp,
-                        fontWeight = if (selectedNightOfficeTab == 1) FontWeight.Bold else FontWeight.Normal
-                    )
-                }
-            )
-        }
+        )
 
         when (selectedNightOfficeTab) {
-            0 -> ComplineView(compline = compline, ttsManager = ttsManager, currentLanguage = currentLanguage)
-            1 -> IgnatianExamenView(steps = examenSteps, ttsManager = ttsManager, currentLanguage = currentLanguage)
+            0 -> ComplineView(
+                compline = compline,
+                ttsManager = ttsManager,
+                isNarrating = isPlayingAudio,
+                currentLanguage = currentLanguage
+            )
+            1 -> IgnatianExamenView(
+                steps = examenSteps,
+                ttsManager = ttsManager,
+                isNarrating = isPlayingAudio,
+                currentLanguage = currentLanguage
+            )
         }
     }
 }
+
+// ------------------------------------------------------------------- compline
 
 @Composable
 private fun ComplineView(
     compline: ComplineOffice,
     ttsManager: LiturgicalTtsManager,
+    isNarrating: Boolean,
     currentLanguage: AppLanguage
 ) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
     var selectedMarianAntiphonIndex by remember { mutableIntStateOf(0) }
-    val currentAntiphon = compline.marianAntiphons.getOrElse(selectedMarianAntiphonIndex) { compline.marianAntiphons.first() }
+    // Held per part rather than inside each part, so scrolling the office out of
+    // the lazy window no longer closes the Latin a reader had opened.
+    var latinParts by remember { mutableStateOf(emptySet<Int>()) }
+    val antiphonScroll = rememberScrollState()
 
-    LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
+    val currentAntiphon = compline.marianAntiphons.getOrNull(selectedMarianAntiphonIndex)
+        ?: compline.marianAntiphons.firstOrNull()
+
+    fun toggleLatin(part: Int) {
+        latinParts = if (part in latinParts) latinParts - part else latinParts + part
+    }
+
+    val officeText = buildString {
+        append(compline.openingVerseTranslation.get(currentLanguage))
+        append("\n\n")
+        append(compline.confiteorText.get(currentLanguage))
+        append("\n\n")
+        append(compline.hymnTranslation.get(currentLanguage))
+        append("\n\n")
+        append(compline.psalmText.get(currentLanguage))
+        append("\n\n")
+        append(compline.canticleOfSimeonTranslation.get(currentLanguage))
+        append("\n\n")
+        append(compline.concludingPrayer.get(currentLanguage))
+    }
+
+    LazyColumn(Modifier.fillMaxSize()) {
         item {
-            ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
-                colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.45f))
-            ) {
-                Column(modifier = Modifier.padding(18.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column(modifier = Modifier.weight(1f)) {
-                            Text(
-                                text = compline.title.get(currentLanguage),
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 16.sp,
-                                color = SacredBurgundy
-                            )
-                            Text(
-                                text = "Liturgia oficial de la Iglesia antes del reposo de la noche",
-                                fontSize = 12.sp,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
+            AppScreenTitle(
+                // The bundled title reads "Completas - Oración oficial de la
+                // noche…"; what follows the dash is the gloss the subtitle
+                // already carries, and a display line is no place for it.
+                title = compline.title.get(currentLanguage).substringBefore(" - ").trim(),
+                subtitle = currentLanguage.pick(
+                    "Liturgia oficial de la Iglesia antes del reposo de la noche",
+                    "The Church's official liturgy before the night's rest",
+                    "Liturgia oficial da Igreja antes do repouso da noite"
+                )
+            )
+        }
 
-                        ElevatedButton(
-                            onClick = {
-                                val fullText = buildString {
-                                    append(compline.openingVerseTranslation.get(currentLanguage))
-                                    append("\n\n")
-                                    append(compline.confiteorText.get(currentLanguage))
-                                    append("\n\n")
-                                    append(compline.hymnTranslation.get(currentLanguage))
-                                    append("\n\n")
-                                    append(compline.psalmText.get(currentLanguage))
-                                    append("\n\n")
-                                    append(compline.canticleOfSimeonTranslation.get(currentLanguage))
-                                    append("\n\n")
-                                    append(compline.concludingPrayer.get(currentLanguage))
-                                }
-                                ttsManager.speakSingle(fullText)
-                            },
-                            colors = ButtonDefaults.elevatedButtonColors(
-                                containerColor = SacredBurgundy,
-                                contentColor = Color.White
-                            )
-                        ) {
-                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(16.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Rezar", fontSize = 12.sp)
-                        }
-                    }
+        item {
+            ReadingColumn {
+                AppPrimaryButton(
+                    label = currentLanguage.pick("Rezar", "Pray", "Rezar"),
+                    onClick = { ttsManager.speakSingle(officeText) },
+                    leadingIcon = Icons.Default.VolumeUp,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("compline_tts_button")
+                )
+                if (isNarrating) {
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Text(
+                        text = currentLanguage.pick(
+                            "Narrando el oficio…",
+                            "Reading the office aloud…",
+                            "Narrando o ofício…"
+                        ),
+                        style = styles.rowSubtitle,
+                        color = design.palette.textTertiary,
+                        modifier = Modifier
+                            .align(design.decor.titleAlignment)
+                            .padding(horizontal = design.spacing.gutter)
+                    )
                 }
             }
         }
 
-        // 1. Invocación inicial
+        item { AppOrnament() }
+
         item {
-            ComplineCard(
-                stepLabel = "1. INVOCACIÓN INICIAL",
-                latinTitle = "Deus in adiutorium",
+            OfficePart(
+                caption = currentLanguage.pick(
+                    "1. Invocación inicial",
+                    "1. Opening versicle",
+                    "1. Invocação inicial"
+                ),
+                reference = "Deus in adiutórium",
                 latinText = compline.openingVerseLatin,
-                translatedText = compline.openingVerseTranslation.get(currentLanguage)
-            )
+                latinShown = 1 in latinParts,
+                onToggleLatin = { toggleLatin(1) },
+                currentLanguage = currentLanguage
+            ) {
+                LiturgicalText(compline.openingVerseTranslation.get(currentLanguage))
+            }
         }
 
-        // 2. Confiteor
         item {
-            ComplineCard(
-                stepLabel = "2. ACTO PENITENCIAL",
-                latinTitle = "Confiteor Deo omnipotenti",
-                latinText = "Confíteor Deo omnipoténti, et vobis, fratres, quia peccávi nimis cogitatióne, verbo, ópere et omissióne: mea culpa, mea culpa, mea máxima culpa...",
-                translatedText = compline.confiteorText.get(currentLanguage)
-            )
+            OfficePart(
+                caption = currentLanguage.pick(
+                    "2. Acto penitencial",
+                    "2. Penitential act",
+                    "2. Ato penitencial"
+                ),
+                reference = "Confiteor Deo omnipotenti",
+                latinText = ConfiteorLatin,
+                latinShown = 2 in latinParts,
+                onToggleLatin = { toggleLatin(2) },
+                currentLanguage = currentLanguage
+            ) {
+                LiturgicalText(compline.confiteorText.get(currentLanguage))
+            }
         }
 
-        // 3. Himno
         item {
-            ComplineCard(
-                stepLabel = "3. HIMNO DE COMPLETAS",
-                latinTitle = compline.hymnLatinTitle,
+            OfficePart(
+                caption = currentLanguage.pick(
+                    "3. Himno de Completas",
+                    "3. Hymn at Compline",
+                    "3. Hino de Completas"
+                ),
+                reference = compline.hymnLatinTitle,
                 latinText = compline.hymnLatin,
-                translatedText = compline.hymnTranslation.get(currentLanguage)
-            )
+                latinShown = 3 in latinParts,
+                onToggleLatin = { toggleLatin(3) },
+                currentLanguage = currentLanguage
+            ) {
+                LiturgicalText(compline.hymnTranslation.get(currentLanguage))
+            }
         }
 
-        // 4. Salmo 91
         item {
-            ComplineCard(
-                stepLabel = "4. SALMODIA DE LA NOCHE",
-                latinTitle = compline.psalmReference,
-                latinText = "Qui hábitat in protectióne Altíssimi, in umbra Omnipoténtis commorábitur. Dicet Dómino: Refúgium meum et fortitúdo mea, Deus meus, in quo confídam...",
-                translatedText = "${compline.psalmAntiphon.get(currentLanguage)}\n\n${compline.psalmText.get(currentLanguage)}"
-            )
+            OfficePart(
+                caption = currentLanguage.pick(
+                    "4. Salmodia de la noche",
+                    "4. Psalmody of the night",
+                    "4. Salmodia da noite"
+                ),
+                reference = compline.psalmReference,
+                latinText = PsalmLatin,
+                latinShown = 4 in latinParts,
+                onToggleLatin = { toggleLatin(4) },
+                currentLanguage = currentLanguage
+            ) {
+                LiturgicalText(
+                    text = compline.psalmAntiphon.get(currentLanguage),
+                    muted = true,
+                    quoted = true
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                // The bundled psalm is one continuous paragraph, so it is set
+                // stich by stich at its sentence ends; the canonical range is
+                // the reference printed above it.
+                val psalmStichs = stichs(compline.psalmText.get(currentLanguage))
+                psalmStichs.forEachIndexed { index, stich ->
+                    AppVerseRow(
+                        number = index + 1,
+                        text = stich,
+                        isFirstOfChapter = index == 0
+                    )
+                }
+            }
         }
 
-        // 5. Lectura breve & Responsorio
         item {
-            ComplineCard(
-                stepLabel = "5. LECTURA BREVE Y RESPONSORIO",
-                latinTitle = compline.readingReference,
+            OfficePart(
+                caption = currentLanguage.pick(
+                    "5. Lectura breve y responsorio",
+                    "5. Short reading and responsory",
+                    "5. Leitura breve e responsório"
+                ),
+                reference = compline.readingReference,
                 latinText = compline.responsoryLatin,
-                translatedText = "${compline.readingText.get(currentLanguage)}\n\n${compline.responsoryTranslation.get(currentLanguage)}"
-            )
-        }
-
-        // 6. Cántico de Simeón (Nunc Dimittis)
-        item {
-            ComplineCard(
-                stepLabel = "6. CÁNTICO EVANGÉLICO (NUNC DIMITTIS)",
-                latinTitle = "Canticum Simeonis (Lc 2, 29-32)",
-                latinText = "${compline.canticleAntiphon.get(currentLanguage)}\n\n${compline.canticleOfSimeonLatin}",
-                translatedText = "${compline.canticleAntiphon.get(currentLanguage)}\n\n${compline.canticleOfSimeonTranslation.get(currentLanguage)}",
-                isHighlighted = true
-            )
-        }
-
-        // 7. Oración Conclusiva y Bendición
-        item {
-            ComplineCard(
-                stepLabel = "7. ORACIÓN CONCLUSIVA Y BENDICIÓN",
-                latinTitle = "Oratio et Benedictio",
-                latinText = "Noctem quiétam et finem perféctum concédat nobis Dóminus omnípotens. Amen.",
-                translatedText = "${compline.concludingPrayer.get(currentLanguage)}\n\n${compline.blessing.get(currentLanguage)}"
-            )
-        }
-
-        // 8. Antífona Mariana
-        item {
-            ElevatedCard(
-                shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surface)
+                latinShown = 5 in latinParts,
+                onToggleLatin = { toggleLatin(5) },
+                currentLanguage = currentLanguage
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Text(
-                        text = "8. ANTÍFONA MARIANA FINAL",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
-                        color = LiturgicalGold,
-                        letterSpacing = 1.sp
-                    )
-                    Spacer(modifier = Modifier.height(8.dp))
+                LiturgicalText(text = compline.readingText.get(currentLanguage), quoted = true)
+                Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                PartLabel(
+                    currentLanguage.pick("Responsorio breve", "Short responsory", "Responsório breve")
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                LiturgicalText(compline.responsoryTranslation.get(currentLanguage))
+            }
+        }
 
-                    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        items(compline.marianAntiphons) { antiphon ->
-                            val isSelected = antiphon.id == currentAntiphon.id
-                            FilterChip(
-                                selected = isSelected,
-                                onClick = {
-                                    val idx = compline.marianAntiphons.indexOf(antiphon)
-                                    selectedMarianAntiphonIndex = idx
-                                },
-                                label = { Text(antiphon.titleLatin, fontSize = 12.sp) }
-                            )
-                        }
-                    }
+        // The gospel canticle is the summit of the office, and the one part the
+        // old screen framed; here the ornament above it carries that weight.
+        item { AppOrnament() }
 
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    Text(
-                        text = currentAntiphon.titleTranslation.get(currentLanguage),
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp,
-                        color = SacredBurgundy
-                    )
-                    Text(
-                        text = currentAntiphon.seasonTag.get(currentLanguage),
-                        fontSize = 11.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    Text(
-                        text = currentAntiphon.latinText,
-                        fontFamily = FontFamily.Serif,
-                        fontSize = 13.sp,
-                        lineHeight = 20.sp,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.8f)
-                    )
-
-                    Spacer(modifier = Modifier.height(10.dp))
-
-                    Text(
-                        text = currentAntiphon.translatedText.get(currentLanguage),
-                        fontFamily = FontFamily.Serif,
-                        fontSize = 13.sp,
-                        lineHeight = 22.sp,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    ElevatedButton(
-                        onClick = {
-                            ttsManager.speakSingle(currentAntiphon.translatedText.get(currentLanguage))
-                        },
-                        colors = ButtonDefaults.elevatedButtonColors(
-                            containerColor = SacredBurgundy,
-                            contentColor = Color.White
+        item {
+            OfficePart(
+                caption = currentLanguage.pick(
+                    "6. Cántico evangélico (Nunc Dimittis)",
+                    "6. Gospel canticle (Nunc Dimittis)",
+                    "6. Cântico evangélico (Nunc Dimittis)"
+                ),
+                reference = "Canticum Simeonis (Lc 2, 29-32)",
+                latinText = "${compline.canticleAntiphon.get(currentLanguage)}\n\n" +
+                    compline.canticleOfSimeonLatin,
+                latinShown = 6 in latinParts,
+                onToggleLatin = { toggleLatin(6) },
+                currentLanguage = currentLanguage
+            ) {
+                LiturgicalText(
+                    text = compline.canticleAntiphon.get(currentLanguage),
+                    muted = true,
+                    quoted = true
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                val canticle = compline.canticleOfSimeonTranslation.get(currentLanguage)
+                    .split("\n\n")
+                canticle.first()
+                    .split("\n")
+                    .map { it.trim() }
+                    .filter { it.isNotEmpty() }
+                    .forEachIndexed { index, stich ->
+                        AppVerseRow(
+                            number = NuncDimittisFirstVerse + index,
+                            text = stich,
+                            isFirstOfChapter = index == 0
                         )
-                    ) {
-                        Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(16.dp))
-                        Spacer(modifier = Modifier.width(6.dp))
-                        Text("Escuchar ${currentAntiphon.titleLatin}", fontSize = 12.sp)
+                    }
+                val doxology = canticle.drop(1).joinToString("\n\n").trim()
+                if (doxology.isNotEmpty()) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    LiturgicalText(doxology)
+                }
+            }
+        }
+
+        item {
+            OfficePart(
+                caption = currentLanguage.pick(
+                    "7. Oración conclusiva y bendición",
+                    "7. Concluding prayer and blessing",
+                    "7. Oração conclusiva e bênção"
+                ),
+                reference = "Oratio et Benedictio",
+                latinText = ConcludingLatin,
+                latinShown = 7 in latinParts,
+                onToggleLatin = { toggleLatin(7) },
+                currentLanguage = currentLanguage
+            ) {
+                LiturgicalText(compline.concludingPrayer.get(currentLanguage))
+                Spacer(Modifier.height(design.spacing.cardGap))
+                LiturgicalText(text = compline.blessing.get(currentLanguage), quoted = true)
+            }
+        }
+
+        if (currentAntiphon != null) {
+            item { AppOrnament() }
+
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick(
+                        "8. Antífona mariana final",
+                        "8. Final Marian antiphon",
+                        "8. Antífona mariana final"
+                    ),
+                    subtitle = currentAntiphon.seasonTag.get(currentLanguage)
+                )
+
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .horizontalScroll(antiphonScroll)
+                        .padding(horizontal = design.spacing.gutter),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+                ) {
+                    compline.marianAntiphons.forEachIndexed { index, antiphon ->
+                        AppChip(
+                            label = antiphon.titleLatin,
+                            selected = antiphon.id == currentAntiphon.id,
+                            onClick = { selectedMarianAntiphonIndex = index }
+                        )
+                    }
+                }
+
+                Spacer(Modifier.height(design.spacing.cardGap))
+
+                ReadingColumn {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        Text(
+                            text = caps(currentAntiphon.titleTranslation.get(currentLanguage)),
+                            style = styles.sectionTitle,
+                            color = design.palette.textPrimary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        LiturgicalText(
+                            text = currentAntiphon.latinText,
+                            muted = true,
+                            inCard = true
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        LiturgicalText(
+                            text = currentAntiphon.translatedText.get(currentLanguage),
+                            inCard = true
+                        )
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        // A label this long cannot be defended in a half-width
+                        // button, so it gets the full measure to itself.
+                        AppPrimaryButton(
+                            label = currentLanguage.pick(
+                                "Escuchar ${currentAntiphon.titleLatin}",
+                                "Listen to ${currentAntiphon.titleLatin}",
+                                "Ouvir ${currentAntiphon.titleLatin}"
+                            ),
+                            onClick = {
+                                ttsManager.speakSingle(
+                                    currentAntiphon.translatedText.get(currentLanguage)
+                                )
+                            },
+                            leadingIcon = Icons.Default.VolumeUp,
+                            modifier = Modifier.fillMaxWidth()
+                        )
                     }
                 }
             }
         }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
+/**
+ * One part of the office: its rubric heading and reference, the toggle that
+ * reveals the Latin of that part, and the vernacular text itself.
+ */
 @Composable
-private fun ComplineCard(
-    stepLabel: String,
-    latinTitle: String,
+private fun OfficePart(
+    caption: String,
+    reference: String?,
     latinText: String,
-    translatedText: String,
-    isHighlighted: Boolean = false
+    latinShown: Boolean,
+    onToggleLatin: () -> Unit,
+    currentLanguage: AppLanguage,
+    body: @Composable ColumnScope.() -> Unit
 ) {
-    var showLatin by remember { mutableStateOf(false) }
+    val design = LocalAppDesign.current
 
-    Card(
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = if (isHighlighted) SacredBurgundy.copy(alpha = 0.08f) else MaterialTheme.colorScheme.surface
-        ),
-        border = if (isHighlighted) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(LiturgicalGold)) else null
-    ) {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = stepLabel,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.sp,
-                    color = LiturgicalGold,
-                    letterSpacing = 1.sp
-                )
-
-                Text(
-                    text = if (showLatin) "Ocultar Latín" else "Ver Latín",
-                    fontSize = 11.sp,
-                    fontWeight = FontWeight.Medium,
-                    color = SacredBurgundy,
-                    modifier = Modifier.clickable { showLatin = !showLatin }
-                )
+    AppSectionHeader(title = caption, subtitle = reference)
+    ReadingColumn {
+        LatinToggle(
+            showing = latinShown,
+            currentLanguage = currentLanguage,
+            onToggle = onToggleLatin,
+            modifier = Modifier.align(design.decor.titleAlignment)
+        )
+        AnimatedVisibility(visible = latinShown) {
+            Column {
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                LiturgicalText(text = latinText, muted = true)
             }
-
-            Spacer(modifier = Modifier.height(6.dp))
-
-            Text(
-                text = latinTitle,
-                fontWeight = FontWeight.Bold,
-                fontSize = 14.sp,
-                color = SacredBurgundy
-            )
-
-            AnimatedVisibility(visible = showLatin) {
-                Column {
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = latinText,
-                        fontFamily = FontFamily.Serif,
-                        fontSize = 12.sp,
-                        lineHeight = 18.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
-            }
-
-            Spacer(modifier = Modifier.height(10.dp))
-
-            Text(
-                text = translatedText,
-                fontFamily = FontFamily.Serif,
-                fontSize = 13.sp,
-                lineHeight = 22.sp,
-                color = MaterialTheme.colorScheme.onSurface
-            )
         }
+        Spacer(Modifier.height(design.spacing.cardGap))
+        body()
     }
+    Spacer(Modifier.height(design.spacing.sectionGap / 2))
 }
+
+// --------------------------------------------------------------------- examen
 
 @Composable
 private fun IgnatianExamenView(
     steps: List<IgnatianExamenStep>,
     ttsManager: LiturgicalTtsManager,
+    isNarrating: Boolean,
     currentLanguage: AppLanguage
 ) {
-    var completedSteps by remember { mutableStateOf(setOf<Int>()) }
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
 
-    LazyColumn(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
-    ) {
+    var completedSteps by remember { mutableStateOf(emptySet<Int>()) }
+    var selectedStepIndex by remember { mutableIntStateOf(0) }
+
+    val step = steps.getOrNull(selectedStepIndex) ?: steps.firstOrNull()
+    val percentDone = if (steps.isEmpty()) 0 else completedSteps.size * 100 / steps.size
+
+    LazyColumn(Modifier.fillMaxSize()) {
         item {
-            ElevatedCard(
-                shape = RoundedCornerShape(18.dp),
-                colors = CardDefaults.elevatedCardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant)
-            ) {
-                Column(modifier = Modifier.padding(18.dp)) {
-                    Text(
-                        text = "Examen de Conciencia Nocturno (Método de San Ignacio)",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
-                        color = SacredBurgundy
-                    )
-                    Spacer(modifier = Modifier.height(6.dp))
-                    Text(
-                        text = "5 pasos para revisar el día con sinceridad ante Dios antes de dormir y recibir la paz de Cristo.",
-                        fontSize = 12.sp,
-                        lineHeight = 18.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-
-                    Spacer(modifier = Modifier.height(12.dp))
-
-                    val progressPercent = (completedSteps.size.toFloat() / steps.size.toFloat()) * 100f
-                    Text(
-                        text = "Progreso del examen: ${completedSteps.size} de ${steps.size} pasos completados (${progressPercent.toInt()}%)",
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = LiturgicalGold
-                    )
-                }
-            }
-        }
-
-        items(steps) { step ->
-            val isStepDone = completedSteps.contains(step.stepNumber)
-
-            Card(
-                shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(
-                    containerColor = if (isStepDone) SacredBurgundy.copy(alpha = 0.05f) else MaterialTheme.colorScheme.surface
+            AppScreenTitle(
+                title = currentLanguage.pick(
+                    "Examen de Conciencia Nocturno",
+                    "Nightly Examination of Conscience",
+                    "Exame de Consciência Noturno"
                 ),
-                border = if (isStepDone) CardDefaults.outlinedCardBorder().copy(brush = androidx.compose.ui.graphics.SolidColor(LiturgicalGold)) else CardDefaults.outlinedCardBorder()
-            ) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = step.title.get(currentLanguage),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 14.sp,
-                            color = SacredBurgundy,
-                            modifier = Modifier.weight(1f)
-                        )
+                subtitle = currentLanguage.pick(
+                    "Método de San Ignacio: 5 pasos para revisar el día con sinceridad ante Dios antes de dormir y recibir la paz de Cristo.",
+                    "The method of St. Ignatius: five steps to review the day honestly before God before sleeping, and to receive the peace of Christ.",
+                    "Método de Santo Inácio: 5 passos para revisar o dia com sinceridade diante de Deus antes de dormir e receber a paz de Cristo."
+                )
+            )
+        }
 
-                        FilledTonalButton(
-                            onClick = {
-                                completedSteps = if (isStepDone) completedSteps - step.stepNumber else completedSteps + step.stepNumber
-                            },
-                            shape = CircleShape
-                        ) {
-                            if (isStepDone) {
-                                Icon(Icons.Default.Check, contentDescription = null, tint = SacredBurgundy, modifier = Modifier.size(16.dp))
-                            } else {
-                                Text("Hecho", fontSize = 11.sp)
-                            }
-                        }
-                    }
-
-                    Spacer(modifier = Modifier.height(8.dp))
-
-                    Text(
-                        text = step.description.get(currentLanguage),
-                        fontSize = 12.sp,
-                        lineHeight = 18.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+        item {
+            ReadingColumn {
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    AppMetricTile(
+                        value = "${completedSteps.size}/${steps.size}",
+                        caption = currentLanguage.pick(
+                            "Pasos del examen",
+                            "Steps of the examen",
+                            "Passos do exame"
+                        ),
+                        icon = Icons.Default.Check,
+                        modifier = Modifier.weight(1f)
                     )
+                    AppMetricTile(
+                        value = "$percentDone%",
+                        caption = currentLanguage.pick("Completado", "Completed", "Concluído"),
+                        icon = Icons.Default.NightsStay,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+            }
+        }
 
-                    Spacer(modifier = Modifier.height(10.dp))
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick("Los cinco pasos", "The five steps", "Os cinco passos"),
+                subtitle = currentLanguage.pick(
+                    "Toca un paso para rezarlo",
+                    "Tap a step to pray it",
+                    "Toque num passo para rezá-lo"
+                )
+            )
+            AppListGroup {
+                steps.forEachIndexed { index, examenStep ->
+                    AppListRow(
+                        title = examenStep.title.get(currentLanguage),
+                        trailingText = if (examenStep.stepNumber in completedSteps) {
+                            currentLanguage.pick("Hecho", "Done", "Feito")
+                        } else {
+                            null
+                        },
+                        showsNavigationAffordance = false,
+                        selected = index == selectedStepIndex,
+                        onClick = { selectedStepIndex = index }
+                    )
+                }
+            }
+        }
 
-                    Surface(
-                        shape = RoundedCornerShape(10.dp),
-                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f)
-                    ) {
-                        Column(modifier = Modifier.padding(12.dp)) {
-                            Text(
-                                text = "Oración sugerida:",
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 11.sp,
-                                color = LiturgicalGold
-                            )
-                            Spacer(modifier = Modifier.height(4.dp))
-                            Text(
-                                text = step.guidedPrayer.get(currentLanguage),
-                                fontFamily = FontFamily.Serif,
-                                fontSize = 13.sp,
-                                lineHeight = 20.sp,
-                                color = MaterialTheme.colorScheme.onSurface
-                            )
-                        }
-                    }
+        if (step != null) {
+            item {
+                val isStepDone = step.stepNumber in completedSteps
+                val guidedPrayer = step.guidedPrayer.get(currentLanguage)
 
-                    Spacer(modifier = Modifier.height(10.dp))
+                Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                ReadingColumn {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        Text(
+                            text = caps(
+                                currentLanguage.pick(
+                                    "Paso ${step.stepNumber} de ${steps.size}",
+                                    "Step ${step.stepNumber} of ${steps.size}",
+                                    "Passo ${step.stepNumber} de ${steps.size}"
+                                )
+                            ),
+                            style = styles.sectionEyebrow,
+                            color = design.palette.textSecondary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        Text(
+                            text = caps(step.title.get(currentLanguage)),
+                            style = styles.sectionTitle,
+                            color = design.palette.textPrimary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        LiturgicalText(
+                            text = step.description.get(currentLanguage),
+                            muted = true,
+                            inCard = true
+                        )
+                        Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                        PartLabel(
+                            text = currentLanguage.pick(
+                                "Oración sugerida",
+                                "Suggested prayer",
+                                "Oração sugerida"
+                            ),
+                            inCard = true
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        LiturgicalText(text = guidedPrayer, quoted = true, inCard = true)
 
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.End
-                    ) {
-                        ElevatedButton(
-                            onClick = {
-                                ttsManager.speakSingle(step.guidedPrayer.get(currentLanguage))
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        // Full-width rows, not two abreast: inside a card the
+                        // half measure is some 120dp, and "Escuchar" set as
+                        // tracked Roman capitals does not fit it.
+                        AppSecondaryButton(
+                            label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
+                            onClick = { ttsManager.speakSingle(guidedPrayer) },
+                            leadingIcon = Icons.Default.VolumeUp,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .testTag("examen_tts_button")
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        AppPrimaryButton(
+                            label = if (isStepDone) {
+                                currentLanguage.pick("Deshacer", "Undo", "Desfazer")
+                            } else {
+                                currentLanguage.pick("Hecho", "Done", "Feito")
                             },
-                            colors = ButtonDefaults.elevatedButtonColors(
-                                containerColor = SacredBurgundy,
-                                contentColor = Color.White
+                            onClick = {
+                                completedSteps = if (isStepDone) {
+                                    completedSteps - step.stepNumber
+                                } else {
+                                    completedSteps + step.stepNumber
+                                }
+                            },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        if (isNarrating) {
+                            Spacer(Modifier.height(design.spacing.cardGap / 2))
+                            Text(
+                                // The flag is the manager's, not this step's, so
+                                // the line says only that a narration runs.
+                                text = currentLanguage.pick(
+                                    "Narración en curso…",
+                                    "Narration in progress…",
+                                    "Narração em curso…"
+                                ),
+                                style = styles.rowSubtitle,
+                                color = design.palette.textTertiary
                             )
-                        ) {
-                            Icon(Icons.Default.VolumeUp, contentDescription = null, modifier = Modifier.size(14.dp))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text("Escuchar", fontSize = 11.sp)
                         }
                     }
                 }
             }
         }
 
-        if (completedSteps.size == steps.size) {
+        if (steps.isNotEmpty() && completedSteps.size == steps.size) {
+            item { AppOrnament() }
             item {
-                ElevatedCard(
-                    shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.elevatedCardColors(containerColor = SacredBurgundy)
-                ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(20.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        Icon(Icons.Default.CheckCircle, contentDescription = null, tint = LiturgicalGold, modifier = Modifier.size(36.dp))
-                        Spacer(modifier = Modifier.height(8.dp))
-                        Text("¡Examen Completado!", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
-                        Spacer(modifier = Modifier.height(4.dp))
-                        Text(
-                            text = "Descansa en la paz y el perdón de Nuestro Señor Jesucristo. Que la Virgen María y los santos Ángeles custodien tu sueño.",
-                            fontSize = 12.sp,
-                            color = Color.White.copy(alpha = 0.9f),
-                            textAlign = androidx.compose.ui.text.style.TextAlign.Center
-                        )
+                ReadingColumn {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        Column(
+                            Modifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.CheckCircle,
+                                contentDescription = null,
+                                tint = design.palette.gold,
+                                modifier = Modifier.size(32.dp)
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            Text(
+                                text = caps(
+                                    currentLanguage.pick(
+                                        "¡Examen Completado!",
+                                        "Examen complete",
+                                        "Exame concluído!"
+                                    )
+                                ),
+                                style = styles.sectionTitle,
+                                color = design.palette.textPrimary,
+                                textAlign = TextAlign.Center
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            Text(
+                                text = currentLanguage.pick(
+                                    "Descansa en la paz y el perdón de Nuestro Señor Jesucristo. Que la Virgen María y los santos Ángeles custodien tu sueño.",
+                                    "Rest in the peace and the forgiveness of Our Lord Jesus Christ. May the Virgin Mary and the holy Angels keep watch over your sleep.",
+                                    "Descansa na paz e no perdão de Nosso Senhor Jesus Cristo. Que a Virgem Maria e os santos Anjos guardem o teu sono."
+                                ),
+                                style = styles.quote,
+                                color = design.palette.textSecondary,
+                                textAlign = TextAlign.Center
+                            )
+                        }
                     }
                 }
             }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+// -------------------------------------------------------------------- setting
+
+/**
+ * Liturgical text as the office prints it.
+ *
+ * A line opening with a versicle or response siglum is set as one voice of a
+ * dialogue — the siglum rubricated, the response set in from the versicle it
+ * answers — and everything else as a paragraph of the reading face. Adjacent
+ * lines are stacked without added leading so a hymn keeps the reading face's
+ * own baseline grid; the blank lines the office text carries are the stanza
+ * breaks.
+ */
+@Composable
+private fun LiturgicalText(
+    text: String,
+    modifier: Modifier = Modifier,
+    muted: Boolean = false,
+    quoted: Boolean = false,
+    inCard: Boolean = false
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    val body = if (quoted) styles.quote else styles.scripture
+    val ink = if (muted) design.palette.textSecondary else design.palette.textPrimary
+    val rubric = SpanStyle(
+        color = design.palette.accent,
+        fontSize = body.fontSize * 0.72f,
+        fontWeight = FontWeight.SemiBold
+    )
+
+    Column(
+        modifier
+            .fillMaxWidth()
+            .padding(horizontal = if (inCard) 0.dp else design.spacing.gutter)
+    ) {
+        text.split("\n").forEach { rawLine ->
+            val line = rawLine.trim()
+            if (line.isEmpty()) {
+                Spacer(Modifier.height(design.spacing.cardGap))
+                return@forEach
+            }
+            val siglum = Sigla.firstOrNull { line.startsWith(it) }
+            Text(
+                text = buildAnnotatedString {
+                    if (siglum == null) {
+                        append(line)
+                    } else {
+                        withStyle(rubric) { append(siglum) }
+                        append("  ")
+                        append(line.removePrefix(siglum).trim())
+                    }
+                },
+                style = body,
+                color = ink,
+                modifier = Modifier
+                    .widthIn(max = design.spacing.readingMaxWidth)
+                    .padding(
+                        start = if (siglum == ResponseSigil) design.spacing.gutter else 0.dp
+                    )
+            )
         }
     }
 }
+
+/** A rubric naming one element inside a part of the office. */
+@Composable
+private fun PartLabel(
+    text: String,
+    modifier: Modifier = Modifier,
+    inCard: Boolean = false
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Text(
+        text = caps(text),
+        style = styles.sectionEyebrow,
+        color = design.palette.textTertiary,
+        modifier = modifier.padding(
+            horizontal = if (inCard) 0.dp else design.spacing.gutter
+        )
+    )
+}
+
+/** The disclosure that opens the Latin of one part of the office. */
+@Composable
+private fun LatinToggle(
+    showing: Boolean,
+    currentLanguage: AppLanguage,
+    onToggle: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Text(
+        text = caps(
+            if (showing) {
+                currentLanguage.pick("Ocultar Latín", "Hide Latin", "Ocultar Latim")
+            } else {
+                currentLanguage.pick("Ver Latín", "Show Latin", "Ver Latim")
+            }
+        ),
+        style = styles.sectionEyebrow,
+        color = design.palette.accent,
+        modifier = modifier
+            .padding(horizontal = design.spacing.gutter)
+            .clickable(onClick = onToggle)
+            // A rubric is a few millimetres tall; the padding is what makes it
+            // a target rather than a hairline of type.
+            .padding(horizontal = 4.dp, vertical = 12.dp)
+    )
+}
+
+/**
+ * Divides continuous prose into the stichs a psalter sets one to a line, at the
+ * sentence ends — including those that close inside a quotation.
+ */
+private val StichBreak = Regex("(?<=[.!?»”’'])\\s+")
+
+private fun stichs(text: String): List<String> =
+    text.split(StichBreak).map { it.trim() }.filter { it.isNotEmpty() }
+
+/**
+ * Holds long-form text to the identity's reading measure and centres it, so a
+ * wide screen reads as the column of a book instead of a wall of type. The two
+ * gutters are added back because what sits inside carries them itself.
+ */
+@Composable
+private fun ReadingColumn(content: @Composable ColumnScope.() -> Unit) {
+    val design = LocalAppDesign.current
+    Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
+        Column(
+            Modifier
+                .widthIn(max = design.spacing.readingMaxWidth + design.spacing.gutter * 2)
+                .fillMaxWidth(),
+            content = content
+        )
+    }
+}
+
+/**
+ * No kit insets its own segmented control, so the gutter is the caller's to
+ * give. Vatican is the exception: its strip is a ruled band whose hairline runs
+ * the full width of the leaf, and inset it stops meeting the edges.
+ */
+@Composable
+private fun segmentedTabsInset(): Dp {
+    val design = LocalAppDesign.current
+    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+}
+
+/** Vatican sets its labels as inscriptional capitals; the other two do not. */
+@Composable
+private fun caps(text: String): String =
+    if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
