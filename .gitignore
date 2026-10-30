@@ -16,3 +16,7 @@
 local.properties
 .env
 debug.keystore
+
+# Local build environment
+/local.properties
+/app/build/screenshots/

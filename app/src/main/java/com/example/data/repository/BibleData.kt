@@ -52,7 +52,7 @@ object BibleData {
             LocalizedText("Libro Deuterocanónico. San Rafael Arcángel guía al joven Tobías; la providencia y la oración.", "Deuterocanonical. St. Raphael the Archangel, fidelity in trials, and filial piety.", "Deuterocanônico. O Arcanjo São Rafael e a piedade familiar.")),
         BibleBook("jdt", LocalizedText("Judit", "Judith", "Judite"), "Jdt", Testament.OLD, BibleCategory.HISTORICAL, true, 16,
             LocalizedText("Libro Deuterocanónico. La heroína que salvó a Israel de Holofernes; prefiguración de María.", "Deuterocanonical. Judith saves her nation; Marian prefiguration.", "Deuterocanônico. A corajosa mulher que libertou seu povo.")),
-        BibleBook("est", LocalizedText("Ester", "Esther", "Ester"), "Est", Testament.OLD, BibleCategory.HISTORICAL, false, 10,
+        BibleBook("est", LocalizedText("Ester", "Esther", "Ester"), "Est", Testament.OLD, BibleCategory.HISTORICAL, false, 16,
             LocalizedText("Con adiciones deuterocanónicas en griego. La providencia salvando a los judíos.", "Includes Catholic Greek additions with rich prayers of Mordecai and Esther.", "Com acréscimos gregos deuterocanônicos de grande beleza.")),
         BibleBook("1ma", LocalizedText("1 Macabeos", "1 Maccabees", "1 Macabeus"), "1M", Testament.OLD, BibleCategory.HISTORICAL, true, 16,
             LocalizedText("Libro Deuterocanónico. La resistencia de los fieles ante Antíoco; la purificación del Templo.", "Deuterocanonical. The heroic defense of the Temple and holy faith.", "Deuterocanônico. A heroica luta pela fé e liberdade religiosa.")),

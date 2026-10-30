@@ -36,6 +36,7 @@ import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.RadioButton
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberModalBottomSheetState
@@ -53,10 +54,11 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.data.local.AppPreferencesEntity
-import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
+import com.example.data.prefs.UserPreferences
+import com.example.data.prefs.UserPreferencesStore
 import com.example.ui.theme.AppThemePreset
+import com.example.ui.theme.DesignLanguage
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.launch
@@ -64,20 +66,20 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
 fun GuiCustomizerModal(
-    dao: SanctaFidesDao,
+    preferencesStore: UserPreferencesStore,
+    preferences: UserPreferences,
     currentLanguage: AppLanguage = AppLanguage.ES,
     onDismiss: () -> Unit
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
-    val savedPreferences by dao.getAppPreferences().collectAsState(initial = null)
-    val currentPreferences = savedPreferences ?: AppPreferencesEntity()
 
-    var selectedTheme by remember(savedPreferences?.themePreset) { mutableStateOf(currentPreferences.themePreset) }
-    var selectedDarkMode by remember(savedPreferences?.darkModeSetting) { mutableStateOf(currentPreferences.darkModeSetting) }
-    var selectedTypography by remember(savedPreferences?.fontFamilyChoice) { mutableStateOf(currentPreferences.fontFamilyChoice) }
-    var selectedScale by remember(savedPreferences?.fontSizeScale) { mutableFloatStateOf(currentPreferences.fontSizeScale) }
-    var selectedAudioSpeed by remember(savedPreferences?.audioNarrationSpeed) { mutableFloatStateOf(currentPreferences.audioNarrationSpeed) }
+    var selectedDesign by remember(preferences.designLanguage) { mutableStateOf(preferences.designLanguage) }
+    var selectedTheme by remember(preferences.themePreset) { mutableStateOf(preferences.themePreset) }
+    var selectedDarkMode by remember(preferences.darkModeSetting) { mutableStateOf(preferences.darkModeSetting) }
+    var selectedTypography by remember(preferences.fontFamilyChoice) { mutableStateOf(preferences.fontFamilyChoice) }
+    var selectedScale by remember(preferences.fontSizeScale) { mutableFloatStateOf(preferences.fontSizeScale) }
+    var selectedAudioSpeed by remember(preferences.audioNarrationSpeed) { mutableFloatStateOf(preferences.audioNarrationSpeed) }
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -121,6 +123,56 @@ fun GuiCustomizerModal(
             }
 
             Spacer(modifier = Modifier.height(16.dp))
+
+            // 0. Visual identity. This is the widest-reaching control in the
+            // app: it swaps type, shape, spacing, depth, motion, navigation and
+            // ornament, not only colour.
+            Text(
+                text = when (currentLanguage) {
+                    AppLanguage.ES -> "Identidad Visual"
+                    AppLanguage.EN -> "Visual Identity"
+                    AppLanguage.PT -> "Identidade Visual"
+                },
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.SemiBold,
+                color = MaterialTheme.colorScheme.primary
+            )
+            Spacer(modifier = Modifier.height(10.dp))
+            DesignLanguage.entries.forEach { identity ->
+                val isSelected = selectedDesign == identity.id
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp)
+                        .clip(RoundedCornerShape(12.dp))
+                        .background(
+                            if (isSelected) MaterialTheme.colorScheme.primaryContainer
+                            else MaterialTheme.colorScheme.surfaceVariant
+                        )
+                        .clickable { selectedDesign = identity.id }
+                        .padding(14.dp)
+                        .testTag("design_language_${identity.id}"),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(selected = isSelected, onClick = { selectedDesign = identity.id })
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            text = identity.label.get(currentLanguage),
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.Bold
+                        )
+                        Spacer(modifier = Modifier.height(3.dp))
+                        Text(
+                            text = identity.tagline.get(currentLanguage),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(22.dp))
 
             // 1. Theme Presets Selection
             Text(
@@ -346,15 +398,15 @@ fun GuiCustomizerModal(
             // Save Button
             Button(
                 onClick = {
-                    val updated = currentPreferences.copy(
-                        themePreset = selectedTheme,
-                        darkModeSetting = selectedDarkMode,
-                        fontFamilyChoice = selectedTypography,
-                        fontSizeScale = selectedScale,
-                        audioNarrationSpeed = selectedAudioSpeed
-                    )
                     scope.launch {
-                        dao.saveAppPreferences(updated)
+                        preferencesStore.saveAppearance(
+                            designLanguage = selectedDesign,
+                            themePreset = selectedTheme,
+                            darkModeSetting = selectedDarkMode,
+                            fontFamilyChoice = selectedTypography,
+                            fontSizeScale = selectedScale,
+                            audioNarrationSpeed = selectedAudioSpeed
+                        )
                     }
                     onDismiss()
                 },

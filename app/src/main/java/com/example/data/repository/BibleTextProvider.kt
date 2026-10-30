@@ -1,93 +1,117 @@
 package com.example.data.repository
 
 import android.content.Context
+import com.example.data.models.AppLanguage
 import com.example.data.models.BibleVerse
 import com.example.data.models.LocalizedText
+import org.json.JSONArray
 import org.json.JSONObject
 import java.io.File
 
 /**
- * Loads complete Bible text from bundled assets (bible/bible_en.json, _es.json, _pt.json)
- * and optionally from locally downloaded alternate versions stored in filesDir/bibles/.
+ * Loads the complete Catholic Bible (73 books) from bundled assets
+ * (bible/bible_en.json, bible_es.json, bible_pt.json) and optionally from
+ * locally downloaded alternate versions in filesDir/bibles/.
+ *
+ * Each asset is {bookId: {chapterNumber: [verse, verse, ...]}} keyed by the
+ * same book ids as [BibleData.catholicCanonBooks].
+ *
+ * Reads are language-first: a chapter is rendered from the requested
+ * language's own verse list, so chapters whose versification differs between
+ * translations (notably the Psalms, where the Vulgate tradition counts the
+ * title line) keep their own verse numbering instead of being forced onto the
+ * English one. Only one language is held parsed at a time, because each asset
+ * is roughly 4.7 MB of JSON.
  */
 class BibleTextProvider(private val context: Context) {
 
-    private val enMap: Map<String, Map<String, List<String>>> by lazy { loadAsset("bible/bible_en.json") }
-    private val esMap: Map<String, Map<String, List<String>>> by lazy { loadAsset("bible/bible_es.json") }
-    private val ptMap: Map<String, Map<String, List<String>>> by lazy { loadAsset("bible/bible_pt.json") }
+    private var loadedLanguage: AppLanguage? = null
+    private var loadedRoot: JSONObject? = null
 
-    private fun loadAsset(path: String): Map<String, Map<String, List<String>>> {
-        return try {
-            val json = context.assets.open(path).bufferedReader().use { it.readText() }
-            parseBibleJson(json)
+    /** Parses the asset for [language], releasing any other language first. */
+    private fun root(language: AppLanguage): JSONObject? {
+        if (loadedLanguage == language) return loadedRoot
+        loadedRoot = null
+        loadedLanguage = null
+        val parsed = try {
+            val json = context.assets.open("bible/bible_${language.code}.json")
+                .bufferedReader()
+                .use { it.readText() }
+            JSONObject(json)
         } catch (e: Exception) {
-            emptyMap()
+            null
+        }
+        loadedRoot = parsed
+        loadedLanguage = if (parsed != null) language else null
+        return parsed
+    }
+
+    private fun chapterArray(language: AppLanguage, bookId: String, chapterNumber: Int): JSONArray? {
+        val book = root(language)?.optJSONObject(bookId) ?: return null
+        return book.optJSONArray(chapterNumber.toString())
+    }
+
+    private fun JSONArray.toStringList(): List<String> =
+        (0 until length()).map { optString(it, "") }
+
+    /**
+     * Verse list for [bookId]/[chapterNumber] in [language]. Verse numbers are
+     * that language's own, 1-based. Falls back to English when the requested
+     * language has no text for the chapter.
+     */
+    fun getVerses(
+        bookId: String,
+        chapterNumber: Int,
+        language: AppLanguage = AppLanguage.EN
+    ): List<BibleVerse> {
+        val verses = chapterArray(language, bookId, chapterNumber)?.toStringList()
+            ?: chapterArray(AppLanguage.EN, bookId, chapterNumber)?.toStringList()
+            ?: return emptyList()
+        return verses.mapIndexed { idx, text ->
+            BibleVerse(number = idx + 1, text = LocalizedText(es = text, en = text, pt = text))
         }
     }
 
-    private fun parseBibleJson(json: String): Map<String, Map<String, List<String>>> {
-        val root = JSONObject(json)
-        val result = mutableMapOf<String, Map<String, List<String>>>()
-        val bookKeys = root.keys()
-        while (bookKeys.hasNext()) {
-            val bookId = bookKeys.next()
-            val chaptersObj = root.getJSONObject(bookId)
-            val chapters = mutableMapOf<String, List<String>>()
-            val chKeys = chaptersObj.keys()
-            while (chKeys.hasNext()) {
-                val ch = chKeys.next()
-                val arr = chaptersObj.getJSONArray(ch)
-                val verses = mutableListOf<String>()
-                for (i in 0 until arr.length()) {
-                    verses.add(arr.getString(i))
-                }
-                chapters[ch] = verses
-            }
-            result[bookId] = chapters
-        }
-        return result
+    /** Number of chapters present for [bookId] in [language]. */
+    fun chapterCount(bookId: String, language: AppLanguage = AppLanguage.EN): Int {
+        val book = root(language)?.optJSONObject(bookId) ?: return 0
+        return book.keys().asSequence().count { it.toIntOrNull() != null }
     }
 
-    fun getVerses(bookId: String, chapterNumber: Int): List<BibleVerse> {
-        val enChapters = enMap[bookId] ?: return emptyList()
-        val enVerses = enChapters[chapterNumber.toString()] ?: return emptyList()
-        val esVerses = esMap[bookId]?.get(chapterNumber.toString())
-        val ptVerses = ptMap[bookId]?.get(chapterNumber.toString())
-        return enVerses.mapIndexed { idx, enText ->
-            BibleVerse(
-                number = idx + 1,
-                text = LocalizedText(
-                    es = esVerses?.getOrNull(idx) ?: enText,
-                    en = enText,
-                    pt = ptVerses?.getOrNull(idx) ?: enText
-                )
-            )
-        }
-    }
+    fun hasText(bookId: String, chapterNumber: Int, language: AppLanguage = AppLanguage.EN): Boolean =
+        chapterArray(language, bookId, chapterNumber) != null
 
-    fun hasText(bookId: String, chapterNumber: Int): Boolean {
-        return enMap[bookId]?.containsKey(chapterNumber.toString()) == true
-    }
-
-    fun search(query: String, limit: Int = 50): List<Triple<String, Int, BibleVerse>> {
+    /** Full-text search over [language], returning (bookId, chapter, verse). */
+    fun search(
+        query: String,
+        language: AppLanguage = AppLanguage.EN,
+        limit: Int = 50
+    ): List<Triple<String, Int, BibleVerse>> {
         if (query.isBlank()) return emptyList()
-        val q = query.lowercase()
+        val root = root(language) ?: return emptyList()
+        val needle = query.lowercase()
         val results = mutableListOf<Triple<String, Int, BibleVerse>>()
-        for (bookId in enMap.keys) {
-            val chapters = enMap[bookId] ?: continue
-            for ((chStr, verses) in chapters) {
-                val chNum = chStr.toIntOrNull() ?: continue
-                verses.forEachIndexed { idx, text ->
-                    if (text.lowercase().contains(q)) {
-                        val esText = esMap[bookId]?.get(chStr)?.getOrNull(idx) ?: text
-                        val ptText = ptMap[bookId]?.get(chStr)?.getOrNull(idx) ?: text
-                        val verse = BibleVerse(
-                            number = idx + 1,
-                            text = LocalizedText(es = esText, en = text, pt = ptText)
+        for (bookId in BibleData.catholicCanonBooks.map { it.id }) {
+            val book = root.optJSONObject(bookId) ?: continue
+            val chapters = book.keys().asSequence()
+                .mapNotNull { it.toIntOrNull() }
+                .sorted()
+            for (chapterNumber in chapters) {
+                val arr = book.optJSONArray(chapterNumber.toString()) ?: continue
+                for (i in 0 until arr.length()) {
+                    val text = arr.optString(i, "")
+                    if (!text.lowercase().contains(needle)) continue
+                    results.add(
+                        Triple(
+                            bookId,
+                            chapterNumber,
+                            BibleVerse(
+                                number = i + 1,
+                                text = LocalizedText(es = text, en = text, pt = text)
+                            )
                         )
-                        results.add(Triple(bookId, chNum, verse))
-                        if (results.size >= limit) return results
-                    }
+                    )
+                    if (results.size >= limit) return results
                 }
             }
         }
@@ -99,8 +123,6 @@ class BibleTextProvider(private val context: Context) {
 
     fun isDownloaded(versionId: String): Boolean =
         File(downloadedVersionsDir(), "$versionId.json").exists()
-
-    fun downloadProgress(versionId: String): Float? = null // managed by caller
 
     companion object {
         val DOWNLOADABLE_VERSIONS = listOf(
