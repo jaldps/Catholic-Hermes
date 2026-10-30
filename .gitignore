@@ -23,3 +23,6 @@ debug.keystore
 *.jks
 *.keystore
 sancta-fides-1.0.apk
+
+# The published build is tracked deliberately; releases are unavailable here.
+!dist/sancta-fides-1.0.apk
