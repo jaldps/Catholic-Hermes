@@ -132,11 +132,13 @@ fun BibleScreen(
     currentLanguage: AppLanguage,
     dao: SanctaFidesDao? = null,
     ttsManager: LiturgicalTtsManager? = null,
+    /** 0 reader · 1 missal · 2 versions · 3 study. */
+    initialMainTab: Int = 0,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
 
-    var selectedMainTab by remember { mutableIntStateOf(0) }
+    var selectedMainTab by remember(initialMainTab) { mutableIntStateOf(initialMainTab) }
     var selectedTestamentTab by remember { mutableIntStateOf(0) }
     var selectedBook by remember { mutableStateOf<BibleBook?>(null) }
     var selectedChapterNumber by remember { mutableIntStateOf(1) }

@@ -3,6 +3,7 @@ package com.example.data.location
 import com.example.data.models.NearbyParish
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.withTimeoutOrNull
 import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -52,21 +53,33 @@ class ParishFinder(
 
         private const val NOMINATIM = "https://nominatim.openstreetmap.org/search"
 
+        /** Seconds before the whole lookup gives up, mirrors tried and all. */
+        private const val OVERALL_TIMEOUT_MS = 35_000L
+
         fun defaultClient(): OkHttpClient = OkHttpClient.Builder()
-            .connectTimeout(20, TimeUnit.SECONDS)
-            .readTimeout(60, TimeUnit.SECONDS)
+            // Overpass mirrors are community-run and frequently slow. A long
+            // per-request timeout multiplied by three mirrors left the search
+            // spinning for minutes with no way out, so each attempt is kept
+            // short and the whole lookup is bounded by OVERALL_TIMEOUT_MS.
+            .connectTimeout(8, TimeUnit.SECONDS)
+            .readTimeout(12, TimeUnit.SECONDS)
+            .callTimeout(15, TimeUnit.SECONDS)
             .build()
     }
 
     /** Resolves a typed "city, region, country" to coordinates. */
     suspend fun geocode(query: String): GeocodedPlace? = withContext(Dispatchers.IO) {
         if (query.isBlank()) return@withContext null
+        withTimeoutOrNull(OVERALL_TIMEOUT_MS) { geocodeInner(query) }
+    }
+
+    private fun geocodeInner(query: String): GeocodedPlace? {
         val url = "$NOMINATIM?q=${encode(query)}&format=json&limit=1"
         val request = Request.Builder()
             .url(url)
             .header("User-Agent", USER_AGENT)
             .build()
-        runCatching {
+        return runCatching {
             client.newCall(request).execute().use { response ->
                 if (!response.isSuccessful) return@use null
                 val body = response.body?.string().orEmpty()
@@ -96,9 +109,18 @@ class ParishFinder(
         longitude: Double,
         radiusKm: Int = 10
     ): ParishLookupResult = withContext(Dispatchers.IO) {
+        withTimeoutOrNull(OVERALL_TIMEOUT_MS) { lookup(latitude, longitude, radiusKm) }
+            ?: ParishLookupResult.Failure("timed out")
+    }
+
+    private suspend fun lookup(
+        latitude: Double,
+        longitude: Double,
+        radiusKm: Int
+    ): ParishLookupResult {
         val radiusMeters = radiusKm * 1000
         val query = """
-            [out:json][timeout:50];
+            [out:json][timeout:20];
             (
               node["amenity"="place_of_worship"]["religion"="christian"](around:$radiusMeters,$latitude,$longitude);
               way["amenity"="place_of_worship"]["religion"="christian"](around:$radiusMeters,$latitude,$longitude);
@@ -132,13 +154,13 @@ class ParishFinder(
                 null
             } ?: continue
 
-            return@withContext if (parsed.isEmpty()) {
+            return if (parsed.isEmpty()) {
                 ParishLookupResult.Empty(radiusKm)
             } else {
                 ParishLookupResult.Success(parsed)
             }
         }
-        ParishLookupResult.Failure(lastError)
+        return ParishLookupResult.Failure(lastError)
     }
 
     private fun parseOverpass(

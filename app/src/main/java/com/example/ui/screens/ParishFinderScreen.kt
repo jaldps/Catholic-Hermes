@@ -118,6 +118,11 @@ fun ParishFinderScreen(
     }
 
     fun useDeviceLocation() {
+        // Set immediately rather than inside runLookup: reading the last known
+        // fix can itself take a moment, and without this the button looked
+        // dead until the network call started.
+        state = SearchState.LOADING
+        message = null
         scope.launch {
             val location = locationProvider.lastKnownLocation()
             if (location == null) {

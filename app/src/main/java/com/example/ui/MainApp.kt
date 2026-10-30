@@ -88,6 +88,7 @@ fun MainApp(
     val currentLanguage by repository.currentLanguage.collectAsState()
     var selectedDestinationIndex by remember { mutableIntStateOf(0) }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
+    var bibleInitialTab by remember { mutableIntStateOf(0) }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCustomizerModal by remember { mutableStateOf(false) }
 
@@ -158,7 +159,14 @@ fun MainApp(
                         liturgicalDay = repository.getCurrentLiturgicalDay(),
                         onOpenLanguageSelector = { showLanguageSelector = true },
                         onNavigateToHabits = { selectedDestinationIndex = destinations.indexOf(AppDestination.HABITS_VIRTUES) },
-                        onNavigateToBible = { selectedDestinationIndex = destinations.indexOf(AppDestination.BIBLE) },
+                        onNavigateToBible = {
+                            bibleInitialTab = 0
+                            selectedDestinationIndex = destinations.indexOf(AppDestination.BIBLE)
+                        },
+                        onNavigateToMissal = {
+                            bibleInitialTab = 1
+                            selectedDestinationIndex = destinations.indexOf(AppDestination.BIBLE)
+                        },
                         onNavigateToCatechism = { selectedDestinationIndex = destinations.indexOf(AppDestination.CATECHISM) },
                         onNavigateToRosary = { selectedDestinationIndex = destinations.indexOf(AppDestination.ROSARY) },
                         onNavigateToPrayers = { selectedDestinationIndex = destinations.indexOf(AppDestination.PRAYERS) },
@@ -184,7 +192,8 @@ fun MainApp(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         dao = dao,
-                        ttsManager = ttsManager
+                        ttsManager = ttsManager,
+                        initialMainTab = bibleInitialTab
                     )
 
                     AppDestination.CATECHISM -> CatechismScreen(

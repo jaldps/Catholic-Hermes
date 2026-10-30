@@ -97,6 +97,7 @@ fun HomeScreen(
     currentLanguage: AppLanguage,
     onOpenLanguageSelector: () -> Unit,
     onNavigateToBible: () -> Unit,
+    onNavigateToMissal: () -> Unit = onNavigateToBible,
     onNavigateToRosary: () -> Unit,
     onNavigateToPrayers: () -> Unit,
     onNavigateToDoctrine: () -> Unit,
@@ -443,7 +444,7 @@ fun HomeScreen(
                         "Read Full Mass & Commentaries",
                         "Ler Missa Completa e Reflexões"
                     ),
-                    onClick = onNavigateToBible,
+                    onClick = onNavigateToMissal,
                     leadingIcon = Icons.Default.AutoStories,
                     modifier = Modifier
                         .fillMaxWidth()

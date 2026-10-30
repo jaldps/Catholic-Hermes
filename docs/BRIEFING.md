@@ -196,16 +196,22 @@ offline fallback.
   Material's findings were applied to the shared tokens.
 
 ### Reported, not yet fixed
-- "Leer la misa y comentarios" on Home navigates to the Bible rather than the
-  Mass. Note the app now computes the real Mass of the day itself, so the
-  Vatican News page — and its cookie banner — may not be needed at all.
+- ~~"Leer la misa y comentarios" on Home navigates to the Bible~~ **Fixed.** It
+  now opens the Bible's Missal tab directly, which shows the app's own
+  date-aware Mass. Since that Mass is computed offline from the bundled Bible,
+  the Vatican News page — and its cookie banner — may not be needed at all.
 - The versions comparator's buttons were reworked during migration but not
   checked against the original complaint.
 - The button to read the official mass readings from the Vatican in-app shows an unformatted web view of the Vatican site, which means the cookie banner uses too much of the screen and tehre is no option to close that banner. There needs to be a workaround for this.  
 - The parish region filter does not list all options per country.
 - The Via Crucis screen has the same squeezed-button problem the Rosary had; it
   lives in `DoctrineAndHistoryScreen`, which is not yet migrated.
-  - The button to use the GPS location doesn't produce results. It gets stuck in loading.
+  - ~~The button to use the GPS location doesn't produce results. It gets stuck in loading.~~
+    **Fixed.** `findNearby` walked three Overpass mirrors at a 60-second read
+    timeout each, so a failure spun for minutes. Each attempt is now short and
+    the whole lookup is bounded at 35 seconds, after which it reports a
+    timeout; the spinner also appears the moment the button is tapped rather
+    than when the network call starts.
   - The Geographical filter with menus does not show the proper options for each country/region/city.
   - Vatican News and Catholic Bulletins, doesn't show what the Vatican updates. Either delete this is the content cannot be fetched, of find a way to fetch news from the day published by the Vatican
 
