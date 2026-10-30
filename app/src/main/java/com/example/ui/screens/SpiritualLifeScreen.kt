@@ -530,17 +530,53 @@ fun SpiritualLifeScreen(
                     }
 
                     item {
-                        Row(
+                        // Three buttons abreast left no room for their labels,
+                        // so each word wrapped to one character per line. Prev
+                        // and next share a row and the narration button takes
+                        // its own, which also survives the longer Portuguese
+                        // strings.
+                        Column(
                             modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.SpaceBetween
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            ElevatedButton(
-                                onClick = {
-                                    if (currentStationIndex > 0) currentStationIndex--
-                                },
-                                enabled = currentStationIndex > 0
+                            Row(
+                                modifier = Modifier.fillMaxWidth(),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
                             ) {
-                                Text("← Anterior")
+                                ElevatedButton(
+                                    onClick = {
+                                        if (currentStationIndex > 0) currentStationIndex--
+                                    },
+                                    enabled = currentStationIndex > 0,
+                                    modifier = Modifier.weight(1f)
+                                ) {
+                                    Text(
+                                        text = when (currentLanguage) {
+                                            AppLanguage.ES -> "← Anterior"
+                                            AppLanguage.EN -> "← Previous"
+                                            AppLanguage.PT -> "← Anterior"
+                                        },
+                                        maxLines = 1
+                                    )
+                                }
+
+                                ElevatedButton(
+                                    onClick = {
+                                        if (currentStationIndex < stations.size - 1) currentStationIndex++
+                                    },
+                                    enabled = currentStationIndex < stations.size - 1,
+                                    colors = ButtonDefaults.elevatedButtonColors(containerColor = LiturgicalGold, contentColor = Color.Black),
+                                    modifier = Modifier.weight(1f)
+                                ) {
+                                    Text(
+                                        text = when (currentLanguage) {
+                                            AppLanguage.ES -> "Siguiente →"
+                                            AppLanguage.EN -> "Next →"
+                                            AppLanguage.PT -> "Seguinte →"
+                                        },
+                                        maxLines = 1
+                                    )
+                                }
                             }
 
                             ElevatedButton(
@@ -550,21 +586,19 @@ fun SpiritualLifeScreen(
                                         currentStation.prayer.get(currentLanguage)
                                     )
                                 },
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = SacredBurgundy, contentColor = Color.White)
+                                colors = ButtonDefaults.elevatedButtonColors(containerColor = SacredBurgundy, contentColor = Color.White),
+                                modifier = Modifier.fillMaxWidth()
                             ) {
                                 Icon(if (isPlayingAudio) Icons.Default.Stop else Icons.Default.PlayArrow, contentDescription = null, modifier = Modifier.size(16.dp))
                                 Spacer(modifier = Modifier.width(6.dp))
-                                Text("Rezar Estación")
-                            }
-
-                            ElevatedButton(
-                                onClick = {
-                                    if (currentStationIndex < stations.size - 1) currentStationIndex++
-                                },
-                                enabled = currentStationIndex < stations.size - 1,
-                                colors = ButtonDefaults.elevatedButtonColors(containerColor = LiturgicalGold, contentColor = Color.Black)
-                            ) {
-                                Text("Siguiente →")
+                                Text(
+                                    text = when (currentLanguage) {
+                                        AppLanguage.ES -> "Rezar estación"
+                                        AppLanguage.EN -> "Pray this station"
+                                        AppLanguage.PT -> "Rezar estação"
+                                    },
+                                    maxLines = 1
+                                )
                             }
                         }
                     }

@@ -2,7 +2,7 @@
 
 Branch: `feat/bible-correctness-and-visual-identities`
 Build: `dist/sancta-fides-1.0.apk` (signed, sideload-ready)
-Tests: 59, all passing
+Tests: 63, all passing
 
 This document is the handover: what the app does, what was wrong with it, what
 was changed, what is still open, and what is worth doing next.
@@ -203,17 +203,32 @@ offline fallback.
 - The versions comparator's buttons were reworked during migration but not
   checked against the original complaint.
 - The button to read the official mass readings from the Vatican in-app shows an unformatted web view of the Vatican site, which means the cookie banner uses too much of the screen and tehre is no option to close that banner. There needs to be a workaround for this.  
-- The parish region filter does not list all options per country.
-- The Via Crucis screen has the same squeezed-button problem the Rosary had; it
-  lives in `DoctrineAndHistoryScreen`, which is not yet migrated.
+- ~~The parish region filter does not list all options per country.~~ **Fixed.**
+- ~~The Via Crucis screen has the same squeezed-button problem the Rosary had~~
+  **Fixed.** It lives in `SpiritualLifeScreen`, not the doctrine screen. Three
+  buttons abreast left no room for their labels; previous and next now share a
+  row and the narration button takes its own. The labels were Spanish-only and
+  are now translated.
   - ~~The button to use the GPS location doesn't produce results. It gets stuck in loading.~~
     **Fixed.** `findNearby` walked three Overpass mirrors at a 60-second read
     timeout each, so a failure spun for minutes. Each attempt is now short and
     the whole lookup is bounded at 35 seconds, after which it reports a
     timeout; the spinner also appears the moment the button is tapped rather
     than when the network call starts.
-  - The Geographical filter with menus does not show the proper options for each country/region/city.
-  - Vatican News and Catholic Bulletins, doesn't show what the Vatican updates. Either delete this is the content cannot be fetched, of find a way to fetch news from the day published by the Vatican
+  - ~~The Geographical filter with menus does not show the proper options for each country/region/city.~~
+    **Fixed.** The country menu was built from `Locale.getISOCountries()` — some
+    250 countries — while the regions and cities below it could only come from
+    the bundled directory's 12, so any other country gave empty menus and no
+    results. Every level now comes from the directory itself, and a narrower
+    choice above resets a stale one below. The Parishes tab remains the one that
+    searches the whole world.
+  - ~~Vatican News and Catholic Bulletins doesn't show what the Vatican updates.~~
+    **Fixed by fetching it.** The Vatican publishes an RSS feed per language
+    (`vaticannews.va/{es,en,pt}.rss.xml`, 50 stories, no API key), so the two
+    hard-coded articles are replaced by the live feed, rendered natively and
+    tapping through to the article. Rendering it natively also sidesteps the
+    cookie banner entirely. Guarded by `VaticanNewsTest` against a real capture
+    of the feed.
 
 ### Dead code to delete
 `LiturgicalCalendarWidget.kt`, `PrayerBeadCounter.kt` and `LiturgicalHeader.kt`

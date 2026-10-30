@@ -77,7 +77,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
 import com.example.data.models.CapitalSinVsVirtue
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.produceState
+import androidx.compose.material3.CircularProgressIndicator
 import com.example.data.models.CatholicNewsArticle
+import com.example.data.news.NewsResult
+import com.example.data.news.VaticanNewsFetcher
+import com.example.data.news.VaticanNewsItem
 import com.example.data.models.ChristManifestation
 import com.example.data.models.ChurchHistoryEpoch
 import com.example.data.models.ChurchPrecept
@@ -297,18 +303,29 @@ fun DoctrineAndHistoryScreen(
                 var selectedRegion by remember { mutableStateOf("Todas") }
                 var selectedCity by remember { mutableStateOf("Todas") }
 
-                val allCountries = remember {
-                    val isoCountries = Locale.getISOCountries().map { code ->
-                        Locale("", code).getDisplayCountry(Locale("es"))
-                    }.filter { it.isNotBlank() }.distinct().sorted()
-                    listOf("Todos") + isoCountries
+                // Every level of the cascade is drawn from the directory
+                // itself. The country list used to come from
+                // Locale.getISOCountries(), offering some 250 countries while
+                // the regions and cities beneath it could only ever come from
+                // the bundled parishes — so choosing any of the other ~240 gave
+                // an empty region list, an empty city list and no results. The
+                // Parishes tab is the one that searches the whole world.
+                val allCountries = remember(repository) {
+                    listOf("Todos") + repository.nearbyParishes
+                        .map { it.country }
+                        .filter { it.isNotBlank() }
+                        .distinct()
+                        .sorted()
                 }
                 val availableRegions = remember(selectedCountry) {
-                    if (selectedCountry == "Todos") {
-                        listOf("Todas") + repository.nearbyParishes.map { it.stateOrRegion }.distinct()
-                    } else {
-                        listOf("Todas") + repository.nearbyParishes.filter { it.country == selectedCountry }.map { it.stateOrRegion }.distinct()
-                    }
+                    val scoped =
+                        if (selectedCountry == "Todos") repository.nearbyParishes
+                        else repository.nearbyParishes.filter { it.country == selectedCountry }
+                    listOf("Todas") + scoped
+                        .map { it.stateOrRegion }
+                        .filter { it.isNotBlank() }
+                        .distinct()
+                        .sorted()
                 }
                 val availableCities = remember(selectedCountry, selectedRegion) {
                     var list = repository.nearbyParishes
@@ -318,7 +335,22 @@ fun DoctrineAndHistoryScreen(
                     if (selectedRegion != "Todas") {
                         list = list.filter { it.stateOrRegion == selectedRegion }
                     }
-                    listOf("Todas") + list.map { it.city }.distinct()
+                    listOf("Todas") + list
+                        .map { it.city }
+                        .filter { it.isNotBlank() }
+                        .distinct()
+                        .sorted()
+                }
+
+                // A narrower choice above must not leave a stale one below it:
+                // picking Spain after choosing a Mexican state previously left
+                // that state selected and the list empty.
+                LaunchedEffect(selectedCountry) {
+                    if (selectedRegion !in availableRegions) selectedRegion = "Todas"
+                    if (selectedCity !in availableCities) selectedCity = "Todas"
+                }
+                LaunchedEffect(selectedRegion) {
+                    if (selectedCity !in availableCities) selectedCity = "Todas"
                 }
 
                 val filteredParishes = repository.nearbyParishes.filter { parish ->
@@ -341,6 +373,16 @@ fun DoctrineAndHistoryScreen(
                         else -> true
                     }
                     matchesQuery && matchesCountry && matchesRegion && matchesCity && matchesFilter
+                }
+
+                // Live from the Vatican's own feed. The bundled articles that
+                // used to sit here were two fixed entries that never changed,
+                // which is what made this section look broken.
+                val newsState by produceState<NewsResult?>(
+                    initialValue = null,
+                    key1 = currentLanguage
+                ) {
+                    value = VaticanNewsFetcher().latest(currentLanguage, limit = 25)
                 }
 
                 LazyColumn(
@@ -614,8 +656,46 @@ fun DoctrineAndHistoryScreen(
                         )
                     }
 
-                    items(repository.catholicNews) { news ->
-                        NewsCard(news = news, currentLanguage = currentLanguage)
+                    when (val news = newsState) {
+                        null -> item {
+                            Row(
+                                modifier = Modifier.fillMaxWidth().padding(20.dp),
+                                horizontalArrangement = Arrangement.Center,
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                CircularProgressIndicator(
+                                    modifier = Modifier.size(18.dp),
+                                    color = MaterialTheme.colorScheme.primary
+                                )
+                                Spacer(modifier = Modifier.width(10.dp))
+                                Text(
+                                    text = when (currentLanguage) {
+                                        AppLanguage.ES -> "Cargando noticias del Vaticano…"
+                                        AppLanguage.EN -> "Loading news from the Vatican…"
+                                        AppLanguage.PT -> "A carregar notícias do Vaticano…"
+                                    },
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                )
+                            }
+                        }
+
+                        is NewsResult.Failure -> item {
+                            Text(
+                                text = when (currentLanguage) {
+                                    AppLanguage.ES -> "No se pudieron cargar las noticias (${news.reason}). Comprueba tu conexión."
+                                    AppLanguage.EN -> "Could not load the news (${news.reason}). Check your connection."
+                                    AppLanguage.PT -> "Não foi possível carregar as notícias (${news.reason}). Verifique a ligação."
+                                },
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+                            )
+                        }
+
+                        is NewsResult.Success -> items(news.items) { article ->
+                            VaticanNewsCard(article = article, currentLanguage = currentLanguage)
+                        }
                     }
                 }
             }
@@ -1068,3 +1148,66 @@ private fun ParishDropdownSelector(
     }
 }
 
+/**
+ * One story from the Vatican's feed. Tapping it opens the article; the feed
+ * carries only a summary.
+ */
+@Composable
+private fun VaticanNewsCard(
+    article: VaticanNewsItem,
+    currentLanguage: AppLanguage
+) {
+    val context = LocalContext.current
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 6.dp)
+            .clickable {
+                runCatching {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse(article.link))
+                    )
+                }
+            },
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceContainer
+        )
+    ) {
+        Column(modifier = Modifier.padding(16.dp)) {
+            if (article.publishedAt.isNotBlank()) {
+                Text(
+                    text = article.publishedAt,
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(modifier = Modifier.height(6.dp))
+            }
+            Text(
+                text = article.title,
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+            if (article.summary.isNotBlank()) {
+                Spacer(modifier = Modifier.height(6.dp))
+                Text(
+                    text = article.summary,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 3,
+                    overflow = TextOverflow.Ellipsis
+                )
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Text(
+                text = when (currentLanguage) {
+                    AppLanguage.ES -> "Leer en Vatican News →"
+                    AppLanguage.EN -> "Read on Vatican News →"
+                    AppLanguage.PT -> "Ler no Vatican News →"
+                },
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.primary
+            )
+        }
+    }
+}
