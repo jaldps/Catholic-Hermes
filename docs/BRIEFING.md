@@ -2,7 +2,7 @@
 
 Branch: `feat/bible-correctness-and-visual-identities`
 Build: `dist/sancta-fides-1.0.apk` (signed, sideload-ready)
-Tests: 55, all passing
+Tests: 59, all passing
 
 This document is the handover: what the app does, what was wrong with it, what
 was changed, what is still open, and what is worth doing next.
@@ -180,11 +180,13 @@ offline fallback.
   liturgical day without readings rather than showing the wrong ones.
 
 ### Partly done
-- **The Catechism.** The text is complete and genuine — all 2,865 paragraphs,
-  official text, three languages. But the browse tree names only **26** of them,
-  so the rest are reachable only by typing a number. `CatechismOutline` now
-  provides a 31-section index tiling 1..2865 without gap or overlap; the screen
-  does not consume it yet. This is the single highest-value remaining fix.
+- ~~**The Catechism.**~~ **Done.** The browse tree named only 26 of the 2,865
+  paragraphs, so the rest were reachable only by typing a number. A "Complete
+  text" index of 31 sections now tiles 1..2865 without gap or overlap, and each
+  section opens as a lazily-rendered reading view. Two paragraphs came out of
+  the source incomplete (§2349 has no Spanish or English, §2357 no Portuguese);
+  those fall back to a language that has the text rather than rendering empty.
+  Guarded by `CatechismCoverageTest`.
 - **Screen migration: 5 of 13.** Migrated: Home, Bible, Catechism, Rosary,
   Parishes. Not migrated: Habits & Virtues, Prayers & Novenas, Doctrine &
   History, Spiritual Life, Scripture Study, Night Prayers, Pilgrimage,

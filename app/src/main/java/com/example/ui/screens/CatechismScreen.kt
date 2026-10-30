@@ -54,6 +54,7 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.CatechismChapter
 import com.example.data.models.CatechismNumberedArticle
 import com.example.data.models.CatechismPart
+import com.example.data.repository.CatechismOutlineSection
 import com.example.data.repository.CatholicDataRepository
 import com.example.data.repository.CompendiumQA
 import com.example.data.repository.DoctrineFormula
@@ -97,6 +98,7 @@ fun CatechismScreen(
     var mainMode by remember { mutableIntStateOf(2) }
     var selectedPartIndex by remember { mutableIntStateOf(0) }
     var selectedChapter by remember { mutableStateOf<CatechismChapter?>(null) }
+    var selectedOutline by remember { mutableStateOf<CatechismOutlineSection?>(null) }
     var searchQuery by remember { mutableStateOf("") }
     var fontSizeMultiplier by remember { mutableFloatStateOf(1f) }
     var useSerifFont by remember { mutableStateOf(true) }
@@ -139,6 +141,8 @@ fun CatechismScreen(
                 onSelectPart = { selectedPartIndex = it },
                 selectedChapter = selectedChapter,
                 onSelectChapter = { selectedChapter = it },
+                selectedOutline = selectedOutline,
+                onSelectOutline = { selectedOutline = it },
                 fontSizeMultiplier = fontSizeMultiplier,
                 onFontSizeChange = { fontSizeMultiplier = it },
                 useSerifFont = useSerifFont,
@@ -165,6 +169,8 @@ private fun UniversalCatechismView(
     onSelectPart: (Int) -> Unit,
     selectedChapter: CatechismChapter?,
     onSelectChapter: (CatechismChapter?) -> Unit,
+    selectedOutline: CatechismOutlineSection?,
+    onSelectOutline: (CatechismOutlineSection?) -> Unit,
     fontSizeMultiplier: Float,
     onFontSizeChange: (Float) -> Unit,
     useSerifFont: Boolean,
@@ -197,13 +203,29 @@ private fun UniversalCatechismView(
                 useSerifFont = useSerifFont
             )
 
+            selectedOutline != null -> {
+                BackHandler { onSelectOutline(null) }
+                ParagraphRangeView(
+                    repository = repository,
+                    section = selectedOutline,
+                    currentLanguage = currentLanguage,
+                    fontSizeMultiplier = fontSizeMultiplier,
+                    onFontSizeChange = onFontSizeChange,
+                    useSerifFont = useSerifFont,
+                    onToggleSerif = onToggleSerif,
+                    onBack = { onSelectOutline(null) }
+                )
+            }
+
             chapter == null -> CatechismIndex(
                 parts = parts,
                 currentPart = currentPart,
                 selectedPartIndex = selectedPartIndex,
                 currentLanguage = currentLanguage,
                 onSelectPart = onSelectPart,
-                onSelectChapter = { onSelectChapter(it) }
+                onSelectChapter = { onSelectChapter(it) },
+                outline = repository.catechismOutline,
+                onSelectOutline = onSelectOutline
             )
 
             else -> {
@@ -234,7 +256,9 @@ private fun CatechismIndex(
     selectedPartIndex: Int,
     currentLanguage: AppLanguage,
     onSelectPart: (Int) -> Unit,
-    onSelectChapter: (CatechismChapter) -> Unit
+    onSelectChapter: (CatechismChapter) -> Unit,
+    outline: List<CatechismOutlineSection>,
+    onSelectOutline: (CatechismOutlineSection?) -> Unit
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -325,7 +349,143 @@ private fun CatechismIndex(
             }
         }
 
+        // The highlighted chapters above name only a few dozen paragraphs.
+        // These sections tile 1..2865 without gap or overlap, so the rest of
+        // the Catechism is reachable too.
+        item { AppOrnament() }
+
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick("Texto completo", "Complete text", "Texto completo"),
+                subtitle = currentLanguage.pick(
+                    "Los 2.865 numerales, íntegros",
+                    "All 2,865 paragraphs, in full",
+                    "Os 2.865 números, na íntegra"
+                )
+            )
+        }
+
+        outline.groupBy { it.partTitle.get(currentLanguage) }.forEach { (partTitle, sections) ->
+            item { SubHeading(partTitle) }
+            item {
+                AppListGroup {
+                    sections.forEach { section ->
+                        AppListRow(
+                            title = section.title.get(currentLanguage),
+                            subtitle = currentLanguage.pick(
+                                "${section.paragraphCount} numerales",
+                                "${section.paragraphCount} paragraphs",
+                                "${section.paragraphCount} números"
+                            ),
+                            trailingText = "§§ ${section.firstNumber}–${section.lastNumber}",
+                            onClick = { onSelectOutline(section) }
+                        )
+                    }
+                }
+            }
+        }
+
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+/**
+ * Every paragraph of one outline section, set in full and lazily, so a
+ * two-hundred-paragraph stretch costs no more to open than a short one.
+ */
+@Composable
+private fun ParagraphRangeView(
+    repository: CatholicDataRepository,
+    section: CatechismOutlineSection,
+    currentLanguage: AppLanguage,
+    fontSizeMultiplier: Float,
+    onFontSizeChange: (Float) -> Unit,
+    useSerifFont: Boolean,
+    onToggleSerif: () -> Unit,
+    onBack: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    Column(Modifier.fillMaxSize()) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+                .padding(bottom = design.spacing.cardGap / 2),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = "§§ ${section.firstNumber}–${section.lastNumber}",
+                style = styles.sectionEyebrow,
+                color = design.palette.gold,
+                modifier = Modifier
+                    .weight(1f)
+                    .clickable(onClick = onBack)
+                    .testTag("back_to_catechism_outline")
+            )
+            AppChip(
+                label = "A-",
+                selected = false,
+                onClick = {
+                    if (fontSizeMultiplier > 0.85f) onFontSizeChange(fontSizeMultiplier - 0.15f)
+                }
+            )
+            Spacer(Modifier.width(design.spacing.cardGap / 2))
+            AppChip(
+                label = "A+",
+                selected = false,
+                onClick = {
+                    if (fontSizeMultiplier < 1.45f) onFontSizeChange(fontSizeMultiplier + 0.15f)
+                }
+            )
+            Spacer(Modifier.width(design.spacing.cardGap / 2))
+            AppChip(
+                label = if (useSerifFont) "Serif" else "Sans",
+                selected = useSerifFont,
+                onClick = onToggleSerif
+            )
+        }
+
+        AppDivider()
+
+        LazyColumn(Modifier.fillMaxSize()) {
+            item {
+                AppScreenTitle(
+                    title = section.title.get(currentLanguage),
+                    subtitle = section.partTitle.get(currentLanguage) + " · " + section.biblicalReferences
+                )
+            }
+
+            items(section.lastNumber - section.firstNumber + 1) { offset ->
+                val number = section.firstNumber + offset
+                val article = repository.findCatechismArticle(number)
+                if (article != null) {
+                    ReadingColumn {
+                        Column(
+                            Modifier.padding(
+                                horizontal = design.spacing.gutter,
+                                vertical = design.spacing.cardGap / 2
+                            )
+                        ) {
+                            Text(
+                                text = "§ $number",
+                                style = styles.verseNumber,
+                                color = design.palette.gold
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap / 3))
+                            Text(
+                                text = article.content.get(currentLanguage),
+                                style = readingStyle(fontSizeMultiplier, useSerifFont),
+                                color = design.palette.textPrimary
+                            )
+                        }
+                    }
+                }
+            }
+
+            item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+        }
     }
 }
 

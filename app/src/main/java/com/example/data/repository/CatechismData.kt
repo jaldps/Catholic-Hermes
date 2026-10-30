@@ -597,7 +597,7 @@ object CatechismData {
         return CatechismNumberedArticle(
             cccNumber = num,
             title = LocalizedText("Artículo CCC § $num: $partTheme", "Article CCC § $num: $partTheme", "Artigo CIC § $num: $partTheme"),
-            content = CatechismFullData.contentByNumber[num] ?: LocalizedText(
+            content = CatechismFullData.contentByNumber[num]?.filledAcrossLanguages() ?: LocalizedText(
                 "Enseñanza íntegra de la Iglesia Católica (Catecismo de la Iglesia Católica, numeral § $num, $partNum).",
                 "Official teaching of the Universal Catholic Church (Catechism of the Catholic Church, § $num, $partNum).",
                 "Doutrina oficial da Igreja Católica universal (Catecismo da Igreja Católica, número § $num, $partNum)."
@@ -641,3 +641,18 @@ object CatechismData {
     }
 }
 
+/**
+ * Fills any language left blank from one that has text.
+ *
+ * Two paragraphs came out of the source incomplete — §2349 has no Spanish or
+ * English, §2357 no Portuguese. Showing another language's text is honest;
+ * showing an empty page, or inventing doctrine to fill it, is not.
+ */
+private fun LocalizedText.filledAcrossLanguages(): LocalizedText {
+    val fallback = sequenceOf(es, en, pt).firstOrNull { it.isNotBlank() } ?: return this
+    return LocalizedText(
+        es = es.ifBlank { fallback },
+        en = en.ifBlank { fallback },
+        pt = pt.ifBlank { fallback }
+    )
+}
