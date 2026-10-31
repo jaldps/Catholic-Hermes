@@ -292,7 +292,9 @@ fun HabitsAndVirtuesScreen(
                                         title = habit.localizedTitle(currentLanguage),
                                         subtitle = com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage),
                                         leadingIcon = habitIcon(habit.iconName),
-                                        trailingText = categoryLabel(habit.category, currentLanguage),
+                                        // The glyph already says what kind of
+                                        // practice it is; a category on every
+                                        // row repeated "Prayer" five times.
                                         showsNavigationAffordance = false
                                     )
                                 }

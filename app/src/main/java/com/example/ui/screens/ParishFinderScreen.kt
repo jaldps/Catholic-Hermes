@@ -4,6 +4,12 @@ import android.content.Intent
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -20,6 +26,7 @@ import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -100,6 +107,7 @@ fun ParishFinderScreen(
     var results by remember { mutableStateOf<List<NearbyParish>>(emptyList()) }
     var message by remember { mutableStateOf<String?>(null) }
     var searchedPlace by remember { mutableStateOf<String?>(null) }
+    var expandedParishId by remember { mutableStateOf<String?>(null) }
 
     fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
         AppLanguage.ES -> es
@@ -366,7 +374,11 @@ fun ParishFinderScreen(
                 } else {
                     strings("Directorio incluido", "Bundled directory", "Diretório incluído")
                 },
-                subtitle = searchedPlace?.takeIf { results.isNotEmpty() }
+                subtitle = searchedPlace?.takeIf { results.isNotEmpty() } ?: strings(
+                    "Toca una parroquia para ver sus misas, su teléfono y cómo llegar.",
+                    "Tap a parish for its Mass times, telephone and directions.",
+                    "Toque numa paróquia para ver as missas, o telefone e como chegar."
+                )
             )
         }
 
@@ -383,53 +395,93 @@ fun ParishFinderScreen(
                 )
             }
         } else {
-            items(shown, key = { it.id }) { parish ->
-                AppListGroup {
-                    AppListRow(
-                        title = parish.name,
-                        subtitle = listOf(parish.diocese, parish.address)
-                            .filter { it.isNotBlank() }
-                            .joinToString(" · ")
-                            .ifBlank { null },
-                        leadingIcon = Icons.Default.Church,
-                        trailingText = parish.distanceDisplay.ifBlank { null },
-                        onClick = {
-                            val uri = Uri.parse(
-                                "geo:${parish.latitude},${parish.longitude}?q=" +
-                                    Uri.encode(parish.name)
+            // One list for the directory. Each parish is its name and one short
+            // line; a tap opens its Mass times, telephone and directions in
+            // place, so the page reads as a list and not as a wall of text.
+            item(key = "parish_list") {
+                AppListGroup(Modifier.testTag("parish_list")) {
+                    shown.forEach { parish ->
+                        val open = expandedParishId == parish.id
+                        val distance = parish.distanceDisplay.takeIf { it.any(Char::isDigit) }
+                        AppListRow(
+                            title = parish.name,
+                            subtitle = listOf(
+                                if (distance == null) parish.distanceDisplay else streetOf(parish.address),
+                                parish.city
                             )
-                            runCatching {
-                                context.startActivity(Intent(Intent.ACTION_VIEW, uri))
-                            }
-                        }
-                    )
-                    if (parish.sundayMasses.isNotBlank()) {
-                        AppListRow(
-                            title = strings("Misas", "Mass times", "Missas"),
-                            subtitle = parish.sundayMasses,
-                            leadingIcon = Icons.Default.LocationOn,
-                            showsNavigationAffordance = false
-                        )
-                    }
-                    if (parish.contactPhone.isNotBlank()) {
-                        AppListRow(
-                            title = parish.contactPhone,
-                            leadingIcon = Icons.Default.Phone,
+                                .map { it.trim() }
+                                .filter { it.isNotBlank() }
+                                .distinct()
+                                .joinToString(" · ")
+                                .ifBlank { null },
+                            trailingText = distance,
                             showsNavigationAffordance = false,
-                            onClick = {
-                                runCatching {
-                                    context.startActivity(
-                                        Intent(Intent.ACTION_DIAL, Uri.parse("tel:${parish.contactPhone}"))
+                            selected = open,
+                            onClick = { expandedParishId = if (open) null else parish.id },
+                            modifier = Modifier.testTag("parish_row_${parish.id}")
+                        )
+                        AnimatedVisibility(
+                            visible = open,
+                            enter = expandVertically(
+                                animationSpec = tween(design.motion.mediumMillis, easing = design.motion.emphasizedEasing)
+                            ) + fadeIn(tween(design.motion.mediumMillis)),
+                            exit = shrinkVertically(
+                                animationSpec = tween(design.motion.fastMillis, easing = design.motion.standardEasing)
+                            ) + fadeOut(tween(design.motion.fastMillis))
+                        ) {
+                            Column {
+                                if (parish.sundayMasses.isNotBlank()) {
+                                    AppListRow(
+                                        title = strings("Misas del domingo", "Sunday Mass", "Missas de domingo"),
+                                        subtitle = parish.sundayMasses,
+                                        leadingIcon = Icons.Default.Schedule,
+                                        showsNavigationAffordance = false
                                     )
                                 }
+                                if (parish.contactPhone.isNotBlank()) {
+                                    AppListRow(
+                                        title = strings("Llamar", "Call", "Ligar"),
+                                        subtitle = parish.contactPhone,
+                                        leadingIcon = Icons.Default.Phone,
+                                        onClick = {
+                                            runCatching {
+                                                context.startActivity(
+                                                    Intent(
+                                                        Intent.ACTION_DIAL,
+                                                        Uri.parse("tel:${parish.contactPhone.replace(" ", "")}")
+                                                    )
+                                                )
+                                            }
+                                        },
+                                        modifier = Modifier.testTag("parish_call_${parish.id}")
+                                    )
+                                }
+                                AppListRow(
+                                    title = strings("Cómo llegar", "Directions", "Como chegar"),
+                                    subtitle = parish.address.ifBlank { null },
+                                    leadingIcon = Icons.Default.LocationOn,
+                                    onClick = {
+                                        val uri = Uri.parse(
+                                            "geo:${parish.latitude},${parish.longitude}?q=" +
+                                                Uri.encode(parish.name)
+                                        )
+                                        runCatching {
+                                            context.startActivity(Intent(Intent.ACTION_VIEW, uri))
+                                        }
+                                    },
+                                    modifier = Modifier.testTag("parish_directions_${parish.id}")
+                                )
                             }
-                        )
+                        }
                     }
                 }
-                Spacer(Modifier.height(design.spacing.cardGap))
             }
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
+
+/** "Calle de Bailén, 10, Centro, 28013 Madrid" → "Calle de Bailén, 10". */
+private fun streetOf(address: String): String =
+    address.split(',').map { it.trim() }.filter { it.isNotEmpty() }.take(2).joinToString(", ")

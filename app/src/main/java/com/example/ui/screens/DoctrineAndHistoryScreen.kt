@@ -5,6 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -835,11 +837,14 @@ private fun ParishesAndNewsPane(
                     modifier = Modifier.testTag("parish_open_maps")
                 )
             }
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
         }
 
+        // Field, group and filters keep the page's own rhythm: a card gap
+        // between field and group, half a section gap before the filters
+        // (which act on the results, not on the cascade), then a card gap.
         item {
-            ChipFlow {
+            Spacer(Modifier.height(design.spacing.sectionGap / 2))
+            ChipRow {
                 parishFilters.forEachIndexed { index, label ->
                     AppChip(
                         label = label,
@@ -848,6 +853,7 @@ private fun ParishesAndNewsPane(
                     )
                 }
             }
+            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
         if (filteredParishes.isEmpty()) {
@@ -1186,6 +1192,26 @@ private fun ChipFlow(content: @Composable () -> Unit) {
             ),
         horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
         verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+    ) {
+        content()
+    }
+}
+
+/**
+ * Filters on one line that scrolls under the screen edge, the gutter carried as
+ * content padding so the row starts and ends on the margin: the idiom of
+ * Photos, Maps and Play, and no lone chip wrapped onto a second line.
+ */
+@Composable
+private fun ChipRow(content: @Composable () -> Unit) {
+    val design = LocalAppDesign.current
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .horizontalScroll(rememberScrollState())
+            .padding(horizontal = design.spacing.gutter),
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
+        verticalAlignment = Alignment.CenterVertically
     ) {
         content()
     }

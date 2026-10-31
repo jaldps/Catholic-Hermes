@@ -228,41 +228,39 @@ private fun LiturgicalDayEntry(day: LiturgicalCalendarDay, currentLanguage: AppL
                 "${day.dayOfMonth} de ${day.monthName.lowercase()}",
                 "${day.monthName} ${day.dayOfMonth}",
                 "${day.dayOfMonth} de ${day.monthName.lowercase()}"
-            ) + " · " + day.seasonName.get(currentLanguage),
+            ) + " · " + day.rank.get(currentLanguage),
             body = day.celebrationTitle.get(currentLanguage),
             accentColorHex = day.liturgicalColorHex
         )
 
-        Spacer(Modifier.height(design.spacing.cardGap))
-
-        AppListGroup {
-            AppListRow(
-                title = currentLanguage.pick("Rango", "Rank", "Grau"),
-                subtitle = day.rank.get(currentLanguage),
-                leadingIcon = Icons.Default.Star,
-                showsNavigationAffordance = false
-            )
-            if (day.gospelVerseRef.isNotBlank()) {
-                AppListRow(
-                    title = currentLanguage.pick("Evangelio", "Gospel", "Evangelho"),
-                    subtitle = day.gospelVerseRef,
-                    leadingIcon = Icons.Default.MenuBook,
-                    showsNavigationAffordance = false
-                )
+        // The rank rides in the banner's eyebrow, so what is left is the day's
+        // Gospel and its precept: one compact group, the precept a row in it
+        // rather than a note floating in the gutter beneath. A plain weekday
+        // with neither is the banner alone.
+        val gospel = day.gospelVerseRef.takeIf { it.isNotBlank() }
+        val precept = day.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
+        if (gospel != null || precept != null) {
+            Spacer(Modifier.height(design.spacing.cardGap / 2))
+            AppListGroup {
+                if (gospel != null) {
+                    AppListRow(
+                        title = currentLanguage.pick("Evangelio", "Gospel", "Evangelho"),
+                        trailingText = gospel,
+                        showsNavigationAffordance = false
+                    )
+                }
+                if (precept != null) {
+                    AppListRow(
+                        title = currentLanguage.pick(
+                            "Ayuno y precepto",
+                            "Fasting and precept",
+                            "Jejum e preceito"
+                        ),
+                        subtitle = precept,
+                        showsNavigationAffordance = false
+                    )
+                }
             }
-        }
-
-        day.fastingRule?.let { rule ->
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Apparatus(
-                label = currentLanguage.pick(
-                    "Ayuno y precepto",
-                    "Fasting and precept",
-                    "Jejum e preceito"
-                ),
-                text = rule.get(currentLanguage),
-                modifier = Modifier.padding(horizontal = design.spacing.gutter)
-            )
         }
     }
 }

@@ -1,10 +1,30 @@
 package com.example.ui.screens
 
-import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.spring
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.geometry.lerp
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.unit.Density
+import androidx.compose.runtime.LaunchedEffect
+import kotlinx.coroutines.launch
+import kotlin.math.PI
+import kotlin.math.abs
+import kotlin.math.cos
+import kotlin.math.sin
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -16,15 +36,12 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
@@ -51,13 +68,11 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.audio.RecitationVoiceMode
@@ -92,16 +107,6 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
 
 /** A decade is one Our Father bead followed by ten Hail Mary beads. */
 private const val HailMarysPerDecade = 10
-
-/** The Our Father bead is cut larger than the ten that follow it. */
-private const val LeadBeadScale = 1.5f
-
-/** The crucifix and the centre medal stand a little prouder than a lead bead. */
-private const val CrucifixScale = 1.6f
-private const val MedalScale = 1.5f
-
-/** Ring weight where the identity rules its edges rather than filling them. */
-private val BeadHairline = 0.5.dp
 
 // ---------------------------------------------------------------------------
 // The guide as data
@@ -856,28 +861,28 @@ private fun buildMercyGuide(
     return g.build(decadeCount)
 }
 
-/** "Decade 3 of 5 · Hail Mary 4 of 10". */
-private fun PrayerGuide.progressLine(step: GuideStep, lang: AppLanguage): String {
-    val where = when {
-        step.section == 0 -> openingTitle(lang)
-        step.section <= decadeCount -> lang.pick(
-            "Década ${step.section} de $decadeCount",
-            "Decade ${step.section} of $decadeCount",
-            "Dezena ${step.section} de $decadeCount"
-        )
-        else -> closingTitle(lang)
-    }
-    val what = if (step.count > 1) {
+/** "Decade 3 of 5": the part of the devotion a step belongs to. */
+private fun PrayerGuide.whereLine(step: GuideStep, lang: AppLanguage): String = when {
+    step.section == 0 -> openingTitle(lang)
+    step.section <= decadeCount -> lang.pick(
+        "Década ${step.section} de $decadeCount",
+        "Decade ${step.section} of $decadeCount",
+        "Dezena ${step.section} de $decadeCount"
+    )
+    else -> closingTitle(lang)
+}
+
+/** "4 of 10" for a prayer said several times in a row, otherwise nothing. */
+private fun countLine(step: GuideStep, lang: AppLanguage): String? =
+    if (step.count > 1) {
         lang.pick(
-            "${step.name} ${step.repetition} de ${step.count}",
-            "${step.name} ${step.repetition} of ${step.count}",
-            "${step.name} ${step.repetition} de ${step.count}"
+            "${step.repetition} de ${step.count}",
+            "${step.repetition} of ${step.count}",
+            "${step.repetition} de ${step.count}"
         )
     } else {
-        step.name
+        null
     }
-    return "$where · $what"
-}
 
 // ---------------------------------------------------------------------------
 // Screen
@@ -1022,8 +1027,8 @@ fun RosaryScreen(
                     Spacer(Modifier.height(design.spacing.sectionGap / 2))
                     AppBanner(
                         title = lang.pick("Misterios de hoy", "Today's mysteries", "Mistérios de hoje"),
-                        body = todayMystery.type.displayName.get(lang) +
-                            " · " + todayMystery.type.recommendedDays.get(lang),
+                        // The days are already on the mystery's row below.
+                        body = todayMystery.type.displayName.get(lang),
                         onClick = {
                             selectedMysteryType = todayMystery.type
                             rosaryStepIndex = 0
@@ -1355,27 +1360,26 @@ private fun GuideControlsCard(
 
         Spacer(Modifier.height(design.spacing.cardPadding))
 
+        val where = guide.whereLine(step, lang)
+        val count = countLine(step, lang)
         BeadRail(
             beads = guide.beads,
             activeIndex = step.bead,
+            where = where,
+            what = step.name,
+            count = count,
             onSelectBead = { bead ->
                 val target = guide.firstStepOn(bead)
                 if (target >= 0) onGo(target)
             },
-            modifier = Modifier.testTag(railTag)
+            modifier = Modifier
+                .testTag(railTag)
+                .semantics {
+                    contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
+                }
         )
 
         Spacer(Modifier.height(design.spacing.cardGap))
-
-        Text(
-            text = guide.progressLine(step, lang),
-            style = styles.rowTitle,
-            color = design.palette.textPrimary,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth()
-        )
-
-        Spacer(Modifier.height(design.spacing.cardPadding))
 
         RecitationControls(
             previousLabel = previousLabel,
@@ -1488,62 +1492,242 @@ private fun StepCard(step: GuideStep, lang: AppLanguage, spokenNow: String?) {
 }
 
 /**
- * The whole rosary: the pendant, each decade on its own line, and the medal.
+ * The whole rosary drawn as the thing itself: the loop of five decades strung
+ * on one thread, the medal where it closes, and the pendant hanging to the
+ * crucifix. Untold beads are hairline rings, told ones are filled, and the
+ * bead in hand stands proud in the accent with a soft halo. Where you are is
+ * set in the middle of the loop.
  *
  * The idiom follows the tokens rather than a flag: where the identity rules its
- * edges (`cardBorderWidth`) the bead is an unfilled ring of leaf and only the
- * current one is inked solid; where it fills them, the bead is a clean circle
- * tinted by its state. Beads before the current one are marked as prayed.
+ * edges (`cardBorderWidth`) the rings and told beads are leaf, as a gilt
+ * rosary; where it fills them they are the tint. One animated position glides
+ * along the thread, so advancing springs the next bead up and lets the last
+ * one settle into the told colour.
  */
 @Composable
 private fun BeadRail(
     beads: List<BeadSpec>,
     activeIndex: Int,
+    where: String,
+    what: String,
+    count: String?,
     onSelectBead: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
     val haptics = LocalHapticFeedback.current
+    val density = LocalDensity.current
 
     val engraved = design.depth.cardBorderWidth > 0.dp
-    val ringWidth = maxOf(
-        design.depth.cardBorderWidth,
-        if (design.depth.usesHairlines) BeadHairline else 0.dp
-    )
-    val rows = remember(beads) {
-        beads.indices.groupBy { beads[it].row }.toSortedMap().values.toList()
+    val thread = if (engraved) palette.gold.copy(alpha = 0.42f) else palette.textTertiary.copy(alpha = 0.32f)
+    val untold = if (engraved) palette.gold.copy(alpha = 0.78f) else palette.textTertiary.copy(alpha = 0.62f)
+    val told = if (engraved) palette.gold else palette.accent.copy(alpha = if (design.isDark) 0.62f else 0.5f)
+    val current = palette.accent
+    val halo = palette.accent.copy(alpha = if (engraved) 0.12f else 0.16f)
+    val stroke = maxOf(design.depth.cardBorderWidth, 1.dp)
+
+    // One position for the whole rail: a spring carries it from bead to bead.
+    val position = remember { Animatable(activeIndex.toFloat()) }
+    // A ring that blooms once from the bead just reached, then fades.
+    val bloom = remember { Animatable(1f) }
+    LaunchedEffect(activeIndex) {
+        if (position.targetValue != activeIndex.toFloat()) {
+            launch {
+                position.animateTo(
+                    activeIndex.toFloat(),
+                    spring(dampingRatio = 0.72f, stiffness = Spring.StiffnessMediumLow)
+                )
+            }
+            bloom.snapTo(0f)
+            bloom.animateTo(
+                1f,
+                tween(durationMillis = design.motion.slowMillis * 2, easing = design.motion.standardEasing)
+            )
+        }
     }
 
     BoxWithConstraints(modifier.fillMaxWidth()) {
-        val gap = design.spacing.cardGap / 3
-        // One bead size for every line, set by the most crowded one.
-        val unit = rows.minOf { row ->
-            val slots = row.sumOf { beadScale(beads[it].kind).toDouble() }.toFloat()
-            (maxWidth - gap * (row.size - 1)) / slots
-        }.coerceIn(0.dp, design.spacing.rowMinHeight / 2)
+        val geometry = remember(beads, maxWidth, density) {
+            with(density) { RosaryGeometry.layout(beads, maxWidth.toPx(), this) }
+        }
+        val heightDp = with(density) { geometry.height.toDp() }
+        val loopTop = with(density) { (geometry.centre.y - geometry.radius).toDp() }
+        val loopSize = with(density) { (geometry.radius * 2).toDp() }
 
-        Column(
-            modifier = Modifier.fillMaxWidth(),
-            verticalArrangement = Arrangement.spacedBy(gap * 2)
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .height(heightDp)
         ) {
-            rows.forEach { row ->
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(gap, Alignment.CenterHorizontally),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    row.forEach { index ->
-                        Bead(
-                            kind = beads[index].kind,
-                            size = unit * beadScale(beads[index].kind),
-                            isActive = index == activeIndex,
-                            isTold = index < activeIndex,
-                            engraved = engraved,
-                            ringWidth = ringWidth,
-                            onClick = {
-                                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                                onSelectBead(index)
+            Canvas(
+                Modifier
+                    .matchParentSize()
+                    .pointerInput(geometry) {
+                        detectTapGestures { tap ->
+                            val reach = 22.dp.toPx()
+                            val hit = geometry.centres.indices.minByOrNull {
+                                (geometry.centres[it] - tap).getDistance()
                             }
+                            if (hit != null && (geometry.centres[hit] - tap).getDistance() <= reach) {
+                                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                                onSelectBead(hit)
+                            }
+                        }
+                    }
+            ) {
+                val pos = position.value
+                val strokePx = stroke.toPx()
+
+                // The thread, trimmed at every bead so no ring is crossed.
+                geometry.loopRuns.forEach { (from, to) ->
+                    val fromAngle = geometry.angles.getValue(from)
+                    var toAngle = geometry.angles.getValue(to)
+                    // The run that closes the loop comes back to the medal a full turn on.
+                    if (toAngle <= fromAngle) toAngle += (2 * PI).toFloat()
+                    val a = fromAngle + geometry.reach(from) / geometry.radius
+                    val b = toAngle - geometry.reach(to) / geometry.radius
+                    if (b > a) {
+                        drawArc(
+                            color = thread,
+                            startAngle = Math.toDegrees(a.toDouble()).toFloat(),
+                            sweepAngle = Math.toDegrees((b - a).toDouble()).toFloat(),
+                            useCenter = false,
+                            topLeft = Offset(
+                                geometry.centre.x - geometry.radius,
+                                geometry.centre.y - geometry.radius
+                            ),
+                            size = Size(geometry.radius * 2, geometry.radius * 2),
+                            style = Stroke(width = strokePx * 0.8f, cap = StrokeCap.Round)
+                        )
+                    }
+                }
+                geometry.pendantRuns.forEach { (upper, lower) ->
+                    val top = geometry.centres[upper].y + geometry.reach(upper)
+                    val bottom = geometry.centres[lower].y - geometry.reach(lower)
+                    if (bottom > top) {
+                        drawLine(
+                            color = thread,
+                            start = Offset(geometry.centre.x, top),
+                            end = Offset(geometry.centre.x, bottom),
+                            strokeWidth = strokePx * 0.8f,
+                            cap = StrokeCap.Round
+                        )
+                    }
+                }
+
+                // The halo travels with the position, between beads mid-glide.
+                val lower = pos.toInt().coerceIn(0, beads.lastIndex)
+                val upper = (lower + 1).coerceAtMost(beads.lastIndex)
+                val haloAt = lerp(geometry.centres[lower], geometry.centres[upper], pos - lower)
+                val haloRadius = geometry.small * 2.9f
+                drawCircle(halo, radius = haloRadius, center = haloAt)
+                if (bloom.value < 1f) {
+                    drawCircle(
+                        color = current.copy(alpha = 0.35f * (1f - bloom.value)),
+                        radius = haloRadius * (0.6f + 1.1f * bloom.value),
+                        center = geometry.centres[activeIndex],
+                        style = Stroke(width = strokePx)
+                    )
+                }
+
+                beads.forEachIndexed { index, bead ->
+                    val emphasis = (1f - abs(index - pos)).coerceIn(0f, 1f)
+                    val toldness = (pos - index).coerceIn(0f, 1f)
+                    val scale = 1f + 0.7f * emphasis
+                    val fill = lerp(told.copy(alpha = told.alpha * toldness), current, emphasis)
+                    val ringAlpha = 1f - maxOf(toldness, emphasis)
+                    val centre = geometry.centres[index]
+                    when (bead.kind) {
+                        BeadKind.CRUCIFIX -> {
+                            val ink = lerp(lerp(untold, told, toldness), current, emphasis)
+                            val h = geometry.crucifixHeight * (1f + 0.2f * emphasis)
+                            val bar = strokePx * 1.8f
+                            drawLine(
+                                ink,
+                                Offset(centre.x, centre.y - h / 2),
+                                Offset(centre.x, centre.y + h / 2),
+                                strokeWidth = bar,
+                                cap = StrokeCap.Round
+                            )
+                            drawLine(
+                                ink,
+                                Offset(centre.x - h * 0.3f, centre.y - h * 0.18f),
+                                Offset(centre.x + h * 0.3f, centre.y - h * 0.18f),
+                                strokeWidth = bar,
+                                cap = StrokeCap.Round
+                            )
+                        }
+
+                        BeadKind.MEDAL -> {
+                            val r = geometry.medal * scale
+                            val lozenge = Path().apply {
+                                moveTo(centre.x, centre.y - r)
+                                lineTo(centre.x + r * 0.78f, centre.y)
+                                lineTo(centre.x, centre.y + r)
+                                lineTo(centre.x - r * 0.78f, centre.y)
+                                close()
+                            }
+                            drawPath(lozenge, fill)
+                            if (ringAlpha > 0f) {
+                                drawPath(
+                                    lozenge,
+                                    untold.copy(alpha = untold.alpha * ringAlpha),
+                                    style = Stroke(width = strokePx, join = StrokeJoin.Round)
+                                )
+                            }
+                        }
+
+                        else -> {
+                            val base = if (bead.kind == BeadKind.LARGE) geometry.large else geometry.small
+                            val r = base * scale
+                            drawCircle(fill, radius = r, center = centre)
+                            if (ringAlpha > 0f) {
+                                drawCircle(
+                                    untold.copy(alpha = untold.alpha * ringAlpha),
+                                    radius = r - strokePx / 2,
+                                    center = centre,
+                                    style = Stroke(width = strokePx)
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            // Where you are, set inside the loop.
+            Box(
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .padding(top = loopTop)
+                    .size(loopSize),
+                contentAlignment = Alignment.Center
+            ) {
+                Column(
+                    modifier = Modifier.widthIn(max = loopSize * 0.68f),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+                    Text(
+                        text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
+                        style = styles.sectionEyebrow,
+                        color = palette.textSecondary,
+                        textAlign = TextAlign.Center
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap / 3))
+                    Text(
+                        text = what,
+                        style = styles.sectionTitle,
+                        color = palette.textPrimary,
+                        textAlign = TextAlign.Center
+                    )
+                    if (count != null) {
+                        Spacer(Modifier.height(design.spacing.cardGap / 4))
+                        Text(
+                            text = count,
+                            style = styles.rowSubtitle,
+                            color = palette.accent,
+                            textAlign = TextAlign.Center
                         )
                     }
                 }
@@ -1552,92 +1736,120 @@ private fun BeadRail(
     }
 }
 
-private fun beadScale(kind: BeadKind): Float = when (kind) {
-    BeadKind.CRUCIFIX -> CrucifixScale
-    BeadKind.LARGE -> LeadBeadScale
-    BeadKind.SMALL -> 1f
-    BeadKind.MEDAL -> MedalScale
-}
-
-@Composable
-private fun Bead(
-    kind: BeadKind,
-    size: Dp,
-    isActive: Boolean,
-    isTold: Boolean,
-    engraved: Boolean,
-    ringWidth: Dp,
-    onClick: () -> Unit
+/**
+ * Where every bead sits, in pixels. The loop carries the decades clockwise from
+ * just beside the medal; the pendant hangs straight down from the medal with
+ * the crucifix at its foot, so the first prayers are said climbing towards it.
+ */
+private class RosaryGeometry(
+    val centres: List<Offset>,
+    /** Angle on the loop, in radians, of each loop bead and of the medal. */
+    val angles: Map<Int, Float>,
+    /** Consecutive loop beads (including the medal at either end) to thread. */
+    val loopRuns: List<Pair<Int, Int>>,
+    /** Consecutive pendant beads, upper then lower, to thread. */
+    val pendantRuns: List<Pair<Int, Int>>,
+    val kinds: List<BeadKind>,
+    val centre: Offset,
+    val radius: Float,
+    val small: Float,
+    val large: Float,
+    val medal: Float,
+    val crucifixHeight: Float,
+    val height: Float
 ) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val spec = tween<Color>(
-        durationMillis = design.motion.fastMillis,
-        easing = design.motion.standardEasing
-    )
+    /** How far the thread stops short of a bead's centre. */
+    fun reach(index: Int): Float = when (kinds[index]) {
+        BeadKind.CRUCIFIX -> crucifixHeight / 2
+        BeadKind.LARGE -> large
+        BeadKind.SMALL -> small
+        BeadKind.MEDAL -> medal
+    } + small * 0.35f
 
-    if (kind == BeadKind.CRUCIFIX) {
-        // A cross drawn from two bars, inked by the same states as a bead.
-        val ink by animateColorAsState(
-            targetValue = when {
-                isActive -> palette.accent
-                isTold -> if (engraved) palette.gold else palette.accent.copy(alpha = 0.55f)
-                engraved -> palette.gold.copy(alpha = 0.45f)
-                else -> palette.textTertiary
-            },
-            animationSpec = spec,
-            label = "crucifixInk"
-        )
-        val bar = RoundedCornerShape(percent = 50)
-        Box(
-            modifier = Modifier
-                .size(size)
-                .clip(CircleShape)
-                .clickable(onClick = onClick),
-            contentAlignment = Alignment.Center
-        ) {
-            Box(
-                Modifier
-                    .size(width = size * 0.22f, height = size * 0.92f)
-                    .clip(bar)
-                    .background(ink)
-            )
-            Box(
-                Modifier
-                    .offset(y = -(size * 0.16f))
-                    .size(width = size * 0.64f, height = size * 0.22f)
-                    .clip(bar)
-                    .background(ink)
+    companion object {
+        fun layout(beads: List<BeadSpec>, width: Float, density: Density): RosaryGeometry = with(density) {
+            val small = 3.4.dp.toPx()
+            val large = 5.dp.toPx()
+            val medal = 6.5.dp.toPx()
+            val crucifixHeight = 17.dp.toPx()
+            val top = 16.dp.toPx()
+            val radius = minOf(width / 2 - 16.dp.toPx(), 108.dp.toPx())
+            val centre = Offset(width / 2, top + radius)
+
+            val kinds = beads.map { it.kind }
+            val medalIndex = beads.indexOfLast { it.kind == BeadKind.MEDAL }
+            val pendant = beads.indices.filter { beads[it].row == 0 }
+            val loop = beads.indices.filter { beads[it].row != 0 && it != medalIndex }
+
+            fun r(i: Int) = when (kinds[i]) {
+                BeadKind.LARGE -> large
+                BeadKind.MEDAL -> medal
+                BeadKind.CRUCIFIX -> crucifixHeight / 2
+                BeadKind.SMALL -> small
+            }
+
+            val centres = MutableList(beads.size) { Offset.Zero }
+            val angles = mutableMapOf<Int, Float>()
+            val bottom = (PI / 2).toFloat()
+            val gap = (medal + small * 3.2f) / radius
+            val start = bottom + gap
+            val end = bottom + (2 * PI).toFloat() - gap
+            val arc = (end - start) * radius
+            val diameters = loop.sumOf { 2.0 * r(it) }.toFloat()
+            val spacing = if (loop.size > 1) (arc - diameters) / (loop.size - 1) else 0f
+            var run = 0f
+            loop.forEach { i ->
+                val angle = start + (run + r(i)) / radius
+                angles[i] = angle
+                centres[i] = Offset(centre.x + radius * cos(angle), centre.y + radius * sin(angle))
+                run += 2 * r(i) + spacing
+            }
+
+            var y = centre.y + radius
+            if (medalIndex >= 0) {
+                angles[medalIndex] = bottom
+                centres[medalIndex] = Offset(centre.x, y)
+            }
+            // The pendant hangs from the medal: its last bead highest.
+            val pitch = small * 1.35f
+            var previous = medalIndex.takeIf { it >= 0 }?.let { medal } ?: 0f
+            val pendantRuns = mutableListOf<Pair<Int, Int>>()
+            var upper: Int? = medalIndex.takeIf { it >= 0 }
+            pendant.reversed().forEach { i ->
+                y += previous + pitch + r(i)
+                centres[i] = Offset(centre.x, y)
+                previous = r(i)
+                upper?.let { pendantRuns += it to i }
+                upper = i
+            }
+            val height = y + previous + 6.dp.toPx()
+
+            val ring = buildList {
+                if (medalIndex >= 0) add(medalIndex)
+                addAll(loop)
+            }
+            val loopRuns = ring.zipWithNext().toMutableList()
+            if (medalIndex >= 0 && loop.isNotEmpty()) {
+                // Close the loop back to the medal, a full turn on.
+                loopRuns += loop.last() to medalIndex
+            }
+
+            RosaryGeometry(
+                centres = centres,
+                angles = angles,
+                loopRuns = loopRuns,
+                pendantRuns = pendantRuns,
+                kinds = kinds,
+                centre = centre,
+                radius = radius,
+                small = small,
+                large = large,
+                medal = medal,
+                crucifixHeight = crucifixHeight,
+                height = height
             )
         }
-        return
     }
-
-    val shape = if (kind == BeadKind.MEDAL) RoundedCornerShape(percent = 30) else CircleShape
-    val fill by animateColorAsState(
-        targetValue = when {
-            isActive -> palette.accent
-            engraved -> Color.Transparent
-            isTold -> palette.accent.copy(alpha = 0.32f)
-            else -> palette.selectionTint
-        },
-        animationSpec = spec,
-        label = "beadFill"
-    )
-    val ring = when {
-        engraved && (isActive || isTold) -> palette.gold
-        engraved -> palette.gold.copy(alpha = 0.45f)
-        design.depth.usesHairlines && !isActive -> palette.hairline
-        else -> Color.Transparent
-    }
-    Box(
-        Modifier
-            .size(size)
-            .clip(shape)
-            .background(fill)
-            .border(ringWidth, ring, shape)
-            .clickable(onClick = onClick)
-    )
 }
 
 /**
