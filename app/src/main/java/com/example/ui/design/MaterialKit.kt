@@ -1401,9 +1401,11 @@ object MaterialKit : AppKit {
             // sake stay a segmented button and drop the checkmark, as the
             // spec allows when space is tight: a radius is a choice, and
             // drawing it as navigation tabs was a component misuse.
-            val fitsBare = options.size <= 5 && widest <= segment - 24.dp
+            // Only for a dense set of four or five values: two or three
+            // long-ish labels are peer views, and those stay tabs.
+            val fitsBare = options.size in 4..5 && widest <= segment - 24.dp
             val showCheck = widest <= room
-            val fits = fitsBare
+            val fits = (options.size <= 5 && showCheck) || fitsBare
             if (!fits) {
                 val bleed = sideInset
                 val selected = selectedIndex.coerceIn(0, (options.size - 1).coerceAtLeast(0))

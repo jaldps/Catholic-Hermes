@@ -120,3 +120,60 @@ extended FAB on the Journal, a clipped radius chip row on Parishes.
   stacked per entry make the page a wall of pills. Use one filled-tonal button
   plus a text button side by side, or make the whole entry a clickable list row
   with an `OpenInNew` trailing icon.
+
+### Iteration 4 → 5 (Round 4, MaterialKit)
+- Large flexible top app bar: the scaffold's bar now carries the screen's
+  headline. `ScreenTitle` hands its title and subtitle up to the bar and draws
+  nothing in the content (a 4dp spacer holding the heading semantics). The bar
+  is a 64dp pinned row (back, collapsed title, actions) over a fixed 84dp
+  expanded region (30sp emphasised headline over one bodyMedium supporting
+  line). It collapses exitUntilCollapsed, the headline fading into a titleLarge
+  bar title. On a root tab with an empty pinned row the headline rises 28dp
+  into it.
+- Expressive shapes, hand-built (`ScallopShape`): a soft-burst seal with a
+  cross on liturgical banners, a Cookie-9 empty-state hero, clover stat-tile
+  glyphs, and a circle-to-cookie avatar morph with rotation on row selection
+  (fast spatial spring).
+- Banner: 28dp hero container. The celebration is set in emphasised
+  headlineSmall or titleLarge; text after a `\n` becomes bodyMedium
+  supporting text. Liturgical colours are harmonised toward primary (≤8°),
+  with gold pinned to amber so it never reads as olive.
+- Settings-style section headers: titleSmall in primary, inset onto the
+  list text edge. A short count rides trailing.
+- Trailing row text is bodyMedium. Clickable navigation rows get a chevron,
+  after the value when there is one.
+- Dark surface ladder deepened (≈6→11→14→19→24).
+- Four or five short values (Parishes radius) stay a segmented button without
+  the checkmark instead of turning into tabs.
+
+## Round 4 shared-screen requests
+
+- **Every screen that calls `AppScreenTitle`: always pass a one-line
+  subtitle** (≤ ~48 chars, since it is ellipsised to one line in the app bar).
+  The bar reserves the supporting line at a fixed height, so a screen without
+  one opens with ~22dp of dead air under the headline. Missing today: Prayers,
+  Rosary, More, Calendar & Shrines, Doctrine & History, Churches & News, Habits
+  & Virtues, Spiritual Life. Headlines must fit one line at 30sp (~20 chars);
+  longer ones step down to 24sp.
+- **Do not add an in-content headline to compensate.** The app bar now shows
+  `AppScreenTitle`'s title for Material.
+- `PilgrimageAndHabitsScreen.kt`: the Calendar/Shrines switch and
+  `HabitsAndVirtuesScreen.kt` Rule of life/In temptation, and
+  `DoctrineAndHistoryScreen.kt` Churches/News, switch whole pages. Those are
+  tabs, not a segmented button. Either give `AppKit` an `AppTabs` call (page
+  navigation) separate from `AppSegmentedTabs` (a value choice), or pass three
+  or more options so Material draws tabs.
+- `PilgrimageAndHabitsScreen.kt`: the banner and its Gospel row are two shapes
+  8dp apart. Put the Gospel/precept rows in the same `AppListGroup` directly
+  under the banner (0–2dp gap), or pass the Gospel reference as a third line of
+  the banner body (`"All Saints\nMass obligation · Matthew 5:1–12"`).
+- `PrayersAndNovenasScreen.kt` "Intention · All" and `DoctrineAndHistoryScreen.kt`
+  "Country/City/Show" filter rows: pass `showsNavigationAffordance = true` so
+  they get the chevron, or better, make them a single row of filter chips with
+  a dropdown arrow (the Play/Maps idiom).
+- `ParishFinderScreen.kt`: a filled button, a tonal button and a search field
+  stacked in one card is three primary controls. Keep the search field and one
+  "Use my location" tonal button side by side, and drop the card.
+- Hero CTAs (Habits "Start with 7 suggested practices", Journal "Write your
+  first entry") should be centred, wrap-content buttons, not full-width. In M3
+  only a pinned bottom action is full width.
