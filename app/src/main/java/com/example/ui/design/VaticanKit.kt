@@ -45,7 +45,9 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.remember
@@ -99,7 +101,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.BaselineShift
 import androidx.compose.ui.text.style.LineHeightStyle
+import androidx.compose.ui.text.style.LineBreak
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
@@ -804,13 +809,16 @@ object VaticanKit : AppKit {
                 contentWindowInsets = WindowInsets.safeDrawing,
                 containerColor = Color.Transparent,
                 topBar = {
-                    Column(Modifier.statusBarsPadding()) {
+                    // A pushed page carries a running head, not the book's
+                    // masthead: one line of small capitals naming the page.
+                    if (onBack != null) RunningHead(title, onBack, backLabel, deviceShadow, deviceLight, actions)
+                    else Column(Modifier.statusBarsPadding()) {
                         Masthead(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(horizontal = 8.dp)
-                                .padding(top = 6.dp)
-                                .heightIn(min = 60.dp),
+                                .padding(top = 2.dp)
+                                .heightIn(min = 46.dp),
                             leading = {
                                 Box(Modifier.width(48.dp), contentAlignment = Alignment.Center) {
                                     if (onBack != null) {
@@ -827,28 +835,38 @@ object VaticanKit : AppKit {
                             },
                             title = {
                                 // The masthead is centred, as an ecclesial
-                                // document is headed rather than left-titled.
-                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                // document is headed rather than left-titled,
+                                // and set on one line: the cross of leaf
+                                // leads the book's name like a colophon mark.
+                                Row(verticalAlignment = Alignment.CenterVertically) {
                                     Text(
                                         text = "✠",
                                         style = styles.sectionEyebrow.copy(
-                                            fontSize = 17.sp,
-                                            lineHeight = 18.sp,
+                                            fontSize = 13.sp,
+                                            lineHeight = 16.sp,
                                             letterSpacing = 0.sp
                                         ),
                                         color = palette.gold
                                     )
-                                    Spacer(Modifier.height(3.dp))
+                                    Spacer(Modifier.width(9.dp))
                                     Text(
                                         text = "Sancta Fides".uppercase(), // the running head names the book, not the page
-                                        // Trajan capitals at masthead size want
-                                        // less tracking than the eyebrows below.
                                         style = styles.screenTitle
-                                            .copy(fontSize = 17.sp, lineHeight = 22.sp, fontWeight = FontWeight.Normal)
-                                            .tracked(0.16f),
+                                            .copy(fontSize = 15.sp, lineHeight = 20.sp, fontWeight = FontWeight.Normal)
+                                            .tracked(0.18f),
                                         color = bodyInk(),
                                         textAlign = TextAlign.Center,
                                         maxLines = 1
+                                    )
+                                    Spacer(Modifier.width(9.dp))
+                                    Text(
+                                        text = "✠",
+                                        style = styles.sectionEyebrow.copy(
+                                            fontSize = 13.sp,
+                                            lineHeight = 16.sp,
+                                            letterSpacing = 0.sp
+                                        ),
+                                        color = palette.gold
                                     )
                                 }
                             },
@@ -860,7 +878,7 @@ object VaticanKit : AppKit {
                                 )
                             }
                         )
-                        Spacer(Modifier.height(10.dp))
+                        Spacer(Modifier.height(6.dp))
                         // The one hairline of leaf the chrome is allowed.
                         ScotchRule(thinColor = palette.gold.copy(alpha = 0.85f))
                     }
@@ -869,8 +887,75 @@ object VaticanKit : AppKit {
                     FolioRail(navItems, selectedNavIndex, onNavSelected)
                 }
             ) { insets ->
-                content(insets)
+                CompositionLocalProvider(LocalRunningHead provides if (onBack != null) title else null) {
+                    content(insets)
+                }
             }
+        }
+    }
+
+    /**
+     * The page a pushed screen is on, when the chrome already names it in a
+     * running head. [ScreenTitle] reads it so the title is not set twice.
+     */
+    private val LocalRunningHead = staticCompositionLocalOf<String?> { null }
+
+    /**
+     * The running head of an inner page, as a missal carries it above the
+     * text: one line of small capitals between rules of air, the back mark
+     * at the outer margin, a single hairline of leaf beneath. Thirty-odd dp,
+     * not a title page.
+     */
+    @Composable
+    private fun RunningHead(
+        title: String,
+        onBack: () -> Unit,
+        backLabel: String?,
+        deviceShadow: Color,
+        deviceLight: Color,
+        actions: @Composable RowScope.() -> Unit
+    ) {
+        val palette = LocalAppDesign.current.palette
+        val styles = LocalAppTextStyles.current
+        Column(Modifier.statusBarsPadding()) {
+            Masthead(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 4.dp)
+                    .heightIn(min = 44.dp),
+                leading = {
+                    Box(Modifier.width(48.dp), contentAlignment = Alignment.Center) {
+                        IconButton(onClick = onBack, modifier = Modifier.testTag("nav_back")) {
+                            Icon(
+                                Icons.AutoMirrored.Sharp.ArrowBack,
+                                contentDescription = backLabel,
+                                tint = palette.textSecondary,
+                                modifier = Modifier.size(19.dp)
+                            )
+                        }
+                    }
+                },
+                title = {
+                    Text(
+                        text = title.uppercase(),
+                        style = styles.sectionEyebrow
+                            .copy(fontSize = 12.5.sp, lineHeight = 16.sp, fontWeight = FontWeight.Normal)
+                            .tracked(0.22f),
+                        color = bodyInk(),
+                        textAlign = TextAlign.Center,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                },
+                actions = {
+                    Row(
+                        Modifier.widthIn(min = 48.dp).duotone(deviceShadow, deviceLight),
+                        verticalAlignment = Alignment.CenterVertically,
+                        content = actions
+                    )
+                }
+            )
+            Hairline(color = palette.gold.copy(alpha = 0.8f))
         }
     }
 
@@ -1009,12 +1094,39 @@ object VaticanKit : AppKit {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
+        val head = LocalRunningHead.current
+        val argument = styles.screenSubtitle.copy(
+            fontStyle = FontStyle.Italic,
+            fontSize = 16.sp,
+            lineHeight = 23.sp,
+            lineBreak = LineBreak.Heading
+        )
+        if (head != null && head.trim().equals(title.trim(), ignoreCase = true)) {
+            // The running head already names the page; setting it again as a
+            // title page is what ate a third of every inner screen. What is
+            // left is the argument, in italic, as a missal sets the line under
+            // a heading.
+            Column(
+                modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = if (subtitle != null) 14.dp else 4.dp, bottom = if (subtitle != null) 10.dp else 0.dp),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                if (subtitle != null) {
+                    Text(subtitle, style = argument, color = palette.textSecondary, textAlign = TextAlign.Center)
+                }
+            }
+            return
+        }
+        // An inner page's own heading (a commandment, a prayer) sits under a
+        // running head and is cut a size smaller than a tab's title page.
+        val inner = head != null
         Column(
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
-                // A title page drops well below the head rule before it speaks.
-                .padding(top = design.spacing.headerTopGap + 22.dp, bottom = 30.dp),
+                .padding(top = design.spacing.headerTopGap + (if (inner) 0.dp else 4.dp), bottom = 18.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
@@ -1022,22 +1134,22 @@ object VaticanKit : AppKit {
                 // Cinzel regular, not bold: the Trajan column is incised, not
                 // fattened. Bold caps at display size read as a luxury logotype.
                 style = styles.screenTitle
-                    .copy(fontWeight = FontWeight.Normal)
-                    .tracked(0.085f),
+                    .copy(
+                        fontWeight = FontWeight.Normal,
+                        fontSize = if (inner) 20.sp else 24.sp,
+                        lineHeight = if (inner) 28.sp else 32.sp,
+                        lineBreak = LineBreak.Heading
+                    )
+                    .tracked(if (inner) 0.07f else 0.09f),
                 color = bodyInk(),
                 textAlign = TextAlign.Center
             )
-            Spacer(Modifier.height(18.dp))
+            Spacer(Modifier.height(12.dp))
             // Leaf, spent once: a swelled rule with a lozenge at its heart.
             TitleFleuron()
             if (subtitle != null) {
-                Spacer(Modifier.height(18.dp))
-                Text(
-                    text = subtitle,
-                    style = styles.screenSubtitle.copy(lineHeight = 24.sp),
-                    color = palette.textSecondary,
-                    textAlign = TextAlign.Center
-                )
+                Spacer(Modifier.height(12.dp))
+                Text(subtitle, style = argument, color = palette.textSecondary, textAlign = TextAlign.Center)
             }
         }
     }
@@ -1185,25 +1297,35 @@ object VaticanKit : AppKit {
                 if (roman != null) {
                     Text(
                         text = roman.trimEnd('.') + ".",
-                        style = styles.sectionEyebrow.copy(fontSize = 13.sp, lineHeight = 18.sp, letterSpacing = 0.6.sp),
+                        style = styles.sectionEyebrow.copy(fontSize = 15.sp, lineHeight = 20.sp, letterSpacing = 0.4.sp),
                         color = rubric(),
                         maxLines = 1,
                         modifier = Modifier.width(38.dp).alignByBaseline()
                     )
                 }
                 Column(Modifier.weight(1f).then(if (roman != null) Modifier.alignByBaseline() else Modifier)) {
-                    Text(title, style = styles.rowTitle, color = titleColor)
+                    Text(title, style = styles.rowTitle.copy(lineBreak = LineBreak.Heading), color = titleColor)
                     if (subtitle != null) {
-                        Spacer(Modifier.height(4.dp))
-                        Text(subtitle, style = styles.rowSubtitle, color = palette.textSecondary)
+                        Spacer(Modifier.height(2.dp))
+                        // The gloss under an entry — an incipit, an extent, a
+                        // reference — is set in italic, as an index sets it,
+                        // so it never competes with the roman of the entry.
+                        Text(
+                            subtitle,
+                            style = styles.rowSubtitle.copy(fontStyle = FontStyle.Italic, fontSize = 15.sp),
+                            color = palette.textSecondary
+                        )
                     }
                 }
                 if (trailing != null) {
                     Spacer(Modifier.width(12.dp))
+                    // Data set opposite an entry is text-face figures, not a
+                    // second voice of tracked capitals: "6:00 am", "All".
                     Text(
-                        text = trailing.uppercase(),
-                        style = styles.navLabel.copy(fontSize = 10.sp).tracked(0.2f),
-                        color = if (selected) palette.accent else palette.textTertiary
+                        text = trailing,
+                        style = styles.rowSubtitle.copy(fontSize = 15.sp, letterSpacing = 0.3.sp),
+                        color = if (selected) palette.accent else palette.textSecondary,
+                        maxLines = 1
                     )
                 }
                 if (showsNavigationAffordance && onClick != null) {
@@ -1265,34 +1387,47 @@ object VaticanKit : AppKit {
             design.isDark -> Color(0xFF861F18)
             else -> palette.accent
         }
-        val gilt = palette.gold.copy(alpha = if (design.isDark) 0.70f else 0.85f)
-        val ink = when {
-            !enabled -> palette.textTertiary
-            design.isDark -> palette.textPrimary
-            else -> palette.raised
-        }
-        // A pressed panel sinks a shade, like a blind-stamped label.
+        // No slab. The action is a rubric: red capitals in a frame tooled
+        // in leaf — a thick-thin pair of hairlines, as on a bound label — with
+        // a lozenge of red either side. It is the strongest thing on the page
+        // by colour, not by mass. (The old fill is kept only as a faint wash.)
+        val gilt = palette.gold.copy(alpha = if (design.isDark) 0.80f else 0.90f)
+        val ink = if (enabled) rubric() else palette.textTertiary
+        val wash = if (enabled) fill.copy(alpha = if (design.isDark) 0.10f else 0.045f) else Color.Transparent
         Box(
             modifier
-                .background(fill, RectangleShape)
+                .alpha(if (enabled) 1f else 0.55f)
+                .background(wash, RectangleShape)
                 .drawBehind {
-                    if (!enabled) return@drawBehind
-                    // A gilt hairline tooled just inside the edge, as on a
-                    // bound label: the button is a stamped panel, not a slab.
+                    val outer = 0.9.dp.toPx()
+                    val inner = 0.5.dp.toPx()
                     val inset = 3.dp.toPx()
-                    val sw = 0.75.dp.toPx()
                     drawRect(
                         gilt,
+                        topLeft = Offset(outer / 2, outer / 2),
+                        size = Size(size.width - outer, size.height - outer),
+                        style = androidx.compose.ui.graphics.drawscope.Stroke(outer)
+                    )
+                    drawRect(
+                        gilt.copy(alpha = gilt.alpha * 0.6f),
                         topLeft = Offset(inset, inset),
                         size = Size(size.width - inset * 2, size.height - inset * 2),
-                        style = androidx.compose.ui.graphics.drawscope.Stroke(sw)
+                        style = androidx.compose.ui.graphics.drawscope.Stroke(inner)
                     )
                 }
                 .press(enabled = enabled, onClick = onClick)
-                .padding(horizontal = 20.dp, vertical = 14.dp),
+                .padding(horizontal = 18.dp, vertical = 13.dp),
             contentAlignment = Alignment.Center
         ) {
-            FittedCapitals(label, styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold), ink)
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Lozenge(4.dp, ink)
+                Spacer(Modifier.width(12.dp))
+                Box(Modifier.weight(1f, fill = false)) {
+                    FittedCapitals(label, styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold), ink)
+                }
+                Spacer(Modifier.width(12.dp))
+                Lozenge(4.dp, ink)
+            }
         }
     }
 
@@ -1305,12 +1440,19 @@ object VaticanKit : AppKit {
         modifier: Modifier
     ) {
         val styles = LocalAppTextStyles.current
+        val hair = inkRule()
         Box(
             modifier
                 // The whole block fades when disabled — frame and label
                 // together, or the frame reads as live and the label as broken.
                 .alpha(if (enabled) 1f else 0.45f)
-                .border(0.75.dp, inkRule(), RectangleShape)
+                // A ruled action line, not a second box: capitals in ink
+                // between two hairlines, quieter than the gilt-framed rubric.
+                .drawBehind {
+                    val sw = 0.6.dp.toPx()
+                    drawLine(hair, Offset(0f, sw / 2), Offset(size.width, sw / 2), sw)
+                    drawLine(hair, Offset(0f, size.height - sw / 2), Offset(size.width, size.height - sw / 2), sw)
+                }
                 .press(enabled = enabled, onClick = onClick)
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             contentAlignment = Alignment.Center
@@ -1743,67 +1885,170 @@ object VaticanKit : AppKit {
         }
     }
 
+    private fun Path.mv(o: Offset) = moveTo(o.x, o.y)
+    private fun Path.ln(o: Offset) = lineTo(o.x, o.y)
+    private fun Path.cb(a: Offset, b: Offset, e: Offset) = cubicTo(a.x, a.y, b.x, b.y, e.x, e.y)
+
+    /** The engraved devices a section can close on, chosen by its subject. */
+    private enum class Motif { CROSS, BOOK, DOVE, CHALICE }
+
+    /**
+     * Keyed off the pictogram a screen passes, so the journal, the rule of
+     * life, the Scriptures and the churches each close on their own block —
+     * one stamped emblem repeated on every empty page reads as a template.
+     */
+    private fun motifFor(icon: ImageVector?): Motif {
+        val n = icon?.name?.lowercase() ?: return Motif.CROSS
+        return when {
+            listOf("book", "comment", "search", "news", "article", "library").any { it in n } -> Motif.BOOK
+            listOf("edit", "note", "journal", "draw", "create", "chat").any { it in n } -> Motif.DOVE
+            listOf("church", "place", "location", "map", "explore", "temple").any { it in n } -> Motif.CHALICE
+            else -> Motif.CROSS
+        }
+    }
+
     /**
      * An engraved vignette, cut in vector the way a missal closes a section
-     * with a small block: a cross pattée hatched in ink inside a fine ring,
-     * in a gloria of gilt rays alternating long and short.
+     * with a small block: ink hatching inside a fine outline, with leaf spent
+     * only on the light the device gives off.
      */
     @Composable
-    private fun Vignette(modifier: Modifier = Modifier) {
+    private fun Vignette(motif: Motif, modifier: Modifier = Modifier) {
         val design = LocalAppDesign.current
         val palette = design.palette
         val gold = palette.gold
+        val red = rubric()
         val ink = if (design.isDark) palette.textSecondary else palette.textPrimary.copy(alpha = 0.82f)
-        Canvas(modifier.size(112.dp)) {
+        Canvas(modifier.size(92.dp)) {
             val c = center
             val u = size.minDimension / 112f
             val hair = 0.55f * u
-            // Gloria: 48 rays, long and short alternate, tapering out.
-            val rays = 48
-            for (k in 0 until rays) {
-                val t = Math.PI * 2 * k / rays
-                val cos = kotlin.math.cos(t).toFloat()
-                val sin = kotlin.math.sin(t).toFloat()
-                val r0 = 25f * u
-                val r1 = (if (k % 2 == 0) 53f else 43f) * u
+            fun p(x: Float, y: Float) = Offset(c.x + x * u, c.y + y * u)
+            fun engrave(path: Path, pitch: Float = 1.7f, slant: Float = 0f) {
+                clipPath(path) {
+                    var y = -60f
+                    while (y <= 60f) {
+                        drawLine(ink, p(-60f, y), p(60f, y + slant), strokeWidth = 0.6f * u)
+                        y += pitch
+                    }
+                }
+                drawPath(path, ink, style = androidx.compose.ui.graphics.drawscope.Stroke(0.9f * u))
+            }
+            fun ray(from: Offset, angle: Double, r0: Float, r1: Float, w: Float) {
+                val cos = kotlin.math.cos(angle).toFloat()
+                val sin = kotlin.math.sin(angle).toFloat()
+                val a = Offset(from.x + cos * r0 * u, from.y + sin * r0 * u)
+                val b = Offset(from.x + cos * r1 * u, from.y + sin * r1 * u)
                 drawLine(
-                    Brush.linearGradient(
-                        listOf(gold.copy(alpha = 0.85f), gold.copy(alpha = 0f)),
-                        start = Offset(c.x + cos * r0, c.y + sin * r0),
-                        end = Offset(c.x + cos * r1, c.y + sin * r1)
-                    ),
-                    Offset(c.x + cos * r0, c.y + sin * r0),
-                    Offset(c.x + cos * r1, c.y + sin * r1),
-                    strokeWidth = if (k % 2 == 0) hair * 1.4f else hair
+                    Brush.linearGradient(listOf(gold.copy(alpha = 0.85f), gold.copy(alpha = 0f)), start = a, end = b),
+                    a, b, strokeWidth = w
                 )
             }
-            // Double ring, thick-thin.
-            drawCircle(gold, radius = 22.5f * u, center = c, style = androidx.compose.ui.graphics.drawscope.Stroke(1.1f * u))
-            drawCircle(gold.copy(alpha = 0.7f), radius = 20.2f * u, center = c, style = androidx.compose.ui.graphics.drawscope.Stroke(hair))
-            // Cross pattée: four flared arms meeting at a narrow waist.
-            val arm = 15.5f * u
-            val waist = 2.2f * u
-            val flare = 6.2f * u
-            val cross = Path().apply {
-                moveTo(c.x - waist, c.y - waist)
-                lineTo(c.x - flare, c.y - arm); lineTo(c.x + flare, c.y - arm)
-                lineTo(c.x + waist, c.y - waist)
-                lineTo(c.x + arm, c.y - flare); lineTo(c.x + arm, c.y + flare)
-                lineTo(c.x + waist, c.y + waist)
-                lineTo(c.x + flare, c.y + arm); lineTo(c.x - flare, c.y + arm)
-                lineTo(c.x - waist, c.y + waist)
-                lineTo(c.x - arm, c.y + flare); lineTo(c.x - arm, c.y - flare)
-                close()
-            }
-            // Engraver's hatching inside the cross, then the outline.
-            clipPath(cross) {
-                var y = c.y - arm
-                while (y <= c.y + arm) {
-                    drawLine(ink, Offset(c.x - arm, y), Offset(c.x + arm, y), strokeWidth = 0.6f * u)
-                    y += 1.7f * u
+            when (motif) {
+                Motif.CROSS -> {
+                    // Cross pattée in a thick-thin ring, in a gloria of rays.
+                    for (k in 0 until 48) {
+                        ray(c, Math.PI * 2 * k / 48, 25f, if (k % 2 == 0) 53f else 43f, if (k % 2 == 0) hair * 1.4f else hair)
+                    }
+                    drawCircle(gold, radius = 22.5f * u, center = c, style = androidx.compose.ui.graphics.drawscope.Stroke(1.1f * u))
+                    drawCircle(gold.copy(alpha = 0.7f), radius = 20.2f * u, center = c, style = androidx.compose.ui.graphics.drawscope.Stroke(hair))
+                    val arm = 15.5f; val waist = 2.2f; val flare = 6.2f
+                    engrave(Path().apply {
+                        mv(p(-waist, -waist)); ln(p(-flare, -arm)); ln(p(flare, -arm))
+                        ln(p(waist, -waist)); ln(p(arm, -flare)); ln(p(arm, flare))
+                        ln(p(waist, waist)); ln(p(flare, arm)); ln(p(-flare, arm))
+                        ln(p(-waist, waist)); ln(p(-arm, flare)); ln(p(-arm, -flare))
+                        close()
+                    })
+                }
+                Motif.BOOK -> {
+                    // The open Gospel book: two hatched leaves, ruled lines of
+                    // text, a red silk marker hanging from the gutter.
+                    for (k in 0 until 9) {
+                        ray(p(0f, -10f), -Math.PI / 2 + (k - 4) * 0.2, 14f, if (k % 2 == 0) 34f else 27f, hair * 1.2f)
+                    }
+                    val left = Path().apply {
+                        mv(p(0f, -6f)); cb(p(-7f, -11f), p(-17f, -11f), p(-27f, -8f))
+                        ln(p(-27f, 15f)); cb(p(-17f, 12f), p(-7f, 12f), p(0f, 17f)); close()
+                    }
+                    val right = Path().apply {
+                        mv(p(0f, -6f)); cb(p(7f, -11f), p(17f, -11f), p(27f, -8f))
+                        ln(p(27f, 15f)); cb(p(17f, 12f), p(7f, 12f), p(0f, 17f)); close()
+                    }
+                    // Board edge beneath the leaves.
+                    drawPath(Path().apply {
+                        mv(p(-29f, -5f)); ln(p(-29f, 18f)); cb(p(-17f, 15f), p(-7f, 15f), p(0f, 20f))
+                        cb(p(7f, 15f), p(17f, 15f), p(29f, 18f)); ln(p(29f, -5f))
+                    }, ink, style = androidx.compose.ui.graphics.drawscope.Stroke(0.9f * u))
+                    listOf(left, right).forEach { leaf ->
+                        drawPath(leaf, palette.canvas)
+                        drawPath(leaf, ink, style = androidx.compose.ui.graphics.drawscope.Stroke(0.9f * u))
+                    }
+                    for (side in listOf(-1f, 1f)) {
+                        for (i in 0 until 7) {
+                            val y = -5f + i * 2.6f
+                            val sag = (y + 8f) * 0.0f
+                            drawLine(
+                                ink.copy(alpha = 0.7f),
+                                p(side * 4f, y + 1.5f + sag), p(side * (if (i == 6) 15f else 23f), y - 0.4f),
+                                strokeWidth = 0.55f * u
+                            )
+                        }
+                    }
+                    drawLine(red, p(1.2f, 16f), p(3.5f, 31f), strokeWidth = 1.8f * u)
+                    drawPath(Path().apply {
+                        mv(p(2.3f, 30f)); ln(p(4.7f, 30f)); ln(p(4.4f, 34f)); ln(p(3.5f, 32f)); ln(p(2.6f, 34f)); close()
+                    }, red)
+                }
+                Motif.DOVE -> {
+                    // The descending dove, wings displayed, in a cone of light.
+                    for (k in 0 until 13) {
+                        ray(p(0f, 8f), Math.PI / 2 + (k - 6) * 0.15, 8f, if (k % 2 == 0) 46f else 36f, hair * 1.3f)
+                    }
+                    for (side in listOf(-1f, 1f)) {
+                        engrave(Path().apply {
+                            mv(p(side * 2f, -1f))
+                            cb(p(side * 9f, -12f), p(side * 20f, -17f), p(side * 29f, -16f))
+                            ln(p(side * 25f, -12f)); ln(p(side * 28f, -9f))
+                            ln(p(side * 22f, -6.5f)); ln(p(side * 24f, -3f))
+                            ln(p(side * 17f, -2f)); ln(p(side * 18f, 1.5f))
+                            ln(p(side * 10f, 1f)); ln(p(side * 3f, 4f)); close()
+                        }, pitch = 1.6f, slant = side * -6f)
+                    }
+                    engrave(Path().apply {
+                        mv(p(0f, -11f)); cb(p(4f, -6f), p(4f, 4f), p(0f, 7f))
+                        cb(p(-4f, 4f), p(-4f, -6f), p(0f, -11f)); close()
+                    })
+                    // Tail fanned above, head bowed below.
+                    engrave(Path().apply {
+                        mv(p(-2f, -9f)); ln(p(-5f, -18f)); ln(p(0f, -15.5f)); ln(p(5f, -18f)); ln(p(2f, -9f)); close()
+                    })
+                    drawCircle(palette.canvas, radius = 3f * u, center = p(0f, 9.5f))
+                    drawCircle(ink, radius = 3f * u, center = p(0f, 9.5f), style = androidx.compose.ui.graphics.drawscope.Stroke(0.9f * u))
+                    drawLine(ink, p(-0.9f, 12.3f), p(0f, 14.6f), strokeWidth = 0.9f * u)
+                    drawLine(ink, p(0.9f, 12.3f), p(0f, 14.6f), strokeWidth = 0.9f * u)
+                }
+                Motif.CHALICE -> {
+                    // Chalice and host: the host is the only gold, radiant.
+                    val host = p(0f, -17f)
+                    for (k in 0 until 32) {
+                        ray(host, Math.PI * 2 * k / 32, 8.5f, if (k % 2 == 0) 22f else 16f, hair * 1.2f)
+                    }
+                    drawCircle(gold, radius = 7f * u, center = host, style = androidx.compose.ui.graphics.drawscope.Stroke(1f * u))
+                    drawLine(gold, p(0f, -21.5f), p(0f, -12.5f), strokeWidth = 0.9f * u)
+                    drawLine(gold, p(-4.5f, -17f), p(4.5f, -17f), strokeWidth = 0.9f * u)
+                    engrave(Path().apply {
+                        mv(p(-12f, -7f)); ln(p(12f, -7f))
+                        cb(p(12f, 3f), p(6f, 8f), p(2f, 9f))
+                        ln(p(2f, 13f)); cb(p(5f, 13f), p(5f, 17f), p(2f, 17f))
+                        ln(p(2f, 21f)); cb(p(7f, 22f), p(12f, 25f), p(13f, 28f))
+                        ln(p(-13f, 28f)); cb(p(-12f, 25f), p(-7f, 22f), p(-2f, 21f))
+                        ln(p(-2f, 17f)); cb(p(-5f, 17f), p(-5f, 13f), p(-2f, 13f))
+                        ln(p(-2f, 9f)); cb(p(-6f, 8f), p(-12f, 3f), p(-12f, -7f)); close()
+                    }, pitch = 1.5f)
+                    drawLine(gold, p(-12.5f, -7f), p(12.5f, -7f), strokeWidth = 1.1f * u)
                 }
             }
-            drawPath(cross, ink, style = androidx.compose.ui.graphics.drawscope.Stroke(0.9f * u))
         }
     }
 
@@ -1816,26 +2061,31 @@ object VaticanKit : AppKit {
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter * 1.5f)
-                .padding(top = 36.dp, bottom = 28.dp),
+                .padding(top = 20.dp, bottom = 20.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Vignette()
-            Spacer(Modifier.height(26.dp))
+            // One ornament, not three: the vignette is the device; the title
+            // is not given a fleuron of its own beneath it.
+            Vignette(motifFor(icon))
+            Spacer(Modifier.height(18.dp))
             Text(
                 text = title.uppercase(),
                 style = styles.sectionTitle
-                    .copy(fontSize = 15.sp, lineHeight = 22.sp, fontWeight = FontWeight.Normal)
+                    .copy(fontSize = 15.sp, lineHeight = 22.sp, fontWeight = FontWeight.Normal, lineBreak = LineBreak.Heading)
                     .tracked(0.13f),
                 color = bodyInk(),
                 textAlign = TextAlign.Center
             )
-            Spacer(Modifier.height(14.dp))
-            TitleFleuron()
             if (body != null) {
-                Spacer(Modifier.height(14.dp))
+                Spacer(Modifier.height(10.dp))
                 Text(
                     text = body,
-                    style = styles.rowSubtitle.copy(fontSize = 16.sp, lineHeight = 25.sp),
+                    style = styles.rowSubtitle.copy(
+                        fontSize = 16.sp,
+                        lineHeight = 24.sp,
+                        fontStyle = FontStyle.Italic,
+                        lineBreak = LineBreak.Paragraph
+                    ),
                     color = palette.textSecondary,
                     textAlign = TextAlign.Center
                 )

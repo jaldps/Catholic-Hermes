@@ -140,7 +140,7 @@ object PilgrimageAndHabitsData {
             category = LocalizedText("Mariana", "Marian", "Mariana"),
             timeSuggestion = "Cualquier hora",
             description = LocalizedText("Rezar los cinco misterios con amor a la Virgen María pidiendo por tu familia.", "Recite the 5 decades contemplating Christ through the eyes of Mary.", "Rezar os cinco mistérios em união com a Mãe de Deus."),
-            iconName = "self_improvement"
+            iconName = "rosary"
         ),
         SpiritualHabitItem(
             id = "habit_angelus",
@@ -328,7 +328,7 @@ object PilgrimageAndHabitsData {
             description = "Cinco misterios de contemplación de la vida de Cristo junto a la Virgen María.",
             category = "PRAYER",
             timeSuggestion = "Tarde / Noche",
-            iconName = "self_improvement",
+            iconName = "rosary",
             isCustom = false
         ),
         com.example.data.local.SpiritualHabitEntity(

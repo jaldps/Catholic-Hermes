@@ -42,6 +42,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.outlined.ArrowBackIos
 import androidx.compose.material.icons.outlined.Inbox
+import androidx.compose.material.icons.outlined.Create
+import androidx.compose.material.icons.filled.AccountBalance
+import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.Icon
@@ -120,7 +123,7 @@ object AppleKit : AppKit {
     /** The 29pt icon well of an iOS Settings row. */
     private val IconWellSize = 28.dp
     private val IconWellShape = RoundedCornerShape(7.dp)
-    private val IconWellGlyph = 17.dp
+    private val IconWellGlyph = 19.dp
 
     /** Leading text inset of a grouped row, measured from the card edge. */
     private val RowTextInset = 16.dp
@@ -251,9 +254,14 @@ object AppleKit : AppKit {
      * glyph with no obvious meaning, a stable pick from the palette so the
      * same glyph is always the same colour.
      */
-    private fun wellColor(icon: ImageVector, dark: Boolean): Color {
-        val n = icon.name.substringAfterLast('.').lowercase()
-        val c = when {
+    private fun wellColor(icon: ImageVector, dark: Boolean): Color = wellHue(icon).of(dark)
+
+    private fun wellHue(icon: ImageVector): SystemColor {
+        val full = icon.name.lowercase()
+        val n = full.substringAfterLast('.')
+        return when {
+            full.startsWith("rosary") -> SystemColor.BLUE
+            full.startsWith("candle") -> SystemColor.ORANGE
             "twilight" in n || "sunrise" in n || "sunset" in n -> SystemColor.PINK
             "sunny" in n || "lightmode" in n || "sun" in n -> SystemColor.ORANGE
             "night" in n || "bedtime" in n || "darkmode" in n || "moon" in n -> SystemColor.INDIGO
@@ -263,7 +271,9 @@ object AppleKit : AppKit {
             "book" in n || "stories" in n || "library" in n -> SystemColor.ORANGE
             "newspaper" in n || "article" in n || "feed" in n -> SystemColor.RED
             "shield" in n || "verified" in n -> SystemColor.TEAL
-            "star" in n || "bolt" in n || "lightbulb" in n || "flash" in n -> SystemColor.YELLOW
+            // systemYellow under a white glyph is ~1.6:1 in light mode;
+            // Settings strikes its "star" rows in orange for that reason.
+            "star" in n || "bolt" in n || "lightbulb" in n || "flash" in n -> SystemColor.ORANGE
             "church" in n || "temple" in n -> SystemColor.PURPLE
             "locationcity" in n || "apartment" in n || "domain" in n -> SystemColor.INDIGO
             "place" in n || "locationon" in n || "pushpin" in n || "pin" in n -> SystemColor.RED
@@ -295,7 +305,89 @@ object AppleKit : AppKit {
                 pool[Math.floorMod(n.hashCode(), pool.size)]
             }
         }
-        return c.of(dark)
+    }
+
+    /**
+     * One colour per tile within a group. Settings never sets two red wells
+     * one above the other: a group is colour-coded, and a repeat reads as
+     * an accident. Each [ListGroup] owns a registry; a row claims its
+     * semantic colour, and if a sibling already holds it, the next unused
+     * colour in a fixed, well-separated order. Rows claim in composition
+     * order, so the assignment is deterministic. Grey (utility links) may
+     * repeat, as it does in Settings.
+     */
+    private class WellRegistry {
+        val used = mutableSetOf<SystemColor>()
+        fun claim(preferred: SystemColor): SystemColor {
+            if (preferred == SystemColor.GRAY) return preferred
+            val pick = if (preferred !in used) preferred else FallbackOrder.firstOrNull { it !in used } ?: preferred
+            used += pick
+            return pick
+        }
+    }
+
+    private val FallbackOrder = listOf(
+        SystemColor.BLUE, SystemColor.ORANGE, SystemColor.GREEN, SystemColor.PURPLE,
+        SystemColor.RED, SystemColor.TEAL, SystemColor.INDIGO, SystemColor.PINK,
+        SystemColor.BROWN, SystemColor.MINT, SystemColor.CYAN
+    )
+
+    private val LocalWellRegistry = compositionLocalOf<WellRegistry?> { null }
+
+    /**
+     * SF Symbols in a Settings well are the *filled* variant at a single
+     * weight, white on colour. Material's outlined glyphs at 17dp are hairline
+     * drawings that thin out against a saturated tile, and a mix of outlined
+     * and filled in one column is the inconsistency an SF eye catches first.
+     * So every well glyph is resolved to its filled cut, and the few Material
+     * glyphs that carry the wrong meaning for a Catholic app are replaced:
+     * the seated meditator becomes a rosary, the quill-on-scroll (illegible
+     * at this size) becomes the columned portico of `building.columns`, the
+     * note-with-lines becomes `square.and.pencil`.
+     */
+    private val solidCache = java.util.concurrent.ConcurrentHashMap<String, ImageVector>()
+
+    private fun solidGlyph(icon: ImageVector): ImageVector {
+        val full = icon.name
+        return solidCache.getOrPut(full) {
+            val n = full.substringAfterLast('.').lowercase()
+            when {
+                full.startsWith("rosary") || n == "selfimprovement" -> DevotionalGlyphs.rosaryFilled
+                full.startsWith("candle") -> DevotionalGlyphs.candleFilled
+                n == "historyedu" -> Icons.Filled.AccountBalance
+                n == "editnote" -> Icons.Filled.Create
+                else -> filledVariant(full) ?: icon
+            }
+        }
+    }
+
+    /** `Outlined.Shield` → `Icons.Filled.Shield`, by the icon library's own accessor. */
+    private fun filledVariant(name: String): ImageVector? = runCatching {
+        val parts = name.split('.')
+        val simple = parts.last()
+        val mirrored = parts.first() == "AutoMirrored"
+        val style = if (mirrored) parts.getOrNull(1) else parts.first()
+        if (style == "Filled") return@runCatching null
+        if (style !in setOf("Outlined", "Rounded", "Sharp", "TwoTone")) return@runCatching null
+        val pkg = if (mirrored) "androidx.compose.material.icons.automirrored.filled"
+        else "androidx.compose.material.icons.filled"
+        val owner: Any = if (mirrored) Icons.AutoMirrored.Filled else Icons.Filled
+        Class.forName("$pkg.${simple}Kt")
+            .getMethod("get$simple", owner.javaClass)
+            .invoke(null, owner) as ImageVector
+    }.getOrNull()
+
+    /** A Latin cross, SF-weighted, for the places a seated meditator stood. */
+    private val LatinCross: ImageVector by lazy {
+        ImageVector.Builder("apple.cross", 24.dp, 24.dp, 24f, 24f).apply {
+            addPath(
+                pathData = androidx.compose.ui.graphics.vector.PathParser()
+                    .parsePathString(
+                        "M10.6,2.6 h2.8 v5.2 h4.9 v2.8 h-4.9 v10.8 h-2.8 v-10.8 h-4.9 v-2.8 h4.9 z"
+                    ).toNodes(),
+                fill = SolidColor(Color.Black)
+            )
+        }.build()
     }
 
     /** The disclosure chevron's grey: iOS's tertiary label, a touch firmer. */
@@ -726,7 +818,32 @@ object AppleKit : AppKit {
                         Modifier
                             .fillMaxSize()
                             .nestedScroll(scrollWatcher)
-                    ) { content(padding) }
+                    ) {
+                        content(padding)
+                        // The bars are materials, not walls: content passing
+                        // under them dissolves into the bar over a short
+                        // run instead of stopping dead at its edge — the
+                        // nearest a frame-rendered surface gets to
+                        // UIBarAppearance's blur. The top veil only exists
+                        // once something has scrolled under the bar.
+                        Box(
+                            Modifier
+                                .align(Alignment.TopCenter)
+                                .padding(top = padding.calculateTopPadding())
+                                .fillMaxWidth()
+                                .height(14.dp)
+                                .graphicsLayer { alpha = edge }
+                                .background(Brush.verticalGradient(listOf(bar.copy(alpha = 0.85f), bar.copy(alpha = 0f))))
+                        )
+                        Box(
+                            Modifier
+                                .align(Alignment.BottomCenter)
+                                .padding(bottom = padding.calculateBottomPadding())
+                                .fillMaxWidth()
+                                .height(22.dp)
+                                .background(Brush.verticalGradient(listOf(bar.copy(alpha = 0f), bar.copy(alpha = 0.92f))))
+                        )
+                    }
                 }
             }
         )
@@ -832,12 +949,9 @@ object AppleKit : AppKit {
                 text = title,
                 // SF tightens by roughly 26/1000 em at display sizes; the
                 // scale's -0.6 is short of that at 34pt.
-                style = styles.screenTitle.copy(
-                    letterSpacing = (-0.9).sp,
-                    color = palette.textPrimary
-                ),
+                style = styles.screenTitle.copy(color = palette.textPrimary),
                 maxLines = 1,
-                minScale = 28f / 34f,
+                minScale = 30f / 38f,
                 heading = true,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -970,6 +1084,7 @@ object AppleKit : AppKit {
         // separator under its last row, so the inner column reports itself one
         // physical pixel short of its content and the final hairline lands
         // outside the clip instead of reading as a bottom border on the card.
+        val registry = remember { WellRegistry() }
         Column(
             modifier
                 .fillMaxWidth()
@@ -977,6 +1092,7 @@ object AppleKit : AppKit {
                 .clip(design.shapes.listGroup)
                 .background(palette.groupedSurface)
         ) {
+          CompositionLocalProvider(LocalWellRegistry provides registry) {
             Column(
                 Modifier
                     .fillMaxWidth()
@@ -988,6 +1104,7 @@ object AppleKit : AppKit {
                     },
                 content = content
             )
+          }
         }
     }
 
@@ -1064,7 +1181,11 @@ object AppleKit : AppKit {
                     // since iOS 7: a few percent lighter at the top edge,
                     // never a visible gradient, and it stops the well from
                     // reading as a flat Android badge.
-                    val well = wellColor(leadingIcon, design.isDark)
+                    val registry = LocalWellRegistry.current
+                    val hue = remember(leadingIcon.name, registry) {
+                        registry?.claim(wellHue(leadingIcon)) ?: wellHue(leadingIcon)
+                    }
+                    val well = hue.of(design.isDark)
                     Box(
                         Modifier
                             .size(IconWellSize)
@@ -1075,7 +1196,7 @@ object AppleKit : AppKit {
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
-                            imageVector = leadingIcon,
+                            imageVector = solidGlyph(leadingIcon),
                             contentDescription = null,
                             tint = onAccentFill(),
                             modifier = Modifier.size(IconWellGlyph)
@@ -1583,7 +1704,13 @@ object AppleKit : AppKit {
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
-                    imageVector = icon ?: Icons.Outlined.Inbox,
+                    imageVector = when {
+                        icon == null -> Icons.Outlined.Inbox
+                        // A seated meditator says yoga, not a rule of life.
+                        icon.name.endsWith("SelfImprovement") -> LatinCross
+                        icon.name.endsWith("EditNote") -> Icons.Outlined.Create
+                        else -> icon
+                    },
                     contentDescription = null,
                     tint = tint,
                     modifier = Modifier.size(42.dp)
@@ -1686,16 +1813,181 @@ object AppleKit : AppKit {
     }
 
     /**
-     * The liturgical day, drawn as the screen's one moment of colour: the
-     * vestment colour washes the card from its top-trailing corner, where a
-     * lit disc of the colour itself sits in a soft halo, the way Weather lets
-     * the sky colour its own card and Fitness lets a ring glow. The season is
-     * set in the colour (struck dark or light enough to read), the day at
-     * title3 semibold. Everywhere else the app stays grey and white, so this
-     * is the thing the eye finds first.
+     * The liturgical day as the app's signature object: the vestment itself.
+     * The card is cut from the day's colour as a deep, saturated cloth — lit
+     * from the top-leading corner, falling to shadow at the bottom-trailing
+     * one, with the faint diagonal twill of a woven chasuble — and a tall
+     * Latin cross is embroidered into it, tone on tone, running off the
+     * bottom edge. The day is set large in the serif, white on the colour, as
+     * Books and Journal set their covers. Nothing glows and nothing is a
+     * decoration that repeats what the colour already says.
+     *
+     * A dated entry ("November 1 · Solemnity") is one of a run, as in the
+     * calendar, and takes the restrained form: a white card with the
+     * vestment colour as Calendar's leading event bar, so a list of them
+     * reads as a colour-coded year rather than a stack of posters.
      */
     @Composable
     private fun LiturgicalHero(
+        season: String,
+        day: String?,
+        vestment: Color,
+        onClick: (() -> Unit)?,
+        modifier: Modifier
+    ) {
+        if ('·' in season) {
+            LiturgicalEntry(season, day, vestment, onClick, modifier)
+            return
+        }
+        val design = LocalAppDesign.current
+        val styles = LocalAppTextStyles.current
+        val dark = design.isDark
+        val source = remember { MutableInteractionSource() }
+        val pressed by source.collectIsPressedAsState()
+        // White vestments are shown in gold, as the rubrics allow.
+        val isWhite = vestment.luminance() > 0.75f
+        val base = remember(vestment, dark) {
+            val hsv = FloatArray(3)
+            android.graphics.Color.colorToHSV(
+                (if (isWhite) Color(0xFFC49A2C) else vestment).toArgb(), hsv
+            )
+            if (hsv[1] > 0.12f) hsv[1] = hsv[1].coerceAtLeast(0.50f)
+            var c = Color(android.graphics.Color.HSVToColor(hsv))
+            // Deep enough that white type reads on the lightest corner.
+            while (contrast(lerp(c, Color.White, 0.10f), Color.White) < 4.8f && hsv[2] > 0.12f) {
+                hsv[2] -= 0.02f
+                c = Color(android.graphics.Color.HSVToColor(hsv))
+            }
+            if (dark) lerp(c, Color.Black, 0.12f) else c
+        }
+        val lit = lerp(base, Color.White, 0.10f)
+        val shade = lerp(base, Color.Black, if (dark) 0.40f else 0.32f)
+        val shape = RoundedCornerShape(22.dp)
+        Box(
+            modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+                .then(if (onClick != null) Modifier.pressScale(pressed, 0.98f) else Modifier)
+                .then(
+                    if (!dark) {
+                        Modifier.shadow(10.dp, shape, ambientColor = base.copy(alpha = 0.35f), spotColor = base.copy(alpha = 0.45f))
+                    } else {
+                        Modifier
+                    }
+                )
+                .clip(shape)
+                .drawBehind {
+                    val w = size.width
+                    val h = size.height
+                    // The cloth: lit top-leading, falling to shadow.
+                    drawRect(
+                        Brush.linearGradient(
+                            listOf(lit, base, shade),
+                            start = Offset(0f, 0f),
+                            end = Offset(w, h)
+                        )
+                    )
+                    // The light source, a soft sheen across the top.
+                    drawRect(
+                        Brush.radialGradient(
+                            listOf(Color.White.copy(alpha = if (dark) 0.10f else 0.16f), Color.Transparent),
+                            center = Offset(w * 0.18f, -h * 0.25f),
+                            radius = w * 0.85f
+                        )
+                    )
+                    // The weave: a fine diagonal twill, felt more than seen.
+                    val step = 3.dp.toPx()
+                    val thread = Color.White.copy(alpha = if (dark) 0.035f else 0.045f)
+                    var x = -h
+                    while (x < w) {
+                        drawLine(thread, Offset(x, h), Offset(x + h, 0f), 0.5.dp.toPx())
+                        x += step
+                    }
+                    // The embroidered cross, tone on tone, off the bottom edge.
+                    val arm = 12.dp.toPx()
+                    val cx = w - 62.dp.toPx()
+                    val top = 22.dp.toPx()
+                    val beamY = top + 34.dp.toPx()
+                    val span = 33.dp.toPx()
+                    val crossBrush = Brush.verticalGradient(
+                        listOf(Color.White.copy(alpha = 0.17f), Color.White.copy(alpha = 0.05f)),
+                        startY = top,
+                        endY = h
+                    )
+                    drawRoundRect(
+                        crossBrush,
+                        topLeft = Offset(cx - arm / 2f, top),
+                        size = androidx.compose.ui.geometry.Size(arm, h + arm),
+                        cornerRadius = androidx.compose.ui.geometry.CornerRadius(arm / 5f)
+                    )
+                    drawRoundRect(
+                        crossBrush,
+                        topLeft = Offset(cx - span, beamY),
+                        size = androidx.compose.ui.geometry.Size(span * 2f, arm),
+                        cornerRadius = androidx.compose.ui.geometry.CornerRadius(arm / 5f)
+                    )
+                }
+                .border(
+                    0.5.dp,
+                    Color.White.copy(alpha = if (dark) 0.10f else 0.14f),
+                    shape
+                )
+                .then(
+                    if (pressed && onClick != null) Modifier.background(Color.Black.copy(alpha = 0.12f)) else Modifier
+                )
+                .pressable(source, onClick)
+                .heightIn(min = 150.dp)
+                .padding(start = 20.dp, end = 20.dp, top = 18.dp, bottom = 20.dp)
+        ) {
+            Row(verticalAlignment = Alignment.Bottom, modifier = Modifier.align(Alignment.BottomStart)) {
+                Column(Modifier.weight(1f).padding(end = 56.dp)) {
+                    Text(
+                        text = season.uppercase(),
+                        style = styles.rowSubtitle.copy(
+                            fontWeight = FontWeight.SemiBold,
+                            letterSpacing = 0.6.sp
+                        ),
+                        color = Color.White.copy(alpha = 0.80f),
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    val headline = day?.substringBefore('\n')
+                    val particulars = day?.substringAfter('\n', "")?.trim().orEmpty()
+                    if (headline != null) {
+                        Spacer(Modifier.height(6.dp))
+                        Text(
+                            text = headline,
+                            style = styles.rowTitle.copy(
+                                fontFamily = com.example.ui.theme.AppFonts.EbGaramond,
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = styles.rowTitle.fontSize * (27f / 17f),
+                                lineHeight = styles.rowTitle.lineHeight * (31f / 22f),
+                                letterSpacing = (-0.1).sp
+                            ),
+                            color = Color.White,
+                            maxLines = 4
+                        )
+                    }
+                    if (particulars.isNotEmpty()) {
+                        Spacer(Modifier.height(8.dp))
+                        Text(
+                            text = particulars,
+                            style = styles.rowSubtitle,
+                            color = Color.White.copy(alpha = 0.80f),
+                            maxLines = 2
+                        )
+                    }
+                }
+                if (onClick != null) {
+                    Chevron(tint = Color.White.copy(alpha = 0.7f), modifier = Modifier.padding(bottom = 4.dp))
+                }
+            }
+        }
+    }
+
+    /** The calendar's dated entry: a white card with the vestment as its event bar. */
+    @Composable
+    private fun LiturgicalEntry(
         season: String,
         day: String?,
         vestment: Color,
@@ -1708,154 +2000,82 @@ object AppleKit : AppKit {
         val dark = design.isDark
         val source = remember { MutableInteractionSource() }
         val pressed by source.collectIsPressedAsState()
-        // White vestments are shown in gold, as the rubrics allow; a white
-        // wash on a white card is no colour at all.
         val isWhite = vestment.luminance() > 0.75f
-        val wash = if (isWhite) Color(0xFFD4AF37) else vestment
-        val surface = palette.groupedSurface
-        // The ink is measured against the washed card, not the bare surface.
-        val ink = inkOn(
-            if (dark) lerp(wash, Color.White, 0.35f) else wash,
-            lerp(surface, wash, if (dark) 0.30f else 0.16f),
-            4.5f
-        )
-        val shape = design.shapes.card
-        // A dated entry ("November 1 · Solemnity") is one of a run, as in
-        // the calendar: the same object, struck smaller, so a list of them
-        // reads as a colour-coded year rather than a stack of posters.
-        val compact = '·' in season
-        val disc = if (compact) 26.dp else 34.dp
-        val halo = if (compact) 38.dp else 52.dp
-        val glowX = if (compact) 33.dp else 44.dp
-        val glowY = if (compact) 34.dp else 42.dp
-        val glowR = if (compact) 90.dp else 130.dp
-        Box(
+        // Gold for white vestments, struck bright in dark mode: on #1C1C1E a
+        // mid gold muddies to brown.
+        val bar = when {
+            isWhite -> if (dark) Color(0xFFE3BE4F) else Color(0xFFD1A21F)
+            dark -> lerp(vestment, Color.White, 0.18f)
+            else -> vestment
+        }
+        val surface = if (pressed && onClick != null) {
+            lerp(palette.groupedSurface, palette.selectionTint, if (dark) 1f else 0.9f)
+        } else {
+            palette.groupedSurface
+        }
+        val ink = inkOn(bar, surface, 4.5f)
+        Row(
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
                 .then(if (onClick != null) Modifier.pressScale(pressed, 0.98f) else Modifier)
-                .clip(shape)
+                .clip(design.shapes.listGroup)
                 .background(surface)
                 .drawBehind {
-                    // Linear wash, top-trailing to bottom-leading.
+                    // A breath of the colour behind the bar, gone by mid-card.
                     drawRect(
-                        Brush.linearGradient(
-                            listOf(
-                                wash.copy(alpha = if (dark) 0.42f else 0.20f),
-                                wash.copy(alpha = if (dark) 0.10f else 0.04f)
-                            ),
-                            start = Offset(size.width, 0f),
-                            end = Offset(0f, size.height)
+                        Brush.horizontalGradient(
+                            listOf(bar.copy(alpha = if (dark) 0.16f else 0.09f), Color.Transparent),
+                            startX = 0f,
+                            endX = size.width * 0.6f
                         )
                     )
-                    // The glow the disc throws.
-                    drawCircle(
-                        Brush.radialGradient(
-                            listOf(wash.copy(alpha = if (dark) 0.40f else 0.26f), Color.Transparent),
-                            center = Offset(size.width - glowX.toPx(), glowY.toPx()),
-                            radius = glowR.toPx()
-                        ),
-                        radius = glowR.toPx(),
-                        center = Offset(size.width - glowX.toPx(), glowY.toPx())
-                    )
                 }
-                .border(
-                    0.5.dp,
-                    wash.copy(alpha = if (dark) 0.35f else 0.22f),
-                    shape
-                )
-                .then(
-                    if (pressed && onClick != null) {
-                        Modifier.background(palette.selectionTint.copy(alpha = 0.35f))
-                    } else {
-                        Modifier
-                    }
-                )
                 .pressable(source, onClick)
-                .padding(
-                    start = if (compact) 16.dp else 18.dp,
-                    end = if (compact) 14.dp else 18.dp,
-                    top = if (compact) 12.dp else 16.dp,
-                    bottom = if (compact) 13.dp else 18.dp
-                )
+                .height(androidx.compose.foundation.layout.IntrinsicSize.Min)
+                .padding(start = 12.dp, end = 16.dp, top = 11.dp, bottom = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
-            Row(verticalAlignment = Alignment.Top) {
-                Column(Modifier.weight(1f).padding(top = 2.dp)) {
+            Box(
+                Modifier
+                    .width(4.dp)
+                    .fillMaxHeight()
+                    .clip(RoundedCornerShape(2.dp))
+                    .background(bar)
+            )
+            Spacer(Modifier.width(12.dp))
+            Column(Modifier.weight(1f)) {
+                Text(
+                    text = season,
+                    style = styles.rowSubtitle.copy(fontWeight = FontWeight.SemiBold),
+                    color = ink,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                val headline = day?.substringBefore('\n')
+                val particulars = day?.substringAfter('\n', "")?.trim().orEmpty()
+                if (headline != null) {
+                    Spacer(Modifier.height(2.dp))
                     Text(
-                        text = season,
-                        style = styles.rowSubtitle.copy(fontWeight = FontWeight.SemiBold),
-                        color = ink,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    // A body with a second line ("Green · Year A · Year II")
-                    // is a headline plus its particulars: the particulars are
-                    // set as a secondary subheadline, not at headline size.
-                    val headline = day?.substringBefore('\n')
-                    val particulars = day?.substringAfter('\n', "")?.trim().orEmpty()
-                    if (headline != null) {
-                        Spacer(Modifier.height(if (compact) 2.dp else 4.dp))
-                        Text(
-                            text = headline,
-                            style = styles.rowTitle.copy(
-                                fontWeight = FontWeight.SemiBold,
-                                fontSize = styles.rowTitle.fontSize * (if (compact) 1f else 22f / 17f),
-                                lineHeight = styles.rowTitle.lineHeight * (if (compact) 1f else 28f / 22f),
-                                letterSpacing = if (compact) (-0.4).sp else (-0.5).sp
-                            ),
-                            color = palette.textPrimary,
-                            maxLines = 3
-                        )
-                    }
-                    if (particulars.isNotEmpty()) {
-                        Spacer(Modifier.height(6.dp))
-                        Text(
-                            text = particulars,
-                            style = styles.rowSubtitle,
-                            color = palette.textSecondary,
-                            maxLines = 2
-                        )
-                    }
-                }
-                Spacer(Modifier.width(14.dp))
-                // The vestment colour itself: a lit disc with a hairline rim
-                // inside a halo ring, the way Calendar shows a calendar's
-                // colour and Activity a ring at rest.
-                Box(
-                    Modifier.size(halo).then(if (compact) Modifier.align(Alignment.CenterVertically) else Modifier),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Box(
-                        Modifier
-                            .size(halo)
-                            .clip(CircleShape)
-                            .background(wash.copy(alpha = if (dark) 0.22f else 0.14f))
-                    )
-                    Box(
-                        Modifier
-                            .size(disc)
-                            .shadow(if (dark) 0.dp else 3.dp, CircleShape, ambientColor = wash, spotColor = wash)
-                            .clip(CircleShape)
-                            .background(
-                                Brush.verticalGradient(
-                                    listOf(
-                                        lerp(vestment, Color.White, 0.30f),
-                                        vestment,
-                                        lerp(vestment, Color.Black, 0.14f)
-                                    )
-                                )
-                            )
-                            .border(
-                                0.5.dp,
-                                if (dark) Color.White.copy(alpha = 0.25f) else Color.Black.copy(alpha = 0.10f),
-                                CircleShape
-                            )
+                        text = headline,
+                        style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+                        color = palette.textPrimary,
+                        maxLines = 3
                     )
                 }
-                if (onClick != null) {
-                    Spacer(Modifier.width(8.dp))
-                    Chevron(tint = chevronGrey(), modifier = Modifier.align(Alignment.CenterVertically))
+                if (particulars.isNotEmpty()) {
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        text = particulars,
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary,
+                        maxLines = 2
+                    )
                 }
+            }
+            if (onClick != null) {
+                Spacer(Modifier.width(8.dp))
+                Chevron(tint = chevronGrey())
             }
         }
     }

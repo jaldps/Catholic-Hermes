@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
@@ -70,7 +71,7 @@ import kotlinx.coroutines.withTimeoutOrNull
 
 private enum class SearchState { IDLE, LOADING, DONE }
 
-private val RadiusOptionsKm = listOf(2, 5, 10, 25, 50)
+private val RadiusOptionsKm = listOf(5, 10, 25)
 
 /**
  * No kit insets its own segmented control, so the gutter is the caller's to
@@ -88,13 +89,15 @@ private const val UI_TIMEOUT_MS = 22_000L
 
 /**
  * Finds Catholic parishes, either around the device or around a place the user
- * names. The bundled directory is shown as a starting point and remains the
- * fallback when there is no network or no location.
+ * names, each with its distance and Sunday Mass where known. The bundled
+ * directory of great churches lives in Churches & News and is linked, not
+ * repeated; Google Maps is the fallback when the online lookup fails.
  */
 @Composable
 fun ParishFinderScreen(
     repository: CatholicDataRepository,
-    currentLanguage: AppLanguage
+    currentLanguage: AppLanguage,
+    onOpenDirectory: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val design = LocalAppDesign.current
@@ -169,9 +172,9 @@ fun ParishFinderScreen(
                 is ParishLookupResult.Failure -> {
                     results = emptyList()
                     message = strings(
-                        "El directorio en línea no respondió. Usa «Parroquias cerca de mí» para buscar en Google Maps.",
-                        "The online directory did not answer. Use “Parishes near me” to search in Google Maps.",
-                        "O diretório online não respondeu. Use «Paróquias perto de mim» para buscar no Google Maps."
+                        "El directorio en línea no respondió. Google Maps puede buscar por ti.",
+                        "The online directory did not answer. Google Maps can search for you.",
+                        "O diretório online não respondeu. O Google Maps pode buscar por você."
                     )
                 }
             }
@@ -189,9 +192,9 @@ fun ParishFinderScreen(
             val location = runCatching { locationProvider.lastKnownLocation() }.getOrNull()
             if (location == null) {
                 message = strings(
-                    "El teléfono aún no tiene tu ubicación. Activa la ubicación, o usa «Parroquias cerca de mí», que la obtiene a través de Google Maps.",
-                    "The phone has no location fix yet. Turn on location, or use “Parishes near me”, which gets it through Google Maps.",
-                    "O telefone ainda não tem a sua localização. Ative a localização, ou use «Paróquias perto de mim», que a obtém pelo Google Maps."
+                    "El teléfono aún no tiene tu ubicación. Activa la ubicación o busca en Google Maps.",
+                    "The phone has no location fix yet. Turn on location, or search in Google Maps.",
+                    "O telefone ainda não tem a sua localização. Ative a localização ou busque no Google Maps."
                 )
                 state = SearchState.DONE
                 return@launch
@@ -234,7 +237,13 @@ fun ParishFinderScreen(
         }
     }
 
-    val shown = if (results.isNotEmpty()) results else repository.nearbyParishes
+    fun nearMe() {
+        if (locationProvider.hasPermission()) {
+            useDeviceLocation()
+        } else {
+            permissionLauncher.launch(DeviceLocationProvider.PERMISSIONS)
+        }
+    }
 
     LazyColumn(Modifier.fillMaxWidth().testTag("parish_finder_screen")) {
         item {
@@ -248,56 +257,25 @@ fun ParishFinderScreen(
             )
         }
 
+        // Search sits in the gutter like every other search in the app, not
+        // nested in a card; the one location action follows it.
         item {
-            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                // Google Maps already knows where the phone is and has the most
-                // complete church listings, so handing it the search is the
-                // reliable way to find a parish nearby. The in-app list below
-                // depends on community-run OpenStreetMap servers, which are often
-                // slow to answer from a phone.
-                AppPrimaryButton(
-                    label = strings(
-                        "Parroquias cerca de mí",
-                        "Parishes near me",
-                        "Paróquias perto de mim"
-                    ),
-                    onClick = { openNearbyInMaps() },
-                    leadingIcon = Icons.Default.Map,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag("gps_nearby_maps_button")
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppSecondaryButton(
-                    label = strings("Usar mi ubicación", "Use my location", "Usar a minha localização"),
-                    onClick = {
-                        if (locationProvider.hasPermission()) {
-                            useDeviceLocation()
-                        } else {
-                            permissionLauncher.launch(DeviceLocationProvider.PERMISSIONS)
-                        }
-                    },
-                    leadingIcon = Icons.Default.MyLocation,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag("use_my_location_button")
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppSearchField(
-                    value = placeQuery,
-                    onValueChange = { placeQuery = it },
-                    placeholder = strings(
-                        "Ciudad, provincia, país",
-                        "City, state, country",
-                        "Cidade, estado, país"
-                    ),
-                    modifier = Modifier.testTag("parish_place_field")
-                )
-                // Only once there is a place to search: a disabled button
-                // under an empty field reads as a second field.
+            AppSearchField(
+                value = placeQuery,
+                onValueChange = { placeQuery = it },
+                placeholder = strings(
+                    "Buscar una ciudad o un lugar",
+                    "Search a city or place",
+                    "Buscar uma cidade ou lugar"
+                ),
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("parish_place_field")
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Column(Modifier.padding(horizontal = design.spacing.gutter)) {
                 if (placeQuery.isNotBlank()) {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    AppSecondaryButton(
+                    AppPrimaryButton(
                         label = strings(
                             "Buscar «${placeQuery.trim()}»",
                             "Search “${placeQuery.trim()}”",
@@ -309,6 +287,21 @@ fun ParishFinderScreen(
                             .fillMaxWidth()
                             .testTag("parish_search_place_button")
                     )
+                } else {
+                    // One "near me": the phone's own fix when it has one, with
+                    // Google Maps offered only if that fails.
+                    AppPrimaryButton(
+                        label = strings(
+                            "Parroquias cerca de mí",
+                            "Parishes near me",
+                            "Paróquias perto de mim"
+                        ),
+                        onClick = { nearMe() },
+                        leadingIcon = Icons.Default.MyLocation,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .testTag("gps_nearby_maps_button")
+                    )
                 }
             }
         }
@@ -317,8 +310,6 @@ fun ParishFinderScreen(
             AppSectionHeader(
                 title = strings("Distancia", "Distance", "Distância")
             )
-            // Five short options: a segmented control holds them abreast in
-            // every identity, where a chip row ran its last chip off the edge.
             AppSegmentedTabs(
                 options = RadiusOptionsKm.map { "$it km" },
                 selectedIndex = RadiusOptionsKm.indexOf(radiusKm).coerceAtLeast(0),
@@ -327,6 +318,7 @@ fun ParishFinderScreen(
                     .padding(horizontal = segmentedTabsInset())
                     .testTag("parish_radius_selector")
             )
+            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
         if (state == SearchState.LOADING) {
@@ -360,57 +352,82 @@ fun ParishFinderScreen(
                         style = MaterialTheme.typography.bodyMedium,
                         color = design.palette.textSecondary
                     )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppSecondaryButton(
+                        label = strings("Abrir Google Maps", "Open Google Maps", "Abrir o Google Maps"),
+                        onClick = { openNearbyInMaps(placeQuery.takeIf { it.isNotBlank() }) },
+                        leadingIcon = Icons.Default.Map,
+                        modifier = Modifier.testTag("use_my_location_button")
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
+        }
+
+        if (results.isEmpty()) {
+            if (state != SearchState.LOADING && message == null) {
+                item {
+                    AppEmptyState(
+                        title = strings(
+                            "Encuentra misa cerca",
+                            "Find Mass nearby",
+                            "Encontre missa por perto"
+                        ),
+                        body = strings(
+                            "Cada parroquia aparece con su distancia y, cuando se conoce, su próxima misa.",
+                            "Each parish is listed with its distance and, where known, its next Mass.",
+                            "Cada paróquia aparece com a sua distância e, quando conhecida, a próxima missa."
+                        ),
+                        icon = Icons.Default.Church
+                    )
                 }
             }
-        }
-
-        item {
-            AppSectionHeader(
-                title = if (results.isNotEmpty()) {
-                    strings("Resultados", "Results", "Resultados")
-                } else {
-                    strings("Grandes iglesias del mundo", "Great churches of the world", "Grandes igrejas do mundo")
-                },
-                subtitle = searchedPlace?.takeIf { results.isNotEmpty() }
-            )
-        }
-
-        if (shown.isEmpty()) {
+            // The bundled directory of cathedrals and basilicas lives in
+            // Churches & News; it is linked here rather than listed twice.
             item {
-                AppEmptyState(
-                    title = strings("Ninguna parroquia aquí", "No parishes here", "Nenhuma paróquia aqui"),
-                    body = strings(
-                        "Amplía la distancia o busca otro lugar.",
-                        "Widen the distance or search another place.",
-                        "Aumente a distância ou busque outro lugar."
-                    ),
-                    icon = Icons.Default.Church
-                )
+                AppListGroup {
+                    AppListRow(
+                        title = strings(
+                            "Directorio de iglesias",
+                            "Church directory",
+                            "Diretório de igrejas"
+                        ),
+                        subtitle = strings(
+                            "Catedrales, basílicas y santuarios por país",
+                            "Cathedrals, basilicas and shrines by country",
+                            "Catedrais, basílicas e santuários por país"
+                        ),
+                        leadingIcon = Icons.Default.Public,
+                        onClick = onOpenDirectory,
+                        modifier = Modifier.testTag("parish_open_directory")
+                    )
+                }
             }
         } else {
-            // One list for the directory. Each parish is its name and one short
-            // line; a tap opens its Mass times, telephone and directions in
-            // place, so the page reads as a list and not as a wall of text.
+            item {
+                AppSectionHeader(
+                    title = strings("Cerca de ti", "Nearby", "Perto de você"),
+                    subtitle = searchedPlace
+                )
+            }
+            // Each parish is its name, its street and its next Mass, with the
+            // distance trailing; a tap opens Mass times, telephone and
+            // directions in place.
             item(key = "parish_list") {
                 AppListGroup(Modifier.testTag("parish_list")) {
-                    shown.forEach { parish ->
+                    results.forEach { parish ->
                         val open = expandedParishId == parish.id
-                        val distance = parish.distanceDisplay.takeIf { it.any(Char::isDigit) }
+                        val masses = parish.sundayMasses.takeIf { it.isNotBlank() }?.let {
+                            strings("Misa del domingo", "Sunday Mass", "Missa de domingo") + " · " +
+                                TextFormat.times(ParishScheduleText.masses(it, currentLanguage), currentLanguage)
+                        }
                         AppListRow(
                             title = parish.name,
-                            // The directory's "distance" is a neighbourhood name in
-                            // the local language; the city and country say more.
-                            subtitle = listOf(
-                                if (distance == null) "" else streetOf(parish.address),
-                                parish.city,
-                                ParishScheduleText.country(parish.country, currentLanguage)
-                            )
-                                .map { it.trim() }
-                                .filter { it.isNotBlank() }
-                                .distinct()
-                                .joinToString(" · ")
-                                .ifBlank { null },
-                            trailingText = distance,
+                            subtitle = listOfNotNull(
+                                streetOf(parish.address).ifBlank { parish.city }.ifBlank { null },
+                                masses
+                            ).joinToString("\n").ifBlank { null },
+                            trailingText = parish.distanceDisplay.takeIf { it.any(Char::isDigit) },
                             selected = open,
                             onClick = { expandedParishId = if (open) null else parish.id },
                             modifier = Modifier.testTag("parish_row_${parish.id}")
@@ -425,17 +442,6 @@ fun ParishFinderScreen(
                             ) + fadeOut(tween(design.motion.fastMillis))
                         ) {
                             Column {
-                                if (parish.sundayMasses.isNotBlank()) {
-                                    AppListRow(
-                                        title = strings("Misas del domingo", "Sunday Mass", "Missas de domingo"),
-                                        subtitle = TextFormat.times(
-                                            ParishScheduleText.masses(parish.sundayMasses, currentLanguage),
-                                            currentLanguage
-                                        ),
-                                        leadingIcon = Icons.Default.Schedule,
-                                        showsNavigationAffordance = false
-                                    )
-                                }
                                 if (parish.contactPhone.isNotBlank()) {
                                     AppListRow(
                                         title = strings("Llamar", "Call", "Ligar"),
@@ -472,6 +478,11 @@ fun ParishFinderScreen(
                             }
                         }
                     }
+                    AppListRow(
+                        title = strings("Ver más en Google Maps", "More in Google Maps", "Ver mais no Google Maps"),
+                        leadingIcon = Icons.Default.Map,
+                        onClick = { openNearbyInMaps(searchedPlace) }
+                    )
                 }
             }
         }

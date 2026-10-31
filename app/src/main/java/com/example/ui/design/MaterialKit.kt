@@ -425,6 +425,66 @@ object MaterialKit : AppKit {
 
     // -------------------------------------------------------------- primitives
 
+    /** A list avatar's container, glyph colour and shape. */
+    private data class AvatarStyle(val container: Color, val content: Color, val shape: Shape)
+
+    /** "Cookie 7", a list avatar's scalloped variant. */
+    private val AvatarCookieShape: Shape = ScallopShape(lobes = 7, depth = 0.13f, rotation = 10f)
+
+    /**
+     * The avatar clover: deeper notches than the stat tiles' clover, because
+     * at 40dp a 16% notch read as a lumpy rounded square.
+     */
+    private val AvatarCloverShape: Shape = ScallopShape(lobes = 4, depth = 0.28f, rotation = 45f)
+
+    /**
+     * One of four avatar treatments, picked deterministically from [key] (an
+     * icon's name, a title): primary container in a circle, a tertiary
+     * (hue + 60°, M3's tertiary offset) clover, a secondary rounded square,
+     * and a warm gold cookie. The same glyph always wears the same treatment,
+     * so a list reads as categories — Android 16 Settings' coloured shapes —
+     * rather than one tonal circle repeated down the screen.
+     */
+    @Composable
+    private fun avatarStyle(key: Int): AvatarStyle {
+        val dark = LocalAppDesign.current.isDark
+        val c = roles()
+        val accent = MaterialTheme.colorScheme.primary
+        val (h, srcS, _) = accent.hsl()
+        val chroma = (srcS / 0.35f).coerceIn(0.35f, 1f)
+        fun at(hue: Float, s: Float, l: Float) =
+            Color.hsl(((hue % 360f) + 360f) % 360f, (s * chroma).coerceIn(0f, 1f), l)
+        return when (Math.floorMod(key, 4)) {
+            0 -> AvatarStyle(c.accentSoft, c.onAccentSoft, RoundedCornerShape(percent = 50))
+            1 -> {
+                val bg = if (dark) at(h + 60f, 0.34f, 0.25f) else at(h + 60f, 0.48f, 0.87f)
+                val fg = if (dark) at(h + 60f, 0.55f, 0.85f) else at(h + 60f, 0.65f, 0.20f)
+                AvatarStyle(bg, fg.readableOn(bg), AvatarCloverShape)
+            }
+            2 -> AvatarStyle(c.accentSofter, c.onAccentSofter, RoundedCornerShape(12.dp))
+            else -> {
+                val bg = if (dark) at(40f, 0.40f, 0.24f) else at(40f, 0.70f, 0.86f)
+                val fg = if (dark) at(40f, 0.60f, 0.82f) else at(36f, 0.70f, 0.22f)
+                AvatarStyle(bg, fg.readableOn(bg), AvatarCookieShape)
+            }
+        }
+    }
+
+    /** "I · Exodus 20:2–3": a leading ordinal folded into the supporting line. */
+    private val SubtitleNumeral = Regex("""^\s*([IVXLC]{1,6}|\d{1,3})\s+[·•—–]\s+(.+)$""")
+
+    /** A trailing value that is nothing but an ordinal. */
+    private val BareNumeral = Regex("""^\s*([IVXLC]{1,6}|\d{1,3})\.?\s*$""")
+
+    /** The letter a monogram avatar shows: the first word that is not an article. */
+    private fun monogramOf(title: String): String? {
+        val skip = setOf("the", "a", "an", "el", "la", "los", "las", "o", "os", "as")
+        val words = title.split(' ', '\'').filter { it.isNotBlank() }
+        val word = words.firstOrNull { it.lowercase() !in skip && it.first().isLetter() }
+            ?: words.firstOrNull { it.first().isLetter() } ?: return null
+        return word.first().uppercase()
+    }
+
     /**
      * The signature M3 list idiom: a glyph centred in a tonal circle. [size] is
      * the container, [glyph] the icon drawn inside it. 40/24 is the dimension
@@ -524,8 +584,11 @@ object MaterialKit : AppKit {
 
     private val LocalBarTitles = staticCompositionLocalOf<BarTitles?> { null }
 
-    /** 4 + 38 (headline) + 2 + 20 (supporting line) + 20. */
-    private val ExpandedBarHeight = 84.dp
+    /** 4 + 38 (headline) + 2 + 20 (supporting line) + 16. */
+    private val ExpandedBarHeight = 80.dp
+
+    /** 4 + 38 (headline) + 10: a headline with no supporting line. */
+    private val ExpandedBarHeightNoSupport = 52.dp
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
@@ -763,7 +826,6 @@ object MaterialKit : AppKit {
                 Spacer(
                     Modifier
                         .fillMaxWidth()
-                        .height(ExpandedBarHeight)
                         .graphicsLayer {
                             alpha = (1f - state.collapsedFraction * 1.6f).coerceIn(0f, 1f)
                         }
@@ -805,7 +867,15 @@ object MaterialKit : AppKit {
             ) { measurables, constraints ->
                 val loose = constraints.copy(minHeight = 0, maxHeight = androidx.compose.ui.unit.Constraints.Infinity)
                 val pinned = measurables[0].measure(loose)
-                val expanded = measurables[1].measure(loose)
+                // The expanded region is as tall as what it carries: a
+                // headline alone closes up under it (16dp to the content),
+                // and only a screen with a supporting line pays for one. A
+                // fixed two-line region left ~24dp of dead canvas under every
+                // headline that had no subtitle.
+                val regionHeight = if (subtitle() != null) ExpandedBarHeight else ExpandedBarHeightNoSupport
+                val expanded = measurables[1].measure(
+                    androidx.compose.ui.unit.Constraints.fixed(constraints.maxWidth, regionHeight.roundToPx())
+                )
                 // A root screen with nothing in the pinned row lets the
                 // headline rise into it at rest, so the bar does not open on
                 // 64dp of empty canvas; anything in the row keeps it clear.
@@ -1045,7 +1115,25 @@ object MaterialKit : AppKit {
         // centring them against a tall block. That is decided in the layout
         // pass from the measured text height, so it is right on the first
         // frame rather than one recomposition later.
-        val hasLeading = leadingIcon != null
+        // A row with no glyph still gets a leading element, so a list is not
+        // a column of bare text: an ordinal ("I · Exodus 20:2–3", or a bare
+        // "IV" trailing) moves into a numeral tile at the leading edge, and a
+        // navigable two-line row gets a monogram avatar (the Contacts / Gmail
+        // idiom), its colour keyed to the title.
+        val subNumeral = if (leadingIcon == null && subtitle != null) SubtitleNumeral.matchEntire(subtitle) else null
+        val trailNumeral = if (leadingIcon == null && subNumeral == null && trailingText != null) {
+            BareNumeral.matchEntire(trailingText)
+        } else {
+            null
+        }
+        val numeral = subNumeral?.groupValues?.get(1) ?: trailNumeral?.groupValues?.get(1)
+        val subtitle = subNumeral?.groupValues?.get(2) ?: subtitle
+        val trailingText = if (trailNumeral != null) null else trailingText
+        val monogram = if (leadingIcon == null && numeral == null && subtitle != null &&
+            trailingText == null && onClick != null
+        ) monogramOf(title) else null
+
+        val hasLeading = leadingIcon != null || numeral != null || monogram != null
         val hasTrailing = trailingText != null || (showsNavigationAffordance && onClick != null)
 
         // Inside a group a row is a 4dp segment; pressed, its corners swell
@@ -1070,6 +1158,33 @@ object MaterialKit : AppKit {
             Layout(
                 modifier = Modifier.fillMaxWidth(),
                 content = {
+                    if (leadingIcon == null && (numeral != null || monogram != null)) {
+                        val style = if (numeral != null) {
+                            // Ordinals share one treatment so the sequence
+                            // reads as a sequence: a tertiary rounded tile.
+                            avatarStyle(1).copy(shape = RoundedCornerShape(12.dp))
+                        } else {
+                            avatarStyle(title.hashCode()).copy(shape = RoundedCornerShape(percent = 50))
+                        }
+                        Box(
+                            Modifier
+                                .size(40.dp)
+                                .background(if (selected) MaterialTheme.colorScheme.primary else style.container, style.shape),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text(
+                                text = numeral ?: monogram!!,
+                                style = if (numeral != null && numeral.length > 2) {
+                                    MaterialTheme.typography.labelLarge
+                                } else {
+                                    MaterialTheme.typography.titleMedium
+                                },
+                                fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold,
+                                color = if (selected) MaterialTheme.colorScheme.onPrimary else style.content,
+                                maxLines = 1
+                            )
+                        }
+                    }
                     if (leadingIcon != null) {
                         // Selection morphs the avatar from a circle into a
                         // nine-lobed cookie, turning as it goes, on the
@@ -1080,16 +1195,16 @@ object MaterialKit : AppKit {
                             animationSpec = fastSpatial(),
                             label = "avatar_morph"
                         )
+                        val style = avatarStyle(leadingIcon.name.hashCode())
                         TonalIconCircle(
-                            shape = if (morph < 0.01f) RoundedCornerShape(percent = 50)
+                            shape = if (morph < 0.01f) style.shape
                             else ScallopShape(9, 0.11f * morph, 40f * morph),
                             icon = leadingIcon,
-                            // The list avatar: primaryContainer / onPrimaryContainer.
-                            // A grey disc under a green glyph read as disabled.
+                            // The list avatar, in its category's treatment.
                             // The selected row is already secondaryContainer,
                             // so its avatar steps up to primary to stay distinct.
-                            container = if (selected) MaterialTheme.colorScheme.primary else c.accentSoft,
-                            tint = if (selected) MaterialTheme.colorScheme.onPrimary else c.onAccentSoft,
+                            container = if (selected) MaterialTheme.colorScheme.primary else style.container,
+                            tint = if (selected) MaterialTheme.colorScheme.onPrimary else style.content,
                             glyph = design.decor.rowIconSize
                         )
                     }
@@ -1403,10 +1518,42 @@ object MaterialKit : AppKit {
             // drawing it as navigation tabs was a component misuse.
             // Only for a dense set of four or five values: two or three
             // long-ish labels are peer views, and those stay tabs.
-            val fitsBare = options.size in 4..5 && widest <= segment - 24.dp
+            // Round 5: a segmented button is a two-way value or view switch
+            // (Rosary / Divine Mercy, Calendar / Shrines) and always carries
+            // its checkmark. Three or more peers are destinations, and M3
+            // draws those as primary tabs — a four-segment pill as section
+            // navigation (Bible, Spiritual Life) was the single most-cited
+            // component misuse. A run of numeric values (2 km … 50 km) is
+            // neither: it is a single-select filter, drawn as the Maps / Play
+            // chip row, checkmark on the chosen one.
+            val valueSet = options.size >= 3 && options.all { o -> o.any { it.isDigit() } }
             val showCheck = widest <= room
-            val fits = (options.size <= 5 && showCheck) || fitsBare
-            if (!fits) {
+            val fits = options.size <= 2 && widest <= segment - 24.dp
+            if (valueSet) {
+                androidx.compose.foundation.layout.Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .layout { measurable, constraints ->
+                            val extra = (sideInset * 2).roundToPx()
+                            val placeable = measurable.measure(
+                                constraints.copy(
+                                    minWidth = constraints.maxWidth + extra,
+                                    maxWidth = constraints.maxWidth + extra
+                                )
+                            )
+                            layout(constraints.maxWidth, placeable.height) {
+                                placeable.placeRelative(-sideInset.roundToPx(), 0)
+                            }
+                        }
+                        .horizontalScroll(rememberScrollState())
+                        .padding(horizontal = design.spacing.gutter),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    options.forEachIndexed { index, option ->
+                        Chip(option, index == selectedIndex, { onSelect(index) }, Modifier)
+                    }
+                }
+            } else if (!fits) {
                 val bleed = sideInset
                 val selected = selectedIndex.coerceIn(0, (options.size - 1).coerceAtLeast(0))
                 // Fixed tabs when every label fits an equal share of the

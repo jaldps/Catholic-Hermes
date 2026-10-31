@@ -33,7 +33,8 @@ import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Schedule
-import androidx.compose.material.icons.filled.SelfImprovement
+import androidx.compose.material.icons.outlined.Checklist
+import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolumeUp
@@ -248,7 +249,7 @@ fun HabitsAndVirtuesScreen(
                                 "A few practices, kept every day, shape a life in Christ.",
                                 "Umas poucas práticas, guardadas cada dia, formam uma vida em Cristo."
                             ),
-                            icon = Icons.Default.SelfImprovement,
+                            icon = Icons.Outlined.Checklist,
                             modifier = Modifier.testTag("habits_empty_state")
                         )
                     }
@@ -1214,7 +1215,7 @@ private fun SpiritualHabitEntity.localizedTitle(language: AppLanguage): String =
 private fun habitIcon(iconName: String): ImageVector = when (iconName) {
     "wb_sunny" -> Icons.Default.WbSunny
     "schedule" -> Icons.Default.Schedule
-    "self_improvement" -> Icons.Default.SelfImprovement
+    "self_improvement", "rosary" -> DevotionalGlyphs.rosaryOutlined
     "church" -> Icons.Default.Church
     "menu_book" -> Icons.Default.MenuBook
     "restaurant" -> Icons.Default.Restaurant

@@ -47,7 +47,8 @@ import androidx.compose.material.icons.filled.NearMe
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Restaurant
-import androidx.compose.material.icons.filled.SelfImprovement
+import androidx.compose.material.icons.outlined.Checklist
+import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.TaskAlt
 import androidx.compose.material.icons.filled.WbTwilight
@@ -71,6 +72,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.data.liturgy.LiturgicalColor
 import com.example.data.models.AppLanguage
@@ -181,147 +183,186 @@ fun HomeScreen(
             .testTag("home_screen")
     ) {
         item {
+            // The date alone: the year's cycles belong to the calendar, and the
+            // banner below already carries the day, its colour and its rank.
             AppScreenTitle(
                 title = strings("Hoy", "Today", "Hoje"),
-                // The date and the year's cycles: one quiet line, since the
-                // banner below already carries the day and its colour.
-                subtitle = listOfNotNull(
-                    strings(
-                        "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
-                        "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
-                        "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
-                    ),
-                    liturgicalDay.sundayCycle?.get(currentLanguage),
-                    liturgicalDay.weekdayCycle?.get(currentLanguage)
-                ).joinToString(" · ")
+                subtitle = strings(
+                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
+                    "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
+                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
+                )
             )
         }
 
-        // The liturgical colour is the one literal colour the data owns, and
-        // the banner is where each identity decides what to do with it.
+        // 1. The hero: the liturgical day. The colour is the one literal
+        // colour the data owns, and the banner is where each identity decides
+        // what to do with it. Its body is the celebration, then colour and
+        // rank, then any precept of the day, so no second card restates it.
         item {
-            // The day's particulars ride under its title: the banner already
-            // carries the colour, so no second card restates it.
             AppBanner(
                 title = liturgicalDay.seasonName.get(currentLanguage),
-                body = liturgicalDay.celebrationTitle.get(currentLanguage),
+                body = listOfNotNull(
+                    liturgicalDay.celebrationTitle.get(currentLanguage),
+                    "$colorLabel · ${liturgicalDay.rank.get(currentLanguage)}",
+                    liturgicalDay.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
+                ).joinToString("\n"),
                 accentColorHex = liturgicalDay.liturgicalColorHex,
                 modifier = Modifier.testTag("liturgical_calendar_widget")
             )
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        if (liturgicalDay.fastingRule != null || gospelOfRecord != null) item {
-            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                liturgicalDay.fastingRule?.let {
-                    DayBadge(
-                        label = it.get(currentLanguage),
-                        tint = palette.accent,
-                        icon = if (liturgicalDay.isFastOrAbstinence) {
-                            Icons.Default.Restaurant
-                        } else {
-                            Icons.Default.Star
-                        }
+        // 2. Today's readings: the Gospel's opening lines first, so the text
+        // itself is above the fold, then the other citations, then one
+        // tonal action into the Missal.
+        item {
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("daily_mass_card")
+            ) {
+                CardHeading(
+                    label = strings(
+                        "Lecturas de hoy",
+                        "Today's readings",
+                        "Leituras de hoje"
+                    ),
+                    icon = Icons.Default.AutoStories
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+
+                if (massCitations.isEmpty() && vaticanResult == null) {
+                    ReadingsPlaceholder(
+                        description = strings(
+                            "Cargando las lecturas de hoy",
+                            "Loading today's readings",
+                            "A carregar as leituras de hoje"
+                        )
                     )
+                } else if (massCitations.isEmpty()) {
+                    Text(
+                        text = strings(
+                            "El leccionario incluido no trae las lecturas de esta feria. " +
+                                "La celebración del día queda indicada arriba.",
+                            "The bundled lectionary has no readings for this weekday. " +
+                                "The day's celebration is given above.",
+                            "O lecionário incluído não traz as leituras desta féria. " +
+                                "A celebração do dia está indicada acima."
+                        ),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = palette.textSecondary,
+                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                    )
+                } else {
+                    val gospel = massCitations.last()
+                    val others = if (gospelExcerpt != null) massCitations.dropLast(1) else massCitations
+                    if (gospelExcerpt != null) {
+                        Text(
+                            text = listOf(gospel.first, TextFormat.ranges(gospel.second))
+                                .filter { it.isNotBlank() }
+                                .joinToString(" · ")
+                                .caps(),
+                            style = styles.sectionEyebrow,
+                            color = palette.accent
+                        )
+                        Spacer(Modifier.height(6.dp))
+                        Text(
+                            text = "«$gospelExcerpt»",
+                            style = styles.scripture,
+                            color = palette.textPrimary,
+                            maxLines = 4,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+                        if (others.isNotEmpty()) {
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            AppDivider()
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                        }
+                    }
+                    // Stacked rather than two-column: a resolved citation
+                    // carries the book's full name and would crush a label
+                    // sharing its line.
+                    others.forEachIndexed { index, (label, reference) ->
+                        if (index > 0) Spacer(Modifier.height(10.dp))
+                        if (label.isNotBlank()) {
+                            Text(
+                                text = label.caps(),
+                                style = styles.sectionEyebrow,
+                                color = palette.textTertiary
+                            )
+                            Spacer(Modifier.height(2.dp))
+                        }
+                        Text(
+                            text = TextFormat.ranges(reference),
+                            style = styles.rowSubtitle,
+                            color = palette.textPrimary
+                        )
+                    }
                 }
 
-                if (gospelOfRecord != null) {
-                    if (liturgicalDay.fastingRule != null) {
-                        Spacer(Modifier.height(design.spacing.cardGap))
-                        AppDivider()
-                    }
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(design.shapes.buttonSmall)
-                            .then(
-                                if (meditation != null) {
-                                    Modifier.clickable {
-                                        meditationExpanded = !meditationExpanded
-                                    }
-                                } else {
-                                    Modifier
-                                }
-                            )
-                            .padding(vertical = 12.dp),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.AutoStories,
-                            contentDescription = null,
-                            tint = palette.textTertiary,
-                            modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
-                        )
-                        Spacer(Modifier.width(design.spacing.iconLabelGap))
-                        Text(
-                            text = gospelOfRecord,
-                            style = styles.rowSubtitle,
-                            color = palette.textPrimary,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.weight(1f)
-                        )
-                        if (meditation != null) {
-                            Spacer(Modifier.width(12.dp))
-                            Text(
-                                text = if (meditationExpanded) {
-                                    strings("Ocultar", "Hide", "Ocultar")
-                                } else {
-                                    strings("Meditación", "Meditation", "Meditação")
-                                }.caps(),
-                                style = styles.sectionEyebrow,
-                                color = palette.accent,
-                                maxLines = 1
-                            )
-                            Icon(
-                                imageVector = if (meditationExpanded) {
-                                    Icons.Default.KeyboardArrowUp
-                                } else {
-                                    Icons.Default.KeyboardArrowDown
-                                },
-                                contentDescription = null,
-                                tint = palette.accent,
-                                modifier = Modifier.size(18.dp)
-                            )
-                        }
-                    }
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppSecondaryButton(
+                    label = strings(
+                        "Leer la Misa de hoy",
+                        "Read today's Mass",
+                        "Ler a Missa de hoje"
+                    ),
+                    onClick = onNavigateToMissal,
+                    leadingIcon = Icons.Default.AutoStories,
+                    modifier = Modifier.testTag("read_mass_full_button")
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
 
-                    AnimatedVisibility(
-                        visible = meditationExpanded && meditation != null,
-                        enter = expandVertically(
-                            tween(design.motion.mediumMillis, easing = design.motion.standardEasing)
-                        ) + fadeIn(tween(design.motion.fastMillis)),
-                        exit = shrinkVertically(
-                            tween(design.motion.fastMillis, easing = design.motion.standardEasing)
-                        ) + fadeOut(tween(design.motion.fastMillis))
-                    ) {
-                        Column {
-                            Text(
-                                text = strings(
-                                    "Meditación litúrgica del día",
-                                    "Liturgical meditation of the day",
-                                    "Meditação litúrgica do dia"
-                                ).caps(),
-                                style = styles.sectionEyebrow,
-                                color = palette.textSecondary
-                            )
-                            Spacer(Modifier.height(10.dp))
-                            Text(
-                                text = meditation.orEmpty(),
-                                style = styles.scripture,
-                                color = palette.textPrimary,
-                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                            )
-                            Spacer(Modifier.height(4.dp))
-                        }
-                    }
+        // 3. Continue: the Gospel of the day in full, one tap away, with its
+        // meditation when the bundled lectionary carries one.
+        if (gospelOfRecord != null) item {
+            AppListGroup {
+                AppListRow(
+                    title = strings("Evangelio del día", "Gospel of the day", "Evangelho do dia"),
+                    subtitle = TextFormat.ranges(gospelOfRecord),
+                    leadingIcon = Icons.Default.MenuBook,
+                    trailingText = if (meditation != null) {
+                        if (meditationExpanded) strings("Ocultar", "Hide", "Ocultar")
+                        else strings("Meditar", "Meditate", "Meditar")
+                    } else null,
+                    showsNavigationAffordance = meditation == null,
+                    onClick = if (meditation != null) {
+                        { meditationExpanded = !meditationExpanded }
+                    } else onNavigateToMissal,
+                    modifier = Modifier.testTag("home_continue_row")
+                )
+            }
+            AnimatedVisibility(
+                visible = meditationExpanded && meditation != null,
+                enter = expandVertically(
+                    tween(design.motion.mediumMillis, easing = design.motion.standardEasing)
+                ) + fadeIn(tween(design.motion.fastMillis)),
+                exit = shrinkVertically(
+                    tween(design.motion.fastMillis, easing = design.motion.standardEasing)
+                ) + fadeOut(tween(design.motion.fastMillis))
+            ) {
+                AppCard(
+                    modifier = Modifier
+                        .padding(horizontal = design.spacing.gutter)
+                        .padding(top = design.spacing.cardGap)
+                ) {
+                    Text(
+                        text = meditation.orEmpty(),
+                        style = styles.scripture,
+                        color = palette.textPrimary,
+                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                    )
                 }
             }
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // Daily sanctification routine. Four rows rather than four tiles: the
-        // Spanish and Portuguese hour names do not survive a 4-across grid.
+        // 4. The routine: the hours of the day, closed by the rule of life,
+        // so the practices read as one group rather than a stray card.
         item {
             AppSectionHeader(
                 title = strings(
@@ -348,7 +389,7 @@ fun HomeScreen(
                 )
                 AppListRow(
                     title = strings("Santo Rosario", "Holy Rosary", "Santo Terço"),
-                    leadingIcon = Icons.Default.SelfImprovement,
+                    leadingIcon = DevotionalGlyphs.rosaryOutlined,
                     trailingText = TextFormat.clock(18, 0, currentLanguage),
                     onClick = onNavigateToRosary
                 )
@@ -358,127 +399,14 @@ fun HomeScreen(
                     trailingText = TextFormat.clock(21, 0, currentLanguage),
                     onClick = onNavigateToPrayers
                 )
-            }
-            Spacer(Modifier.height(design.spacing.cardGap))
-            // The rule of life is a place to go, so it is a row with a
-            // disclosure, not a card with a stray text link.
-            AppListGroup {
                 AppListRow(
                     title = strings("Regla de vida", "Rule of life", "Regra de vida"),
-                    subtitle = strings(
-                        "Tus prácticas, ayunos y propósitos",
-                        "Your practices, fasts and resolutions",
-                        "As tuas práticas, jejuns e propósitos"
-                    ),
-                    leadingIcon = Icons.Default.TaskAlt,
+                    leadingIcon = Icons.Outlined.Checklist,
                     onClick = onNavigateToHabits,
                     modifier = Modifier.testTag("home_habit_tracker_card")
                 )
             }
             Spacer(Modifier.height(design.spacing.sectionGap / 2))
-        }
-
-        // Mass of the day.
-        item {
-            AppCard(
-                modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("daily_mass_card")
-            ) {
-                CardHeading(
-                    label = strings(
-                        "Lecturas de la Misa de Hoy",
-                        "Today's Mass Readings",
-                        "Leituras da Santa Missa"
-                    ),
-                    icon = Icons.Default.AutoStories
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-
-                if (massCitations.isEmpty() && vaticanResult == null) {
-                    // A quiet placeholder in the shape of the citations to
-                    // come, rather than a sentence announcing that they are.
-                    val placeholder = palette.textTertiary.copy(alpha = 0.16f)
-                    listOf(0.42f, 0.7f, 0.36f, 0.62f).forEachIndexed { i, fraction ->
-                        if (i > 0) Spacer(Modifier.height(if (i % 2 == 0) 14.dp else 6.dp))
-                        Box(
-                            Modifier
-                                .fillMaxWidth(fraction)
-                                .height(if (i % 2 == 0) 10.dp else 14.dp)
-                                .clip(design.shapes.chip)
-                                .background(placeholder)
-                                .semantics {
-                                    contentDescription = strings(
-                                        "Cargando las lecturas de hoy",
-                                        "Loading today's readings",
-                                        "A carregar as leituras de hoje"
-                                    )
-                                }
-                        )
-                    }
-                } else if (massCitations.isEmpty()) {
-                    Text(
-                        text = strings(
-                            "El leccionario incluido no trae las lecturas de esta feria. " +
-                                "La celebración del día queda indicada arriba.",
-                            "The bundled lectionary has no readings for this weekday. " +
-                                "The day's celebration is given above.",
-                            "O lecionário incluído não traz as leituras desta féria. " +
-                                "A celebração do dia está indicada acima."
-                        ),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = palette.textSecondary,
-                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                    )
-                } else {
-                    // Stacked rather than two-column: a resolved citation
-                    // carries the book's full name and would crush a label
-                    // sharing its line.
-                    massCitations.forEachIndexed { index, (label, reference) ->
-                        if (index > 0) Spacer(Modifier.height(12.dp))
-                        if (label.isNotBlank()) {
-                            Text(
-                                text = label.caps(),
-                                style = styles.sectionEyebrow,
-                                color = palette.textTertiary
-                            )
-                            Spacer(Modifier.height(3.dp))
-                        }
-                        Text(
-                            text = reference,
-                            style = styles.rowSubtitle,
-                            color = palette.textPrimary
-                        )
-                    }
-
-                    if (gospelExcerpt != null) {
-                        Spacer(Modifier.height(design.spacing.cardGap))
-                        Text(
-                            text = "«$gospelExcerpt»",
-                            style = styles.scripture,
-                            color = palette.textPrimary,
-                            maxLines = 4,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                        )
-                    }
-                }
-
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppPrimaryButton(
-                    label = strings(
-                        "Leer la Misa de hoy",
-                        "Read today's Mass",
-                        "Ler a Missa de hoje"
-                    ),
-                    onClick = onNavigateToMissal,
-                    leadingIcon = Icons.Default.AutoStories,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag("read_mass_full_button")
-                )
-            }
-            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
         // Verse of the day: the screen's hero pull quote.
@@ -660,6 +588,43 @@ fun HomeScreen(
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+/**
+ * The readings card while the day's Mass is on its way: a fixed-height block in
+ * the shape of what is coming (the Gospel's eyebrow and four lines of text, then
+ * two citations), so the card keeps its size and the page does not jump.
+ */
+@Composable
+private fun ReadingsPlaceholder(description: String) {
+    val design = LocalAppDesign.current
+    val ink = design.palette.textTertiary.copy(alpha = if (design.isDark) 0.22f else 0.14f)
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .height(156.dp)
+            .semantics { contentDescription = description }
+            .testTag("home_readings_placeholder")
+    ) {
+        @Composable
+        fun bar(fraction: Float, height: Dp) = Box(
+            Modifier
+                .fillMaxWidth(fraction)
+                .height(height)
+                .clip(design.shapes.chip)
+                .background(ink)
+        )
+        bar(0.34f, 10.dp)
+        Spacer(Modifier.height(10.dp))
+        listOf(1f, 0.94f, 0.97f, 0.58f).forEach {
+            bar(it, 13.dp)
+            Spacer(Modifier.height(7.dp))
+        }
+        Spacer(Modifier.height(9.dp))
+        bar(0.26f, 9.dp)
+        Spacer(Modifier.height(6.dp))
+        bar(0.48f, 12.dp)
     }
 }
 

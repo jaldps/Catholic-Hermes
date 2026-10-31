@@ -26,6 +26,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Comment
 import androidx.compose.material.icons.automirrored.filled.MenuBook
@@ -94,6 +95,7 @@ import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.components.MenuPickerRow
 import com.example.ui.design.AppVerseRow
 import com.example.ui.theme.AppFonts
 import com.example.ui.theme.DesignLanguage
@@ -187,14 +189,19 @@ fun BibleScreen(
         }
         item(key = "bible_screen_tabs") {
             AppSegmentedTabs(
+                // Three views; Versions is a row inside the Bible view, so the
+                // control never carries four segments.
                 options = listOf(
                     currentLanguage.pick("Biblia", "Bible", "Bíblia"),
                     currentLanguage.pick("Misal", "Missal", "Missal"),
-                    currentLanguage.pick("Versiones", "Versions", "Versões"),
                     currentLanguage.pick("Estudio", "Study", "Estudo")
                 ),
-                selectedIndex = selectedMainTab,
-                onSelect = { selectedMainTab = it },
+                selectedIndex = when (selectedMainTab) {
+                    1 -> 1
+                    3 -> 2
+                    else -> 0
+                },
+                onSelect = { selectedMainTab = if (it == 2) 3 else it },
                 modifier = Modifier
                     .padding(horizontal = tabsInset)
                     .padding(bottom = design.spacing.cardGap / 2)
@@ -219,6 +226,7 @@ fun BibleScreen(
                         onSearchQueryChange = { searchQuery = it },
                         selectedFilter = selectedTestamentTab,
                         onFilterChange = { selectedTestamentTab = it },
+                        onOpenVersions = { selectedMainTab = 2 },
                         onOpenBook = { opened, chapter ->
                             selectedBook = opened
                             selectedChapterNumber = chapter
@@ -273,12 +281,15 @@ fun BibleScreen(
                 currentLanguage = currentLanguage
             )
 
-            2 -> VersionsView(
+            2 -> {
+                BackHandler { selectedMainTab = 0 }
+                VersionsView(
                 header = header,
                 versions = repository.bibleVersions,
                 downloadManager = repository.bibleDownloadManager,
                 currentLanguage = currentLanguage
             )
+            }
 
             3 -> if (dao != null && ttsManager != null) {
                 ScriptureStudyScreen(
@@ -335,6 +346,7 @@ private fun BookDirectory(
     onSearchQueryChange: (String) -> Unit,
     selectedFilter: Int,
     onFilterChange: (Int) -> Unit,
+    onOpenVersions: () -> Unit,
     onOpenBook: (BibleBook, Int) -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -347,9 +359,9 @@ private fun BookDirectory(
     }
     val booksById = remember { repository.catholicBooks.associateBy { it.id } }
 
-    // One filter layer only: the view selector above. The testaments and the
-    // deuterocanon are reached by search ("deutero", "Gospels", "New
-    // Testament") and the sections themselves, not a second row of chips.
+    // One filter layer: the canon is a single menu row under the search, not a
+    // second row of chips; search also matches "deutero", "Gospels" and the
+    // testaments by name.
     val filteredBooks = remember(searchQuery, selectedFilter, currentLanguage) {
         val query = searchQuery.trim()
         repository.catholicBooks.filter { book ->
@@ -407,6 +419,36 @@ private fun BookDirectory(
                     .padding(horizontal = design.spacing.gutter)
                     .testTag("bible_search_input")
             )
+        }
+
+        item(key = "bible_directory_menu") {
+            Spacer(Modifier.height(design.spacing.cardGap))
+            AppListGroup {
+                MenuPickerRow(
+                    title = currentLanguage.pick("Libros", "Books", "Livros"),
+                    leadingIcon = Icons.AutoMirrored.Filled.MenuBook,
+                    options = listOf(
+                        0 to currentLanguage.pick("Todos", "All", "Todos"),
+                        1 to currentLanguage.pick("Antiguo Testamento", "Old Testament", "Antigo Testamento"),
+                        2 to currentLanguage.pick("Nuevo Testamento", "New Testament", "Novo Testamento"),
+                        3 to currentLanguage.pick("Deuterocanónicos", "Deuterocanonical", "Deuterocanônicos")
+                    ),
+                    selected = selectedFilter,
+                    onSelect = onFilterChange,
+                    testTag = "bible_canon_filter"
+                )
+                AppListRow(
+                    title = currentLanguage.pick("Versiones", "Versions", "Versões"),
+                    subtitle = currentLanguage.pick(
+                        "Traducciones y descargas",
+                        "Translations and downloads",
+                        "Traduções e downloads"
+                    ),
+                    leadingIcon = Icons.Default.Translate,
+                    onClick = onOpenVersions,
+                    modifier = Modifier.testTag("bible_versions_row")
+                )
+            }
         }
 
         if (filteredBooks.isEmpty() && verseMatches.isEmpty()) {

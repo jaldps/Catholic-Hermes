@@ -27,7 +27,8 @@ import androidx.compose.material.icons.filled.Directions
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.RadioButtonUnchecked
-import androidx.compose.material.icons.filled.SelfImprovement
+import androidx.compose.material.icons.outlined.Checklist
+import androidx.compose.material.icons.outlined.TaskAlt
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -204,47 +205,24 @@ private fun LiturgicalCalendarTab(
 
 @Composable
 private fun LiturgicalDayEntry(day: LiturgicalCalendarDay, currentLanguage: AppLanguage) {
-    val design = LocalAppDesign.current
-
-    Column {
-        // The liturgical colour is data, so it travels as the banner's accent
-        // rather than as a coloured disc the screen draws for itself.
-        AppBanner(
-            title = currentLanguage.pick(
-                "${day.dayOfMonth} de ${day.monthName.lowercase()}",
-                "${day.monthName} ${day.dayOfMonth}",
-                "${day.dayOfMonth} de ${day.monthName.lowercase()}"
-            ) + " · " + day.rank.get(currentLanguage),
-            body = day.celebrationTitle.get(currentLanguage) +
-                (day.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }?.let { "\n$it" } ?: ""),
-            accentColorHex = day.liturgicalColorHex
-        )
-
-        // The rank rides in the banner's eyebrow, so what is left is the day's
-        // Gospel and its precept: one compact group, the precept a row in it
-        // rather than a note floating in the gutter beneath. A plain weekday
-        // with neither is the banner alone.
-        val gospel = day.gospelVerseRef.takeIf { it.isNotBlank() }
-        val precept: String? = null // carried by the hero's second line
-        if (gospel != null || precept != null) {
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            AppListGroup {
-                if (gospel != null) {
-                    AppListRow(
-                        title = currentLanguage.pick("Evangelio", "Gospel", "Evangelho"),
-                        trailingText = TextFormat.ranges(gospel),
-                        showsNavigationAffordance = false
-                    )
-                }
-                if (precept != null) {
-                    AppListRow(
-                        title = precept,
-                        showsNavigationAffordance = false
-                    )
-                }
-            }
-        }
+    // One card per celebration: the liturgical colour is data, so it travels
+    // as the banner's accent; the rank rides in its eyebrow; the body names the
+    // feast first, then its precept as a line of its own, and closes with the
+    // day's Gospel, so no detached mini-card trails beneath the hero.
+    val gospel = day.gospelVerseRef.takeIf { it.isNotBlank() }?.let {
+        currentLanguage.pick("Evangelio", "Gospel", "Evangelho") + " · " + TextFormat.ranges(it)
     }
+    val precept = day.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
+    AppBanner(
+        title = currentLanguage.pick(
+            "${day.dayOfMonth} de ${day.monthName.lowercase()}",
+            "${day.monthName} ${day.dayOfMonth}",
+            "${day.dayOfMonth} de ${day.monthName.lowercase()}"
+        ) + " · " + day.rank.get(currentLanguage),
+        body = listOfNotNull(day.celebrationTitle.get(currentLanguage), precept, gospel).joinToString("\n"),
+        accentColorHex = day.liturgicalColorHex,
+        modifier = Modifier.testTag("calendar_day_${day.monthName}_${day.dayOfMonth}")
+    )
 }
 
 // --------------------------------------------------------------------- habits
@@ -272,7 +250,7 @@ private fun HolyHabitsTab(
                         "The rule of life has no practices loaded.",
                         "A regra de vida não tem práticas carregadas."
                     ),
-                    icon = Icons.Default.SelfImprovement
+                    icon = Icons.Outlined.Checklist
                 )
             }
         } else {
@@ -303,7 +281,7 @@ private fun HolyHabitsTab(
                         "Kept today",
                         "Cumpridos hoje"
                     ),
-                    icon = Icons.Default.SelfImprovement,
+                    icon = Icons.Outlined.TaskAlt,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = design.spacing.gutter)

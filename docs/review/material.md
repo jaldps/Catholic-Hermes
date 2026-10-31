@@ -177,3 +177,50 @@ extended FAB on the Journal, a clipped radius chip row on Parishes.
 - Hero CTAs (Habits "Start with 7 suggested practices", Journal "Write your
   first entry") should be centred, wrap-content buttons, not full-width. In M3
   only a pinned bottom action is full width.
+
+### Iteration 5 → 6 (Round 5, MaterialKit)
+- The large app bar's expanded region now sizes to its content: 52dp for a
+  headline alone, 80dp with a supporting line. No more ~24dp dead band under
+  headlines without a subtitle.
+- `SegmentedTabs`: two options stay a segmented button, always with the
+  checkmark. Three or more become fixed (or scrollable) primary tabs: Bible,
+  Spiritual Life, Doctrine, Catechism, Prayers. A set where every option holds
+  a digit (Parishes 5/10/25 km) is a single-select filter-chip row with the
+  checkmark.
+- List rows get variety without screen changes. Leading icons wear one of four
+  treatments keyed to the icon: primary circle, tertiary (hue +60°) clover,
+  secondary rounded square, or warm-gold cookie. A subtitle that opens with an
+  ordinal ("IV · Exodus 20:12") or a bare numeral trailing value moves into a
+  tertiary numeral tile. A navigable two-line row with no icon and no trailing
+  value gets a monogram avatar.
+
+## Round 5 shared-screen requests
+
+- **`SpiritualLifeScreen` "Ways to begin"**: the three prompts share one icon,
+  so they also share one avatar treatment. Give each its own glyph (for
+  example `VolunteerActivism`, `Favorite`/`FavoriteBorder`, `Celebration`), and
+  the kit will colour and shape them differently.
+- **Hero CTAs** (Habits "Start with 7 suggested practices", Journal "Write your
+  first entry"): drop `fillMaxWidth()` and centre a wrap-content button. Only a
+  pinned bottom action is full width in M3. This is still open from Round 4.
+- **Rosary bead ring** (`RosaryScreen` canvas): beads are hairline outlines at
+  about 1dp in `outline`, and the current bead is not marked. Draw 6dp filled
+  beads in `outlineVariant`, completed beads in `primary`, the current bead at
+  10dp in `primary` with a 4dp `primaryContainer` halo, and the Our Father
+  beads at 8dp. Put a `LinearWavyProgressIndicator` (or a 4dp rounded
+  `LinearProgressIndicator`) under "Step 1 of 85". Wrap the prev/next arrows in
+  `FilledTonalIconButton`.
+- **Home "Today's readings" skeleton**: give it a fixed height that matches
+  the loaded card, plus a shimmer (an infinite transition on a gradient brush).
+  It is captured in screenshots and reads as broken.
+- **Prayers "Intention · All ›" and Churches "Country / City / Show" rows**:
+  these are filters. Use a horizontally scrolling row of `AppChip`s, with
+  "Intention: All ▾" opening a menu (the Gmail/Maps idiom).
+- **Bible**: add a "Continue reading · Genesis 3" row (or banner) above
+  Pentateuch when a last position exists, and restore O.T. / N.T. /
+  Deuterocanon as `AppChip`s under the search field.
+- **Catechism Sources**: the Compendium row uses `OpenInNew` as its *leading*
+  icon. Use a book glyph for leading, and if the row opens externally, say so
+  in the subtitle ("vatican.va").
+- **More "Spiritual Life"** uses a star (favourite semantics). Use
+  `SelfImprovement` or `AutoStories`.

@@ -20,6 +20,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.Density
 import androidx.compose.runtime.LaunchedEffect
 import kotlinx.coroutines.launch
+import com.example.ui.theme.DesignLanguage
 import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.cos
@@ -1291,27 +1292,21 @@ private fun GuideControlsCard(
     val step = guide.steps[index]
 
     AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-        // One quiet line: the devotion is already named above the card, so
-        // only the honest count is left to say.
-        CardHeading(
-            eyebrow = lang.pick(
-                "Paso ${index + 1} de ${guide.steps.size}",
-                "Step ${index + 1} of ${guide.steps.size}",
-                "Passo ${index + 1} de ${guide.steps.size}"
-            ),
-            detail = null
-        )
-
-        Spacer(Modifier.height(design.spacing.cardGap))
-
         val where = guide.whereLine(step, lang)
         val count = countLine(step, lang)
+        val stepLabel = lang.pick(
+            "Paso ${index + 1} de ${guide.steps.size}",
+            "Step ${index + 1} of ${guide.steps.size}",
+            "Passo ${index + 1} de ${guide.steps.size}"
+        )
         BeadRail(
             beads = guide.beads,
             activeIndex = step.bead,
+            progress = index.toFloat() / guide.steps.lastIndex.coerceAtLeast(1),
             where = where,
             what = step.name,
             count = count,
+            stepLabel = stepLabel,
             onSelectBead = { bead ->
                 val target = guide.firstStepOn(bead)
                 if (target >= 0) onGo(target)
@@ -1319,7 +1314,7 @@ private fun GuideControlsCard(
             modifier = Modifier
                 .testTag(railTag)
                 .semantics {
-                    contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
+                    contentDescription = listOfNotNull(where, step.name, count, stepLabel).joinToString(", ")
                 }
         )
 
@@ -1436,25 +1431,24 @@ private fun StepCard(step: GuideStep, lang: AppLanguage, spokenNow: String?) {
 }
 
 /**
- * The whole rosary drawn as the thing itself: the loop of five decades strung
- * on one thread, the medal where it closes, and the pendant hanging to the
- * crucifix. Untold beads are hairline rings, told ones are filled, and the
- * bead in hand stands proud in the accent with a soft halo. Where you are is
- * set in the middle of the loop.
- *
- * The idiom follows the tokens rather than a flag: where the identity rules its
- * edges (`cardBorderWidth`) the rings and told beads are leaf, as a gilt
- * rosary; where it fills them they are the tint. One animated position glides
- * along the thread, so advancing springs the next bead up and lets the last
- * one settle into the told colour.
+ * The whole rosary drawn as the thing itself, large and centred: the loop of
+ * five decades strung on one thread, the medal where it closes, and the pendant
+ * hanging to a drawn crucifix. Beads still to pray are soft tinted pearls with a
+ * rim; prayed beads are filled solid and the thread between them is inked, so
+ * the progress reads at a glance; the bead in hand stands proud in the accent
+ * with a halo and a ring. Around the loop runs the devotion's overall progress
+ * in each identity's idiom: a Fitness-style ring (Apple), an expressive wavy
+ * indicator (Material), a ruled gilt band with a rubric arc (Vatican).
  */
 @Composable
 private fun BeadRail(
     beads: List<BeadSpec>,
     activeIndex: Int,
+    progress: Float,
     where: String,
     what: String,
     count: String?,
+    stepLabel: String,
     onSelectBead: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -1465,18 +1459,35 @@ private fun BeadRail(
     val density = LocalDensity.current
 
     val engraved = design.depth.cardBorderWidth > 0.dp
-    val thread = if (engraved) palette.gold.copy(alpha = 0.42f) else palette.textTertiary.copy(alpha = 0.32f)
-    val untold = if (engraved) palette.gold.copy(alpha = 0.78f) else palette.textTertiary.copy(alpha = 0.62f)
-    val told = if (engraved) palette.gold else palette.accent.copy(alpha = if (design.isDark) 0.62f else 0.5f)
+    val idiom = design.language
+    val dark = design.isDark
+    val thread = if (engraved) palette.gold.copy(alpha = 0.45f) else palette.textTertiary.copy(alpha = if (dark) 0.42f else 0.34f)
+    val pearl = if (engraved) {
+        palette.gold.copy(alpha = if (dark) 0.20f else 0.16f)
+    } else {
+        palette.textTertiary.copy(alpha = if (dark) 0.30f else 0.20f)
+    }
+    val rim = if (engraved) palette.gold.copy(alpha = 0.85f) else palette.textTertiary.copy(alpha = if (dark) 0.70f else 0.55f)
+    val told = if (engraved) palette.gold else palette.accent
+    val toldThread = if (engraved) palette.gold else palette.accent.copy(alpha = 0.85f)
     val current = palette.accent
-    val halo = palette.accent.copy(alpha = if (engraved) 0.12f else 0.16f)
+    val halo = palette.accent.copy(alpha = if (dark) 0.22f else 0.14f)
+    val track = when (idiom) {
+        DesignLanguage.VATICAN -> palette.gold.copy(alpha = 0.40f)
+        else -> palette.accent.copy(alpha = if (dark) 0.20f else 0.12f)
+    }
+    val corpusInk = palette.raised
     val stroke = maxOf(design.depth.cardBorderWidth, 1.dp)
 
     // One position for the whole rail: a spring carries it from bead to bead.
     val position = remember { Animatable(activeIndex.toFloat()) }
+    val sweep = remember { Animatable(progress) }
     // A ring that blooms once from the bead just reached, then fades.
     val bloom = remember { Animatable(1f) }
-    LaunchedEffect(activeIndex) {
+    LaunchedEffect(activeIndex, progress) {
+        launch {
+            sweep.animateTo(progress, tween(design.motion.slowMillis, easing = design.motion.standardEasing))
+        }
         if (position.targetValue != activeIndex.toFloat()) {
             launch {
                 position.animateTo(
@@ -1524,7 +1535,105 @@ private fun BeadRail(
                 val pos = position.value
                 val strokePx = stroke.toPx()
 
-                // The thread, trimmed at every bead so no ring is crossed.
+                // The devotion's progress, round the outside of the loop,
+                // starting at the medal and running the way the decades run.
+                val ringR = geometry.ringRadius
+                val ringTopLeft = Offset(geometry.centre.x - ringR, geometry.centre.y - ringR)
+                val ringSize = Size(ringR * 2, ringR * 2)
+                val f = sweep.value.coerceIn(0f, 1f)
+                when (idiom) {
+                    DesignLanguage.APPLE -> {
+                        val w = 7.dp.toPx()
+                        drawCircle(track, radius = ringR, center = geometry.centre, style = Stroke(w))
+                        if (f > 0f) {
+                            drawArc(
+                                color = current,
+                                startAngle = 90f,
+                                sweepAngle = 360f * f,
+                                useCenter = false,
+                                topLeft = ringTopLeft,
+                                size = ringSize,
+                                style = Stroke(w, cap = StrokeCap.Round)
+                            )
+                        }
+                        // The ring's head: a bright cap where it has reached.
+                        val head = (PI / 2 + 2 * PI * f).toFloat()
+                        drawCircle(
+                            current,
+                            radius = w / 2,
+                            center = Offset(
+                                geometry.centre.x + ringR * cos(head),
+                                geometry.centre.y + ringR * sin(head)
+                            )
+                        )
+                    }
+
+                    DesignLanguage.MATERIAL -> {
+                        val w = 4.dp.toPx()
+                        val amp = 2.2.dp.toPx()
+                        val waves = 36
+                        val gapAngle = if (f in 0.001f..0.999f) 0.06f else 0f
+                        val startA = (PI / 2).toFloat()
+                        val endA = startA + (2 * PI).toFloat() * f
+                        // Track: the unprayed remainder, flat.
+                        if (f < 1f) {
+                            drawArc(
+                                color = track,
+                                startAngle = Math.toDegrees((endA + gapAngle).toDouble()).toFloat(),
+                                sweepAngle = (360f * (1f - f) - Math.toDegrees(2.0 * gapAngle).toFloat()).coerceAtLeast(0f),
+                                useCenter = false,
+                                topLeft = ringTopLeft,
+                                size = ringSize,
+                                style = Stroke(w, cap = StrokeCap.Round)
+                            )
+                        }
+                        // Progress: the expressive wave.
+                        if (f > 0f) {
+                            val wave = Path()
+                            val steps = (240 * f).toInt().coerceAtLeast(8)
+                            for (k in 0..steps) {
+                                val a = startA + (endA - startA) * k / steps
+                                val rr = ringR + amp * sin(waves * (a - startA))
+                                val pt = Offset(geometry.centre.x + rr * cos(a), geometry.centre.y + rr * sin(a))
+                                if (k == 0) wave.moveTo(pt.x, pt.y) else wave.lineTo(pt.x, pt.y)
+                            }
+                            drawPath(wave, current, style = Stroke(w, cap = StrokeCap.Round, join = StrokeJoin.Round))
+                        } else {
+                            drawCircle(current, radius = w / 2, center = Offset(geometry.centre.x, geometry.centre.y + ringR))
+                        }
+                    }
+
+                    DesignLanguage.VATICAN -> {
+                        // A ruled band: two gilt hairlines, the rubric arc between.
+                        val gap = 3.dp.toPx()
+                        drawCircle(track, radius = ringR - gap, center = geometry.centre, style = Stroke(strokePx))
+                        drawCircle(track, radius = ringR + gap, center = geometry.centre, style = Stroke(strokePx))
+                        if (f > 0f) {
+                            drawArc(
+                                color = current,
+                                startAngle = 90f,
+                                sweepAngle = 360f * f,
+                                useCenter = false,
+                                topLeft = ringTopLeft,
+                                size = ringSize,
+                                style = Stroke(2.5.dp.toPx(), cap = StrokeCap.Butt)
+                            )
+                        }
+                        // A small lozenge marks where the band begins.
+                        val m = 3.2.dp.toPx()
+                        val c0 = Offset(geometry.centre.x, geometry.centre.y + ringR)
+                        drawPath(
+                            Path().apply {
+                                moveTo(c0.x, c0.y - m); lineTo(c0.x + m, c0.y)
+                                lineTo(c0.x, c0.y + m); lineTo(c0.x - m, c0.y); close()
+                            },
+                            current
+                        )
+                    }
+                }
+
+                // The thread, trimmed at every bead so no ring is crossed; the
+                // stretch already prayed is inked.
                 geometry.loopRuns.forEach { (from, to) ->
                     val fromAngle = geometry.angles.getValue(from)
                     var toAngle = geometry.angles.getValue(to)
@@ -1532,9 +1641,10 @@ private fun BeadRail(
                     if (toAngle <= fromAngle) toAngle += (2 * PI).toFloat()
                     val a = fromAngle + geometry.reach(from) / geometry.radius
                     val b = toAngle - geometry.reach(to) / geometry.radius
+                    val prayed = maxOf(from, to) <= pos
                     if (b > a) {
                         drawArc(
-                            color = thread,
+                            color = if (prayed) toldThread else thread,
                             startAngle = Math.toDegrees(a.toDouble()).toFloat(),
                             sweepAngle = Math.toDegrees((b - a).toDouble()).toFloat(),
                             useCenter = false,
@@ -1543,19 +1653,20 @@ private fun BeadRail(
                                 geometry.centre.y - geometry.radius
                             ),
                             size = Size(geometry.radius * 2, geometry.radius * 2),
-                            style = Stroke(width = strokePx * 0.8f, cap = StrokeCap.Round)
+                            style = Stroke(width = if (prayed) strokePx * 2f else strokePx * 1.1f, cap = StrokeCap.Round)
                         )
                     }
                 }
                 geometry.pendantRuns.forEach { (upper, lower) ->
                     val top = geometry.centres[upper].y + geometry.reach(upper)
                     val bottom = geometry.centres[lower].y - geometry.reach(lower)
+                    val prayed = maxOf(upper, lower) <= pos
                     if (bottom > top) {
                         drawLine(
-                            color = thread,
+                            color = if (prayed) toldThread else thread,
                             start = Offset(geometry.centre.x, top),
                             end = Offset(geometry.centre.x, bottom),
-                            strokeWidth = strokePx * 0.8f,
+                            strokeWidth = if (prayed) strokePx * 2f else strokePx * 1.1f,
                             cap = StrokeCap.Round
                         )
                     }
@@ -1565,42 +1676,33 @@ private fun BeadRail(
                 val lower = pos.toInt().coerceIn(0, beads.lastIndex)
                 val upper = (lower + 1).coerceAtMost(beads.lastIndex)
                 val haloAt = lerp(geometry.centres[lower], geometry.centres[upper], pos - lower)
-                val haloRadius = geometry.small * 2.9f
+                val onCrucifix = beads[activeIndex].kind == BeadKind.CRUCIFIX
+                val haloRadius = if (onCrucifix) geometry.crucifixHeight * 0.78f else geometry.large * 2.4f
                 drawCircle(halo, radius = haloRadius, center = haloAt)
                 if (bloom.value < 1f) {
                     drawCircle(
-                        color = current.copy(alpha = 0.35f * (1f - bloom.value)),
-                        radius = haloRadius * (0.6f + 1.1f * bloom.value),
+                        color = current.copy(alpha = 0.4f * (1f - bloom.value)),
+                        radius = haloRadius * (0.7f + 0.9f * bloom.value),
                         center = geometry.centres[activeIndex],
-                        style = Stroke(width = strokePx)
+                        style = Stroke(width = strokePx * 1.5f)
                     )
                 }
 
                 beads.forEachIndexed { index, bead ->
                     val emphasis = (1f - abs(index - pos)).coerceIn(0f, 1f)
                     val toldness = (pos - index).coerceIn(0f, 1f)
-                    val scale = 1f + 0.7f * emphasis
-                    val fill = lerp(told.copy(alpha = told.alpha * toldness), current, emphasis)
-                    val ringAlpha = 1f - maxOf(toldness, emphasis)
+                    val scale = 1f + 0.45f * emphasis
+                    val fill = lerp(lerp(pearl, told, toldness), current, emphasis)
+                    val rimAlpha = (1f - maxOf(toldness, emphasis)).coerceIn(0f, 1f)
                     val centre = geometry.centres[index]
                     when (bead.kind) {
                         BeadKind.CRUCIFIX -> {
-                            val ink = lerp(lerp(untold, told, toldness), current, emphasis)
-                            val h = geometry.crucifixHeight * (1f + 0.2f * emphasis)
-                            val bar = strokePx * 1.8f
-                            drawLine(
-                                ink,
-                                Offset(centre.x, centre.y - h / 2),
-                                Offset(centre.x, centre.y + h / 2),
-                                strokeWidth = bar,
-                                cap = StrokeCap.Round
-                            )
-                            drawLine(
-                                ink,
-                                Offset(centre.x - h * 0.3f, centre.y - h * 0.18f),
-                                Offset(centre.x + h * 0.3f, centre.y - h * 0.18f),
-                                strokeWidth = bar,
-                                cap = StrokeCap.Round
+                            val ink = lerp(lerp(rim, told, toldness), current, emphasis)
+                            drawCrucifix(
+                                centre = centre,
+                                height = geometry.crucifixHeight * (1f + 0.08f * emphasis),
+                                ink = ink,
+                                corpus = corpusInk
                             )
                         }
 
@@ -1608,31 +1710,47 @@ private fun BeadRail(
                             val r = geometry.medal * scale
                             val lozenge = Path().apply {
                                 moveTo(centre.x, centre.y - r)
-                                lineTo(centre.x + r * 0.78f, centre.y)
+                                lineTo(centre.x + r * 0.8f, centre.y)
                                 lineTo(centre.x, centre.y + r)
-                                lineTo(centre.x - r * 0.78f, centre.y)
+                                lineTo(centre.x - r * 0.8f, centre.y)
                                 close()
                             }
                             drawPath(lozenge, fill)
-                            if (ringAlpha > 0f) {
-                                drawPath(
-                                    lozenge,
-                                    untold.copy(alpha = untold.alpha * ringAlpha),
-                                    style = Stroke(width = strokePx, join = StrokeJoin.Round)
-                                )
-                            }
+                            drawPath(
+                                lozenge,
+                                lerp(rim, told, maxOf(toldness, emphasis)),
+                                style = Stroke(width = strokePx * 1.2f, join = StrokeJoin.Round)
+                            )
+                            // A small cross struck on the medal's face.
+                            val c = r * 0.36f
+                            drawLine(corpusInk.copy(alpha = 0.9f), Offset(centre.x, centre.y - c), Offset(centre.x, centre.y + c), strokePx * 1.2f)
+                            drawLine(corpusInk.copy(alpha = 0.9f), Offset(centre.x - c * 0.66f, centre.y - c * 0.2f), Offset(centre.x + c * 0.66f, centre.y - c * 0.2f), strokePx * 1.2f)
                         }
 
                         else -> {
                             val base = if (bead.kind == BeadKind.LARGE) geometry.large else geometry.small
                             val r = base * scale
                             drawCircle(fill, radius = r, center = centre)
-                            if (ringAlpha > 0f) {
+                            if (rimAlpha > 0f) {
                                 drawCircle(
-                                    untold.copy(alpha = untold.alpha * ringAlpha),
-                                    radius = r - strokePx / 2,
+                                    rim.copy(alpha = rim.alpha * rimAlpha),
+                                    radius = r - strokePx * 0.6f,
                                     center = centre,
-                                    style = Stroke(width = strokePx)
+                                    style = Stroke(width = strokePx * 1.2f)
+                                )
+                            }
+                            if (emphasis > 0.5f) {
+                                // The bead in hand: a ring around it and a point of light.
+                                drawCircle(
+                                    current.copy(alpha = emphasis),
+                                    radius = r + 3.dp.toPx(),
+                                    center = centre,
+                                    style = Stroke(width = strokePx * 1.4f)
+                                )
+                                drawCircle(
+                                    Color.White.copy(alpha = 0.55f * emphasis),
+                                    radius = r * 0.32f,
+                                    center = centre + Offset(-r * 0.3f, -r * 0.3f)
                                 )
                             }
                         }
@@ -1649,13 +1767,13 @@ private fun BeadRail(
                 contentAlignment = Alignment.Center
             ) {
                 Column(
-                    modifier = Modifier.widthIn(max = loopSize * 0.68f),
+                    modifier = Modifier.widthIn(max = loopSize * 0.72f),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
                         text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
                         style = styles.sectionEyebrow,
-                        color = palette.textSecondary,
+                        color = palette.accent,
                         textAlign = TextAlign.Center
                     )
                     Spacer(Modifier.height(design.spacing.cardGap / 3))
@@ -1669,15 +1787,67 @@ private fun BeadRail(
                         Spacer(Modifier.height(design.spacing.cardGap / 4))
                         Text(
                             text = count,
-                            style = styles.rowSubtitle,
+                            style = styles.rowTitle,
                             color = palette.accent,
                             textAlign = TextAlign.Center
                         )
                     }
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Text(
+                        text = stepLabel,
+                        style = styles.rowSubtitle,
+                        color = palette.textTertiary,
+                        textAlign = TextAlign.Center
+                    )
                 }
             }
         }
     }
+}
+
+/**
+ * A small crucifix: a Latin cross with budded (trefoil) ends and the corpus
+ * cut out of it in the card's own colour, so it reads as a crucifix and never
+ * as a plus sign.
+ */
+private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawCrucifix(
+    centre: Offset,
+    height: Float,
+    ink: Color,
+    corpus: Color
+) {
+    val top = centre.y - height / 2
+    val bottom = centre.y + height / 2
+    val stem = height * 0.15f
+    val barY = top + height * 0.30f
+    val half = height * 0.34f
+    val bud = stem * 0.78f
+    val corner = androidx.compose.ui.geometry.CornerRadius(stem * 0.25f)
+    // Upright and arms.
+    drawRoundRect(ink, Offset(centre.x - stem / 2, top + bud * 0.6f), Size(stem, bottom - top - bud * 0.6f), corner)
+    drawRoundRect(ink, Offset(centre.x - half + bud * 0.6f, barY - stem / 2), Size(2 * half - bud * 1.2f, stem), corner)
+    // Budded ends: three lobes at the head and at each arm.
+    // `out` points from the crossing towards this end.
+    fun trefoil(at: Offset, out: Offset) {
+        val side = Offset(-out.y, out.x)
+        drawCircle(ink, bud, at + out * (bud * 0.35f))
+        drawCircle(ink, bud * 0.72f, at + side * (bud * 0.95f) - out * (bud * 0.35f))
+        drawCircle(ink, bud * 0.72f, at - side * (bud * 0.95f) - out * (bud * 0.35f))
+    }
+    trefoil(Offset(centre.x, top + bud * 0.9f), Offset(0f, -1f))
+    trefoil(Offset(centre.x - half + bud * 0.9f, barY), Offset(-1f, 0f))
+    trefoil(Offset(centre.x + half - bud * 0.9f, barY), Offset(1f, 0f))
+    // The foot widens a little, as the cross is planted.
+    drawRoundRect(ink, Offset(centre.x - stem * 0.85f, bottom - stem * 0.7f), Size(stem * 1.7f, stem * 0.7f), corner)
+
+    // The corpus: head, outstretched arms, body and legs.
+    val thin = stem * 0.36f
+    val headR = stem * 0.36f
+    drawCircle(corpus, headR, Offset(centre.x, barY - stem * 0.95f))
+    drawLine(corpus, Offset(centre.x - half + bud * 1.1f, barY - thin * 0.2f), Offset(centre.x, barY + thin * 0.5f), thin, StrokeCap.Round)
+    drawLine(corpus, Offset(centre.x + half - bud * 1.1f, barY - thin * 0.2f), Offset(centre.x, barY + thin * 0.5f), thin, StrokeCap.Round)
+    drawLine(corpus, Offset(centre.x, barY - stem * 0.5f), Offset(centre.x, barY + height * 0.30f), thin * 1.25f, StrokeCap.Round)
+    drawLine(corpus, Offset(centre.x, barY + height * 0.30f), Offset(centre.x, bottom - stem * 1.1f), thin * 0.9f, StrokeCap.Round)
 }
 
 /**
@@ -1696,6 +1866,8 @@ private class RosaryGeometry(
     val kinds: List<BeadKind>,
     val centre: Offset,
     val radius: Float,
+    /** Radius of the progress ring drawn outside the loop. */
+    val ringRadius: Float,
     val small: Float,
     val large: Float,
     val medal: Float,
@@ -1708,16 +1880,19 @@ private class RosaryGeometry(
         BeadKind.LARGE -> large
         BeadKind.SMALL -> small
         BeadKind.MEDAL -> medal
-    } + small * 0.35f
+    } + small * 0.3f
 
     companion object {
         fun layout(beads: List<BeadSpec>, width: Float, density: Density): RosaryGeometry = with(density) {
-            val small = 3.4.dp.toPx()
-            val large = 5.dp.toPx()
-            val medal = 6.5.dp.toPx()
-            val crucifixHeight = 17.dp.toPx()
-            val top = 16.dp.toPx()
-            val radius = minOf(width / 2 - 16.dp.toPx(), 108.dp.toPx())
+            val ringInset = 16.dp.toPx()
+            val top = 12.dp.toPx() + ringInset
+            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 132.dp.toPx())
+            // Beads scale with the loop, so a narrow phone keeps its gaps.
+            val unit = radius / 132.dp.toPx()
+            val small = 4.6.dp.toPx() * unit
+            val large = 7.2.dp.toPx() * unit
+            val medal = 9.dp.toPx() * unit
+            val crucifixHeight = 38.dp.toPx() * unit
             val centre = Offset(width / 2, top + radius)
 
             val kinds = beads.map { it.kind }
@@ -1735,7 +1910,7 @@ private class RosaryGeometry(
             val centres = MutableList(beads.size) { Offset.Zero }
             val angles = mutableMapOf<Int, Float>()
             val bottom = (PI / 2).toFloat()
-            val gap = (medal + small * 3.2f) / radius
+            val gap = (medal + small * 3.0f) / radius
             val start = bottom + gap
             val end = bottom + (2 * PI).toFloat() - gap
             val arc = (end - start) * radius
@@ -1754,19 +1929,23 @@ private class RosaryGeometry(
                 angles[medalIndex] = bottom
                 centres[medalIndex] = Offset(centre.x, y)
             }
-            // The pendant hangs from the medal: its last bead highest.
-            val pitch = small * 1.35f
+            // The pendant hangs from the medal, its last bead highest; the
+            // first gap clears the progress ring.
+            val pitch = small * 1.25f
             var previous = medalIndex.takeIf { it >= 0 }?.let { medal } ?: 0f
             val pendantRuns = mutableListOf<Pair<Int, Int>>()
             var upper: Int? = medalIndex.takeIf { it >= 0 }
+            var first = true
             pendant.reversed().forEach { i ->
-                y += previous + pitch + r(i)
+                val extra = if (first) ringInset * 0.9f else 0f
+                y += previous + pitch + extra + r(i)
                 centres[i] = Offset(centre.x, y)
                 previous = r(i)
                 upper?.let { pendantRuns += it to i }
                 upper = i
+                first = false
             }
-            val height = y + previous + 6.dp.toPx()
+            val height = y + previous + 8.dp.toPx()
 
             val ring = buildList {
                 if (medalIndex >= 0) add(medalIndex)
@@ -1786,6 +1965,7 @@ private class RosaryGeometry(
                 kinds = kinds,
                 centre = centre,
                 radius = radius,
+                ringRadius = radius + ringInset,
                 small = small,
                 large = large,
                 medal = medal,

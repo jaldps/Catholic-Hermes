@@ -71,6 +71,8 @@ enum class LiturgicalColor(val hex: Long, val displayName: LocalizedText) {
 enum class CelebrationRank(val displayName: LocalizedText) {
     SOLEMNITY(LocalizedText("Solemnidad", "Solemnity", "Solenidade")),
     FEAST(LocalizedText("Fiesta", "Feast", "Festa")),
+    /** All Souls: a day of its own kind, ranked with the solemnities. */
+    COMMEMORATION(LocalizedText("Conmemoración", "Commemoration", "Comemoração")),
     MEMORIAL(LocalizedText("Memoria", "Memorial", "Memória")),
     SUNDAY(LocalizedText("Domingo", "Sunday", "Domingo")),
     FERIAL(LocalizedText("Feria", "Weekday", "Féria"))
@@ -252,7 +254,7 @@ object LiturgicalCalendar {
         ),
         11 to 2 to Fixed(
             LocalizedText("Conmemoración de los Fieles Difuntos", "The Commemoration of All the Faithful Departed", "Comemoração de Todos os Fiéis Defuntos"),
-            CelebrationRank.FEAST, LiturgicalColor.VIOLET, key = "all_souls"
+            CelebrationRank.COMMEMORATION, LiturgicalColor.VIOLET, key = "all_souls"
         ),
         12 to 8 to Fixed(
             LocalizedText("Inmaculada Concepción de María", "The Immaculate Conception of the Blessed Virgin Mary", "Imaculada Conceição de Maria"),

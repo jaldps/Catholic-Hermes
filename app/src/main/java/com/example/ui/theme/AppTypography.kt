@@ -101,7 +101,11 @@ object AppTypographyFactory {
         )
 
         val extras = AppTextStyles(
-            screenTitle = style(34.0, 41.0, FontWeight.Bold, -0.6),
+            // The large title is set in the serif, the way Books and News set
+            // theirs in New York: it is the one place the chrome speaks with
+            // the voice of the text it serves. Garamond's small x-height
+            // needs ~38pt to stand at the optical size of 34pt SF.
+            screenTitle = style(38.0, 43.0, FontWeight.SemiBold, -0.3, AppFonts.EbGaramond),
             screenSubtitle = style(15.0, 20.0, FontWeight.Normal, -0.2),
             sectionEyebrow = style(13.0, 18.0, FontWeight.Normal, 0.0),
             sectionTitle = style(22.0, 28.0, FontWeight.Bold, -0.3),

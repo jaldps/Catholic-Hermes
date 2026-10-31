@@ -260,7 +260,8 @@ class CatholicDataRepository(
                 val info = LiturgicalCalendar.dayInfo(date)
                 date == today || date.isSunday || info.isHolyDayOfObligation ||
                     info.isFastDay || info.isAbstinenceDay && !date.isFriday ||
-                    info.rank == CelebrationRank.SOLEMNITY || info.rank == CelebrationRank.FEAST
+                    info.rank == CelebrationRank.SOLEMNITY || info.rank == CelebrationRank.FEAST ||
+                    info.rank == CelebrationRank.COMMEMORATION
             }.map { getLiturgicalDay(it) }
         }
     val defaultHabitsToSeed: List<com.example.data.local.SpiritualHabitEntity> get() = PilgrimageAndHabitsData.defaultHabitsToSeed

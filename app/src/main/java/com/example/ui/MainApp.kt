@@ -240,7 +240,8 @@ fun MainApp(
 
                     AppDestination.PARISHES -> ParishFinderScreen(
                         repository = repository,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        onOpenDirectory = { go(AppDestination.CHURCHES_NEWS) }
                     )
 
                     AppDestination.CHURCHES_NEWS -> DoctrineAndHistoryScreen(
