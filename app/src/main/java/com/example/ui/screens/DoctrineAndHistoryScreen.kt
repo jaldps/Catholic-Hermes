@@ -56,6 +56,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
@@ -360,7 +361,10 @@ private fun DoctrineEntryPage(
                     GutterCard {
                         Text(
                             text = withoutCitation(cmd.biblicalWording.get(currentLanguage)),
-                            style = styles.scripture,
+                            // Scripture in true italic where the identity prints it so.
+                            style = if (design.language == DesignLanguage.VATICAN) {
+                                styles.scripture.copy(fontStyle = FontStyle.Italic)
+                            } else styles.scripture,
                             color = design.palette.textPrimary
                         )
                         scriptureCitation(cmd.biblicalWording.get(currentLanguage))?.let {

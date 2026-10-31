@@ -34,6 +34,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -450,7 +451,8 @@ private fun ComplineView(
                         LiturgicalText(
                             text = currentAntiphon.latinText,
                             muted = true,
-                            inCard = true
+                            inCard = true,
+                            latin = true
                         )
                         Spacer(Modifier.height(design.spacing.cardGap))
                         LiturgicalText(
@@ -766,12 +768,16 @@ private fun LiturgicalText(
     modifier: Modifier = Modifier,
     muted: Boolean = false,
     quoted: Boolean = false,
-    inCard: Boolean = false
+    inCard: Boolean = false,
+    /** Latin, which the Vatican identity sets in its true italic. */
+    latin: Boolean = false
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
 
-    val body = if (quoted) styles.quote else styles.scripture
+    val body = (if (quoted) styles.quote else styles.scripture).let {
+        if (latin && design.language == DesignLanguage.VATICAN) it.copy(fontStyle = FontStyle.Italic) else it
+    }
     val ink = if (muted) design.palette.textSecondary else design.palette.textPrimary
     val rubric = rubricSigil()
 

@@ -756,9 +756,7 @@ object MaterialKit : AppKit {
                 }
                 // A fixed-height region, as the large top app bar's is, so
                 // its height never waits on the headline: one line of
-                // emphasised headline over one line of supporting text,
-                // bottom-aligned, the headline dropping onto the supporting
-                // line's place when a screen has none.
+                // emphasised headline over one line of supporting text.
                 Spacer(
                     Modifier
                         .fillMaxWidth()
@@ -787,13 +785,11 @@ object MaterialKit : AppKit {
                                     it, supportStyle, overflow = TextOverflow.Ellipsis, maxLines = 1, constraints = box
                                 )
                             }
-                            val bottom = size.height - 20.dp.toPx()
-                            val supportTop = bottom - (support?.size?.height ?: 0)
-                            val headTop = if (support != null) {
-                                supportTop - 2.dp.toPx() - head.size.height
-                            } else {
-                                bottom - head.size.height
-                            }
+                            // Top-aligned on a fixed line, so the headline
+                            // never jumps between tabs that have a
+                            // supporting line and tabs that do not.
+                            val headTop = 4.dp.toPx()
+                            val supportTop = headTop + 38.dp.toPx() + 2.dp.toPx()
                             onDrawBehind {
                                 drawText(head, topLeft = androidx.compose.ui.geometry.Offset(gutter, headTop))
                                 support?.let {
@@ -1112,31 +1108,36 @@ object MaterialKit : AppKit {
                             )
                         }
                     }
-                    // decor.usesChevrons is false here: M3 states the
-                    // destination with trailing supporting text, not a
-                    // disclosure arrow, so showsNavigationAffordance draws
-                    // nothing. labelSmall, capped at 104dp, so a long locality
-                    // cannot starve the headline of width.
-                    if (trailingText != null) {
+                    val chevron = showsNavigationAffordance && onClick != null
+                    if (trailingText != null || chevron) {
                         // Trailing supporting text at bodyMedium: a time, a
-                        // reference or a count is data the reader scans for,
-                        // and 11sp labelSmall read as a footnote.
-                        Text(
-                            text = trailingText,
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = if (selected) c.onAccentSofter else palette.textSecondary,
-                            textAlign = TextAlign.End,
-                            maxLines = 2,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.widthIn(max = 112.dp)
-                        )
-                    } else if (showsNavigationAffordance && onClick != null) {
-                        Icon(
-                            Icons.AutoMirrored.Rounded.KeyboardArrowRight,
-                            contentDescription = null,
-                            tint = if (selected) c.onAccentSofter else palette.textSecondary,
-                            modifier = Modifier.size(24.dp)
-                        )
+                        // reference or a current value is data the reader
+                        // scans for, and 11sp labelSmall read as a footnote.
+                        // A row that opens something says so with a chevron,
+                        // after its value when it has one ("Country  All ›").
+                        val tint = if (selected) c.onAccentSofter else palette.textSecondary
+                        androidx.compose.foundation.layout.Row(verticalAlignment = Alignment.CenterVertically) {
+                            if (trailingText != null) {
+                                Text(
+                                    text = trailingText,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    color = tint,
+                                    textAlign = TextAlign.End,
+                                    maxLines = 2,
+                                    overflow = TextOverflow.Ellipsis,
+                                    modifier = Modifier.widthIn(max = 112.dp)
+                                )
+                            }
+                            if (chevron) {
+                                if (trailingText != null) Spacer(Modifier.width(4.dp))
+                                Icon(
+                                    Icons.AutoMirrored.Rounded.KeyboardArrowRight,
+                                    contentDescription = null,
+                                    tint = tint,
+                                    modifier = Modifier.size(24.dp)
+                                )
+                            }
+                        }
                     }
                 }
             ) { measurables, constraints ->
@@ -1185,10 +1186,13 @@ object MaterialKit : AppKit {
                         // sitting on the padding line 4dp above it.
                         val textBase = text[FirstBaseline]
                         val trailBase = it[FirstBaseline]
-                        val y = if (threeLine && textBase != AlignmentLine.Unspecified &&
+                        val y = if (threeLine && !(showsNavigationAffordance && onClick != null) && textBase != AlignmentLine.Unspecified &&
                             trailBase != AlignmentLine.Unspecified
                         ) {
                             (height - text.height) / 2 + textBase - trailBase
+                        } else if (showsNavigationAffordance && onClick != null) {
+                            // A chevron is centred on the item at any height.
+                            (height - it.height) / 2
                         } else {
                             sideY(it.height)
                         }
@@ -1390,7 +1394,13 @@ object MaterialKit : AppKit {
             val widest = with(LocalDensity.current) {
                 options.maxOfOrNull { measurer.measure(it, labelStyle, maxLines = 1).size.width.toDp() } ?: 0.dp
             }
-            val fits = options.size <= 5 && widest <= room
+            // Short values (2 km … 50 km) that only fail for the checkmark's
+            // sake stay a segmented button and drop the checkmark, as the
+            // spec allows when space is tight: a radius is a choice, and
+            // drawing it as navigation tabs was a component misuse.
+            val fitsBare = options.size <= 5 && widest <= segment - 24.dp
+            val showCheck = widest <= room
+            val fits = fitsBare
             if (!fits) {
                 val bleed = sideInset
                 val selected = selectedIndex.coerceIn(0, (options.size - 1).coerceAtLeast(0))
@@ -1472,6 +1482,7 @@ object MaterialKit : AppKit {
                             onClick = { onSelect(index) },
                             shape = SegmentedButtonDefaults.itemShape(index, options.size),
                             modifier = Modifier.weight(1f),
+                            icon = { if (showCheck) SegmentedButtonDefaults.Icon(isSelected) },
                             colors = SegmentedButtonDefaults.colors(
                                 activeContainerColor = c.accentSofter,
                                 activeContentColor = c.onAccentSofter,

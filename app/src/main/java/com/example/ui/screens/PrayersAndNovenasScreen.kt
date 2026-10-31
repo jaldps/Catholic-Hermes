@@ -52,6 +52,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
@@ -471,9 +472,11 @@ private fun PrayerDetailView(
             )
         }
         item {
+            // The Latin incipit is set in true italic inside the card where
+            // the identity prints Latin so; elsewhere it is the subtitle.
             AppScreenTitle(
                 title = prayer.title.get(currentLanguage),
-                subtitle = prayer.latinTitle
+                subtitle = prayer.latinTitle.takeUnless { LocalAppDesign.current.language == DesignLanguage.VATICAN }
             )
         }
         item {
@@ -501,6 +504,15 @@ private fun VaticanPrayerCard(
     val styles = LocalAppTextStyles.current
 
     AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+        val latin = prayer.latinTitle?.takeIf { it.isNotBlank() }
+        if (latin != null && design.language == DesignLanguage.VATICAN) {
+            Text(
+                text = latin,
+                style = styles.rowTitle.copy(fontStyle = FontStyle.Italic),
+                color = design.palette.accent
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
         VersicleAndResponse(
             leaderText = prayer.leaderText.get(currentLanguage),
             responseText = prayer.responseText?.get(currentLanguage),

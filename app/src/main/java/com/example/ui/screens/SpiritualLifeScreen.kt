@@ -47,6 +47,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.testTag
@@ -1142,7 +1143,9 @@ private fun ChantTab(
                         Spacer(Modifier.height(design.spacing.cardGap / 2))
                         Text(
                             text = chant.latinLyrics,
-                            style = styles.scripture,
+                            style = if (design.language == DesignLanguage.VATICAN) {
+                                styles.scripture.copy(fontStyle = FontStyle.Italic)
+                            } else styles.scripture,
                             color = palette.textPrimary
                         )
 

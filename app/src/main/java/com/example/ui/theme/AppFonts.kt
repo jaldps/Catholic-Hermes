@@ -2,6 +2,7 @@ package com.example.ui.theme
 
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import com.example.R
 
@@ -41,6 +42,9 @@ object AppFonts {
         Font(R.font.ebgaramond_regular, FontWeight.Normal),
         Font(R.font.ebgaramond_medium, FontWeight.Medium),
         Font(R.font.ebgaramond_semibold, FontWeight.SemiBold),
-        Font(R.font.ebgaramond_bold, FontWeight.Bold)
+        Font(R.font.ebgaramond_bold, FontWeight.Bold),
+        // True italics, so Latin titles and rubric glosses are cut, not slanted.
+        Font(R.font.ebgaramond_italic, FontWeight.Normal, FontStyle.Italic),
+        Font(R.font.ebgaramond_semibold_italic, FontWeight.SemiBold, FontStyle.Italic)
     )
 }
