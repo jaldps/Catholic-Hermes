@@ -25,6 +25,10 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.VolunteerActivism
+import androidx.compose.material.icons.filled.AutoAwesome
+import androidx.compose.material.icons.filled.Quiz
+import com.example.ui.components.MenuPickerRow
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.EditNote
@@ -252,19 +256,48 @@ fun SpiritualLifeScreen(
             )
         }
         item(key = "spiritual_life_tabs") {
+            // Three destinations: the quiz and the chant share "Learn", chosen
+            // by one menu row beneath, so the control never carries four.
             AppSegmentedTabs(
                 options = listOf(
                     currentLanguage.pick("Diario", "Journal", "Diário"),
-                    currentLanguage.pick("Preguntas", "Quiz", "Quiz"),
                     currentLanguage.pick("Vía Crucis", "Stations", "Via-Sacra"),
-                    currentLanguage.pick("Canto", "Chant", "Canto")
+                    currentLanguage.pick("Aprender", "Learn", "Aprender")
                 ),
-                selectedIndex = selectedTopTab,
-                onSelect = { selectedTopTab = it },
+                selectedIndex = when (selectedTopTab) {
+                    2 -> 1
+                    1, 3 -> 2
+                    else -> 0
+                },
+                onSelect = {
+                    selectedTopTab = when (it) {
+                        1 -> 2
+                        2 -> if (selectedTopTab == 3) 3 else 1
+                        else -> 0
+                    }
+                },
                 modifier = Modifier
                     .padding(horizontal = tabsInset)
                     .padding(bottom = design.spacing.cardGap / 2)
             )
+        }
+        if (selectedTopTab == 1 || selectedTopTab == 3) {
+            item(key = "spiritual_life_learn_picker") {
+                AppListGroup {
+                    MenuPickerRow(
+                        title = currentLanguage.pick("Actividad", "Activity", "Atividade"),
+                        leadingIcon = if (selectedTopTab == 3) Icons.Default.MusicNote else Icons.Default.Quiz,
+                        options = listOf(
+                            1 to currentLanguage.pick("Preguntas de fe", "Faith quiz", "Quiz da fé"),
+                            3 to currentLanguage.pick("Canto gregoriano", "Gregorian chant", "Canto gregoriano")
+                        ),
+                        selected = selectedTopTab,
+                        onSelect = { selectedTopTab = it },
+                        testTag = "spiritual_life_learn_picker"
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
         }
     }
 
@@ -424,15 +457,18 @@ private fun JournalTab(
                     )
                     // The empty page's one action sits with its explanation,
                     // not floating over a void at the foot of the screen.
-                    AppPrimaryButton(
-                        label = currentLanguage.pick("Escribir la primera entrada", "Write your first entry", "Escrever a primeira entrada"),
-                        onClick = { onAdd(null) },
-                        leadingIcon = Icons.Default.Add,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = design.spacing.gutter)
-                            .testTag("add_first_journal_entry")
-                    )
+                    // Sized to its label and centred: only a pinned bottom
+                    // action spans the width.
+                    Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                        AppPrimaryButton(
+                            label = currentLanguage.pick("Escribir la primera entrada", "Write your first entry", "Escrever a primeira entrada"),
+                            onClick = { onAdd(null) },
+                            leadingIcon = Icons.Default.Add,
+                            modifier = Modifier
+                                .padding(horizontal = design.spacing.gutter)
+                                .testTag("add_first_journal_entry")
+                        )
+                    }
                 }
                 // A few ways in, for the reader who does not know where to start.
                 item {
@@ -444,10 +480,12 @@ private fun JournalTab(
                             currentLanguage.pick("Una gracia recibida hoy", "A grace received today", "Uma graça recebida hoje"),
                             currentLanguage.pick("Una intención para rezar", "An intention to pray for", "Uma intenção para rezar"),
                             currentLanguage.pick("Algo por lo que dar gracias", "Something to give thanks for", "Algo por que agradecer")
-                        ).forEach { prompt ->
+                        ).zip(
+                            listOf(Icons.Default.AutoAwesome, Icons.Default.VolunteerActivism, Icons.Default.Favorite)
+                        ).forEach { (prompt, glyph) ->
                             AppListRow(
                                 title = prompt,
-                                leadingIcon = Icons.Default.EditNote,
+                                leadingIcon = glyph,
                                 onClick = { onAdd(prompt) }
                             )
                         }

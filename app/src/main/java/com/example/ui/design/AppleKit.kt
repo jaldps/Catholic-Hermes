@@ -289,7 +289,9 @@ object AppleKit : AppKit {
             "delete" in n || "remove" in n -> SystemColor.RED
             "download" in n || "cloud" in n || "upload" in n -> SystemColor.BLUE
             "check" in n || "done" in n || "task" in n -> SystemColor.GREEN
-            "favorite" in n || "heart" in n || "volunteer" in n || "florist" in n || "spa" in n -> SystemColor.PINK
+            // The rose of the rosary is Marian, not a red alarm beside the tint.
+            "florist" in n -> SystemColor.BLUE
+            "favorite" in n || "heart" in n || "volunteer" in n || "spa" in n -> SystemColor.PINK
             "restaurant" in n || "food" in n || "dining" in n -> SystemColor.PURPLE
             "water" in n || "drop" in n || "waves" in n -> SystemColor.CYAN
             "quiz" in n || "psychology" in n || "help" in n || "school" in n -> SystemColor.INDIGO

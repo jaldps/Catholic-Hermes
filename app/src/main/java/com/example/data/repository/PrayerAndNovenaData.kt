@@ -431,7 +431,7 @@ object PrayerAndNovenaData {
         ),
         VaticanPrayer(
             id = "memorare",
-            title = LocalizedText("El Acordaos de San Bernardo (Memorare)", "The Memorare of St. Bernard", "O Lembrai-vos (Memorare)"),
+            title = LocalizedText("El Acordaos (Memorare)", "The Memorare", "O Lembrai-vos (Memorare)"),
             latinTitle = "Memorare, O Piissima Virgo Maria",
             category = PrayerCategory.MARIAN,
             leaderText = LocalizedText(

@@ -1001,11 +1001,11 @@ private fun VaticanOfficialLinksView(
                             "Compêndio do Catecismo"
                         ),
                         subtitle = currentLanguage.pick(
-                            "598 preguntas y respuestas",
-                            "598 questions and answers",
-                            "598 perguntas e respostas"
+                            "598 preguntas y respuestas · vatican.va",
+                            "598 questions and answers · vatican.va",
+                            "598 perguntas e respostas · vatican.va"
                         ),
-                        leadingIcon = Icons.Default.OpenInNew,
+                        leadingIcon = Icons.Default.MenuBook,
                         onClick = { context.openExternally(own.compendiumUrl) },
                         modifier = Modifier.testTag("catechism_source_compendium")
                     )

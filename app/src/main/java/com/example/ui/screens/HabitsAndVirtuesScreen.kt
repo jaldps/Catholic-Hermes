@@ -256,21 +256,22 @@ fun HabitsAndVirtuesScreen(
 
                     if (suggestedHabits.isNotEmpty()) {
                         item {
-                            AppPrimaryButton(
-                                label = currentLanguage.pick(
-                                    "Empezar con ${suggestedHabits.size} prácticas sugeridas",
-                                    "Start with ${suggestedHabits.size} suggested practices",
-                                    "Começar com ${suggestedHabits.size} práticas sugeridas"
-                                ),
-                                onClick = {
-                                    scope.launch { dao.insertDefaultHabits(suggestedHabits) }
-                                },
-                                leadingIcon = Icons.Default.Add,
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(horizontal = design.spacing.gutter)
-                                    .testTag("adopt_suggested_habits")
-                            )
+                            Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                                AppPrimaryButton(
+                                    label = currentLanguage.pick(
+                                        "Empezar con ${suggestedHabits.size} prácticas sugeridas",
+                                        "Start with ${suggestedHabits.size} suggested practices",
+                                        "Começar com ${suggestedHabits.size} práticas sugeridas"
+                                    ),
+                                    onClick = {
+                                        scope.launch { dao.insertDefaultHabits(suggestedHabits) }
+                                    },
+                                    leadingIcon = Icons.Default.Add,
+                                    modifier = Modifier
+                                        .padding(horizontal = design.spacing.gutter)
+                                        .testTag("adopt_suggested_habits")
+                                )
+                            }
                         }
                         item {
                             AppSectionHeader(

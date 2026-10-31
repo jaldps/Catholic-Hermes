@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.outlined.Palette
 import androidx.compose.material.icons.outlined.Translate
@@ -352,7 +353,8 @@ private fun moreSections(
             pick("Vida interior", "Inner life", "Vida interior"),
             listOf(
                 entry(AppDestination.HABITS_VIRTUES, "Examen, virtudes y hábitos diarios", "Examen, virtues and daily habits", "Exame, virtudes e hábitos diários"),
-                entry(AppDestination.SPIRITUAL_LIFE, "Diario, preguntas, vía crucis y canto", "Journal, quiz, Stations and chant", "Diário, quiz, via-sacra e canto")
+                entry(AppDestination.SPIRITUAL_LIFE, "Diario, vía crucis, preguntas y canto", "Journal, Stations, quiz and chant", "Diário, via-sacra, quiz e canto")
+                    .copy(icon = Icons.Outlined.AutoStories)
             )
         ),
         MoreSection(

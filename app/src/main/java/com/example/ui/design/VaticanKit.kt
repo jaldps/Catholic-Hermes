@@ -1040,7 +1040,7 @@ object VaticanKit : AppKit {
         val styles = LocalAppTextStyles.current
         Column(Modifier.fillMaxWidth()) {
             Masthead(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp).heightIn(min = 58.dp),
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp).heightIn(min = 44.dp),
                 leading = {
                     Box(Modifier.width(48.dp), contentAlignment = Alignment.Center) {
                         if (onBack != null) {
@@ -1058,18 +1058,21 @@ object VaticanKit : AppKit {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
                             text = title.uppercase(),
-                            style = styles.sectionTitle
-                                .copy(fontSize = 17.sp, fontWeight = FontWeight.Normal)
-                                .tracked(0.12f),
+                            // Same running head as an inner page: one line
+                            // of small capitals, not a second title page.
+                            style = styles.sectionEyebrow
+                                .copy(fontSize = 12.5.sp, lineHeight = 16.sp, fontWeight = FontWeight.Normal)
+                                .tracked(0.22f),
                             color = bodyInk(),
                             textAlign = TextAlign.Center,
-                            maxLines = 2
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
                         )
                         if (subtitle != null) {
-                            Spacer(Modifier.height(4.dp))
+                            Spacer(Modifier.height(2.dp))
                             Text(
                                 text = subtitle,
-                                style = styles.rowSubtitle,
+                                style = styles.rowSubtitle.copy(fontStyle = FontStyle.Italic),
                                 color = palette.textSecondary,
                                 textAlign = TextAlign.Center
                             )
@@ -1084,8 +1087,8 @@ object VaticanKit : AppKit {
                     )
                 }
             )
-            Spacer(Modifier.height(10.dp))
-            ScotchRule(thinColor = palette.gold.copy(alpha = 0.85f))
+            Spacer(Modifier.height(2.dp))
+            Hairline(color = palette.gold.copy(alpha = 0.8f))
         }
     }
 
@@ -1300,11 +1303,12 @@ object VaticanKit : AppKit {
                         style = styles.sectionEyebrow.copy(fontSize = 15.sp, lineHeight = 20.sp, letterSpacing = 0.4.sp),
                         color = rubric(),
                         maxLines = 1,
-                        modifier = Modifier.width(38.dp).alignByBaseline()
+                        textAlign = TextAlign.End,
+                        modifier = Modifier.width(36.dp).alignByBaseline()
                     )
                 }
                 Column(Modifier.weight(1f).then(if (roman != null) Modifier.alignByBaseline() else Modifier)) {
-                    Text(title, style = styles.rowTitle.copy(lineBreak = LineBreak.Heading), color = titleColor)
+                    Text(title, style = styles.rowTitle.copy(lineBreak = LineBreak.Paragraph), color = titleColor)
                     if (subtitle != null) {
                         Spacer(Modifier.height(2.dp))
                         // The gloss under an entry — an incipit, an extent, a
@@ -1379,25 +1383,15 @@ object VaticanKit : AppKit {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
-        // Rubric red, square, unbordered. At night the red is laid down as
-        // oxblood — cinnabar seen by candle — with vellum lettering; mixing
-        // the bright rubric toward the ground gives a muddy mauve instead.
-        val fill = when {
-            !enabled -> palette.hairline
-            design.isDark -> Color(0xFF861F18)
-            else -> palette.accent
-        }
         // No slab. The action is a rubric: red capitals in a frame tooled
         // in leaf — a thick-thin pair of hairlines, as on a bound label — with
         // a lozenge of red either side. It is the strongest thing on the page
-        // by colour, not by mass. (The old fill is kept only as a faint wash.)
+        // by colour, not by mass.
         val gilt = palette.gold.copy(alpha = if (design.isDark) 0.80f else 0.90f)
         val ink = if (enabled) rubric() else palette.textTertiary
-        val wash = if (enabled) fill.copy(alpha = if (design.isDark) 0.10f else 0.045f) else Color.Transparent
         Box(
             modifier
                 .alpha(if (enabled) 1f else 0.55f)
-                .background(wash, RectangleShape)
                 .drawBehind {
                     val outer = 0.9.dp.toPx()
                     val inner = 0.5.dp.toPx()
@@ -2003,30 +1997,31 @@ object VaticanKit : AppKit {
                 Motif.DOVE -> {
                     // The descending dove, wings displayed, in a cone of light.
                     for (k in 0 until 13) {
-                        ray(p(0f, 8f), Math.PI / 2 + (k - 6) * 0.15, 8f, if (k % 2 == 0) 46f else 36f, hair * 1.3f)
+                        ray(p(0f, 12f), Math.PI / 2 + (k - 6) * 0.14, 6f, if (k % 2 == 0) 44f else 34f, hair * 1.3f)
                     }
                     for (side in listOf(-1f, 1f)) {
                         engrave(Path().apply {
-                            mv(p(side * 2f, -1f))
-                            cb(p(side * 9f, -12f), p(side * 20f, -17f), p(side * 29f, -16f))
-                            ln(p(side * 25f, -12f)); ln(p(side * 28f, -9f))
-                            ln(p(side * 22f, -6.5f)); ln(p(side * 24f, -3f))
-                            ln(p(side * 17f, -2f)); ln(p(side * 18f, 1.5f))
-                            ln(p(side * 10f, 1f)); ln(p(side * 3f, 4f)); close()
-                        }, pitch = 1.6f, slant = side * -6f)
+                            mv(p(side * 2.5f, -3f))
+                            cb(p(side * 10f, -14f), p(side * 24f, -24f), p(side * 38f, -25f))
+                            cb(p(side * 35f, -21f), p(side * 35f, -19f), p(side * 36f, -17f))
+                            ln(p(side * 29f, -14.5f)); ln(p(side * 32f, -10.5f))
+                            ln(p(side * 24f, -8.5f)); ln(p(side * 26f, -4.5f))
+                            ln(p(side * 17f, -3.5f)); ln(p(side * 18f, 0f))
+                            ln(p(side * 9f, 0.5f)); ln(p(side * 3f, 5f)); close()
+                        }, pitch = 1.6f, slant = side * -8f)
                     }
                     engrave(Path().apply {
-                        mv(p(0f, -11f)); cb(p(4f, -6f), p(4f, 4f), p(0f, 7f))
-                        cb(p(-4f, 4f), p(-4f, -6f), p(0f, -11f)); close()
+                        mv(p(0f, -14f)); cb(p(5f, -8f), p(5f, 5f), p(0f, 9f))
+                        cb(p(-5f, 5f), p(-5f, -8f), p(0f, -14f)); close()
                     })
                     // Tail fanned above, head bowed below.
                     engrave(Path().apply {
-                        mv(p(-2f, -9f)); ln(p(-5f, -18f)); ln(p(0f, -15.5f)); ln(p(5f, -18f)); ln(p(2f, -9f)); close()
+                        mv(p(-2.5f, -12f)); ln(p(-6.5f, -23f)); ln(p(0f, -20f)); ln(p(6.5f, -23f)); ln(p(2.5f, -12f)); close()
                     })
-                    drawCircle(palette.canvas, radius = 3f * u, center = p(0f, 9.5f))
-                    drawCircle(ink, radius = 3f * u, center = p(0f, 9.5f), style = androidx.compose.ui.graphics.drawscope.Stroke(0.9f * u))
-                    drawLine(ink, p(-0.9f, 12.3f), p(0f, 14.6f), strokeWidth = 0.9f * u)
-                    drawLine(ink, p(0.9f, 12.3f), p(0f, 14.6f), strokeWidth = 0.9f * u)
+                    drawCircle(palette.canvas, radius = 3.8f * u, center = p(0f, 12.5f))
+                    drawCircle(ink, radius = 3.8f * u, center = p(0f, 12.5f), style = androidx.compose.ui.graphics.drawscope.Stroke(0.9f * u))
+                    drawPath(Path().apply { mv(p(-1.3f, 15.8f)); ln(p(0f, 19f)); ln(p(1.3f, 15.8f)); close() }, ink)
+                    drawCircle(red, radius = 0.9f * u, center = p(0f, 12.5f))
                 }
                 Motif.CHALICE -> {
                     // Chalice and host: the host is the only gold, radiant.
@@ -2116,20 +2111,33 @@ object VaticanKit : AppKit {
                 .padding(horizontal = design.spacing.gutter)
                 .padding(vertical = 6.dp)
         ) {
+            // The day's colour as the calendar prints it: a short bar of the
+            // pigment on a hairline of the same, like the ribbon laid in the
+            // page — a colour you can see, not a dot you have to find.
+            Box(Modifier.fillMaxWidth().height(10.dp)) {
+                Box(Modifier.align(Alignment.BottomStart).fillMaxWidth().height(0.6.dp).background(accent.copy(alpha = 0.55f)))
+                Box(Modifier.align(Alignment.BottomStart).width(44.dp).height(3.dp).background(accent))
+            }
+            Spacer(Modifier.height(12.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(Modifier.size(6.dp).rotate(45f).background(accent))
-                Spacer(Modifier.width(12.dp))
+                Lozenge(6.dp, accent)
+                Spacer(Modifier.width(10.dp))
                 Text(
                     text = title.uppercase(),
-                    style = styles.sectionEyebrow.copy(fontSize = 11.sp, lineHeight = 16.sp).tracked(0.2f),
+                    style = styles.sectionEyebrow.copy(fontSize = 11.5.sp, lineHeight = 16.sp).tracked(0.2f),
                     color = accent
                 )
             }
             if (body != null) {
-                Spacer(Modifier.height(8.dp))
+                Spacer(Modifier.height(6.dp))
                 Text(
                     body,
-                    style = styles.rowTitle.copy(fontSize = 19.sp, lineHeight = 27.sp, fontWeight = FontWeight.Normal),
+                    style = styles.rowTitle.copy(
+                        fontSize = 21.sp,
+                        lineHeight = 28.sp,
+                        fontWeight = FontWeight.Normal,
+                        lineBreak = LineBreak.Heading
+                    ),
                     color = bodyInk()
                 )
             }

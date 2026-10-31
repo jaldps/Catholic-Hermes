@@ -90,3 +90,40 @@ is a rubricated calendar heading. `AppPrimaryButton` has a gilt inset.
 8. **Times**: format consistently as "6:00 AM" everywhere (Habits uses "07:00 AM").
 9. **Count blocks**: remove the centred "PRAYERS / 7 prayers" header, or pass the count as a short subtitle, which the kit now sets opposite the rubric.
 10. **Calendar**: set references with an en dash ("Matthew 5:1–12"). Do not show Spanish dates in English ("25 OCTUBRE").
+
+## Round 5 shared-screen requests
+
+Kit changes this round, which screens can now rely on: a pushed screen
+(`onBack != null`) gets a **one-line running head** naming the page in small
+capitals. When the screen's first `AppScreenTitle` has the same title as the
+scaffold, the kit does not set the title again: only the subtitle is kept, as
+one italic argument line. Root tabs keep a tighter title page. An
+`AppScreenTitle` with a different title inside a pushed screen (a commandment,
+a prayer) is cut at 20sp. Row subtitles are now italic, which suits incipits,
+references and extents. Trailing values are set in text-face figures, not
+tracked caps. `AppPrimaryButton` is red capitals in a gilt double frame with
+no fill. `AppSecondaryButton` is a ruled action line. `AppEmptyState` picks
+its vignette from the icon: a book/comment/search/news icon gets the open
+book, edit/note gets the dove, church/place gets the chalice and host, and
+anything else gets the rayed cross. `AppBanner` prints the liturgical colour
+as a bar.
+
+1. **AppScreenTitle title must equal the scaffold title** on pushed screens
+   (for example "Calendar & Shrines"), so the kit can fold it into the
+   running head. Otherwise the page is set twice.
+2. **Rosary**: the crucifix sits in a pink or red radial halo, which is a web
+   glow. Draw the cross flat in rubric red, with no disc. Put the current
+   prayer's text under the ring, above the action, so the text is the hero.
+3. **Home**: the "Today's readings" skeleton shows mid-load in screenshots.
+   Show the Gospel incipit, with the reference as a rubric, as soon as it is
+   known. The "Green · Weekday" line under the Banner duplicates the colour
+   bar: drop it, or pass the rank as the Banner title ("Weekday").
+4. **Calendar**: set "Mass obligation" as a rubric (`AppSectionHeader`-style
+   red caps, or the italic row subtitle), not as a second title line.
+5. **Doctrine**: commandment rows wrap to three lines. Drop the chevron on
+   rows whose detail only repeats the reference.
+6. **Empty states**: pass a meaningful icon. Habits uses `Checklist` (gets
+   the cross, which is correct). Journal uses `EditNote` (dove). Parishes and
+   Churches use `Church` (chalice). Bible uses `MenuBook` (book).
+7. **Parishes**: one primary action only. The kit now frames it in gilt, so
+   two framed actions stacked look like a form.

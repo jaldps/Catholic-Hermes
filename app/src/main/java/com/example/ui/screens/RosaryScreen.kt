@@ -4,6 +4,10 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Canvas
+import androidx.compose.ui.draw.clip
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -1012,8 +1016,38 @@ fun RosaryScreen(
 
         when (selectedTab) {
             0 -> {
-                // Holy Rosary. The mysteries are one row with a menu, so the
-                // chaplet itself is the first thing under the selector.
+                // Holy Rosary: the beads come first, then the prayer itself;
+                // the choice of mysteries and of voices closes the page.
+                item { Spacer(Modifier.height(design.spacing.cardGap)) }
+
+                // Where you are on the beads, and the way forward
+                item {
+                    GuideControlsCard(
+                        eyebrow = currentMystery.type.displayName.get(lang),
+                        guide = rosaryGuide,
+                        index = rosaryIndex,
+                        lang = lang,
+                        previousLabel = previousLabel,
+                        nextLabel = nextLabel,
+                        audioLabel = if (isPlayingAudio) pauseLabel else playLabel,
+                        isPlayingAudio = isPlayingAudio,
+                        onGo = { goRosary(it) },
+                        onToggleAudio = {
+                            if (isPlayingAudio) ttsManager.stop() else narrate(rosaryStep)
+                        },
+                        railTag = "prayer_bead_counter",
+                        previousTag = "prev_bead_button",
+                        nextTag = "next_bead_button",
+                        audioTag = "toggle_prayer_audio_button"
+                    )
+                }
+
+                // What to pray now, in full
+                item {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    StepCard(step = rosaryStep, lang = lang, spokenNow = currentlySpeaking)
+                }
+
                 item {
                     Spacer(Modifier.height(design.spacing.cardGap))
                     val todayLabel = lang.pick("Hoy", "Today", "Hoje")
@@ -1041,41 +1075,6 @@ fun RosaryScreen(
                             },
                             testTag = "rosary_mystery_picker"
                         )
-                    }
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                }
-
-                // Where you are on the beads, and the way forward
-                item {
-                    GuideControlsCard(
-                        eyebrow = lang.pick("Rosario", "Rosary", "Terço"),
-                        guide = rosaryGuide,
-                        index = rosaryIndex,
-                        lang = lang,
-                        previousLabel = previousLabel,
-                        nextLabel = nextLabel,
-                        audioLabel = if (isPlayingAudio) pauseLabel else playLabel,
-                        isPlayingAudio = isPlayingAudio,
-                        onGo = { goRosary(it) },
-                        onToggleAudio = {
-                            if (isPlayingAudio) ttsManager.stop() else narrate(rosaryStep)
-                        },
-                        railTag = "prayer_bead_counter",
-                        previousTag = "prev_bead_button",
-                        nextTag = "next_bead_button",
-                        audioTag = "toggle_prayer_audio_button"
-                    )
-                }
-
-                // What to pray now, in full
-                item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    StepCard(step = rosaryStep, lang = lang, spokenNow = currentlySpeaking)
-                }
-
-                item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    AppListGroup {
                         MenuPickerRow(
                             title = lang.pick("Voces", "Voices", "Vozes"),
                             leadingIcon = Icons.Default.RecordVoiceOver,
@@ -1307,6 +1306,7 @@ private fun GuideControlsCard(
             what = step.name,
             count = count,
             stepLabel = stepLabel,
+            context = eyebrow,
             onSelectBead = { bead ->
                 val target = guide.firstStepOn(bead)
                 if (target >= 0) onGo(target)
@@ -1449,6 +1449,7 @@ private fun BeadRail(
     what: String,
     count: String?,
     stepLabel: String,
+    context: String?,
     onSelectBead: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -1677,7 +1678,7 @@ private fun BeadRail(
                 val upper = (lower + 1).coerceAtMost(beads.lastIndex)
                 val haloAt = lerp(geometry.centres[lower], geometry.centres[upper], pos - lower)
                 val onCrucifix = beads[activeIndex].kind == BeadKind.CRUCIFIX
-                val haloRadius = if (onCrucifix) geometry.crucifixHeight * 0.78f else geometry.large * 2.4f
+                val haloRadius = if (onCrucifix) geometry.crucifixHeight * 0.64f else geometry.large * 2.4f
                 drawCircle(halo, radius = haloRadius, center = haloAt)
                 if (bloom.value < 1f) {
                     drawCircle(
@@ -1770,6 +1771,15 @@ private fun BeadRail(
                     modifier = Modifier.widthIn(max = loopSize * 0.72f),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
+                    if (!context.isNullOrBlank()) {
+                        Text(
+                            text = context,
+                            style = styles.rowSubtitle,
+                            color = palette.textSecondary,
+                            textAlign = TextAlign.Center
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 3))
+                    }
                     Text(
                         text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
                         style = styles.sectionEyebrow,
@@ -1818,10 +1828,10 @@ private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawCrucifix(
 ) {
     val top = centre.y - height / 2
     val bottom = centre.y + height / 2
-    val stem = height * 0.15f
+    val stem = height * 0.13f
     val barY = top + height * 0.30f
-    val half = height * 0.34f
-    val bud = stem * 0.78f
+    val half = height * 0.37f
+    val bud = stem * 0.6f
     val corner = androidx.compose.ui.geometry.CornerRadius(stem * 0.25f)
     // Upright and arms.
     drawRoundRect(ink, Offset(centre.x - stem / 2, top + bud * 0.6f), Size(stem, bottom - top - bud * 0.6f), corner)
@@ -1830,13 +1840,13 @@ private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawCrucifix(
     // `out` points from the crossing towards this end.
     fun trefoil(at: Offset, out: Offset) {
         val side = Offset(-out.y, out.x)
-        drawCircle(ink, bud, at + out * (bud * 0.35f))
-        drawCircle(ink, bud * 0.72f, at + side * (bud * 0.95f) - out * (bud * 0.35f))
-        drawCircle(ink, bud * 0.72f, at - side * (bud * 0.95f) - out * (bud * 0.35f))
+        drawCircle(ink, bud, at + out * (bud * 0.5f))
+        drawCircle(ink, bud * 0.62f, at + side * (bud * 1.05f) - out * (bud * 0.25f))
+        drawCircle(ink, bud * 0.62f, at - side * (bud * 1.05f) - out * (bud * 0.25f))
     }
-    trefoil(Offset(centre.x, top + bud * 0.9f), Offset(0f, -1f))
-    trefoil(Offset(centre.x - half + bud * 0.9f, barY), Offset(-1f, 0f))
-    trefoil(Offset(centre.x + half - bud * 0.9f, barY), Offset(1f, 0f))
+    trefoil(Offset(centre.x, top + bud * 1.1f), Offset(0f, -1f))
+    trefoil(Offset(centre.x - half + bud * 1.1f, barY), Offset(-1f, 0f))
+    trefoil(Offset(centre.x + half - bud * 1.1f, barY), Offset(1f, 0f))
     // The foot widens a little, as the cross is planted.
     drawRoundRect(ink, Offset(centre.x - stem * 0.85f, bottom - stem * 0.7f), Size(stem * 1.7f, stem * 0.7f), corner)
 
@@ -2001,27 +2011,23 @@ private fun RecitationControls(
     val design = LocalAppDesign.current
     val haptics = LocalHapticFeedback.current
 
-    // One row: back and next as quiet glyphs flanking the one filled
-    // action, so three slabs no longer stack under the beads.
+    // One compact row: back and next as tonal round buttons flanking the one
+    // filled action, all centred under the beads rather than a full-width slab.
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap, Alignment.CenterHorizontally)
     ) {
-        IconButton(
+        StepArrow(
+            icon = Icons.AutoMirrored.Filled.ArrowBack,
+            label = previousLabel,
+            enabled = canGoPrevious,
             onClick = {
                 haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                 onPrevious()
             },
-            enabled = canGoPrevious,
             modifier = Modifier.testTag(previousTag)
-        ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = previousLabel,
-                tint = if (canGoPrevious) design.palette.accent else design.palette.textTertiary.copy(alpha = 0.5f)
-            )
-        }
+        )
         AppPrimaryButton(
             label = audioLabel,
             onClick = {
@@ -2029,24 +2035,54 @@ private fun RecitationControls(
                 onToggleAudio()
             },
             leadingIcon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
-            modifier = Modifier
-                .weight(1f)
-                .testTag(audioTag)
+            modifier = Modifier.testTag(audioTag)
         )
-        IconButton(
+        StepArrow(
+            icon = Icons.AutoMirrored.Filled.ArrowForward,
+            label = nextLabel,
+            enabled = canGoNext,
             onClick = {
                 haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                 onNext()
             },
-            enabled = canGoNext,
             modifier = Modifier.testTag(nextTag)
-        ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                contentDescription = nextLabel,
-                tint = if (canGoNext) design.palette.accent else design.palette.textTertiary.copy(alpha = 0.5f)
+        )
+    }
+}
+
+/** A round tonal step button; ruled rather than filled where the identity rules its edges. */
+@Composable
+private fun StepArrow(
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    label: String,
+    enabled: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val engraved = design.depth.cardBorderWidth > 0.dp
+    val tint = if (enabled) palette.accent else palette.textTertiary.copy(alpha = 0.45f)
+    Box(
+        modifier = modifier
+            .size(48.dp)
+            .clip(androidx.compose.foundation.shape.CircleShape)
+            .then(
+                if (engraved) {
+                    Modifier.border(
+                        design.depth.cardBorderWidth,
+                        palette.gold.copy(alpha = if (enabled) 0.8f else 0.35f),
+                        androidx.compose.foundation.shape.CircleShape
+                    )
+                } else {
+                    Modifier.background(palette.accent.copy(alpha = if (enabled) 0.12f else 0.05f))
+                }
             )
-        }
+            .clickable(enabled = enabled, onClick = onClick)
+            .semantics { contentDescription = label },
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(imageVector = icon, contentDescription = null, tint = tint, modifier = Modifier.size(22.dp))
     }
 }
 

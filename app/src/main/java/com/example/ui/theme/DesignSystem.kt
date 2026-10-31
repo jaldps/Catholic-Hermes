@@ -492,9 +492,11 @@ object DesignTokens {
         groupedSurface = Color(0xFF221A12),
         raised = Color(0xFF2A2017),
         hairline = Color(0xFF55452F),
-        accent = Color(0xFFD9503C),
+        // Hue 6°: cinnabar. Green and blue held down so it never lifts
+        // toward coral; 4.3:1 on the umber ground.
+        accent = Color(0xFFE0402E),
         accentMuted = Color(0xFF34201A),
-        gold = Color(0xFFCCA24C),
+        gold = Color(0xFFD4AD55),
         textPrimary = Color(0xFFECE0CA),
         textSecondary = Color(0xFFBDAC92),
         textTertiary = Color(0xFF8C7B66),

@@ -1635,9 +1635,12 @@ object MaterialKit : AppKit {
                             shape = SegmentedButtonDefaults.itemShape(index, options.size),
                             modifier = Modifier.weight(1f),
                             icon = { if (showCheck) SegmentedButtonDefaults.Icon(isSelected) },
+                            // Dark: the selected segment steps up to the
+                            // primary container — secondaryContainer at tone 25
+                            // was a dull smudge barely off the canvas.
                             colors = SegmentedButtonDefaults.colors(
-                                activeContainerColor = c.accentSofter,
-                                activeContentColor = c.onAccentSofter,
+                                activeContainerColor = if (design.isDark) c.accentSoft else c.accentSofter,
+                                activeContentColor = if (design.isDark) c.onAccentSoft else c.onAccentSofter,
                                 activeBorderColor = c.outline,
                                 inactiveContainerColor = Color.Transparent,
                                 inactiveContentColor = palette.textSecondary,
@@ -1792,9 +1795,9 @@ object MaterialKit : AppKit {
             colors = FilterChipDefaults.filterChipColors(
                 containerColor = Color.Transparent,
                 labelColor = palette.textSecondary,
-                selectedContainerColor = c.accentSofter,
-                selectedLabelColor = c.onAccentSofter,
-                selectedLeadingIconColor = c.onAccentSofter
+                selectedContainerColor = if (design.isDark) c.accentSoft else c.accentSofter,
+                selectedLabelColor = if (design.isDark) c.onAccentSoft else c.onAccentSofter,
+                selectedLeadingIconColor = if (design.isDark) c.onAccentSoft else c.onAccentSofter
             ),
             border = FilterChipDefaults.filterChipBorder(
                 enabled = true,

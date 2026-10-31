@@ -66,6 +66,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -81,6 +82,8 @@ import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.models.SaintOfTheDay
 import com.example.data.models.VerseOfTheDay
 import com.example.data.repository.PilgrimageAndHabitsData
+import com.example.data.repository.BibleData
+import com.example.data.prefs.ReadingPosition
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppDivider
@@ -147,6 +150,12 @@ fun HomeScreen(
     val meditation = liturgicalDay.missalMeditation?.get(currentLanguage)
         ?.takeIf { it.isNotBlank() }
     val gospelOfRecord = liturgicalDay.gospelVerseRef.takeIf { it.isNotBlank() }
+    val resumeReading = remember(currentLanguage) {
+        ReadingPosition.load(context)?.let { position ->
+            BibleData.catholicCanonBooks.firstOrNull { it.id == position.bookId }
+                ?.let { "${it.name.get(currentLanguage)} ${position.chapter}" }
+        }
+    }
 
     // Today's readings from the Vatican's own feed, the same source the Missal
     // tab uses; the bundled lectionary is the offline fallback.
@@ -317,10 +326,20 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // 3. Continue: the Gospel of the day in full, one tap away, with its
-        // meditation when the bundled lectionary carries one.
-        if (gospelOfRecord != null) item {
+        // 3. Continue: where the reader stopped in the Bible, and the Gospel
+        // of the day with its meditation when the bundled lectionary has one.
+        if (gospelOfRecord != null || resumeReading != null) item {
             AppListGroup {
+                if (resumeReading != null) {
+                    AppListRow(
+                        title = strings("Seguir leyendo", "Continue reading", "Continuar a ler"),
+                        subtitle = resumeReading,
+                        leadingIcon = Icons.Default.AutoStories,
+                        onClick = onNavigateToBible,
+                        modifier = Modifier.testTag("home_continue_reading")
+                    )
+                }
+                if (gospelOfRecord != null) {
                 AppListRow(
                     title = strings("Evangelio del día", "Gospel of the day", "Evangelho do dia"),
                     subtitle = TextFormat.ranges(gospelOfRecord),
@@ -335,6 +354,7 @@ fun HomeScreen(
                     } else onNavigateToMissal,
                     modifier = Modifier.testTag("home_continue_row")
                 )
+                }
             }
             AnimatedVisibility(
                 visible = meditationExpanded && meditation != null,
@@ -599,7 +619,10 @@ fun HomeScreen(
 @Composable
 private fun ReadingsPlaceholder(description: String) {
     val design = LocalAppDesign.current
-    val ink = design.palette.textTertiary.copy(alpha = if (design.isDark) 0.22f else 0.14f)
+    val base = design.palette.textTertiary.copy(alpha = if (design.isDark) 0.20f else 0.12f)
+    val sheen = design.palette.textTertiary.copy(alpha = if (design.isDark) 0.34f else 0.22f)
+    // A still sheen across the bars: the shimmer's frame, without a clock.
+    val ink = Brush.linearGradient(listOf(base, sheen, base))
     Column(
         Modifier
             .fillMaxWidth()

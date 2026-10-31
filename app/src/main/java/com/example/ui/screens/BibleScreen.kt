@@ -96,6 +96,8 @@ import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.components.MenuPickerRow
+import androidx.compose.runtime.LaunchedEffect
+import com.example.data.prefs.ReadingPosition
 import com.example.ui.design.AppVerseRow
 import com.example.ui.theme.AppFonts
 import com.example.ui.theme.DesignLanguage
@@ -227,6 +229,7 @@ fun BibleScreen(
                         selectedFilter = selectedTestamentTab,
                         onFilterChange = { selectedTestamentTab = it },
                         onOpenVersions = { selectedMainTab = 2 },
+                        lastPosition = LocalContext.current.let { ctx -> remember(selectedBook) { ReadingPosition.load(ctx) } },
                         onOpenBook = { opened, chapter ->
                             selectedBook = opened
                             selectedChapterNumber = chapter
@@ -242,6 +245,10 @@ fun BibleScreen(
                     }
 
                     BackHandler { selectedBook = null }
+                    val positionContext = LocalContext.current
+                    LaunchedEffect(book.id, chapterNumber) {
+                        ReadingPosition.save(positionContext, book.id, chapterNumber)
+                    }
 
                     ChapterReader(
                         book = book,
@@ -347,6 +354,7 @@ private fun BookDirectory(
     selectedFilter: Int,
     onFilterChange: (Int) -> Unit,
     onOpenVersions: () -> Unit,
+    lastPosition: ReadingPosition.Position? = null,
     onOpenBook: (BibleBook, Int) -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -423,6 +431,19 @@ private fun BookDirectory(
 
         item(key = "bible_directory_menu") {
             Spacer(Modifier.height(design.spacing.cardGap))
+            val resume = lastPosition?.let { pos -> booksById[pos.bookId]?.let { it to pos.chapter } }
+            if (resume != null && searchQuery.isBlank()) {
+                AppListGroup {
+                    AppListRow(
+                        title = currentLanguage.pick("Seguir leyendo", "Continue reading", "Continuar a ler"),
+                        subtitle = "${resume.first.name.get(currentLanguage)} ${resume.second}",
+                        leadingIcon = Icons.Default.AutoStories,
+                        onClick = { onOpenBook(resume.first, resume.second) },
+                        modifier = Modifier.testTag("bible_continue_reading")
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
             AppListGroup {
                 MenuPickerRow(
                     title = currentLanguage.pick("Libros", "Books", "Livros"),

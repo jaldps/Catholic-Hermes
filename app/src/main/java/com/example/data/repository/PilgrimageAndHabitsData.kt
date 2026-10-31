@@ -344,9 +344,9 @@ object PilgrimageAndHabitsData {
         ),
         com.example.data.local.SpiritualHabitEntity(
             id = "habit_lectio_divina",
-            titleEs = "Lectura Bíblica (Lectio Divina 15 min)",
-            titleEn = "Scripture Reading (Lectio Divina 15 min)",
-            titlePt = "Leitura Bíblica (Lectio Divina 15 min)",
+            titleEs = "Lectio divina",
+            titleEn = "Lectio divina",
+            titlePt = "Lectio divina",
             description = "Alimentar el alma con la Palabra Viva de Dios antes de comenzar las tareas.",
             category = "PRAYER",
             timeSuggestion = "Mañana",
