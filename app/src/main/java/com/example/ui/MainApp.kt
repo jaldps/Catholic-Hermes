@@ -135,7 +135,7 @@ fun MainApp(
     }
 
     AppScaffold(
-        title = "Sancta Fides",
+        title = current.title(currentLanguage),
         navItems = navItems,
         selectedNavIndex = tabs.indexOf(if (isPushed) origin else current),
         onNavSelected = { go(tabs[it]) },

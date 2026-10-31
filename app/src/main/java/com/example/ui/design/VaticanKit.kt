@@ -755,7 +755,7 @@ object VaticanKit : AppKit {
                                     )
                                     Spacer(Modifier.height(5.dp))
                                     Text(
-                                        text = title.uppercase(),
+                                        text = "Sancta Fides".uppercase(), // the running head names the book, not the page
                                         // Trajan capitals at masthead size want
                                         // less tracking than the eyebrows below.
                                         style = styles.screenTitle
