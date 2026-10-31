@@ -54,6 +54,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -179,9 +180,9 @@ fun HomeScreen(
             AppScreenTitle(
                 title = strings("Hoy", "Today", "Hoje"),
                 subtitle = strings(
-                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName}",
+                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
                     "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
-                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName}"
+                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
                 )
             )
         }
@@ -200,33 +201,39 @@ fun HomeScreen(
 
         item {
             AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                FlowRow(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    DayBadge(label = colorLabel, tint = liturgicalPigment)
-                    DayBadge(
-                        label = liturgicalDay.rank.get(currentLanguage),
-                        tint = palette.textSecondary
+                // The day's particulars are metadata, not filters: one quiet
+                // line keyed by the liturgical colour, not a row of chips that
+                // look tappable.
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(
+                        Modifier
+                            .size(10.dp)
+                            .clip(design.shapes.chip)
+                            .background(liturgicalPigment)
                     )
-                    liturgicalDay.sundayCycle?.let {
-                        DayBadge(label = it.get(currentLanguage), tint = palette.textSecondary)
-                    }
-                    liturgicalDay.weekdayCycle?.let {
-                        DayBadge(label = it.get(currentLanguage), tint = palette.textSecondary)
-                    }
-                    liturgicalDay.fastingRule?.let {
-                        DayBadge(
-                            label = it.get(currentLanguage),
-                            tint = palette.accent,
-                            icon = if (liturgicalDay.isFastOrAbstinence) {
-                                Icons.Default.Restaurant
-                            } else {
-                                Icons.Default.Star
-                            }
-                        )
-                    }
+                    Spacer(Modifier.width(design.spacing.iconLabelGap))
+                    Text(
+                        text = listOfNotNull(
+                            colorLabel,
+                            liturgicalDay.rank.get(currentLanguage),
+                            liturgicalDay.sundayCycle?.get(currentLanguage),
+                            liturgicalDay.weekdayCycle?.get(currentLanguage)
+                        ).joinToString("  ·  "),
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary
+                    )
+                }
+                liturgicalDay.fastingRule?.let {
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    DayBadge(
+                        label = it.get(currentLanguage),
+                        tint = palette.accent,
+                        icon = if (liturgicalDay.isFastOrAbstinence) {
+                            Icons.Default.Restaurant
+                        } else {
+                            Icons.Default.Star
+                        }
+                    )
                 }
 
                 if (gospelOfRecord != null) {
@@ -270,7 +277,7 @@ fun HomeScreen(
                                     strings("Ocultar", "Hide", "Ocultar")
                                 } else {
                                     strings("Meditación", "Meditation", "Meditação")
-                                }.uppercase(),
+                                }.caps(),
                                 style = styles.sectionEyebrow,
                                 color = palette.accent,
                                 maxLines = 1
@@ -303,7 +310,7 @@ fun HomeScreen(
                                     "Meditación litúrgica del día",
                                     "Liturgical meditation of the day",
                                     "Meditação litúrgica do dia"
-                                ).uppercase(),
+                                ).caps(),
                                 style = styles.sectionEyebrow,
                                 color = palette.textSecondary
                             )
@@ -332,9 +339,9 @@ fun HomeScreen(
             ) {
                 CardHeading(
                     label = strings(
-                        "Hábitos y Virtudes (Regla de Vida)",
-                        "Habits & Virtues (Rule of Life)",
-                        "Hábitos e Virtudes (Regra de Vida)"
+                        "Regla de vida",
+                        "Rule of life",
+                        "Regra de vida"
                     ),
                     icon = Icons.Default.Star,
                     trailing = strings("Ver Panel", "Dashboard", "Painel"),
@@ -444,7 +451,7 @@ fun HomeScreen(
                         if (index > 0) Spacer(Modifier.height(12.dp))
                         if (label.isNotBlank()) {
                             Text(
-                                text = label.uppercase(),
+                                text = label.caps(),
                                 style = styles.sectionEyebrow,
                                 color = palette.textTertiary
                             )
@@ -697,7 +704,7 @@ private fun CardHeading(
             Spacer(Modifier.width(8.dp))
         }
         Text(
-            text = label.uppercase(),
+            text = label.caps(),
             style = styles.sectionEyebrow,
             color = design.palette.textSecondary,
             modifier = Modifier.weight(1f)
@@ -705,7 +712,7 @@ private fun CardHeading(
         if (trailing != null) {
             Spacer(Modifier.width(12.dp))
             Text(
-                text = trailing.uppercase(),
+                text = trailing.caps(),
                 style = styles.sectionEyebrow,
                 color = trailingColor ?: design.palette.textTertiary,
                 maxLines = 1
@@ -744,7 +751,7 @@ private fun MarginalQuote(text: String, attribution: String? = null) {
             if (attribution != null) {
                 Spacer(Modifier.height(10.dp))
                 Text(
-                    text = attribution.uppercase(),
+                    text = attribution.caps(),
                     style = styles.sectionEyebrow,
                     color = design.palette.textSecondary
                 )
@@ -789,7 +796,7 @@ private fun DayBadge(
             Spacer(Modifier.width(6.dp))
         }
         Text(
-            text = if (design.decor.usesAllCapsLabels) label.uppercase() else label,
+            text = label.caps(),
             style = styles.sectionEyebrow,
             color = tint,
             // "Ayuno y abstinencia de carne" at Vatican's tracking is wider
@@ -806,3 +813,9 @@ private fun DayBadge(
  */
 private fun pigment(color: Color, isDark: Boolean, ink: Color): Color =
     if (isDark) lerp(color, ink, 0.45f) else color
+
+/** Tracked capitals where the identity sets its labels that way; as written otherwise. */
+@Composable
+@ReadOnlyComposable
+private fun String.caps(): String =
+    if (LocalAppDesign.current.decor.usesAllCapsLabels) uppercase() else this

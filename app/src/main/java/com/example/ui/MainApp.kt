@@ -11,7 +11,11 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Palette
+import androidx.compose.material.icons.outlined.Language
+import androidx.compose.material.icons.outlined.Palette
+import androidx.compose.material.icons.outlined.Translate
+import androidx.compose.material.icons.sharp.Palette
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -26,7 +30,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
@@ -52,7 +55,9 @@ import com.example.ui.screens.PilgrimageAndHabitsScreen
 import com.example.ui.screens.PrayersAndNovenasScreen
 import com.example.ui.screens.RosaryScreen
 import com.example.ui.screens.SpiritualLifeScreen
+import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 
 enum class AppDestination(
     val titleEs: String,
@@ -137,14 +142,31 @@ fun MainApp(
         onBack = if (isPushed) ({ current = origin }) else null,
         backLabel = if (isPushed) origin.title(currentLanguage) else null,
         actions = {
+            // Bar buttons in each identity's own idiom: iOS tints its bar
+            // glyphs, M3 leaves app-bar actions onSurfaceVariant, and the
+            // Vatican running head sets the language as a Cinzel code rather
+            // than an emoji flag, which no printed page would carry.
+            val barTint = when (design.language) {
+                DesignLanguage.APPLE -> MaterialTheme.colorScheme.primary
+                DesignLanguage.MATERIAL -> LocalContentColor.current
+                DesignLanguage.VATICAN -> design.palette.textSecondary
+            }
             IconButton(
                 onClick = { showCustomizerModal = true },
                 modifier = Modifier.testTag("app_bar_theme_button")
             ) {
                 Icon(
-                    imageVector = Icons.Default.Palette,
-                    contentDescription = "Personalizar Tema y Apariencia",
-                    tint = MaterialTheme.colorScheme.primary,
+                    imageVector = when (design.language) {
+                        DesignLanguage.APPLE -> Icons.Outlined.Palette
+                        DesignLanguage.MATERIAL -> Icons.Outlined.Palette
+                        DesignLanguage.VATICAN -> Icons.Sharp.Palette
+                    },
+                    contentDescription = when (currentLanguage) {
+                        AppLanguage.ES -> "Apariencia"
+                        AppLanguage.EN -> "Appearance"
+                        AppLanguage.PT -> "Aparência"
+                    },
+                    tint = barTint,
                     modifier = Modifier.size(22.dp)
                 )
             }
@@ -152,7 +174,20 @@ fun MainApp(
                 onClick = { showLanguageSelector = true },
                 modifier = Modifier.testTag("app_bar_lang_button")
             ) {
-                Text(text = currentLanguage.flag, fontSize = 18.sp)
+                when (design.language) {
+                    DesignLanguage.VATICAN -> Text(
+                        text = currentLanguage.code.uppercase(),
+                        style = LocalAppTextStyles.current.sectionEyebrow,
+                        color = barTint
+                    )
+                    else -> Icon(
+                        imageVector = if (design.language == DesignLanguage.APPLE) Icons.Outlined.Language
+                        else Icons.Outlined.Translate,
+                        contentDescription = currentLanguage.displayName,
+                        tint = barTint,
+                        modifier = Modifier.size(22.dp)
+                    )
+                }
             }
         }
     ) { innerPadding ->

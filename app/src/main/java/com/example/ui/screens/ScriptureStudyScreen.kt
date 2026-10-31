@@ -4,7 +4,10 @@ import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
@@ -17,6 +20,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -123,9 +127,10 @@ fun ScriptureStudyScreen(
     dao: SanctaFidesDao,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    /** The host screen's title and view switcher, set as the first rows. */
+    header: LazyListScope.() -> Unit = {}
 ) {
-    val design = LocalAppDesign.current
     val tracks = repository.scriptureStudyTracks
     var selectedTrackIndex by remember { mutableIntStateOf(0) }
 
@@ -143,19 +148,24 @@ fun ScriptureStudyScreen(
             .testTag("scripture_study_screen")
     ) {
         if (tracks.isEmpty()) {
-            AppEmptyState(
-                title = currentLanguage.pick(
-                    "Sin itinerarios",
-                    "No study tracks",
-                    "Sem itinerários"
-                ),
-                body = currentLanguage.pick(
-                    "El curso bíblico no está disponible en esta edición.",
-                    "The scripture course is not available in this edition.",
-                    "O curso bíblico não está disponível nesta edição."
-                ),
-                icon = Icons.AutoMirrored.Filled.MenuBook
-            )
+            LazyColumn(Modifier.fillMaxSize()) {
+                header()
+                item {
+                    AppEmptyState(
+                        title = currentLanguage.pick(
+                            "Sin itinerarios",
+                            "No study tracks",
+                            "Sem itinerários"
+                        ),
+                        body = currentLanguage.pick(
+                            "El curso bíblico no está disponible en esta edición.",
+                            "The scripture course is not available in this edition.",
+                            "O curso bíblico não está disponível nesta edição."
+                        ),
+                        icon = Icons.AutoMirrored.Filled.MenuBook
+                    )
+                }
+            }
         } else {
             val currentTrack = tracks.getOrElse(selectedTrackIndex) { tracks.first() }
             val stripLabels = remember(tracks, currentLanguage) {
@@ -164,21 +174,11 @@ fun ScriptureStudyScreen(
                 }
             }
 
-            AppSegmentedTabs(
-                options = stripLabels,
-                selectedIndex = selectedTrackIndex,
-                onSelect = { index ->
-                    selectedTrackIndex = index
-                    activeLesson = null
-                },
-                modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(top = design.spacing.headerTopGap / 2)
-            )
-
             val lesson = activeLesson
             if (lesson == null) {
                 TrackOverviewView(
+                    header = header,
+                    stripLabels = stripLabels,
                     tracks = tracks,
                     track = currentTrack,
                     selectedTrackIndex = selectedTrackIndex,
@@ -240,8 +240,11 @@ fun ScriptureStudyScreen(
 
 // ------------------------------------------------------------------- overview
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun TrackOverviewView(
+    header: LazyListScope.() -> Unit,
+    stripLabels: List<String>,
     tracks: List<ScriptureCourseTrack>,
     track: ScriptureCourseTrack,
     selectedTrackIndex: Int,
@@ -258,8 +261,31 @@ private fun TrackOverviewView(
     val fraction = if (total > 0) done.toFloat() / total.toFloat() else 0f
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
+
+        // The itineraries are a filter on this one list, not a second row of
+        // views, so they are chips under the screen's own segmented control.
         item {
-            AppScreenTitle(
+            FlowRow(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.cardGap / 2),
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
+                verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+            ) {
+                stripLabels.forEachIndexed { index, label ->
+                    AppChip(
+                        label = label,
+                        selected = index == selectedTrackIndex,
+                        onClick = { onSelectTrack(index) }
+                    )
+                }
+            }
+        }
+
+        item {
+            AppSectionHeader(
                 title = track.title.get(currentLanguage),
                 subtitle = track.description.get(currentLanguage)
             )

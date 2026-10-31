@@ -35,6 +35,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.data.location.DeviceLocationProvider
 import com.example.data.location.ParishFinder
@@ -43,7 +44,6 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.NearbyParish
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppCard
-import com.example.ui.design.AppChip
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
@@ -52,12 +52,27 @@ import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import kotlinx.coroutines.launch
 import kotlin.coroutines.cancellation.CancellationException
 import kotlinx.coroutines.withTimeoutOrNull
 
 private enum class SearchState { IDLE, LOADING, DONE }
+
+private val RadiusOptionsKm = listOf(2, 5, 10, 25, 50)
+
+/**
+ * No kit insets its own segmented control, so the gutter is the caller's to
+ * give. Vatican is the exception: its strip is a ruled band whose hairline runs
+ * the full width of the leaf.
+ */
+@Composable
+private fun segmentedTabsInset(): Dp {
+    val design = LocalAppDesign.current
+    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+}
 
 /** The longest the screen will show its spinner before giving up. */
 private const val UI_TIMEOUT_MS = 22_000L
@@ -268,33 +283,45 @@ fun ParishFinderScreen(
                     ),
                     modifier = Modifier.testTag("parish_place_field")
                 )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppSecondaryButton(
-                    label = strings("Buscar este lugar", "Search this place", "Buscar este lugar"),
-                    onClick = { searchPlace() },
-                    enabled = placeQuery.isNotBlank(),
-                    leadingIcon = Icons.Default.Search,
-                    modifier = Modifier.fillMaxWidth()
-                )
+                // Only once there is a place to search: a disabled button
+                // under an empty field reads as a second field.
+                if (placeQuery.isNotBlank()) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppSecondaryButton(
+                        label = strings(
+                            "Buscar «${placeQuery.trim()}»",
+                            "Search “${placeQuery.trim()}”",
+                            "Buscar «${placeQuery.trim()}»"
+                        ),
+                        onClick = { searchPlace() },
+                        leadingIcon = Icons.Default.Search,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .testTag("parish_search_place_button")
+                    )
+                }
             }
         }
 
         item {
-            AppSectionHeader(title = strings("Radio", "Radius", "Raio"))
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                listOf(2, 5, 10, 25, 50).forEach { km ->
-                    AppChip(
-                        label = "$km km",
-                        selected = radiusKm == km,
-                        onClick = { radiusKm = km }
-                    )
-                }
-            }
+            AppSectionHeader(
+                title = strings("Radio de búsqueda", "Search radius", "Raio de busca"),
+                subtitle = strings(
+                    "Hasta dónde buscar alrededor del lugar.",
+                    "How far around the place to look.",
+                    "Até onde buscar em volta do lugar."
+                )
+            )
+            // Five short options: a segmented control holds them abreast in
+            // every identity, where a chip row ran its last chip off the edge.
+            AppSegmentedTabs(
+                options = RadiusOptionsKm.map { "$it km" },
+                selectedIndex = RadiusOptionsKm.indexOf(radiusKm).coerceAtLeast(0),
+                onSelect = { radiusKm = RadiusOptionsKm[it] },
+                modifier = Modifier
+                    .padding(horizontal = segmentedTabsInset())
+                    .testTag("parish_radius_selector")
+            )
         }
 
         if (state == SearchState.LOADING) {
@@ -308,7 +335,7 @@ fun ParishFinderScreen(
                 ) {
                     CircularProgressIndicator(
                         modifier = Modifier.size(20.dp),
-                        color = MaterialTheme.colorScheme.primary
+                        color = design.palette.accent
                     )
                     Spacer(Modifier.size(12.dp))
                     Text(

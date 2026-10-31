@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -21,6 +23,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
@@ -46,6 +49,11 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
@@ -164,30 +172,44 @@ fun PrayersAndNovenasScreen(
 
     val tabsInset = segmentedTabsInset()
 
+    // One title for the screen, then the control that picks the view. Both
+    // are the first rows of whichever list is showing, so they scroll away.
+    val header: LazyListScope.() -> Unit = {
+        item(key = "prayers_screen_title") {
+            AppScreenTitle(
+                title = currentLanguage.pick("Oraciones", "Prayers", "Orações"),
+                subtitle = currentLanguage.pick(
+                    "Las oraciones de la Iglesia, de día y de noche",
+                    "The Church's prayers, by day and by night",
+                    "As orações da Igreja, de dia e de noite"
+                )
+            )
+        }
+        item(key = "prayers_screen_tabs") {
+            AppSegmentedTabs(
+                options = listOf(
+                    currentLanguage.pick("Devociones", "Devotions", "Devoções"),
+                    currentLanguage.pick("Coronilla", "Chaplet", "Terço"),
+                    currentLanguage.pick("Novenas", "Novenas", "Novenas"),
+                    currentLanguage.pick("Completas", "Compline", "Completas")
+                ),
+                selectedIndex = selectedTab,
+                onSelect = { selectedTab = it },
+                modifier = Modifier
+                    .padding(horizontal = tabsInset)
+                    .padding(bottom = design.spacing.cardGap / 2)
+            )
+        }
+    }
+
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(design.palette.canvas)
             .testTag("prayers_and_novenas_screen")
     ) {
-        AppSegmentedTabs(
-            options = listOf(
-                currentLanguage.pick("Devocionario", "Prayers", "Devocionário"),
-                currentLanguage.pick("Misericordia", "Divine Mercy", "Misericórdia"),
-                currentLanguage.pick("Novenas", "Novenas", "Novenas"),
-                currentLanguage.pick("Completas", "Night Prayer", "Completas")
-            ),
-            selectedIndex = selectedTab,
-            onSelect = { selectedTab = it },
-            modifier = Modifier.padding(
-                start = tabsInset,
-                end = tabsInset,
-                top = design.spacing.cardGap / 2
-            )
-        )
-
         when (selectedTab) {
             0 -> VaticanDevotionalView(
+                header = header,
                 repository = repository,
                 currentLanguage = currentLanguage,
                 searchQuery = prayerSearchQuery,
@@ -204,6 +226,7 @@ fun PrayersAndNovenasScreen(
             )
 
             1 -> DivineMercyChapletView(
+                header = header,
                 ttsManager = ttsManager,
                 currentLanguage = currentLanguage,
                 onOpenNovena = {
@@ -221,6 +244,7 @@ fun PrayersAndNovenasScreen(
                 val novena = selectedNovena
                 if (novena == null) {
                     NovenaIndexView(
+                        header = header,
                         novenas = repository.officialNovenas,
                         currentLanguage = currentLanguage,
                         searchQuery = novenaSearchQuery,
@@ -277,7 +301,8 @@ fun PrayersAndNovenasScreen(
             3 -> NightPrayersScreen(
                 repository = repository,
                 ttsManager = ttsManager,
-                currentLanguage = currentLanguage
+                currentLanguage = currentLanguage,
+                header = header
             )
         }
     }
@@ -285,8 +310,10 @@ fun PrayersAndNovenasScreen(
 
 // ----------------------------------------------------------------- devotional
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun VaticanDevotionalView(
+    header: LazyListScope.() -> Unit,
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
     searchQuery: String,
@@ -311,16 +338,7 @@ private fun VaticanDevotionalView(
     val prayers = repository.searchPrayers(query = searchQuery, tag = selectedTag)
 
     LazyColumn(Modifier.fillMaxSize()) {
-        item {
-            AppScreenTitle(
-                title = currentLanguage.pick("Devocionario", "The Devotional", "Devocionário"),
-                subtitle = currentLanguage.pick(
-                    "Las oraciones del Vaticano, con su versículo, su respuesta y su indulgencia.",
-                    "The prayers of the Holy See, with versicle, response and indulgence.",
-                    "As orações do Vaticano, com versículo, resposta e indulgência."
-                )
-            )
-        }
+        header()
 
         item {
             AppSearchField(
@@ -341,12 +359,13 @@ private fun VaticanDevotionalView(
             AppSectionHeader(
                 title = currentLanguage.pick("Según tu necesidad", "By what you need", "Conforme a necessidade")
             )
-            Row(
+            // Six themes wrap on the measure instead of running off the edge.
+            FlowRow(
                 Modifier
                     .fillMaxWidth()
-                    .horizontalScroll(themeScroll)
                     .padding(horizontal = design.spacing.gutter),
-                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
+                verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
             ) {
                 themes.forEach { (key, label) ->
                     AppChip(
@@ -464,6 +483,7 @@ private fun VaticanPrayerCard(
 
 @Composable
 private fun DivineMercyChapletView(
+    header: LazyListScope.() -> Unit,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
     onOpenNovena: () -> Unit
@@ -525,8 +545,9 @@ private fun DivineMercyChapletView(
     val listenLabel = currentLanguage.pick("Escuchar", "Listen", "Ouvir")
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
         item {
-            AppScreenTitle(
+            AppSectionHeader(
                 title = currentLanguage.pick(
                     "Coronilla de la Divina Misericordia",
                     "Chaplet of Divine Mercy",
@@ -844,6 +865,7 @@ private fun DivineMercyChapletView(
 
 @Composable
 private fun NovenaIndexView(
+    header: LazyListScope.() -> Unit,
     novenas: List<Novena>,
     currentLanguage: AppLanguage,
     searchQuery: String,
@@ -915,17 +937,18 @@ private fun NovenaIndexView(
     }
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
         item {
-            AppScreenTitle(
+            AppSectionHeader(
                 title = currentLanguage.pick(
-                    "Novenas Oficiales con Control de 9 Días",
-                    "Official Novenas with 9-Day Tracker",
-                    "Novenas Oficiais com Controle de 9 Dias"
+                    "Novenas oficiales",
+                    "Official novenas",
+                    "Novenas oficiais"
                 ),
                 subtitle = currentLanguage.pick(
-                    "Lleva el seguimiento diario de tus oraciones, registra tus intenciones y recibe consuelo en la promesa de Dios.",
-                    "Track your 9-day prayer progress, record your deepest intentions, and receive divine consolation.",
-                    "Acompanhe diariamente suas novenas com registro de intenções e perseverança na oração."
+                    "Nueve días de oración, llevados día a día.",
+                    "Nine days of prayer, kept day by day.",
+                    "Nove dias de oração, acompanhados dia a dia."
                 )
             )
         }
@@ -1480,23 +1503,67 @@ private fun VersicleAndResponse(
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
+    val rubric = rubricSigil()
+
+    // Some prayers (the Angelus) already carry their own sigla line by line;
+    // those are set as they stand rather than given a second sign.
+    fun signed(sign: String, text: String) =
+        if (SiglaPattern.containsMatchIn(text)) withLiturgicalSigla(text, rubric)
+        else buildAnnotatedString {
+            withStyle(rubric) { append(sign) }
+            append("\u2002")
+            append(text)
+        }
 
     Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
         Text(
-            text = "V/. $leaderText",
+            text = signed(VersicleSign, leaderText),
             style = styles.quote,
             color = if (spokenNow == leaderText) design.palette.accent else design.palette.textPrimary
         )
         if (responseText != null) {
             Spacer(Modifier.height(design.spacing.cardGap / 2))
             Text(
-                text = "R/. $responseText",
+                text = signed(ResponseSign, responseText),
                 style = styles.quote,
                 color = if (spokenNow == responseText) design.palette.accent else design.palette.textSecondary
             )
         }
     }
 }
+
+/** ℣ — the versicle, as the liturgical books print it. */
+internal const val VersicleSign = "\u2123"
+
+/** ℟ — the response. */
+internal const val ResponseSign = "\u211F"
+
+/** The typed-out sigla ("V/." and "R/.") the bundled texts carry. */
+internal val SiglaPattern = Regex("""(?<!\p{L})([VR])/\.""")
+
+/** The sigla's rubric: the identity's accent, which is Vatican's missal red. */
+@Composable
+internal fun rubricSigil(): SpanStyle = SpanStyle(
+    color = LocalAppDesign.current.palette.accent,
+    fontWeight = FontWeight.SemiBold
+)
+
+/**
+ * The text with each typed-out "V/." and "R/." set as ℣ and ℟ in [rubric], at
+ * render time, so the bundled data and the text-to-speech feed stay as they are.
+ */
+internal fun withLiturgicalSigla(text: String, rubric: SpanStyle): AnnotatedString =
+    buildAnnotatedString {
+        var last = 0
+        SiglaPattern.findAll(text).forEach { match ->
+            append(text.substring(last, match.range.first))
+            withStyle(rubric) {
+                append(if (match.groupValues[1] == "V") VersicleSign else ResponseSign)
+            }
+            last = match.range.last + 1
+        }
+        append(text.substring(last))
+    }
 
 /** An eyebrow over a card, with its reference or count on the line below. */
 @Composable

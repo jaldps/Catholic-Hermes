@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
@@ -102,10 +103,10 @@ fun NightPrayersScreen(
     repository: CatholicDataRepository,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    /** The host screen's title and view switcher, set as the first rows. */
+    header: LazyListScope.() -> Unit = {}
 ) {
-    val design = LocalAppDesign.current
-
     var selectedNightOfficeTab by remember { mutableIntStateOf(0) } // 0 = Roman Compline, 1 = Ignatian Examen
 
     val compline = repository.complineOffice
@@ -119,28 +120,32 @@ fun NightPrayersScreen(
             .fillMaxSize()
             .testTag("night_prayers_screen")
     ) {
-        AppSegmentedTabs(
-            options = listOf(
-                currentLanguage.pick("Completas (Breviario)", "Roman Compline", "Completas (Breviário)"),
-                currentLanguage.pick("Examen Ignaciano", "Ignatian Examen", "Exame Inaciano")
-            ),
-            selectedIndex = selectedNightOfficeTab,
-            onSelect = { selectedNightOfficeTab = it },
-            modifier = Modifier.padding(
-                start = tabsInset,
-                end = tabsInset,
-                top = design.spacing.cardGap / 2
-            )
-        )
+        // Compline or the examen is a choice inside the night's prayer, not a
+        // second strip of views: two chips under the screen's own control.
+        val officeHeader: LazyListScope.() -> Unit = {
+            header()
+            item(key = "night_office_choice") {
+                OfficeChoice(
+                    labels = listOf(
+                        currentLanguage.pick("Completas", "Compline", "Completas"),
+                        currentLanguage.pick("Examen ignaciano", "Ignatian examen", "Exame inaciano")
+                    ),
+                    selectedIndex = selectedNightOfficeTab,
+                    onSelect = { selectedNightOfficeTab = it }
+                )
+            }
+        }
 
         when (selectedNightOfficeTab) {
             0 -> ComplineView(
+                header = officeHeader,
                 compline = compline,
                 ttsManager = ttsManager,
                 isNarrating = isPlayingAudio,
                 currentLanguage = currentLanguage
             )
             1 -> IgnatianExamenView(
+                header = officeHeader,
                 steps = examenSteps,
                 ttsManager = ttsManager,
                 isNarrating = isPlayingAudio,
@@ -154,6 +159,7 @@ fun NightPrayersScreen(
 
 @Composable
 private fun ComplineView(
+    header: LazyListScope.() -> Unit,
     compline: ComplineOffice,
     ttsManager: LiturgicalTtsManager,
     isNarrating: Boolean,
@@ -190,8 +196,9 @@ private fun ComplineView(
     }
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
         item {
-            AppScreenTitle(
+            AppSectionHeader(
                 // The bundled title reads "Completas - Oración oficial de la
                 // noche…"; what follows the dash is the gloss the subtitle
                 // already carries, and a display line is no place for it.
@@ -521,6 +528,7 @@ private fun OfficePart(
 
 @Composable
 private fun IgnatianExamenView(
+    header: LazyListScope.() -> Unit,
     steps: List<IgnatianExamenStep>,
     ttsManager: LiturgicalTtsManager,
     isNarrating: Boolean,
@@ -536,17 +544,18 @@ private fun IgnatianExamenView(
     val percentDone = if (steps.isEmpty()) 0 else completedSteps.size * 100 / steps.size
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
         item {
-            AppScreenTitle(
+            AppSectionHeader(
                 title = currentLanguage.pick(
-                    "Examen de Conciencia Nocturno",
-                    "Nightly Examination of Conscience",
-                    "Exame de Consciência Noturno"
+                    "Examen de conciencia",
+                    "Examination of conscience",
+                    "Exame de consciência"
                 ),
                 subtitle = currentLanguage.pick(
-                    "Método de San Ignacio: 5 pasos para revisar el día con sinceridad ante Dios antes de dormir y recibir la paz de Cristo.",
-                    "The method of St. Ignatius: five steps to review the day honestly before God before sleeping, and to receive the peace of Christ.",
-                    "Método de Santo Inácio: 5 passos para revisar o dia com sinceridade diante de Deus antes de dormir e receber a paz de Cristo."
+                    "Cinco pasos de San Ignacio para revisar el día ante Dios.",
+                    "St. Ignatius's five steps to review the day before God.",
+                    "Cinco passos de Santo Inácio para rever o dia diante de Deus."
                 )
             )
         }
@@ -769,11 +778,7 @@ private fun LiturgicalText(
 
     val body = if (quoted) styles.quote else styles.scripture
     val ink = if (muted) design.palette.textSecondary else design.palette.textPrimary
-    val rubric = SpanStyle(
-        color = design.palette.accent,
-        fontSize = body.fontSize * 0.72f,
-        fontWeight = FontWeight.SemiBold
-    )
+    val rubric = rubricSigil()
 
     Column(
         modifier
@@ -788,13 +793,16 @@ private fun LiturgicalText(
             }
             val siglum = Sigla.firstOrNull { line.startsWith(it) }
             Text(
-                text = buildAnnotatedString {
-                    if (siglum == null) {
-                        append(line)
-                    } else {
-                        withStyle(rubric) { append(siglum) }
-                        append("  ")
-                        append(line.removePrefix(siglum).trim())
+                // ℣ and ℟ in rubric, set from the typed sigla at render time.
+                text = if (siglum == null) {
+                    withLiturgicalSigla(line, rubric)
+                } else {
+                    buildAnnotatedString {
+                        withStyle(rubric) {
+                            append(if (siglum == VersicleSigil) VersicleSign else ResponseSign)
+                        }
+                        append("\u2002")
+                        append(withLiturgicalSigla(line.removePrefix(siglum).trim(), rubric))
                     }
                 },
                 style = body,
@@ -865,6 +873,31 @@ private val StichBreak = Regex("(?<=[.!?»”’'])\\s+")
 
 private fun stichs(text: String): List<String> =
     text.split(StichBreak).map { it.trim() }.filter { it.isNotEmpty() }
+
+/** The two offices of the night, as a pair of chips on the gutter. */
+@Composable
+private fun OfficeChoice(
+    labels: List<String>,
+    selectedIndex: Int,
+    onSelect: (Int) -> Unit
+) {
+    val design = LocalAppDesign.current
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .padding(top = design.spacing.cardGap / 2),
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+    ) {
+        labels.forEachIndexed { index, label ->
+            AppChip(
+                label = label,
+                selected = index == selectedIndex,
+                onClick = { onSelect(index) }
+            )
+        }
+    }
+}
 
 /**
  * Holds long-form text to the identity's reading measure and centres it, so a

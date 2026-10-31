@@ -70,7 +70,6 @@ fun MoreScreen(
                         )
                     }
                 }
-                Spacer(Modifier.height(design.spacing.sectionGap))
             }
         }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }

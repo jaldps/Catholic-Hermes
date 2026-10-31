@@ -16,7 +16,10 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
@@ -114,6 +117,17 @@ private const val FontScaleStep = 0.15f
 /** Verse search only runs once the query is long enough to mean something. */
 private const val MinSearchLength = 3
 
+/**
+ * The caller insets the segmented control by the gutter. Vatican is the
+ * exception: its strip is a ruled band whose hairline runs the full width of
+ * the leaf, and inset it stops meeting the edges.
+ */
+@Composable
+private fun segmentedTabsInset(): androidx.compose.ui.unit.Dp {
+    val design = LocalAppDesign.current
+    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+}
+
 private fun TextUnit.scaledBy(factor: Float): TextUnit =
     if (isSpecified) this * factor else this
 
@@ -156,31 +170,49 @@ fun BibleScreen(
 
     val bottomSheetState = rememberModalBottomSheetState()
 
+    // One title for the whole screen, then the control that chooses the view:
+    // title → segmented control, never the other way round. It is the first
+    // rows of whichever list is showing, so it scrolls away with the content.
+    val tabsInset = segmentedTabsInset()
+    val header: LazyListScope.() -> Unit = {
+        item(key = "bible_screen_title") {
+            AppScreenTitle(
+                title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"),
+                subtitle = currentLanguage.pick(
+                    "El canon católico íntegro: 73 libros",
+                    "The whole Catholic canon: 73 books",
+                    "O cânon católico íntegro: 73 livros"
+                )
+            )
+        }
+        item(key = "bible_screen_tabs") {
+            AppSegmentedTabs(
+                options = listOf(
+                    currentLanguage.pick("Biblia", "Bible", "Bíblia"),
+                    currentLanguage.pick("Misal", "Missal", "Missal"),
+                    currentLanguage.pick("Versiones", "Versions", "Versões"),
+                    currentLanguage.pick("Estudio", "Study", "Estudo")
+                ),
+                selectedIndex = selectedMainTab,
+                onSelect = { selectedMainTab = it },
+                modifier = Modifier
+                    .padding(horizontal = tabsInset)
+                    .padding(bottom = design.spacing.cardGap / 2)
+            )
+        }
+    }
+
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(design.palette.canvas)
             .testTag("bible_screen")
     ) {
-        AppSegmentedTabs(
-            options = listOf(
-                currentLanguage.pick("Biblia (73)", "Bible (73)", "Bíblia (73)"),
-                currentLanguage.pick("Misal", "Missal", "Missal"),
-                currentLanguage.pick("Comparador", "Versions", "Versões"),
-                currentLanguage.pick("Estudio", "Study", "Estudo")
-            ),
-            selectedIndex = selectedMainTab,
-            onSelect = { selectedMainTab = it },
-            modifier = Modifier
-                .padding(horizontal = design.spacing.gutter)
-                .padding(top = design.spacing.headerTopGap / 2)
-        )
-
         when (selectedMainTab) {
             0 -> {
                 val book = selectedBook
                 if (book == null) {
                     BookDirectory(
+                        header = header,
                         repository = repository,
                         currentLanguage = currentLanguage,
                         searchQuery = searchQuery,
@@ -236,11 +268,13 @@ fun BibleScreen(
             }
 
             1 -> DailyMissalView(
+                header = header,
                 reading = repository.dailyMassReading,
                 currentLanguage = currentLanguage
             )
 
             2 -> VersionsView(
+                header = header,
                 versions = repository.bibleVersions,
                 downloadManager = repository.bibleDownloadManager,
                 currentLanguage = currentLanguage
@@ -248,25 +282,31 @@ fun BibleScreen(
 
             3 -> if (dao != null && ttsManager != null) {
                 ScriptureStudyScreen(
+                    header = header,
                     repository = repository,
                     dao = dao,
                     ttsManager = ttsManager,
                     currentLanguage = currentLanguage
                 )
             } else {
-                AppEmptyState(
-                    title = currentLanguage.pick(
-                        "Estudio Bíblico",
-                        "Scripture Study",
-                        "Estudo Bíblico"
-                    ),
-                    body = currentLanguage.pick(
-                        "Los itinerarios de estudio necesitan el almacenamiento local del dispositivo.",
-                        "The study tracks need the device's local storage.",
-                        "Os itinerários de estudo precisam do armazenamento local do dispositivo."
-                    ),
-                    icon = Icons.AutoMirrored.Filled.MenuBook
-                )
+                LazyColumn(Modifier.fillMaxSize()) {
+                    header()
+                    item {
+                        AppEmptyState(
+                            title = currentLanguage.pick(
+                                "Estudio Bíblico",
+                                "Scripture Study",
+                                "Estudo Bíblico"
+                            ),
+                            body = currentLanguage.pick(
+                                "Los itinerarios de estudio necesitan el almacenamiento local del dispositivo.",
+                                "The study tracks need the device's local storage.",
+                                "Os itinerários de estudo precisam do armazenamento local do dispositivo."
+                            ),
+                            icon = Icons.AutoMirrored.Filled.MenuBook
+                        )
+                    }
+                }
             }
         }
     }
@@ -286,8 +326,10 @@ fun BibleScreen(
 
 // ------------------------------------------------------------------ directory
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun BookDirectory(
+    header: LazyListScope.() -> Unit,
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
     searchQuery: String,
@@ -337,20 +379,7 @@ private fun BookDirectory(
     }
 
     LazyColumn(Modifier.fillMaxSize()) {
-        item {
-            AppScreenTitle(
-                title = currentLanguage.pick(
-                    "Sagrada Escritura",
-                    "Sacred Scripture",
-                    "Sagrada Escritura"
-                ),
-                subtitle = currentLanguage.pick(
-                    "El canon católico íntegro: 73 libros, del Génesis al Apocalipsis.",
-                    "The whole Catholic canon: 73 books, from Genesis to Revelation.",
-                    "O cânon católico íntegro: 73 livros, do Génesis ao Apocalipse."
-                )
-            )
-        }
+        header()
 
         item {
             AppSearchField(
@@ -374,13 +403,15 @@ private fun BookDirectory(
                 currentLanguage.pick("N.T. (27)", "N.T. (27)", "N.T. (27)"),
                 currentLanguage.pick("Deuterocanónicos", "Deuterocanon", "Deuterocanônicos")
             )
-            Row(
+            // Four filters: they wrap on the measure rather than scroll, so the
+            // last one is never sliced by the screen edge.
+            FlowRow(
                 Modifier
                     .fillMaxWidth()
-                    .horizontalScroll(rememberScrollState())
                     .padding(horizontal = design.spacing.gutter)
                     .padding(top = design.spacing.cardGap),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 filters.forEachIndexed { index, label ->
                     AppChip(
@@ -893,6 +924,7 @@ private fun CommentarySheet(
 
 @Composable
 private fun DailyMissalView(
+    header: LazyListScope.() -> Unit,
     reading: DailyMassReading,
     currentLanguage: AppLanguage
 ) {
@@ -948,9 +980,10 @@ private fun DailyMissalView(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        header()
         item {
-            AppScreenTitle(
-                title = currentLanguage.pick("Misal Diario", "Daily Missal", "Missal Diário"),
+            AppSectionHeader(
+                title = currentLanguage.pick("Misa del día", "Today's Mass", "Missa do dia"),
                 subtitle = reading.dateDisplay
             )
         }
@@ -1004,7 +1037,8 @@ private fun DailyMissalView(
                 )
                 if (lesson.text.isNotBlank()) {
                     Text(
-                        text = lesson.text,
+                        // The psalm's refrain is printed with ℟ in rubric.
+                        text = withLiturgicalSigla(lesson.text, rubricSigil()),
                         style = styles.scripture,
                         color = palette.textPrimary,
                         modifier = readingClamp
@@ -1080,6 +1114,7 @@ private fun DailyMissalView(
 
 @Composable
 private fun VersionsView(
+    header: LazyListScope.() -> Unit,
     versions: List<BibleVersionInfo>,
     downloadManager: BibleDownloadManager?,
     currentLanguage: AppLanguage
@@ -1090,17 +1125,18 @@ private fun VersionsView(
     val scheme = MaterialTheme.colorScheme
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
         item {
-            AppScreenTitle(
+            AppSectionHeader(
                 title = currentLanguage.pick(
-                    "Comparador de Versiones y Cánones Bíblicos",
-                    "Bible Versions & Canon Comparator",
-                    "Comparador de Versões e Cânones Bíblicos"
+                    "Versiones y cánones",
+                    "Versions & canons",
+                    "Versões e cânones"
                 ),
                 subtitle = currentLanguage.pick(
-                    "Conoce las diferencias esenciales entre las biblias con el canon apostólico católico íntegro (73 libros) y las versiones protestantes (66 libros).",
-                    "Learn the doctrinal and textual differences between the authentic 73-book Catholic Canon and 66-book Protestant translations.",
-                    "Conheça a diferença entre as Bíblias católicas integrais (73 livros) e as versões protestantes (66 livros)."
+                    "El canon católico (73 libros) frente a las ediciones protestantes (66).",
+                    "The Catholic canon (73 books) beside the Protestant editions (66).",
+                    "O cânon católico (73 livros) diante das edições protestantes (66)."
                 )
             )
         }

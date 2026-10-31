@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
@@ -71,7 +72,9 @@ import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.theme.AppDesign
 import com.example.ui.theme.AppFonts
+import com.example.ui.theme.AppTextStyles
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -104,35 +107,51 @@ fun CatechismScreen(
     var useSerifFont by remember { mutableStateOf(true) }
 
     val modeLabels = listOf(
-        currentLanguage.pick("Compendio (598)", "Compendium (598)", "Compêndio (598)"),
-        currentLanguage.pick("Catecismo (1-2865)", "Catechism (1-2865)", "Catecismo (1-2865)"),
-        currentLanguage.pick("Fuentes Vaticano", "Vatican Links", "Fontes Vaticano")
+        currentLanguage.pick("Compendio", "Compendium", "Compêndio"),
+        currentLanguage.pick("Catecismo", "Catechism", "Catecismo"),
+        currentLanguage.pick("Fuentes", "Sources", "Fontes")
     )
     val tabsInset = segmentedTabsInset()
+
+    // One title for the screen, then the control that picks the view: the
+    // first rows of whichever list is showing, so they scroll away with it.
+    val header: LazyListScope.() -> Unit = {
+        item(key = "catechism_screen_title") {
+            AppScreenTitle(
+                title = currentLanguage.pick("Catecismo", "Catechism", "Catecismo"),
+                subtitle = currentLanguage.pick(
+                    "El Catecismo de la Iglesia Católica y su Compendio",
+                    "The Catechism of the Catholic Church and its Compendium",
+                    "O Catecismo da Igreja Católica e o seu Compêndio"
+                )
+            )
+        }
+        item(key = "catechism_screen_tabs") {
+            AppSegmentedTabs(
+                options = modeLabels,
+                selectedIndex = mainMode,
+                onSelect = { mainMode = it },
+                modifier = Modifier
+                    .padding(horizontal = tabsInset)
+                    .padding(bottom = design.spacing.cardGap / 2)
+            )
+        }
+    }
 
     Column(
         modifier = modifier
             .fillMaxSize()
             .testTag("catechism_screen")
     ) {
-        AppSegmentedTabs(
-            options = modeLabels,
-            selectedIndex = mainMode,
-            onSelect = { mainMode = it },
-            modifier = Modifier.padding(
-                start = tabsInset,
-                end = tabsInset,
-                top = design.spacing.cardGap / 2
-            )
-        )
-
         when (mainMode) {
             0 -> CompendiumView(
+                header = header,
                 repository = repository,
                 currentLanguage = currentLanguage
             )
 
             1 -> UniversalCatechismView(
+                header = header,
                 repository = repository,
                 currentLanguage = currentLanguage,
                 searchQuery = searchQuery,
@@ -150,6 +169,7 @@ fun CatechismScreen(
             )
 
             else -> VaticanOfficialLinksView(
+                header = header,
                 repository = repository,
                 currentLanguage = currentLanguage
             )
@@ -161,6 +181,7 @@ fun CatechismScreen(
 
 @Composable
 private fun UniversalCatechismView(
+    header: LazyListScope.() -> Unit,
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
     searchQuery: String,
@@ -180,66 +201,87 @@ private fun UniversalCatechismView(
     val currentPart = parts.getOrNull(selectedPartIndex) ?: parts.first()
     val chapter = selectedChapter
 
-    Column(Modifier.fillMaxSize()) {
-        SearchRow(
-            value = searchQuery,
-            onValueChange = onSearchQueryChange,
-            placeholder = currentLanguage.pick(
-                "Buscar por n° de art. (ej. 1324) o tema...",
-                "Search by CCC # (e.g. 1324) or topic...",
-                "Buscar por nº art. (ex. 1324) ou tema..."
-            ),
-            clearLabel = currentLanguage.pick("Limpiar", "Clear", "Limpar"),
-            fieldModifier = Modifier.testTag("ccc_search_input")
-        )
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
 
-        when {
-            searchQuery.isNotBlank() -> CatechismSearchResults(
+    // The index and the search results are one list, so the field keeps its
+    // focus while the first letter typed turns the one into the other.
+    @Composable
+    fun IndexAndSearch() {
+        val results = remember(searchQuery, currentLanguage) {
+            if (searchQuery.isBlank()) emptyList() else searchCatechism(repository, parts, searchQuery, currentLanguage)
+        }
+        LazyColumn(Modifier.fillMaxSize()) {
+            header()
+            item(key = "ccc_search_row") {
+                SearchRow(
+                    value = searchQuery,
+                    onValueChange = onSearchQueryChange,
+                    placeholder = currentLanguage.pick(
+                        "Buscar por n° de art. (ej. 1324) o tema...",
+                        "Search by CCC # (e.g. 1324) or topic...",
+                        "Buscar por nº art. (ex. 1324) ou tema..."
+                    ),
+                    clearLabel = currentLanguage.pick("Limpiar", "Clear", "Limpar"),
+                    fieldModifier = Modifier.testTag("ccc_search_input")
+                )
+            }
+            if (searchQuery.isNotBlank()) {
+                catechismSearchItems(
+                    results = results,
+                    currentLanguage = currentLanguage,
+                    fontSizeMultiplier = fontSizeMultiplier,
+                    useSerifFont = useSerifFont,
+                    design = design
+                )
+            } else {
+                catechismIndexItems(
+                    parts = parts,
+                    currentPart = currentPart,
+                    selectedPartIndex = selectedPartIndex,
+                    currentLanguage = currentLanguage,
+                    onSelectPart = onSelectPart,
+                    onSelectChapter = { onSelectChapter(it) },
+                    outline = repository.catechismOutline,
+                    onSelectOutline = onSelectOutline,
+                    design = design,
+                    styles = styles
+                )
+            }
+        }
+    }
+
+    // A single call site: the list is the same composition whether it shows
+    // the index or the results, which is what keeps the field focused.
+    val showsList = searchQuery.isNotBlank() || (selectedOutline == null && chapter == null)
+    when {
+        showsList -> IndexAndSearch()
+
+        selectedOutline != null -> {
+            BackHandler { onSelectOutline(null) }
+            ParagraphRangeView(
                 repository = repository,
-                parts = parts,
+                section = selectedOutline,
                 currentLanguage = currentLanguage,
-                searchQuery = searchQuery,
                 fontSizeMultiplier = fontSizeMultiplier,
-                useSerifFont = useSerifFont
+                onFontSizeChange = onFontSizeChange,
+                useSerifFont = useSerifFont,
+                onToggleSerif = onToggleSerif,
+                onBack = { onSelectOutline(null) }
             )
+        }
 
-            selectedOutline != null -> {
-                BackHandler { onSelectOutline(null) }
-                ParagraphRangeView(
-                    repository = repository,
-                    section = selectedOutline,
-                    currentLanguage = currentLanguage,
-                    fontSizeMultiplier = fontSizeMultiplier,
-                    onFontSizeChange = onFontSizeChange,
-                    useSerifFont = useSerifFont,
-                    onToggleSerif = onToggleSerif,
-                    onBack = { onSelectOutline(null) }
-                )
-            }
-
-            chapter == null -> CatechismIndex(
-                parts = parts,
-                currentPart = currentPart,
-                selectedPartIndex = selectedPartIndex,
+        chapter != null -> {
+            BackHandler { onSelectChapter(null) }
+            ChapterReadingView(
+                chapter = chapter,
                 currentLanguage = currentLanguage,
-                onSelectPart = onSelectPart,
-                onSelectChapter = { onSelectChapter(it) },
-                outline = repository.catechismOutline,
-                onSelectOutline = onSelectOutline
+                fontSizeMultiplier = fontSizeMultiplier,
+                onFontSizeChange = onFontSizeChange,
+                useSerifFont = useSerifFont,
+                onToggleSerif = onToggleSerif,
+                onBack = { onSelectChapter(null) }
             )
-
-            else -> {
-                BackHandler { onSelectChapter(null) }
-                ChapterReadingView(
-                    chapter = chapter,
-                    currentLanguage = currentLanguage,
-                    fontSizeMultiplier = fontSizeMultiplier,
-                    onFontSizeChange = onFontSizeChange,
-                    useSerifFont = useSerifFont,
-                    onToggleSerif = onToggleSerif,
-                    onBack = { onSelectChapter(null) }
-                )
-            }
         }
     }
 }
@@ -249,8 +291,7 @@ private fun UniversalCatechismView(
  * level of navigation — the part in view is rubricated in the group, and its
  * own sections and chapters follow underneath.
  */
-@Composable
-private fun CatechismIndex(
+private fun LazyListScope.catechismIndexItems(
     parts: List<CatechismPart>,
     currentPart: CatechismPart,
     selectedPartIndex: Int,
@@ -258,12 +299,11 @@ private fun CatechismIndex(
     onSelectPart: (Int) -> Unit,
     onSelectChapter: (CatechismChapter) -> Unit,
     outline: List<CatechismOutlineSection>,
-    onSelectOutline: (CatechismOutlineSection?) -> Unit
+    onSelectOutline: (CatechismOutlineSection?) -> Unit,
+    design: AppDesign,
+    styles: AppTextStyles
 ) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-
-    LazyColumn(Modifier.fillMaxSize()) {
+    run {
         item {
             AppSectionHeader(
                 title = currentLanguage.pick(
@@ -591,34 +631,35 @@ private fun ChapterReadingView(
  * Search by CCC number — which reaches any of the 2,865 articles — or by topic
  * across the titles and bodies of the indexed ones.
  */
-@Composable
-private fun CatechismSearchResults(
+private fun searchCatechism(
     repository: CatholicDataRepository,
     parts: List<CatechismPart>,
-    currentLanguage: AppLanguage,
     searchQuery: String,
-    fontSizeMultiplier: Float,
-    useSerifFont: Boolean
-) {
-    val design = LocalAppDesign.current
-
-    val results = remember(searchQuery, currentLanguage) {
-        val numQuery = searchQuery.trim().toIntOrNull()
-        if (numQuery != null) {
-            listOfNotNull(repository.findCatechismArticle(numQuery))
-        } else {
-            parts.flatMap { it.sections }
-                .flatMap { it.chapters }
-                .flatMap { it.articles }
-                .filter { art ->
-                    art.title.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
-                        art.content.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
-                        art.cccNumber.toString() == searchQuery.trim()
-                }
-        }
+    currentLanguage: AppLanguage
+): List<CatechismNumberedArticle> {
+    val numQuery = searchQuery.trim().toIntOrNull()
+    return if (numQuery != null) {
+        listOfNotNull(repository.findCatechismArticle(numQuery))
+    } else {
+        parts.flatMap { it.sections }
+            .flatMap { it.chapters }
+            .flatMap { it.articles }
+            .filter { art ->
+                art.title.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
+                    art.content.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
+                    art.cccNumber.toString() == searchQuery.trim()
+            }
     }
+}
 
-    LazyColumn(Modifier.fillMaxSize()) {
+private fun LazyListScope.catechismSearchItems(
+    results: List<CatechismNumberedArticle>,
+    currentLanguage: AppLanguage,
+    fontSizeMultiplier: Float,
+    useSerifFont: Boolean,
+    design: AppDesign
+) {
+    run {
         item {
             AppSectionHeader(
                 title = currentLanguage.pick("Resultados", "Results", "Resultados"),
@@ -702,6 +743,7 @@ private fun CatechismArticleCard(
 
 @Composable
 private fun CompendiumView(
+    header: LazyListScope.() -> Unit,
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage
 ) {
@@ -752,39 +794,45 @@ private fun CompendiumView(
         )
     }
 
-    Column(Modifier.fillMaxSize()) {
-        SearchRow(
-            value = compendiumSearch,
-            onValueChange = { compendiumSearch = it },
-            placeholder = currentLanguage.pick(
-                "Buscar en las 598 preguntas (ej. 1, eucaristía)...",
-                "Search across 598 questions (e.g. 1, eucharist)...",
-                "Buscar nas 598 perguntas (ex. 1, eucaristia)..."
-            ),
-            clearLabel = currentLanguage.pick("Limpiar", "Clear", "Limpar"),
-            fieldModifier = Modifier.testTag("compendium_search_input")
-        )
+    run {
+        LazyColumn(Modifier.fillMaxSize()) {
+            header()
 
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .horizontalScroll(rememberScrollState())
-                .padding(horizontal = design.spacing.gutter)
-                .padding(bottom = design.spacing.cardGap / 2),
-            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-        ) {
-            filterNames.forEachIndexed { index, name ->
-                AppChip(
-                    label = name,
-                    selected = selectedFilterIndex == index,
-                    onClick = { selectedFilterIndex = index }
+            item(key = "compendium_search_row") {
+                SearchRow(
+                    value = compendiumSearch,
+                    onValueChange = { compendiumSearch = it },
+                    placeholder = currentLanguage.pick(
+                        "Buscar en las 598 preguntas (ej. 1, eucaristía)...",
+                        "Search across 598 questions (e.g. 1, eucharist)...",
+                        "Buscar nas 598 perguntas (ex. 1, eucaristia)..."
+                    ),
+                    clearLabel = currentLanguage.pick("Limpiar", "Clear", "Limpar"),
+                    fieldModifier = Modifier.testTag("compendium_search_input")
                 )
             }
-        }
 
-        AppDivider()
+            // The run scrolls, and its own padding carries the gutter at both
+            // ends, so a scrolled row comes to rest on the margin.
+            item(key = "compendium_filters") {
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .horizontalScroll(rememberScrollState())
+                        .padding(horizontal = design.spacing.gutter)
+                        .padding(bottom = design.spacing.cardGap / 2),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+                ) {
+                    filterNames.forEachIndexed { index, name ->
+                        AppChip(
+                            label = name,
+                            selected = selectedFilterIndex == index,
+                            onClick = { selectedFilterIndex = index }
+                        )
+                    }
+                }
+            }
 
-        LazyColumn(Modifier.fillMaxSize()) {
             if (selectedFilterIndex == filterNames.lastIndex) {
                 item {
                     AppSectionHeader(
@@ -925,6 +973,7 @@ private fun DoctrineFormulaCard(
 
 @Composable
 private fun VaticanOfficialLinksView(
+    header: LazyListScope.() -> Unit,
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage
 ) {
@@ -934,58 +983,46 @@ private fun VaticanOfficialLinksView(
     var webViewUrl by remember { mutableStateOf<String?>(null) }
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
+
         item {
-            AppScreenTitle(
+            AppSectionHeader(
                 title = currentLanguage.pick(
-                    "Fuentes Oficiales",
-                    "Official Sources",
-                    "Fontes Oficiais"
+                    "Fuentes oficiales",
+                    "Official sources",
+                    "Fontes oficiais"
                 ),
                 subtitle = currentLanguage.pick(
-                    "Fuentes Documentales Oficiales de la Santa Sede",
-                    "Official documentary sources of the Holy See",
-                    "Fontes Documentais Oficiais da Santa Sé"
+                    "Los textos íntegros de la Santa Sede, en tres lenguas.",
+                    "The Holy See's complete texts, in three languages.",
+                    "Os textos integrais da Santa Sé, em três línguas."
                 )
             )
         }
 
-        item {
-            ReadingColumn {
-                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                    Text(
-                        text = currentLanguage.pick(
-                            "Accede a los portales oficiales de la Santa Sede (vatican.va) con los textos completos del Catecismo de la Iglesia Católica y del Compendio en Español, Inglés y Portugués.",
-                            "Reach the Holy See's official portals (vatican.va) for the complete texts of the Catechism of the Catholic Church and of the Compendium in Spanish, English and Portuguese.",
-                            "Acesse os portais oficiais da Santa Sé (vatican.va) com os textos completos do Catecismo da Igreja Católica e do Compêndio em Espanhol, Inglês e Português."
-                        ),
-                        style = styles.scripture,
-                        color = design.palette.textSecondary
-                    )
-                }
-            }
-        }
-
         items(repository.officialVaticanLinks) { link ->
-            AppSectionHeader(title = "Vatican.va (${link.language})")
+            // The host is the only part of the address worth reading; the
+            // action already says where it goes.
+            AppSectionHeader(title = link.language, subtitle = hostOf(link.catechismUrl))
             ReadingColumn {
                 AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                     DocumentLink(
                         title = currentLanguage.pick(
-                            "Catecismo de la Iglesia Católica (Texto Completo 1-2865)",
-                            "Catechism of the Catholic Church (complete text 1-2865)",
-                            "Catecismo da Igreja Católica (Texto Completo 1-2865)"
+                            "Catecismo de la Iglesia Católica",
+                            "Catechism of the Catholic Church",
+                            "Catecismo da Igreja Católica"
                         ),
-                        url = link.catechismUrl,
-                        openLabel = currentLanguage.pick(
-                            "Abrir Catecismo Oficial",
-                            "Open official Catechism",
-                            "Abrir Catecismo Oficial"
+                        detail = currentLanguage.pick(
+                            "Texto completo · §§ 1–2865",
+                            "Complete text · §§ 1–2865",
+                            "Texto completo · §§ 1–2865"
                         ),
+                        openLabel = currentLanguage.pick("Abrir", "Open", "Abrir"),
                         onOpen = { context.openExternally(link.catechismUrl) },
                         inAppLabel = currentLanguage.pick(
-                            "Ver en la app",
+                            "Leer en la app",
                             "Read in the app",
-                            "Ver no app"
+                            "Ler no app"
                         ),
                         onOpenInApp = { webViewUrl = link.catechismUrl }
                     )
@@ -996,16 +1033,16 @@ private fun VaticanOfficialLinksView(
 
                     DocumentLink(
                         title = currentLanguage.pick(
-                            "Compendio del Catecismo (598 Preguntas y Respuestas)",
-                            "Compendium of the Catechism (598 questions and answers)",
-                            "Compêndio do Catecismo (598 Perguntas e Respostas)"
+                            "Compendio del Catecismo",
+                            "Compendium of the Catechism",
+                            "Compêndio do Catecismo"
                         ),
-                        url = link.compendiumUrl,
-                        openLabel = currentLanguage.pick(
-                            "Abrir Compendio Oficial",
-                            "Open official Compendium",
-                            "Abrir Compêndio Oficial"
+                        detail = currentLanguage.pick(
+                            "598 preguntas y respuestas",
+                            "598 questions and answers",
+                            "598 perguntas e respostas"
                         ),
+                        openLabel = currentLanguage.pick("Abrir", "Open", "Abrir"),
                         onOpen = { context.openExternally(link.compendiumUrl) },
                         inAppLabel = null,
                         onOpenInApp = null
@@ -1022,10 +1059,15 @@ private fun VaticanOfficialLinksView(
     }
 }
 
+/**
+ * One document: its name, one line of what it holds, and a single row of
+ * actions — the primary one as a button, reading in the app as a text action
+ * beside it — rather than two full-width pills stacked per entry.
+ */
 @Composable
 private fun DocumentLink(
     title: String,
-    url: String,
+    detail: String,
     openLabel: String,
     onOpen: () -> Unit,
     inAppLabel: String?,
@@ -1040,24 +1082,43 @@ private fun DocumentLink(
         color = design.palette.textPrimary
     )
     Spacer(Modifier.height(design.spacing.cardGap / 3))
-    Text(text = url, style = styles.rowSubtitle, color = design.palette.textTertiary)
+    Text(text = detail, style = styles.rowSubtitle, color = design.palette.textTertiary)
     Spacer(Modifier.height(design.spacing.cardGap))
-    AppSecondaryButton(
-        label = openLabel,
-        onClick = onOpen,
-        leadingIcon = Icons.Default.OpenInNew,
-        modifier = Modifier.fillMaxWidth()
-    )
-    if (inAppLabel != null && onOpenInApp != null) {
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
+    Row(
+        Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+    ) {
         AppSecondaryButton(
-            label = inAppLabel,
-            onClick = onOpenInApp,
-            leadingIcon = Icons.Default.MenuBook,
-            modifier = Modifier.fillMaxWidth()
+            label = openLabel,
+            onClick = onOpen,
+            leadingIcon = Icons.Default.OpenInNew
         )
+        if (inAppLabel != null && onOpenInApp != null) {
+            Text(
+                text = caps(inAppLabel),
+                style = styles.buttonLabel,
+                color = design.palette.accent,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .clickable(onClick = onOpenInApp)
+                    .padding(horizontal = 8.dp, vertical = 12.dp)
+            )
+        }
     }
 }
+
+/** "https://www.vatican.va/archive/…" → "vatican.va". */
+private fun hostOf(url: String): String? =
+    runCatching { Uri.parse(url).host }.getOrNull()
+        ?.removePrefix("www.")
+        ?.takeIf { it.isNotBlank() }
+
+/** Vatican sets its labels as inscriptional capitals; the other two do not. */
+@Composable
+private fun caps(text: String): String =
+    if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
 
 // ------------------------------------------------------------------- pieces
 

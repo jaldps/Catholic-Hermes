@@ -7,6 +7,8 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -18,6 +20,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.BasicTextField
@@ -236,28 +239,45 @@ fun SpiritualLifeScreen(
     }
     val isPlayingAudio by ttsManager.isPlaying.collectAsState()
 
+    // One title for the screen, then the control that picks the view, both
+    // the first rows of whichever list is showing so they scroll away.
+    val tabsInset = tabStripInset()
+    val header: LazyListScope.() -> Unit = {
+        item(key = "spiritual_life_title") {
+            AppScreenTitle(
+                title = currentLanguage.pick("Vida espiritual", "Spiritual life", "Vida espiritual"),
+                subtitle = currentLanguage.pick(
+                    "Escribir, aprender, meditar y cantar",
+                    "Write, learn, meditate and sing",
+                    "Escrever, aprender, meditar e cantar"
+                )
+            )
+        }
+        item(key = "spiritual_life_tabs") {
+            AppSegmentedTabs(
+                options = listOf(
+                    currentLanguage.pick("Diario", "Journal", "Diário"),
+                    currentLanguage.pick("Trivia", "Trivia", "Quiz"),
+                    currentLanguage.pick("Vía Crucis", "Stations", "Via-Sacra"),
+                    currentLanguage.pick("Canto", "Chant", "Canto")
+                ),
+                selectedIndex = selectedTopTab,
+                onSelect = { selectedTopTab = it },
+                modifier = Modifier
+                    .padding(horizontal = tabsInset)
+                    .padding(bottom = design.spacing.cardGap / 2)
+            )
+        }
+    }
+
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(design.palette.canvas)
             .testTag("spiritual_life_screen")
     ) {
-        AppSegmentedTabs(
-            options = listOf(
-                currentLanguage.pick("Diario Espiritual", "Spiritual Journal", "Diário Espiritual"),
-                currentLanguage.pick("Trivia Católica", "Catholic Trivia", "Quiz Católico"),
-                currentLanguage.pick("Santo Vía Crucis", "Stations of the Cross", "Santa Via-Sacra"),
-                currentLanguage.pick("Canto Gregoriano", "Gregorian Chant", "Canto Gregoriano")
-            ),
-            selectedIndex = selectedTopTab,
-            onSelect = { selectedTopTab = it },
-            modifier = Modifier
-                .padding(horizontal = tabStripInset())
-                .padding(top = design.spacing.headerTopGap / 2)
-        )
-
         when (selectedTopTab) {
             0 -> JournalTab(
+                header = header,
                 entries = journalEntries,
                 currentLanguage = currentLanguage,
                 onToggleAnswered = { entry ->
@@ -272,6 +292,7 @@ fun SpiritualLifeScreen(
             )
 
             1 -> TriviaTab(
+                header = header,
                 questions = triviaList,
                 index = triviaIndex,
                 score = triviaScore,
@@ -298,6 +319,7 @@ fun SpiritualLifeScreen(
             2 -> {
                 val stations = repository.viaCrucisStations
                 ViaCrucisTab(
+                    header = header,
                     stations = stations,
                     currentIndex = currentStationIndex,
                     isPlayingAudio = isPlayingAudio,
@@ -316,6 +338,7 @@ fun SpiritualLifeScreen(
             }
 
             3 -> ChantTab(
+                header = header,
                 chants = repository.gregorianChants,
                 selectedChantId = selectedChant?.id,
                 isPlayingAudio = isPlayingAudio,
@@ -368,6 +391,7 @@ fun SpiritualLifeScreen(
 
 @Composable
 private fun JournalTab(
+    header: LazyListScope.() -> Unit,
     entries: List<JournalEntryEntity>,
     currentLanguage: AppLanguage,
     onToggleAnswered: (JournalEntryEntity) -> Unit,
@@ -376,24 +400,28 @@ private fun JournalTab(
 ) {
     val design = LocalAppDesign.current
 
-    Column(Modifier.fillMaxSize()) {
-        LazyColumn(
-            Modifier
-                .fillMaxWidth()
-                .weight(1f)
-        ) {
+    val centred = design.decor.titleAlignment == Alignment.CenterHorizontally
+
+    Box(Modifier.fillMaxSize()) {
+        LazyColumn(Modifier.fillMaxSize()) {
+            header()
+
             item {
-                AppScreenTitle(
-                    title = currentLanguage.pick(
-                        "Diario Católico y Peticiones",
-                        "Catholic Spiritual Journal",
-                        "Diário Espiritual Católico"
-                    ),
-                    subtitle = currentLanguage.pick(
-                        "Anota tus intenciones al Señor, tus agradecimientos, las gracias concedidas y el examen de conciencia.",
-                        "Record your prayers, graces received, answered petitions, and daily examination of conscience.",
-                        "Registre suas intenções de oração, graças alcançadas e exame diário de consciência."
-                    )
+                AppSectionHeader(
+                    title = currentLanguage.pick("Diario", "Journal", "Diário"),
+                    subtitle = if (entries.isEmpty()) {
+                        currentLanguage.pick(
+                            "Intenciones, agradecimientos, gracias y examen de conciencia.",
+                            "Intentions, thanksgivings, graces and the examen.",
+                            "Intenções, agradecimentos, graças e exame de consciência."
+                        )
+                    } else {
+                        currentLanguage.pick(
+                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas",
+                            "${entries.size} written · ${entries.count { it.isAnswered }} granted",
+                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas"
+                        )
+                    }
                 )
             }
 
@@ -401,30 +429,19 @@ private fun JournalTab(
                 item {
                     AppEmptyState(
                         title = currentLanguage.pick(
-                            "Tu diario espiritual está vacío",
-                            "Your spiritual journal is empty",
-                            "Seu diário espiritual está vazio"
+                            "Tu diario está vacío",
+                            "Your journal is empty",
+                            "Seu diário está vazio"
                         ),
                         body = currentLanguage.pick(
-                            "Toca el botón de abajo para registrar tu primera intención o agradecimiento.",
-                            "Use the button below to write your first prayer intention or thanksgiving.",
-                            "Use o botão abaixo para anotar sua primeira intenção de oração."
+                            "Escribe tu primera intención o acción de gracias con «Nueva entrada».",
+                            "Write your first intention or thanksgiving with “New entry”.",
+                            "Escreva sua primeira intenção ou ação de graças com “Nova entrada”."
                         ),
                         icon = Icons.Default.Favorite
                     )
                 }
             } else {
-                item {
-                    AppSectionHeader(
-                        title = currentLanguage.pick("Tus entradas", "Your entries", "Suas entradas"),
-                        subtitle = currentLanguage.pick(
-                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas",
-                            "${entries.size} written · ${entries.count { it.isAnswered }} granted",
-                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas"
-                        )
-                    )
-                }
-
                 itemsIndexed(entries, key = { _, entry -> entry.id }) { index, entry ->
                     JournalEntry(
                         entry = entry,
@@ -436,28 +453,28 @@ private fun JournalTab(
                 }
             }
 
-            item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+            // Room under the last entry for the floating action to clear it.
+            item {
+                Spacer(
+                    Modifier.height(
+                        design.spacing.contentBottomGap + design.spacing.rowMinHeight + design.spacing.gutter
+                    )
+                )
+            }
         }
 
-        // The add affordance is pinned rather than floating: no identity here
-        // owns a floating action button, and from the foot of the leaf it stays
-        // reachable however long the journal grows.
-        AppDivider()
-        Row(
-            Modifier
-                .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-                .padding(vertical = design.spacing.cardGap)
-        ) {
-            AppPrimaryButton(
-                label = currentLanguage.pick("Nueva entrada", "New entry", "Nova entrada"),
-                onClick = onAdd,
-                leadingIcon = Icons.Default.Add,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .testTag("add_journal_entry_fab")
-            )
-        }
+        // The add action floats over the foot of the page, with no rule above
+        // it: the bottom-end extended action in Material and Apple, centred
+        // under a centred masthead in Vatican.
+        AppPrimaryButton(
+            label = currentLanguage.pick("Nueva entrada", "New entry", "Nova entrada"),
+            onClick = onAdd,
+            leadingIcon = Icons.Default.Add,
+            modifier = Modifier
+                .align(if (centred) Alignment.BottomCenter else Alignment.BottomEnd)
+                .padding(design.spacing.gutter)
+                .testTag("add_journal_entry_fab")
+        )
     }
 }
 
@@ -552,6 +569,7 @@ private fun JournalEntry(
     }
 }
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun AddJournalEntryDialog(
     currentLanguage: AppLanguage,
@@ -603,13 +621,12 @@ private fun AddJournalEntryDialog(
                         color = palette.textSecondary
                     )
                     // Four categories do not fit a dialog's measure in any of
-                    // the three languages, so the run scrolls instead of being
+                    // the three languages, so the run wraps instead of being
                     // clipped at the edge.
-                    Row(
-                        Modifier
-                            .fillMaxWidth()
-                            .horizontalScroll(rememberScrollState()),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    FlowRow(
+                        Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         JournalCategories.forEach { option ->
                             AppChip(
@@ -658,6 +675,7 @@ private fun AddJournalEntryDialog(
 
 @Composable
 private fun TriviaTab(
+    header: LazyListScope.() -> Unit,
     questions: List<TriviaQuestion>,
     index: Int,
     score: Int,
@@ -672,15 +690,20 @@ private fun TriviaTab(
     val styles = LocalAppTextStyles.current
 
     if (questions.isEmpty()) {
-        AppEmptyState(
-            title = currentLanguage.pick("Sin preguntas", "No questions", "Sem perguntas"),
-            body = currentLanguage.pick(
-                "El cuestionario no tiene preguntas disponibles.",
-                "The quiz has no questions available.",
-                "O questionário não tem perguntas disponíveis."
-            ),
-            icon = Icons.Default.Lightbulb
-        )
+        LazyColumn(Modifier.fillMaxSize()) {
+            header()
+            item {
+                AppEmptyState(
+                    title = currentLanguage.pick("Sin preguntas", "No questions", "Sem perguntas"),
+                    body = currentLanguage.pick(
+                        "El cuestionario no tiene preguntas disponibles.",
+                        "The quiz has no questions available.",
+                        "O questionário não tem perguntas disponíveis."
+                    ),
+                    icon = Icons.Default.Lightbulb
+                )
+            }
+        }
         return
     }
 
@@ -688,6 +711,8 @@ private fun TriviaTab(
     val answeredCorrectly = selectedOptionIndex == question.correctIndex
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
+
         item {
             Row(
                 Modifier
@@ -841,6 +866,7 @@ private fun StationProgress(
 
 @Composable
 private fun ViaCrucisTab(
+    header: LazyListScope.() -> Unit,
     stations: List<ViaCrucisStation>,
     currentIndex: Int,
     isPlayingAudio: Boolean,
@@ -855,14 +881,19 @@ private fun ViaCrucisTab(
     val centred = design.decor.titleAlignment == Alignment.CenterHorizontally
 
     if (stations.isEmpty()) {
-        AppEmptyState(
-            title = currentLanguage.pick("Sin estaciones", "No stations", "Sem estações"),
-            body = currentLanguage.pick(
-                "El Vía Crucis no está disponible.",
-                "The Stations of the Cross are not available.",
-                "A Via-Sacra não está disponível."
-            )
-        )
+        LazyColumn(Modifier.fillMaxSize()) {
+            header()
+            item {
+                AppEmptyState(
+                    title = currentLanguage.pick("Sin estaciones", "No stations", "Sem estações"),
+                    body = currentLanguage.pick(
+                        "El Vía Crucis no está disponible.",
+                        "The Stations of the Cross are not available.",
+                        "A Via-Sacra não está disponível."
+                    )
+                )
+            }
+        }
         return
     }
 
@@ -870,6 +901,8 @@ private fun ViaCrucisTab(
     val station = stations[index]
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
+
         item {
             AppSectionHeader(
                 title = currentLanguage.pick(
@@ -988,6 +1021,7 @@ private fun ViaCrucisTab(
 
 @Composable
 private fun ChantTab(
+    header: LazyListScope.() -> Unit,
     chants: List<GregorianChantItem>,
     selectedChantId: String?,
     isPlayingAudio: Boolean,
@@ -1000,17 +1034,19 @@ private fun ChantTab(
     val styles = LocalAppTextStyles.current
 
     LazyColumn(Modifier.fillMaxSize()) {
+        header()
+
         item {
             AppSectionHeader(
                 title = currentLanguage.pick(
-                    "Reproductor de Canto Gregoriano y Música Sacra",
-                    "Gregorian Chant & Sacred Music Player",
-                    "Reprodutor de Canto Gregoriano e Música Sacra"
+                    "Canto gregoriano",
+                    "Gregorian chant",
+                    "Canto gregoriano"
                 ),
                 subtitle = currentLanguage.pick(
-                    "Eleva tu alma a Dios con la rica tradición musical milenaria de la Iglesia Católica.",
-                    "Lift your soul to God with the Church's thousand-year musical tradition.",
-                    "Eleve sua alma a Deus com a rica tradição musical milenar da Igreja Católica."
+                    "La música sacra milenaria de la Iglesia.",
+                    "The Church's thousand-year sacred music.",
+                    "A música sacra milenar da Igreja."
                 )
             )
         }

@@ -11,10 +11,8 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Newspaper
 import androidx.compose.material.icons.filled.Place
-import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.VolunteerActivism
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Church
 import androidx.compose.material.icons.outlined.GridView
@@ -23,10 +21,8 @@ import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.MenuBook
 import androidx.compose.material.icons.outlined.Newspaper
 import androidx.compose.material.icons.outlined.Place
-import androidx.compose.material.icons.outlined.SelfImprovement
 import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material.icons.outlined.Star
-import androidx.compose.material.icons.outlined.VolunteerActivism
 import androidx.compose.material.icons.rounded.AutoStories
 import androidx.compose.material.icons.rounded.Church
 import androidx.compose.material.icons.rounded.GridView
@@ -35,10 +31,8 @@ import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.icons.rounded.MenuBook
 import androidx.compose.material.icons.rounded.Newspaper
 import androidx.compose.material.icons.rounded.Place
-import androidx.compose.material.icons.rounded.SelfImprovement
 import androidx.compose.material.icons.rounded.Shield
 import androidx.compose.material.icons.rounded.Star
-import androidx.compose.material.icons.rounded.VolunteerActivism
 import androidx.compose.material.icons.sharp.AutoStories
 import androidx.compose.material.icons.sharp.Church
 import androidx.compose.material.icons.sharp.GridView
@@ -47,10 +41,8 @@ import androidx.compose.material.icons.sharp.Home
 import androidx.compose.material.icons.sharp.MenuBook
 import androidx.compose.material.icons.sharp.Newspaper
 import androidx.compose.material.icons.sharp.Place
-import androidx.compose.material.icons.sharp.SelfImprovement
 import androidx.compose.material.icons.sharp.Shield
 import androidx.compose.material.icons.sharp.Star
-import androidx.compose.material.icons.sharp.VolunteerActivism
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -94,8 +86,8 @@ object AppIcons {
         AppIconSlot.HABITS -> Icons.Outlined.Shield
         AppIconSlot.BIBLE -> Icons.Outlined.AutoStories
         AppIconSlot.CATECHISM -> Icons.Outlined.MenuBook
-        AppIconSlot.ROSARY -> Icons.Outlined.SelfImprovement
-        AppIconSlot.PRAYERS -> Icons.Outlined.VolunteerActivism
+        AppIconSlot.ROSARY -> DevotionalGlyphs.rosaryOutlined
+        AppIconSlot.PRAYERS -> DevotionalGlyphs.candleOutlined
         AppIconSlot.PILGRIMAGE -> Icons.Outlined.Place
         AppIconSlot.PARISH -> Icons.Outlined.Church
         AppIconSlot.DOCTRINE -> Icons.Outlined.HistoryEdu
@@ -109,8 +101,8 @@ object AppIcons {
         AppIconSlot.HABITS -> Icons.Rounded.Shield
         AppIconSlot.BIBLE -> Icons.Rounded.AutoStories
         AppIconSlot.CATECHISM -> Icons.Rounded.MenuBook
-        AppIconSlot.ROSARY -> Icons.Rounded.SelfImprovement
-        AppIconSlot.PRAYERS -> Icons.Rounded.VolunteerActivism
+        AppIconSlot.ROSARY -> DevotionalGlyphs.rosaryFilled
+        AppIconSlot.PRAYERS -> DevotionalGlyphs.candleFilled
         AppIconSlot.PILGRIMAGE -> Icons.Rounded.Place
         AppIconSlot.PARISH -> Icons.Rounded.Church
         AppIconSlot.DOCTRINE -> Icons.Rounded.HistoryEdu
@@ -124,8 +116,8 @@ object AppIcons {
         AppIconSlot.HABITS -> Icons.Sharp.Shield
         AppIconSlot.BIBLE -> Icons.Sharp.AutoStories
         AppIconSlot.CATECHISM -> Icons.Sharp.MenuBook
-        AppIconSlot.ROSARY -> Icons.Sharp.SelfImprovement
-        AppIconSlot.PRAYERS -> Icons.Sharp.VolunteerActivism
+        AppIconSlot.ROSARY -> DevotionalGlyphs.rosarySharp
+        AppIconSlot.PRAYERS -> DevotionalGlyphs.candleSharp
         AppIconSlot.PILGRIMAGE -> Icons.Sharp.Place
         AppIconSlot.PARISH -> Icons.Sharp.Church
         AppIconSlot.DOCTRINE -> Icons.Sharp.HistoryEdu
@@ -139,8 +131,8 @@ object AppIcons {
         AppIconSlot.HABITS -> Icons.Filled.Shield
         AppIconSlot.BIBLE -> Icons.Filled.AutoStories
         AppIconSlot.CATECHISM -> Icons.Filled.MenuBook
-        AppIconSlot.ROSARY -> Icons.Filled.SelfImprovement
-        AppIconSlot.PRAYERS -> Icons.Filled.VolunteerActivism
+        AppIconSlot.ROSARY -> DevotionalGlyphs.rosaryFilled
+        AppIconSlot.PRAYERS -> DevotionalGlyphs.candleFilled
         AppIconSlot.PILGRIMAGE -> Icons.Filled.Place
         AppIconSlot.PARISH -> Icons.Filled.Church
         AppIconSlot.DOCTRINE -> Icons.Filled.HistoryEdu

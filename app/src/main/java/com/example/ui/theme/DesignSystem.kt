@@ -231,7 +231,10 @@ object DesignTokens {
 
     private val AppleSpacing = AppSpacing(
         gutter = 16.dp,
-        sectionGap = 28.dp,
+        // 24, not 28: the prominent section header brings its own 22 above
+        // it, and a group followed by a full gap and then a header opened a
+        // 50dp hole between groups that no inset grouped table has.
+        sectionGap = 24.dp,
         cardPadding = 16.dp,
         cardGap = 12.dp,
         rowMinHeight = 44.dp,
@@ -246,7 +249,10 @@ object DesignTokens {
 
     private val MaterialSpacing = AppSpacing(
         gutter = 16.dp,
-        sectionGap = 24.dp,
+        // 16, not 24: every section break is this gap *plus* the section
+        // header's own 20dp top, and 24 put 44dp of dead canvas between a
+        // segmented group and the next header — twice Settings' rhythm.
+        sectionGap = 16.dp,
         cardPadding = 16.dp,
         cardGap = 12.dp,
         // 72dp is M3's two-line list item; 56dp is the one-line height and was
@@ -462,9 +468,10 @@ object DesignTokens {
         groupedSurface = Color(0xFFFCF8F0),
         raised = Color(0xFFFFFDF8),
         hairline = Color(0xFFD9C9A3),
-        accent = Color(0xFF7B1B2A),
+        // Missal rubric: a vermilion-crimson, not a wine. 7.4:1 on parchment.
+        accent = Color(0xFF951D1C),
         accentMuted = Color(0xFFF0E2D5),
-        gold = Color(0xFFB08A2E),
+        gold = Color(0xFFAC852B),
         textPrimary = Color(0xFF1F1A17),
         textSecondary = Color(0xFF5B4F42),
         textTertiary = Color(0xFF8A7B68),
@@ -473,16 +480,18 @@ object DesignTokens {
     )
 
     private val VaticanPaletteDark = AppPalette(
-        canvas = Color(0xFF14110E),
-        groupedSurface = Color(0xFF1E1915),
-        raised = Color(0xFF26201A),
-        hairline = Color(0xFF4A3F2E),
-        accent = Color(0xFFC75B6A),
-        accentMuted = Color(0xFF2E221C),
-        gold = Color(0xFFD4AF37),
-        textPrimary = Color(0xFFEDE4D3),
-        textSecondary = Color(0xFFBFB09A),
-        textTertiary = Color(0xFF8E8070),
+        // A codex by candlelight: umber vellum, cinnabar rubrics (not pink),
+        // and burnished rather than lemon gold.
+        canvas = Color(0xFF16110C),
+        groupedSurface = Color(0xFF1E1711),
+        raised = Color(0xFF271E16),
+        hairline = Color(0xFF4A3D2B),
+        accent = Color(0xFFD66B50),
+        accentMuted = Color(0xFF2E1F17),
+        gold = Color(0xFFCCA24C),
+        textPrimary = Color(0xFFECE0CA),
+        textSecondary = Color(0xFFBDAC92),
+        textTertiary = Color(0xFF8C7B66),
         scrim = Color(0xB3000000),
         selectionTint = Color(0xFF332A20)
     )

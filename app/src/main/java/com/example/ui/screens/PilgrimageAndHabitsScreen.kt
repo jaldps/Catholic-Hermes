@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
@@ -93,41 +94,65 @@ fun PilgrimageAndHabitsScreen(
         }
     }
 
-    Column(
+    val tabs = listOf(
+        currentLanguage.pick("Calendario", "Calendar", "Calendário"),
+        currentLanguage.pick("Hábitos", "Habits", "Hábitos"),
+        currentLanguage.pick("Santuarios", "Shrines", "Santuários")
+    )
+    val tabsInset = segmentedTabsInset()
+
+    // The screen's one large title, then the selector; both scroll away with
+    // the pane. Each pane opens on a section header, never a second title.
+    val header: LazyListScope.() -> Unit = {
+        item(key = "pilgrimage_title") {
+            AppScreenTitle(
+                title = currentLanguage.pick(
+                    "Calendario y Santuarios",
+                    "Calendar & Shrines",
+                    "Calendário e Santuários"
+                ),
+                subtitle = currentLanguage.pick(
+                    "El año de la Iglesia, una regla de vida y los lugares santos.",
+                    "The Church's year, a rule of life and the holy places.",
+                    "O ano da Igreja, uma regra de vida e os lugares santos."
+                )
+            )
+        }
+        item(key = "pilgrimage_tabs") {
+            AppSegmentedTabs(
+                options = tabs,
+                selectedIndex = selectedMainTab,
+                onSelect = { selectedMainTab = it },
+                modifier = Modifier.padding(horizontal = tabsInset)
+            )
+            Spacer(Modifier.height(design.spacing.cardGap / 2))
+        }
+    }
+
+    Box(
         modifier = modifier
             .fillMaxSize()
-            .background(design.palette.canvas)
             .testTag("pilgrimage_and_habits_screen")
     ) {
-        AppSegmentedTabs(
-            options = listOf(
-                currentLanguage.pick("Calendario", "Calendar", "Calendário"),
-                currentLanguage.pick("Hábitos Diarios", "Daily Habits", "Hábitos Diários"),
-                currentLanguage.pick("Santuarios", "Shrines", "Santuários")
-            ),
-            selectedIndex = selectedMainTab,
-            onSelect = { selectedMainTab = it },
-            modifier = Modifier
-                .padding(horizontal = segmentedTabsInset())
-                .padding(top = design.spacing.headerTopGap / 2)
-        )
-
         when (selectedMainTab) {
             0 -> LiturgicalCalendarTab(
                 days = repository.liturgicalCalendarDays,
-                currentLanguage = currentLanguage
+                currentLanguage = currentLanguage,
+                header = header
             )
 
             1 -> HolyHabitsTab(
                 habits = repository.spiritualHabitsList,
                 isCompleted = { id -> habitCompletionMap[id] ?: false },
                 onToggle = { id -> habitCompletionMap[id] = !(habitCompletionMap[id] ?: false) },
-                currentLanguage = currentLanguage
+                currentLanguage = currentLanguage,
+                header = header
             )
 
             else -> SanctuariesTab(
                 sanctuaries = repository.globalPilgrimages,
-                currentLanguage = currentLanguage
+                currentLanguage = currentLanguage,
+                header = header
             )
         }
     }
@@ -138,25 +163,13 @@ fun PilgrimageAndHabitsScreen(
 @Composable
 private fun LiturgicalCalendarTab(
     days: List<LiturgicalCalendarDay>,
-    currentLanguage: AppLanguage
+    currentLanguage: AppLanguage,
+    header: LazyListScope.() -> Unit
 ) {
     val design = LocalAppDesign.current
 
     LazyColumn(Modifier.fillMaxSize()) {
-        item {
-            AppScreenTitle(
-                title = currentLanguage.pick(
-                    "Calendario Litúrgico Católico",
-                    "Catholic Liturgical Calendar",
-                    "Calendário Litúrgico Católico"
-                ),
-                subtitle = currentLanguage.pick(
-                    "Ciclo del Año Litúrgico, colores sagrados, solemnidades y normas de precepto.",
-                    "Cycle of the Liturgical Year, sacred colors, solemnities, and fasting rules.",
-                    "Ciclo do Ano Litúrgico, cores sagradas, solenidades e preceitos."
-                )
-            )
-        }
+        header()
 
         if (days.isEmpty()) {
             item {
@@ -181,6 +194,11 @@ private fun LiturgicalCalendarTab(
                         "Próximas celebraciones",
                         "Upcoming celebrations",
                         "Próximas celebrações"
+                    ),
+                    subtitle = currentLanguage.pick(
+                        "Colores litúrgicos, solemnidades y días de precepto.",
+                        "Liturgical colours, solemnities and days of precept.",
+                        "Cores litúrgicas, solenidades e dias de preceito."
                     )
                 )
             }
@@ -224,12 +242,14 @@ private fun LiturgicalDayEntry(day: LiturgicalCalendarDay, currentLanguage: AppL
                 leadingIcon = Icons.Default.Star,
                 showsNavigationAffordance = false
             )
-            AppListRow(
-                title = currentLanguage.pick("Evangelio", "Gospel", "Evangelho"),
-                subtitle = day.gospelVerseRef,
-                leadingIcon = Icons.Default.MenuBook,
-                showsNavigationAffordance = false
-            )
+            if (day.gospelVerseRef.isNotBlank()) {
+                AppListRow(
+                    title = currentLanguage.pick("Evangelio", "Gospel", "Evangelho"),
+                    subtitle = day.gospelVerseRef,
+                    leadingIcon = Icons.Default.MenuBook,
+                    showsNavigationAffordance = false
+                )
+            }
         }
 
         day.fastingRule?.let { rule ->
@@ -254,42 +274,14 @@ private fun HolyHabitsTab(
     habits: List<SpiritualHabitItem>,
     isCompleted: (String) -> Boolean,
     onToggle: (String) -> Unit,
-    currentLanguage: AppLanguage
+    currentLanguage: AppLanguage,
+    header: LazyListScope.() -> Unit
 ) {
     val design = LocalAppDesign.current
     val completedCount = habits.count { isCompleted(it.id) }
 
     LazyColumn(Modifier.fillMaxSize()) {
-        item {
-            AppScreenTitle(
-                title = currentLanguage.pick(
-                    "Regla de Vida y Hábitos Santos",
-                    "Rule of Life & Holy Habits",
-                    "Regra de Vida e Santos Hábitos"
-                ),
-                subtitle = currentLanguage.pick(
-                    "La santificación diaria paso a paso",
-                    "Daily sanctification step by step",
-                    "A santificação diária passo a passo"
-                )
-            )
-        }
-
-        item {
-            AppMetricTile(
-                value = "$completedCount / ${habits.size}",
-                caption = currentLanguage.pick(
-                    "Hábitos cumplidos hoy",
-                    "Habits kept today",
-                    "Hábitos cumpridos hoje"
-                ),
-                icon = Icons.Default.SelfImprovement,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("habit_progress_tile")
-            )
-        }
+        header()
 
         if (habits.isEmpty()) {
             item {
@@ -307,11 +299,37 @@ private fun HolyHabitsTab(
             item {
                 AppSectionHeader(
                     title = currentLanguage.pick(
-                        "Hábitos del día",
-                        "Today's habits",
-                        "Hábitos do dia"
+                        "Regla de vida",
+                        "Rule of life",
+                        "Regra de vida"
+                    ),
+                    subtitle = currentLanguage.pick(
+                        "La santificación diaria, paso a paso. Toca una práctica al cumplirla.",
+                        "Daily sanctification, step by step. Tap a practice once it is kept.",
+                        "A santificação diária, passo a passo. Toque numa prática ao cumpri-la."
                     )
                 )
+            }
+
+            item {
+                AppMetricTile(
+                    value = currentLanguage.pick(
+                        "$completedCount de ${habits.size}",
+                        "$completedCount of ${habits.size}",
+                        "$completedCount de ${habits.size}"
+                    ),
+                    caption = currentLanguage.pick(
+                        "Cumplidos hoy",
+                        "Kept today",
+                        "Cumpridos hoje"
+                    ),
+                    icon = Icons.Default.SelfImprovement,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("habit_progress_tile")
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
             }
 
             items(habits, key = { it.id }) { habit ->
@@ -380,11 +398,9 @@ private fun HabitEntry(
                 )
                 Spacer(Modifier.height(10.dp))
                 Text(
-                    text = (
-                        habit.category.get(currentLanguage) + " · " +
-                            currentLanguage.pick("Sugerencia", "Suggested", "Sugestão") +
-                            " " + habit.timeSuggestion
-                        ).uppercase(),
+                    text = caps(
+                        habit.category.get(currentLanguage) + " · " + habit.timeSuggestion
+                    ),
                     style = styles.sectionEyebrow,
                     color = design.palette.textSecondary
                 )
@@ -398,26 +414,14 @@ private fun HabitEntry(
 @Composable
 private fun SanctuariesTab(
     sanctuaries: List<CatholicPilgrimageSanctuary>,
-    currentLanguage: AppLanguage
+    currentLanguage: AppLanguage,
+    header: LazyListScope.() -> Unit
 ) {
     val context = LocalContext.current
     val design = LocalAppDesign.current
 
     LazyColumn(Modifier.fillMaxSize()) {
-        item {
-            AppScreenTitle(
-                title = currentLanguage.pick(
-                    "Guía Universal de Santuarios y Peregrinaciones",
-                    "Universal Guide to Shrines & Pilgrimages",
-                    "Guia Universal de Santuários e Peregrinações"
-                ),
-                subtitle = currentLanguage.pick(
-                    "Lugares sagrados con gracias de indulgencia plenaria e historia milagrosa.",
-                    "Sacred places with plenary indulgence graces and miraculous histories.",
-                    "Lugares sagrados com graças de indulgência plenária e história milagrosa."
-                )
-            )
-        }
+        header()
 
         if (sanctuaries.isEmpty()) {
             item {
@@ -442,6 +446,11 @@ private fun SanctuariesTab(
                         "Santuarios del mundo",
                         "Shrines worldwide",
                         "Santuários do mundo"
+                    ),
+                    subtitle = currentLanguage.pick(
+                        "Lugares santos, su historia y la indulgencia plenaria que ofrecen.",
+                        "Holy places, their history and the plenary indulgence they offer.",
+                        "Lugares santos, a sua história e a indulgência plenária que oferecem."
                     )
                 )
             }
@@ -564,7 +573,7 @@ private fun Apparatus(label: String, text: String, modifier: Modifier = Modifier
 
     Column(modifier.fillMaxWidth()) {
         Text(
-            text = label.uppercase(),
+            text = caps(label),
             style = styles.sectionEyebrow,
             color = design.palette.textSecondary
         )
@@ -577,6 +586,11 @@ private fun Apparatus(label: String, text: String, modifier: Modifier = Modifier
         )
     }
 }
+
+/** Labels are cut as capitals only where the identity sets them so. */
+@Composable
+private fun caps(text: String): String =
+    if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
 
 private data class PlaceParts(val locality: String?, val region: String?)
 

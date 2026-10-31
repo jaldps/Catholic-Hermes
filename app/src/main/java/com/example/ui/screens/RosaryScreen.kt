@@ -46,6 +46,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
@@ -571,13 +576,13 @@ private fun buildRosaryGuide(mystery: RosaryMystery, creed: Said, lang: AppLangu
     val litany = LitanyOfLoreto.lines(lang)
     val litanyRubric = lang.pick(
         "Opcional. Las letanías se rezan al terminar las cinco decenas y la Salve. " +
-            "Quien guía dice cada invocación y los demás contestan lo que sigue a R/. " +
+            "Quien guía dice cada invocación y los demás contestan lo que sigue a ℟ " +
             "Si rezas solo, di las dos partes.",
         "Optional. The litany is prayed after the five decades and the Hail, Holy Queen. " +
-            "The leader says each invocation and everyone answers what follows R/. " +
+            "The leader says each invocation and everyone answers what follows ℟ " +
             "Praying alone, say both parts.",
         "Opcional. A ladainha reza-se depois das cinco dezenas e da Salve-Rainha. " +
-            "Quem conduz diz cada invocação e todos respondem o que segue a R/. " +
+            "Quem conduz diz cada invocação e todos respondem o que segue a ℟ " +
             "Se rezar sozinho, diga as duas partes."
     )
     val trinityEnd = litany.indexOfFirst { it.call.startsWith("Santa Mar") || it.call.startsWith("Holy Mary") }
@@ -1470,9 +1475,9 @@ private fun StepCard(step: GuideStep, lang: AppLanguage, spokenNow: String?) {
             Spacer(Modifier.height(design.spacing.cardGap / 2))
             Text(
                 text = lang.pick(
-                    "V/. dice quien guía · R/. responden todos. Si rezas solo, di las dos partes.",
-                    "V/. the leader says · R/. everyone answers. Praying alone? Say both parts.",
-                    "V/. diz quem conduz · R/. todos respondem. Rezando sozinho? Diga as duas partes."
+                    "℣ dice quien guía · ℟ responden todos. Si rezas solo, di las dos partes.",
+                    "℣ the leader says · ℟ everyone answers. Praying alone? Say both parts.",
+                    "℣ diz quem conduz · ℟ todos respondem. Rezando sozinho? Diga as duas partes."
                 ),
                 style = styles.rowSubtitle,
                 color = palette.textTertiary,
@@ -1708,7 +1713,8 @@ private fun RecitationControls(
 }
 
 /**
- * The text to pray. With a response, leader and people are marked V/. and R/.;
+ * The text to pray. With a response, leader and people are marked ℣ and ℟, the
+ * signs set in rubric as a missal prints them;
  * a prayer said straight through is set plain. The line being spoken is in rubric.
  */
 @Composable
@@ -1731,13 +1737,13 @@ private fun PrayerDialogue(
             )
         } else {
             Text(
-                text = "V/. $leaderText",
+                text = rubricated("\u2123", leaderText, palette.accent),
                 style = styles.quote,
                 color = if (leaderSpoken) palette.accent else palette.textPrimary
             )
             Spacer(Modifier.height(design.spacing.cardGap / 2))
             Text(
-                text = "R/. $responseText",
+                text = rubricated("\u211F", responseText, palette.accent),
                 style = styles.quote,
                 color = if (responseSpoken) palette.accent else palette.textSecondary
             )
@@ -1770,4 +1776,12 @@ private fun CardHeading(eyebrow: String, detail: String?) {
 
 /** A run of litany lines set as call and answer, one pair to a paragraph. */
 private fun litanyText(lines: List<LitanyLine>): String =
-    lines.joinToString("\n\n") { "${it.call}\n    R/. ${it.response}" }
+    lines.joinToString("\n\n") { "${it.call}\n    \u211F ${it.response}" }
+
+/** A versicle or response sign in the rubric colour, then the words in ink. */
+private fun rubricated(sign: String, text: String, rubric: Color): AnnotatedString =
+    buildAnnotatedString {
+        withStyle(SpanStyle(color = rubric, fontWeight = FontWeight.SemiBold)) { append(sign) }
+        append("\u2002")
+        append(text)
+    }

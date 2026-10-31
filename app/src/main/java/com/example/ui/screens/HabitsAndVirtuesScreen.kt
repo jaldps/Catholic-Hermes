@@ -44,7 +44,6 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -132,11 +131,9 @@ fun HabitsAndVirtuesScreen(
     val sinOvercomeLogs by dao.getAllSinOvercomeLogs().collectAsState(initial = emptyList())
     val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
 
-    LaunchedEffect(habitsList) {
-        if (habitsList.isEmpty()) {
-            dao.insertDefaultHabits(repository.defaultHabitsToSeed)
-        }
-    }
+    // The suggested rule is offered, not imposed: with nothing configured the
+    // pane shows these practices and one action that adopts them.
+    val suggestedHabits = repository.defaultHabitsToSeed
 
     var selectedTab by remember { mutableIntStateOf(0) }
 
@@ -164,8 +161,18 @@ fun HabitsAndVirtuesScreen(
     // selector carries short labels, because a 23-character segment is
     // unreadable at 360dp in any of the three identities.
     val tabLabels = listOf(
-        currentLanguage.pick("Regla de Vida", "Rule of Life", "Regra de Vida"),
-        currentLanguage.pick("Gracia (S.O.S)", "Grace (S.O.S)", "Graça (S.O.S)")
+        currentLanguage.pick("Regla de vida", "Rule of life", "Regra de vida"),
+        currentLanguage.pick("Gracia S.O.S.", "Grace S.O.S.", "Graça S.O.S.")
+    )
+    val screenTitle = currentLanguage.pick(
+        "Hábitos y Virtudes",
+        "Habits & Virtues",
+        "Hábitos e Virtudes"
+    )
+    val screenSubtitle = currentLanguage.pick(
+        "Las prácticas que sostienen tu vida en Cristo, y la gracia para cuando caes.",
+        "The practices that sustain your life in Christ, and grace for when you fall.",
+        "As práticas que sustentam a sua vida em Cristo, e a graça para quando cai."
     )
 
     fun openSinAvoider(option: SinAvoiderOption) {
@@ -224,70 +231,112 @@ fun HabitsAndVirtuesScreen(
                     .testTag("tab_habits_rule")
             ) {
                 paneHeader(
-                    title = currentLanguage.pick(
-                        "Regla de Vida y Hábitos",
-                        "Rule of Life & Habits",
-                        "Regra de Vida e Hábitos"
-                    ),
-                    subtitle = currentLanguage.pick(
-                        "Las prácticas diarias que sostienen tu vida en Cristo.",
-                        "The daily practices that sustain your life in Christ.",
-                        "As práticas diárias que sustentam a sua vida em Cristo."
-                    ),
+                    title = screenTitle,
+                    subtitle = screenSubtitle,
                     tabLabels = tabLabels,
                     selectedTab = selectedTab,
                     onSelectTab = { selectedTab = it }
                 )
 
-                item {
-                    FidelityCard(
-                        completedCount = completedHabitIds.size,
-                        totalCount = habitsList.size,
-                        completionRate = completionRate,
-                        allCompletions = allCompletions,
-                        currentLanguage = currentLanguage,
-                        onOpenSinAvoider = { openSinAvoider(repository.sinAvoiderCatalog.first()) }
-                    )
-                }
-
-                item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    MetricRow(
-                        bestStreak = habitsList.maxOfOrNull { it.bestStreak } ?: 0,
-                        totalCompletions = allCompletions.size,
-                        totalVictories = totalVictories,
-                        currentLanguage = currentLanguage
-                    )
-                }
-
-                item {
-                    AppSectionHeader(
-                        title = currentLanguage.pick(
-                            "Prácticas y devociones diarias",
-                            "Daily practices & devotions",
-                            "Práticas e devoções diárias"
-                        ),
-                        subtitle = "${completedHabitIds.size}/${habitsList.size}"
-                    )
-                }
-
                 if (habitsList.isEmpty()) {
+                    // Nothing configured: no counters at all, since "0 of 0"
+                    // only ever reads as broken. An invitation instead.
                     item {
                         AppEmptyState(
                             title = currentLanguage.pick(
-                                "Sin hábitos aún",
-                                "No habits yet",
-                                "Sem hábitos ainda"
+                                "Empieza tu regla de vida",
+                                "Begin your rule of life",
+                                "Comece a sua regra de vida"
                             ),
                             body = currentLanguage.pick(
-                                "Añade una práctica diaria y empieza tu regla de vida.",
-                                "Add a daily practice and begin your rule of life.",
-                                "Adicione uma prática diária e comece a sua regra de vida."
+                                "Unas pocas prácticas, guardadas cada día, forman una vida en Cristo. Empieza con estas o escribe las tuyas.",
+                                "A few practices, kept every day, shape a life in Christ. Start with these, or write your own.",
+                                "Umas poucas práticas, guardadas cada dia, formam uma vida em Cristo. Comece com estas ou escreva as suas."
                             ),
-                            icon = Icons.Default.Church
+                            icon = Icons.Default.SelfImprovement,
+                            modifier = Modifier.testTag("habits_empty_state")
                         )
                     }
+
+                    if (suggestedHabits.isNotEmpty()) {
+                        item {
+                            AppSectionHeader(
+                                title = currentLanguage.pick(
+                                    "Sugerencias",
+                                    "Suggested practices",
+                                    "Sugestões"
+                                )
+                            )
+                        }
+                        item {
+                            AppListGroup {
+                                suggestedHabits.forEach { habit ->
+                                    AppListRow(
+                                        title = habit.localizedTitle(currentLanguage),
+                                        subtitle = habit.timeSuggestion,
+                                        leadingIcon = habitIcon(habit.iconName),
+                                        trailingText = categoryLabel(habit.category, currentLanguage),
+                                        showsNavigationAffordance = false
+                                    )
+                                }
+                            }
+                        }
+                        item {
+                            Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                            AppPrimaryButton(
+                                label = currentLanguage.pick(
+                                    "Adoptar estas ${suggestedHabits.size} prácticas",
+                                    "Adopt these ${suggestedHabits.size} practices",
+                                    "Adotar estas ${suggestedHabits.size} práticas"
+                                ),
+                                onClick = {
+                                    scope.launch { dao.insertDefaultHabits(suggestedHabits) }
+                                },
+                                leadingIcon = Icons.Default.CheckCircle,
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = design.spacing.gutter)
+                                    .testTag("adopt_suggested_habits")
+                            )
+                        }
+                    }
                 } else {
+                    item {
+                        FidelityCard(
+                            completedCount = completedHabitIds.size,
+                            totalCount = habitsList.size,
+                            completionRate = completionRate,
+                            allCompletions = allCompletions,
+                            currentLanguage = currentLanguage,
+                            onOpenSinAvoider = { openSinAvoider(repository.sinAvoiderCatalog.first()) }
+                        )
+                    }
+
+                    item {
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        MetricRow(
+                            bestStreak = habitsList.maxOfOrNull { it.bestStreak } ?: 0,
+                            totalCompletions = allCompletions.size,
+                            totalVictories = totalVictories,
+                            currentLanguage = currentLanguage
+                        )
+                    }
+
+                    item {
+                        AppSectionHeader(
+                            title = currentLanguage.pick(
+                                "Prácticas diarias",
+                                "Daily practices",
+                                "Práticas diárias"
+                            ),
+                            subtitle = currentLanguage.pick(
+                                "Toca una práctica al cumplirla hoy.",
+                                "Tap a practice once you have kept it today.",
+                                "Toque numa prática ao cumpri-la hoje."
+                            )
+                        )
+                    }
+
                     item {
                         AppListGroup {
                             habitsList.forEach { habit ->
@@ -310,11 +359,19 @@ fun HabitsAndVirtuesScreen(
                 item {
                     Spacer(Modifier.height(design.spacing.sectionGap / 2))
                     AppSecondaryButton(
-                        label = currentLanguage.pick(
-                            "Añadir hábito",
-                            "Add habit",
-                            "Adicionar hábito"
-                        ),
+                        label = if (habitsList.isEmpty()) {
+                            currentLanguage.pick(
+                                "Escribir la mía",
+                                "Write my own",
+                                "Escrever a minha"
+                            )
+                        } else {
+                            currentLanguage.pick(
+                                "Añadir práctica",
+                                "Add a practice",
+                                "Adicionar prática"
+                            )
+                        },
                         onClick = { showAddHabitDialog = true },
                         leadingIcon = Icons.Default.Add,
                         modifier = Modifier
@@ -333,16 +390,8 @@ fun HabitsAndVirtuesScreen(
                     .testTag("tab_sin_avoider")
             ) {
                 paneHeader(
-                    title = currentLanguage.pick(
-                        "Antídoto de Gracia (S.O.S)",
-                        "Grace Antidote (S.O.S)",
-                        "Antídoto de Graça (S.O.S)"
-                    ),
-                    subtitle = currentLanguage.pick(
-                        "Siete raíces de pecado, siete virtudes que las vencen.",
-                        "Seven roots of sin, seven virtues that overcome them.",
-                        "Sete raízes do pecado, sete virtudes que as vencem."
-                    ),
+                    title = screenTitle,
+                    subtitle = screenSubtitle,
                     tabLabels = tabLabels,
                     selectedTab = selectedTab,
                     onSelectTab = { selectedTab = it }
@@ -359,9 +408,14 @@ fun HabitsAndVirtuesScreen(
                 item {
                     AppSectionHeader(
                         title = currentLanguage.pick(
-                            "Las 7 raíces de pecado y sus virtudes",
-                            "The 7 capital sins & remedy virtues",
-                            "As 7 raízes do pecado e suas virtudes"
+                            "Las siete raíces",
+                            "The seven roots",
+                            "As sete raízes"
+                        ),
+                        subtitle = currentLanguage.pick(
+                            "Siete raíces de pecado, siete virtudes que las vencen.",
+                            "Seven roots of sin, seven virtues that overcome them.",
+                            "Sete raízes do pecado, sete virtudes que as vencem."
                         )
                     )
                 }
@@ -482,11 +536,7 @@ fun HabitsAndVirtuesScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            text = currentLanguage.pick(
-                                "REZA UN AVE MARÍA AHORA",
-                                "PRAY ONE HAIL MARY NOW",
-                                "REZE UMA AVE MARIA AGORA"
-                            ),
+                            text = caps(currentLanguage.pick("Reza un Ave María ahora", "Pray one Hail Mary now", "Reze uma Ave Maria agora")),
                             style = styles.sectionEyebrow,
                             color = palette.gold,
                             modifier = Modifier.weight(1f)
@@ -662,7 +712,7 @@ fun HabitsAndVirtuesScreen(
 
                     Spacer(Modifier.height(design.spacing.cardGap))
                     Text(
-                        text = currentLanguage.pick("Categoría:", "Category:", "Categoria:"),
+                        text = caps(currentLanguage.pick("Categoría", "Category", "Categoria")),
                         style = styles.sectionEyebrow,
                         color = palette.textSecondary
                     )
@@ -782,11 +832,7 @@ private fun FidelityCard(
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f)) {
                 Text(
-                    text = currentLanguage.pick(
-                        "FIDELIDAD ESPIRITUAL",
-                        "SPIRITUAL FIDELITY",
-                        "FIDELIDADE ESPIRITUAL"
-                    ),
+                    text = caps(currentLanguage.pick("Fidelidad espiritual", "Spiritual fidelity", "Fidelidade espiritual")),
                     style = styles.sectionEyebrow,
                     color = palette.textSecondary
                 )
@@ -832,7 +878,7 @@ private fun FidelityCard(
         Spacer(Modifier.height(design.spacing.cardPadding))
 
         Text(
-            text = currentLanguage.pick("ÚLTIMOS 7 DÍAS", "LAST 7 DAYS", "ÚLTIMOS 7 DIAS"),
+            text = caps(currentLanguage.pick("Últimos 7 días", "Last 7 days", "Últimos 7 dias")),
             style = styles.sectionEyebrow,
             color = palette.textSecondary
         )
@@ -842,9 +888,9 @@ private fun FidelityCard(
         Spacer(Modifier.height(design.spacing.cardPadding))
         AppSecondaryButton(
             label = currentLanguage.pick(
-                "S.O.S. Tentación: Rezar Ave María",
-                "S.O.S. Temptation: Pray Hail Mary",
-                "S.O.S. Tentação: Rezar Ave Maria"
+                "¿Tentado? Reza un Ave María",
+                "Tempted? Pray a Hail Mary",
+                "Tentado? Reze uma Ave Maria"
             ),
             onClick = onOpenSinAvoider,
             leadingIcon = Icons.Default.Shield,
@@ -1092,11 +1138,7 @@ private fun GraceAntidoteCard(
             Spacer(Modifier.width(design.spacing.iconLabelGap))
             Column(Modifier.weight(1f)) {
                 Text(
-                    text = currentLanguage.pick(
-                        "ANTÍDOTO DE GRACIA",
-                        "GRACE ANTIDOTE",
-                        "ANTÍDOTO DE GRAÇA"
-                    ),
+                    text = caps(currentLanguage.pick("Antídoto de gracia", "Grace antidote", "Antídoto de graça")),
                     style = styles.sectionEyebrow,
                     color = palette.textSecondary
                 )
@@ -1127,9 +1169,9 @@ private fun GraceAntidoteCard(
         Spacer(Modifier.height(design.spacing.cardPadding))
         AppPrimaryButton(
             label = currentLanguage.pick(
-                "¡Sentí tentación y la vencí! (Ave María)",
-                "Felt temptation & overcame it! (Hail Mary)",
-                "Senti tentação e venci! (Ave Maria)"
+                "Vencí una tentación",
+                "I overcame a temptation",
+                "Venci uma tentação"
             ),
             onClick = onTriggerEmergency,
             leadingIcon = Icons.Default.Bolt,
@@ -1160,6 +1202,17 @@ private fun VictoryLogRow(
         trailingText = dateStr,
         showsNavigationAffordance = false
     )
+}
+
+/** Labels are cut as capitals only where the identity sets them so. */
+@Composable
+private fun caps(text: String): String =
+    if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
+
+private fun SpiritualHabitEntity.localizedTitle(language: AppLanguage): String = when (language) {
+    AppLanguage.ES -> titleEs
+    AppLanguage.EN -> titleEn
+    AppLanguage.PT -> titlePt
 }
 
 private fun habitIcon(iconName: String): ImageVector = when (iconName) {

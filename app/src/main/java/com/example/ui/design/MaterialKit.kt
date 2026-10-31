@@ -32,7 +32,16 @@ import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Inbox
 import androidx.compose.material.icons.rounded.Search
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.material3.Button
+import androidx.compose.material3.PrimaryTabRow
+import androidx.compose.material3.Tab
+import androidx.compose.material3.TabRowDefaults
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card as M3Card
 import androidx.compose.material3.CardDefaults
@@ -59,13 +68,18 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.snapshotFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.AlignmentLine
 import androidx.compose.ui.layout.FirstBaseline
@@ -75,7 +89,14 @@ import androidx.compose.ui.layout.onPlaced
 import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.RoundRect
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Outline
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -272,6 +293,73 @@ object MaterialKit : AppKit {
         )
     }
 
+    // ------------------------------------------------------------------ motion
+
+    /**
+     * M3 Expressive's *fast spatial* spring (damping 0.6, stiffness 800): the
+     * scheme Google's own apps use for a shape answering a finger. It is
+     * allowed to overshoot — the corner settles, it does not slide.
+     */
+    private fun <T> fastSpatial() = spring<T>(dampingRatio = 0.6f, stiffness = 800f)
+
+    /** The *default effects* spring: no bounce, for colour and opacity. */
+    private fun <T> defaultEffects() = spring<T>(dampingRatio = 1f, stiffness = Spring.StiffnessMediumLow)
+
+    /** Inner corner of a row inside a segmented list group. */
+    private val GroupInnerCorner = 4.dp
+
+    /** Outer corner of a segmented list group, and the gap between its rows. */
+    private val GroupOuterCorner = 20.dp
+    private val GroupGap = 2.dp
+
+    /**
+     * Set by [ListGroup]: a row inside a group is one segment of it (4dp inner
+     * corners, 2dp gaps, the group rounding the ends) — the Expressive list
+     * Android 16 Settings and the Google apps moved to — rather than a free
+     * 16dp card floating 8dp from its neighbour.
+     */
+    private val LocalInListGroup = staticCompositionLocalOf { false }
+
+    /**
+     * A corner radius that morphs on press: [rest] at rest, [pressed] while a
+     * finger is down, on the fast spatial spring.
+     */
+    @Composable
+    private fun pressMorph(interaction: MutableInteractionSource, enabled: Boolean, rest: Dp, pressed: Dp): Dp {
+        val isPressed by interaction.collectIsPressedAsState()
+        val corner by animateDpAsState(
+            targetValue = if (enabled && isPressed) pressed else rest,
+            animationSpec = fastSpatial(),
+            label = "press_morph"
+        )
+        return corner.coerceAtLeast(0.dp)
+    }
+
+    /**
+     * A stadium whose ends square off as [progress] goes to 1 — the Expressive
+     * button's press morph. Computed from the measured height so the resting
+     * shape is a true stadium at any button height.
+     */
+    private data class MorphPill(val progress: Float, val pressedRadius: Dp) : Shape {
+        override fun createOutline(size: Size, layoutDirection: LayoutDirection, density: Density): Outline {
+            val full = size.minDimension / 2f
+            val target = with(density) { pressedRadius.toPx() }
+            val r = (full + (target - full) * progress).coerceIn(0f, full)
+            return Outline.Rounded(RoundRect(0f, 0f, size.width, size.height, CornerRadius(r)))
+        }
+    }
+
+    @Composable
+    private fun buttonShape(interaction: MutableInteractionSource, enabled: Boolean): Shape {
+        val isPressed by interaction.collectIsPressedAsState()
+        val progress by animateFloatAsState(
+            targetValue = if (enabled && isPressed) 1f else 0f,
+            animationSpec = fastSpatial(),
+            label = "button_morph"
+        )
+        return MorphPill(progress, 10.dp)
+    }
+
     // -------------------------------------------------------------- primitives
 
     /**
@@ -328,6 +416,7 @@ object MaterialKit : AppKit {
         shape: Shape,
         onClick: (() -> Unit)?,
         elevation: Dp = 0.dp,
+        interactionSource: MutableInteractionSource? = null,
         content: @Composable ColumnScope.() -> Unit
     ) {
         val colors = CardDefaults.cardColors(containerColor = container)
@@ -339,6 +428,7 @@ object MaterialKit : AppKit {
                 shape = shape,
                 colors = colors,
                 elevation = cardElevation,
+                interactionSource = interactionSource,
                 content = content
             )
         } else {
@@ -387,8 +477,24 @@ object MaterialKit : AppKit {
                 // on the same edge as everything under it.
                 TopAppBar(
                     title = {
+                        // Every screen opens on its own headline, so a title
+                        // in the bar at rest is a second title stacked on the
+                        // first. The bar stays empty until content scrolls
+                        // under it, then the app's name fades in on the
+                        // effects spring — the collapsing-headline idiom of
+                        // Settings and Files. A pushed screen never shows it:
+                        // beside a back arrow the app's name reads as "you are
+                        // still on the root".
+                        val scrolled = onBack == null &&
+                            scrollBehavior.state.overlappedFraction > 0.01f
+                        val titleAlpha by animateFloatAsState(
+                            targetValue = if (scrolled) 1f else 0f,
+                            animationSpec = defaultEffects(),
+                            label = "app_bar_title"
+                        )
                         Text(
-                            text = title,
+                            text = if (onBack != null) "" else title,
+                            modifier = Modifier.graphicsLayer { alpha = titleAlpha },
                             style = MaterialTheme.typography.titleLarge,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
@@ -640,11 +746,16 @@ object MaterialKit : AppKit {
     ) {
         val design = LocalAppDesign.current
         val c = roles()
+        val inGroup = LocalInListGroup.current
+        val interaction = remember { MutableInteractionSource() }
+        val rest = if (inGroup) GroupInnerCorner else 16.dp
+        val corner = pressMorph(interaction, onClick != null, rest, rest + 12.dp)
         FilledCard(
             modifier = modifier.fillMaxWidth(),
             container = c.container,
-            shape = design.shapes.card,
-            onClick = onClick
+            shape = RoundedCornerShape(corner),
+            onClick = onClick,
+            interactionSource = interaction
         ) {
             Column(Modifier.padding(design.spacing.cardPadding), content = content)
         }
@@ -653,15 +764,21 @@ object MaterialKit : AppKit {
     @Composable
     override fun ListGroup(modifier: Modifier, content: @Composable ColumnScope.() -> Unit) {
         val spacing = LocalAppDesign.current.spacing
-        // No grouped block: M3 gives each row its own card, so the group is
-        // only a rhythm of gaps.
+        // The Expressive segmented list: each row keeps its own surface, but
+        // the rows sit 2dp apart with 4dp inner corners and the group rounds
+        // its two ends, so a run of rows reads as one set and a section break
+        // reads as a break. Free 16dp cards 8dp apart made every list on every
+        // screen one undifferentiated stack.
         Column(
             modifier
                 .fillMaxWidth()
-                .padding(horizontal = spacing.gutter),
-            verticalArrangement = Arrangement.spacedBy(spacing.listItemGap),
-            content = content
-        )
+                .padding(horizontal = spacing.gutter)
+                .clip(RoundedCornerShape(GroupOuterCorner)),
+            verticalArrangement = Arrangement.spacedBy(GroupGap)
+        ) {
+            val scope = this
+            CompositionLocalProvider(LocalInListGroup provides true) { scope.content() }
+        }
     }
 
     @Composable
@@ -695,11 +812,24 @@ object MaterialKit : AppKit {
         val hasLeading = leadingIcon != null
         val hasTrailing = trailingText != null
 
+        // Inside a group a row is a 4dp segment; pressed, its corners swell
+        // on the fast spatial spring — the Expressive list's press answer.
+        val inGroup = LocalInListGroup.current
+        val interaction = remember { MutableInteractionSource() }
+        val rest = if (inGroup) GroupInnerCorner else 16.dp
+        val corner = pressMorph(interaction, onClick != null, rest, if (inGroup) 16.dp else 28.dp)
+        val animatedContainer by androidx.compose.animation.animateColorAsState(
+            targetValue = container,
+            animationSpec = defaultEffects(),
+            label = "row_container"
+        )
+
         FilledCard(
             modifier = modifier.fillMaxWidth(),
-            container = container,
-            shape = design.shapes.card,
-            onClick = onClick
+            container = animatedContainer,
+            shape = RoundedCornerShape(corner),
+            onClick = onClick,
+            interactionSource = interaction
         ) {
             Layout(
                 modifier = Modifier.fillMaxWidth(),
@@ -813,6 +943,9 @@ object MaterialKit : AppKit {
 
     @Composable
     override fun Divider(modifier: Modifier) {
+        // Inside a segmented group the 2dp gap already is the separator; a
+        // rule on top of it would count the break twice.
+        if (LocalInListGroup.current) return
         HorizontalDivider(
             modifier = modifier.fillMaxWidth(),
             thickness = 1.dp,
@@ -836,13 +969,14 @@ object MaterialKit : AppKit {
         leadingIcon: ImageVector?,
         modifier: Modifier
     ) {
-        val design = LocalAppDesign.current
         val scheme = MaterialTheme.colorScheme
+        val interaction = remember { MutableInteractionSource() }
         Button(
             onClick = onClick,
             modifier = modifier.heightIn(min = 40.dp),
             enabled = enabled,
-            shape = design.shapes.button,
+            shape = buttonShape(interaction, enabled),
+            interactionSource = interaction,
             colors = ButtonDefaults.buttonColors(
                 containerColor = scheme.primary,
                 contentColor = scheme.onPrimary
@@ -872,13 +1006,14 @@ object MaterialKit : AppKit {
         leadingIcon: ImageVector?,
         modifier: Modifier
     ) {
-        val design = LocalAppDesign.current
         val c = roles()
+        val interaction = remember { MutableInteractionSource() }
         FilledTonalButton(
             onClick = onClick,
             modifier = modifier.heightIn(min = 40.dp),
             enabled = enabled,
-            shape = design.shapes.button,
+            shape = buttonShape(interaction, enabled),
+            interactionSource = interaction,
             colors = ButtonDefaults.filledTonalButtonColors(
                 containerColor = c.accentSofter,
                 contentColor = c.onAccentSofter
@@ -971,60 +1106,71 @@ object MaterialKit : AppKit {
         modifier: Modifier
     ) {
         val c = roles()
-        val palette = LocalAppDesign.current.palette
-        // No gutter of its own: every other component in this kit takes its
-        // inset from the caller, and adding one here double-padded the control
-        // to 32dp while the search field above it sat at 16dp.
+        val design = LocalAppDesign.current
+        val palette = design.palette
+        val scheme = MaterialTheme.colorScheme
         // Segmented buttons are for short labels: the spec's own examples are
         // one or two words, and a segment never truncates. Measure each label
         // against the width its segment would actually get (minus the 12dp
-        // side insets and, for the selected one, the 18+8dp checkmark); if any
-        // would be cut — "Compendium …", "Catechism (1-…" — or there are more
-        // than five, the set becomes a scrolling row of filter chips, which is
-        // what Google's own apps use for long or localised option sets.
+        // side insets and, for the selected one, the 18+8dp checkmark). If any
+        // would be cut, or there are more than five, the set is not a choice
+        // but a set of peer views — and M3 draws peer views as scrollable
+        // primary tabs (Play Store, Files, Clock), not as filter chips, which
+        // say "narrow this list" and stacked a second chip row on top of the
+        // real filters on half the screens.
         val measurer = rememberTextMeasurer()
         val labelStyle = MaterialTheme.typography.labelLarge
+        val screenWidth = LocalConfiguration.current.screenWidthDp.dp
         BoxWithConstraints(modifier.fillMaxWidth()) {
-        val segment = maxWidth / options.size.coerceAtLeast(1)
-        val room = segment - 24.dp - 26.dp
-        val widest = with(LocalDensity.current) {
-            options.maxOfOrNull { measurer.measure(it, labelStyle, maxLines = 1).size.width.toDp() } ?: 0.dp
-        }
-        val fits = options.size <= 5 && widest <= room
-        if (!fits) {
-            // A scrolling chip row bleeds to the screen edge and carries the
-            // gutter as content padding, so chips scroll off the glass rather
-            // than being guillotined 16dp short of it. Every Material caller
-            // insets this control by exactly the gutter, which is what the
-            // bleed undoes.
-            val bleed = LocalAppDesign.current.spacing.gutter
-            val scroll = rememberScrollState()
-            val chipLefts = remember(options) { IntArray(options.size) }
-            val chipWidths = remember(options) { IntArray(options.size) }
-            // The selected chip is brought into view: a mode row whose active
-            // mode is scrolled off the glass hides the one thing it reports.
-            // On first composition it snaps there (the row arrives already
-            // showing its selection); later selections animate.
-            val firstRun = remember(options) { booleanArrayOf(true) }
-            LaunchedEffect(selectedIndex, options) {
-                // Wait for the layout pass that gives the row its extent.
-                snapshotFlow { scroll.viewportSize }.first { it > 0 }
-                val i = selectedIndex.coerceIn(0, options.size - 1)
-                val left = chipLefts[i]
-                val right = left + chipWidths[i]
-                val target = when {
-                    right > scroll.value + scroll.viewportSize -> right - scroll.viewportSize + 24
-                    left < scroll.value -> left - 24
-                    else -> null
-                }?.coerceIn(0, scroll.maxValue)
-                if (target != null) {
-                    if (firstRun[0]) scroll.scrollTo(target) else scroll.animateScrollTo(target)
-                }
-                firstRun[0] = false
+            // Callers disagree on whether they inset this control (Rosary
+            // passes the full width, Bible passes the gutter). Read it off the
+            // constraints instead of trusting either.
+            val sideInset = ((screenWidth - maxWidth) / 2).coerceAtLeast(0.dp)
+            val ownGutter = if (sideInset < 1.dp) design.spacing.gutter else 0.dp
+            val segment = (maxWidth - ownGutter * 2) / options.size.coerceAtLeast(1)
+            val room = segment - 24.dp - 26.dp
+            val widest = with(LocalDensity.current) {
+                options.maxOfOrNull { measurer.measure(it, labelStyle, maxLines = 1).size.width.toDp() } ?: 0.dp
             }
-            Row(
-                Modifier
-                    .layout { measurable, constraints ->
+            val fits = options.size <= 5 && widest <= room
+            if (!fits) {
+                val bleed = sideInset
+                val selected = selectedIndex.coerceIn(0, (options.size - 1).coerceAtLeast(0))
+                // Fixed tabs when every label fits an equal share of the
+                // glass (Bible's four), scrollable only when they cannot.
+                val fixedTabs = options.size <= 4 && widest + 32.dp <= screenWidth / options.size
+                val indicator: @Composable androidx.compose.material3.TabIndicatorScope.() -> Unit = {
+                    TabRowDefaults.PrimaryIndicator(
+                        modifier = Modifier.tabIndicatorOffset(selected, matchContentSize = true),
+                        width = Dp.Unspecified,
+                        height = 3.dp,
+                        color = scheme.primary,
+                        shape = RoundedCornerShape(topStart = 3.dp, topEnd = 3.dp)
+                    )
+                }
+                val tabs: @Composable () -> Unit = {
+                    options.forEachIndexed { index, option ->
+                        Tab(
+                            selected = index == selected,
+                            onClick = { onSelect(index) },
+                            selectedContentColor = scheme.primary,
+                            unselectedContentColor = palette.textSecondary,
+                            text = {
+                                Text(
+                                    text = option,
+                                    style = MaterialTheme.typography.titleSmall,
+                                    maxLines = 1
+                                )
+                            }
+                        )
+                    }
+                }
+                // Tabs run glass to glass: bleed back out over whatever inset
+                // the caller applied. The divider is drawn here, under the
+                // whole width — the scrollable row's own divider stops where
+                // its last tab does.
+                Box(
+                    Modifier.layout { measurable, constraints ->
                         val extra = (bleed * 2).roundToPx()
                         val placeable = measurable.measure(
                             constraints.copy(
@@ -1036,51 +1182,163 @@ object MaterialKit : AppKit {
                             placeable.placeRelative(-bleed.roundToPx(), 0)
                         }
                     }
-                    .horizontalScroll(scroll)
-                    .padding(horizontal = bleed),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                options.forEachIndexed { index, option ->
-                    Chip(
-                        label = option,
-                        selected = index == selectedIndex,
-                        onClick = { onSelect(index) },
-                        modifier = Modifier.onPlaced {
-                            chipLefts[index] = it.positionInParent().x.toInt()
-                            chipWidths[index] = it.size.width
-                        }
+                ) {
+                    // Under the indicator, so the indicator draws over it.
+                    HorizontalDivider(
+                        modifier = Modifier.align(Alignment.BottomStart).fillMaxWidth(),
+                        thickness = 1.dp,
+                        color = c.highest
                     )
+                    if (fixedTabs) {
+                        PrimaryTabRow(
+                            selectedTabIndex = selected,
+                            modifier = Modifier.fillMaxWidth(),
+                            containerColor = Color.Transparent,
+                            contentColor = scheme.primary,
+                            indicator = indicator,
+                            divider = {},
+                            tabs = tabs
+                        )
+                    } else {
+                        ScrollingTabs(options, selected, onSelect)
+                    }
+                }
+            } else {
+                SingleChoiceSegmentedButtonRow(
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = ownGutter)
+                ) {
+                    options.forEachIndexed { index, option ->
+                        val isSelected = index == selectedIndex
+                        SegmentedButton(
+                            selected = isSelected,
+                            onClick = { onSelect(index) },
+                            shape = SegmentedButtonDefaults.itemShape(index, options.size),
+                            modifier = Modifier.weight(1f),
+                            colors = SegmentedButtonDefaults.colors(
+                                activeContainerColor = c.accentSofter,
+                                activeContentColor = c.onAccentSofter,
+                                activeBorderColor = c.outline,
+                                inactiveContainerColor = Color.Transparent,
+                                inactiveContentColor = palette.textSecondary,
+                                inactiveBorderColor = c.outline
+                            ),
+                            label = {
+                                Text(
+                                    text = option,
+                                    style = MaterialTheme.typography.labelLarge,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
+                        )
+                    }
                 }
             }
-        } else {
-            SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
+        }
+    }
+
+    /**
+     * Scrollable primary tabs, drawn by hand. The stock row animates its
+     * scroll to the selected tab on first composition, so every screen that
+     * opens on a later tab slid its strip across on entry — and a capture
+     * caught the selected tab off the glass. This one arrives already showing
+     * its selection (centred, as the stock row centres it) and only moves on
+     * a change, with the indicator travelling on the default spatial spring.
+     */
+    @Composable
+    private fun ScrollingTabs(options: List<String>, selected: Int, onSelect: (Int) -> Unit) {
+        val design = LocalAppDesign.current
+        val palette = design.palette
+        val scheme = MaterialTheme.colorScheme
+        val density = LocalDensity.current
+        // Lay the strip out once at composition, from the measured labels
+        // (a tab is its label plus 16dp each side), so the very first frame
+        // already shows the selected tab centred with its indicator under it.
+        // The layout pass below then corrects any sub-pixel difference.
+        val measurer = rememberTextMeasurer()
+        val labelStyle = MaterialTheme.typography.titleSmall
+        val viewportPx = with(density) { LocalConfiguration.current.screenWidthDp.dp.toPx() }
+        val initial = remember(options, selected, labelStyle) {
+            val pad = with(density) { 16.dp.toPx() }
+            val edge = with(density) { (design.spacing.gutter - 16.dp).coerceAtLeast(0.dp).toPx() }
+            val textWidths = options.map { measurer.measure(it, labelStyle, maxLines = 1).size.width.toFloat() }
+            var x = edge
+            val tabLefts = textWidths.map { w -> x.also { x += w + pad * 2 } }
+            val content = x + edge
+            val i = selected.coerceIn(0, options.size - 1)
+            val centre = (tabLefts[i] + (textWidths[i] + pad * 2) / 2f - viewportPx / 2f)
+                .coerceIn(0f, (content - viewportPx).coerceAtLeast(0f))
+            Triple(tabLefts[i] + pad, textWidths[i], centre.toInt())
+        }
+        val scroll = rememberScrollState(initial.third)
+        val rowCoords = remember(options) { arrayOfNulls<androidx.compose.ui.layout.LayoutCoordinates>(1) }
+        val tabCoords = remember(options) { arrayOfNulls<androidx.compose.ui.layout.LayoutCoordinates>(options.size) }
+        val textCoords = remember(options) { arrayOfNulls<androidx.compose.ui.layout.LayoutCoordinates>(options.size) }
+        val left = remember(options) { androidx.compose.animation.core.Animatable(initial.first) }
+        val width = remember(options) { androidx.compose.animation.core.Animatable(initial.second) }
+        val firstRun = remember(options) { booleanArrayOf(true) }
+
+        LaunchedEffect(selected, options) {
+            snapshotFlow { scroll.viewportSize }.first { it > 0 }
+            val row = rowCoords[0] ?: return@LaunchedEffect
+            val tab = tabCoords.getOrNull(selected) ?: return@LaunchedEffect
+            val text = textCoords.getOrNull(selected) ?: return@LaunchedEffect
+            val textLeft = row.localPositionOf(text, androidx.compose.ui.geometry.Offset.Zero).x
+            val textWidth = text.size.width.toFloat()
+            val tabLeft = row.localPositionOf(tab, androidx.compose.ui.geometry.Offset.Zero).x
+            val centre = (tabLeft + tab.size.width / 2f - scroll.viewportSize / 2f)
+                .toInt().coerceIn(0, scroll.maxValue)
+            if (firstRun[0]) {
+                left.snapTo(textLeft)
+                width.snapTo(textWidth)
+                scroll.scrollTo(centre)
+                firstRun[0] = false
+            } else {
+                val spatial = spring<Float>(dampingRatio = 0.8f, stiffness = 380f)
+                kotlinx.coroutines.coroutineScope {
+                    launch { left.animateTo(textLeft, spatial) }
+                    launch { width.animateTo(textWidth, spatial) }
+                    launch { scroll.animateScrollTo(centre, spring(dampingRatio = 1f, stiffness = 380f)) }
+                }
+            }
+        }
+
+        Box(Modifier.fillMaxWidth().horizontalScroll(scroll)) {
+            Row(
+                Modifier
+                    .onPlaced { rowCoords[0] = it }
+                    .padding(horizontal = (design.spacing.gutter - 16.dp).coerceAtLeast(0.dp))
+            ) {
                 options.forEachIndexed { index, option ->
-                    val isSelected = index == selectedIndex
-                    SegmentedButton(
-                        selected = isSelected,
+                    Tab(
+                        selected = index == selected,
                         onClick = { onSelect(index) },
-                        shape = SegmentedButtonDefaults.itemShape(index, options.size),
-                        modifier = Modifier.weight(1f),
-                        colors = SegmentedButtonDefaults.colors(
-                            activeContainerColor = c.accentSofter,
-                            activeContentColor = c.onAccentSofter,
-                            activeBorderColor = c.outline,
-                            inactiveContainerColor = Color.Transparent,
-                            inactiveContentColor = palette.textSecondary,
-                            inactiveBorderColor = c.outline
-                        ),
-                        label = {
+                        modifier = Modifier.onPlaced { tabCoords[index] = it },
+                        selectedContentColor = scheme.primary,
+                        unselectedContentColor = palette.textSecondary,
+                        text = {
                             Text(
                                 text = option,
-                                style = MaterialTheme.typography.labelLarge,
+                                style = MaterialTheme.typography.titleSmall,
                                 maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
+                                modifier = Modifier.onPlaced { textCoords[index] = it }
                             )
                         }
                     )
                 }
             }
-        }
+            Box(
+                Modifier
+                    .align(Alignment.BottomStart)
+                    .layout { measurable, _ ->
+                        val w = width.value.toInt().coerceAtLeast(0)
+                        val placeable = measurable.measure(
+                            androidx.compose.ui.unit.Constraints.fixed(w, with(density) { 3.dp.roundToPx() })
+                        )
+                        layout(w, placeable.height) { placeable.place(left.value.toInt(), 0) }
+                    }
+                    .background(scheme.primary, RoundedCornerShape(topStart = 3.dp, topEnd = 3.dp))
+            )
         }
     }
 

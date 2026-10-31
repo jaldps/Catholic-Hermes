@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
@@ -70,7 +71,8 @@ fun DevotionsExplorerScreen(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
     onSpeakText: ((String) -> Unit)? = null,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    header: LazyListScope.() -> Unit = {}
 ) {
     val design = LocalAppDesign.current
 
@@ -89,34 +91,22 @@ fun DevotionsExplorerScreen(
 
     val categories = listOf(
         currentLanguage.pick(
-            "Advocaciones Marianas (${marianList.size})",
-            "Marian Advocations (${marianList.size})",
-            "Advocações Marianas (${marianList.size})"
+            "Nuestra Señora · ${marianList.size}",
+            "Our Lady · ${marianList.size}",
+            "Nossa Senhora · ${marianList.size}"
         ),
         currentLanguage.pick(
-            "Devociones a Cristo (${christList.size})",
-            "Devotions to Christ (${christList.size})",
-            "Devoções a Cristo (${christList.size})"
+            "Cristo · ${christList.size}",
+            "Christ · ${christList.size}",
+            "Cristo · ${christList.size}"
         )
     )
 
     val regions = listOf(
         EVERY_REGION to currentLanguage.pick("Todas", "All", "Todas"),
-        "Americas" to currentLanguage.pick(
-            "América Latina y el Caribe",
-            "Latin America and the Caribbean",
-            "América Latina e o Caribe"
-        ),
-        "Europe" to currentLanguage.pick(
-            "Europa y Santuarios Históricos",
-            "Europe and historic shrines",
-            "Europa e Santuários Históricos"
-        ),
-        "Universal" to currentLanguage.pick(
-            "Devociones Universales",
-            "Universal devotions",
-            "Devoções Universais"
-        )
+        "Americas" to currentLanguage.pick("Américas", "Americas", "Américas"),
+        "Europe" to currentLanguage.pick("Europa", "Europe", "Europa"),
+        "Universal" to currentLanguage.pick("Universales", "Universal", "Universais")
     )
 
     val query = searchQuery.trim().lowercase()
@@ -156,30 +146,32 @@ fun DevotionsExplorerScreen(
             .fillMaxSize()
             .testTag("devotions_explorer_screen")
     ) {
-        // Either label fills the leaf on its own in tracked capitals, so the
-        // two never sit abreast: the rail scrolls instead.
-        ReadingColumn {
-            ChipRail(scroll = categoryScroll) {
-                categories.forEachIndexed { index, label ->
-                    AppChip(
-                        label = label,
-                        selected = selectedCategoryTab == index,
-                        onClick = { selectedCategoryTab = index }
-                    )
+        LazyColumn(Modifier.fillMaxSize()) {
+            header()
+
+            item {
+                ReadingColumn {
+                    ChipRail(scroll = categoryScroll) {
+                        categories.forEachIndexed { index, label ->
+                            AppChip(
+                                label = label,
+                                selected = selectedCategoryTab == index,
+                                onClick = { selectedCategoryTab = index }
+                            )
+                        }
+                    }
                 }
             }
-        }
 
-        LazyColumn(Modifier.fillMaxSize()) {
             item {
                 ReadingColumn {
                     AppSearchField(
                         value = searchQuery,
                         onValueChange = { searchQuery = it },
                         placeholder = currentLanguage.pick(
-                            "Buscar por nombre, país, santuario o milagro...",
-                            "Search by name, country, sanctuary or miracle…",
-                            "Buscar por nome, país, santuário ou milagre…"
+                            "Nombre, país o santuario",
+                            "Name, country or shrine",
+                            "Nome, país ou santuário"
                         ),
                         modifier = Modifier
                             .padding(horizontal = design.spacing.gutter)
@@ -212,9 +204,9 @@ fun DevotionsExplorerScreen(
                                 "Advocações Marianas"
                             ),
                             subtitle = currentLanguage.pick(
-                                "Mostrando ${filteredMarian.size} advocaciones marianas aprobadas por la Iglesia",
-                                "Showing ${filteredMarian.size} Marian advocations approved by the Church",
-                                "Mostrando ${filteredMarian.size} advocações marianas aprovadas pela Igreja"
+                                "${filteredMarian.size} advocaciones aprobadas por la Iglesia",
+                                "${filteredMarian.size} advocations approved by the Church",
+                                "${filteredMarian.size} advocações aprovadas pela Igreja"
                             )
                         )
                     } else {
@@ -225,9 +217,9 @@ fun DevotionsExplorerScreen(
                                 "Devoções a Cristo"
                             ),
                             subtitle = currentLanguage.pick(
-                                "Mostrando ${filteredChrist.size} manifestaciones sagradas de Jesucristo",
-                                "Showing ${filteredChrist.size} sacred manifestations of Jesus Christ",
-                                "Mostrando ${filteredChrist.size} manifestações sagradas de Jesus Cristo"
+                                "${filteredChrist.size} devociones a Nuestro Señor",
+                                "${filteredChrist.size} devotions to Our Lord",
+                                "${filteredChrist.size} devoções a Nosso Senhor"
                             )
                         )
                     }
