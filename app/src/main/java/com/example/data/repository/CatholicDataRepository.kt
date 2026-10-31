@@ -30,6 +30,7 @@ import com.example.data.models.VerseOfTheDay
 import com.example.data.models.ViaCrucisStation
 import com.example.data.liturgy.CalendarDate
 import com.example.data.liturgy.LectionaryData
+import com.example.data.liturgy.CelebrationRank
 import com.example.data.liturgy.LiturgicalCalendar
 import com.example.data.liturgy.ScriptureResolver
 import com.example.data.models.LocalizedText
@@ -248,7 +249,20 @@ class CatholicDataRepository(
     // Flagship Additions: Pilgrimages, Habits, Calendar
     val globalPilgrimages: List<com.example.data.models.CatholicPilgrimageSanctuary> get() = PilgrimageAndHabitsData.globalPilgrimages
     val spiritualHabitsList: List<com.example.data.models.SpiritualHabitItem> get() = PilgrimageAndHabitsData.spiritualHabitsList
-    val liturgicalCalendarDays: List<com.example.data.models.LiturgicalCalendarDay> get() = PilgrimageAndHabitsData.upcomingLiturgicalDays
+    /**
+     * Today, then the next four weeks' Sundays, feasts, solemnities and days
+     * of fast or abstinence, computed from the calendar rather than seeded.
+     */
+    val liturgicalCalendarDays: List<com.example.data.models.LiturgicalCalendarDay>
+        get() {
+            val today = LiturgicalCalendar.today()
+            return (0 until 28).map { today.plusDays(it) }.filter { date ->
+                val info = LiturgicalCalendar.dayInfo(date)
+                date == today || date.isSunday || info.isHolyDayOfObligation ||
+                    info.isFastDay || info.isAbstinenceDay && !date.isFriday ||
+                    info.rank == CelebrationRank.SOLEMNITY || info.rank == CelebrationRank.FEAST
+            }.map { getLiturgicalDay(it) }
+        }
     val defaultHabitsToSeed: List<com.example.data.local.SpiritualHabitEntity> get() = PilgrimageAndHabitsData.defaultHabitsToSeed
     val defaultLiturgicalDaysToSeed: List<com.example.data.local.LiturgicalDayEntity> get() = PilgrimageAndHabitsData.defaultLiturgicalDaysToSeed
     val sinAvoiderCatalog: List<com.example.data.models.SinAvoiderOption> get() = PilgrimageAndHabitsData.sinAvoiderCatalog

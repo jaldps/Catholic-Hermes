@@ -206,7 +206,11 @@ private fun LiturgicalDayEntry(day: LiturgicalCalendarDay, currentLanguage: AppL
         // The liturgical colour is data, so it travels as the banner's accent
         // rather than as a coloured disc the screen draws for itself.
         AppBanner(
-            title = "${day.dayOfMonth} ${day.monthName} · ${day.seasonName.get(currentLanguage)}",
+            title = currentLanguage.pick(
+                "${day.dayOfMonth} de ${day.monthName.lowercase()}",
+                "${day.monthName} ${day.dayOfMonth}",
+                "${day.dayOfMonth} de ${day.monthName.lowercase()}"
+            ) + " · " + day.seasonName.get(currentLanguage),
             body = day.celebrationTitle.get(currentLanguage),
             accentColorHex = day.liturgicalColorHex
         )

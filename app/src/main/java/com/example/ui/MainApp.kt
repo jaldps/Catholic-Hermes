@@ -67,7 +67,7 @@ enum class AppDestination(
     CATECHISM("Catecismo", "Catechism", "Catecismo", AppIconSlot.CATECHISM, "nav_catechism"),
     ROSARY("Rosario", "Rosary", "Terço", AppIconSlot.ROSARY, "nav_rosary"),
     PRAYERS("Oraciones", "Prayers", "Orações", AppIconSlot.PRAYERS, "nav_prayers"),
-    PILGRIMAGE_HABITS("Santuarios", "Sanctuaries", "Santuários", AppIconSlot.PILGRIMAGE, "nav_pilgrimage"),
+    PILGRIMAGE_HABITS("Calendario y Santuarios", "Calendar & Shrines", "Calendário e Santuários", AppIconSlot.PILGRIMAGE, "nav_pilgrimage"),
     DOCTRINE("Doctrina e Historia", "Doctrine & History", "Doutrina e História", AppIconSlot.DOCTRINE, "nav_doctrine"),
     PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PARISH, "nav_parishes"),
     CHURCHES_NEWS("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias", AppIconSlot.NEWS, "nav_churches_news"),
@@ -100,6 +100,16 @@ fun MainApp(
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
     var current by remember { mutableStateOf(initialDestination) }
+    // The tab a pushed screen was opened from, so back and the tab bar's
+    // highlight return to it: Home's shortcuts push onto Home, not onto More.
+    var origin by remember {
+        mutableStateOf(if (initialDestination in AppDestination.tabs) initialDestination else AppDestination.MORE)
+    }
+    fun go(destination: AppDestination) {
+        if (destination in AppDestination.tabs) origin = destination
+        else if (current in AppDestination.tabs) origin = current
+        current = destination
+    }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
     var bibleInitialTab by remember { mutableIntStateOf(0) }
     var showLanguageSelector by remember { mutableStateOf(false) }
@@ -122,10 +132,10 @@ fun MainApp(
     AppScaffold(
         title = "Sancta Fides",
         navItems = navItems,
-        selectedNavIndex = if (isPushed) tabs.indexOf(AppDestination.MORE) else tabs.indexOf(current),
-        onNavSelected = { current = tabs[it] },
-        onBack = if (isPushed) ({ current = AppDestination.MORE }) else null,
-        backLabel = if (isPushed) AppDestination.MORE.title(currentLanguage) else null,
+        selectedNavIndex = tabs.indexOf(if (isPushed) origin else current),
+        onNavSelected = { go(tabs[it]) },
+        onBack = if (isPushed) ({ current = origin }) else null,
+        backLabel = if (isPushed) origin.title(currentLanguage) else null,
         actions = {
             IconButton(
                 onClick = { showCustomizerModal = true },
@@ -147,7 +157,7 @@ fun MainApp(
         }
     ) { innerPadding ->
         BackHandler(enabled = current != AppDestination.HOME) {
-            current = if (isPushed) AppDestination.MORE else AppDestination.HOME
+            if (isPushed) current = origin else go(AppDestination.HOME)
         }
 
         Box(
@@ -174,27 +184,27 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         liturgicalDay = repository.getCurrentLiturgicalDay(),
                         onOpenLanguageSelector = { showLanguageSelector = true },
-                        onNavigateToHabits = { current = AppDestination.HABITS_VIRTUES },
+                        onNavigateToHabits = { go(AppDestination.HABITS_VIRTUES) },
                         onNavigateToBible = {
                             bibleInitialTab = 0
-                            current = AppDestination.BIBLE
+                            go(AppDestination.BIBLE)
                         },
                         onNavigateToMissal = {
                             bibleInitialTab = 1
-                            current = AppDestination.BIBLE
+                            go(AppDestination.BIBLE)
                         },
-                        onNavigateToCatechism = { current = AppDestination.CATECHISM },
-                        onNavigateToRosary = { current = AppDestination.ROSARY },
-                        onNavigateToPrayers = { current = AppDestination.PRAYERS },
-                        onNavigateToPilgrimage = { current = AppDestination.PILGRIMAGE_HABITS },
-                        onNavigateToDoctrine = { current = AppDestination.DOCTRINE },
+                        onNavigateToCatechism = { go(AppDestination.CATECHISM) },
+                        onNavigateToRosary = { go(AppDestination.ROSARY) },
+                        onNavigateToPrayers = { go(AppDestination.PRAYERS) },
+                        onNavigateToPilgrimage = { go(AppDestination.PILGRIMAGE_HABITS) },
+                        onNavigateToDoctrine = { go(AppDestination.DOCTRINE) },
                         onNavigateToSpiritualLife = {
                             spiritualLifeInitialTab = 0
-                            current = AppDestination.SPIRITUAL_LIFE
+                            go(AppDestination.SPIRITUAL_LIFE)
                         },
                         onNavigateToQuiz = {
                             spiritualLifeInitialTab = 1
-                            current = AppDestination.SPIRITUAL_LIFE
+                            go(AppDestination.SPIRITUAL_LIFE)
                         }
                     )
 
@@ -263,7 +273,7 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         sections = moreSections(currentLanguage) { destination ->
                             if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
-                            current = destination
+                            go(destination)
                         }
                     )
                 }
@@ -324,7 +334,7 @@ private fun moreSections(
             pick("Lugares", "Places", "Lugares"),
             listOf(
                 entry(AppDestination.PARISHES, "Misa cerca de ti", "Mass near you", "Missa perto de você"),
-                entry(AppDestination.PILGRIMAGE_HABITS, "Santuarios y peregrinaciones", "Shrines and pilgrimages", "Santuários e peregrinações")
+                entry(AppDestination.PILGRIMAGE_HABITS, "Año litúrgico, hábitos y santuarios", "Church year, habits and shrines", "Ano litúrgico, hábitos e santuários")
             )
         )
     )

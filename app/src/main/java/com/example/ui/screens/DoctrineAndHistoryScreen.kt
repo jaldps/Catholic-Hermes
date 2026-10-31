@@ -746,9 +746,9 @@ private fun ParishesAndNewsPane(
                 Text(
                     text = eyebrow(
                         currentLanguage.pick(
-                            "Filtro Geográfico por Menú Desplegable:",
-                            "Geographic Filter Dropdown Menus:",
-                            "Filtro Geográfico por Menus Desdobráveis:"
+                            "Filtrar por lugar",
+                            "Filter by place",
+                            "Filtrar por lugar"
                         )
                     ),
                     style = styles.sectionEyebrow,
@@ -761,9 +761,9 @@ private fun ParishesAndNewsPane(
                 // capitals does not fit half a 360dp card.
                 ParishDropdownSelector(
                     label = currentLanguage.pick(
-                        "País seleccionado:",
-                        "Selected Country:",
-                        "País selecionado:"
+                        "País",
+                        "Country",
+                        "País"
                     ),
                     selectedValue = selectedCountry,
                     anyLabel = currentLanguage.pick("Todos", "All", "Todos"),
@@ -782,9 +782,9 @@ private fun ParishesAndNewsPane(
 
                 ParishDropdownSelector(
                     label = currentLanguage.pick(
-                        "Región / Estado:",
-                        "Region / State:",
-                        "Região / Estado:"
+                        "Región o estado",
+                        "Region or state",
+                        "Região ou estado"
                     ),
                     selectedValue = selectedRegion,
                     anyLabel = currentLanguage.pick("Todas", "All", "Todas"),
@@ -801,7 +801,7 @@ private fun ParishesAndNewsPane(
                 Spacer(Modifier.height(design.spacing.cardGap / 2))
 
                 ParishDropdownSelector(
-                    label = currentLanguage.pick("Ciudad:", "City:", "Cidade:"),
+                    label = currentLanguage.pick("Ciudad", "City", "Cidade"),
                     selectedValue = selectedCity,
                     anyLabel = currentLanguage.pick("Todas", "All", "Todas"),
                     options = availableCities,
