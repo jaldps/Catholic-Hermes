@@ -61,6 +61,8 @@ import com.example.data.models.LocalizedText
 import com.example.data.models.RosaryMystery
 import com.example.data.models.RosaryMysteryType
 import com.example.data.repository.CatholicDataRepository
+import com.example.data.repository.LitanyLine
+import com.example.data.repository.LitanyOfLoreto
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
@@ -544,9 +546,9 @@ private fun buildRosaryGuide(mystery: RosaryMystery, creed: Said, lang: AppLangu
         closing,
         closingTitle(lang),
         lang.pick(
-            "Salve, oración final y señal de la cruz",
-            "Hail, Holy Queen, closing prayer and Sign of the Cross",
-            "Salve-Rainha, oração final e sinal da cruz"
+            "Salve, letanías (opcional), oración final y señal de la cruz",
+            "Hail, Holy Queen, the litany (optional), closing prayer and Sign of the Cross",
+            "Salve-Rainha, ladainha (opcional), oração final e sinal da cruz"
         )
     )
     val medal = g.bead(BeadKind.MEDAL, closing)
@@ -562,6 +564,62 @@ private fun buildRosaryGuide(mystery: RosaryMystery, creed: Said, lang: AppLangu
         bead = medal,
         section = closing
     )
+
+    // The Litany of Loreto follows the Hail Holy Queen. It is optional, so each
+    // of its parts is marked so and can be skipped with Next. Its closing
+    // versicle is the "Pray for us" step that already follows.
+    val litany = LitanyOfLoreto.lines(lang)
+    val litanyRubric = lang.pick(
+        "Opcional. Las letanías se rezan al terminar las cinco decenas y la Salve. " +
+            "Quien guía dice cada invocación y los demás contestan lo que sigue a R/. " +
+            "Si rezas solo, di las dos partes.",
+        "Optional. The litany is prayed after the five decades and the Hail, Holy Queen. " +
+            "The leader says each invocation and everyone answers what follows R/. " +
+            "Praying alone, say both parts.",
+        "Opcional. A ladainha reza-se depois das cinco dezenas e da Salve-Rainha. " +
+            "Quem conduz diz cada invocação e todos respondem o que segue a R/. " +
+            "Se rezar sozinho, diga as duas partes."
+    )
+    val trinityEnd = litany.indexOfFirst { it.call.startsWith("Santa Mar") || it.call.startsWith("Holy Mary") }
+    val lambStart = litany.indexOfFirst {
+        it.call.startsWith("Cordero") || it.call.startsWith("Lamb") || it.call.startsWith("Cordeiro")
+    }
+    g.steps += GuideStep(
+        name = lang.pick("Letanías Lauretanas", "Litany of Loreto", "Ladainha de Nossa Senhora"),
+        intention = lang.pick("Señor y Santísima Trinidad", "The Lord and the Holy Trinity", "O Senhor e a Santíssima Trindade"),
+        rubric = litanyRubric,
+        leader = litanyText(litany.subList(0, trinityEnd)),
+        bead = medal,
+        section = closing,
+        optional = true
+    )
+    g.steps += GuideStep(
+        name = lang.pick("Letanías Lauretanas", "Litany of Loreto", "Ladainha de Nossa Senhora"),
+        intention = lang.pick("Invocaciones a la Virgen", "Invocations of Our Lady", "Invocações a Nossa Senhora"),
+        rubric = lang.pick(
+            "Opcional. A cada invocación se contesta «ruega por nosotros».",
+            "Optional. Each invocation is answered “pray for us”.",
+            "Opcional. A cada invocação responde-se «rogai por nós»."
+        ),
+        leader = litanyText(litany.subList(trinityEnd, lambStart)),
+        bead = medal,
+        section = closing,
+        optional = true
+    )
+    g.steps += GuideStep(
+        name = lang.pick("Cordero de Dios", "Lamb of God", "Cordeiro de Deus"),
+        intention = lang.pick("Conclusión de las letanías", "End of the litany", "Conclusão da ladainha"),
+        rubric = lang.pick(
+            "Opcional. Tres veces, cada una con su respuesta.",
+            "Optional. Three times, each with its own response.",
+            "Opcional. Três vezes, cada uma com a sua resposta."
+        ),
+        leader = litanyText(litany.subList(lambStart, litany.size)),
+        bead = medal,
+        section = closing,
+        optional = true
+    )
+
     g.steps += GuideStep(
         name = lang.pick("Ruega por nosotros", "Pray for us", "Rogai por nós"),
         rubric = lang.pick(
@@ -573,6 +631,18 @@ private fun buildRosaryGuide(mystery: RosaryMystery, creed: Said, lang: AppLangu
         response = prayForUs(lang).response,
         bead = medal,
         section = closing
+    )
+    g.steps += GuideStep(
+        name = lang.pick("Oración de las letanías", "Prayer of the litany", "Oração da ladainha"),
+        rubric = lang.pick(
+            "Opcional. Si rezaste las letanías, concluyen con esta oración.",
+            "Optional. If you prayed the litany, it ends with this prayer.",
+            "Opcional. Se rezou a ladainha, ela termina com esta oração."
+        ),
+        leader = LitanyOfLoreto.closingPrayer(lang),
+        bead = medal,
+        section = closing,
+        optional = true
     )
     g.steps += GuideStep(
         name = lang.pick("Oración final", "Closing prayer", "Oração final"),
@@ -1697,3 +1767,7 @@ private fun CardHeading(eyebrow: String, detail: String?) {
         }
     }
 }
+
+/** A run of litany lines set as call and answer, one pair to a paragraph. */
+private fun litanyText(lines: List<LitanyLine>): String =
+    lines.joinToString("\n\n") { "${it.call}\n    R/. ${it.response}" }
