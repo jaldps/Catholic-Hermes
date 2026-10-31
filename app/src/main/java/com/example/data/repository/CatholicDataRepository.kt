@@ -29,6 +29,10 @@ import com.example.data.models.VaticanPrayer
 import com.example.data.models.VerseOfTheDay
 import com.example.data.models.ViaCrucisStation
 import com.example.data.liturgy.CalendarDate
+import com.example.data.xref.BibleLine
+import com.example.data.xref.CrossReference
+import com.example.data.xref.CrossReferenceIndex
+import com.example.data.xref.VerseRef
 import com.example.data.liturgy.LectionaryData
 import com.example.data.liturgy.CelebrationRank
 import com.example.data.liturgy.LiturgicalCalendar
@@ -53,6 +57,12 @@ class CatholicDataRepository(
 
     private val bibleProvider: BibleTextProvider? = context?.let { BibleTextProvider(it) }
     val bibleDownloadManager: BibleDownloadManager? = context?.let { BibleDownloadManager(it) }
+
+    private val canonIds: List<String> by lazy { BibleData.catholicCanonBooks.map { it.id } }
+    private val crossReferenceIndex: CrossReferenceIndex? by lazy {
+        context?.let { CrossReferenceIndex(it, canonIds) }
+    }
+    private val bibleLines = HashMap<AppLanguage, BibleLine>()
 
     private val _currentLanguage = MutableStateFlow(detectInitialLanguage())
     val currentLanguage: StateFlow<AppLanguage> = _currentLanguage.asStateFlow()
@@ -340,5 +350,61 @@ class CatholicDataRepository(
     // Official Vatican Night Prayer (Compline & Examen)
     val complineOffice: com.example.data.models.ComplineOffice get() = NightPrayerData.complineOffice
     val ignatianExamenSteps: List<com.example.data.models.IgnatianExamenStep> get() = NightPrayerData.ignatianExamenSteps
-}
 
+    // ------------------------------------------------------- cross-references
+
+    /** A cross-reference as the reader shows it: label and opening words. */
+    data class ResolvedCrossReference(
+        val reference: CrossReference,
+        val label: String,
+        val preview: String
+    )
+
+    /** References from one verse, strongest first, with their text in [language]. */
+    fun crossReferences(
+        bookId: String,
+        chapter: Int,
+        verse: Int,
+        language: AppLanguage = _currentLanguage.value,
+        limit: Int = 60
+    ): List<ResolvedCrossReference> {
+        val index = crossReferenceIndex ?: return emptyList()
+        return index.referencesFrom(VerseRef(bookId, chapter, verse), language, limit).map { ref ->
+            ResolvedCrossReference(ref, referenceLabel(ref, language), referenceText(ref, language))
+        }
+    }
+
+    /** How many references leave each verse of a chapter. */
+    fun crossReferenceCounts(bookId: String, chapter: Int, language: AppLanguage = _currentLanguage.value): Map<Int, Int> =
+        crossReferenceIndex?.countsForChapter(bookId, chapter, language) ?: emptyMap()
+
+    /** Every connection in the Bible, for the whole-Bible arc view. */
+    fun allCrossReferences(language: AppLanguage = _currentLanguage.value, minVotes: Int = 0): Sequence<Pair<VerseRef, VerseRef>> =
+        crossReferenceIndex?.allConnections(language, minVotes) ?: emptySequence()
+
+    /** The whole canon laid on one line, in [language]'s own numbering. */
+    fun bibleLine(language: AppLanguage = _currentLanguage.value): BibleLine? {
+        bibleLines[language]?.let { return it }
+        val counts = bibleProvider?.verseCounts(language)?.takeIf { it.isNotEmpty() } ?: return null
+        return BibleLine(counts, canonIds).also { bibleLines[language] = it }
+    }
+
+    private fun referenceLabel(ref: CrossReference, language: AppLanguage): String {
+        val book = BibleData.catholicCanonBooks.firstOrNull { it.id == ref.target.bookId }
+            ?.name?.get(language) ?: ref.target.bookId
+        val sep = if (language == AppLanguage.EN) ":" else ","
+        val start = "${ref.target.chapter}$sep${ref.target.verse}"
+        val end = ref.end?.let { e ->
+            if (e.chapter == ref.target.chapter) "\u2013${e.verse}" else "\u2013${e.chapter}$sep${e.verse}"
+        } ?: ""
+        return "$book $start$end"
+    }
+
+    private fun referenceText(ref: CrossReference, language: AppLanguage): String {
+        val t = ref.target
+        val verses = bibleProvider?.getVerses(t.bookId, t.chapter, language) ?: return ""
+        val last = ref.end?.takeIf { it.chapter == t.chapter }?.verse ?: t.verse
+        return verses.filter { it.number in t.verse..last }
+            .joinToString(" ") { it.text.get(language) }
+    }
+}

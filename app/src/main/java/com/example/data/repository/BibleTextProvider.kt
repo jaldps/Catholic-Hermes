@@ -72,6 +72,19 @@ class BibleTextProvider(private val context: Context) {
         }
     }
 
+    /**
+     * Verses per chapter for every book in [language], in that edition's own
+     * numbering: index 0 is chapter 1. Used to lay the whole Bible on one line.
+     */
+    fun verseCounts(language: AppLanguage): Map<String, IntArray> {
+        val root = root(language) ?: return emptyMap()
+        return BibleData.catholicCanonBooks.associate { book ->
+            val chapters = root.optJSONObject(book.id)
+            val count = chapters?.keys()?.asSequence()?.count { it.toIntOrNull() != null } ?: 0
+            book.id to IntArray(count) { c -> chapters?.optJSONArray((c + 1).toString())?.length() ?: 0 }
+        }
+    }
+
     /** Number of chapters present for [bookId] in [language]. */
     fun chapterCount(bookId: String, language: AppLanguage = AppLanguage.EN): Int {
         val book = root(language)?.optJSONObject(bookId) ?: return 0

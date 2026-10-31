@@ -57,6 +57,14 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.data.repository.BibleData
+import com.example.data.xref.VerseRef
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.runtime.mutableStateListOf
+import android.content.res.Configuration
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.TextStyle
@@ -168,6 +176,12 @@ fun BibleScreen(
     var selectedChapterNumber by remember { mutableIntStateOf(1) }
     var showChapterSelectorDialog by remember { mutableStateOf(false) }
     var selectedVerseForCommentary by remember { mutableStateOf<BibleVerse?>(null) }
+    // Following cross-references: the verse to land on, the verse studied in
+    // landscape, and the trail back to where the reader started.
+    var focusVerse by remember { mutableStateOf<Int?>(null) }
+    var studyVerse by remember { mutableStateOf<Int?>(null) }
+    val referenceTrail = remember { mutableStateListOf<VerseRef>() }
+    val landscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
     var searchQuery by remember { mutableStateOf("") }
     var fontSizeMultiplier by remember { mutableFloatStateOf(1f) }
     var useSerifFont by remember { mutableStateOf(true) }
@@ -244,27 +258,89 @@ fun BibleScreen(
                         repository.getChapter(book.id, chapterNumber, currentLanguage).verses
                     }
 
-                    BackHandler { selectedBook = null }
+                    // Back first retraces followed references, then leaves the book.
+                    BackHandler {
+                        val previous = referenceTrail.removeLastOrNull()
+                        if (previous != null) {
+                            selectedBook = BibleData.catholicCanonBooks.firstOrNull { it.id == previous.bookId } ?: book
+                            selectedChapterNumber = previous.chapter
+                            focusVerse = previous.verse
+                            studyVerse = previous.verse
+                        } else {
+                            selectedBook = null
+                        }
+                    }
                     val positionContext = LocalContext.current
                     LaunchedEffect(book.id, chapterNumber) {
                         ReadingPosition.save(positionContext, book.id, chapterNumber)
                     }
 
-                    ChapterReader(
-                        book = book,
-                        chapterNumber = chapterNumber,
-                        chapterCount = chapterCount,
-                        verses = verses,
-                        currentLanguage = currentLanguage,
-                        fontScale = fontSizeMultiplier,
-                        serif = useSerifFont,
-                        onBack = { selectedBook = null },
-                        onChooseChapter = { showChapterSelectorDialog = true },
-                        onFontScaleChange = { fontSizeMultiplier = it },
-                        onSerifToggle = { useSerifFont = !useSerifFont },
-                        onChapterChange = { selectedChapterNumber = it },
-                        onVerseClick = { selectedVerseForCommentary = it }
-                    )
+                    val follow: (VerseRef) -> Unit = { target ->
+                        referenceTrail.add(VerseRef(book.id, chapterNumber, studyVerse ?: selectedVerseForCommentary?.number ?: 1))
+                        selectedVerseForCommentary = null
+                        selectedBook = BibleData.catholicCanonBooks.firstOrNull { it.id == target.bookId } ?: book
+                        selectedChapterNumber = target.chapter
+                        focusVerse = target.verse
+                        studyVerse = target.verse
+                    }
+                    val reader: @Composable (Modifier) -> Unit = { readerModifier ->
+                        ChapterReader(
+                            book = book,
+                            chapterNumber = chapterNumber,
+                            chapterCount = chapterCount,
+                            verses = verses,
+                            currentLanguage = currentLanguage,
+                            fontScale = fontSizeMultiplier,
+                            serif = useSerifFont,
+                            onBack = { referenceTrail.clear(); selectedBook = null },
+                            onChooseChapter = { showChapterSelectorDialog = true },
+                            onFontScaleChange = { fontSizeMultiplier = it },
+                            onSerifToggle = { useSerifFont = !useSerifFont },
+                            onChapterChange = { selectedChapterNumber = it; focusVerse = null; studyVerse = null },
+                            onVerseClick = {
+                                if (landscape) studyVerse = it.number else selectedVerseForCommentary = it
+                            },
+                            focusVerse = focusVerse,
+                            selectedVerse = if (landscape) studyVerse else null,
+                            modifier = readerModifier
+                        )
+                    }
+                    if (landscape) {
+                        // Turned on its side, the reader becomes a study: the
+                        // text on the left, the whole Bible's web on the right.
+                        Row(Modifier.fillMaxSize()) {
+                            reader(Modifier.weight(0.46f))
+                            CrossReferenceStudy(
+                                repository = repository,
+                                book = book,
+                                chapterNumber = chapterNumber,
+                                verse = studyVerse,
+                                currentLanguage = currentLanguage,
+                                onFollow = follow,
+                                modifier = Modifier.weight(0.54f).fillMaxHeight()
+                            )
+                        }
+                    } else {
+                        reader(Modifier)
+                    }
+                    selectedVerseForCommentary?.let { verse ->
+                        ModalBottomSheet(
+                            onDismissRequest = { selectedVerseForCommentary = null },
+                            sheetState = bottomSheetState,
+                            shape = design.shapes.sheet,
+                            containerColor = design.palette.groupedSurface,
+                            scrimColor = design.palette.scrim
+                        ) {
+                            VerseSheet(
+                                repository = repository,
+                                book = book,
+                                chapterNumber = chapterNumber,
+                                verse = verse,
+                                currentLanguage = currentLanguage,
+                                onFollow = follow
+                            )
+                        }
+                    }
 
                     if (showChapterSelectorDialog) {
                         ChapterSelectorDialog(
@@ -329,17 +405,6 @@ fun BibleScreen(
         }
     }
 
-    selectedVerseForCommentary?.let { verse ->
-        ModalBottomSheet(
-            onDismissRequest = { selectedVerseForCommentary = null },
-            sheetState = bottomSheetState,
-            shape = design.shapes.sheet,
-            containerColor = design.palette.groupedSurface,
-            scrimColor = design.palette.scrim
-        ) {
-            CommentarySheet(verse = verse, currentLanguage = currentLanguage)
-        }
-    }
 }
 
 // ------------------------------------------------------------------ directory
@@ -578,12 +643,24 @@ private fun ChapterReader(
     onFontScaleChange: (Float) -> Unit,
     onSerifToggle: () -> Unit,
     onChapterChange: (Int) -> Unit,
-    onVerseClick: (BibleVerse) -> Unit
+    onVerseClick: (BibleVerse) -> Unit,
+    /** A verse to bring into view and mark, e.g. after following a reference. */
+    focusVerse: Int? = null,
+    /** Verse being studied beside the text in landscape. */
+    selectedVerse: Int? = null,
+    modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
     val centred = design.decor.titleAlignment == Alignment.CenterHorizontally
+    val listState = rememberLazyListState()
+    // Title, summary, the deuterocanon note when there is one, the ornament.
+    val leadingItems = if (book.isDeuterocanonical) 4 else 3
+    LaunchedEffect(focusVerse, verses) {
+        val i = verses.indexOfFirst { it.number == focusVerse }
+        if (i >= 0) listState.scrollToItem(leadingItems + i)
+    }
     val reading = Modifier.widthIn(max = design.spacing.readingMaxWidth)
 
     val chapterLabel = currentLanguage.pick(
@@ -592,7 +669,7 @@ private fun ChapterReader(
         "Cap. $chapterNumber / $chapterCount"
     )
 
-    Column(Modifier.fillMaxSize()) {
+    Column(modifier.fillMaxSize()) {
         Row(
             Modifier
                 .fillMaxWidth()
@@ -664,6 +741,7 @@ private fun ChapterReader(
 
         ReadingTypography(scale = fontScale, serif = serif) {
             LazyColumn(
+                state = listState,
                 modifier = Modifier
                     .weight(1f)
                     .fillMaxWidth(),
@@ -732,6 +810,7 @@ private fun ChapterReader(
                     }
                 } else {
                     itemsIndexed(verses, key = { _, verse -> verse.number }) { index, verse ->
+                        val marked = verse.number == selectedVerse || verse.number == focusVerse
                         AppVerseRow(
                             number = verse.number,
                             text = verse.text.get(currentLanguage),
@@ -739,6 +818,9 @@ private fun ChapterReader(
                             hasCommentary = verse.commentary != null,
                             onClick = { onVerseClick(verse) },
                             modifier = reading
+                                .clip(design.shapes.buttonSmall)
+                                .background(if (marked) palette.selectionTint else Color.Transparent)
+                                .testTag("verse_${verse.number}")
                         )
                     }
                 }
@@ -885,82 +967,6 @@ private fun ChapterSelectorDialog(
             )
         }
     )
-}
-
-@Composable
-private fun CommentarySheet(
-    verse: BibleVerse,
-    currentLanguage: AppLanguage
-) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-    val reading = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-
-    Column(
-        Modifier
-            .fillMaxWidth()
-            .padding(bottom = design.spacing.contentBottomGap)
-    ) {
-        AppSectionHeader(
-            title = currentLanguage.pick(
-                "Comentario Patrístico y Litúrgico",
-                "Patristic & Liturgical Commentary",
-                "Comentário Patrístico e Litúrgico"
-            ),
-            subtitle = currentLanguage.pick(
-                "v. ${verse.number}",
-                "v. ${verse.number}",
-                "v. ${verse.number}"
-            )
-        )
-
-        Text(
-            text = "«${verse.text.get(currentLanguage)}»",
-            style = styles.quote,
-            color = palette.textPrimary,
-            modifier = reading
-                .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-        )
-
-        Spacer(Modifier.height(design.spacing.sectionGap / 2))
-
-        val commentary = verse.commentary
-        if (commentary == null) {
-            AppEmptyState(
-                title = currentLanguage.pick(
-                    "Sin comentario",
-                    "No commentary",
-                    "Sem comentário"
-                ),
-                body = currentLanguage.pick(
-                    "Este versículo aún no tiene glosa patrística en la edición incluida.",
-                    "This verse has no patristic gloss in the bundled edition yet.",
-                    "Este versículo ainda não tem glosa patrística na edição incluída."
-                ),
-                icon = Icons.AutoMirrored.Filled.Comment
-            )
-        } else {
-            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                Text(
-                    text = verse.commentaryAuthor ?: currentLanguage.pick(
-                        "Padres de la Iglesia",
-                        "Church Fathers",
-                        "Padres da Igreja"
-                    ),
-                    style = styles.sectionEyebrow,
-                    color = palette.gold
-                )
-                Spacer(Modifier.height(design.spacing.cardGap / 2))
-                Text(
-                    text = commentary.get(currentLanguage),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = palette.textPrimary
-                )
-            }
-        }
-    }
 }
 
 // --------------------------------------------------------------- daily missal
