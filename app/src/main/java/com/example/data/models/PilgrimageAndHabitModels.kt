@@ -44,3 +44,22 @@ data class SinAvoiderOption(
     val iconName: String
 )
 
+
+/**
+ * Habit times were seeded, and are stored in Room, as Spanish words beside
+ * clock times ("08:00 AM / Tarde"). They are translated where they are shown,
+ * so existing databases read correctly without a migration.
+ */
+fun localizedHabitTime(time: String, language: com.example.data.models.AppLanguage): String {
+    if (language == com.example.data.models.AppLanguage.ES) return time
+    val words = listOf(
+        "Cualquier hora" to ("Any time" to "Qualquer hora"),
+        "Todo el día" to ("All day" to "O dia todo"),
+        "Mañana" to ("Morning" to "Manhã"),
+        "Tarde" to ("Afternoon" to "Tarde"),
+        "Noche" to ("Evening" to "Noite")
+    )
+    return words.fold(time) { acc, (es, other) ->
+        acc.replace(es, if (language == com.example.data.models.AppLanguage.EN) other.first else other.second)
+    }
+}

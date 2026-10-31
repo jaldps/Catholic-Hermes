@@ -5,12 +5,12 @@ import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
 import androidx.compose.foundation.background
-import androidx.compose.foundation.ScrollState
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,7 +23,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Call
@@ -221,7 +220,6 @@ private fun MoralDoctrinePane(
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
-    val chipScroll = rememberScrollState()
 
     val sections = listOf(
         currentLanguage.pick("Mandamientos", "Commandments", "Mandamentos"),
@@ -234,7 +232,7 @@ private fun MoralDoctrinePane(
         header()
 
         item(key = "doctrine_sections") {
-            ChipRail(scroll = chipScroll) {
+            ChipFlow {
                 sections.forEachIndexed { index, label ->
                     AppChip(
                         label = label,
@@ -643,7 +641,6 @@ private fun ParishesAndNewsPane(
 ) {
     val context = LocalContext.current
     val design = LocalAppDesign.current
-    val filterScroll = rememberScrollState()
 
     var parishSearchQuery by remember { mutableStateOf("") }
     // 0: all, 1: confessions, 2: adoration, 3: cathedrals.
@@ -838,10 +835,11 @@ private fun ParishesAndNewsPane(
                     modifier = Modifier.testTag("parish_open_maps")
                 )
             }
+            Spacer(Modifier.height(design.spacing.cardGap / 2))
         }
 
         item {
-            ChipRail(scroll = filterScroll) {
+            ChipFlow {
                 parishFilters.forEachIndexed { index, label ->
                     AppChip(
                         label = label,
@@ -1171,26 +1169,23 @@ private fun PlacePickerRow(
 }
 
 /**
- * A rail of chips that scrolls. The gutter is content padding inside the
- * scroll, so a rail scrolled to its end stops on the margin rather than
- * guillotining its last chip against the edge of the screen.
+ * A short set of chips (four at most here) that wraps instead of scrolling, so
+ * no chip is ever guillotined at the right edge of a phone: every choice is in
+ * view, inside the gutters, in every identity.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun ChipRail(
-    scroll: ScrollState,
-    content: @Composable () -> Unit
-) {
+private fun ChipFlow(content: @Composable () -> Unit) {
     val design = LocalAppDesign.current
-    Row(
-        Modifier
+    FlowRow(
+        modifier = Modifier
             .fillMaxWidth()
-            .horizontalScroll(scroll)
             .padding(
                 horizontal = design.spacing.gutter,
                 vertical = design.spacing.cardGap / 2
             ),
         horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
-        verticalAlignment = Alignment.CenterVertically
+        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
     ) {
         content()
     }

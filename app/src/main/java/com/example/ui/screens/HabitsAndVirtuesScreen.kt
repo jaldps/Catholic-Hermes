@@ -260,34 +260,11 @@ fun HabitsAndVirtuesScreen(
 
                     if (suggestedHabits.isNotEmpty()) {
                         item {
-                            AppSectionHeader(
-                                title = currentLanguage.pick(
-                                    "Sugerencias",
-                                    "Suggested practices",
-                                    "Sugestões"
-                                )
-                            )
-                        }
-                        item {
-                            AppListGroup {
-                                suggestedHabits.forEach { habit ->
-                                    AppListRow(
-                                        title = habit.localizedTitle(currentLanguage),
-                                        subtitle = habit.timeSuggestion,
-                                        leadingIcon = habitIcon(habit.iconName),
-                                        trailingText = categoryLabel(habit.category, currentLanguage),
-                                        showsNavigationAffordance = false
-                                    )
-                                }
-                            }
-                        }
-                        item {
-                            Spacer(Modifier.height(design.spacing.sectionGap / 2))
                             AppPrimaryButton(
                                 label = currentLanguage.pick(
-                                    "Adoptar estas ${suggestedHabits.size} prácticas",
-                                    "Adopt these ${suggestedHabits.size} practices",
-                                    "Adotar estas ${suggestedHabits.size} práticas"
+                                    "Empezar con ${suggestedHabits.size} prácticas sugeridas",
+                                    "Start with ${suggestedHabits.size} suggested practices",
+                                    "Começar com ${suggestedHabits.size} práticas sugeridas"
                                 ),
                                 onClick = {
                                     scope.launch { dao.insertDefaultHabits(suggestedHabits) }
@@ -298,6 +275,28 @@ fun HabitsAndVirtuesScreen(
                                     .padding(horizontal = design.spacing.gutter)
                                     .testTag("adopt_suggested_habits")
                             )
+                        }
+                        item {
+                            AppSectionHeader(
+                                title = currentLanguage.pick(
+                                    "Prácticas sugeridas",
+                                    "Suggested practices",
+                                    "Práticas sugeridas"
+                                )
+                            )
+                        }
+                        item {
+                            AppListGroup {
+                                suggestedHabits.forEach { habit ->
+                                    AppListRow(
+                                        title = habit.localizedTitle(currentLanguage),
+                                        subtitle = com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage),
+                                        leadingIcon = habitIcon(habit.iconName),
+                                        trailingText = categoryLabel(habit.category, currentLanguage),
+                                        showsNavigationAffordance = false
+                                    )
+                                }
+                            }
                         }
                     }
                 } else {
@@ -1092,7 +1091,7 @@ private fun HabitRow(
     Box(Modifier.testTag("habit_card_${habit.id}")) {
         AppListRow(
             title = title,
-            subtitle = "${habit.timeSuggestion} · ${habit.description}" + streakLine,
+            subtitle = "${com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage)} · ${habit.description}" + streakLine,
             leadingIcon = habitIcon(habit.iconName),
             showsNavigationAffordance = false,
             selected = isCompletedToday,

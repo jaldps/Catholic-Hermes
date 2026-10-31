@@ -120,9 +120,9 @@ fun CatechismScreen(
             AppScreenTitle(
                 title = currentLanguage.pick("Catecismo", "Catechism", "Catecismo"),
                 subtitle = currentLanguage.pick(
-                    "El Catecismo de la Iglesia Católica y su Compendio",
-                    "The Catechism of the Catholic Church and its Compendium",
-                    "O Catecismo da Igreja Católica e o seu Compêndio"
+                    "La fe de la Iglesia, íntegra",
+                    "The faith of the Church, in full",
+                    "A fé da Igreja, na íntegra"
                 )
             )
         }
@@ -218,9 +218,9 @@ private fun UniversalCatechismView(
                     value = searchQuery,
                     onValueChange = onSearchQueryChange,
                     placeholder = currentLanguage.pick(
-                        "Buscar por n° de art. (ej. 1324) o tema...",
-                        "Search by CCC # (e.g. 1324) or topic...",
-                        "Buscar por nº art. (ex. 1324) ou tema..."
+                        "Número (ej. 1324) o tema",
+                        "Number (e.g. 1324) or topic",
+                        "Número (ex. 1324) ou tema"
                     ),
                     clearLabel = currentLanguage.pick("Limpiar", "Clear", "Limpar"),
                     fieldModifier = Modifier.testTag("ccc_search_input")
@@ -803,9 +803,9 @@ private fun CompendiumView(
                     value = compendiumSearch,
                     onValueChange = { compendiumSearch = it },
                     placeholder = currentLanguage.pick(
-                        "Buscar en las 598 preguntas (ej. 1, eucaristía)...",
-                        "Search across 598 questions (e.g. 1, eucharist)...",
-                        "Buscar nas 598 perguntas (ex. 1, eucaristia)..."
+                        "Buscar en 598 preguntas",
+                        "Search 598 questions",
+                        "Buscar em 598 perguntas"
                     ),
                     clearLabel = currentLanguage.pick("Limpiar", "Clear", "Limpar"),
                     fieldModifier = Modifier.testTag("compendium_search_input")
@@ -982,6 +982,13 @@ private fun VaticanOfficialLinksView(
     val styles = LocalAppTextStyles.current
     var webViewUrl by remember { mutableStateOf<String?>(null) }
 
+    // The reader's own language first; the other two follow.
+    val ownLanguage = currentLanguage.pick("Español", "English", "Português")
+    val links = remember(currentLanguage) {
+        repository.officialVaticanLinks.sortedByDescending { it.language == ownLanguage }
+    }
+    val host = links.firstNotNullOfOrNull { hostOf(it.catechismUrl) } ?: "vatican.va"
+
     LazyColumn(Modifier.fillMaxSize()) {
         header()
 
@@ -992,18 +999,18 @@ private fun VaticanOfficialLinksView(
                     "Official sources",
                     "Fontes oficiais"
                 ),
+                // The host is the only part of the addresses worth reading;
+                // each action already says where it goes.
                 subtitle = currentLanguage.pick(
-                    "Los textos íntegros de la Santa Sede, en tres lenguas.",
-                    "The Holy See's complete texts, in three languages.",
-                    "Os textos integrais da Santa Sé, em três línguas."
+                    "Los textos íntegros de la Santa Sede en ${host}.",
+                    "The Holy See's complete texts on ${host}.",
+                    "Os textos integrais da Santa Sé em ${host}."
                 )
             )
         }
 
-        items(repository.officialVaticanLinks) { link ->
-            // The host is the only part of the address worth reading; the
-            // action already says where it goes.
-            AppSectionHeader(title = link.language, subtitle = hostOf(link.catechismUrl))
+        items(links) { link ->
+            AppSectionHeader(title = link.language)
             ReadingColumn {
                 AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                     DocumentLink(

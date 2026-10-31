@@ -1238,26 +1238,37 @@ object VaticanKit : AppKit {
         val styles = LocalAppTextStyles.current
         val density = LocalDensity.current
         val measurer = rememberTextMeasurer()
-        val tabStyle = styles.navLabel.copy(fontSize = 11.sp).tracked(0.2f)
+        val looseStyle = styles.navLabel.copy(fontSize = 11.sp).tracked(0.2f)
         // Where each heading sits inside the scrolled strip, so the rule can
         // travel to it and the strip can bring an off-measure heading into view.
         val lefts = remember(options.size) { mutableStateListOf(*Array(options.size) { 0f }) }
         val widths = remember(options.size) { mutableStateListOf(*Array(options.size) { 0f }) }
         val markLeft = remember { Animatable(0f) }
         val markWidth = remember { Animatable(0f) }
-        val inset = with(density) { 14.dp.toPx() }
         val rubricInk = rubric()
         val opened = remember { booleanArrayOf(false) }
         val ground = palette.canvas
 
         BoxWithConstraints(modifier.fillMaxWidth()) {
             val viewport = constraints.maxWidth
+            // A strip of four headings at full tracking overruns a phone's
+            // measure. Close it up, as a compositor tightens a running head,
+            // before letting the strip scroll a heading out of sight.
+            val fitsLoose = remember(options, viewport) {
+                options.sumOf {
+                    measurer.measure(AnnotatedString(it.uppercase()), looseStyle, maxLines = 1).size.width +
+                        with(density) { 28.dp.roundToPx() }
+                } <= viewport
+            }
+            val tabStyle = if (fitsLoose) looseStyle else styles.navLabel.copy(fontSize = 10.5.sp).tracked(0.1f)
+            val tabPad = if (fitsLoose) 14.dp else 8.dp
+            val inset = with(density) { tabPad.toPx() }
             val i = selectedIndex.coerceIn(0, (options.size - 1).coerceAtLeast(0))
             // Set the strip so the chosen heading opens in the middle of the
             // measure on the very first frame: the widths are known from the
             // type before anything is laid out.
             val scroll = remember {
-                val pad = with(density) { 28.dp.roundToPx() }
+                val pad = with(density) { (tabPad * 2).roundToPx() }
                 val spans = options.map {
                     measurer.measure(AnnotatedString(it.uppercase()), tabStyle, maxLines = 1).size.width + pad
                 }
@@ -1334,7 +1345,7 @@ object VaticanKit : AppKit {
                                         }
                                     }
                                     .press { onSelect(index) }
-                                    .padding(horizontal = 14.dp)
+                                    .padding(horizontal = tabPad)
                                     .padding(top = 6.dp, bottom = 13.dp),
                                 contentAlignment = Alignment.Center
                             ) {

@@ -406,25 +406,6 @@ private fun JournalTab(
         LazyColumn(Modifier.fillMaxSize()) {
             header()
 
-            item {
-                AppSectionHeader(
-                    title = currentLanguage.pick("Diario", "Journal", "Diário"),
-                    subtitle = if (entries.isEmpty()) {
-                        currentLanguage.pick(
-                            "Intenciones, agradecimientos, gracias y examen de conciencia.",
-                            "Intentions, thanksgivings, graces and the examen.",
-                            "Intenções, agradecimentos, graças e exame de consciência."
-                        )
-                    } else {
-                        currentLanguage.pick(
-                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas",
-                            "${entries.size} written · ${entries.count { it.isAnswered }} granted",
-                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas"
-                        )
-                    }
-                )
-            }
-
             if (entries.isEmpty()) {
                 item {
                     AppEmptyState(
@@ -434,14 +415,24 @@ private fun JournalTab(
                             "Seu diário está vazio"
                         ),
                         body = currentLanguage.pick(
-                            "Escribe tu primera intención o acción de gracias con «Nueva entrada».",
-                            "Write your first intention or thanksgiving with “New entry”.",
-                            "Escreva sua primeira intenção ou ação de graças com “Nova entrada”."
+                            "Anota intenciones, agradecimientos y gracias recibidas. Empieza con «Nueva entrada».",
+                            "Keep intentions, thanksgivings and graces received. Begin with “New entry”.",
+                            "Anote intenções, agradecimentos e graças recebidas. Comece com “Nova entrada”."
                         ),
                         icon = Icons.Default.Favorite
                     )
                 }
             } else {
+                item {
+                    AppSectionHeader(
+                        title = currentLanguage.pick("Entradas", "Entries", "Entradas"),
+                        subtitle = currentLanguage.pick(
+                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas",
+                            "${entries.size} written · ${entries.count { it.isAnswered }} granted",
+                            "${entries.size} escritas · ${entries.count { it.isAnswered }} concedidas"
+                        )
+                    )
+                }
                 itemsIndexed(entries, key = { _, entry -> entry.id }) { index, entry ->
                     JournalEntry(
                         entry = entry,

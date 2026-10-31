@@ -199,10 +199,9 @@ private fun ComplineView(
         header()
         item {
             AppSectionHeader(
-                // The bundled title reads "Completas - Oración oficial de la
-                // noche…"; what follows the dash is the gloss the subtitle
-                // already carries, and a display line is no place for it.
-                title = compline.title.get(currentLanguage).substringBefore(" - ").trim(),
+                // The chip above already names the office, so the rubric names
+                // the hour instead of repeating it.
+                title = currentLanguage.pick("Oración de la noche", "Night prayer", "Oração da noite"),
                 subtitle = currentLanguage.pick(
                     "Liturgia oficial de la Iglesia antes del reposo de la noche",
                     "The Church's official liturgy before the night's rest",

@@ -32,13 +32,54 @@ defects.
 - Empty state title at title3 semibold.
 - `sectionGap` 28 → 24.
 
+## Iteration 2 (after tint, fills, springs)
+
+| Screen | Light | Dark | Notes |
+|---|---|---|---|
+| home | 8 | 8 | One tint now; swatch disc reads as a colour, not a missing icon |
+| bible | 8 | 8 | Search field now tertiarySystemFill; still segmented-above-title |
+| rosary | 8.5 | 8.5 | Cross in tint |
+| prayers | 8 | 8 | |
+| more | 8.5 | 8.5 | |
+| catechism | 7.5 | 7.5 | |
+| doctrine | 7 | 7 | Segments truncate harder at 6dp padding (fixed in it. 3) |
+| churches_news | 7 | 7 | Material dropdowns |
+| habits_virtues | 8 | 8 | "Completions" fits on one line |
+| spiritual_life | 7.5 | 7.5 | |
+| parishes | 8 | 8 | |
+| pilgrimage_habits | 7.5 | 7.5 | |
+
+Kit fixes: `FittedText` (UILabel adjustsFontSizeToFitWidth, intrinsic-safe — BoxWithConstraints crashed in intrinsic-height tile rows); metric figures sit on the tile floor; segmented labels shrink to 0.7 before truncating.
+
+## Iteration 3–4 (after screen agents' fixes landed + kit work)
+
+| Screen | Light | Dark | Notes |
+|---|---|---|---|
+| home | 9 | 9 | |
+| bible | 8.5 | 8.5 | Missal tab is sparse while loading |
+| rosary | 8.5 | 8.5 | Banner title wraps; bead map heavy grey |
+| prayers | 8.5 | 8.5 | "Compline" said three times (segment, chip, header) |
+| more | 9.5 | 9.5 | |
+| catechism | 9 | 9 | Long trailing "§§ 1066 - 1690" squeezes titles to 2–3 lines |
+| doctrine | 9 | 9 | |
+| churches_news | 8.5 | 8.5 | 8dp gaps between search, filter group and chips |
+| habits_virtues | 8.5 | 8.5 | Trailing category repeated on every row |
+| spiritual_life | 9 | 9 | |
+| parishes | 8.5 | 8.5 | 3-line title + 2-line subtitle + trailing in one row |
+| pilgrimage_habits | 8.5 | 8.5 | Floating "Fasting and precept" footer |
+
+Kit fixes: large titles shrink to title1 (28pt) before wrapping ("Catholic Liturgical Calendar" now one line); a row inside a card sits flush with the card's text and draws its separator above, not a stray rule at the card bottom; disabled buttons use tertiarySystemFill; `palette.gold` also maps to the tint inside the Apple scaffold (no mustard second accent).
+
 ## Shared-screen requests
 
-- **Large title before segmented control** — `BibleScreen.kt`, `PrayersAndNovenasScreen.kt`, `CatechismScreen.kt`, `DoctrineAndHistoryScreen.kt`, `SpiritualLifeScreen.kt`, `PilgrimageAndHabitsScreen.kt`: the `AppSegmentedTabs` is placed above `AppScreenTitle`. iOS order is large title → (search) → segmented control. Move the segmented control below the title/subtitle (as `RosaryScreen` and `HabitsAndVirtuesScreen` already do).
-- **Doctrine has no large title** — `DoctrineAndHistoryScreen.kt`: the first tab opens straight into chips and a section header. Add an `AppScreenTitle` (e.g. "Doctrine & History") above the segmented control.
-- **Segment labels too long** — `DoctrineAndHistoryScreen.kt` ("Catechism & Doctrine", "Mary & Jesus Christ"…) and `SpiritualLifeScreen.kt` ("Stations of the Cross") truncate at four segments on a phone. Use short labels: "Doctrine", "Mary & Jesus", "History", "Churches"; "Journal", "Trivia", "Stations", "Chant".
-- **Hard-coded `.uppercase()`** — `HomeScreen.kt` lines ~273, 306, 447, 700, 708, 747 (and similar in other screens): uppercase only when `design.decor.usesAllCapsLabels`. Apple apps do not set tinted all-caps actions like "DASHBOARD"/"MEDITATION"; sentence case in the tint.
-- **Material dropdowns** — `DoctrineAndHistoryScreen.kt` (~line 760–800, churches & news filter): the Country/Region/City `OutlinedTextField` dropdowns are Material. Render them as `AppListRow`s with `trailingText` = current value and a chevron inside an `AppListGroup` (iOS pop-up menu button rows).
-- **Over-long large titles** — "Catholic Parish & Church Finder", "Catholic Spiritual Journal", "Catholic Liturgical Calendar" wrap to two lines at 34pt. Shorten to "Church Finder", "Journal", "Calendar"; put the qualifier in the subtitle.
-- **More screen gap** — `MoreScreen.kt:73` adds `Spacer(sectionGap)` after each group although `AppSectionHeader` already carries the inter-section gap; drop it (keep one for the last group only) or use `cardGap`.
-- **Disabled secondary button under a search field** — `ParishFinderScreen.kt`: "Search this place" disabled sits directly under the search field and reads as a second field. Hide it until the field has text, or make it the field's submit action.
+Resolved by screen agents since iteration 1: segmented control above large title (all six screens), Doctrine large title, long segment labels, hard-coded `.uppercase()` on Home, Material dropdowns in Churches & News, over-long large titles, More screen gaps, disabled "Search this place".
+
+Open:
+- **Rosary banner title** — `RosaryScreen.kt` "Today's mysteries" banner: body is "Joyful Mysteries · Mondays & Saturdays" and wraps. Body = "Joyful Mysteries" only; the days already appear in the list row below.
+- **Catechism part rows** — `CatechismScreen.kt` "The four parts": the `trailingText` "§§ 1066 - 1690" is 17pt and squeezes the titles to 2–3 lines. Move the range into the subtitle ("§§ 1066–1690 · The Liturgy & the Seven Sacraments") and drop `trailingText`. Use an en dash, no spaces.
+- **Compline redundancy** — `PrayersAndNovenasScreen.kt` Compline tab: segment "Compline", chip "Compline", header "Compline". Replace the chips with a two-segment control or drop the section header when the chip says the same thing.
+- **Churches & News spacing** — `DoctrineAndHistoryScreen.kt` Church Finder: search field → filter group → chip row are separated by ~8dp. Use `cardGap` (12) between field and group and `sectionGap/2` above the chip row.
+- **Habits trailing category** — `HabitsAndVirtuesScreen.kt` "Suggested practices": "Prayer" repeated as trailing text on five rows. Group the rows under per-category section headers, or drop `trailingText`.
+- **Parish rows** — `ParishFinderScreen.kt` bundled directory: a 3-line title, 2-line subtitle and the trailing district in one row. Put the district in the subtitle ("Centro · Archidiócesis de Madrid") and drop `trailingText`, or cap the title at 2 lines.
+- **Calendar footer** — `PilgrimageAndHabitsScreen.kt`: "Fasting and precept / Mass obligation" floats at the gutter between groups. Make it a row in the celebration's group (`AppListRow(title = "Fasting and precept", trailingText = "Mass obligation")`) so it aligns with the rows above.
+- **Rosary bead map** — `RosaryScreen.kt`: all 59 beads in systemGray at rest make a heavy grey slab. Untold beads should be the quaternary fill (hollow ring or ~30% grey), so the told ones in the tint carry the picture.

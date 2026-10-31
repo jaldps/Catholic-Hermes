@@ -233,14 +233,7 @@ object AppleKit : AppKit {
 
     /** tertiarySystemFill — the grey of a disabled filled button. */
     @Composable
-    private fun disabledFill(): Color {
-        val design = LocalAppDesign.current
-        return if (design.isDark) {
-            design.palette.selectionTint.copy(alpha = 0.7f)
-        } else {
-            design.palette.selectionTint.copy(alpha = 0.55f)
-        }
-    }
+    private fun disabledFill(): Color = systemFill(3)
 
     /** A full-bleed half-pixel separator. */
     @Composable
@@ -520,6 +513,11 @@ object AppleKit : AppKit {
                     design.copy(
                         palette = palette.copy(
                             accent = scheme.primary,
+                            // Gold is the Vatican's second ink. Here it was a
+                            // mustard second accent on catechism references
+                            // and parish districts beside the green; iOS
+                            // metadata takes the tint, so gold does too.
+                            gold = scheme.primary,
                             accentMuted = lerp(
                                 palette.groupedSurface,
                                 scheme.primary,

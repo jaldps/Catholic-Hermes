@@ -398,9 +398,11 @@ private fun BookDirectory(
 
         item {
             val filters = listOf(
-                currentLanguage.pick("Todos (73)", "All (73)", "Todos (73)"),
-                currentLanguage.pick("A.T. (46)", "O.T. (46)", "A.T. (46)"),
-                currentLanguage.pick("N.T. (27)", "N.T. (27)", "N.T. (27)"),
+                // The counts live in the section headers below; the chips
+                // stay short enough to sit on one line in every identity.
+                currentLanguage.pick("Todos", "All", "Todos"),
+                currentLanguage.pick("A.T.", "O.T.", "A.T."),
+                currentLanguage.pick("N.T.", "N.T.", "N.T."),
                 currentLanguage.pick("Deuterocanónicos", "Deuterocanon", "Deuterocanônicos")
             )
             // Four filters: they wrap on the measure rather than scroll, so the

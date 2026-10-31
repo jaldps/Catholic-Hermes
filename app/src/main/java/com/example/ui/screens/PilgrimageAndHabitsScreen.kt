@@ -399,7 +399,7 @@ private fun HabitEntry(
                 Spacer(Modifier.height(10.dp))
                 Text(
                     text = caps(
-                        habit.category.get(currentLanguage) + " · " + habit.timeSuggestion
+                        habit.category.get(currentLanguage) + " · " + com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage)
                     ),
                     style = styles.sectionEyebrow,
                     color = design.palette.textSecondary
