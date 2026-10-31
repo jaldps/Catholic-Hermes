@@ -238,38 +238,43 @@ object BibleData {
     }
 
     val bibleVersions: List<BibleVersionInfo> = listOf(
+        // The Spanish text bundled in assets/bible/bible_es.json. The legacy
+        // id is kept because it is the stored default for
+        // activeBibleTranslationId.
         BibleVersionInfo(
             id = "jerusalem",
-            name = "Biblia de Jerusalén / Jerusalem Bible",
-            abbreviation = "BJ",
-            language = "Multilingual (FR, ES, EN, PT)",
+            name = "Biblia Platense (Straubinger, 1948)",
+            abbreviation = "PLAT",
+            language = "Español",
             isCatholicCanon = true,
             description = LocalizedText(
-                "La edición académica y litúrgica de mayor prestigio en el orbe católico, traducida por la Escuela Bíblica de Jerusalén.",
-                "The pinnacle of Catholic biblical scholarship, prized worldwide for rich textual fidelity and theological footnotes.",
-                "A mais respeitada tradução católica para estudo bíblico e liturgia, fruto da Escola Bíblica e Arqueológica de Jerusalém."
+                "Traducción católica del P. Juan Straubinger, publicada en La Plata (Argentina) entre 1944 y 1951, con aprobación eclesiástica y numeración de la Vulgata. De dominio público.",
+                "The Catholic translation of Fr. Juan Straubinger, published at La Plata, Argentina (1944-1951) with ecclesiastical approval and Vulgate versification. Public domain.",
+                "Tradução católica do Pe. Juan Straubinger, publicada em La Plata, Argentina (1944-1951), com aprovação eclesiástica e numeração da Vulgata. Domínio público."
             ),
             canonicalDifferenceNote = LocalizedText(
-                "Contiene los 73 libros canónicos completos de la Iglesia Católica.",
-                "Contains the full 73 canonical books approved at Hippo (393), Carthage (397), and Trent (1546).",
-                "Contém os 73 livros completos aprovados pelos Concílios da Igreja Católica."
+                "Contiene los 73 libros canónicos completos, con las adiciones de Ester y Daniel en su lugar tradicional.",
+                "Contains the full 73 canonical books, with the Greek additions to Esther and Daniel in their traditional places.",
+                "Contém os 73 livros canónicos completos, com as adições de Ester e Daniel no seu lugar tradicional."
             )
         ),
+        // The Portuguese text bundled in assets/bible/bible_pt.json. The
+        // legacy id is kept for stored preferences.
         BibleVersionInfo(
             id = "latinoamericana",
-            name = "Biblia Latinoamericana",
-            abbreviation = "BLA",
-            language = "Español / Português",
+            name = "Matos Soares (1927/1932)",
+            abbreviation = "MS",
+            language = "Português",
             isCatholicCanon = true,
             description = LocalizedText(
-                "Traducción pastoral con vocabulario accesible y notas explicativas profundas para la vida diaria del creyente.",
-                "Pastoral edition celebrated for accessible vocabulary and vivid practical catechetical annotations.",
-                "Edição pastoral amplamente utilizada na América Latina por sua linguagem acessível e notas de reflexão."
+                "Traducción católica del P. Matos Soares a partir de la Vulgata latina, con Nihil Obstat e Imprimatur de 1927 y 1932. De dominio público.",
+                "The Catholic translation of Fr. Matos Soares from the Latin Vulgate, bearing Nihil Obstat and Imprimatur of 1927 and 1932. Public domain.",
+                "Tradução católica do Pe. Matos Soares a partir da Vulgata latina, com Nihil Obstat e Imprimatur de 1927 e 1932. Domínio público."
             ),
             canonicalDifferenceNote = LocalizedText(
-                "Contiene los 73 libros canónicos católicos íntegros.",
-                "Includes all 73 Catholic canonical books in proper liturgical sequence.",
-                "Possui todos os 73 livros sagrados da tradição católica."
+                "Contiene los 73 libros canónicos íntegros, según el texto y la numeración de la Vulgata.",
+                "Includes all 73 canonical books, following the text and versification of the Vulgate.",
+                "Contém todos os 73 livros canónicos, seguindo o texto e a numeração da Vulgata."
             )
         ),
         BibleVersionInfo(

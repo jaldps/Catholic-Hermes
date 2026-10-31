@@ -179,14 +179,35 @@ class BibleIntegrityTest {
         assertTrue("psalters misaligned:\n${structural.joinToString("\n")}", structural.isEmpty())
     }
 
-    /** Psalm 22 must be the shepherd psalm in every language. */
+    /**
+     * Psalm 22 must be the shepherd psalm in every language — the check that
+     * catches a psalter slipping back to Masoretic numbering, where 22 is
+     * "My God, why hast thou forsaken me".
+     *
+     * Each translation renders the image its own way, so each is matched on
+     * its own wording: the Douay-Rheims "ruleth me", Straubinger's "pastor",
+     * and Matos Soares' "apascenta" (he pastures me).
+     */
     @Test
     fun theShepherdPsalmIsPsalmTwentyTwo() {
-        val openings = languages.associateWith {
-            provider.getVerses("psa", 22, it).first().text.get(it).lowercase()
+        val expected = mapOf(
+            AppLanguage.EN to listOf("ruleth me", "shepherd"),
+            AppLanguage.ES to listOf("pastor", "apacienta"),
+            AppLanguage.PT to listOf("apascenta", "pastor")
+        )
+        for ((language, fragments) in expected) {
+            val opening = provider.getVerses("psa", 22, language).first().text.get(language).lowercase()
+            assertTrue(
+                "${language.code} Psalm 22 is not the shepherd psalm: $opening",
+                fragments.any { opening.contains(it) }
+            )
+            // And it must not be the psalm of the Passion, which is 21 in the
+            // Vulgate and 22 in the Masoretic.
+            assertTrue(
+                "${language.code} Psalm 22 looks Masoretic-numbered: $opening",
+                !opening.contains("abandonado") && !opening.contains("forsaken") &&
+                    !opening.contains("desamparaste")
+            )
         }
-        assertTrue("en: ${openings[AppLanguage.EN]}", openings.getValue(AppLanguage.EN).contains("ruleth me"))
-        assertTrue("es: ${openings[AppLanguage.ES]}", openings.getValue(AppLanguage.ES).contains("pastor"))
-        assertTrue("pt: ${openings[AppLanguage.PT]}", openings.getValue(AppLanguage.PT).contains("pastor"))
     }
 }

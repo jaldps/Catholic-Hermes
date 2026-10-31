@@ -140,31 +140,29 @@ class MissalTest {
     }
 
     /**
-     * The Spanish and Portuguese texts rest on translations that omit two
-     * deuterocanonical passages. This records exactly where, so the gap is a
-     * known and bounded fact rather than a surprise: the resolver covers them
-     * by falling back to English.
+     * The Spanish and Portuguese texts used to rest on Reina-Valera and
+     * Almeida, which omit the Canticle of the Three Young Men (Daniel 3:52-90)
+     * and part of the Greek additions to Esther, so those readings fell back to
+     * English. Both languages now carry Catholic translations — Platense and
+     * Matos Soares — and the gap is closed. This guards against a regression to
+     * a Protestant base text.
      */
     @Test
-    fun knownDeuterocanonicalGapsAreCoveredByFallback() {
+    fun theDeuterocanonicalAdditionsArePresentInEveryLanguage() {
         val provider = BibleTextProvider(ApplicationProvider.getApplicationContext())
-        val resolver = ScriptureResolver(
-            bookName = { bookId, language ->
-                BibleData.catholicCanonBooks.firstOrNull { it.id == bookId }?.name?.get(language)
-            },
-            versesOf = { bookId, chapter, language -> provider.getVerses(bookId, chapter, language) }
-        )
-
-        // The Canticle of the Three Young Men is absent from the Spanish and
-        // Portuguese Daniel 3...
-        assertEquals(30, provider.getVerses("dan", 3, AppLanguage.ES).size)
-        assertEquals(100, provider.getVerses("dan", 3, AppLanguage.EN).size)
-
-        // ...but the reading still renders, via the English fallback.
         for (language in listOf(AppLanguage.EN, AppLanguage.ES, AppLanguage.PT)) {
+            // Daniel 3 carries the canticle, so it runs well past verse 30.
+            val daniel = provider.getVerses("dan", 3, language)
             assertTrue(
-                "Daniel 3:52-56 renders nothing in ${language.code}",
-                !resolver.passage("dan 3:52-56", language).isNullOrBlank()
+                "Daniel 3 has only ${daniel.size} verses in ${language.code}; " +
+                    "the Canticle of the Three Young Men is missing",
+                daniel.size >= 90
+            )
+            // Catholic Esther has sixteen chapters, not ten.
+            assertEquals(
+                "Esther is missing its Greek additions in ${language.code}",
+                16,
+                provider.chapterCount("est", language)
             )
         }
     }

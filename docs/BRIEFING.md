@@ -269,7 +269,13 @@ across screens and are worth adding to `AppKit`:
 6. **`AppProgressRail`** — every devotional screen re-invents the bead counter.
 
 **Data and correctness**
-- Source a genuinely Catholic Spanish and Portuguese text.
+- ~~Source a genuinely Catholic Spanish and Portuguese text.~~ **Done.** Spanish
+  is now the Biblia Platense (Straubinger, 1948) and Portuguese the Matos Soares
+  (1927/1932, Nihil Obstat and Imprimatur), both public domain and both
+  Vulgate-numbered, so all 150 psalms align with the Douay-Rheims. This also
+  closed the deuterocanonical gap: Daniel 3 carries the Canticle of the Three
+  Young Men and Esther all sixteen chapters in every language. Straubinger uses
+  "Yahvé" in the Old Testament; Matos Soares is pre-1990 European Portuguese.
 - Extend the lectionary to ferial weekdays (Year I/II), which the calendar
   already distinguishes.
 - Add proper **Room migrations**: the database still uses
