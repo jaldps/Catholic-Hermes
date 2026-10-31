@@ -66,7 +66,7 @@ object LectionaryData {
         "holy_cross" to LectionaryEntry("num 21:4-9", "psa 77", "phi 2:6-11", "joh 3:13-17"),
         "all_saints" to LectionaryEntry("rev 7:2-14", "psa 23", "1jo 3:1-3", "mat 5:1-12"),
         // All Souls offers a wide choice; the first option of each slot is given.
-        "all_souls" to LectionaryEntry("wis 3:1-9", "psa 22", "rom 5:5-11", "mat 5:1-12"),
+        "all_souls" to LectionaryEntry("wis 3:1-9", "psa 22", "rom 5:5-11", "joh 6:37-40"),
         "immaculate_conception" to LectionaryEntry("gen 3:9-20", "psa 97", "eph 1:3-12", "luk 1:26-38")
     )
 

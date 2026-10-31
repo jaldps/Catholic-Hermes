@@ -46,6 +46,7 @@ import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppEmptyState
+import com.example.ui.components.MenuPickerRow
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppSearchField
@@ -83,24 +84,17 @@ fun DevotionsExplorerScreen(
 
     // Held outside the list: a rail that scrolled off screen would otherwise
     // come back rewound, with the chosen chip hidden off to the right.
-    val categoryScroll = rememberScrollState()
-    val regionScroll = rememberScrollState()
 
     val marianList = repository.marianApparitions
     val christList = repository.christManifestations
 
     val categories = listOf(
-        currentLanguage.pick(
-            "Nuestra Señora · ${marianList.size}",
-            "Our Lady · ${marianList.size}",
-            "Nossa Senhora · ${marianList.size}"
-        ),
-        currentLanguage.pick(
-            "Cristo · ${christList.size}",
-            "Christ · ${christList.size}",
-            "Cristo · ${christList.size}"
-        )
+        currentLanguage.pick("Nuestra Señora", "Our Lady", "Nossa Senhora"),
+        currentLanguage.pick("Cristo", "Christ", "Cristo")
     )
+    // One entry open at a time: the list carries a line of each, the open one
+    // its feast, sanctuary and history.
+    var expandedId by remember { mutableStateOf<String?>(null) }
 
     val regions = listOf(
         EVERY_REGION to currentLanguage.pick("Todas", "All", "Todas"),
@@ -151,20 +145,6 @@ fun DevotionsExplorerScreen(
 
             item {
                 ReadingColumn {
-                    ChipRail(scroll = categoryScroll) {
-                        categories.forEachIndexed { index, label ->
-                            AppChip(
-                                label = label,
-                                selected = selectedCategoryTab == index,
-                                onClick = { selectedCategoryTab = index }
-                            )
-                        }
-                    }
-                }
-            }
-
-            item {
-                ReadingColumn {
                     AppSearchField(
                         value = searchQuery,
                         onValueChange = { searchQuery = it },
@@ -177,19 +157,27 @@ fun DevotionsExplorerScreen(
                             .padding(horizontal = design.spacing.gutter)
                             .testTag("devotions_search_input")
                     )
-                }
-            }
-
-            item {
-                ReadingColumn {
-                    ChipRail(scroll = regionScroll) {
-                        regions.forEach { (id, label) ->
-                            AppChip(
-                                label = label,
-                                selected = selectedRegionFilter == id,
-                                onClick = { selectedRegionFilter = id }
-                            )
-                        }
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    // Devotion and region are rows with menus, so the tabs
+                    // above stay the page's only visible selector.
+                    AppListGroup {
+                        MenuPickerRow(
+                            title = currentLanguage.pick("Devoción", "Devotion", "Devoção"),
+                            options = categories.mapIndexed { i, label -> i to label },
+                            selected = selectedCategoryTab,
+                            onSelect = {
+                                selectedCategoryTab = it
+                                expandedId = null
+                            },
+                            testTag = "devotions_category_picker"
+                        )
+                        MenuPickerRow(
+                            title = currentLanguage.pick("Región", "Region", "Região"),
+                            options = regions,
+                            selected = selectedRegionFilter,
+                            onSelect = { selectedRegionFilter = it },
+                            testTag = "devotions_region_picker"
+                        )
                     }
                 }
             }
@@ -203,11 +191,7 @@ fun DevotionsExplorerScreen(
                                 "Marian Advocations",
                                 "Advocações Marianas"
                             ),
-                            subtitle = currentLanguage.pick(
-                                "${filteredMarian.size} advocaciones aprobadas por la Iglesia",
-                                "${filteredMarian.size} advocations approved by the Church",
-                                "${filteredMarian.size} advocações aprovadas pela Igreja"
-                            )
+                            subtitle = null
                         )
                     } else {
                         AppSectionHeader(
@@ -216,11 +200,7 @@ fun DevotionsExplorerScreen(
                                 "Devotions to Christ",
                                 "Devoções a Cristo"
                             ),
-                            subtitle = currentLanguage.pick(
-                                "${filteredChrist.size} devociones a Nuestro Señor",
-                                "${filteredChrist.size} devotions to Our Lord",
-                                "${filteredChrist.size} devoções a Nosso Senhor"
-                            )
+                            subtitle = null
                         )
                     }
                 }
@@ -250,18 +230,22 @@ fun DevotionsExplorerScreen(
                     ApparitionEntry(
                         item = apparition,
                         currentLanguage = currentLanguage,
-                        onSpeakText = onSpeakText
+                        onSpeakText = onSpeakText,
+                        expanded = expandedId == apparition.id,
+                        onToggle = { expandedId = if (expandedId == apparition.id) null else apparition.id }
                     )
-                    Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
                 }
             } else {
                 items(filteredChrist, key = { it.id }) { manifestation ->
                     ManifestationEntry(
                         item = manifestation,
                         currentLanguage = currentLanguage,
-                        onSpeakText = onSpeakText
+                        onSpeakText = onSpeakText,
+                        expanded = expandedId == manifestation.id,
+                        onToggle = { expandedId = if (expandedId == manifestation.id) null else manifestation.id }
                     )
-                    Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
                 }
             }
 
@@ -276,7 +260,9 @@ fun DevotionsExplorerScreen(
 private fun ApparitionEntry(
     item: MarianApparition,
     currentLanguage: AppLanguage,
-    onSpeakText: ((String) -> Unit)?
+    onSpeakText: ((String) -> Unit)?,
+    expanded: Boolean,
+    onToggle: () -> Unit
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -287,11 +273,13 @@ private fun ApparitionEntry(
                 title = item.title.get(currentLanguage),
                 subtitle = item.location.get(currentLanguage),
                 trailingText = item.year,
-                showsNavigationAffordance = false
+                showsNavigationAffordance = false,
+                selected = expanded,
+                onClick = onToggle
             )
         }
 
-        EntryBody {
+        if (expanded) EntryBody {
             // The feast and the country are a line each, so they read as the
             // two columns of a printed header rather than as two more notes.
             Row(
@@ -363,7 +351,9 @@ private fun ApparitionEntry(
 private fun ManifestationEntry(
     item: ChristManifestation,
     currentLanguage: AppLanguage,
-    onSpeakText: ((String) -> Unit)?
+    onSpeakText: ((String) -> Unit)?,
+    expanded: Boolean,
+    onToggle: () -> Unit
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -373,11 +363,13 @@ private fun ManifestationEntry(
             AppListRow(
                 title = item.title.get(currentLanguage),
                 subtitle = item.country.get(currentLanguage),
-                showsNavigationAffordance = false
+                showsNavigationAffordance = false,
+                selected = expanded,
+                onClick = onToggle
             )
         }
 
-        EntryBody {
+        if (expanded) EntryBody {
             Note(
                 label = currentLanguage.pick("Fiesta", "Feast day", "Festa"),
                 body = item.feastDay.get(currentLanguage),

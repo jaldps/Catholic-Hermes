@@ -314,7 +314,7 @@ class CatholicDataRepository(
             fastingRule = fasting,
             gospelVerseRef = reading?.gospel?.let { scriptureResolver.display(it, _currentLanguage.value) } ?: "",
             sundayCycle = LocalizedText(
-                "Ciclo ${info.sundayCycle.name}", "Cycle ${info.sundayCycle.name}", "Ciclo ${info.sundayCycle.name}"
+                "Ciclo ${info.sundayCycle.name}", "Year ${info.sundayCycle.name}", "Ano ${info.sundayCycle.name}"
             ),
             weekdayCycle = info.weekdayCycle.displayName,
             isFastOrAbstinence = info.isFastDay || info.isAbstinenceDay,

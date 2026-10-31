@@ -79,8 +79,8 @@ enum class CelebrationRank(val displayName: LocalizedText) {
 enum class SundayCycle { A, B, C }
 
 enum class WeekdayCycle(val displayName: LocalizedText) {
-    I(LocalizedText("Año I (Impares)", "Cycle I (Odd Year)", "Ano I (Ímpares)")),
-    II(LocalizedText("Año II (Pares)", "Cycle II (Even Year)", "Ano II (Pares)"))
+    I(LocalizedText("Año I", "Year I", "Ano I")),
+    II(LocalizedText("Año II", "Year II", "Ano II"))
 }
 
 /** Everything the app needs to know about one day of the Church's year. */
@@ -299,7 +299,7 @@ object LiturgicalCalendar {
             )
             else -> LocalizedText(
                 "Domingo $week del Tiempo Ordinario",
-                "${ordinalEnglish(week)} Sunday in Ordinary Time",
+                "${ordinalWordEnglish(week)} Sunday in Ordinary Time",
                 "$week.º Domingo do Tempo Comum"
             )
         }
@@ -323,11 +323,37 @@ object LiturgicalCalendar {
         val seasonEs = season.displayName.es
         val seasonEn = season.displayName.en
         val seasonPt = season.displayName.pt
+        // The Missal's own diction: "Saturday of the Thirty-first Week in
+        // Ordinary Time", "Sábado de la semana XXXI del Tiempo Ordinario".
+        val ordinary = season == LiturgicalSeason.ORDINARY_TIME
         return LocalizedText(
-            "$dayEs de la semana $week de $seasonEs",
-            "$dayEn of week $week of $seasonEn",
-            "$dayPt da semana $week do $seasonPt"
+            "$dayEs de la semana ${romanNumeral(week)} " +
+                if (ordinary || season == LiturgicalSeason.EASTER) "del $seasonEs" else "de $seasonEs",
+            "$dayEn of the ${ordinalWordEnglish(week)} Week " + if (ordinary) "in $seasonEn" else "of $seasonEn",
+            "$dayPt da ${week}.ª Semana " + if (season == LiturgicalSeason.LENT) "da $seasonPt" else "do $seasonPt"
         )
+    }
+
+    private fun romanNumeral(n: Int): String {
+        val table = listOf(10 to "X", 9 to "IX", 5 to "V", 4 to "IV", 1 to "I")
+        var left = n
+        return buildString {
+            for ((value, glyph) in table) while (left >= value) { append(glyph); left -= value }
+        }
+    }
+
+    private fun ordinalWordEnglish(n: Int): String {
+        val units = listOf("", "First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth")
+        val teens = listOf("Tenth", "Eleventh", "Twelfth", "Thirteenth", "Fourteenth", "Fifteenth",
+            "Sixteenth", "Seventeenth", "Eighteenth", "Nineteenth")
+        val tensOrdinal = mapOf(2 to "Twentieth", 3 to "Thirtieth")
+        val tens = mapOf(2 to "Twenty", 3 to "Thirty")
+        return when {
+            n < 10 -> units[n.coerceAtLeast(1)]
+            n < 20 -> teens[n - 10]
+            n % 10 == 0 -> tensOrdinal[n / 10] ?: ordinalEnglish(n)
+            else -> (tens[n / 10]?.let { "$it-${units[n % 10].lowercase()}" }) ?: ordinalEnglish(n)
+        }
     }
 
     /** The full description of [date]. */

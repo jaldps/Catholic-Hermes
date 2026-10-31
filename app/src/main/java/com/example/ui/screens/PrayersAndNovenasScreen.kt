@@ -64,6 +64,9 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.Novena
 import com.example.data.models.VaticanPrayer
 import com.example.data.repository.CatholicDataRepository
+import androidx.activity.compose.BackHandler
+import com.example.ui.components.InlineBackLink
+import com.example.ui.components.MenuPickerRow
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
@@ -137,6 +140,9 @@ fun PrayersAndNovenasScreen(
     // Devotional
     var prayerSearchQuery by remember { mutableStateOf("") }
     var selectedThematicTag by remember { mutableStateOf<String?>(null) }
+    // A prayer opens as its own page; the list carries only a line of each.
+    var openPrayerId by remember { mutableStateOf<String?>(null) }
+    var showChaplet by remember { mutableStateOf(false) }
 
     // Novenas
     var selectedNovena by remember { mutableStateOf<Novena?>(null) }
@@ -176,22 +182,16 @@ fun PrayersAndNovenasScreen(
     // are the first rows of whichever list is showing, so they scroll away.
     val header: LazyListScope.() -> Unit = {
         item(key = "prayers_screen_title") {
-            AppScreenTitle(
-                title = currentLanguage.pick("Oraciones", "Prayers", "Orações"),
-                subtitle = currentLanguage.pick(
-                    "Las oraciones de la Iglesia, de día y de noche",
-                    "The Church's prayers, by day and by night",
-                    "As orações da Igreja, de dia e de noite"
-                )
-            )
+            AppScreenTitle(title = currentLanguage.pick("Oraciones", "Prayers", "Orações"))
         }
         item(key = "prayers_screen_tabs") {
             AppSegmentedTabs(
+                // The chaplet is a devotion, opened from the Prayers list,
+                // and Compline goes by the name a newcomer knows.
                 options = listOf(
-                    currentLanguage.pick("Devociones", "Devotions", "Devoções"),
-                    currentLanguage.pick("Coronilla", "Chaplet", "Terço"),
+                    currentLanguage.pick("Oraciones", "Prayers", "Orações"),
                     currentLanguage.pick("Novenas", "Novenas", "Novenas"),
-                    currentLanguage.pick("Completas", "Compline", "Completas")
+                    currentLanguage.pick("Noche", "Night prayer", "Noite")
                 ),
                 selectedIndex = selectedTab,
                 onSelect = { selectedTab = it },
@@ -207,8 +207,44 @@ fun PrayersAndNovenasScreen(
             .fillMaxSize()
             .testTag("prayers_and_novenas_screen")
     ) {
-        when (selectedTab) {
-            0 -> VaticanDevotionalView(
+        val openPrayer = openPrayerId?.let { id -> repository.vaticanPrayers.firstOrNull { it.id == id } }
+        when {
+            selectedTab == 0 && openPrayer != null -> {
+                BackHandler { openPrayerId = null }
+                PrayerDetailView(
+                    prayer = openPrayer,
+                    currentLanguage = currentLanguage,
+                    currentlySpeaking = currentlySpeaking,
+                    onBack = { openPrayerId = null },
+                    onPlayAudio = {
+                        ttsManager.speakDialogue(
+                            openPrayer.leaderText.get(currentLanguage),
+                            openPrayer.responseText?.get(currentLanguage) ?: ""
+                        )
+                    }
+                )
+            }
+
+            selectedTab == 0 && showChaplet -> {
+                BackHandler { showChaplet = false }
+                DivineMercyChapletView(
+                    ttsManager = ttsManager,
+                    currentLanguage = currentLanguage,
+                    onBack = { showChaplet = false },
+                    onOpenNovena = {
+                        showChaplet = false
+                        selectedTab = 1
+                        selectedNovena = repository.officialNovenas
+                            .firstOrNull { it.id == "divine_mercy" }
+                            ?: repository.officialNovenas.firstOrNull()
+                        activeNovenaDay = selectedNovena
+                            ?.let { nextNovenaDay(it, daysPrayed[it.id].orEmpty()) }
+                            ?: 1
+                    }
+                )
+            }
+
+            selectedTab == 0 -> VaticanDevotionalView(
                 header = header,
                 repository = repository,
                 currentLanguage = currentLanguage,
@@ -216,31 +252,11 @@ fun PrayersAndNovenasScreen(
                 onSearchQueryChange = { prayerSearchQuery = it },
                 selectedTag = selectedThematicTag,
                 onSelectTag = { selectedThematicTag = it },
-                currentlySpeaking = currentlySpeaking,
-                onPlayPrayer = { prayer ->
-                    ttsManager.speakDialogue(
-                        prayer.leaderText.get(currentLanguage),
-                        prayer.responseText?.get(currentLanguage) ?: ""
-                    )
-                }
+                onOpenPrayer = { openPrayerId = it.id },
+                onOpenChaplet = { showChaplet = true }
             )
 
-            1 -> DivineMercyChapletView(
-                header = header,
-                ttsManager = ttsManager,
-                currentLanguage = currentLanguage,
-                onOpenNovena = {
-                    selectedTab = 2
-                    selectedNovena = repository.officialNovenas
-                        .firstOrNull { it.id == "divine_mercy" }
-                        ?: repository.officialNovenas.firstOrNull()
-                    activeNovenaDay = selectedNovena
-                        ?.let { nextNovenaDay(it, daysPrayed[it.id].orEmpty()) }
-                        ?: 1
-                }
-            )
-
-            2 -> {
+            selectedTab == 1 -> {
                 val novena = selectedNovena
                 if (novena == null) {
                     NovenaIndexView(
@@ -298,7 +314,7 @@ fun PrayersAndNovenasScreen(
                 }
             }
 
-            3 -> NightPrayersScreen(
+            else -> NightPrayersScreen(
                 repository = repository,
                 ttsManager = ttsManager,
                 currentLanguage = currentLanguage,
@@ -310,7 +326,6 @@ fun PrayersAndNovenasScreen(
 
 // ----------------------------------------------------------------- devotional
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun VaticanDevotionalView(
     header: LazyListScope.() -> Unit,
@@ -320,22 +335,22 @@ private fun VaticanDevotionalView(
     onSearchQueryChange: (String) -> Unit,
     selectedTag: String?,
     onSelectTag: (String?) -> Unit,
-    currentlySpeaking: String?,
-    onPlayPrayer: (VaticanPrayer) -> Unit
+    onOpenPrayer: (VaticanPrayer) -> Unit,
+    onOpenChaplet: () -> Unit
 ) {
     val design = LocalAppDesign.current
-    val themeScroll = rememberScrollState()
 
     val themes = listOf(
         null to currentLanguage.pick("Todas", "All", "Todas"),
-        "health" to currentLanguage.pick("Salud y Sanación", "Health & Healing", "Saúde e Cura"),
-        "peace" to currentLanguage.pick("Paz y Serenidad", "Peace of Mind", "Paz de Espírito"),
+        "health" to currentLanguage.pick("Salud y sanación", "Health & healing", "Saúde e cura"),
+        "peace" to currentLanguage.pick("Paz interior", "Peace of mind", "Paz interior"),
         "family" to currentLanguage.pick("Familia", "Family", "Família"),
         "protection" to currentLanguage.pick("Protección", "Protection", "Proteção"),
-        "forgiveness" to currentLanguage.pick("Perdón y Confesión", "Forgiveness", "Perdão")
+        "forgiveness" to currentLanguage.pick("Perdón", "Forgiveness", "Perdão")
     )
 
     val prayers = repository.searchPrayers(query = searchQuery, tag = selectedTag)
+    val filtering = searchQuery.isNotBlank() || selectedTag != null
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
@@ -345,76 +360,133 @@ private fun VaticanDevotionalView(
                 value = searchQuery,
                 onValueChange = onSearchQueryChange,
                 placeholder = currentLanguage.pick(
-                    "Buscar oración o necesidad...",
-                    "Search prayer or petition...",
-                    "Buscar oração ou intenção..."
+                    "Buscar una oración",
+                    "Search prayers",
+                    "Buscar uma oração"
                 ),
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
                     .testTag("prayer_search_input")
             )
+            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
+        // The theme is one row with a menu rather than a cloud of chips
+        // under the screen's own selector.
         item {
-            AppSectionHeader(
-                title = currentLanguage.pick("Según tu necesidad", "By what you need", "Conforme a necessidade")
-            )
-            // Six themes wrap on the measure instead of running off the edge.
-            FlowRow(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter),
-                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
-                verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-            ) {
-                themes.forEach { (key, label) ->
-                    AppChip(
-                        label = label,
-                        selected = selectedTag == key,
-                        onClick = { onSelectTag(key) }
-                    )
-                }
+            AppListGroup {
+                MenuPickerRow(
+                    title = currentLanguage.pick("Intención", "Intention", "Intenção"),
+                    options = themes,
+                    selected = selectedTag,
+                    onSelect = onSelectTag,
+                    testTag = "prayer_theme_picker"
+                )
             }
         }
 
         if (prayers.isEmpty()) {
             item {
                 AppEmptyState(
-                    title = currentLanguage.pick("Sin oraciones", "No prayers", "Sem orações"),
+                    title = currentLanguage.pick("Ninguna oración coincide", "No matching prayers", "Nenhuma oração corresponde"),
                     body = currentLanguage.pick(
-                        "Ninguna oración responde a esa búsqueda. Prueba otra palabra o quita el tema.",
-                        "No prayer answers that search. Try another word, or clear the theme.",
-                        "Nenhuma oração responde a essa busca. Tente outra palavra ou remova o tema."
+                        "Prueba otra palabra o elige otra intención.",
+                        "Try another word or choose another intention.",
+                        "Tente outra palavra ou escolha outra intenção."
                     ),
                     icon = Icons.Default.SearchOff
                 )
-            }
-        } else {
-            item {
-                AppSectionHeader(
-                    title = currentLanguage.pick("Oraciones", "Prayers", "Orações"),
-                    subtitle = currentLanguage.pick(
-                        "${prayers.size} oraciones",
-                        "${prayers.size} prayers",
-                        "${prayers.size} orações"
-                    )
+                AppSecondaryButton(
+                    label = currentLanguage.pick("Ver todas", "Show all prayers", "Ver todas"),
+                    onClick = {
+                        onSearchQueryChange("")
+                        onSelectTag(null)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("prayer_clear_filters")
                 )
             }
-
-            items(prayers, key = { it.id }) { prayer ->
-                ReadingColumn {
-                    VaticanPrayerCard(
-                        prayer = prayer,
-                        currentLanguage = currentLanguage,
-                        currentlySpeaking = currentlySpeaking,
-                        onPlayAudio = { onPlayPrayer(prayer) }
-                    )
+        } else {
+            // Seven prayers in six categories: one list reads better than six
+            // headers over a row each.
+            item(key = "prayer_list") {
+                Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                AppListGroup {
+                    prayers.forEach { prayer ->
+                        AppListRow(
+                            title = prayer.title.get(currentLanguage),
+                            subtitle = prayerPreview(prayer, currentLanguage),
+                            onClick = { onOpenPrayer(prayer) },
+                            modifier = Modifier.testTag("prayer_row_${prayer.id}")
+                        )
+                    }
+                    if (!filtering) {
+                        AppListRow(
+                            title = currentLanguage.pick(
+                                "Coronilla de la Divina Misericordia",
+                                "Chaplet of Divine Mercy",
+                                "Terço da Divina Misericórdia"
+                            ),
+                            subtitle = currentLanguage.pick(
+                                "Coronilla · para las tres de la tarde",
+                                "Chaplet · for three in the afternoon",
+                                "Terço · para as três da tarde"
+                            ),
+                            onClick = onOpenChaplet,
+                            modifier = Modifier.testTag("open_chaplet_row")
+                        )
+                    }
                 }
-                Spacer(Modifier.height(design.spacing.cardGap))
             }
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+/** One line of a prayer — its Latin incipit, or the opening of its text. */
+private fun prayerPreview(prayer: VaticanPrayer, language: AppLanguage): String {
+    prayer.latinTitle?.takeIf { it.isNotBlank() }?.let { return it }
+    val text = prayer.leaderText.get(language).replace('\n', ' ').trim()
+    return if (text.length > 64) text.take(64).substringBeforeLast(' ') + "…" else text
+}
+
+/** A prayer as its own page: title, the text set to be prayed, and its notes. */
+@Composable
+private fun PrayerDetailView(
+    prayer: VaticanPrayer,
+    currentLanguage: AppLanguage,
+    currentlySpeaking: String?,
+    onBack: () -> Unit,
+    onPlayAudio: () -> Unit
+) {
+    LazyColumn(Modifier.fillMaxSize().testTag("prayer_detail_${prayer.id}")) {
+        item {
+            InlineBackLink(
+                label = currentLanguage.pick("Oraciones", "Prayers", "Orações"),
+                onClick = onBack,
+                testTag = "back_to_prayers_button"
+            )
+        }
+        item {
+            AppScreenTitle(
+                title = prayer.title.get(currentLanguage),
+                subtitle = prayer.latinTitle
+            )
+        }
+        item {
+            ReadingColumn {
+                VaticanPrayerCard(
+                    prayer = prayer,
+                    currentLanguage = currentLanguage,
+                    currentlySpeaking = currentlySpeaking,
+                    onPlayAudio = onPlayAudio
+                )
+            }
+        }
+        item { Spacer(Modifier.height(LocalAppDesign.current.spacing.contentBottomGap)) }
     }
 }
 
@@ -429,19 +501,6 @@ private fun VaticanPrayerCard(
     val styles = LocalAppTextStyles.current
 
     AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-        BlockHeading(
-            eyebrow = prayer.category.title.get(currentLanguage),
-            detail = prayer.latinTitle
-        )
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-        Text(
-            text = prayer.title.get(currentLanguage),
-            style = styles.sectionTitle,
-            color = design.palette.textPrimary
-        )
-
-        Spacer(Modifier.height(design.spacing.cardGap))
-
         VersicleAndResponse(
             leaderText = prayer.leaderText.get(currentLanguage),
             responseText = prayer.responseText?.get(currentLanguage),
@@ -483,9 +542,9 @@ private fun VaticanPrayerCard(
 
 @Composable
 private fun DivineMercyChapletView(
-    header: LazyListScope.() -> Unit,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
+    onBack: () -> Unit,
     onOpenNovena: () -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -497,7 +556,6 @@ private fun DivineMercyChapletView(
     // 0 = the lead bead (Eternal Father), 1..10 = the small ones (His Passion)
     var currentBead by remember { mutableIntStateOf(0) }
 
-    val decadeScroll = rememberScrollState()
 
     val openingPrayer = when (currentLanguage) {
         AppLanguage.ES -> "En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.\n\n«Expiraste, Jesús, pero la fuente de vida brotó para las almas y el mar de misericordia se abrió para el mundo entero. ¡Oh fuente de vida, insondable Misericordia Divina!, abarca al mundo entero y derrámate sobre nosotros.\n\n¡Oh Sangre y Agua que brotaste del Corazón de Jesús como una fuente de misericordia para nosotros, en Ti confío! (repetir 3 veces)»\n\n[Padre Nuestro, Ave María, Credo de los Apóstoles]"
@@ -530,9 +588,9 @@ private fun DivineMercyChapletView(
     }
 
     val stepNames = when (currentLanguage) {
-        AppLanguage.ES -> listOf("Inicio", "5 Decenas", "Cierre", "Hora 3:00 PM")
-        AppLanguage.EN -> listOf("Opening", "5 Decades", "Closing", "3:00 PM Hour")
-        AppLanguage.PT -> listOf("Início", "5 Dezenas", "Fechamento", "Hora 15:00")
+        AppLanguage.ES -> listOf("Inicio", "Decenas", "Cierre", "15:00")
+        AppLanguage.EN -> listOf("Opening", "Decades", "Closing", "3:00 PM")
+        AppLanguage.PT -> listOf("Início", "Dezenas", "Final", "15:00")
     }
 
     val beadPrayer = if (currentBead == 0) largeBeadPrayer else smallBeadPrayer
@@ -545,18 +603,24 @@ private fun DivineMercyChapletView(
     val listenLabel = currentLanguage.pick("Escuchar", "Listen", "Ouvir")
 
     LazyColumn(Modifier.fillMaxSize()) {
-        header()
         item {
-            AppSectionHeader(
+            InlineBackLink(
+                label = currentLanguage.pick("Oraciones", "Prayers", "Orações"),
+                onClick = onBack,
+                testTag = "back_from_chaplet_button"
+            )
+        }
+        item {
+            AppScreenTitle(
                 title = currentLanguage.pick(
                     "Coronilla de la Divina Misericordia",
                     "Chaplet of Divine Mercy",
                     "Terço da Divina Misericórdia"
                 ),
                 subtitle = currentLanguage.pick(
-                    "Revelada a Santa Faustina Kowalska en Vilna (1935)",
-                    "Revealed to St. Maria Faustina Kowalska in Vilnius (1935)",
-                    "Revelada a Santa Faustina Kowalska em Vilna (1935)"
+                    "Revelada a santa Faustina en Vilna, 1935",
+                    "Revealed to St. Faustina in Vilnius, 1935",
+                    "Revelado a santa Faustina em Vilna, 1935"
                 )
             )
         }
@@ -639,39 +703,6 @@ private fun DivineMercyChapletView(
 
             1 -> {
                 item {
-                    AppSectionHeader(
-                        title = currentLanguage.pick("Decena", "Decade", "Dezena"),
-                        subtitle = currentLanguage.pick(
-                            "Decena $currentDecade de $ChapletDecades",
-                            "Decade $currentDecade of $ChapletDecades",
-                            "Dezena $currentDecade de $ChapletDecades"
-                        )
-                    )
-                    Row(
-                        Modifier
-                            .fillMaxWidth()
-                            .horizontalScroll(decadeScroll)
-                            .padding(horizontal = design.spacing.gutter),
-                        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-                    ) {
-                        (1..ChapletDecades).forEach { decade ->
-                            AppChip(
-                                label = currentLanguage.pick(
-                                    "Decena $decade",
-                                    "Decade $decade",
-                                    "Dezena $decade"
-                                ),
-                                selected = decade == currentDecade,
-                                onClick = {
-                                    currentDecade = decade
-                                    currentBead = 0
-                                }
-                            )
-                        }
-                    }
-                }
-
-                item {
                     Spacer(Modifier.height(design.spacing.cardGap))
                     AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                         BlockHeading(
@@ -690,15 +721,15 @@ private fun DivineMercyChapletView(
                             },
                             detail = if (currentBead == 0) {
                                 currentLanguage.pick(
-                                    "Decena $currentDecade",
-                                    "Decade $currentDecade",
-                                    "Dezena $currentDecade"
+                                    "Decena $currentDecade de $ChapletDecades",
+                                    "Decade $currentDecade of $ChapletDecades",
+                                    "Dezena $currentDecade de $ChapletDecades"
                                 )
                             } else {
                                 currentLanguage.pick(
-                                    "Cuenta $currentBead de $ChapletBeadsPerDecade",
-                                    "Bead $currentBead of $ChapletBeadsPerDecade",
-                                    "Conta $currentBead de $ChapletBeadsPerDecade"
+                                    "Decena $currentDecade de $ChapletDecades · cuenta $currentBead de $ChapletBeadsPerDecade",
+                                    "Decade $currentDecade of $ChapletDecades · bead $currentBead of $ChapletBeadsPerDecade",
+                                    "Dezena $currentDecade de $ChapletDecades · conta $currentBead de $ChapletBeadsPerDecade"
                                 )
                             }
                         )
@@ -826,7 +857,7 @@ private fun DivineMercyChapletView(
                 item {
                     Spacer(Modifier.height(design.spacing.sectionGap / 2))
                     AppBanner(
-                        title = "3:00 PM",
+                        title = currentLanguage.pick("15:00", "3:00 PM", "15:00"),
                         body = currentLanguage.pick(
                             "La Hora de la Misericordia",
                             "The Hour of Mercy",
@@ -877,7 +908,6 @@ private fun NovenaIndexView(
     onOpenNovena: (Novena) -> Unit
 ) {
     val design = LocalAppDesign.current
-    val tagScroll = rememberScrollState()
 
     // Drawn from the whole catalogue, not the filtered index: what someone is
     // praying should not disappear because a search is still typed in.
@@ -938,20 +968,6 @@ private fun NovenaIndexView(
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Novenas oficiales",
-                    "Official novenas",
-                    "Novenas oficiais"
-                ),
-                subtitle = currentLanguage.pick(
-                    "Nueve días de oración, llevados día a día.",
-                    "Nine days of prayer, kept day by day.",
-                    "Nove dias de oração, acompanhados dia a dia."
-                )
-            )
-        }
 
         item {
             AppSearchField(
@@ -966,14 +982,23 @@ private fun NovenaIndexView(
                     .padding(horizontal = design.spacing.gutter)
                     .testTag("novena_search_input")
             )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            AppListGroup {
+                MenuPickerRow(
+                    title = currentLanguage.pick("Intención", "Intention", "Intenção"),
+                    options = listOf<Pair<String?, String>>(null to currentLanguage.pick("Todas", "All", "Todas")) +
+                        availableTags.map { it to (tagLabels[it] ?: it) },
+                    selected = selectedTag,
+                    onSelect = onSelectTag,
+                    testTag = "novena_intention_picker"
+                )
+            }
         }
 
         if (inProgress.isNotEmpty()) {
             item {
                 AppSectionHeader(
-                    title = currentLanguage.pick("En curso", "In progress", "Em andamento"),
-                    // "novena" is the same word in all three languages.
-                    subtitle = if (inProgress.size == 1) "1 novena" else "${inProgress.size} novenas"
+                    title = currentLanguage.pick("En curso", "In progress", "Em andamento")
                 )
                 AppListGroup(modifier = Modifier.testTag("novenas_in_progress")) {
                     inProgress.forEach { novena ->
@@ -1014,53 +1039,38 @@ private fun NovenaIndexView(
             }
         }
 
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick("Intención", "Intention", "Intenção")
-            )
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .horizontalScroll(tagScroll)
-                    .padding(horizontal = design.spacing.gutter),
-                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-            ) {
-                AppChip(
-                    label = currentLanguage.pick("Todas", "All", "Todas"),
-                    selected = selectedTag == null,
-                    onClick = { onSelectTag(null) }
-                )
-                availableTags.forEach { tag ->
-                    AppChip(
-                        label = tagLabels[tag] ?: tag,
-                        selected = selectedTag == tag,
-                        onClick = { onSelectTag(tag) }
-                    )
-                }
-            }
-        }
-
         if (filtered.isEmpty()) {
             item {
                 AppEmptyState(
-                    title = currentLanguage.pick("Sin novenas", "No novenas", "Sem novenas"),
+                    title = currentLanguage.pick("Ninguna novena coincide", "No matching novenas", "Nenhuma novena corresponde"),
                     body = currentLanguage.pick(
-                        "Ninguna novena responde a esa búsqueda. Prueba otra palabra o quita la intención.",
-                        "No novena answers that search. Try another word, or clear the intention.",
-                        "Nenhuma novena responde a essa busca. Tente outra palavra ou remova a intenção."
+                        "Prueba otra palabra o elige otra intención.",
+                        "Try another word or choose another intention.",
+                        "Tente outra palavra ou escolha outra intenção."
                     ),
                     icon = Icons.Default.SearchOff
+                )
+                AppSecondaryButton(
+                    label = currentLanguage.pick("Ver todas", "Show all novenas", "Ver todas"),
+                    onClick = {
+                        onSearchQueryChange("")
+                        onSelectTag(null)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
                 )
             }
         } else {
             item {
+                // The count is said only when a search has narrowed the index.
                 AppSectionHeader(
-                    title = currentLanguage.pick("Índice", "Index", "Índice"),
-                    subtitle = currentLanguage.pick(
-                        "${filtered.size} de ${novenas.size} novenas",
-                        "${filtered.size} of ${novenas.size} novenas",
-                        "${filtered.size} de ${novenas.size} novenas"
-                    )
+                    title = currentLanguage.pick("Todas las novenas", "All novenas", "Todas as novenas"),
+                    subtitle = if (filtered.size < novenas.size) currentLanguage.pick(
+                        "${filtered.size} de ${novenas.size}",
+                        "${filtered.size} of ${novenas.size}",
+                        "${filtered.size} de ${novenas.size}"
+                    ) else null
                 )
             }
 

@@ -64,6 +64,8 @@ import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
+import com.example.ui.components.MenuPickerRow
+import com.example.ui.components.TextFormat
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
@@ -311,11 +313,7 @@ private fun LazyListScope.catechismIndexItems(
                     "The four parts",
                     "As quatro partes"
                 ),
-                subtitle = currentLanguage.pick(
-                    "Catecismo de la Iglesia Católica · §§ 1 – 2865",
-                    "Catechism of the Catholic Church · §§ 1 – 2865",
-                    "Catecismo da Igreja Católica · §§ 1 – 2865"
-                )
+                subtitle = "§§ 1–2865"
             )
         }
 
@@ -324,8 +322,10 @@ private fun LazyListScope.catechismIndexItems(
                 parts.forEachIndexed { index, part ->
                     AppListRow(
                         title = part.title.get(currentLanguage),
-                        subtitle = part.subtitle.get(currentLanguage),
-                        trailingText = part.cccRange,
+                        // The range rides in the subtitle: as trailing text it
+                        // squeezed the titles onto three lines.
+                        subtitle = TextFormat.ranges(part.cccRange.replace(" - ", "–")) +
+                            " · " + part.subtitle.get(currentLanguage),
                         selected = index == selectedPartIndex,
                         onClick = { onSelectPart(index) }
                     )
@@ -339,7 +339,8 @@ private fun LazyListScope.catechismIndexItems(
             ReadingColumn {
                 AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                     Text(
-                        text = currentPart.subtitle.get(currentLanguage) + " • " + currentPart.cccRange,
+                        text = currentPart.subtitle.get(currentLanguage) + " · " +
+                            TextFormat.ranges(currentPart.cccRange),
                         style = styles.sectionEyebrow,
                         color = design.palette.gold
                     )
@@ -376,12 +377,7 @@ private fun LazyListScope.catechismIndexItems(
                     section.chapters.forEach { chapter ->
                         AppListRow(
                             title = chapter.title.get(currentLanguage),
-                            subtitle = currentLanguage.pick(
-                                "${chapter.articles.size} artículos destacados",
-                                "${chapter.articles.size} highlighted articles",
-                                "${chapter.articles.size} artigos destacados"
-                            ),
-                            trailingText = chapter.articleRangeDisplay,
+                            subtitle = TextFormat.ranges(chapter.articleRangeDisplay),
                             onClick = { onSelectChapter(chapter) }
                         )
                     }
@@ -397,11 +393,7 @@ private fun LazyListScope.catechismIndexItems(
         item {
             AppSectionHeader(
                 title = currentLanguage.pick("Texto completo", "Complete text", "Texto completo"),
-                subtitle = currentLanguage.pick(
-                    "Los 2.865 numerales, íntegros",
-                    "All 2,865 paragraphs, in full",
-                    "Os 2.865 números, na íntegra"
-                )
+                subtitle = null
             )
         }
 
@@ -412,12 +404,7 @@ private fun LazyListScope.catechismIndexItems(
                     sections.forEach { section ->
                         AppListRow(
                             title = section.title.get(currentLanguage),
-                            subtitle = currentLanguage.pick(
-                                "${section.paragraphCount} numerales",
-                                "${section.paragraphCount} paragraphs",
-                                "${section.paragraphCount} números"
-                            ),
-                            trailingText = "§§ ${section.firstNumber}–${section.lastNumber}",
+                            subtitle = "§§ ${section.firstNumber}–${section.lastNumber}",
                             onClick = { onSelectOutline(section) }
                         )
                     }
@@ -781,16 +768,16 @@ private fun CompendiumView(
 
     val filterNames = when (currentLanguage) {
         AppLanguage.ES -> listOf(
-            "Todas (598)", "P. I: La Fe", "P. II: Sacramentos",
-            "P. III: Vida en Cristo", "P. IV: Oración", "Fórmulas Doctrinales"
+            "Todas", "I. La profesión de la fe", "II. Los sacramentos",
+            "III. La vida en Cristo", "IV. La oración", "Fórmulas de la doctrina"
         )
         AppLanguage.EN -> listOf(
-            "All (598)", "P. I: The Faith", "P. II: Sacraments",
-            "P. III: Life in Christ", "P. IV: Prayer", "Doctrinal Formulas"
+            "All parts", "I. The Profession of Faith", "II. The Sacraments",
+            "III. Life in Christ", "IV. Christian Prayer", "Formulas of doctrine"
         )
         AppLanguage.PT -> listOf(
-            "Todas (598)", "P. I: A Fé", "P. II: Sacramentos",
-            "P. III: Vida em Cristo", "P. IV: Oração", "Fórmulas Doutrinais"
+            "Todas", "I. A profissão da fé", "II. Os sacramentos",
+            "III. A vida em Cristo", "IV. A oração", "Fórmulas da doutrina"
         )
     }
 
@@ -812,24 +799,16 @@ private fun CompendiumView(
                 )
             }
 
-            // The run scrolls, and its own padding carries the gutter at both
-            // ends, so a scrolled row comes to rest on the margin.
+            // The part is one row with a menu, under the screen's own selector.
             item(key = "compendium_filters") {
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .horizontalScroll(rememberScrollState())
-                        .padding(horizontal = design.spacing.gutter)
-                        .padding(bottom = design.spacing.cardGap / 2),
-                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-                ) {
-                    filterNames.forEachIndexed { index, name ->
-                        AppChip(
-                            label = name,
-                            selected = selectedFilterIndex == index,
-                            onClick = { selectedFilterIndex = index }
-                        )
-                    }
+                AppListGroup {
+                    MenuPickerRow(
+                        title = currentLanguage.pick("Parte", "Part", "Parte"),
+                        options = filterNames.mapIndexed { i, name -> i to name },
+                        selected = selectedFilterIndex,
+                        onSelect = { selectedFilterIndex = it },
+                        testTag = "compendium_part_picker"
+                    )
                 }
             }
 
@@ -987,73 +966,69 @@ private fun VaticanOfficialLinksView(
     val links = remember(currentLanguage) {
         repository.officialVaticanLinks.sortedByDescending { it.language == ownLanguage }
     }
-    val host = links.firstNotNullOfOrNull { hostOf(it.catechismUrl) } ?: "vatican.va"
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
 
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Fuentes oficiales",
-                    "Official sources",
-                    "Fontes oficiais"
-                ),
-                // The host is the only part of the addresses worth reading;
-                // each action already says where it goes.
-                subtitle = currentLanguage.pick(
-                    "Los textos íntegros de la Santa Sede en ${host}.",
-                    "The Holy See's complete texts on ${host}.",
-                    "Os textos integrais da Santa Sé em ${host}."
+        // The texts as one list in the reader's language, then the same in
+        // the other two: rows that open, not cards of mismatched buttons.
+        val own = links.firstOrNull()
+        if (own != null) {
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick("En vatican.va", "On vatican.va", "Em vatican.va")
                 )
-            )
-        }
-
-        items(links) { link ->
-            AppSectionHeader(title = link.language)
-            ReadingColumn {
-                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                    DocumentLink(
+                AppListGroup {
+                    AppListRow(
                         title = currentLanguage.pick(
                             "Catecismo de la Iglesia Católica",
                             "Catechism of the Catholic Church",
                             "Catecismo da Igreja Católica"
                         ),
-                        detail = currentLanguage.pick(
+                        subtitle = currentLanguage.pick(
                             "Texto completo · §§ 1–2865",
                             "Complete text · §§ 1–2865",
                             "Texto completo · §§ 1–2865"
                         ),
-                        openLabel = currentLanguage.pick("Abrir", "Open", "Abrir"),
-                        onOpen = { context.openExternally(link.catechismUrl) },
-                        inAppLabel = currentLanguage.pick(
-                            "Leer en la app",
-                            "Read in the app",
-                            "Ler no app"
-                        ),
-                        onOpenInApp = { webViewUrl = link.catechismUrl }
+                        leadingIcon = Icons.Default.MenuBook,
+                        onClick = { webViewUrl = own.catechismUrl },
+                        modifier = Modifier.testTag("catechism_source_ccc")
                     )
-
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    AppDivider()
-                    Spacer(Modifier.height(design.spacing.cardGap))
-
-                    DocumentLink(
+                    AppListRow(
                         title = currentLanguage.pick(
                             "Compendio del Catecismo",
                             "Compendium of the Catechism",
                             "Compêndio do Catecismo"
                         ),
-                        detail = currentLanguage.pick(
+                        subtitle = currentLanguage.pick(
                             "598 preguntas y respuestas",
                             "598 questions and answers",
                             "598 perguntas e respostas"
                         ),
-                        openLabel = currentLanguage.pick("Abrir", "Open", "Abrir"),
-                        onOpen = { context.openExternally(link.compendiumUrl) },
-                        inAppLabel = null,
-                        onOpenInApp = null
+                        leadingIcon = Icons.Default.OpenInNew,
+                        onClick = { context.openExternally(own.compendiumUrl) },
+                        modifier = Modifier.testTag("catechism_source_compendium")
                     )
+                }
+            }
+        }
+        if (links.size > 1) {
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick("En otros idiomas", "In other languages", "Noutros idiomas")
+                )
+                AppListGroup {
+                    links.drop(1).forEach { link ->
+                        AppListRow(
+                            title = link.language,
+                            subtitle = currentLanguage.pick(
+                                "Catecismo, texto completo",
+                                "Catechism, complete text",
+                                "Catecismo, texto completo"
+                            ),
+                            onClick = { webViewUrl = link.catechismUrl }
+                        )
+                    }
                 }
             }
         }

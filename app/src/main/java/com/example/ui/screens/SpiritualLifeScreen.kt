@@ -27,6 +27,7 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.EditNote
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.MusicNote
@@ -245,19 +246,15 @@ fun SpiritualLifeScreen(
     val header: LazyListScope.() -> Unit = {
         item(key = "spiritual_life_title") {
             AppScreenTitle(
-                title = currentLanguage.pick("Vida espiritual", "Spiritual life", "Vida espiritual"),
-                subtitle = currentLanguage.pick(
-                    "Escribir, aprender, meditar y cantar",
-                    "Write, learn, meditate and sing",
-                    "Escrever, aprender, meditar e cantar"
-                )
+                title = currentLanguage.pick("Vida espiritual", "Spiritual Life", "Vida espiritual"),
+                subtitle = null
             )
         }
         item(key = "spiritual_life_tabs") {
             AppSegmentedTabs(
                 options = listOf(
                     currentLanguage.pick("Diario", "Journal", "Diário"),
-                    currentLanguage.pick("Trivia", "Trivia", "Quiz"),
+                    currentLanguage.pick("Preguntas", "Quiz", "Quiz"),
                     currentLanguage.pick("Vía Crucis", "Stations", "Via-Sacra"),
                     currentLanguage.pick("Canto", "Chant", "Canto")
                 ),
@@ -288,7 +285,10 @@ fun SpiritualLifeScreen(
                 onDelete = { entry ->
                     coroutineScope.launch { dao.deleteJournalEntry(entry) }
                 },
-                onAdd = { showAddJournalDialog = true }
+                onAdd = { prompt ->
+                    if (prompt != null) newJournalTitle = prompt
+                    showAddJournalDialog = true
+                }
             )
 
             1 -> TriviaTab(
@@ -396,7 +396,7 @@ private fun JournalTab(
     currentLanguage: AppLanguage,
     onToggleAnswered: (JournalEntryEntity) -> Unit,
     onDelete: (JournalEntryEntity) -> Unit,
-    onAdd: () -> Unit
+    onAdd: (prompt: String?) -> Unit
 ) {
     val design = LocalAppDesign.current
 
@@ -415,12 +415,42 @@ private fun JournalTab(
                             "Seu diário está vazio"
                         ),
                         body = currentLanguage.pick(
-                            "Anota intenciones, agradecimientos y gracias recibidas. Empieza con «Nueva entrada».",
-                            "Keep intentions, thanksgivings and graces received. Begin with “New entry”.",
-                            "Anote intenções, agradecimentos e graças recebidas. Comece com “Nova entrada”."
+                            "Anota intenciones, agradecimientos y gracias recibidas.",
+                            "Keep your intentions, thanksgivings and the graces you receive.",
+                            "Anote intenções, agradecimentos e graças recebidas."
                         ),
-                        icon = Icons.Default.Favorite
+                        icon = Icons.Default.EditNote
                     )
+                    // The empty page's one action sits with its explanation,
+                    // not floating over a void at the foot of the screen.
+                    AppPrimaryButton(
+                        label = currentLanguage.pick("Escribir la primera entrada", "Write your first entry", "Escrever a primeira entrada"),
+                        onClick = { onAdd(null) },
+                        leadingIcon = Icons.Default.Add,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
+                            .testTag("add_first_journal_entry")
+                    )
+                }
+                // A few ways in, for the reader who does not know where to start.
+                item {
+                    AppSectionHeader(
+                        title = currentLanguage.pick("Para empezar", "Ways to begin", "Para começar")
+                    )
+                    AppListGroup {
+                        listOf(
+                            currentLanguage.pick("Una gracia recibida hoy", "A grace received today", "Uma graça recebida hoje"),
+                            currentLanguage.pick("Una intención para rezar", "An intention to pray for", "Uma intenção para rezar"),
+                            currentLanguage.pick("Algo por lo que dar gracias", "Something to give thanks for", "Algo por que agradecer")
+                        ).forEach { prompt ->
+                            AppListRow(
+                                title = prompt,
+                                leadingIcon = Icons.Default.EditNote,
+                                onClick = { onAdd(prompt) }
+                            )
+                        }
+                    }
                 }
             } else {
                 item {
@@ -457,9 +487,9 @@ private fun JournalTab(
         // The add action floats over the foot of the page, with no rule above
         // it: the bottom-end extended action in Material and Apple, centred
         // under a centred masthead in Vatican.
-        AppPrimaryButton(
+        if (entries.isNotEmpty()) AppPrimaryButton(
             label = currentLanguage.pick("Nueva entrada", "New entry", "Nova entrada"),
-            onClick = onAdd,
+            onClick = { onAdd(null) },
             leadingIcon = Icons.Default.Add,
             modifier = Modifier
                 .align(if (centred) Alignment.BottomCenter else Alignment.BottomEnd)

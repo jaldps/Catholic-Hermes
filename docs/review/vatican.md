@@ -68,3 +68,25 @@ What still keeps screens below 9.5 is screen content and layout (see the request
 7. **HabitsAndVirtues** — "0/0" under "Daily practices & devotions" and "0 of 0 kept today" read as a broken counter. With no practices configured show an EmptyState ("No practices yet" + one action) instead of the counters.
 8. **CatechismScreen (official sources)** — raw `https://…` URLs set as body text. Show the host only (`vatican.va`) in small caps, or drop it: the button already says where it goes.
 9. **AppIconSet.kt** — `PRAYERS` uses VolunteerActivism (a hand giving a heart: charity, not prayer) and `ROSARY` a seated meditator. The Vatican kit substitutes its own rosary device on the rail; please supply a proper sharp glyph for both slots (praying hands / rosary) so all identities benefit.
+
+## Round 4 shared-screen requests
+
+Kit changes this round, which screens can now rely on: `AppSectionHeader` is
+left-ranged and draws the **only** thick-thin rule under itself. A short subtitle
+(≤22 chars, no full stop) is set opposite as a count ("PENTATEUCH ……… 5 books").
+`AppListGroup` and `AppCard` no longer open with a rule (a card closes with a
+hairline). `AppChip` is now a lozenge-led small-caps text filter with no box.
+`AppRow` with a Roman-numeral `trailingText` ("I", "IV.") hangs it in the left
+margin as a red figure. `AppEmptyState` draws an engraved vignette. `AppBanner`
+is a rubricated calendar heading. `AppPrimaryButton` has a gilt inset.
+
+1. **Do not add `AppDivider()` before or after `AppListGroup`, `AppSectionHeader` or `AppSearchField`.** The search field's underline followed by a group (Prayers, Churches & News) currently gives two rules about 20dp apart. Put the search field directly above the first row, or put a `AppSectionHeader` between them.
+2. **Chip rows in `horizontalScroll`** (Churches & News filters, others): add `contentPadding`/end padding equal to `spacing.gutter`. The fourth filter's lozenge is cut at the screen edge. For six or fewer filters, prefer `FlowRow` with `horizontalArrangement = spacedBy(14.dp)`.
+3. **HomeScreen**: drop the green ■ swatch row ("Green · Weekday · Cycle A · Cycle II") or fold it into the Banner body, because the Banner already shows the colour as a lozenge. Drop the ★ before "RULE OF LIFE". Rename "DASHBOARD" to "OPEN" or remove it. Change the copy "Grace Antidote against sins" to "the remedies against sin". Write the day name as "Saturday of the Thirty-first Week in Ordinary Time" (ordinal words).
+4. **Doctrine (Commandments)**: pass the Roman numeral as `trailingText` ("I" … "X") and drop "1st:" from titles. The kit hangs it as a red marginal figure. The same applies to Precepts.
+5. **Prayer detail**: the Latin incipit (`prayer.latinTitle`) should be the `AppScreenTitle` subtitle in the rubric colour. Better still, bundle **EB Garamond Italic** (`res/font/ebgaramond_italic.ttf`, plus the `FontStyle.Italic` entry in `AppFonts.EbGaramond`) so Latin incipits and scripture quotations can be true italic. Faux-oblique Garamond is worse than roman, so the kit does not synthesise it.
+6. **Doctrine scripture quotation**: set it in `bodyInk` (`palette.textPrimary`) at body size, not grey at 22sp, so the quotation does not outrank the text.
+7. **Spiritual Life (Journal empty)**: place the "New entry" button directly under the `AppEmptyState` (24dp gap), not pinned above the tab bar with a 300dp void.
+8. **Times**: format consistently as "6:00 AM" everywhere (Habits uses "07:00 AM").
+9. **Count blocks**: remove the centred "PRAYERS / 7 prayers" header, or pass the count as a short subtitle, which the kit now sets opposite the rubric.
+10. **Calendar**: set references with an en dash ("Matthew 5:1–12"). Do not show Spanish dates in English ("25 OCTUBRE").

@@ -404,8 +404,12 @@ object DesignTokens {
         accentMuted = Color(0xFFE5F0FF),
         gold = Color(0xFFB8860B),
         textPrimary = Color(0xFF000000),
-        textSecondary = Color(0x993C3C43),
-        textTertiary = Color(0x4D3C3C43),
+        // secondaryLabel at 60% measures 3.5:1 on white and reads as a
+        // ghost in captions; struck firmer to clear 4.5:1 on the grouped
+        // canvas, and tertiary lifted to where a disabled label is still
+        // legible.
+        textSecondary = Color(0xC23C3C43),
+        textTertiary = Color(0x8C3C3C43),
         scrim = Color(0x66000000),
         selectionTint = Color(0xFFD1D1D6)
     )
@@ -419,8 +423,8 @@ object DesignTokens {
         accentMuted = Color(0xFF13243B),
         gold = Color(0xFFD4AF37),
         textPrimary = Color(0xFFFFFFFF),
-        textSecondary = Color(0x99EBEBF5),
-        textTertiary = Color(0x4DEBEBF5),
+        textSecondary = Color(0xADEBEBF5),
+        textTertiary = Color(0x80EBEBF5),
         scrim = Color(0x99000000),
         selectionTint = Color(0xFF3A3A3C)
     )
@@ -482,12 +486,14 @@ object DesignTokens {
     private val VaticanPaletteDark = AppPalette(
         // A codex by candlelight: umber vellum, cinnabar rubrics (not pink),
         // and burnished rather than lemon gold.
-        canvas = Color(0xFF16110C),
-        groupedSurface = Color(0xFF1E1711),
-        raised = Color(0xFF271E16),
-        hairline = Color(0xFF4A3D2B),
-        accent = Color(0xFFD66B50),
-        accentMuted = Color(0xFF2E1F17),
+        // Deep warm umber, not black; one deep vermilion (4.5:1 on the
+        // ground) that stays red by candle rather than drifting to coral.
+        canvas = Color(0xFF1B140E),
+        groupedSurface = Color(0xFF221A12),
+        raised = Color(0xFF2A2017),
+        hairline = Color(0xFF55452F),
+        accent = Color(0xFFD9503C),
+        accentMuted = Color(0xFF34201A),
         gold = Color(0xFFCCA24C),
         textPrimary = Color(0xFFECE0CA),
         textSecondary = Color(0xFFBDAC92),

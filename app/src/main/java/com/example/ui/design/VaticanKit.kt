@@ -73,6 +73,7 @@ import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.TileMode
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.ContentDrawScope
+import androidx.compose.ui.graphics.drawscope.clipPath
 import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.graphicsLayer
@@ -108,7 +109,6 @@ import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
 import kotlin.math.abs
-import kotlin.math.floor
 import kotlin.math.max
 
 /**
@@ -167,14 +167,14 @@ object VaticanKit : AppKit {
     @Composable
     private fun inkRule(): Color {
         val design = LocalAppDesign.current
-        return design.palette.textPrimary.copy(alpha = if (design.isDark) 0.38f else 0.72f)
+        return design.palette.textPrimary.copy(alpha = if (design.isDark) 0.52f else 0.72f)
     }
 
     /** The companion thin stroke of a scotch rule, and row separators. */
     @Composable
     private fun inkHair(): Color {
         val design = LocalAppDesign.current
-        return design.palette.textPrimary.copy(alpha = if (design.isDark) 0.17f else 0.26f)
+        return design.palette.textPrimary.copy(alpha = if (design.isDark) 0.22f else 0.24f)
     }
 
     /**
@@ -189,9 +189,16 @@ object VaticanKit : AppKit {
         else design.palette.textPrimary
     }
 
+    private val RomanFigure = Regex("^[IVXL]{1,6}\\.?$")
+
     /** Rubric red as it should sit in running text on either ground. */
     @Composable
     private fun rubric(): Color = LocalAppDesign.current.palette.accent
+
+    /** Silk is dyed, not printed: a deeper crimson than the rubric ink. */
+    @Composable
+    private fun ribbonSilk(): Color =
+        if (LocalAppDesign.current.isDark) Color(0xFFB8321F) else Color(0xFFA11F1A)
 
     /**
      * A liturgical colour as pigment on this ground. At night it is lifted
@@ -227,42 +234,26 @@ object VaticanKit : AppKit {
             cache.getOrPut(dark) { build(dark) }
         }
 
-        private fun lattice(rnd: java.util.Random, g: Int) = FloatArray(g * g) { rnd.nextFloat() * 2f - 1f }
-
-        private fun smooth(t: Float) = t * t * (3f - 2f * t)
-
-        private fun noise(lat: FloatArray, g: Int, x: Float, y: Float): Float {
-            val x0 = floor(x).toInt()
-            val y0 = floor(y).toInt()
-            val fx = smooth(x - x0)
-            val fy = smooth(y - y0)
-            fun at(i: Int, j: Int) = lat[((j % g + g) % g) * g + ((i % g + g) % g)]
-            val a = at(x0, y0) + (at(x0 + 1, y0) - at(x0, y0)) * fx
-            val b = at(x0, y0 + 1) + (at(x0 + 1, y0 + 1) - at(x0, y0 + 1)) * fx
-            return a + (b - a) * fy
-        }
-
         private fun build(dark: Boolean): ImageBitmap {
+            // A fine, even tooth and nothing else. Mottle and fibres read as
+            // stains and hairs on glass at phone scale; a good laid paper is
+            // perfectly even to the eye and only *feels* like paper. The
+            // grain is pre-blurred one pixel so it never sparkles, and is
+            // faintly elongated along the chain lines of a laid sheet.
             val n = Tile
             val rnd = java.util.Random(if (dark) 0x5EEDDA2EL else 0x5EED11E7L)
-            val g1 = 6
-            val g2 = 22
-            val l1 = lattice(rnd, g1)
-            val l2 = lattice(rnd, g2)
-            val mottleAmp = if (dark) 0.075f else 0.040f
-            val grainAmp = if (dark) 0.050f else 0.040f
-            // Umber shadow and cream lift; at night the lift is warmer and fainter.
+            val raw = FloatArray(n * n) { rnd.nextFloat() + rnd.nextFloat() - 1f }
+            val amp = if (dark) 0.030f else 0.026f
             val shade = if (dark) intArrayOf(0, 0, 0) else intArrayOf(74, 52, 24)
-            val lift = if (dark) intArrayOf(255, 214, 160) else intArrayOf(255, 252, 240)
-            val liftScale = if (dark) 0.55f else 1f
+            val lift = if (dark) intArrayOf(255, 222, 176) else intArrayOf(255, 252, 240)
+            val liftScale = if (dark) 0.45f else 0.9f
             val px = IntArray(n * n)
             for (y in 0 until n) {
                 for (x in 0 until n) {
-                    val m = noise(l1, g1, x * g1 / n.toFloat(), y * g1 / n.toFloat()) * 0.6f +
-                        noise(l2, g2, x * g2 / n.toFloat(), y * g2 / n.toFloat()) * 0.4f
-                    // Triangular grain: two uniforms summed, softer than white noise.
-                    val gr = (rnd.nextFloat() + rnd.nextFloat() - 1f)
-                    val v = m * mottleAmp + gr * grainAmp
+                    fun r(i: Int, j: Int) = raw[((j + n) % n) * n + ((i + n) % n)]
+                    // 3x2 box: wider than tall, the grain lies with the sheet.
+                    val g = (r(x - 1, y) + r(x, y) + r(x + 1, y) + r(x - 1, y + 1) + r(x, y + 1) + r(x + 1, y + 1)) / 6f * 2.2f
+                    val v = g * amp
                     val c = if (v < 0f) shade else lift
                     val a = (abs(v) * (if (v < 0f) 1f else liftScale) * 255f).toInt().coerceIn(0, 255)
                     px[y * n + x] = (a shl 24) or (c[0] shl 16) or (c[1] shl 8) or c[2]
@@ -270,37 +261,6 @@ object VaticanKit : AppKit {
             }
             val bmp = android.graphics.Bitmap.createBitmap(n, n, android.graphics.Bitmap.Config.ARGB_8888)
             bmp.setPixels(px, 0, n, 0, 0, n, n)
-            // Fibres: short, faintly curved strokes, mostly lying with the grain.
-            val canvas = android.graphics.Canvas(bmp)
-            val paint = android.graphics.Paint(android.graphics.Paint.ANTI_ALIAS_FLAG).apply {
-                style = android.graphics.Paint.Style.STROKE
-                strokeCap = android.graphics.Paint.Cap.ROUND
-            }
-            repeat(if (dark) 110 else 90) {
-                val x0 = rnd.nextFloat() * n
-                val y0 = rnd.nextFloat() * n
-                val len = 6f + rnd.nextFloat() * 22f
-                val ang = (rnd.nextFloat() - 0.5f) * 1.4f + if (rnd.nextFloat() < 0.5f) 0f else Math.PI.toFloat()
-                val dx = kotlin.math.cos(ang) * len
-                val dy = kotlin.math.sin(ang) * len
-                val bend = (rnd.nextFloat() - 0.5f) * len * 0.5f
-                val light = rnd.nextFloat() < 0.4f
-                val c = if (light) lift else shade
-                val alpha = ((if (dark) 9 else 7) + rnd.nextInt(6)) * (if (light) liftScale else 1f)
-                paint.color = android.graphics.Color.argb(alpha.toInt(), c[0], c[1], c[2])
-                paint.strokeWidth = 0.5f + rnd.nextFloat() * 0.5f
-                val path = android.graphics.Path().apply {
-                    moveTo(x0, y0)
-                    quadTo(x0 + dx / 2 - dy / len * bend, y0 + dy / 2 + dx / len * bend, x0 + dx, y0 + dy)
-                }
-                // Draw the wrapped copies so the fibre continues across the seam.
-                for (ox in -1..1) for (oy in -1..1) {
-                    canvas.save()
-                    canvas.translate(ox * n.toFloat(), oy * n.toFloat())
-                    canvas.drawPath(path, paint)
-                    canvas.restore()
-                }
-            }
             return bmp.asImageBitmap()
         }
     }
@@ -318,7 +278,7 @@ object VaticanKit : AppKit {
                 // away to umber at the edges of the leaf.
                 drawRect(
                     Brush.radialGradient(
-                        0f to Color(0xFFFFC27A).copy(alpha = 0.075f),
+                        0f to Color(0xFFFFC27A).copy(alpha = 0.06f),
                         0.55f to Color(0xFFFFB060).copy(alpha = 0.025f),
                         1f to Color.Transparent,
                         center = Offset(w * 0.5f, h * 0.30f),
@@ -329,7 +289,7 @@ object VaticanKit : AppKit {
                     Brush.radialGradient(
                         0f to Color.Transparent,
                         0.58f to Color.Transparent,
-                        1f to Color.Black.copy(alpha = 0.42f),
+                        1f to Color.Black.copy(alpha = 0.30f),
                         center = Offset(w * 0.5f, h * 0.40f),
                         radius = max(w, h) * 0.78f
                     )
@@ -591,30 +551,155 @@ object VaticanKit : AppKit {
         }.build()
     }
 
-    /** Substitutes this identity's own device where the stock glyph is wrong. */
-    private fun glyphFor(item: AppNavItem, selected: Boolean): ImageVector =
-        if (item.tag == "nav_rosary") RosaryGlyph
-        else if (selected) item.selectedIcon else item.icon
+    /**
+     * The rest of the rail's devices, cut as one fine-line set at a single
+     * stroke so they read as engravings from the same hand rather than a
+     * house, a grid and a candle from three icon fonts.
+     */
+    private fun engraved(name: String, build: ImageVector.Builder.() -> Unit): ImageVector =
+        ImageVector.Builder(name, 24.dp, 24.dp, 24f, 24f).apply(build).build()
 
-    /** The ribbon marker of a bound missal, hanging from the head of the bar. */
-    @Composable
-    private fun Ribbon(color: Color, modifier: Modifier = Modifier) {
-        Canvas(modifier.size(width = 9.dp, height = 15.dp)) {
-            val notch = 4.dp.toPx()
-            val p = Path().apply {
-                moveTo(0f, 0f)
-                lineTo(size.width, 0f)
-                lineTo(size.width, size.height)
-                lineTo(size.width / 2f, size.height - notch)
-                lineTo(0f, size.height)
+    private fun ImageVector.Builder.line(w: Float = 1.45f, block: androidx.compose.ui.graphics.vector.PathBuilder.() -> Unit) =
+        path(
+            fill = null,
+            stroke = SolidColor(Color.Black),
+            strokeLineWidth = w,
+            strokeLineCap = androidx.compose.ui.graphics.StrokeCap.Butt,
+            strokeLineJoin = androidx.compose.ui.graphics.StrokeJoin.Miter,
+            pathBuilder = block
+        )
+
+    /** A church front: pediment and cross, rose window, arched door. */
+    private val ChurchGlyph: ImageVector by lazy {
+        engraved("vatican.church") {
+            line { moveTo(12f, 0.8f); lineTo(12f, 5.6f); moveTo(10.2f, 2.6f); lineTo(13.8f, 2.6f) }
+            line { moveTo(3.6f, 11.2f); lineTo(12f, 5.6f); lineTo(20.4f, 11.2f); close() }
+            line { moveTo(5f, 11.2f); lineTo(5f, 21.6f); moveTo(19f, 11.2f); lineTo(19f, 21.6f) }
+            line(1.6f) { moveTo(2.4f, 22.2f); lineTo(21.6f, 22.2f) }
+            path(fill = SolidColor(Color.Black)) {
+                // Arched door, filled; rose window as a ring.
+                moveTo(10f, 21.6f); lineTo(10f, 18.2f)
+                arcTo(2f, 2f, 0f, false, true, 14f, 18.2f)
+                lineTo(14f, 21.6f); close()
+            }
+            line(1.1f) {
+                moveTo(10.6f, 14.2f)
+                arcTo(1.4f, 1.4f, 0f, true, true, 13.4f, 14.2f)
+                arcTo(1.4f, 1.4f, 0f, true, true, 10.6f, 14.2f)
+            }
+        }
+    }
+
+    /** An open missal with a cross on the recto. */
+    private val BookGlyph: ImageVector by lazy {
+        engraved("vatican.book") {
+            line {
+                moveTo(12f, 6.4f)
+                curveTo(9.2f, 4.7f, 5.6f, 4.6f, 2.2f, 5.5f)
+                lineTo(2.2f, 19.4f)
+                curveTo(5.6f, 18.5f, 9.2f, 18.6f, 12f, 20.3f)
+                curveTo(14.8f, 18.6f, 18.4f, 18.5f, 21.8f, 19.4f)
+                lineTo(21.8f, 5.5f)
+                curveTo(18.4f, 4.6f, 14.8f, 4.7f, 12f, 6.4f)
+                lineTo(12f, 20.3f)
+            }
+            line(1.2f) { moveTo(16.9f, 8.4f); lineTo(16.9f, 15f); moveTo(14.9f, 10.4f); lineTo(18.9f, 10.4f) }
+            line(0.8f) { moveTo(4.4f, 9.6f); lineTo(9.6f, 10.2f); moveTo(4.4f, 12.4f); lineTo(9.6f, 13f); moveTo(4.4f, 15.2f); lineTo(9.6f, 15.8f) }
+        }
+    }
+
+    /** A votive candle on its pricket, flame lit. */
+    private val CandleGlyph: ImageVector by lazy {
+        engraved("vatican.candle") {
+            path(fill = SolidColor(Color.Black)) {
+                moveTo(12f, 1.6f)
+                curveTo(14.4f, 4.4f, 14.5f, 6.9f, 12f, 8.3f)
+                curveTo(9.5f, 6.9f, 9.6f, 4.4f, 12f, 1.6f)
                 close()
             }
-            drawPath(p, color)
-            // The weave catches the light down one edge.
-            drawRect(
-                Color.White.copy(alpha = 0.16f),
-                topLeft = Offset(size.width * 0.18f, 0f),
-                size = Size(0.8.dp.toPx(), size.height - notch * 1.2f)
+            line(1f) { moveTo(12f, 8.3f); lineTo(12f, 10f) }
+            line { moveTo(9.6f, 10f); lineTo(14.4f, 10f); lineTo(14.4f, 19.4f); lineTo(9.6f, 19.4f); close() }
+            line(1.6f) { moveTo(5.6f, 19.6f); lineTo(18.4f, 19.6f) }
+            line { moveTo(12f, 19.6f); lineTo(12f, 22.4f); moveTo(8.6f, 22.4f); lineTo(15.4f, 22.4f) }
+        }
+    }
+
+    /** The library: volumes on a shelf, one leaning. */
+    private val LibraryGlyph: ImageVector by lazy {
+        engraved("vatican.library") {
+            line { moveTo(3.6f, 5f); lineTo(7.8f, 5f); lineTo(7.8f, 21f); lineTo(3.6f, 21f); close() }
+            line { moveTo(9.4f, 7.2f); lineTo(13.4f, 7.2f); lineTo(13.4f, 21f); lineTo(9.4f, 21f); close() }
+            line { moveTo(14.6f, 8.6f); lineTo(18.2f, 7.6f); lineTo(21.8f, 20.1f); lineTo(18.2f, 21f); close() }
+            line(1f) { moveTo(3.6f, 8f); lineTo(7.8f, 8f); moveTo(3.6f, 18f); lineTo(7.8f, 18f); moveTo(9.4f, 10f); lineTo(13.4f, 10f); moveTo(9.4f, 18f); lineTo(13.4f, 18f) }
+            line(1.6f) { moveTo(1.8f, 21.8f); lineTo(22.4f, 21.8f) }
+        }
+    }
+
+    /** Substitutes this identity's own device where the stock glyph is wrong. */
+    private fun glyphFor(item: AppNavItem, selected: Boolean): ImageVector = when (item.tag) {
+        "nav_rosary" -> RosaryGlyph
+        "nav_home" -> ChurchGlyph
+        "nav_bible" -> BookGlyph
+        "nav_prayers" -> CandleGlyph
+        "nav_more" -> LibraryGlyph
+        else -> if (selected) item.selectedIcon else item.icon
+    }
+
+    /**
+     * The silk marker of a bound missal. It comes over the head rule of the
+     * rail as a ribbon comes over the head of the text block: a short turned
+     * fold where it crosses the edge (the reverse of the silk, in shadow),
+     * then the hanging tail — cross-lit so the weave reads as a soft
+     * cylinder, with a lengthwise sheen, a swallowtail cut, and a faint cast
+     * shadow on the leaf to the fore-edge side.
+     */
+    @Composable
+    private fun Ribbon(color: Color, modifier: Modifier = Modifier) {
+        Canvas(modifier.size(width = 11.dp, height = 17.dp)) {
+            val w = size.width
+            val h = size.height
+            val notch = 4.5.dp.toPx()
+            val fold = 3.dp.toPx()
+            fun tail(dx: Float, dy: Float) = Path().apply {
+                moveTo(dx, fold + dy)
+                lineTo(w + dx, fold + dy)
+                lineTo(w + dx, h + dy)
+                lineTo(w / 2f + dx, h - notch + dy)
+                lineTo(dx, h + dy)
+                close()
+            }
+            // Cast shadow, soft: two passes offset toward the fore-edge.
+            drawPath(tail(1.2.dp.toPx(), 1.dp.toPx()), Color.Black.copy(alpha = 0.10f))
+            drawPath(tail(0.6.dp.toPx(), 0.5.dp.toPx()), Color.Black.copy(alpha = 0.12f))
+            // The tail, cross-lit: deep at both selvedges, lit left of centre.
+            val deep = lerp(color, Color.Black, 0.38f)
+            val lit = lerp(color, Color.White, 0.16f)
+            drawPath(
+                tail(0f, 0f),
+                Brush.horizontalGradient(
+                    0f to deep, 0.18f to color, 0.36f to lit, 0.55f to color, 0.86f to lerp(color, Color.Black, 0.18f), 1f to deep,
+                    startX = 0f, endX = w
+                )
+            )
+            // Lengthwise weave: two faint threads of sheen.
+            drawRect(Color.White.copy(alpha = 0.10f), Offset(w * 0.33f, fold), Size(0.5.dp.toPx(), h - fold - notch))
+            drawRect(Color.Black.copy(alpha = 0.08f), Offset(w * 0.70f, fold), Size(0.5.dp.toPx(), h - fold - notch))
+            // The turned fold over the head rule: the reverse of the silk,
+            // narrower at the far side where it wraps the edge.
+            val turn = Path().apply {
+                moveTo(0f, 0f)
+                lineTo(w, 0f)
+                lineTo(w, fold)
+                lineTo(0f, fold + 0.8.dp.toPx())
+                close()
+            }
+            drawPath(turn, Brush.verticalGradient(listOf(lerp(color, Color.Black, 0.55f), lerp(color, Color.Black, 0.30f)), 0f, fold))
+            // The crease catches a line of light.
+            drawLine(
+                lerp(color, Color.White, 0.30f).copy(alpha = 0.8f),
+                Offset(0f, fold + 0.8.dp.toPx()),
+                Offset(w, fold),
+                strokeWidth = 0.6.dp.toPx()
             )
         }
     }
@@ -747,13 +832,13 @@ object VaticanKit : AppKit {
                                     Text(
                                         text = "✠",
                                         style = styles.sectionEyebrow.copy(
-                                            fontSize = 12.sp,
-                                            lineHeight = 14.sp,
+                                            fontSize = 17.sp,
+                                            lineHeight = 18.sp,
                                             letterSpacing = 0.sp
                                         ),
                                         color = palette.gold
                                     )
-                                    Spacer(Modifier.height(5.dp))
+                                    Spacer(Modifier.height(3.dp))
                                     Text(
                                         text = "Sancta Fides".uppercase(), // the running head names the book, not the page
                                         // Trajan capitals at masthead size want
@@ -852,7 +937,7 @@ object VaticanKit : AppKit {
                         }
                     }
                     if (selectedNavIndex in navItems.indices) {
-                        Ribbon(rubric(), Modifier.offset(x = ribbonX - 4.5.dp))
+                        Ribbon(ribbonSilk(), Modifier.offset(x = ribbonX - 5.5.dp, y = (-0.5).dp))
                     }
                 }
             }
@@ -959,37 +1044,57 @@ object VaticanKit : AppKit {
 
     // --------------------------------------------------------------- structure
 
+    /**
+     * The second level of the page. A rubric: red capitals ranged left on
+     * the same edge as the table it heads, with any count or note set
+     * opposite in small Garamond, as a missal sets "Pentateuch ....... 5".
+     * A long note drops below in the text face. Never centred over a
+     * left-ranged list — headings and matter share one edge.
+     */
     @Composable
     override fun SectionHeader(title: String, subtitle: String?, modifier: Modifier) {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
+        val short = subtitle != null && subtitle.length <= 22 && !subtitle.contains('.')
+        val rubricStyle = styles.sectionEyebrow.copy(fontSize = 11.sp, lineHeight = 16.sp).tracked(0.2f)
         Column(
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
-                .padding(top = design.spacing.sectionGap / 2, bottom = 14.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .padding(top = design.spacing.sectionGap / 2 + 4.dp, bottom = 4.dp)
         ) {
-            // A missal heads its sections with a rubric: centred capitals in
-            // red ink, standing free. Dashes either side of a label are a web
-            // idiom ("— TITLE —"), not a printer's; the rule belongs to the
-            // table that follows, not to the heading.
-            Text(
-                text = title.uppercase(),
-                style = styles.sectionEyebrow.tracked(0.2f),
-                color = rubric(),
-                textAlign = TextAlign.Center
-            )
-            if (subtitle != null) {
-                Spacer(Modifier.height(10.dp))
+            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
+                Text(
+                    text = title.uppercase(),
+                    style = rubricStyle,
+                    color = rubric(),
+                    modifier = Modifier.weight(1f).alignByBaseline()
+                )
+                if (short) {
+                    Spacer(Modifier.width(12.dp))
+                    Text(
+                        text = subtitle!!,
+                        style = styles.rowSubtitle.copy(fontSize = 14.sp, lineHeight = 16.sp),
+                        color = palette.textTertiary,
+                        maxLines = 1,
+                        modifier = Modifier.alignByBaseline()
+                    )
+                }
+            }
+            if (subtitle != null && !short) {
+                Spacer(Modifier.height(6.dp))
                 Text(
                     text = subtitle,
                     style = styles.rowSubtitle.copy(fontSize = 15.sp, lineHeight = 22.sp),
-                    color = palette.textSecondary,
-                    textAlign = TextAlign.Center
+                    color = palette.textSecondary
                 )
             }
+            // The heading owns the one thick-thin rule; the matter beneath
+            // (a table, a card, a line of filters) opens without a rule of its
+            // own, so two rules are never stacked.
+            Spacer(Modifier.height(10.dp))
+            ScotchRule(gap = 2.dp)
         }
     }
 
@@ -1009,11 +1114,11 @@ object VaticanKit : AppKit {
                 .fillMaxWidth()
                 .then(if (onClick != null) Modifier.press(onClick = onClick) else Modifier)
         ) {
-            Hairline(color = inkRule().copy(alpha = inkRule().alpha * 0.6f))
             Column(
-                Modifier.fillMaxWidth().padding(top = 20.dp, bottom = 6.dp),
+                Modifier.fillMaxWidth().padding(top = 18.dp, bottom = 20.dp),
                 content = content
             )
+            Hairline()
         }
     }
 
@@ -1031,7 +1136,6 @@ object VaticanKit : AppKit {
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
         ) {
-            ScotchRule(gap = 2.dp)
             Column(
                 Modifier
                     .fillMaxWidth()
@@ -1063,6 +1167,10 @@ object VaticanKit : AppKit {
         // The current entry is rubricated, not highlighted: red ink is how a
         // missal marks what is being read.
         val titleColor = if (selected) palette.accent else bodyInk()
+        // An ordinal in Roman figures is not trailing data: a missal hangs it
+        // in the margin, in red, before the text it numbers.
+        val roman = trailingText?.trim()?.takeIf { RomanFigure.matches(it) }
+        val trailing = if (roman != null) null else trailingText
         Column(modifier.fillMaxWidth()) {
             Row(
                 Modifier
@@ -1074,20 +1182,39 @@ object VaticanKit : AppKit {
             ) {
                 // No pictogram. A printed index of books carries the name, the
                 // extent and the siglum — nothing else.
-                Column(Modifier.weight(1f)) {
+                if (roman != null) {
+                    Text(
+                        text = roman.trimEnd('.') + ".",
+                        style = styles.sectionEyebrow.copy(fontSize = 13.sp, lineHeight = 18.sp, letterSpacing = 0.6.sp),
+                        color = rubric(),
+                        maxLines = 1,
+                        modifier = Modifier.width(38.dp).alignByBaseline()
+                    )
+                }
+                Column(Modifier.weight(1f).then(if (roman != null) Modifier.alignByBaseline() else Modifier)) {
                     Text(title, style = styles.rowTitle, color = titleColor)
                     if (subtitle != null) {
                         Spacer(Modifier.height(4.dp))
                         Text(subtitle, style = styles.rowSubtitle, color = palette.textSecondary)
                     }
                 }
-                if (trailingText != null) {
+                if (trailing != null) {
                     Spacer(Modifier.width(12.dp))
                     Text(
-                        text = trailingText.uppercase(),
+                        text = trailing.uppercase(),
                         style = styles.navLabel.copy(fontSize = 10.sp).tracked(0.2f),
                         color = if (selected) palette.accent else palette.textTertiary
                     )
+                }
+                if (showsNavigationAffordance && onClick != null) {
+                    Spacer(Modifier.width(14.dp))
+                    // A fine engraved pointer, not a Material chevron.
+                    val tick = palette.textTertiary
+                    Canvas(Modifier.size(width = 5.dp, height = 9.dp)) {
+                        val sw = 0.9.dp.toPx()
+                        drawLine(tick, Offset(0f, 0f), Offset(size.width, size.height / 2f), sw)
+                        drawLine(tick, Offset(size.width, size.height / 2f), Offset(0f, size.height), sw)
+                    }
                 }
             }
             Hairline()
@@ -1135,9 +1262,10 @@ object VaticanKit : AppKit {
         // the bright rubric toward the ground gives a muddy mauve instead.
         val fill = when {
             !enabled -> palette.hairline
-            design.isDark -> Color(0xFF7C2418)
+            design.isDark -> Color(0xFF861F18)
             else -> palette.accent
         }
+        val gilt = palette.gold.copy(alpha = if (design.isDark) 0.70f else 0.85f)
         val ink = when {
             !enabled -> palette.textTertiary
             design.isDark -> palette.textPrimary
@@ -1147,9 +1275,21 @@ object VaticanKit : AppKit {
         Box(
             modifier
                 .background(fill, RectangleShape)
-                .border(0.5.dp, Color.Black.copy(alpha = if (enabled) 0.18f else 0f), RectangleShape)
+                .drawBehind {
+                    if (!enabled) return@drawBehind
+                    // A gilt hairline tooled just inside the edge, as on a
+                    // bound label: the button is a stamped panel, not a slab.
+                    val inset = 3.dp.toPx()
+                    val sw = 0.75.dp.toPx()
+                    drawRect(
+                        gilt,
+                        topLeft = Offset(inset, inset),
+                        size = Size(size.width - inset * 2, size.height - inset * 2),
+                        style = androidx.compose.ui.graphics.drawscope.Stroke(sw)
+                    )
+                }
                 .press(enabled = enabled, onClick = onClick)
-                .padding(horizontal = 16.dp, vertical = 13.dp),
+                .padding(horizontal = 20.dp, vertical = 14.dp),
             contentAlignment = Alignment.Center
         ) {
             FittedCapitals(label, styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold), ink)
@@ -1365,36 +1505,52 @@ object VaticanKit : AppKit {
         }
     }
 
+    /**
+     * A filter as a missal sets a choice of forms: a line of small capitals,
+     * each led by a lozenge. No boxes. The lozenges run between the words
+     * like the points of a printed list; the chosen form is rubricated, its
+     * lozenge filled red and a fine red rule laid under the word.
+     */
     @Composable
     override fun Chip(label: String, selected: Boolean, onClick: () -> Unit, modifier: Modifier) {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
         val spec = tween<Color>(design.motion.mediumMillis, easing = design.motion.standardEasing)
-        // A ruled box from a printed form. The chosen one is rubricated and
-        // takes a faint wash of the same red, as a stamped entry would.
-        val edge by animateColorAsState(if (selected) palette.accent else inkHair(), spec, label = "chip_edge")
-        val wash by animateColorAsState(
-            if (selected) palette.accent.copy(alpha = if (design.isDark) 0.10f else 0.06f)
-            else Color.Transparent,
-            spec,
-            label = "chip_wash"
-        )
         val ink by animateColorAsState(
-            if (selected) palette.accent else palette.textSecondary, spec, label = "chip_ink"
+            if (selected) rubric() else palette.textSecondary, spec, label = "chip_ink"
         )
-        Box(
+        val point by animateColorAsState(
+            if (selected) rubric() else palette.gold.copy(alpha = 0.55f), spec, label = "chip_point"
+        )
+        val rule by animateColorAsState(
+            if (selected) rubric() else Color.Transparent, spec, label = "chip_rule"
+        )
+        Row(
             modifier
-                .background(wash, RectangleShape)
-                .border(if (selected) 1.dp else 0.75.dp, edge, RectangleShape)
+                .heightIn(min = 40.dp)
                 .press(onClick = onClick)
-                .padding(horizontal = 14.dp, vertical = 9.dp)
+                .padding(horizontal = 4.dp),
+            verticalAlignment = Alignment.CenterVertically
         ) {
+            Box(Modifier.size(4.5.dp).rotate(45f).background(point))
+            Spacer(Modifier.width(9.dp))
             Text(
                 text = label.uppercase(),
-                style = styles.navLabel.copy(fontSize = 10.sp).tracked(0.2f),
+                style = styles.navLabel.copy(fontSize = 11.sp, lineHeight = 14.sp).tracked(0.16f),
                 color = ink,
-                maxLines = 1
+                maxLines = 1,
+                modifier = Modifier.drawBehind {
+                    // The rule sits a little below the baseline, trimmed of the
+                    // trailing letterspace so it ends on the last letter.
+                    val sw = 1.dp.toPx()
+                    val trail = 11.sp.toPx() * 0.16f
+                    drawRect(
+                        rule,
+                        topLeft = Offset(0f, size.height + 3.dp.toPx()),
+                        size = Size((size.width - trail).coerceAtLeast(0f), sw)
+                    )
+                }
             )
         }
     }
@@ -1526,7 +1682,9 @@ object VaticanKit : AppKit {
                         Text(
                             text = initial,
                             style = capStyle,
-                            color = palette.gold,
+                            // A rubricated versal: red, as the missal opens
+                            // each proper. Gold stays on the rules.
+                            color = rubric(),
                             maxLines = 1,
                             modifier = Modifier.offset(y = capBaselineOffset)
                         )
@@ -1585,30 +1743,99 @@ object VaticanKit : AppKit {
         }
     }
 
+    /**
+     * An engraved vignette, cut in vector the way a missal closes a section
+     * with a small block: a cross pattée hatched in ink inside a fine ring,
+     * in a gloria of gilt rays alternating long and short.
+     */
+    @Composable
+    private fun Vignette(modifier: Modifier = Modifier) {
+        val design = LocalAppDesign.current
+        val palette = design.palette
+        val gold = palette.gold
+        val ink = if (design.isDark) palette.textSecondary else palette.textPrimary.copy(alpha = 0.82f)
+        Canvas(modifier.size(112.dp)) {
+            val c = center
+            val u = size.minDimension / 112f
+            val hair = 0.55f * u
+            // Gloria: 48 rays, long and short alternate, tapering out.
+            val rays = 48
+            for (k in 0 until rays) {
+                val t = Math.PI * 2 * k / rays
+                val cos = kotlin.math.cos(t).toFloat()
+                val sin = kotlin.math.sin(t).toFloat()
+                val r0 = 25f * u
+                val r1 = (if (k % 2 == 0) 53f else 43f) * u
+                drawLine(
+                    Brush.linearGradient(
+                        listOf(gold.copy(alpha = 0.85f), gold.copy(alpha = 0f)),
+                        start = Offset(c.x + cos * r0, c.y + sin * r0),
+                        end = Offset(c.x + cos * r1, c.y + sin * r1)
+                    ),
+                    Offset(c.x + cos * r0, c.y + sin * r0),
+                    Offset(c.x + cos * r1, c.y + sin * r1),
+                    strokeWidth = if (k % 2 == 0) hair * 1.4f else hair
+                )
+            }
+            // Double ring, thick-thin.
+            drawCircle(gold, radius = 22.5f * u, center = c, style = androidx.compose.ui.graphics.drawscope.Stroke(1.1f * u))
+            drawCircle(gold.copy(alpha = 0.7f), radius = 20.2f * u, center = c, style = androidx.compose.ui.graphics.drawscope.Stroke(hair))
+            // Cross pattée: four flared arms meeting at a narrow waist.
+            val arm = 15.5f * u
+            val waist = 2.2f * u
+            val flare = 6.2f * u
+            val cross = Path().apply {
+                moveTo(c.x - waist, c.y - waist)
+                lineTo(c.x - flare, c.y - arm); lineTo(c.x + flare, c.y - arm)
+                lineTo(c.x + waist, c.y - waist)
+                lineTo(c.x + arm, c.y - flare); lineTo(c.x + arm, c.y + flare)
+                lineTo(c.x + waist, c.y + waist)
+                lineTo(c.x + flare, c.y + arm); lineTo(c.x - flare, c.y + arm)
+                lineTo(c.x - waist, c.y + waist)
+                lineTo(c.x - arm, c.y + flare); lineTo(c.x - arm, c.y - flare)
+                close()
+            }
+            // Engraver's hatching inside the cross, then the outline.
+            clipPath(cross) {
+                var y = c.y - arm
+                while (y <= c.y + arm) {
+                    drawLine(ink, Offset(c.x - arm, y), Offset(c.x + arm, y), strokeWidth = 0.6f * u)
+                    y += 1.7f * u
+                }
+            }
+            drawPath(cross, ink, style = androidx.compose.ui.graphics.drawscope.Stroke(0.9f * u))
+        }
+    }
+
     @Composable
     override fun EmptyState(title: String, body: String?, icon: ImageVector?, modifier: Modifier) {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
         Column(
-            modifier.fillMaxWidth().padding(design.spacing.gutter * 1.5f),
+            modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter * 1.5f)
+                .padding(top = 36.dp, bottom = 28.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Lozenge(8.dp)
-            Spacer(Modifier.height(22.dp))
+            Vignette()
+            Spacer(Modifier.height(26.dp))
             Text(
                 text = title.uppercase(),
                 style = styles.sectionTitle
-                    .copy(fontSize = 15.sp, fontWeight = FontWeight.Normal)
+                    .copy(fontSize = 15.sp, lineHeight = 22.sp, fontWeight = FontWeight.Normal)
                     .tracked(0.13f),
                 color = bodyInk(),
                 textAlign = TextAlign.Center
             )
+            Spacer(Modifier.height(14.dp))
+            TitleFleuron()
             if (body != null) {
-                Spacer(Modifier.height(12.dp))
+                Spacer(Modifier.height(14.dp))
                 Text(
                     text = body,
-                    style = styles.rowSubtitle.copy(fontSize = 15.sp, lineHeight = 23.sp),
+                    style = styles.rowSubtitle.copy(fontSize = 16.sp, lineHeight = 25.sp),
                     color = palette.textSecondary,
                     textAlign = TextAlign.Center
                 )
@@ -1616,6 +1843,11 @@ object VaticanKit : AppKit {
         }
     }
 
+    /**
+     * The day's heading as a calendar sets it: the season or rank in the
+     * liturgical colour, led by a lozenge of that pigment, and the name of
+     * the day beneath in the text face. No callout bar, no box.
+     */
     @Composable
     override fun Banner(
         title: String,
@@ -1625,29 +1857,31 @@ object VaticanKit : AppKit {
         modifier: Modifier
     ) {
         val design = LocalAppDesign.current
-        val palette = design.palette
         val styles = LocalAppTextStyles.current
-        val accent = pigment(accentColorHex?.let { Color(it) } ?: palette.accent)
-        // A marginal note in the liturgical colour: one rule of pigment in the
-        // margin, left-ranged. Not a tinted alert with a rounded border.
-        Row(
+        val accent = pigment(accentColorHex?.let { Color(it) } ?: design.palette.accent)
+        Column(
             modifier
                 .fillMaxWidth()
+                .then(if (onClick != null) Modifier.press(onClick = onClick) else Modifier)
                 .padding(horizontal = design.spacing.gutter)
-                .then(if (onClick != null) Modifier.press(onClick = onClick) else Modifier),
-            verticalAlignment = Alignment.CenterVertically
+                .padding(vertical = 6.dp)
         ) {
-            Box(Modifier.width(2.dp).heightIn(min = 52.dp).background(accent))
-            Column(Modifier.padding(start = 16.dp, top = 6.dp, bottom = 6.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.size(6.dp).rotate(45f).background(accent))
+                Spacer(Modifier.width(12.dp))
                 Text(
                     text = title.uppercase(),
-                    style = styles.sectionEyebrow.copy(lineHeight = 16.sp).tracked(0.22f),
+                    style = styles.sectionEyebrow.copy(fontSize = 11.sp, lineHeight = 16.sp).tracked(0.2f),
                     color = accent
                 )
-                if (body != null) {
-                    Spacer(Modifier.height(9.dp))
-                    Text(body, style = styles.rowTitle, color = bodyInk())
-                }
+            }
+            if (body != null) {
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    body,
+                    style = styles.rowTitle.copy(fontSize = 19.sp, lineHeight = 27.sp, fontWeight = FontWeight.Normal),
+                    color = bodyInk()
+                )
             }
         }
     }

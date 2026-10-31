@@ -162,17 +162,12 @@ fun HabitsAndVirtuesScreen(
     // unreadable at 360dp in any of the three identities.
     val tabLabels = listOf(
         currentLanguage.pick("Regla de vida", "Rule of life", "Regra de vida"),
-        currentLanguage.pick("Gracia S.O.S.", "Grace S.O.S.", "Graça S.O.S.")
+        currentLanguage.pick("En la tentación", "In temptation", "Na tentação")
     )
     val screenTitle = currentLanguage.pick(
         "Hábitos y Virtudes",
         "Habits & Virtues",
         "Hábitos e Virtudes"
-    )
-    val screenSubtitle = currentLanguage.pick(
-        "Las prácticas que sostienen tu vida en Cristo, y la gracia para cuando caes.",
-        "The practices that sustain your life in Christ, and grace for when you fall.",
-        "As práticas que sustentam a sua vida em Cristo, e a graça para quando cai."
     )
 
     fun openSinAvoider(option: SinAvoiderOption) {
@@ -232,7 +227,7 @@ fun HabitsAndVirtuesScreen(
             ) {
                 paneHeader(
                     title = screenTitle,
-                    subtitle = screenSubtitle,
+                    subtitle = null,
                     tabLabels = tabLabels,
                     selectedTab = selectedTab,
                     onSelectTab = { selectedTab = it }
@@ -249,9 +244,9 @@ fun HabitsAndVirtuesScreen(
                                 "Comece a sua regra de vida"
                             ),
                             body = currentLanguage.pick(
-                                "Unas pocas prácticas, guardadas cada día, forman una vida en Cristo. Empieza con estas o escribe las tuyas.",
-                                "A few practices, kept every day, shape a life in Christ. Start with these, or write your own.",
-                                "Umas poucas práticas, guardadas cada dia, formam uma vida em Cristo. Comece com estas ou escreva as suas."
+                                "Unas pocas prácticas, guardadas cada día, forman una vida en Cristo.",
+                                "A few practices, kept every day, shape a life in Christ.",
+                                "Umas poucas práticas, guardadas cada dia, formam uma vida em Cristo."
                             ),
                             icon = Icons.Default.SelfImprovement,
                             modifier = Modifier.testTag("habits_empty_state")
@@ -269,7 +264,7 @@ fun HabitsAndVirtuesScreen(
                                 onClick = {
                                     scope.launch { dao.insertDefaultHabits(suggestedHabits) }
                                 },
-                                leadingIcon = Icons.Default.CheckCircle,
+                                leadingIcon = Icons.Default.Add,
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(horizontal = design.spacing.gutter)
@@ -392,7 +387,7 @@ fun HabitsAndVirtuesScreen(
             ) {
                 paneHeader(
                     title = screenTitle,
-                    subtitle = screenSubtitle,
+                    subtitle = null,
                     tabLabels = tabLabels,
                     selectedTab = selectedTab,
                     onSelectTab = { selectedTab = it }
@@ -783,7 +778,7 @@ fun HabitsAndVirtuesScreen(
  */
 private fun LazyListScope.paneHeader(
     title: String,
-    subtitle: String,
+    subtitle: String?,
     tabLabels: List<String>,
     selectedTab: Int,
     onSelectTab: (Int) -> Unit

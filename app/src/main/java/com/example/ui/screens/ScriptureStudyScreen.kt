@@ -51,6 +51,7 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.ScriptureCourseTrack
 import com.example.data.models.ScriptureLesson
 import com.example.data.repository.CatholicDataRepository
+import com.example.ui.components.MenuPickerRow
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
@@ -263,24 +264,18 @@ private fun TrackOverviewView(
     LazyColumn(Modifier.fillMaxSize()) {
         header()
 
-        // The itineraries are a filter on this one list, not a second row of
-        // views, so they are chips under the screen's own segmented control.
+        // The itinerary is one row with a menu under the screen's own
+        // segmented control, not a second row of chips.
         item {
-            FlowRow(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(top = design.spacing.cardGap / 2),
-                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
-                verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-            ) {
-                stripLabels.forEachIndexed { index, label ->
-                    AppChip(
-                        label = label,
-                        selected = index == selectedTrackIndex,
-                        onClick = { onSelectTrack(index) }
-                    )
-                }
+            Spacer(Modifier.height(design.spacing.cardGap / 2))
+            AppListGroup {
+                MenuPickerRow(
+                    title = currentLanguage.pick("Itinerario", "Course", "Itinerário"),
+                    options = stripLabels.mapIndexed { i, label -> i to label },
+                    selected = selectedTrackIndex,
+                    onSelect = onSelectTrack,
+                    testTag = "study_track_picker"
+                )
             }
         }
 

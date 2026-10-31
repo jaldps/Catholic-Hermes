@@ -69,6 +69,7 @@ import com.example.data.news.NewsResult
 import com.example.data.news.VaticanNewsFetcher
 import com.example.data.news.VaticanNewsItem
 import com.example.data.repository.CatholicDataRepository
+import com.example.data.repository.ParishScheduleText
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
@@ -77,6 +78,10 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
+import androidx.activity.compose.BackHandler
+import com.example.ui.components.InlineBackLink
+import com.example.ui.components.MenuPickerRow
+import com.example.ui.components.TextFormat
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
@@ -114,7 +119,9 @@ fun DoctrineAndHistoryScreen(
     // 0 = Catechism & doctrine, 1 = Mary & Christ, 2 = history & schisms,
     // 3 = parishes & news.
     var selectedTopTab by remember { mutableIntStateOf(initialTopTab) }
-    var selectedSubDoctrineTab by remember { mutableIntStateOf(0) }
+    // A commandment, precept, vice or epoch opens as its own page, keyed
+    // "kind:index"; the panes list one line of each.
+    var openEntry by remember { mutableStateOf<String?>(null) }
 
     // Opened from "Churches & News" the directory is a destination of its own:
     // a title over three doctrinal tabs it was not asked for would mislead.
@@ -125,8 +132,7 @@ fun DoctrineAndHistoryScreen(
     val topTabs = listOf(
         currentLanguage.pick("Doctrina", "Doctrine", "Doutrina"),
         currentLanguage.pick("María y Jesús", "Mary & Jesus", "Maria e Jesus"),
-        currentLanguage.pick("Historia", "History", "História"),
-        currentLanguage.pick("Iglesias", "Churches", "Igrejas")
+        currentLanguage.pick("Historia", "History", "História")
     )
     val tabsInset = tabStripInset()
 
@@ -141,11 +147,7 @@ fun DoctrineAndHistoryScreen(
                         "Churches & News",
                         "Igrejas e Notícias"
                     ),
-                    subtitle = currentLanguage.pick(
-                        "El directorio de parroquias y las noticias del Vaticano.",
-                        "The parish directory and the latest from the Vatican.",
-                        "O diretório de paróquias e as notícias do Vaticano."
-                    )
+                    subtitle = null
                 )
             } else {
                 AppScreenTitle(
@@ -154,11 +156,7 @@ fun DoctrineAndHistoryScreen(
                         "Doctrine & History",
                         "Doutrina e História"
                     ),
-                    subtitle = currentLanguage.pick(
-                        "La enseñanza moral, las devociones y dos mil años de Iglesia.",
-                        "Moral teaching, devotions and two thousand years of the Church.",
-                        "O ensino moral, as devoções e dois mil anos de Igreja."
-                    )
+                    subtitle = null
                 )
             }
         }
@@ -180,12 +178,21 @@ fun DoctrineAndHistoryScreen(
             .fillMaxSize()
             .testTag("doctrine_and_history_screen")
     ) {
-        when (selectedTopTab) {
+        val entry = openEntry
+        if (entry != null && selectedTopTab in 0..2) {
+            BackHandler { openEntry = null }
+            DoctrineEntryPage(
+                key = entry,
+                repository = repository,
+                currentLanguage = currentLanguage,
+                backLabel = topTabs[selectedTopTab],
+                onBack = { openEntry = null }
+            )
+        } else when (selectedTopTab) {
             0 -> MoralDoctrinePane(
                 repository = repository,
                 currentLanguage = currentLanguage,
-                selectedTab = selectedSubDoctrineTab,
-                onSelectTab = { selectedSubDoctrineTab = it },
+                onOpen = { openEntry = it },
                 header = header
             )
 
@@ -198,6 +205,7 @@ fun DoctrineAndHistoryScreen(
             2 -> ChurchHistoryPane(
                 repository = repository,
                 currentLanguage = currentLanguage,
+                onOpen = { openEntry = it },
                 header = header
             )
 
@@ -216,303 +224,307 @@ fun DoctrineAndHistoryScreen(
 private fun MoralDoctrinePane(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
-    selectedTab: Int,
-    onSelectTab: (Int) -> Unit,
+    onOpen: (String) -> Unit,
     header: LazyListScope.() -> Unit
 ) {
     val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
+    // Vatican hangs a Roman trailing numeral in the margin as a red figure;
+    // elsewhere a numeral beside the chevron reads as a value, so it leads
+    // the subtitle instead.
+    val marginalNumerals = design.language == DesignLanguage.VATICAN
+    fun numbered(n: Int, rest: String?) =
+        if (marginalNumerals) rest else listOfNotNull(TextFormat.roman(n), rest).joinToString(" · ")
 
-    val sections = listOf(
-        currentLanguage.pick("Mandamientos", "Commandments", "Mandamentos"),
-        currentLanguage.pick("Preceptos", "Precepts", "Preceitos"),
-        currentLanguage.pick("Vicios y virtudes", "Vices & virtues", "Vícios e virtudes"),
-        currentLanguage.pick("Gravedad", "Gravity of sin", "Gravidade")
-    )
-
+    // One selector on the page (the tabs above). The four parts of the moral
+    // teaching follow one another as sections, each a list of one-line rows
+    // that open a page — not four chips over walls of text.
     LazyColumn(Modifier.fillMaxSize()) {
         header()
 
-        item(key = "doctrine_sections") {
-            ChipFlow {
-                sections.forEachIndexed { index, label ->
-                    AppChip(
-                        label = label,
-                        selected = selectedTab == index,
-                        onClick = { onSelectTab(index) }
+        item(key = "commandments") {
+            AppSectionHeader(
+                title = currentLanguage.pick("Los Diez Mandamientos", "The Ten Commandments", "Os Dez Mandamentos")
+            )
+            AppListGroup {
+                repository.theTenCommandments.forEachIndexed { i, cmd ->
+                    AppListRow(
+                        title = TextFormat.withoutOrdinal(cmd.title.get(currentLanguage)),
+                        subtitle = numbered(cmd.number, scriptureCitation(cmd.biblicalWording.get(currentLanguage))),
+                        trailingText = if (marginalNumerals) TextFormat.roman(cmd.number) else null,
+                        onClick = { onOpen("cmd:$i") },
+                        modifier = Modifier.testTag("commandment_row_${cmd.number}")
                     )
                 }
             }
         }
 
-        when (selectedTab) {
-            0 -> commandments(repository, currentLanguage, design, styles)
-            1 -> precepts(repository, currentLanguage, design)
-            2 -> sinsAndVirtues(repository, currentLanguage, design)
-            else -> sinGravity(repository, currentLanguage, design)
+        item(key = "precepts") {
+            AppSectionHeader(
+                title = currentLanguage.pick("Los preceptos de la Iglesia", "The Precepts of the Church", "Os Mandamentos da Igreja")
+            )
+            AppListGroup {
+                repository.churchPrecepts.forEachIndexed { i, prc ->
+                    AppListRow(
+                        title = TextFormat.withoutOrdinal(prc.title.get(currentLanguage)),
+                        subtitle = numbered(prc.number, null),
+                        trailingText = if (marginalNumerals) TextFormat.roman(prc.number) else null,
+                        onClick = { onOpen("prc:$i") }
+                    )
+                }
+            }
+        }
+
+        item(key = "vices") {
+            AppSectionHeader(
+                title = currentLanguage.pick("Vicios capitales y virtudes", "Capital Vices and Virtues", "Vícios capitais e virtudes")
+            )
+            AppListGroup {
+                repository.capitalSinsVsVirtues.forEachIndexed { i, v ->
+                    AppListRow(
+                        title = v.capitalSin.get(currentLanguage),
+                        subtitle = currentLanguage.pick(
+                            "Se cura con: ${v.opposingVirtue.get(currentLanguage)}",
+                            "Healed by ${v.opposingVirtue.get(currentLanguage).replaceFirstChar { it.lowercase() }}",
+                            "Cura-se com: ${v.opposingVirtue.get(currentLanguage)}"
+                        ),
+                        onClick = { onOpen("vice:$i") }
+                    )
+                }
+            }
+        }
+
+        item(key = "gravity") {
+            AppSectionHeader(
+                title = currentLanguage.pick("El pecado y la confesión", "Sin and Confession", "O pecado e a confissão")
+            )
+            AppListGroup {
+                gravityTitles(currentLanguage).forEachIndexed { i, title ->
+                    AppListRow(title = title, onClick = { onOpen("grav:$i") })
+                }
+            }
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
-private fun LazyListScope.commandments(
+private fun gravityTitles(language: AppLanguage) = listOf(
+    language.pick("Pecado venial y pecado mortal", "Venial and mortal sin", "Pecado venial e pecado mortal"),
+    language.pick("Las tres condiciones del pecado mortal", "The three conditions of mortal sin", "As três condições do pecado mortal"),
+    language.pick("Cómo prepararse para la confesión", "Preparing for confession", "Como preparar-se para a confissão")
+)
+
+/** The citation that closes a quotation — "(Exodus 20:2-3)" → "Exodus 20:2–3". */
+private fun scriptureCitation(quoted: String): String? =
+    Regex("""\(([^()]+)\)\s*$""").find(quoted.trim())?.groupValues?.get(1)?.let(TextFormat::ranges)
+
+/** The quotation without its closing citation, which the page sets apart. */
+private fun withoutCitation(quoted: String): String =
+    quoted.trim().replace(Regex("""\s*\([^()]+\)\s*$"""), "")
+
+/**
+ * One entry of the moral teaching or of the Church's history, as a page: the
+ * way back, an eyebrow, the title, and the full text in a single card.
+ */
+@Composable
+private fun DoctrineEntryPage(
+    key: String,
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
-    design: AppDesign,
-    styles: AppTextStyles
+    backLabel: String,
+    onBack: () -> Unit
 ) {
-    item {
-        AppSectionHeader(
-            title = currentLanguage.pick(
-                "Los Diez Mandamientos",
-                "The Ten Commandments",
-                "Os Dez Mandamentos"
-            ),
-            subtitle = currentLanguage.pick(
-                "La ley moral entregada en el Sinaí y confirmada por Cristo.",
-                "The moral law given at Sinai and confirmed by Christ.",
-                "A lei moral entregue no Sinai e confirmada por Cristo."
-            )
-        )
-    }
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val kind = key.substringBefore(':')
+    val index = key.substringAfter(':').toIntOrNull() ?: 0
 
-    items(repository.theTenCommandments) { cmd ->
-        GutterCard {
-            CardHeading(title = cmd.title.get(currentLanguage))
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            Text(
-                text = cmd.biblicalWording.get(currentLanguage),
-                style = styles.quote,
-                color = design.palette.textSecondary
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Text(
-                text = cmd.moralExplanation.get(currentLanguage),
-                style = MaterialTheme.typography.bodyMedium,
-                color = design.palette.textPrimary
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Note(
-                label = currentLanguage.pick(
-                    "Pecados prohibidos",
-                    "Sins forbidden",
-                    "Pecados proibidos"
-                ),
-                body = cmd.sinsForbidden.get(currentLanguage),
-                labelColor = design.palette.accent
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Note(
-                label = currentLanguage.pick(
-                    "Virtudes mandadas",
-                    "Virtues commanded",
-                    "Virtudes ordenadas"
-                ),
-                body = cmd.virtuesCommanded.get(currentLanguage)
-            )
+    LazyColumn(Modifier.fillMaxSize().testTag("doctrine_entry_page")) {
+        item {
+            InlineBackLink(label = backLabel, onClick = onBack, testTag = "doctrine_entry_back")
         }
-        Spacer(Modifier.height(design.spacing.cardGap))
-    }
-}
+        when (kind) {
+            "cmd" -> {
+                val cmd = repository.theTenCommandments[index.coerceIn(0, repository.theTenCommandments.lastIndex)]
+                item {
+                    AppScreenTitle(
+                        title = TextFormat.withoutOrdinal(cmd.title.get(currentLanguage)),
+                        subtitle = currentLanguage.pick(
+                            "${TextFormat.ordinalWord(cmd.number, currentLanguage)} mandamiento",
+                            "${TextFormat.ordinalWord(cmd.number, currentLanguage)} Commandment",
+                            "${TextFormat.ordinalWord(cmd.number, currentLanguage)} mandamento"
+                        )
+                    )
+                }
+                item {
+                    GutterCard {
+                        Text(
+                            text = withoutCitation(cmd.biblicalWording.get(currentLanguage)),
+                            style = styles.scripture,
+                            color = design.palette.textPrimary
+                        )
+                        scriptureCitation(cmd.biblicalWording.get(currentLanguage))?.let {
+                            Spacer(Modifier.height(design.spacing.cardGap / 3))
+                            Text(text = eyebrow(it), style = styles.sectionEyebrow, color = design.palette.textSecondary)
+                        }
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        AppDivider()
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Text(
+                            text = cmd.moralExplanation.get(currentLanguage),
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = design.palette.textPrimary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Note(
+                            label = currentLanguage.pick("Lo que manda", "What it asks", "O que pede"),
+                            body = cmd.virtuesCommanded.get(currentLanguage),
+                            labelColor = design.palette.accent
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Note(
+                            label = currentLanguage.pick("Lo que prohíbe", "What it forbids", "O que proíbe"),
+                            body = cmd.sinsForbidden.get(currentLanguage),
+                            labelColor = design.palette.accent
+                        )
+                    }
+                }
+            }
 
-private fun LazyListScope.precepts(
-    repository: CatholicDataRepository,
-    currentLanguage: AppLanguage,
-    design: AppDesign
-) {
-    item {
-        AppSectionHeader(
-            title = currentLanguage.pick(
-                "Los Cinco Preceptos",
-                "The Five Precepts",
-                "Os Cinco Preceitos"
-            ),
-            subtitle = currentLanguage.pick(
-                "El mínimo que la Iglesia pide a todo fiel bautizado.",
-                "The minimum the Church asks of every baptised faithful.",
-                "O mínimo que a Igreja pede a todo fiel batizado."
-            )
-        )
-    }
+            "prc" -> {
+                val prc = repository.churchPrecepts[index.coerceIn(0, repository.churchPrecepts.lastIndex)]
+                item {
+                    AppScreenTitle(
+                        title = TextFormat.withoutOrdinal(prc.title.get(currentLanguage)),
+                        subtitle = currentLanguage.pick(
+                            "Precepto ${TextFormat.roman(prc.number)}",
+                            "Precept ${TextFormat.roman(prc.number)}",
+                            "Preceito ${TextFormat.roman(prc.number)}"
+                        )
+                    )
+                }
+                item {
+                    GutterCard {
+                        Text(
+                            text = prc.explanation.get(currentLanguage),
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = design.palette.textPrimary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Note(
+                            label = currentLanguage.pick("En la práctica", "In practice", "Na prática"),
+                            body = prc.applicationInLife.get(currentLanguage),
+                            labelColor = design.palette.accent
+                        )
+                    }
+                }
+            }
 
-    items(repository.churchPrecepts) { prc ->
-        GutterCard {
-            CardHeading(title = prc.title.get(currentLanguage))
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Text(
-                text = prc.explanation.get(currentLanguage),
-                style = MaterialTheme.typography.bodyMedium,
-                color = design.palette.textPrimary
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Note(
-                label = currentLanguage.pick("Obligación", "Obligation", "Obrigação"),
-                body = prc.applicationInLife.get(currentLanguage)
-            )
-        }
-        Spacer(Modifier.height(design.spacing.cardGap))
-    }
-}
+            "vice" -> {
+                val v = repository.capitalSinsVsVirtues[index.coerceIn(0, repository.capitalSinsVsVirtues.lastIndex)]
+                item {
+                    AppScreenTitle(
+                        title = v.capitalSin.get(currentLanguage),
+                        subtitle = currentLanguage.pick("Vicio capital", "Capital vice", "Vício capital")
+                    )
+                }
+                item {
+                    GutterCard {
+                        Text(
+                            text = v.sinMeaning.get(currentLanguage),
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = design.palette.textPrimary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        AppDivider()
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Note(
+                            label = currentLanguage.pick("La virtud contraria", "The opposing virtue", "A virtude contrária"),
+                            body = v.opposingVirtue.get(currentLanguage),
+                            labelColor = design.palette.accent,
+                            bodyStyle = MaterialTheme.typography.titleMedium
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Note(
+                            label = currentLanguage.pick("Remedio", "Remedy", "Remédio"),
+                            body = v.virtueRemedy.get(currentLanguage),
+                            labelColor = design.palette.accent
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        Note(
+                            label = currentLanguage.pick("En la práctica", "In practice", "Na prática"),
+                            body = v.practicalAdvice.get(currentLanguage),
+                            labelColor = design.palette.accent
+                        )
+                    }
+                }
+            }
 
-private fun LazyListScope.sinsAndVirtues(
-    repository: CatholicDataRepository,
-    currentLanguage: AppLanguage,
-    design: AppDesign
-) {
-    item {
-        AppSectionHeader(
-            title = currentLanguage.pick(
-                "Vicios Capitales y Virtudes",
-                "Capital Vices and Virtues",
-                "Vícios Capitais e Virtudes"
-            ),
-            subtitle = currentLanguage.pick(
-                "Siete raíces del pecado y la virtud que cura cada una.",
-                "Seven roots of sin and the virtue that heals each one.",
-                "Sete raízes do pecado e a virtude que cura cada uma."
-            )
-        )
-    }
+            "grav" -> {
+                val st = repository.sinTheology
+                item { AppScreenTitle(title = gravityTitles(currentLanguage)[index.coerceIn(0, 2)]) }
+                item {
+                    GutterCard {
+                        when (index) {
+                            0 -> {
+                                Note(
+                                    label = currentLanguage.pick("Pecado venial", "Venial sin", "Pecado venial"),
+                                    body = st.venialExplanation.get(currentLanguage),
+                                    labelColor = design.palette.accent
+                                )
+                                Spacer(Modifier.height(design.spacing.cardGap))
+                                Note(
+                                    label = currentLanguage.pick("Pecado mortal", "Mortal sin", "Pecado mortal"),
+                                    body = st.mortalExplanation.get(currentLanguage),
+                                    labelColor = design.palette.accent
+                                )
+                            }
+                            1 -> {
+                                Text(
+                                    text = currentLanguage.pick(
+                                        "Un pecado es mortal solo cuando se dan a la vez estas tres condiciones:",
+                                        "A sin is mortal only when all three conditions are met at once:",
+                                        "Um pecado é mortal só quando se reúnem ao mesmo tempo estas três condições:"
+                                    ),
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    color = design.palette.textPrimary
+                                )
+                                Spacer(Modifier.height(design.spacing.cardGap))
+                                st.mortalThreeConditions.forEachIndexed { i, cond ->
+                                    if (i > 0) Spacer(Modifier.height(design.spacing.cardGap / 2))
+                                    NumberedLine(i + 1, cond.get(currentLanguage))
+                                }
+                            }
+                            else -> Text(
+                                text = st.confessionExamenGuide.get(currentLanguage),
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = design.palette.textPrimary
+                            )
+                        }
+                    }
+                }
+            }
 
-    items(repository.capitalSinsVsVirtues) { item ->
-        CapitalSinCard(item = item, currentLanguage = currentLanguage)
-        Spacer(Modifier.height(design.spacing.cardGap))
-    }
-}
+            "epoch" -> {
+                val epoch = repository.churchHistoryEpochs[index.coerceIn(0, repository.churchHistoryEpochs.lastIndex)]
+                item {
+                    AppScreenTitle(
+                        title = epoch.title.get(currentLanguage),
+                        subtitle = TextFormat.ranges(epoch.centuryRange)
+                    )
+                }
+                item { ChurchEpochCard(epoch = epoch, currentLanguage = currentLanguage) }
+            }
 
-private fun LazyListScope.sinGravity(
-    repository: CatholicDataRepository,
-    currentLanguage: AppLanguage,
-    design: AppDesign
-) {
-    val st = repository.sinTheology
-
-    item {
-        AppSectionHeader(
-            title = currentLanguage.pick(
-                "La Gravedad del Pecado",
-                "The Gravity of Sin",
-                "A Gravidade do Pecado"
-            ),
-            subtitle = currentLanguage.pick(
-                "Pecado venial y mortal, y cómo prepararse para la confesión.",
-                "Venial and mortal sin, and how to prepare for confession.",
-                "Pecado venial e mortal, e como preparar-se para a confissão."
-            )
-        )
-    }
-
-    item {
-        GutterCard {
-            CardHeading(
-                title = currentLanguage.pick(
-                    "Pecado Venial vs Pecado Mortal",
-                    "Venial Sin vs Mortal Sin",
-                    "Pecado Venial vs Pecado Mortal"
-                )
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Note(
-                label = currentLanguage.pick("Pecado Venial", "Venial sin", "Pecado Venial"),
-                body = st.venialExplanation.get(currentLanguage),
-                labelColor = design.palette.gold
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Note(
-                label = currentLanguage.pick("Pecado Mortal", "Mortal sin", "Pecado Mortal"),
-                body = st.mortalExplanation.get(currentLanguage),
-                labelColor = design.palette.accent
-            )
-        }
-        Spacer(Modifier.height(design.spacing.cardGap))
-    }
-
-    item {
-        GutterCard {
-            CardHeading(
-                title = currentLanguage.pick(
-                    "Las 3 Condiciones del Pecado Mortal",
-                    "The 3 Conditions of Mortal Sin",
-                    "As 3 Condições do Pecado Mortal"
-                )
-            )
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            Text(
-                text = currentLanguage.pick(
-                    "Para que un pecado sea mortal se requieren simultáneamente tres condiciones:",
-                    "A sin is mortal only when three conditions are met at the same time:",
-                    "Para que um pecado seja mortal exigem-se simultaneamente três condições:"
-                ),
-                style = MaterialTheme.typography.bodySmall,
-                color = design.palette.textSecondary
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            st.mortalThreeConditions.forEachIndexed { index, cond ->
-                if (index > 0) Spacer(Modifier.height(design.spacing.cardGap / 2))
-                NumberedLine(index + 1, cond.get(currentLanguage))
+            "schism" -> {
+                val schism = repository.churchSchisms[index.coerceIn(0, repository.churchSchisms.lastIndex)]
+                item {
+                    AppScreenTitle(title = schism.title.get(currentLanguage), subtitle = schism.historicalYear)
+                }
+                item { SchismCard(schism = schism, currentLanguage = currentLanguage) }
             }
         }
-        Spacer(Modifier.height(design.spacing.cardGap))
-    }
-
-    item {
-        GutterCard {
-            CardHeading(
-                title = currentLanguage.pick(
-                    "Guía para la Confesión y Examen de Conciencia",
-                    "Guide to Confession and the Examination of Conscience",
-                    "Guia para a Confissão e Exame de Consciência"
-                )
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Text(
-                text = st.confessionExamenGuide.get(currentLanguage),
-                style = MaterialTheme.typography.bodyMedium,
-                color = design.palette.textPrimary
-            )
-        }
-    }
-}
-
-@Composable
-private fun CapitalSinCard(item: CapitalSinVsVirtue, currentLanguage: AppLanguage) {
-    val design = LocalAppDesign.current
-
-    GutterCard {
-        Note(
-            label = currentLanguage.pick("Vicio", "Vice", "Vício"),
-            body = item.capitalSin.get(currentLanguage),
-            labelColor = design.palette.accent,
-            bodyStyle = MaterialTheme.typography.titleMedium
-        )
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-        Text(
-            text = item.sinMeaning.get(currentLanguage),
-            style = MaterialTheme.typography.bodyMedium,
-            color = design.palette.textSecondary
-        )
-
-        Spacer(Modifier.height(design.spacing.cardGap))
-        AppDivider()
-        Spacer(Modifier.height(design.spacing.cardGap))
-
-        Note(
-            label = currentLanguage.pick("Virtud", "Virtue", "Virtude"),
-            body = item.opposingVirtue.get(currentLanguage),
-            labelColor = design.palette.gold,
-            bodyStyle = MaterialTheme.typography.titleMedium
-        )
-        Spacer(Modifier.height(design.spacing.cardGap))
-        Note(
-            label = currentLanguage.pick("Remedio", "Remedy", "Remédio"),
-            body = item.virtueRemedy.get(currentLanguage)
-        )
-        Spacer(Modifier.height(design.spacing.cardGap))
-        Note(
-            label = currentLanguage.pick("Consejo práctico", "In practice", "Conselho prático"),
-            body = item.practicalAdvice.get(currentLanguage)
-        )
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
@@ -522,6 +534,7 @@ private fun CapitalSinCard(item: CapitalSinVsVirtue, currentLanguage: AppLanguag
 private fun ChurchHistoryPane(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
+    onOpen: (String) -> Unit,
     header: LazyListScope.() -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -531,44 +544,32 @@ private fun ChurchHistoryPane(
 
         item {
             AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Línea de tiempo de la Iglesia",
-                    "Timeline of the Church",
-                    "Linha do tempo da Igreja"
-                ),
-                subtitle = currentLanguage.pick(
-                    "Dos mil años de fidelidad al mandato de Cristo, de Pentecostés a hoy.",
-                    "Two thousand years of fidelity to Christ's commission, from Pentecost to today.",
-                    "Dois mil anos de fidelidade ao mandato de Cristo, do Pentecostes até hoje."
-                )
+                title = currentLanguage.pick("Línea de tiempo", "Timeline", "Linha do tempo")
             )
+            AppListGroup {
+                repository.churchHistoryEpochs.forEachIndexed { i, epoch ->
+                    AppListRow(
+                        title = epoch.title.get(currentLanguage),
+                        subtitle = TextFormat.ranges(epoch.centuryRange),
+                        onClick = { onOpen("epoch:$i") }
+                    )
+                }
+            }
         }
-
-        items(repository.churchHistoryEpochs) { epoch ->
-            ChurchEpochCard(epoch = epoch, currentLanguage = currentLanguage)
-            Spacer(Modifier.height(design.spacing.cardGap))
-        }
-
-        item { AppOrnament() }
 
         item {
             AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Los cismas históricos",
-                    "The historic schisms",
-                    "Os cismas históricos"
-                ),
-                subtitle = currentLanguage.pick(
-                    "El Cisma de 1054 y la Reforma de 1517, explicados con claridad y respeto.",
-                    "The schism of 1054 and the Reformation of 1517, told clearly and with respect.",
-                    "O Cisma de 1054 e a Reforma de 1517, explicados com clareza e respeito."
-                )
+                title = currentLanguage.pick("Los grandes cismas", "The great schisms", "Os grandes cismas")
             )
-        }
-
-        items(repository.churchSchisms) { schism ->
-            SchismCard(schism = schism, currentLanguage = currentLanguage)
-            Spacer(Modifier.height(design.spacing.cardGap))
+            AppListGroup {
+                repository.churchSchisms.forEachIndexed { i, schism ->
+                    AppListRow(
+                        title = schism.title.get(currentLanguage),
+                        subtitle = schism.historicalYear,
+                        onClick = { onOpen("schism:$i") }
+                    )
+                }
+            }
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
@@ -580,8 +581,6 @@ private fun ChurchEpochCard(epoch: ChurchHistoryEpoch, currentLanguage: AppLangu
     val design = LocalAppDesign.current
 
     GutterCard {
-        CardHeading(title = epoch.title.get(currentLanguage), meta = epoch.centuryRange)
-        Spacer(Modifier.height(design.spacing.cardGap))
         Text(
             text = epoch.narrative.get(currentLanguage),
             style = MaterialTheme.typography.bodyMedium,
@@ -605,8 +604,6 @@ private fun SchismCard(schism: ChurchSchismHistory, currentLanguage: AppLanguage
     val design = LocalAppDesign.current
 
     GutterCard {
-        CardHeading(title = schism.title.get(currentLanguage), meta = schism.historicalYear)
-        Spacer(Modifier.height(design.spacing.cardGap))
         Text(
             text = schism.context.get(currentLanguage),
             style = MaterialTheme.typography.bodyMedium,
@@ -644,6 +641,9 @@ private fun ParishesAndNewsPane(
     val context = LocalContext.current
     val design = LocalAppDesign.current
 
+    // The screen's one selector: the directory or the news.
+    var section by remember { mutableIntStateOf(0) }
+    var openParishId by remember { mutableStateOf<String?>(null) }
     var parishSearchQuery by remember { mutableStateOf("") }
     // 0: all, 1: confessions, 2: adoration, 3: cathedrals.
     var selectedParishFilter by remember { mutableIntStateOf(0) }
@@ -651,12 +651,8 @@ private fun ParishesAndNewsPane(
     var selectedRegion by remember { mutableStateOf(ANY_PLACE) }
     var selectedCity by remember { mutableStateOf(ANY_PLACE) }
 
-    // Every level of the cascade is drawn from the directory itself. The
-    // country list used to come from Locale.getISOCountries(), offering some
-    // 250 countries while the regions and cities beneath it could only ever
-    // come from the bundled parishes — so choosing any of the other ~240 gave
-    // an empty region list, an empty city list and no results. The Parishes
-    // tab is the one that searches the whole world.
+    // Every level of the cascade is drawn from the directory itself, so no
+    // choice can lead to an empty region or city list.
     val allCountries = remember(repository) {
         listOf(ANY_PLACE) + repository.nearbyParishes
             .map { it.country }
@@ -676,12 +672,8 @@ private fun ParishesAndNewsPane(
     }
     val availableCities = remember(selectedCountry, selectedRegion) {
         var list = repository.nearbyParishes
-        if (selectedCountry != ANY_PLACE) {
-            list = list.filter { it.country == selectedCountry }
-        }
-        if (selectedRegion != ANY_PLACE) {
-            list = list.filter { it.stateOrRegion == selectedRegion }
-        }
+        if (selectedCountry != ANY_PLACE) list = list.filter { it.country == selectedCountry }
+        if (selectedRegion != ANY_PLACE) list = list.filter { it.stateOrRegion == selectedRegion }
         listOf(ANY_PLACE) + list
             .map { it.city }
             .filter { it.isNotBlank() }
@@ -689,9 +681,7 @@ private fun ParishesAndNewsPane(
             .sorted()
     }
 
-    // A narrower choice above must not leave a stale one below it: picking
-    // Spain after choosing a Mexican state previously left that state selected
-    // and the list empty.
+    // A narrower choice above must not leave a stale one below it.
     LaunchedEffect(selectedCountry) {
         if (selectedRegion !in availableRegions) selectedRegion = ANY_PLACE
         if (selectedCity !in availableCities) selectedCity = ANY_PLACE
@@ -705,12 +695,14 @@ private fun ParishesAndNewsPane(
                 parish.diocese.contains(parishSearchQuery, ignoreCase = true) ||
                 parish.address.contains(parishSearchQuery, ignoreCase = true) ||
                 parish.city.contains(parishSearchQuery, ignoreCase = true) ||
-                parish.country.contains(parishSearchQuery, ignoreCase = true)
+                parish.country.contains(parishSearchQuery, ignoreCase = true) ||
+                ParishScheduleText.country(parish.country, currentLanguage)
+                    .contains(parishSearchQuery, ignoreCase = true)
         val matchesCountry = selectedCountry == ANY_PLACE || parish.country == selectedCountry
         val matchesRegion = selectedRegion == ANY_PLACE || parish.stateOrRegion == selectedRegion
         val matchesCity = selectedCity == ANY_PLACE || parish.city == selectedCity
-        // These read the bundled directory's own Spanish wording, not anything
-        // shown to the reader, so they are not translated.
+        // These read the bundled directory's own wording, not anything shown
+        // to the reader, so they are not translated.
         val matchesFilter = when (selectedParishFilter) {
             1 -> !parish.confessionTimes.contains("No disponible", ignoreCase = true)
             2 -> parish.isPerpetualAdoration ||
@@ -718,16 +710,16 @@ private fun ParishesAndNewsPane(
                     parish.adorationTimes.contains("Perpetua", ignoreCase = true) ||
                     parish.adorationTimes.contains("Jueves", ignoreCase = true)
             3 -> parish.name.contains("Catedral", ignoreCase = true) ||
-                    parish.name.contains("Basílica", ignoreCase = true)
+                    parish.name.contains("Basílica", ignoreCase = true) ||
+                    parish.name.contains("Cathedral", ignoreCase = true) ||
+                    parish.name.contains("Cathédrale", ignoreCase = true) ||
+                    parish.name.contains("Basilica", ignoreCase = true)
             else -> true
         }
         matchesQuery && matchesCountry && matchesRegion && matchesCity && matchesFilter
     }
 
-    // Live from the Vatican's own feed. The bundled articles that used to sit
-    // here were two fixed entries that never changed, which is what made this
-    // section look broken. Hoisted above the list because LazyListScope is not
-    // a composable context.
+    // Live from the Vatican's own feed, fetched once per language.
     val newsState by produceState<NewsResult?>(
         initialValue = null,
         key1 = currentLanguage
@@ -735,96 +727,156 @@ private fun ParishesAndNewsPane(
         value = VaticanNewsFetcher().latest(currentLanguage, limit = 25)
     }
 
-    val parishFilters = listOf(
-        currentLanguage.pick(
-            "Todas (${filteredParishes.size})",
-            "All (${filteredParishes.size})",
-            "Todas (${filteredParishes.size})"
-        ),
-        currentLanguage.pick("Confesiones", "Confessions", "Confissões"),
-        currentLanguage.pick("Adoración 24h", "24h Adoration", "Adoração 24h"),
-        currentLanguage.pick("Catedrales", "Cathedrals", "Catedrais")
-    )
+    val openParish = openParishId?.let { id -> repository.nearbyParishes.firstOrNull { it.id == id } }
+    if (openParish != null) {
+        BackHandler { openParishId = null }
+        ParishDetail(
+            parish = openParish,
+            currentLanguage = currentLanguage,
+            onBack = { openParishId = null }
+        )
+        return
+    }
+
+    val anyLabel = currentLanguage.pick("Todos", "All", "Todos")
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
 
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Buscador de iglesias",
-                    "Church Finder",
-                    "Buscador de igrejas"
+        item(key = "churches_news_tabs") {
+            AppSegmentedTabs(
+                options = listOf(
+                    currentLanguage.pick("Iglesias", "Churches", "Igrejas"),
+                    currentLanguage.pick("Noticias", "News", "Notícias")
                 ),
-                subtitle = currentLanguage.pick(
-                    "El directorio por país y ciudad. Para buscar cerca de ti, usa Parroquias.",
-                    "The directory by country and city. To search near you, use Parishes.",
-                    "O diretório por país e cidade. Para buscar perto de você, use Paróquias."
-                )
-            )
-        }
-
-        item {
-            AppSearchField(
-                value = parishSearchQuery,
-                onValueChange = { parishSearchQuery = it },
-                placeholder = currentLanguage.pick(
-                    "Nombre, dirección o diócesis",
-                    "Name, address or diocese",
-                    "Nome, endereço ou diocese"
-                ),
+                selectedIndex = section,
+                onSelect = { section = it },
                 modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("parish_search_input")
+                    .padding(horizontal = tabStripInset())
+                    .testTag("churches_news_tabs")
             )
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // The cascade as a group of pop-up rows — label, current value, and a
-        // menu of the choices — which every identity already knows how to set.
-        item {
-            AppListGroup {
-                PlacePickerRow(
-                    label = currentLanguage.pick("País", "Country", "País"),
-                    selectedValue = selectedCountry,
-                    anyLabel = currentLanguage.pick("Todos", "All", "Todos"),
-                    options = allCountries,
-                    onOptionSelected = {
-                        selectedCountry = it
-                        selectedRegion = ANY_PLACE
-                        selectedCity = ANY_PLACE
-                    },
-                    leadingIcon = Icons.Default.Public,
-                    testTag = "parish_country_dropdown"
-                )
-                PlacePickerRow(
-                    label = currentLanguage.pick("Región", "Region", "Região"),
-                    selectedValue = selectedRegion,
-                    anyLabel = currentLanguage.pick("Todas", "All", "Todas"),
-                    options = availableRegions,
-                    onOptionSelected = {
-                        selectedRegion = it
-                        selectedCity = ANY_PLACE
-                    },
-                    leadingIcon = Icons.Default.Map,
-                    testTag = "parish_region_dropdown"
-                )
-                PlacePickerRow(
-                    label = currentLanguage.pick("Ciudad", "City", "Cidade"),
-                    selectedValue = selectedCity,
-                    anyLabel = currentLanguage.pick("Todas", "All", "Todas"),
-                    options = availableCities,
-                    onOptionSelected = { selectedCity = it },
-                    leadingIcon = Icons.Default.LocationCity,
-                    testTag = "parish_city_dropdown"
-                )
-                AppListRow(
-                    title = currentLanguage.pick(
-                        "Ver en Google Maps",
-                        "Open in Google Maps",
-                        "Ver no Google Maps"
+        if (section == 0) {
+            item {
+                AppSearchField(
+                    value = parishSearchQuery,
+                    onValueChange = { parishSearchQuery = it },
+                    placeholder = currentLanguage.pick(
+                        "Nombre, ciudad o diócesis",
+                        "Name, city or diocese",
+                        "Nome, cidade ou diocese"
                     ),
-                    leadingIcon = Icons.Default.OpenInNew,
+                    modifier = Modifier
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("parish_search_input")
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
+
+            // Where and what, as rows with menus: one group, no chip rows.
+            item {
+                AppListGroup {
+                    MenuPickerRow(
+                        title = currentLanguage.pick("País", "Country", "País"),
+                        options = allCountries.map {
+                            it to if (it == ANY_PLACE) anyLabel else ParishScheduleText.country(it, currentLanguage)
+                        },
+                        selected = selectedCountry,
+                        onSelect = {
+                            selectedCountry = it
+                            selectedRegion = ANY_PLACE
+                            selectedCity = ANY_PLACE
+                        },
+                        testTag = "parish_country_dropdown"
+                    )
+                    if (selectedCountry != ANY_PLACE) {
+                        MenuPickerRow(
+                            title = currentLanguage.pick("Región", "Region", "Região"),
+                            options = availableRegions.map {
+                                it to if (it == ANY_PLACE) currentLanguage.pick("Todas", "All", "Todas") else it
+                            },
+                            selected = selectedRegion,
+                            onSelect = {
+                                selectedRegion = it
+                                selectedCity = ANY_PLACE
+                            },
+                            testTag = "parish_region_dropdown"
+                        )
+                    }
+                    MenuPickerRow(
+                        title = currentLanguage.pick("Ciudad", "City", "Cidade"),
+                        options = availableCities.map {
+                            it to if (it == ANY_PLACE) currentLanguage.pick("Todas", "All", "Todas") else it
+                        },
+                        selected = selectedCity,
+                        onSelect = { selectedCity = it },
+                        testTag = "parish_city_dropdown"
+                    )
+                    MenuPickerRow(
+                        title = currentLanguage.pick("Mostrar", "Show", "Mostrar"),
+                        options = listOf(
+                            0 to currentLanguage.pick("Todas", "All churches", "Todas"),
+                            1 to currentLanguage.pick("Con confesiones", "With confessions", "Com confissões"),
+                            2 to currentLanguage.pick("Con adoración", "With adoration", "Com adoração"),
+                            3 to currentLanguage.pick("Catedrales y basílicas", "Cathedrals & basilicas", "Catedrais e basílicas")
+                        ),
+                        selected = selectedParishFilter,
+                        onSelect = { selectedParishFilter = it },
+                        testTag = "parish_kind_picker"
+                    )
+                }
+            }
+
+            if (filteredParishes.isEmpty()) {
+                item {
+                    AppEmptyState(
+                        title = currentLanguage.pick("Ninguna iglesia coincide", "No matching churches", "Nenhuma igreja corresponde"),
+                        body = currentLanguage.pick(
+                            "Prueba otro nombre o amplía el lugar.",
+                            "Try another name or widen the place.",
+                            "Tente outro nome ou amplie o lugar."
+                        ),
+                        icon = Icons.Default.Church
+                    )
+                    AppSecondaryButton(
+                        label = currentLanguage.pick("Ver todas", "Show all churches", "Ver todas"),
+                        onClick = {
+                            parishSearchQuery = ""
+                            selectedParishFilter = 0
+                            selectedCountry = ANY_PLACE
+                            selectedRegion = ANY_PLACE
+                            selectedCity = ANY_PLACE
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
+                    )
+                }
+            } else {
+                item(key = "parish_results") {
+                    AppSectionHeader(
+                        title = currentLanguage.pick("Iglesias", "Churches", "Igrejas")
+                    )
+                    AppListGroup {
+                        filteredParishes.forEach { parish ->
+                            AppListRow(
+                                title = parish.name,
+                                subtitle = "${parish.city}, ${ParishScheduleText.country(parish.country, currentLanguage)}",
+                                onClick = { openParishId = parish.id },
+                                modifier = Modifier.testTag("parish_card_${parish.id}")
+                            )
+                        }
+                    }
+                }
+            }
+
+            item {
+                Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                AppSecondaryButton(
+                    label = currentLanguage.pick("Buscar en Google Maps", "Search Google Maps", "Buscar no Google Maps"),
+                    leadingIcon = Icons.Default.Map,
                     onClick = {
                         val query = listOf(selectedCity, selectedRegion, selectedCountry)
                             .filter { it != ANY_PLACE }
@@ -834,109 +886,72 @@ private fun ParishesAndNewsPane(
                                 Uri.encode("catholic church $query".trim())
                         )
                     },
-                    modifier = Modifier.testTag("parish_open_maps")
-                )
-            }
-        }
-
-        // Field, group and filters keep the page's own rhythm: a card gap
-        // between field and group, half a section gap before the filters
-        // (which act on the results, not on the cascade), then a card gap.
-        item {
-            Spacer(Modifier.height(design.spacing.sectionGap / 2))
-            ChipRow {
-                parishFilters.forEachIndexed { index, label ->
-                    AppChip(
-                        label = label,
-                        selected = selectedParishFilter == index,
-                        onClick = { selectedParishFilter = index }
-                    )
-                }
-            }
-            Spacer(Modifier.height(design.spacing.cardGap))
-        }
-
-        if (filteredParishes.isEmpty()) {
-            item {
-                AppEmptyState(
-                    title = currentLanguage.pick("Sin resultados", "No results", "Sem resultados"),
-                    body = currentLanguage.pick(
-                        "No se encontraron parroquias con el criterio buscado.",
-                        "No parishes found matching your search.",
-                        "Nenhuma paróquia encontrada com os critérios pesquisados."
-                    ),
-                    icon = Icons.Default.Church
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("parish_open_maps")
                 )
             }
         } else {
-            items(filteredParishes, key = { it.id }) { parish ->
-                ParishCard(parish = parish, currentLanguage = currentLanguage)
-                Spacer(Modifier.height(design.spacing.cardGap))
-            }
-        }
+            when (val news = newsState) {
+                null -> item {
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(design.spacing.gutter),
+                        horizontalArrangement = Arrangement.Center,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(18.dp),
+                            color = design.palette.accent
+                        )
+                        Spacer(Modifier.width(design.spacing.iconLabelGap))
+                        Text(
+                            text = currentLanguage.pick(
+                                "Cargando noticias del Vaticano…",
+                                "Loading news from the Vatican…",
+                                "A carregar notícias do Vaticano…"
+                            ),
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = design.palette.textSecondary
+                        )
+                    }
+                }
 
-        item { AppOrnament() }
-
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Noticias del Vaticano",
-                    "Vatican News",
-                    "Notícias do Vaticano"
-                ),
-                subtitle = currentLanguage.pick(
-                    "Directo del canal oficial de Vatican News.",
-                    "Straight from the official Vatican News feed.",
-                    "Direto do canal oficial do Vatican News."
-                )
-            )
-        }
-
-        when (val news = newsState) {
-            null -> item {
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(design.spacing.gutter),
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    CircularProgressIndicator(
-                        modifier = Modifier.size(18.dp),
-                        color = design.palette.accent
-                    )
-                    Spacer(Modifier.width(design.spacing.iconLabelGap))
-                    Text(
-                        text = currentLanguage.pick(
-                            "Cargando noticias del Vaticano…",
-                            "Loading news from the Vatican…",
-                            "A carregar notícias do Vaticano…"
+                is NewsResult.Failure -> item {
+                    AppEmptyState(
+                        title = currentLanguage.pick(
+                            "Noticias no disponibles",
+                            "News unavailable",
+                            "Notícias indisponíveis"
                         ),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = design.palette.textSecondary
+                        body = currentLanguage.pick(
+                            "Comprueba tu conexión y vuelve a intentarlo.",
+                            "Check your connection and try again.",
+                            "Verifique a ligação e tente de novo."
+                        ),
+                        icon = Icons.Default.Newspaper
+                    )
+                    AppSecondaryButton(
+                        label = currentLanguage.pick("Abrir Vatican News", "Open Vatican News", "Abrir o Vatican News"),
+                        onClick = {
+                            runCatching {
+                                context.startActivity(
+                                    Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vaticannews.va"))
+                                )
+                            }
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
                     )
                 }
-            }
 
-            is NewsResult.Failure -> item {
-                AppEmptyState(
-                    title = currentLanguage.pick(
-                        "Noticias no disponibles",
-                        "News unavailable",
-                        "Notícias indisponíveis"
-                    ),
-                    body = currentLanguage.pick(
-                        "No se pudieron cargar las noticias (${news.reason}). Comprueba tu conexión.",
-                        "Could not load the news (${news.reason}). Check your connection.",
-                        "Não foi possível carregar as notícias (${news.reason}). Verifique a ligação."
-                    ),
-                    icon = Icons.Default.Newspaper
-                )
-            }
-
-            is NewsResult.Success -> items(news.items) { article ->
-                VaticanNewsCard(article = article, currentLanguage = currentLanguage)
-                Spacer(Modifier.height(design.spacing.cardGap))
+                is NewsResult.Success -> items(news.items) { article ->
+                    VaticanNewsCard(article = article, currentLanguage = currentLanguage)
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                }
             }
         }
 
@@ -944,107 +959,107 @@ private fun ParishesAndNewsPane(
     }
 }
 
+/** A church as its own page: where it is, its hours, and how to reach it. */
 @Composable
-private fun ParishCard(parish: NearbyParish, currentLanguage: AppLanguage) {
+private fun ParishDetail(
+    parish: NearbyParish,
+    currentLanguage: AppLanguage,
+    onBack: () -> Unit
+) {
     val context = LocalContext.current
     val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
 
-    GutterCard(modifier = Modifier.testTag("parish_card_${parish.id}")) {
-        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Top) {
-            Text(
-                text = parish.name,
-                style = MaterialTheme.typography.titleMedium,
-                color = design.palette.textPrimary,
-                modifier = Modifier.weight(1f)
+    fun hours(text: String) = TextFormat.times(text, currentLanguage)
+
+    LazyColumn(Modifier.fillMaxSize().testTag("parish_detail_${parish.id}")) {
+        item {
+            InlineBackLink(
+                label = currentLanguage.pick("Iglesias", "Churches", "Igrejas"),
+                onClick = onBack,
+                testTag = "back_to_churches_button"
             )
-            if (parish.distanceDisplay.isNotBlank()) {
-                Spacer(Modifier.width(design.spacing.iconLabelGap))
-                Text(
-                    text = eyebrow(parish.distanceDisplay),
-                    style = styles.sectionEyebrow,
-                    color = design.palette.gold,
-                    maxLines = 1
+        }
+        item {
+            AppScreenTitle(
+                title = parish.name,
+                subtitle = "${parish.city}, ${ParishScheduleText.country(parish.country, currentLanguage)}"
+            )
+        }
+        item {
+            GutterCard {
+                if (parish.isPerpetualAdoration) {
+                    Text(
+                        text = eyebrow(
+                            currentLanguage.pick("Adoración perpetua", "Perpetual adoration", "Adoração perpétua")
+                        ),
+                        style = LocalAppTextStyles.current.sectionEyebrow,
+                        color = design.palette.accent
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                }
+                Note(
+                    label = currentLanguage.pick("Misas del domingo", "Sunday Mass", "Missas de domingo"),
+                    body = hours(ParishScheduleText.masses(parish.sundayMasses, currentLanguage))
+                )
+                if (parish.weekdayMasses.isNotBlank()) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    Note(
+                        label = currentLanguage.pick("Misas entre semana", "Weekday Mass", "Missas durante a semana"),
+                        body = hours(ParishScheduleText.masses(parish.weekdayMasses, currentLanguage))
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Note(
+                    label = currentLanguage.pick("Confesiones", "Confessions", "Confissões"),
+                    body = hours(ParishScheduleText.note(parish.confessionTimes, currentLanguage))
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Note(
+                    label = currentLanguage.pick("Adoración", "Adoration", "Adoração"),
+                    body = hours(ParishScheduleText.note(parish.adorationTimes, currentLanguage))
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Note(
+                    label = currentLanguage.pick("Diócesis", "Diocese", "Diocese"),
+                    body = parish.diocese
                 )
             }
         }
-
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-        Text(
-            text = "${parish.address} • ${parish.city}, ${parish.country} • ${parish.diocese}",
-            style = MaterialTheme.typography.bodySmall,
-            color = design.palette.textSecondary
-        )
-
-        if (parish.isPerpetualAdoration) {
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            Text(
-                text = eyebrow(
-                    currentLanguage.pick(
-                        "Adoración Perpetua 24 Horas",
-                        "Perpetual Adoration, 24 Hours",
-                        "Adoração Perpétua 24 Horas"
+        item {
+            Spacer(Modifier.height(design.spacing.cardGap))
+            AppListGroup {
+                AppListRow(
+                    title = currentLanguage.pick("Cómo llegar", "Directions", "Como chegar"),
+                    subtitle = parish.address.ifBlank { null },
+                    leadingIcon = Icons.Default.Directions,
+                    onClick = {
+                        val target = Uri.encode("${parish.name}, ${parish.address}")
+                        if (!context.openMaps("geo:0,0?q=$target")) {
+                            Toast.makeText(context, parish.address, Toast.LENGTH_LONG).show()
+                        }
+                    },
+                    modifier = Modifier.testTag("map_parish_${parish.id}")
+                )
+                if (parish.contactPhone.isNotBlank()) {
+                    AppListRow(
+                        title = currentLanguage.pick("Llamar", "Call", "Ligar"),
+                        subtitle = parish.contactPhone,
+                        leadingIcon = Icons.Default.Call,
+                        onClick = {
+                            val phone = parish.contactPhone.replace(" ", "")
+                            val dialled = runCatching {
+                                context.startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phone")))
+                            }.isSuccess
+                            if (!dialled) {
+                                Toast.makeText(context, parish.contactPhone, Toast.LENGTH_SHORT).show()
+                            }
+                        },
+                        modifier = Modifier.testTag("call_parish_${parish.id}")
                     )
-                ),
-                style = styles.sectionEyebrow,
-                color = design.palette.accent
-            )
+                }
+            }
         }
-
-        Spacer(Modifier.height(design.spacing.cardGap))
-
-        Note(
-            label = currentLanguage.pick(
-                "Misas dominicales",
-                "Sunday Mass",
-                "Missas dominicais"
-            ),
-            body = parish.sundayMasses
-        )
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-        Note(
-            label = currentLanguage.pick("Confesiones", "Confessions", "Confissões"),
-            body = parish.confessionTimes
-        )
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-        Note(
-            label = currentLanguage.pick("Adoración", "Adoration", "Adoração"),
-            body = parish.adorationTimes
-        )
-
-        Spacer(Modifier.height(design.spacing.cardGap))
-
-        // Two full-width rows rather than two buttons abreast: "Cómo llegar"
-        // in tracked capitals has no room in half a card at 360dp.
-        AppListRow(
-            title = currentLanguage.pick("Llamar", "Call", "Ligar"),
-            subtitle = parish.contactPhone.ifBlank { null },
-            leadingIcon = Icons.Default.Call,
-            onClick = {
-                val phone = parish.contactPhone.replace(" ", "")
-                val dialled = runCatching {
-                    context.startActivity(
-                        Intent(Intent.ACTION_DIAL, Uri.parse("tel:$phone"))
-                    )
-                }.isSuccess
-                if (!dialled) {
-                    Toast.makeText(context, parish.contactPhone, Toast.LENGTH_SHORT).show()
-                }
-            },
-            modifier = Modifier.testTag("call_parish_${parish.id}")
-        )
-        AppListRow(
-            title = currentLanguage.pick("Cómo llegar", "Directions", "Como chegar"),
-            subtitle = parish.address.ifBlank { null },
-            leadingIcon = Icons.Default.Directions,
-            onClick = {
-                val target = Uri.encode("${parish.name}, ${parish.address}")
-                if (!context.openMaps("geo:0,0?q=$target")) {
-                    Toast.makeText(context, parish.address, Toast.LENGTH_LONG).show()
-                }
-            },
-            modifier = Modifier.testTag("map_parish_${parish.id}")
-        )
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
@@ -1087,7 +1102,7 @@ private fun VaticanNewsCard(
                 text = article.summary,
                 style = MaterialTheme.typography.bodyMedium,
                 color = design.palette.textSecondary,
-                maxLines = 3,
+                maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
         }
@@ -1104,118 +1119,8 @@ private fun VaticanNewsCard(
     }
 }
 
-/**
- * One level of the geographic cascade, set as a list row that names the level
- * and shows the current choice; tapping it drops a menu of the choices. The
- * row is the kit's, so it reads as an iOS pop-up button, an M3 list item or a
- * ruled index line as the identity requires.
- */
-@Composable
-private fun PlacePickerRow(
-    label: String,
-    selectedValue: String,
-    anyLabel: String,
-    options: List<String>,
-    onOptionSelected: (String) -> Unit,
-    leadingIcon: ImageVector,
-    testTag: String
-) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    var expanded by remember { mutableStateOf(false) }
 
-    fun display(value: String) = if (value == ANY_PLACE) anyLabel else value
 
-    Box(Modifier.fillMaxWidth()) {
-        AppListRow(
-            title = label,
-            leadingIcon = leadingIcon,
-            trailingText = display(selectedValue),
-            onClick = { expanded = true },
-            modifier = Modifier.testTag(testTag)
-        )
-
-        DropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { expanded = false },
-            offset = DpOffset(design.spacing.gutter, 0.dp),
-            modifier = Modifier
-                .heightIn(max = 320.dp)
-                .background(design.palette.raised)
-        ) {
-            options.forEach { option ->
-                val isSelected = option == selectedValue
-                DropdownMenuItem(
-                    text = {
-                        Text(
-                            text = display(option),
-                            style = styles.rowTitle,
-                            color = if (isSelected) design.palette.accent
-                            else design.palette.textPrimary
-                        )
-                    },
-                    trailingIcon = if (isSelected) {
-                        {
-                            Icon(
-                                imageVector = Icons.Default.Check,
-                                contentDescription = null,
-                                tint = design.palette.accent,
-                                modifier = Modifier.size(18.dp)
-                            )
-                        }
-                    } else null,
-                    onClick = {
-                        onOptionSelected(option)
-                        expanded = false
-                    }
-                )
-            }
-        }
-    }
-}
-
-/**
- * A short set of chips (four at most here) that wraps instead of scrolling, so
- * no chip is ever guillotined at the right edge of a phone: every choice is in
- * view, inside the gutters, in every identity.
- */
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-private fun ChipFlow(content: @Composable () -> Unit) {
-    val design = LocalAppDesign.current
-    FlowRow(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(
-                horizontal = design.spacing.gutter,
-                vertical = design.spacing.cardGap / 2
-            ),
-        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
-        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-    ) {
-        content()
-    }
-}
-
-/**
- * Filters on one line that scrolls under the screen edge, the gutter carried as
- * content padding so the row starts and ends on the margin: the idiom of
- * Photos, Maps and Play, and no lone chip wrapped onto a second line.
- */
-@Composable
-private fun ChipRow(content: @Composable () -> Unit) {
-    val design = LocalAppDesign.current
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .horizontalScroll(rememberScrollState())
-            .padding(horizontal = design.spacing.gutter),
-        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        content()
-    }
-}
 
 // ------------------------------------------------------------------ fittings
 

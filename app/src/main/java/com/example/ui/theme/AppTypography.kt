@@ -159,7 +159,9 @@ object AppTypographyFactory {
         )
 
         val extras = AppTextStyles(
-            screenTitle = style(32.0, 40.0, FontWeight.Normal, 0.0),
+            // The large flexible app bar's headline, in M3 Expressive's
+            // emphasised headline (the same size, at weight 500).
+            screenTitle = style(30.0, 38.0, FontWeight.Medium, -0.2),
             screenSubtitle = style(14.0, 20.0, FontWeight.Normal, 0.25),
             sectionEyebrow = style(11.0, 16.0, FontWeight.Medium, 0.5),
             sectionTitle = style(22.0, 28.0, FontWeight.Normal, 0.0),
@@ -209,10 +211,10 @@ object AppTypographyFactory {
             displayMedium = style(25.0, 36.0, FontWeight.Bold, 2.6, display),
             displaySmall = style(21.0, 30.0, FontWeight.SemiBold, 2.2, display),
             headlineLarge = style(24.0, 34.0, FontWeight.Bold, 2.0, display),
-            headlineMedium = style(20.0, 29.0, FontWeight.SemiBold, 1.8, display),
-            headlineSmall = style(17.0, 25.0, FontWeight.SemiBold, 1.6, display),
-            titleLarge = style(16.0, 24.0, FontWeight.SemiBold, 1.4, display),
-            titleMedium = style(18.0, 26.0, FontWeight.SemiBold, 0.2, text),
+            headlineMedium = style(20.0, 29.0, FontWeight.Normal, 2.2, display),
+            headlineSmall = style(17.0, 25.0, FontWeight.Normal, 2.2, display),
+            titleLarge = style(16.0, 24.0, FontWeight.Normal, 2.0, display),
+            titleMedium = style(18.0, 26.0, FontWeight.Medium, 0.2, text),
             titleSmall = style(13.0, 19.0, FontWeight.SemiBold, 1.1, display),
             bodyLarge = style(18.0, 30.0, FontWeight.Normal, 0.1, text),
             bodyMedium = style(16.0, 26.0, FontWeight.Normal, 0.1, text),
@@ -226,7 +228,7 @@ object AppTypographyFactory {
             screenTitle = style(26.0, 38.0, FontWeight.Bold, 3.4, display),
             screenSubtitle = style(15.0, 23.0, FontWeight.Normal, 0.4, text),
             sectionEyebrow = style(10.0, 15.0, FontWeight.SemiBold, 2.4, display),
-            sectionTitle = style(19.0, 28.0, FontWeight.SemiBold, 2.0, display),
+            sectionTitle = style(18.0, 27.0, FontWeight.Normal, 2.6, display),
             scripture = style(19.0, 33.0, FontWeight.Normal, 0.1, text),
             scriptureDropCap = style(46.0, 46.0, FontWeight.Bold, 0.0, display),
             verseNumber = style(11.0, 15.0, FontWeight.SemiBold, 0.6, display),
@@ -234,7 +236,7 @@ object AppTypographyFactory {
             rowSubtitle = style(14.0, 20.0, FontWeight.Normal, 0.2, text),
             navLabel = style(9.0, 12.0, FontWeight.SemiBold, 1.0, display),
             buttonLabel = style(13.0, 18.0, FontWeight.Bold, 1.8, display),
-            metric = style(30.0, 36.0, FontWeight.Bold, 1.2, display),
+            metric = style(30.0, 36.0, FontWeight.Normal, 1.2, display),
             quote = style(19.0, 31.0, FontWeight.Normal, 0.2, text)
         )
         return typography to extras

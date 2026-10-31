@@ -47,6 +47,7 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.ComplineOffice
 import com.example.data.models.IgnatianExamenStep
 import com.example.data.repository.CatholicDataRepository
+import com.example.ui.components.MenuPickerRow
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppListGroup
@@ -131,7 +132,8 @@ fun NightPrayersScreen(
                         currentLanguage.pick("Examen ignaciano", "Ignatian examen", "Exame inaciano")
                     ),
                     selectedIndex = selectedNightOfficeTab,
-                    onSelect = { selectedNightOfficeTab = it }
+                    onSelect = { selectedNightOfficeTab = it },
+                    title = currentLanguage.pick("Oficio", "Office", "Ofício")
                 )
             }
         }
@@ -425,20 +427,14 @@ private fun ComplineView(
                     subtitle = currentAntiphon.seasonTag.get(currentLanguage)
                 )
 
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .horizontalScroll(antiphonScroll)
-                        .padding(horizontal = design.spacing.gutter),
-                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-                ) {
-                    compline.marianAntiphons.forEachIndexed { index, antiphon ->
-                        AppChip(
-                            label = antiphon.titleLatin,
-                            selected = antiphon.id == currentAntiphon.id,
-                            onClick = { selectedMarianAntiphonIndex = index }
-                        )
-                    }
+                AppListGroup {
+                    MenuPickerRow(
+                        title = currentLanguage.pick("Antífona", "Antiphon", "Antífona"),
+                        options = compline.marianAntiphons.mapIndexed { i, a -> i to a.titleLatin },
+                        selected = compline.marianAntiphons.indexOfFirst { it.id == currentAntiphon.id },
+                        onSelect = { selectedMarianAntiphonIndex = it },
+                        testTag = "marian_antiphon_picker"
+                    )
                 }
 
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -873,28 +869,27 @@ private val StichBreak = Regex("(?<=[.!?»”’'])\\s+")
 private fun stichs(text: String): List<String> =
     text.split(StichBreak).map { it.trim() }.filter { it.isNotEmpty() }
 
-/** The two offices of the night, as a pair of chips on the gutter. */
+/**
+ * The two offices of the night as one row with a menu, so the Prayers
+ * selector above stays the page's only visible control.
+ */
 @Composable
 private fun OfficeChoice(
     labels: List<String>,
     selectedIndex: Int,
-    onSelect: (Int) -> Unit
+    onSelect: (Int) -> Unit,
+    title: String
 ) {
     val design = LocalAppDesign.current
-    Row(
-        Modifier
-            .fillMaxWidth()
-            .padding(horizontal = design.spacing.gutter)
-            .padding(top = design.spacing.cardGap / 2),
-        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-    ) {
-        labels.forEachIndexed { index, label ->
-            AppChip(
-                label = label,
-                selected = index == selectedIndex,
-                onClick = { onSelect(index) }
-            )
-        }
+    Spacer(Modifier.height(design.spacing.cardGap / 2))
+    AppListGroup {
+        MenuPickerRow(
+            title = title,
+            options = labels.mapIndexed { i, label -> i to label },
+            selected = selectedIndex,
+            onSelect = onSelect,
+            testTag = "night_office_picker"
+        )
     }
 }
 

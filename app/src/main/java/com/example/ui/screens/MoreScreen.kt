@@ -23,6 +23,8 @@ data class MoreEntry(
     val subtitle: String,
     val iconSlot: AppIconSlot,
     val tag: String,
+    /** Overrides the slot's glyph, for rows that are settings, not places. */
+    val icon: ImageVector? = null,
     val onOpen: () -> Unit
 )
 
@@ -47,11 +49,6 @@ fun MoreScreen(
                     AppLanguage.ES -> "Más"
                     AppLanguage.EN -> "More"
                     AppLanguage.PT -> "Mais"
-                },
-                subtitle = when (currentLanguage) {
-                    AppLanguage.ES -> "Estudio, vida interior y lugares"
-                    AppLanguage.EN -> "Study, inner life and places"
-                    AppLanguage.PT -> "Estudo, vida interior e lugares"
                 }
             )
         }
@@ -60,7 +57,7 @@ fun MoreScreen(
                 AppSectionHeader(title = section.title)
                 AppListGroup {
                     section.entries.forEach { entry ->
-                        val icon: ImageVector = AppIcons.pair(entry.iconSlot).first
+                        val icon: ImageVector = entry.icon ?: AppIcons.pair(entry.iconSlot).first
                         AppListRow(
                             title = entry.title,
                             subtitle = entry.subtitle,

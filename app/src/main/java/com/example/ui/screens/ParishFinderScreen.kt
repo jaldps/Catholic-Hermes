@@ -54,6 +54,8 @@ import com.example.ui.design.AppCard
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
+import com.example.data.repository.ParishScheduleText
+import com.example.ui.components.TextFormat
 import com.example.ui.design.AppPrimaryButton
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
@@ -239,9 +241,9 @@ fun ParishFinderScreen(
             AppScreenTitle(
                 title = strings("Parroquias", "Parishes", "Paróquias"),
                 subtitle = strings(
-                    "Encuentra una iglesia católica cerca de ti o en cualquier lugar del mundo.",
-                    "Find a Catholic church near you, or anywhere in the world.",
-                    "Encontre uma igreja católica perto de você, ou em qualquer lugar."
+                    "Misa cerca de ti o en cualquier lugar",
+                    "Mass near you, or anywhere",
+                    "Missa perto de você ou em qualquer lugar"
                 )
             )
         }
@@ -267,7 +269,7 @@ fun ParishFinderScreen(
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
                 AppSecondaryButton(
-                    label = strings("Ver lista aquí", "List them here", "Ver lista aqui"),
+                    label = strings("Usar mi ubicación", "Use my location", "Usar a minha localização"),
                     onClick = {
                         if (locationProvider.hasPermission()) {
                             useDeviceLocation()
@@ -313,12 +315,7 @@ fun ParishFinderScreen(
 
         item {
             AppSectionHeader(
-                title = strings("Radio de búsqueda", "Search radius", "Raio de busca"),
-                subtitle = strings(
-                    "Hasta dónde buscar alrededor del lugar.",
-                    "How far around the place to look.",
-                    "Até onde buscar em volta do lugar."
-                )
+                title = strings("Distancia", "Distance", "Distância")
             )
             // Five short options: a segmented control holds them abreast in
             // every identity, where a chip row ran its last chip off the edge.
@@ -372,24 +369,20 @@ fun ParishFinderScreen(
                 title = if (results.isNotEmpty()) {
                     strings("Resultados", "Results", "Resultados")
                 } else {
-                    strings("Directorio incluido", "Bundled directory", "Diretório incluído")
+                    strings("Grandes iglesias del mundo", "Great churches of the world", "Grandes igrejas do mundo")
                 },
-                subtitle = searchedPlace?.takeIf { results.isNotEmpty() } ?: strings(
-                    "Toca una parroquia para ver sus misas, su teléfono y cómo llegar.",
-                    "Tap a parish for its Mass times, telephone and directions.",
-                    "Toque numa paróquia para ver as missas, o telefone e como chegar."
-                )
+                subtitle = searchedPlace?.takeIf { results.isNotEmpty() }
             )
         }
 
         if (shown.isEmpty()) {
             item {
                 AppEmptyState(
-                    title = strings("Sin parroquias", "No parishes", "Sem paróquias"),
+                    title = strings("Ninguna parroquia aquí", "No parishes here", "Nenhuma paróquia aqui"),
                     body = strings(
-                        "Busca por ubicación o por nombre de lugar.",
-                        "Search by location or by place name.",
-                        "Busque por localização ou por nome de lugar."
+                        "Amplía la distancia o busca otro lugar.",
+                        "Widen the distance or search another place.",
+                        "Aumente a distância ou busque outro lugar."
                     ),
                     icon = Icons.Default.Church
                 )
@@ -405,9 +398,12 @@ fun ParishFinderScreen(
                         val distance = parish.distanceDisplay.takeIf { it.any(Char::isDigit) }
                         AppListRow(
                             title = parish.name,
+                            // The directory's "distance" is a neighbourhood name in
+                            // the local language; the city and country say more.
                             subtitle = listOf(
-                                if (distance == null) parish.distanceDisplay else streetOf(parish.address),
-                                parish.city
+                                if (distance == null) "" else streetOf(parish.address),
+                                parish.city,
+                                ParishScheduleText.country(parish.country, currentLanguage)
                             )
                                 .map { it.trim() }
                                 .filter { it.isNotBlank() }
@@ -415,7 +411,6 @@ fun ParishFinderScreen(
                                 .joinToString(" · ")
                                 .ifBlank { null },
                             trailingText = distance,
-                            showsNavigationAffordance = false,
                             selected = open,
                             onClick = { expandedParishId = if (open) null else parish.id },
                             modifier = Modifier.testTag("parish_row_${parish.id}")
@@ -433,7 +428,10 @@ fun ParishFinderScreen(
                                 if (parish.sundayMasses.isNotBlank()) {
                                     AppListRow(
                                         title = strings("Misas del domingo", "Sunday Mass", "Missas de domingo"),
-                                        subtitle = parish.sundayMasses,
+                                        subtitle = TextFormat.times(
+                                            ParishScheduleText.masses(parish.sundayMasses, currentLanguage),
+                                            currentLanguage
+                                        ),
                                         leadingIcon = Icons.Default.Schedule,
                                         showsNavigationAffordance = false
                                     )

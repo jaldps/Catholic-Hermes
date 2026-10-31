@@ -53,6 +53,7 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.WaterDrop
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -85,6 +86,7 @@ import com.example.data.repository.LitanyLine
 import com.example.data.repository.LitanyOfLoreto
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
+import com.example.ui.components.MenuPickerRow
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppListGroup
@@ -980,22 +982,9 @@ fun RosaryScreen(
         item {
             // The masthead names the screen and holds still; the segmented
             // control below it names the two devotions it carries.
-            AppScreenTitle(
-                title = lang.pick("Rosario y coronilla", "Rosary & chaplet", "Terço e coroinha"),
-                subtitle = if (selectedTab == 0) {
-                    lang.pick(
-                        "Paso a paso, de la señal de la cruz a la Salve, con lo que se reza en cada cuenta.",
-                        "Step by step, from the Sign of the Cross to the Hail, Holy Queen, with what to pray on every bead.",
-                        "Passo a passo, do sinal da cruz à Salve-Rainha, com o que se reza em cada conta."
-                    )
-                } else {
-                    lang.pick(
-                        "La coronilla que el Señor dictó a Santa Faustina, paso a paso.",
-                        "The chaplet the Lord dictated to Saint Faustina, step by step.",
-                        "A coroinha que o Senhor ditou a Santa Faustina, passo a passo."
-                    )
-                }
-            )
+            // No subtitle: the beads are the page, and they must sit above
+            // the fold on a phone.
+            AppScreenTitle(title = lang.pick("Rosario", "Rosary", "Terço"))
         }
 
         item {
@@ -1022,60 +1011,43 @@ fun RosaryScreen(
 
         when (selectedTab) {
             0 -> {
-                // Holy Rosary
+                // Holy Rosary. The mysteries are one row with a menu, so the
+                // chaplet itself is the first thing under the selector.
                 item {
-                    Spacer(Modifier.height(design.spacing.sectionGap / 2))
-                    AppBanner(
-                        title = lang.pick("Misterios de hoy", "Today's mysteries", "Mistérios de hoje"),
-                        // The days are already on the mystery's row below.
-                        body = todayMystery.type.displayName.get(lang),
-                        onClick = {
-                            selectedMysteryType = todayMystery.type
-                            rosaryStepIndex = 0
-                        }
-                    )
-                }
-
-                item {
-                    AppSectionHeader(
-                        title = lang.pick(
-                            "Selecciona el misterio",
-                            "Select the mystery",
-                            "Selecione o mistério"
-                        )
-                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    val todayLabel = lang.pick("Hoy", "Today", "Hoje")
                     AppListGroup {
-                        RosaryMysteryType.entries.forEach { mType ->
-                            val isToday = mType == todayMystery.type
-                            AppListRow(
-                                title = mType.displayName.get(lang),
-                                subtitle = mType.recommendedDays.get(lang),
-                                leadingIcon = when (mType) {
-                                    RosaryMysteryType.JOYFUL -> Icons.Default.LocalFlorist
-                                    RosaryMysteryType.SORROWFUL -> Icons.Default.WaterDrop
-                                    RosaryMysteryType.GLORIOUS -> Icons.Default.AutoAwesome
-                                    RosaryMysteryType.LUMINOUS -> Icons.Default.LightMode
-                                },
-                                trailingText = if (isToday) lang.pick("Hoy", "Today", "Hoje") else null,
-                                showsNavigationAffordance = false,
-                                selected = mType == selectedMysteryType,
-                                onClick = {
-                                    if (mType != selectedMysteryType) {
-                                        ttsManager.stop()
-                                        selectedMysteryType = mType
-                                        rosaryStepIndex = 0
-                                    }
+                        MenuPickerRow(
+                            title = currentMystery.type.displayName.get(lang),
+                            subtitle = if (selectedMysteryType == todayMystery.type) {
+                                lang.pick("Los misterios de hoy", "Today's mysteries", "Os mistérios de hoje")
+                            } else {
+                                currentMystery.type.recommendedDays.get(lang)
+                            },
+                            leadingIcon = mysteryIcon(selectedMysteryType),
+                            options = RosaryMysteryType.entries.map { mType ->
+                                mType to (mType.displayName.get(lang) +
+                                    if (mType == todayMystery.type) " · $todayLabel" else "")
+                            },
+                            selected = selectedMysteryType,
+                            trailingOverride = lang.pick("Cambiar", "Change", "Mudar"),
+                            onSelect = { mType ->
+                                if (mType != selectedMysteryType) {
+                                    ttsManager.stop()
+                                    selectedMysteryType = mType
+                                    rosaryStepIndex = 0
                                 }
-                            )
-                        }
+                            },
+                            testTag = "rosary_mystery_picker"
+                        )
                     }
+                    Spacer(Modifier.height(design.spacing.cardGap))
                 }
 
                 // Where you are on the beads, and the way forward
                 item {
-                    AppOrnament()
                     GuideControlsCard(
-                        eyebrow = currentMystery.type.displayName.get(lang),
+                        eyebrow = lang.pick("Rosario", "Rosary", "Terço"),
                         guide = rosaryGuide,
                         index = rosaryIndex,
                         lang = lang,
@@ -1091,57 +1063,31 @@ fun RosaryScreen(
                         previousTag = "prev_bead_button",
                         nextTag = "next_bead_button",
                         audioTag = "toggle_prayer_audio_button"
-                    ) {
-                        Spacer(Modifier.height(design.spacing.cardPadding))
-                        AppDivider()
-                        Spacer(Modifier.height(design.spacing.cardGap))
-
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Icon(
-                                imageVector = Icons.Default.RecordVoiceOver,
-                                contentDescription = null,
-                                tint = palette.textTertiary,
-                                modifier = Modifier.size(design.decor.rowIconSize * 0.7f)
-                            )
-                            Spacer(Modifier.width(design.spacing.cardGap / 2))
-                            Text(
-                                text = caps(lang.pick("Modo de voz", "Voice mode", "Modo de voz")),
-                                style = styles.sectionEyebrow,
-                                color = palette.textSecondary
-                            )
-                        }
-
-                        Spacer(Modifier.height(design.spacing.cardGap / 2))
-
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .horizontalScroll(rememberScrollState()),
-                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-                        ) {
-                            AppChip(
-                                label = lang.pick("Diálogo dual", "Dual dialogue", "Diálogo duplo"),
-                                selected = voiceMode == RecitationVoiceMode.DUAL_DIALOGUE,
-                                onClick = { ttsManager.setVoiceMode(RecitationVoiceMode.DUAL_DIALOGUE) }
-                            )
-                            AppChip(
-                                label = lang.pick("Voz guía", "Leader voice", "Voz guia"),
-                                selected = voiceMode == RecitationVoiceMode.MALE,
-                                onClick = { ttsManager.setVoiceMode(RecitationVoiceMode.MALE) }
-                            )
-                            AppChip(
-                                label = lang.pick("Respuesta", "Response", "Resposta"),
-                                selected = voiceMode == RecitationVoiceMode.FEMALE,
-                                onClick = { ttsManager.setVoiceMode(RecitationVoiceMode.FEMALE) }
-                            )
-                        }
-                    }
+                    )
                 }
 
                 // What to pray now, in full
                 item {
                     Spacer(Modifier.height(design.spacing.cardGap))
                     StepCard(step = rosaryStep, lang = lang, spokenNow = currentlySpeaking)
+                }
+
+                item {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppListGroup {
+                        MenuPickerRow(
+                            title = lang.pick("Voces", "Voices", "Vozes"),
+                            leadingIcon = Icons.Default.RecordVoiceOver,
+                            options = listOf(
+                                RecitationVoiceMode.DUAL_DIALOGUE to lang.pick("Diálogo", "Dialogue", "Diálogo"),
+                                RecitationVoiceMode.MALE to lang.pick("Solo quien guía", "Leader only", "Só quem conduz"),
+                                RecitationVoiceMode.FEMALE to lang.pick("Solo la respuesta", "Response only", "Só a resposta")
+                            ),
+                            selected = voiceMode,
+                            onSelect = { ttsManager.setVoiceMode(it) },
+                            testTag = "rosary_voice_mode_picker"
+                        )
+                    }
                 }
 
                 // While the decade is prayed, its mystery stays in view
@@ -1227,20 +1173,9 @@ fun RosaryScreen(
 
             1 -> {
                 // Divine Mercy Chaplet
-                item {
-                    Spacer(Modifier.height(design.spacing.sectionGap / 2))
-                    AppBanner(
-                        title = "3:00 PM",
-                        body = lang.pick(
-                            "La Hora de la Gran Misericordia",
-                            "The Hour of Great Mercy",
-                            "A Hora da Grande Misericórdia"
-                        )
-                    )
-                }
+                item { Spacer(Modifier.height(design.spacing.cardGap)) }
 
                 item {
-                    AppOrnament()
                     GuideControlsCard(
                         eyebrow = lang.pick("Coronilla", "Chaplet", "Coroinha"),
                         guide = mercyGuide,
@@ -1322,6 +1257,13 @@ fun RosaryScreen(
     }
 }
 
+private fun mysteryIcon(type: RosaryMysteryType) = when (type) {
+    RosaryMysteryType.JOYFUL -> Icons.Default.LocalFlorist
+    RosaryMysteryType.SORROWFUL -> Icons.Default.WaterDrop
+    RosaryMysteryType.GLORIOUS -> Icons.Default.AutoAwesome
+    RosaryMysteryType.LUMINOUS -> Icons.Default.LightMode
+}
+
 /**
  * The rail of the whole rosary, the honest progress line and the controls.
  * [extra] closes the card (the Rosary puts its voice-mode chips there).
@@ -1349,16 +1291,18 @@ private fun GuideControlsCard(
     val step = guide.steps[index]
 
     AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+        // One quiet line: the devotion is already named above the card, so
+        // only the honest count is left to say.
         CardHeading(
-            eyebrow = eyebrow,
-            detail = lang.pick(
+            eyebrow = lang.pick(
                 "Paso ${index + 1} de ${guide.steps.size}",
                 "Step ${index + 1} of ${guide.steps.size}",
                 "Passo ${index + 1} de ${guide.steps.size}"
-            )
+            ),
+            detail = null
         )
 
-        Spacer(Modifier.height(design.spacing.cardPadding))
+        Spacer(Modifier.height(design.spacing.cardGap))
 
         val where = guide.whereLine(step, lang)
         val count = countLine(step, lang)
@@ -1877,39 +1821,27 @@ private fun RecitationControls(
     val design = LocalAppDesign.current
     val haptics = LocalHapticFeedback.current
 
-    Column(Modifier.fillMaxWidth()) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+    // One row: back and next as quiet glyphs flanking the one filled
+    // action, so three slabs no longer stack under the beads.
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+    ) {
+        IconButton(
+            onClick = {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                onPrevious()
+            },
+            enabled = canGoPrevious,
+            modifier = Modifier.testTag(previousTag)
         ) {
-            AppSecondaryButton(
-                label = previousLabel,
-                onClick = {
-                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                    onPrevious()
-                },
-                enabled = canGoPrevious,
-                leadingIcon = Icons.AutoMirrored.Filled.ArrowBack,
-                modifier = Modifier
-                    .weight(1f)
-                    .testTag(previousTag)
-            )
-            AppSecondaryButton(
-                label = nextLabel,
-                onClick = {
-                    haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                    onNext()
-                },
-                enabled = canGoNext,
-                leadingIcon = Icons.AutoMirrored.Filled.ArrowForward,
-                modifier = Modifier
-                    .weight(1f)
-                    .testTag(nextTag)
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                contentDescription = previousLabel,
+                tint = if (canGoPrevious) design.palette.accent else design.palette.textTertiary.copy(alpha = 0.5f)
             )
         }
-
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-
         AppPrimaryButton(
             label = audioLabel,
             onClick = {
@@ -1918,9 +1850,23 @@ private fun RecitationControls(
             },
             leadingIcon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
             modifier = Modifier
-                .fillMaxWidth()
+                .weight(1f)
                 .testTag(audioTag)
         )
+        IconButton(
+            onClick = {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                onNext()
+            },
+            enabled = canGoNext,
+            modifier = Modifier.testTag(nextTag)
+        ) {
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                contentDescription = nextLabel,
+                tint = if (canGoNext) design.palette.accent else design.palette.textTertiary.copy(alpha = 0.5f)
+            )
+        }
     }
 }
 

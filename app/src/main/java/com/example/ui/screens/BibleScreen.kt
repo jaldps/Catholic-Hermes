@@ -179,9 +179,9 @@ fun BibleScreen(
             AppScreenTitle(
                 title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"),
                 subtitle = currentLanguage.pick(
-                    "El canon católico íntegro: 73 libros",
-                    "The whole Catholic canon: 73 books",
-                    "O cânon católico íntegro: 73 livros"
+                    "Los 73 libros del canon católico",
+                    "The 73 books of the Catholic canon",
+                    "Os 73 livros do cânon católico"
                 )
             )
         }
@@ -326,7 +326,6 @@ fun BibleScreen(
 
 // ------------------------------------------------------------------ directory
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun BookDirectory(
     header: LazyListScope.() -> Unit,
@@ -348,10 +347,24 @@ private fun BookDirectory(
     }
     val booksById = remember { repository.catholicBooks.associateBy { it.id } }
 
+    // One filter layer only: the view selector above. The testaments and the
+    // deuterocanon are reached by search ("deutero", "Gospels", "New
+    // Testament") and the sections themselves, not a second row of chips.
     val filteredBooks = remember(searchQuery, selectedFilter, currentLanguage) {
+        val query = searchQuery.trim()
         repository.catholicBooks.filter { book ->
-            val matchesSearch = book.name.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
-                book.abbreviation.contains(searchQuery, ignoreCase = true)
+            val testamentName = if (book.testament == Testament.OLD) {
+                currentLanguage.pick("Antiguo Testamento", "Old Testament", "Antigo Testamento")
+            } else {
+                currentLanguage.pick("Nuevo Testamento", "New Testament", "Novo Testamento")
+            }
+            val matchesSearch = query.isEmpty() ||
+                book.name.get(currentLanguage).contains(query, ignoreCase = true) ||
+                book.category.displayName.get(currentLanguage).contains(query, ignoreCase = true) ||
+                testamentName.contains(query, ignoreCase = true) ||
+                (book.isDeuterocanonical && query.length >= 4 &&
+                    currentLanguage.pick("deuterocanónico", "deuterocanonical", "deuterocanônico")
+                        .contains(query, ignoreCase = true))
             val matchesTab = when (selectedFilter) {
                 1 -> book.testament == Testament.OLD
                 2 -> book.testament == Testament.NEW
@@ -386,43 +399,14 @@ private fun BookDirectory(
                 value = searchQuery,
                 onValueChange = onSearchQueryChange,
                 placeholder = currentLanguage.pick(
-                    "Buscar libro bíblico...",
-                    "Search biblical book...",
-                    "Buscar livro bíblico..."
+                    "Buscar libros y versículos",
+                    "Search books and verses",
+                    "Buscar livros e versículos"
                 ),
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
                     .testTag("bible_search_input")
             )
-        }
-
-        item {
-            val filters = listOf(
-                // The counts live in the section headers below; the chips
-                // stay short enough to sit on one line in every identity.
-                currentLanguage.pick("Todos", "All", "Todos"),
-                currentLanguage.pick("A.T.", "O.T.", "A.T."),
-                currentLanguage.pick("N.T.", "N.T.", "N.T."),
-                currentLanguage.pick("Deuterocanónicos", "Deuterocanon", "Deuterocanônicos")
-            )
-            // Four filters: they wrap on the measure rather than scroll, so the
-            // last one is never sliced by the screen edge.
-            FlowRow(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(top = design.spacing.cardGap),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                filters.forEachIndexed { index, label ->
-                    AppChip(
-                        label = label,
-                        selected = selectedFilter == index,
-                        onClick = { onFilterChange(index) }
-                    )
-                }
-            }
         }
 
         if (filteredBooks.isEmpty() && verseMatches.isEmpty()) {
@@ -440,19 +424,19 @@ private fun BookDirectory(
                     ),
                     icon = Icons.Default.SearchOff
                 )
+                AppSecondaryButton(
+                    label = currentLanguage.pick("Borrar la búsqueda", "Clear search", "Limpar a busca"),
+                    onClick = { onSearchQueryChange("") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                )
             }
         }
 
         grouped.forEach { (category, books) ->
             item(key = "header_${category.name}") {
-                AppSectionHeader(
-                    title = category.displayName.get(currentLanguage),
-                    subtitle = currentLanguage.pick(
-                        "${books.size} libros",
-                        "${books.size} books",
-                        "${books.size} livros"
-                    )
-                )
+                AppSectionHeader(title = category.displayName.get(currentLanguage))
             }
             item(key = "group_${category.name}") {
                 AppListGroup {
@@ -479,7 +463,6 @@ private fun BookDirectory(
                                     )
                                 }
                             },
-                            trailingText = book.abbreviation,
                             onClick = { onOpenBook(book, 1) },
                             modifier = Modifier.testTag("book_item_${book.id}")
                         )
@@ -491,14 +474,7 @@ private fun BookDirectory(
         if (verseMatches.isNotEmpty()) {
             item { AppOrnament() }
             item {
-                AppSectionHeader(
-                    title = currentLanguage.pick("Versículos", "Verses", "Versículos"),
-                    subtitle = currentLanguage.pick(
-                        "Coincidencias en el texto sagrado",
-                        "Matches in the sacred text",
-                        "Correspondências no texto sagrado"
-                    )
-                )
+                AppSectionHeader(title = currentLanguage.pick("Versículos", "Verses", "Versículos"))
             }
             item {
                 AppListGroup {
@@ -508,7 +484,9 @@ private fun BookDirectory(
                             if (it.length > 140) it.take(140).trimEnd() + "…" else it
                         }
                         AppListRow(
-                            title = "${book.name.get(currentLanguage)} $chapter,${verse.number}",
+                            // Spanish and Portuguese cite 3,16; English 3:16.
+                            title = book.name.get(currentLanguage) + " " + chapter +
+                                (if (currentLanguage == AppLanguage.EN) ":" else ",") + verse.number,
                             subtitle = snippet,
                             onClick = { onOpenBook(book, chapter) }
                         )

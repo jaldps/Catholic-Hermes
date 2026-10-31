@@ -49,6 +49,7 @@ import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.filled.TaskAlt
 import androidx.compose.material.icons.filled.WbTwilight
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -61,6 +62,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
@@ -83,6 +86,7 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
+import com.example.ui.components.TextFormat
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
@@ -179,17 +183,25 @@ fun HomeScreen(
         item {
             AppScreenTitle(
                 title = strings("Hoy", "Today", "Hoje"),
-                subtitle = strings(
-                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
-                    "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
-                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
-                )
+                // The date and the year's cycles: one quiet line, since the
+                // banner below already carries the day and its colour.
+                subtitle = listOfNotNull(
+                    strings(
+                        "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
+                        "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
+                        "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
+                    ),
+                    liturgicalDay.sundayCycle?.get(currentLanguage),
+                    liturgicalDay.weekdayCycle?.get(currentLanguage)
+                ).joinToString(" · ")
             )
         }
 
         // The liturgical colour is the one literal colour the data owns, and
         // the banner is where each identity decides what to do with it.
         item {
+            // The day's particulars ride under its title: the banner already
+            // carries the colour, so no second card restates it.
             AppBanner(
                 title = liturgicalDay.seasonName.get(currentLanguage),
                 body = liturgicalDay.celebrationTitle.get(currentLanguage),
@@ -199,32 +211,9 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        item {
+        if (liturgicalDay.fastingRule != null || gospelOfRecord != null) item {
             AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                // The day's particulars are metadata, not filters: one quiet
-                // line keyed by the liturgical colour, not a row of chips that
-                // look tappable.
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Box(
-                        Modifier
-                            .size(10.dp)
-                            .clip(design.shapes.chip)
-                            .background(liturgicalPigment)
-                    )
-                    Spacer(Modifier.width(design.spacing.iconLabelGap))
-                    Text(
-                        text = listOfNotNull(
-                            colorLabel,
-                            liturgicalDay.rank.get(currentLanguage),
-                            liturgicalDay.sundayCycle?.get(currentLanguage),
-                            liturgicalDay.weekdayCycle?.get(currentLanguage)
-                        ).joinToString("  ·  "),
-                        style = styles.rowSubtitle,
-                        color = palette.textSecondary
-                    )
-                }
                 liturgicalDay.fastingRule?.let {
-                    Spacer(Modifier.height(design.spacing.cardGap / 2))
                     DayBadge(
                         label = it.get(currentLanguage),
                         tint = palette.accent,
@@ -237,8 +226,10 @@ fun HomeScreen(
                 }
 
                 if (gospelOfRecord != null) {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    AppDivider()
+                    if (liturgicalDay.fastingRule != null) {
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        AppDivider()
+                    }
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -329,37 +320,6 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // Habit & virtue tracker summary.
-        item {
-            AppCard(
-                modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("home_habit_tracker_card"),
-                onClick = onNavigateToHabits
-            ) {
-                CardHeading(
-                    label = strings(
-                        "Regla de vida",
-                        "Rule of life",
-                        "Regra de vida"
-                    ),
-                    icon = Icons.Default.Star,
-                    trailing = strings("Ver Panel", "Dashboard", "Painel"),
-                    trailingColor = palette.accent
-                )
-                Spacer(Modifier.height(10.dp))
-                Text(
-                    text = strings(
-                        "Sigue tus devociones diarias, ayuno y el Antídoto contra la tentación.",
-                        "Track your daily devotions, fasting, and Grace Antidote against sins.",
-                        "Acompanhe suas práticas diárias, jejum e o Antídoto contra o pecado."
-                    ),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = palette.textSecondary
-                )
-            }
-        }
-
         // Daily sanctification routine. Four rows rather than four tiles: the
         // Spanish and Portuguese hour names do not survive a 4-across grid.
         item {
@@ -375,28 +335,44 @@ fun HomeScreen(
         item {
             AppListGroup {
                 AppListRow(
-                    title = strings("Laudes", "Morning", "Laudes"),
+                    title = strings("Laudes", "Morning Prayer", "Laudes"),
                     leadingIcon = Icons.Default.LightMode,
-                    trailingText = "6:00 AM",
+                    trailingText = TextFormat.clock(6, 0, currentLanguage),
                     onClick = onNavigateToPrayers
                 )
                 AppListRow(
                     title = strings("El Ángelus", "The Angelus", "O Angelus"),
                     leadingIcon = Icons.Default.WbTwilight,
-                    trailingText = "12:00 PM",
+                    trailingText = TextFormat.clock(12, 0, currentLanguage),
                     onClick = onNavigateToPrayers
                 )
                 AppListRow(
                     title = strings("Santo Rosario", "Holy Rosary", "Santo Terço"),
                     leadingIcon = Icons.Default.SelfImprovement,
-                    trailingText = strings("Hoy", "Today", "Hoje"),
+                    trailingText = TextFormat.clock(18, 0, currentLanguage),
                     onClick = onNavigateToRosary
                 )
                 AppListRow(
-                    title = strings("Completas", "Night Examen", "Completas"),
+                    title = strings("Completas", "Night Prayer", "Completas"),
                     leadingIcon = Icons.Default.NightsStay,
-                    trailingText = "9:00 PM",
+                    trailingText = TextFormat.clock(21, 0, currentLanguage),
                     onClick = onNavigateToPrayers
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+            // The rule of life is a place to go, so it is a row with a
+            // disclosure, not a card with a stray text link.
+            AppListGroup {
+                AppListRow(
+                    title = strings("Regla de vida", "Rule of life", "Regra de vida"),
+                    subtitle = strings(
+                        "Tus prácticas, ayunos y propósitos",
+                        "Your practices, fasts and resolutions",
+                        "As tuas práticas, jejuns e propósitos"
+                    ),
+                    leadingIcon = Icons.Default.TaskAlt,
+                    onClick = onNavigateToHabits,
+                    modifier = Modifier.testTag("home_habit_tracker_card")
                 )
             }
             Spacer(Modifier.height(design.spacing.sectionGap / 2))
@@ -420,15 +396,26 @@ fun HomeScreen(
                 Spacer(Modifier.height(design.spacing.cardGap))
 
                 if (massCitations.isEmpty() && vaticanResult == null) {
-                    Text(
-                        text = strings(
-                            "Cargando las lecturas de hoy…",
-                            "Loading today's readings…",
-                            "A carregar as leituras de hoje…"
-                        ),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = palette.textSecondary
-                    )
+                    // A quiet placeholder in the shape of the citations to
+                    // come, rather than a sentence announcing that they are.
+                    val placeholder = palette.textTertiary.copy(alpha = 0.16f)
+                    listOf(0.42f, 0.7f, 0.36f, 0.62f).forEachIndexed { i, fraction ->
+                        if (i > 0) Spacer(Modifier.height(if (i % 2 == 0) 14.dp else 6.dp))
+                        Box(
+                            Modifier
+                                .fillMaxWidth(fraction)
+                                .height(if (i % 2 == 0) 10.dp else 14.dp)
+                                .clip(design.shapes.chip)
+                                .background(placeholder)
+                                .semantics {
+                                    contentDescription = strings(
+                                        "Cargando las lecturas de hoy",
+                                        "Loading today's readings",
+                                        "A carregar as leituras de hoje"
+                                    )
+                                }
+                        )
+                    }
                 } else if (massCitations.isEmpty()) {
                     Text(
                         text = strings(

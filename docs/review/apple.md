@@ -83,3 +83,32 @@ Open:
 - **Parish rows** — `ParishFinderScreen.kt` bundled directory: a 3-line title, 2-line subtitle and the trailing district in one row. Put the district in the subtitle ("Centro · Archidiócesis de Madrid") and drop `trailingText`, or cap the title at 2 lines.
 - **Calendar footer** — `PilgrimageAndHabitsScreen.kt`: "Fasting and precept / Mass obligation" floats at the gutter between groups. Make it a row in the celebration's group (`AppListRow(title = "Fasting and precept", trailingText = "Mass obligation")`) so it aligns with the rows above.
 - **Rosary bead map** — `RosaryScreen.kt`: all 59 beads in systemGray at rest make a heavy grey slab. Untold beads should be the quaternary fill (hollow ring or ~30% grey), so the told ones in the tint carry the picture.
+
+## Round 4 (kit): system-colour wells, liturgical hero, contrast
+
+Kit changes: icon wells take a semantic iOS system colour per glyph (morning orange, night indigo, rosary Marian blue, books orange, Maps red pin, fasting purple, grey for utility links) in place of one green; filled controls are struck so white reads at ≥4.6:1 (dark "Read today's Mass" now passes AA); secondaryLabel/tertiaryLabel firmed to ≥4.5:1 / ~3.2:1; a large title has no subtitle line — a short one (date, Latin incipit) becomes a footnote-caps eyebrow *above* the title, a tagline is dropped; section-header counts ride the header baseline as trailing text, explanations drop to a footnote; a liturgical `AppBanner` (accentColorHex set) is the signature hero — vestment-colour wash, glowing lit disc, title3 headline, particulars after `\n` as secondary — and a dated entry ("Nov 1 · Solemnity") renders the compact variant, so the calendar reads as a colour-coded year; the nav bar fades in its material, hairline and inline title once the large title scrolls under it; bar buttons sit on a Liquid Glass capsule (hidden when there are none); empty states get a tinted halo symbol.
+
+| Screen | Before (judge) | After |
+|---|---|---|
+| home | 7.0 | 9 |
+| bible | 7.5 | 8.5 |
+| rosary | 7.0 | 8.5 |
+| prayers | 6.5 | 8.5 |
+| more | 7.5 | 9.5 |
+| catechism | 6.5 | 9 |
+| doctrine | 6.5 | 8.5 |
+| churches_news | 6.5 | 8.5 |
+| habits_virtues | 7.0 | 9 |
+| spiritual_life | 6.5 | 8.5 |
+| parishes | 7.0 | 8.5 |
+| pilgrimage_habits | 6.5 | 9 |
+
+## Round 4 shared-screen requests
+
+- **Home cards** — `HomeScreen.kt` "Today's Mass Readings" / "Verse of the Day": grey icon + grey caption inside the card is a third header grammar. Use `AppSectionHeader` inside the card (renders as tinted subheadline) or a section header outside it; replace "Loading today's readings…" with a redacted placeholder, or hide the CTA until loaded.
+- **Doctrine commandments** — `DoctrineAndHistoryScreen.kt`: the Roman numeral as `trailingText` beside the chevron reads as a value. Put it at the start of the title ("I. You shall love…") or in the subtitle ("I · Exodus 20:2–3") and drop `trailingText`.
+- **Parishes directory** — `ParishFinderScreen.kt` "Great churches of the world": rows open a detail but pass `showsNavigationAffordance = false`; set it true (Churches & News already does). Top card: three entry points (filled, tinted, search). Keep search + one button; "Use my location" belongs as a trailing glyph in the search row.
+- **Rosary controls** — `RosaryScreen.kt`: Back/Next as two 50pt tinted slabs plus a 50pt filled "Pray aloud" make three big buttons under the ring. Make Back/Next borderless capsule glyph buttons flanking the step caption, keep "Pray aloud" as the one filled button. Tie the told beads to the tint so the ring shows progress.
+- **Spiritual life / Habits empty states** — fine now; add 2–3 suggestion rows under the CTA (Journal-style prompts: "A grace received today", "An intention") so the lower 60% isn't void.
+- **Calendar detail groups** — `PilgrimageAndHabitsScreen.kt`: the hero and its Gospel/obligation group sit 12dp apart but the next day is 24dp away — good; drop the "Mass obligation" row title-only (no value) into the hero's particulars (`body = title + "\nMass obligation"`), which the hero renders as a secondary line.
+- **Prayers single section** — the Chaplets section has one row; fold it into the main group with "Chaplet" in the subtitle, or keep only when ≥2 rows.

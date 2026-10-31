@@ -76,7 +76,7 @@ enum class AppDestination(
     DOCTRINE("Doctrina e Historia", "Doctrine & History", "Doutrina e História", AppIconSlot.DOCTRINE, "nav_doctrine"),
     PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PARISH, "nav_parishes"),
     CHURCHES_NEWS("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias", AppIconSlot.NEWS, "nav_churches_news"),
-    SPIRITUAL_LIFE("Diario y Quiz", "Journal & Quiz", "Diário e Quiz", AppIconSlot.JOURNAL, "nav_spiritual"),
+    SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
     MORE("Más", "More", "Mais", AppIconSlot.MORE, "nav_more");
 
     companion object {
@@ -140,56 +140,9 @@ fun MainApp(
         selectedNavIndex = tabs.indexOf(if (isPushed) origin else current),
         onNavSelected = { go(tabs[it]) },
         onBack = if (isPushed) ({ current = origin }) else null,
-        backLabel = if (isPushed) origin.title(currentLanguage) else null,
-        actions = {
-            // Bar buttons in each identity's own idiom: iOS tints its bar
-            // glyphs, M3 leaves app-bar actions onSurfaceVariant, and the
-            // Vatican running head sets the language as a Cinzel code rather
-            // than an emoji flag, which no printed page would carry.
-            val barTint = when (design.language) {
-                DesignLanguage.APPLE -> MaterialTheme.colorScheme.primary
-                DesignLanguage.MATERIAL -> LocalContentColor.current
-                DesignLanguage.VATICAN -> design.palette.textSecondary
-            }
-            IconButton(
-                onClick = { showCustomizerModal = true },
-                modifier = Modifier.testTag("app_bar_theme_button")
-            ) {
-                Icon(
-                    imageVector = when (design.language) {
-                        DesignLanguage.APPLE -> Icons.Outlined.Palette
-                        DesignLanguage.MATERIAL -> Icons.Outlined.Palette
-                        DesignLanguage.VATICAN -> Icons.Sharp.Palette
-                    },
-                    contentDescription = when (currentLanguage) {
-                        AppLanguage.ES -> "Apariencia"
-                        AppLanguage.EN -> "Appearance"
-                        AppLanguage.PT -> "Aparência"
-                    },
-                    tint = barTint,
-                    modifier = Modifier.size(22.dp)
-                )
-            }
-            IconButton(
-                onClick = { showLanguageSelector = true },
-                modifier = Modifier.testTag("app_bar_lang_button")
-            ) {
-                when (design.language) {
-                    DesignLanguage.VATICAN -> Text(
-                        text = currentLanguage.code.uppercase(),
-                        style = LocalAppTextStyles.current.sectionEyebrow,
-                        color = barTint
-                    )
-                    else -> Icon(
-                        imageVector = if (design.language == DesignLanguage.APPLE) Icons.Outlined.Language
-                        else Icons.Outlined.Translate,
-                        contentDescription = currentLanguage.displayName,
-                        tint = barTint,
-                        modifier = Modifier.size(22.dp)
-                    )
-                }
-            }
-        }
+        backLabel = if (isPushed) origin.title(currentLanguage) else null
+        // Appearance and language are settings, listed under More, not two
+        // glyphs floating over every screen.
     ) { innerPadding ->
         BackHandler(enabled = current != AppDestination.HOME) {
             if (isPushed) current = origin else go(AppDestination.HOME)
@@ -309,7 +262,43 @@ fun MainApp(
                         sections = moreSections(currentLanguage) { destination ->
                             if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
                             go(destination)
-                        }
+                        } + MoreSection(
+                            when (currentLanguage) {
+                                AppLanguage.ES -> "Ajustes"
+                                AppLanguage.EN -> "Settings"
+                                AppLanguage.PT -> "Ajustes"
+                            },
+                            listOf(
+                                MoreEntry(
+                                    title = when (currentLanguage) {
+                                        AppLanguage.ES -> "Apariencia"
+                                        AppLanguage.EN -> "Appearance"
+                                        AppLanguage.PT -> "Aparência"
+                                    },
+                                    subtitle = when (currentLanguage) {
+                                        AppLanguage.ES -> "Estilo, tema y tamaño del texto"
+                                        AppLanguage.EN -> "Style, theme and text size"
+                                        AppLanguage.PT -> "Estilo, tema e tamanho do texto"
+                                    },
+                                    iconSlot = AppIconSlot.MORE,
+                                    tag = "app_bar_theme_button",
+                                    onOpen = { showCustomizerModal = true },
+                                    icon = Icons.Outlined.Palette
+                                ),
+                                MoreEntry(
+                                    title = when (currentLanguage) {
+                                        AppLanguage.ES -> "Idioma"
+                                        AppLanguage.EN -> "Language"
+                                        AppLanguage.PT -> "Idioma"
+                                    },
+                                    subtitle = currentLanguage.displayName,
+                                    iconSlot = AppIconSlot.MORE,
+                                    tag = "app_bar_lang_button",
+                                    onOpen = { showLanguageSelector = true },
+                                    icon = Icons.Outlined.Language
+                                )
+                            )
+                        )
                     )
                 }
             }
@@ -354,22 +343,22 @@ private fun moreSections(
             pick("Estudio", "Study", "Estudo"),
             listOf(
                 entry(AppDestination.CATECHISM, "Los 2865 artículos, por partes", "All 2,865 paragraphs, by part", "Os 2865 parágrafos, por partes"),
-                entry(AppDestination.DOCTRINE, "Doctrina, María y Jesús, historia de la Iglesia", "Doctrine, Mary and Jesus, Church history", "Doutrina, Maria e Jesus, história da Igreja"),
-                entry(AppDestination.CHURCHES_NEWS, "Noticias del Vaticano y directorio", "Vatican news and directory", "Notícias do Vaticano e diretório")
+                entry(AppDestination.DOCTRINE, "Mandamientos, devociones, historia", "Commandments, devotions, history", "Mandamentos, devoções, história"),
+                entry(AppDestination.CHURCHES_NEWS, "Directorio y noticias del Vaticano", "Directory and Vatican news", "Diretório e notícias do Vaticano")
             )
         ),
         MoreSection(
             pick("Vida interior", "Inner life", "Vida interior"),
             listOf(
                 entry(AppDestination.HABITS_VIRTUES, "Examen, virtudes y hábitos diarios", "Examen, virtues and daily habits", "Exame, virtudes e hábitos diários"),
-                entry(AppDestination.SPIRITUAL_LIFE, "Diario espiritual y preguntas de fe", "Spiritual journal and faith quiz", "Diário espiritual e quiz de fé")
+                entry(AppDestination.SPIRITUAL_LIFE, "Diario, preguntas, vía crucis y canto", "Journal, quiz, Stations and chant", "Diário, quiz, via-sacra e canto")
             )
         ),
         MoreSection(
             pick("Lugares", "Places", "Lugares"),
             listOf(
                 entry(AppDestination.PARISHES, "Misa cerca de ti", "Mass near you", "Missa perto de você"),
-                entry(AppDestination.PILGRIMAGE_HABITS, "Año litúrgico, hábitos y santuarios", "Church year, habits and shrines", "Ano litúrgico, hábitos e santuários")
+                entry(AppDestination.PILGRIMAGE_HABITS, "Año litúrgico y santuarios", "Church year and shrines", "Ano litúrgico e santuários")
             )
         )
     )

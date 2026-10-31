@@ -55,6 +55,7 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppMetricTile
 import com.example.ui.design.AppOrnament
+import com.example.ui.components.TextFormat
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
@@ -95,8 +96,9 @@ fun PilgrimageAndHabitsScreen(
     }
 
     val tabs = listOf(
+        // The daily habits live in Habits & Virtues; here, only the year and
+        // the places.
         currentLanguage.pick("Calendario", "Calendar", "Calendário"),
-        currentLanguage.pick("Hábitos", "Habits", "Hábitos"),
         currentLanguage.pick("Santuarios", "Shrines", "Santuários")
     )
     val tabsInset = segmentedTabsInset()
@@ -111,11 +113,7 @@ fun PilgrimageAndHabitsScreen(
                     "Calendar & Shrines",
                     "Calendário e Santuários"
                 ),
-                subtitle = currentLanguage.pick(
-                    "El año de la Iglesia, una regla de vida y los lugares santos.",
-                    "The Church's year, a rule of life and the holy places.",
-                    "O ano da Igreja, uma regra de vida e os lugares santos."
-                )
+                subtitle = null
             )
         }
         item(key = "pilgrimage_tabs") {
@@ -137,14 +135,6 @@ fun PilgrimageAndHabitsScreen(
         when (selectedMainTab) {
             0 -> LiturgicalCalendarTab(
                 days = repository.liturgicalCalendarDays,
-                currentLanguage = currentLanguage,
-                header = header
-            )
-
-            1 -> HolyHabitsTab(
-                habits = repository.spiritualHabitsList,
-                isCompleted = { id -> habitCompletionMap[id] ?: false },
-                onToggle = { id -> habitCompletionMap[id] = !(habitCompletionMap[id] ?: false) },
                 currentLanguage = currentLanguage,
                 header = header
             )
@@ -195,11 +185,7 @@ private fun LiturgicalCalendarTab(
                         "Upcoming celebrations",
                         "Próximas celebrações"
                     ),
-                    subtitle = currentLanguage.pick(
-                        "Colores litúrgicos, solemnidades y días de precepto.",
-                        "Liturgical colours, solemnities and days of precept.",
-                        "Cores litúrgicas, solenidades e dias de preceito."
-                    )
+                    subtitle = null
                 )
             }
 
@@ -229,7 +215,8 @@ private fun LiturgicalDayEntry(day: LiturgicalCalendarDay, currentLanguage: AppL
                 "${day.monthName} ${day.dayOfMonth}",
                 "${day.dayOfMonth} de ${day.monthName.lowercase()}"
             ) + " · " + day.rank.get(currentLanguage),
-            body = day.celebrationTitle.get(currentLanguage),
+            body = day.celebrationTitle.get(currentLanguage) +
+                (day.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }?.let { "\n$it" } ?: ""),
             accentColorHex = day.liturgicalColorHex
         )
 
@@ -238,25 +225,20 @@ private fun LiturgicalDayEntry(day: LiturgicalCalendarDay, currentLanguage: AppL
         // rather than a note floating in the gutter beneath. A plain weekday
         // with neither is the banner alone.
         val gospel = day.gospelVerseRef.takeIf { it.isNotBlank() }
-        val precept = day.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
+        val precept: String? = null // carried by the hero's second line
         if (gospel != null || precept != null) {
             Spacer(Modifier.height(design.spacing.cardGap / 2))
             AppListGroup {
                 if (gospel != null) {
                     AppListRow(
                         title = currentLanguage.pick("Evangelio", "Gospel", "Evangelho"),
-                        trailingText = gospel,
+                        trailingText = TextFormat.ranges(gospel),
                         showsNavigationAffordance = false
                     )
                 }
                 if (precept != null) {
                     AppListRow(
-                        title = currentLanguage.pick(
-                            "Ayuno y precepto",
-                            "Fasting and precept",
-                            "Jejum e preceito"
-                        ),
-                        subtitle = precept,
+                        title = precept,
                         showsNavigationAffordance = false
                     )
                 }
