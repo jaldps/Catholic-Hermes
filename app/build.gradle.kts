@@ -69,6 +69,7 @@ android {
       all { test ->
         // Lets a screenshot run be narrowed: -Pshots.only=home,bible
         project.findProperty("shots.only")?.let { test.systemProperty("shots.only", it) }
+        project.findProperty("shots.lang")?.let { test.systemProperty("shots.lang", it) }
         test.maxHeapSize = "3g"
       }
     }

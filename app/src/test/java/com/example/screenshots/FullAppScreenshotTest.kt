@@ -47,17 +47,21 @@ class FullAppScreenshotTest {
     private val only: Set<String>? = System.getProperty("shots.only")
         ?.split(',')?.map { it.trim().lowercase() }?.filter { it.isNotEmpty() }?.toSet()
 
+    /** -Pshots.lang=es|pt renders the app in that language; English by default. */
+    private val language: AppLanguage = System.getProperty("shots.lang")
+        ?.let { AppLanguage.fromCode(it.trim().lowercase()) } ?: AppLanguage.EN
+
     private fun idle() = shadowOf(Looper.getMainLooper()).idle()
 
     private fun render(identity: DesignLanguage, dark: Boolean) {
-        val repository = CatholicDataRepository(context).apply { setLanguage(AppLanguage.EN) }
+        val repository = CatholicDataRepository(context).apply { setLanguage(language) }
         val db = Room.inMemoryDatabaseBuilder(context, SanctaFidesDatabase::class.java)
             .allowMainThreadQueries()
             .build()
         val tts = LiturgicalTtsManager(context)
         val store = UserPreferencesStore(context)
         val prefs = UserPreferences(
-            language = AppLanguage.EN,
+            language = language,
             designLanguage = identity.id,
             themePreset = UserPreferences.DEFAULT_THEME_PRESET,
             darkModeSetting = if (dark) "DARK" else "LIGHT",
@@ -107,7 +111,8 @@ class FullAppScreenshotTest {
             idle()
             val bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
             view.draw(Canvas(bitmap))
-            val file = File(outputDir, "${name}_${identity.id.lowercase()}_${if (dark) "dark" else "light"}.png")
+            val suffix = if (language == AppLanguage.EN) "" else "_${language.code}"
+            val file = File(outputDir, "${name}_${identity.id.lowercase()}_${if (dark) "dark" else "light"}$suffix.png")
             file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
             println("WROTE ${file.absolutePath}")
             controller.close()
