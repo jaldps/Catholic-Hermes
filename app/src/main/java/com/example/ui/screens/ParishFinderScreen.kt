@@ -41,6 +41,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.ui.components.SacredHero
+import com.example.ui.components.SacredSubject
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.Dp
@@ -256,6 +258,7 @@ fun ParishFinderScreen(
                 )
             )
         }
+        item { SacredHero(SacredSubject.CHURCH) }
 
         // Search sits in the gutter like every other search in the app, not
         // nested in a card; the one location action follows it.

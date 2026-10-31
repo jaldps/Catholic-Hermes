@@ -51,6 +51,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.ui.components.SacredHero
+import com.example.ui.components.SacredSubject
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
@@ -255,6 +257,7 @@ fun SpiritualLifeScreen(
                 subtitle = null
             )
         }
+        item(key = "hero_art") { SacredHero(SacredSubject.DOVE) }
         item(key = "spiritual_life_tabs") {
             // Three destinations: the quiz and the chant share "Learn", chosen
             // by one menu row beneath, so the control never carries four.

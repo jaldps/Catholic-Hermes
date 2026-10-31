@@ -63,6 +63,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.ui.components.SacredHero
+import com.example.ui.components.SacredSubject
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.draw.clip
@@ -203,6 +205,7 @@ fun HomeScreen(
                 )
             )
         }
+        item { SacredHero(SacredSubject.DAY) }
 
         // 1. The hero: the liturgical day. The colour is the one literal
         // colour the data owns, and the banner is where each identity decides

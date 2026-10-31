@@ -57,6 +57,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.ui.components.SacredHero
+import com.example.ui.components.SacredSubject
 import com.example.data.repository.BibleData
 import com.example.data.xref.VerseRef
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -203,6 +205,7 @@ fun BibleScreen(
                 )
             )
         }
+        item(key = "hero_art") { SacredHero(SacredSubject.SCRIPTURE) }
         item(key = "bible_screen_tabs") {
             AppSegmentedTabs(
                 // Three views; Versions is a row inside the Bible view, so the

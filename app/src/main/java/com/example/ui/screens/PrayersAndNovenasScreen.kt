@@ -45,6 +45,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.example.ui.components.SacredHero
+import com.example.ui.components.SacredSubject
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -185,6 +187,7 @@ fun PrayersAndNovenasScreen(
         item(key = "prayers_screen_title") {
             AppScreenTitle(title = currentLanguage.pick("Oraciones", "Prayers", "Orações"))
         }
+        item(key = "hero_art") { SacredHero(SacredSubject.PRAYER) }
         item(key = "prayers_screen_tabs") {
             AppSegmentedTabs(
                 // The chaplet is a devotion, opened from the Prayers list,

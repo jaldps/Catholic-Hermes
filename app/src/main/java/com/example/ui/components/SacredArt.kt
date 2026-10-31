@@ -12,6 +12,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
@@ -117,16 +121,22 @@ fun SacredArt(
         tertiary = scheme.tertiary
     )
 
-    val transition = rememberInfiniteTransition(label = "sacredArt")
-    val breath = transition.animateFloat(
-        initialValue = 0f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 5600, easing = FastOutSlowInEasing),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "breath"
-    )
+    // Previews and screenshots hold the glory still; the app lets it breathe.
+    val still = androidx.compose.ui.platform.LocalInspectionMode.current
+    val breath: androidx.compose.runtime.State<Float> = if (still) {
+        androidx.compose.runtime.remember { androidx.compose.runtime.mutableFloatStateOf(0.5f) }
+    } else {
+        val transition = rememberInfiniteTransition(label = "sacredArt")
+        transition.animateFloat(
+            initialValue = 0f,
+            targetValue = 1f,
+            animationSpec = infiniteRepeatable(
+                animation = tween(durationMillis = 5600, easing = FastOutSlowInEasing),
+                repeatMode = RepeatMode.Reverse
+            ),
+            label = "breath"
+        )
+    }
 
     Spacer(
         modifier
@@ -1461,4 +1471,22 @@ private fun Painter.dove() {
         addOval(Rect(P(0.022f, 0.118f), st.d(0.0065f)))
     }
     form(eyes, Tone.DEEP)
+}
+
+/**
+ * A screen's one moment of imagery: the illustration as a hero under its
+ * title, inset to the gutter and kept short so the content still starts above
+ * the fold.
+ */
+@Composable
+fun SacredHero(subject: SacredSubject, modifier: Modifier = Modifier) {
+    val design = com.example.ui.theme.LocalAppDesign.current
+    SacredArt(
+        subject = subject,
+        modifier = modifier
+            .padding(horizontal = design.spacing.gutter)
+            .padding(bottom = design.spacing.cardGap)
+            .fillMaxWidth()
+            .height(136.dp)
+    )
 }

@@ -85,6 +85,10 @@ class FullAppScreenshotTest {
                         themePreset = prefs.themePreset,
                         darkModeSetting = prefs.darkModeSetting
                     ) {
+                        // Holds looping ornament still so the looper can go idle.
+                        androidx.compose.runtime.CompositionLocalProvider(
+                            androidx.compose.ui.platform.LocalInspectionMode provides true
+                        ) {
                         MainApp(
                             repository = repository,
                             dao = db.dao(),
@@ -93,6 +97,7 @@ class FullAppScreenshotTest {
                             preferences = prefs,
                             initialDestination = destination
                         )
+                        }
                     }
                 }
             }
