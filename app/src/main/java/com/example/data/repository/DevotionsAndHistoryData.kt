@@ -160,7 +160,8 @@ object DevotionsAndHistoryData {
     val saintOfTheDay: SaintOfTheDay get() = getTodaySaint()
 
     val verseOfTheDay = VerseOfTheDay(
-        reference = "Filipenses 4, 6-7",
+        // Canonical citation; the repository renders it in the reader's language.
+        reference = "phi 4:6-7",
         text = LocalizedText(
             "«No se angustien por nada; más bien, en toda ocasión, con oración y súplica y acción de gracias, presenten sus peticiones a Dios. Y la paz de Dios, que sobrepasa todo entendimiento, cuidará sus corazones y sus pensamientos en Cristo Jesús».",
             "“Have no anxiety at all, but in everything, by prayer and petition, with thanksgiving, make your requests known to God. Then the peace of God that surpasses all understanding will guard your hearts and minds in Christ Jesus.”",

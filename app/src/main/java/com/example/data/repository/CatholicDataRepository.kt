@@ -207,7 +207,10 @@ class CatholicDataRepository(
 
     // Saints & Devotions
     val saintOfTheDay: SaintOfTheDay get() = DevotionsAndHistoryData.saintOfTheDay
-    val verseOfTheDay: VerseOfTheDay get() = DevotionsAndHistoryData.verseOfTheDay
+    val verseOfTheDay: VerseOfTheDay
+        get() = DevotionsAndHistoryData.verseOfTheDay.let {
+            it.copy(reference = scriptureResolver.display(it.reference, _currentLanguage.value))
+        }
     val marianApparitions: List<MarianApparition> get() = DevotionsAndHistoryData.marianApparitions
     val christManifestations: List<ChristManifestation> get() = DevotionsAndHistoryData.christManifestations
 

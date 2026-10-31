@@ -1,5 +1,10 @@
 package com.example.ui.screens
 
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.produceState
+import com.example.data.liturgy.LiturgicalCalendar
+import com.example.data.news.VaticanGospelFetcher
+import com.example.data.news.ReadingsResult
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
@@ -136,9 +141,20 @@ fun HomeScreen(
         ?.takeIf { it.isNotBlank() }
     val gospelOfRecord = liturgicalDay.gospelVerseRef.takeIf { it.isNotBlank() }
 
+    // Today's readings from the Vatican's own feed, the same source the Missal
+    // tab uses; the bundled lectionary is the offline fallback.
+    val isoToday = remember {
+        val d = LiturgicalCalendar.today()
+        "%04d-%02d-%02d".format(d.year, d.month, d.day)
+    }
+    val vaticanResult by produceState<ReadingsResult?>(null, currentLanguage, isoToday) {
+        value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+    }
+    val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
+
     // A ferial weekday is not in the bundled lectionary, and the repository
     // leaves its citations empty rather than borrowing another day's readings.
-    val massCitations = listOfNotNull(
+    val bundledCitations = listOfNotNull(
         strings("Primera lectura", "First reading", "Primeira leitura") to dailyReading.firstReadingRef,
         strings("Salmo responsorial", "Responsorial psalm", "Salmo responsorial")
             to dailyReading.responsorialPsalmRef,
@@ -147,7 +163,12 @@ fun HomeScreen(
         },
         strings("Evangelio", "Gospel", "Evangelho") to dailyReading.gospelRef
     ).filter { it.second.isNotBlank() }
-    val gospelExcerpt = dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
+    val massCitations = vatican?.sections
+        ?.map { section -> section.heading to section.citation.ifBlank { "" } }
+        ?.map { (heading, citation) -> if (citation.isBlank()) "" to heading else heading to citation }
+        ?: bundledCitations
+    val gospelExcerpt = vatican?.sections?.lastOrNull()?.text?.takeIf { it.isNotBlank() }
+        ?: dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
 
     LazyColumn(
         modifier = modifier
@@ -391,7 +412,17 @@ fun HomeScreen(
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
 
-                if (massCitations.isEmpty()) {
+                if (massCitations.isEmpty() && vaticanResult == null) {
+                    Text(
+                        text = strings(
+                            "Cargando las lecturas de hoy…",
+                            "Loading today's readings…",
+                            "A carregar as leituras de hoje…"
+                        ),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = palette.textSecondary
+                    )
+                } else if (massCitations.isEmpty()) {
                     Text(
                         text = strings(
                             "El leccionario incluido no trae las lecturas de esta feria. " +
@@ -411,12 +442,14 @@ fun HomeScreen(
                     // sharing its line.
                     massCitations.forEachIndexed { index, (label, reference) ->
                         if (index > 0) Spacer(Modifier.height(12.dp))
-                        Text(
-                            text = label.uppercase(),
-                            style = styles.sectionEyebrow,
-                            color = palette.textTertiary
-                        )
-                        Spacer(Modifier.height(3.dp))
+                        if (label.isNotBlank()) {
+                            Text(
+                                text = label.uppercase(),
+                                style = styles.sectionEyebrow,
+                                color = palette.textTertiary
+                            )
+                            Spacer(Modifier.height(3.dp))
+                        }
                         Text(
                             text = reference,
                             style = styles.rowSubtitle,
@@ -440,9 +473,9 @@ fun HomeScreen(
                 Spacer(Modifier.height(design.spacing.cardGap))
                 AppPrimaryButton(
                     label = strings(
-                        "Leer Misa Completa y Comentarios",
-                        "Read Full Mass & Commentaries",
-                        "Ler Missa Completa e Reflexões"
+                        "Leer la Misa de hoy",
+                        "Read today's Mass",
+                        "Ler a Missa de hoje"
                     ),
                     onClick = onNavigateToMissal,
                     leadingIcon = Icons.Default.AutoStories,
