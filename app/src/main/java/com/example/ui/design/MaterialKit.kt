@@ -417,6 +417,9 @@ object MaterialKit : AppKit {
     /** M3 Expressive "Cookie 9": the hero shape for an empty state. */
     private val CookieShape: Shape = ScallopShape(lobes = 9, depth = 0.10f)
 
+    /** "4-leaf clover", for the stat tiles' glyphs. */
+    private val CloverShape: Shape = ScallopShape(lobes = 4, depth = 0.16f, rotation = 45f)
+
     /** "Soft burst": twelve shallow lobes, for the liturgical banner's seal. */
     private val SoftBurstShape: Shape = ScallopShape(lobes = 12, depth = 0.09f, rotation = 15f)
 
@@ -1740,12 +1743,15 @@ object MaterialKit : AppKit {
             // out of line with its neighbours'.
             Column(Modifier.padding(16.dp)) {
                 if (icon != null) {
+                    // A four-leaf clover, not another circle: stat tiles are
+                    // the one place on a screen meant to be glanced at.
                     TonalIconCircle(
                         icon = icon,
                         container = c.accentSoft,
                         tint = c.onAccentSoft,
-                        size = 32.dp,
-                        glyph = 18.dp
+                        size = 36.dp,
+                        glyph = 18.dp,
+                        shape = CloverShape
                     )
                     Spacer(Modifier.height(12.dp))
                 }
@@ -1825,6 +1831,10 @@ object MaterialKit : AppKit {
         val (h, sat, l) = hsl()
         val (ph, ps, _) = primary.hsl()
         if (sat < 0.05f || ps < 0.05f) return this
+        // Gold is the exception. Any turn toward a green seed — and even its
+        // own hue struck at a container or seal tone — reads as olive, so
+        // it is pinned to amber, where its tones stay gold at every lightness.
+        if (h in 35f..70f) return Color.hsl(40f, sat, l, alpha)
         val diff = ((ph - h + 540f) % 360f) - 180f
         // MCU allows 15°; at that a liturgical gold turned olive beside a
         // green seed, so the turn is held to 8°: enough to share the
@@ -1883,17 +1893,21 @@ object MaterialKit : AppKit {
         // A short celebration name is the hero of the screen it opens, so it
         // gets emphasised headline type; a sentence of explanation stays at
         // titleMedium, where a paragraph can still be read.
+        // The first line of the body is the celebration; anything after a
+        // line break (the precept, the cycle) is supporting text under it.
+        val headline = body?.substringBefore('\n')
+        val support = body?.substringAfter('\n', "")?.takeIf { it.isNotBlank() }
         val bodyStyle = when {
-            body == null -> MaterialTheme.typography.titleMedium
-            body.length <= 28 -> MaterialTheme.typography.headlineSmall.copy(
+            headline == null -> MaterialTheme.typography.titleMedium
+            headline.length <= 28 -> MaterialTheme.typography.headlineSmall.copy(
                 fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
             )
-            body.length <= 64 -> MaterialTheme.typography.titleLarge.copy(
+            headline.length <= 64 -> MaterialTheme.typography.titleLarge.copy(
                 fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
             )
             else -> MaterialTheme.typography.titleMedium
         }
-        val heroBody = body != null && body.length <= 64
+        val heroBody = headline != null && headline.length <= 64
         val seal = given != null
 
         FilledCard(
@@ -1916,12 +1930,20 @@ object MaterialKit : AppKit {
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )
-                    if (body != null) {
+                    if (headline != null) {
                         Spacer(Modifier.height(if (heroBody) 6.dp else 4.dp))
                         Text(
-                            text = body,
+                            text = headline,
                             style = bodyStyle,
                             color = bodyColor
+                        )
+                    }
+                    if (support != null) {
+                        Spacer(Modifier.height(4.dp))
+                        Text(
+                            text = support,
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = bodyColor.copy(alpha = 0.78f)
                         )
                     }
                 }
