@@ -38,6 +38,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -49,6 +50,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.data.audio.LiturgicalTtsManager
+import com.example.data.local.NovenaProgressEntity
+import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
 import com.example.data.models.Novena
 import com.example.data.models.VaticanPrayer
@@ -71,6 +74,11 @@ import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.ListStyle
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import java.text.DateFormat
+import java.util.Date
+import java.util.Locale
+import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.launch
 
 /** The chaplet: a lead bead and ten small ones, five times over. */
 private const val ChapletDecades = 5
@@ -110,9 +118,11 @@ fun PrayersAndNovenasScreen(
     repository: CatholicDataRepository,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    dao: SanctaFidesDao? = null
 ) {
     val design = LocalAppDesign.current
+    val scope = rememberCoroutineScope()
 
     var selectedTab by remember { mutableIntStateOf(0) }
 
@@ -127,10 +137,28 @@ fun PrayersAndNovenasScreen(
     var activeNovenaDay by remember { mutableIntStateOf(1) }
     // Keyed by novena id: a single shared set of day numbers reported the same
     // progress for all 246 of them, so every row read "day 1 of 9".
-    var daysPrayed by remember { mutableStateOf(emptyMap<String, Set<Int>>()) }
+    // This is the session's own record: the whole record when there is no DAO
+    // (previews, the screenshot test), and the optimistic echo of a write
+    // until the database flow hands the row back when there is one.
+    var sessionDaysPrayed by remember { mutableStateOf(emptyMap<String, Set<Int>>()) }
     // The intention `NovenaProgressEntity` carries alongside the day count. No
     // control writes it yet; it is held here so that wiring has one home.
     var personalIntention by remember { mutableStateOf("") }
+
+    val persistedProgress by remember(dao) {
+        dao?.getAllNovenaProgress() ?: flowOf(emptyList<NovenaProgressEntity>())
+    }.collectAsState(initial = emptyList())
+    val startedOn = remember(persistedProgress) {
+        persistedProgress.associate { it.novenaId to it.startDate }
+    }
+    // Days only ever get added, so the union of the stored rows and this
+    // session's marks is the truth in both the persisted and fallback modes.
+    val daysPrayed = remember(persistedProgress, sessionDaysPrayed) {
+        val stored = persistedProgress.associate { it.novenaId to decodeNovenaDays(it.currentDay) }
+        (stored.keys + sessionDaysPrayed.keys).associateWith {
+            stored[it].orEmpty() + sessionDaysPrayed[it].orEmpty()
+        }
+    }
 
     val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
 
@@ -183,7 +211,9 @@ fun PrayersAndNovenasScreen(
                     selectedNovena = repository.officialNovenas
                         .firstOrNull { it.id == "divine_mercy" }
                         ?: repository.officialNovenas.firstOrNull()
-                    activeNovenaDay = 1
+                    activeNovenaDay = selectedNovena
+                        ?.let { nextNovenaDay(it, daysPrayed[it.id].orEmpty()) }
+                        ?: 1
                 }
             )
 
@@ -198,9 +228,10 @@ fun PrayersAndNovenasScreen(
                         selectedTag = selectedNovenaTag,
                         onSelectTag = { selectedNovenaTag = it },
                         daysPrayed = daysPrayed,
+                        startedOn = startedOn,
                         onOpenNovena = {
                             selectedNovena = it
-                            activeNovenaDay = 1
+                            activeNovenaDay = nextNovenaDay(it, daysPrayed[it.id].orEmpty())
                         }
                     )
                 } else {
@@ -213,8 +244,29 @@ fun PrayersAndNovenasScreen(
                         currentlySpeaking = currentlySpeaking,
                         onListen = { ttsManager.speakSingle(it) },
                         onMarkDayPrayed = {
-                            val prayed = daysPrayed[novena.id].orEmpty() + activeNovenaDay
-                            daysPrayed = daysPrayed + (novena.id to prayed)
+                            val day = activeNovenaDay
+                            val prayed = daysPrayed[novena.id].orEmpty() + day
+                            sessionDaysPrayed = sessionDaysPrayed + (novena.id to prayed)
+                            if (dao != null) {
+                                scope.launch {
+                                    // Read back rather than trust the flow: a mark
+                                    // must never drop a day another write just added.
+                                    val existing = dao.getNovenaProgress(novena.id)
+                                    val days = prayed + decodeNovenaDays(existing?.currentDay ?: 0)
+                                    val now = System.currentTimeMillis()
+                                    dao.saveNovenaProgress(
+                                        NovenaProgressEntity(
+                                            novenaId = novena.id,
+                                            currentDay = encodeNovenaDays(days),
+                                            personalIntention = existing?.personalIntention
+                                                ?: personalIntention,
+                                            startDate = existing?.startDate ?: now,
+                                            lastUpdated = now,
+                                            isCompleted = isNovenaFinished(novena, days)
+                                        )
+                                    )
+                                }
+                            }
                             if (activeNovenaDay < novena.days.size) activeNovenaDay++
                         },
                         onBack = { selectedNovena = null }
@@ -799,10 +851,26 @@ private fun NovenaIndexView(
     selectedTag: String?,
     onSelectTag: (String?) -> Unit,
     daysPrayed: Map<String, Set<Int>>,
+    startedOn: Map<String, Long>,
     onOpenNovena: (Novena) -> Unit
 ) {
     val design = LocalAppDesign.current
     val tagScroll = rememberScrollState()
+
+    // Drawn from the whole catalogue, not the filtered index: what someone is
+    // praying should not disappear because a search is still typed in.
+    val begun = remember(novenas.size, daysPrayed) {
+        novenas.filter { daysPrayed[it.id].orEmpty().isNotEmpty() }
+    }
+    val inProgress = begun
+        .filterNot { isNovenaFinished(it, daysPrayed[it.id].orEmpty()) }
+        .sortedByDescending { startedOn[it.id] ?: 0L }
+    val finished = begun
+        .filter { isNovenaFinished(it, daysPrayed[it.id].orEmpty()) }
+        .sortedByDescending { startedOn[it.id] ?: 0L }
+    val dateFormat = remember(currentLanguage) {
+        DateFormat.getDateInstance(DateFormat.MEDIUM, Locale(currentLanguage.code))
+    }
 
     val tagLabels = mapOf(
         "impossible" to currentLanguage.pick("Casos imposibles/difíciles", "Impossible/difficult cases", "Casos impossíveis/difíceis"),
@@ -877,6 +945,52 @@ private fun NovenaIndexView(
             )
         }
 
+        if (inProgress.isNotEmpty()) {
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick("En curso", "In progress", "Em andamento"),
+                    // "novena" is the same word in all three languages.
+                    subtitle = if (inProgress.size == 1) "1 novena" else "${inProgress.size} novenas"
+                )
+                AppListGroup(modifier = Modifier.testTag("novenas_in_progress")) {
+                    inProgress.forEach { novena ->
+                        val next = nextNovenaDay(novena, daysPrayed[novena.id].orEmpty())
+                        val started = startedOn[novena.id]?.let { dateFormat.format(Date(it)) }
+                        AppListRow(
+                            title = novena.title.get(currentLanguage),
+                            subtitle = started?.let {
+                                currentLanguage.pick(
+                                    "Comenzada el $it",
+                                    "Started $it",
+                                    "Iniciada em $it"
+                                )
+                            } ?: novena.patron.get(currentLanguage),
+                            trailingText = novenaDayOf(currentLanguage, next, novena.days.size),
+                            onClick = { onOpenNovena(novena) }
+                        )
+                    }
+                }
+            }
+        }
+
+        if (finished.isNotEmpty()) {
+            item {
+                AppSectionHeader(
+                    title = currentLanguage.pick("Completadas", "Completed", "Concluídas")
+                )
+                AppListGroup(modifier = Modifier.testTag("novenas_completed")) {
+                    finished.forEach { novena ->
+                        AppListRow(
+                            title = novena.title.get(currentLanguage),
+                            subtitle = novena.patron.get(currentLanguage),
+                            trailingText = novenaFinishedLabel(currentLanguage),
+                            onClick = { onOpenNovena(novena) }
+                        )
+                    }
+                }
+            }
+        }
+
         item {
             AppSectionHeader(
                 title = currentLanguage.pick("Intención", "Intention", "Intenção")
@@ -930,21 +1044,21 @@ private fun NovenaIndexView(
             items(filtered.chunked(NovenaIndexBlock)) { block ->
                 AppListGroup {
                     block.forEach { novena ->
-                        val lastPrayed = daysPrayed[novena.id].orEmpty().maxOrNull()
+                        val prayed = daysPrayed[novena.id].orEmpty()
                         AppListRow(
                             title = novena.title.get(currentLanguage),
                             subtitle = novena.patron.get(currentLanguage),
-                            trailingText = if (lastPrayed == null) {
-                                currentLanguage.pick(
+                            trailingText = when {
+                                prayed.isEmpty() -> currentLanguage.pick(
                                     "${novena.days.size} días",
                                     "${novena.days.size} days",
                                     "${novena.days.size} dias"
                                 )
-                            } else {
-                                currentLanguage.pick(
-                                    "Día $lastPrayed de ${novena.days.size}",
-                                    "Day $lastPrayed of ${novena.days.size}",
-                                    "Dia $lastPrayed de ${novena.days.size}"
+                                isNovenaFinished(novena, prayed) -> novenaFinishedLabel(currentLanguage)
+                                else -> novenaDayOf(
+                                    currentLanguage,
+                                    nextNovenaDay(novena, prayed),
+                                    novena.days.size
                                 )
                             },
                             onClick = { onOpenNovena(novena) }
@@ -1467,3 +1581,39 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
     AppLanguage.EN -> en
     AppLanguage.PT -> pt
 }
+
+// ------------------------------------------------------- novena progress
+
+/*
+ * `NovenaProgressEntity.currentDay` is stored as a bitmask of the days prayed:
+ * bit (n - 1) set means day n is done. A single "current day" cannot say which
+ * days are done once someone prays them out of order, which the rail allows,
+ * and a mask holds that in the existing column with no schema change. Nothing
+ * else reads the column; the entity's own "1 to 9" note predates this.
+ */
+private fun encodeNovenaDays(days: Set<Int>): Int =
+    days.filter { it in 1..31 }.fold(0) { mask, day -> mask or (1 shl (day - 1)) }
+
+private fun decodeNovenaDays(mask: Int): Set<Int> =
+    (1..31).filterTo(mutableSetOf()) { mask and (1 shl (it - 1)) != 0 }
+
+private fun isNovenaFinished(novena: Novena, prayed: Set<Int>): Boolean =
+    novena.days.isNotEmpty() && novena.days.all { prayed.contains(it.dayNumber) }
+
+/** The first day not yet prayed, or the first day once the novena is finished. */
+private fun nextNovenaDay(novena: Novena, prayed: Set<Int>): Int =
+    novena.days.firstOrNull { !prayed.contains(it.dayNumber) }?.dayNumber
+        ?: novena.days.firstOrNull()?.dayNumber
+        ?: 1
+
+private fun novenaDayOf(language: AppLanguage, day: Int, of: Int): String = language.pick(
+    "Día $day de $of",
+    "Day $day of $of",
+    "Dia $day de $of"
+)
+
+private fun novenaFinishedLabel(language: AppLanguage): String = language.pick(
+    "✓ Completada",
+    "✓ Completed",
+    "✓ Concluída"
+)

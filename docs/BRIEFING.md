@@ -2,7 +2,7 @@
 
 Branch: `feat/bible-correctness-and-visual-identities`
 Build: `dist/sancta-fides-1.0.apk` (signed, sideload-ready)
-Tests: 63, all passing
+Tests: 68, all passing
 
 This document is the handover: what the app does, what was wrong with it, what
 was changed, what is still open, and what is worth doing next.
@@ -229,6 +229,26 @@ offline fallback.
     tapping through to the article. Rendering it natively also sidesteps the
     cookie banner entirely. Guarded by `VaticanNewsTest` against a real capture
     of the feed.
+
+### Done in the latest round
+- **Daily missal from Vatican News.** The readings page is script-driven and
+  covered by a cookie banner, but Vatican News publishes the same readings as an
+  RSS feed per language; the Missal tab reads it natively and falls back to the
+  bundled lectionary offline. "Open on Vatican News" uses the phone's browser,
+  which handles cookie consent, instead of an in-app WebView.
+- **Parishes.** "Parishes near me" now hands the search to Google Maps, which
+  already knows the phone's location; the in-app OpenStreetMap list is a
+  secondary option and points back to Maps when its servers do not answer. The
+  duplicate button is gone from the Iglesias section.
+- **Novena progress is persisted** to the existing `NovenaProgressEntity`
+  (completed days as a bitmask; no schema change), with "In progress" and
+  "Completed" sections at the top of the novena list and "Day N of 9" on each.
+- **Rosary and Divine Mercy Chaplet are fully guided**: 81 and 68 steps
+  respectively, from the opening Sign of the Cross to the closing one, with the
+  full text of every prayer in three languages, a plain instruction for each
+  step, and a bead rail of the whole rosary that marks progress and jumps.
+- **Novena text cleaned** of the source site's promo banner, analytics
+  JavaScript, share chrome and readers' comments (304,499 lines removed).
 
 ### Found during migration, worth knowing
 - **Novena progress has never been persisted.** `NovenaProgressEntity`, its

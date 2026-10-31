@@ -17,7 +17,7 @@ data class JournalEntryEntity(
 @Entity(tableName = "novena_progress")
 data class NovenaProgressEntity(
     @PrimaryKey val novenaId: String,
-    val currentDay: Int, // 1 to 9
+    val currentDay: Int, // bitmask of completed days: bit (n-1) set means day n is done
     val personalIntention: String,
     val startDate: Long = System.currentTimeMillis(),
     val lastUpdated: Long = System.currentTimeMillis(),

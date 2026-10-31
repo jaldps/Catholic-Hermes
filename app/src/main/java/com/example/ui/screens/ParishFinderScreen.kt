@@ -17,6 +17,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Search
@@ -86,6 +87,25 @@ fun ParishFinderScreen(
         AppLanguage.PT -> pt
     }
 
+    fun openNearbyInMaps(near: String? = null) {
+        val what = strings("parroquia católica", "catholic church", "igreja católica")
+        val query = Uri.encode(if (near.isNullOrBlank()) what else "$what $near")
+        val opened = runCatching {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=$query")))
+        }.isSuccess || runCatching {
+            context.startActivity(
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/$query"))
+            )
+        }.isSuccess
+        if (!opened) {
+            message = strings(
+                "No se pudo abrir Google Maps.",
+                "Could not open Google Maps.",
+                "Não foi possível abrir o Google Maps."
+            )
+        }
+    }
+
     fun runLookup(latitude: Double, longitude: Double, label: String?) {
         state = SearchState.LOADING
         message = null
@@ -107,9 +127,9 @@ fun ParishFinderScreen(
                 is ParishLookupResult.Failure -> {
                     results = emptyList()
                     message = strings(
-                        "No se pudo consultar el directorio (${outcome.reason}). Mostrando el directorio incluido.",
-                        "Could not reach the directory (${outcome.reason}). Showing the bundled directory.",
-                        "Não foi possível consultar o diretório (${outcome.reason}). Mostrando o diretório incluído."
+                        "El directorio en línea no respondió. Usa «Parroquias cerca de mí» para buscar en Google Maps.",
+                        "The online directory did not answer. Use “Parishes near me” to search in Google Maps.",
+                        "O diretório online não respondeu. Use «Paróquias perto de mim» para buscar no Google Maps."
                     )
                 }
             }
@@ -164,12 +184,8 @@ fun ParishFinderScreen(
         scope.launch {
             val place = finder.geocode(placeQuery)
             if (place == null) {
-                message = strings(
-                    "No se encontró ese lugar. Prueba «Ciudad, Provincia, País».",
-                    "That place was not found. Try “City, State, Country”.",
-                    "Lugar não encontrado. Tente “Cidade, Estado, País”."
-                )
                 state = SearchState.DONE
+                openNearbyInMaps(placeQuery)
                 return@launch
             }
             runLookup(place.latitude, place.longitude, place.displayName)
@@ -192,8 +208,26 @@ fun ParishFinderScreen(
 
         item {
             AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                // Google Maps already knows where the phone is and has the most
+                // complete church listings, so handing it the search is the
+                // reliable way to find a parish nearby. The in-app list below
+                // depends on community-run OpenStreetMap servers, which are often
+                // slow to answer from a phone.
                 AppPrimaryButton(
-                    label = strings("Usar mi ubicación", "Use my location", "Usar minha localização"),
+                    label = strings(
+                        "Parroquias cerca de mí",
+                        "Parishes near me",
+                        "Paróquias perto de mim"
+                    ),
+                    onClick = { openNearbyInMaps() },
+                    leadingIcon = Icons.Default.Map,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("gps_nearby_maps_button")
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppSecondaryButton(
+                    label = strings("Ver lista aquí", "List them here", "Ver lista aqui"),
                     onClick = {
                         if (locationProvider.hasPermission()) {
                             useDeviceLocation()

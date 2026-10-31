@@ -721,46 +721,15 @@ private fun ParishesAndNewsPane(
                     "Buscador de Paróquias e Templos Católicos"
                 ),
                 subtitle = currentLanguage.pick(
-                    "Localiza iglesias cerca de ti mediante Google Maps o explora el directorio internacional por país y ciudad.",
-                    "Locate churches near you using Google Maps or browse the international directory by country and city.",
-                    "Encontre igrejas próximas com o Google Maps ou explore o diretório internacional por país e cidade."
+                    "Explora el directorio por país y ciudad. Para buscar cerca de ti, usa la pestaña Parroquias.",
+                    "Browse the directory by country and city. To search near you, use the Parishes tab.",
+                    "Explore o diretório por país e cidade. Para buscar perto de você, use a aba Paróquias."
                 )
             )
         }
 
         item {
             GutterCard {
-                AppPrimaryButton(
-                    label = currentLanguage.pick(
-                        "Buscar Parroquias Cerca de Mí (Google Maps)",
-                        "Find Parishes Near Me (Google Maps)",
-                        "Buscar Paróquias Perto de Mim (Google Maps)"
-                    ),
-                    onClick = {
-                        val opened = context.openMaps("geo:0,0?q=parroquia+catolica") ||
-                                context.openMaps(
-                                    "https://www.google.com/maps/search/parroquia+catolica"
-                                )
-                        if (!opened) {
-                            Toast.makeText(
-                                context,
-                                currentLanguage.pick(
-                                    "No se pudo abrir Google Maps",
-                                    "Could not open Google Maps",
-                                    "Não foi possível abrir o Google Maps"
-                                ),
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                    },
-                    leadingIcon = Icons.Default.Directions,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag("gps_nearby_maps_button")
-                )
-
-                Spacer(Modifier.height(design.spacing.cardGap))
-
                 AppSearchField(
                     value = parishSearchQuery,
                     onValueChange = { parishSearchQuery = it },

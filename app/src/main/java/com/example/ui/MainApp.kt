@@ -210,7 +210,8 @@ fun MainApp(
                     AppDestination.PRAYERS -> PrayersAndNovenasScreen(
                         repository = repository,
                         ttsManager = ttsManager,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        dao = dao
                     )
 
                     AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(

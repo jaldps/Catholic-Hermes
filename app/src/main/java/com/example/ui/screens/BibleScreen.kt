@@ -44,6 +44,9 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -69,6 +72,9 @@ import com.example.data.models.BibleVersionInfo
 import com.example.data.models.DailyMassReading
 import com.example.data.models.Testament
 import com.example.data.repository.BibleDownloadManager
+import com.example.data.news.ReadingsResult
+import com.example.data.news.VaticanGospelFetcher
+import com.example.data.liturgy.LiturgicalCalendar
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.components.InAppBrowserDialog
 import com.example.ui.design.AppBanner
@@ -894,12 +900,25 @@ private fun DailyMissalView(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
     val readingClamp = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-    var webViewUrl by remember { mutableStateOf<String?>(null) }
+    val context = LocalContext.current
+
+    // The day's readings come from the Vatican's own feed, read natively — the
+    // web page is driven by script and covered by a cookie banner. The bundled
+    // lectionary is the offline fallback.
+    val isoToday = remember {
+        val d = LiturgicalCalendar.today()
+        "%04d-%02d-%02d".format(d.year, d.month, d.day)
+    }
+    val vaticanResult by produceState<ReadingsResult?>(null, currentLanguage, isoToday) {
+        value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+    }
+    val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
+    val loadingVatican = vaticanResult == null
 
     // On a ferial weekday the bundled lectionary legitimately has no entry: the
     // citation and the passage both come back empty. Such a lesson is dropped
     // rather than drawn as an empty row, and nothing is invented in its place.
-    val lessons = listOf(
+    val bundledLessons = listOf(
         MassLesson(
             currentLanguage.pick("Primera Lectura", "First Reading", "Primeira Leitura"),
             reading.firstReadingRef,
@@ -922,6 +941,9 @@ private fun DailyMissalView(
         )
     ).filter { it.reference.isNotBlank() || it.text.isNotBlank() }
 
+    val lessons = vatican?.sections?.map { MassLesson(it.heading, it.citation, it.text) }
+        ?: bundledLessons
+
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
@@ -941,7 +963,22 @@ private fun DailyMissalView(
             )
         }
 
-        if (lessons.isEmpty()) {
+        if (loadingVatican) {
+            item {
+                Text(
+                    text = currentLanguage.pick(
+                        "Cargando las lecturas de hoy desde Vatican News…",
+                        "Loading today's readings from Vatican News…",
+                        "A carregar as leituras de hoje do Vatican News…"
+                    ),
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary,
+                    modifier = Modifier.padding(design.spacing.gutter)
+                )
+            }
+        }
+
+        if (lessons.isEmpty() && !loadingVatican) {
             item {
                 AppEmptyState(
                     title = currentLanguage.pick(
@@ -960,7 +997,7 @@ private fun DailyMissalView(
         } else {
             // A missal does not box its lessons: the label is the rubric, the
             // citation sits under it, and the passage runs at reading measure.
-            items(lessons, key = { it.label }) { lesson ->
+            items(lessons, key = { "${it.label}|${it.reference}" }) { lesson ->
                 AppSectionHeader(
                     title = lesson.label,
                     subtitle = lesson.reference.ifBlank { null }
@@ -980,7 +1017,7 @@ private fun DailyMissalView(
 
         item { AppOrnament() }
 
-        item {
+        if (vatican == null && !loadingVatican) item {
             AppSectionHeader(
                 title = currentLanguage.pick(
                     "Reflexión Homilética",
@@ -990,7 +1027,7 @@ private fun DailyMissalView(
             )
         }
 
-        item {
+        if (vatican == null && !loadingVatican) item {
             AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                 Text(
                     text = reading.homilyReflection.get(currentLanguage),
@@ -1003,23 +1040,31 @@ private fun DailyMissalView(
 
         item {
             AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Fuente oficial: ${reading.sourceName}",
-                    "Official source: ${reading.sourceName}",
-                    "Fonte oficial: ${reading.sourceName}"
-                ),
-                subtitle = reading.sourceUrl
+                title = currentLanguage.pick("Fuente", "Source", "Fonte"),
+                subtitle = if (vatican != null) {
+                    "Vatican News · ${vatican.title}"
+                } else {
+                    reading.sourceName
+                }
             )
         }
 
+        // Opens in the phone's own browser rather than an in-app WebView: the
+        // site's cookie banner covers half the screen there and cannot be
+        // dismissed, while the system browser handles consent and remembers it.
+        val pageUrl = vatican?.link ?: VaticanGospelFetcher.pageUrl(currentLanguage)
         item {
             AppSecondaryButton(
                 label = currentLanguage.pick(
-                    "Ver misal oficial en la app",
-                    "View official missal in app",
-                    "Ver missal oficial no app"
+                    "Abrir en Vatican News",
+                    "Open on Vatican News",
+                    "Abrir no Vatican News"
                 ),
-                onClick = { webViewUrl = reading.sourceUrl },
+                onClick = {
+                    runCatching {
+                        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(pageUrl)))
+                    }
+                },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = design.spacing.gutter)
@@ -1029,9 +1074,6 @@ private fun DailyMissalView(
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 
-    webViewUrl?.let { url ->
-        InAppBrowserDialog(url = url, onDismiss = { webViewUrl = null })
-    }
 }
 
 // ------------------------------------------------------------------- versions
