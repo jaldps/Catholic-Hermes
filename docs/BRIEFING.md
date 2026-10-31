@@ -250,6 +250,27 @@ offline fallback.
 - **Novena text cleaned** of the source site's promo banner, analytics
   JavaScript, share chrome and readers' comments (304,499 lines removed).
 
+### Design review round 2 — screen-level findings for next time
+The kit reviewers scored the real screens at 8–9/10 in each identity after their
+changes; what holds the rest back lives in screen files they could not edit:
+- **Home**: the liturgical `DayBadge`s are hand-drawn grey outlined boxes (should be
+  `AppChip`, or a line of small capitals in the Vatican identity); `CardHeading`
+  upper-cases its labels and draws Material icons before them in every identity.
+- **Navigation**: eleven destinations do not fit an iOS tab bar (five plus "More")
+  or an M3 navigation bar; needs a drawer or a "More" destination in `MainApp.kt`.
+- **Catechism**: the segmented control sits above the screen title; two stacked
+  full-width buttons per link card read as a form.
+- **Parishes**: each parish is three rows (name, Mass times, phone) and should be
+  one; the radius chip row is clipped at the right edge.
+- **Cupertino top bar**: scrolling under it should show a blurred bar with the
+  inline title, which needs scroll state the fixed `AppKit` signatures do not pass.
+
+### Novenas — what the source actually contains
+Of 325 novenas on catholicnovenaapp.com, 267 say the same prayer all nine days;
+58 have distinct days. The 44 bundled novenas in that second group now carry
+their real nine days. The other 202 repeat one prayer because the novena itself
+does.
+
 ### Found during migration, worth knowing
 - **Novena progress has never been persisted.** `NovenaProgressEntity`, its
   table and three DAO methods all exist, but nothing in the app reads or writes
