@@ -63,14 +63,12 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 On the Cross her Son was dying.
+ Mary stood beneath Him crying,
+ Sharing in His saving cross.
+ As He hangs, her soul is grieving, and a sword her heart is cleaving
+ and she weeps the bitter loss.
 
-Mary stood beneath Him crying,
-
-Sharing in His saving cross.
-
-As He hangs, her soul is grieving, and a sword her heart is cleaving
-
-and she weeps the bitter loss.
+O Mother of Sorrows, through thy First Sorrow, the Prophecy of Holy Simeon, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -80,11 +78,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -93,16 +87,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 De pé, a Mãe dolorosa,
+ junto da cruz, lacrimosa,
+ via o Filho que pendia.
+ Na sua alma agoniada
+ enterrou-se a dura espada
+ de uma antiga profecia.
 
-junto da cruz, lacrimosa,
-
-via o Filho que pendia.
-
-Na sua alma agoniada
-
-enterrou-se a dura espada
-
-de uma antiga profecia.
+Ó Mãe das Dores, pela vossa primeira dor, a profecia do santo Simeão, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -158,14 +149,12 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 On the Cross her Son was dying.
+ Mary stood beneath Him crying,
+ Sharing in His saving cross.
+ As He hangs, her soul is grieving, and a sword her heart is cleaving
+ and she weeps the bitter loss.
 
-Mary stood beneath Him crying,
-
-Sharing in His saving cross.
-
-As He hangs, her soul is grieving, and a sword her heart is cleaving
-
-and she weeps the bitter loss.
+O Mother of Sorrows, through thy First Sorrow, the Prophecy of Holy Simeon, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -175,11 +164,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -188,16 +173,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 De pé, a Mãe dolorosa,
+ junto da cruz, lacrimosa,
+ via o Filho que pendia.
+ Na sua alma agoniada
+ enterrou-se a dura espada
+ de uma antiga profecia.
 
-junto da cruz, lacrimosa,
-
-via o Filho que pendia.
-
-Na sua alma agoniada
-
-enterrou-se a dura espada
-
-de uma antiga profecia.
+Ó Mãe das Dores, pela vossa primeira dor, a profecia do santo Simeão, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -259,16 +241,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 O, the sad, afflicted Mother
+ of the Son beyond all others:
+ only Son of God most high.
+ Full of grief, her heart is aching;
+ watching Him, her body, quaking,
+ trembles as her offspring dies.
 
-of the Son beyond all others:
-
-only Son of God most high.
-
-Full of grief, her heart is aching;
-
-watching Him, her body, quaking,
-
-trembles as her offspring dies.
+O Mother of Sorrows, through thy Second Sorrow, the Flight into Egypt, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -287,16 +266,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Oh, quão triste e quão aflita
+ entre todas, Mãe bendita,
+ que só tinha aquele Filho!
+ Quanta angústia não sentia,
+ Mãe piedosa, quando via
+ as penas do Filho seu!
 
-entre todas, Mãe bendita,
-
-que só tinha aquele Filho!
-
-Quanta angústia não sentia,
-
-Mãe piedosa, quando via
-
-as penas do Filho seu!
+Ó Mãe das Dores, pela vossa segunda dor, a fuga para o Egito, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -352,16 +328,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 O, the sad, afflicted Mother
+ of the Son beyond all others:
+ only Son of God most high.
+ Full of grief, her heart is aching;
+ watching Him, her body, quaking,
+ trembles as her offspring dies.
 
-of the Son beyond all others:
-
-only Son of God most high.
-
-Full of grief, her heart is aching;
-
-watching Him, her body, quaking,
-
-trembles as her offspring dies.
+O Mother of Sorrows, through thy Second Sorrow, the Flight into Egypt, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -380,16 +353,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Oh, quão triste e quão aflita
+ entre todas, Mãe bendita,
+ que só tinha aquele Filho!
+ Quanta angústia não sentia,
+ Mãe piedosa, quando via
+ as penas do Filho seu!
 
-entre todas, Mãe bendita,
-
-que só tinha aquele Filho!
-
-Quanta angústia não sentia,
-
-Mãe piedosa, quando via
-
-as penas do Filho seu!
+Ó Mãe das Dores, pela vossa segunda dor, a fuga para o Egito, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -451,16 +421,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Who would see Christ’s mother crying
+ at the bitter crucifying
+ without tears of sympathy?
+ Who could see her depth of feeling
+ thoughts of many hearts revealing
+ and not share her agony?
 
-at the bitter crucifying
-
-without tears of sympathy?
-
-Who could see her depth of feeling
-
-thoughts of many hearts revealing
-
-and not share her agony?
+O Mother of Sorrows, through thy Third Sorrow, the Loss of the Child Jesus, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -470,11 +437,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -483,16 +446,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Quem não chora vendo isto:
+ contemplando a Mãe de Cristo
+ num suplício tão enorme?
+ Quem haverá que resista,
+ se a Mãe assim se contrista,
+ padecendo com seu Filho?
 
-contemplando a Mãe de Cristo
-
-num suplício tão enorme?
-
-Quem haverá que resista,
-
-se a Mãe assim se contrista,
-
-padecendo com seu Filho?
+Ó Mãe das Dores, pela vossa terceira dor, a perda do Menino Jesus, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -548,16 +508,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Who would see Christ’s mother crying
+ at the bitter crucifying
+ without tears of sympathy?
+ Who could see her depth of feeling
+ thoughts of many hearts revealing
+ and not share her agony?
 
-at the bitter crucifying
-
-without tears of sympathy?
-
-Who could see her depth of feeling
-
-thoughts of many hearts revealing
-
-and not share her agony?
+O Mother of Sorrows, through thy Third Sorrow, the Loss of the Child Jesus, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -567,11 +524,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -580,16 +533,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Quem não chora vendo isto:
+ contemplando a Mãe de Cristo
+ num suplício tão enorme?
+ Quem haverá que resista,
+ se a Mãe assim se contrista,
+ padecendo com seu Filho?
 
-contemplando a Mãe de Cristo
-
-num suplício tão enorme?
-
-Quem haverá que resista,
-
-se a Mãe assim se contrista,
-
-padecendo com seu Filho?
+Ó Mãe das Dores, pela vossa terceira dor, a perda do Menino Jesus, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -651,16 +601,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Pardon for our sins entreating,
+ She saw Him endure the beating
+ All our guilt on Him was cast.
+ She stood by in contemplation
+ When her Son, in desolation
+ Breathed His spirit forth at last.
 
-She saw Him endure the beating
-
-All our guilt on Him was cast.
-
-She stood by in contemplation
-
-When her Son, in desolation
-
-Breathed His spirit forth at last.
+O Mother of Sorrows, through thy Fourth Sorrow, meeting thy Jesus on His Way to Calvary, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -679,16 +626,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Por culpa de sua gente
+ viu Jesus inocente
+ ser flagelado e morrer.
+ Viu o seu Filho amado,
+ por todos abandonado,
+ entregar o seu espírito.
 
-viu Jesus inocente
-
-ser flagelado e morrer.
-
-Viu o seu Filho amado,
-
-por todos abandonado,
-
-entregar o seu espírito.
+Ó Mãe das Dores, pela vossa quarta dor, o encontro com o vosso Jesus a caminho do Calvário, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -744,16 +688,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Pardon for our sins entreating,
+ She saw Him endure the beating
+ All our guilt on Him was cast.
+ She stood by in contemplation
+ When her Son, in desolation
+ Breathed His spirit forth at last.
 
-She saw Him endure the beating
-
-All our guilt on Him was cast.
-
-She stood by in contemplation
-
-When her Son, in desolation
-
-Breathed His spirit forth at last.
+O Mother of Sorrows, through thy Fourth Sorrow, meeting thy Jesus on His Way to Calvary, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -772,16 +713,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Por culpa de sua gente
+ viu Jesus inocente
+ ser flagelado e morrer.
+ Viu o seu Filho amado,
+ por todos abandonado,
+ entregar o seu espírito.
 
-viu Jesus inocente
-
-ser flagelado e morrer.
-
-Viu o seu Filho amado,
-
-por todos abandonado,
-
-entregar o seu espírito.
+Ó Mãe das Dores, pela vossa quarta dor, o encontro com o vosso Jesus a caminho do Calvário, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -843,16 +781,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Font of love, O Blessed Mother,
+ lend me tears to mourn my Brother
+ Never let my ardor dim.
+ Let my heart be burning freely,
+ Christ my God be pleased to see me
+ all on fire with love for Him.
 
-lend me tears to mourn my Brother
-
-Never let my ardor dim.
-
-Let my heart be burning freely,
-
-Christ my God be pleased to see me
-
-all on fire with love for Him.
+O Mother of Sorrows, through thy Fifth Sorrow, standing beneath thy dying Son on Mt. Calvary, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -862,11 +797,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -875,16 +806,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Ó Mãe, fonte de amor,
+ fazei-me sentir a vossa dor,
+ para que convosco eu chore.
+ Fazei que o meu coração
+ arda em grande paixão
+ por Cristo, meu Deus e Senhor.
 
-fazei-me sentir a vossa dor,
-
-para que convosco eu chore.
-
-Fazei que o meu coração
-
-arda em grande paixão
-
-por Cristo, meu Deus e Senhor.
+Ó Mãe das Dores, pela vossa quinta dor, junto ao vosso Filho moribundo no Calvário, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -940,16 +868,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Font of love, O Blessed Mother,
+ lend me tears to mourn my Brother
+ Never let my ardor dim.
+ Let my heart be burning freely,
+ Christ my God be pleased to see me
+ all on fire with love for Him.
 
-lend me tears to mourn my Brother
-
-Never let my ardor dim.
-
-Let my heart be burning freely,
-
-Christ my God be pleased to see me
-
-all on fire with love for Him.
+O Mother of Sorrows, through thy Fifth Sorrow, standing beneath thy dying Son on Mt. Calvary, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -959,11 +884,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -972,16 +893,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Ó Mãe, fonte de amor,
+ fazei-me sentir a vossa dor,
+ para que convosco eu chore.
+ Fazei que o meu coração
+ arda em grande paixão
+ por Cristo, meu Deus e Senhor.
 
-fazei-me sentir a vossa dor,
-
-para que convosco eu chore.
-
-Fazei que o meu coração
-
-arda em grande paixão
-
-por Cristo, meu Deus e Senhor.
+Ó Mãe das Dores, pela vossa quinta dor, junto ao vosso Filho moribundo no Calvário, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -1043,16 +961,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 This I ask, O Holy Mary,
+ that His wounds I too may carry:
+ fix them deeply in my heart.
+ Mine the burden He was bearing;
+ let me in His pain be sharing;
+ of His suffering take a part.
 
-that His wounds I too may carry:
-
-fix them deeply in my heart.
-
-Mine the burden He was bearing;
-
-let me in His pain be sharing;
-
-of His suffering take a part.
+O Mother of Sorrows, through thy Sixth Sorrow, thy Jesus is laid in thy arms, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -1071,16 +986,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Ó santa Mãe, por favor,
+ gravai as chagas do Senhor
+ no meu coração para sempre.
+ Do vosso Filho chagado,
+ que tanto sofreu por mim,
+ reparti comigo as penas.
 
-gravai as chagas do Senhor
-
-no meu coração para sempre.
-
-Do vosso Filho chagado,
-
-que tanto sofreu por mim,
-
-reparti comigo as penas.
+Ó Mãe das Dores, pela vossa sexta dor, quando o vosso Jesus foi colocado em vossos braços, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -1136,16 +1048,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 This I ask, O Holy Mary,
+ that His wounds I too may carry:
+ fix them deeply in my heart.
+ Mine the burden He was bearing;
+ let me in His pain be sharing;
+ of His suffering take a part.
 
-that His wounds I too may carry:
-
-fix them deeply in my heart.
-
-Mine the burden He was bearing;
-
-let me in His pain be sharing;
-
-of His suffering take a part.
+O Mother of Sorrows, through thy Sixth Sorrow, thy Jesus is laid in thy arms, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -1164,16 +1073,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Ó santa Mãe, por favor,
+ gravai as chagas do Senhor
+ no meu coração para sempre.
+ Do vosso Filho chagado,
+ que tanto sofreu por mim,
+ reparti comigo as penas.
 
-gravai as chagas do Senhor
-
-no meu coração para sempre.
-
-Do vosso Filho chagado,
-
-que tanto sofreu por mim,
-
-reparti comigo as penas.
+Ó Mãe das Dores, pela vossa sexta dor, quando o vosso Jesus foi colocado em vossos braços, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -1235,16 +1141,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Let me join in your lamenting,
+ through my life weep unrelenting
+ tears for Jesus Crucified.
+ Let me stand and share your weeping,
+ all the day death’s vigil keeping,
+ glad to stand close by your side.
 
-through my life weep unrelenting
-
-tears for Jesus Crucified.
-
-Let me stand and share your weeping,
-
-all the day death’s vigil keeping,
-
-glad to stand close by your side.
+O Mother of Sorrows, through thy Seventh Sorrow, the Burial of thy Jesus, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -1254,11 +1157,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1267,16 +1166,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Convosco quero chorar
+ e com o Crucificado penar
+ enquanto a vida durar.
+ Junto à cruz convosco estar
+ e o vosso pranto chorar:
+ eis o que eu desejo.
 
-e com o Crucificado penar
-
-enquanto a vida durar.
-
-Junto à cruz convosco estar
-
-e o vosso pranto chorar:
-
-eis o que eu desejo.
+Ó Mãe das Dores, pela vossa sétima dor, a sepultura do vosso Jesus, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -1332,16 +1228,13 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Let me join in your lamenting,
+ through my life weep unrelenting
+ tears for Jesus Crucified.
+ Let me stand and share your weeping,
+ all the day death’s vigil keeping,
+ glad to stand close by your side.
 
-through my life weep unrelenting
-
-tears for Jesus Crucified.
-
-Let me stand and share your weeping,
-
-all the day death’s vigil keeping,
-
-glad to stand close by your side.
+O Mother of Sorrows, through thy Seventh Sorrow, the Burial of thy Jesus, intercede for me with the Sacred Heart of Jesus, and grant me the favor I implore
 
 (mention request here…)
 
@@ -1351,11 +1244,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1364,16 +1253,13 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Convosco quero chorar
+ e com o Crucificado penar
+ enquanto a vida durar.
+ Junto à cruz convosco estar
+ e o vosso pranto chorar:
+ eis o que eu desejo.
 
-e com o Crucificado penar
-
-enquanto a vida durar.
-
-Junto à cruz convosco estar
-
-e o vosso pranto chorar:
-
-eis o que eu desejo.
+Ó Mãe das Dores, pela vossa sétima dor, a sepultura do vosso Jesus, intercedei por mim junto ao Sagrado Coração de Jesus e alcançai-me a graça que imploro
 
 (mencione o pedido aqui…)
 
@@ -1435,16 +1321,11 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Queen of all the virgin choir,
-
-judge me not when I aspire
-
-your pure tears to emulate.
-
-Let me share in Christ’s affliction
-
-death by bitter crucifixion
-
-and His wounds commemorate.
+ judge me not when I aspire
+ your pure tears to emulate.
+ Let me share in Christ’s affliction
+ death by bitter crucifixion
+ and His wounds commemorate.
 
 We give God thanks for the exaltation of His holy Cross, and ask dear Mother of Sorrows that you pray for us
 
@@ -1465,16 +1346,11 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Virgem das virgens bendita,
-
-não desprezeis a minha súplica,
-
-deixai que eu chore convosco.
-
-Fazei que eu traga a morte de Cristo,
-
-que eu participe da sua paixão
-
-e venere as suas chagas.
+ não desprezeis a minha súplica,
+ deixai que eu chore convosco.
+ Fazei que eu traga a morte de Cristo,
+ que eu participe da sua paixão
+ e venere as suas chagas.
 
 Damos graças a Deus pela exaltação da Sua santa Cruz e pedimos a vós, querida Mãe das Dores, que rogueis por nós
 
@@ -1532,16 +1408,11 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Queen of all the virgin choir,
-
-judge me not when I aspire
-
-your pure tears to emulate.
-
-Let me share in Christ’s affliction
-
-death by bitter crucifixion
-
-and His wounds commemorate.
+ judge me not when I aspire
+ your pure tears to emulate.
+ Let me share in Christ’s affliction
+ death by bitter crucifixion
+ and His wounds commemorate.
 
 We give God thanks for the exaltation of His holy Cross, and ask dear Mother of Sorrows that you pray for us
 
@@ -1562,16 +1433,11 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Virgem das virgens bendita,
-
-não desprezeis a minha súplica,
-
-deixai que eu chore convosco.
-
-Fazei que eu traga a morte de Cristo,
-
-que eu participe da sua paixão
-
-e venere as suas chagas.
+ não desprezeis a minha súplica,
+ deixai que eu chore convosco.
+ Fazei que eu traga a morte de Cristo,
+ que eu participe da sua paixão
+ e venere as suas chagas.
 
 Damos graças a Deus pela exaltação da Sua santa Cruz e pedimos a vós, querida Mãe das Dores, que rogueis por nós
 
@@ -1635,30 +1501,18 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Let me taste the pains He offered,
-
-drunk with love for Him who suffered
-
-May His wounds become my own.
-
-On the day of Christ’s returning
-
-may my heart be lit and burning.
-
-Virgin, aid me at His throne.
-
-May His Cross be interceding
-
-and His death my vict’ry pleading.
-
-May He hold me in His grace.
-
-When my flesh by death is taken,
-
-may my soul to glory waken
-
-and in heaven take a place.
-
-Amen.
+ drunk with love for Him who suffered
+ May His wounds become my own.
+ On the day of Christ’s returning
+ may my heart be lit and burning.
+ Virgin, aid me at His throne.
+ May His Cross be interceding
+ and His death my vict’ry pleading.
+ May He hold me in His grace.
+ When my flesh by death is taken,
+ may my soul to glory waken
+ and in heaven take a place.
+ Amen.
 
 Blessed Mother, on this last day of our novena to you we entrust ourselves to your heart, pierced with love for your Divine Son
 
@@ -1670,11 +1524,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1683,30 +1533,18 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Ferido pelas suas chagas,
-
-inebriado pela sua cruz
-
-e pelo sangue de vosso Filho,
-
-que no dia do juízo,
-
-ó Virgem, eu seja defendido
-
-e não arda no fogo eterno.
-
-Ó Cristo, quando eu partir,
-
-por vossa Mãe fazei-me chegar
-
-à palma da vitória.
-
-Quando o meu corpo morrer,
-
-fazei que a minha alma alcance
-
-a glória do paraíso.
-
-Amém.
+ inebriado pela sua cruz
+ e pelo sangue de vosso Filho,
+ que no dia do juízo,
+ ó Virgem, eu seja defendido
+ e não arda no fogo eterno.
+ Ó Cristo, quando eu partir,
+ por vossa Mãe fazei-me chegar
+ à palma da vitória.
+ Quando o meu corpo morrer,
+ fazei que a minha alma alcance
+ a glória do paraíso.
+ Amém.
 
 Mãe Santíssima, neste último dia da nossa novena confiamo-nos ao vosso coração, transpassado de amor pelo vosso divino Filho
 
@@ -1764,30 +1602,18 @@ O sorrowful Mother, I turn to you in total trust. You suffered the sharpest pain
 Look with favor upon me, a poor sinner, and obtain for me from your Son all the graces I need to endure the sufferings God allows me to face.
 
 Let me taste the pains He offered,
-
-drunk with love for Him who suffered
-
-May His wounds become my own.
-
-On the day of Christ’s returning
-
-may my heart be lit and burning.
-
-Virgin, aid me at His throne.
-
-May His Cross be interceding
-
-and His death my vict’ry pleading.
-
-May He hold me in His grace.
-
-When my flesh by death is taken,
-
-may my soul to glory waken
-
-and in heaven take a place.
-
-Amen.
+ drunk with love for Him who suffered
+ May His wounds become my own.
+ On the day of Christ’s returning
+ may my heart be lit and burning.
+ Virgin, aid me at His throne.
+ May His Cross be interceding
+ and His death my vict’ry pleading.
+ May He hold me in His grace.
+ When my flesh by death is taken,
+ may my soul to glory waken
+ and in heaven take a place.
+ Amen.
 
 Blessed Mother, on this last day of our novena to you we entrust ourselves to your heart, pierced with love for your Divine Son
 
@@ -1799,11 +1625,7 @@ O Mother of the Word Incarnate, despise not my petitions, but in your clemency, 
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1812,30 +1634,18 @@ Amém.
 Olhai com bondade para mim, pobre pecador, e alcançai-me do vosso Filho todas as graças de que preciso para suportar os sofrimentos que Deus permite que eu enfrente.
 
 Ferido pelas suas chagas,
-
-inebriado pela sua cruz
-
-e pelo sangue de vosso Filho,
-
-que no dia do juízo,
-
-ó Virgem, eu seja defendido
-
-e não arda no fogo eterno.
-
-Ó Cristo, quando eu partir,
-
-por vossa Mãe fazei-me chegar
-
-à palma da vitória.
-
-Quando o meu corpo morrer,
-
-fazei que a minha alma alcance
-
-a glória do paraíso.
-
-Amém.
+ inebriado pela sua cruz
+ e pelo sangue de vosso Filho,
+ que no dia do juízo,
+ ó Virgem, eu seja defendido
+ e não arda no fogo eterno.
+ Ó Cristo, quando eu partir,
+ por vossa Mãe fazei-me chegar
+ à palma da vitória.
+ Quando o meu corpo morrer,
+ fazei que a minha alma alcance
+ a glória do paraíso.
+ Amém.
 
 Mãe Santíssima, neste último dia da nossa novena confiamo-nos ao vosso coração, transpassado de amor pelo vosso divino Filho
 

@@ -43,46 +43,28 @@ Te embarcaste en ayudarlos, no solo dándoles pan sino ayudándoles a ganarse la
 Tenemos muchas personas desempleadas entre nosotros y sus familias pasan hambre. Te pedimos que guíes a los padres y madres que buscan trabajo. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -113,20 +95,14 @@ You embarked to help them, not just by giving them bread but helping them gain t
 We have many unemployed people in our midst and their families go hungry. We ask you to guide the fathers and mothers who are looking for work. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -151,10 +127,8 @@ Pusestes-vos a ajudá-los, não só dando-lhes pão, mas ajudando-os a ganhar a 
 Há muitos desempregados entre nós, e as suas famílias passam fome. Pedimos-vos que guieis os pais e as mães que procuram trabalho. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -186,46 +160,28 @@ Te embarcaste en ayudarlos, no solo dándoles pan sino ayudándoles a ganarse la
 Tenemos muchas personas desempleadas entre nosotros y sus familias pasan hambre. Te pedimos que guíes a los padres y madres que buscan trabajo. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -256,20 +212,14 @@ You embarked to help them, not just by giving them bread but helping them gain t
 We have many unemployed people in our midst and their families go hungry. We ask you to guide the fathers and mothers who are looking for work. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -294,10 +244,8 @@ Pusestes-vos a ajudá-los, não só dando-lhes pão, mas ajudando-os a ganhar a 
 Há muitos desempregados entre nós, e as suas famílias passam fome. Pedimos-vos que guieis os pais e as mães que procuram trabalho. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -333,46 +281,28 @@ Guíanos a ser como tú, dando prioridad a la oración en nuestra vida. Permíte
 Inspíranos a comprender que la oración no es solo pedir a Jesús por nuestras necesidades, sino estar con Él, deleitándonos en su presencia. Te pedimos, querido santo, que nos guíes en esta dirección para que aprendamos a deleitarnos en la presencia de Jesús. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -401,10 +331,8 @@ Guide us to be like you by giving priority to prayer in our life. Enable us to s
 Inspire us to understand that prayer is not just asking Jesus for our needs, but being with him, delighting in his presence. We ask you, dear saint, to lead us in this direction that we may learn to delight in Jesus’ presence. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
@@ -433,10 +361,8 @@ Guiai-nos para sermos como vós, dando prioridade à oração na nossa vida. Tor
 Inspirai-nos a compreender que rezar não é só pedir a Jesus o que precisamos, mas estar com Ele, deleitando-nos na Sua presença. Pedimos-vos, querido santo, que nos conduzais por este caminho, para aprendermos a deleitar-nos na presença de Jesus. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -466,46 +392,28 @@ Guíanos a ser como tú, dando prioridad a la oración en nuestra vida. Permíte
 Inspíranos a comprender que la oración no es solo pedir a Jesús por nuestras necesidades, sino estar con Él, deleitándonos en su presencia. Te pedimos, querido santo, que nos guíes en esta dirección para que aprendamos a deleitarnos en la presencia de Jesús. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -534,10 +442,8 @@ Guide us to be like you by giving priority to prayer in our life. Enable us to s
 Inspire us to understand that prayer is not just asking Jesus for our needs, but being with him, delighting in his presence. We ask you, dear saint, to lead us in this direction that we may learn to delight in Jesus’ presence. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
@@ -566,10 +472,8 @@ Guiai-nos para sermos como vós, dando prioridade à oração na nossa vida. Tor
 Inspirai-nos a compreender que rezar não é só pedir a Jesus o que precisamos, mas estar com Ele, deleitando-nos na Sua presença. Pedimos-vos, querido santo, que nos conduzais por este caminho, para aprendermos a deleitar-nos na presença de Jesus. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -607,46 +511,28 @@ Estas personas se convierten en víctimas de la desesperación y algunos incluso
 Tú que estableciste un banco para los necesitados, inspira a nuestros líderes a extender préstamos para los pobres para que puedan proveer las necesidades de sus familias. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -677,20 +563,14 @@ These people become victims of desperation and some even resort to crimes to sur
 You who established a bank for the needy inspire our leaders to extend loans for the poor so that they may provide for the needs of their families. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -715,10 +595,8 @@ Essas pessoas tornam-se vítimas do desespero, e algumas chegam a cometer crimes
 Vós, que fundastes um banco para os necessitados, inspirai os nossos governantes a conceder empréstimos aos pobres, para que possam prover às necessidades das suas famílias. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -750,46 +628,28 @@ Estas personas se convierten en víctimas de la desesperación y algunos incluso
 Tú que estableciste un banco para los necesitados, inspira a nuestros líderes a extender préstamos para los pobres para que puedan proveer las necesidades de sus familias. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -820,20 +680,14 @@ These people become victims of desperation and some even resort to crimes to sur
 You who established a bank for the needy inspire our leaders to extend loans for the poor so that they may provide for the needs of their families. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -858,10 +712,8 @@ Essas pessoas tornam-se vítimas do desespero, e algumas chegam a cometer crimes
 Vós, que fundastes um banco para os necessitados, inspirai os nossos governantes a conceder empréstimos aos pobres, para que possam prover às necessidades das suas famílias. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -899,46 +751,28 @@ Mira con piedad a nuestra sociedad donde los recursos se desperdician en comprar
 Inspíranos a compartir para que nadie entre nosotros pase hambre, y para que todos puedan vivir con dignidad. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -969,10 +803,8 @@ Look with pity on our society where resources are wasted in buying useless goods
 Inspire us to share that nobody among us would go hungry, and that everybody may live with dignity. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
@@ -1003,10 +835,8 @@ Olhai com compaixão para a nossa sociedade, onde se desperdiçam recursos compr
 Inspirai-nos a partilhar, para que ninguém entre nós passe fome e todos possam viver com dignidade. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -1038,46 +868,28 @@ Mira con piedad a nuestra sociedad donde los recursos se desperdician en comprar
 Inspíranos a compartir para que nadie entre nosotros pase hambre, y para que todos puedan vivir con dignidad. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -1108,10 +920,8 @@ Look with pity on our society where resources are wasted in buying useless goods
 Inspire us to share that nobody among us would go hungry, and that everybody may live with dignity. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
@@ -1142,10 +952,8 @@ Olhai com compaixão para a nossa sociedade, onde se desperdiçam recursos compr
 Inspirai-nos a partilhar, para que ninguém entre nós passe fome e todos possam viver com dignidade. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -1181,46 +989,28 @@ Cuidaste de los enfermos no solo para sanarlos, sino para guiarlos hacia una mue
 Ayúdanos a comprender que debemos prepararnos para una muerte feliz. Que también veamos que la enfermedad más terrible es nuestra pecaminosidad, y que siempre debemos examinarnos por los pecados que cometemos diariamente. Inspíranos a tener corazones arrepentidos para que siempre estemos preparados para encontrarnos con el Señor. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -1249,20 +1039,14 @@ You cared for the sick not just to heal them, but to guide them to a happy death
 Help us to understand that we have to prepare ourselves to a happy death. May we likewise see that the most terrible sickness is our sinfulness, and we always have to examine ourselves for the sins we commit daily. Inspire us to have repentant hearts that we may always be prepared to meet the Lord. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1285,10 +1069,8 @@ Cuidáveis dos doentes não só para curá-los, mas para guiá-los a uma morte f
 Ajudai-nos a compreender que devemos preparar-nos para uma morte feliz. Que vejamos também que a doença mais terrível é o nosso pecado e que devemos examinar-nos sempre sobre os pecados que cometemos cada dia. Inspirai-nos um coração arrependido, para estarmos sempre preparados para encontrar o Senhor. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -1318,46 +1100,28 @@ Cuidaste de los enfermos no solo para sanarlos, sino para guiarlos hacia una mue
 Ayúdanos a comprender que debemos prepararnos para una muerte feliz. Que también veamos que la enfermedad más terrible es nuestra pecaminosidad, y que siempre debemos examinarnos por los pecados que cometemos diariamente. Inspíranos a tener corazones arrepentidos para que siempre estemos preparados para encontrarnos con el Señor. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -1386,20 +1150,14 @@ You cared for the sick not just to heal them, but to guide them to a happy death
 Help us to understand that we have to prepare ourselves to a happy death. May we likewise see that the most terrible sickness is our sinfulness, and we always have to examine ourselves for the sins we commit daily. Inspire us to have repentant hearts that we may always be prepared to meet the Lord. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1422,10 +1180,8 @@ Cuidáveis dos doentes não só para curá-los, mas para guiá-los a uma morte f
 Ajudai-nos a compreender que devemos preparar-nos para uma morte feliz. Que vejamos também que a doença mais terrível é o nosso pecado e que devemos examinar-nos sempre sobre os pecados que cometemos cada dia. Inspirai-nos um coração arrependido, para estarmos sempre preparados para encontrar o Senhor. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -1463,46 +1219,28 @@ Tu humildad no te impidió convertirte en profeta. Solo temías a Jesús. Ayúda
 Solo podemos ser alguien si permanecemos cerca de Jesús. Inspíranos a seguir tus pasos para que nosotros también podamos luchar por la justicia y ayudar a detener la corrupción en nuestro gobierno. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -1533,10 +1271,8 @@ Your humility did not prevent you from becoming a prophet. You only feared Jesus
 We can only be someone if we stand close to Jesus. Inspire us to follow your footsteps so that we, too, may fight for justice and help stop corruption in our government. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
@@ -1567,10 +1303,8 @@ A vossa humildade não vos impediu de ser profeta. Só temíeis Jesus. Ajudai-no
 Só podemos ser alguém se estivermos perto de Jesus. Inspirai-nos a seguir os vossos passos, para que também nós lutemos pela justiça e ajudemos a deter a corrupção no nosso governo. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -1602,46 +1336,28 @@ Tu humildad no te impidió convertirte en profeta. Solo temías a Jesús. Ayúda
 Solo podemos ser alguien si permanecemos cerca de Jesús. Inspíranos a seguir tus pasos para que nosotros también podamos luchar por la justicia y ayudar a detener la corrupción en nuestro gobierno. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -1672,10 +1388,8 @@ Your humility did not prevent you from becoming a prophet. You only feared Jesus
 We can only be someone if we stand close to Jesus. Inspire us to follow your footsteps so that we, too, may fight for justice and help stop corruption in our government. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
@@ -1706,10 +1420,8 @@ A vossa humildade não vos impediu de ser profeta. Só temíeis Jesus. Ajudai-no
 Só podemos ser alguém se estivermos perto de Jesus. Inspirai-nos a seguir os vossos passos, para que também nós lutemos pela justiça e ajudemos a deter a corrupção no nosso governo. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -1747,46 +1459,28 @@ Renovaste la fe de muchas personas, tocaste sus corazones, y ayudaste mucho en l
 Inspíranos a ayunar y hacer penitencia por nuestros pecados. Infunde en nosotros el espíritu de sacrificio para que nosotros también podamos amar a Dios intensamente como tú lo hiciste. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -1817,20 +1511,14 @@ You renewed the faith of many people, touched their hearts, and helped much in t
 Inspire us to fast and do penance for our sins. Instill in us the spirit of sacrifice that we, too, may love God intensely as you did. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1855,10 +1543,8 @@ Renovastes a fé de muitas pessoas, tocastes os seus corações e ajudastes muit
 Inspirai-nos a jejuar e a fazer penitência pelos nossos pecados. Infundi em nós o espírito de sacrifício, para que também nós amemos a Deus intensamente como vós. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -1890,46 +1576,28 @@ Renovaste la fe de muchas personas, tocaste sus corazones, y ayudaste mucho en l
 Inspíranos a ayunar y hacer penitencia por nuestros pecados. Infunde en nosotros el espíritu de sacrificio para que nosotros también podamos amar a Dios intensamente como tú lo hiciste. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -1960,20 +1628,14 @@ You renewed the faith of many people, touched their hearts, and helped much in t
 Inspire us to fast and do penance for our sins. Instill in us the spirit of sacrifice that we, too, may love God intensely as you did. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1998,10 +1660,8 @@ Renovastes a fé de muitas pessoas, tocastes os seus corações e ajudastes muit
 Inspirai-nos a jejuar e a fazer penitência pelos nossos pecados. Infundi em nós o espírito de sacrifício, para que também nós amemos a Deus intensamente como vós. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -2039,46 +1699,28 @@ Veías a la Iglesia como la esposa de Cristo, el sacramento por el cual hombres 
 Enséñanos entonces a trabajar por la unidad en nuestra Iglesia y al mismo tiempo, a defenderla de sectas y movimientos religiosos que la atacan. Inspíranos a seguir tu camino. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -2109,10 +1751,8 @@ You see the Church as the bride of Christ, the sacrament by which men and women 
 Teach us then to work for unity in our Church and at the same time, to defend her from sects and religious movements that attack her. Inspire us to follow your path. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
@@ -2143,10 +1783,8 @@ Víeis a Igreja como a esposa de Cristo, o sacramento pelo qual homens e mulhere
 Ensinai-nos, pois, a trabalhar pela unidade na nossa Igreja e, ao mesmo tempo, a defendê-la das seitas e dos movimentos religiosos que a atacam. Inspirai-nos a seguir o vosso caminho. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -2178,46 +1816,28 @@ Veías a la Iglesia como la esposa de Cristo, el sacramento por el cual hombres 
 Enséñanos entonces a trabajar por la unidad en nuestra Iglesia y al mismo tiempo, a defenderla de sectas y movimientos religiosos que la atacan. Inspíranos a seguir tu camino. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -2248,10 +1868,8 @@ You see the Church as the bride of Christ, the sacrament by which men and women 
 Teach us then to work for unity in our Church and at the same time, to defend her from sects and religious movements that attack her. Inspire us to follow your path. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
@@ -2282,10 +1900,8 @@ Víeis a Igreja como a esposa de Cristo, o sacramento pelo qual homens e mulhere
 Ensinai-nos, pois, a trabalhar pela unidade na nossa Igreja e, ao mesmo tempo, a defendê-la das seitas e dos movimentos religiosos que a atacam. Inspirai-nos a seguir o vosso caminho. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -2323,46 +1939,28 @@ Jesús verdaderamente te amaba y su Madre confiaba en ti. Escucha entonces nuest
 Demuéstranos que ahora en el cielo estás más cerca de Jesús y que Él te escucha. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -2393,20 +1991,14 @@ Jesus truly loved you and his Mother trusted you. Listen then to our petitions o
 Prove to us that now in heaven you are closer to Jesus and he listens to you. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2431,10 +2023,8 @@ Jesus vos amava verdadeiramente, e a Sua Mãe confiava em vós. Ouvi, pois, os n
 Mostrai-nos que agora, no céu, estais mais perto de Jesus e que Ele vos ouve. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 
@@ -2466,46 +2056,28 @@ Jesús verdaderamente te amaba y su Madre confiaba en ti. Escucha entonces nuest
 Demuéstranos que ahora en el cielo estás más cerca de Jesús y que Él te escucha. Amén.
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 San Cayetano, ruega por nosotros.
 
@@ -2536,20 +2108,14 @@ Jesus truly loved you and his Mother trusted you. Listen then to our petitions o
 Prove to us that now in heaven you are closer to Jesus and he listens to you. Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Cajetan, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2574,10 +2140,8 @@ Jesus vos amava verdadeiramente, e a Sua Mãe confiava em vós. Ouvi, pois, os n
 Mostrai-nos que agora, no céu, estais mais perto de Jesus e que Ele vos ouve. Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São Caetano, rogai por nós.
 

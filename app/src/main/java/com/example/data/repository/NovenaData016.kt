@@ -25,22 +25,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -59,22 +51,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -111,98 +98,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -233,100 +187,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -340,22 +259,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -374,22 +285,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -426,98 +332,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -548,100 +421,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -661,22 +499,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -695,22 +525,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -747,88 +572,59 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
@@ -865,100 +661,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -972,22 +733,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -1006,22 +759,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -1058,88 +806,59 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
@@ -1176,100 +895,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -1289,22 +973,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -1323,22 +999,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -1375,98 +1046,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1497,100 +1135,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -1604,22 +1207,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -1638,22 +1233,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -1690,98 +1280,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1812,100 +1369,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -1925,22 +1447,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -1959,22 +1473,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -2011,88 +1520,59 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
@@ -2129,100 +1609,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -2236,22 +1681,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -2270,22 +1707,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -2322,88 +1754,59 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
@@ -2440,100 +1843,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -2553,22 +1921,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -2587,22 +1947,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -2639,98 +1994,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2761,100 +2083,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -2868,22 +2155,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -2902,22 +2181,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -2954,98 +2228,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3076,100 +2317,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -3189,22 +2395,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -3223,22 +2421,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -3275,88 +2468,59 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
@@ -3393,100 +2557,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -3500,22 +2629,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -3534,22 +2655,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -3586,88 +2702,59 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
@@ -3704,100 +2791,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -3817,22 +2869,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -3851,22 +2895,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -3903,98 +2942,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -4025,100 +3031,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -4132,22 +3103,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -4166,22 +3129,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -4218,98 +3176,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -4340,100 +3265,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -4453,22 +3343,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -4487,22 +3369,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -4539,88 +3416,59 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
@@ -4657,100 +3505,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -4764,22 +3577,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -4798,22 +3603,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -4850,88 +3650,59 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
@@ -4968,100 +3739,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -5081,22 +3817,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -5115,22 +3843,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -5167,98 +3890,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -5289,100 +3979,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 
@@ -5396,22 +4051,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
+ y porque os amo sobre todas las cosas,
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
+ Amén.
 
 Oración inicial
 
@@ -5430,22 +4077,17 @@ Se dicen las intenciones de la novena y se rezan tres padrenuestros, avemarías 
 Consagración a la Virgen
 
 ¡Oh Madre, quiero consagrarme a ti!
-
-Virgen María, hoy consagro mi vida a ti.
-
-Siento necesidad constante de tu presencia en mi vida
-
-para que me protejas, me guíes y me consueles.
-
-Sé que en ti mi alma encontrará reposo
-
-y la angustia en mí no entrará.
-
-Mi derrota se convertirá en victoria,
-
-mi fatiga en ti fortaleza es. Amén.
+ Virgen María, hoy consagro mi vida a ti.
+ Siento necesidad constante de tu presencia en mi vida
+ para que me protejas, me guíes y me consueles.
+ Sé que en ti mi alma encontrará reposo
+ y la angustia en mí no entrará.
+ Mi derrota se convertirá en victoria,
+ mi fatiga en ti fortaleza es. Amén.
 
 Oración final
+
+¡Oh Santísima Virgen, Madre de Dios, dulce refugio y consuelo piadoso de todos los afligidos! Por aquella confianza y autoridad de Madre con que puedes presentar nuestros ruegos al que es árbitro soberano de nuestro bien, intercede una y otra en favor nuestro. Consíguenos el reformar con el Santo Rosario nuestras vidas, estudiando en tan dulce libro la fiel imitación de tu Hijo Jesús, hasta que podamos adorarlo y amarlo por todos los siglos de los siglos. Amén.
 
 Se sugiere también rezar el Santo Rosario o al menos una decena, correspondiente al día.
 
@@ -5482,98 +4124,65 @@ The Holy Rosary
 Which set of mysteries to pray today depends on the day of the week:
 
 Monday, Saturday: Joyful mysteries (Annunciation, Visitation, Nativity, Presentation, Finding of the Child Jesus in the Temple)
-
-Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
-
-Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
-
-Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
+ Tuesday, Friday: Sorrowful mysteries (Agony in the garden, Scourging, Crowning with thorns, the carrying of the Cross, the Crucifixion)
+ Wednesday, Sunday: Glorious mysteries (Resurrection, Ascension, Descent of the Holy Spirit, Assumption, Coronation of our Lady)
+ Thursday: Luminous mysteries (Baptism in the Jordan, Wedding at Cana, Proclamation of the Kingdom/Call to conversion, Transfiguration, Institution of the Eucharist)
 
 The Rosary begins with:
 
 The Apostles’ Creed
-
-The Our Father
-
-Three Hail Marys
-
-The Glory Be
+ The Our Father
+ Three Hail Marys
+ The Glory Be
 
 The Apostles’ Creed:
-
-I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
+ I believe in God, the Father Almighty, Creator of heaven and earth; and in Jesus Christ, His only Son, our Lord: Who was conceived by the Holy Spirit, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, died and was buried.
 
 He descended into hell; the third day He rose again from the dead; He ascended into heaven, is seated at the right hand of God the Father Almighty; from thence He shall come to judge the living and the dead.
 
 I believe in the Holy Spirit, the Holy Catholic Church, the communion of Saints, the forgiveness of sins, the resurrection of the body, and life everlasting. Amen.
 
 The Our Father:
-
-Our Father, Who art in Heaven,
-
-Hallowed be Thy Name.
-
-Thy Kingdom come,
-
-They will be done, on earth as it is in Heaven.
-
-Give us this day our daily bread,
-
-and forgive us our trespasses,
-
-as we forgive those who trespass against us.
-
-And lead us not into temptation,
-
-but deliver us from evil,
-
-Amen.
+ Our Father, Who art in Heaven,
+ Hallowed be Thy Name.
+ Thy Kingdom come,
+ They will be done, on earth as it is in Heaven.
+ Give us this day our daily bread,
+ and forgive us our trespasses,
+ as we forgive those who trespass against us.
+ And lead us not into temptation,
+ but deliver us from evil,
+ Amen.
 
 The Hail Mary:
-
-Hail Mary, full of grace, the Lord is with thee.
-
-Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
-
-Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
+ Hail Mary, full of grace, the Lord is with thee.
+ Blessed art thou among women, and blessed is the fruit of they womb, Jesus.
+ Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death, amen.
 
 The Glory Be:
-
-Glory be to the Father, and to the Son, and to the Holy Spirit,
-
-as it was in the beginning, is now, and ever shall be, world without end, amen.
+ Glory be to the Father, and to the Son, and to the Holy Spirit,
+ as it was in the beginning, is now, and ever shall be, world without end, amen.
 
 Then begin the first decade of the set of mysteries you are praying today.
-
-Our Father
-
-Ten Hail Marys
-
-Glory Be
-
-Fatima Prayer:
-
-“Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
+ Our Father
+ Ten Hail Marys
+ Glory Be
+ Fatima Prayer:
+ “Oh my Jesus, forgive us our sins, save us from the fires of hell, and lead all souls to Heaven, especially those in most need of They mercy.”
 
 Repeat for decades 2 through 5.
 
 End the Rosary with the Hail, Holy Queen:
-
-Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
+ Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope! To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears! Turn, then, O most gracious Advocate, thine eyes of mercy toward us, and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.
 
 V. Pray for us, O holy Mother of God.
-
-R. That we may be made worthy of the promises of Christ.
+ R. That we may be made worthy of the promises of Christ.
 
 Let us Pray. O God, whose only-begotten Son, by His life, death and resurrection, has purchased for us the rewards of eternal life, grant, we beseech Thee, that meditating on these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain, and obtain what they promise, through the same Christ our Lord. Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -5604,100 +4213,65 @@ O Santo Rosário
 O conjunto de mistérios a rezar depende do dia da semana:
 
 Segunda-feira, sábado: mistérios gozosos (Anunciação, Visitação, Nascimento, Apresentação, Perda e Encontro do Menino Jesus no Templo)
-
-Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
-
-Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
-
-Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
+ Terça-feira, sexta-feira: mistérios dolorosos (Agonia no Horto, Flagelação, Coroação de espinhos, Jesus carregando a cruz, Crucifixão)
+ Quarta-feira, domingo: mistérios gloriosos (Ressurreição, Ascensão, Vinda do Espírito Santo, Assunção, Coroação de Nossa Senhora)
+ Quinta-feira: mistérios luminosos (Batismo no Jordão, Bodas de Caná, Anúncio do Reino e convite à conversão, Transfiguração, Instituição da Eucaristia)
 
 O Rosário começa com:
 
 O Credo dos Apóstolos
-
-O Pai-Nosso
-
-Três Ave-Marias
-
-O Glória ao Pai
+ O Pai-Nosso
+ Três Ave-Marias
+ O Glória ao Pai
 
 O Credo dos Apóstolos:
-
-Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
+ Creio em Deus Pai todo-poderoso, criador do céu e da terra; e em Jesus Cristo, seu único Filho, nosso Senhor, que foi concebido pelo poder do Espírito Santo; nasceu da Virgem Maria; padeceu sob Pôncio Pilatos, foi crucificado, morto e sepultado.
 
 Desceu à mansão dos mortos; ressuscitou ao terceiro dia; subiu aos céus, está sentado à direita de Deus Pai todo-poderoso, donde há de vir a julgar os vivos e os mortos.
 
 Creio no Espírito Santo, na santa Igreja Católica, na comunhão dos santos, na remissão dos pecados, na ressurreição da carne, na vida eterna. Amém.
 
 O Pai-Nosso:
-
-Pai nosso que estais nos céus,
-
-santificado seja o vosso nome;
-
-venha a nós o vosso reino;
-
-seja feita a vossa vontade
-
-assim na terra como no céu.
-
-O pão nosso de cada dia nos dai hoje;
-
-perdoai-nos as nossas ofensas
-
-assim como nós perdoamos a quem nos tem ofendido;
-
-e não nos deixeis cair em tentação,
-
-mas livrai-nos do mal.
-
-Amém.
+ Pai nosso que estais nos céus,
+ santificado seja o vosso nome;
+ venha a nós o vosso reino;
+ seja feita a vossa vontade
+ assim na terra como no céu.
+ O pão nosso de cada dia nos dai hoje;
+ perdoai-nos as nossas ofensas
+ assim como nós perdoamos a quem nos tem ofendido;
+ e não nos deixeis cair em tentação,
+ mas livrai-nos do mal.
+ Amém.
 
 A Ave-Maria:
-
-Ave Maria, cheia de graça, o Senhor é convosco,
-
-bendita sois vós entre as mulheres,
-
-e bendito é o fruto do vosso ventre, Jesus.
-
-Santa Maria, Mãe de Deus,
-
-rogai por nós, pecadores,
-
-agora e na hora da nossa morte.
-
-Amém.
+ Ave Maria, cheia de graça, o Senhor é convosco,
+ bendita sois vós entre as mulheres,
+ e bendito é o fruto do vosso ventre, Jesus.
+ Santa Maria, Mãe de Deus,
+ rogai por nós, pecadores,
+ agora e na hora da nossa morte.
+ Amém.
 
 O Glória ao Pai:
-
-Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre.
-
-Amém.
+ Glória ao Pai e ao Filho e ao Espírito Santo.
+ Como era no princípio, agora e sempre.
+ Amém.
 
 Depois comece a primeira dezena do conjunto de mistérios que reza hoje.
-
-Pai-Nosso
-
-Dez Ave-Marias
-
-Glória ao Pai
-
-Oração de Fátima:
-
-“Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
+ Pai-Nosso
+ Dez Ave-Marias
+ Glória ao Pai
+ Oração de Fátima:
+ “Ó meu Jesus, perdoai-nos, livrai-nos do fogo do inferno; levai as almas todas para o céu e socorrei principalmente as que mais precisarem.”
 
 Repita para as dezenas da segunda à quinta.
 
 Termine o Rosário com a Salve Rainha:
-
-Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
+ Salve, Rainha, Mãe de misericórdia, vida, doçura e esperança nossa, salve! A vós bradamos, os degredados filhos de Eva; a vós suspiramos, gemendo e chorando neste vale de lágrimas. Eia, pois, advogada nossa, esses vossos olhos misericordiosos a nós volvei; e, depois deste desterro, mostrai-nos Jesus, bendito fruto do vosso ventre, ó clemente, ó piedosa, ó doce sempre Virgem Maria.
 
 V. Rogai por nós, santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremos. Ó Deus, cujo Filho Unigênito, por sua vida, morte e ressurreição, nos alcançou o prêmio da salvação eterna, concedei-nos, Vos pedimos, que, meditando estes mistérios do santíssimo Rosário da Bem-aventurada Virgem Maria, imitemos o que contêm e alcancemos o que prometem. Pelo mesmo Cristo, nosso Senhor. Amém.
 

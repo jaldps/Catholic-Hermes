@@ -7,6 +7,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
@@ -52,6 +53,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.graphics.luminance
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.platform.testTag
@@ -60,7 +63,10 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.BaselineShift
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -77,9 +83,9 @@ import com.example.ui.theme.LocalAppTextStyles
  * Three rules do most of the work here and are worth stating because they are
  * what the eye reads as "iOS" before it reads anything else:
  *
- *  * **Nothing ripples.** Every target is `indication = null`; a list row
- *    answers a touch with a flat grey wash, which is what UIKit does, and
- *    everything else answers with nothing at all.
+ *  * **Nothing ripples.** Every target is `indication = null`. Cells and
+ *    tappable cards answer a touch with UIKit's flat grey wash; buttons and
+ *    capsules fade toward ~70% under the finger, as UIButton highlights.
  *  * **The group ends at the group.** A table view never draws a separator
  *    under its last row, so [ListGroup] measures itself one physical pixel
  *    short and lets the trailing hairline fall outside its own clip.
@@ -122,6 +128,63 @@ object AppleKit : AppKit {
                 enabled = enabled,
                 onClick = onClick
             )
+        }
+    }
+
+    /**
+     * A target that reports its own press, for the controls UIKit highlights:
+     * a button's fill and label fade to ~70% under the finger, a cell takes
+     * the flat grey wash. Still no ripple.
+     */
+    @Composable
+    private fun Modifier.pressable(
+        source: MutableInteractionSource,
+        onClick: (() -> Unit)?,
+        enabled: Boolean = true
+    ): Modifier = if (onClick == null) {
+        this
+    } else {
+        clickable(interactionSource = source, indication = null, enabled = enabled, onClick = onClick)
+    }
+
+    /**
+     * The fill behind filled controls and icon wells. iOS sets white on its
+     * tint in both appearances; the dark-mode liturgical accent is a pastel
+     * meant for text and glyphs, and filling a button with it forces a black
+     * label, which is Material's tonal idiom, not Apple's. In dark mode a pale
+     * accent is taken back down to a saturated mid-tone that carries white.
+     */
+    @Composable
+    private fun accentFill(): Color {
+        val design = LocalAppDesign.current
+        val primary = MaterialTheme.colorScheme.primary
+        return if (design.isDark && primary.luminance() > 0.25f) {
+            // Same hue, re-struck at a saturated mid value (S .66, V .56) —
+            // the way systemGreen stays vivid under a white label — rather
+            // than darkened toward black, which only greys it to olive.
+            val hsv = FloatArray(3)
+            android.graphics.Color.colorToHSV(primary.toArgb(), hsv)
+            Color(android.graphics.Color.HSVToColor(floatArrayOf(hsv[0], 0.66f, 0.56f)))
+        } else {
+            primary
+        }
+    }
+
+    @Composable
+    private fun onAccentFill(): Color {
+        val design = LocalAppDesign.current
+        val scheme = MaterialTheme.colorScheme
+        return if (design.isDark && scheme.primary.luminance() > 0.25f) Color.White else scheme.onPrimary
+    }
+
+    /** tertiarySystemFill — the grey of a disabled filled button. */
+    @Composable
+    private fun disabledFill(): Color {
+        val design = LocalAppDesign.current
+        return if (design.isDark) {
+            design.palette.selectionTint.copy(alpha = 0.7f)
+        } else {
+            design.palette.selectionTint.copy(alpha = 0.55f)
         }
     }
 
@@ -198,34 +261,27 @@ object AppleKit : AppKit {
             contentWindowInsets = WindowInsets.safeDrawing,
             containerColor = palette.canvas,
             topBar = {
-                Surface(color = bar) {
-                    Column(Modifier.statusBarsPadding()) {
-                        Row(
-                            Modifier
-                                .fillMaxWidth()
-                                .padding(horizontal = 8.dp)
-                                .heightIn(min = 44.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            // Balanced side wells keep the title optically
-                            // centred however wide the actions run.
-                            Box(Modifier.width(44.dp))
-                            Text(
-                                text = title,
-                                style = MaterialTheme.typography.titleLarge,
-                                color = palette.textPrimary,
-                                textAlign = TextAlign.Center,
-                                maxLines = 1,
-                                modifier = Modifier.weight(1f)
-                            )
-                            Row(
-                                Modifier.widthIn(min = 44.dp).wrapContentWidth(),
-                                verticalAlignment = Alignment.CenterVertically,
-                                content = actions
-                            )
-                        }
-                        Hairline()
-                    }
+                // A tab root in iOS opens on a large title, and at the scroll
+                // edge its navigation bar is transparent, hairline-free and
+                // carries no inline title: only the bar buttons. Every tab
+                // here opens on AppScreenTitle, so an inline app name above it
+                // was a second title — and an app name in the bar is the
+                // Android toolbar habit, not a UINavigationBar one.
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .background(palette.canvas)
+                        .statusBarsPadding()
+                ) {
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 8.dp)
+                            .heightIn(min = 44.dp),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically,
+                        content = actions
+                    )
                 }
             },
             bottomBar = {
@@ -318,11 +374,11 @@ object AppleKit : AppKit {
                         maxLines = 1
                     )
                     if (subtitle != null) {
-                        // UIKit's nav-bar prompt line: 11pt, not the 13pt of a
-                        // row subtitle, so the pair reads as one two-line title.
+                        // UIKit's two-line navigation title: a 12pt
+                        // secondary line in sentence case under the 17pt title.
                         Text(
-                            text = subtitle.uppercase(),
-                            style = styles.navLabel,
+                            text = subtitle,
+                            style = styles.rowSubtitle.copy(fontSize = styles.navLabel.fontSize * 1.2f),
                             color = palette.textSecondary,
                             textAlign = TextAlign.Center,
                             maxLines = 1
@@ -376,38 +432,54 @@ object AppleKit : AppKit {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
+        val scheme = MaterialTheme.colorScheme
         val insideCard = LocalInsideCard.current
+        if (insideCard) {
+            // Health's card header: the card's subject in the tint at
+            // subheadline semibold, sentence case, then the card's own title.
+            // An all-caps grey eyebrow on top of a bold line is the Android
+            // "overline" pattern; Apple apps don't letter-space shouting caps
+            // inside a card.
+            Column(modifier.fillMaxWidth().padding(bottom = 10.dp)) {
+                Text(
+                    text = title,
+                    style = styles.screenSubtitle.copy(fontWeight = FontWeight.SemiBold),
+                    color = scheme.primary
+                )
+                if (subtitle != null) {
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        text = subtitle,
+                        style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+                        color = palette.textPrimary
+                    )
+                }
+            }
+            return
+        }
+        // Outside a card: the prominent section header of Health, Fitness,
+        // Books and Journal (`.headerProminence(.increased)`) — a 20pt bold
+        // title in sentence case standing on the card edge, not the 13pt
+        // grey capitals of a 2014 settings table. On a screen made of cards
+        // rather than one long table, the small caps read as Android's
+        // overline style and stack into a wall of shouting labels.
         Column(
             modifier
                 .fillMaxWidth()
-                // Outside a card: the extra 4dp aligns the header to the text
-                // inside the group below it rather than to the group's own
-                // edge. Inside a card the card's padding already owns the
-                // inset, and a second one would push the header 20dp further
-                // in than everything it heads.
-                .padding(horizontal = if (insideCard) 0.dp else design.spacing.gutter + 4.dp)
-                .padding(
-                    top = if (insideCard) 0.dp else design.spacing.insetGroupGap,
-                    bottom = if (insideCard) 10.dp else 6.dp
-                )
+                .padding(horizontal = design.spacing.gutter + 1.dp)
+                .padding(top = design.spacing.insetGroupGap, bottom = 8.dp)
         ) {
             Text(
-                text = title.uppercase(),
-                style = styles.sectionEyebrow,
-                color = palette.textSecondary
+                text = title,
+                style = styles.sectionTitle.copy(fontSize = styles.sectionTitle.fontSize * (20f / 22f)),
+                color = palette.textPrimary
             )
             if (subtitle != null) {
-                Spacer(Modifier.height(if (insideCard) 2.dp else 3.dp))
+                Spacer(Modifier.height(1.dp))
                 Text(
                     text = subtitle,
-                    // A card header's second line is the card's title and
-                    // carries the weight; a section header's is a caption.
-                    style = if (insideCard) {
-                        styles.rowTitle.copy(fontWeight = FontWeight.SemiBold)
-                    } else {
-                        styles.rowSubtitle
-                    },
-                    color = if (insideCard) palette.textPrimary else palette.textSecondary
+                    style = styles.screenSubtitle,
+                    color = palette.textSecondary
                 )
             }
         }
@@ -421,12 +493,20 @@ object AppleKit : AppKit {
     ) {
         val design = LocalAppDesign.current
         val palette = design.palette
+        val source = remember { MutableInteractionSource() }
+        val pressed by source.collectIsPressedAsState()
+        // A tappable card highlights like a cell: the flat grey wash.
+        val fill = if (pressed && onClick != null) {
+            lerp(palette.groupedSurface, palette.selectionTint, if (design.isDark) 1f else 0.9f)
+        } else {
+            palette.groupedSurface
+        }
         Column(
             modifier
                 .fillMaxWidth()
                 .clip(design.shapes.card)
-                .background(palette.groupedSurface)
-                .tap(onClick)
+                .background(fill)
+                .pressable(source, onClick)
                 .padding(design.spacing.cardPadding)
         ) {
             val scope = this
@@ -518,14 +598,16 @@ object AppleKit : AppKit {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 if (leadingIcon != null) {
+                    // Settings' wells are saturated with a white glyph in
+                    // both appearances; never a pastel tile with a dark glyph.
                     Box(
-                        Modifier.size(IconWellSize).background(scheme.primary, IconWellShape),
+                        Modifier.size(IconWellSize).background(accentFill(), IconWellShape),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
                             imageVector = leadingIcon,
                             contentDescription = null,
-                            tint = scheme.onPrimary,
+                            tint = onAccentFill(),
                             modifier = Modifier.size(IconWellGlyph)
                         )
                     }
@@ -560,15 +642,23 @@ object AppleKit : AppKit {
     @Composable
     override fun Divider(modifier: Modifier) {
         val design = LocalAppDesign.current
-        // A rule standing on the canvas starts at the gutter, the way a table
-        // view's separator starts at its card's text inset — never full bleed.
-        InsetHairline(modifier, leadingInset = design.spacing.gutter)
+        // Inside a card the rule spans the card's content measure, edge to
+        // edge of the text it separates. On the canvas it is inset by the
+        // gutter on *both* sides: a rule that starts at the gutter and runs
+        // off the right edge belongs to no column and reads as a stray line.
+        if (LocalInsideCard.current) {
+            Hairline(modifier)
+        } else {
+            Hairline(modifier.padding(horizontal = design.spacing.gutter))
+        }
     }
 
     /** Cupertino has no ornament; the gap between groups is the ornament. */
     @Composable
     override fun Ornament(modifier: Modifier) {
-        Spacer(modifier.height(LocalAppDesign.current.spacing.sectionGap))
+        // Half a section gap: the header that follows brings its own 22dp, and
+        // the full 28 on top of it opened a 50dp hole no table view has.
+        Spacer(modifier.height(LocalAppDesign.current.spacing.sectionGap / 2))
     }
 
     // ------------------------------------------------------------------ inputs
@@ -583,25 +673,31 @@ object AppleKit : AppKit {
     ) {
         val design = LocalAppDesign.current
         val styles = LocalAppTextStyles.current
-        val scheme = MaterialTheme.colorScheme
+        val source = remember { MutableInteractionSource() }
+        val pressed by source.collectIsPressedAsState()
+        // UIButton.Configuration.filled at .large: 50pt, 12pt corners, white
+        // semibold label. Disabled is UIKit's grey fill and tertiary label —
+        // a ghost of the tint is Material's disabled state, not Apple's.
+        val content = if (enabled) onAccentFill() else design.palette.textTertiary
         Row(
             modifier
+                .graphicsLayer { alpha = if (pressed) 0.72f else 1f }
                 .heightIn(min = 50.dp)
                 .clip(design.shapes.button)
-                .background(if (enabled) scheme.primary else scheme.primary.copy(alpha = 0.3f))
-                .tap(onClick, enabled)
+                .background(if (enabled) accentFill() else disabledFill())
+                .pressable(source, onClick, enabled)
                 .padding(horizontal = 20.dp, vertical = 13.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
             if (leadingIcon != null) {
-                Icon(leadingIcon, null, tint = scheme.onPrimary, modifier = Modifier.size(17.dp))
+                Icon(leadingIcon, null, tint = content, modifier = Modifier.size(17.dp))
                 Spacer(Modifier.width(7.dp))
             }
             Text(
                 text = label,
                 style = styles.buttonLabel,
-                color = scheme.onPrimary,
+                color = content,
                 textAlign = TextAlign.Center
             )
         }
@@ -622,27 +718,29 @@ object AppleKit : AppKit {
         // Derived from the live accent rather than from palette.accentMuted,
         // which is keyed to the palette's own iOS blue and turns this button
         // blue in a green app.
-        val wash = scheme.primary.copy(alpha = if (design.isDark) 0.22f else 0.12f)
+        val wash = scheme.primary.copy(alpha = if (design.isDark) 0.20f else 0.12f)
+        val source = remember { MutableInteractionSource() }
+        val pressed by source.collectIsPressedAsState()
+        val content = if (enabled) scheme.primary else design.palette.textTertiary
         Row(
             modifier
-                // Outermost, so the tint fades with the label.
-                .alpha(if (enabled) 1f else 0.3f)
+                .graphicsLayer { alpha = if (pressed) 0.6f else 1f }
                 .heightIn(min = 50.dp)
                 .clip(design.shapes.button)
-                .background(wash)
-                .tap(onClick, enabled)
+                .background(if (enabled) wash else disabledFill())
+                .pressable(source, onClick, enabled)
                 .padding(horizontal = 20.dp, vertical = 13.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center
         ) {
             if (leadingIcon != null) {
-                Icon(leadingIcon, null, tint = scheme.primary, modifier = Modifier.size(17.dp))
+                Icon(leadingIcon, null, tint = content, modifier = Modifier.size(17.dp))
                 Spacer(Modifier.width(7.dp))
             }
             Text(
                 text = label,
                 style = styles.buttonLabel,
-                color = scheme.primary,
+                color = content,
                 textAlign = TextAlign.Center
             )
         }
@@ -770,15 +868,41 @@ object AppleKit : AppKit {
                         .tap({ onSelect(index) }),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text(
-                        text = option,
-                        style = MaterialTheme.typography.labelMedium.copy(
-                            fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal
-                        ),
-                        color = if (isSelected) palette.textPrimary else palette.textSecondary,
-                        textAlign = TextAlign.Center,
-                        maxLines = 1
+                    // UISegmentedControl shrinks a long title to fit its
+                    // segment (adjustsFontSizeToFitWidth) before it truncates;
+                    // a label crowding the rule beside it is the tell.
+                    // Measured against the semibold weight whether selected or
+                    // not, so a label does not change size as selection moves.
+                    val base = MaterialTheme.typography.labelMedium.copy(
+                        fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal
                     )
+                    val measurer = rememberTextMeasurer()
+                    BoxWithConstraints(
+                        Modifier.padding(horizontal = 5.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        val available = constraints.maxWidth
+                        val natural = measurer.measure(
+                            option,
+                            base.copy(fontWeight = FontWeight.SemiBold),
+                            softWrap = false,
+                            maxLines = 1
+                        ).size.width
+                        val scale = if (natural > available && natural > 0) {
+                            (available.toFloat() / natural).coerceAtLeast(0.75f)
+                        } else {
+                            1f
+                        }
+                        Text(
+                            text = option,
+                            style = base.copy(fontSize = base.fontSize * scale),
+                            color = if (isSelected) palette.textPrimary else palette.textSecondary,
+                            textAlign = TextAlign.Center,
+                            maxLines = 1,
+                            softWrap = false,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
                 }
             }
         }
@@ -788,25 +912,29 @@ object AppleKit : AppKit {
     override fun Chip(label: String, selected: Boolean, onClick: () -> Unit, modifier: Modifier) {
         val design = LocalAppDesign.current
         val palette = design.palette
-        val scheme = MaterialTheme.colorScheme
+        val source = remember { MutableInteractionSource() }
+        val pressed by source.collectIsPressedAsState()
+        // The capsule filter button of Photos, Music and the App Store:
+        // tertiary-fill capsule at rest, the tint with a white label when on.
         Box(
             modifier
+                .graphicsLayer { alpha = if (pressed) 0.65f else 1f }
                 .height(32.dp)
                 .clip(design.shapes.chip)
                 .background(
-                    if (selected) scheme.primary
-                    else palette.selectionTint.copy(alpha = if (design.isDark) 1f else 0.55f)
+                    if (selected) accentFill()
+                    else palette.selectionTint.copy(alpha = if (design.isDark) 0.8f else 0.55f)
                 )
-                .tap(onClick)
+                .pressable(source, onClick)
                 .padding(horizontal = 14.dp),
             contentAlignment = Alignment.Center
         ) {
             Text(
                 text = label,
-                style = MaterialTheme.typography.labelMedium.copy(
-                    fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal
+                style = LocalAppTextStyles.current.screenSubtitle.copy(
+                    fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Medium
                 ),
-                color = if (selected) scheme.onPrimary else palette.textPrimary,
+                color = if (selected) onAccentFill() else palette.textPrimary,
                 maxLines = 1
             )
         }
@@ -970,13 +1098,20 @@ object AppleKit : AppKit {
         val styles = LocalAppTextStyles.current
         val scheme = MaterialTheme.colorScheme
         val accent = accentColorHex?.let { Color(it) } ?: scheme.primary
+        val source = remember { MutableInteractionSource() }
+        val pressed by source.collectIsPressedAsState()
+        val fill = if (pressed && onClick != null) {
+            lerp(palette.groupedSurface, palette.selectionTint, if (design.isDark) 1f else 0.9f)
+        } else {
+            palette.groupedSurface
+        }
         Row(
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
                 .clip(design.shapes.card)
-                .background(palette.groupedSurface)
-                .tap(onClick)
+                .background(fill)
+                .pressable(source, onClick)
                 .heightIn(min = 60.dp)
                 .padding(horizontal = RowTextInset, vertical = 11.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -986,11 +1121,13 @@ object AppleKit : AppKit {
             Box(Modifier.size(IconWellSize).background(accent, IconWellShape))
             Spacer(Modifier.width(design.spacing.iconLabelGap))
             Column(Modifier.weight(1f)) {
+                // A cell's caption line, sentence case — not an all-caps overline.
                 Text(
-                    text = title.uppercase(),
-                    style = styles.sectionEyebrow,
+                    text = title,
+                    style = styles.rowSubtitle,
                     color = palette.textSecondary,
-                    maxLines = 1
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
                 )
                 Spacer(Modifier.height(1.dp))
                 if (body != null) {

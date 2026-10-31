@@ -35,10 +35,8 @@ La Eucaristía es un sacrificio que nunca termina. Es el sacramento del amor, el
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -59,20 +57,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 The Eucharist is a never-ending sacrifice. It is the Sacrament of love, the supreme love, the act of love. Help me each moment today and always to communicate myself to You by doing Your will. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -85,14 +77,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 A Eucaristia é um sacrifício que nunca termina. É o Sacramento do amor, o amor supremo, o ato de amor. Ajudai-me, a cada momento de hoje e sempre, a comunicar-me a Vós fazendo a Vossa vontade.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -116,10 +105,8 @@ La Eucaristía es un sacrificio que nunca termina. Es el sacramento del amor, el
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -140,20 +127,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 The Eucharist is a never-ending sacrifice. It is the Sacrament of love, the supreme love, the act of love. Help me each moment today and always to communicate myself to You by doing Your will. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -166,14 +147,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 A Eucaristia é um sacrifício que nunca termina. É o Sacramento do amor, o amor supremo, o ato de amor. Ajudai-me, a cada momento de hoje e sempre, a comunicar-me a Vós fazendo a Vossa vontade.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -203,10 +181,8 @@ Levanté la mirada asombrada ante los maravillosos caminos de Dios y pensé qué
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -227,10 +203,8 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 I looked up in wonder at God’s wonderful ways and thought how little we imagine what may be the result of listening and acting on a desire He puts into the heart. Nourish before Him great desires…May our desire be to bring Him hearts, for all are His by right, having been purchased by every drop of His blood. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
@@ -249,14 +223,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Olhei maravilhada para os admiráveis caminhos de Deus e pensei em quão pouco imaginamos qual pode ser o resultado de ouvir e de pôr em prática um desejo que Ele coloca no coração. Alimentai diante d’Ele grandes desejos… Que o nosso desejo seja levar-Lhe corações, pois todos são Seus por direito, tendo sido comprados por cada gota do Seu sangue.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -280,10 +251,8 @@ Levanté la mirada asombrada ante los maravillosos caminos de Dios y pensé qué
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -304,10 +273,8 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 I looked up in wonder at God’s wonderful ways and thought how little we imagine what may be the result of listening and acting on a desire He puts into the heart. Nourish before Him great desires…May our desire be to bring Him hearts, for all are His by right, having been purchased by every drop of His blood. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
@@ -326,14 +293,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Olhei maravilhada para os admiráveis caminhos de Deus e pensei em quão pouco imaginamos qual pode ser o resultado de ouvir e de pôr em prática um desejo que Ele coloca no coração. Alimentai diante d’Ele grandes desejos… Que o nosso desejo seja levar-Lhe corações, pois todos são Seus por direito, tendo sido comprados por cada gota do Seu sangue.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -363,10 +327,8 @@ Haz en paz, en cada momento, lo que en ese momento se debe hacer. Si hacemos lo 
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -387,20 +349,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Peacefully do at each moment what at that moment ought to be done. If we do what each moment requires, we will eventually complete God’s plan, whatever it is. We can trust God to take care of the master plan when we take care of the details. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -413,14 +369,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Fazei em paz, a cada momento, o que naquele momento deve ser feito. Se fizermos o que cada momento exige, acabaremos por completar o plano de Deus, seja ele qual for. Podemos confiar que Deus cuidará do plano geral quando nós cuidamos dos detalhes.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -444,10 +397,8 @@ Haz en paz, en cada momento, lo que en ese momento se debe hacer. Si hacemos lo 
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -468,20 +419,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Peacefully do at each moment what at that moment ought to be done. If we do what each moment requires, we will eventually complete God’s plan, whatever it is. We can trust God to take care of the master plan when we take care of the details. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -494,14 +439,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Fazei em paz, a cada momento, o que naquele momento deve ser feito. Se fizermos o que cada momento exige, acabaremos por completar o plano de Deus, seja ele qual for. Podemos confiar que Deus cuidará do plano geral quando nós cuidamos dos detalhes.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -531,10 +473,8 @@ La bondad es el fruto natural de un corazón bueno. Jesús amaba a todo ser huma
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -555,10 +495,8 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Kindness is the natural fruit of goodness of heart. He (Jesus) loved every human being as the image of God…and so all that came within range of His benevolence were treated kindly for God’s sake and their own. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
@@ -577,14 +515,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 A bondade é o fruto natural de um bom coração. Ele (Jesus) amava cada ser humano como imagem de Deus… e assim todos os que chegavam ao alcance da Sua benevolência eram tratados com bondade, por amor de Deus e por eles mesmos.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -608,10 +543,8 @@ La bondad es el fruto natural de un corazón bueno. Jesús amaba a todo ser huma
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -632,10 +565,8 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Kindness is the natural fruit of goodness of heart. He (Jesus) loved every human being as the image of God…and so all that came within range of His benevolence were treated kindly for God’s sake and their own. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
@@ -654,14 +585,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 A bondade é o fruto natural de um bom coração. Ele (Jesus) amava cada ser humano como imagem de Deus… e assim todos os que chegavam ao alcance da Sua benevolência eram tratados com bondade, por amor de Deus e por eles mesmos.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -691,10 +619,8 @@ A menudo, en mi deseo de trabajar por los demás, me encuentro con las manos ata
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -715,20 +641,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Often in my desire to work for others I find my hands tied, something hinders my charitable designs, some hostile influence renders me powerless. My prayers seem to avail nothing, my kind acts are rejected, I seem to do the wrong thing when I am trying to do my best. In such cases I must not grieve. I am only treading in my Master’s steps. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -741,14 +661,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Muitas vezes, no meu desejo de trabalhar pelos outros, encontro as mãos atadas; algo impede os meus propósitos caridosos, alguma influência hostil me deixa impotente. As minhas orações parecem não servir para nada, os meus gestos de bondade são rejeitados, parece que faço a coisa errada quando estou tentando fazer o meu melhor. Nesses casos, não devo me entristecer. Estou apenas seguindo os passos do meu Mestre.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -772,10 +689,8 @@ A menudo, en mi deseo de trabajar por los demás, me encuentro con las manos ata
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -796,20 +711,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Often in my desire to work for others I find my hands tied, something hinders my charitable designs, some hostile influence renders me powerless. My prayers seem to avail nothing, my kind acts are rejected, I seem to do the wrong thing when I am trying to do my best. In such cases I must not grieve. I am only treading in my Master’s steps. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -822,14 +731,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Muitas vezes, no meu desejo de trabalhar pelos outros, encontro as mãos atadas; algo impede os meus propósitos caridosos, alguma influência hostil me deixa impotente. As minhas orações parecem não servir para nada, os meus gestos de bondade são rejeitados, parece que faço a coisa errada quando estou tentando fazer o meu melhor. Nesses casos, não devo me entristecer. Estou apenas seguindo os passos do meu Mestre.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -859,10 +765,8 @@ Puede que Cristo me esté conduciendo hacia una cruz. Si es así, ¡no puedo dud
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -883,10 +787,8 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 (Christ) may be leading me out to a cross. If so, I can have no hesitation about following Him! I must follow Him closely, so that…I shall be near Him, my good Shepherd, Who will help me to carry it, for He still bears His Cross in each one of His children. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
@@ -905,14 +807,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 (Cristo) talvez esteja me conduzindo a uma cruz. Se for assim, não posso hesitar em segui-Lo! Devo segui-Lo de perto, para que… eu esteja perto d’Ele, meu bom Pastor, que me ajudará a carregá-la, pois Ele ainda carrega a Sua Cruz em cada um dos Seus filhos.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -936,10 +835,8 @@ Puede que Cristo me esté conduciendo hacia una cruz. Si es así, ¡no puedo dud
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -960,10 +857,8 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 (Christ) may be leading me out to a cross. If so, I can have no hesitation about following Him! I must follow Him closely, so that…I shall be near Him, my good Shepherd, Who will help me to carry it, for He still bears His Cross in each one of His children. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
@@ -982,14 +877,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 (Cristo) talvez esteja me conduzindo a uma cruz. Se for assim, não posso hesitar em segui-Lo! Devo segui-Lo de perto, para que… eu esteja perto d’Ele, meu bom Pastor, que me ajudará a carregá-la, pois Ele ainda carrega a Sua Cruz em cada um dos Seus filhos.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -1019,10 +911,8 @@ Enséñame, oh mi querida Madre, la lección del sacrificio. Ayúdame, Madre, a 
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -1043,20 +933,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Teach me, O my dear Mother, the lesson of sacrifice. Help me, Mother, to take from the hands of Jesus, in the spirit of humble love, devotion to my daily crosses. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1069,14 +953,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Ensinai-me, ó minha querida Mãe, a lição do sacrifício. Ajudai-me, Mãe, a receber das mãos de Jesus, num espírito de amor humilde, a dedicação às minhas cruzes de cada dia.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -1100,10 +981,8 @@ Enséñame, oh mi querida Madre, la lección del sacrificio. Ayúdame, Madre, a 
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -1124,20 +1003,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Teach me, O my dear Mother, the lesson of sacrifice. Help me, Mother, to take from the hands of Jesus, in the spirit of humble love, devotion to my daily crosses. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1150,14 +1023,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Ensinai-me, ó minha querida Mãe, a lição do sacrifício. Ajudai-me, Mãe, a receber das mãos de Jesus, num espírito de amor humilde, a dedicação às minhas cruzes de cada dia.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -1187,10 +1057,8 @@ Con nuestros días ordinarios de hoy y de ayer estamos construyendo para la eter
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -1211,10 +1079,8 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Out of our common todays and yesterdays we are building for eternity. No thought, no work of ours ever dies. We shall meet them all again, and in the world to come shall find our gathered harvest. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
@@ -1233,14 +1099,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Com os nossos dias comuns de hoje e de ontem, estamos construindo para a eternidade. Nenhum pensamento, nenhuma obra nossa jamais morre. Haveremos de reencontrá-los todos, e no mundo que há de vir encontraremos a nossa colheita reunida.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -1264,10 +1127,8 @@ Con nuestros días ordinarios de hoy y de ayer estamos construyendo para la eter
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -1288,10 +1149,8 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 Out of our common todays and yesterdays we are building for eternity. No thought, no work of ours ever dies. We shall meet them all again, and in the world to come shall find our gathered harvest. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
@@ -1310,14 +1169,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 Com os nossos dias comuns de hoje e de ontem, estamos construindo para a eternidade. Nenhum pensamento, nenhuma obra nossa jamais morre. Haveremos de reencontrá-los todos, e no mundo que há de vir encontraremos a nossa colheita reunida.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -1347,10 +1203,8 @@ La vida activa, para dar fruto, necesita de la contemplación. Cuando la contemp
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -1371,20 +1225,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 The active life to be productive must have contemplation. When it (contemplation) gets to a certain height it overflows to active life and gets help and strength from the heart of God. This is the way the saints produced so much fruit, and we’re all called to be saints. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1397,14 +1245,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 A vida ativa, para ser fecunda, precisa da contemplação. Quando ela (a contemplação) atinge certa altura, transborda para a vida ativa e recebe ajuda e força do coração de Deus. Foi assim que os santos produziram tantos frutos, e todos nós somos chamados a ser santos.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 
@@ -1428,10 +1273,8 @@ La vida activa, para dar fruto, necesita de la contemplación. Cuando la contemp
 Santa Catalina Drexel
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 ¡Santa Catalina Drexel, ruega por nosotros!
 
@@ -1452,20 +1295,14 @@ Grant this through our Lord Jesus Christ, your Son, who lives and reigns with Yo
 The active life to be productive must have contemplation. When it (contemplation) gets to a certain height it overflows to active life and gets help and strength from the heart of God. This is the way the saints produced so much fruit, and we’re all called to be saints. – Saint Katharine Drexel
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St Katharine Drexel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1478,14 +1315,11 @@ Concedei-nos isto por nosso Senhor Jesus Cristo, Vosso Filho, que Convosco vive 
 (mencione o pedido aqui…)
 
 A vida ativa, para ser fecunda, precisa da contemplação. Quando ela (a contemplação) atinge certa altura, transborda para a vida ativa e recebe ajuda e força do coração de Deus. Foi assim que os santos produziram tantos frutos, e todos nós somos chamados a ser santos.
-
-Santa Catarina Drexel
+ Santa Catarina Drexel
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santa Catarina Drexel, rogai por nós!
 

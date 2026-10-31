@@ -1092,7 +1092,12 @@ private fun NovenaDayView(
 
     val dayData = novena.days.firstOrNull { it.dayNumber == activeDay } ?: novena.days.first()
     val prayerText = dayData.prayer.get(currentLanguage)
+    // The source data stores each day's prayer in both fields, so the
+    // meditation is shown only when it says something the prayer does not —
+    // otherwise every day displayed its prayer twice.
     val meditation = dayData.meditation.get(currentLanguage)
+        .takeUnless { it.trim() == prayerText.trim() }
+        .orEmpty()
     val guidance = dayData.intentionGuidance.get(currentLanguage)
     val description = novena.description.get(currentLanguage)
 

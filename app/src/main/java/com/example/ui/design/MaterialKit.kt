@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.PaddingValues
@@ -27,6 +28,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.AutoAwesome
+import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Inbox
 import androidx.compose.material.icons.rounded.Search
@@ -34,7 +36,6 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card as M3Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.FilterChip
@@ -54,12 +55,26 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.snapshotFlow
+import kotlinx.coroutines.flow.first
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.layout.AlignmentLine
+import androidx.compose.ui.layout.FirstBaseline
+import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.layout.layout
+import androidx.compose.ui.layout.onPlaced
+import androidx.compose.ui.layout.positionInParent
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.compositeOver
@@ -181,6 +196,34 @@ object MaterialKit : AppKit {
     private fun Color.step(ink: Color, alpha: Float): Color =
         ink.copy(alpha = alpha).compositeOver(this)
 
+    /** Hue (0..360), saturation and lightness of an sRGB colour. */
+    private fun Color.hsl(): FloatArray {
+        val max = maxOf(red, green, blue)
+        val min = minOf(red, green, blue)
+        val l = (max + min) / 2f
+        val d = max - min
+        if (d < 1e-4f) return floatArrayOf(0f, 0f, l)
+        val s = d / (1f - kotlin.math.abs(2f * l - 1f))
+        val h = when (max) {
+            red -> 60f * (((green - blue) / d).mod(6f))
+            green -> 60f * (((blue - red) / d) + 2f)
+            else -> 60f * (((red - green) / d) + 4f)
+        }
+        return floatArrayOf(h, s.coerceIn(0f, 1f), l)
+    }
+
+    /**
+     * A tone of [this] colour's hue at lightness [l] and saturation [s] —
+     * the stand-in for picking tone 90 / tone 30 out of the seed's tonal
+     * palette. Saturation is scaled down for low-chroma seeds (slate, ivory),
+     * so a sober theme gets sober containers instead of a forced pastel.
+     */
+    private fun Color.tone(s: Float, l: Float): Color {
+        val (h, srcS, _) = hsl()
+        val chromaScale = (srcS / 0.35f).coerceIn(0f, 1f)
+        return Color.hsl(h, (s * chromaScale).coerceIn(0f, 1f), l.coerceIn(0f, 1f))
+    }
+
     @Composable
     private fun roles(): Roles {
         val design = LocalAppDesign.current
@@ -205,13 +248,15 @@ object MaterialKit : AppKit {
         else floatArrayOf(0.031f, 0.050f, 0.082f, 0.109f)
 
         val high = canvas.step(ink, a[2])
-        val accentSoft = accent
-            .copy(alpha = if (dark) 0.30f else 0.22f)
-            .compositeOver(canvas)
-            .tintedBy(accent, 0.18f)
-        val accentSofter = accent
-            .copy(alpha = if (dark) 0.20f else 0.13f)
-            .compositeOver(canvas)
+        // The two containers are struck as tones of the accent's hue, the
+        // way a seeded scheme picks tone 90 (light) / 30 (dark) out of the
+        // primary and secondary palettes. Compositing the accent at low alpha
+        // over a grey canvas — what this did before — lands on a desaturated
+        // sage that reads as "disabled", not as "container".
+        val accentSoft = if (dark) accent.tone(0.40f, 0.24f) else accent.tone(0.50f, 0.85f)
+        val accentSofter = if (dark) accent.tone(0.16f, 0.25f) else accent.tone(0.30f, 0.875f)
+        val onAccentSoft = if (dark) accent.tone(0.55f, 0.86f) else accent.tone(0.70f, 0.17f)
+        val onAccentSofter = if (dark) accent.tone(0.25f, 0.89f) else accent.tone(0.35f, 0.12f)
 
         return Roles(
             canvas = canvas,
@@ -220,9 +265,9 @@ object MaterialKit : AppKit {
             high = high,
             highest = canvas.step(ink, a[3]),
             accentSoft = accentSoft,
-            onAccentSoft = accent.readableOn(accentSoft),
+            onAccentSoft = onAccentSoft.readableOn(accentSoft),
             accentSofter = accentSofter,
-            onAccentSofter = design.palette.textPrimary.readableOn(accentSofter),
+            onAccentSofter = onAccentSofter.readableOn(accentSofter),
             outline = canvas.step(ink, if (dark) 0.30f else 0.24f)
         )
     }
@@ -324,11 +369,21 @@ object MaterialKit : AppKit {
         val styles = LocalAppTextStyles.current
         val c = roles()
 
+        // The small top app bar's own behaviour: flush with the canvas at rest,
+        // stepping up to surfaceContainer once content scrolls under it.
+        val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+
         Scaffold(
+            modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
             contentWindowInsets = WindowInsets.safeDrawing,
             containerColor = c.canvas,
             topBar = {
-                CenterAlignedTopAppBar(
+                // Start-aligned, not centred. A centred title over a
+                // start-aligned headline is two competing axes, and a centred
+                // word alone in a bar is the iOS navigation bar; the M3 small
+                // top app bar (Gmail, Calendar, the Catalog) starts at 16dp,
+                // on the same edge as everything under it.
+                TopAppBar(
                     title = {
                         Text(
                             text = title,
@@ -339,10 +394,10 @@ object MaterialKit : AppKit {
                     },
                     actions = actions,
                     windowInsets = WindowInsets.statusBars,
-                    colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
-                        // At rest the small top app bar is `surface`, flush with
-                        // the content behind it: no line, no shadow, no fill.
+                    scrollBehavior = scrollBehavior,
+                    colors = TopAppBarDefaults.topAppBarColors(
                         containerColor = c.canvas,
+                        scrolledContainerColor = c.container,
                         titleContentColor = palette.textPrimary,
                         actionIconContentColor = palette.textSecondary,
                         navigationIconContentColor = palette.textSecondary
@@ -460,11 +515,11 @@ object MaterialKit : AppKit {
     ) {
         val palette = LocalAppDesign.current.palette
         val c = roles()
-        CenterAlignedTopAppBar(
+        TopAppBar(
             title = {
                 // 1.3.0's app bars have no subtitle slot, so the two lines sit
-                // in the title slot together and stay centred as a pair.
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                // in the title slot together, start-aligned like the bar.
+                Column {
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleLarge,
@@ -494,7 +549,7 @@ object MaterialKit : AppKit {
                 }
             },
             actions = actions,
-            colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
+            colors = TopAppBarDefaults.topAppBarColors(
                 containerColor = c.canvas,
                 titleContentColor = palette.textPrimary,
                 actionIconContentColor = palette.textSecondary,
@@ -616,62 +671,129 @@ object MaterialKit : AppKit {
         val container = if (selected) c.accentSofter else c.container
         val titleColor = if (selected) c.onAccentSofter else palette.textPrimary
 
+        // M3 list items come in one-, two- and three-line heights (56/72/88)
+        // and the three-line item lets its supporting text run to a second
+        // line. Clamping both lines to one cut every long Spanish parish name
+        // to "Catedral Primada de S…" — which no Google list does; it wraps.
+        // Once the text block runs past two lines the item is three-line, and
+        // the spec then pins avatar and trailing text to the top instead of
+        // centring them against a tall block. That is decided in the layout
+        // pass from the measured text height, so it is right on the first
+        // frame rather than one recomposition later.
+        val hasLeading = leadingIcon != null
+        val hasTrailing = trailingText != null
+
         FilledCard(
             modifier = modifier.fillMaxWidth(),
             container = container,
             shape = design.shapes.card,
             onClick = onClick
         ) {
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    // Two-line list item: 72dp, with the 16/12 insets the spec
-                    // puts around a leading avatar.
-                    .heightIn(min = 72.dp)
-                    .padding(horizontal = 16.dp, vertical = design.spacing.rowPaddingVertical),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                if (leadingIcon != null) {
-                    TonalIconCircle(
-                        icon = leadingIcon,
-                        // Derived from the accent, not from the scheme's
-                        // baseline containers: a green app has green circles.
-                        container = if (selected) c.accentSoft else c.high,
-                        tint = if (selected) c.onAccentSoft else MaterialTheme.colorScheme.primary,
-                        glyph = design.decor.rowIconSize
-                    )
-                    Spacer(Modifier.width(design.spacing.iconLabelGap))
-                }
-                Column(Modifier.weight(1f)) {
-                    Text(
-                        text = title,
-                        style = styles.rowTitle,
-                        color = titleColor,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    if (subtitle != null) {
-                        Spacer(Modifier.height(2.dp))
+            Layout(
+                modifier = Modifier.fillMaxWidth(),
+                content = {
+                    if (leadingIcon != null) {
+                        TonalIconCircle(
+                            icon = leadingIcon,
+                            // The list avatar: primaryContainer / onPrimaryContainer.
+                            // A grey disc under a green glyph read as disabled.
+                            // The selected row is already secondaryContainer,
+                            // so its avatar steps up to primary to stay distinct.
+                            container = if (selected) MaterialTheme.colorScheme.primary else c.accentSoft,
+                            tint = if (selected) MaterialTheme.colorScheme.onPrimary else c.onAccentSoft,
+                            glyph = design.decor.rowIconSize
+                        )
+                    }
+                    Column {
                         Text(
-                            text = subtitle,
-                            style = styles.rowSubtitle,
-                            color = palette.textSecondary,
-                            maxLines = 1,
+                            text = title,
+                            style = styles.rowTitle,
+                            color = titleColor,
+                            maxLines = 2,
                             overflow = TextOverflow.Ellipsis
+                        )
+                        if (subtitle != null) {
+                            Text(
+                                text = subtitle,
+                                style = styles.rowSubtitle,
+                                color = if (selected) c.onAccentSofter else palette.textSecondary,
+                                maxLines = 2,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        }
+                    }
+                    // decor.usesChevrons is false here: M3 states the
+                    // destination with trailing supporting text, not a
+                    // disclosure arrow, so showsNavigationAffordance draws
+                    // nothing. labelSmall, capped at 104dp, so a long locality
+                    // cannot starve the headline of width.
+                    if (trailingText != null) {
+                        Text(
+                            text = trailingText,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = if (selected) c.onAccentSofter else palette.textSecondary,
+                            textAlign = TextAlign.End,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.widthIn(max = 104.dp)
                         )
                     }
                 }
-                // decor.usesChevrons is false here: M3 states the destination
-                // with a trailing value, not with a disclosure arrow, so
-                // showsNavigationAffordance draws nothing.
-                if (trailingText != null) {
-                    Spacer(Modifier.width(16.dp))
-                    Text(
-                        text = trailingText,
-                        style = MaterialTheme.typography.labelMedium,
-                        color = if (selected) c.onAccentSofter else palette.textSecondary,
-                        maxLines = 1
-                    )
+            ) { measurables, constraints ->
+                val start = 16.dp.roundToPx()
+                val end = 24.dp.roundToPx()
+                val gap = design.spacing.iconLabelGap.roundToPx()
+                val trailingGap = 16.dp.roundToPx()
+                val loose = constraints.copy(minWidth = 0, minHeight = 0)
+                var i = 0
+                val leading = if (hasLeading) measurables[i++].measure(loose) else null
+                val textMeasurable = measurables[i++]
+                val trailing = if (hasTrailing) measurables[i].measure(loose) else null
+
+                val width = constraints.maxWidth
+                val used = start + end +
+                    (leading?.let { it.width + gap } ?: 0) +
+                    (trailing?.let { it.width + trailingGap } ?: 0)
+                val text = textMeasurable.measure(
+                    loose.copy(maxWidth = (width - used).coerceAtLeast(0))
+                )
+
+                // One line of rowTitle is 24dp, title + subtitle 44dp; anything
+                // taller is a three-line item.
+                val threeLine = text.height > 48.dp.roundToPx()
+                val oneLine = subtitle == null && text.height <= 28.dp.roundToPx()
+                val minHeight = when {
+                    threeLine -> 88.dp
+                    oneLine -> 56.dp
+                    else -> 72.dp
+                }.roundToPx()
+                val padV = (if (threeLine) 12.dp else 8.dp).roundToPx()
+                val height = maxOf(minHeight, text.height + padV * 2)
+
+                fun sideY(h: Int) = if (threeLine) padV else (height - h) / 2
+
+                layout(width, height) {
+                    var x = start
+                    leading?.let {
+                        it.placeRelative(x, sideY(it.height))
+                        x += it.width + gap
+                    }
+                    text.placeRelative(x, (height - text.height) / 2)
+                    trailing?.let {
+                        // Three-line: the trailing text shares the headline's
+                        // first baseline, as the spec draws it, rather than
+                        // sitting on the padding line 4dp above it.
+                        val textBase = text[FirstBaseline]
+                        val trailBase = it[FirstBaseline]
+                        val y = if (threeLine && textBase != AlignmentLine.Unspecified &&
+                            trailBase != AlignmentLine.Unspecified
+                        ) {
+                            (height - text.height) / 2 + textBase - trailBase
+                        } else {
+                            sideY(it.height)
+                        }
+                        it.placeRelative(width - end - it.width, y)
+                    }
                 }
             }
         }
@@ -841,13 +963,69 @@ object MaterialKit : AppKit {
         // No gutter of its own: every other component in this kit takes its
         // inset from the caller, and adding one here double-padded the control
         // to 32dp while the search field above it sat at 16dp.
-        if (options.size > 5) {
-            // Segmented buttons do not scroll, and past five segments the end
-            // caps stop reading as one control — so the set becomes chips.
+        // Segmented buttons are for short labels: the spec's own examples are
+        // one or two words, and a segment never truncates. Measure each label
+        // against the width its segment would actually get (minus the 12dp
+        // side insets and, for the selected one, the 18+8dp checkmark); if any
+        // would be cut — "Compendium …", "Catechism (1-…" — or there are more
+        // than five, the set becomes a scrolling row of filter chips, which is
+        // what Google's own apps use for long or localised option sets.
+        val measurer = rememberTextMeasurer()
+        val labelStyle = MaterialTheme.typography.labelLarge
+        BoxWithConstraints(modifier.fillMaxWidth()) {
+        val segment = maxWidth / options.size.coerceAtLeast(1)
+        val room = segment - 24.dp - 26.dp
+        val widest = with(LocalDensity.current) {
+            options.maxOfOrNull { measurer.measure(it, labelStyle, maxLines = 1).size.width.toDp() } ?: 0.dp
+        }
+        val fits = options.size <= 5 && widest <= room
+        if (!fits) {
+            // A scrolling chip row bleeds to the screen edge and carries the
+            // gutter as content padding, so chips scroll off the glass rather
+            // than being guillotined 16dp short of it. Every Material caller
+            // insets this control by exactly the gutter, which is what the
+            // bleed undoes.
+            val bleed = LocalAppDesign.current.spacing.gutter
+            val scroll = rememberScrollState()
+            val chipLefts = remember(options) { IntArray(options.size) }
+            val chipWidths = remember(options) { IntArray(options.size) }
+            // The selected chip is brought into view: a mode row whose active
+            // mode is scrolled off the glass hides the one thing it reports.
+            // On first composition it snaps there (the row arrives already
+            // showing its selection); later selections animate.
+            val firstRun = remember(options) { booleanArrayOf(true) }
+            LaunchedEffect(selectedIndex, options) {
+                // Wait for the layout pass that gives the row its extent.
+                snapshotFlow { scroll.viewportSize }.first { it > 0 }
+                val i = selectedIndex.coerceIn(0, options.size - 1)
+                val left = chipLefts[i]
+                val right = left + chipWidths[i]
+                val target = when {
+                    right > scroll.value + scroll.viewportSize -> right - scroll.viewportSize + 24
+                    left < scroll.value -> left - 24
+                    else -> null
+                }?.coerceIn(0, scroll.maxValue)
+                if (target != null) {
+                    if (firstRun[0]) scroll.scrollTo(target) else scroll.animateScrollTo(target)
+                }
+                firstRun[0] = false
+            }
             Row(
-                modifier
-                    .fillMaxWidth()
-                    .horizontalScroll(rememberScrollState()),
+                Modifier
+                    .layout { measurable, constraints ->
+                        val extra = (bleed * 2).roundToPx()
+                        val placeable = measurable.measure(
+                            constraints.copy(
+                                minWidth = constraints.maxWidth + extra,
+                                maxWidth = constraints.maxWidth + extra
+                            )
+                        )
+                        layout(constraints.maxWidth, placeable.height) {
+                            placeable.placeRelative(-bleed.roundToPx(), 0)
+                        }
+                    }
+                    .horizontalScroll(scroll)
+                    .padding(horizontal = bleed),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 options.forEachIndexed { index, option ->
@@ -855,12 +1033,15 @@ object MaterialKit : AppKit {
                         label = option,
                         selected = index == selectedIndex,
                         onClick = { onSelect(index) },
-                        modifier = Modifier
+                        modifier = Modifier.onPlaced {
+                            chipLefts[index] = it.positionInParent().x.toInt()
+                            chipWidths[index] = it.size.width
+                        }
                     )
                 }
             }
         } else {
-            SingleChoiceSegmentedButtonRow(modifier = modifier.fillMaxWidth()) {
+            SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth()) {
                 options.forEachIndexed { index, option ->
                     val isSelected = index == selectedIndex
                     SegmentedButton(
@@ -888,6 +1069,7 @@ object MaterialKit : AppKit {
                 }
             }
         }
+        }
     }
 
     @OptIn(ExperimentalMaterial3Api::class)
@@ -901,13 +1083,27 @@ object MaterialKit : AppKit {
             onClick = onClick,
             label = { Text(text = label, style = MaterialTheme.typography.labelLarge, maxLines = 1) },
             modifier = modifier,
-            leadingIcon = null,
+            // The selected filter chip carries its checkmark: without it a
+            // selected chip is only a fill change, which is the input-chip
+            // idiom, not the filter one.
+            leadingIcon = if (selected) {
+                {
+                    Icon(
+                        Icons.Rounded.Check,
+                        contentDescription = null,
+                        modifier = Modifier.size(FilterChipDefaults.IconSize)
+                    )
+                }
+            } else {
+                null
+            },
             shape = design.shapes.chip,
             colors = FilterChipDefaults.filterChipColors(
                 containerColor = Color.Transparent,
                 labelColor = palette.textSecondary,
                 selectedContainerColor = c.accentSofter,
-                selectedLabelColor = c.onAccentSofter
+                selectedLabelColor = c.onAccentSofter,
+                selectedLeadingIconColor = c.onAccentSofter
             ),
             border = FilterChipDefaults.filterChipBorder(
                 enabled = true,
@@ -991,7 +1187,10 @@ object MaterialKit : AppKit {
         val c = roles()
         FilledCard(
             modifier = modifier,
-            container = c.high,
+            // surfaceContainer, the same step as every other card: a tile one
+            // tone darker than the list rows under it read as a second,
+            // unrelated grey rather than as a sibling surface.
+            container = c.container,
             shape = design.shapes.card,
             onClick = null
         ) {
@@ -1093,10 +1292,13 @@ object MaterialKit : AppKit {
         // surface role instead of as a stripe. In dark mode the wash has to be
         // carried by a *light* version of the colour — a dark green at 16% over
         // a dark surface is indistinguishable from the surface.
+        // The wash is a *tone* of the liturgical colour — its hue at container
+        // lightness (≈ tone 90 light, 25 dark) — not the colour at 18% over
+        // grey, which came out as a dull sage no seeded scheme would produce.
         val container = when {
             given == null -> c.accentSoft
-            design.isDark -> given.lighten(0.12f).copy(alpha = 0.26f).compositeOver(c.high)
-            else -> given.copy(alpha = 0.18f).compositeOver(c.high)
+            design.isDark -> given.tone(0.40f, 0.24f)
+            else -> given.tone(0.50f, 0.86f)
         }
         // The eyebrow was the liturgical colour at its literal hex, which on a
         // wash of itself in dark mode fell to roughly 2:1. Solve it instead.
@@ -1106,9 +1308,10 @@ object MaterialKit : AppKit {
         FilledCard(
             modifier = modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
             container = container,
-            // cardLarge, 28dp: the banner is the one hero surface on the page
-            // and it has to out-shape the 16dp cards under it.
-            shape = design.shapes.cardLarge,
+            // 24dp: the banner is the hero surface and has to out-shape the
+            // 16dp cards under it, but at ~90dp tall the 28dp extra-large
+            // corner turns it into a capsule.
+            shape = RoundedCornerShape(24.dp),
             onClick = onClick
         ) {
             Column(Modifier.padding(horizontal = 20.dp, vertical = 16.dp)) {

@@ -57,30 +57,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -88,11 +76,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -107,30 +91,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -178,30 +150,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -209,11 +169,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -228,30 +184,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -305,30 +249,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -351,30 +283,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -422,30 +342,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -468,30 +376,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -545,30 +441,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -576,11 +460,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -595,30 +475,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -666,30 +534,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -697,11 +553,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -716,30 +568,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -793,30 +633,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -839,30 +667,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -910,30 +726,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -956,30 +760,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -1033,30 +825,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -1064,11 +844,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1083,30 +859,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -1154,30 +918,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -1185,11 +937,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1204,30 +952,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -1281,30 +1017,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -1327,30 +1051,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -1398,30 +1110,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -1444,30 +1144,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -1521,30 +1209,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -1552,11 +1228,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1571,30 +1243,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -1642,30 +1302,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -1673,11 +1321,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1692,30 +1336,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -1769,30 +1401,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -1815,30 +1435,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -1886,30 +1494,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -1932,30 +1528,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -2009,30 +1593,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -2040,11 +1612,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2059,30 +1627,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 
@@ -2130,30 +1686,18 @@ Amen
 (mention request here…)
 
 Anima Christi:
-
-Soul of Christ, sanctify me.
-
-Body of Christ, save me
-
-Blood of Christ, inebriate me.
-
-Water from the side of Christ, wash me.
-
-Passion of Christ, strengthen me.
-
-O Good Jesus, hear me.
-
-Within Thy wounds hide me.
-
-Suffer me not to be separated from thee.
-
-From the malignant enemy defend me.
-
-In the hour of my death call me.
-
-And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
-
-Amen.
+ Soul of Christ, sanctify me.
+ Body of Christ, save me
+ Blood of Christ, inebriate me.
+ Water from the side of Christ, wash me.
+ Passion of Christ, strengthen me.
+ O Good Jesus, hear me.
+ Within Thy wounds hide me.
+ Suffer me not to be separated from thee.
+ From the malignant enemy defend me.
+ In the hour of my death call me.
+ And bid me come unto Thee, That with all Thy saints, I may praise thee Forever and ever.
+ Amen.
 
 St Ignatius Loyola, pray for us.
 
@@ -2161,11 +1705,7 @@ AD MAIOREM DEI GLORIAM
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2180,30 +1720,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Alma de Cristo:
-
-Alma de Cristo, santificai-me.
-
-Corpo de Cristo, salvai-me.
-
-Sangue de Cristo, inebriai-me.
-
-Água do lado de Cristo, lavai-me.
-
-Paixão de Cristo, confortai-me.
-
-Ó bom Jesus, ouvi-me.
-
-Dentro das Vossas chagas, escondei-me.
-
-Não permitais que eu me separe de Vós.
-
-Do espírito maligno, defendei-me.
-
-Na hora da minha morte, chamai-me.
-
-E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
-
-Amém.
+ Alma de Cristo, santificai-me.
+ Corpo de Cristo, salvai-me.
+ Sangue de Cristo, inebriai-me.
+ Água do lado de Cristo, lavai-me.
+ Paixão de Cristo, confortai-me.
+ Ó bom Jesus, ouvi-me.
+ Dentro das Vossas chagas, escondei-me.
+ Não permitais que eu me separe de Vós.
+ Do espírito maligno, defendei-me.
+ Na hora da minha morte, chamai-me.
+ E mandai-me ir para Vós, para que com os Vossos Santos Vos louve por todos os séculos dos séculos.
+ Amém.
 
 Santo Inácio de Loyola, rogai por nós.
 

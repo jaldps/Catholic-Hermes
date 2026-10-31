@@ -41,6 +41,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.layout.layout
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -140,6 +142,10 @@ object VaticanKit : AppKit {
         else design.palette.textPrimary
     }
 
+    /** Rubric red as it should sit in running text on either ground. */
+    @Composable
+    private fun rubric(): Color = LocalAppDesign.current.palette.accent
+
     /** Lifts a liturgical colour until it reads as pigment on a dark ground. */
     @Composable
     private fun pigment(color: Color): Color {
@@ -178,6 +184,40 @@ object VaticanKit : AppKit {
     private fun Lozenge(size: Dp) {
         val gold = LocalAppDesign.current.palette.gold
         Box(Modifier.size(size).rotate(45f).background(gold))
+    }
+
+    /**
+     * A line of capitals set to one line, as a compositor would: when the
+     * label is longer than the measure he takes out letterspacing first, then
+     * drops a size, and only breaks the line as a last resort. A button label
+     * broken over two lines of widely-tracked caps is a web tell.
+     */
+    @Composable
+    private fun FittedCapitals(label: String, base: TextStyle, color: Color) {
+        val text = label.uppercase()
+        val measurer = rememberTextMeasurer()
+        BoxWithConstraints(contentAlignment = Alignment.Center) {
+            val limit = constraints.maxWidth
+            val candidates = listOf(
+                base.tracked(0.15f),
+                base.tracked(0.11f),
+                base.tracked(0.08f),
+                base.copy(fontSize = base.fontSize * 0.92f).tracked(0.08f),
+                base.copy(fontSize = base.fontSize * 0.85f).tracked(0.06f)
+            )
+            val style = if (limit == Constraints.Infinity) candidates.first() else
+                candidates.firstOrNull {
+                    measurer.measure(AnnotatedString(text), it, maxLines = 1, softWrap = false)
+                        .size.width <= limit
+                } ?: candidates.last()
+            Text(
+                text = text,
+                style = style,
+                color = color,
+                textAlign = TextAlign.Center,
+                maxLines = 2
+            )
+        }
     }
 
     // ------------------------------------------------------------------ chrome
@@ -436,19 +476,16 @@ object VaticanKit : AppKit {
                 .padding(top = design.spacing.sectionGap / 2, bottom = 14.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // A running head is centred between two rules — but the rules are
-            // ink. A printer does not gild a section label five times a page.
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Box(Modifier.width(24.dp).height(0.5.dp).background(inkHair()))
-                Text(
-                    text = title.uppercase(),
-                    style = styles.sectionEyebrow.tracked(0.22f),
-                    color = palette.textSecondary,
-                    textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(horizontal = 14.dp)
-                )
-                Box(Modifier.width(24.dp).height(0.5.dp).background(inkHair()))
-            }
+            // A missal heads its sections with a rubric: centred capitals in
+            // red ink, standing free. Dashes either side of a label are a web
+            // idiom ("— TITLE —"), not a printer's; the rule belongs to the
+            // table that follows, not to the heading.
+            Text(
+                text = title.uppercase(),
+                style = styles.sectionEyebrow.tracked(0.2f),
+                color = rubric(),
+                textAlign = TextAlign.Center
+            )
             if (subtitle != null) {
                 Spacer(Modifier.height(10.dp))
                 Text(
@@ -467,30 +504,50 @@ object VaticanKit : AppKit {
         onClick: (() -> Unit)?,
         content: @Composable ColumnScope.() -> Unit
     ) {
-        val design = LocalAppDesign.current
-        // A box rule on the page: square, unfilled, one weight of ink.
+        // Not a box. A printed page does not frame each paragraph and indent
+        // it a second time inside the frame: a new block is opened by a rule
+        // across the full measure and its text sits on the same left edge as
+        // everything else on the page. Boxed panels with inner padding are
+        // the single strongest tell of an app imitating print.
         Column(
             modifier
                 .fillMaxWidth()
-                .border(0.75.dp, inkHair(), RectangleShape)
                 .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
-                .padding(design.spacing.cardPadding),
-            content = content
-        )
+        ) {
+            Hairline(color = inkRule().copy(alpha = inkRule().alpha * 0.6f))
+            Column(
+                Modifier.fillMaxWidth().padding(top = 20.dp, bottom = 6.dp),
+                content = content
+            )
+        }
     }
 
     @Composable
     override fun ListGroup(modifier: Modifier, content: @Composable ColumnScope.() -> Unit) {
         val design = LocalAppDesign.current
         // No panel, no border box, no corner radius: a ruled folio table. The
-        // head rule opens it; each row closes itself with a hairline.
+        // head rule opens it and each row closes itself with a hairline — all
+        // but the last, which is trimmed off. A printed index ends in white
+        // space; leaving the last hairline in sets two parallel rules a line
+        // apart wherever the next block opens with its own rule.
+        val trim = with(LocalDensity.current) { 0.5.dp.roundToPx().coerceAtLeast(1) }
         Column(
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
         ) {
             ScotchRule(gap = 2.dp)
-            content()
+            Column(
+                Modifier
+                    .fillMaxWidth()
+                    .clipToBounds()
+                    .layout { measurable, constraints ->
+                        val placeable = measurable.measure(constraints)
+                        val height = (placeable.height - trim).coerceAtLeast(0)
+                        layout(placeable.width, height) { placeable.place(0, 0) }
+                    },
+                content = content
+            )
         }
     }
 
@@ -516,10 +573,6 @@ object VaticanKit : AppKit {
                 Modifier
                     .fillMaxWidth()
                     .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
-                    .background(
-                        if (selected) palette.selectionTint.copy(alpha = 0.45f)
-                        else Color.Transparent
-                    )
                     .heightIn(min = design.spacing.rowMinHeight)
                     .padding(vertical = design.spacing.rowPaddingVertical),
                 verticalAlignment = Alignment.CenterVertically
@@ -582,22 +635,26 @@ object VaticanKit : AppKit {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
-        Row(
+        // Rubric red, square, unbordered. At night the red is laid down as a
+        // deep wine panel with vellum lettering, never as a pink slab.
+        val fill = when {
+            !enabled -> palette.hairline
+            design.isDark -> lerp(palette.accent, palette.canvas, 0.52f)
+            else -> palette.accent
+        }
+        val ink = when {
+            !enabled -> palette.textTertiary
+            design.isDark -> palette.textPrimary
+            else -> palette.raised
+        }
+        Box(
             modifier
-                // Rubric red, square, unbordered. A gilded edge on a button is
-                // leaf spent where no printer would spend it.
-                .background(if (enabled) palette.accent else palette.hairline, RectangleShape)
+                .background(fill, RectangleShape)
                 .clickable(enabled = enabled, onClick = onClick)
-                .padding(horizontal = 22.dp, vertical = 15.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
+                .padding(horizontal = 16.dp, vertical = 13.dp),
+            contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = label.uppercase(),
-                style = styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold).tracked(0.16f),
-                color = if (enabled) palette.raised else palette.textTertiary,
-                textAlign = TextAlign.Center
-            )
+            FittedCapitals(label, styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold), ink)
         }
     }
 
@@ -610,21 +667,17 @@ object VaticanKit : AppKit {
         modifier: Modifier
     ) {
         val styles = LocalAppTextStyles.current
-        Row(
+        Box(
             modifier
+                // The whole block fades when disabled — frame and label
+                // together, or the frame reads as live and the label as broken.
+                .alpha(if (enabled) 1f else 0.45f)
                 .border(0.75.dp, inkRule(), RectangleShape)
                 .clickable(enabled = enabled, onClick = onClick)
-                .padding(horizontal = 22.dp, vertical = 15.dp)
-                .alpha(if (enabled) 1f else 0.45f),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center
+                .padding(horizontal = 16.dp, vertical = 12.dp),
+            contentAlignment = Alignment.Center
         ) {
-            Text(
-                text = label.uppercase(),
-                style = styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold).tracked(0.16f),
-                color = bodyInk(),
-                textAlign = TextAlign.Center
-            )
+            FittedCapitals(label, styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold), bodyInk())
         }
     }
 
@@ -694,7 +747,7 @@ object VaticanKit : AppKit {
                     Column(
                         Modifier
                             .clickable { onSelect(index) }
-                            .padding(horizontal = 18.dp)
+                            .padding(horizontal = 14.dp)
                             .padding(top = 4.dp, bottom = 10.dp),
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {

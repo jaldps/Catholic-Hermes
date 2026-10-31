@@ -66,11 +66,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -143,11 +139,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -362,11 +354,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -433,11 +421,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -490,6 +474,8 @@ La Madre Teresa aprovechó de una manera innovadora el poder del sufrimiento red
 
 ¡Qué misión tan asombrosa para alguien que quizá no puede salir de casa o está postrado en cama! Ser el motor espiritual detrás de una Misionera de la Caridad que cuida físicamente a pobres y enfermos a miles de kilómetros de distancia. Con esta inspiración llena del Espíritu, la Madre dio cuidado, consuelo y sentido no solo a los enfermos con los que ella y sus hermanas entraban en contacto, sino también a aquellos a quienes nunca conocerían en este mundo, ¡pero sin duda sí en el otro!
 
+Oración: Padre, Tú diste a la Madre Teresa ojos para ver el valor real de quienes sufren cuando ese sufrimiento se une al de Jesús, Tu Hijo. Envía Tu Espíritu para abrir nuestros ojos, para que demos cuidado y consuelo a quienes padecen aflicciones físicas o mentales, y para que ofrezcamos nuestros propios sufrimientos con espíritu de amor y de reparación por la salvación del mundo y por la vitalidad continua de todas las ramas de las Misioneras de la Caridad.
+
 Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
@@ -547,6 +533,8 @@ Ela percebeu que os que estavam doentes demais para participar do trabalho físi
 “Veja, a finalidade da nossa Sociedade é saciar a sede de Jesus na Cruz pelo amor das almas, trabalhando pela salvação e santificação dos pobres das favelas. Quem poderia fazer isso melhor do que você e os outros que sofrem como você? O seu sofrimento e as suas orações serão o cálice no qual nós, os membros que trabalham, derramaremos o amor das almas que reunirmos… Na verdade, você pode fazer muito mais no seu leito de dor do que eu correndo de um lado para outro, mas você e eu juntos podemos tudo n’Aquele que nos fortalece.”
 
 Que missão extraordinária para alguém que talvez não possa sair de casa ou esteja acamado! Ser o motor espiritual por trás de uma Missionária da Caridade que cuida fisicamente dos pobres e doentes a milhares de quilômetros de distância. Com esta inspiração cheia do Espírito, a Madre deu cuidado, consolo e sentido não só aos doentes com quem ela e as suas irmãs tinham contato, mas também àqueles que elas nunca encontrariam neste mundo, mas certamente no outro!
+
+Oração: Pai, Tu deste a Madre Teresa olhos para ver o verdadeiro valor dos que sofrem quando esse sofrimento está unido ao de Jesus, Teu Filho. Envia o Teu Espírito para abrir os nossos olhos, para que demos cuidado e consolo aos que sofrem no corpo ou na mente e ofereçamos os nossos próprios sofrimentos em espírito de amor e de reparação pela salvação do mundo e pela vitalidade de todos os ramos das Missionárias da Caridade.
 
 Amém
 
@@ -577,6 +565,8 @@ La Madre Teresa aprovechó de una manera innovadora el poder del sufrimiento red
 
 ¡Qué misión tan asombrosa para alguien que quizá no puede salir de casa o está postrado en cama! Ser el motor espiritual detrás de una Misionera de la Caridad que cuida físicamente a pobres y enfermos a miles de kilómetros de distancia. Con esta inspiración llena del Espíritu, la Madre dio cuidado, consuelo y sentido no solo a los enfermos con los que ella y sus hermanas entraban en contacto, sino también a aquellos a quienes nunca conocerían en este mundo, ¡pero sin duda sí en el otro!
 
+Oración: Padre, Tú diste a la Madre Teresa ojos para ver el valor real de quienes sufren cuando ese sufrimiento se une al de Jesús, Tu Hijo. Envía Tu Espíritu para abrir nuestros ojos, para que demos cuidado y consuelo a quienes padecen aflicciones físicas o mentales, y para que ofrezcamos nuestros propios sufrimientos con espíritu de amor y de reparación por la salvación del mundo y por la vitalidad continua de todas las ramas de las Misioneras de la Caridad.
+
 Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
@@ -634,6 +624,8 @@ Ela percebeu que os que estavam doentes demais para participar do trabalho físi
 “Veja, a finalidade da nossa Sociedade é saciar a sede de Jesus na Cruz pelo amor das almas, trabalhando pela salvação e santificação dos pobres das favelas. Quem poderia fazer isso melhor do que você e os outros que sofrem como você? O seu sofrimento e as suas orações serão o cálice no qual nós, os membros que trabalham, derramaremos o amor das almas que reunirmos… Na verdade, você pode fazer muito mais no seu leito de dor do que eu correndo de um lado para outro, mas você e eu juntos podemos tudo n’Aquele que nos fortalece.”
 
 Que missão extraordinária para alguém que talvez não possa sair de casa ou esteja acamado! Ser o motor espiritual por trás de uma Missionária da Caridade que cuida fisicamente dos pobres e doentes a milhares de quilômetros de distância. Com esta inspiração cheia do Espírito, a Madre deu cuidado, consolo e sentido não só aos doentes com quem ela e as suas irmãs tinham contato, mas também àqueles que elas nunca encontrariam neste mundo, mas certamente no outro!
+
+Oração: Pai, Tu deste a Madre Teresa olhos para ver o verdadeiro valor dos que sofrem quando esse sofrimento está unido ao de Jesus, Teu Filho. Envia o Teu Espírito para abrir os nossos olhos, para que demos cuidado e consolo aos que sofrem no corpo ou na mente e ofereçamos os nossos próprios sofrimentos em espírito de amor e de reparação pela salvação do mundo e pela vitalidade de todos os ramos das Missionárias da Caridade.
 
 Amém
 
@@ -698,11 +690,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -781,11 +769,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1022,11 +1006,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1105,11 +1085,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1159,8 +1135,7 @@ La Madre Teresa irradió la alegría y la paz de Cristo a todos los que conoció
 “La situación física de mis pobres abandonados en las calles, no deseados, no amados, no reclamados, es la verdadera imagen de mi propia vida espiritual, de mi amor por Jesús, y sin embargo este terrible dolor nunca me ha hecho desear que fuera de otro modo. Más aún, quiero que sea así mientras Él lo quiera.”
 
 Vivía una participación tanto en la agonía de su Jesús como en la de sus pobres. “Hazme sentir lo que Tú has sentido. Hazme compartir contigo Tu dolor.” Escribió que lo decía día tras día durante la Cuaresma, “quizá solo con los labios”. El amor y la fidelidad de la Madre eran un acto de su voluntad, incluso cuando no había ningún consuelo divino.
-
-Esta prueba interior era solo suya, y permaneció fiel a su Dios y a su misión a lo largo de toda ella.
+ Esta prueba interior era solo suya, y permaneció fiel a su Dios y a su misión a lo largo de toda ella.
 
 “Si alguna vez llego a ser santa, seguramente seré una santa de la oscuridad. Estaré continuamente ausente del cielo, para encender la luz de aquellos que están en la oscuridad en la tierra.”
 
@@ -1187,8 +1162,7 @@ Mother Teresa radiated the joy and peace of Christ to everyone she met throughou
 “The physical situation of my poor left in the streets unwanted, unloved, unclaimed-are the true picture of my own spiritual life, of my love for Jesus, and yet this terrible pain has never made me desire to have it different – What’s more, I want it to be like this for as long as He wants it.”
 
 She lived a share of both the agony of her Jesus and her poor. “Make me feel what Thou hast felt. Make me share with Thee Thy pain.” She wrote that she said this day after day during Lent, “maybe only with my lips”. Mother’s love and faithfulness was an act of her Will even when there was no divine consolation to be found.
-
-This interior trial was hers alone and she stayed faithful to her God and her mission throughout it.
+ This interior trial was hers alone and she stayed faithful to her God and her mission throughout it.
 
 “If I ever become a saint-I will surely be one of ‘darkness.’ I will continually be absent from heaven – to light the light of those in darkness on earth.”
 
@@ -1215,8 +1189,7 @@ Madre Teresa irradiou a alegria e a paz de Cristo a todos os que encontrou duran
 “A situação física dos meus pobres deixados nas ruas, indesejados, não amados, sem ninguém que os reclame, é a verdadeira imagem da minha própria vida espiritual, do meu amor por Jesus, e no entanto esta dor terrível nunca me fez desejar que fosse diferente. Mais ainda, quero que seja assim enquanto Ele quiser.”
 
 Ela vivia uma participação tanto na agonia do seu Jesus como na dos seus pobres. “Faze-me sentir o que Tu sentiste. Faze-me partilhar contigo a Tua dor.” Escreveu que dizia isso dia após dia durante a Quaresma, “talvez só com os lábios”. O amor e a fidelidade da Madre eram um ato da sua vontade, mesmo quando não havia nenhuma consolação divina.
-
-Esta provação interior era só dela, e ela permaneceu fiel ao seu Deus e à sua missão durante toda ela.
+ Esta provação interior era só dela, e ela permaneceu fiel ao seu Deus e à sua missão durante toda ela.
 
 “Se algum dia eu me tornar santa, serei certamente uma santa da escuridão. Estarei continuamente ausente do céu, para acender a luz dos que estão na escuridão na terra.”
 
@@ -1244,8 +1217,7 @@ La Madre Teresa irradió la alegría y la paz de Cristo a todos los que conoció
 “La situación física de mis pobres abandonados en las calles, no deseados, no amados, no reclamados, es la verdadera imagen de mi propia vida espiritual, de mi amor por Jesús, y sin embargo este terrible dolor nunca me ha hecho desear que fuera de otro modo. Más aún, quiero que sea así mientras Él lo quiera.”
 
 Vivía una participación tanto en la agonía de su Jesús como en la de sus pobres. “Hazme sentir lo que Tú has sentido. Hazme compartir contigo Tu dolor.” Escribió que lo decía día tras día durante la Cuaresma, “quizá solo con los labios”. El amor y la fidelidad de la Madre eran un acto de su voluntad, incluso cuando no había ningún consuelo divino.
-
-Esta prueba interior era solo suya, y permaneció fiel a su Dios y a su misión a lo largo de toda ella.
+ Esta prueba interior era solo suya, y permaneció fiel a su Dios y a su misión a lo largo de toda ella.
 
 “Si alguna vez llego a ser santa, seguramente seré una santa de la oscuridad. Estaré continuamente ausente del cielo, para encender la luz de aquellos que están en la oscuridad en la tierra.”
 
@@ -1272,8 +1244,7 @@ Mother Teresa radiated the joy and peace of Christ to everyone she met throughou
 “The physical situation of my poor left in the streets unwanted, unloved, unclaimed-are the true picture of my own spiritual life, of my love for Jesus, and yet this terrible pain has never made me desire to have it different – What’s more, I want it to be like this for as long as He wants it.”
 
 She lived a share of both the agony of her Jesus and her poor. “Make me feel what Thou hast felt. Make me share with Thee Thy pain.” She wrote that she said this day after day during Lent, “maybe only with my lips”. Mother’s love and faithfulness was an act of her Will even when there was no divine consolation to be found.
-
-This interior trial was hers alone and she stayed faithful to her God and her mission throughout it.
+ This interior trial was hers alone and she stayed faithful to her God and her mission throughout it.
 
 “If I ever become a saint-I will surely be one of ‘darkness.’ I will continually be absent from heaven – to light the light of those in darkness on earth.”
 
@@ -1300,8 +1271,7 @@ Madre Teresa irradiou a alegria e a paz de Cristo a todos os que encontrou duran
 “A situação física dos meus pobres deixados nas ruas, indesejados, não amados, sem ninguém que os reclame, é a verdadeira imagem da minha própria vida espiritual, do meu amor por Jesus, e no entanto esta dor terrível nunca me fez desejar que fosse diferente. Mais ainda, quero que seja assim enquanto Ele quiser.”
 
 Ela vivia uma participação tanto na agonia do seu Jesus como na dos seus pobres. “Faze-me sentir o que Tu sentiste. Faze-me partilhar contigo a Tua dor.” Escreveu que dizia isso dia após dia durante a Quaresma, “talvez só com os lábios”. O amor e a fidelidade da Madre eram um ato da sua vontade, mesmo quando não havia nenhuma consolação divina.
-
-Esta provação interior era só dela, e ela permaneceu fiel ao seu Deus e à sua missão durante toda ela.
+ Esta provação interior era só dela, e ela permaneceu fiel ao seu Deus e à sua missão durante toda ela.
 
 “Se algum dia eu me tornar santa, serei certamente uma santa da escuridão. Estarei continuamente ausente do céu, para acender a luz dos que estão na escuridão na terra.”
 
@@ -1374,11 +1344,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1463,11 +1429,7 @@ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

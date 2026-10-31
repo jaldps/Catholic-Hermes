@@ -25,30 +25,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -59,68 +47,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -132,30 +92,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -166,68 +114,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -245,30 +165,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -279,30 +187,18 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -313,30 +209,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -348,30 +232,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -382,30 +254,18 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -416,30 +276,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -457,30 +305,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -491,68 +327,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -564,30 +372,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -598,68 +394,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -677,30 +445,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -711,30 +467,18 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -745,30 +489,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -780,30 +512,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -814,30 +534,18 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -848,30 +556,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -889,30 +585,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -923,68 +607,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -996,30 +652,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1030,68 +674,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1109,30 +725,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1143,30 +747,18 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1177,30 +769,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1212,30 +792,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1246,30 +814,18 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1280,30 +836,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1321,30 +865,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1355,68 +887,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1428,30 +932,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1462,68 +954,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1541,30 +1005,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1575,30 +1027,18 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1609,30 +1049,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1644,30 +1072,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1678,30 +1094,18 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1712,30 +1116,18 @@ Amém.
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1753,30 +1145,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1787,68 +1167,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1860,30 +1212,18 @@ Amén.
 (menciona tu petición aquí…)
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1894,68 +1234,40 @@ Amen.
 (mention request here…)
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 (mencione o pedido aqui…)
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1973,30 +1285,18 @@ Amén.
 Hoy reza el Acordaos en acción de gracias por el favor que has pedido a Nuestra Señora.
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2007,30 +1307,18 @@ Amen.
 Today pray the Memorare in thanksgiving for the favor you have asked of Our Lady.
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -2041,30 +1329,18 @@ Amém.
 Hoje reze o Lembrai-vos em ação de graças pela graça que você pediu a Nossa Senhora.
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2076,30 +1352,18 @@ Amén.
 Hoy reza el Acordaos en acción de gracias por el favor que has pedido a Nuestra Señora.
 
 Acordaos, oh piadosísima Virgen María,
-
-que jamás se ha oído decir
-
-que ninguno de los que han acudido a vuestra protección,
-
-implorado vuestra asistencia
-
-y reclamado vuestro socorro,
-
-haya sido abandonado de vos.
-
-Animado con esta confianza,
-
-a vos también acudo, oh Madre, Virgen de las vírgenes,
-
-y aunque gimiendo bajo el peso de mis pecados,
-
-me atrevo a comparecer ante vuestra presencia soberana.
-
-No desechéis, oh Madre de Dios, mis humildes súplicas,
-
-antes bien escuchadlas y acogedlas benignamente.
-
-Amén.
+ que jamás se ha oído decir
+ que ninguno de los que han acudido a vuestra protección,
+ implorado vuestra asistencia
+ y reclamado vuestro socorro,
+ haya sido abandonado de vos.
+ Animado con esta confianza,
+ a vos también acudo, oh Madre, Virgen de las vírgenes,
+ y aunque gimiendo bajo el peso de mis pecados,
+ me atrevo a comparecer ante vuestra presencia soberana.
+ No desechéis, oh Madre de Dios, mis humildes súplicas,
+ antes bien escuchadlas y acogedlas benignamente.
+ Amén.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2110,30 +1374,18 @@ Amen.
 Today pray the Memorare in thanksgiving for the favor you have asked of Our Lady.
 
 Remember, O most gracious Virgin Mary,
-
-that never was it known
-
-that any one who fled to thy protection,
-
-implored thy help
-
-or sought thy intercession,
-
-was left unaided.
-
-Inspired by this confidence,
-
-I fly unto thee, O Virgin of virgins, my Mother;
-
-to thee do I come, before thee I stand, sinful and sorrowful;
-
-O Mother of the Word Incarnate,
-
-despise not my petitions,
-
-but in thy mercy, hear and answer me.
-
-Amen.
+ that never was it known
+ that any one who fled to thy protection,
+ implored thy help
+ or sought thy intercession,
+ was left unaided.
+ Inspired by this confidence,
+ I fly unto thee, O Virgin of virgins, my Mother;
+ to thee do I come, before thee I stand, sinful and sorrowful;
+ O Mother of the Word Incarnate,
+ despise not my petitions,
+ but in thy mercy, hear and answer me.
+ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -2144,30 +1396,18 @@ Amém.
 Hoje reze o Lembrai-vos em ação de graças pela graça que você pediu a Nossa Senhora.
 
 Lembrai-vos, ó piíssima Virgem Maria,
-
-que nunca se ouviu dizer
-
-que algum daqueles que têm recorrido à vossa proteção,
-
-implorado a vossa assistência
-
-e reclamado o vosso socorro,
-
-fosse por vós desamparado.
-
-Animado eu, pois, com igual confiança,
-
-a vós, ó Virgem entre todas singular, como a Mãe recorro,
-
-de vós me valho e, gemendo sob o peso dos meus pecados,
-
-me prostro aos vossos pés.
-
-Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
-
-mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
-
-Amém.
+ que nunca se ouviu dizer
+ que algum daqueles que têm recorrido à vossa proteção,
+ implorado a vossa assistência
+ e reclamado o vosso socorro,
+ fosse por vós desamparado.
+ Animado eu, pois, com igual confiança,
+ a vós, ó Virgem entre todas singular, como a Mãe recorro,
+ de vós me valho e, gemendo sob o peso dos meus pecados,
+ me prostro aos vossos pés.
+ Não rejeiteis as minhas súplicas, ó Mãe do Filho de Deus humanado,
+ mas dignai-vos de as ouvir propícia e de me alcançar o que vos rogo.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 

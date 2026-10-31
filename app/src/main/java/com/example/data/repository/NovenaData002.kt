@@ -35,16 +35,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -73,84 +70,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -175,72 +143,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -264,16 +206,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -302,84 +241,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -404,72 +314,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -499,16 +383,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -537,74 +418,49 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
@@ -635,72 +491,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -724,16 +554,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -762,74 +589,49 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
@@ -860,72 +662,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -955,16 +731,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -993,84 +766,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1095,72 +839,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -1184,16 +902,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1222,84 +937,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1324,72 +1010,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -1419,16 +1079,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1457,74 +1114,49 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
@@ -1555,72 +1187,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -1644,16 +1250,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1682,74 +1285,49 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
@@ -1780,72 +1358,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -1875,16 +1427,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1913,84 +1462,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2015,72 +1535,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -2104,16 +1598,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2142,84 +1633,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2244,72 +1706,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -2339,16 +1775,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2377,74 +1810,49 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
@@ -2475,72 +1883,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -2564,16 +1946,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2602,74 +1981,49 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
@@ -2700,72 +2054,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -2795,16 +2123,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2835,84 +2160,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2939,72 +2235,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -3028,16 +2298,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -3068,84 +2335,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3172,72 +2410,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -3267,16 +2479,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -3305,74 +2514,49 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
@@ -3403,72 +2587,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -3492,16 +2650,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -3530,74 +2685,49 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
@@ -3628,72 +2758,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -3723,16 +2827,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -3761,84 +2862,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3863,72 +2935,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 
@@ -3952,16 +2998,13 @@ Dios te salve, María, llena eres de gracia; el Señor es contigo, bendita eres 
 Creo en Dios, Padre todopoderoso, Creador del cielo y de la tierra. Y en Jesucristo, su único Hijo, nuestro Señor. Que fue concebido por obra y gracia del Espíritu Santo. Nacío de Santa María Virgen. Padecío bajo el poder de Poncio Pilato. Fue crucificado, muerto y sepultado. Descendió a los infiernos. Al tercer día resucíto de entre los muertos. Subió a los cielos. Está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creoen el Espíritu Santo, la santa Iglesia católica, la comunión de los antos, el perdón de los pecados, la resurrección de la carne y la vida perdurable. Amén.
 
 Al comienzo de cada decena (x1):
-
-Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
+ Padre Eterno, te ofrezco el Cuerpo, Sangre, Alma y Divinidad de tu amadísimo Hijo, Nuestro Señor Jesucristo, como propiciación de nuestros pecados y de los del mundo entero.
 
 En cada cuenta de la decena (x10):
-
-Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
+ Por su dolorosa Pasión, ten misericordia de nosotros y del mundo entero.
 
 Al finalizar las 5 decenas de la coronilla se repite 3 veces:
-
-Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
+ Santo Dios, Santo Fuerte, Santo Inmortal, ten piedad de nosotros y del mundo entero.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -3990,84 +3033,55 @@ O Jesus, eternal Truth, our Life, I call upon You and I beg Your mercy for poor 
 You expired, Jesus, but the source of life gushed forth for souls, and the ocean of mercy opened up for the whole world. O Fount of Life, unfathomable Divine Mercy, envelop the whole world and empty Yourself out upon us.
 
 (Repeat three times)
-
-O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
+ O Blood and Water, which gushed forth from the Heart of Jesus as a fount of mercy for us, I trust in You!
 
 Then on the first beads above the crucifix pray
-
-one Our Father
-
-one Hail Mary and
-
-The Apostles Creed
+ one Our Father
+ one Hail Mary and 
+ The Apostles Creed
 
 I believe in God,
-
-the Father Almighty,
-
-Creator of heaven and earth,
-
-and in Jesus Christ, his only Son, our Lord,
-
-who was conceived by the power of the Holy Spirit,
-
-born of the Virgin Mary,
-
-suffered under Pontius Pilate,
-
-was crucified, died and was buried;
-
-he descended to the dead;
-
-on the third day he rose again from the dead;
-
-he ascended into Heaven,
-
-and is seated at the right hand of God the Father Almighty;
-
-from there he will come to judge the living and the dead.
+ the Father Almighty,
+ Creator of heaven and earth,
+ and in Jesus Christ, his only Son, our Lord,
+ who was conceived by the power of the Holy Spirit,
+ born of the Virgin Mary,
+ suffered under Pontius Pilate,
+ was crucified, died and was buried;
+ he descended to the dead;
+ on the third day he rose again from the dead;
+ he ascended into Heaven,
+ and is seated at the right hand of God the Father Almighty;
+ from there he will come to judge the living and the dead.
 
 I believe in the Holy Spirit,
-
-the holy Catholic Church,
-
-the Communion of Saints,
-
-the forgiveness of sins,
-
-the resurrection of the body,
-
-and life everlasting.
+ the holy Catholic Church,
+ the Communion of Saints,
+ the forgiveness of sins,
+ the resurrection of the body,
+ and life everlasting.
 
 Amen.
 
 Using the Rosary beads, on the Our Father Beads say the following:
-
-Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
+ Eternal Father, I offer Thee the Body and Blood, Soul and Divinity of Thy dearly beloved Son, Our Lord Jesus Christ, in atonement for our sins and those of the whole world.
 
 After each Eternal Father prayer, on the ten Hail Mary Beads say the following:
-
-For the sake of His sorrowful Passion, have mercy on us and on the whole world.
+ For the sake of His sorrowful Passion, have mercy on us and on the whole world.
 
 (Repeat step 4 and 5 for all five decades).
 
 Conclude with the Holy God prayer, repeated three times:
-
-Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
+ Holy God, Holy Mighty One, Holy Immortal One, have mercy on us and on the whole world.
 
 Pray the Optional Closing Prayers
-
-Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
+ Eternal God, in whom mercy is endless and the treasury of compassion — inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself.
 
 O Greatly Merciful God, Infinite Goodness, today all mankind calls out from the abyss of its misery to Your mercy — to Your compassion, O God; and it is with its mighty voice of misery that it cries out. Gracious God, do not reject the prayer of this earth’s exiles! O Lord, Goodness beyond our understanding, Who are acquainted with our misery through and through, and know that by our own power we cannot ascend to You, we implore You: anticipate us with Your grace and keep on increasing Your mercy in us, that we may faithfully do Your holy will all through our life and at death’s hour. Let the omnipotence of Your mercy shield us from the darts of our salvation’s enemies, that we may with confidence, as Your children, await Your [Son’s] final coming — that day known to You alone. And we expect to obtain everything promised us by Jesus in spite of all our wretchedness. For Jesus is our Hope: through His merciful Heart, as through an open gate, we pass through to heaven (Diary, 1570).
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -4092,72 +3106,46 @@ Oração de Santa Faustina pelos pecadores
 Expirastes, Jesus, mas a fonte de vida jorrou para as almas, e o oceano de misericórdia se abriu para o mundo inteiro. Ó Fonte de Vida, insondável Misericórdia Divina, envolvei o mundo inteiro e derramai-Vos sobre nós.
 
 (Repita três vezes)
-
-Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
+ Ó Sangue e Água que jorrastes do Coração de Jesus como fonte de misericórdia para nós, eu confio em Vós!
 
 Depois, nas primeiras contas acima do crucifixo, reze
-
-um Pai-Nosso,
-
-uma Ave-Maria e
-
-o Credo
+ um Pai-Nosso,
+ uma Ave-Maria e
+ o Credo
 
 Creio em Deus Pai todo-poderoso,
-
-criador do céu e da terra.
-
-E em Jesus Cristo, seu único Filho, nosso Senhor,
-
-que foi concebido pelo poder do Espírito Santo,
-
-nasceu da Virgem Maria,
-
-padeceu sob Pôncio Pilatos,
-
-foi crucificado, morto e sepultado,
-
-desceu à mansão dos mortos,
-
-ressuscitou ao terceiro dia,
-
-subiu aos céus,
-
-está sentado à direita de Deus Pai todo-poderoso,
-
-donde há de vir a julgar os vivos e os mortos.
-
-Creio no Espírito Santo,
-
-na santa Igreja católica,
-
-na comunhão dos santos,
-
-na remissão dos pecados,
-
-na ressurreição da carne,
-
-na vida eterna.
-
-Amém.
+ criador do céu e da terra.
+ E em Jesus Cristo, seu único Filho, nosso Senhor,
+ que foi concebido pelo poder do Espírito Santo,
+ nasceu da Virgem Maria,
+ padeceu sob Pôncio Pilatos,
+ foi crucificado, morto e sepultado,
+ desceu à mansão dos mortos,
+ ressuscitou ao terceiro dia,
+ subiu aos céus,
+ está sentado à direita de Deus Pai todo-poderoso,
+ donde há de vir a julgar os vivos e os mortos.
+ Creio no Espírito Santo,
+ na santa Igreja católica,
+ na comunhão dos santos,
+ na remissão dos pecados,
+ na ressurreição da carne,
+ na vida eterna.
+ Amém.
 
 Usando as contas do terço, nas contas do Pai-Nosso diga:
-
-Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
+ Eterno Pai, eu Vos ofereço o Corpo e o Sangue, a Alma e a Divindade do Vosso diletíssimo Filho, Nosso Senhor Jesus Cristo, em expiação dos nossos pecados e dos do mundo inteiro.
 
 Depois de cada oração do Eterno Pai, nas dez contas da Ave-Maria diga:
-
-Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
+ Pela Sua dolorosa Paixão, tende misericórdia de nós e do mundo inteiro.
 
 (Repita os passos 4 e 5 nas cinco dezenas.)
 
 Conclua com a oração Deus Santo, repetida três vezes:
-
-Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
+ Deus Santo, Deus Forte, Deus Imortal, tende piedade de nós e do mundo inteiro.
 
 Reze as orações finais (opcionais)
-
-Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
+ Ó Deus eterno, em quem a misericórdia é infinita e o tesouro da compaixão inesgotável, olhai benigno para nós e aumentai em nós a Vossa misericórdia, para que nos momentos difíceis não desesperemos nem desanimemos, mas com grande confiança nos submetamos à Vossa santa vontade, que é o próprio Amor e a própria Misericórdia.
 
 Ó Deus de grande misericórdia, Bondade infinita, hoje toda a humanidade clama do abismo da sua miséria à Vossa misericórdia, à Vossa compaixão, ó Deus; e é com a voz poderosa da sua miséria que clama. Deus clemente, não rejeiteis a oração dos exilados desta terra! Ó Senhor, Bondade que ultrapassa a nossa compreensão, que conheceis a fundo a nossa miséria e sabeis que pelas nossas próprias forças não podemos subir até Vós, nós Vos imploramos: preveni-nos com a Vossa graça e aumentai continuamente em nós a Vossa misericórdia, para que cumpramos fielmente a Vossa santa vontade durante toda a vida e na hora da morte. Que a onipotência da Vossa misericórdia nos proteja dos dardos dos inimigos da nossa salvação, para que esperemos com confiança, como Vossos filhos, a Vossa [do Vosso Filho] vinda final, aquele dia conhecido só por Vós. E esperamos obter tudo o que Jesus nos prometeu, apesar de toda a nossa miséria. Pois Jesus é a nossa Esperança: pelo Seu Coração misericordioso, como por uma porta aberta, passamos para o céu (Diário, 1570).
 

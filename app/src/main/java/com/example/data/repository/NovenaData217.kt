@@ -23,8 +23,7 @@ object NovenaData217 {
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -40,6 +39,8 @@ Salmo 51, 3-4.
 
 Ten piedad de mí, oh Dios, por Tu bondad; por Tu inmensa ternura borra mis culpas; lávame a fondo de mi delito, limpia mi pecado.
 
+Oh Santísimo Rostro de Jesús, mira con ternura a nosotros, pecadores. Tú eres un Dios misericordioso, lleno de amor y de compasión. Consérvanos puros de corazón, para que te veamos siempre. María, Madre nuestra, intercede por nosotros; san José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración a nuestro Padre Todopoderoso
@@ -47,16 +48,12 @@ Oración a nuestro Padre Todopoderoso
 Padre Todopoderoso, ven a nuestros corazones y llénanos de tal modo de Tu amor que, abandonando todo mal deseo, te abracemos a Ti, nuestro único bien. Muéstranos, oh Señor Dios nuestro, lo que eres para nosotros. Di a nuestras almas: Yo soy tu salvación; habla para que te oigamos. Nuestros corazones están ante Ti; abre nuestros oídos; haz que corramos tras Tu voz. No nos escondas Tu Rostro, te lo suplicamos, oh Señor. Abre nuestros corazones para que puedas entrar en ellos. Repara las moradas en ruinas para que puedas habitar en ellas. Escúchanos, oh Padre celestial, por amor de Tu Hijo único, nuestro Señor Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén. (San Agustín)
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -65,12 +62,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -80,6 +78,8 @@ Psalm 51, 3-4.
 
 Have mercy on me, O God in Thy goodness, in Thy great tenderness wipe away my faults; wash me clean of my guilt, purify me from my sin.
 
+O most Holy Face of Jesus, look with tenderness on us who are sinners. Thou art a merciful God, full of love and compassion. Keep us pure of heart, so that we may see Thee always. Mary, our Mother, intercede for us; Saint Joseph, pray for us.
+
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
 Prayer to Our Almighty Father
@@ -87,30 +87,21 @@ Prayer to Our Almighty Father
 Almighty Father, come into our hearts, and so fill us with Thy love that forsaking all evil desires, we may embrace Thee, our only good. Show us, O Lord our God, what Thou art to us. Say to our souls, I am Thy salvation, speak so that we may hear. Our hearts are before Thee; open our ears; let us hasten after Thy voice. Hide not Thy Face from us; we beseech Thee, O Lord. Open our hearts so that Thou mayst enter in. Repair the ruined mansions that Thou mayst dwell therein. Hear us, O Heavenly Father, for the sake of Thy only Son, Our Lord Jesus Christ, who lives and reigns with Thee and the Holy Spirit, one God, now and forever. Amen. (St. Augustine)
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -126,6 +117,8 @@ Salmo 51, 3-4.
 
 Tende piedade de mim, ó Deus, segundo a Vossa bondade; segundo a Vossa grande misericórdia, apagai as minhas faltas; lavai-me de toda a minha culpa e purificai-me do meu pecado.
 
+Ó Santíssima Face de Jesus, olhai com ternura para nós, pecadores. Sois um Deus misericordioso, cheio de amor e compaixão. Conservai-nos puros de coração, para que Vos vejamos sempre. Maria, nossa Mãe, intercedei por nós; São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração ao Pai Todo-Poderoso
@@ -133,16 +126,12 @@ Oração ao Pai Todo-Poderoso
 Pai Todo-Poderoso, vinde aos nossos corações e enchei-nos de tal modo do Vosso amor que, abandonando todo mau desejo, Vos abracemos a Vós, nosso único bem. Mostrai-nos, ó Senhor nosso Deus, o que sois para nós. Dizei às nossas almas: Eu sou a tua salvação; falai para que possamos ouvir. Os nossos corações estão diante de Vós; abri os nossos ouvidos; fazei-nos correr atrás da Vossa voz. Não escondais de nós a Vossa Face, nós Vos suplicamos, ó Senhor. Abri os nossos corações para que possais entrar. Reparai as moradas em ruínas para que nelas possais habitar. Ouvi-nos, ó Pai celeste, por amor do Vosso Filho único, Nosso Senhor Jesus Cristo, que convosco vive e reina com o Espírito Santo, um só Deus, agora e para sempre. Amém. (Santo Agostinho)
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -152,8 +141,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -169,6 +157,8 @@ Salmo 51, 3-4.
 
 Ten piedad de mí, oh Dios, por Tu bondad; por Tu inmensa ternura borra mis culpas; lávame a fondo de mi delito, limpia mi pecado.
 
+Oh Santísimo Rostro de Jesús, mira con ternura a nosotros, pecadores. Tú eres un Dios misericordioso, lleno de amor y de compasión. Consérvanos puros de corazón, para que te veamos siempre. María, Madre nuestra, intercede por nosotros; san José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración a nuestro Padre Todopoderoso
@@ -176,16 +166,12 @@ Oración a nuestro Padre Todopoderoso
 Padre Todopoderoso, ven a nuestros corazones y llénanos de tal modo de Tu amor que, abandonando todo mal deseo, te abracemos a Ti, nuestro único bien. Muéstranos, oh Señor Dios nuestro, lo que eres para nosotros. Di a nuestras almas: Yo soy tu salvación; habla para que te oigamos. Nuestros corazones están ante Ti; abre nuestros oídos; haz que corramos tras Tu voz. No nos escondas Tu Rostro, te lo suplicamos, oh Señor. Abre nuestros corazones para que puedas entrar en ellos. Repara las moradas en ruinas para que puedas habitar en ellas. Escúchanos, oh Padre celestial, por amor de Tu Hijo único, nuestro Señor Jesucristo, que vive y reina contigo y el Espíritu Santo, un solo Dios, ahora y por siempre. Amén. (San Agustín)
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -194,12 +180,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -209,6 +196,8 @@ Psalm 51, 3-4.
 
 Have mercy on me, O God in Thy goodness, in Thy great tenderness wipe away my faults; wash me clean of my guilt, purify me from my sin.
 
+O most Holy Face of Jesus, look with tenderness on us who are sinners. Thou art a merciful God, full of love and compassion. Keep us pure of heart, so that we may see Thee always. Mary, our Mother, intercede for us; Saint Joseph, pray for us.
+
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
 Prayer to Our Almighty Father
@@ -216,30 +205,21 @@ Prayer to Our Almighty Father
 Almighty Father, come into our hearts, and so fill us with Thy love that forsaking all evil desires, we may embrace Thee, our only good. Show us, O Lord our God, what Thou art to us. Say to our souls, I am Thy salvation, speak so that we may hear. Our hearts are before Thee; open our ears; let us hasten after Thy voice. Hide not Thy Face from us; we beseech Thee, O Lord. Open our hearts so that Thou mayst enter in. Repair the ruined mansions that Thou mayst dwell therein. Hear us, O Heavenly Father, for the sake of Thy only Son, Our Lord Jesus Christ, who lives and reigns with Thee and the Holy Spirit, one God, now and forever. Amen. (St. Augustine)
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -255,6 +235,8 @@ Salmo 51, 3-4.
 
 Tende piedade de mim, ó Deus, segundo a Vossa bondade; segundo a Vossa grande misericórdia, apagai as minhas faltas; lavai-me de toda a minha culpa e purificai-me do meu pecado.
 
+Ó Santíssima Face de Jesus, olhai com ternura para nós, pecadores. Sois um Deus misericordioso, cheio de amor e compaixão. Conservai-nos puros de coração, para que Vos vejamos sempre. Maria, nossa Mãe, intercedei por nós; São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração ao Pai Todo-Poderoso
@@ -262,16 +244,12 @@ Oração ao Pai Todo-Poderoso
 Pai Todo-Poderoso, vinde aos nossos corações e enchei-nos de tal modo do Vosso amor que, abandonando todo mau desejo, Vos abracemos a Vós, nosso único bem. Mostrai-nos, ó Senhor nosso Deus, o que sois para nós. Dizei às nossas almas: Eu sou a tua salvação; falai para que possamos ouvir. Os nossos corações estão diante de Vós; abri os nossos ouvidos; fazei-nos correr atrás da Vossa voz. Não escondais de nós a Vossa Face, nós Vos suplicamos, ó Senhor. Abri os nossos corações para que possais entrar. Reparai as moradas em ruínas para que nelas possais habitar. Ouvi-nos, ó Pai celeste, por amor do Vosso Filho único, Nosso Senhor Jesus Cristo, que convosco vive e reina com o Espírito Santo, um só Deus, agora e para sempre. Amém. (Santo Agostinho)
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -287,8 +265,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -319,16 +296,12 @@ Ven, Espíritu Santo Santificador, Dios de amor todopoderoso, Tú que colmaste d
 Te consagramos nuestro entendimiento, nuestro corazón y nuestra voluntad, todo nuestro ser para el tiempo y para la eternidad. Que nuestro entendimiento esté siempre sometido a Tus celestiales inspiraciones y a las enseñanzas de Tu Santa Iglesia Católica, de la que Tú eres el guía infalible; que nuestro corazón esté siempre inflamado de amor a Dios y al prójimo; que nuestra voluntad esté siempre conforme con la voluntad divina, y que toda nuestra vida sea una fiel imitación de la vida y de las virtudes de nuestro Señor y Salvador Jesucristo, a quien, con el Padre y contigo, sea el honor y la gloria por siempre. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -337,12 +310,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -356,6 +330,8 @@ Prayer
 
 Most Holy Face of Jesus, we are truly sorry that we have hurt Thee so much by constantly doing what is wrong; and for all the good works we have failed to do.
 
+Immaculate Heart of Mary; Saint Joseph, intercede for us, help us to console the Most Holy Face of Jesus. Pray that we may share in the tremendous love Thou hast for one another and for the most Holy and Blessed Trinity. Amen.
+
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
 Prayer to the Holy Spirit
@@ -365,16 +341,12 @@ Come, Holy Spirit, Sanctifier, all powerful God of love, Thou Who didst fill the
 We consecrate to Thee our understanding, our heart and our will, our whole being for time and for eternity. May our understanding be always submissive to Thy heavenly inspirations and to the teachings of Thy Holy Catholic Church, of which Thou art the infallible guide; may our heart be ever inflamed with love of God and neighbor; may our will be ever conformed to the divine will, and may our whole life be a faithful imitation of the life and virtues of Our Lord and Savior, Jesus Christ, to whom with the Father and Thee be honor and glory forever. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -383,8 +355,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -404,6 +375,8 @@ Oração
 
 Santíssima Face de Jesus, lamentamos de verdade ter-Vos ferido tanto, fazendo continuamente o mal, e por todas as boas obras que deixamos de fazer.
 
+Imaculado Coração de Maria, São José, intercedei por nós, ajudai-nos a consolar a Santíssima Face de Jesus. Rogai para que participemos do imenso amor que tendes um pelo outro e pela Santíssima e Bendita Trindade. Amém.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração ao Espírito Santo
@@ -413,16 +386,12 @@ Vinde, Espírito Santo Santificador, Deus de amor todo-poderoso, Vós que enches
 Consagramo-Vos a nossa inteligência, o nosso coração e a nossa vontade, todo o nosso ser no tempo e na eternidade. Que a nossa inteligência esteja sempre submissa às Vossas celestes inspirações e aos ensinamentos da Vossa Santa Igreja Católica, da qual sois o guia infalível; que o nosso coração esteja sempre inflamado de amor a Deus e ao próximo; que a nossa vontade esteja sempre conforme à vontade divina, e que toda a nossa vida seja uma fiel imitação da vida e das virtudes de Nosso Senhor e Salvador Jesus Cristo, a quem, com o Pai e convosco, sejam a honra e a glória para sempre. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -432,8 +401,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -464,16 +432,12 @@ Ven, Espíritu Santo Santificador, Dios de amor todopoderoso, Tú que colmaste d
 Te consagramos nuestro entendimiento, nuestro corazón y nuestra voluntad, todo nuestro ser para el tiempo y para la eternidad. Que nuestro entendimiento esté siempre sometido a Tus celestiales inspiraciones y a las enseñanzas de Tu Santa Iglesia Católica, de la que Tú eres el guía infalible; que nuestro corazón esté siempre inflamado de amor a Dios y al prójimo; que nuestra voluntad esté siempre conforme con la voluntad divina, y que toda nuestra vida sea una fiel imitación de la vida y de las virtudes de nuestro Señor y Salvador Jesucristo, a quien, con el Padre y contigo, sea el honor y la gloria por siempre. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -482,12 +446,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -501,6 +466,8 @@ Prayer
 
 Most Holy Face of Jesus, we are truly sorry that we have hurt Thee so much by constantly doing what is wrong; and for all the good works we have failed to do.
 
+Immaculate Heart of Mary; Saint Joseph, intercede for us, help us to console the Most Holy Face of Jesus. Pray that we may share in the tremendous love Thou hast for one another and for the most Holy and Blessed Trinity. Amen.
+
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
 Prayer to the Holy Spirit
@@ -510,16 +477,12 @@ Come, Holy Spirit, Sanctifier, all powerful God of love, Thou Who didst fill the
 We consecrate to Thee our understanding, our heart and our will, our whole being for time and for eternity. May our understanding be always submissive to Thy heavenly inspirations and to the teachings of Thy Holy Catholic Church, of which Thou art the infallible guide; may our heart be ever inflamed with love of God and neighbor; may our will be ever conformed to the divine will, and may our whole life be a faithful imitation of the life and virtues of Our Lord and Savior, Jesus Christ, to whom with the Father and Thee be honor and glory forever. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -528,8 +491,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -549,6 +511,8 @@ Oração
 
 Santíssima Face de Jesus, lamentamos de verdade ter-Vos ferido tanto, fazendo continuamente o mal, e por todas as boas obras que deixamos de fazer.
 
+Imaculado Coração de Maria, São José, intercedei por nós, ajudai-nos a consolar a Santíssima Face de Jesus. Rogai para que participemos do imenso amor que tendes um pelo outro e pela Santíssima e Bendita Trindade. Amém.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração ao Espírito Santo
@@ -558,16 +522,12 @@ Vinde, Espírito Santo Santificador, Deus de amor todo-poderoso, Vós que enches
 Consagramo-Vos a nossa inteligência, o nosso coração e a nossa vontade, todo o nosso ser no tempo e na eternidade. Que a nossa inteligência esteja sempre submissa às Vossas celestes inspirações e aos ensinamentos da Vossa Santa Igreja Católica, da qual sois o guia infalível; que o nosso coração esteja sempre inflamado de amor a Deus e ao próximo; que a nossa vontade esteja sempre conforme à vontade divina, e que toda a nossa vida seja uma fiel imitação da vida e das virtudes de Nosso Senhor e Salvador Jesus Cristo, a quem, com o Pai e convosco, sejam a honra e a glória para sempre. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -583,8 +543,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -615,16 +574,12 @@ Oración a los Ángeles y Santos
 Os saludamos, por el Santo Rostro y el Sagrado Corazón de Jesús, oh todos vosotros, santos Ángeles y Santos de Dios. Nos alegramos de vuestra gloria y damos gracias a nuestro Señor por todos los beneficios que ha derramado sobre vosotros; lo alabamos y lo glorificamos, y os ofrecemos, para aumento de vuestro gozo y de vuestro honor, el Santísimo Rostro y el manso Corazón de Jesús. Rogad para que seamos formados según el corazón de Dios. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -633,12 +588,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -663,30 +619,21 @@ Prayer to the Angels and Saints
 We salute Thee, through the Holy Face and Sacred Heart of Jesus, O all ye Holy Angels and Saints of God. We rejoice in Thy glory, and we give thanks to Our Lord for all the benefits which He has showered upon ye; we praise Him and glorify Him, and offer ye, for an increase of Thy joy and honor, the most Holy Face and gentle Heart of Jesus. Pray that we may become formed according to the heart of God. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -717,16 +664,12 @@ Oração aos Anjos e Santos
 Nós vos saudamos, pela Santa Face e pelo Sagrado Coração de Jesus, ó todos vós, santos Anjos e Santos de Deus. Alegramo-nos com a vossa glória e damos graças a nosso Senhor por todos os benefícios que derramou sobre vós; nós O louvamos e O glorificamos e vos oferecemos, para aumento da vossa alegria e da vossa honra, a Santíssima Face e o manso Coração de Jesus. Rogai para que sejamos formados segundo o coração de Deus. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -736,8 +679,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -768,16 +710,12 @@ Oración a los Ángeles y Santos
 Os saludamos, por el Santo Rostro y el Sagrado Corazón de Jesús, oh todos vosotros, santos Ángeles y Santos de Dios. Nos alegramos de vuestra gloria y damos gracias a nuestro Señor por todos los beneficios que ha derramado sobre vosotros; lo alabamos y lo glorificamos, y os ofrecemos, para aumento de vuestro gozo y de vuestro honor, el Santísimo Rostro y el manso Corazón de Jesús. Rogad para que seamos formados según el corazón de Dios. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -786,12 +724,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -816,30 +755,21 @@ Prayer to the Angels and Saints
 We salute Thee, through the Holy Face and Sacred Heart of Jesus, O all ye Holy Angels and Saints of God. We rejoice in Thy glory, and we give thanks to Our Lord for all the benefits which He has showered upon ye; we praise Him and glorify Him, and offer ye, for an increase of Thy joy and honor, the most Holy Face and gentle Heart of Jesus. Pray that we may become formed according to the heart of God. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -870,16 +800,12 @@ Oração aos Anjos e Santos
 Nós vos saudamos, pela Santa Face e pelo Sagrado Coração de Jesus, ó todos vós, santos Anjos e Santos de Deus. Alegramo-nos com a vossa glória e damos graças a nosso Senhor por todos os benefícios que derramou sobre vós; nós O louvamos e O glorificamos e vos oferecemos, para aumento da vossa alegria e da vossa honra, a Santíssima Face e o manso Coração de Jesus. Rogai para que sejamos formados segundo o coração de Deus. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -895,8 +821,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -929,16 +854,12 @@ Oración por las Almas del Purgatorio
 Jesús mío, por los dolores que sufriste en Tu agonía en el huerto, en Tu flagelación y coronación de espinas, en el camino del Calvario, en Tu crucifixión y muerte, ten misericordia de las almas del Purgatorio, y especialmente de las más abandonadas. Líbralas de los terribles tormentos que padecen. Llámalas y admítelas en Tu dulcísimo abrazo en el Paraíso. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -947,12 +868,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -979,16 +901,12 @@ Prayer to the Souls in Purgatory
 My Jesus, by the sorrows Thou didst suffer in Thine agony in the garden, in Thine scourging and crowning with thorns, in the way to Calvary, in Thine crucifixion and death, have mercy on the souls in Purgatory, and especially on those that are most forsaken. Deliver them from the dire torments they endure. Call them and admit them to Thy most sweet embrace in Paradise. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -997,8 +915,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -1031,16 +948,12 @@ Oração pelas almas do Purgatório
 Meu Jesus, pelas dores que sofrestes na Vossa agonia no horto, na Vossa flagelação e coroação de espinhos, no caminho do Calvário, na Vossa crucificação e morte, tende misericórdia das almas do Purgatório, especialmente das mais abandonadas. Livrai-as dos terríveis tormentos que padecem. Chamai-as e recebei-as no Vosso dulcíssimo abraço no Paraíso. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1050,8 +963,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -1084,16 +996,12 @@ Oración por las Almas del Purgatorio
 Jesús mío, por los dolores que sufriste en Tu agonía en el huerto, en Tu flagelación y coronación de espinas, en el camino del Calvario, en Tu crucifixión y muerte, ten misericordia de las almas del Purgatorio, y especialmente de las más abandonadas. Líbralas de los terribles tormentos que padecen. Llámalas y admítelas en Tu dulcísimo abrazo en el Paraíso. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1102,12 +1010,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -1134,16 +1043,12 @@ Prayer to the Souls in Purgatory
 My Jesus, by the sorrows Thou didst suffer in Thine agony in the garden, in Thine scourging and crowning with thorns, in the way to Calvary, in Thine crucifixion and death, have mercy on the souls in Purgatory, and especially on those that are most forsaken. Deliver them from the dire torments they endure. Call them and admit them to Thy most sweet embrace in Paradise. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1152,8 +1057,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -1186,16 +1090,12 @@ Oração pelas almas do Purgatório
 Meu Jesus, pelas dores que sofrestes na Vossa agonia no horto, na Vossa flagelação e coroação de espinhos, no caminho do Calvário, na Vossa crucificação e morte, tende misericórdia das almas do Purgatório, especialmente das mais abandonadas. Livrai-as dos terríveis tormentos que padecem. Chamai-as e recebei-as no Vosso dulcíssimo abraço no Paraíso. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1211,8 +1111,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -1228,6 +1127,8 @@ Hazme oír el gozo y la alegría, que se alegren los huesos que quebrantaste. Ap
 
 Oración
 
+Santo Rostro de Jesús, Sagrado Rostro de Dios, qué grande es Tu paciencia con la humanidad, qué infinito Tu perdón. Somos pecadores y, sin embargo, Tú nos amas. Esto nos da valor. Para gloria de Tu Santo Rostro y de la Santísima Trinidad, escúchanos y respóndenos. María, Madre nuestra, intercede por nosotros; san José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración a san José
@@ -1237,16 +1138,12 @@ Oración a san José
 San José, acompáñanos en la vida, acompáñanos en la muerte y obtennos un juicio favorable de Jesús, nuestro Salvador misericordioso. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1255,12 +1152,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -1269,6 +1167,8 @@ Amen.
 Make me hear rejoicing and gladness that the bones Thou hast crushed may revive. From my sins turn away Thy Face, and blot out all my guilt.
 
 Prayer
+
+Holy Face of Jesus, Sacred Countenance of God, how great is Thy patience with humankind, how infinite Thy forgiveness. We are sinners, yet Thou lovest us. This gives us courage. For the glory of Thy Holy Face and of the Blessed Trinity, hear and answer us. Mary our Mother, intercede for us; Saint Joseph, pray for us.
 
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
@@ -1279,30 +1179,21 @@ Dear Saint Joseph! Adopt us as thy children, take charge of our salvation; watch
 Saint Joseph, be with us in life, be with us in death and obtain for us a favorable judgment from Jesus, our merciful Savior. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -1318,6 +1209,8 @@ Fazei-me ouvir o júbilo e a alegria, e exultarão os ossos que esmagastes. Desv
 
 Oração
 
+Santa Face de Jesus, Sagrado Rosto de Deus, quão grande é a Vossa paciência com a humanidade, quão infinito o Vosso perdão. Somos pecadores, e no entanto Vós nos amais. Isto nos dá coragem. Para a glória da Vossa Santa Face e da Santíssima Trindade, ouvi-nos e atendei-nos. Maria, nossa Mãe, intercedei por nós; São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração a São José
@@ -1327,16 +1220,12 @@ Querido São José! Adotai-nos como vossos filhos, cuidai da nossa salvação; v
 São José, estai conosco na vida, estai conosco na morte e alcançai-nos um julgamento favorável de Jesus, nosso Salvador misericordioso. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1346,8 +1235,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -1363,6 +1251,8 @@ Hazme oír el gozo y la alegría, que se alegren los huesos que quebrantaste. Ap
 
 Oración
 
+Santo Rostro de Jesús, Sagrado Rostro de Dios, qué grande es Tu paciencia con la humanidad, qué infinito Tu perdón. Somos pecadores y, sin embargo, Tú nos amas. Esto nos da valor. Para gloria de Tu Santo Rostro y de la Santísima Trinidad, escúchanos y respóndenos. María, Madre nuestra, intercede por nosotros; san José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración a san José
@@ -1372,16 +1262,12 @@ Oración a san José
 San José, acompáñanos en la vida, acompáñanos en la muerte y obtennos un juicio favorable de Jesús, nuestro Salvador misericordioso. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1390,12 +1276,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -1404,6 +1291,8 @@ Amen.
 Make me hear rejoicing and gladness that the bones Thou hast crushed may revive. From my sins turn away Thy Face, and blot out all my guilt.
 
 Prayer
+
+Holy Face of Jesus, Sacred Countenance of God, how great is Thy patience with humankind, how infinite Thy forgiveness. We are sinners, yet Thou lovest us. This gives us courage. For the glory of Thy Holy Face and of the Blessed Trinity, hear and answer us. Mary our Mother, intercede for us; Saint Joseph, pray for us.
 
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
@@ -1414,30 +1303,21 @@ Dear Saint Joseph! Adopt us as thy children, take charge of our salvation; watch
 Saint Joseph, be with us in life, be with us in death and obtain for us a favorable judgment from Jesus, our merciful Savior. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -1453,6 +1333,8 @@ Fazei-me ouvir o júbilo e a alegria, e exultarão os ossos que esmagastes. Desv
 
 Oração
 
+Santa Face de Jesus, Sagrado Rosto de Deus, quão grande é a Vossa paciência com a humanidade, quão infinito o Vosso perdão. Somos pecadores, e no entanto Vós nos amais. Isto nos dá coragem. Para a glória da Vossa Santa Face e da Santíssima Trindade, ouvi-nos e atendei-nos. Maria, nossa Mãe, intercedei por nós; São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração a São José
@@ -1462,16 +1344,12 @@ Querido São José! Adotai-nos como vossos filhos, cuidai da nossa salvação; v
 São José, estai conosco na vida, estai conosco na morte e alcançai-nos um julgamento favorável de Jesus, nosso Salvador misericordioso. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1487,8 +1365,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -1504,6 +1381,8 @@ Crea en nosotros, oh Dios, un corazón puro; renueva en nuestro interior un esp�
 
 Oración
 
+Que nuestros corazones sean purificados, oh Señor, por la efusión del Espíritu Santo, y que Él los haga fecundos regándolos con Su rocío celestial. María, castísima esposa del Espíritu Santo, intercede por nosotros. San José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración a san Miguel Arcángel
@@ -1511,16 +1390,12 @@ Oración a san Miguel Arcángel
 Oh Príncipe victorioso, humildísimo custodio de la Iglesia de Dios y de las almas fieles, que con tanta caridad y celo tomaste parte en tantos combates y alcanzaste tan grandes victorias sobre el enemigo, por la conservación y defensa del honor y de la gloria que todos debemos a Dios, así como por el bien de nuestra salvación, ven, te lo suplicamos, en nuestro auxilio, porque estamos continuamente asediados por tan grandes peligros de parte de tus enemigos: la carne, el mundo y el demonio; y así como fuiste guía del pueblo de Dios a través del desierto, sé también nuestro fiel guía y compañero a través del desierto de este mundo, hasta que nos conduzcas a salvo a la feliz tierra de los vivientes, a aquella bienaventurada patria de la que todos estamos desterrados. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1529,12 +1404,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -1544,6 +1420,8 @@ A pure heart create for us, O God; put a steadfast spirit within us. Do not cast
 
 Prayer
 
+May our hearts be cleansed, O Lord, by the inpouring of the Holy Spirit, and may He render them fruitful by watering them with His heavenly dew. Mary, most chaste spouse of the Holy Spirit, intercede for us. Saint Joseph, pray for us.
+
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
 Prayer to Saint Michael the Archangel
@@ -1551,16 +1429,12 @@ Prayer to Saint Michael the Archangel
 O Victorious Prince, most humble guardian of the Church of God and of faithful souls, who with such charity and zeal took part in so many conflicts and gained such great victories over the enemy; for the conservation and protection of the honor and glory we all owe to God, as well as for the promotion of our salvation, come, we pray Thee, to our assistance, for we are continually besieged with such great perils by Thy enemies: the flesh, the world, and the devil; and as Thou wast a leader for the people of God through the desert, so also be our faithful leader and companion through the desert of this world, until Thou conduct us safely into the happy land of the living, in that blessed fatherland from which we are all exiles. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1569,8 +1443,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -1586,6 +1459,8 @@ Criai em nós, ó Deus, um coração puro; renovai em nós um espírito firme. N
 
 Oração
 
+Que os nossos corações sejam purificados, ó Senhor, pela efusão do Espírito Santo, e que Ele os torne fecundos regando-os com o Seu orvalho celeste. Maria, castíssima esposa do Espírito Santo, intercedei por nós. São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração a São Miguel Arcanjo
@@ -1593,16 +1468,12 @@ Oração a São Miguel Arcanjo
 Ó Príncipe vitorioso, humílimo guardião da Igreja de Deus e das almas fiéis, que com tanta caridade e zelo tomastes parte em tantos combates e alcançastes tão grandes vitórias sobre o inimigo, para a conservação e defesa da honra e da glória que todos devemos a Deus, como também para o bem da nossa salvação, vinde, Vos pedimos, em nosso auxílio, pois estamos continuamente cercados de tão grandes perigos pelos vossos inimigos: a carne, o mundo e o demônio; e assim como fostes guia do povo de Deus através do deserto, sede também nosso fiel guia e companheiro através do deserto deste mundo, até nos conduzirdes sãos e salvos à feliz terra dos viventes, àquela bendita pátria da qual todos estamos exilados. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1612,8 +1483,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -1629,6 +1499,8 @@ Crea en nosotros, oh Dios, un corazón puro; renueva en nuestro interior un esp�
 
 Oración
 
+Que nuestros corazones sean purificados, oh Señor, por la efusión del Espíritu Santo, y que Él los haga fecundos regándolos con Su rocío celestial. María, castísima esposa del Espíritu Santo, intercede por nosotros. San José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración a san Miguel Arcángel
@@ -1636,16 +1508,12 @@ Oración a san Miguel Arcángel
 Oh Príncipe victorioso, humildísimo custodio de la Iglesia de Dios y de las almas fieles, que con tanta caridad y celo tomaste parte en tantos combates y alcanzaste tan grandes victorias sobre el enemigo, por la conservación y defensa del honor y de la gloria que todos debemos a Dios, así como por el bien de nuestra salvación, ven, te lo suplicamos, en nuestro auxilio, porque estamos continuamente asediados por tan grandes peligros de parte de tus enemigos: la carne, el mundo y el demonio; y así como fuiste guía del pueblo de Dios a través del desierto, sé también nuestro fiel guía y compañero a través del desierto de este mundo, hasta que nos conduzcas a salvo a la feliz tierra de los vivientes, a aquella bienaventurada patria de la que todos estamos desterrados. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1654,12 +1522,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -1669,6 +1538,8 @@ A pure heart create for us, O God; put a steadfast spirit within us. Do not cast
 
 Prayer
 
+May our hearts be cleansed, O Lord, by the inpouring of the Holy Spirit, and may He render them fruitful by watering them with His heavenly dew. Mary, most chaste spouse of the Holy Spirit, intercede for us. Saint Joseph, pray for us.
+
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
 Prayer to Saint Michael the Archangel
@@ -1676,16 +1547,12 @@ Prayer to Saint Michael the Archangel
 O Victorious Prince, most humble guardian of the Church of God and of faithful souls, who with such charity and zeal took part in so many conflicts and gained such great victories over the enemy; for the conservation and protection of the honor and glory we all owe to God, as well as for the promotion of our salvation, come, we pray Thee, to our assistance, for we are continually besieged with such great perils by Thy enemies: the flesh, the world, and the devil; and as Thou wast a leader for the people of God through the desert, so also be our faithful leader and companion through the desert of this world, until Thou conduct us safely into the happy land of the living, in that blessed fatherland from which we are all exiles. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1694,8 +1561,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -1711,6 +1577,8 @@ Criai em nós, ó Deus, um coração puro; renovai em nós um espírito firme. N
 
 Oração
 
+Que os nossos corações sejam purificados, ó Senhor, pela efusão do Espírito Santo, e que Ele os torne fecundos regando-os com o Seu orvalho celeste. Maria, castíssima esposa do Espírito Santo, intercedei por nós. São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração a São Miguel Arcanjo
@@ -1718,16 +1586,12 @@ Oração a São Miguel Arcanjo
 Ó Príncipe vitorioso, humílimo guardião da Igreja de Deus e das almas fiéis, que com tanta caridade e zelo tomastes parte em tantos combates e alcançastes tão grandes vitórias sobre o inimigo, para a conservação e defesa da honra e da glória que todos devemos a Deus, como também para o bem da nossa salvação, vinde, Vos pedimos, em nosso auxílio, pois estamos continuamente cercados de tão grandes perigos pelos vossos inimigos: a carne, o mundo e o demônio; e assim como fostes guia do povo de Deus através do deserto, sede também nosso fiel guia e companheiro através do deserto deste mundo, até nos conduzirdes sãos e salvos à feliz terra dos viventes, àquela bendita pátria da qual todos estamos exilados. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1743,8 +1607,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -1764,6 +1627,8 @@ Oración
 
 Señor, no permitas que nos contentemos con una simple compasión; danos la gracia de seguirte tan de cerca en este Calvario que los oprobios destinados a Ti caigan sobre nosotros, oh Jesús, para que así tengamos parte, por pequeña que sea, en la expiación del pecado. Amén.
 
+María, Madre nuestra, intercede por nosotros. San José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración en honor de María
@@ -1777,16 +1642,12 @@ Somos todo tuyos, y todo lo que tenemos es tuyo. Oh Virgen bendita sobre todas l
 Concédenos, Virgen clementísima, que seamos contados entre aquellos a quienes te complaces en amar, enseñar y guiar, favorecer y proteger como hijos tuyos. Concédenos que, con la ayuda de tu amor, despreciemos todo consuelo terreno y nos adhiramos a las cosas celestiales, hasta que, por el Espíritu Santo, tu fiel Esposo, y por ti, Su fiel Esposa, Jesucristo, tu Hijo, sea formado en nosotros para gloria del Padre. Amén (San Luis María Grignion de Montfort)
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1795,12 +1656,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -1813,6 +1675,8 @@ Prayer
 Lord Jesus! After contemplating Thy features, disfigured by grief, after meditating upon Thy passion with compunction and love, how can our hearts fail to be inflamed with a holy hatred of sin, which even now outrages Thy Adorable Face!
 
 Lord, suffer us not to be content with mere compassion, but give us grace to so closely follow Thee in this Calvary, so that the opprobrium destined for Thee may fall on us, O Jesus, that thus we may have a share, small though it may be, in expiation of sin. Amen.
+
+Mary, our Mother, intercede for us. Saint Joseph, pray for us.
 
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
@@ -1827,30 +1691,21 @@ We are all thine, and all we have is thine. O Virgin blessed above all things, m
 Grant, most gracious Virgin, that we may be numbered among those whom thou art pleased to love, to teach and to guide, to favor and to protect as thy children. Grant that with the help of thy love, we may despise all earthly consolation and cling to heavenly things, until through the Holy Spirit, thy faithful spouse, and through thee, His faithful spouse, Jesus Christ, thy Son, be formed within us for the glory of the Father. Amen (St. Louis de Montfort)
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -1870,6 +1725,8 @@ Senhor Jesus! Depois de contemplar os Vossos traços, desfigurados pela dor, dep
 
 Senhor, não permitais que nos contentemos com uma simples compaixão, mas dai-nos a graça de Vos seguir tão de perto neste Calvário que os opróbrios destinados a Vós caiam sobre nós, ó Jesus, para que assim tenhamos parte, por pequena que seja, na expiação do pecado. Amém.
 
+Maria, nossa Mãe, intercedei por nós. São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração em honra de Maria
@@ -1883,16 +1740,12 @@ Somos todos vossos, e tudo o que temos é vosso. Ó Virgem bendita acima de toda
 Concedei, Virgem clementíssima, que sejamos contados entre aqueles a quem vos agrada amar, ensinar e guiar, favorecer e proteger como vossos filhos. Concedei que, com a ajuda do vosso amor, desprezemos toda consolação terrena e nos apeguemos às coisas celestes, até que, pelo Espírito Santo, vosso fiel Esposo, e por vós, Sua fiel Esposa, Jesus Cristo, vosso Filho, seja formado em nós para a glória do Pai. Amém (São Luís Maria Grignion de Montfort)
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1902,8 +1755,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -1923,6 +1775,8 @@ Oración
 
 Señor, no permitas que nos contentemos con una simple compasión; danos la gracia de seguirte tan de cerca en este Calvario que los oprobios destinados a Ti caigan sobre nosotros, oh Jesús, para que así tengamos parte, por pequeña que sea, en la expiación del pecado. Amén.
 
+María, Madre nuestra, intercede por nosotros. San José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración en honor de María
@@ -1936,16 +1790,12 @@ Somos todo tuyos, y todo lo que tenemos es tuyo. Oh Virgen bendita sobre todas l
 Concédenos, Virgen clementísima, que seamos contados entre aquellos a quienes te complaces en amar, enseñar y guiar, favorecer y proteger como hijos tuyos. Concédenos que, con la ayuda de tu amor, despreciemos todo consuelo terreno y nos adhiramos a las cosas celestiales, hasta que, por el Espíritu Santo, tu fiel Esposo, y por ti, Su fiel Esposa, Jesucristo, tu Hijo, sea formado en nosotros para gloria del Padre. Amén (San Luis María Grignion de Montfort)
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1954,12 +1804,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -1972,6 +1823,8 @@ Prayer
 Lord Jesus! After contemplating Thy features, disfigured by grief, after meditating upon Thy passion with compunction and love, how can our hearts fail to be inflamed with a holy hatred of sin, which even now outrages Thy Adorable Face!
 
 Lord, suffer us not to be content with mere compassion, but give us grace to so closely follow Thee in this Calvary, so that the opprobrium destined for Thee may fall on us, O Jesus, that thus we may have a share, small though it may be, in expiation of sin. Amen.
+
+Mary, our Mother, intercede for us. Saint Joseph, pray for us.
 
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
@@ -1986,30 +1839,21 @@ We are all thine, and all we have is thine. O Virgin blessed above all things, m
 Grant, most gracious Virgin, that we may be numbered among those whom thou art pleased to love, to teach and to guide, to favor and to protect as thy children. Grant that with the help of thy love, we may despise all earthly consolation and cling to heavenly things, until through the Holy Spirit, thy faithful spouse, and through thee, His faithful spouse, Jesus Christ, thy Son, be formed within us for the glory of the Father. Amen (St. Louis de Montfort)
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -2029,6 +1873,8 @@ Senhor Jesus! Depois de contemplar os Vossos traços, desfigurados pela dor, dep
 
 Senhor, não permitais que nos contentemos com uma simples compaixão, mas dai-nos a graça de Vos seguir tão de perto neste Calvário que os opróbrios destinados a Vós caiam sobre nós, ó Jesus, para que assim tenhamos parte, por pequena que seja, na expiação do pecado. Amém.
 
+Maria, nossa Mãe, intercedei por nós. São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração em honra de Maria
@@ -2042,16 +1888,12 @@ Somos todos vossos, e tudo o que temos é vosso. Ó Virgem bendita acima de toda
 Concedei, Virgem clementíssima, que sejamos contados entre aqueles a quem vos agrada amar, ensinar e guiar, favorecer e proteger como vossos filhos. Concedei que, com a ajuda do vosso amor, desprezemos toda consolação terrena e nos apeguemos às coisas celestes, até que, pelo Espírito Santo, vosso fiel Esposo, e por vós, Sua fiel Esposa, Jesus Cristo, vosso Filho, seja formado em nós para a glória do Pai. Amém (São Luís Maria Grignion de Montfort)
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2067,8 +1909,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -2084,6 +1925,8 @@ Líbrame, oh Dios, Dios mío, mi auxilio, y mi lengua cantará Tu bondad. Señor
 
 Oración
 
+Misericordiosísimo Rostro de Jesús, que en este valle de lágrimas te conmoviste tanto por nuestras desgracias que te llamaste médico de los enfermos y buen Pastor de las almas extraviadas, no permitas que Satanás nos aparte de Ti, sino mantennos siempre bajo Tu amorosa protección, junto con todas las almas que se esfuerzan por consolarte. María, Madre nuestra, intercede por nosotros. San José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración a san Pedro
@@ -2095,16 +1938,12 @@ Obtennos también una lealtad sincera a nuestra Santa Madre la Iglesia. Concéde
 Concédenos, además, seguir con toda humildad y mansedumbre las enseñanzas y los consejos de la Iglesia y obedecer todos sus preceptos, para poder gozar aquí en la tierra de una paz segura y serena, y alcanzar un día en el cielo la felicidad eterna. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2113,12 +1952,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -2127,6 +1967,8 @@ Amen.
 O rescue me, God my helper, and my tongue shall ring out Thy goodness. O Lord, open my lips, and my mouth shall declare Thy praise.
 
 Prayer
+
+Most merciful Face of Jesus, Who in this vale of tears was so moved by our misfortunes to call Thyself the healer of the sick, and the good Shepherd of the souls gone astray, allow not Satan to draw us away from Thee, but keep us always under Thy loving protection, together with all souls who endeavor to console Thee. Mary, our Mother, intercede for us. Saint Joseph, pray for us.
 
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
@@ -2139,16 +1981,12 @@ Obtain for us likewise a sincere loyalty to our Holy Mother the Church. Grant th
 Grant, moreover, that we may follow, in all humility and meekness, the Church’s teaching and counsels and may be obedient to all her precepts, in order to be able here on earth to enjoy a peace that is sure and undisturbed, and to attain one day in heaven to everlasting happiness. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -2157,8 +1995,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -2174,6 +2011,8 @@ Livrai-me, ó Deus, meu Salvador, e a minha língua cantará a Vossa bondade. Se
 
 Oração
 
+Misericordiosíssima Face de Jesus, que neste vale de lágrimas Vos comovestes tanto com as nossas desgraças que Vos chamastes médico dos enfermos e bom Pastor das almas desgarradas, não permitais que Satanás nos afaste de Vós, mas guardai-nos sempre sob a Vossa amorosa proteção, juntamente com todas as almas que se esforçam por Vos consolar. Maria, nossa Mãe, intercedei por nós. São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração a São Pedro
@@ -2185,16 +2024,12 @@ Alcançai-nos também uma sincera lealdade à nossa Santa Mãe Igreja. Concedei 
 Concedei-nos, além disso, seguir com toda humildade e mansidão os ensinamentos e conselhos da Igreja e obedecer a todos os seus preceitos, para podermos gozar aqui na terra de uma paz segura e tranquila e alcançar um dia no céu a felicidade eterna. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2204,8 +2039,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -2221,6 +2055,8 @@ Líbrame, oh Dios, Dios mío, mi auxilio, y mi lengua cantará Tu bondad. Señor
 
 Oración
 
+Misericordiosísimo Rostro de Jesús, que en este valle de lágrimas te conmoviste tanto por nuestras desgracias que te llamaste médico de los enfermos y buen Pastor de las almas extraviadas, no permitas que Satanás nos aparte de Ti, sino mantennos siempre bajo Tu amorosa protección, junto con todas las almas que se esfuerzan por consolarte. María, Madre nuestra, intercede por nosotros. San José, ruega por nosotros.
+
 Por los méritos de Tu preciosa Sangre y de Tu Santo Rostro, oh Jesús, concédenos nuestra petición: perdón y misericordia.
 
 Oración a san Pedro
@@ -2232,16 +2068,12 @@ Obtennos también una lealtad sincera a nuestra Santa Madre la Iglesia. Concéde
 Concédenos, además, seguir con toda humildad y mansedumbre las enseñanzas y los consejos de la Iglesia y obedecer todos sus preceptos, para poder gozar aquí en la tierra de una paz segura y serena, y alcanzar un día en el cielo la felicidad eterna. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2250,12 +2082,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -2264,6 +2097,8 @@ Amen.
 O rescue me, God my helper, and my tongue shall ring out Thy goodness. O Lord, open my lips, and my mouth shall declare Thy praise.
 
 Prayer
+
+Most merciful Face of Jesus, Who in this vale of tears was so moved by our misfortunes to call Thyself the healer of the sick, and the good Shepherd of the souls gone astray, allow not Satan to draw us away from Thee, but keep us always under Thy loving protection, together with all souls who endeavor to console Thee. Mary, our Mother, intercede for us. Saint Joseph, pray for us.
 
 Through the merits of Thy precious blood and Thy Holy Face, O Jesus, grant us our petition; Pardon and Mercy.
 
@@ -2276,16 +2111,12 @@ Obtain for us likewise a sincere loyalty to our Holy Mother the Church. Grant th
 Grant, moreover, that we may follow, in all humility and meekness, the Church’s teaching and counsels and may be obedient to all her precepts, in order to be able here on earth to enjoy a peace that is sure and undisturbed, and to attain one day in heaven to everlasting happiness. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -2294,8 +2125,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -2311,6 +2141,8 @@ Livrai-me, ó Deus, meu Salvador, e a minha língua cantará a Vossa bondade. Se
 
 Oração
 
+Misericordiosíssima Face de Jesus, que neste vale de lágrimas Vos comovestes tanto com as nossas desgraças que Vos chamastes médico dos enfermos e bom Pastor das almas desgarradas, não permitais que Satanás nos afaste de Vós, mas guardai-nos sempre sob a Vossa amorosa proteção, juntamente com todas as almas que se esforçam por Vos consolar. Maria, nossa Mãe, intercedei por nós. São José, rogai por nós.
+
 Pelos méritos do Vosso precioso Sangue e da Vossa Santa Face, ó Jesus, concedei-nos o que pedimos: perdão e misericórdia.
 
 Oração a São Pedro
@@ -2322,16 +2154,12 @@ Alcançai-nos também uma sincera lealdade à nossa Santa Mãe Igreja. Concedei 
 Concedei-nos, além disso, seguir com toda humildade e mansidão os ensinamentos e conselhos da Igreja e obedecer a todos os seus preceitos, para podermos gozar aqui na terra de uma paz segura e tranquila e alcançar um dia no céu a felicidade eterna. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2347,8 +2175,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -2389,26 +2216,20 @@ Oh Madre Dolorosa, por la gloria eterna de que gozas en el Cielo, por los mérit
 Te amamos, oh María. Abrázanos y bendícenos, oh Madre. Protégenos en la vida y en la muerte. Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 Oración de la Flecha de Oro
 
 Que el santísimo, sacratísimo, adorabilísimo, incomprensible e inefable Nombre de Dios sea siempre alabado, bendecido, amado, adorado y glorificado en el Cielo, en la tierra y en los abismos, por todas las criaturas de Dios y por el Sagrado Corazón de nuestro Señor Jesucristo en el Santísimo Sacramento del Altar. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2417,12 +2238,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -2463,30 +2285,21 @@ The Golden Arrow Prayer
 May the most holy, most sacred, most adorable, most incomprehensible and ineffable Name of God be forever praised, blessed, loved, adored, and glorified in Heaven, on earth, and under the earth, by all the creatures of God, and by the Sacred Heart of Our Lord Jesus Christ, in the Most Holy Sacrament of the Altar. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -2527,24 +2340,19 @@ Fazei resplandecer sobre nós a Vossa Face divina e abençoai-nos agora e sempre
 Nós vos amamos, ó Maria. Abraçai-nos e abençoai-nos, ó Mãe. Protegei-nos na vida e na morte. Amém.
 
 Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre. Amém.
+ Como era no princípio, agora e sempre. Amém.
 
 Oração da Flecha de Ouro
 
 Que o santíssimo, sacratíssimo, adorabilíssimo, incompreensível e inefável Nome de Deus seja sempre louvado, bendito, amado, adorado e glorificado no Céu, na terra e nos abismos, por todas as criaturas de Deus e pelo Sagrado Coração de Nosso Senhor Jesus Cristo no Santíssimo Sacramento do Altar. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2554,8 +2362,7 @@ Amém."""),
 Amén.
 
 “¡Deseo firmemente que Mi rostro, que refleja las penas íntimas de Mi alma, el sufrimiento y el amor de Mi corazón, sea más honrado! Quien me contempla ya me consuela.”
-
-Nuestro Señor Jesucristo a sor María de San Pedro
+ Nuestro Señor Jesucristo a sor María de San Pedro
 
 ORACIÓN PREPARATORIA DIARIA
 
@@ -2596,26 +2403,20 @@ Oh Madre Dolorosa, por la gloria eterna de que gozas en el Cielo, por los mérit
 Te amamos, oh María. Abrázanos y bendícenos, oh Madre. Protégenos en la vida y en la muerte. Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 Oración de la Flecha de Oro
 
 Que el santísimo, sacratísimo, adorabilísimo, incomprensible e inefable Nombre de Dios sea siempre alabado, bendecido, amado, adorado y glorificado en el Cielo, en la tierra y en los abismos, por todas las criaturas de Dios y por el Sagrado Corazón de nuestro Señor Jesucristo en el Santísimo Sacramento del Altar. Amén.
 
 Padre nuestro.
-
-Dios te salve, María. (3 veces)
-
-Gloria al Padre.
+ Dios te salve, María. (3 veces)
+ Gloria al Padre.
 
 Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
-
-Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
+ Oh Rostro ensangrentado, oh Rostro divino, sea para Ti toda adoración.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -2624,12 +2425,13 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 “I firmly wish that my face reflecting the intimate pains of my soul, the suffering and love of my heart, be more honoured! Whoever gazes upon me already consoles me.”
-
-– Our Lord Jesus Christ to Sister Pierre
+ – Our Lord Jesus Christ to Sister Pierre
 
 DAILY PREPARATORY PRAYER
 
 O Most Holy and Blessed Trinity, through the intercession of Holy Mary, whose soul was pierced through by a sword of sorrow at the sight of the passion of her Divine Son, we ask your help in making a perfect Novena of reparation with Jesus, united with all His sorrows, love and total abandonment.
+
+We now implore all the Angels and Saints to intercede for us as we pray this Holy Novena to the Most Holy Face of Jesus and for the glory of the most Holy Trinity, Father, Son and Holy Spirit.
 
 (mention request here…)
 
@@ -2670,30 +2472,21 @@ The Golden Arrow Prayer
 May the most holy, most sacred, most adorable, most incomprehensible and ineffable Name of God be forever praised, blessed, loved, adored, and glorified in Heaven, on earth, and under the earth, by all the creatures of God, and by the Sacred Heart of Our Lord Jesus Christ, in the Most Holy Sacrament of the Altar. Amen.
 
 Our Father
-
-Hail Mary x3
-
-Glory Be
+ Hail Mary x3
+ Glory Be
 
 O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
-
-O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
+ O Bleeding Face, O Face Divine, be every adoration Thine.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 “Desejo firmemente que a Minha face, que reflete as dores íntimas da Minha alma, o sofrimento e o amor do Meu coração, seja mais honrada! Quem Me contempla já Me consola.”
-
-Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
+ Nosso Senhor Jesus Cristo à Irmã Maria de São Pedro
 
 ORAÇÃO PREPARATÓRIA DIÁRIA
 
@@ -2734,24 +2527,19 @@ Fazei resplandecer sobre nós a Vossa Face divina e abençoai-nos agora e sempre
 Nós vos amamos, ó Maria. Abraçai-nos e abençoai-nos, ó Mãe. Protegei-nos na vida e na morte. Amém.
 
 Glória ao Pai e ao Filho e ao Espírito Santo.
-
-Como era no princípio, agora e sempre. Amém.
+ Como era no princípio, agora e sempre. Amém.
 
 Oração da Flecha de Ouro
 
 Que o santíssimo, sacratíssimo, adorabilíssimo, incompreensível e inefável Nome de Deus seja sempre louvado, bendito, amado, adorado e glorificado no Céu, na terra e nos abismos, por todas as criaturas de Deus e pelo Sagrado Coração de Nosso Senhor Jesus Cristo no Santíssimo Sacramento do Altar. Amém.
 
 Pai-Nosso.
-
-Ave-Maria. (3 vezes)
-
-Glória ao Pai.
+ Ave-Maria. (3 vezes)
+ Glória ao Pai.
 
 Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
-
-Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
+ Ó Face ensanguentada, ó Face divina, a Vós toda adoração.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 

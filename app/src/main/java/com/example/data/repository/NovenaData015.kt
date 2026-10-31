@@ -61,20 +61,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Beautiful Flower of Carmel, most fruitful vine, splendor of heaven, holy and singular, who brought forth the Son of God, still ever remaining a pure virgin, assist us in our necessity! O Star of the Sea, help and protect us! Show us that you are our Mother!
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -83,22 +77,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -148,20 +139,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Beautiful Flower of Carmel, most fruitful vine, splendor of heaven, holy and singular, who brought forth the Son of God, still ever remaining a pure virgin, assist us in our necessity! O Star of the Sea, help and protect us! Show us that you are our Mother!
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -170,22 +155,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -241,10 +223,8 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 Most Holy Mary, Our Mother, in your great love for us you gave us the Holy Scapular of Mount Carmel, having heard the prayers of your chosen son Saint Simon Stock. Help us now to wear it faithfully and with devotion. May it be a sign to us of our desire to grow in holiness.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
@@ -259,22 +239,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -324,10 +301,8 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 Most Holy Mary, Our Mother, in your great love for us you gave us the Holy Scapular of Mount Carmel, having heard the prayers of your chosen son Saint Simon Stock. Help us now to wear it faithfully and with devotion. May it be a sign to us of our desire to grow in holiness.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
@@ -342,22 +317,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -413,20 +385,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Queen of Heaven, you gave us the Scapular as an outward sign by which we might be known as your faithful children. May we always wear it with honor by avoiding sin and imitating your virtues. Help us to be faithful to this desire of ours.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -435,22 +401,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -500,20 +463,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Queen of Heaven, you gave us the Scapular as an outward sign by which we might be known as your faithful children. May we always wear it with honor by avoiding sin and imitating your virtues. Help us to be faithful to this desire of ours.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -522,22 +479,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -593,10 +547,8 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 When you gave us, Gracious Lady, the Scapular as our Habit, you called us to be not only servants, but also your own children. We ask you to gain for us from your Son the grace to live as your children in joy, peace and love.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
@@ -611,22 +563,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -676,10 +625,8 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 When you gave us, Gracious Lady, the Scapular as our Habit, you called us to be not only servants, but also your own children. We ask you to gain for us from your Son the grace to live as your children in joy, peace and love.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
@@ -694,22 +641,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -765,20 +709,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Mother of Fair Love, through your goodness, as your children, we are called to live in the spirit of Carmel. Help us to live in charity with one another, prayerful as Elijah of old, and mindful of our call to minister to God’s people.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -787,22 +725,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -852,20 +787,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Mother of Fair Love, through your goodness, as your children, we are called to live in the spirit of Carmel. Help us to live in charity with one another, prayerful as Elijah of old, and mindful of our call to minister to God’s people.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -874,22 +803,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -945,10 +871,8 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 With loving provident care, O Mother Most Amiable, you covered us with your Scapular as a shield of defense against the Evil One. Through your assistance, may we bravely struggle against the powers of evil, always open to your Son Jesus Christ.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
@@ -963,22 +887,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -1028,10 +949,8 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 With loving provident care, O Mother Most Amiable, you covered us with your Scapular as a shield of defense against the Evil One. Through your assistance, may we bravely struggle against the powers of evil, always open to your Son Jesus Christ.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
@@ -1046,22 +965,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -1117,20 +1033,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Mary, Help of Christians, you assured us that wearing your Scapular worthily would keep us safe from harm. Protect us in both body and soul with your continual aid. May all that we do be pleasing to your Son and to you.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1139,22 +1049,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -1204,20 +1111,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Mary, Help of Christians, you assured us that wearing your Scapular worthily would keep us safe from harm. Protect us in both body and soul with your continual aid. May all that we do be pleasing to your Son and to you.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1226,22 +1127,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -1297,10 +1195,8 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 You give us hope, O Mother of Mercy, that through your Scapular promise we might quickly pass through the fires of purgatory to the Kingdom of your Son. Be our comfort and our hope. Grant that our hope may not be in vain but that, ever faithful to your Son and to you, we may speedily enjoy after death the blessed company of Jesus and the saints.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
@@ -1315,22 +1211,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -1380,10 +1273,8 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 You give us hope, O Mother of Mercy, that through your Scapular promise we might quickly pass through the fires of purgatory to the Kingdom of your Son. Be our comfort and our hope. Grant that our hope may not be in vain but that, ever faithful to your Son and to you, we may speedily enjoy after death the blessed company of Jesus and the saints.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
@@ -1398,22 +1289,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -1469,20 +1357,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Most Holy Mother of Mount Carmel, when asked by a saint to grant privileges to the family of Carmel, you gave assurance of your Motherly love and help to those faithful to you and to your Son. Behold us, your children. We glory in wearing your holy habit, which makes us members of your family of Carmel, through which we shall have your powerful protection in life, at death and even after death. Look down with love, O Gate of Heaven, on all those now in their last agony! Look down graciously, O Virgin, Flower of Carmel, on all those in need of help! Look down mercifully, O Mother of our Savior, on all those who do not know that they are numbered among your children. Look down tenderly, O Queen of All Saints, on the poor souls!
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1491,22 +1373,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 
@@ -1556,20 +1435,14 @@ O Queen, who are the beauty of Carmel, pray for us now and at the hour of our de
 O Most Holy Mother of Mount Carmel, when asked by a saint to grant privileges to the family of Carmel, you gave assurance of your Motherly love and help to those faithful to you and to your Son. Behold us, your children. We glory in wearing your holy habit, which makes us members of your family of Carmel, through which we shall have your powerful protection in life, at death and even after death. Look down with love, O Gate of Heaven, on all those now in their last agony! Look down graciously, O Virgin, Flower of Carmel, on all those in need of help! Look down mercifully, O Mother of our Savior, on all those who do not know that they are numbered among your children. Look down tenderly, O Queen of All Saints, on the poor souls!
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Mount Carmel, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1578,22 +1451,19 @@ Sacratíssima Senhora, Mãe de Deus, à qual Nosso Senhor desde a Sua cruz desti
 Vossa é a instituição do santo escapulário do Carmo: Vós mesma o destes ao Bem-aventurado Simão carmelita para que, por este celeste vestido, fossem conhecidos os vossos servos especiais. Felizmente, chegou até nós esta santa e tão interessante devoção. Reconhecei-nos por vossos, ó Santíssima Virgem. Também nós nos achamos honrados com esta libré vossa, e em honra deste especial benefício, queremos celebrar a vossa festa, antecipada por nove dias em vossa honra. Olhai para nós, Senhora, e lançai-nos uma benção de amorosa Mãe, para que no fim desta novena fique mais honrado vosso Filho, e nós, mais aproveitados e fervorosos na vossa devoção. Amém.
 
 V. Mãe e Senhora dos carmelitas.
-
-R. Olhai para nossas almas aflitas.
+ R. Olhai para nossas almas aflitas.
 
 Reza-se três Pai-Nossos, Ave-Marias e Glórias ao Pai.
 
 (mencione o pedido aqui…)
 
 V. Ora pro nobis, Sancta Dei Génitrix.
-
-R. Ut digni efficiámur promissiónibus Christi.
+ R. Ut digni efficiámur promissiónibus Christi.
 
 Oremus: Deus, qui beatíssimae semper Vírginis et Genitrícis tuae Maríae singulári título Carméli Ordinem decorásti: concéde propítius; ut cujus hódie commemoratiónem solémni celebrámus, ejus muníti praesídiis, ad gáudia sempitérna perveníre mereámur. Qui vivis et regnas in saécula saeculórum.
 
 V. Rogai por nós, Santa Mãe de Deus.
-
-R. Para que sejamos dignos das promessas de Cristo.
+ R. Para que sejamos dignos das promessas de Cristo.
 
 Oremus: Ó Deus, que destes à Ordem do Carmelo a glória insigne de ter o nome da Virgem Santíssima, vossa Mãe, fazei por vossa misericórdia que, fortalecidos com a proteção daquela cuja memória hoje celebramos, mereçamos alcançar a felicidade eterna. Que viveis e reinais, por todos os séculos dos séculos. Amém.
 

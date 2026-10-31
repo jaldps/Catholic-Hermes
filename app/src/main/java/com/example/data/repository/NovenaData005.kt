@@ -72,15 +72,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -165,15 +163,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -264,6 +260,8 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
@@ -352,6 +350,8 @@ Hail Mary x1
 Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world; since from you arose the Sun of Justice, Christ our God, who, destroying the curse, bestowed the blessing, and confounding death, rewarded us with life everlasting.
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
+
+R. That she may intercede for us with Our Lord Jesus Christ.
 
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
@@ -448,15 +448,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -541,15 +539,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -640,6 +636,8 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
@@ -728,6 +726,8 @@ Hail Mary x1
 Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world; since from you arose the Sun of Justice, Christ our God, who, destroying the curse, bestowed the blessing, and confounding death, rewarded us with life everlasting.
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
+
+R. That she may intercede for us with Our Lord Jesus Christ.
 
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
@@ -824,15 +824,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -917,15 +915,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1016,6 +1012,8 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
@@ -1104,6 +1102,8 @@ Hail Mary x1
 Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world; since from you arose the Sun of Justice, Christ our God, who, destroying the curse, bestowed the blessing, and confounding death, rewarded us with life everlasting.
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
+
+R. That she may intercede for us with Our Lord Jesus Christ.
 
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
@@ -1200,15 +1200,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1293,15 +1291,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1392,6 +1388,8 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
@@ -1480,6 +1478,8 @@ Hail Mary x1
 Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world; since from you arose the Sun of Justice, Christ our God, who, destroying the curse, bestowed the blessing, and confounding death, rewarded us with life everlasting.
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
+
+R. That she may intercede for us with Our Lord Jesus Christ.
 
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
@@ -1576,15 +1576,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1669,15 +1667,13 @@ Your Nativity, O Virgin Mother of God, was the herald of joy to the whole world;
 
 V. Let us celebrate with joy the birth of the Blessed Virgin Mary.
 
+R. That she may intercede for us with Our Lord Jesus Christ.
+
 Grant to us your servants, we beseech you, O Lord, the gift of Your heavenly grace, that as our salvation was begun in the child-bearing of the Blessed Virgin, so from this solemn festival of her Nativity may we obtain an increase of peace. Through Our Lord Jesus Christ. Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

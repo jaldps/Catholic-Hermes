@@ -68,11 +68,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -145,11 +141,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -380,11 +372,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -457,11 +445,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -692,11 +676,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -769,11 +749,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -994,6 +970,8 @@ I come, therefore, with the most unbounded confidence to implore your maternal i
 
 Through gratitude for favors, I will endeavor to imitate your virtues that I may one day share your glory.
 
+Father in Heaven, who by the Immaculate Conception of the Blessed Virgin Mary did prepare a worthy dwelling place for your Son, we humbly beseech you that as we contemplate the apparition of Our Lady of Lourdes, we may be blessed with health of mind and body. O most gracious Mother Mary, beloved Mother of Our Redeemer, look with favor upon us as you did that day on Bernadette and intercede with Him for us that the favor we now so earnestly seek may be granted to us.
+
 O star of purity, Mary Immaculate, Our Lady of Lourdes, glorious in your assumption, triumphant in your coronation, show unto us the mercy of thy Son. Virgin Mary, Queen and Mother, be our comfort, hope, strength, and consolation. Amen.
 
 Our Lady of Lourdes, pray for us.
@@ -1002,11 +980,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1069,6 +1043,8 @@ I come, therefore, with the most unbounded confidence to implore your maternal i
 
 Through gratitude for favors, I will endeavor to imitate your virtues that I may one day share your glory.
 
+Father in Heaven, who by the Immaculate Conception of the Blessed Virgin Mary did prepare a worthy dwelling place for your Son, we humbly beseech you that as we contemplate the apparition of Our Lady of Lourdes, we may be blessed with health of mind and body. O most gracious Mother Mary, beloved Mother of Our Redeemer, look with favor upon us as you did that day on Bernadette and intercede with Him for us that the favor we now so earnestly seek may be granted to us.
+
 O star of purity, Mary Immaculate, Our Lady of Lourdes, glorious in your assumption, triumphant in your coronation, show unto us the mercy of thy Son. Virgin Mary, Queen and Mother, be our comfort, hope, strength, and consolation. Amen.
 
 Our Lady of Lourdes, pray for us.
@@ -1077,11 +1053,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1312,11 +1284,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1389,11 +1357,7 @@ Saint Bernadette, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

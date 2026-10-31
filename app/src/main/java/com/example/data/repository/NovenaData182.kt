@@ -23,8 +23,7 @@ object NovenaData182 {
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -41,250 +40,185 @@ Amabilísima pequeña Santa, que valoraste tu pureza por encima de cualquier gan
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -295,8 +229,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -313,266 +246,195 @@ Most lovable little Saint, who valued your purity above any earthly gain, and wh
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -589,248 +451,184 @@ Amabilíssima pequena santa, que estimastes a vossa pureza acima de qualquer gan
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -842,8 +640,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -860,250 +657,185 @@ Amabilísima pequeña Santa, que valoraste tu pureza por encima de cualquier gan
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -1114,8 +846,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -1132,266 +863,195 @@ Most lovable little Saint, who valued your purity above any earthly gain, and wh
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -1408,248 +1068,184 @@ Amabilíssima pequena santa, que estimastes a vossa pureza acima de qualquer gan
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -1667,8 +1263,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -1685,250 +1280,185 @@ Querida santa María Goretti, modelo de amorosa obediencia a los padres, enséñ
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -1939,8 +1469,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -1957,250 +1486,184 @@ Dear Saint Maria Goretti, model of loving obedience to parents, teach me to imit
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
@@ -2211,8 +1674,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -2229,248 +1691,184 @@ Querida Santa Maria Goretti, modelo de amorosa obediência aos pais, ensinai-me 
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -2482,8 +1880,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -2500,250 +1897,185 @@ Querida santa María Goretti, modelo de amorosa obediencia a los padres, enséñ
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -2754,8 +2086,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -2772,250 +2103,184 @@ Dear Saint Maria Goretti, model of loving obedience to parents, teach me to imit
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
@@ -3026,8 +2291,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -3044,248 +2308,184 @@ Querida Santa Maria Goretti, modelo de amorosa obediência aos pais, ensinai-me 
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -3303,8 +2503,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -3321,250 +2520,185 @@ Amén.
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -3575,8 +2709,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -3593,266 +2726,195 @@ Dear Little Saint Mary! You were ready for the moment of martyrdom because your 
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -3869,248 +2931,184 @@ Querida pequena Santa Maria! Estáveis pronta para o momento do martírio porque
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -4122,8 +3120,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -4140,250 +3137,185 @@ Amén.
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -4394,8 +3326,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -4412,266 +3343,195 @@ Dear Little Saint Mary! You were ready for the moment of martyrdom because your 
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -4688,248 +3548,184 @@ Querida pequena Santa Maria! Estáveis pronta para o momento do martírio porque
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -4947,8 +3743,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -4965,250 +3760,185 @@ Amén.
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -5219,8 +3949,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -5237,250 +3966,184 @@ Dear Little Saint! Your days were spent in the filth of the marshes, willingly h
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
@@ -5491,8 +4154,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -5509,248 +4171,184 @@ Querida pequena santa! Passastes os vossos dias na lama dos pântanos, ajudando 
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -5762,8 +4360,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -5780,250 +4377,185 @@ Amén.
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -6034,8 +4566,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -6052,250 +4583,184 @@ Dear Little Saint! Your days were spent in the filth of the marshes, willingly h
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
@@ -6306,8 +4771,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -6324,248 +4788,184 @@ Querida pequena santa! Passastes os vossos dias na lama dos pântanos, ajudando 
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -6583,8 +4983,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -6601,250 +5000,185 @@ Querida pequeña Santa, dependo mucho de la ayuda de mis amigos en tiempos de di
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -6855,8 +5189,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -6873,266 +5206,195 @@ Dear Little Saint, I depend a great deal upon the help of my friends in time of 
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -7149,248 +5411,184 @@ Querida pequena santa, nos momentos de dificuldade ou de tristeza dependo muito 
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -7402,8 +5600,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -7420,250 +5617,185 @@ Querida pequeña Santa, dependo mucho de la ayuda de mis amigos en tiempos de di
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -7674,8 +5806,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -7692,266 +5823,195 @@ Dear Little Saint, I depend a great deal upon the help of my friends in time of 
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -7968,248 +6028,184 @@ Querida pequena santa, nos momentos de dificuldade ou de tristeza dependo muito 
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -8227,8 +6223,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -8245,250 +6240,185 @@ Amén.
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -8499,8 +6429,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -8517,250 +6446,184 @@ Dear Little Saint! Help me to greater love of my Faith. I have many God-given op
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
@@ -8771,8 +6634,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -8789,248 +6651,184 @@ Querida pequena santa! Ajudai-me a amar mais a minha fé. Tenho muitas oportunid
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -9042,8 +6840,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -9060,250 +6857,185 @@ Amén.
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -9314,8 +7046,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -9332,250 +7063,184 @@ Dear Little Saint! Help me to greater love of my Faith. I have many God-given op
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
@@ -9586,8 +7251,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -9604,248 +7268,184 @@ Querida pequena santa! Ajudai-me a amar mais a minha fé. Tenho muitas oportunid
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -9863,8 +7463,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -9881,250 +7480,185 @@ Querida pequeña Santa, nunca fue Jesús mejor recibido en un corazón humano qu
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -10135,8 +7669,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -10153,266 +7686,195 @@ Dear Little Saint, never was Jesus more welcome in a human heart than in yours. 
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -10429,248 +7891,184 @@ Querida pequena santa, nunca Jesus foi mais bem recebido num coração humano do
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -10682,8 +8080,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -10700,250 +8097,185 @@ Querida pequeña Santa, nunca fue Jesús mejor recibido en un corazón humano qu
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -10954,8 +8286,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -10972,266 +8303,195 @@ Dear Little Saint, never was Jesus more welcome in a human heart than in yours. 
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -11248,248 +8508,184 @@ Querida pequena santa, nunca Jesus foi mais bem recebido num coração humano do
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -11507,8 +8703,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -11525,250 +8720,185 @@ Amén.
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -11779,8 +8909,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -11797,250 +8926,184 @@ Dear Little Martyr! To the last you followed your beloved Jesus. He, while hangi
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
@@ -12051,8 +9114,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -12069,248 +9131,184 @@ Querida pequena mártir! Até o fim seguistes o vosso amado Jesus. Ele, pendurad
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -12322,8 +9320,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -12340,250 +9337,185 @@ Amén.
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -12594,8 +9526,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -12612,250 +9543,184 @@ Dear Little Martyr! To the last you followed your beloved Jesus. He, while hangi
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
@@ -12866,8 +9731,7 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -12884,248 +9748,184 @@ Querida pequena mártir! Até o fim seguistes o vosso amado Jesus. Ele, pendurad
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -13143,8 +9943,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -13161,250 +9960,185 @@ Querida santa María Goretti, una vez más acudo a ti y te pido, con las palabra
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -13415,8 +10149,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -13433,266 +10166,195 @@ Dear Saint Maria Goretti, once again I turn to you, and beg of you in the words 
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -13709,248 +10371,184 @@ Querida Santa Maria Goretti, mais uma vez recorro a vós e vos peço, com as pal
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 
@@ -13962,8 +10560,7 @@ Amém."""),
 Amén.
 
 Santa María Goretti, que, fortalecida por la gracia de Dios, no dudaste, aun siendo tan joven,
-
-en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
+ en derramar tu sangre y sacrificar la vida misma para defender tu pureza virginal, mira con bondad al desdichado género humano, que se ha alejado tanto del camino de la salvación eterna.
 
 Enséñanos a todos, y especialmente a los jóvenes, con qué valentía y prontitud debemos huir, por amor a Jesús, de todo lo que pueda ofenderlo o manchar nuestras almas con el pecado.
 
@@ -13980,250 +10577,185 @@ Querida santa María Goretti, una vez más acudo a ti y te pido, con las palabra
 Reza la Letanía de la Santísima Virgen María
 
 Señor, ten piedad de nosotros.
-
-Cristo, ten piedad de nosotros.
-
-Señor, ten piedad de nosotros.
-
-Cristo, óyenos.
-
-Cristo, escúchanos.
+ Cristo, ten piedad de nosotros.
+ Señor, ten piedad de nosotros.
+ Cristo, óyenos.
+ Cristo, escúchanos.
 
 Dios Padre celestial,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Hijo, Redentor del mundo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Dios Espíritu Santo,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santísima Trinidad, un solo Dios,
-
-ten piedad de nosotros.
+ ten piedad de nosotros.
 
 Santa María,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Madre de Dios,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Santa Virgen de las vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de Cristo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre de la divina gracia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre purísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre castísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre virginal,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre sin mancha,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre amable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre admirable,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del buen consejo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Creador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Madre del Salvador,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen prudentísima,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de veneración,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen digna de alabanza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen poderosa,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen clemente,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Virgen fiel,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Espejo de justicia,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Trono de la sabiduría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Causa de nuestra alegría,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso espiritual,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso digno de honor,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Vaso de insigne devoción,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Rosa mística,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de David,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Torre de marfil,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Casa de oro,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Arca de la Alianza,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Puerta del cielo,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Estrella de la mañana,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Salud de los enfermos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Refugio de los pecadores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Consuelo de los afligidos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Auxilio de los cristianos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Ángeles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Patriarcas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Profetas,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Apóstoles,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Mártires,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de los Confesores,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de las Vírgenes,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de todos los Santos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina concebida sin pecado original,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina asunta a los cielos,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina del Santísimo Rosario,
-
-ruega por nosotros.
+ ruega por nosotros.
 
 Reina de la paz,
-
-ruega por nosotros.
-
-Cordero de Dios, que quitas el pecado del mundo,
-
-perdónanos, Señor.
+ ruega por nosotros.
 
 Cordero de Dios, que quitas el pecado del mundo,
-
-escúchanos, Señor.
+ perdónanos, Señor.
 
 Cordero de Dios, que quitas el pecado del mundo,
+ escúchanos, Señor.
 
-ten misericordia de nosotros.
+Cordero de Dios, que quitas el pecado del mundo,
+ ten misericordia de nosotros.
 
 Te rogamos, Señor Dios,
-
-que nosotros, Tus siervos,
-
-gocemos de continua salud de alma y cuerpo,
-
-y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
-
-seamos librados de las tristezas presentes y gocemos de la alegría eterna.
-
-Por Cristo nuestro Señor.
+ que nosotros, Tus siervos,
+ gocemos de continua salud de alma y cuerpo,
+ y, por la gloriosa intercesión de la bienaventurada siempre Virgen María,
+ seamos librados de las tristezas presentes y gocemos de la alegría eterna.
+ Por Cristo nuestro Señor.
 
 Amén.
 
@@ -14234,8 +10766,7 @@ Amén.""", """In the Name of the Father, and of the Son, and of the Holy Spirit.
 Amen.
 
 Saint Maria Goretti who, strengthened by God’s grace, did not hesitate, even at a young age,
-
-to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
+ to shed your blood and sacrifice life itself to defend your virginal purity, look graciously on the unhappy human race, which has strayed far from the path of eternal salvation.
 
 Teach us all, and especially youth, with what courage and promptitude we should flee for the love of Jesus, anything that could offend Him or stain our souls with sin.
 
@@ -14252,266 +10783,195 @@ Dear Saint Maria Goretti, once again I turn to you, and beg of you in the words 
 Pray the Litany of the Blessed Virgin Mary
 
 Lord, have mercy on us
-
-Christ, have mercy on us
-
-Lord, have mercy on us
-
-Christ, hear us
-
-Christ, graciously hear us
+ Christ, have mercy on us
+ Lord, have mercy on us
+ Christ, hear us
+ Christ, graciously hear us
 
 God the Father of heaven,
-
-have mercy on us.
+ have mercy on us.
 
 God the Son, Redeemer of the World,
-
-have mercy on us.
+ have mercy on us.
 
 God the Holy Spirit,
-
-have mercy on us.
+ have mercy on us.
 
 Holy Trinity, one God,
-
-have mercy on us.
-
-Holy Mary,
-
-pray for us.
+ have mercy on us.
+ Holy Mary, 
+ pray for us.
 
 Holy Mother of God,
-
-pray for us.
+ pray for us.
 
 Holy Virgin of virgins,
-
-pray for us.
+ pray for us.
 
 Mother of Christ,
-
-pray for us.
+ pray for us.
 
 Mother of Divine Grace,
-
-pray for us.
+ pray for us.
 
 Mother most pure,
-
-pray for us.
+ pray for us.
 
 Mother most chaste,
-
-pray for us.
+ pray for us.
 
 Mother inviolate,
-
-pray for us.
+ pray for us.
 
 Mother undefiled,
-
-pray for us.
+ pray for us.
 
 Mother most amiable,
-
-pray for us.
+ pray for us.
 
 Mother most admirable,
-
-pray for us.
+ pray for us.
 
 Mother of good counsel,
-
-pray for us.
+ pray for us.
 
 Mother of our Creator,
-
-pray for us.
+ pray for us.
 
 Mother of our Saviour,
-
-pray for us.
+ pray for us.
 
 Virgin most prudent,
-
-pray for us.
+ pray for us.
 
 Virgin most venerable,
-
-pray for us.
+ pray for us.
 
 Virgin most renowned,
-
-pray for us.
+ pray for us.
 
 Virgin most powerful,
-
-pray for us.
+ pray for us.
 
 Virgin most merciful,
-
-pray for us.
+ pray for us.
 
 Virgin most faithful,
-
-pray for us.
+ pray for us.
 
 Mirror of justice,
-
-pray for us.
+ pray for us.
 
 Seat of wisdom,
-
-pray for us.
+ pray for us.
 
 Cause of our joy,
-
-pray for us.
+ pray for us.
 
 Spiritual vessel,
-
-pray for us.
+ pray for us.
 
 Vessel of honour,
-
-pray for us.
+ pray for us.
 
 Singular vessel of devotion,
-
-pray for us.
+ pray for us.
 
 Mystical rose,
-
-pray for us.
+ pray for us.
 
 Tower of David,
-
-pray for us.
+ pray for us.
 
 Tower of ivory,
-
-pray for us.
+ pray for us.
 
 House of gold,
-
-pray for us.
+ pray for us.
 
 Ark of the covenant,
-
-pray for us.
+ pray for us.
 
 Gate of heaven,
-
-pray for us.
+ pray for us.
 
 Morning star,
-
-pray for us.
+ pray for us.
 
 Health of the sick,
-
-pray for us.
+ pray for us.
 
 Refuge of sinners,
-
-pray for us.
+ pray for us.
 
 Comforter of the afflicted,
-
-pray for us.
+ pray for us.
 
 Help of Christians,
-
-pray for us.
+ pray for us.
 
 Queen of Angels,
-
-pray for us.
+ pray for us.
 
 Queen of Patriarchs,
-
-pray for us.
+ pray for us.
 
 Queen of Prophets,
-
-pray for us.
+ pray for us.
 
 Queen of Apostles,
-
-pray for us.
+ pray for us.
 
 Queen of Martyrs,
-
-pray for us.
+ pray for us.
 
 Queen of Confessors,
-
-pray for us.
+ pray for us.
 
 Queen of Virgins,
-
-pray for us.
+ pray for us.
 
 Queen of all Saints,
-
-pray for us.
+ pray for us.
 
 Queen conceived without original sin,
-
-pray for us.
+ pray for us.
 
 Queen assumed into heaven,
-
-pray for us.
+ pray for us.
 
 Queen of the most holy Rosary,
-
-pray for us.
+ pray for us.
 
 Queen of Peace,
-
-pray for us.
-
-Lamb of God, who takes away the sins of the world,
-
-spare us, O Lord.
+ pray for us.
 
 Lamb of God, who takes away the sins of the world,
-
-graciously hear us, O Lord.
+ spare us, O Lord.
 
 Lamb of God, who takes away the sins of the world,
+ graciously hear us, O Lord.
 
-have mercy on us.
+Lamb of God, who takes away the sins of the world,
+ have mercy on us.
 
-Grant we beseech Thee, O Lord God,
-
-that we, Thy servants,
-
-may enjoy perpetual health of mind and body:
-
-and, by the glorious intercession of the blessed Mary, ever Virgin,
-
-be delivered from present sorrow and enjoy eternal gladness.
-
-Through Christ, our Lord.
+Grant we beseech Thee, O Lord God, 
+ that we, Thy servants, 
+ may enjoy perpetual health of mind and body: 
+ and, by the glorious intercession of the blessed Mary, ever Virgin, 
+ be delivered from present sorrow and enjoy eternal gladness. 
+ Through Christ, our Lord.
 
 Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Santa Maria Goretti, que, fortalecida pela graça de Deus, não hesitastes, ainda tão jovem,
-
-em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
+ em derramar o vosso sangue e sacrificar a própria vida para defender a vossa pureza virginal, olhai com bondade para o infeliz gênero humano, que se afastou tanto do caminho da salvação eterna.
 
 Ensinai a todos nós, e especialmente aos jovens, com que coragem e prontidão devemos fugir, por amor de Jesus, de tudo o que possa ofendê-Lo ou manchar as nossas almas com o pecado.
 
@@ -14528,248 +10988,184 @@ Querida Santa Maria Goretti, mais uma vez recorro a vós e vos peço, com as pal
 Reze a Ladainha de Nossa Senhora
 
 Senhor, tende piedade de nós.
-
-Jesus Cristo, tende piedade de nós.
-
-Senhor, tende piedade de nós.
-
-Jesus Cristo, ouvi-nos.
-
-Jesus Cristo, atendei-nos.
+ Jesus Cristo, tende piedade de nós.
+ Senhor, tende piedade de nós.
+ Jesus Cristo, ouvi-nos.
+ Jesus Cristo, atendei-nos.
 
 Deus Pai do céu,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Filho, Redentor do mundo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Deus Espírito Santo,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santíssima Trindade, que sois um só Deus,
-
-tende piedade de nós.
+ tende piedade de nós.
 
 Santa Maria,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Mãe de Deus,
-
-rogai por nós.
+ rogai por nós.
 
 Santa Virgem das virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe de Jesus Cristo,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe da divina graça,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe puríssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe castíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe imaculada,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe intacta,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe amável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe admirável,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do bom conselho,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Criador,
-
-rogai por nós.
+ rogai por nós.
 
 Mãe do Salvador,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem prudentíssima,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem venerável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem louvável,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem poderosa,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem clemente,
-
-rogai por nós.
+ rogai por nós.
 
 Virgem fiel,
-
-rogai por nós.
+ rogai por nós.
 
 Espelho de justiça,
-
-rogai por nós.
+ rogai por nós.
 
 Sede da sabedoria,
-
-rogai por nós.
+ rogai por nós.
 
 Causa da nossa alegria,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso espiritual,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso honorífico,
-
-rogai por nós.
+ rogai por nós.
 
 Vaso insigne de devoção,
-
-rogai por nós.
+ rogai por nós.
 
 Rosa mística,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de Davi,
-
-rogai por nós.
+ rogai por nós.
 
 Torre de marfim,
-
-rogai por nós.
+ rogai por nós.
 
 Casa de ouro,
-
-rogai por nós.
+ rogai por nós.
 
 Arca da aliança,
-
-rogai por nós.
+ rogai por nós.
 
 Porta do céu,
-
-rogai por nós.
+ rogai por nós.
 
 Estrela da manhã,
-
-rogai por nós.
+ rogai por nós.
 
 Saúde dos enfermos,
-
-rogai por nós.
+ rogai por nós.
 
 Refúgio dos pecadores,
-
-rogai por nós.
+ rogai por nós.
 
 Consoladora dos aflitos,
-
-rogai por nós.
+ rogai por nós.
 
 Auxílio dos cristãos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Anjos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Patriarcas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Profetas,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Apóstolos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Mártires,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha dos Confessores,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha das Virgens,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha de todos os Santos,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha concebida sem pecado original,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha elevada ao céu,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha do sacratíssimo Rosário,
-
-rogai por nós.
+ rogai por nós.
 
 Rainha da paz,
-
-rogai por nós.
-
-Cordeiro de Deus, que tirais o pecado do mundo,
-
-perdoai-nos, Senhor.
+ rogai por nós.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
-
-ouvi-nos, Senhor.
+ perdoai-nos, Senhor.
 
 Cordeiro de Deus, que tirais o pecado do mundo,
+ ouvi-nos, Senhor.
 
-tende piedade de nós.
+Cordeiro de Deus, que tirais o pecado do mundo,
+ tende piedade de nós.
 
 Concedei aos Vossos servos, nós Vos pedimos, Senhor Deus,
-
-que gozemos de perpétua saúde da alma e do corpo
-
-e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
-
-sejamos livres da presente tristeza e gozemos da eterna alegria.
-
-Por Cristo, nosso Senhor.
+ que gozemos de perpétua saúde da alma e do corpo
+ e, pela gloriosa intercessão da bem-aventurada sempre Virgem Maria,
+ sejamos livres da presente tristeza e gozemos da eterna alegria.
+ Por Cristo, nosso Senhor.
 
 Amém.
 

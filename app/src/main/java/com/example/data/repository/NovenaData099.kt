@@ -52,6 +52,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -61,22 +63,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -87,10 +85,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -129,6 +125,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -138,22 +136,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -164,10 +158,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -212,6 +204,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -221,10 +215,8 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -233,6 +225,8 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -243,10 +237,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -285,6 +277,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -294,10 +288,8 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -306,6 +298,8 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -316,10 +310,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -364,6 +356,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -373,22 +367,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -399,10 +389,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -441,6 +429,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -450,22 +440,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -476,10 +462,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -524,6 +508,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -533,10 +519,8 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -545,6 +529,8 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -555,10 +541,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -597,6 +581,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -606,10 +592,8 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -618,6 +602,8 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -628,10 +614,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -676,6 +660,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -685,22 +671,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -711,10 +693,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -753,6 +733,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -762,22 +744,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -788,10 +766,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -836,6 +812,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -845,10 +823,8 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -857,6 +833,8 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -867,10 +845,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -909,6 +885,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -918,10 +896,8 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -930,6 +906,8 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -940,10 +918,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -988,6 +964,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -997,22 +975,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -1023,10 +997,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1065,6 +1037,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -1074,22 +1048,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -1100,10 +1070,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1148,6 +1116,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -1157,10 +1127,8 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1169,6 +1137,8 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -1179,10 +1149,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1221,6 +1189,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -1230,10 +1200,8 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1242,6 +1210,8 @@ Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -1252,10 +1222,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1300,6 +1268,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -1309,22 +1279,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -1335,10 +1301,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1377,6 +1341,8 @@ Amen.
 
 O glorious St. John of the Cross, through a pure desire of being like Jesus crucified, you longed for nothing so eagerly as to suffer, to be despised, and to be made little of by all; and your thirst after sufferings was so burning that your noble heart rejoiced in the midst of the cruelest torments and afflictions.
 
+Grant, I beseech you, O dear Saint, by the glory which your many sufferings have gained for you, to intercede for me for (mention request here…) and obtain from God for me a love of suffering, together with strength and grace to bear with firmness of mind all the trials and adversities which are the sure means to the happy attainment of all that awaits me in heaven.
+
 Dear Saint, from your most happy place in glory, hear, I beseech you, my prayers, so that after your example, full of love for the cross I may deserve to be your companion in glory. Amen
 
 O my loving father St. John of the Cross, to imitate more perfectly our Lord, you generously renounced every consolation, even the spiritual; prayed to suffer and to be despised for God’s sake; and finally died suffering, happy to be condemned by men.
@@ -1386,22 +1352,18 @@ Obtain for me the grace of abandonment to the Will of God that, placing all my j
 Obtain for me also the special grace I ask through your intercession during this novena, if it be for the glory of God and for my salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Ó glorioso São João da Cruz, por um puro desejo de vos assemelhardes a Jesus crucificado, nada desejastes com tanto ardor quanto sofrer, ser desprezado e ser tido em pouca conta por todos; e a vossa sede de sofrimentos era tão ardente que o vosso nobre coração se alegrava em meio aos mais cruéis tormentos e aflições.
+
+Dignai-vos, eu vos suplico, ó querido Santo, pela glória que os vossos muitos sofrimentos vos conquistaram, interceder por mim por (mencione o pedido aqui…) e alcançar-me de Deus o amor ao sofrimento, juntamente com a força e a graça para suportar com firmeza de ânimo todas as provações e adversidades, que são o meio seguro para alcançar felizmente tudo o que me espera no céu.
 
 Querido Santo, do vosso felicíssimo lugar na glória, ouvi, eu vos suplico, as minhas orações, para que, a vosso exemplo, cheio de amor pela cruz, eu mereça ser vosso companheiro na glória. Amém.
 
@@ -1412,10 +1374,8 @@ Alcançai-me a graça do abandono à Vontade de Deus, para que, pondo toda a min
 Alcançai-me também a graça especial que peço por vossa intercessão durante esta novena, se for para a glória de Deus e para a minha salvação.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 

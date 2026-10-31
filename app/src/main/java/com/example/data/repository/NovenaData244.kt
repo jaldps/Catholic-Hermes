@@ -27,16 +27,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Jesús, danos una comprensión profunda de Tu verdad, para que formemos nuestra conciencia según ella y votemos de acuerdo con ella.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -49,24 +46,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Jesus, give us deep understanding of Your truth so that we may form our consciences by it and vote according to it.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -75,16 +65,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Jesus, dai-nos uma compreensão profunda da Vossa verdade, para que por ela formemos a nossa consciência e votemos de acordo com ela.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -98,16 +85,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Jesús, danos una comprensión profunda de Tu verdad, para que formemos nuestra conciencia según ella y votemos de acuerdo con ella.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -120,24 +104,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Jesus, give us deep understanding of Your truth so that we may form our consciences by it and vote according to it.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -146,16 +123,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Jesus, dai-nos uma compreensão profunda da Vossa verdade, para que por ela formemos a nossa consciência e votemos de acordo com ela.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -175,16 +149,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 En este mes del Santo Rosario, que Nuestra Señora de las Victorias aplaste las fuerzas del mal que nos amenazan a nosotros y a nuestro país, como lo hizo en la batalla de Lepanto.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -197,16 +168,13 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In this month of the Holy Rosary, may Our Lady of Victory crush the forces of evil that threaten us and our country, as she did at the Battle of Lepanto.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -219,16 +187,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Neste mês do Santo Rosário, que Nossa Senhora das Vitórias esmague as forças do mal que ameaçam a nós e ao nosso país, como fez na Batalha de Lepanto.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -242,16 +207,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 En este mes del Santo Rosario, que Nuestra Señora de las Victorias aplaste las fuerzas del mal que nos amenazan a nosotros y a nuestro país, como lo hizo en la batalla de Lepanto.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -264,16 +226,13 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In this month of the Holy Rosary, may Our Lady of Victory crush the forces of evil that threaten us and our country, as she did at the Battle of Lepanto.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -286,16 +245,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Neste mês do Santo Rosário, que Nossa Senhora das Vitórias esmague as forças do mal que ameaçam a nós e ao nosso país, como fez na Batalha de Lepanto.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -315,16 +271,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 En esta batalla por el alma de nuestra nación, te pedimos que Tu gloria triunfe sobre todo.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -337,24 +290,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 During this battle over the soul of our nation, we pray Your glory will conquer over all.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -363,16 +309,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Durante esta batalha pela alma da nossa nação, pedimos que a Vossa glória vença sobre tudo.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -386,16 +329,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 En esta batalla por el alma de nuestra nación, te pedimos que Tu gloria triunfe sobre todo.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -408,24 +348,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 During this battle over the soul of our nation, we pray Your glory will conquer over all.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -434,16 +367,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Durante esta batalha pela alma da nossa nação, pedimos que a Vossa glória vença sobre tudo.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -463,16 +393,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Señor, ayúdanos a elegir gobernantes que luchen por el derecho a la vida desde la concepción hasta la muerte natural. Pon fin al flagelo del aborto en nuestra tierra.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -485,16 +412,13 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Lord, help us elect leaders who will fight for the right to life from conception to natural death. End the scourge of abortion in our land.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -507,16 +431,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Senhor, ajudai-nos a eleger governantes que lutem pelo direito à vida, desde a concepção até a morte natural. Ponde fim ao flagelo do aborto na nossa terra.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -530,16 +451,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Señor, ayúdanos a elegir gobernantes que luchen por el derecho a la vida desde la concepción hasta la muerte natural. Pon fin al flagelo del aborto en nuestra tierra.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -552,16 +470,13 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Lord, help us elect leaders who will fight for the right to life from conception to natural death. End the scourge of abortion in our land.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -574,16 +489,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Senhor, ajudai-nos a eleger governantes que lutem pelo direito à vida, desde a concepção até a morte natural. Ponde fim ao flagelo do aborto na nossa terra.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -603,16 +515,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Padre del Cielo, ayuda a nuestro país a proteger y promover el matrimonio tradicional y a poner fin a toda perversión que lo amenace.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -625,24 +534,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Father in Heaven, please help our country to protect and promote traditional marriage and end every perversion that threatens it.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -651,16 +553,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Pai do Céu, ajudai o nosso país a proteger e promover o matrimônio tradicional e a acabar com toda perversão que o ameaça.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -674,16 +573,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Padre del Cielo, ayuda a nuestro país a proteger y promover el matrimonio tradicional y a poner fin a toda perversión que lo amenace.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -696,24 +592,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Father in Heaven, please help our country to protect and promote traditional marriage and end every perversion that threatens it.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -722,16 +611,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Pai do Céu, ajudai o nosso país a proteger e promover o matrimônio tradicional e a acabar com toda perversão que o ameaça.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -751,16 +637,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 En este tiempo en que la libertad religiosa está amenazada por fuerzas ateas y autoritarias, que nuestra nación se vuelva hacia Ti y preserve nuestra libertad como católicos para adorarte en espíritu y en verdad.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -773,16 +656,13 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 During this time when religious liberty is threatened by atheistic and authoritarian forces, may our nation turn to You and preserve our freedom as Catholics to worship You in spirit and in truth.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -795,16 +675,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Neste tempo em que a liberdade religiosa está ameaçada por forças ateias e autoritárias, que a nossa nação se volte para Vós e preserve a nossa liberdade, como católicos, de Vos adorar em espírito e verdade.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -818,16 +695,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 En este tiempo en que la libertad religiosa está amenazada por fuerzas ateas y autoritarias, que nuestra nación se vuelva hacia Ti y preserve nuestra libertad como católicos para adorarte en espíritu y en verdad.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -840,16 +714,13 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 During this time when religious liberty is threatened by atheistic and authoritarian forces, may our nation turn to You and preserve our freedom as Catholics to worship You in spirit and in truth.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -862,16 +733,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Neste tempo em que a liberdade religiosa está ameaçada por forças ateias e autoritárias, que a nossa nação se volte para Vós e preserve a nossa liberdade, como católicos, de Vos adorar em espírito e verdade.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -891,16 +759,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Hoy te pedimos que los gobernantes de todos los partidos se conviertan a Ti y a Tu Iglesia y se dejen guiar por el Espíritu Santo.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -913,24 +778,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 We pray today that leaders of every party will convert to You and Your Church and be guided by the Holy Spirit.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -939,16 +797,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rezamos hoje para que os governantes de todos os partidos se convertam a Vós e à Vossa Igreja e sejam guiados pelo Espírito Santo.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -962,16 +817,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Hoy te pedimos que los gobernantes de todos los partidos se conviertan a Ti y a Tu Iglesia y se dejen guiar por el Espíritu Santo.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -984,24 +836,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 We pray today that leaders of every party will convert to You and Your Church and be guided by the Holy Spirit.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1010,16 +855,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rezamos hoje para que os governantes de todos os partidos se convertam a Vós e à Vossa Igreja e sejam guiados pelo Espírito Santo.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1039,16 +881,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Te pedimos que el demonio sea completamente derrotado por Ti en nuestro país y que todos los corazones se entreguen al Tuyo.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1061,16 +900,13 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 We pray that the devil is utterly routed by you in our country and that every heart becomes devoted to Yours.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1083,16 +919,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rezamos para que o demônio seja completamente derrotado por Vós no nosso país e para que todo coração se consagre ao Vosso.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1106,16 +939,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Te pedimos que el demonio sea completamente derrotado por Ti en nuestro país y que todos los corazones se entreguen al Tuyo.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1128,16 +958,13 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 We pray that the devil is utterly routed by you in our country and that every heart becomes devoted to Yours.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1150,16 +977,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rezamos para que o demônio seja completamente derrotado por Vós no nosso país e para que todo coração se consagre ao Vosso.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1179,16 +1003,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Padre, gracias por escuchar nuestras oraciones en esta novena. Confiamos en Tu Divina Providencia y creemos que responderás a nuestras oraciones. Amén.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1201,24 +1022,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Father, thank you for hearing our prayers in this novena. We trust in Your Divine Providence and believe that You will answer our prayers. Amen.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1227,16 +1041,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Pai, obrigado por ouvirdes as nossas orações nesta novena. Confiamos na Vossa Divina Providência e cremos que respondereis às nossas orações. Amém.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1250,16 +1061,13 @@ Padre del Cielo, protege a nuestro país y danos la sabiduría para elegir gober
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Padre, gracias por escuchar nuestras oraciones en esta novena. Confiamos en Tu Divina Providencia y creemos que responderás a nuestras oraciones. Amén.
 
 Señor, te pedimos que escuches nuestra oración por nuestro país en esta novena y nos libres de todo mal.
-
-Amén
+ Amén
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1272,24 +1080,17 @@ Father in Heaven, please protect our country and give us the wisdom to elect lea
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Father, thank you for hearing our prayers in this novena. We trust in Your Divine Providence and believe that You will answer our prayers. Amen.
 
-Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil.
-
-Amen
+Lord, we ask that You hear our prayer for our country in this novena and deliver us from every evil. 
+ Amen
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1298,16 +1099,13 @@ Pai do Céu, protegei o nosso país e dai-nos a sabedoria de eleger governantes 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Pai, obrigado por ouvirdes as nossas orações nesta novena. Confiamos na Vossa Divina Providência e cremos que respondereis às nossas orações. Amém.
 
 Senhor, pedimos que ouçais a nossa oração pelo nosso país nesta novena e nos livreis de todo mal.
-
-Amém.
+ Amém.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 

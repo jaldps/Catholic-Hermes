@@ -33,8 +33,7 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 Me levanto hoy por medio de una fuerza poderosa, la invocación de la Trinidad, por medio de la fe en las Tres Personas, por medio de la confesión de la Unidad del Creador de la creación.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -53,16 +52,11 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 I arise today; Through a mighty strength, the invocation of the Trinity, Through a belief in the Threeness, Through confession of the Oneness Of the Creator of creation.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -77,8 +71,7 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 Levanto-me hoje por meio de uma força poderosa, a invocação da Trindade, pela fé nas Três Pessoas, pela confissão da Unidade do Criador da criação.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -98,8 +91,7 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 Me levanto hoy por medio de una fuerza poderosa, la invocación de la Trinidad, por medio de la fe en las Tres Personas, por medio de la confesión de la Unidad del Creador de la creación.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -118,16 +110,11 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 I arise today; Through a mighty strength, the invocation of the Trinity, Through a belief in the Threeness, Through confession of the Oneness Of the Creator of creation.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -142,8 +129,7 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 Levanto-me hoje por meio de uma força poderosa, a invocação da Trindade, pela fé nas Três Pessoas, pela confissão da Unidade do Criador da criação.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -167,18 +153,13 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Me levanto hoy
-
-por la fuerza del nacimiento de Cristo y de Su bautismo,
-
-por la fuerza de Su crucifixión y de Su sepultura,
-
-por la fuerza de Su resurrección y de Su ascensión,
-
-por la fuerza de Su descenso para el Juicio Final.
+ por la fuerza del nacimiento de Cristo y de Su bautismo,
+ por la fuerza de Su crucifixión y de Su sepultura,
+ por la fuerza de Su resurrección y de Su ascensión,
+ por la fuerza de Su descenso para el Juicio Final.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -195,16 +176,12 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I arise today
-
-Through the strength of Christ’s birth and His baptism,
-
-Through the strength of His crucifixion and His burial,
-
-Through the strength of His resurrection and His ascension, Through the strength of His descent for the judgment of doom.
+ Through the strength of Christ’s birth and His baptism,
+ Through the strength of His crucifixion and His burial,
+ Through the strength of His resurrection and His ascension, Through the strength of His descent for the judgment of doom.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -221,18 +198,13 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Levanto-me hoje
-
-pela força do nascimento de Cristo e do Seu batismo,
-
-pela força da Sua crucificação e da Sua sepultura,
-
-pela força da Sua ressurreição e da Sua ascensão,
-
-pela força da Sua vinda no dia do juízo.
+ pela força do nascimento de Cristo e do Seu batismo,
+ pela força da Sua crucificação e da Sua sepultura,
+ pela força da Sua ressurreição e da Sua ascensão,
+ pela força da Sua vinda no dia do juízo.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -250,18 +222,13 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Me levanto hoy
-
-por la fuerza del nacimiento de Cristo y de Su bautismo,
-
-por la fuerza de Su crucifixión y de Su sepultura,
-
-por la fuerza de Su resurrección y de Su ascensión,
-
-por la fuerza de Su descenso para el Juicio Final.
+ por la fuerza del nacimiento de Cristo y de Su bautismo,
+ por la fuerza de Su crucifixión y de Su sepultura,
+ por la fuerza de Su resurrección y de Su ascensión,
+ por la fuerza de Su descenso para el Juicio Final.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -278,16 +245,12 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I arise today
-
-Through the strength of Christ’s birth and His baptism,
-
-Through the strength of His crucifixion and His burial,
-
-Through the strength of His resurrection and His ascension, Through the strength of His descent for the judgment of doom.
+ Through the strength of Christ’s birth and His baptism,
+ Through the strength of His crucifixion and His burial,
+ Through the strength of His resurrection and His ascension, Through the strength of His descent for the judgment of doom.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -304,18 +267,13 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Levanto-me hoje
-
-pela força do nascimento de Cristo e do Seu batismo,
-
-pela força da Sua crucificação e da Sua sepultura,
-
-pela força da Sua ressurreição e da Sua ascensão,
-
-pela força da Sua vinda no dia do juízo.
+ pela força do nascimento de Cristo e do Seu batismo,
+ pela força da Sua crucificação e da Sua sepultura,
+ pela força da Sua ressurreição e da Sua ascensão,
+ pela força da Sua vinda no dia do juízo.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -339,12 +297,10 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Me levanto hoy por la fuerza del amor de los querubines, en la obediencia de los ángeles, en el servicio de los arcángeles, en la esperanza de la resurrección para recibir la recompensa, en las oraciones de los patriarcas,
-
-en las predicaciones de los apóstoles, en la fe de los confesores, en la inocencia de las vírgenes, en las obras de los justos.
+ en las predicaciones de los apóstoles, en la fe de los confesores, en la inocencia de las vírgenes, en las obras de los justos.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -361,20 +317,14 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I arise today Through the strength of the love of cherubim, In obedience of angels, In service of archangels, In the hope of resurrection to meet with reward, In the prayers of patriarchs,
-
-In preachings of the apostles, In faiths of confessors, In innocence of virgins, In deeds of righteous men.
+ In preachings of the apostles, In faiths of confessors, In innocence of virgins, In deeds of righteous men.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -387,12 +337,10 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Levanto-me hoje pela força do amor dos querubins, na obediência dos anjos, no serviço dos arcanjos, na esperança da ressurreição para receber a recompensa, nas orações dos patriarcas,
-
-nas pregações dos apóstolos, na fé dos confessores, na inocência das virgens, nas obras dos justos.
+ nas pregações dos apóstolos, na fé dos confessores, na inocência das virgens, nas obras dos justos.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -410,12 +358,10 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Me levanto hoy por la fuerza del amor de los querubines, en la obediencia de los ángeles, en el servicio de los arcángeles, en la esperanza de la resurrección para recibir la recompensa, en las oraciones de los patriarcas,
-
-en las predicaciones de los apóstoles, en la fe de los confesores, en la inocencia de las vírgenes, en las obras de los justos.
+ en las predicaciones de los apóstoles, en la fe de los confesores, en la inocencia de las vírgenes, en las obras de los justos.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -432,20 +378,14 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I arise today Through the strength of the love of cherubim, In obedience of angels, In service of archangels, In the hope of resurrection to meet with reward, In the prayers of patriarchs,
-
-In preachings of the apostles, In faiths of confessors, In innocence of virgins, In deeds of righteous men.
+ In preachings of the apostles, In faiths of confessors, In innocence of virgins, In deeds of righteous men.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -458,12 +398,10 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Levanto-me hoje pela força do amor dos querubins, na obediência dos anjos, no serviço dos arcanjos, na esperança da ressurreição para receber a recompensa, nas orações dos patriarcas,
-
-nas pregações dos apóstolos, na fé dos confessores, na inocência das virgens, nas obras dos justos.
+ nas pregações dos apóstolos, na fé dos confessores, na inocência das virgens, nas obras dos justos.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -487,14 +425,11 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Me levanto hoy por la fuerza del cielo:
-
-luz del sol, resplandor del fuego, rapidez del rayo, velocidad del viento, profundidad del mar,
-
-estabilidad de la tierra, firmeza de la roca.
+ luz del sol, resplandor del fuego, rapidez del rayo, velocidad del viento, profundidad del mar,
+ estabilidad de la tierra, firmeza de la roca.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -511,14 +446,11 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I arise today Through the strength of heaven;
-
-Light of the sun, Splendor of fire, Speed of lightning, Swiftness of the wind, Depth of the sea,
-
-Stability of the earth, Firmness of the rock.
+ Light of the sun, Splendor of fire, Speed of lightning, Swiftness of the wind, Depth of the sea,
+ Stability of the earth, Firmness of the rock.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -535,14 +467,11 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Levanto-me hoje pela força do céu:
-
-luz do sol, esplendor do fogo, rapidez do relâmpago, velocidade do vento, profundidade do mar,
-
-estabilidade da terra, firmeza da rocha.
+ luz do sol, esplendor do fogo, rapidez do relâmpago, velocidade do vento, profundidade do mar,
+ estabilidade da terra, firmeza da rocha.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -560,14 +489,11 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Me levanto hoy por la fuerza del cielo:
-
-luz del sol, resplandor del fuego, rapidez del rayo, velocidad del viento, profundidad del mar,
-
-estabilidad de la tierra, firmeza de la roca.
+ luz del sol, resplandor del fuego, rapidez del rayo, velocidad del viento, profundidad del mar,
+ estabilidad de la tierra, firmeza de la roca.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -584,14 +510,11 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I arise today Through the strength of heaven;
-
-Light of the sun, Splendor of fire, Speed of lightning, Swiftness of the wind, Depth of the sea,
-
-Stability of the earth, Firmness of the rock.
+ Light of the sun, Splendor of fire, Speed of lightning, Swiftness of the wind, Depth of the sea,
+ Stability of the earth, Firmness of the rock.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -608,14 +531,11 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Levanto-me hoje pela força do céu:
-
-luz do sol, esplendor do fogo, rapidez do relâmpago, velocidade do vento, profundidade do mar,
-
-estabilidade da terra, firmeza da rocha.
+ luz do sol, esplendor do fogo, rapidez do relâmpago, velocidade do vento, profundidade do mar,
+ estabilidade da terra, firmeza da rocha.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -639,36 +559,23 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Me levanto hoy por la fuerza de Dios que me guía:
-
-el poder de Dios para sostenerme,
-
-la sabiduría de Dios para conducirme,
-
-el ojo de Dios para mirar delante de mí,
-
-el oído de Dios para escucharme,
-
-la palabra de Dios para hablar por mí,
-
-la mano de Dios para guardarme,
-
-el escudo de Dios para protegerme,
-
-los ejércitos de Dios para salvarme
-
-de las trampas del demonio,
-
-de las tentaciones de los vicios,
-
-de todos los que me desean mal,
-
-lejos y cerca,
-
-solo o en multitud.
+ el poder de Dios para sostenerme,
+ la sabiduría de Dios para conducirme,
+ el ojo de Dios para mirar delante de mí,
+ el oído de Dios para escucharme,
+ la palabra de Dios para hablar por mí,
+ la mano de Dios para guardarme,
+ el camino de Dios para abrirse ante mí,
+ el escudo de Dios para protegerme,
+ los ejércitos de Dios para salvarme
+ de las trampas del demonio,
+ de las tentaciones de los vicios,
+ de todos los que me desean mal,
+ lejos y cerca,
+ solo o en multitud.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -685,44 +592,26 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I arise today Through God’s strength to pilot me; God’s might to uphold me,
-
-God’s wisdom to guide me,
-
-God’s eye to look before me,
-
-God’s ear to hear me,
-
-God’s word to speak for me,
-
-God’s hand to guard me,
-
-God’s way to lie before me,
-
-God’s shield to protect me,
-
-God’s hosts to save me
-
-From snares of the devil,
-
-From temptations of vices,
-
-From every one who desires me ill,
-
-Afar and anear,
-
-Alone or in a mulitude.
+ God’s wisdom to guide me,
+ God’s eye to look before me,
+ God’s ear to hear me,
+ God’s word to speak for me,
+ God’s hand to guard me,
+ God’s way to lie before me,
+ God’s shield to protect me,
+ God’s hosts to save me
+ From snares of the devil,
+ From temptations of vices,
+ From every one who desires me ill,
+ Afar and anear,
+ Alone or in a mulitude.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -735,36 +624,23 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Levanto-me hoje pela força de Deus que me guia;
-
-o poder de Deus para me sustentar,
-
-a sabedoria de Deus para me conduzir,
-
-o olho de Deus para olhar diante de mim,
-
-o ouvido de Deus para me ouvir,
-
-a palavra de Deus para falar por mim,
-
-a mão de Deus para me guardar,
-
-o escudo de Deus para me proteger,
-
-os exércitos de Deus para me salvar
-
-das ciladas do demônio,
-
-das tentações dos vícios,
-
-de todos os que me desejam mal,
-
-longe e perto,
-
-sozinho ou na multidão.
+ o poder de Deus para me sustentar,
+ a sabedoria de Deus para me conduzir,
+ o olho de Deus para olhar diante de mim,
+ o ouvido de Deus para me ouvir,
+ a palavra de Deus para falar por mim,
+ a mão de Deus para me guardar,
+ o caminho de Deus para se abrir diante de mim,
+ o escudo de Deus para me proteger,
+ os exércitos de Deus para me salvar
+ das ciladas do demônio,
+ das tentações dos vícios,
+ de todos os que me desejam mal,
+ longe e perto,
+ sozinho ou na multidão.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -782,36 +658,23 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Me levanto hoy por la fuerza de Dios que me guía:
-
-el poder de Dios para sostenerme,
-
-la sabiduría de Dios para conducirme,
-
-el ojo de Dios para mirar delante de mí,
-
-el oído de Dios para escucharme,
-
-la palabra de Dios para hablar por mí,
-
-la mano de Dios para guardarme,
-
-el escudo de Dios para protegerme,
-
-los ejércitos de Dios para salvarme
-
-de las trampas del demonio,
-
-de las tentaciones de los vicios,
-
-de todos los que me desean mal,
-
-lejos y cerca,
-
-solo o en multitud.
+ el poder de Dios para sostenerme,
+ la sabiduría de Dios para conducirme,
+ el ojo de Dios para mirar delante de mí,
+ el oído de Dios para escucharme,
+ la palabra de Dios para hablar por mí,
+ la mano de Dios para guardarme,
+ el camino de Dios para abrirse ante mí,
+ el escudo de Dios para protegerme,
+ los ejércitos de Dios para salvarme
+ de las trampas del demonio,
+ de las tentaciones de los vicios,
+ de todos los que me desean mal,
+ lejos y cerca,
+ solo o en multitud.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -828,44 +691,26 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I arise today Through God’s strength to pilot me; God’s might to uphold me,
-
-God’s wisdom to guide me,
-
-God’s eye to look before me,
-
-God’s ear to hear me,
-
-God’s word to speak for me,
-
-God’s hand to guard me,
-
-God’s way to lie before me,
-
-God’s shield to protect me,
-
-God’s hosts to save me
-
-From snares of the devil,
-
-From temptations of vices,
-
-From every one who desires me ill,
-
-Afar and anear,
-
-Alone or in a mulitude.
+ God’s wisdom to guide me,
+ God’s eye to look before me,
+ God’s ear to hear me,
+ God’s word to speak for me,
+ God’s hand to guard me,
+ God’s way to lie before me,
+ God’s shield to protect me,
+ God’s hosts to save me
+ From snares of the devil,
+ From temptations of vices,
+ From every one who desires me ill,
+ Afar and anear,
+ Alone or in a mulitude.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -878,36 +723,23 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Levanto-me hoje pela força de Deus que me guia;
-
-o poder de Deus para me sustentar,
-
-a sabedoria de Deus para me conduzir,
-
-o olho de Deus para olhar diante de mim,
-
-o ouvido de Deus para me ouvir,
-
-a palavra de Deus para falar por mim,
-
-a mão de Deus para me guardar,
-
-o escudo de Deus para me proteger,
-
-os exércitos de Deus para me salvar
-
-das ciladas do demônio,
-
-das tentações dos vícios,
-
-de todos os que me desejam mal,
-
-longe e perto,
-
-sozinho ou na multidão.
+ o poder de Deus para me sustentar,
+ a sabedoria de Deus para me conduzir,
+ o olho de Deus para olhar diante de mim,
+ o ouvido de Deus para me ouvir,
+ a palavra de Deus para falar por mim,
+ a mão de Deus para me guardar,
+ o caminho de Deus para se abrir diante de mim,
+ o escudo de Deus para me proteger,
+ os exércitos de Deus para me salvar
+ das ciladas do demônio,
+ das tentações dos vícios,
+ de todos os que me desejam mal,
+ longe e perto,
+ sozinho ou na multidão.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -931,20 +763,14 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Convoco hoy todos estos poderes entre mí y el mal, contra todo poder cruel y despiadado que se oponga a mi cuerpo y a mi alma,
-
-contra los conjuros de los falsos profetas, contra las negras leyes del paganismo, contra las falsas leyes de los herejes, contra las artes de la idolatría,
-
-contra los hechizos de brujas, herreros y magos, contra todo conocimiento que corrompe el cuerpo y el alma del hombre.
-
-Cristo, protégeme hoy
-
-contra el veneno, contra el fuego,
-
-contra el ahogamiento, contra las heridas, para que me llegue recompensa en abundancia.
+ contra los conjuros de los falsos profetas, contra las negras leyes del paganismo, contra las falsas leyes de los herejes, contra las artes de la idolatría,
+ contra los hechizos de brujas, herreros y magos, contra todo conocimiento que corrompe el cuerpo y el alma del hombre.
+ Cristo, protégeme hoy
+ contra el veneno, contra el fuego,
+ contra el ahogamiento, contra las heridas, para que me llegue recompensa en abundancia.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -961,20 +787,14 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I summon today all these powers between me and evil, Against every cruel merciless power that opposes my body and soul,
-
-Against incantations of false prophets, Against black laws of pagandom, Against false laws of heretics, Against craft of idolatry,
-
-Against spells of witches and smiths and wizards, Against every knowledge that corrupts man’s body and soul.
-
-Christ shield me today
-
-Against poison, against burning,
-
-Against drowning, against wounding, So that reward may come to me in abundance.
+ Against incantations of false prophets, Against black laws of pagandom, Against false laws of heretics, Against craft of idolatry,
+ Against spells of witches and smiths and wizards, Against every knowledge that corrupts man’s body and soul.
+ Christ shield me today
+ Against poison, against burning,
+ Against drowning, against wounding, So that reward may come to me in abundance.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -991,20 +811,14 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Convoco hoje todos estes poderes entre mim e o mal, contra todo poder cruel e impiedoso que se oponha ao meu corpo e à minha alma,
-
-contra os encantamentos dos falsos profetas, contra as leis negras do paganismo, contra as falsas leis dos hereges, contra as artes da idolatria,
-
-contra os feitiços de bruxas, ferreiros e magos, contra todo saber que corrompe o corpo e a alma do homem.
-
-Cristo me proteja hoje
-
-contra o veneno, contra o fogo,
-
-contra o afogamento, contra as feridas, para que me venha recompensa em abundância.
+ contra os encantamentos dos falsos profetas, contra as leis negras do paganismo, contra as falsas leis dos hereges, contra as artes da idolatria,
+ contra os feitiços de bruxas, ferreiros e magos, contra todo saber que corrompe o corpo e a alma do homem.
+ Cristo me proteja hoje
+ contra o veneno, contra o fogo,
+ contra o afogamento, contra as feridas, para que me venha recompensa em abundância.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1022,20 +836,14 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Convoco hoy todos estos poderes entre mí y el mal, contra todo poder cruel y despiadado que se oponga a mi cuerpo y a mi alma,
-
-contra los conjuros de los falsos profetas, contra las negras leyes del paganismo, contra las falsas leyes de los herejes, contra las artes de la idolatría,
-
-contra los hechizos de brujas, herreros y magos, contra todo conocimiento que corrompe el cuerpo y el alma del hombre.
-
-Cristo, protégeme hoy
-
-contra el veneno, contra el fuego,
-
-contra el ahogamiento, contra las heridas, para que me llegue recompensa en abundancia.
+ contra los conjuros de los falsos profetas, contra las negras leyes del paganismo, contra las falsas leyes de los herejes, contra las artes de la idolatría,
+ contra los hechizos de brujas, herreros y magos, contra todo conocimiento que corrompe el cuerpo y el alma del hombre.
+ Cristo, protégeme hoy
+ contra el veneno, contra el fuego,
+ contra el ahogamiento, contra las heridas, para que me llegue recompensa en abundancia.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1052,20 +860,14 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 I summon today all these powers between me and evil, Against every cruel merciless power that opposes my body and soul,
-
-Against incantations of false prophets, Against black laws of pagandom, Against false laws of heretics, Against craft of idolatry,
-
-Against spells of witches and smiths and wizards, Against every knowledge that corrupts man’s body and soul.
-
-Christ shield me today
-
-Against poison, against burning,
-
-Against drowning, against wounding, So that reward may come to me in abundance.
+ Against incantations of false prophets, Against black laws of pagandom, Against false laws of heretics, Against craft of idolatry,
+ Against spells of witches and smiths and wizards, Against every knowledge that corrupts man’s body and soul.
+ Christ shield me today
+ Against poison, against burning,
+ Against drowning, against wounding, So that reward may come to me in abundance.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1082,20 +884,14 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Convoco hoje todos estes poderes entre mim e o mal, contra todo poder cruel e impiedoso que se oponha ao meu corpo e à minha alma,
-
-contra os encantamentos dos falsos profetas, contra as leis negras do paganismo, contra as falsas leis dos hereges, contra as artes da idolatria,
-
-contra os feitiços de bruxas, ferreiros e magos, contra todo saber que corrompe o corpo e a alma do homem.
-
-Cristo me proteja hoje
-
-contra o veneno, contra o fogo,
-
-contra o afogamento, contra as feridas, para que me venha recompensa em abundância.
+ contra os encantamentos dos falsos profetas, contra as leis negras do paganismo, contra as falsas leis dos hereges, contra as artes da idolatria,
+ contra os feitiços de bruxas, ferreiros e magos, contra todo saber que corrompe o corpo e a alma do homem.
+ Cristo me proteja hoje
+ contra o veneno, contra o fogo,
+ contra o afogamento, contra as feridas, para que me venha recompensa em abundância.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1119,22 +915,15 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Cristo conmigo, Cristo delante de mí, Cristo detrás de mí, Cristo en mí, Cristo debajo de mí, Cristo encima de mí,
-
-Cristo a mi derecha, Cristo a mi izquierda,
-
-Cristo cuando me acuesto, Cristo cuando me siento,
-
-Cristo en el corazón de todo el que piensa en mí,
-
-Cristo en la boca de todo el que habla de mí,
-
-Cristo en el ojo que me ve,
-
-Cristo en el oído que me escucha.
+ Cristo a mi derecha, Cristo a mi izquierda,
+ Cristo cuando me acuesto, Cristo cuando me siento,
+ Cristo en el corazón de todo el que piensa en mí,
+ Cristo en la boca de todo el que habla de mí,
+ Cristo en el ojo que me ve,
+ Cristo en el oído que me escucha.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1151,30 +940,19 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 Christ with me, Christ before me, Christ behind me, Christ in me, Christ beneath me, Christ above me,
-
-Christ on my right, Christ on my left,
-
-Christ when I lie down, Christ when I sit down,
-
-Christ in the heart of every man who thinks of me,
-
-Christ in the mouth of every man who speaks of me,
-
-Christ in the eye that sees me,
-
-Christ in the ear that hears me.
+ Christ on my right, Christ on my left,
+ Christ when I lie down, Christ when I sit down,
+ Christ in the heart of every man who thinks of me,
+ Christ in the mouth of every man who speaks of me,
+ Christ in the eye that sees me,
+ Christ in the ear that hears me.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1187,22 +965,15 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Cristo comigo, Cristo diante de mim, Cristo atrás de mim, Cristo em mim, Cristo abaixo de mim, Cristo acima de mim,
-
-Cristo à minha direita, Cristo à minha esquerda,
-
-Cristo quando me deito, Cristo quando me sento,
-
-Cristo no coração de todo aquele que pensa em mim,
-
-Cristo na boca de todo aquele que fala de mim,
-
-Cristo no olho que me vê,
-
-Cristo no ouvido que me escuta.
+ Cristo à minha direita, Cristo à minha esquerda,
+ Cristo quando me deito, Cristo quando me sento,
+ Cristo no coração de todo aquele que pensa em mim,
+ Cristo na boca de todo aquele que fala de mim,
+ Cristo no olho que me vê,
+ Cristo no ouvido que me escuta.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1220,22 +991,15 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 (menciona tu petición aquí…)
 
 Cristo conmigo, Cristo delante de mí, Cristo detrás de mí, Cristo en mí, Cristo debajo de mí, Cristo encima de mí,
-
-Cristo a mi derecha, Cristo a mi izquierda,
-
-Cristo cuando me acuesto, Cristo cuando me siento,
-
-Cristo en el corazón de todo el que piensa en mí,
-
-Cristo en la boca de todo el que habla de mí,
-
-Cristo en el ojo que me ve,
-
-Cristo en el oído que me escucha.
+ Cristo a mi derecha, Cristo a mi izquierda,
+ Cristo cuando me acuesto, Cristo cuando me siento,
+ Cristo en el corazón de todo el que piensa en mí,
+ Cristo en la boca de todo el que habla de mí,
+ Cristo en el ojo que me ve,
+ Cristo en el oído que me escucha.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1252,30 +1016,19 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 (mention request here…)
 
 Christ with me, Christ before me, Christ behind me, Christ in me, Christ beneath me, Christ above me,
-
-Christ on my right, Christ on my left,
-
-Christ when I lie down, Christ when I sit down,
-
-Christ in the heart of every man who thinks of me,
-
-Christ in the mouth of every man who speaks of me,
-
-Christ in the eye that sees me,
-
-Christ in the ear that hears me.
+ Christ on my right, Christ on my left,
+ Christ when I lie down, Christ when I sit down,
+ Christ in the heart of every man who thinks of me,
+ Christ in the mouth of every man who speaks of me,
+ Christ in the eye that sees me,
+ Christ in the ear that hears me.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1288,22 +1041,15 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 (mencione o pedido aqui…)
 
 Cristo comigo, Cristo diante de mim, Cristo atrás de mim, Cristo em mim, Cristo abaixo de mim, Cristo acima de mim,
-
-Cristo à minha direita, Cristo à minha esquerda,
-
-Cristo quando me deito, Cristo quando me sento,
-
-Cristo no coração de todo aquele que pensa em mim,
-
-Cristo na boca de todo aquele que fala de mim,
-
-Cristo no olho que me vê,
-
-Cristo no ouvido que me escuta.
+ Cristo à minha direita, Cristo à minha esquerda,
+ Cristo quando me deito, Cristo quando me sento,
+ Cristo no coração de todo aquele que pensa em mim,
+ Cristo na boca de todo aquele que fala de mim,
+ Cristo no olho que me vê,
+ Cristo no ouvido que me escuta.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1329,8 +1075,7 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 Me levanto hoy por medio de una fuerza poderosa, la invocación de la Trinidad, por medio de la fe en las Tres Personas, por medio de la confesión de la Unidad del Creador de la creación.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1349,8 +1094,7 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 I arise today Through a mighty strength, the invocation of the Trinity, Through a belief in the Threeness, Through a confession of the Oneness Of the Creator of creation
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1369,8 +1113,7 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 Levanto-me hoje por meio de uma força poderosa, a invocação da Trindade, pela fé nas Três Pessoas, pela confissão da Unidade do Criador da criação.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1390,8 +1133,7 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 Me levanto hoy por medio de una fuerza poderosa, la invocación de la Trinidad, por medio de la fe en las Tres Personas, por medio de la confesión de la Unidad del Creador de la creación.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1410,8 +1152,7 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 I arise today Through a mighty strength, the invocation of the Trinity, Through a belief in the Threeness, Through a confession of the Oneness Of the Creator of creation
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1430,8 +1171,7 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 Levanto-me hoje por meio de uma força poderosa, a invocação da Trindade, pela fé nas Três Pessoas, pela confissão da Unidade do Criador da criação.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1457,8 +1197,7 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 San Patricio, gracias por tus oraciones por mi intención en esta novena. Confío en que nuestro Señor las escuchará por tu intercesión.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1477,16 +1216,11 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 St. Patrick, thank you for your prayers for my intention in this novena. I trust that our Lord will answer them through your intercession.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1501,8 +1235,7 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 São Patrício, obrigado pelas vossas orações pela minha intenção nesta novena. Confio que nosso Senhor as atenderá pela vossa intercessão.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1522,8 +1255,7 @@ Concede que todos los corazones participen de los benditos frutos de aquel Evang
 San Patricio, gracias por tus oraciones por mi intención en esta novena. Confío en que nuestro Señor las escuchará por tu intercesión.
 
 V. Ruega por nosotros, glorioso san Patricio.
-
-R. Y obtennos la intención de esta novena.
+ R. Y obtennos la intención de esta novena.
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
 
@@ -1542,16 +1274,11 @@ Grant that all hearts may share the blessed fruits of that Gospel that you plant
 St. Patrick, thank you for your prayers for my intention in this novena. I trust that our Lord will answer them through your intercession.
 
 V. Pray for us, O glorious saint Patrick.
-
-R. And obtain for us the intention of this Novena.
+ R. And obtain for us the intention of this Novena.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1566,8 +1293,7 @@ Concedei que todos os corações participem dos frutos benditos daquele Evangelh
 São Patrício, obrigado pelas vossas orações pela minha intenção nesta novena. Confio que nosso Senhor as atenderá pela vossa intercessão.
 
 V. Rogai por nós, glorioso São Patrício.
-
-R. E alcançai-nos a intenção desta novena.
+ R. E alcançai-nos a intenção desta novena.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 

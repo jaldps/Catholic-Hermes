@@ -57,20 +57,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -136,20 +129,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -221,12 +207,9 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -296,12 +279,9 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -377,20 +357,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -456,20 +429,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -541,12 +507,9 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -616,12 +579,9 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -697,20 +657,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -776,20 +729,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -861,12 +807,9 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -936,12 +879,9 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1017,20 +957,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1096,20 +1029,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1181,12 +1107,9 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1256,12 +1179,9 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1337,20 +1257,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1416,20 +1329,13 @@ Amen.
 My God, I believe, I adore, I hope and I love You! I ask pardon of You for those who do not believe, do not adore, do not hope and do not love You. Most Holy Trinity, Father, Son and Holy Spirit, I adore You profoundly, and I offer You the most precious Body, Blood, Soul and Divinity of Jesus Christ, present in all the tabernacles of the world, in reparation for the outrages, sacrileges and indifference with which He Himself is offended. And, through the infinite merits of His most Sacred Heart, and the Immaculate Heart of Mary, I beg of You the conversion of poor sinners.
 
 Our Father,
-
-Hail Mary
-
-Glory Be
-
-(three times each)
+ Hail Mary
+ Glory Be
+ (three times each)
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

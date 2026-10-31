@@ -23,14 +23,10 @@ object NovenaData011 {
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -81,20 +77,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -119,10 +109,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -134,14 +122,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -192,20 +176,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -230,10 +208,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -251,14 +227,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -309,10 +281,8 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
@@ -343,10 +313,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -358,14 +326,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -416,10 +380,8 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
@@ -450,10 +412,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -471,14 +431,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -529,20 +485,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -567,10 +517,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -582,14 +530,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -640,20 +584,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -678,10 +616,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -699,14 +635,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -757,10 +689,8 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
@@ -791,10 +721,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -806,14 +734,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -864,10 +788,8 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
@@ -898,10 +820,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -919,14 +839,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -977,20 +893,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1015,10 +925,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1030,14 +938,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1088,20 +992,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1126,10 +1024,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1147,14 +1043,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1205,10 +1097,8 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
@@ -1239,10 +1129,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1254,14 +1142,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1312,10 +1196,8 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
@@ -1346,10 +1228,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1367,14 +1247,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1425,20 +1301,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1463,10 +1333,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1478,14 +1346,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1536,20 +1400,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1574,10 +1432,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1595,14 +1451,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1653,10 +1505,8 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
@@ -1687,10 +1537,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1702,14 +1550,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1760,10 +1604,8 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
@@ -1794,10 +1636,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1815,14 +1655,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1873,20 +1709,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1911,10 +1741,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 
@@ -1926,14 +1754,10 @@ Amém."""),
 Amén.
 
 Ruega por nosotros,
-
-Santa Madre de Dios,
-
-para que seamos
-
-dignos de alcanzar las promesas
-
-de Nuestro Señor Jesucristo.
+ Santa Madre de Dios,
+ para que seamos
+ dignos de alcanzar las promesas
+ de Nuestro Señor Jesucristo.
 
 Amén
 
@@ -1984,20 +1808,14 @@ Inspired with this confidence, I fly to thee, O Virgin of virgins, my Mother. To
 Amen.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Our Lady of Charity, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2022,10 +1840,8 @@ Animado eu, pois, com igual confiança, a vós, ó Virgem entre todas singular, 
 Amém.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Nossa Senhora da Caridade, rogai por nós!
 

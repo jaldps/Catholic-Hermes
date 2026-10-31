@@ -38,6 +38,8 @@ Oh, Señor Jesucristo, que antes de ascender al cielo prometiste enviar al Espí
 
 (menciona tu petición aquí…)
 
+¡Señor de Luz! ¡Danos, desde tu clara altura celestial, tu puro radiante esplendor! Sólo una cosa es importante: la salvación eterna. Por lo tanto, sólo una cosa hay que temer: el pecado. El pecado es el resultado de la ignorancia, debilidad e indiferencia. El Espíritu Santo es el Espíritu de Luz, de Fuerza y de Amor. Con sus siete dones ilumina la mente, fortalece la voluntad, e inflama el corazón con el amor de Dios. Para asegurarnos la salvación debemos invocar al Divino Espíritu diariamente, porque “el Espíritu viene en ayuda de nuestra flaqueza. Pues nosotros no sabemos cómo pedir para orar como conviene; mas el Espíritu mismo intercede por nosotros” (Rom 8,26). Omnipotente y eterno Dios, que has condescendido para regenerarnos con el agua y el Espíritu Santo, y nos has dado el perdón de todos los pecados, permite enviar del cielo sobre nosotros los siete dones de tu Espíritu, el Espíritu de Sabiduría y de Entendimiento, el Espíritu de Consejo y de Fortaleza, el Espíritu de Conocimiento y de Piedad, y llénanos con el Espíritu del Santo Temor. Amén.
+
 Padrenuestro y Avemaría, una vez. Gloria
 
 Oración por los Siete Dones del Espíritu
@@ -99,8 +101,7 @@ Only one thing is important, eternal salvation. Only one thing, therefore, is to
 Almighty and eternal God, Who hast vouchsafed to regenerate us by water and the Holy Spirit, and hast given us forgiveness all sins, vouchsafe to send forth from heaven upon us your sevenfold Spirit, the Spirit of Wisdom and Understanding, the Spirit of Counsel and fortitude, the Spirit of Knowledge and Piety, and fill us with the Spirit of Holy Fear. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -122,11 +123,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -221,6 +218,8 @@ Oh, Señor Jesucristo, que antes de ascender al cielo prometiste enviar al Espí
 
 (menciona tu petición aquí…)
 
+¡Señor de Luz! ¡Danos, desde tu clara altura celestial, tu puro radiante esplendor! Sólo una cosa es importante: la salvación eterna. Por lo tanto, sólo una cosa hay que temer: el pecado. El pecado es el resultado de la ignorancia, debilidad e indiferencia. El Espíritu Santo es el Espíritu de Luz, de Fuerza y de Amor. Con sus siete dones ilumina la mente, fortalece la voluntad, e inflama el corazón con el amor de Dios. Para asegurarnos la salvación debemos invocar al Divino Espíritu diariamente, porque “el Espíritu viene en ayuda de nuestra flaqueza. Pues nosotros no sabemos cómo pedir para orar como conviene; mas el Espíritu mismo intercede por nosotros” (Rom 8,26). Omnipotente y eterno Dios, que has condescendido para regenerarnos con el agua y el Espíritu Santo, y nos has dado el perdón de todos los pecados, permite enviar del cielo sobre nosotros los siete dones de tu Espíritu, el Espíritu de Sabiduría y de Entendimiento, el Espíritu de Consejo y de Fortaleza, el Espíritu de Conocimiento y de Piedad, y llénanos con el Espíritu del Santo Temor. Amén.
+
 Padrenuestro y Avemaría, una vez. Gloria
 
 Oración por los Siete Dones del Espíritu
@@ -282,8 +281,7 @@ Only one thing is important, eternal salvation. Only one thing, therefore, is to
 Almighty and eternal God, Who hast vouchsafed to regenerate us by water and the Holy Spirit, and hast given us forgiveness all sins, vouchsafe to send forth from heaven upon us your sevenfold Spirit, the Spirit of Wisdom and Understanding, the Spirit of Counsel and fortitude, the Spirit of Knowledge and Piety, and fill us with the Spirit of Holy Fear. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -305,11 +303,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -473,8 +467,7 @@ The gift of Fear fills us with a sovereign respect for God, and makes us dread n
 Come, O blessed Spirit of Holy Fear, penetrate my inmost heart, that I may set you, my Lord and God, before my face forever, help me to shun all things that can offend You, and make me worthy to appear before the pure eyes of Your Divine Majesty in heaven, where You live and reign in the unity of the ever Blessed Trinity, God world without end. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -656,8 +649,7 @@ The gift of Fear fills us with a sovereign respect for God, and makes us dread n
 Come, O blessed Spirit of Holy Fear, penetrate my inmost heart, that I may set you, my Lord and God, before my face forever, help me to shun all things that can offend You, and make me worthy to appear before the pure eyes of Your Divine Majesty in heaven, where You live and reign in the unity of the ever Blessed Trinity, God world without end. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -845,8 +837,7 @@ The gift of Piety begets in our hearts a filial affection for God as our most lo
 Come, O Blessed Spirit of Piety, possess my heart. Enkindle therein such a love for God, that I may find satisfaction only in His service, and for His sake lovingly submit to all legitimate authority. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -868,11 +859,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1030,8 +1017,7 @@ The gift of Piety begets in our hearts a filial affection for God as our most lo
 Come, O Blessed Spirit of Piety, possess my heart. Enkindle therein such a love for God, that I may find satisfaction only in His service, and for His sake lovingly submit to all legitimate authority. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -1053,11 +1039,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1221,8 +1203,7 @@ By the gift of Fortitude the soul is strengthened against natural fear, and supp
 Come, O Blessed Spirit of Fortitude, uphold my soul in time of trouble and adversity, sustain my efforts after holiness, strengthen my weakness, give me courage against all the assaults of my enemies, that I may never be overcome and separated from Thee, my God and greatest Good. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -1402,8 +1383,7 @@ By the gift of Fortitude the soul is strengthened against natural fear, and supp
 Come, O Blessed Spirit of Fortitude, uphold my soul in time of trouble and adversity, sustain my efforts after holiness, strengthen my weakness, give me courage against all the assaults of my enemies, that I may never be overcome and separated from Thee, my God and greatest Good. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -1589,8 +1569,7 @@ The gift of Knowledge enables the soul to evaluate created things at their true 
 Come, O Blessed Spirit of Knowledge, and grant that I may perceive the will of the Father; show me the nothingness of earthly things, that I may realize their vanity and use them only for Thy glory and my own salvation, looking ever beyond them to Thee, and Thy eternal rewards. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -1612,11 +1591,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1774,8 +1749,7 @@ The gift of Knowledge enables the soul to evaluate created things at their true 
 Come, O Blessed Spirit of Knowledge, and grant that I may perceive the will of the Father; show me the nothingness of earthly things, that I may realize their vanity and use them only for Thy glory and my own salvation, looking ever beyond them to Thee, and Thy eternal rewards. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -1797,11 +1771,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1965,8 +1935,7 @@ Understanding, as a gift of the Holy Spirit, helps us to grasp the meaning of th
 Come, O Spirit of Understanding, and enlighten our minds, that we may know and believe all the mysteries of salvation; and may merit at last to see the eternal light in Thy Light; and in the light of glory to have a clear vision of Thee and the Father and the Son. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -2146,8 +2115,7 @@ Understanding, as a gift of the Holy Spirit, helps us to grasp the meaning of th
 Come, O Spirit of Understanding, and enlighten our minds, that we may know and believe all the mysteries of salvation; and may merit at last to see the eternal light in Thy Light; and in the light of glory to have a clear vision of Thee and the Father and the Son. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -2333,8 +2301,7 @@ The gift of Counsel endows the soul with supernatural prudence, enabling it to j
 Come, O Spirit of Counsel, help and guide me in all my ways, that I may always do Thy holy will. Incline my heart to that which is good; turn it away from all that is evil, and direct me by the straight path of Thy commandments to that goal of eternal life for which I long. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -2356,11 +2323,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2518,8 +2481,7 @@ The gift of Counsel endows the soul with supernatural prudence, enabling it to j
 Come, O Spirit of Counsel, help and guide me in all my ways, that I may always do Thy holy will. Incline my heart to that which is good; turn it away from all that is evil, and direct me by the straight path of Thy commandments to that goal of eternal life for which I long. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -2541,11 +2503,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2709,8 +2667,7 @@ Embodying all the other gifts, as charity embraces all the other virtues, Wisdom
 Come, O Spirit of Wisdom, and reveal to my soul the mysteries of heavenly things, their exceeding greatness, power and beauty. Teach me to love them above and beyond all the passing joys and satisfactions of earth. Help me to attain them and possess them for ever. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -2894,8 +2851,7 @@ Embodying all the other gifts, as charity embraces all the other virtues, Wisdom
 Come, O Spirit of Wisdom, and reveal to my soul the mysteries of heavenly things, their exceeding greatness, power and beauty. Teach me to love them above and beyond all the passing joys and satisfactions of earth. Help me to attain them and possess them for ever. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -3085,8 +3041,7 @@ The gifts of the Holy Spirit perfect the supernatural virtues by enabling us to 
 Come, O Divine Spirit, fill my heart with Thy heavenly fruits, Thy charity, joy, peace, patience, benignity, goodness, faith, mildness, and temperance, that I may never weary in the service of God, but by continued faithful submission to Thy inspiration may merit to be united eternally with Thee in the love of the Father and the Son. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -3108,11 +3063,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3274,8 +3225,7 @@ The gifts of the Holy Spirit perfect the supernatural virtues by enabling us to 
 Come, O Divine Spirit, fill my heart with Thy heavenly fruits, Thy charity, joy, peace, patience, benignity, goodness, faith, mildness, and temperance, that I may never weary in the service of God, but by continued faithful submission to Thy inspiration may merit to be united eternally with Thee in the love of the Father and the Son. Amen.
 
 Our Father and Hail Mary ONCE.
-
-Glory be to the Father SEVEN TIMES.
+ Glory be to the Father SEVEN TIMES.
 
 O Lord Jesus Christ Who, before ascending into heaven did promise to send the Holy Spirit to finish Your work in the souls of Your Apostles and Disciples, deign to grant the same Holy Spirit to me that He may perfect in my soul, the work of Your grace and Your love.
 
@@ -3297,11 +3247,7 @@ Mark me, dear Lord with the sign of Your true disciples, and animate me in all t
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

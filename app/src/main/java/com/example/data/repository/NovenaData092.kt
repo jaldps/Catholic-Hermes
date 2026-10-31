@@ -45,8 +45,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -84,27 +83,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -146,8 +138,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -185,27 +176,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -253,8 +237,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -299,18 +282,17 @@ Amém.
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
+
+Que felicidade a vossa, glorioso protetor, serdes escolhido milagrosamente para esposo da Imaculada Maria! Alegro-me convosco pela imensa satisfação que experimentastes quando associastes vossa sorte à da Mãe de Jesus. Que admiração teriam os anjos do céu por vossa dedicação! Por esse favor e felicidade tão grande, peço a poderoso São José a amizade e a graça de Deus e a proteção constante de Maria Santíssima. Intercede por nós junto a Jesus para alcançarmos as graças que nesta novena pedimos.
 
 Lembrai-vos, ó puríssimo Esposo da Virgem Maria, doce protetor São José, que jamais se ouviu dizer que alguém que tivesse invocado proteção, implorado socorro e não fosse por vós consolado. Com grande confiança, venho à vossa presença, recomendar-me fervorosamente a vós. Não desprezeis a súplica, ó Pai adotivo do Redentor, e dignai-vos acolhê-la piedosamente. Amém.
 
@@ -348,8 +330,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -394,18 +375,17 @@ Amém.
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
+
+Que felicidade a vossa, glorioso protetor, serdes escolhido milagrosamente para esposo da Imaculada Maria! Alegro-me convosco pela imensa satisfação que experimentastes quando associastes vossa sorte à da Mãe de Jesus. Que admiração teriam os anjos do céu por vossa dedicação! Por esse favor e felicidade tão grande, peço a poderoso São José a amizade e a graça de Deus e a proteção constante de Maria Santíssima. Intercede por nós junto a Jesus para alcançarmos as graças que nesta novena pedimos.
 
 Lembrai-vos, ó puríssimo Esposo da Virgem Maria, doce protetor São José, que jamais se ouviu dizer que alguém que tivesse invocado proteção, implorado socorro e não fosse por vós consolado. Com grande confiança, venho à vossa presença, recomendar-me fervorosamente a vós. Não desprezeis a súplica, ó Pai adotivo do Redentor, e dignai-vos acolhê-la piedosamente. Amém.
 
@@ -449,8 +429,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -488,27 +467,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -550,8 +522,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -589,27 +560,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -657,8 +621,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -703,16 +666,13 @@ Amém.
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -754,8 +714,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -800,16 +759,13 @@ Amém.
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -857,8 +813,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -896,27 +851,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -958,8 +906,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -997,27 +944,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -1065,8 +1005,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -1111,16 +1050,13 @@ Amém.
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -1162,8 +1098,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -1208,16 +1143,13 @@ Amém.
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -1265,8 +1197,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -1304,27 +1235,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -1366,8 +1290,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -1405,27 +1328,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -1473,8 +1389,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -1519,16 +1434,13 @@ Amém.
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -1570,8 +1482,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -1616,16 +1527,13 @@ Amém.
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -1673,8 +1581,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -1712,27 +1619,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 
@@ -1774,8 +1674,7 @@ Jesús, José y María, con Vos descanse en paz el alma mía.
 Padrenuestro, Avemaría y Gloria.
 
 V. San José, ruega por nosotros.
-
-R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
+ R. Para que seamos dignos de alcanzar las promesas de Jesucristo.
 
 Oración. Oh Dios que con inefable providencia te dignaste escoger al bienaventurado José por Esposo de tu Madre Santísima; concédenos que, al veneremos como protector en la tierra, y merezcamos tenerle como protector en los cielos. Oh Dios que vives y reinas por los siglos de los siglos. Amén.
 
@@ -1813,27 +1712,20 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
 Vinde, Espírito Santo, enchei os corações dos Vossos fiéis e acendei neles o fogo do Vosso amor. Enviai, Senhor, o Vosso Espírito, e tudo será criado, e renovareis a face da Terra. Oremos: Ó Deus, que instruístes os corações dos Vossos fiéis com a luz do Espírito Santo, fazei que apreciemos retamente todas as coisas e gozemos sempre da sua consolação. Por Nosso Senhor Jesus Cristo, na unidade do Espírito Santo. Amém.
 
 Oração preparatória para todos os dias da novena a São José
-
-Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
+ Deus e Senhor meu, uno e trino, Pai, Filho e Espírito Santo, creio que estou em Vossa soberana presença agora, quando pretendo consagrar a São José esta novena. Adoro-vos com todo o meu coração, porque sois infinitamente bom e digno de ser amado sobre todas as coisas. Adoro-vos com toda a intensidade de que sou capaz e arrependo-me dos muitos pecados que fiz contra a Vossa Divina Majestade. Quero, nesta novena, aprender as virtudes que, com tanta perfeição, praticou o glorioso Patriarca São José, e alcançar, por sua intercessão, as graças de que tanto preciso. Senhor, quem sou eu para atrever-me a comparecer diante de Vossa presença? Conheço a deficiência de meus méritos e a multidão de meus pecados, pelos quais não mereço ser ouvido em minhas orações; o que não mereço, merece-o São José, Pai nutrício de Jesus; o que eu não posso, ele pode. Venho, por isso, com total confiança, implorar a divina clemência, não fiando em minha fraqueza, mas no poder e valimento de São José.
 
 Oração à Santíssima Virgem
-
-Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
+ Virgem Imaculada, esposa castíssima de São José, assisti-me nestes momentos que dedico ao culto de vosso glorioso esposo. Sem auxílio, como eu poderia honrar dignamente o varão justo a quem dedicastes 30 anos de vida? Nem sei, nem posso honrá-lo como ele merece; por isso venho para que completeis o que me falta, e façais por ele o que não sei fazer. Ajudai-me, Senhora, nas minhas orações, para que sejam favoravelmente despachadas, pela intercessão e valimento de vosso Santo Esposo. Amém.
 
 Oração a São José
-
-Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
+ Ó meu querido São José, ofereço-vos esta novena, com muito fervor e reverência e me consagro a vós, que merecestes o respeito e os favores de Jesus e de Maria, dedicados ao vosso serviço. Desejo obsequiar-vos dignamente, porque preciso ardentemente conseguir, por vossa intercessão, minha salvação eterna e as graças particulares que, rezando esta novena, desejo alcançar. Não olheis minhas faltas, mas a vossa grande misericórdia e o muito amor que professais. Ó meu amável protetor, em vós ponho a confiança, atendei-me bondosamente. Amém.
 
 (mencione o pedido aqui…)
 

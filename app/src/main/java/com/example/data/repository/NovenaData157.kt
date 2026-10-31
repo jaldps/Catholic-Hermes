@@ -52,15 +52,13 @@ I am firmly convinced that through your merits, through the scorn, the suffering
 
 (From the “Novena to St. Philomena” by The Society of St. Paul)
 
+Illustrious Virgin and Martyr, St. Philomena, behold me prostrate before the throne whereupon it has pleased the Most Holy Trinity to place you. Full of confidence in your protection, I entreat you to intercede for me with God, from the heights of Heaven deign to cast a glance upon your humble client! Spouse of Christ, sustain me in suffering, fortify me in temptation, protect me in the dangers surrounding me, and obtain for me the graces necessary to me. Above all, assist me at the hour of my death. St. Philomena, powerful with God, pray for us. Amen.
+
 Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -115,15 +113,13 @@ I am firmly convinced that through your merits, through the scorn, the suffering
 
 (From the “Novena to St. Philomena” by The Society of St. Paul)
 
+Illustrious Virgin and Martyr, St. Philomena, behold me prostrate before the throne whereupon it has pleased the Most Holy Trinity to place you. Full of confidence in your protection, I entreat you to intercede for me with God, from the heights of Heaven deign to cast a glance upon your humble client! Spouse of Christ, sustain me in suffering, fortify me in temptation, protect me in the dangers surrounding me, and obtain for me the graces necessary to me. Above all, assist me at the hour of my death. St. Philomena, powerful with God, pray for us. Amen.
+
 Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -292,6 +288,8 @@ Estoy firmemente convencido de que, por tus méritos, por los desprecios, los su
 
 (De la “Novena a santa Filomena” de la Sociedad de San Pablo)
 
+Oh Virgen pura y santa mártir, dirige desde el Cielo una mirada compasiva a tu devoto servidor, consuélame en la aflicción, asísteme en el peligro y, sobre todo, ven en mi ayuda en la hora de la muerte. Vela por los intereses de la Iglesia de Dios, ruega por su exaltación y prosperidad, por la extensión de la fe, por el Papa, por el clero, por la perseverancia de los justos, por la conversión de los pecadores y por el alivio de las almas del purgatorio, especialmente las que me son queridas. Oh gran santa, cuyo triunfo celebramos en la tierra, intercede por mí para que un día contemple la corona de gloria que se te ha concedido en el Cielo, y alabe eternamente a Aquel que recompensa con tanta generosidad, por toda la eternidad, los sufrimientos soportados por Su amor durante esta breve vida. Amén.
+
 ¡Santa Filomena, ruega por nosotros!
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
@@ -310,15 +308,13 @@ I am firmly convinced that through your merits, through the scorn, the suffering
 
 (From the “Novena to St. Philomena” by The Society of St. Paul)
 
+O pure Virgin and holy martyr, cast a look of pity from Heaven on your devoted servant, comfort me in affliction, assist me in danger, above all come to my aid in the hour of death. Watch over the interests of the Church of God, pray for its exaltation and prosperity, the extension of the faith, for the Pope, for the clergy, for the perseverance of the just, the conversion of sinners, and the relief of the souls in purgatory, especially those dear to me. O great saint, whose triumph we celebrate on earth, intercede for me, that I may one day behold the crown of glory bestowed on you in Heaven, and eternally praise Him who so liberally rewards for all eternity the sufferings endured for His love during this short life. Amen.
+
 Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -331,6 +327,8 @@ Conheceis a multidão e a diversidade das minhas necessidades. Eis-me a vossos p
 Estou firmemente convencido de que, pelos vossos méritos, pelo desprezo, pelos sofrimentos e pela morte que suportastes, unidos aos méritos da Paixão e morte de Jesus, vosso Esposo, alcançarei o que vos peço, e na alegria do meu coração bendirei a Deus, que é admirável nos seus Santos. Amém.
 
 (Da “Novena a Santa Filomena” da Sociedade de São Paulo)
+
+Ó Virgem pura e santa mártir, lançai do Céu um olhar de compaixão sobre o vosso servo devoto, consolai-me na aflição, assisti-me no perigo e, sobretudo, vinde em meu auxílio na hora da morte. Velai pelos interesses da Igreja de Deus, rogai pela sua exaltação e prosperidade, pela propagação da fé, pelo Papa, pelo clero, pela perseverança dos justos, pela conversão dos pecadores e pelo alívio das almas do purgatório, especialmente das que me são queridas. Ó grande santa, cujo triunfo celebramos na terra, intercedei por mim, para que um dia eu contemple a coroa de glória que vos foi dada no Céu e louve eternamente Aquele que recompensa tão generosamente, por toda a eternidade, os sofrimentos suportados por Seu amor nesta breve vida. Amém.
 
 Santa Filomena, rogai por nós!
 
@@ -351,6 +349,8 @@ Estoy firmemente convencido de que, por tus méritos, por los desprecios, los su
 
 (De la “Novena a santa Filomena” de la Sociedad de San Pablo)
 
+Oh Virgen pura y santa mártir, dirige desde el Cielo una mirada compasiva a tu devoto servidor, consuélame en la aflicción, asísteme en el peligro y, sobre todo, ven en mi ayuda en la hora de la muerte. Vela por los intereses de la Iglesia de Dios, ruega por su exaltación y prosperidad, por la extensión de la fe, por el Papa, por el clero, por la perseverancia de los justos, por la conversión de los pecadores y por el alivio de las almas del purgatorio, especialmente las que me son queridas. Oh gran santa, cuyo triunfo celebramos en la tierra, intercede por mí para que un día contemple la corona de gloria que se te ha concedido en el Cielo, y alabe eternamente a Aquel que recompensa con tanta generosidad, por toda la eternidad, los sufrimientos soportados por Su amor durante esta breve vida. Amén.
+
 ¡Santa Filomena, ruega por nosotros!
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
@@ -369,15 +369,13 @@ I am firmly convinced that through your merits, through the scorn, the suffering
 
 (From the “Novena to St. Philomena” by The Society of St. Paul)
 
+O pure Virgin and holy martyr, cast a look of pity from Heaven on your devoted servant, comfort me in affliction, assist me in danger, above all come to my aid in the hour of death. Watch over the interests of the Church of God, pray for its exaltation and prosperity, the extension of the faith, for the Pope, for the clergy, for the perseverance of the just, the conversion of sinners, and the relief of the souls in purgatory, especially those dear to me. O great saint, whose triumph we celebrate on earth, intercede for me, that I may one day behold the crown of glory bestowed on you in Heaven, and eternally praise Him who so liberally rewards for all eternity the sufferings endured for His love during this short life. Amen.
+
 Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -390,6 +388,8 @@ Conheceis a multidão e a diversidade das minhas necessidades. Eis-me a vossos p
 Estou firmemente convencido de que, pelos vossos méritos, pelo desprezo, pelos sofrimentos e pela morte que suportastes, unidos aos méritos da Paixão e morte de Jesus, vosso Esposo, alcançarei o que vos peço, e na alegria do meu coração bendirei a Deus, que é admirável nos seus Santos. Amém.
 
 (Da “Novena a Santa Filomena” da Sociedade de São Paulo)
+
+Ó Virgem pura e santa mártir, lançai do Céu um olhar de compaixão sobre o vosso servo devoto, consolai-me na aflição, assisti-me no perigo e, sobretudo, vinde em meu auxílio na hora da morte. Velai pelos interesses da Igreja de Deus, rogai pela sua exaltação e prosperidade, pela propagação da fé, pelo Papa, pelo clero, pela perseverança dos justos, pela conversão dos pecadores e pelo alívio das almas do purgatório, especialmente das que me são queridas. Ó grande santa, cujo triunfo celebramos na terra, intercedei por mim, para que um dia eu contemple a coroa de glória que vos foi dada no Céu e louve eternamente Aquele que recompensa tão generosamente, por toda a eternidade, os sofrimentos suportados por Seu amor nesta breve vida. Amém.
 
 Santa Filomena, rogai por nós!
 
@@ -416,6 +416,8 @@ Estoy firmemente convencido de que, por tus méritos, por los desprecios, los su
 
 (De la “Novena a santa Filomena” de la Sociedad de San Pablo)
 
+Oh santa Filomena, Virgen y Mártir, a quien Dios glorifica con tantos milagros y a quien el Vicario de Jesucristo ha nombrado Protectora del Rosario Viviente y de los Hijos de María, manifiesta cada vez más claramente, desde las alturas del Cielo, que una voz tan santa como la tuya no puede ser desoída y que tenemos derecho a contar con tu ayuda. Obtennos la gracia de ser fieles a Jesucristo hasta la muerte. Te diste a conocer por tus milagros. Intercede por mí ante el trono de Dios. Amén.
+
 ¡Santa Filomena, ruega por nosotros!
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
@@ -434,6 +436,8 @@ I am firmly convinced that through your merits, through the scorn, the suffering
 
 (From the “Novena to St. Philomena” by The Society of St. Paul)
 
+O St. Philomena, Virgin and Martyr, whom God glorifies by so many miracles, whom the Vicar of Jesus Christ has named the Protectress of the living rosary and the children of Mary, manifest, more and more plainly from the heights of Heaven, that a voice holy as yours cannot be denied and that we have the right to rely upon your aid. Obtain for us the grace to be faithful to Jesus Christ, even to death. You became known by your miracles. May you intercede for me before the throne of God. Amen.
+
 Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
@@ -451,6 +455,8 @@ Conheceis a multidão e a diversidade das minhas necessidades. Eis-me a vossos p
 Estou firmemente convencido de que, pelos vossos méritos, pelo desprezo, pelos sofrimentos e pela morte que suportastes, unidos aos méritos da Paixão e morte de Jesus, vosso Esposo, alcançarei o que vos peço, e na alegria do meu coração bendirei a Deus, que é admirável nos seus Santos. Amém.
 
 (Da “Novena a Santa Filomena” da Sociedade de São Paulo)
+
+Ó Santa Filomena, Virgem e Mártir, a quem Deus glorifica com tantos milagres e a quem o Vigário de Jesus Cristo chamou Protetora do Rosário Vivo e dos Filhos de Maria, mostrai cada vez mais claramente, do alto do Céu, que uma voz santa como a vossa não pode ser recusada e que temos o direito de contar com a vossa ajuda. Alcançai-nos a graça de sermos fiéis a Jesus Cristo até a morte. Fostes conhecida pelos vossos milagres. Intercedei por mim diante do trono de Deus. Amém.
 
 Santa Filomena, rogai por nós!
 
@@ -471,6 +477,8 @@ Estoy firmemente convencido de que, por tus méritos, por los desprecios, los su
 
 (De la “Novena a santa Filomena” de la Sociedad de San Pablo)
 
+Oh santa Filomena, Virgen y Mártir, a quien Dios glorifica con tantos milagros y a quien el Vicario de Jesucristo ha nombrado Protectora del Rosario Viviente y de los Hijos de María, manifiesta cada vez más claramente, desde las alturas del Cielo, que una voz tan santa como la tuya no puede ser desoída y que tenemos derecho a contar con tu ayuda. Obtennos la gracia de ser fieles a Jesucristo hasta la muerte. Te diste a conocer por tus milagros. Intercede por mí ante el trono de Dios. Amén.
+
 ¡Santa Filomena, ruega por nosotros!
 
 En el nombre del Padre, y del Hijo, y del Espíritu Santo.
@@ -489,6 +497,8 @@ I am firmly convinced that through your merits, through the scorn, the suffering
 
 (From the “Novena to St. Philomena” by The Society of St. Paul)
 
+O St. Philomena, Virgin and Martyr, whom God glorifies by so many miracles, whom the Vicar of Jesus Christ has named the Protectress of the living rosary and the children of Mary, manifest, more and more plainly from the heights of Heaven, that a voice holy as yours cannot be denied and that we have the right to rely upon your aid. Obtain for us the grace to be faithful to Jesus Christ, even to death. You became known by your miracles. May you intercede for me before the throne of God. Amen.
+
 Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
@@ -506,6 +516,8 @@ Conheceis a multidão e a diversidade das minhas necessidades. Eis-me a vossos p
 Estou firmemente convencido de que, pelos vossos méritos, pelo desprezo, pelos sofrimentos e pela morte que suportastes, unidos aos méritos da Paixão e morte de Jesus, vosso Esposo, alcançarei o que vos peço, e na alegria do meu coração bendirei a Deus, que é admirável nos seus Santos. Amém.
 
 (Da “Novena a Santa Filomena” da Sociedade de São Paulo)
+
+Ó Santa Filomena, Virgem e Mártir, a quem Deus glorifica com tantos milagres e a quem o Vigário de Jesus Cristo chamou Protetora do Rosário Vivo e dos Filhos de Maria, mostrai cada vez mais claramente, do alto do Céu, que uma voz santa como a vossa não pode ser recusada e que temos o direito de contar com a vossa ajuda. Alcançai-nos a graça de sermos fiéis a Jesus Cristo até a morte. Fostes conhecida pelos vossos milagres. Intercedei por mim diante do trono de Deus. Amém.
 
 Santa Filomena, rogai por nós!
 
@@ -558,11 +570,7 @@ Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -623,11 +631,7 @@ Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -822,11 +826,7 @@ Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -887,11 +887,7 @@ Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1086,11 +1082,7 @@ Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1151,11 +1143,7 @@ Saint Philomena, Pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

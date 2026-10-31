@@ -41,10 +41,8 @@ Amén.
 Oh poderosísimo ángel, tú que eres mi custodio, te suplico, por el aborrecimiento soberano que tienes al pecado, porque ofende a Dios, a quien amas con amor puro y perfecto, que me obtengas un dolor sincero y duradero de mis pecados y un odio implacable a todo pecado, de cualquier clase que sea, para que nunca más ofenda a mi Dios, hasta el último instante de mi vida.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -75,10 +73,8 @@ Amen.
 O most powerful angel, thou who art my guardian, I beseech thee, by the sovereign hatred thou hast for sin, because it offends God, Whom you love with a pure and perfect love, obtain for me a sincere and lasting sorrow for my sins, and an implacable hatred against all sin, of what kind soever, so that I may never more offend my God, till the last moment of my life.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -86,11 +82,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -113,10 +105,8 @@ Amém.
 Ó poderosíssimo anjo, vós que sois o meu guardião, eu vos suplico, pelo ódio soberano que tendes ao pecado, porque ofende a Deus, a quem amais com amor puro e perfeito, alcançai-me uma dor sincera e duradoura dos meus pecados e um ódio implacável a todo pecado, de qualquer espécie, para que eu nunca mais ofenda o meu Deus até o último instante da minha vida.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -148,10 +138,8 @@ Amén.
 Oh poderosísimo ángel, tú que eres mi custodio, te suplico, por el aborrecimiento soberano que tienes al pecado, porque ofende a Dios, a quien amas con amor puro y perfecto, que me obtengas un dolor sincero y duradero de mis pecados y un odio implacable a todo pecado, de cualquier clase que sea, para que nunca más ofenda a mi Dios, hasta el último instante de mi vida.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -182,10 +170,8 @@ Amen.
 O most powerful angel, thou who art my guardian, I beseech thee, by the sovereign hatred thou hast for sin, because it offends God, Whom you love with a pure and perfect love, obtain for me a sincere and lasting sorrow for my sins, and an implacable hatred against all sin, of what kind soever, so that I may never more offend my God, till the last moment of my life.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -193,11 +179,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -220,10 +202,8 @@ Amém.
 Ó poderosíssimo anjo, vós que sois o meu guardião, eu vos suplico, pelo ódio soberano que tendes ao pecado, porque ofende a Deus, a quem amais com amor puro e perfeito, alcançai-me uma dor sincera e duradoura dos meus pecados e um ódio implacável a todo pecado, de qualquer espécie, para que eu nunca mais ofenda o meu Deus até o último instante da minha vida.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -261,10 +241,8 @@ Amén.
 Poderosísimo espíritu, mi ángel custodio, te ruego, por aquella suprema felicidad de que gozas al ver a Dios sin velo, aun mientras velas por mí, que me obtengas la gracia de caminar sin cesar en la presencia de Dios, para que viva como un cristiano perfecto hasta mi último aliento.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -295,10 +273,8 @@ Amen.
 Most mighty spirit, my angel-guardian, I pray thee, by that supreme felicity thou dost enjoy in seeing God without a veil, even whilst watching over me, obtain for me grace to walk without ceasing in the presence of God, so that I may live as a perfect Christian till my last breath.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -329,10 +305,8 @@ Amém.
 Poderosíssimo espírito, meu anjo da guarda, eu vos peço, por aquela suprema felicidade de que gozais vendo Deus sem véu, mesmo enquanto velais por mim, alcançai-me a graça de caminhar sem cessar na presença de Deus, para que eu viva como um cristão perfeito até o meu último suspiro.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -364,10 +338,8 @@ Amén.
 Poderosísimo espíritu, mi ángel custodio, te ruego, por aquella suprema felicidad de que gozas al ver a Dios sin velo, aun mientras velas por mí, que me obtengas la gracia de caminar sin cesar en la presencia de Dios, para que viva como un cristiano perfecto hasta mi último aliento.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -398,10 +370,8 @@ Amen.
 Most mighty spirit, my angel-guardian, I pray thee, by that supreme felicity thou dost enjoy in seeing God without a veil, even whilst watching over me, obtain for me grace to walk without ceasing in the presence of God, so that I may live as a perfect Christian till my last breath.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -432,10 +402,8 @@ Amém.
 Poderosíssimo espírito, meu anjo da guarda, eu vos peço, por aquela suprema felicidade de que gozais vendo Deus sem véu, mesmo enquanto velais por mim, alcançai-me a graça de caminhar sem cessar na presença de Deus, para que eu viva como um cristão perfeito até o meu último suspiro.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -473,10 +441,8 @@ Amén.
 Perfectísimo ejecutor de la Voluntad de Dios, mi fiel custodio, te ruego, por el celo vigilante y amoroso con que cumples el oficio de mi custodia que Dios te ha confiado, que me obtengas la gracia de desear siempre conocer y cumplir perfectamente, hasta el último instante de mi vida, todo lo que Dios me pide.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -507,10 +473,8 @@ Amen.
 Most perfect executor of the Will of God, my faithful guardian, I pray thee, by the vigilant and loving eagerness with which thou fulfillest the duty of my guardianship which God has confided to thee, obtain for me the grace of being always anxious to know and accomplish perfectly to the last moment of my life, everything that God asks of me.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -518,11 +482,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -545,10 +505,8 @@ Amém.
 Perfeitíssimo executor da vontade de Deus, meu fiel guardião, eu vos peço, pelo zelo vigilante e amoroso com que cumpris o ofício da minha guarda que Deus vos confiou, alcançai-me a graça de desejar sempre conhecer e cumprir perfeitamente, até o último instante da minha vida, tudo o que Deus me pede.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -580,10 +538,8 @@ Amén.
 Perfectísimo ejecutor de la Voluntad de Dios, mi fiel custodio, te ruego, por el celo vigilante y amoroso con que cumples el oficio de mi custodia que Dios te ha confiado, que me obtengas la gracia de desear siempre conocer y cumplir perfectamente, hasta el último instante de mi vida, todo lo que Dios me pide.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -614,10 +570,8 @@ Amen.
 Most perfect executor of the Will of God, my faithful guardian, I pray thee, by the vigilant and loving eagerness with which thou fulfillest the duty of my guardianship which God has confided to thee, obtain for me the grace of being always anxious to know and accomplish perfectly to the last moment of my life, everything that God asks of me.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -625,11 +579,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -652,10 +602,8 @@ Amém.
 Perfeitíssimo executor da vontade de Deus, meu fiel guardião, eu vos peço, pelo zelo vigilante e amoroso com que cumpris o ofício da minha guarda que Deus vos confiou, alcançai-me a graça de desejar sempre conhecer e cumprir perfeitamente, até o último instante da minha vida, tudo o que Deus me pede.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -693,10 +641,8 @@ Amén.
 Mi celosísimo protector y querido ángel custodio, te ruego, por el encargo que Dios te ha dado de guardarme en todos mis caminos, como una madre lleva en brazos a su hijo amado, que apartes de mí toda ocasión de pecado y me preserves de todos los peligros que podrían hacerme ofender a Dios; y para ello reprime las tentaciones del enemigo infernal y mis propias pasiones, para que, vencidos los enemigos de mi salvación, camine con facilidad, por la gracia de Dios, por el camino de Sus mandamientos hasta la muerte.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -727,10 +673,8 @@ Amen.
 My most zealous protector and dear angel guardian, I pray, thee, by the charge which God hath given thee to guard me in all my ways, as a mother carries in her arms her beloved child, avert from me all occasions of sin, and preserve me from all perils which could make me offend God, and for that, repress the temptations of the infernal enemy and my own passions, so that having conquered the enemies of my salvation, I may walk with ease, by the grace of God, in the way of His commandments, till I die.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -761,10 +705,8 @@ Amém.
 Meu zelosíssimo protetor e querido anjo da guarda, eu vos peço, pelo encargo que Deus vos deu de me guardar em todos os meus caminhos, como uma mãe carrega nos braços o seu filho amado, afastai de mim todas as ocasiões de pecado e preservai-me de todos os perigos que poderiam me fazer ofender a Deus; e para isso reprimi as tentações do inimigo infernal e as minhas próprias paixões, para que, vencidos os inimigos da minha salvação, eu caminhe com facilidade, pela graça de Deus, no caminho dos Seus mandamentos até a morte.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -796,10 +738,8 @@ Amén.
 Mi celosísimo protector y querido ángel custodio, te ruego, por el encargo que Dios te ha dado de guardarme en todos mis caminos, como una madre lleva en brazos a su hijo amado, que apartes de mí toda ocasión de pecado y me preserves de todos los peligros que podrían hacerme ofender a Dios; y para ello reprime las tentaciones del enemigo infernal y mis propias pasiones, para que, vencidos los enemigos de mi salvación, camine con facilidad, por la gracia de Dios, por el camino de Sus mandamientos hasta la muerte.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -830,10 +770,8 @@ Amen.
 My most zealous protector and dear angel guardian, I pray, thee, by the charge which God hath given thee to guard me in all my ways, as a mother carries in her arms her beloved child, avert from me all occasions of sin, and preserve me from all perils which could make me offend God, and for that, repress the temptations of the infernal enemy and my own passions, so that having conquered the enemies of my salvation, I may walk with ease, by the grace of God, in the way of His commandments, till I die.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -864,10 +802,8 @@ Amém.
 Meu zelosíssimo protetor e querido anjo da guarda, eu vos peço, pelo encargo que Deus vos deu de me guardar em todos os meus caminhos, como uma mãe carrega nos braços o seu filho amado, afastai de mim todas as ocasiões de pecado e preservai-me de todos os perigos que poderiam me fazer ofender a Deus; e para isso reprimi as tentações do inimigo infernal e as minhas próprias paixões, para que, vencidos os inimigos da minha salvação, eu caminhe com facilidade, pela graça de Deus, no caminho dos Seus mandamentos até a morte.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -905,10 +841,8 @@ Amén.
 Fidelísimo guía, mi ángel custodio, te ruego, por la misión que Dios te ha confiado de conducirme por el camino del cielo, que me obtengas la gracia de seguir fiel y constantemente la luz que me has dado sobre el mal que debo evitar y el bien que debo hacer, y no dejes de animarme a la práctica de toda virtud hasta el último instante de mi vida.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -939,10 +873,8 @@ Amen.
 Most faithful guide, my angel-guardian, I pray thee, by the mission which God has confided to thee to lead me on the road to heaven, obtain, for me grace to follow faithfully and constantly the light which thou hast shown me, of the evil which I must avoid, and of the good which I must do, and do not cease to excite me to the practice of all virtue, till the last moment of my life.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -950,11 +882,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -977,10 +905,8 @@ Amém.
 Fidelíssimo guia, meu anjo da guarda, eu vos peço, pela missão que Deus vos confiou de me conduzir no caminho do céu, alcançai-me a graça de seguir fiel e constantemente a luz que me mostrastes sobre o mal que devo evitar e o bem que devo fazer, e não deixeis de me estimular à prática de toda virtude até o último instante da minha vida.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1012,10 +938,8 @@ Amén.
 Fidelísimo guía, mi ángel custodio, te ruego, por la misión que Dios te ha confiado de conducirme por el camino del cielo, que me obtengas la gracia de seguir fiel y constantemente la luz que me has dado sobre el mal que debo evitar y el bien que debo hacer, y no dejes de animarme a la práctica de toda virtud hasta el último instante de mi vida.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1046,10 +970,8 @@ Amen.
 Most faithful guide, my angel-guardian, I pray thee, by the mission which God has confided to thee to lead me on the road to heaven, obtain, for me grace to follow faithfully and constantly the light which thou hast shown me, of the evil which I must avoid, and of the good which I must do, and do not cease to excite me to the practice of all virtue, till the last moment of my life.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1057,11 +979,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1084,10 +1002,8 @@ Amém.
 Fidelíssimo guia, meu anjo da guarda, eu vos peço, pela missão que Deus vos confiou de me conduzir no caminho do céu, alcançai-me a graça de seguir fiel e constantemente a luz que me mostrastes sobre o mal que devo evitar e o bem que devo fazer, e não deixeis de me estimular à prática de toda virtude até o último instante da minha vida.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1125,10 +1041,8 @@ Amén.
 Queridísimo amigo, mi buen ángel, te ruego, por el gran amor que me tienes, tú que amas a Dios tan ardientemente y que ves cuánto me amó y me sigue amando, que me obtengas el consuelo de rezar siempre, y de rezar bien, en mis dificultades, para que alcance Su misericordia hasta el último instante de mi existencia.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1159,10 +1073,8 @@ Amen.
 Dearest friend, my good angel, I pray thee, by the great love thou hast for me, thou who lovest God so ardently, and who seest how much He loved me and still loves me, obtain for me the consolation of always praying and praying well in my troubles, so that I may obtain His mercy, till the last moment of my existence.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1193,10 +1105,8 @@ Amém.
 Queridíssimo amigo, meu bom anjo, eu vos peço, pelo grande amor que me tendes, vós que amais tão ardentemente a Deus e vedes quanto Ele me amou e ainda me ama, alcançai-me o consolo de rezar sempre, e de rezar bem, nas minhas dificuldades, para que eu alcance a Sua misericórdia até o último instante da minha existência.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1228,10 +1138,8 @@ Amén.
 Queridísimo amigo, mi buen ángel, te ruego, por el gran amor que me tienes, tú que amas a Dios tan ardientemente y que ves cuánto me amó y me sigue amando, que me obtengas el consuelo de rezar siempre, y de rezar bien, en mis dificultades, para que alcance Su misericordia hasta el último instante de mi existencia.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1262,10 +1170,8 @@ Amen.
 Dearest friend, my good angel, I pray thee, by the great love thou hast for me, thou who lovest God so ardently, and who seest how much He loved me and still loves me, obtain for me the consolation of always praying and praying well in my troubles, so that I may obtain His mercy, till the last moment of my existence.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1296,10 +1202,8 @@ Amém.
 Queridíssimo amigo, meu bom anjo, eu vos peço, pelo grande amor que me tendes, vós que amais tão ardentemente a Deus e vedes quanto Ele me amou e ainda me ama, alcançai-me o consolo de rezar sempre, e de rezar bem, nas minhas dificuldades, para que eu alcance a Sua misericórdia até o último instante da minha existência.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1337,10 +1241,8 @@ Amén.
 Poderosísimo intercesor, mi fiel custodio, te ruego, por el celo que Dios te ha dado por la salvación eterna de mi alma, que me obtengas la gracia de tener también un celo ardiente y prudente por la salvación de mi prójimo, para que merezca la salvación eterna.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1371,10 +1273,8 @@ Amen.
 Most powerful intercessor, my faithful guardian, I pray thee, by the zeal which God hath given thee for the eternal salvation of my soul, obtain for me the grace of having also an ardent and prudent zeal for the salvation of my neighbour, so that I may merit eternal salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1382,11 +1282,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1409,10 +1305,8 @@ Amém.
 Poderosíssimo intercessor, meu fiel guardião, eu vos peço, pelo zelo que Deus vos deu pela salvação eterna da minha alma, alcançai-me a graça de ter também um zelo ardente e prudente pela salvação do meu próximo, para que eu mereça a salvação eterna.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1444,10 +1338,8 @@ Amén.
 Poderosísimo intercesor, mi fiel custodio, te ruego, por el celo que Dios te ha dado por la salvación eterna de mi alma, que me obtengas la gracia de tener también un celo ardiente y prudente por la salvación de mi prójimo, para que merezca la salvación eterna.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1478,10 +1370,8 @@ Amen.
 Most powerful intercessor, my faithful guardian, I pray thee, by the zeal which God hath given thee for the eternal salvation of my soul, obtain for me the grace of having also an ardent and prudent zeal for the salvation of my neighbour, so that I may merit eternal salvation.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1489,11 +1379,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1516,10 +1402,8 @@ Amém.
 Poderosíssimo intercessor, meu fiel guardião, eu vos peço, pelo zelo que Deus vos deu pela salvação eterna da minha alma, alcançai-me a graça de ter também um zelo ardente e prudente pela salvação do meu próximo, para que eu mereça a salvação eterna.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1557,10 +1441,8 @@ Amén.
 ¡Oh purísimo espíritu, querido ángel custodio! Te ruego, por el amor ardiente que tienes a la Inmaculada Virgen Madre de Dios, Reina de los Ángeles, que me obtengas una gran pureza de alma y de cuerpo, para que a mi muerte sea hallado digno de unirme a ti en el Paraíso.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1591,10 +1473,8 @@ Amen.
 O! most pure spirit, dear angel-guardian, I pray thee, by the burning love thou hast for the Immaculate Virgin-Mother of God, the Queen of Angels, to obtain for me great purity of soul and body, that at my death I may be found worthy to associate with thee in Paradise.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1625,10 +1505,8 @@ Amém.
 Ó puríssimo espírito, querido anjo da guarda, eu vos peço, pelo amor ardente que tendes à Imaculada Virgem Mãe de Deus, Rainha dos Anjos, que me alcanceis uma grande pureza de alma e de corpo, para que na minha morte eu seja achado digno de me unir a vós no Paraíso.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1660,10 +1538,8 @@ Amén.
 ¡Oh purísimo espíritu, querido ángel custodio! Te ruego, por el amor ardiente que tienes a la Inmaculada Virgen Madre de Dios, Reina de los Ángeles, que me obtengas una gran pureza de alma y de cuerpo, para que a mi muerte sea hallado digno de unirme a ti en el Paraíso.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1694,10 +1570,8 @@ Amen.
 O! most pure spirit, dear angel-guardian, I pray thee, by the burning love thou hast for the Immaculate Virgin-Mother of God, the Queen of Angels, to obtain for me great purity of soul and body, that at my death I may be found worthy to associate with thee in Paradise.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1728,10 +1602,8 @@ Amém.
 Ó puríssimo espírito, querido anjo da guarda, eu vos peço, pelo amor ardente que tendes à Imaculada Virgem Mãe de Deus, Rainha dos Anjos, que me alcanceis uma grande pureza de alma e de corpo, para que na minha morte eu seja achado digno de me unir a vós no Paraíso.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1769,10 +1641,8 @@ Amén.
 Oh dulcísimo ángel, mi fiel y amoroso custodio, ¿cómo podré agradecerte lo suficiente el amor ardiente y la fiel vigilancia con que siempre has velado, y velarás, por mí, hasta que me hayas llevado seguro a la dulce presencia de Dios? ¡Ah! Ruega por mí, para que te dé gracias con mi obediencia a tus santas inspiraciones, de modo que, amándote cada día más, merezca estar contigo por toda la eternidad.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1803,10 +1673,8 @@ Amen.
 O sweetest angel, my faithful and loving guardian, how can I thank thee sufficiently for the ardent love and faithful vigilance with which thou hast ever watched, and will watch over me, till thou hast led me safely into the sweet presence of God. Ah! pray for me, that I may thank thee by my obedience to thy holy inspirations, so that loving thee daily more and more, I may merit to be with thee for all eternity.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1814,11 +1682,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1841,10 +1705,8 @@ Amém.
 Ó dulcíssimo anjo, meu fiel e amoroso guardião, como poderei agradecer-vos suficientemente o amor ardente e a fiel vigilância com que sempre velastes, e velareis, por mim, até me terdes conduzido em segurança à doce presença de Deus? Ah! Rogai por mim, para que eu vos agradeça pela minha obediência às vossas santas inspirações, de modo que, amando-vos cada dia mais, eu mereça estar convosco por toda a eternidade.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 
@@ -1876,10 +1738,8 @@ Amén.
 Oh dulcísimo ángel, mi fiel y amoroso custodio, ¿cómo podré agradecerte lo suficiente el amor ardiente y la fiel vigilancia con que siempre has velado, y velarás, por mí, hasta que me hayas llevado seguro a la dulce presencia de Dios? ¡Ah! Ruega por mí, para que te dé gracias con mi obediencia a tus santas inspiraciones, de modo que, amándote cada día más, merezca estar contigo por toda la eternidad.
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ángel de Dios, que eres mi custodio, pues la bondad divina me ha encomendado a ti, ilumíname, guárdame, rígeme y gobiérname.
 
@@ -1910,10 +1770,8 @@ Amen.
 O sweetest angel, my faithful and loving guardian, how can I thank thee sufficiently for the ardent love and faithful vigilance with which thou hast ever watched, and will watch over me, till thou hast led me safely into the sweet presence of God. Ah! pray for me, that I may thank thee by my obedience to thy holy inspirations, so that loving thee daily more and more, I may merit to be with thee for all eternity.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Angel of God, my guardian dear, To whom God’s love commits me here, Ever this day be at my side, To light and guard, rule and guide.
 
@@ -1921,11 +1779,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1948,10 +1802,8 @@ Amém.
 Ó dulcíssimo anjo, meu fiel e amoroso guardião, como poderei agradecer-vos suficientemente o amor ardente e a fiel vigilância com que sempre velastes, e velareis, por mim, até me terdes conduzido em segurança à doce presença de Deus? Ah! Rogai por mim, para que eu vos agradeça pela minha obediência às vossas santas inspirações, de modo que, amando-vos cada dia mais, eu mereça estar convosco por toda a eternidade.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Santo Anjo do Senhor, meu zeloso guardador, se a ti me confiou a piedade divina, sempre me rege, me guarda, me governa e me ilumina.
 

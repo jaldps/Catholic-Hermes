@@ -186,12 +186,15 @@ object DesignTokens {
         button = RoundedCornerShape(12.dp),
         buttonSmall = RoundedCornerShape(8.dp),
         field = RoundedCornerShape(10.dp),
-        chip = RoundedCornerShape(8.dp),
+        // Filter buttons are capsules in every current Apple app.
+        chip = RoundedCornerShape(percent = 50),
         sheet = RoundedCornerShape(topStart = 14.dp, topEnd = 14.dp),
         dialog = RoundedCornerShape(14.dp),
         thumbnail = RoundedCornerShape(10.dp),
         badge = RoundedCornerShape(percent = 50),
-        listGroup = RoundedCornerShape(10.dp)
+        // Same radius as a card: groups and cards share one column on every
+        // screen, and a 10/12 mismatch side by side reads as two systems.
+        listGroup = RoundedCornerShape(12.dp)
     )
 
     private val MaterialShapes = AppShapes(
@@ -214,11 +217,13 @@ object DesignTokens {
         button = RoundedCornerShape(2.dp),
         buttonSmall = RoundedCornerShape(2.dp),
         field = RoundedCornerShape(2.dp),
-        chip = RoundedCornerShape(2.dp),
+        // Paper has no radius: anything the screens cut from these tokens
+        // (day badges, sigla, swatches) is square like a set rule box.
+        chip = RoundedCornerShape(0.dp),
         sheet = RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp),
         dialog = RoundedCornerShape(4.dp),
-        thumbnail = RoundedCornerShape(2.dp),
-        badge = RoundedCornerShape(2.dp),
+        thumbnail = RoundedCornerShape(0.dp),
+        badge = RoundedCornerShape(0.dp),
         listGroup = RoundedCornerShape(3.dp)
     )
 
@@ -418,7 +423,9 @@ object DesignTokens {
     // neutral is struck from the seed's tonal palette, so these are the
     // liturgical accent at neutral chroma rather than the baseline purple —
     // baseline containers under a green primary produced lilac discs holding
-    // green glyphs, a pairing no M3 app has.
+    // green glyphs, a pairing no M3 app has. The same goes for the ink: the
+    // baseline onSurface #1D1B20 / #E6E0E9 is violet-neutral, so text is
+    // struck from the green-neutral palette too (tone 10 / 90).
     private val MaterialPaletteLight = AppPalette(
         canvas = Color(0xFFF4FBF6),
         groupedSurface = Color(0xFFFCFFFD),
@@ -427,7 +434,7 @@ object DesignTokens {
         accent = Color(0xFF2C6B3E),
         accentMuted = Color(0xFFC0DEC9),
         gold = Color(0xFF8A6B12),
-        textPrimary = Color(0xFF1D1B20),
+        textPrimary = Color(0xFF171D19),
         textSecondary = Color(0xFF414941),
         textTertiary = Color(0xFF717A74),
         scrim = Color(0x52000000),
@@ -442,7 +449,7 @@ object DesignTokens {
         accent = Color(0xFF81C784),
         accentMuted = Color(0xFF2A4432),
         gold = Color(0xFFE5C158),
-        textPrimary = Color(0xFFE6E0E9),
+        textPrimary = Color(0xFFDEE4DD),
         textSecondary = Color(0xFFC2CCC5),
         textTertiary = Color(0xFF8C968F),
         scrim = Color(0x7A000000),

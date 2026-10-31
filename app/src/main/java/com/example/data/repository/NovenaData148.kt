@@ -48,11 +48,7 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
-O Seraphic Saint Clare, first disciple of the Poor Man of Assisi, who hast abandoned all riches and honours for a life of sacrifice and of highest poverty, obtain from God for us the grace we ask
-
-mention your intentions here
-
-, that of always submitting to the Divine Will and of living confidently in the providence of our Heavenly Father. Amen.
+O Seraphic Saint Clare, first disciple of the Poor Man of Assisi, who hast abandoned all riches and honours for a life of sacrifice and of highest poverty, obtain from God for us the grace we ask mention your intentions here, that of always submitting to the Divine Will and of living confidently in the providence of our Heavenly Father. Amen.
 
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
@@ -62,11 +58,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -76,11 +68,7 @@ Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta
 
 (mencione o pedido aqui…)
 
-Ó Seráfica Santa Clara, primeira discípula do Pobre de Assis, que abandonastes todas as riquezas e honras por uma vida de sacrifício e de altíssima pobreza, obtende de Deus para nós a graça que pedimos
-
-mencione suas intenções aqui
-
-, a de sempre nos submetermos à Divina Vontade e de vivermos confiadamente na providência de nosso Pai Celestial. Amém.
+Ó Seráfica Santa Clara, primeira discípula do Pobre de Assis, que abandonastes todas as riquezas e honras por uma vida de sacrifício e de altíssima pobreza, obtende de Deus para nós a graça que pedimos mencione suas intenções aqui, a de sempre nos submetermos à Divina Vontade e de vivermos confiadamente na providência de nosso Pai Celestial. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -119,11 +107,7 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
-O Seraphic Saint Clare, first disciple of the Poor Man of Assisi, who hast abandoned all riches and honours for a life of sacrifice and of highest poverty, obtain from God for us the grace we ask
-
-mention your intentions here
-
-, that of always submitting to the Divine Will and of living confidently in the providence of our Heavenly Father. Amen.
+O Seraphic Saint Clare, first disciple of the Poor Man of Assisi, who hast abandoned all riches and honours for a life of sacrifice and of highest poverty, obtain from God for us the grace we ask mention your intentions here, that of always submitting to the Divine Will and of living confidently in the providence of our Heavenly Father. Amen.
 
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
@@ -133,11 +117,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -147,11 +127,7 @@ Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta
 
 (mencione o pedido aqui…)
 
-Ó Seráfica Santa Clara, primeira discípula do Pobre de Assis, que abandonastes todas as riquezas e honras por uma vida de sacrifício e de altíssima pobreza, obtende de Deus para nós a graça que pedimos
-
-mencione suas intenções aqui
-
-, a de sempre nos submetermos à Divina Vontade e de vivermos confiadamente na providência de nosso Pai Celestial. Amém.
+Ó Seráfica Santa Clara, primeira discípula do Pobre de Assis, que abandonastes todas as riquezas e honras por uma vida de sacrifício e de altíssima pobreza, obtende de Deus para nós a graça que pedimos mencione suas intenções aqui, a de sempre nos submetermos à Divina Vontade e de vivermos confiadamente na providência de nosso Pai Celestial. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -196,11 +172,7 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
-O Seraphic Saint Clare who, notwithstanding living separated from the world hast not forgotten the poor and the afflicted, but hast become a mother to them, sacrificing for them your riches and working for them innumerable miracles; obtain from God for us the grace we implore
-
-mention your intentions here
-
-, Christian charity towards our brethren in all their spiritual and temporal needs. Amen.
+O Seraphic Saint Clare who, notwithstanding living separated from the world hast not forgotten the poor and the afflicted, but hast become a mother to them, sacrificing for them your riches and working for them innumerable miracles; obtain from God for us the grace we implore mention your intentions here, Christian charity towards our brethren in all their spiritual and temporal needs. Amen.
 
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
@@ -220,11 +192,7 @@ Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta
 
 (mencione o pedido aqui…)
 
-Ó Seráfica Santa Clara que, apesar de viver separada do mundo, não esquecestes os pobres e os aflitos, mas vos tornastes mãe para eles, sacrificando por eles vossas riquezas e operando para eles inúmeros milagres; obtende de Deus para nós a graça que imploramos
-
-mencione suas intenções aqui
-
-, caridade cristã para com nossos irmãos em todas as suas necessidades espirituais e temporais. Amém.
+Ó Seráfica Santa Clara que, apesar de viver separada do mundo, não esquecestes os pobres e os aflitos, mas vos tornastes mãe para eles, sacrificando por eles vossas riquezas e operando para eles inúmeros milagres; obtende de Deus para nós a graça que imploramos mencione suas intenções aqui, caridade cristã para com nossos irmãos em todas as suas necessidades espirituais e temporais. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -263,11 +231,7 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
-O Seraphic Saint Clare who, notwithstanding living separated from the world hast not forgotten the poor and the afflicted, but hast become a mother to them, sacrificing for them your riches and working for them innumerable miracles; obtain from God for us the grace we implore
-
-mention your intentions here
-
-, Christian charity towards our brethren in all their spiritual and temporal needs. Amen.
+O Seraphic Saint Clare who, notwithstanding living separated from the world hast not forgotten the poor and the afflicted, but hast become a mother to them, sacrificing for them your riches and working for them innumerable miracles; obtain from God for us the grace we implore mention your intentions here, Christian charity towards our brethren in all their spiritual and temporal needs. Amen.
 
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
@@ -287,11 +251,7 @@ Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta
 
 (mencione o pedido aqui…)
 
-Ó Seráfica Santa Clara que, apesar de viver separada do mundo, não esquecestes os pobres e os aflitos, mas vos tornastes mãe para eles, sacrificando por eles vossas riquezas e operando para eles inúmeros milagres; obtende de Deus para nós a graça que imploramos
-
-mencione suas intenções aqui
-
-, caridade cristã para com nossos irmãos em todas as suas necessidades espirituais e temporais. Amém.
+Ó Seráfica Santa Clara que, apesar de viver separada do mundo, não esquecestes os pobres e os aflitos, mas vos tornastes mãe para eles, sacrificando por eles vossas riquezas e operando para eles inúmeros milagres; obtende de Deus para nós a graça que imploramos mencione suas intenções aqui, caridade cristã para com nossos irmãos em todas as suas necessidades espirituais e temporais. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -336,11 +296,7 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
-O Seraphic Saint Clare, light of your country, who hast delivered Italy from barbarous invaders; obtain from God for us the grace we implore
-
-mention your intentions here
-
-, that of overcoming all attacks of the world against faith and morals thus preserving in our families true Christian peace with a holy fear of God and a devotion to the Blessed Sacrament. Amen.
+O Seraphic Saint Clare, light of your country, who hast delivered Italy from barbarous invaders; obtain from God for us the grace we implore mention your intentions here, that of overcoming all attacks of the world against faith and morals thus preserving in our families true Christian peace with a holy fear of God and a devotion to the Blessed Sacrament. Amen.
 
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
@@ -350,11 +306,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -364,11 +316,7 @@ Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta
 
 (mencione o pedido aqui…)
 
-Ó Seráfica Santa Clara, luz de vosso país, que livrastes a Itália de invasores bárbaros; obtende de Deus para nós a graça que imploramos
-
-mencione suas intenções aqui
-
-, a de vencer todos os ataques do mundo contra a fé e a moral, preservando assim em nossas famílias a verdadeira paz cristã com um santo temor de Deus e uma devoção ao Santíssimo Sacramento. Amém.
+Ó Seráfica Santa Clara, luz de vosso país, que livrastes a Itália de invasores bárbaros; obtende de Deus para nós a graça que imploramos mencione suas intenções aqui, a de vencer todos os ataques do mundo contra a fé e a moral, preservando assim em nossas famílias a verdadeira paz cristã com um santo temor de Deus e uma devoção ao Santíssimo Sacramento. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -407,11 +355,7 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
-O Seraphic Saint Clare, light of your country, who hast delivered Italy from barbarous invaders; obtain from God for us the grace we implore
-
-mention your intentions here
-
-, that of overcoming all attacks of the world against faith and morals thus preserving in our families true Christian peace with a holy fear of God and a devotion to the Blessed Sacrament. Amen.
+O Seraphic Saint Clare, light of your country, who hast delivered Italy from barbarous invaders; obtain from God for us the grace we implore mention your intentions here, that of overcoming all attacks of the world against faith and morals thus preserving in our families true Christian peace with a holy fear of God and a devotion to the Blessed Sacrament. Amen.
 
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
@@ -421,11 +365,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -435,11 +375,7 @@ Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta
 
 (mencione o pedido aqui…)
 
-Ó Seráfica Santa Clara, luz de vosso país, que livrastes a Itália de invasores bárbaros; obtende de Deus para nós a graça que imploramos
-
-mencione suas intenções aqui
-
-, a de vencer todos os ataques do mundo contra a fé e a moral, preservando assim em nossas famílias a verdadeira paz cristã com um santo temor de Deus e uma devoção ao Santíssimo Sacramento. Amém.
+Ó Seráfica Santa Clara, luz de vosso país, que livrastes a Itália de invasores bárbaros; obtende de Deus para nós a graça que imploramos mencione suas intenções aqui, a de vencer todos os ataques do mundo contra a fé e a moral, preservando assim em nossas famílias a verdadeira paz cristã com um santo temor de Deus e uma devoção ao Santíssimo Sacramento. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -588,6 +524,8 @@ Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre 
 
 Amén.
 
+Oh seráfica santa Clara, cuyo corazón virginal fue tan grande que amó al mundo entero, toma nuestras peticiones en tus manos puras y preséntalas a Dios. Ruega por nosotros para que un día entremos gozosos ante el trono de Dios. Que la luz de tu perfecta pureza disipe las sombras de pecado y corrupción que oscurecen el mundo. Intercede con tu inocencia por nuestra juventud. Protege la paz de nuestros hogares y la unidad de nuestra familia. Suplica con tu amor casto por todos los que están en peligro. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
 
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
@@ -606,6 +544,8 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
+O Seraphic Saint Clare, whose virginal heart was great enough to love the whole world, take our petitions into your pure hands and present them to God. Pray for us that we may one day enter joyously before the throne of God. Let the light of your perfect purity consume the shadows of sin and corruption that darkens the world. Intercede by your innocence for our youth. Safeguard the peace of our homes and the unity of our family. Plead with your chaste love for all in peril. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
@@ -614,11 +554,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -627,6 +563,8 @@ Amém.
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
 
 (mencione o pedido aqui…)
+
+Ó Seráfica Santa Clara, cujo coração virginal era grande o suficiente para amar o mundo inteiro, tomai nossas petições em vossas mãos puras e apresentai-as a Deus. Rogai por nós para que um dia possamos entrar alegremente diante do trono de Deus. Que a luz de vossa perfeita pureza consuma as sombras do pecado e da corrupção que obscurecem o mundo. Intercedei por vossa inocência por nossa juventude. Salvaguardai a paz de nossos lares e a unidade de nossa família. Suplicai com vosso amor casto por todos em perigo. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -645,6 +583,8 @@ Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre 
 
 Amén.
 
+Oh seráfica santa Clara, cuyo corazón virginal fue tan grande que amó al mundo entero, toma nuestras peticiones en tus manos puras y preséntalas a Dios. Ruega por nosotros para que un día entremos gozosos ante el trono de Dios. Que la luz de tu perfecta pureza disipe las sombras de pecado y corrupción que oscurecen el mundo. Intercede con tu inocencia por nuestra juventud. Protege la paz de nuestros hogares y la unidad de nuestra familia. Suplica con tu amor casto por todos los que están en peligro. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
 
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
@@ -663,6 +603,8 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
+O Seraphic Saint Clare, whose virginal heart was great enough to love the whole world, take our petitions into your pure hands and present them to God. Pray for us that we may one day enter joyously before the throne of God. Let the light of your perfect purity consume the shadows of sin and corruption that darkens the world. Intercede by your innocence for our youth. Safeguard the peace of our homes and the unity of our family. Plead with your chaste love for all in peril. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
@@ -671,11 +613,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -684,6 +622,8 @@ Amém.
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
 
 (mencione o pedido aqui…)
+
+Ó Seráfica Santa Clara, cujo coração virginal era grande o suficiente para amar o mundo inteiro, tomai nossas petições em vossas mãos puras e apresentai-as a Deus. Rogai por nós para que um dia possamos entrar alegremente diante do trono de Deus. Que a luz de vossa perfeita pureza consuma as sombras do pecado e da corrupção que obscurecem o mundo. Intercedei por vossa inocência por nossa juventude. Salvaguardai a paz de nossos lares e a unidade de nossa família. Suplicai com vosso amor casto por todos em perigo. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -832,6 +772,8 @@ Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre 
 
 Amén.
 
+Fiel santa Clara, hija leal de la Iglesia, amiga y confidente de papas, intercede por la santa Iglesia y mira con bondad desde el Cielo a nuestro Santo Padre. Ilumínanos para quitar de nuestras almas todo lo que impide el progreso de la Iglesia en la tierra. Concédenos compartir tu gran amor a la Iglesia de Dios y extender Su reino en la tierra con una vida santa. Tú, que obraste milagros en presencia del papa en la tierra, obtennos las gracias que necesitamos, ahora que estás en presencia del Dios altísimo en el Cielo. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
 
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
@@ -850,6 +792,8 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
+Faithful Saint Clare, loyal daughter of the Church, friend and confidante of popes, intercede for the holy Church and look graciously from Heaven on our holy Father. Enlighten us to remove from our souls all that hinders the progress of the Church on earth. Grant that we may share your great love for the church of God and spread His kingdom on earth by a holy life. You, who worked miracles in the presence of the pope on earth, obtain for us the graces we need, now that you stand in the presence of the most high God in Heaven. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
@@ -858,11 +802,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -871,6 +811,8 @@ Amém.
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
 
 (mencione o pedido aqui…)
+
+Fiel Santa Clara, filha leal da Igreja, amiga e confidente de papas, intercedei pela santa Igreja e olhai graciosamente do Céu sobre nosso santo Padre o Papa. Iluminai-nos para remover de nossas almas tudo o que impede o progresso da Igreja na terra. Concedei que possamos compartilhar vosso grande amor pela igreja de Deus e difundir Seu reino na terra através de uma vida santa. Vós, que operastes milagres na presença do papa na terra, obtende para nós as graças de que necessitamos, agora que estais na presença do altíssimo Deus no Céu. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -889,6 +831,8 @@ Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre 
 
 Amén.
 
+Fiel santa Clara, hija leal de la Iglesia, amiga y confidente de papas, intercede por la santa Iglesia y mira con bondad desde el Cielo a nuestro Santo Padre. Ilumínanos para quitar de nuestras almas todo lo que impide el progreso de la Iglesia en la tierra. Concédenos compartir tu gran amor a la Iglesia de Dios y extender Su reino en la tierra con una vida santa. Tú, que obraste milagros en presencia del papa en la tierra, obtennos las gracias que necesitamos, ahora que estás en presencia del Dios altísimo en el Cielo. Amén.
+
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
 
 Te rogamos, Señor, que concedas a Tus siervos que celebramos la fiesta de la bienaventurada Clara, Tu Virgen, participar por su intercesión de los gozos del cielo y ser coherederos con Tu Hijo unigénito, que, siendo Dios, vive y reina por los siglos de los siglos.
@@ -907,6 +851,8 @@ O most Holy Trinity, Father, Son and Holy Spirit, we praise Thy Holy Name and th
 
 Amen.
 
+Faithful Saint Clare, loyal daughter of the Church, friend and confidante of popes, intercede for the holy Church and look graciously from Heaven on our holy Father. Enlighten us to remove from our souls all that hinders the progress of the Church on earth. Grant that we may share your great love for the church of God and spread His kingdom on earth by a holy life. You, who worked miracles in the presence of the pope on earth, obtain for us the graces we need, now that you stand in the presence of the most high God in Heaven. Amen.
+
 Pray for us, Saint Clare. That we may be made worthy of the promises of Christ. Let us Pray.
 
 We pray Thee, Lord, Grant us Thy servants who celebrate the festival of blessed Clare Thy Virgin, by her intercession, to be partakers of the joys of heaven and coheirs with Thine only-begotten Son, Who being God, lives and reigns forever and ever.
@@ -915,11 +861,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -928,6 +870,8 @@ Amém.
 Através de sua poderosa intercessão, concedei-nos os favores que pedimos nesta novena, acima de tudo a graça de viver e morrer como ela viveu em Vosso Santíssimo Amor. Amém.
 
 (mencione o pedido aqui…)
+
+Fiel Santa Clara, filha leal da Igreja, amiga e confidente de papas, intercedei pela santa Igreja e olhai graciosamente do Céu sobre nosso santo Padre o Papa. Iluminai-nos para remover de nossas almas tudo o que impede o progresso da Igreja na terra. Concedei que possamos compartilhar vosso grande amor pela igreja de Deus e difundir Seu reino na terra através de uma vida santa. Vós, que operastes milagres na presença do papa na terra, obtende para nós as graças de que necessitamos, agora que estais na presença do altíssimo Deus no Céu. Amém.
 
 V. Rogai por nós, Santa Clara.
 
@@ -951,6 +895,8 @@ Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre 
 (menciona tu petición aquí…)
 
 Amén.
+
+Valiente santa Clara, que te enfrentaste sola y sin miedo a los sarracenos bárbaros, confiando en el Santísimo Sacramento como tu única protección, enciende en nosotros un tierno amor a Jesucristo; ayúdanos a vivir vidas eucarísticas. Tú, que salvaste tu ciudad de Asís del saqueo y la ruina, protege nuestra ciudad y nuestra arquidiócesis, intercede por nuestra amada patria y por el mundo que sufre. Una voz desde la Sagrada Hostia premió tu confianza con una promesa: “Yo siempre cuidaré de ti.” Gloriosa santa Clara, desde tu alto lugar en el Cielo, cuida ahora de nosotros en nuestras necesidades terrenas y guíanos con tu luz hasta el Cielo. Amén.
 
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
 
@@ -1008,6 +954,8 @@ Oh Santísima Trinidad, Padre, Hijo y Espíritu Santo, alabamos Tu Santo Nombre 
 (menciona tu petición aquí…)
 
 Amén.
+
+Valiente santa Clara, que te enfrentaste sola y sin miedo a los sarracenos bárbaros, confiando en el Santísimo Sacramento como tu única protección, enciende en nosotros un tierno amor a Jesucristo; ayúdanos a vivir vidas eucarísticas. Tú, que salvaste tu ciudad de Asís del saqueo y la ruina, protege nuestra ciudad y nuestra arquidiócesis, intercede por nuestra amada patria y por el mundo que sufre. Una voz desde la Sagrada Hostia premió tu confianza con una promesa: “Yo siempre cuidaré de ti.” Gloriosa santa Clara, desde tu alto lugar en el Cielo, cuida ahora de nosotros en nuestras necesidades terrenas y guíanos con tu luz hasta el Cielo. Amén.
 
 Ruega por nosotros, santa Clara. Para que seamos dignos de alcanzar las promesas de Cristo. Oremos.
 
@@ -1102,11 +1050,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1165,11 +1109,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

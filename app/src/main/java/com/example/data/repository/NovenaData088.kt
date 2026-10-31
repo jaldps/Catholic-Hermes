@@ -28,49 +28,33 @@ A cambio, prometo darte a conocer y hacer que seas invocado. Por Cristo nuestro 
 
 Amén.
 
+Querido San José de Cupertino, fuiste un niño no deseado y considerado inútil incluso por tu propia madre. Intercede por todos los niños no deseados para que lleguen a saber que nacieron del amor de Dios por ellos. Rezamos especialmente por
+
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -86,23 +70,19 @@ In return I promise to make you known and cause you to be invoked. Through Chris
 
 Amen.
 
+Dear St Joseph of Cupertino, you were an unwanted child and were thought worthless even by your own mother. Intercede for all unwanted children that they may come to know they were born out of God’s love for them. We pray especially for
+
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -112,13 +92,13 @@ Em troca, prometo tornar-vos conhecido e fazer que sejais invocado. Por Cristo, 
 
 Amém.
 
+Querido São José de Cupertino, fostes uma criança indesejada e considerada inútil até pela vossa própria mãe. Intercedei por todas as crianças indesejadas, para que cheguem a saber que nasceram do amor de Deus por elas. Rezamos especialmente por
+
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -135,49 +115,33 @@ A cambio, prometo darte a conocer y hacer que seas invocado. Por Cristo nuestro 
 
 Amén.
 
+Querido San José de Cupertino, fuiste un niño no deseado y considerado inútil incluso por tu propia madre. Intercede por todos los niños no deseados para que lleguen a saber que nacieron del amor de Dios por ellos. Rezamos especialmente por
+
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -193,23 +157,19 @@ In return I promise to make you known and cause you to be invoked. Through Chris
 
 Amen.
 
+Dear St Joseph of Cupertino, you were an unwanted child and were thought worthless even by your own mother. Intercede for all unwanted children that they may come to know they were born out of God’s love for them. We pray especially for
+
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -219,13 +179,13 @@ Em troca, prometo tornar-vos conhecido e fazer que sejais invocado. Por Cristo, 
 
 Amém.
 
+Querido São José de Cupertino, fostes uma criança indesejada e considerada inútil até pela vossa própria mãe. Intercedei por todas as crianças indesejadas, para que cheguem a saber que nasceram do amor de Deus por elas. Rezamos especialmente por
+
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -253,46 +213,28 @@ Querido San José, fuiste un niño enojado y frustrado. Rezamos por todos los qu
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -313,10 +255,8 @@ Dear St Joseph, you were an angry, frustrated child. We pray for all who struggl
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
@@ -337,10 +277,8 @@ Querido São José, fostes uma criança irritada e frustrada. Rezamos por todos 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -362,46 +300,28 @@ Querido San José, fuiste un niño enojado y frustrado. Rezamos por todos los qu
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -422,10 +342,8 @@ Dear St Joseph, you were an angry, frustrated child. We pray for all who struggl
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
@@ -446,10 +364,8 @@ Querido São José, fostes uma criança irritada e frustrada. Rezamos por todos 
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -477,46 +393,28 @@ Querido San José, no experimentaste amor en tu familia y eras considerado de po
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -537,20 +435,14 @@ Dear St Joseph, you experienced no love in your family and were considered of li
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -565,10 +457,8 @@ Querido São José, não conhecestes o amor na vossa família e éreis considera
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -590,46 +480,28 @@ Querido San José, no experimentaste amor en tu familia y eras considerado de po
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -650,20 +522,14 @@ Dear St Joseph, you experienced no love in your family and were considered of li
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -678,10 +544,8 @@ Querido São José, não conhecestes o amor na vossa família e éreis considera
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -709,46 +573,28 @@ Querido San José, sufriste porque te resultaba difícil aprender. Rezamos por t
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -769,10 +615,8 @@ Dear St Joseph, you suffered because you found it difficult to learn. We pray fo
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
@@ -793,10 +637,8 @@ Querido São José, sofrestes porque tínheis dificuldade para aprender. Rezamos
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -818,46 +660,28 @@ Querido San José, sufriste porque te resultaba difícil aprender. Rezamos por t
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -878,10 +702,8 @@ Dear St Joseph, you suffered because you found it difficult to learn. We pray fo
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
@@ -902,10 +724,8 @@ Querido São José, sofrestes porque tínheis dificuldade para aprender. Rezamos
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -933,46 +753,28 @@ Querido San José, hiciste lo mejor que pudiste con la inteligencia que tenías 
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -993,20 +795,14 @@ Dear St Joseph, you did the best with the intelligence you did have and put the 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1021,10 +817,8 @@ Querido São José, fizestes o melhor que pudestes com a inteligência que tính
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1046,46 +840,28 @@ Querido San José, hiciste lo mejor que pudiste con la inteligencia que tenías 
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -1106,20 +882,14 @@ Dear St Joseph, you did the best with the intelligence you did have and put the 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1134,10 +904,8 @@ Querido São José, fizestes o melhor que pudestes com a inteligência que tính
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1165,46 +933,28 @@ Querido San José, el solo pensamiento o mención de algo santo te hacía levita
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -1225,10 +975,8 @@ Dear St Joseph, even the thought or mention of anything holy made you levitate i
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
@@ -1249,10 +997,8 @@ Querido São José, só o pensamento ou a menção de algo santo vos fazia levit
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1274,46 +1020,28 @@ Querido San José, el solo pensamiento o mención de algo santo te hacía levita
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -1334,10 +1062,8 @@ Dear St Joseph, even the thought or mention of anything holy made you levitate i
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
@@ -1358,10 +1084,8 @@ Querido São José, só o pensamento ou a menção de algo santo vos fazia levit
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1389,46 +1113,28 @@ Querido San José, solo cuando tu superior te lo ordenaba, eras capaz de volver 
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -1449,20 +1155,14 @@ Dear St Joseph, only when your superior ordered you to, were you able to come ba
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1477,10 +1177,8 @@ Querido São José, só quando o vosso superior vos ordenava conseguíeis voltar
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1502,46 +1200,28 @@ Querido San José, solo cuando tu superior te lo ordenaba, eras capaz de volver 
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -1562,20 +1242,14 @@ Dear St Joseph, only when your superior ordered you to, were you able to come ba
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1590,10 +1264,8 @@ Querido São José, só quando o vosso superior vos ordenava conseguíeis voltar
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1621,46 +1293,28 @@ Querido San José, fuiste injustamente sospechoso, confinado a tu habitación y 
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -1681,10 +1335,8 @@ Dear St Joseph, you were unjustly suspected, confined to your room and neglected
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
@@ -1705,10 +1357,8 @@ Querido São José, fostes injustamente suspeito, confinado à vossa cela e negl
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1730,46 +1380,28 @@ Querido San José, fuiste injustamente sospechoso, confinado a tu habitación y 
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -1790,10 +1422,8 @@ Dear St Joseph, you were unjustly suspected, confined to your room and neglected
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
@@ -1814,10 +1444,8 @@ Querido São José, fostes injustamente suspeito, confinado à vossa cela e negl
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1845,46 +1473,28 @@ Querido San José, porque podías levitar, eres el patrón de los viajeros, espe
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -1905,20 +1515,14 @@ Dear St Joseph, because you could levitate you are the patron of travelers, espe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1933,10 +1537,8 @@ Querido São José, porque podíeis levitar, sois o padroeiro dos viajantes, esp
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 
@@ -1958,46 +1560,28 @@ Querido San José, porque podías levitar, eres el patrón de los viajeros, espe
 (menciona tu petición aquí…)
 
 Padre nuestro, que estás en el cielo,
-
-santificado sea tu nombre;
-
-venga a nosotros tu reino;
-
-hágase tu voluntad en la tierra como en el cielo.
-
-Danos hoy nuestro pan de cada día;
-
-perdona nuestras ofensas,
-
-como también nosotros perdonamos a los que nos ofenden;
-
-no nos dejes caer en tentación,
-
-y líbranos del mal.
-
-Amén.
+ santificado sea tu nombre;
+ venga a nosotros tu reino;
+ hágase tu voluntad en la tierra como en el cielo.
+ Danos hoy nuestro pan de cada día;
+ perdona nuestras ofensas,
+ como también nosotros perdonamos a los que nos ofenden;
+ no nos dejes caer en tentación,
+ y líbranos del mal.
+ Amén.
 
 Dios te salve, María, llena eres de gracia,
-
-el Señor es contigo.
-
-Bendita tú eres entre todas las mujeres,
-
-y bendito es el fruto de tu vientre, Jesús.
-
-Santa María, Madre de Dios,
-
-ruega por nosotros, pecadores,
-
-ahora y en la hora de nuestra muerte.
-
-Amén.
+ el Señor es contigo.
+ Bendita tú eres entre todas las mujeres,
+ y bendito es el fruto de tu vientre, Jesús.
+ Santa María, Madre de Dios,
+ ruega por nosotros, pecadores,
+ ahora y en la hora de nuestra muerte.
+ Amén.
 
 Gloria al Padre, al Hijo y al Espíritu Santo.
-
-Como era en el principio, ahora y siempre, por los siglos de los siglos.
-
-Amén.
+ Como era en el principio, ahora y siempre, por los siglos de los siglos.
+ Amén.
 
 ¡San José de Cupertino, ruega por nosotros!
 
@@ -2018,20 +1602,14 @@ Dear St Joseph, because you could levitate you are the patron of travelers, espe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 St. Joseph of Cupertino, pray for us!
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2046,10 +1624,8 @@ Querido São José, porque podíeis levitar, sois o padroeiro dos viajantes, esp
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 São José de Cupertino, rogai por nós!
 

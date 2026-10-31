@@ -25,22 +25,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -65,10 +57,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -77,10 +67,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -89,52 +77,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -151,16 +120,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -172,22 +139,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -212,10 +171,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -224,10 +181,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -236,52 +191,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -298,16 +234,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -325,22 +259,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -365,10 +291,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -377,10 +301,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -389,42 +311,27 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
@@ -447,16 +354,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -468,22 +373,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -508,10 +405,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -520,10 +415,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -532,42 +425,27 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
@@ -590,16 +468,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -617,22 +493,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -657,10 +525,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -669,10 +535,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -681,52 +545,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -743,16 +588,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -764,22 +607,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -804,10 +639,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -816,10 +649,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -828,52 +659,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -890,16 +702,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -917,22 +727,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -957,10 +759,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -969,10 +769,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -981,42 +779,27 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
@@ -1039,16 +822,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1060,22 +841,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -1100,10 +873,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1112,10 +883,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1124,42 +893,27 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
@@ -1182,16 +936,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1209,22 +961,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -1249,10 +993,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1261,10 +1003,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1273,52 +1013,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1335,16 +1056,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1356,22 +1075,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -1396,10 +1107,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1408,10 +1117,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1420,52 +1127,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1482,16 +1170,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1509,22 +1195,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -1549,10 +1227,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1561,10 +1237,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1573,42 +1247,27 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
@@ -1631,16 +1290,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1652,22 +1309,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -1692,10 +1341,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1704,10 +1351,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1716,42 +1361,27 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
@@ -1774,16 +1404,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1801,22 +1429,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -1841,10 +1461,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1853,10 +1471,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -1865,52 +1481,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1927,16 +1524,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1948,22 +1543,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -1988,10 +1575,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2000,10 +1585,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2012,52 +1595,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2074,16 +1638,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2101,22 +1663,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -2141,10 +1695,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2153,10 +1705,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2165,42 +1715,27 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
@@ -2223,16 +1758,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2244,22 +1777,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -2284,10 +1809,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2296,10 +1819,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2308,42 +1829,27 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
@@ -2366,16 +1872,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2393,22 +1897,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -2433,10 +1929,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2445,10 +1939,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2457,52 +1949,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2519,16 +1992,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -2540,22 +2011,14 @@ Amén.
 Acto de contrición
 
 ¡Señor mío, Jesucristo!
-
-Dios y Hombre verdadero,
-
-Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita,
-
-y porque os amo sobre todas las cosas,
-
-me pesa de todo corazón de haberos ofendido;
-
-también me pesa porque podéis castigarme con las penas del infierno.
-
-Ayudado de vuestra divina gracia
-
-propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta.
-
-Amén.
+ Dios y Hombre verdadero,
+ Creador, Padre y Redentor mío; por ser Vos quien sois, Bondad infinita, 
+ y porque os amo sobre todas las cosas, 
+ me pesa de todo corazón de haberos ofendido;
+ también me pesa porque podéis castigarme con las penas del infierno.
+ Ayudado de vuestra divina gracia
+ propongo firmemente nunca más pecar, confesarme y cumplir la penitencia que me fuere impuesta. 
+ Amén.
 
 Oración preparatoria
 
@@ -2580,10 +2043,8 @@ O my Jesus, you said, “verily I say to you, ask and you shall receive, seek an
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2592,10 +2053,8 @@ O my Jesus, you said, “verily I say to you, whatsoever you shall ask the Fathe
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
@@ -2604,52 +2063,33 @@ O my Jesus, you said, “verily I say to you, heaven and earth shall pass away, 
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Sacred Heart of Jesus, I place all my trust in you.
 
 O Sacred Heart of Jesus, for Whom it is impossible not to have compassion on the afflicted, have pity on us miserable sinners and grant us the grace which we ask of you, through the Sorrowful and Immaculate Heart of Mary, your tender Mother and ours.
 
 Hail, Holy Queen,
-
-Mother of Mercy,
-
-Our life, our sweetness, and our hope,
-
-to thee do we cry, poor banished children of Eve,
-
-to thee do we send up our sighs,
-
-mourning and weeping in this valley of tears.
-
-Turn then, most gracious advocate,
-
-thine eyes of mercy toward us,
-
-and after this, our exile,
-
-show unto us the blessed fruit of thy womb, Jesus.
-
-O clement, o loving, o sweet Virgin Mary.
-
-Pray for us, o holy Mother of God,
-
-that we may be made worthy of the promises of Christ,
-
-Amen.
+ Mother of Mercy,
+ Our life, our sweetness, and our hope,
+ to thee do we cry, poor banished children of Eve,
+ to thee do we send up our sighs,
+ mourning and weeping in this valley of tears.
+ Turn then, most gracious advocate,
+ thine eyes of mercy toward us,
+ and after this, our exile,
+ show unto us the blessed fruit of thy womb, Jesus.
+ O clement, o loving, o sweet Virgin Mary.
+ Pray for us, o holy Mother of God,
+ that we may be made worthy of the promises of Christ,
+ Amen.
 
 St. Joseph, foster father of Jesus, pray for us.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2666,16 +2106,14 @@ Considera, pois, alma minha, que aumentos de glória teria a Santíssima Trindad
 Pai-nosso, Ave-Maria e Glória.
 
 V. Jesus, manso e humilde de coração,
-
-R. Fazei o nosso coração semelhante ao vosso.
+ R. Fazei o nosso coração semelhante ao vosso.
 
 Dulcíssimo Coração de Jesus, vosso precioso Sangue é a vida da minha alma; só em Vós quero viver, só a Vós quero amar e servir. Pela sede ardente que vos abrasa de me salvar, iluminai o meu espírito com a luz de vossa divina graça.
 
 Santificai o meu coração, fortalecei a minha vontade, perdoai os meus pecados e curai todas as minhas misérias. Aumentai minha fé, fortificai a minha esperança e acendei em mim cada vez mais o fogo do vosso santo amor. Concedei-me, enfim, todas as graças que espero alcançar com esta novena. Ó dulcíssimo Jesus, vivei em mim agora e por todo o sempre. Amém.
 
 V. Doce Coração de Jesus,
-
-R. fazei que eu vos ame cada vez mais!
+ R. fazei que eu vos ame cada vez mais!
 
 Em nome do Pai, do Filho e do Espírito Santo.
 

@@ -35,14 +35,11 @@ Fiel Santa Gema, tú amaste a Dios por encima de todo. Ayúdanos, por tus oracio
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -71,14 +68,11 @@ Faithful Saint Gemma, you loved God above all others. Please help us through you
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -90,11 +84,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -111,14 +101,11 @@ Fiel Santa Gema, vós amastes a Deus acima de todos. Ajudai-nos, por vossas ora�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -148,14 +135,11 @@ Fiel Santa Gema, tú amaste a Dios por encima de todo. Ayúdanos, por tus oracio
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -184,14 +168,11 @@ Faithful Saint Gemma, you loved God above all others. Please help us through you
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -203,11 +184,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -224,14 +201,11 @@ Fiel Santa Gema, vós amastes a Deus acima de todos. Ajudai-nos, por vossas ora�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -267,14 +241,11 @@ Oh digna Esposa del Cordero de Dios y virgen fiel, Santa Gema, tú conservaste l
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -303,14 +274,11 @@ O worthy Spouse of the Lamb of God and faithful virgin St Gemma, you preserved t
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -339,14 +307,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -376,14 +341,11 @@ Oh digna Esposa del Cordero de Dios y virgen fiel, Santa Gema, tú conservaste l
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -412,14 +374,11 @@ O worthy Spouse of the Lamb of God and faithful virgin St Gemma, you preserved t
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -448,14 +407,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -491,14 +447,11 @@ Oh amantísima virgen Santa Gema, con un ferviente amor a Jesús sufriste inmens
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -527,14 +480,11 @@ O most loving virgin St. Gemma, with a fervent love for Jesus you suffered immen
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -546,11 +496,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -567,14 +513,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -604,14 +547,11 @@ Oh amantísima virgen Santa Gema, con un ferviente amor a Jesús sufriste inmens
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -640,14 +580,11 @@ O most loving virgin St. Gemma, with a fervent love for Jesus you suffered immen
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -659,11 +596,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -680,14 +613,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -723,14 +653,11 @@ Bienaventurada Santa Gema, tú que por voluntad de Dios sufriste la pérdida de 
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -759,14 +686,11 @@ Blessed St Gemma, you who by the will of God suffered the loss of both of your p
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -795,14 +719,11 @@ Bem-aventurada Santa Gema, vós que, por vontade de Deus, sofrestes a perda de v
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -832,14 +753,11 @@ Bienaventurada Santa Gema, tú que por voluntad de Dios sufriste la pérdida de 
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -868,14 +786,11 @@ Blessed St Gemma, you who by the will of God suffered the loss of both of your p
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -904,14 +819,11 @@ Bem-aventurada Santa Gema, vós que, por vontade de Deus, sofrestes a perda de v
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -947,14 +859,11 @@ Oh gloriosa Santa Gema, durante años deseaste ardientemente entrar en la vida r
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -983,14 +892,11 @@ Oh glorious St Gemma, for years you greatly desired to enter the consecrated rel
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1002,11 +908,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1023,14 +925,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1060,14 +959,11 @@ Oh gloriosa Santa Gema, durante años deseaste ardientemente entrar en la vida r
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -1096,14 +992,11 @@ Oh glorious St Gemma, for years you greatly desired to enter the consecrated rel
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1115,11 +1008,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1136,14 +1025,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1179,14 +1065,11 @@ Amada Gema de Cristo, Santa Gema, cuyo corazón ardía todo en el amor de Dios, 
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -1215,14 +1098,11 @@ Beloved Gem of Christ St Gemma, whose heart was all on fire for the love of God,
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1251,14 +1131,11 @@ Amada Joia de Cristo, Santa Gema, cujo coração ardia todo de amor a Deus, ensi
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1288,14 +1165,11 @@ Amada Gema de Cristo, Santa Gema, cuyo corazón ardía todo en el amor de Dios, 
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -1324,14 +1198,11 @@ Beloved Gem of Christ St Gemma, whose heart was all on fire for the love of God,
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1360,14 +1231,11 @@ Amada Joia de Cristo, Santa Gema, cujo coração ardia todo de amor a Deus, ensi
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1403,14 +1271,11 @@ Oh santa de la Pasión de Jesús, Santa Gema, como alma víctima intercedías si
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -1439,14 +1304,11 @@ Oh holy saint of the Passion of Jesus, St Gemma, as a soul victim you were alway
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1458,11 +1320,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1479,14 +1337,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1516,14 +1371,11 @@ Oh santa de la Pasión de Jesús, Santa Gema, como alma víctima intercedías si
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -1552,14 +1404,11 @@ Oh holy saint of the Passion of Jesus, St Gemma, as a soul victim you were alway
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1571,11 +1420,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1592,14 +1437,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1635,14 +1477,11 @@ Oh fervorosísima Santa Gema, cuántas veces derramaste innumerables lágrimas p
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -1671,14 +1510,11 @@ Oh most fervent St Gemma, so many times you shed countless tears over your sins,
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1707,14 +1543,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1744,14 +1577,11 @@ Oh fervorosísima Santa Gema, cuántas veces derramaste innumerables lágrimas p
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -1780,14 +1610,11 @@ Oh most fervent St Gemma, so many times you shed countless tears over your sins,
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1816,14 +1643,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1859,14 +1683,11 @@ Oh amabilísima Santa Gema, te pedimos que seas nuestra patrona y amiga especial
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -1895,14 +1716,11 @@ Oh most lovable St Gemma, we ask you to be our patroness and special friend toda
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -1914,11 +1732,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1935,14 +1749,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 
@@ -1972,14 +1783,11 @@ Oh amabilísima Santa Gema, te pedimos que seas nuestra patrona y amiga especial
 (menciona tu petición aquí…)
 
 Padre nuestro.
-
-Dios te salve, María.
-
-Gloria al Padre.
+ Dios te salve, María.
+ Gloria al Padre.
 
 Ruega por nosotros, Santa Gema,
-
-para que seamos dignos de alcanzar las promesas de Cristo.
+ para que seamos dignos de alcanzar las promesas de Cristo.
 
 Oremos:
 
@@ -2008,14 +1816,11 @@ Oh most lovable St Gemma, we ask you to be our patroness and special friend toda
 (mention request here…)
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 Pray for us, Saint Gemma,
-
-that we may be made worthy of the promises of Christ.
+ that we may be made worthy of the promises of Christ.
 
 Let us pray:
 
@@ -2027,11 +1832,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2048,14 +1849,11 @@ Tende piedade de nós, que tanto necessitamos da Misericórdia de Deus, e alcan�
 (mencione o pedido aqui…)
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Rogai por nós, Santa Gema,
-
-para que sejamos dignos das promessas de Cristo.
+ para que sejamos dignos das promessas de Cristo.
 
 Oremos:
 

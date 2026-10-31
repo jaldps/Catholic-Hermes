@@ -63,18 +63,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 Dearest Lady of Guadalupe, fruitful Mother of holiness, teach me your ways of gentleness and strength. Hear my humble prayer offered with heartfelt confidence to beg this favor.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -97,10 +91,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Queridíssima Senhora de Guadalupe, Mãe fecunda de santidade, ensinai-me os vossos caminhos de mansidão e de fortaleza. Ouvi a minha humilde oração, oferecida com sincera confiança para implorar esta graça.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -150,18 +142,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 Dearest Lady of Guadalupe, fruitful Mother of holiness, teach me your ways of gentleness and strength. Hear my humble prayer offered with heartfelt confidence to beg this favor.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -184,10 +170,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Queridíssima Senhora de Guadalupe, Mãe fecunda de santidade, ensinai-me os vossos caminhos de mansidão e de fortaleza. Ouvi a minha humilde oração, oferecida com sincera confiança para implorar esta graça.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -243,10 +227,8 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O Mary, conceived without sin, I come to your throne of grace to share the fervent devotion of your faithful children who call to you under the glorious title of Guadalupe. Obtain for me a lively faith to do your Son’s holy will always: May His will be done on earth as it is in heaven.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -273,10 +255,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Maria, concebida sem pecado, venho ao vosso trono de graça para partilhar a fervorosa devoção dos vossos filhos fiéis que vos invocam com o glorioso título de Guadalupe. Alcançai-me uma fé viva para fazer sempre a santa vontade do vosso Filho: seja feita a Sua vontade assim na terra como no céu.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -326,10 +306,8 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O Mary, conceived without sin, I come to your throne of grace to share the fervent devotion of your faithful children who call to you under the glorious title of Guadalupe. Obtain for me a lively faith to do your Son’s holy will always: May His will be done on earth as it is in heaven.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -356,10 +334,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Maria, concebida sem pecado, venho ao vosso trono de graça para partilhar a fervorosa devoção dos vossos filhos fiéis que vos invocam com o glorioso título de Guadalupe. Alcançai-me uma fé viva para fazer sempre a santa vontade do vosso Filho: seja feita a Sua vontade assim na terra como no céu.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -415,18 +391,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O Mary, whose Immaculate Heart was pierced by seven swords of grief, help me to walk valiantly amid the sharp thorns strewn across my pathway. Obtain for me the strength to be a true imitator of you. This I ask you, my dear Mother.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -449,10 +419,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Maria, cujo Imaculado Coração foi trespassado por sete espadas de dor, ajudai-me a caminhar com coragem entre os espinhos agudos espalhados pelo meu caminho. Alcançai-me a força de ser um verdadeiro imitador vosso. Isto vos peço, minha querida Mãe.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -502,18 +470,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O Mary, whose Immaculate Heart was pierced by seven swords of grief, help me to walk valiantly amid the sharp thorns strewn across my pathway. Obtain for me the strength to be a true imitator of you. This I ask you, my dear Mother.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -536,10 +498,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Maria, cujo Imaculado Coração foi trespassado por sete espadas de dor, ajudai-me a caminhar com coragem entre os espinhos agudos espalhados pelo meu caminho. Alcançai-me a força de ser um verdadeiro imitador vosso. Isto vos peço, minha querida Mãe.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -595,10 +555,8 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 Dearest Mother of Guadalupe, I beg you for a fortified will to imitate your divine Son’s charity, to always seek the good of others in need. Grant me this, I humbly ask of you.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -625,10 +583,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Queridíssima Mãe de Guadalupe, peço-vos uma vontade fortalecida para imitar a caridade do vosso divino Filho, para procurar sempre o bem dos outros que estão em necessidade. Concedei-mo, eu vo-lo peço humildemente.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -678,10 +634,8 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 Dearest Mother of Guadalupe, I beg you for a fortified will to imitate your divine Son’s charity, to always seek the good of others in need. Grant me this, I humbly ask of you.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -708,10 +662,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Queridíssima Mãe de Guadalupe, peço-vos uma vontade fortalecida para imitar a caridade do vosso divino Filho, para procurar sempre o bem dos outros que estão em necessidade. Concedei-mo, eu vo-lo peço humildemente.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -767,18 +719,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O most holy Mother, I beg you to obtain for me pardon of all my sins, abundant graces to serve your Son more faithfully from now on, and lastly, the grace to praise Him with you forever in heaven.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -801,10 +747,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Mãe santíssima, suplico-vos que me alcanceis o perdão de todos os meus pecados, graças abundantes para servir de agora em diante o vosso Filho com mais fidelidade e, por fim, a graça de louvá-Lo convosco para sempre no céu.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -854,18 +798,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O most holy Mother, I beg you to obtain for me pardon of all my sins, abundant graces to serve your Son more faithfully from now on, and lastly, the grace to praise Him with you forever in heaven.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -888,10 +826,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Mãe santíssima, suplico-vos que me alcanceis o perdão de todos os meus pecados, graças abundantes para servir de agora em diante o vosso Filho com mais fidelidade e, por fim, a graça de louvá-Lo convosco para sempre no céu.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -947,10 +883,8 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 Mary, Mother of vocations, multiply priestly vocations and fill the earth with religious houses which will be light and warmth for the world, safety in stormy nights. Beg your Son to send us many priests and religious. This we ask of you, O Mother.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -977,10 +911,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Maria, Mãe das vocações, multiplicai as vocações sacerdotais e enchei a terra de casas religiosas que sejam luz e calor para o mundo, abrigo seguro nas noites de tempestade. Pedi ao vosso Filho que nos envie muitos sacerdotes e religiosos. Isto vos pedimos, ó Mãe.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1030,10 +962,8 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 Mary, Mother of vocations, multiply priestly vocations and fill the earth with religious houses which will be light and warmth for the world, safety in stormy nights. Beg your Son to send us many priests and religious. This we ask of you, O Mother.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1060,10 +990,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Maria, Mãe das vocações, multiplicai as vocações sacerdotais e enchei a terra de casas religiosas que sejam luz e calor para o mundo, abrigo seguro nas noites de tempestade. Pedi ao vosso Filho que nos envie muitos sacerdotes e religiosos. Isto vos pedimos, ó Mãe.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1119,18 +1047,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O Lady of Guadalupe, we beg you that parents live a holy life and educate their children in a Christian manner; that children obey and follow the directions of their parents; that all members of the family pray and worship together.This we ask of you, O Mother.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1153,10 +1075,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Senhora de Guadalupe, pedimos-vos que os pais vivam uma vida santa e eduquem os filhos de maneira cristã; que os filhos obedeçam e sigam as orientações dos pais; que todos os membros da família rezem e adorem juntos. Isto vos pedimos, ó Mãe.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1206,18 +1126,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O Lady of Guadalupe, we beg you that parents live a holy life and educate their children in a Christian manner; that children obey and follow the directions of their parents; that all members of the family pray and worship together.This we ask of you, O Mother.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1240,10 +1154,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Senhora de Guadalupe, pedimos-vos que os pais vivam uma vida santa e eduquem os filhos de maneira cristã; que os filhos obedeçam e sigam as orientações dos pais; que todos os membros da família rezem e adorem juntos. Isto vos pedimos, ó Mãe.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1299,10 +1211,8 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 With my heart full of the most sincere veneration, I prostrate myself before you, O Mother, to ask you to obtain for me the grace to fulfill the duties of my state in life with faithfulness and constancy.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1329,10 +1239,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Com o coração cheio da mais sincera veneração, prostro-me diante de vós, ó Mãe, para vos pedir que me alcanceis a graça de cumprir com fidelidade e constância os deveres do meu estado de vida.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1382,10 +1290,8 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 With my heart full of the most sincere veneration, I prostrate myself before you, O Mother, to ask you to obtain for me the grace to fulfill the duties of my state in life with faithfulness and constancy.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
@@ -1412,10 +1318,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Com o coração cheio da mais sincera veneração, prostro-me diante de vós, ó Mãe, para vos pedir que me alcanceis a graça de cumprir com fidelidade e constância os deveres do meu estado de vida.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1471,18 +1375,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O God, You have been pleased to bestow upon us unceasing favors by having placed us under the special protection of the Most Blessed Virgin Mary. Grant us, your humble servants, who rejoice in honoring her today upon earth, the happiness of seeing her face to face in heaven.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1505,10 +1403,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Deus, que Vos dignastes conceder-nos favores incessantes, colocando-nos sob a proteção especial da Santíssima Virgem Maria, concedei a nós, Vossos humildes servos, que hoje nos alegramos em honrá-la na terra, a felicidade de vê-la face a face no céu.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
@@ -1558,18 +1454,12 @@ O Holy Mother of God, despise not our petitions, but in your mercy hear and answ
 O God, You have been pleased to bestow upon us unceasing favors by having placed us under the special protection of the Most Blessed Virgin Mary. Grant us, your humble servants, who rejoice in honoring her today upon earth, the happiness of seeing her face to face in heaven.
 
 Our Father
-
-Hail Mary
-
-Glory Be
+ Hail Mary
+ Glory Be
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1592,10 +1482,8 @@ Colocando-nos sob o vosso olhar materno e recorrendo a vós em todas as nossas n
 Ó Deus, que Vos dignastes conceder-nos favores incessantes, colocando-nos sob a proteção especial da Santíssima Virgem Maria, concedei a nós, Vossos humildes servos, que hoje nos alegramos em honrá-la na terra, a felicidade de vê-la face a face no céu.
 
 Pai-Nosso.
-
-Ave-Maria.
-
-Glória ao Pai.
+ Ave-Maria.
+ Glória ao Pai.
 
 Em nome do Pai, do Filho e do Espírito Santo.
 
