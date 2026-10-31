@@ -2,11 +2,21 @@ package com.example.data.location
 
 import com.example.data.models.NearbyParish
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.selects.select
+import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
+import okhttp3.Call
+import okhttp3.Callback
 import okhttp3.FormBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.Response
+import java.io.IOException
+import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 import org.json.JSONObject
 import java.util.concurrent.TimeUnit
 import kotlin.math.asin
@@ -54,7 +64,7 @@ class ParishFinder(
         private const val NOMINATIM = "https://nominatim.openstreetmap.org/search"
 
         /** Seconds before the whole lookup gives up, mirrors tried and all. */
-        private const val OVERALL_TIMEOUT_MS = 35_000L
+        private const val OVERALL_TIMEOUT_MS = 20_000L
 
         fun defaultClient(): OkHttpClient = OkHttpClient.Builder()
             // Overpass mirrors are community-run and frequently slow. A long
@@ -73,14 +83,14 @@ class ParishFinder(
         withTimeoutOrNull(OVERALL_TIMEOUT_MS) { geocodeInner(query) }
     }
 
-    private fun geocodeInner(query: String): GeocodedPlace? {
+    private suspend fun geocodeInner(query: String): GeocodedPlace? {
         val url = "$NOMINATIM?q=${encode(query)}&format=json&limit=1"
         val request = Request.Builder()
             .url(url)
             .header("User-Agent", USER_AGENT)
             .build()
-        return runCatching {
-            client.newCall(request).execute().use { response ->
+        return runCatchingNonCancel {
+            client.newCall(request).await().use { response ->
                 if (!response.isSuccessful) return@use null
                 val body = response.body?.string().orEmpty()
                 val array = org.json.JSONArray(body)
@@ -92,7 +102,7 @@ class ParishFinder(
                     longitude = first.optString("lon").toDoubleOrNull() ?: return@use null
                 )
             }
-        }.getOrNull()
+        }
     }
 
     /**
@@ -128,39 +138,53 @@ class ParishFinder(
             out center tags 120;
         """.trimIndent()
 
-        var lastError = "unreachable"
-        for (endpoint in OVERPASS_ENDPOINTS) {
-            val request = Request.Builder()
-                .url(endpoint)
-                .header("User-Agent", USER_AGENT)
-                .post(FormBody.Builder().add("data", query).build())
-                .build()
-            val attempt = runCatching {
-                client.newCall(request).execute().use { response ->
-                    if (!response.isSuccessful) {
-                        lastError = "HTTP ${response.code}"
-                        return@use null
-                    }
-                    response.body?.string()
+        // All mirrors are asked at once and the first usable answer wins. Asked
+        // one after another, a single slow mirror held the screen on its
+        // spinner for most of a minute.
+        return coroutineScope {
+            val attempts = OVERPASS_ENDPOINTS.map { endpoint ->
+                async { askMirror(endpoint, query, latitude, longitude, radiusKm) }
+            }.toMutableList()
+            var lastFailure: ParishLookupResult = ParishLookupResult.Failure("unreachable")
+            while (attempts.isNotEmpty()) {
+                val (finished, outcome) = select {
+                    attempts.forEach { attempt -> attempt.onAwait { attempt to it } }
                 }
+                attempts.remove(finished)
+                if (outcome !is ParishLookupResult.Failure) {
+                    attempts.forEach { it.cancel() }
+                    return@coroutineScope outcome
+                }
+                lastFailure = outcome
             }
-            val body = attempt.getOrElse {
-                lastError = it.message ?: it::class.java.simpleName
-                null
-            } ?: continue
-
-            val parsed = runCatching { parseOverpass(body, latitude, longitude) }.getOrElse {
-                lastError = "malformed response"
-                null
-            } ?: continue
-
-            return if (parsed.isEmpty()) {
-                ParishLookupResult.Empty(radiusKm)
-            } else {
-                ParishLookupResult.Success(parsed)
-            }
+            lastFailure
         }
-        return ParishLookupResult.Failure(lastError)
+    }
+
+    private suspend fun askMirror(
+        endpoint: String,
+        query: String,
+        latitude: Double,
+        longitude: Double,
+        radiusKm: Int
+    ): ParishLookupResult {
+        val request = Request.Builder()
+            .url(endpoint)
+            .header("User-Agent", USER_AGENT)
+            .post(FormBody.Builder().add("data", query).build())
+            .build()
+        val body = try {
+            client.newCall(request).await().use { response ->
+                if (!response.isSuccessful) return ParishLookupResult.Failure("HTTP ${response.code}")
+                response.body?.string() ?: return ParishLookupResult.Failure("empty response")
+            }
+        } catch (e: IOException) {
+            return ParishLookupResult.Failure(e.message ?: "network error")
+        }
+        val parsed = runCatching { parseOverpass(body, latitude, longitude) }.getOrNull()
+            ?: return ParishLookupResult.Failure("malformed response")
+        return if (parsed.isEmpty()) ParishLookupResult.Empty(radiusKm)
+        else ParishLookupResult.Success(parsed)
     }
 
     private fun parseOverpass(
@@ -247,4 +271,27 @@ class ParishFinder(
 
     private fun encode(value: String): String =
         java.net.URLEncoder.encode(value, "UTF-8")
+
+    /**
+     * Runs the call asynchronously and cancels it if the coroutine is cancelled.
+     * A blocking execute() cannot be interrupted by withTimeoutOrNull, which only
+     * cancels at suspension points — that is what let the search hang.
+     */
+    private suspend fun Call.await(): Response = suspendCancellableCoroutine { cont ->
+        cont.invokeOnCancellation { cancel() }
+        enqueue(object : Callback {
+            override fun onResponse(call: Call, response: Response) = cont.resume(response)
+            override fun onFailure(call: Call, e: IOException) {
+                if (!cont.isCancelled) cont.resumeWithException(e)
+            }
+        })
+    }
+
+    private inline fun <T> runCatchingNonCancel(block: () -> T?): T? = try {
+        block()
+    } catch (e: kotlinx.coroutines.CancellationException) {
+        throw e
+    } catch (e: Exception) {
+        null
+    }
 }

@@ -54,8 +54,13 @@ import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.theme.LocalAppDesign
 import kotlinx.coroutines.launch
+import kotlin.coroutines.cancellation.CancellationException
+import kotlinx.coroutines.withTimeoutOrNull
 
 private enum class SearchState { IDLE, LOADING, DONE }
+
+/** The longest the screen will show its spinner before giving up. */
+private const val UI_TIMEOUT_MS = 22_000L
 
 /**
  * Finds Catholic parishes, either around the device or around a place the user
@@ -111,7 +116,19 @@ fun ParishFinderScreen(
         message = null
         searchedPlace = label
         scope.launch {
-            when (val outcome = finder.findNearby(latitude, longitude, radiusKm)) {
+            // Whatever happens below — success, failure, an exception — the
+            // spinner must end. It previously stayed on "Searching" for good if
+            // anything threw before the last line.
+            val outcome = try {
+                withTimeoutOrNull(UI_TIMEOUT_MS) { finder.findNearby(latitude, longitude, radiusKm) }
+                    ?: ParishLookupResult.Failure("timed out")
+            } catch (e: CancellationException) {
+                state = SearchState.DONE
+                throw e
+            } catch (e: Exception) {
+                ParishLookupResult.Failure(e.message ?: "error")
+            }
+            when (outcome) {
                 is ParishLookupResult.Success -> {
                     results = outcome.parishes
                     message = null
@@ -144,12 +161,12 @@ fun ParishFinderScreen(
         state = SearchState.LOADING
         message = null
         scope.launch {
-            val location = locationProvider.lastKnownLocation()
+            val location = runCatching { locationProvider.lastKnownLocation() }.getOrNull()
             if (location == null) {
                 message = strings(
-                    "Sin ubicación disponible. Activa la ubicación o busca un lugar por nombre.",
-                    "No location available. Turn on location or search for a place by name.",
-                    "Sem localização disponível. Ative a localização ou busque um lugar pelo nome."
+                    "El teléfono aún no tiene tu ubicación. Activa la ubicación, o usa «Parroquias cerca de mí», que la obtiene a través de Google Maps.",
+                    "The phone has no location fix yet. Turn on location, or use “Parishes near me”, which gets it through Google Maps.",
+                    "O telefone ainda não tem a sua localização. Ative a localização, ou use «Paróquias perto de mim», que a obtém pelo Google Maps."
                 )
                 state = SearchState.DONE
                 return@launch
@@ -182,7 +199,7 @@ fun ParishFinderScreen(
         state = SearchState.LOADING
         message = null
         scope.launch {
-            val place = finder.geocode(placeQuery)
+            val place = runCatching { finder.geocode(placeQuery) }.getOrNull()
             if (place == null) {
                 state = SearchState.DONE
                 openNearbyInMaps(placeQuery)
