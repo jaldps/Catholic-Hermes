@@ -228,6 +228,8 @@ object VaticanKit : AppKit {
         navItems: List<AppNavItem>,
         selectedNavIndex: Int,
         onNavSelected: (Int) -> Unit,
+        onBack: (() -> Unit)?,
+        backLabel: String?,
         actions: @Composable RowScope.() -> Unit,
         content: @Composable (PaddingValues) -> Unit
     ) {
@@ -250,7 +252,17 @@ object VaticanKit : AppKit {
                         ) {
                             // The masthead is centred, as an ecclesial document is
                             // headed rather than left-titled.
-                            Box(Modifier.width(48.dp))
+                            Box(Modifier.width(48.dp), contentAlignment = Alignment.Center) {
+                                if (onBack != null) {
+                                    IconButton(onClick = onBack, modifier = Modifier.testTag("nav_back")) {
+                                        Icon(
+                                            Icons.AutoMirrored.Sharp.ArrowBack,
+                                            contentDescription = backLabel,
+                                            tint = palette.gold
+                                        )
+                                    }
+                                }
+                            }
                             Column(
                                 Modifier.weight(1f),
                                 horizontalAlignment = Alignment.CenterHorizontally

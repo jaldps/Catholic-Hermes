@@ -63,7 +63,16 @@ android {
     compose = true
     buildConfig = true
   }
-  testOptions { unitTests { isIncludeAndroidResources = true } }
+  testOptions {
+    unitTests {
+      isIncludeAndroidResources = true
+      all { test ->
+        // Lets a screenshot run be narrowed: -Pshots.only=home,bible
+        project.findProperty("shots.only")?.let { test.systemProperty("shots.only", it) }
+        test.maxHeapSize = "3g"
+      }
+    }
+  }
   dependenciesInfo {
     includeInApk = false
     includeInBundle = true

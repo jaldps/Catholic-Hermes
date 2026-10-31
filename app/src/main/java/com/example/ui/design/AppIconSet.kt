@@ -5,6 +5,8 @@ package com.example.ui.design
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Church
+import androidx.compose.material.icons.filled.GridView
+import androidx.compose.material.icons.filled.HistoryEdu
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Newspaper
@@ -15,6 +17,8 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolunteerActivism
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Church
+import androidx.compose.material.icons.outlined.GridView
+import androidx.compose.material.icons.outlined.HistoryEdu
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.MenuBook
 import androidx.compose.material.icons.outlined.Newspaper
@@ -25,6 +29,8 @@ import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material.icons.outlined.VolunteerActivism
 import androidx.compose.material.icons.rounded.AutoStories
 import androidx.compose.material.icons.rounded.Church
+import androidx.compose.material.icons.rounded.GridView
+import androidx.compose.material.icons.rounded.HistoryEdu
 import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.icons.rounded.MenuBook
 import androidx.compose.material.icons.rounded.Newspaper
@@ -35,6 +41,8 @@ import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material.icons.rounded.VolunteerActivism
 import androidx.compose.material.icons.sharp.AutoStories
 import androidx.compose.material.icons.sharp.Church
+import androidx.compose.material.icons.sharp.GridView
+import androidx.compose.material.icons.sharp.HistoryEdu
 import androidx.compose.material.icons.sharp.Home
 import androidx.compose.material.icons.sharp.MenuBook
 import androidx.compose.material.icons.sharp.Newspaper
@@ -51,7 +59,7 @@ import com.example.ui.theme.LocalAppDesign
 
 /** The navigation glyphs the app needs, independent of any one icon style. */
 enum class AppIconSlot {
-    HOME, HABITS, BIBLE, CATECHISM, ROSARY, PRAYERS, PILGRIMAGE, DOCTRINE, NEWS, JOURNAL
+    HOME, HABITS, BIBLE, CATECHISM, ROSARY, PRAYERS, PILGRIMAGE, PARISH, DOCTRINE, NEWS, JOURNAL, MORE
 }
 
 /**
@@ -89,9 +97,11 @@ object AppIcons {
         AppIconSlot.ROSARY -> Icons.Outlined.SelfImprovement
         AppIconSlot.PRAYERS -> Icons.Outlined.VolunteerActivism
         AppIconSlot.PILGRIMAGE -> Icons.Outlined.Place
-        AppIconSlot.DOCTRINE -> Icons.Outlined.Church
+        AppIconSlot.PARISH -> Icons.Outlined.Church
+        AppIconSlot.DOCTRINE -> Icons.Outlined.HistoryEdu
         AppIconSlot.NEWS -> Icons.Outlined.Newspaper
         AppIconSlot.JOURNAL -> Icons.Outlined.Star
+        AppIconSlot.MORE -> Icons.Outlined.GridView
     }
 
     private fun rounded(slot: AppIconSlot): ImageVector = when (slot) {
@@ -102,9 +112,11 @@ object AppIcons {
         AppIconSlot.ROSARY -> Icons.Rounded.SelfImprovement
         AppIconSlot.PRAYERS -> Icons.Rounded.VolunteerActivism
         AppIconSlot.PILGRIMAGE -> Icons.Rounded.Place
-        AppIconSlot.DOCTRINE -> Icons.Rounded.Church
+        AppIconSlot.PARISH -> Icons.Rounded.Church
+        AppIconSlot.DOCTRINE -> Icons.Rounded.HistoryEdu
         AppIconSlot.NEWS -> Icons.Rounded.Newspaper
         AppIconSlot.JOURNAL -> Icons.Rounded.Star
+        AppIconSlot.MORE -> Icons.Rounded.GridView
     }
 
     private fun sharp(slot: AppIconSlot): ImageVector = when (slot) {
@@ -115,9 +127,11 @@ object AppIcons {
         AppIconSlot.ROSARY -> Icons.Sharp.SelfImprovement
         AppIconSlot.PRAYERS -> Icons.Sharp.VolunteerActivism
         AppIconSlot.PILGRIMAGE -> Icons.Sharp.Place
-        AppIconSlot.DOCTRINE -> Icons.Sharp.Church
+        AppIconSlot.PARISH -> Icons.Sharp.Church
+        AppIconSlot.DOCTRINE -> Icons.Sharp.HistoryEdu
         AppIconSlot.NEWS -> Icons.Sharp.Newspaper
         AppIconSlot.JOURNAL -> Icons.Sharp.Star
+        AppIconSlot.MORE -> Icons.Sharp.GridView
     }
 
     private fun filled(slot: AppIconSlot): ImageVector = when (slot) {
@@ -128,8 +142,10 @@ object AppIcons {
         AppIconSlot.ROSARY -> Icons.Filled.SelfImprovement
         AppIconSlot.PRAYERS -> Icons.Filled.VolunteerActivism
         AppIconSlot.PILGRIMAGE -> Icons.Filled.Place
-        AppIconSlot.DOCTRINE -> Icons.Filled.Church
+        AppIconSlot.PARISH -> Icons.Filled.Church
+        AppIconSlot.DOCTRINE -> Icons.Filled.HistoryEdu
         AppIconSlot.NEWS -> Icons.Filled.Newspaper
         AppIconSlot.JOURNAL -> Icons.Filled.Star
+        AppIconSlot.MORE -> Icons.Filled.GridView
     }
 }

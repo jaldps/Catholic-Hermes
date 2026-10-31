@@ -28,9 +28,11 @@ fun AppScaffold(
     navItems: List<AppNavItem>,
     selectedNavIndex: Int,
     onNavSelected: (Int) -> Unit,
+    onBack: (() -> Unit)? = null,
+    backLabel: String? = null,
     actions: @Composable RowScope.() -> Unit = {},
     content: @Composable (PaddingValues) -> Unit
-) = appKit().Scaffold(title, navItems, selectedNavIndex, onNavSelected, actions, content)
+) = appKit().Scaffold(title, navItems, selectedNavIndex, onNavSelected, onBack, backLabel, actions, content)
 
 @Composable
 fun AppTopBar(

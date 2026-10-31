@@ -248,6 +248,8 @@ object AppleKit : AppKit {
         navItems: List<AppNavItem>,
         selectedNavIndex: Int,
         onNavSelected: (Int) -> Unit,
+        onBack: (() -> Unit)?,
+        backLabel: String?,
         actions: @Composable RowScope.() -> Unit,
         content: @Composable (PaddingValues) -> Unit
     ) {
@@ -278,10 +280,38 @@ object AppleKit : AppKit {
                             .fillMaxWidth()
                             .padding(horizontal = 8.dp)
                             .heightIn(min = 44.dp),
-                        horizontalArrangement = Arrangement.End,
-                        verticalAlignment = Alignment.CenterVertically,
-                        content = actions
-                    )
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        if (onBack != null) {
+                            // The UINavigationBar back item: chevron and the
+                            // previous screen's title, both in the tint.
+                            Row(
+                                Modifier
+                                    .tap(onBack)
+                                    .heightIn(min = 44.dp)
+                                    .padding(end = 8.dp)
+                                    .testTag("nav_back"),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(
+                                    Icons.AutoMirrored.Outlined.ArrowBackIos,
+                                    contentDescription = backLabel,
+                                    tint = scheme.primary,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                                if (backLabel != null) {
+                                    Text(
+                                        text = backLabel,
+                                        style = styles.rowTitle,
+                                        color = scheme.primary,
+                                        maxLines = 1
+                                    )
+                                }
+                            }
+                        }
+                        Spacer(Modifier.weight(1f))
+                        actions()
+                    }
                 }
             },
             bottomBar = {

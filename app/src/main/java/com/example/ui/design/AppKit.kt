@@ -32,7 +32,9 @@ interface AppKit {
 
     /**
      * Screen frame: background treatment, top bar and bottom navigation.
-     * [content] receives the insets it must respect.
+     * [content] receives the insets it must respect. [onBack] is set when the
+     * screen was pushed from another tab's list (the More tab), and [backLabel]
+     * names where it returns to.
      */
     @Composable
     fun Scaffold(
@@ -40,6 +42,8 @@ interface AppKit {
         navItems: List<AppNavItem>,
         selectedNavIndex: Int,
         onNavSelected: (Int) -> Unit,
+        onBack: (() -> Unit)?,
+        backLabel: String?,
         actions: @Composable RowScope.() -> Unit,
         content: @Composable (PaddingValues) -> Unit
     )

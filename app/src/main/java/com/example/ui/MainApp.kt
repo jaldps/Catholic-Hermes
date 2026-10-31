@@ -44,6 +44,9 @@ import com.example.ui.screens.CatechismScreen
 import com.example.ui.screens.DoctrineAndHistoryScreen
 import com.example.ui.screens.HabitsAndVirtuesScreen
 import com.example.ui.screens.HomeScreen
+import com.example.ui.screens.MoreEntry
+import com.example.ui.screens.MoreScreen
+import com.example.ui.screens.MoreSection
 import com.example.ui.screens.ParishFinderScreen
 import com.example.ui.screens.PilgrimageAndHabitsScreen
 import com.example.ui.screens.PrayersAndNovenasScreen
@@ -65,10 +68,19 @@ enum class AppDestination(
     ROSARY("Rosario", "Rosary", "Terço", AppIconSlot.ROSARY, "nav_rosary"),
     PRAYERS("Oraciones", "Prayers", "Orações", AppIconSlot.PRAYERS, "nav_prayers"),
     PILGRIMAGE_HABITS("Santuarios", "Sanctuaries", "Santuários", AppIconSlot.PILGRIMAGE, "nav_pilgrimage"),
-    DOCTRINE("Doctrina e Iglesias", "Doctrine & Parishes", "Doutrina e Paróquias", AppIconSlot.DOCTRINE, "nav_doctrine"),
-    PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PILGRIMAGE, "nav_parishes"),
+    DOCTRINE("Doctrina e Historia", "Doctrine & History", "Doutrina e História", AppIconSlot.DOCTRINE, "nav_doctrine"),
+    PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PARISH, "nav_parishes"),
     CHURCHES_NEWS("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias", AppIconSlot.NEWS, "nav_churches_news"),
-    SPIRITUAL_LIFE("Diario y Quiz", "Journal & Quiz", "Diário e Quiz", AppIconSlot.JOURNAL, "nav_spiritual");
+    SPIRITUAL_LIFE("Diario y Quiz", "Journal & Quiz", "Diário e Quiz", AppIconSlot.JOURNAL, "nav_spiritual"),
+    MORE("Más", "More", "Mais", AppIconSlot.MORE, "nav_more");
+
+    companion object {
+        /**
+         * What the tab bar carries. iOS and Material both cap a bottom bar at
+         * five; everything else is listed by [MORE] and pushed from it.
+         */
+        val tabs = listOf(HOME, BIBLE, ROSARY, PRAYERS, MORE)
+    }
 
     fun title(language: AppLanguage): String = when (language) {
         AppLanguage.ES -> titleEs
@@ -83,19 +95,21 @@ fun MainApp(
     dao: SanctaFidesDao,
     ttsManager: LiturgicalTtsManager,
     preferencesStore: UserPreferencesStore,
-    preferences: UserPreferences
+    preferences: UserPreferences,
+    initialDestination: AppDestination = AppDestination.HOME
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
-    var selectedDestinationIndex by remember { mutableIntStateOf(0) }
+    var current by remember { mutableStateOf(initialDestination) }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
     var bibleInitialTab by remember { mutableIntStateOf(0) }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCustomizerModal by remember { mutableStateOf(false) }
 
-    val destinations = AppDestination.entries
     val design = LocalAppDesign.current
+    val tabs = AppDestination.tabs
+    val isPushed = current !in tabs
 
-    val navItems = destinations.map { destination ->
+    val navItems = tabs.map { destination ->
         val (resting, active) = AppIcons.pair(destination.iconSlot)
         AppNavItem(
             label = destination.title(currentLanguage),
@@ -108,8 +122,10 @@ fun MainApp(
     AppScaffold(
         title = "Sancta Fides",
         navItems = navItems,
-        selectedNavIndex = selectedDestinationIndex,
-        onNavSelected = { selectedDestinationIndex = it },
+        selectedNavIndex = if (isPushed) tabs.indexOf(AppDestination.MORE) else tabs.indexOf(current),
+        onNavSelected = { current = tabs[it] },
+        onBack = if (isPushed) ({ current = AppDestination.MORE }) else null,
+        backLabel = if (isPushed) AppDestination.MORE.title(currentLanguage) else null,
         actions = {
             IconButton(
                 onClick = { showCustomizerModal = true },
@@ -130,8 +146,8 @@ fun MainApp(
             }
         }
     ) { innerPadding ->
-        BackHandler(enabled = selectedDestinationIndex != 0) {
-            selectedDestinationIndex = 0
+        BackHandler(enabled = current != AppDestination.HOME) {
+            current = if (isPushed) AppDestination.MORE else AppDestination.HOME
         }
 
         Box(
@@ -140,7 +156,7 @@ fun MainApp(
                 .padding(innerPadding)
         ) {
             AnimatedContent(
-                targetState = selectedDestinationIndex,
+                targetState = current,
                 transitionSpec = {
                     val spec = tween<Float>(
                         durationMillis = design.motion.mediumMillis,
@@ -149,8 +165,8 @@ fun MainApp(
                     fadeIn(spec) togetherWith fadeOut(spec)
                 },
                 label = "screen_transition"
-            ) { targetIndex ->
-                when (destinations[targetIndex]) {
+            ) { target ->
+                when (target) {
                     AppDestination.HOME -> HomeScreen(
                         dailyReading = repository.dailyMassReading,
                         verseOfTheDay = repository.verseOfTheDay,
@@ -158,27 +174,27 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         liturgicalDay = repository.getCurrentLiturgicalDay(),
                         onOpenLanguageSelector = { showLanguageSelector = true },
-                        onNavigateToHabits = { selectedDestinationIndex = destinations.indexOf(AppDestination.HABITS_VIRTUES) },
+                        onNavigateToHabits = { current = AppDestination.HABITS_VIRTUES },
                         onNavigateToBible = {
                             bibleInitialTab = 0
-                            selectedDestinationIndex = destinations.indexOf(AppDestination.BIBLE)
+                            current = AppDestination.BIBLE
                         },
                         onNavigateToMissal = {
                             bibleInitialTab = 1
-                            selectedDestinationIndex = destinations.indexOf(AppDestination.BIBLE)
+                            current = AppDestination.BIBLE
                         },
-                        onNavigateToCatechism = { selectedDestinationIndex = destinations.indexOf(AppDestination.CATECHISM) },
-                        onNavigateToRosary = { selectedDestinationIndex = destinations.indexOf(AppDestination.ROSARY) },
-                        onNavigateToPrayers = { selectedDestinationIndex = destinations.indexOf(AppDestination.PRAYERS) },
-                        onNavigateToPilgrimage = { selectedDestinationIndex = destinations.indexOf(AppDestination.PILGRIMAGE_HABITS) },
-                        onNavigateToDoctrine = { selectedDestinationIndex = destinations.indexOf(AppDestination.DOCTRINE) },
+                        onNavigateToCatechism = { current = AppDestination.CATECHISM },
+                        onNavigateToRosary = { current = AppDestination.ROSARY },
+                        onNavigateToPrayers = { current = AppDestination.PRAYERS },
+                        onNavigateToPilgrimage = { current = AppDestination.PILGRIMAGE_HABITS },
+                        onNavigateToDoctrine = { current = AppDestination.DOCTRINE },
                         onNavigateToSpiritualLife = {
                             spiritualLifeInitialTab = 0
-                            selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE)
+                            current = AppDestination.SPIRITUAL_LIFE
                         },
                         onNavigateToQuiz = {
                             spiritualLifeInitialTab = 1
-                            selectedDestinationIndex = destinations.indexOf(AppDestination.SPIRITUAL_LIFE)
+                            current = AppDestination.SPIRITUAL_LIFE
                         }
                     )
 
@@ -242,6 +258,14 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         initialTab = spiritualLifeInitialTab
                     )
+
+                    AppDestination.MORE -> MoreScreen(
+                        currentLanguage = currentLanguage,
+                        sections = moreSections(currentLanguage) { destination ->
+                            if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
+                            current = destination
+                        }
+                    )
                 }
             }
         }
@@ -266,4 +290,42 @@ fun MainApp(
             onDismiss = { showCustomizerModal = false }
         )
     }
+}
+
+/** The More tab's contents, grouped by what the reader has come to do. */
+private fun moreSections(
+    language: AppLanguage,
+    open: (AppDestination) -> Unit
+): List<MoreSection> {
+    fun pick(es: String, en: String, pt: String) = when (language) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
+    }
+    fun entry(d: AppDestination, es: String, en: String, pt: String) =
+        MoreEntry(d.title(language), pick(es, en, pt), d.iconSlot, d.tag) { open(d) }
+    return listOf(
+        MoreSection(
+            pick("Estudio", "Study", "Estudo"),
+            listOf(
+                entry(AppDestination.CATECHISM, "Los 2865 artículos, por partes", "All 2,865 paragraphs, by part", "Os 2865 parágrafos, por partes"),
+                entry(AppDestination.DOCTRINE, "Doctrina, María y Jesús, historia de la Iglesia", "Doctrine, Mary and Jesus, Church history", "Doutrina, Maria e Jesus, história da Igreja"),
+                entry(AppDestination.CHURCHES_NEWS, "Noticias del Vaticano y directorio", "Vatican news and directory", "Notícias do Vaticano e diretório")
+            )
+        ),
+        MoreSection(
+            pick("Vida interior", "Inner life", "Vida interior"),
+            listOf(
+                entry(AppDestination.HABITS_VIRTUES, "Examen, virtudes y hábitos diarios", "Examen, virtues and daily habits", "Exame, virtudes e hábitos diários"),
+                entry(AppDestination.SPIRITUAL_LIFE, "Diario espiritual y preguntas de fe", "Spiritual journal and faith quiz", "Diário espiritual e quiz de fé")
+            )
+        ),
+        MoreSection(
+            pick("Lugares", "Places", "Lugares"),
+            listOf(
+                entry(AppDestination.PARISHES, "Misa cerca de ti", "Mass near you", "Missa perto de você"),
+                entry(AppDestination.PILGRIMAGE_HABITS, "Santuarios y peregrinaciones", "Shrines and pilgrimages", "Santuários e peregrinações")
+            )
+        )
+    )
 }

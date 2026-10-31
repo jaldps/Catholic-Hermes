@@ -361,6 +361,8 @@ object MaterialKit : AppKit {
         navItems: List<AppNavItem>,
         selectedNavIndex: Int,
         onNavSelected: (Int) -> Unit,
+        onBack: (() -> Unit)?,
+        backLabel: String?,
         actions: @Composable RowScope.() -> Unit,
         content: @Composable (PaddingValues) -> Unit
     ) {
@@ -391,6 +393,16 @@ object MaterialKit : AppKit {
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
+                    },
+                    navigationIcon = {
+                        if (onBack != null) {
+                            IconButton(onClick = onBack, modifier = Modifier.testTag("nav_back")) {
+                                Icon(
+                                    Icons.AutoMirrored.Rounded.ArrowBack,
+                                    contentDescription = backLabel
+                                )
+                            }
+                        }
                     },
                     actions = actions,
                     windowInsets = WindowInsets.statusBars,
