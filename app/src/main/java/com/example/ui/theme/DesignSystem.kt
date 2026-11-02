@@ -478,7 +478,7 @@ object DesignTokens {
         gold = Color(0xFFAC852B),
         textPrimary = Color(0xFF1F1A17),
         textSecondary = Color(0xFF5B4F42),
-        textTertiary = Color(0xFF8A7B68),
+        textTertiary = Color(0xFF756652),
         scrim = Color(0x801F1A17),
         selectionTint = Color(0xFFEADFC6)
     )
@@ -492,14 +492,13 @@ object DesignTokens {
         groupedSurface = Color(0xFF221A12),
         raised = Color(0xFF2A2017),
         hairline = Color(0xFF55452F),
-        // Hue 6°: cinnabar. Green and blue held down so it never lifts
-        // toward coral; 4.3:1 on the umber ground.
-        accent = Color(0xFFE0402E),
+        // A clear vermilion with sufficient luminance for small rubrics on umber.
+        accent = Color(0xFFEF5945),
         accentMuted = Color(0xFF34201A),
         gold = Color(0xFFD4AD55),
         textPrimary = Color(0xFFECE0CA),
         textSecondary = Color(0xFFBDAC92),
-        textTertiary = Color(0xFF8C7B66),
+        textTertiary = Color(0xFFAE9A7C),
         scrim = Color(0xB3000000),
         selectionTint = Color(0xFF332A20)
     )

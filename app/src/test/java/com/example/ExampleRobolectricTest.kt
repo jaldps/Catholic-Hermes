@@ -74,7 +74,12 @@ class ExampleRobolectricTest {
     val todayLiturgicalDay = repo.getCurrentLiturgicalDay()
     org.junit.Assert.assertNotNull(todayLiturgicalDay.sundayCycle)
     org.junit.Assert.assertNotNull(todayLiturgicalDay.weekdayCycle)
-    org.junit.Assert.assertEquals(0xFF2C6B3E, todayLiturgicalDay.liturgicalColorHex)
+    // The current celebration is date-dependent: it is not always green.
+    assertEquals(java.util.Calendar.getInstance().get(java.util.Calendar.DAY_OF_MONTH), todayLiturgicalDay.dayOfMonth)
+    val ordinaryThursday = repo.getLiturgicalDay(com.example.data.liturgy.CalendarDate(2026, 10, 29))
+    assertEquals(0xFF2C6B3E, ordinaryThursday.liturgicalColorHex)
+    val allSouls = repo.getLiturgicalDay(com.example.data.liturgy.CalendarDate(2026, 11, 2))
+    assertEquals(0xFF5E2777, allSouls.liturgicalColorHex)
   }
 
   @Test

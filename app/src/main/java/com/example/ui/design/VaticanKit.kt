@@ -93,6 +93,10 @@ import androidx.compose.ui.node.DrawModifierNode
 import androidx.compose.ui.node.currentValueOf
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
@@ -117,29 +121,9 @@ import kotlin.math.abs
 import kotlin.math.max
 
 /**
- * The Vatican identity, set as a printer would set it.
- *
- * Two rules govern everything here.
- *
- * **Gold is leaf, not paint.** It is spent in exactly four places: the single
- * hairline under the masthead, the fleuron under a title, the illuminated
- * initial that opens a chapter, and the fleuron that closes a section.
- * Everything else is ink. Red is reserved for rubrication: verse figures, the
- * current entry, the ribbon that marks the open section, the liturgical colour.
- *
- * **Everything sits on one baseline grid.** Scripture is leaded at 30sp with no
- * space added between verses, exactly as a Bible column is set solid, and the
- * illuminated initial is cut into that grid: its cap line meets the first
- * line's cap line and its baseline sits on the second line's baseline, with the
- * remainder of the opening word running on beside it. Nothing floats on a
- * shadow; depth is carried by ruled lines, and corners are square because paper
- * has no radius.
- *
- * The leaf itself is not a flat tint. A procedural vellum — fine grain, slow
- * mottle and a scatter of fibres, generated once per process and tiled — lies
- * over the whole page, ink included, because ink sits *in* paper, not on a
- * pane of glass above it. At night the page is lit by a single candle: a warm
- * pool high on the leaf, falling away to umber at the edges.
+ * An editorial reading identity: Garamond, rubric red and restrained rules.
+ * Navigation retains engraved devices and a ribbon marker; content uses a
+ * clear type hierarchy without repeating the book's masthead on every page.
  */
 object VaticanKit : AppKit {
 
@@ -419,28 +403,6 @@ object VaticanKit : AppKit {
     private fun Lozenge(size: Dp, color: Color? = null) {
         val gold = color ?: LocalAppDesign.current.palette.gold
         Box(Modifier.size(size).rotate(45f).background(gold))
-    }
-
-    /**
-     * The fleuron under a title: two hairlines of leaf that taper to nothing
-     * either side of a lozenge, as an engraver cuts a swelled rule.
-     */
-    @Composable
-    private fun TitleFleuron() {
-        val gold = LocalAppDesign.current.palette.gold
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Box(
-                Modifier.width(40.dp).height(0.75.dp)
-                    .background(Brush.horizontalGradient(listOf(gold.copy(alpha = 0f), gold)))
-            )
-            Spacer(Modifier.width(9.dp))
-            Lozenge(4.5.dp)
-            Spacer(Modifier.width(9.dp))
-            Box(
-                Modifier.width(40.dp).height(0.75.dp)
-                    .background(Brush.horizontalGradient(listOf(gold, gold.copy(alpha = 0f))))
-            )
-        }
     }
 
     /**
@@ -794,7 +756,6 @@ object VaticanKit : AppKit {
     ) {
         val design = LocalAppDesign.current
         val palette = design.palette
-        val styles = LocalAppTextStyles.current
         val texture = remember(design.isDark) { Vellum.texture(design.isDark) }
         val deviceShadow = if (design.isDark) lerp(palette.gold, palette.canvas, 0.62f) else palette.textSecondary
         val deviceLight = if (design.isDark) palette.gold else lerp(palette.canvas, palette.textTertiary, 0.25f)
@@ -812,76 +773,13 @@ object VaticanKit : AppKit {
                     // A pushed page carries a running head, not the book's
                     // masthead: one line of small capitals naming the page.
                     if (onBack != null) RunningHead(title, onBack, backLabel, deviceShadow, deviceLight, actions)
-                    else Column(Modifier.statusBarsPadding()) {
-                        Masthead(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(horizontal = 8.dp)
-                                .padding(top = 2.dp)
-                                .heightIn(min = 46.dp),
-                            leading = {
-                                Box(Modifier.width(48.dp), contentAlignment = Alignment.Center) {
-                                    if (onBack != null) {
-                                        IconButton(onClick = onBack, modifier = Modifier.testTag("nav_back")) {
-                                            Icon(
-                                                Icons.AutoMirrored.Sharp.ArrowBack,
-                                                contentDescription = backLabel,
-                                                tint = palette.textSecondary,
-                                                modifier = Modifier.size(22.dp)
-                                            )
-                                        }
-                                    }
-                                }
-                            },
-                            title = {
-                                // The masthead is centred, as an ecclesial
-                                // document is headed rather than left-titled,
-                                // and set on one line: the cross of leaf
-                                // leads the book's name like a colophon mark.
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text(
-                                        text = "✠",
-                                        style = styles.sectionEyebrow.copy(
-                                            fontSize = 13.sp,
-                                            lineHeight = 16.sp,
-                                            letterSpacing = 0.sp
-                                        ),
-                                        color = palette.gold
-                                    )
-                                    Spacer(Modifier.width(9.dp))
-                                    Text(
-                                        text = "Sancta Fides".uppercase(), // the running head names the book, not the page
-                                        style = styles.screenTitle
-                                            .copy(fontSize = 15.sp, lineHeight = 20.sp, fontWeight = FontWeight.Normal)
-                                            .tracked(0.18f),
-                                        color = bodyInk(),
-                                        textAlign = TextAlign.Center,
-                                        maxLines = 1
-                                    )
-                                    Spacer(Modifier.width(9.dp))
-                                    Text(
-                                        text = "✠",
-                                        style = styles.sectionEyebrow.copy(
-                                            fontSize = 13.sp,
-                                            lineHeight = 16.sp,
-                                            letterSpacing = 0.sp
-                                        ),
-                                        color = palette.gold
-                                    )
-                                }
-                            },
-                            actions = {
-                                Row(
-                                    Modifier.widthIn(min = 48.dp).duotone(deviceShadow, deviceLight),
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    content = actions
-                                )
-                            }
-                        )
-                        Spacer(Modifier.height(6.dp))
-                        // The one hairline of leaf the chrome is allowed.
-                        ScotchRule(thinColor = palette.gold.copy(alpha = 0.85f))
-                    }
+                    else Row(
+                        modifier = Modifier.statusBarsPadding().fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically,
+                        content = actions
+                    )
                 },
                 bottomBar = {
                     FolioRail(navItems, selectedNavIndex, onNavSelected)
@@ -991,7 +889,7 @@ object VaticanKit : AppKit {
                         navItems.forEachIndexed { index, item ->
                             val isSelected = index == selectedNavIndex
                             val ink by animateColorAsState(
-                                if (isSelected) bodyInk() else palette.textTertiary,
+                                if (isSelected) rubric() else palette.textSecondary,
                                 tween(design.motion.mediumMillis, easing = design.motion.standardEasing),
                                 label = "nav_ink"
                             )
@@ -999,21 +897,23 @@ object VaticanKit : AppKit {
                                 modifier = Modifier
                                     .width(itemWidth)
                                     .press { onNavSelected(index) }
+                                    .semantics { selected = isSelected; role = Role.Tab }
+                                    .heightIn(min = 48.dp)
                                     .testTag(item.tag),
                                 horizontalAlignment = Alignment.CenterHorizontally
                             ) {
                                 Icon(
                                     imageVector = glyphFor(item, isSelected),
-                                    contentDescription = item.label,
+                                    contentDescription = null,
                                     tint = ink,
                                     modifier = Modifier.size(19.dp)
                                 )
                                 Spacer(Modifier.height(7.dp))
                                 Text(
                                     text = item.label.uppercase(),
-                                    // 9sp caps: the smallest cut, so the
-                                    // widest tracking on the scale.
-                                    style = styles.navLabel.tracked(0.2f),
+                                    // Small inscriptional labels stay readable at
+                                    // phone size without excessive tracking.
+                                    style = styles.navLabel.copy(fontSize = 10.sp, lineHeight = 14.sp).tracked(0.10f),
                                     color = ink,
                                     textAlign = TextAlign.Center,
                                     maxLines = 1
@@ -1097,62 +997,28 @@ object VaticanKit : AppKit {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
-        val head = LocalRunningHead.current
-        val argument = styles.screenSubtitle.copy(
-            fontStyle = FontStyle.Italic,
-            fontSize = 16.sp,
-            lineHeight = 23.sp,
-            lineBreak = LineBreak.Heading
-        )
-        if (head != null && head.trim().equals(title.trim(), ignoreCase = true)) {
-            // The running head already names the page; setting it again as a
-            // title page is what ate a third of every inner screen. What is
-            // left is the argument, in italic, as a missal sets the line under
-            // a heading.
-            Column(
-                modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(top = if (subtitle != null) 14.dp else 4.dp, bottom = if (subtitle != null) 10.dp else 0.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                if (subtitle != null) {
-                    Text(subtitle, style = argument, color = palette.textSecondary, textAlign = TextAlign.Center)
-                }
-            }
-            return
-        }
-        // An inner page's own heading (a commandment, a prayer) sits under a
-        // running head and is cut a size smaller than a tab's title page.
-        val inner = head != null
+        val alreadyNamed = LocalRunningHead.current?.trim()?.equals(title.trim(), ignoreCase = true) == true
+        if (alreadyNamed && subtitle.isNullOrBlank()) return
         Column(
-            modifier
-                .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-                .padding(top = design.spacing.headerTopGap + (if (inner) 0.dp else 4.dp), bottom = 18.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+            modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)
+                .padding(top = if (alreadyNamed) 8.dp else 16.dp, bottom = 12.dp)
         ) {
-            Text(
-                text = title.uppercase(),
-                // Cinzel regular, not bold: the Trajan column is incised, not
-                // fattened. Bold caps at display size read as a luxury logotype.
-                style = styles.screenTitle
-                    .copy(
+            if (!alreadyNamed) {
+                Text(
+                    text = title,
+                    style = styles.rowTitle.copy(
+                        fontSize = if (LocalRunningHead.current != null) 25.sp else 32.sp,
+                        lineHeight = if (LocalRunningHead.current != null) 32.sp else 38.sp,
                         fontWeight = FontWeight.Normal,
-                        fontSize = if (inner) 20.sp else 24.sp,
-                        lineHeight = if (inner) 28.sp else 32.sp,
+                        letterSpacing = 0.sp,
                         lineBreak = LineBreak.Heading
-                    )
-                    .tracked(if (inner) 0.07f else 0.09f),
-                color = bodyInk(),
-                textAlign = TextAlign.Center
-            )
-            Spacer(Modifier.height(12.dp))
-            // Leaf, spent once: a swelled rule with a lozenge at its heart.
-            TitleFleuron()
-            if (subtitle != null) {
-                Spacer(Modifier.height(12.dp))
-                Text(subtitle, style = argument, color = palette.textSecondary, textAlign = TextAlign.Center)
+                    ),
+                    color = bodyInk()
+                )
+            }
+            if (!subtitle.isNullOrBlank()) {
+                if (!alreadyNamed) Spacer(Modifier.height(4.dp))
+                Text(subtitle, style = styles.rowSubtitle.copy(fontSize = 15.sp, lineHeight = 21.sp), color = palette.textSecondary)
             }
         }
     }
@@ -1172,12 +1038,12 @@ object VaticanKit : AppKit {
         val palette = design.palette
         val styles = LocalAppTextStyles.current
         val short = subtitle != null && subtitle.length <= 22 && !subtitle.contains('.')
-        val rubricStyle = styles.sectionEyebrow.copy(fontSize = 11.sp, lineHeight = 16.sp).tracked(0.2f)
+        val rubricStyle = styles.sectionEyebrow.copy(fontSize = 11.sp, lineHeight = 16.sp).tracked(0.10f)
         Column(
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
-                .padding(top = design.spacing.sectionGap / 2 + 4.dp, bottom = 4.dp)
+                .padding(top = 16.dp, bottom = 4.dp)
         ) {
             Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
                 Text(
@@ -1191,7 +1057,7 @@ object VaticanKit : AppKit {
                     Text(
                         text = subtitle!!,
                         style = styles.rowSubtitle.copy(fontSize = 14.sp, lineHeight = 16.sp),
-                        color = palette.textTertiary,
+                        color = palette.textSecondary,
                         maxLines = 1,
                         modifier = Modifier.alignByBaseline()
                     )
@@ -1205,11 +1071,8 @@ object VaticanKit : AppKit {
                     color = palette.textSecondary
                 )
             }
-            // The heading owns the one thick-thin rule; the matter beneath
-            // (a table, a card, a line of filters) opens without a rule of its
-            // own, so two rules are never stacked.
-            Spacer(Modifier.height(10.dp))
-            ScotchRule(gap = 2.dp)
+            Spacer(Modifier.height(8.dp))
+            Hairline()
         }
     }
 
@@ -1356,20 +1219,7 @@ object VaticanKit : AppKit {
 
     @Composable
     override fun Ornament(modifier: Modifier) {
-        val design = LocalAppDesign.current
-        Row(
-            modifier
-                .fillMaxWidth()
-                .padding(
-                    horizontal = design.spacing.gutter,
-                    vertical = design.spacing.sectionGap / 2
-                ),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Box(Modifier.weight(1f).height(0.5.dp).background(inkHair()))
-            Box(Modifier.padding(horizontal = 16.dp)) { Lozenge(5.dp) }
-            Box(Modifier.weight(1f).height(0.5.dp).background(inkHair()))
-        }
+        Spacer(modifier.height(12.dp))
     }
 
     // ------------------------------------------------------------------ inputs
@@ -1412,11 +1262,16 @@ object VaticanKit : AppKit {
                     )
                 }
                 .press(enabled = enabled, onClick = onClick)
+                .heightIn(min = 52.dp)
                 .padding(horizontal = 18.dp, vertical = 13.dp),
             contentAlignment = Alignment.Center
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Lozenge(4.dp, ink)
+                if (leadingIcon != null) {
+                    Icon(leadingIcon, contentDescription = null, tint = ink, modifier = Modifier.size(18.dp))
+                } else {
+                    Lozenge(4.dp, ink)
+                }
                 Spacer(Modifier.width(12.dp))
                 Box(Modifier.weight(1f, fill = false)) {
                     FittedCapitals(label, styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold), ink)
@@ -1450,10 +1305,18 @@ object VaticanKit : AppKit {
                     drawLine(hair, Offset(0f, size.height - sw / 2), Offset(size.width, size.height - sw / 2), sw)
                 }
                 .press(enabled = enabled, onClick = onClick)
+                .heightIn(min = 48.dp)
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             contentAlignment = Alignment.Center
         ) {
-            FittedCapitals(label, styles.buttonLabel.copy(fontWeight = FontWeight.SemiBold), bodyInk())
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                if (leadingIcon != null) {
+                    Icon(leadingIcon, contentDescription = null, tint = bodyInk(), modifier = Modifier.size(17.dp))
+                }
+                Box(Modifier.weight(1f, fill = false)) {
+                    FittedCapitals(label, styles.buttonLabel.copy(fontWeight = FontWeight.Medium), bodyInk())
+                }
+            }
         }
     }
 
@@ -1470,7 +1333,7 @@ object VaticanKit : AppKit {
         BasicTextField(
             value = value,
             onValueChange = onValueChange,
-            modifier = modifier.fillMaxWidth(),
+            modifier = modifier.fillMaxWidth().heightIn(min = 48.dp),
             textStyle = styles.rowTitle.copy(color = bodyInk()),
             singleLine = true,
             cursorBrush = SolidColor(palette.accent),
@@ -1483,16 +1346,16 @@ object VaticanKit : AppKit {
                         Icon(
                             Icons.Sharp.Search,
                             contentDescription = null,
-                            tint = palette.textTertiary,
-                            modifier = Modifier.size(16.dp)
+                            tint = palette.textSecondary,
+                            modifier = Modifier.size(18.dp)
                         )
                         Spacer(Modifier.width(12.dp))
                         Box(Modifier.weight(1f)) {
                             if (value.isEmpty()) {
                                 Text(
                                     text = placeholder,
-                                    style = styles.rowTitle,
-                                    color = palette.textTertiary
+                                    style = styles.rowTitle.copy(fontStyle = FontStyle.Italic),
+                                    color = palette.textSecondary
                                 )
                             }
                             inner()
@@ -1597,7 +1460,7 @@ object VaticanKit : AppKit {
                         options.forEachIndexed { index, option ->
                             val isSelected = index == selectedIndex
                             val ink by animateColorAsState(
-                                if (isSelected) bodyInk() else palette.textTertiary,
+                                if (isSelected) rubric() else palette.textSecondary,
                                 tween(design.motion.mediumMillis, easing = design.motion.standardEasing),
                                 label = "tab_ink"
                             )
@@ -1623,6 +1486,8 @@ object VaticanKit : AppKit {
                                         }
                                     }
                                     .press { onSelect(index) }
+                                    .semantics { selected = isSelected; role = Role.Tab }
+                                    .heightIn(min = 48.dp)
                                     .padding(horizontal = tabPad)
                                     .padding(top = 6.dp, bottom = 13.dp),
                                 contentAlignment = Alignment.Center
@@ -1666,8 +1531,9 @@ object VaticanKit : AppKit {
         )
         Row(
             modifier
-                .heightIn(min = 40.dp)
+                .heightIn(min = 48.dp)
                 .press(onClick = onClick)
+                .semantics { this.selected = selected; role = Role.RadioButton }
                 .padding(horizontal = 4.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -2090,11 +1956,7 @@ object VaticanKit : AppKit {
         }
     }
 
-    /**
-     * The day's heading as a calendar sets it: the season or rank in the
-     * liturgical colour, led by a lozenge of that pigment, and the name of
-     * the day beneath in the text face. No callout bar, no box.
-     */
+    /** Calendar headline first; rank, date and obligations stay secondary. */
     @Composable
     override fun Banner(
         title: String,
@@ -2106,41 +1968,31 @@ object VaticanKit : AppKit {
         val design = LocalAppDesign.current
         val styles = LocalAppTextStyles.current
         val accent = pigment(accentColorHex?.let { Color(it) } ?: design.palette.accent)
+        val lines = body?.lineSequence()?.filter { it.isNotBlank() }?.toList().orEmpty()
         Column(
-            modifier
-                .fillMaxWidth()
+            modifier.fillMaxWidth()
                 .then(if (onClick != null) Modifier.press(onClick = onClick) else Modifier)
-                .padding(horizontal = design.spacing.gutter)
-                .padding(vertical = 6.dp)
+                .padding(horizontal = design.spacing.gutter, vertical = 10.dp)
         ) {
-            // The day's colour as the calendar prints it: a short bar of the
-            // pigment on a hairline of the same, like the ribbon laid in the
-            // page — a colour you can see, not a dot you have to find.
-            Box(Modifier.fillMaxWidth().height(10.dp)) {
-                Box(Modifier.align(Alignment.BottomStart).fillMaxWidth().height(0.6.dp).background(accent.copy(alpha = 0.55f)))
-                Box(Modifier.align(Alignment.BottomStart).width(44.dp).height(3.dp).background(accent))
-            }
-            Spacer(Modifier.height(12.dp))
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Lozenge(6.dp, accent)
-                Spacer(Modifier.width(10.dp))
-                Text(
-                    text = title.uppercase(),
-                    style = styles.sectionEyebrow.copy(fontSize = 11.5.sp, lineHeight = 16.sp).tracked(0.2f),
-                    color = accent
-                )
-            }
-            if (body != null) {
+            Text(
+                text = title.uppercase(),
+                style = styles.sectionEyebrow.copy(fontSize = 11.sp, lineHeight = 16.sp).tracked(0.10f),
+                color = accent
+            )
+            lines.firstOrNull()?.let { headline ->
                 Spacer(Modifier.height(6.dp))
                 Text(
-                    body,
-                    style = styles.rowTitle.copy(
-                        fontSize = 21.sp,
-                        lineHeight = 28.sp,
-                        fontWeight = FontWeight.Normal,
-                        lineBreak = LineBreak.Heading
-                    ),
+                    headline,
+                    style = styles.rowTitle.copy(fontSize = 24.sp, lineHeight = 30.sp, fontWeight = FontWeight.Normal, lineBreak = LineBreak.Heading),
                     color = bodyInk()
+                )
+            }
+            if (lines.size > 1) {
+                Spacer(Modifier.height(6.dp))
+                Text(
+                    lines.drop(1).joinToString("\n"),
+                    style = styles.rowSubtitle.copy(fontSize = 14.sp, lineHeight = 20.sp),
+                    color = design.palette.textSecondary
                 )
             }
         }

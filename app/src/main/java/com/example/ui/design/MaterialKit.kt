@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBarsPadding
@@ -68,22 +67,21 @@ import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.draw.clipToBounds
-import androidx.compose.ui.draw.drawWithCache
-import androidx.compose.ui.text.drawText
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.remember
@@ -95,12 +93,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.layout.AlignmentLine
-import androidx.compose.ui.layout.FirstBaseline
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.layout.layout
 import androidx.compose.ui.layout.onPlaced
-import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.geometry.CornerRadius
@@ -336,6 +331,7 @@ object MaterialKit : AppKit {
      * 16dp card floating 8dp from its neighbour.
      */
     private val LocalInListGroup = staticCompositionLocalOf { false }
+    private val LocalInsideCard = staticCompositionLocalOf { false }
 
     /**
      * A corner radius that morphs on press: [rest] at rest, [pressed] while a
@@ -377,113 +373,7 @@ object MaterialKit : AppKit {
         return MorphPill(progress, 10.dp)
     }
 
-    // ------------------------------------------------------------------ shapes
-
-    /**
-     * The M3 Expressive shape library's rounded polygons (Cookie, Soft burst,
-     * Clover), built by hand because 1.3.0 ships no `MaterialShapes`: a
-     * circle whose radius rises and falls [lobes] times around the centre,
-     * [depth] deep. A depth of 0 is a circle, so animating [depth] morphs a
-     * circle into a cookie, and [rotation] (degrees) lets the shape turn as it
-     * morphs, as the Expressive shapes do.
-     */
-    private class ScallopShape(
-        private val lobes: Int,
-        private val depth: Float,
-        private val rotation: Float = 0f
-    ) : Shape {
-        override fun createOutline(size: Size, layoutDirection: LayoutDirection, density: Density): Outline {
-            val cx = size.width / 2f
-            val cy = size.height / 2f
-            val radius = size.minDimension / 2f
-            val path = androidx.compose.ui.graphics.Path()
-            val steps = 240
-            val rot = Math.toRadians(rotation.toDouble())
-            for (i in 0..steps) {
-                val t = 2.0 * Math.PI * i / steps
-                // A raised cosine, sharpened a little, so lobes read as
-                // rounded scallops rather than a sine wobble.
-                val wave = (1.0 + kotlin.math.cos(lobes * t)) / 2.0
-                val r = radius * (1.0 - depth * (1.0 - Math.pow(wave, 0.8)))
-                val x = cx + (r * kotlin.math.cos(t + rot)).toFloat()
-                val y = cy + (r * kotlin.math.sin(t + rot)).toFloat()
-                if (i == 0) path.moveTo(x, y) else path.lineTo(x, y)
-            }
-            path.close()
-            return Outline.Generic(path)
-        }
-    }
-
-    /** M3 Expressive "Cookie 9": the hero shape for an empty state. */
-    private val CookieShape: Shape = ScallopShape(lobes = 9, depth = 0.10f)
-
-    /** "4-leaf clover", for the stat tiles' glyphs. */
-    private val CloverShape: Shape = ScallopShape(lobes = 4, depth = 0.16f, rotation = 45f)
-
-    /** "Soft burst": twelve shallow lobes, for the liturgical banner's seal. */
-    private val SoftBurstShape: Shape = ScallopShape(lobes = 12, depth = 0.09f, rotation = 15f)
-
     // -------------------------------------------------------------- primitives
-
-    /** A list avatar's container, glyph colour and shape. */
-    private data class AvatarStyle(val container: Color, val content: Color, val shape: Shape)
-
-    /** "Cookie 7", a list avatar's scalloped variant. */
-    private val AvatarCookieShape: Shape = ScallopShape(lobes = 7, depth = 0.13f, rotation = 10f)
-
-    /**
-     * The avatar clover: deeper notches than the stat tiles' clover, because
-     * at 40dp a 16% notch read as a lumpy rounded square.
-     */
-    private val AvatarCloverShape: Shape = ScallopShape(lobes = 4, depth = 0.28f, rotation = 45f)
-
-    /**
-     * One of four avatar treatments, picked deterministically from [key] (an
-     * icon's name, a title): primary container in a circle, a tertiary
-     * (hue + 60°, M3's tertiary offset) clover, a secondary rounded square,
-     * and a warm gold cookie. The same glyph always wears the same treatment,
-     * so a list reads as categories — Android 16 Settings' coloured shapes —
-     * rather than one tonal circle repeated down the screen.
-     */
-    @Composable
-    private fun avatarStyle(key: Int): AvatarStyle {
-        val dark = LocalAppDesign.current.isDark
-        val c = roles()
-        val accent = MaterialTheme.colorScheme.primary
-        val (h, srcS, _) = accent.hsl()
-        val chroma = (srcS / 0.35f).coerceIn(0.35f, 1f)
-        fun at(hue: Float, s: Float, l: Float) =
-            Color.hsl(((hue % 360f) + 360f) % 360f, (s * chroma).coerceIn(0f, 1f), l)
-        return when (Math.floorMod(key, 4)) {
-            0 -> AvatarStyle(c.accentSoft, c.onAccentSoft, RoundedCornerShape(percent = 50))
-            1 -> {
-                val bg = if (dark) at(h + 60f, 0.34f, 0.25f) else at(h + 60f, 0.48f, 0.87f)
-                val fg = if (dark) at(h + 60f, 0.55f, 0.85f) else at(h + 60f, 0.65f, 0.20f)
-                AvatarStyle(bg, fg.readableOn(bg), AvatarCloverShape)
-            }
-            2 -> AvatarStyle(c.accentSofter, c.onAccentSofter, RoundedCornerShape(12.dp))
-            else -> {
-                val bg = if (dark) at(40f, 0.40f, 0.24f) else at(40f, 0.70f, 0.86f)
-                val fg = if (dark) at(40f, 0.60f, 0.82f) else at(36f, 0.70f, 0.22f)
-                AvatarStyle(bg, fg.readableOn(bg), AvatarCookieShape)
-            }
-        }
-    }
-
-    /** "I · Exodus 20:2–3": a leading ordinal folded into the supporting line. */
-    private val SubtitleNumeral = Regex("""^\s*([IVXLC]{1,6}|\d{1,3})\s+[·•—–]\s+(.+)$""")
-
-    /** A trailing value that is nothing but an ordinal. */
-    private val BareNumeral = Regex("""^\s*([IVXLC]{1,6}|\d{1,3})\.?\s*$""")
-
-    /** The letter a monogram avatar shows: the first word that is not an article. */
-    private fun monogramOf(title: String): String? {
-        val skip = setOf("the", "a", "an", "el", "la", "los", "las", "o", "os", "as")
-        val words = title.split(' ', '\'').filter { it.isNotBlank() }
-        val word = words.firstOrNull { it.lowercase() !in skip && it.first().isLetter() }
-            ?: words.firstOrNull { it.first().isLetter() } ?: return null
-        return word.first().uppercase()
-    }
 
     /**
      * The signature M3 list idiom: a glyph centred in a tonal circle. [size] is
@@ -583,12 +473,6 @@ object MaterialKit : AppKit {
     }
 
     private val LocalBarTitles = staticCompositionLocalOf<BarTitles?> { null }
-
-    /** 4 + 38 (headline) + 2 + 20 (supporting line) + 16. */
-    private val ExpandedBarHeight = 80.dp
-
-    /** 4 + 38 (headline) + 10: a headline with no supporting line. */
-    private val ExpandedBarHeightNoSupport = 52.dp
 
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
@@ -745,11 +629,11 @@ object MaterialKit : AppKit {
     }
 
     /**
-     * Two rows, as the M3 large top app bar draws them: a 64dp row with the
-     * navigation icon, the collapsed title and the actions, over an expanded
-     * region carrying the headline (emphasised headline type) and its
-     * supporting line. The expanded region's own height is the scroll
-     * behaviour's offset limit, so it collapses exactly as far as it is tall.
+     * A flexible headline with real text layout, not text painted onto a fixed
+     * spacer. The expanded height follows the actual type scale and translated
+     * title; a larger accessibility font therefore gets space rather than
+     * silently losing its second line. An actionless root screen starts with
+     * the headline, while pushed screens keep a full navigation row.
      */
     @OptIn(ExperimentalMaterial3Api::class)
     @Composable
@@ -766,130 +650,101 @@ object MaterialKit : AppKit {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
-        val measurer = rememberTextMeasurer()
-        val headStyle = styles.screenTitle.copy(color = palette.textPrimary)
-        val headSmallStyle = MaterialTheme.typography.headlineSmall.copy(
-            color = palette.textPrimary,
-            fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
-        )
-        val supportStyle = styles.screenSubtitle.copy(color = palette.textSecondary)
-        val fraction = state.collapsedFraction
-        val container = androidx.compose.ui.graphics.lerp(canvas, scrolled, fraction.coerceIn(0f, 1f))
+        val displayTitle = title()
+        val supporting = subtitle()?.takeIf { it.isNotBlank() }
+        val fraction = state.collapsedFraction.coerceIn(0f, 1f)
+        val container = androidx.compose.ui.graphics.lerp(canvas, scrolled, fraction)
         Surface(color = container, contentColor = palette.textPrimary) {
             val actionsWidth = remember { intArrayOf(0) }
             Layout(
-                modifier = Modifier.fillMaxWidth().windowInsetsPadding(WindowInsets.statusBars),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .windowInsetsPadding(WindowInsets.statusBars)
+                    .clipToBounds(),
                 content = {
-                Row(
-                    Modifier.fillMaxWidth().height(64.dp).padding(horizontal = 4.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    if (onBack != null) {
-                        IconButton(onClick = onBack, modifier = Modifier.testTag("nav_back")) {
-                            Icon(
-                                Icons.AutoMirrored.Rounded.ArrowBack,
-                                contentDescription = backLabel,
-                                tint = palette.textPrimary
-                            )
-                        }
-                    } else {
-                        Spacer(Modifier.width(12.dp))
-                    }
-                    Text(
-                        text = title(),
-                        style = MaterialTheme.typography.titleLarge,
-                        color = palette.textPrimary,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier
-                            .weight(1f)
-                            .padding(start = 4.dp)
-                            .graphicsLayer {
-                                alpha = ((state.collapsedFraction - 0.55f) / 0.45f).coerceIn(0f, 1f)
+                    Row(
+                        Modifier.fillMaxWidth().height(64.dp).padding(horizontal = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        if (onBack != null) {
+                            IconButton(onClick = onBack, modifier = Modifier.testTag("nav_back")) {
+                                Icon(
+                                    Icons.AutoMirrored.Rounded.ArrowBack,
+                                    contentDescription = backLabel,
+                                    tint = palette.textPrimary
+                                )
                             }
-                    )
-                    CompositionLocalProvider(androidx.compose.material3.LocalContentColor provides palette.textSecondary) {
-                        Row(
-                            Modifier.layout { m, c ->
-                                val p = m.measure(c)
-                                actionsWidth[0] = p.width
-                                layout(p.width, p.height) { p.place(0, 0) }
-                            },
-                            verticalAlignment = Alignment.CenterVertically,
-                            content = actions
+                        } else {
+                            Spacer(Modifier.width(12.dp))
+                        }
+                        Text(
+                            text = displayTitle,
+                            style = MaterialTheme.typography.titleLarge,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.weight(1f).padding(start = 4.dp)
+                                .graphicsLayer { alpha = ((fraction - 0.55f) / 0.45f).coerceIn(0f, 1f) }
+                                .then(if (fraction < 0.55f) Modifier.clearAndSetSemantics {} else Modifier)
                         )
-                    }
-                }
-                // A fixed-height region, as the large top app bar's is, so
-                // its height never waits on the headline: one line of
-                // emphasised headline over one line of supporting text.
-                Spacer(
-                    Modifier
-                        .fillMaxWidth()
-                        .graphicsLayer {
-                            alpha = (1f - state.collapsedFraction * 1.6f).coerceIn(0f, 1f)
-                        }
-                        .drawWithCache {
-                            val gutter = design.spacing.gutter.toPx()
-                            val maxW = (size.width - gutter * 2).toInt().coerceAtLeast(0)
-                            val box = androidx.compose.ui.unit.Constraints(maxWidth = maxW)
-                            val t = title()
-                            val sub = subtitle()
-                            var head = measurer.measure(
-                                t, headStyle, overflow = TextOverflow.Ellipsis, maxLines = 1, constraints = box
+                        CompositionLocalProvider(
+                            androidx.compose.material3.LocalContentColor provides palette.textSecondary
+                        ) {
+                            Row(
+                                Modifier.layout { measurable, constraints ->
+                                    val placeable = measurable.measure(constraints)
+                                    actionsWidth[0] = placeable.width
+                                    layout(placeable.width, placeable.height) { placeable.place(0, 0) }
+                                },
+                                verticalAlignment = Alignment.CenterVertically,
+                                content = actions
                             )
-                            // A long headline steps down to headlineSmall
-                            // before it ever ellipsises.
-                            if (head.hasVisualOverflow) {
-                                head = measurer.measure(
-                                    t, headSmallStyle, overflow = TextOverflow.Ellipsis, maxLines = 1, constraints = box
-                                )
-                            }
-                            val support = sub?.let {
-                                measurer.measure(
-                                    it, supportStyle, overflow = TextOverflow.Ellipsis, maxLines = 1, constraints = box
-                                )
-                            }
-                            // Top-aligned on a fixed line, so the headline
-                            // never jumps between tabs that have a
-                            // supporting line and tabs that do not.
-                            val headTop = 4.dp.toPx()
-                            val supportTop = headTop + 38.dp.toPx() + 2.dp.toPx()
-                            onDrawBehind {
-                                drawText(head, topLeft = androidx.compose.ui.geometry.Offset(gutter, headTop))
-                                support?.let {
-                                    drawText(it, topLeft = androidx.compose.ui.geometry.Offset(gutter, supportTop))
-                                }
-                            }
                         }
-                )
+                    }
+                    Column(
+                        Modifier.fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
+                            .padding(top = 8.dp, bottom = 24.dp)
+                            .graphicsLayer { alpha = (1f - fraction * 1.7f).coerceIn(0f, 1f) },
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Text(
+                            text = displayTitle,
+                            style = styles.screenTitle,
+                            color = palette.textPrimary,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier.then(
+                                if (fraction < 0.6f) Modifier.semantics { heading() }
+                                else Modifier.clearAndSetSemantics {}
+                            )
+                        )
+                        if (supporting != null) {
+                            Text(
+                                text = supporting,
+                                style = styles.screenSubtitle,
+                                color = palette.textSecondary,
+                                maxLines = 2,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        }
+                    }
                 }
             ) { measurables, constraints ->
                 val loose = constraints.copy(minHeight = 0, maxHeight = androidx.compose.ui.unit.Constraints.Infinity)
                 val pinned = measurables[0].measure(loose)
-                // The expanded region is as tall as what it carries: a
-                // headline alone closes up under it (16dp to the content),
-                // and only a screen with a supporting line pays for one. A
-                // fixed two-line region left ~24dp of dead canvas under every
-                // headline that had no subtitle.
-                val regionHeight = if (subtitle() != null) ExpandedBarHeight else ExpandedBarHeightNoSupport
-                val expanded = measurables[1].measure(
-                    androidx.compose.ui.unit.Constraints.fixed(constraints.maxWidth, regionHeight.roundToPx())
-                )
-                // A root screen with nothing in the pinned row lets the
-                // headline rise into it at rest, so the bar does not open on
-                // 64dp of empty canvas; anything in the row keeps it clear.
-                val overlap = if (onBack == null && actionsWidth[0] == 0) 28.dp.roundToPx() else 0
-                val full = expanded.height
-                val collapsible = (full - overlap).coerceAtLeast(0)
-                if (state.heightOffsetLimit != -collapsible.toFloat()) {
-                    state.heightOffsetLimit = -collapsible.toFloat()
-                }
+                val expanded = measurables[1].measure(loose)
+                // With no navigation or actions there is no empty toolbar to
+                // display. Its headline rises into that space, as in Google's
+                // first-party large-title surfaces, and collapses to 64dp.
+                val overlap = if (onBack == null && actionsWidth[0] == 0) 44.dp.roundToPx() else 0
+                val collapsible = (expanded.height - overlap).coerceAtLeast(1)
+                val offsetLimit = -collapsible.toFloat()
+                if (state.heightOffsetLimit != offsetLimit) state.heightOffsetLimit = offsetLimit
                 val visible = (collapsible + state.heightOffset).toInt().coerceIn(0, collapsible)
                 val height = pinned.height + visible
                 layout(constraints.maxWidth, height) {
+                    expanded.placeRelative(0, height - expanded.height)
                     pinned.placeRelative(0, 0)
-                    expanded.placeRelative(0, height - full)
                 }
             }
         }
@@ -965,17 +820,10 @@ object MaterialKit : AppKit {
                 holder.entries.add(entry)
                 onDispose { if (holder.entries.size > 1) holder.entries.remove(entry) }
             }
-            // The headline is drawn by the bar, so the heading's semantics
-            // stay here, where a screen reader expects the screen to open.
-            Spacer(
-                modifier
-                    .fillMaxWidth()
-                    .height(4.dp)
-                    .semantics {
-                        heading()
-                        contentDescription = listOfNotNull(title, subtitle).joinToString(". ")
-                    }
-            )
+            // The app bar owns both the visible headline and its heading
+            // semantics. Keeping another named spacer here would announce
+            // the same screen twice to a screen reader.
+            Spacer(modifier.fillMaxWidth().height(0.dp))
             return
         }
         val design = LocalAppDesign.current
@@ -1009,12 +857,13 @@ object MaterialKit : AppKit {
         // rides at the trailing end on the same line rather than costing a
         // line of its own; a longer description hangs under it in bodyMedium.
         val shortAside = subtitle != null && subtitle.length <= 18 && !subtitle.contains('.')
+        val inCard = LocalInsideCard.current
         Column(
-            modifier
-                .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-                .padding(start = 16.dp, end = 16.dp)
-                .padding(top = 24.dp, bottom = 8.dp)
+            modifier.fillMaxWidth().then(
+                if (inCard) Modifier.padding(bottom = 8.dp)
+                else Modifier.padding(horizontal = design.spacing.gutter + 16.dp)
+                    .padding(top = 16.dp, bottom = 8.dp)
+            )
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(
@@ -1054,7 +903,7 @@ object MaterialKit : AppKit {
         val c = roles()
         val inGroup = LocalInListGroup.current
         val interaction = remember { MutableInteractionSource() }
-        val rest = if (inGroup) GroupInnerCorner else 16.dp
+        val rest = if (inGroup) GroupInnerCorner else 24.dp
         val corner = pressMorph(interaction, onClick != null, rest, rest + 12.dp)
         FilledCard(
             modifier = modifier.fillMaxWidth(),
@@ -1063,7 +912,10 @@ object MaterialKit : AppKit {
             onClick = onClick,
             interactionSource = interaction
         ) {
-            Column(Modifier.padding(design.spacing.cardPadding), content = content)
+            Column(Modifier.padding(design.spacing.cardPadding)) {
+                val scope = this
+                CompositionLocalProvider(LocalInsideCard provides true) { scope.content() }
+            }
         }
     }
 
@@ -1099,225 +951,48 @@ object MaterialKit : AppKit {
         modifier: Modifier
     ) {
         val design = LocalAppDesign.current
-        val palette = design.palette
         val styles = LocalAppTextStyles.current
         val c = roles()
-
         val container = if (selected) c.accentSofter else c.container
-        val titleColor = if (selected) c.onAccentSofter else palette.textPrimary
-
-        // M3 list items come in one-, two- and three-line heights (56/72/88)
-        // and the three-line item lets its supporting text run to a second
-        // line. Clamping both lines to one cut every long Spanish parish name
-        // to "Catedral Primada de S…" — which no Google list does; it wraps.
-        // Once the text block runs past two lines the item is three-line, and
-        // the spec then pins avatar and trailing text to the top instead of
-        // centring them against a tall block. That is decided in the layout
-        // pass from the measured text height, so it is right on the first
-        // frame rather than one recomposition later.
-        // A row with no glyph still gets a leading element, so a list is not
-        // a column of bare text: an ordinal ("I · Exodus 20:2–3", or a bare
-        // "IV" trailing) moves into a numeral tile at the leading edge, and a
-        // navigable two-line row gets a monogram avatar (the Contacts / Gmail
-        // idiom), its colour keyed to the title.
-        val subNumeral = if (leadingIcon == null && subtitle != null) SubtitleNumeral.matchEntire(subtitle) else null
-        val trailNumeral = if (leadingIcon == null && subNumeral == null && trailingText != null) {
-            BareNumeral.matchEntire(trailingText)
-        } else {
-            null
-        }
-        val numeral = subNumeral?.groupValues?.get(1) ?: trailNumeral?.groupValues?.get(1)
-        val subtitle = subNumeral?.groupValues?.get(2) ?: subtitle
-        val trailingText = if (trailNumeral != null) null else trailingText
-        val monogram = if (leadingIcon == null && numeral == null && subtitle != null &&
-            trailingText == null && onClick != null
-        ) monogramOf(title) else null
-
-        val hasLeading = leadingIcon != null || numeral != null || monogram != null
-        val hasTrailing = trailingText != null || (showsNavigationAffordance && onClick != null)
-
-        // Inside a group a row is a 4dp segment; pressed, its corners swell
-        // on the fast spatial spring — the Expressive list's press answer.
-        val inGroup = LocalInListGroup.current
-        val interaction = remember { MutableInteractionSource() }
-        val rest = if (inGroup) GroupInnerCorner else 16.dp
-        val corner = pressMorph(interaction, onClick != null, rest, if (inGroup) 16.dp else 28.dp)
-        val animatedContainer by androidx.compose.animation.animateColorAsState(
-            targetValue = container,
-            animationSpec = defaultEffects(),
-            label = "row_container"
-        )
-
+        val foreground = if (selected) c.onAccentSofter else design.palette.textPrimary
+        val secondary = if (selected) c.onAccentSofter else design.palette.textSecondary
         FilledCard(
             modifier = modifier.fillMaxWidth(),
-            container = animatedContainer,
-            shape = RoundedCornerShape(corner),
-            onClick = onClick,
-            interactionSource = interaction
+            container = container,
+            shape = RoundedCornerShape(if (LocalInListGroup.current) GroupInnerCorner else 16.dp),
+            onClick = onClick
         ) {
-            Layout(
-                modifier = Modifier.fillMaxWidth(),
-                content = {
-                    if (leadingIcon == null && (numeral != null || monogram != null)) {
-                        val style = if (numeral != null) {
-                            // Ordinals share one treatment so the sequence
-                            // reads as a sequence: a tertiary rounded tile.
-                            avatarStyle(1).copy(shape = RoundedCornerShape(12.dp))
-                        } else {
-                            avatarStyle(title.hashCode()).copy(shape = RoundedCornerShape(percent = 50))
-                        }
-                        Box(
-                            Modifier
-                                .size(40.dp)
-                                .background(if (selected) MaterialTheme.colorScheme.primary else style.container, style.shape),
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                text = numeral ?: monogram!!,
-                                style = if (numeral != null && numeral.length > 2) {
-                                    MaterialTheme.typography.labelLarge
-                                } else {
-                                    MaterialTheme.typography.titleMedium
-                                },
-                                fontWeight = androidx.compose.ui.text.font.FontWeight.SemiBold,
-                                color = if (selected) MaterialTheme.colorScheme.onPrimary else style.content,
-                                maxLines = 1
-                            )
-                        }
-                    }
-                    if (leadingIcon != null) {
-                        // Selection morphs the avatar from a circle into a
-                        // nine-lobed cookie, turning as it goes, on the
-                        // fast spatial spring: the Expressive selection cue,
-                        // so a selected row differs by shape, not by fill alone.
-                        val morph by animateFloatAsState(
-                            targetValue = if (selected) 1f else 0f,
-                            animationSpec = fastSpatial(),
-                            label = "avatar_morph"
-                        )
-                        val style = avatarStyle(leadingIcon.name.hashCode())
-                        TonalIconCircle(
-                            shape = if (morph < 0.01f) style.shape
-                            else ScallopShape(9, 0.11f * morph, 40f * morph),
-                            icon = leadingIcon,
-                            // The list avatar, in its category's treatment.
-                            // The selected row is already secondaryContainer,
-                            // so its avatar steps up to primary to stay distinct.
-                            container = if (selected) MaterialTheme.colorScheme.primary else style.container,
-                            tint = if (selected) MaterialTheme.colorScheme.onPrimary else style.content,
-                            glyph = design.decor.rowIconSize
-                        )
-                    }
-                    Column {
-                        Text(
-                            text = title,
-                            style = styles.rowTitle,
-                            color = titleColor,
-                            maxLines = 2,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                        if (subtitle != null) {
-                            Text(
-                                text = subtitle,
-                                style = styles.rowSubtitle,
-                                color = if (selected) c.onAccentSofter else palette.textSecondary,
-                                maxLines = 2,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        }
-                    }
-                    val chevron = showsNavigationAffordance && onClick != null
-                    if (trailingText != null || chevron) {
-                        // Trailing supporting text at bodyMedium: a time, a
-                        // reference or a current value is data the reader
-                        // scans for, and 11sp labelSmall read as a footnote.
-                        // A row that opens something says so with a chevron,
-                        // after its value when it has one ("Country  All ›").
-                        val tint = if (selected) c.onAccentSofter else palette.textSecondary
-                        androidx.compose.foundation.layout.Row(verticalAlignment = Alignment.CenterVertically) {
-                            if (trailingText != null) {
+            androidx.compose.material3.ListItem(
+                headlineContent = {
+                    Text(title, style = styles.rowTitle, color = foreground, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                },
+                supportingContent = if (!subtitle.isNullOrBlank()) {
+                    { Text(subtitle, style = styles.rowSubtitle, color = secondary, maxLines = 2, overflow = TextOverflow.Ellipsis) }
+                } else null,
+                leadingContent = if (leadingIcon != null) {
+                    { Icon(leadingIcon, contentDescription = null, tint = foreground, modifier = Modifier.size(24.dp)) }
+                } else null,
+                trailingContent = if (trailingText != null || (showsNavigationAffordance && onClick != null)) {
+                    {
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                            trailingText?.let {
                                 Text(
-                                    text = trailingText,
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = tint,
-                                    textAlign = TextAlign.End,
-                                    maxLines = 2,
-                                    overflow = TextOverflow.Ellipsis,
-                                    modifier = Modifier.widthIn(max = 112.dp)
+                                    it, style = MaterialTheme.typography.bodyMedium, color = secondary,
+                                    maxLines = 2, overflow = TextOverflow.Ellipsis,
+                                    textAlign = TextAlign.End, modifier = Modifier.widthIn(max = 104.dp)
                                 )
                             }
-                            if (chevron) {
-                                if (trailingText != null) Spacer(Modifier.width(4.dp))
+                            if (showsNavigationAffordance && onClick != null) {
                                 Icon(
                                     Icons.AutoMirrored.Rounded.KeyboardArrowRight,
-                                    contentDescription = null,
-                                    tint = tint,
-                                    modifier = Modifier.size(24.dp)
+                                    contentDescription = null, tint = secondary, modifier = Modifier.size(20.dp)
                                 )
                             }
                         }
                     }
-                }
-            ) { measurables, constraints ->
-                val start = 16.dp.roundToPx()
-                val end = 24.dp.roundToPx()
-                val gap = design.spacing.iconLabelGap.roundToPx()
-                val trailingGap = 16.dp.roundToPx()
-                val loose = constraints.copy(minWidth = 0, minHeight = 0)
-                var i = 0
-                val leading = if (hasLeading) measurables[i++].measure(loose) else null
-                val textMeasurable = measurables[i++]
-                val trailing = if (hasTrailing) measurables[i].measure(loose) else null
-
-                val width = constraints.maxWidth
-                val used = start + end +
-                    (leading?.let { it.width + gap } ?: 0) +
-                    (trailing?.let { it.width + trailingGap } ?: 0)
-                val text = textMeasurable.measure(
-                    loose.copy(maxWidth = (width - used).coerceAtLeast(0))
-                )
-
-                // One line of rowTitle is 24dp, title + subtitle 44dp; anything
-                // taller is a three-line item.
-                val threeLine = text.height > 48.dp.roundToPx()
-                val oneLine = subtitle == null && text.height <= 28.dp.roundToPx()
-                val minHeight = when {
-                    threeLine -> 88.dp
-                    oneLine -> 56.dp
-                    else -> 72.dp
-                }.roundToPx()
-                val padV = (if (threeLine) 12.dp else 8.dp).roundToPx()
-                val height = maxOf(minHeight, text.height + padV * 2)
-
-                fun sideY(h: Int) = if (threeLine) padV else (height - h) / 2
-
-                layout(width, height) {
-                    var x = start
-                    leading?.let {
-                        it.placeRelative(x, sideY(it.height))
-                        x += it.width + gap
-                    }
-                    text.placeRelative(x, (height - text.height) / 2)
-                    trailing?.let {
-                        // Three-line: the trailing text shares the headline's
-                        // first baseline, as the spec draws it, rather than
-                        // sitting on the padding line 4dp above it.
-                        val textBase = text[FirstBaseline]
-                        val trailBase = it[FirstBaseline]
-                        val y = if (threeLine && !(showsNavigationAffordance && onClick != null) && textBase != AlignmentLine.Unspecified &&
-                            trailBase != AlignmentLine.Unspecified
-                        ) {
-                            (height - text.height) / 2 + textBase - trailBase
-                        } else if (showsNavigationAffordance && onClick != null) {
-                            // A chevron is centred on the item at any height.
-                            (height - it.height) / 2
-                        } else {
-                            sideY(it.height)
-                        }
-                        it.placeRelative(width - end - it.width, y)
-                    }
-                }
-            }
+                } else null,
+                colors = androidx.compose.material3.ListItemDefaults.colors(containerColor = container)
+            )
         }
     }
 
@@ -1353,7 +1028,7 @@ object MaterialKit : AppKit {
         val interaction = remember { MutableInteractionSource() }
         Button(
             onClick = onClick,
-            modifier = modifier.heightIn(min = 40.dp),
+            modifier = modifier.heightIn(min = 48.dp),
             enabled = enabled,
             shape = buttonShape(interaction, enabled),
             interactionSource = interaction,
@@ -1374,7 +1049,7 @@ object MaterialKit : AppKit {
                 Icon(leadingIcon, contentDescription = null, modifier = Modifier.size(18.dp))
                 Spacer(Modifier.width(8.dp))
             }
-            Text(text = label, style = MaterialTheme.typography.labelLarge, maxLines = 1)
+            Text(text = label, style = MaterialTheme.typography.labelLarge, maxLines = 2, textAlign = TextAlign.Center, overflow = TextOverflow.Ellipsis)
         }
     }
 
@@ -1390,7 +1065,7 @@ object MaterialKit : AppKit {
         val interaction = remember { MutableInteractionSource() }
         FilledTonalButton(
             onClick = onClick,
-            modifier = modifier.heightIn(min = 40.dp),
+            modifier = modifier.heightIn(min = 48.dp),
             enabled = enabled,
             shape = buttonShape(interaction, enabled),
             interactionSource = interaction,
@@ -1409,7 +1084,7 @@ object MaterialKit : AppKit {
                 Icon(leadingIcon, contentDescription = null, modifier = Modifier.size(18.dp))
                 Spacer(Modifier.width(8.dp))
             }
-            Text(text = label, style = MaterialTheme.typography.labelLarge, maxLines = 1)
+            Text(text = label, style = MaterialTheme.typography.labelLarge, maxLines = 2, textAlign = TextAlign.Center, overflow = TextOverflow.Ellipsis)
         }
     }
 
@@ -1775,7 +1450,7 @@ object MaterialKit : AppKit {
         FilterChip(
             selected = selected,
             onClick = onClick,
-            label = { Text(text = label, style = MaterialTheme.typography.labelLarge, maxLines = 1) },
+            label = { Text(text = label, style = MaterialTheme.typography.labelLarge, maxLines = 2, textAlign = TextAlign.Center, overflow = TextOverflow.Ellipsis) },
             modifier = modifier,
             // The selected filter chip carries its checkmark: without it a
             // selected chip is only a fill change, which is the input-chip
@@ -1835,20 +1510,17 @@ object MaterialKit : AppKit {
                 .padding(start = design.spacing.gutter, end = design.spacing.gutter, bottom = 6.dp),
             verticalAlignment = Alignment.Top
         ) {
-            // A 24dp tonal disc, not a rounded tag: it is the same circle the
-            // list rows and the metric tiles use, one size down, so the page
-            // has one shape language for "a glyph in a tint" instead of two.
+            // A quiet number column keeps the verse text easy to scan.
             Box(
                 Modifier
                     .padding(top = 3.dp)
-                    .size(24.dp)
-                    .background(c.accentSofter, RoundedCornerShape(percent = 50)),
+                    .size(24.dp),
                 contentAlignment = Alignment.Center
             ) {
                 Text(
                     text = "$number",
                     style = MaterialTheme.typography.labelSmall,
-                    color = c.onAccentSofter,
+                    color = palette.textSecondary,
                     textAlign = TextAlign.Center,
                     maxLines = 1
                 )
@@ -1895,15 +1567,12 @@ object MaterialKit : AppKit {
             // out of line with its neighbours'.
             Column(Modifier.padding(16.dp)) {
                 if (icon != null) {
-                    // A four-leaf clover, not another circle: stat tiles are
-                    // the one place on a screen meant to be glanced at.
                     TonalIconCircle(
                         icon = icon,
                         container = c.accentSoft,
                         tint = c.onAccentSoft,
                         size = 36.dp,
-                        glyph = 18.dp,
-                        shape = CloverShape
+                        glyph = 18.dp
                     )
                     Spacer(Modifier.height(12.dp))
                 }
@@ -1949,9 +1618,8 @@ object MaterialKit : AppKit {
                 icon = icon ?: Icons.Rounded.Inbox,
                 container = c.accentSoft,
                 tint = c.onAccentSoft,
-                size = 96.dp,
-                glyph = 40.dp,
-                shape = CookieShape
+                size = 56.dp,
+                glyph = 28.dp
             )
             Spacer(Modifier.height(24.dp))
             Text(
@@ -1995,29 +1663,6 @@ object MaterialKit : AppKit {
         return Color.hsl(((h + shift) % 360f + 360f) % 360f, sat, l, alpha)
     }
 
-    /** A Latin cross, drawn rather than borrowed: the icon set has none. */
-    @Composable
-    private fun CrossGlyph(color: Color, modifier: Modifier) {
-        androidx.compose.foundation.Canvas(modifier) {
-            val w = size.width
-            val h = size.height
-            val bar = w * 0.17f
-            val r = CornerRadius(bar / 2f)
-            drawRoundRect(
-                color = color,
-                topLeft = androidx.compose.ui.geometry.Offset((w - bar) / 2f, h * 0.08f),
-                size = Size(bar, h * 0.84f),
-                cornerRadius = r
-            )
-            drawRoundRect(
-                color = color,
-                topLeft = androidx.compose.ui.geometry.Offset(w * 0.2f, h * 0.30f),
-                size = Size(w * 0.6f, bar),
-                cornerRadius = r
-            )
-        }
-    }
-
     @Composable
     override fun Banner(
         title: String,
@@ -2030,88 +1675,38 @@ object MaterialKit : AppKit {
         val palette = design.palette
         val c = roles()
         val primary = MaterialTheme.colorScheme.primary
-        // The liturgical colour is a fixed custom colour, so it is harmonised
-        // with the scheme before any tone is struck from it.
+        // Colour conveys the liturgical day; it does not need a seal,
+        // illustration or a second container competing with the text.
         val given = accentColorHex?.let { Color(it).harmonizedWith(primary) }
-        // The whole container is a tone of the liturgical colour — its hue at
-        // container lightness (tone ≈90 light, ≈25 dark) — never a stripe.
-        val container = when {
-            given == null -> c.accentSoft
-            design.isDark -> given.tone(0.36f, 0.22f)
-            else -> given.tone(0.48f, 0.875f)
-        }
-        val eyebrowColor = (given ?: primary).readableOn(container)
-        val bodyColor = palette.textPrimary.readableOn(container, target = 7f)
-        // A short celebration name is the hero of the screen it opens, so it
-        // gets emphasised headline type; a sentence of explanation stays at
-        // titleMedium, where a paragraph can still be read.
-        // The first line of the body is the celebration; anything after a
-        // line break (the precept, the cycle) is supporting text under it.
-        val headline = body?.substringBefore('\n')
-        val support = body?.substringAfter('\n', "")?.takeIf { it.isNotBlank() }
-        val bodyStyle = when {
-            headline == null -> MaterialTheme.typography.titleMedium
-            headline.length <= 28 -> MaterialTheme.typography.headlineSmall.copy(
-                fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
-            )
-            headline.length <= 64 -> MaterialTheme.typography.titleLarge.copy(
-                fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
-            )
-            else -> MaterialTheme.typography.titleMedium
-        }
-        val heroBody = headline != null && headline.length <= 64
-        val seal = given != null
-
+        val container = c.low
+        val accent = (given ?: primary).readableOn(container)
+        val headline = body?.substringBefore('\n')?.takeIf { it.isNotBlank() }
+        val supporting = body?.substringAfter('\n', "")?.takeIf { it.isNotBlank() }
         FilledCard(
             modifier = modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
             container = container,
-            // The extra-large 28dp corner: the banner is the hero surface,
-            // and with headline type it is tall enough to carry it.
-            shape = RoundedCornerShape(28.dp),
+            shape = RoundedCornerShape(16.dp),
             onClick = onClick
         ) {
             Row(
-                Modifier.padding(start = 20.dp, end = if (seal) 16.dp else 20.dp, top = 18.dp, bottom = 20.dp),
-                verticalAlignment = Alignment.CenterVertically
+                Modifier.padding(16.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalAlignment = Alignment.Top
             ) {
-                Column(Modifier.weight(1f)) {
+                if (given != null) {
+                    Box(Modifier.padding(top = 5.dp).size(8.dp).background(accent, RoundedCornerShape(50)))
+                }
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     Text(
                         text = title,
-                        style = MaterialTheme.typography.labelLarge,
-                        color = eyebrowColor,
-                        maxLines = 2,
-                        overflow = TextOverflow.Ellipsis
+                        style = if (headline == null) MaterialTheme.typography.titleMedium else MaterialTheme.typography.labelLarge,
+                        color = if (headline == null) palette.textPrimary else accent
                     )
-                    if (headline != null) {
-                        Spacer(Modifier.height(if (heroBody) 6.dp else 4.dp))
-                        Text(
-                            text = headline,
-                            style = bodyStyle,
-                            color = bodyColor
-                        )
+                    headline?.let {
+                        Text(it, style = MaterialTheme.typography.titleLarge, color = palette.textPrimary)
                     }
-                    if (support != null) {
-                        Spacer(Modifier.height(4.dp))
-                        Text(
-                            text = support,
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = bodyColor.copy(alpha = 0.78f)
-                        )
-                    }
-                }
-                if (seal && given != null) {
-                    // The Expressive moment: the day's colour struck as a
-                    // soft-burst seal at full container strength, carrying a
-                    // cross — the one shape on the screen that is not a
-                    // rounded rectangle, which is what makes it the hero.
-                    val sealColor = if (design.isDark) given.tone(0.50f, 0.72f) else given.tone(0.55f, 0.36f)
-                    val crossColor = if (design.isDark) given.tone(0.40f, 0.16f) else given.tone(0.30f, 0.96f)
-                    Spacer(Modifier.width(16.dp))
-                    Box(
-                        Modifier.size(64.dp).background(sealColor, SoftBurstShape),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        CrossGlyph(crossColor, Modifier.size(width = 22.dp, height = 30.dp))
+                    supporting?.let {
+                        Text(it, style = MaterialTheme.typography.bodyMedium, color = palette.textSecondary)
                     }
                 }
             }

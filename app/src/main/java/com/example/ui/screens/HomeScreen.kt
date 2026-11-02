@@ -63,21 +63,19 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.ui.components.SacredHero
-import com.example.ui.components.SacredSubject
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.example.data.liturgy.LiturgicalColor
 import com.example.data.models.AppLanguage
 import com.example.data.models.DailyMassReading
 import com.example.data.models.LiturgicalCalendarDay
@@ -91,12 +89,12 @@ import com.example.ui.design.AppCard
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
-import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
 import com.example.ui.components.TextFormat
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
+import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -140,18 +138,11 @@ fun HomeScreen(
         AppLanguage.PT -> pt
     }
 
-    val liturgicalPigment = pigment(Color(liturgicalDay.liturgicalColorHex), design.isDark, palette.textPrimary)
-    val colorLabel = LiturgicalColor.entries
-        .firstOrNull { it.hex == liturgicalDay.liturgicalColorHex }
-        ?.displayName?.get(currentLanguage)
-        ?: strings("Color Litúrgico", "Liturgical Color", "Cor Litúrgica")
-
     // Both of these are empty on a ferial weekday the bundled lectionary does
     // not carry, so the day's gospel line and its disclosure appear only when
     // there is something behind them.
     val meditation = liturgicalDay.missalMeditation?.get(currentLanguage)
         ?.takeIf { it.isNotBlank() }
-    val gospelOfRecord = liturgicalDay.gospelVerseRef.takeIf { it.isNotBlank() }
     val resumeReading = remember(currentLanguage) {
         ReadingPosition.load(context)?.let { position ->
             BibleData.catholicCanonBooks.firstOrNull { it.id == position.bookId }
@@ -170,23 +161,16 @@ fun HomeScreen(
     }
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
 
-    // A ferial weekday is not in the bundled lectionary, and the repository
-    // leaves its citations empty rather than borrowing another day's readings.
-    val bundledCitations = listOfNotNull(
-        strings("Primera lectura", "First reading", "Primeira leitura") to dailyReading.firstReadingRef,
-        strings("Salmo responsorial", "Responsorial psalm", "Salmo responsorial")
-            to dailyReading.responsorialPsalmRef,
-        dailyReading.secondReadingRef?.let {
-            strings("Segunda lectura", "Second reading", "Segunda leitura") to it
-        },
-        strings("Evangelio", "Gospel", "Evangelho") to dailyReading.gospelRef
-    ).filter { it.second.isNotBlank() }
-    val massCitations = vatican?.sections
-        ?.map { section -> section.heading to section.citation.ifBlank { "" } }
-        ?.map { (heading, citation) -> if (citation.isBlank()) "" to heading else heading to citation }
-        ?: bundledCitations
-    val gospelExcerpt = vatican?.sections?.lastOrNull()?.text?.takeIf { it.isNotBlank() }
+    val gospel = vatican?.sections?.lastOrNull()
+    val gospelReference = gospel?.citation?.takeIf { it.isNotBlank() } ?: dailyReading.gospelRef
+    val gospelExcerpt = gospel?.text?.takeIf { it.isNotBlank() }
         ?: dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
+    val gospelPreview = remember(gospelExcerpt) {
+        gospelExcerpt?.trim()?.let { text ->
+            val end = Regex("""[.!?](?=\s|$)""").find(text)?.range?.last
+            if (end != null) text.take(end + 1) else text
+        }
+    }
 
     LazyColumn(
         modifier = modifier
@@ -194,29 +178,25 @@ fun HomeScreen(
             .testTag("home_screen")
     ) {
         item {
-            // The date alone: the year's cycles belong to the calendar, and the
-            // banner below already carries the day, its colour and its rank.
-            AppScreenTitle(
-                title = strings("Hoy", "Today", "Hoje"),
-                subtitle = strings(
+            AppScreenTitle(title = strings("Hoy", "Today", "Hoje"))
+            Text(
+                text = strings(
                     "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
                     "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
                     "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
-                )
+                ),
+                style = styles.screenSubtitle,
+                color = palette.textSecondary,
+                modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(bottom = 16.dp)
             )
         }
-        item { SacredHero(SacredSubject.DAY) }
 
-        // 1. The hero: the liturgical day. The colour is the one literal
-        // colour the data owns, and the banner is where each identity decides
-        // what to do with it. Its body is the celebration, then colour and
-        // rank, then any precept of the day, so no second card restates it.
+        // The celebration and any obligation, with its liturgical color.
         item {
             AppBanner(
                 title = liturgicalDay.seasonName.get(currentLanguage),
                 body = listOfNotNull(
                     liturgicalDay.celebrationTitle.get(currentLanguage),
-                    "$colorLabel · ${liturgicalDay.rank.get(currentLanguage)}",
                     liturgicalDay.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
                 ).joinToString("\n"),
                 accentColorHex = liturgicalDay.liturgicalColorHex,
@@ -225,102 +205,44 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // 2. Today's readings: the Gospel's opening lines first, so the text
-        // itself is above the fold, then the other citations, then one
-        // tonal action into the Missal.
+        // A complete reading preview and one route to the full Mass.
         item {
             AppCard(
-                modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
+                modifier = Modifier.padding(horizontal = design.spacing.gutter)
                     .testTag("daily_mass_card")
             ) {
                 CardHeading(
-                    label = strings(
-                        "Lecturas de hoy",
-                        "Today's readings",
-                        "Leituras de hoje"
-                    ),
+                    label = strings("Misa de hoy", "Today's Mass", "Missa de hoje"),
                     icon = Icons.Default.AutoStories
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
-
-                if (massCitations.isEmpty() && vaticanResult == null) {
-                    ReadingsPlaceholder(
-                        description = strings(
-                            "Cargando las lecturas de hoy",
-                            "Loading today's readings",
-                            "A carregar as leituras de hoje"
-                        )
-                    )
-                } else if (massCitations.isEmpty()) {
-                    Text(
-                        text = strings(
-                            "El leccionario incluido no trae las lecturas de esta feria. " +
-                                "La celebración del día queda indicada arriba.",
-                            "The bundled lectionary has no readings for this weekday. " +
-                                "The day's celebration is given above.",
-                            "O lecionário incluído não traz as leituras desta féria. " +
-                                "A celebração do dia está indicada acima."
-                        ),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = palette.textSecondary,
-                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                    )
-                } else {
-                    val gospel = massCitations.last()
-                    val others = if (gospelExcerpt != null) massCitations.dropLast(1) else massCitations
-                    if (gospelExcerpt != null) {
+                if (gospelPreview != null) {
+                    if (gospelReference.isNotBlank()) {
                         Text(
-                            text = listOf(gospel.first, TextFormat.ranges(gospel.second))
-                                .filter { it.isNotBlank() }
-                                .joinToString(" · ")
-                                .caps(),
+                            text = TextFormat.ranges(gospelReference),
                             style = styles.sectionEyebrow,
                             color = palette.accent
                         )
                         Spacer(Modifier.height(6.dp))
-                        Text(
-                            text = "«$gospelExcerpt»",
-                            style = styles.scripture,
-                            color = palette.textPrimary,
-                            maxLines = 4,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                        )
-                        if (others.isNotEmpty()) {
-                            Spacer(Modifier.height(design.spacing.cardGap))
-                            AppDivider()
-                            Spacer(Modifier.height(design.spacing.cardGap))
-                        }
                     }
-                    // Stacked rather than two-column: a resolved citation
-                    // carries the book's full name and would crush a label
-                    // sharing its line.
-                    others.forEachIndexed { index, (label, reference) ->
-                        if (index > 0) Spacer(Modifier.height(10.dp))
-                        if (label.isNotBlank()) {
-                            Text(
-                                text = label.caps(),
-                                style = styles.sectionEyebrow,
-                                color = palette.textTertiary
-                            )
-                            Spacer(Modifier.height(2.dp))
-                        }
-                        Text(
-                            text = TextFormat.ranges(reference),
-                            style = styles.rowSubtitle,
-                            color = palette.textPrimary
-                        )
-                    }
+                    Text(
+                        text = "«$gospelPreview»",
+                        style = styles.scripture,
+                        color = palette.textPrimary,
+                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                    )
+                } else if (vaticanResult == null) {
+                    ReadingsPlaceholder(strings("Cargando lecturas", "Loading readings", "A carregar leituras"))
+                } else {
+                    Text(
+                        text = strings("Lecturas no disponibles sin conexión.", "Readings unavailable offline.", "Leituras indisponíveis offline."),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = palette.textSecondary
+                    )
                 }
-
                 Spacer(Modifier.height(design.spacing.cardGap))
                 AppSecondaryButton(
-                    label = strings(
-                        "Leer la Misa de hoy",
-                        "Read today's Mass",
-                        "Ler a Missa de hoje"
-                    ),
+                    label = strings("Leer Misa", "Read Mass", "Ler Missa"),
                     onClick = onNavigateToMissal,
                     leadingIcon = Icons.Default.AutoStories,
                     modifier = Modifier.testTag("read_mass_full_button")
@@ -329,9 +251,8 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // 3. Continue: where the reader stopped in the Bible, and the Gospel
-        // of the day with its meditation when the bundled lectionary has one.
-        if (gospelOfRecord != null || resumeReading != null) item {
+        // Resume the reader's place or open today's reflection.
+        if (meditation != null || resumeReading != null) item {
             AppListGroup {
                 if (resumeReading != null) {
                     AppListRow(
@@ -342,21 +263,16 @@ fun HomeScreen(
                         modifier = Modifier.testTag("home_continue_reading")
                     )
                 }
-                if (gospelOfRecord != null) {
-                AppListRow(
-                    title = strings("Evangelio del día", "Gospel of the day", "Evangelho do dia"),
-                    subtitle = TextFormat.ranges(gospelOfRecord),
-                    leadingIcon = Icons.Default.MenuBook,
-                    trailingText = if (meditation != null) {
-                        if (meditationExpanded) strings("Ocultar", "Hide", "Ocultar")
-                        else strings("Meditar", "Meditate", "Meditar")
-                    } else null,
-                    showsNavigationAffordance = meditation == null,
-                    onClick = if (meditation != null) {
-                        { meditationExpanded = !meditationExpanded }
-                    } else onNavigateToMissal,
-                    modifier = Modifier.testTag("home_continue_row")
-                )
+                if (meditation != null) {
+                    AppListRow(
+                        title = strings("Meditación", "Reflection", "Meditação"),
+                        leadingIcon = Icons.Default.MenuBook,
+                        onClick = { meditationExpanded = !meditationExpanded },
+                        modifier = Modifier.testTag("home_continue_row").semantics {
+                            stateDescription = if (meditationExpanded) strings("Expandida", "Expanded", "Expandida")
+                                else strings("Contraída", "Collapsed", "Recolhida")
+                        }
+                    )
                 }
             }
             AnimatedVisibility(
@@ -389,9 +305,9 @@ fun HomeScreen(
         item {
             AppSectionHeader(
                 title = strings(
-                    "Rutina espiritual diaria",
-                    "Daily spiritual routine",
-                    "Rotina espiritual diária"
+                    "Oración diaria",
+                    "Daily prayer",
+                    "Oração diária"
                 )
             )
         }
@@ -455,7 +371,7 @@ fun HomeScreen(
                 AppDivider()
                 Spacer(Modifier.height(design.spacing.cardGap))
                 Text(
-                    text = "💡 " + verseOfTheDay.spiritualChallenge.get(currentLanguage),
+                    text = verseOfTheDay.spiritualChallenge.get(currentLanguage),
                     style = MaterialTheme.typography.bodyMedium,
                     color = palette.textSecondary
                 )
@@ -516,56 +432,15 @@ fun HomeScreen(
                 }
                 Unit
             }
-            AppCard(
-                modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("home_nearby_churches_banner"),
-                onClick = openNearbyChurches
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.NearMe,
-                        contentDescription = null,
-                        tint = palette.accent,
-                        modifier = Modifier.size(design.decor.rowIconSize)
-                    )
-                    Spacer(Modifier.width(design.spacing.iconLabelGap))
-                    Column(Modifier.weight(1f)) {
-                        Text(
-                            text = strings(
-                                "Buscar Iglesias Cerca de Mí",
-                                "Find Churches Near Me",
-                                "Buscar Igrejas Perto de Mim"
-                            ),
-                            style = styles.rowTitle,
-                            color = palette.textPrimary
-                        )
-                        Spacer(Modifier.height(4.dp))
-                        Text(
-                            text = strings(
-                                "Ubicación en Google Maps y horarios de misa",
-                                "Google Maps nearby & mass times",
-                                "Localização no Google Maps e horários"
-                            ),
-                            style = styles.rowSubtitle,
-                            color = palette.textSecondary
-                        )
-                    }
-                }
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppSecondaryButton(
-                    label = strings("Buscar", "Locate", "Localizar"),
+            AppListGroup {
+                AppListRow(
+                    title = strings("Iglesias cercanas", "Nearby churches", "Igrejas próximas"),
+                    leadingIcon = Icons.Default.NearMe,
                     onClick = openNearbyChurches,
-                    leadingIcon = Icons.Default.LocationOn,
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.testTag("home_nearby_churches_banner")
                 )
             }
         }
-
-        item { AppOrnament() }
 
         item {
             AppSectionHeader(
@@ -577,31 +452,26 @@ fun HomeScreen(
             AppListGroup {
                 AppListRow(
                     title = strings("Directorio Iglesias", "Church Directory", "Diretório Igrejas"),
-                    subtitle = strings("Por país y ciudad", "By Country & City", "Por país e cidade"),
                     leadingIcon = Icons.Default.Church,
                     onClick = onNavigateToDoctrine
                 )
                 AppListRow(
                     title = strings("Trivia Católica", "Catholic Trivia", "Quiz Católico"),
-                    subtitle = strings("Aprende jugando", "Test Your Faith", "Aprenda a Fé"),
                     leadingIcon = Icons.Default.Star,
                     onClick = onNavigateToQuiz
                 )
                 AppListRow(
                     title = strings("Catecismo (CCC)", "Catechism (CCC)", "Catecismo (CIC)"),
-                    subtitle = strings("4 Pilares de la Fe", "4 Pillars of Faith", "4 Pilares da Fé"),
                     leadingIcon = Icons.Default.MenuBook,
                     onClick = onNavigateToCatechism
                 )
                 AppListRow(
                     title = strings("Santuarios y Fe", "Shrines & Pilgrims", "Santuários e Fé"),
-                    subtitle = strings("Indulgencias y Rutas", "Indulgences & Maps", "Indulgências e Rotas"),
                     leadingIcon = Icons.Default.Place,
                     onClick = onNavigateToPilgrimage
                 )
                 AppListRow(
                     title = strings("Idioma", "Language", "Idioma"),
-                    subtitle = currentLanguage.displayName,
                     leadingIcon = Icons.Default.Language,
                     trailingText = "${currentLanguage.flag} ${currentLanguage.code.uppercase()}",
                     onClick = onOpenLanguageSelector,
@@ -672,7 +542,7 @@ private fun CardHeading(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        if (icon != null) {
+        if (icon != null && design.language != DesignLanguage.VATICAN) {
             Icon(
                 imageVector = icon,
                 contentDescription = null,
@@ -743,55 +613,6 @@ private fun MarginalQuote(text: String, attribution: String? = null) {
  * control and demands a click; these are read-only, so they are built from the
  * identity's chip shape, its eyebrow style and a tint.
  */
-@Composable
-private fun DayBadge(
-    label: String,
-    tint: Color,
-    icon: ImageVector? = null,
-    modifier: Modifier = Modifier
-) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    Row(
-        modifier = modifier
-            .clip(design.shapes.chip)
-            .background(tint.copy(alpha = if (design.isDark) 0.20f else 0.10f))
-            .border(
-                width = design.depth.cardBorderWidth.coerceAtLeast(0.75.dp),
-                color = tint.copy(alpha = 0.40f),
-                shape = design.shapes.chip
-            )
-            .padding(horizontal = 10.dp, vertical = 5.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        if (icon != null) {
-            Icon(
-                imageVector = icon,
-                contentDescription = null,
-                tint = tint,
-                modifier = Modifier.size(12.dp)
-            )
-            Spacer(Modifier.width(6.dp))
-        }
-        Text(
-            text = label.caps(),
-            style = styles.sectionEyebrow,
-            color = tint,
-            // "Ayuno y abstinencia de carne" at Vatican's tracking is wider
-            // than the card, so a badge is allowed to set on two lines.
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis
-        )
-    }
-}
-
-/**
- * Lifts a liturgical colour until it reads as pigment on a dark ground; violet
- * and green at their printed values disappear into a night canvas.
- */
-private fun pigment(color: Color, isDark: Boolean, ink: Color): Color =
-    if (isDark) lerp(color, ink, 0.45f) else color
-
 /** Tracked capitals where the identity sets its labels that way; as written otherwise. */
 @Composable
 @ReadOnlyComposable

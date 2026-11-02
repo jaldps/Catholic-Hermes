@@ -5,13 +5,10 @@ import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -25,7 +22,6 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -35,18 +31,16 @@ import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.ui.components.SacredHero
-import com.example.ui.components.SacredSubject
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -68,11 +62,10 @@ import com.example.data.models.Novena
 import com.example.data.models.VaticanPrayer
 import com.example.data.repository.CatholicDataRepository
 import androidx.activity.compose.BackHandler
-import com.example.ui.components.InlineBackLink
 import com.example.ui.components.MenuPickerRow
+import com.example.ui.components.InlineBackLink
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
-import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppListGroup
@@ -187,7 +180,6 @@ fun PrayersAndNovenasScreen(
         item(key = "prayers_screen_title") {
             AppScreenTitle(title = currentLanguage.pick("Oraciones", "Prayers", "Orações"))
         }
-        item(key = "hero_art") { SacredHero(SacredSubject.PRAYER) }
         item(key = "prayers_screen_tabs") {
             AppSegmentedTabs(
                 // The chaplet is a devotion, opened from the Prayers list,
@@ -345,7 +337,7 @@ private fun VaticanDevotionalView(
     val design = LocalAppDesign.current
 
     val themes = listOf(
-        null to currentLanguage.pick("Todas", "All", "Todas"),
+        null to currentLanguage.pick("Todas las intenciones", "All intentions", "Todas as intenções"),
         "health" to currentLanguage.pick("Salud y sanación", "Health & healing", "Saúde e cura"),
         "peace" to currentLanguage.pick("Paz interior", "Peace of mind", "Paz interior"),
         "family" to currentLanguage.pick("Familia", "Family", "Família"),
@@ -375,18 +367,13 @@ private fun VaticanDevotionalView(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // The theme is one row with a menu rather than a cloud of chips
-        // under the screen's own selector.
         item {
-            AppListGroup {
-                MenuPickerRow(
-                    title = currentLanguage.pick("Intención", "Intention", "Intenção"),
-                    options = themes,
-                    selected = selectedTag,
-                    onSelect = onSelectTag,
-                    testTag = "prayer_theme_picker"
-                )
-            }
+            PrayerIntentionFilters(
+                options = themes,
+                selected = selectedTag,
+                onSelect = onSelectTag,
+                testTag = "prayer_theme_picker"
+            )
         }
 
         if (prayers.isEmpty()) {
@@ -413,30 +400,41 @@ private fun VaticanDevotionalView(
                 )
             }
         } else {
-            // Seven prayers in six categories: one list reads better than six
-            // headers over a row each.
-            item(key = "prayer_list") {
-                Spacer(Modifier.height(design.spacing.sectionGap / 2))
-                AppListGroup {
-                    prayers.forEach { prayer ->
-                        AppListRow(
-                            title = prayer.title.get(currentLanguage),
-                            subtitle = prayerPreview(prayer, currentLanguage),
-                            onClick = { onOpenPrayer(prayer) },
-                            modifier = Modifier.testTag("prayer_row_${prayer.id}")
-                        )
+            // The daily rhythm is a useful first choice, not seven equally
+            // weighted categories with one row each. Search results remain a
+            // single index; grouping never conceals or changes filtering.
+            val daily = prayers.filter { "daily_routine" in it.thematicTags }
+            val groups = if (filtering) {
+                listOf(currentLanguage.pick("Resultados", "Results", "Resultados") to prayers)
+            } else {
+                listOf(
+                    currentLanguage.pick("Cada día", "Every day", "Todos os dias") to daily,
+                    currentLanguage.pick("Otras oraciones", "Other prayers", "Outras orações") to prayers.filterNot { it in daily }
+                )
+            }
+            groups.filter { it.second.isNotEmpty() }.forEachIndexed { groupIndex, (label, entries) ->
+                item(key = "prayer_group_$groupIndex") {
+                    AppSectionHeader(title = label)
+                    AppListGroup {
+                        entries.forEach { prayer ->
+                            AppListRow(
+                                title = prayer.title.get(currentLanguage),
+                                onClick = { onOpenPrayer(prayer) },
+                                modifier = Modifier.testTag("prayer_row_${prayer.id}")
+                            )
+                        }
                     }
-                    if (!filtering) {
+                }
+            }
+            if (!filtering) {
+                item(key = "guided_chaplet") {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppListGroup {
                         AppListRow(
                             title = currentLanguage.pick(
                                 "Coronilla de la Divina Misericordia",
                                 "Chaplet of Divine Mercy",
                                 "Terço da Divina Misericórdia"
-                            ),
-                            subtitle = currentLanguage.pick(
-                                "Coronilla · para las tres de la tarde",
-                                "Chaplet · for three in the afternoon",
-                                "Terço · para as três da tarde"
                             ),
                             onClick = onOpenChaplet,
                             modifier = Modifier.testTag("open_chaplet_row")
@@ -450,11 +448,24 @@ private fun VaticanDevotionalView(
     }
 }
 
-/** One line of a prayer — its Latin incipit, or the opening of its text. */
-private fun prayerPreview(prayer: VaticanPrayer, language: AppLanguage): String {
-    prayer.latinTitle?.takeIf { it.isNotBlank() }?.let { return it }
-    val text = prayer.leaderText.get(language).replace('\n', ' ').trim()
-    return if (text.length > 64) text.take(64).substringBeforeLast(' ') + "…" else text
+/** One collapsed choice keeps every intention available without clipped chips. */
+@Composable
+private fun PrayerIntentionFilters(
+    options: List<Pair<String?, String>>,
+    selected: String?,
+    onSelect: (String?) -> Unit,
+    testTag: String
+) {
+    AppListGroup {
+        MenuPickerRow(
+            title = options.firstOrNull { it.first == selected }?.second.orEmpty(),
+            options = options,
+            selected = selected,
+            onSelect = onSelect,
+            trailingOverride = "",
+            testTag = testTag
+        )
+    }
 }
 
 /** A prayer as its own page: title, the text set to be prayed, and its notes. */
@@ -475,12 +486,7 @@ private fun PrayerDetailView(
             )
         }
         item {
-            // The Latin incipit is set in true italic inside the card where
-            // the identity prints Latin so; elsewhere it is the subtitle.
-            AppScreenTitle(
-                title = prayer.title.get(currentLanguage),
-                subtitle = prayer.latinTitle.takeUnless { LocalAppDesign.current.language == DesignLanguage.VATICAN }
-            )
+            AppScreenTitle(title = prayer.title.get(currentLanguage))
         }
         item {
             ReadingColumn {
@@ -998,16 +1004,13 @@ private fun NovenaIndexView(
                     .testTag("novena_search_input")
             )
             Spacer(Modifier.height(design.spacing.cardGap))
-            AppListGroup {
-                MenuPickerRow(
-                    title = currentLanguage.pick("Intención", "Intention", "Intenção"),
-                    options = listOf<Pair<String?, String>>(null to currentLanguage.pick("Todas", "All", "Todas")) +
-                        availableTags.map { it to (tagLabels[it] ?: it) },
-                    selected = selectedTag,
-                    onSelect = onSelectTag,
-                    testTag = "novena_intention_picker"
-                )
-            }
+            PrayerIntentionFilters(
+                options = listOf<Pair<String?, String>>(null to currentLanguage.pick("Todas las intenciones", "All intentions", "Todas as intenções")) +
+                    availableTags.map { it to (tagLabels[it] ?: it) },
+                selected = selectedTag,
+                onSelect = onSelectTag,
+                testTag = "novena_intention_picker"
+            )
         }
 
         if (inProgress.isNotEmpty()) {

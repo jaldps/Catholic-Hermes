@@ -20,9 +20,9 @@ import com.example.ui.theme.LocalAppDesign
 /** One secondary destination as the More screen lists it. */
 data class MoreEntry(
     val title: String,
-    val subtitle: String,
     val iconSlot: AppIconSlot,
     val tag: String,
+    val value: String? = null,
     /** Overrides the slot's glyph, for rows that are settings, not places. */
     val icon: ImageVector? = null,
     val onOpen: () -> Unit
@@ -60,7 +60,7 @@ fun MoreScreen(
                         val icon: ImageVector = entry.icon ?: AppIcons.pair(entry.iconSlot).first
                         AppListRow(
                             title = entry.title,
-                            subtitle = entry.subtitle,
+                            trailingText = entry.value,
                             leadingIcon = icon,
                             onClick = entry.onOpen,
                             modifier = Modifier.testTag(entry.tag)

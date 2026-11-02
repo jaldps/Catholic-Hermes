@@ -84,14 +84,20 @@ class AppScreenshotTest {
                     themePreset = "LITURGICAL_DYNAMIC",
                     darkModeSetting = if (dark) "DARK" else "LIGHT"
                 ) {
-                    Surface(Modifier.fillMaxSize()) {
-                        AppScaffold(
-                            title = "Sancta Fides",
-                            navItems = navItems,
-                            selectedNavIndex = selectedNav,
-                            onNavSelected = {}
-                        ) { insets ->
-                            Box(Modifier.fillMaxSize().padding(insets)) { screen() }
+                    // Freeze decorative loops, as in FullAppScreenshotTest:
+                    // an infinitely breathing illustration never lets idle() return.
+                    androidx.compose.runtime.CompositionLocalProvider(
+                        androidx.compose.ui.platform.LocalInspectionMode provides true
+                    ) {
+                        Surface(Modifier.fillMaxSize()) {
+                            AppScaffold(
+                                title = "Sancta Fides",
+                                navItems = navItems,
+                                selectedNavIndex = selectedNav,
+                                onNavSelected = {}
+                            ) { insets ->
+                                Box(Modifier.fillMaxSize().padding(insets)) { screen() }
+                            }
                         }
                     }
                 }

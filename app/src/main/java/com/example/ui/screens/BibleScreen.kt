@@ -3,7 +3,6 @@ package com.example.ui.screens
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -16,23 +15,23 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Translate
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.Comment
 import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.AutoStories
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.SearchOff
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -57,8 +56,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.ui.components.SacredHero
-import com.example.ui.components.SacredSubject
 import com.example.data.repository.BibleData
 import com.example.data.xref.VerseRef
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -69,6 +66,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
@@ -105,7 +106,6 @@ import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
-import com.example.ui.components.MenuPickerRow
 import androidx.compose.runtime.LaunchedEffect
 import com.example.data.prefs.ReadingPosition
 import com.example.ui.design.AppVerseRow
@@ -197,15 +197,9 @@ fun BibleScreen(
     val header: LazyListScope.() -> Unit = {
         item(key = "bible_screen_title") {
             AppScreenTitle(
-                title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"),
-                subtitle = currentLanguage.pick(
-                    "Los 73 libros del canon católico",
-                    "The 73 books of the Catholic canon",
-                    "Os 73 livros do cânon católico"
-                )
+                title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada")
             )
         }
-        item(key = "hero_art") { SacredHero(SacredSubject.SCRIPTURE) }
         item(key = "bible_screen_tabs") {
             AppSegmentedTabs(
                 // Three views; Versions is a row inside the Bible view, so the
@@ -435,9 +429,8 @@ private fun BookDirectory(
     }
     val booksById = remember { repository.catholicBooks.associateBy { it.id } }
 
-    // One filter layer: the canon is a single menu row under the search, not a
-    // second row of chips; search also matches "deutero", "Gospels" and the
-    // testaments by name.
+    // Search and one utility row lead directly to the books. The canon
+    // choice and translations share that row instead of adding filter rails.
     val filteredBooks = remember(searchQuery, selectedFilter, currentLanguage) {
         val query = searchQuery.trim()
         repository.catholicBooks.filter { book ->
@@ -512,31 +505,95 @@ private fun BookDirectory(
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
             }
-            AppListGroup {
-                MenuPickerRow(
-                    title = currentLanguage.pick("Libros", "Books", "Livros"),
-                    leadingIcon = Icons.AutoMirrored.Filled.MenuBook,
-                    options = listOf(
-                        0 to currentLanguage.pick("Todos", "All", "Todos"),
-                        1 to currentLanguage.pick("Antiguo Testamento", "Old Testament", "Antigo Testamento"),
-                        2 to currentLanguage.pick("Nuevo Testamento", "New Testament", "Novo Testamento"),
-                        3 to currentLanguage.pick("Deuterocanónicos", "Deuterocanonical", "Deuterocanônicos")
-                    ),
-                    selected = selectedFilter,
-                    onSelect = onFilterChange,
-                    testTag = "bible_canon_filter"
-                )
-                AppListRow(
-                    title = currentLanguage.pick("Versiones", "Versions", "Versões"),
-                    subtitle = currentLanguage.pick(
-                        "Traducciones y descargas",
-                        "Translations and downloads",
-                        "Traduções e downloads"
-                    ),
-                    leadingIcon = Icons.Default.Translate,
-                    onClick = onOpenVersions,
-                    modifier = Modifier.testTag("bible_versions_row")
-                )
+            val canonOptions = listOf(
+                currentLanguage.pick("Todos los libros", "All books", "Todos os livros"),
+                currentLanguage.pick("Antiguo Testamento", "Old Testament", "Antigo Testamento"),
+                currentLanguage.pick("Nuevo Testamento", "New Testament", "Novo Testamento"),
+                currentLanguage.pick("Deuterocanónicos", "Deuterocanon", "Deuterocanônicos")
+            )
+            var showCanonMenu by remember { mutableStateOf(false) }
+            val selectedCanon = canonOptions.getOrElse(selectedFilter) { canonOptions.first() }
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                Box(Modifier.weight(1f)) {
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = 44.dp)
+                            .clickable(role = Role.Button) { showCanonMenu = true }
+                            .semantics {
+                                contentDescription = currentLanguage.pick("Filtrar libros", "Filter books", "Filtrar livros")
+                                stateDescription = selectedCanon
+                            }
+                            .testTag("bible_canon_filter"),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            selectedCanon,
+                            style = LocalAppTextStyles.current.rowSubtitle.copy(fontWeight = FontWeight.Medium),
+                            color = design.palette.textPrimary,
+                            modifier = Modifier.weight(1f, fill = false)
+                        )
+                        Icon(
+                            Icons.Default.ArrowDropDown,
+                            contentDescription = null,
+                            tint = design.palette.textSecondary
+                        )
+                    }
+                    // Use the same standard menu behavior as MenuPickerRow;
+                    // a full list row would repeat the selected canon label.
+                    DropdownMenu(
+                        expanded = showCanonMenu,
+                        onDismissRequest = { showCanonMenu = false },
+                        modifier = Modifier.background(design.palette.raised)
+                    ) {
+                        canonOptions.forEachIndexed { index, label ->
+                            DropdownMenuItem(
+                                text = {
+                                    Text(
+                                        label,
+                                        style = LocalAppTextStyles.current.rowTitle,
+                                        color = if (selectedFilter == index) design.palette.accent
+                                            else design.palette.textPrimary
+                                    )
+                                },
+                                trailingIcon = if (selectedFilter == index) {
+                                    { Icon(Icons.Default.Check, contentDescription = null, tint = design.palette.accent) }
+                                } else null,
+                                onClick = {
+                                    onFilterChange(index)
+                                    showCanonMenu = false
+                                },
+                                modifier = Modifier.testTag("bible_canon_$index")
+                            )
+                        }
+                    }
+                }
+                Box(
+                    modifier = Modifier
+                        .heightIn(min = 44.dp)
+                        .clickable(role = Role.Button, onClick = onOpenVersions)
+                        .semantics {
+                            contentDescription = currentLanguage.pick(
+                                "Versiones, traducciones y descargas",
+                                "Versions, translations and downloads",
+                                "Versões, traduções e downloads"
+                            )
+                        }
+                        .testTag("bible_versions_row"),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = currentLanguage.pick("Versiones", "Versions", "Versões") + " ›",
+                        style = LocalAppTextStyles.current.rowSubtitle.copy(fontWeight = FontWeight.Medium),
+                        color = design.palette.accent
+                    )
+                }
             }
         }
 
@@ -720,10 +777,15 @@ private fun ChapterReader(
             verticalAlignment = Alignment.CenterVertically
         ) {
             AppChip(
-                label = "A-",
+                label = "A−",
                 selected = false,
                 onClick = {
                     if (fontScale > MinFontScale) onFontScaleChange(fontScale - FontScaleStep)
+                },
+                modifier = Modifier.heightIn(min = 44.dp).semantics {
+                    contentDescription = currentLanguage.pick(
+                        "Reducir el tamaño del texto", "Decrease text size", "Diminuir o tamanho do texto"
+                    )
                 }
             )
             AppChip(
@@ -731,10 +793,16 @@ private fun ChapterReader(
                 selected = false,
                 onClick = {
                     if (fontScale < MaxFontScale) onFontScaleChange(fontScale + FontScaleStep)
+                },
+                modifier = Modifier.heightIn(min = 44.dp).semantics {
+                    contentDescription = currentLanguage.pick(
+                        "Aumentar el tamaño del texto", "Increase text size", "Aumentar o tamanho do texto"
+                    )
                 }
             )
             AppChip(
-                label = if (serif) "Serif" else "Sans",
+                label = if (serif) currentLanguage.pick("Serif", "Serif", "Serifa")
+                    else currentLanguage.pick("Sans", "Sans", "Sem serifa"),
                 selected = serif,
                 onClick = onSerifToggle
             )
@@ -843,11 +911,11 @@ private fun ChapterReader(
             verticalAlignment = Alignment.CenterVertically
         ) {
             AppSecondaryButton(
-                label = currentLanguage.pick(
+                label = if (chapterNumber > 1) currentLanguage.pick(
                     "← Cap. ${chapterNumber - 1}",
                     "← Ch. ${chapterNumber - 1}",
                     "← Cap. ${chapterNumber - 1}"
-                ),
+                ) else currentLanguage.pick("← Anterior", "← Previous", "← Anterior"),
                 onClick = { onChapterChange(chapterNumber - 1) },
                 enabled = chapterNumber > 1,
                 modifier = Modifier
@@ -855,11 +923,11 @@ private fun ChapterReader(
                     .testTag("prev_chapter_button")
             )
             AppSecondaryButton(
-                label = currentLanguage.pick(
+                label = if (chapterNumber < chapterCount) currentLanguage.pick(
                     "Cap. ${chapterNumber + 1} →",
                     "Ch. ${chapterNumber + 1} →",
                     "Cap. ${chapterNumber + 1} →"
-                ),
+                ) else currentLanguage.pick("Siguiente →", "Next →", "Próximo →"),
                 onClick = { onChapterChange(chapterNumber + 1) },
                 enabled = chapterNumber < chapterCount,
                 modifier = Modifier
@@ -1029,7 +1097,7 @@ private fun DailyMissalView(
         ?: bundledLessons
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize(),
+        modifier = Modifier.fillMaxSize().testTag("daily_missal_screen"),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         header()

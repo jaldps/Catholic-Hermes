@@ -1,7 +1,6 @@
 package com.example.ui.design
 
 import androidx.compose.animation.animateColorAsState
-import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
@@ -45,6 +44,7 @@ import androidx.compose.material.icons.outlined.Inbox
 import androidx.compose.material.icons.outlined.Create
 import androidx.compose.material.icons.filled.AccountBalance
 import androidx.compose.material.icons.filled.Create
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.Icon
@@ -60,9 +60,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.drawText
@@ -630,7 +631,7 @@ object AppleKit : AppKit {
                         Modifier
                             .fillMaxWidth()
                             .padding(start = 8.dp, end = 16.dp)
-                            .heightIn(min = 52.dp),
+                            .heightIn(min = 44.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         if (onBack != null) {
@@ -715,77 +716,97 @@ object AppleKit : AppKit {
                 }
             },
             bottomBar = {
-                Surface(color = bar) {
-                    Column(Modifier.navigationBarsPadding().testTag("bottom_nav_bar")) {
-                        Hairline()
-                        Row(
-                            Modifier
-                                .fillMaxWidth()
-                                // 6 + 25 + 2 + label ≈ the 49pt UITabBar.
-                                .padding(top = 6.dp, bottom = 6.dp),
-                            horizontalArrangement = Arrangement.SpaceAround,
-                            verticalAlignment = Alignment.Top
-                        ) {
-                            navItems.forEachIndexed { index, item ->
-                                val isSelected = index == selectedNavIndex
-                                // Unselected tab items are UIKit's secondary
-                                // label, not its tertiary: at 30% the glyphs
-                                // wash out into the bar.
-                                val tint by animateColorAsState(
-                                    if (isSelected) scheme.primary else palette.textSecondary,
-                                    tween(design.motion.fastMillis, easing = design.motion.standardEasing),
-                                    label = "tabTint"
-                                )
-                                // iOS 17's tab item answers selection with a
-                                // small symbol bounce: the glyph dips and
-                                // springs back past rest. The spring is
-                                // under-damped on purpose — this is the one
-                                // place UIKit lets a control visibly bounce.
-                                val bounce by animateFloatAsState(
-                                    if (isSelected) 1f else 0.9f,
-                                    spring(dampingRatio = 0.45f, stiffness = Spring.StiffnessMediumLow),
-                                    label = "tabBounce"
-                                )
-                                val tabSource = remember { MutableInteractionSource() }
-                                val tabPressed by tabSource.collectIsPressedAsState()
-                                Column(
-                                    modifier = Modifier
-                                        .weight(1f)
-                                        .pressable(tabSource, { onNavSelected(index) })
-                                        .padding(horizontal = 2.dp)
-                                        .testTag(item.tag),
-                                    horizontalAlignment = Alignment.CenterHorizontally
-                                ) {
-                                    // Unselected items rest a hair smaller so
-                                    // the selected glyph lands on its spring;
-                                    // at rest the difference is a single
-                                    // pixel and reads only as emphasis.
-                                    val rest = if (isSelected) bounce else 1f
-                                    Icon(
-                                        imageVector = if (isSelected) item.selectedIcon else item.icon,
-                                        contentDescription = item.label,
-                                        tint = tint,
-                                        modifier = Modifier
-                                            .size(25.dp)
-                                            .graphicsLayer {
-                                                val s = rest * if (tabPressed) 0.88f else 1f
-                                                scaleX = s
-                                                scaleY = s
-                                                alpha = if (tabPressed) 0.6f else 1f
-                                            }
+                // A compact, floating material dock belongs to the reading
+                // canvas instead of dividing it with a full-width footer.
+                // All five destinations retain a labelled 52pt touch target.
+                val dockShape = RoundedCornerShape(32.dp)
+                Box(
+                    Modifier
+                        .fillMaxWidth()
+                        .navigationBarsPadding()
+                        .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
+                ) {
+                    Row(
+                        Modifier
+                            .fillMaxWidth()
+                            .shadow(
+                                18.dp, dockShape,
+                                ambientColor = Color.Black.copy(alpha = if (design.isDark) 0.22f else 0.09f),
+                                spotColor = Color.Black.copy(alpha = if (design.isDark) 0.35f else 0.12f)
+                            )
+                            .clip(dockShape)
+                            .background(
+                                Brush.verticalGradient(
+                                    listOf(
+                                        if (design.isDark) Color(0xFF303033) else Color(0xFFFAFAFC),
+                                        if (design.isDark) Color(0xFF222225) else Color(0xFFF2F2F6)
                                     )
-                                    Spacer(Modifier.height(2.dp))
-                                    // Ten destinations will not sit on one line
-                                    // at tab-bar width; wrapping is the honest
-                                    // tab-bar answer, not a scrolling rail.
-                                    Text(
-                                        text = item.label,
-                                        style = styles.navLabel,
-                                        color = tint,
-                                        textAlign = TextAlign.Center,
-                                        maxLines = 2
+                                )
+                            )
+                            .border(
+                                HairlineWeight,
+                                if (design.isDark) Color.White.copy(alpha = 0.14f) else Color.White.copy(alpha = 0.96f),
+                                dockShape
+                            )
+                            .padding(5.dp)
+                            .testTag("bottom_nav_bar"),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        navItems.forEachIndexed { index, item ->
+                            val isSelected = index == selectedNavIndex
+                            val tint by animateColorAsState(
+                                if (isSelected) scheme.primary else palette.textSecondary,
+                                tween(design.motion.fastMillis), label = "tabTint"
+                            )
+                            val tabFill by animateColorAsState(
+                                if (isSelected) scheme.primary.copy(alpha = if (design.isDark) 0.18f else 0.09f)
+                                else Color.Transparent,
+                                tween(design.motion.fastMillis), label = "tabFill"
+                            )
+                            val tabSource = remember { MutableInteractionSource() }
+                            val tabPressed by tabSource.collectIsPressedAsState()
+                            Column(
+                                Modifier
+                                    .weight(1f)
+                                    .heightIn(min = 52.dp)
+                                    .clip(RoundedCornerShape(27.dp))
+                                    .background(tabFill)
+                                    .pressScale(tabPressed, 0.94f)
+                                    .clickable(
+                                        interactionSource = tabSource,
+                                        indication = null,
+                                        role = Role.Tab,
+                                        onClick = { onNavSelected(index) }
                                     )
-                                }
+                                    .semantics { selected = isSelected }
+                                    .padding(horizontal = 2.dp, vertical = 5.dp)
+                                    .testTag(item.tag),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.Center
+                            ) {
+                                Icon(
+                                    imageVector = when {
+                                        item.tag == "nav_more" -> Icons.Filled.MoreHoriz
+                                        isSelected -> solidGlyph(item.selectedIcon)
+                                        else -> item.icon
+                                    },
+                                    contentDescription = null,
+                                    tint = tint,
+                                    modifier = Modifier.size(23.dp)
+                                )
+                                Spacer(Modifier.height(3.dp))
+                                Text(
+                                    text = item.label,
+                                    style = styles.navLabel.copy(
+                                        fontSize = styles.navLabel.fontSize * 1.1f,
+                                        lineHeight = styles.navLabel.lineHeight * 1.17f,
+                                        fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium
+                                    ),
+                                    color = tint,
+                                    textAlign = TextAlign.Center,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
+                                )
                             }
                         }
                     }
@@ -822,28 +843,17 @@ object AppleKit : AppKit {
                             .nestedScroll(scrollWatcher)
                     ) {
                         content(padding)
-                        // The bars are materials, not walls: content passing
-                        // under them dissolves into the bar over a short
-                        // run instead of stopping dead at its edge — the
-                        // nearest a frame-rendered surface gets to
-                        // UIBarAppearance's blur. The top veil only exists
-                        // once something has scrolled under the bar.
+                        // Only the scrolled navigation edge needs a veil.
+                        // The floating dock has its own material: fading the
+                        // content above it obscures actual prayers and rows.
                         Box(
                             Modifier
                                 .align(Alignment.TopCenter)
                                 .padding(top = padding.calculateTopPadding())
                                 .fillMaxWidth()
-                                .height(14.dp)
+                                .height(8.dp)
                                 .graphicsLayer { alpha = edge }
                                 .background(Brush.verticalGradient(listOf(bar.copy(alpha = 0.85f), bar.copy(alpha = 0f))))
-                        )
-                        Box(
-                            Modifier
-                                .align(Alignment.BottomCenter)
-                                .padding(bottom = padding.calculateBottomPadding())
-                                .fillMaxWidth()
-                                .height(22.dp)
-                                .background(Brush.verticalGradient(listOf(bar.copy(alpha = 0f), bar.copy(alpha = 0.92f))))
                         )
                     }
                 }
@@ -953,7 +963,7 @@ object AppleKit : AppKit {
                 // scale's -0.6 is short of that at 34pt.
                 style = styles.screenTitle.copy(color = palette.textPrimary),
                 maxLines = 1,
-                minScale = 30f / 38f,
+                minScale = 28f / 34f,
                 heading = true,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -1179,10 +1189,6 @@ object AppleKit : AppKit {
                 if (leadingIcon != null) {
                     // Settings' wells are saturated with a white glyph in
                     // both appearances; never a pastel tile with a dark glyph.
-                    // The tile is lit from above, as every Settings icon is
-                    // since iOS 7: a few percent lighter at the top edge,
-                    // never a visible gradient, and it stops the well from
-                    // reading as a flat Android badge.
                     val registry = LocalWellRegistry.current
                     val hue = remember(leadingIcon.name, registry) {
                         registry?.claim(wellHue(leadingIcon)) ?: wellHue(leadingIcon)
@@ -1192,9 +1198,7 @@ object AppleKit : AppKit {
                         Modifier
                             .size(IconWellSize)
                             .clip(IconWellShape)
-                            .background(
-                                Brush.verticalGradient(listOf(lerp(well, Color.White, 0.14f), well))
-                            ),
+                            .background(well),
                         contentAlignment = Alignment.Center
                     ) {
                         Icon(
@@ -1215,7 +1219,14 @@ object AppleKit : AppKit {
                 }
                 if (trailingText != null) {
                     Spacer(Modifier.width(8.dp))
-                    Text(trailingText, style = styles.rowTitle, color = palette.textSecondary)
+                    Text(
+                        trailingText,
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                        modifier = Modifier.widthIn(max = 110.dp)
+                    )
                 }
                 if (showsNavigationAffordance && design.decor.usesChevrons) {
                     Spacer(Modifier.width(8.dp))
@@ -1686,23 +1697,13 @@ object AppleKit : AppKit {
                 .padding(horizontal = design.spacing.gutter * 2, vertical = design.spacing.sectionGap),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            // ContentUnavailableView's symbol, given the warmth Journal's
-            // onboarding has: the glyph in the tint, standing in a soft
-            // tinted halo lit from above, instead of a grey icon that reads
-            // as "nothing here".
+            // The symbol identifies the empty state without extra artwork.
             val tint = MaterialTheme.colorScheme.primary
             Box(
                 Modifier
                     .size(84.dp)
                     .clip(CircleShape)
-                    .background(
-                        Brush.verticalGradient(
-                            listOf(
-                                if (design.isDark) tint.copy(alpha = 0.30f) else lerp(Color.White, tint, 0.16f),
-                                if (design.isDark) tint.copy(alpha = 0.14f) else lerp(Color.White, tint, 0.07f)
-                            )
-                        )
-                    ),
+                    .background(tint.copy(alpha = if (design.isDark) 0.16f else 0.08f)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -1755,7 +1756,7 @@ object AppleKit : AppKit {
         modifier: Modifier
     ) {
         if (accentColorHex != null) {
-            LiturgicalHero(title, body, Color(accentColorHex), onClick, modifier)
+            LiturgicalEntry(title, body, Color(accentColorHex), onClick, modifier)
             return
         }
         val design = LocalAppDesign.current
@@ -1814,180 +1815,7 @@ object AppleKit : AppKit {
         }
     }
 
-    /**
-     * The liturgical day as the app's signature object: the vestment itself.
-     * The card is cut from the day's colour as a deep, saturated cloth — lit
-     * from the top-leading corner, falling to shadow at the bottom-trailing
-     * one, with the faint diagonal twill of a woven chasuble — and a tall
-     * Latin cross is embroidered into it, tone on tone, running off the
-     * bottom edge. The day is set large in the serif, white on the colour, as
-     * Books and Journal set their covers. Nothing glows and nothing is a
-     * decoration that repeats what the colour already says.
-     *
-     * A dated entry ("November 1 · Solemnity") is one of a run, as in the
-     * calendar, and takes the restrained form: a white card with the
-     * vestment colour as Calendar's leading event bar, so a list of them
-     * reads as a colour-coded year rather than a stack of posters.
-     */
-    @Composable
-    private fun LiturgicalHero(
-        season: String,
-        day: String?,
-        vestment: Color,
-        onClick: (() -> Unit)?,
-        modifier: Modifier
-    ) {
-        if ('·' in season) {
-            LiturgicalEntry(season, day, vestment, onClick, modifier)
-            return
-        }
-        val design = LocalAppDesign.current
-        val styles = LocalAppTextStyles.current
-        val dark = design.isDark
-        val source = remember { MutableInteractionSource() }
-        val pressed by source.collectIsPressedAsState()
-        // White vestments are shown in gold, as the rubrics allow.
-        val isWhite = vestment.luminance() > 0.75f
-        val base = remember(vestment, dark) {
-            val hsv = FloatArray(3)
-            android.graphics.Color.colorToHSV(
-                (if (isWhite) Color(0xFFC49A2C) else vestment).toArgb(), hsv
-            )
-            if (hsv[1] > 0.12f) hsv[1] = hsv[1].coerceAtLeast(0.50f)
-            var c = Color(android.graphics.Color.HSVToColor(hsv))
-            // Deep enough that white type reads on the lightest corner.
-            while (contrast(lerp(c, Color.White, 0.10f), Color.White) < 4.8f && hsv[2] > 0.12f) {
-                hsv[2] -= 0.02f
-                c = Color(android.graphics.Color.HSVToColor(hsv))
-            }
-            if (dark) lerp(c, Color.Black, 0.12f) else c
-        }
-        val lit = lerp(base, Color.White, 0.10f)
-        val shade = lerp(base, Color.Black, if (dark) 0.40f else 0.32f)
-        val shape = RoundedCornerShape(22.dp)
-        Box(
-            modifier
-                .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-                .then(if (onClick != null) Modifier.pressScale(pressed, 0.98f) else Modifier)
-                .then(
-                    if (!dark) {
-                        Modifier.shadow(10.dp, shape, ambientColor = base.copy(alpha = 0.35f), spotColor = base.copy(alpha = 0.45f))
-                    } else {
-                        Modifier
-                    }
-                )
-                .clip(shape)
-                .drawBehind {
-                    val w = size.width
-                    val h = size.height
-                    // The cloth: lit top-leading, falling to shadow.
-                    drawRect(
-                        Brush.linearGradient(
-                            listOf(lit, base, shade),
-                            start = Offset(0f, 0f),
-                            end = Offset(w, h)
-                        )
-                    )
-                    // The light source, a soft sheen across the top.
-                    drawRect(
-                        Brush.radialGradient(
-                            listOf(Color.White.copy(alpha = if (dark) 0.10f else 0.16f), Color.Transparent),
-                            center = Offset(w * 0.18f, -h * 0.25f),
-                            radius = w * 0.85f
-                        )
-                    )
-                    // The weave: a fine diagonal twill, felt more than seen.
-                    val step = 3.dp.toPx()
-                    val thread = Color.White.copy(alpha = if (dark) 0.035f else 0.045f)
-                    var x = -h
-                    while (x < w) {
-                        drawLine(thread, Offset(x, h), Offset(x + h, 0f), 0.5.dp.toPx())
-                        x += step
-                    }
-                    // The embroidered cross, tone on tone, off the bottom edge.
-                    val arm = 12.dp.toPx()
-                    val cx = w - 62.dp.toPx()
-                    val top = 22.dp.toPx()
-                    val beamY = top + 34.dp.toPx()
-                    val span = 33.dp.toPx()
-                    val crossBrush = Brush.verticalGradient(
-                        listOf(Color.White.copy(alpha = 0.17f), Color.White.copy(alpha = 0.05f)),
-                        startY = top,
-                        endY = h
-                    )
-                    drawRoundRect(
-                        crossBrush,
-                        topLeft = Offset(cx - arm / 2f, top),
-                        size = androidx.compose.ui.geometry.Size(arm, h + arm),
-                        cornerRadius = androidx.compose.ui.geometry.CornerRadius(arm / 5f)
-                    )
-                    drawRoundRect(
-                        crossBrush,
-                        topLeft = Offset(cx - span, beamY),
-                        size = androidx.compose.ui.geometry.Size(span * 2f, arm),
-                        cornerRadius = androidx.compose.ui.geometry.CornerRadius(arm / 5f)
-                    )
-                }
-                .border(
-                    0.5.dp,
-                    Color.White.copy(alpha = if (dark) 0.10f else 0.14f),
-                    shape
-                )
-                .then(
-                    if (pressed && onClick != null) Modifier.background(Color.Black.copy(alpha = 0.12f)) else Modifier
-                )
-                .pressable(source, onClick)
-                .heightIn(min = 150.dp)
-                .padding(start = 20.dp, end = 20.dp, top = 18.dp, bottom = 20.dp)
-        ) {
-            Row(verticalAlignment = Alignment.Bottom, modifier = Modifier.align(Alignment.BottomStart)) {
-                Column(Modifier.weight(1f).padding(end = 56.dp)) {
-                    Text(
-                        text = season.uppercase(),
-                        style = styles.rowSubtitle.copy(
-                            fontWeight = FontWeight.SemiBold,
-                            letterSpacing = 0.6.sp
-                        ),
-                        color = Color.White.copy(alpha = 0.80f),
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    val headline = day?.substringBefore('\n')
-                    val particulars = day?.substringAfter('\n', "")?.trim().orEmpty()
-                    if (headline != null) {
-                        Spacer(Modifier.height(6.dp))
-                        Text(
-                            text = headline,
-                            style = styles.rowTitle.copy(
-                                fontFamily = com.example.ui.theme.AppFonts.EbGaramond,
-                                fontWeight = FontWeight.SemiBold,
-                                fontSize = styles.rowTitle.fontSize * (27f / 17f),
-                                lineHeight = styles.rowTitle.lineHeight * (31f / 22f),
-                                letterSpacing = (-0.1).sp
-                            ),
-                            color = Color.White,
-                            maxLines = 4
-                        )
-                    }
-                    if (particulars.isNotEmpty()) {
-                        Spacer(Modifier.height(8.dp))
-                        Text(
-                            text = particulars,
-                            style = styles.rowSubtitle,
-                            color = Color.White.copy(alpha = 0.80f),
-                            maxLines = 2
-                        )
-                    }
-                }
-                if (onClick != null) {
-                    Chevron(tint = Color.White.copy(alpha = 0.7f), modifier = Modifier.padding(bottom = 4.dp))
-                }
-            }
-        }
-    }
-
-    /** The calendar's dated entry: a white card with the vestment as its event bar. */
+    /** One native information card for today and dated calendar entries. */
     @Composable
     private fun LiturgicalEntry(
         season: String,
@@ -2015,7 +1843,7 @@ object AppleKit : AppKit {
         } else {
             palette.groupedSurface
         }
-        val ink = inkOn(bar, surface, 4.5f)
+        val ink = inkOn(bar, surface, 4.7f)
         Row(
             modifier
                 .fillMaxWidth()
@@ -2023,17 +1851,8 @@ object AppleKit : AppKit {
                 .then(if (onClick != null) Modifier.pressScale(pressed, 0.98f) else Modifier)
                 .clip(design.shapes.listGroup)
                 .background(surface)
-                .drawBehind {
-                    // A breath of the colour behind the bar, gone by mid-card.
-                    drawRect(
-                        Brush.horizontalGradient(
-                            listOf(bar.copy(alpha = if (dark) 0.16f else 0.09f), Color.Transparent),
-                            startX = 0f,
-                            endX = size.width * 0.6f
-                        )
-                    )
-                }
                 .pressable(source, onClick)
+                .heightIn(min = 44.dp)
                 .height(androidx.compose.foundation.layout.IntrinsicSize.Min)
                 .padding(start = 12.dp, end = 16.dp, top = 11.dp, bottom = 12.dp),
             verticalAlignment = Alignment.CenterVertically
@@ -2050,9 +1869,7 @@ object AppleKit : AppKit {
                 Text(
                     text = season,
                     style = styles.rowSubtitle.copy(fontWeight = FontWeight.SemiBold),
-                    color = ink,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
+                    color = ink
                 )
                 val headline = day?.substringBefore('\n')
                 val particulars = day?.substringAfter('\n', "")?.trim().orEmpty()
@@ -2062,7 +1879,7 @@ object AppleKit : AppKit {
                         text = headline,
                         style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
                         color = palette.textPrimary,
-                        maxLines = 3
+                        modifier = Modifier.semantics { heading() }
                     )
                 }
                 if (particulars.isNotEmpty()) {
@@ -2070,8 +1887,7 @@ object AppleKit : AppKit {
                     Text(
                         text = particulars,
                         style = styles.rowSubtitle,
-                        color = palette.textSecondary,
-                        maxLines = 2
+                        color = palette.textSecondary
                     )
                 }
             }

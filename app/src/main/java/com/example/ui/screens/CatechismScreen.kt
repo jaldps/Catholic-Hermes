@@ -120,12 +120,7 @@ fun CatechismScreen(
     val header: LazyListScope.() -> Unit = {
         item(key = "catechism_screen_title") {
             AppScreenTitle(
-                title = currentLanguage.pick("Catecismo", "Catechism", "Catecismo"),
-                subtitle = currentLanguage.pick(
-                    "La fe de la Iglesia, íntegra",
-                    "The faith of the Church, in full",
-                    "A fé da Igreja, na íntegra"
-                )
+                title = currentLanguage.pick("Catecismo", "Catechism", "Catecismo")
             )
         }
         item(key = "catechism_screen_tabs") {

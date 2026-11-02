@@ -20,7 +20,10 @@ import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.CustomAccessibilityAction
+import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.Density
 import androidx.compose.runtime.LaunchedEffect
 import kotlinx.coroutines.launch
@@ -1031,6 +1034,7 @@ fun RosaryScreen(
                         nextLabel = nextLabel,
                         audioLabel = if (isPlayingAudio) pauseLabel else playLabel,
                         isPlayingAudio = isPlayingAudio,
+                        spokenNow = currentlySpeaking,
                         onGo = { goRosary(it) },
                         onToggleAudio = {
                             if (isPlayingAudio) ttsManager.stop() else narrate(rosaryStep)
@@ -1042,7 +1046,7 @@ fun RosaryScreen(
                     )
                 }
 
-                // What to pray now, in full
+                // Beginner instructions and meditation beneath the current prayer
                 item {
                     Spacer(Modifier.height(design.spacing.cardGap))
                     StepCard(step = rosaryStep, lang = lang, spokenNow = currentlySpeaking)
@@ -1185,6 +1189,7 @@ fun RosaryScreen(
                         nextLabel = nextLabel,
                         audioLabel = if (isPlayingAudio) pauseLabel else playLabel,
                         isPlayingAudio = isPlayingAudio,
+                        spokenNow = currentlySpeaking,
                         onGo = { goMercy(it) },
                         onToggleAudio = {
                             if (isPlayingAudio) ttsManager.stop() else narrate(mercyStep)
@@ -1278,6 +1283,7 @@ private fun GuideControlsCard(
     nextLabel: String,
     audioLabel: String,
     isPlayingAudio: Boolean,
+    spokenNow: String?,
     onGo: (Int) -> Unit,
     onToggleAudio: () -> Unit,
     railTag: String,
@@ -1303,7 +1309,6 @@ private fun GuideControlsCard(
             activeIndex = step.bead,
             progress = index.toFloat() / guide.steps.lastIndex.coerceAtLeast(1),
             where = where,
-            what = step.name,
             count = count,
             stepLabel = stepLabel,
             context = eyebrow,
@@ -1312,12 +1317,48 @@ private fun GuideControlsCard(
                 if (target >= 0) onGo(target)
             },
             modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .widthIn(max = when (design.language) {
+                    DesignLanguage.APPLE -> 224.dp
+                    DesignLanguage.MATERIAL -> 232.dp
+                    DesignLanguage.VATICAN -> 240.dp
+                })
                 .testTag(railTag)
                 .semantics {
                     contentDescription = listOfNotNull(where, step.name, count, stepLabel).joinToString(", ")
+                    customActions = listOf(
+                        CustomAccessibilityAction(previousLabel) {
+                            if (index > 0) { onGo(index - 1); true } else false
+                        },
+                        CustomAccessibilityAction(nextLabel) {
+                            if (index < guide.steps.lastIndex) { onGo(index + 1); true } else false
+                        }
+                    )
                 }
         )
 
+        Spacer(Modifier.height(12.dp))
+        if (step.optional) {
+            Text(
+                text = lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
+                style = styles.rowSubtitle,
+                color = design.palette.textSecondary
+            )
+            Spacer(Modifier.height(4.dp))
+        }
+        Text(
+            text = step.name,
+            style = styles.sectionTitle,
+            color = design.palette.textPrimary,
+            modifier = Modifier.testTag("current_prayer_title")
+        )
+        Spacer(Modifier.height(10.dp))
+        PrayerDialogue(
+            leaderText = step.leader,
+            responseText = step.response,
+            leaderSpoken = spokenNow != null && (spokenNow == step.leader || spokenNow == step.narration),
+            responseSpoken = spokenNow != null && spokenNow == step.response
+        )
         Spacer(Modifier.height(design.spacing.cardGap))
 
         RecitationControls(
@@ -1339,99 +1380,67 @@ private fun GuideControlsCard(
     }
 }
 
-/** The current step: its name, what to do, and the full text to pray. */
+/** Reflection remains visible; beginners can open instructions when needed. */
 @Composable
 private fun StepCard(step: GuideStep, lang: AppLanguage, spokenNow: String?) {
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
+    var instructionsOpen by remember(step.name, step.rubric) { mutableStateOf(false) }
+    val hasReflection = step.intention != null || step.meditation != null || step.detail != null
+    val leaderSpoken = spokenNow != null && (spokenNow == step.leader || spokenNow == step.narration)
 
-    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-        if (step.optional) {
-            Text(
-                text = lang.pick("Opcional", "Optional", "Opcional").let {
-                    if (design.decor.usesAllCapsLabels) it.uppercase() else it
-                },
-                style = styles.sectionEyebrow,
-                color = palette.textTertiary
-            )
-            Spacer(Modifier.height(design.spacing.cardGap / 3))
+    Column(Modifier.padding(horizontal = design.spacing.gutter)) {
+        if (hasReflection) {
+            AppCard {
+                step.intention?.let {
+                    Text(it, style = styles.rowTitle, color = palette.accent)
+                }
+                step.meditation?.let {
+                    if (step.intention != null) Spacer(Modifier.height(8.dp))
+                    Text(
+                        it, style = styles.scripture,
+                        color = if (leaderSpoken) palette.accent else palette.textPrimary,
+                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                    )
+                }
+                step.detail?.let {
+                    Spacer(Modifier.height(6.dp))
+                    Text(it, style = styles.rowSubtitle, color = palette.textSecondary)
+                }
+            }
+            Spacer(Modifier.height(8.dp))
         }
-
-        Text(
-            text = step.name,
-            style = styles.sectionTitle,
-            color = palette.textPrimary
+        AppSecondaryButton(
+            label = if (instructionsOpen) lang.pick("Ocultar instrucciones", "Hide instructions", "Ocultar instruções")
+                else lang.pick("Instrucciones", "Instructions", "Instruções"),
+            onClick = { instructionsOpen = !instructionsOpen },
+            modifier = Modifier.testTag("prayer_instructions_toggle").semantics {
+                stateDescription = if (instructionsOpen) lang.pick("Expandido", "Expanded", "Expandido")
+                    else lang.pick("Contraído", "Collapsed", "Recolhido")
+            }
         )
-
-        if (step.intention != null) {
-            Spacer(Modifier.height(design.spacing.cardGap / 3))
-            Text(
-                text = step.intention,
-                style = styles.rowTitle,
-                color = palette.accent
-            )
-        }
-
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-
-        Text(
-            text = step.rubric,
-            style = styles.rowSubtitle,
-            color = palette.textSecondary,
-            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-        )
-
-        Spacer(Modifier.height(design.spacing.cardGap))
-
-        val leaderSpoken = spokenNow != null &&
-            (spokenNow == step.leader || spokenNow == step.narration)
-        PrayerDialogue(
-            leaderText = step.leader,
-            responseText = step.response,
-            leaderSpoken = leaderSpoken,
-            responseSpoken = spokenNow != null && spokenNow == step.response
-        )
-
-        if (step.meditation != null) {
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Text(
-                text = step.meditation,
-                style = styles.scripture,
-                color = if (leaderSpoken) palette.accent else palette.textSecondary,
-                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-            )
-        }
-
-        if (step.detail != null) {
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Text(
-                text = step.detail,
-                style = styles.rowSubtitle,
-                color = palette.textTertiary
-            )
-        }
-
-        if (step.response.isNotBlank()) {
-            Spacer(Modifier.height(design.spacing.cardPadding))
-            AppDivider()
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            Text(
-                text = lang.pick(
-                    "℣ dice quien guía · ℟ responden todos. Si rezas solo, di las dos partes.",
-                    "℣ the leader says · ℟ everyone answers. Praying alone? Say both parts.",
-                    "℣ diz quem conduz · ℟ todos respondem. Rezando sozinho? Diga as duas partes."
-                ),
-                style = styles.rowSubtitle,
-                color = palette.textTertiary,
-                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-            )
+        if (instructionsOpen) {
+            Spacer(Modifier.height(10.dp))
+            Text(step.rubric, style = styles.rowSubtitle, color = palette.textSecondary)
+            if (step.response.isNotBlank()) {
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    lang.pick(
+                        "℣ dice quien guía · ℟ responden todos. Si rezas solo, di las dos partes.",
+                        "℣ the leader says · ℟ everyone answers. Praying alone? Say both parts.",
+                        "℣ diz quem conduz · ℟ todos respondem. Rezando sozinho? Diga as duas partes."
+                    ),
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+            }
         }
     }
 }
 
 /**
- * The whole rosary drawn as the thing itself, large and centred: the loop of
+ * The whole rosary drawn as the thing itself, compact and centred: the loop of
  * five decades strung on one thread, the medal where it closes, and the pendant
  * hanging to a drawn crucifix. Beads still to pray are soft tinted pearls with a
  * rim; prayed beads are filled solid and the thread between them is inked, so
@@ -1446,7 +1455,6 @@ private fun BeadRail(
     activeIndex: Int,
     progress: Float,
     where: String,
-    what: String,
     count: String?,
     stepLabel: String,
     context: String?,
@@ -1679,8 +1687,11 @@ private fun BeadRail(
                 val haloAt = lerp(geometry.centres[lower], geometry.centres[upper], pos - lower)
                 val onCrucifix = beads[activeIndex].kind == BeadKind.CRUCIFIX
                 val haloRadius = if (onCrucifix) geometry.crucifixHeight * 0.64f else geometry.large * 2.4f
-                drawCircle(halo, radius = haloRadius, center = haloAt)
-                if (bloom.value < 1f) {
+                // The Vatican crucifix is engraved rubric ink, not a web glow.
+                if (idiom != DesignLanguage.VATICAN || !onCrucifix) {
+                    drawCircle(halo, radius = haloRadius, center = haloAt)
+                }
+                if (bloom.value < 1f && (idiom != DesignLanguage.VATICAN || !onCrucifix)) {
                     drawCircle(
                         color = current.copy(alpha = 0.4f * (1f - bloom.value)),
                         radius = haloRadius * (0.7f + 0.9f * bloom.value),
@@ -1787,12 +1798,8 @@ private fun BeadRail(
                         textAlign = TextAlign.Center
                     )
                     Spacer(Modifier.height(design.spacing.cardGap / 3))
-                    Text(
-                        text = what,
-                        style = styles.sectionTitle,
-                        color = palette.textPrimary,
-                        textAlign = TextAlign.Center
-                    )
+                    // The current prayer belongs in the reading column below,
+                    // rather than being repeated inside a miniature rosary.
                     if (count != null) {
                         Spacer(Modifier.height(design.spacing.cardGap / 4))
                         Text(
@@ -1802,11 +1809,11 @@ private fun BeadRail(
                             textAlign = TextAlign.Center
                         )
                     }
-                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Spacer(Modifier.height(design.spacing.cardGap / 3))
                     Text(
                         text = stepLabel,
                         style = styles.rowSubtitle,
-                        color = palette.textTertiary,
+                        color = palette.textSecondary,
                         textAlign = TextAlign.Center
                     )
                 }
@@ -1989,9 +1996,9 @@ private class RosaryGeometry(
 /**
  * Navigation across the steps and the narration toggle.
  *
- * Stacked rather than set three-across: "Siguiente" and "Seguinte" in Roman
- * capitals are wide enough to break a three-button row on a narrow screen.
- * Back and Next share a row; narration has a row of its own.
+ * The two accessible 48dp step arrows flank a flexible narration action.
+ * The action owns the remaining measure so translated labels wrap without
+ * pushing either arrow beyond a narrow viewport.
  */
 @Composable
 private fun RecitationControls(
@@ -2016,7 +2023,7 @@ private fun RecitationControls(
     Row(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap, Alignment.CenterHorizontally)
+        horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterHorizontally)
     ) {
         StepArrow(
             icon = Icons.AutoMirrored.Filled.ArrowBack,
@@ -2035,7 +2042,7 @@ private fun RecitationControls(
                 onToggleAudio()
             },
             leadingIcon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
-            modifier = Modifier.testTag(audioTag)
+            modifier = Modifier.weight(1f, fill = false).testTag(audioTag)
         )
         StepArrow(
             icon = Icons.AutoMirrored.Filled.ArrowForward,

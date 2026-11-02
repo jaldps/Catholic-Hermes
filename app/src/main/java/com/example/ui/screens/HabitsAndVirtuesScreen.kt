@@ -326,11 +326,6 @@ fun HabitsAndVirtuesScreen(
                                 "Prácticas diarias",
                                 "Daily practices",
                                 "Práticas diárias"
-                            ),
-                            subtitle = currentLanguage.pick(
-                                "Toca una práctica al cumplirla hoy.",
-                                "Tap a practice once you have kept it today.",
-                                "Toque numa prática ao cumpri-la hoje."
                             )
                         )
                     }
@@ -409,11 +404,6 @@ fun HabitsAndVirtuesScreen(
                             "Las siete raíces",
                             "The seven roots",
                             "As sete raízes"
-                        ),
-                        subtitle = currentLanguage.pick(
-                            "Siete raíces de pecado, siete virtudes que las vencen.",
-                            "Seven roots of sin, seven virtues that overcome them.",
-                            "Sete raízes do pecado, sete virtudes que as vencem."
                         )
                     )
                 }

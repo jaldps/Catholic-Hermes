@@ -1,3 +1,5 @@
+> Current work is on `CatholicGPT`. For the current UI direction, implementation and checks, read [the CatholicGPT review](review/catholicgpt/README.md). The handover below describes the source branch and its historical APK; it is retained for content and product context.
+
 # Sancta Fides — project briefing
 
 Branch: `feat/bible-correctness-and-visual-identities`

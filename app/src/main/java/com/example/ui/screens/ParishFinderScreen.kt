@@ -41,8 +41,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.ui.components.SacredHero
-import com.example.ui.components.SacredSubject
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.Dp
@@ -250,15 +248,9 @@ fun ParishFinderScreen(
     LazyColumn(Modifier.fillMaxWidth().testTag("parish_finder_screen")) {
         item {
             AppScreenTitle(
-                title = strings("Parroquias", "Parishes", "Paróquias"),
-                subtitle = strings(
-                    "Misa cerca de ti o en cualquier lugar",
-                    "Mass near you, or anywhere",
-                    "Missa perto de você ou em qualquer lugar"
-                )
+                title = strings("Parroquias", "Parishes", "Paróquias")
             )
         }
-        item { SacredHero(SacredSubject.CHURCH) }
 
         // Search sits in the gutter like every other search in the app, not
         // nested in a card; the one location action follows it.
@@ -368,23 +360,6 @@ fun ParishFinderScreen(
         }
 
         if (results.isEmpty()) {
-            if (state != SearchState.LOADING && message == null) {
-                item {
-                    AppEmptyState(
-                        title = strings(
-                            "Encuentra misa cerca",
-                            "Find Mass nearby",
-                            "Encontre missa por perto"
-                        ),
-                        body = strings(
-                            "Cada parroquia aparece con su distancia y, cuando se conoce, su próxima misa.",
-                            "Each parish is listed with its distance and, where known, its next Mass.",
-                            "Cada paróquia aparece com a sua distância e, quando conhecida, a próxima missa."
-                        ),
-                        icon = Icons.Default.Church
-                    )
-                }
-            }
             // The bundled directory of cathedrals and basilicas lives in
             // Churches & News; it is linked here rather than listed twice.
             item {
@@ -394,11 +369,6 @@ fun ParishFinderScreen(
                             "Directorio de iglesias",
                             "Church directory",
                             "Diretório de igrejas"
-                        ),
-                        subtitle = strings(
-                            "Catedrales, basílicas y santuarios por país",
-                            "Cathedrals, basilicas and shrines by country",
-                            "Catedrais, basílicas e santuários por país"
                         ),
                         leadingIcon = Icons.Default.Public,
                         onClick = onOpenDirectory,

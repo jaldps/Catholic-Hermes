@@ -277,11 +277,6 @@ fun MainApp(
                                         AppLanguage.EN -> "Appearance"
                                         AppLanguage.PT -> "Aparência"
                                     },
-                                    subtitle = when (currentLanguage) {
-                                        AppLanguage.ES -> "Estilo, tema y tamaño del texto"
-                                        AppLanguage.EN -> "Style, theme and text size"
-                                        AppLanguage.PT -> "Estilo, tema e tamanho do texto"
-                                    },
                                     iconSlot = AppIconSlot.MORE,
                                     tag = "app_bar_theme_button",
                                     onOpen = { showCustomizerModal = true },
@@ -293,7 +288,7 @@ fun MainApp(
                                         AppLanguage.EN -> "Language"
                                         AppLanguage.PT -> "Idioma"
                                     },
-                                    subtitle = currentLanguage.displayName,
+                                    value = currentLanguage.displayName,
                                     iconSlot = AppIconSlot.MORE,
                                     tag = "app_bar_lang_button",
                                     onOpen = { showLanguageSelector = true },
@@ -338,30 +333,30 @@ private fun moreSections(
         AppLanguage.EN -> en
         AppLanguage.PT -> pt
     }
-    fun entry(d: AppDestination, es: String, en: String, pt: String) =
-        MoreEntry(d.title(language), pick(es, en, pt), d.iconSlot, d.tag) { open(d) }
+    fun entry(d: AppDestination) =
+        MoreEntry(d.title(language), d.iconSlot, d.tag) { open(d) }
     return listOf(
         MoreSection(
             pick("Estudio", "Study", "Estudo"),
             listOf(
-                entry(AppDestination.CATECHISM, "Los 2865 artículos, por partes", "All 2,865 paragraphs, by part", "Os 2865 parágrafos, por partes"),
-                entry(AppDestination.DOCTRINE, "Mandamientos, devociones, historia", "Commandments, devotions, history", "Mandamentos, devoções, história"),
-                entry(AppDestination.CHURCHES_NEWS, "Directorio y noticias del Vaticano", "Directory and Vatican news", "Diretório e notícias do Vaticano")
+                entry(AppDestination.CATECHISM),
+                entry(AppDestination.DOCTRINE),
+                entry(AppDestination.CHURCHES_NEWS)
             )
         ),
         MoreSection(
             pick("Vida interior", "Inner life", "Vida interior"),
             listOf(
-                entry(AppDestination.HABITS_VIRTUES, "Examen, virtudes y hábitos diarios", "Examen, virtues and daily habits", "Exame, virtudes e hábitos diários"),
-                entry(AppDestination.SPIRITUAL_LIFE, "Diario, vía crucis, preguntas y canto", "Journal, Stations, quiz and chant", "Diário, via-sacra, quiz e canto")
+                entry(AppDestination.HABITS_VIRTUES),
+                entry(AppDestination.SPIRITUAL_LIFE)
                     .copy(icon = Icons.Outlined.AutoStories)
             )
         ),
         MoreSection(
             pick("Lugares", "Places", "Lugares"),
             listOf(
-                entry(AppDestination.PARISHES, "Misa cerca de ti", "Mass near you", "Missa perto de você"),
-                entry(AppDestination.PILGRIMAGE_HABITS, "Año litúrgico y santuarios", "Church year and shrines", "Ano litúrgico e santuários")
+                entry(AppDestination.PARISHES),
+                entry(AppDestination.PILGRIMAGE_HABITS)
             )
         )
     )
