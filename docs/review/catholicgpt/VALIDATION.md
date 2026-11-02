@@ -21,4 +21,6 @@ Production UI diff versus the source branch: 734 lines added, 3130 removed (2396
 
 Reviewers preferred the simpler version in all 30 blind pairs. Final focused visual reviews found no critical defects at the rendered phone viewport. This is not proof of perfection, all font scales, all scroll states or real-device behavior. No emulator/device installation or live benchmark-site comparison was performed.
 
-The preview uses the environment's debug key; installation over the historical signed APK has not been verified.
+The downloadable preview is a separate, side-by-side package, `com.aistudio.sanctafides.qvmrpx.catholicgpt`, version `1.3-CatholicGPT`. It preserves the historical app and uses independent app data. Its build and APK signature were verified; no physical-phone installation was performed. Preview SHA-256: `ba7deab2a0cb13b2d7974a0156c3ef44e2d78d8e1fae855bd19c48ef3f527d87`.
+
+Build this variant with `flock /tmp/gradle.lock gradle --no-daemon --max-workers=4 --no-configuration-cache -I tools/preview.gradle :app:assembleDebug`. The init script only affects explicitly requested debug preview builds; the normal application ID is unchanged.

@@ -34,7 +34,7 @@ Keep the shared Gradle lock. Main screenshot output: `app/build/screenshots/app`
 
 New regression coverage includes kit-level navigation and touch targets, full-app navigation, independent Rosary/Divine Mercy steps, and Vatican text contrast. The older app screenshot harness now freezes decorative animations consistently with the main harness.
 
-The generated APK uses the environment's debug key. The historical signed APK in `dist/sancta-fides-1.3.apk` is unchanged. Installation over that historical APK and real-device behavior have not been verified.
+The [downloadable preview](../../../dist/CatholicGPT-preview.apk) uses a separate application ID, so it installs alongside the historical app with independent data. The historical signed APK in `dist/sancta-fides-1.3.apk` is unchanged. Real-device behavior has not been verified.
 
 ## Current previews
 
