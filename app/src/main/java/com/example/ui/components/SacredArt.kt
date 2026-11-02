@@ -12,6 +12,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -1488,5 +1489,7 @@ fun SacredHero(subject: SacredSubject, modifier: Modifier = Modifier) {
             .padding(bottom = design.spacing.cardGap)
             .fillMaxWidth()
             .height(136.dp)
+            // The glory's rays stop at the frame, as a vignette's do on the page.
+            .clipToBounds()
     )
 }

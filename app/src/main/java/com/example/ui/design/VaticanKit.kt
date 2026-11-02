@@ -1304,8 +1304,10 @@ object VaticanKit : AppKit {
                         color = rubric(),
                         maxLines = 1,
                         textAlign = TextAlign.End,
-                        modifier = Modifier.width(36.dp).alignByBaseline()
+                        softWrap = false,
+                        modifier = Modifier.width(48.dp).alignByBaseline()
                     )
+                    Spacer(Modifier.width(10.dp))
                 }
                 Column(Modifier.weight(1f).then(if (roman != null) Modifier.alignByBaseline() else Modifier)) {
                     Text(title, style = styles.rowTitle.copy(lineBreak = LineBreak.Paragraph), color = titleColor)
