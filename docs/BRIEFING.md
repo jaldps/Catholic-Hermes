@@ -1,11 +1,119 @@
 # Sancta Fides — project briefing
 
 Branch: `feat/bible-correctness-and-visual-identities`
-Build: `dist/sancta-fides-1.0.apk` (signed, sideload-ready)
-Tests: 68, all passing
+Build: `dist/sancta-fides-1.3.apk` (versionCode 4, signed with the same key as 1.0, so it installs over it)
+Tests: 100, all passing on the code before 1.3's last two Vatican fixes (see §0.6)
 
 This document is the handover: what the app does, what was wrong with it, what
 was changed, what is still open, and what is worth doing next.
+
+## 0. Release 1.3: what changed since 1.0, and what is left
+
+### 0.1 Navigation
+- **Tabs.** The 11-destination bottom bar is now four tabs (Home, Bible, Rosary, Prayers) plus **More**, inside the 5-item limit of both an iOS tab bar and an M3 navigation bar. More groups the other screens under Study, Inner life, Places and Settings.
+- **Back.** A screen opened from More, or from a Home shortcut, gets a back affordance in its identity's own chrome and returns to the tab it came from (`MainApp.kt`, `origin`). The scaffold receives the current screen's title (`AppKit.Scaffold(title, …, onBack, backLabel)`).
+- **Settings.** Appearance and language moved from top-bar icons into Settings under More.
+
+### 0.2 The three identities: design rounds 3–5
+- **The loop.** One agent per identity reviewed real renders and fixed its own kit; shared-screen requests went to separate workers. Fresh, independent judges then compared before/after pairs blind.
+
+  | Round | Apple | Material | Vatican | Blind pairs won by the newer build |
+  |---|---|---|---|---|
+  | 3 vs 2 | 6.9 | 6.8 | 7.1 | 72/72 |
+  | 4 vs 3 | 7.1 | 7.25 | 6.85 | 71/72 |
+
+  Every judge's verdict was "**not wowed**". The full reports are in the session scratchpad (`judge5_*.md`); their main findings are under §0.7.
+- **Apple** (`AppleKit.kt`):
+  - Colour: one liturgical tint, iOS system colours on icon tiles chosen by meaning, iOS-style translucent fills, and AA contrast on buttons and secondary labels.
+  - Hero: the liturgical day is drawn as a vestment-colour card.
+  - Navigation: the nav bar fades its inline title in under the large title.
+  - Motion: sprung press and selection animations.
+- **Material** (`MaterialKit.kt`):
+  - Title: a large collapsing top app bar carries the screen title, so there is one title per screen.
+  - Navigation: M3 primary tabs for view switching.
+  - Lists: Android 16-style segmented list groups and Settings-style section headers.
+  - Expressive: hand-built shapes (soft-burst seal on liturgical banners, cookie empty states, clover icons) and spring shape morphs on press.
+  - Colour: liturgical colours harmonised toward the scheme.
+- **Vatican** (`VaticanKit.kt`):
+  - Paper: fine laid-paper grain; in dark mode, a candle-lit umber with one deep vermilion.
+  - Navigation: a folded silk ribbon marks the selected tab over engraved tab glyphs; pushed screens get a compact running head.
+  - Missal typesetting: small-caps text filters instead of chip boxes, missal rules, Roman numerals hung in the margin, a red drop initial, gilt-inset buttons, an engraved empty-state vignette, and true EB Garamond italics (bundled) for Latin.
+- **Shared** (`ui/design/DevotionalGlyphs.kt`, `ui/components/SacredArt.kt`):
+  - Glyphs: drawn rosary and votive-candle glyphs replace the stock meditator and charity hand.
+  - Illustrations: procedural sacred illustrations (cross in glory, open book, rosary, candles, basilica, dove), each drawn in its identity's idiom. They sit as heroes on Home, Bible, Prayers, Spiritual life and Parishes.
+
+### 0.3 Screens and content
+- **Layout.** Every screen opens title → (search) → one control, never tabs above the title.
+  - Filters: at most one filter layer per screen; secondary filters became menu rows (`MenuPickerRow`).
+  - Lists: long text cards became concise rows that open their own page (`InlineBackLink`).
+- **Rosary.** Drawn as a real chaplet: five decades, medal, pendant and crucifix. Prayed beads are filled and the current bead is haloed; the ring and its controls sit above the fold.
+- **Calendar.** Computed from today's date: today plus the next four weeks' Sundays, feasts, solemnities and fast days. The rank sits in the hero, and each day's Gospel is attached to it.
+- **Content.**
+  - Home: a "Continue reading" row.
+  - Habits: a real empty state with suggested practices.
+  - Liturgy: November 2 is a Commemoration, with Gospel John 6:37–40.
+  - Localisation and formatting:
+    - Parish schedule notes are translated (`ParishScheduleText`).
+    - Times are localised ("7:00 AM" vs "7:00").
+    - Scripture ranges use en dashes.
+    - Liturgical wording is used throughout ("Saturday of the Thirty-first Week in Ordinary Time").
+    - Developer jargon is gone ("Dashboard", "Geographic Filter Dropdown Menus").
+
+### 0.4 Bible cross-references (new in 1.1)
+- **Portrait.** Tapping a verse opens a sheet with:
+  - the verse;
+  - an arc strip showing its reach over the whole canon, coloured by testament;
+  - its references, strongest first, each with its text from the bundled Catholic Bible in the reader's language, and each tap opening the target highlighted (Back retraces the trail);
+  - the patristic gloss, when there is one.
+- **Landscape.** The reader becomes a study: the text beside the whole Bible's web of connections, with the chosen verse's (or the chapter's) arcs over it.
+- **Data.**
+  - Source: OpenBible.info (CC BY 4.0, mostly the *Treasury of Scripture Knowledge*), keeping the strongest 30 per verse; about 152k per language.
+  - Numbering: re-keyed from King James numbering to each edition's Vulgate-tradition numbering — Psalm renumbering with title verses, Daniel's Greek additions, and a word-similarity alignment for the Douay-Rheims (98.7% of verses land on their best match).
+  - How to rebuild the assets: `tools/xref/README.md`.
+  - Coverage gap: the deuterocanonical books have no references in the source, and the sheet says so.
+- **Code.** `data/xref/CrossReferenceIndex.kt`, `ui/screens/CrossReferenceViews.kt`, `ui/components/CrossReferenceArcs.kt`.
+
+### 0.5 1.3 itself
+- The Vatican identity's Roman numerals overlapped their text; they now hang in a wider margin column.
+- The sacred illustrations spilled their rays over titles and tabs; they now clip to their frame.
+
+### 0.6 Verification
+- **Tests.** 100 unit tests, 0 failures, on the code of 1.2 (which is 1.3 minus the two Vatican fixes). 1.3 was built without a full re-run; its two fixes were checked on four Vatican screens in dark mode.
+- **Screenshot tests.**
+  - `FullAppScreenshotTest` renders MainApp at every destination × identity × light/dark: 72 PNGs at phone size in `app/build/screenshots/app`. `-Pshots.only=home,bible` narrows the destinations, and `-Pshots.lang=es|pt` renders in another language.
+  - `CrossReferenceScreenshotTest` renders the verse sheet and the landscape study.
+  - `SacredArtScreenshotTest` renders the illustration gallery.
+- **Behaviour in screenshot runs.** Looping animations hold still under `LocalInspectionMode`. Without that, Robolectric never reaches idle and the run hangs.
+- **Gradle.** Concurrent builds must share `flock /tmp/gradle.lock`.
+
+### 0.7 What is left
+**The design goal is not met.** The independent blind judges rate every identity about 7/10 and are "not wowed". They also have not judged the sacred illustrations or 1.3. The next step is another blind-judging round against the 1.3 renders, then fixes, repeated until each judge is wowed. Their open findings:
+
+- **All identities**
+  - Many screens are still "a Settings-app skin": the same stack of text rows. Each top-level tab needs a signature moment; the illustrations are a first step, still unjudged.
+  - Parishes and Churches: a map with distances, one "near me" action, and the next Mass time per result.
+  - The Bible's Old Testament / New Testament / Deuterocanonical canon filter should come back as a single compact control.
+  - Home: a reading preview, and a lighter hierarchy below the hero.
+- **Apple**
+  - Icon tiles must never repeat a colour within one group.
+  - Try a serif (EB Garamond) for large titles, as Books and Journal do.
+  - Replace the floating "New entry" with a nav-bar button.
+- **Material**
+  - The large app bar reserves supporting-text space even when there is no subtitle, leaving a gap.
+  - Use segmented buttons only for 2-option value switches, with checkmarks; screens with 3 or more options should use tabs.
+  - Vary row containers: numeral badges and shaped icons per category.
+  - Add a wavy progress indicator to the Rosary.
+- **Vatican**
+  - The root-tab title page is still tall.
+  - Liturgical typesetting is not done throughout: ℣/℟ sized to the text and italic incipits everywhere.
+  - Vary the empty-state vignettes by subject.
+  - Check the dark-mode red and gold contrast again.
+- **Cross-references**
+  - The landscape study has not been seen on a real phone. The app's top and bottom bars take height from it, so consider hiding them in landscape.
+  - The density of the background web needs a device check.
+- **Coverage gaps**
+  - The detail pages added in round 4 (prayer, commandment, church, chaplet) are not in the screenshot harness.
+  - Spanish and Portuguese renders have only been spot-checked.
 
 ---
 
@@ -187,13 +295,8 @@ offline fallback.
   the source incomplete (§2349 has no Spanish or English, §2357 no Portuguese);
   those fall back to a language that has the text rather than rendering empty.
   Guarded by `CatechismCoverageTest`.
-- **Screen migration: 9 of 13.** Migrated: Home, Bible, Catechism, Rosary,
-  Parishes, Doctrine & History, Habits & Virtues, Prayers & Novenas, Spiritual
-  Life. Not migrated: Scripture Study, Night Prayers, Pilgrimage, Devotions
-  Explorer. Unmigrated screens still inherit each identity's colour, type and
-  shape, but not its structural idiom.
-- **The critic loop ran one round.** Apple and Vatican were revised by it;
-  Material's findings were applied to the shared tokens.
+- ~~**Screen migration: 9 of 13.**~~ **Done**: all 13 screens are on the kit.
+- **The critic loop** has run five rounds; scores and open findings are in §0.2 and §0.7.
 
 ### Reported, not yet fixed
 - ~~"Leer la misa y comentarios" on Home navigates to the Bible~~ **Fixed.** It
@@ -256,12 +359,9 @@ changes; what holds the rest back lives in screen files they could not edit:
 - **Home**: the liturgical `DayBadge`s are hand-drawn grey outlined boxes (should be
   `AppChip`, or a line of small capitals in the Vatican identity); `CardHeading`
   upper-cases its labels and draws Material icons before them in every identity.
-- **Navigation**: eleven destinations do not fit an iOS tab bar (five plus "More")
-  or an M3 navigation bar; needs a drawer or a "More" destination in `MainApp.kt`.
-- **Catechism**: the segmented control sits above the screen title; two stacked
-  full-width buttons per link card read as a form.
-- **Parishes**: each parish is three rows (name, Mass times, phone) and should be
-  one; the radius chip row is clipped at the right edge.
+- ~~**Navigation**: eleven destinations do not fit a tab bar~~ **Done in 1.3**: four tabs plus More (§0.1).
+- ~~**Catechism**: segmented control above the title; stacked buttons~~ **Done in 1.3** (§0.3).
+- ~~**Parishes**: three rows per parish; clipped radius chips~~ **Done in 1.3**: one row each, opening in place; radius is a segmented control.
 - **Cupertino top bar**: scrolling under it should show a blurred bar with the
   inline title, which needs scroll state the fixed `AppKit` signatures do not pass.
 
