@@ -7,11 +7,14 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
@@ -22,8 +25,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.NightsStay
+import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -36,6 +41,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -48,7 +58,6 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.ComplineOffice
 import com.example.data.models.IgnatianExamenStep
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.components.MenuPickerRow
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppListGroup
@@ -64,6 +73,9 @@ import com.example.ui.design.AppVerseRow
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+
+/** Minimum touch target for every control this screen owns (AAA). */
+private val MinTouchTarget = 48.dp
 
 private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
     AppLanguage.ES -> es
@@ -160,6 +172,7 @@ fun NightPrayersScreen(
 
 // ------------------------------------------------------------------- compline
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun ComplineView(
     header: LazyListScope.() -> Unit,
@@ -215,14 +228,30 @@ private fun ComplineView(
 
         item {
             ReadingColumn {
+                // While the voice is running the same 48dp button offers Stop,
+                // so recitation can be ended without leaving the page.
                 AppPrimaryButton(
-                    label = currentLanguage.pick("Rezar", "Pray", "Rezar"),
-                    onClick = { ttsManager.speakSingle(officeText) },
-                    leadingIcon = Icons.Default.VolumeUp,
+                    label = if (isNarrating) {
+                        currentLanguage.pick("Detener", "Stop", "Parar")
+                    } else {
+                        currentLanguage.pick("Rezar", "Pray", "Rezar")
+                    },
+                    onClick = {
+                        if (isNarrating) ttsManager.stop() else ttsManager.speakSingle(officeText)
+                    },
+                    leadingIcon = if (isNarrating) Icons.Default.Stop else Icons.Default.VolumeUp,
                     modifier = Modifier
                         .fillMaxWidth()
+                        .heightIn(min = MinTouchTarget)
                         .padding(horizontal = design.spacing.gutter)
                         .testTag("compline_tts_button")
+                        .semantics {
+                            stateDescription = if (isNarrating) {
+                                currentLanguage.pick("Narrando", "Narrating", "Narrando")
+                            } else {
+                                currentLanguage.pick("Detenido", "Stopped", "Parado")
+                            }
+                        }
                 )
                 if (isNarrating) {
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
@@ -428,14 +457,26 @@ private fun ComplineView(
                     subtitle = currentAntiphon.seasonTag.get(currentLanguage)
                 )
 
-                AppListGroup {
-                    MenuPickerRow(
-                        title = currentLanguage.pick("Antífona", "Antiphon", "Antífona"),
-                        options = compline.marianAntiphons.mapIndexed { i, a -> i to a.titleLatin },
-                        selected = compline.marianAntiphons.indexOfFirst { it.id == currentAntiphon.id },
-                        onSelect = { selectedMarianAntiphonIndex = it },
-                        testTag = "marian_antiphon_picker"
-                    )
+                // The antiphons as wrapping chips instead of a menu: every
+                // Latin title is visible at once (no clipped label behind a
+                // dropdown at 320dp / 130% text), each is a 48dp target, and
+                // the kit draws the selected state from tokens.
+                FlowRow(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("marian_antiphon_picker"),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+                    verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+                ) {
+                    compline.marianAntiphons.forEachIndexed { index, antiphon ->
+                        AppChip(
+                            label = antiphon.titleLatin,
+                            selected = index == selectedMarianAntiphonIndex,
+                            onClick = { selectedMarianAntiphonIndex = index },
+                            modifier = Modifier.heightIn(min = MinTouchTarget)
+                        )
+                    }
                 }
 
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -463,18 +504,28 @@ private fun ComplineView(
                         // A label this long cannot be defended in a half-width
                         // button, so it gets the full measure to itself.
                         AppPrimaryButton(
-                            label = currentLanguage.pick(
-                                "Escuchar ${currentAntiphon.titleLatin}",
-                                "Listen to ${currentAntiphon.titleLatin}",
-                                "Ouvir ${currentAntiphon.titleLatin}"
-                            ),
-                            onClick = {
-                                ttsManager.speakSingle(
-                                    currentAntiphon.translatedText.get(currentLanguage)
+                            label = if (isNarrating) {
+                                currentLanguage.pick("Detener", "Stop", "Parar")
+                            } else {
+                                currentLanguage.pick(
+                                    "Escuchar ${currentAntiphon.titleLatin}",
+                                    "Listen to ${currentAntiphon.titleLatin}",
+                                    "Ouvir ${currentAntiphon.titleLatin}"
                                 )
                             },
-                            leadingIcon = Icons.Default.VolumeUp,
-                            modifier = Modifier.fillMaxWidth()
+                            onClick = {
+                                if (isNarrating) {
+                                    ttsManager.stop()
+                                } else {
+                                    ttsManager.speakSingle(
+                                        currentAntiphon.translatedText.get(currentLanguage)
+                                    )
+                                }
+                            },
+                            leadingIcon = if (isNarrating) Icons.Default.Stop else Icons.Default.VolumeUp,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(min = MinTouchTarget)
                         )
                     }
                 }
@@ -501,7 +552,11 @@ private fun OfficePart(
 ) {
     val design = LocalAppDesign.current
 
-    AppSectionHeader(title = caption, subtitle = reference)
+    AppSectionHeader(
+        title = caption,
+        subtitle = reference,
+        modifier = Modifier.semantics { heading() }
+    )
     ReadingColumn {
         LatinToggle(
             showing = latinShown,
@@ -582,6 +637,34 @@ private fun IgnatianExamenView(
                         modifier = Modifier.weight(1f)
                     )
                 }
+                // Progress as a rule with a text equivalent, not only the
+                // tiles' numbers: the bar gives the fraction at a glance in
+                // the identity's accent on its selection tint, and
+                // stateDescription carries the same $completed/$total text,
+                // so dark mode and screen readers get it without colour.
+                val progressFraction = if (steps.isEmpty()) 0f else
+                    completedSteps.size.toFloat() / steps.size.toFloat()
+                val progressLabel = currentLanguage.pick(
+                    "${completedSteps.size} de ${steps.size} pasos completados",
+                    "${completedSteps.size} of ${steps.size} steps completed",
+                    "${completedSteps.size} de ${steps.size} passos concluídos"
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                LinearProgressIndicator(
+                    progress = { progressFraction },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(4.dp)
+                        .padding(horizontal = design.spacing.gutter)
+                        .semantics {
+                            contentDescription = currentLanguage.pick(
+                                "Progreso del examen", "Examen progress", "Progresso do exame"
+                            )
+                            stateDescription = progressLabel
+                        },
+                    color = design.palette.accent,
+                    trackColor = design.palette.selectionTint
+                )
             }
         }
 
@@ -605,7 +688,16 @@ private fun IgnatianExamenView(
                         },
                         showsNavigationAffordance = false,
                         selected = index == selectedStepIndex,
-                        onClick = { selectedStepIndex = index }
+                        onClick = { selectedStepIndex = index },
+                        modifier = Modifier
+                            .heightIn(min = MinTouchTarget)
+                            .semantics {
+                                stateDescription = if (examenStep.stepNumber in completedSteps) {
+                                    currentLanguage.pick("Hecho", "Done", "Feito")
+                                } else {
+                                    currentLanguage.pick("Pendiente", "Pending", "Pendente")
+                                }
+                            }
                     )
                 }
             }
@@ -634,7 +726,8 @@ private fun IgnatianExamenView(
                         Text(
                             text = caps(step.title.get(currentLanguage)),
                             style = styles.sectionTitle,
-                            color = design.palette.textPrimary
+                            color = design.palette.textPrimary,
+                            modifier = Modifier.semantics { heading() }
                         )
                         Spacer(Modifier.height(design.spacing.cardGap))
                         LiturgicalText(
@@ -657,14 +750,29 @@ private fun IgnatianExamenView(
                         Spacer(Modifier.height(design.spacing.cardPadding))
                         // Full-width rows, not two abreast: inside a card the
                         // half measure is some 120dp, and "Escuchar" set as
-                        // tracked Roman capitals does not fit it.
+                        // tracked Roman capitals does not fit it. While the
+                        // voice runs the same 48dp button offers Stop.
                         AppSecondaryButton(
-                            label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
-                            onClick = { ttsManager.speakSingle(guidedPrayer) },
-                            leadingIcon = Icons.Default.VolumeUp,
+                            label = if (isNarrating) {
+                                currentLanguage.pick("Detener", "Stop", "Parar")
+                            } else {
+                                currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+                            },
+                            onClick = {
+                                if (isNarrating) ttsManager.stop() else ttsManager.speakSingle(guidedPrayer)
+                            },
+                            leadingIcon = if (isNarrating) Icons.Default.Stop else Icons.Default.VolumeUp,
                             modifier = Modifier
                                 .fillMaxWidth()
+                                .heightIn(min = MinTouchTarget)
                                 .testTag("examen_tts_button")
+                                .semantics {
+                                    stateDescription = if (isNarrating) {
+                                        currentLanguage.pick("Narrando", "Narrating", "Narrando")
+                                    } else {
+                                        currentLanguage.pick("Detenido", "Stopped", "Parado")
+                                    }
+                                }
                         )
                         Spacer(Modifier.height(design.spacing.cardGap / 2))
                         AppPrimaryButton(
@@ -680,7 +788,16 @@ private fun IgnatianExamenView(
                                     completedSteps + step.stepNumber
                                 }
                             },
-                            modifier = Modifier.fillMaxWidth()
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(min = MinTouchTarget)
+                                .semantics {
+                                    stateDescription = if (isStepDone) {
+                                        currentLanguage.pick("Hecho", "Done", "Feito")
+                                    } else {
+                                        currentLanguage.pick("Pendiente", "Pending", "Pendente")
+                                    }
+                                }
                         )
                         if (isNarrating) {
                             Spacer(Modifier.height(design.spacing.cardGap / 2))
@@ -714,7 +831,7 @@ private fun IgnatianExamenView(
                                 imageVector = Icons.Default.CheckCircle,
                                 contentDescription = null,
                                 tint = design.palette.gold,
-                                modifier = Modifier.size(32.dp)
+                                modifier = Modifier.size(design.decor.rowIconSize + 8.dp)
                             )
                             Spacer(Modifier.height(design.spacing.cardGap))
                             Text(
@@ -727,7 +844,8 @@ private fun IgnatianExamenView(
                                 ),
                                 style = styles.sectionTitle,
                                 color = design.palette.textPrimary,
-                                textAlign = TextAlign.Center
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.semantics { heading() }
                             )
                             Spacer(Modifier.height(design.spacing.cardGap))
                             Text(
@@ -847,22 +965,30 @@ private fun LatinToggle(
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
+    val label = if (showing) {
+        currentLanguage.pick("Ocultar Latín", "Hide Latin", "Ocultar Latim")
+    } else {
+        currentLanguage.pick("Ver Latín", "Show Latin", "Ver Latim")
+    }
     Text(
-        text = caps(
-            if (showing) {
-                currentLanguage.pick("Ocultar Latín", "Hide Latin", "Ocultar Latim")
-            } else {
-                currentLanguage.pick("Ver Latín", "Show Latin", "Ver Latim")
-            }
-        ),
+        text = caps(label),
         style = styles.sectionEyebrow,
         color = design.palette.accent,
         modifier = modifier
+            .heightIn(min = MinTouchTarget)
             .padding(horizontal = design.spacing.gutter)
-            .clickable(onClick = onToggle)
-            // A rubric is a few millimetres tall; the padding is what makes it
-            // a target rather than a hairline of type.
+            .clickable(role = Role.Button, onClick = onToggle)
+            // A rubric is a few millimetres tall; the minimum height is what
+            // makes it a 48dp target rather than a hairline of type.
             .padding(horizontal = 4.dp, vertical = 12.dp)
+            .semantics {
+                contentDescription = label
+                stateDescription = if (showing) {
+                    currentLanguage.pick("Expandido", "Expanded", "Expandido")
+                } else {
+                    currentLanguage.pick("Contraído", "Collapsed", "Recolhido")
+                }
+            }
     )
 }
 
@@ -876,8 +1002,11 @@ private fun stichs(text: String): List<String> =
     text.split(StichBreak).map { it.trim() }.filter { it.isNotEmpty() }
 
 /**
- * The two offices of the night as one row with a menu, so the Prayers
- * selector above stays the page's only visible control.
+ * The two offices of the night as a segmented control, so the choice is
+ * visible without opening a menu: at 320dp and 130% text the long ES/PT
+ * labels ("Examen ignaciano") can overflow a dropdown, and the kit's
+ * segmented control falls back to tabs when its segments cannot hold
+ * both labels.
  */
 @Composable
 private fun OfficeChoice(
@@ -888,13 +1017,19 @@ private fun OfficeChoice(
 ) {
     val design = LocalAppDesign.current
     Spacer(Modifier.height(design.spacing.cardGap / 2))
-    AppListGroup {
-        MenuPickerRow(
-            title = title,
-            options = labels.mapIndexed { i, label -> i to label },
-            selected = selectedIndex,
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .testTag("night_office_picker")
+    ) {
+        AppSegmentedTabs(
+            options = labels,
+            selectedIndex = selectedIndex,
             onSelect = onSelect,
-            testTag = "night_office_picker"
+            modifier = Modifier
+                .fillMaxWidth()
+                .semantics { contentDescription = title }
         )
     }
 }

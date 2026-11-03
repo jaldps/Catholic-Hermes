@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -28,7 +29,6 @@ import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -43,6 +43,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
@@ -255,11 +259,16 @@ private fun TrackOverviewView(
     onSelectLesson: (ScriptureLesson) -> Unit
 ) {
     val design = LocalAppDesign.current
-    val scheme = MaterialTheme.colorScheme
+    val palette = design.palette
 
     val total = track.lessons.size
     val done = track.lessons.count { completedLessonIds.contains(it.id) }
     val fraction = if (total > 0) done.toFloat() / total.toFloat() else 0f
+    val progressSummary = currentLanguage.pick(
+        "$done de $total lecciones · ${(fraction * 100).toInt()}% del curso",
+        "$done of $total lessons · ${(fraction * 100).toInt()}% of the course",
+        "$done de $total lições · ${(fraction * 100).toInt()}% do curso"
+    )
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
@@ -274,6 +283,10 @@ private fun TrackOverviewView(
                     options = stripLabels.mapIndexed { i, label -> i to label },
                     selected = selectedTrackIndex,
                     onSelect = onSelectTrack,
+                    // Row height comes from the kit's rowMinHeight; the
+                    // modifier is a no-op in MenuPickerRow today (it only
+                    // forwards the test tag), so no 48dp floor is promised
+                    // here — the track index rows below carry the floor.
                     testTag = "study_track_picker"
                 )
             }
@@ -308,22 +321,25 @@ private fun TrackOverviewView(
                     "Course Lessons",
                     "Lições do Curso"
                 ),
-                subtitle = currentLanguage.pick(
-                    "$done de $total lecciones · ${(fraction * 100).toInt()}% del curso",
-                    "$done of $total lessons · ${(fraction * 100).toInt()}% of the course",
-                    "$done de $total lições · ${(fraction * 100).toInt()}% do curso"
-                )
+                subtitle = progressSummary
             )
             // No kit component carries a progress bar, so the course rule is
-            // the Material indicator dressed in the identity's own colours.
+            // the indicator dressed in the identity's own colours. It speaks:
+            // progress is only colour and fill to a sighted reader, so the
+            // done/total summary rides as its state description.
             LinearProgressIndicator(
                 progress = { fraction },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = design.spacing.gutter)
-                    .padding(bottom = design.spacing.cardGap),
-                color = scheme.primary,
-                trackColor = design.palette.selectionTint
+                    .padding(bottom = design.spacing.cardGap)
+                    .semantics {
+                        contentDescription = track.title.get(currentLanguage)
+                        stateDescription = progressSummary
+                    }
+                    .testTag("study_course_progress"),
+                color = palette.accent,
+                trackColor = palette.selectionTint
             )
         }
 
@@ -357,7 +373,9 @@ private fun TrackOverviewView(
                                 null
                             },
                             onClick = { onSelectLesson(lesson) },
-                            modifier = Modifier.testTag("lesson_row_${lesson.id}")
+                            modifier = Modifier
+                                .heightIn(min = 48.dp)
+                                .testTag("lesson_row_${lesson.id}")
                         )
                     }
                 }
@@ -390,7 +408,9 @@ private fun TrackOverviewView(
                             ),
                             selected = index == selectedTrackIndex,
                             onClick = { onSelectTrack(index) },
-                            modifier = Modifier.testTag("track_row_${candidate.id}")
+                            modifier = Modifier
+                                .heightIn(min = 48.dp)
+                                .testTag("track_row_${candidate.id}")
                         )
                     }
                 }
@@ -434,8 +454,16 @@ private fun LessonDetailView(
                 Row(
                     Modifier
                         .weight(1f)
-                        .clickable(onClick = onBack)
+                        .heightIn(min = 48.dp)
+                        .clickable(role = Role.Button, onClick = onBack)
                         .padding(vertical = design.spacing.rowPaddingVertical)
+                        .semantics {
+                            contentDescription = currentLanguage.pick(
+                                "Volver al Curso",
+                                "Back to the Course",
+                                "Voltar ao Curso"
+                            )
+                        }
                         .testTag("back_to_course_button"),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
@@ -469,7 +497,9 @@ private fun LessonDetailView(
                     },
                     selected = isCompleted,
                     onClick = { onToggleComplete(notesText) },
-                    modifier = Modifier.testTag("toggle_lesson_complete_button")
+                    modifier = Modifier
+                        .heightIn(min = 48.dp)
+                        .testTag("toggle_lesson_complete_button")
                 )
             }
         }
@@ -515,6 +545,7 @@ private fun LessonDetailView(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = design.spacing.gutter)
+                        .heightIn(min = 48.dp)
                         .testTag("lesson_listen_button")
                 )
             }
@@ -660,6 +691,7 @@ private fun LessonDetailView(
                         },
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = 48.dp)
                             .testTag("save_lesson_button")
                     )
                 }
@@ -695,7 +727,7 @@ private fun LectioStep(
         Spacer(Modifier.height(design.spacing.cardGap / 2))
         Text(
             text = content,
-            style = MaterialTheme.typography.bodyMedium,
+            style = styles.rowSubtitle,
             color = design.palette.textSecondary
         )
     }
@@ -749,15 +781,20 @@ private fun NotesField(
                 Modifier
                     .fillMaxWidth()
                     .clip(design.shapes.field)
-                    .background(
-                        palette.selectionTint.copy(alpha = if (design.isDark) 1f else 0.5f)
-                    )
+                    // The selection tint is struck dark-aware in the
+                    // palette; no alpha hack per mode. The border weight is
+                    // the depth token: 0 in the tonal identities (the fill
+                    // carries the edge), 1dp in Vatican.
+                    .background(palette.selectionTint)
                     .border(
-                        design.depth.cardBorderWidth.coerceAtLeast(0.75.dp),
+                        design.depth.cardBorderWidth,
                         palette.hairline,
                         design.shapes.field
                     )
-                    .padding(horizontal = 12.dp, vertical = 10.dp)
+                    .padding(
+                        horizontal = design.spacing.cardPadding,
+                        vertical = design.spacing.rowPaddingVertical
+                    )
             ) {
                 if (value.isEmpty()) {
                     Text(

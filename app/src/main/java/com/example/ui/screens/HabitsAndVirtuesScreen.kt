@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -40,6 +41,7 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material.icons.filled.WbSunny
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
@@ -61,6 +63,9 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
@@ -268,6 +273,7 @@ fun HabitsAndVirtuesScreen(
                                     },
                                     leadingIcon = Icons.Default.Add,
                                     modifier = Modifier
+                                        .heightIn(min = MinTouchTarget)
                                         .padding(horizontal = design.spacing.gutter)
                                         .testTag("adopt_suggested_habits")
                                 )
@@ -369,6 +375,7 @@ fun HabitsAndVirtuesScreen(
                         leadingIcon = Icons.Default.Add,
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                             .padding(horizontal = design.spacing.gutter)
                             .testTag("fab_add_habit")
                     )
@@ -421,7 +428,14 @@ fun HabitsAndVirtuesScreen(
                                 ) + "\n" + option.advice.get(currentLanguage),
                                 trailingText = if (count > 0) count.toString() else null,
                                 onClick = { openSinAvoider(option) },
-                                modifier = Modifier.testTag("card_overcome_${option.sinKey}")
+                                modifier = Modifier
+                                    .heightIn(
+                                        min = maxOf(
+                                            design.spacing.rowMinHeight,
+                                            MinTouchTarget
+                                        )
+                                    )
+                                    .testTag("card_overcome_${option.sinKey}")
                             )
                         }
                     }
@@ -534,7 +548,9 @@ fun HabitsAndVirtuesScreen(
                                 ttsManager.setLanguage(currentLanguage)
                                 ttsManager.speakSingle(hailMaryPrayer, isFemaleVoice = true)
                             },
-                            modifier = Modifier.size(32.dp)
+                            // Was 32.dp: below the M3 48dp minimum, so the
+                            // only TTS control on the screen was hard to hit.
+                            modifier = Modifier.size(MinTouchTarget)
                         ) {
                             Icon(
                                 imageVector = Icons.Default.VolumeUp,
@@ -544,16 +560,27 @@ fun HabitsAndVirtuesScreen(
                                     "Ouvir a oração"
                                 ),
                                 tint = palette.accent,
-                                modifier = Modifier.size(20.dp)
+                                modifier = Modifier.size(24.dp)
                             )
                         }
                     }
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
-                    Text(
-                        text = hailMaryPrayer,
-                        style = styles.rowSubtitle.copy(fontStyle = FontStyle.Italic),
-                        color = palette.textPrimary
-                    )
+                    // Tonal container for the prayer itself: accentMuted is
+                    // the identity's tinted surface in both light and dark,
+                    // so the text keeps its contrast without a hard-coded tone.
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .clip(design.shapes.card)
+                            .background(palette.accentMuted)
+                            .padding(design.spacing.cardGap)
+                    ) {
+                        Text(
+                            text = hailMaryPrayer,
+                            style = styles.rowSubtitle.copy(fontStyle = FontStyle.Italic),
+                            color = palette.textPrimary
+                        )
+                    }
 
                     Spacer(Modifier.height(design.spacing.cardGap))
                     AppDivider()
@@ -600,7 +627,7 @@ fun HabitsAndVirtuesScreen(
                             ttsManager.stop()
                         }
                     },
-                    modifier = Modifier.testTag("confirm_victory_button")
+                    modifier = Modifier.heightIn(min = MinTouchTarget).testTag("confirm_victory_button")
                 )
             },
             dismissButton = {
@@ -713,7 +740,8 @@ fun HabitsAndVirtuesScreen(
                             AppChip(
                                 label = categoryLabel(cat, currentLanguage),
                                 selected = newHabitCategory == cat,
-                                onClick = { newHabitCategory = cat }
+                                onClick = { newHabitCategory = cat },
+                                modifier = Modifier.heightIn(min = MinTouchTarget)
                             )
                         }
                     }
@@ -751,7 +779,7 @@ fun HabitsAndVirtuesScreen(
                         }
                     },
                     enabled = newHabitTitle.isNotBlank(),
-                    modifier = Modifier.testTag("save_custom_habit_button")
+                    modifier = Modifier.heightIn(min = MinTouchTarget).testTag("save_custom_habit_button")
                 )
             },
             dismissButton = {
@@ -784,7 +812,9 @@ private fun LazyListScope.paneHeader(
             options = tabLabels,
             selectedIndex = selectedTab,
             onSelect = onSelectTab,
-            modifier = Modifier.padding(horizontal = segmentedTabsInset())
+            modifier = Modifier
+                .heightIn(min = MinTouchTarget)
+                .padding(horizontal = segmentedTabsInset())
         )
         Spacer(Modifier.height(design.spacing.sectionGap / 2))
     }
@@ -858,8 +888,32 @@ private fun FidelityCard(
                 )
             }
             Spacer(Modifier.width(design.spacing.cardGap))
-            FidelityRing(completionRate = completionRate)
+            FidelityRing(
+                completionRate = completionRate,
+                completedCount = completedCount,
+                totalCount = totalCount,
+                currentLanguage = currentLanguage
+            )
         }
+
+        // Progress as a determinate bar as well as the ring: colour/arc alone
+        // is invisible to a reader who cannot see the ring, and the bar's
+        // stateDescription carries the same $completed/$total text.
+        val progressLabel = currentLanguage.pick(
+            "$completedCount de $totalCount cumplidos hoy",
+            "$completedCount of $totalCount kept today",
+            "$completedCount de $totalCount cumpridos hoje"
+        )
+        Spacer(Modifier.height(design.spacing.cardGap))
+        LinearProgressIndicator(
+            progress = { completionRate.coerceIn(0f, 1f) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(4.dp)
+                .semantics { stateDescription = progressLabel },
+            color = palette.accent,
+            trackColor = palette.selectionTint
+        )
 
         Spacer(Modifier.height(design.spacing.cardPadding))
         AppDivider()
@@ -884,6 +938,7 @@ private fun FidelityCard(
             leadingIcon = Icons.Default.Shield,
             modifier = Modifier
                 .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
                 .testTag("grace_sos_quick_button")
         )
     }
@@ -892,17 +947,38 @@ private fun FidelityCard(
 /**
  * The day's completion as a ring. No kit component draws one, so it is built
  * from the palette and closed with a square cap where the identity has no
- * rounded forms at all.
+ * rounded forms at all. The percentage is also a contentDescription so the
+ * value does not live only in the arc.
  */
 @Composable
-private fun FidelityRing(completionRate: Float, modifier: Modifier = Modifier) {
+private fun FidelityRing(
+    completionRate: Float,
+    completedCount: Int = 0,
+    totalCount: Int = 0,
+    currentLanguage: AppLanguage? = null,
+    modifier: Modifier = Modifier
+) {
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
     val fraction = completionRate.coerceIn(0f, 1f)
     val cap = if (design.language == DesignLanguage.VATICAN) StrokeCap.Butt else StrokeCap.Round
+    val ringDescription = if (currentLanguage != null) {
+        currentLanguage.pick(
+            "$completedCount de $totalCount cumplidos hoy, ${(fraction * 100).toInt()}%",
+            "$completedCount of $totalCount kept today, ${(fraction * 100).toInt()}%",
+            "$completedCount de $totalCount cumpridos hoje, ${(fraction * 100).toInt()}%"
+        )
+    } else {
+        "${(fraction * 100).toInt()}%"
+    }
 
-    Box(modifier.size(RingSize), contentAlignment = Alignment.Center) {
+    Box(
+        modifier = modifier
+            .size(RingSize)
+            .semantics { contentDescription = ringDescription },
+        contentAlignment = Alignment.Center
+    ) {
         Canvas(Modifier.fillMaxSize()) {
             val stroke = RingStroke.toPx()
             val box = Size(size.width - stroke, size.height - stroke)
@@ -1077,6 +1153,8 @@ private fun HabitRow(
 
     // Two tags on one row: the habit's card is now the habit's toggle, and a
     // click anywhere in it does what the toggle used to.
+    val design = LocalAppDesign.current
+    val rowMinHeight = maxOf(design.spacing.rowMinHeight, MinTouchTarget)
     Box(Modifier.testTag("habit_card_${habit.id}")) {
         AppListRow(
             title = title,
@@ -1085,7 +1163,16 @@ private fun HabitRow(
             showsNavigationAffordance = false,
             selected = isCompletedToday,
             onClick = onToggleCompletion,
-            modifier = Modifier.testTag("toggle_habit_${habit.id}")
+            modifier = Modifier
+                .heightIn(min = rowMinHeight)
+                .semantics {
+                    stateDescription = if (isCompletedToday) {
+                        currentLanguage.pick("Cumplido hoy", "Kept today", "Cumprido hoje")
+                    } else {
+                        currentLanguage.pick("Pendiente hoy", "Pending today", "Pendente hoje")
+                    }
+                }
+                .testTag("toggle_habit_${habit.id}")
         )
     }
 
@@ -1098,7 +1185,8 @@ private fun HabitRow(
             ),
             leadingIcon = Icons.Default.Delete,
             showsNavigationAffordance = false,
-            onClick = onDeleteCustomHabit
+            onClick = onDeleteCustomHabit,
+            modifier = Modifier.heightIn(min = MinTouchTarget)
         )
     }
 }
@@ -1117,12 +1205,22 @@ private fun GraceAntidoteCard(
 
     AppCard(modifier = modifier.padding(horizontal = design.spacing.gutter)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Icon(
-                imageVector = Icons.Default.Shield,
-                contentDescription = null,
-                tint = palette.gold,
-                modifier = Modifier.size(22.dp)
-            )
+            // Tonal badge behind the shield: accentMuted carries the separation
+            // in Material, and the dark variant of the same token does in dark mode.
+            Box(
+                modifier = Modifier
+                    .size(MinTouchTarget)
+                    .clip(design.shapes.badge)
+                    .background(palette.accentMuted),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Shield,
+                    contentDescription = null,
+                    tint = palette.gold,
+                    modifier = Modifier.size(24.dp)
+                )
+            }
             Spacer(Modifier.width(design.spacing.iconLabelGap))
             Column(Modifier.weight(1f)) {
                 Text(
@@ -1165,6 +1263,7 @@ private fun GraceAntidoteCard(
             leadingIcon = Icons.Default.Bolt,
             modifier = Modifier
                 .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
                 .testTag("emergency_overcome_button")
         )
     }
@@ -1225,3 +1324,6 @@ private fun categoryLabel(category: String, language: AppLanguage): String = whe
 private val RingSize = 68.dp
 private val RingStroke = 6.dp
 private val MarkerSize = 24.dp
+
+/** M3 minimum touch target; rows also honour the identity's rowMinHeight. */
+private val MinTouchTarget = 48.dp

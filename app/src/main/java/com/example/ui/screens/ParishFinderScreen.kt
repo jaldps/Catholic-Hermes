@@ -10,16 +10,18 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.LocationOn
@@ -27,10 +29,8 @@ import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.Public
-import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -43,7 +43,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.dp
 import com.example.data.location.DeviceLocationProvider
 import com.example.data.location.ParishFinder
@@ -52,6 +54,7 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.NearbyParish
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppCard
+import com.example.ui.design.AppChip
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
@@ -64,8 +67,6 @@ import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
-import com.example.ui.design.AppSegmentedTabs
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import kotlinx.coroutines.launch
 import kotlin.coroutines.cancellation.CancellationException
@@ -75,16 +76,8 @@ private enum class SearchState { IDLE, LOADING, DONE }
 
 private val RadiusOptionsKm = listOf(5, 10, 25)
 
-/**
- * No kit insets its own segmented control, so the gutter is the caller's to
- * give. Vatican is the exception: its strip is a ruled band whose hairline runs
- * the full width of the leaf.
- */
-@Composable
-private fun segmentedTabsInset(): Dp {
-    val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
-}
+/** Minimum touch target for every control this screen owns (AAA). */
+private val MinTouchTarget = 48.dp
 
 /** The longest the screen will show its spinner before giving up. */
 private const val UI_TIMEOUT_MS = 22_000L
@@ -94,6 +87,16 @@ private const val UI_TIMEOUT_MS = 22_000L
  * names, each with its distance and Sunday Mass where known. The bundled
  * directory of great churches lives in Churches & News and is linked, not
  * repeated; Google Maps is the fallback when the online lookup fails.
+ *
+ * AAA M3 treatment, kept inside the shared kit on purpose: the screen paints
+ * with nothing but [LocalAppDesign] tokens (canvas, spacing, shape via the kit
+ * components) and lets the active identity resolve tonal surfaces, icon style
+ * and the dark palette. No hardcoded colour or dimension, so dark mode is the
+ * token's job, not this file's. Every tappable row, button, chip and the
+ * search field carries a 48dp floor — `maxOf(rowMinHeight, 48.dp)` for rows —
+ * so a one-line control never shrinks below the AAA touch target even under
+ * the Apple identity's 44dp token, and the kit's own 32dp filter chips for
+ * the radius are lifted the same way.
  */
 @Composable
 fun ParishFinderScreen(
@@ -103,6 +106,8 @@ fun ParishFinderScreen(
 ) {
     val context = LocalContext.current
     val design = LocalAppDesign.current
+    val palette = design.palette
+    val rowMinHeight = maxOf(design.spacing.rowMinHeight, MinTouchTarget)
     val scope = rememberCoroutineScope()
 
     val finder = remember { ParishFinder() }
@@ -131,6 +136,44 @@ fun ParishFinderScreen(
             context.startActivity(
                 Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/$query"))
             )
+        }.isSuccess
+        if (!opened) {
+            message = strings(
+                "No se pudo abrir Google Maps.",
+                "Could not open Google Maps.",
+                "Não foi possível abrir o Google Maps."
+            )
+        }
+    }
+
+    fun callParish(parish: NearbyParish) {
+        val number = parish.contactPhone.replace(" ", "")
+        val opened = runCatching {
+            context.startActivity(Intent(Intent.ACTION_DIAL, Uri.parse("tel:$number")))
+        }.isSuccess || runCatching {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("tel:$number")))
+        }.isSuccess
+        if (!opened) {
+            message = strings(
+                "No se pudo abrir el teléfono.",
+                "Could not open the phone app.",
+                "Não foi possível abrir o telefone."
+            )
+        }
+    }
+
+    fun openDirections(parish: NearbyParish) {
+        val geo = Uri.parse(
+            "geo:${parish.latitude},${parish.longitude}?q=" + Uri.encode(parish.name)
+        )
+        val web = Uri.parse(
+            "https://www.google.com/maps/search/" +
+                Uri.encode("${parish.name} ${parish.address}".trim())
+        )
+        val opened = runCatching {
+            context.startActivity(Intent(Intent.ACTION_VIEW, geo))
+        }.isSuccess || runCatching {
+            context.startActivity(Intent(Intent.ACTION_VIEW, web))
         }.isSuccess
         if (!opened) {
             message = strings(
@@ -247,8 +290,13 @@ fun ParishFinderScreen(
         }
     }
 
-    LazyColumn(Modifier.fillMaxWidth().testTag("parish_finder_screen")) {
-        item {
+    LazyColumn(
+        Modifier
+            .fillMaxSize()
+            .background(palette.canvas)
+            .testTag("parish_finder_screen")
+    ) {
+        item(key = "parish_header") {
             IllustratedScreenHeader(
                 title = strings("Parroquias", "Parishes", "Paróquias"),
                 subject = SacredSubject.CHURCH
@@ -257,7 +305,7 @@ fun ParishFinderScreen(
 
         // Search sits in the gutter like every other search in the app, not
         // nested in a card; the one location action follows it.
-        item {
+        item(key = "parish_search") {
             AppSearchField(
                 value = placeQuery,
                 onValueChange = { placeQuery = it },
@@ -268,6 +316,7 @@ fun ParishFinderScreen(
                 ),
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
+                    .heightIn(min = MinTouchTarget)
                     .testTag("parish_place_field")
             )
             Spacer(Modifier.height(design.spacing.cardGap))
@@ -280,9 +329,11 @@ fun ParishFinderScreen(
                             "Buscar «${placeQuery.trim()}»"
                         ),
                         onClick = { searchPlace() },
+                        enabled = state != SearchState.LOADING,
                         leadingIcon = Icons.Default.Search,
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                             .testTag("parish_search_place_button")
                     )
                 } else {
@@ -295,32 +346,47 @@ fun ParishFinderScreen(
                             "Paróquias perto de mim"
                         ),
                         onClick = { nearMe() },
+                        enabled = state != SearchState.LOADING,
                         leadingIcon = Icons.Default.MyLocation,
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                             .testTag("gps_nearby_maps_button")
                     )
                 }
             }
         }
 
-        item {
+        item(key = "parish_radius") {
             AppSectionHeader(
                 title = strings("Distancia", "Distance", "Distância")
             )
-            AppSegmentedTabs(
-                options = RadiusOptionsKm.map { "$it km" },
-                selectedIndex = RadiusOptionsKm.indexOf(radiusKm).coerceAtLeast(0),
-                onSelect = { radiusKm = RadiusOptionsKm[it] },
-                modifier = Modifier
-                    .padding(horizontal = segmentedTabsInset())
-                    .testTag("parish_radius_selector")
-            )
+            // A radius is a single-select filter value, so M3 draws it as a
+            // filter-chip row rather than a segmented control (the kit's own
+            // rule for numeric sets) — and the kit chips are 32dp in Material
+            // and 44dp in Apple, so each is lifted to the 48dp floor here.
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("parish_radius_selector"),
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+            ) {
+                RadiusOptionsKm.forEach { option ->
+                    AppChip(
+                        label = "$option km",
+                        selected = option == radiusKm,
+                        onClick = { radiusKm = option },
+                        modifier = Modifier.heightIn(min = MinTouchTarget)
+                    )
+                }
+            }
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
         if (state == SearchState.LOADING) {
-            item {
+            val searchingText = strings("Buscando…", "Searching…", "Buscando…")
+            item(key = "parish_loading") {
                 Row(
                     Modifier
                         .fillMaxWidth()
@@ -329,43 +395,86 @@ fun ParishFinderScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     CircularProgressIndicator(
-                        modifier = Modifier.size(20.dp),
-                        color = design.palette.accent
+                        modifier = Modifier
+                            .size(design.decor.rowIconSize)
+                            .semantics { contentDescription = searchingText }
+                            .testTag("parish_loading"),
+                        color = palette.accent
                     )
-                    Spacer(Modifier.size(12.dp))
+                    Spacer(Modifier.size(design.spacing.iconLabelGap))
                     Text(
-                        text = strings("Buscando…", "Searching…", "Buscando…"),
+                        text = searchingText,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = design.palette.textSecondary
+                        color = palette.textSecondary
                     )
                 }
             }
         }
 
         message?.let { text ->
-            item {
+            item(key = "parish_message") {
                 AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                     Text(
                         text = text,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = design.palette.textSecondary
+                        color = palette.textSecondary
                     )
                     Spacer(Modifier.height(design.spacing.cardGap))
                     AppSecondaryButton(
                         label = strings("Abrir Google Maps", "Open Google Maps", "Abrir o Google Maps"),
                         onClick = { openNearbyInMaps(placeQuery.takeIf { it.isNotBlank() }) },
                         leadingIcon = Icons.Default.Map,
-                        modifier = Modifier.testTag("use_my_location_button")
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
+                            .testTag("use_my_location_button")
                     )
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
             }
         }
 
+        // Pre-search empty state, and the no-results state when the lookup
+        // itself succeeded with nothing to show (the Empty/Failure outcomes
+        // carry their own message card above, so nothing is said twice).
+        if (results.isEmpty() && message == null && state != SearchState.LOADING) {
+            item(key = "parish_empty_state") {
+                AppEmptyState(
+                    title = if (state == SearchState.IDLE) {
+                        strings(
+                            "Encuentra parroquias cerca de ti",
+                            "Find parishes near you",
+                            "Encontre paróquias perto de você"
+                        )
+                    } else {
+                        strings(
+                            "Sin resultados",
+                            "No results",
+                            "Sem resultados"
+                        )
+                    },
+                    body = if (state == SearchState.IDLE) {
+                        strings(
+                            "Busca una ciudad o usa tu ubicación para ver las parroquias cercanas y sus Misas del domingo.",
+                            "Search a city or use your location to see nearby parishes and their Sunday Masses.",
+                            "Busque uma cidade ou use sua localização para ver as paróquias próximas e suas Missas de domingo."
+                        )
+                    } else {
+                        strings(
+                            "Prueba un radio mayor o abre Google Maps.",
+                            "Try a wider radius or open Google Maps.",
+                            "Tente um raio maior ou abra o Google Maps."
+                        )
+                    },
+                    icon = Icons.Default.Church
+                )
+            }
+        }
+
         if (results.isEmpty()) {
             // The bundled directory of cathedrals and basilicas lives in
             // Churches & News; it is linked here rather than listed twice.
-            item {
+            item(key = "parish_directory") {
                 AppListGroup {
                     AppListRow(
                         title = strings(
@@ -375,15 +484,24 @@ fun ParishFinderScreen(
                         ),
                         leadingIcon = Icons.Default.Public,
                         onClick = onOpenDirectory,
-                        modifier = Modifier.testTag("parish_open_directory")
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = rowMinHeight)
+                            .testTag("parish_open_directory")
                     )
                 }
             }
         } else {
-            item {
+            val countLine = strings(
+                "${results.size} parroquias",
+                "${results.size} parishes",
+                "${results.size} paróquias"
+            )
+            item(key = "parish_results_header") {
                 AppSectionHeader(
                     title = strings("Cerca de ti", "Nearby", "Perto de você"),
-                    subtitle = searchedPlace
+                    subtitle = listOfNotNull(searchedPlace, countLine)
+                        .joinToString(" · ").ifBlank { null }
                 )
             }
             // Each parish is its name, its street and its next Mass, with the
@@ -406,7 +524,20 @@ fun ParishFinderScreen(
                             trailingText = parish.distanceDisplay.takeIf { it.any(Char::isDigit) },
                             selected = open,
                             onClick = { expandedParishId = if (open) null else parish.id },
-                            modifier = Modifier.testTag("parish_row_${parish.id}")
+                            // The tap expands rather than navigates, so the
+                            // open/closed state is set as text alongside the
+                            // kit's selected fill.
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(min = rowMinHeight)
+                                .semantics {
+                                    stateDescription = if (open) {
+                                        strings("Expandida", "Expanded", "Expandida")
+                                    } else {
+                                        strings("Contraída", "Collapsed", "Recolhida")
+                                    }
+                                }
+                                .testTag("parish_row_${parish.id}")
                         )
                         AnimatedVisibility(
                             visible = open,
@@ -423,33 +554,24 @@ fun ParishFinderScreen(
                                         title = strings("Llamar", "Call", "Ligar"),
                                         subtitle = parish.contactPhone,
                                         leadingIcon = Icons.Default.Phone,
-                                        onClick = {
-                                            runCatching {
-                                                context.startActivity(
-                                                    Intent(
-                                                        Intent.ACTION_DIAL,
-                                                        Uri.parse("tel:${parish.contactPhone.replace(" ", "")}")
-                                                    )
-                                                )
-                                            }
-                                        },
-                                        modifier = Modifier.testTag("parish_call_${parish.id}")
+                                        showsNavigationAffordance = false,
+                                        onClick = { callParish(parish) },
+                                        modifier = Modifier
+                                            .fillMaxWidth()
+                                            .heightIn(min = rowMinHeight)
+                                            .testTag("parish_call_${parish.id}")
                                     )
                                 }
                                 AppListRow(
                                     title = strings("Cómo llegar", "Directions", "Como chegar"),
                                     subtitle = parish.address.ifBlank { null },
                                     leadingIcon = Icons.Default.LocationOn,
-                                    onClick = {
-                                        val uri = Uri.parse(
-                                            "geo:${parish.latitude},${parish.longitude}?q=" +
-                                                Uri.encode(parish.name)
-                                        )
-                                        runCatching {
-                                            context.startActivity(Intent(Intent.ACTION_VIEW, uri))
-                                        }
-                                    },
-                                    modifier = Modifier.testTag("parish_directions_${parish.id}")
+                                    showsNavigationAffordance = false,
+                                    onClick = { openDirections(parish) },
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .heightIn(min = rowMinHeight)
+                                        .testTag("parish_directions_${parish.id}")
                                 )
                             }
                         }
@@ -457,13 +579,18 @@ fun ParishFinderScreen(
                     AppListRow(
                         title = strings("Ver más en Google Maps", "More in Google Maps", "Ver mais no Google Maps"),
                         leadingIcon = Icons.Default.Map,
-                        onClick = { openNearbyInMaps(searchedPlace) }
+                        onClick = { openNearbyInMaps(searchedPlace) },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = rowMinHeight)
                     )
                 }
             }
         }
 
-        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+        item(key = "parish_bottom_gap") {
+            Spacer(Modifier.height(design.spacing.contentBottomGap))
+        }
     }
 }
 

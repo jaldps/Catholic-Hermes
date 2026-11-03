@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -25,6 +26,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Info
@@ -32,22 +34,32 @@ import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -69,6 +81,7 @@ import com.example.ui.components.TextFormat
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
+import com.example.ui.design.AppPrimaryButton
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSectionHeader
@@ -337,7 +350,7 @@ private fun LazyListScope.catechismIndexItems(
                         text = currentPart.subtitle.get(currentLanguage) + " · " +
                             TextFormat.ranges(currentPart.cccRange),
                         style = styles.sectionEyebrow,
-                        color = design.palette.gold
+                        color = design.palette.textSecondary
                     )
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
                     Text(
@@ -427,59 +440,87 @@ private fun ParagraphRangeView(
     onBack: () -> Unit
 ) {
     val design = LocalAppDesign.current
+    val palette = design.palette
     val styles = LocalAppTextStyles.current
+    val scope = rememberCoroutineScope()
+
+    val paragraphCount = section.lastNumber - section.firstNumber + 1
+    val listState = rememberLazyListState()
+    // List item 0 is the title; paragraph offsets live at items 1..count, and
+    // the final item is the bottom gap. The first visible paragraph is where
+    // the reader actually is, which is what progress and prev/next follow.
+    val currentOffset by remember {
+        derivedStateOf {
+            (listState.firstVisibleItemIndex - 1).coerceIn(0, (paragraphCount - 1).coerceAtLeast(0))
+        }
+    }
+    val currentNumber = section.firstNumber + currentOffset
+    val progressLabel = currentLanguage.pick(
+        "Párrafo $currentNumber de ${section.lastNumber} · §§ ${section.firstNumber}–${section.lastNumber}",
+        "Paragraph $currentNumber of ${section.lastNumber} · §§ ${section.firstNumber}–${section.lastNumber}",
+        "Parágrafo $currentNumber de ${section.lastNumber} · §§ ${section.firstNumber}–${section.lastNumber}"
+    )
 
     Column(Modifier.fillMaxSize()) {
         Row(
             Modifier
                 .fillMaxWidth()
+                .heightIn(min = maxOf(design.spacing.rowMinHeight, 48.dp))
                 .padding(horizontal = design.spacing.gutter)
                 .padding(bottom = design.spacing.cardGap / 2),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text(
                 text = "§§ ${section.firstNumber}–${section.lastNumber}",
-                style = styles.sectionEyebrow,
-                color = design.palette.gold,
+                style = styles.rowTitle,
+                color = palette.textPrimary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
                     .weight(1f)
-                    .clickable(onClick = onBack)
+                    .heightIn(min = 48.dp)
+                    .clickable(
+                        role = Role.Button,
+                        onClickLabel = currentLanguage.pick(
+                            "Volver al índice del Catecismo",
+                            "Back to the Catechism index",
+                            "Voltar ao índice do Catecismo"
+                        ),
+                        onClick = onBack
+                    )
                     .testTag("back_to_catechism_outline")
             )
-            AppChip(
-                label = "A-",
-                selected = false,
-                onClick = {
-                    if (fontSizeMultiplier > 0.85f) onFontSizeChange(fontSizeMultiplier - 0.15f)
-                }
-            )
-            Spacer(Modifier.width(design.spacing.cardGap / 2))
-            AppChip(
-                label = "A+",
-                selected = false,
-                onClick = {
-                    if (fontSizeMultiplier < 1.45f) onFontSizeChange(fontSizeMultiplier + 0.15f)
-                }
-            )
-            Spacer(Modifier.width(design.spacing.cardGap / 2))
-            AppChip(
-                label = readerFont.label(currentLanguage),
-                selected = readerFont != ReaderFontChoice.FOLLOW_APP,
-                onClick = onReaderFontChange
+            ReaderControls(
+                currentLanguage = currentLanguage,
+                fontSizeMultiplier = fontSizeMultiplier,
+                onFontSizeChange = onFontSizeChange,
+                readerFont = readerFont,
+                onReaderFontChange = onReaderFontChange
             )
         }
 
+        ReadingProgress(
+            progress = (currentOffset + 1f) / paragraphCount.coerceAtLeast(1),
+            label = progressLabel,
+            stateLabel = currentLanguage.pick(
+                "Progreso de la lectura",
+                "Reading progress",
+                "Progresso da leitura"
+            ),
+            testTag = "catechism_reading_progress"
+        )
+
         AppDivider()
 
-        LazyColumn(Modifier.fillMaxSize()) {
-            item {
+        LazyColumn(state = listState, modifier = Modifier.fillMaxSize()) {
+            item(key = "paragraph_range_title") {
                 AppScreenTitle(
                     title = section.title.get(currentLanguage),
                     subtitle = section.partTitle.get(currentLanguage) + " · " + section.biblicalReferences
                 )
             }
 
-            items(section.lastNumber - section.firstNumber + 1) { offset ->
+            items(paragraphCount, key = { "paragraph_$it" }) { offset ->
                 val number = section.firstNumber + offset
                 val article = repository.findCatechismArticle(number)
                 if (article != null) {
@@ -493,17 +534,40 @@ private fun ParagraphRangeView(
                             Text(
                                 text = "§ $number",
                                 style = styles.verseNumber,
-                                color = design.palette.gold
+                                color = palette.textPrimary,
+                                modifier = Modifier.semantics { heading() }
                             )
                             Spacer(Modifier.height(design.spacing.cardGap / 3))
                             Text(
                                 text = article.content.get(currentLanguage),
                                 style = readingStyle(fontSizeMultiplier, readerFont),
-                                color = design.palette.textPrimary
+                                color = palette.textPrimary
                             )
+                            article.biblicalReferences
+                                ?.takeIf { it.isNotBlank() }
+                                ?.let { references ->
+                                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                                    CrossReferenceText(
+                                        references = references,
+                                        currentLanguage = currentLanguage,
+                                        modifier = Modifier.testTag("catechism_cross_references_$number")
+                                    )
+                                }
                         }
                     }
                 }
+            }
+
+            item(key = "paragraph_navigation") {
+                ParagraphNavigation(
+                    currentNumber = currentNumber,
+                    firstNumber = section.firstNumber,
+                    lastNumber = section.lastNumber,
+                    currentLanguage = currentLanguage,
+                    onGoTo = { target ->
+                        scope.launch { listState.scrollToItem(target - section.firstNumber + 1) }
+                    }
+                )
             }
 
             item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
@@ -526,12 +590,29 @@ private fun ChapterReadingView(
     onBack: () -> Unit
 ) {
     val design = LocalAppDesign.current
+    val palette = design.palette
     val styles = LocalAppTextStyles.current
+
+    val articleCount = chapter.articles.size
+    val listState = rememberLazyListState()
+    // Item 0 is the title; articles live at items 1..count, the gap is last.
+    val currentArticle by remember {
+        derivedStateOf {
+            (listState.firstVisibleItemIndex - 1).coerceIn(0, (articleCount - 1).coerceAtLeast(0))
+        }
+    }
+    val currentArticleNumber = chapter.articles.getOrNull(currentArticle)?.cccNumber
+    val chapterProgressLabel = currentLanguage.pick(
+        "Artículo ${currentArticle + 1} de $articleCount · ${chapter.articleRangeDisplay}",
+        "Article ${currentArticle + 1} of $articleCount · ${chapter.articleRangeDisplay}",
+        "Artigo ${currentArticle + 1} de $articleCount · ${chapter.articleRangeDisplay}"
+    )
 
     Column(Modifier.fillMaxSize()) {
         Row(
             Modifier
                 .fillMaxWidth()
+                .heightIn(min = maxOf(design.spacing.rowMinHeight, 48.dp))
                 .padding(horizontal = design.spacing.gutter)
                 .padding(bottom = design.spacing.cardGap / 2),
             verticalAlignment = Alignment.CenterVertically
@@ -545,42 +626,47 @@ private fun ChapterReadingView(
                     "← Índice do Catecismo"
                 ),
                 style = styles.rowTitle,
-                color = design.palette.accent,
+                color = palette.textPrimary,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
                     .weight(1f)
-                    .clickable(onClick = onBack)
-                    .padding(vertical = design.spacing.rowPaddingVertical)
+                    .heightIn(min = 48.dp)
+                    .clickable(
+                        role = Role.Button,
+                        onClickLabel = currentLanguage.pick(
+                            "Volver al índice del Catecismo",
+                            "Back to the Catechism index",
+                            "Voltar ao índice do Catecismo"
+                        ),
+                        onClick = onBack
+                    )
                     .testTag("back_to_catechism_index")
             )
-            AppChip(
-                label = "A-",
-                selected = false,
-                onClick = {
-                    if (fontSizeMultiplier > 0.85f) onFontSizeChange(fontSizeMultiplier - 0.15f)
-                }
-            )
-            Spacer(Modifier.width(design.spacing.cardGap / 2))
-            AppChip(
-                label = "A+",
-                selected = false,
-                onClick = {
-                    if (fontSizeMultiplier < 1.45f) onFontSizeChange(fontSizeMultiplier + 0.15f)
-                }
-            )
-            Spacer(Modifier.width(design.spacing.cardGap / 2))
-            AppChip(
-                label = readerFont.label(currentLanguage),
-                selected = readerFont != ReaderFontChoice.FOLLOW_APP,
-                onClick = onReaderFontChange
+            ReaderControls(
+                currentLanguage = currentLanguage,
+                fontSizeMultiplier = fontSizeMultiplier,
+                onFontSizeChange = onFontSizeChange,
+                readerFont = readerFont,
+                onReaderFontChange = onReaderFontChange
             )
         }
 
+        ReadingProgress(
+            progress = (currentArticle + 1f) / articleCount.coerceAtLeast(1),
+            label = chapterProgressLabel,
+            stateLabel = currentLanguage.pick(
+                "Progreso de la lectura",
+                "Reading progress",
+                "Progresso da leitura"
+            ),
+            testTag = "catechism_chapter_progress"
+        )
+
         AppDivider()
 
-        LazyColumn(Modifier.fillMaxSize()) {
-            item {
+        LazyColumn(state = listState, modifier = Modifier.fillMaxSize()) {
+            item(key = "chapter_title") {
                 AppScreenTitle(
                     title = chapter.title.get(currentLanguage),
                     subtitle = currentLanguage.pick(
@@ -591,14 +677,26 @@ private fun ChapterReadingView(
                 )
             }
 
-            items(chapter.articles) { article ->
+            items(articleCount, key = { "chapter_article_$it" }) { index ->
+                val article = chapter.articles[index]
                 ReadingColumn {
                     CatechismArticleCard(
                         article = article,
                         currentLanguage = currentLanguage,
                         fontSizeMultiplier = fontSizeMultiplier,
                         readerFont = readerFont,
-                        modifier = Modifier.padding(horizontal = design.spacing.gutter)
+                        modifier = Modifier
+                            .padding(horizontal = design.spacing.gutter)
+                            .semantics {
+                                if (article.cccNumber == currentArticleNumber) {
+                                    contentDescription = currentLanguage.pick(
+                                        "Párrafo actual § ${article.cccNumber}",
+                                        "Current paragraph § ${article.cccNumber}",
+                                        "Parágrafo atual § ${article.cccNumber}"
+                                    )
+                                }
+                            }
+                            .testTag("catechism_article_${article.cccNumber}")
                     )
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -697,7 +795,8 @@ private fun CatechismArticleCard(
     AppCard(modifier = modifier) {
         EntryHeader(
             label = "CIC § ${article.cccNumber}",
-            reference = article.biblicalReferences?.let { "Ref: $it" }
+            reference = article.biblicalReferences?.let { "Ref: $it" },
+            currentLanguage = currentLanguage
         )
         Spacer(Modifier.height(design.spacing.cardGap / 2))
         Text(
@@ -894,7 +993,8 @@ private fun CompendiumQuestionCard(
                 "Question ${question.number}",
                 "Pergunta ${question.number}"
             ),
-            reference = question.cccReference.ifBlank { null }
+            reference = question.cccReference.ifBlank { null },
+            currentLanguage = currentLanguage
         )
         Spacer(Modifier.height(design.spacing.cardGap / 2))
         Text(
@@ -1075,12 +1175,18 @@ private fun DocumentLink(
             Text(
                 text = caps(inAppLabel),
                 style = styles.buttonLabel,
-                color = design.palette.accent,
+                color = design.palette.textPrimary,
+                textDecoration = TextDecoration.Underline,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier
-                    .clickable(onClick = onOpenInApp)
-                    .padding(horizontal = 8.dp, vertical = 12.dp)
+                    .heightIn(min = 48.dp)
+                    .clickable(
+                        role = Role.Button,
+                        onClickLabel = inAppLabel,
+                        onClick = onOpenInApp
+                    )
+                    .padding(horizontal = design.spacing.iconLabelGap, vertical = design.spacing.cardGap / 2)
             )
         }
     }
@@ -1133,9 +1239,18 @@ private fun SearchRow(
             Text(
                 text = clearLabel,
                 style = styles.buttonLabel,
-                color = design.palette.accent,
+                color = design.palette.textPrimary,
+                textDecoration = TextDecoration.Underline,
                 maxLines = 1,
-                modifier = Modifier.clickable { onValueChange("") }
+                modifier = Modifier
+                    .heightIn(min = 48.dp)
+                    .clickable(
+                        role = Role.Button,
+                        onClickLabel = clearLabel,
+                        onClick = { onValueChange("") }
+                    )
+                    .padding(horizontal = design.spacing.iconLabelGap)
+                    .testTag("search_clear_button")
             )
         }
     }
@@ -1143,7 +1258,11 @@ private fun SearchRow(
 
 /** The siglum that opens an entry, and the reference it cites. */
 @Composable
-private fun EntryHeader(label: String, reference: String?) {
+private fun EntryHeader(
+    label: String,
+    reference: String?,
+    currentLanguage: AppLanguage? = null
+) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
 
@@ -1151,16 +1270,25 @@ private fun EntryHeader(label: String, reference: String?) {
         Text(
             text = label,
             style = styles.sectionEyebrow,
-            color = design.palette.accent
+            color = design.palette.textPrimary
         )
         if (reference != null) {
             Spacer(Modifier.width(design.spacing.iconLabelGap))
             Text(
                 text = reference,
                 style = styles.sectionEyebrow,
-                color = design.palette.gold,
+                color = design.palette.textSecondary,
                 textAlign = TextAlign.End,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
+                    .semantics {
+                        contentDescription = (currentLanguage?.pick(
+                            "Referencias cruzadas",
+                            "Cross-references",
+                            "Referências cruzadas"
+                        ) ?: "Cross-references") + ": " + reference
+                    }
+                    .testTag("catechism_cross_references")
             )
         }
     }
@@ -1230,7 +1358,8 @@ private fun SubHeading(text: String) {
             text = text,
             style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
             color = design.palette.textSecondary,
-            textAlign = if (centred) TextAlign.Center else TextAlign.Start
+            textAlign = if (centred) TextAlign.Center else TextAlign.Start,
+            modifier = Modifier.semantics { heading() }
         )
     }
 }
@@ -1251,6 +1380,183 @@ private fun ReadingColumn(content: @Composable ColumnScope.() -> Unit) {
             content = content
         )
     }
+}
+
+/**
+ * The reader's type controls: A-/A+ scale the reading face, the third chip
+ * cycles the local font. One call site per reading view, so both toolbars
+ * name the same targets. Filter chips are 32dp by spec; the 48dp floor is
+ * the caller's, and every chip here carries it, plus the spoken name a
+ * screen reader needs for a two-character label.
+ */
+@Composable
+private fun ReaderControls(
+    currentLanguage: AppLanguage,
+    fontSizeMultiplier: Float,
+    onFontSizeChange: (Float) -> Unit,
+    readerFont: ReaderFontChoice,
+    onReaderFontChange: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        AppChip(
+            label = "A-",
+            selected = false,
+            onClick = {
+                if (fontSizeMultiplier > 0.85f) onFontSizeChange(fontSizeMultiplier - 0.15f)
+            },
+            modifier = Modifier
+                .heightIn(min = 48.dp)
+                .semantics {
+                    contentDescription = currentLanguage.pick(
+                        "Reducir el tamaño del texto",
+                        "Decrease text size",
+                        "Diminuir o tamanho do texto"
+                    )
+                }
+                .testTag("reader_font_decrease")
+        )
+        Spacer(Modifier.width(design.spacing.cardGap / 2))
+        AppChip(
+            label = "A+",
+            selected = false,
+            onClick = {
+                if (fontSizeMultiplier < 1.45f) onFontSizeChange(fontSizeMultiplier + 0.15f)
+            },
+            modifier = Modifier
+                .heightIn(min = 48.dp)
+                .semantics {
+                    contentDescription = currentLanguage.pick(
+                        "Aumentar el tamaño del texto",
+                        "Increase text size",
+                        "Aumentar o tamanho do texto"
+                    )
+                }
+                .testTag("reader_font_increase")
+        )
+        Spacer(Modifier.width(design.spacing.cardGap / 2))
+        AppChip(
+            label = readerFont.label(currentLanguage),
+            selected = readerFont != ReaderFontChoice.FOLLOW_APP,
+            onClick = onReaderFontChange,
+            modifier = Modifier
+                .heightIn(min = 48.dp)
+                .testTag("reader_font_choice")
+        )
+    }
+}
+
+/**
+ * Where the reader stands in the stretch being read, as a bar and as
+ * spoken text. The bar's colours are palette tokens, so it tracks dark
+ * mode; the label names the current paragraph and the whole range, which
+ * is the number a reader would say aloud.
+ */
+@Composable
+private fun ReadingProgress(
+    progress: Float,
+    label: String,
+    stateLabel: String,
+    testTag: String
+) {
+    val design = LocalAppDesign.current
+    LinearProgressIndicator(
+        progress = { progress.coerceIn(0f, 1f) },
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .semantics {
+                contentDescription = label
+                stateDescription = stateLabel
+            }
+            .testTag(testTag),
+        color = design.palette.accent,
+        trackColor = design.palette.selectionTint
+    )
+}
+
+/**
+ * Previous / next paragraph, pinned at the foot of a paragraph range. The
+ * buttons are the kit's 48dp buttons; each carries its target paragraph
+ * number in its spoken name, and the boundary one is disabled rather than
+ * a dead target.
+ */
+@Composable
+private fun ParagraphNavigation(
+    currentNumber: Int,
+    firstNumber: Int,
+    lastNumber: Int,
+    currentLanguage: AppLanguage,
+    onGoTo: (Int) -> Unit
+) {
+    val design = LocalAppDesign.current
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .padding(top = design.spacing.cardGap),
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        AppSecondaryButton(
+            label = currentLanguage.pick("← Anterior", "← Previous", "← Anterior"),
+            onClick = { onGoTo(currentNumber - 1) },
+            enabled = currentNumber > firstNumber,
+            modifier = Modifier
+                .weight(1f)
+                .semantics {
+                    contentDescription = currentLanguage.pick(
+                        "Ir al párrafo anterior § ${currentNumber - 1}",
+                        "Go to previous paragraph § ${currentNumber - 1}",
+                        "Ir para o parágrafo anterior § ${currentNumber - 1}"
+                    )
+                }
+                .testTag("paragraph_prev_button")
+        )
+        AppPrimaryButton(
+            label = currentLanguage.pick("Siguiente →", "Next →", "Seguinte →"),
+            onClick = { onGoTo(currentNumber + 1) },
+            enabled = currentNumber < lastNumber,
+            modifier = Modifier
+                .weight(1f)
+                .semantics {
+                    contentDescription = currentLanguage.pick(
+                        "Ir al párrafo siguiente § ${currentNumber + 1}",
+                        "Go to next paragraph § ${currentNumber + 1}",
+                        "Ir para o próximo parágrafo § ${currentNumber + 1}"
+                    )
+                }
+                .testTag("paragraph_next_button")
+        )
+    }
+}
+
+/**
+ * A paragraph's cross-references, verbatim. Set as a labelled marginal
+ * line — ink from the palette's text ranks, never gold at 11sp — and named
+ * as what it is for a screen reader.
+ */
+@Composable
+private fun CrossReferenceText(
+    references: String,
+    currentLanguage: AppLanguage,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val label = currentLanguage.pick(
+        "Referencias cruzadas",
+        "Cross-references",
+        "Referências cruzadas"
+    )
+    Text(
+        text = "Ref: $references",
+        style = styles.rowSubtitle,
+        color = design.palette.textSecondary,
+        modifier = modifier.semantics {
+            contentDescription = "$label: $references"
+        }
+    )
 }
 
 /**

@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -28,7 +29,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.VolunteerActivism
 import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Quiz
-import com.example.ui.components.MenuPickerRow
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.EditNote
@@ -39,6 +39,7 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -55,6 +56,9 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
@@ -192,7 +196,10 @@ private fun JournalField(
                             palette.hairline,
                             design.shapes.field
                         )
-                        .padding(horizontal = 12.dp, vertical = 10.dp)
+                        .padding(
+                            horizontal = design.spacing.cardGap,
+                            vertical = design.spacing.cardGap / 2
+                        )
                 ) {
                     if (value.isEmpty()) {
                         Text(
@@ -282,18 +289,25 @@ fun SpiritualLifeScreen(
         }
         if (selectedTopTab == 1 || selectedTopTab == 3) {
             item(key = "spiritual_life_learn_picker") {
-                AppListGroup {
-                    MenuPickerRow(
-                        title = currentLanguage.pick("Actividad", "Activity", "Atividade"),
-                        leadingIcon = if (selectedTopTab == 3) Icons.Default.MusicNote else Icons.Default.Quiz,
-                        options = listOf(
-                            1 to currentLanguage.pick("Preguntas de fe", "Faith quiz", "Quiz da fé"),
-                            3 to currentLanguage.pick("Canto gregoriano", "Gregorian chant", "Canto gregoriano")
-                        ),
-                        selected = selectedTopTab,
-                        onSelect = { selectedTopTab = it },
-                        testTag = "spiritual_life_learn_picker"
-                    )
+                // The two Learn activities as visible rows rather than a
+                // dropdown: with only two options a menu hides the choice
+                // behind an extra tap, and the kit's trigger row can sit
+                // below 48dp in some identities. Each row is a 48dp target
+                // with the selected state the kit draws from tokens.
+                AppListGroup(modifier = Modifier.testTag("spiritual_life_learn_picker")) {
+                    listOf(
+                        1 to currentLanguage.pick("Preguntas de fe", "Faith quiz", "Quiz da fé"),
+                        3 to currentLanguage.pick("Canto gregoriano", "Gregorian chant", "Canto gregoriano")
+                    ).forEach { (key, label) ->
+                        AppListRow(
+                            title = label,
+                            leadingIcon = if (key == 3) Icons.Default.MusicNote else Icons.Default.Quiz,
+                            selected = selectedTopTab == key,
+                            showsNavigationAffordance = false,
+                            onClick = { selectedTopTab = key },
+                            modifier = Modifier.heightIn(min = 48.dp)
+                        )
+                    }
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
             }
@@ -366,7 +380,8 @@ fun SpiritualLifeScreen(
                             station.meditation.get(currentLanguage),
                             station.prayer.get(currentLanguage)
                         )
-                    }
+                    },
+                    onStop = { ttsManager.stop() }
                 )
             }
 
@@ -485,7 +500,8 @@ private fun JournalTab(
                             AppListRow(
                                 title = prompt,
                                 leadingIcon = glyph,
-                                onClick = { onAdd(prompt) }
+                                onClick = { onAdd(prompt) },
+                                modifier = Modifier.heightIn(min = 48.dp)
                             )
                         }
                     }
@@ -611,7 +627,7 @@ private fun JournalEntry(
             Modifier
                 .size(48.dp)
                 .clip(design.shapes.buttonSmall)
-                .clickable(onClick = onDelete),
+                .clickable(role = Role.Button, onClick = onDelete),
             contentAlignment = Alignment.Center
         ) {
             Icon(
@@ -684,14 +700,15 @@ private fun AddJournalEntryDialog(
                     // clipped at the edge.
                     FlowRow(
                         Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+                        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
                     ) {
                         JournalCategories.forEach { option ->
                             AppChip(
                                 label = currentLanguage.pick(option.es, option.en, option.pt),
                                 selected = category == option.key,
-                                onClick = { onCategoryChange(option.key) }
+                                onClick = { onCategoryChange(option.key) },
+                                modifier = Modifier.heightIn(min = 48.dp)
                             )
                         }
                     }
@@ -791,6 +808,27 @@ private fun TriviaTab(
                     modifier = Modifier.weight(1f)
                 )
             }
+            // Progress as a bar with the same progress set as text: the
+            // question counter tile alone does not read as a bar to a
+            // screen reader, and the fill is not colour-only information.
+            val progressFraction = (index + 1).toFloat() / questions.size
+            val progressLabel = currentLanguage.pick(
+                "Pregunta ${index + 1} de ${questions.size}",
+                "Question ${index + 1} of ${questions.size}",
+                "Pergunta ${index + 1} de ${questions.size}"
+            )
+            LinearProgressIndicator(
+                progress = { progressFraction },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.cardGap)
+                    .height(4.dp)
+                    .semantics { stateDescription = progressLabel }
+                    .testTag("trivia_progress"),
+                color = palette.accent,
+                trackColor = palette.selectionTint
+            )
         }
 
         item { AppSectionHeader(title = question.category.get(currentLanguage)) }
@@ -814,6 +852,22 @@ private fun TriviaTab(
                 question.options.forEachIndexed { optionIndex, option ->
                     val chosen = selectedOptionIndex == optionIndex
                     val isCorrect = optionIndex == question.correctIndex
+                    // The answer state as text, not only as the kit's
+                    // selected fill and the ✓/✗ glyph: a wrong choice is
+                    // neither the selected row nor the right one, so
+                    // without this a screen reader hears no verdict.
+                    val stateLabel = when {
+                        !hasAnswered && chosen -> currentLanguage.pick(
+                            "Seleccionada", "Selected", "Selecionada"
+                        )
+                        hasAnswered && isCorrect -> currentLanguage.pick(
+                            "Respuesta correcta", "Correct answer", "Resposta correta"
+                        )
+                        hasAnswered && chosen -> currentLanguage.pick(
+                            "Respuesta incorrecta", "Incorrect answer", "Resposta incorreta"
+                        )
+                        else -> null
+                    }
                     AppListRow(
                         title = option.get(currentLanguage),
                         // Once answered the kit marks the right answer as the
@@ -827,7 +881,12 @@ private fun TriviaTab(
                         },
                         showsNavigationAffordance = false,
                         selected = if (hasAnswered) isCorrect else chosen,
-                        onClick = if (hasAnswered) null else ({ onAnswer(optionIndex) })
+                        onClick = if (hasAnswered) null else ({ onAnswer(optionIndex) }),
+                        modifier = Modifier
+                            .heightIn(min = 48.dp)
+                            .semantics {
+                                if (stateLabel != null) stateDescription = stateLabel
+                            }
                     )
                 }
             }
@@ -932,7 +991,8 @@ private fun ViaCrucisTab(
     currentLanguage: AppLanguage,
     onPrevious: () -> Unit,
     onNext: () -> Unit,
-    onNarrate: (ViaCrucisStation) -> Unit
+    onNarrate: (ViaCrucisStation) -> Unit,
+    onStop: () -> Unit
 ) {
     val design = LocalAppDesign.current
     val palette = design.palette
@@ -973,12 +1033,20 @@ private fun ViaCrucisTab(
         }
 
         item {
+            // The dots carry progress by position alone; the same progress
+            // is set as text for a screen reader, as the header above it.
+            val progressLabel = currentLanguage.pick(
+                "Estación ${station.stationNumber} de ${stations.size}",
+                "Station ${station.stationNumber} of ${stations.size}",
+                "Estação ${station.stationNumber} de ${stations.size}"
+            )
             StationProgress(
                 count = stations.size,
                 currentIndex = index,
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = design.spacing.gutter)
+                    .semantics { stateDescription = progressLabel }
             )
         }
 
@@ -1057,13 +1125,20 @@ private fun ViaCrucisTab(
                             .testTag("via_crucis_next_button")
                     )
                 }
+                // While the voice is running the same button offers Stop,
+                // so recitation can be ended without leaving the page —
+                // the label turns with the icon, as on the chant page.
                 AppPrimaryButton(
-                    label = currentLanguage.pick(
-                        "Rezar estación",
-                        "Pray this station",
-                        "Rezar estação"
-                    ),
-                    onClick = { onNarrate(station) },
+                    label = if (isPlayingAudio) {
+                        currentLanguage.pick("Detener", "Stop", "Parar")
+                    } else {
+                        currentLanguage.pick(
+                            "Rezar estación",
+                            "Pray this station",
+                            "Rezar estação"
+                        )
+                    },
+                    onClick = { if (isPlayingAudio) onStop() else onNarrate(station) },
                     leadingIcon = if (isPlayingAudio) Icons.Default.Stop else Icons.Default.PlayArrow,
                     modifier = Modifier
                         .fillMaxWidth()

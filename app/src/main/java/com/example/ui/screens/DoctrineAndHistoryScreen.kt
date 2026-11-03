@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
@@ -54,6 +55,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
@@ -100,6 +105,9 @@ import com.example.ui.theme.LocalAppTextStyles
  * any filter silently ceasing to match.
  */
 private const val ANY_PLACE = "__any__"
+
+/** Minimum touch target for every control this screen owns (AAA). */
+private val MinTouchTarget = 48.dp
 
 /**
  * Doctrine, history and the directory, behind four panes: the moral teaching of
@@ -167,7 +175,9 @@ fun DoctrineAndHistoryScreen(
                     options = topTabs,
                     selectedIndex = selectedTopTab,
                     onSelect = { selectedTopTab = it },
-                    modifier = Modifier.padding(horizontal = tabsInset)
+                    modifier = Modifier
+                        .padding(horizontal = tabsInset)
+                        .heightIn(min = MinTouchTarget)
                 )
                 Spacer(Modifier.height(design.spacing.cardGap / 2))
             }
@@ -253,7 +263,7 @@ private fun MoralDoctrinePane(
                         subtitle = numbered(cmd.number, scriptureCitation(cmd.biblicalWording.get(currentLanguage))),
                         trailingText = if (marginalNumerals) TextFormat.roman(cmd.number) else null,
                         onClick = { onOpen("cmd:$i") },
-                        modifier = Modifier.testTag("commandment_row_${cmd.number}")
+                        modifier = Modifier.heightIn(min = MinTouchTarget).testTag("commandment_row_${cmd.number}")
                     )
                 }
             }
@@ -269,7 +279,8 @@ private fun MoralDoctrinePane(
                         title = TextFormat.withoutOrdinal(prc.title.get(currentLanguage)),
                         subtitle = numbered(prc.number, null),
                         trailingText = if (marginalNumerals) TextFormat.roman(prc.number) else null,
-                        onClick = { onOpen("prc:$i") }
+                        onClick = { onOpen("prc:$i") },
+                        modifier = Modifier.heightIn(min = MinTouchTarget)
                     )
                 }
             }
@@ -288,7 +299,8 @@ private fun MoralDoctrinePane(
                             "Healed by ${v.opposingVirtue.get(currentLanguage).replaceFirstChar { it.lowercase() }}",
                             "Cura-se com: ${v.opposingVirtue.get(currentLanguage)}"
                         ),
-                        onClick = { onOpen("vice:$i") }
+                        onClick = { onOpen("vice:$i") },
+                        modifier = Modifier.heightIn(min = MinTouchTarget)
                     )
                 }
             }
@@ -300,7 +312,7 @@ private fun MoralDoctrinePane(
             )
             AppListGroup {
                 gravityTitles(currentLanguage).forEachIndexed { i, title ->
-                    AppListRow(title = title, onClick = { onOpen("grav:$i") })
+                    AppListRow(title = title, onClick = { onOpen("grav:$i") }, modifier = Modifier.heightIn(min = MinTouchTarget))
                 }
             }
         }
@@ -555,7 +567,8 @@ private fun ChurchHistoryPane(
                     AppListRow(
                         title = epoch.title.get(currentLanguage),
                         subtitle = TextFormat.ranges(epoch.centuryRange),
-                        onClick = { onOpen("epoch:$i") }
+                        onClick = { onOpen("epoch:$i") },
+                        modifier = Modifier.heightIn(min = MinTouchTarget)
                     )
                 }
             }
@@ -570,7 +583,8 @@ private fun ChurchHistoryPane(
                     AppListRow(
                         title = schism.title.get(currentLanguage),
                         subtitle = schism.historicalYear,
-                        onClick = { onOpen("schism:$i") }
+                        onClick = { onOpen("schism:$i") },
+                        modifier = Modifier.heightIn(min = MinTouchTarget)
                     )
                 }
             }
@@ -587,7 +601,7 @@ private fun ChurchEpochCard(epoch: ChurchHistoryEpoch, currentLanguage: AppLangu
     GutterCard {
         Text(
             text = epoch.narrative.get(currentLanguage),
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodyLarge,
             color = design.palette.textPrimary
         )
         Spacer(Modifier.height(design.spacing.cardGap))
@@ -610,7 +624,7 @@ private fun SchismCard(schism: ChurchSchismHistory, currentLanguage: AppLanguage
     GutterCard {
         Text(
             text = schism.context.get(currentLanguage),
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodyLarge,
             color = design.palette.textPrimary
         )
         Spacer(Modifier.height(design.spacing.cardGap))
@@ -757,6 +771,7 @@ private fun ParishesAndNewsPane(
                 onSelect = { section = it },
                 modifier = Modifier
                     .padding(horizontal = tabStripInset())
+                    .heightIn(min = MinTouchTarget)
                     .testTag("churches_news_tabs")
             )
             Spacer(Modifier.height(design.spacing.cardGap))
@@ -774,6 +789,7 @@ private fun ParishesAndNewsPane(
                     ),
                     modifier = Modifier
                         .padding(horizontal = design.spacing.gutter)
+                        .heightIn(min = MinTouchTarget)
                         .testTag("parish_search_input")
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -855,6 +871,7 @@ private fun ParishesAndNewsPane(
                         },
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                             .padding(horizontal = design.spacing.gutter)
                     )
                 }
@@ -869,7 +886,7 @@ private fun ParishesAndNewsPane(
                                 title = parish.name,
                                 subtitle = "${parish.city}, ${ParishScheduleText.country(parish.country, currentLanguage)}",
                                 onClick = { openParishId = parish.id },
-                                modifier = Modifier.testTag("parish_card_${parish.id}")
+                                modifier = Modifier.heightIn(min = MinTouchTarget).testTag("parish_card_${parish.id}")
                             )
                         }
                     }
@@ -892,6 +909,7 @@ private fun ParishesAndNewsPane(
                     },
                     modifier = Modifier
                         .fillMaxWidth()
+                        .heightIn(min = MinTouchTarget)
                         .padding(horizontal = design.spacing.gutter)
                         .testTag("parish_open_maps")
                 )
@@ -902,12 +920,13 @@ private fun ParishesAndNewsPane(
                     Row(
                         Modifier
                             .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                             .padding(design.spacing.gutter),
                         horizontalArrangement = Arrangement.Center,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         CircularProgressIndicator(
-                            modifier = Modifier.size(18.dp),
+                            modifier = Modifier.size(design.decor.rowIconSize),
                             color = design.palette.accent
                         )
                         Spacer(Modifier.width(design.spacing.iconLabelGap))
@@ -948,11 +967,12 @@ private fun ParishesAndNewsPane(
                         },
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                             .padding(horizontal = design.spacing.gutter)
                     )
                 }
 
-                is NewsResult.Success -> items(news.items) { article ->
+                is NewsResult.Success -> items(news.items, key = { it.link }) { article ->
                     VaticanNewsCard(article = article, currentLanguage = currentLanguage)
                     Spacer(Modifier.height(design.spacing.cardGap))
                 }
@@ -1042,7 +1062,7 @@ private fun ParishDetail(
                             Toast.makeText(context, parish.address, Toast.LENGTH_LONG).show()
                         }
                     },
-                    modifier = Modifier.testTag("map_parish_${parish.id}")
+                    modifier = Modifier.heightIn(min = MinTouchTarget).testTag("map_parish_${parish.id}")
                 )
                 if (parish.contactPhone.isNotBlank()) {
                     AppListRow(
@@ -1058,7 +1078,7 @@ private fun ParishDetail(
                                 Toast.makeText(context, parish.contactPhone, Toast.LENGTH_SHORT).show()
                             }
                         },
-                        modifier = Modifier.testTag("call_parish_${parish.id}")
+                        modifier = Modifier.heightIn(min = MinTouchTarget).testTag("call_parish_${parish.id}")
                     )
                 }
             }
@@ -1080,25 +1100,36 @@ private fun VaticanNewsCard(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
 
+    // Semantic palette only: source/date textTertiary, title textPrimary,
+    // summary textSecondary, CTA accent -- every rank resolves per identity
+    // and dark mode, so no hardcoded colour survives here.
     GutterCard(
+        modifier = Modifier.semantics {
+            contentDescription = article.title
+        },
         onClick = {
             runCatching {
                 context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(article.link)))
             }
         }
     ) {
-        if (article.publishedAt.isNotBlank()) {
-            Text(
-                text = eyebrow(article.publishedAt),
-                style = styles.sectionEyebrow,
-                color = design.palette.textTertiary
-            )
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-        }
+        Text(
+            text = eyebrow(
+                if (article.publishedAt.isNotBlank()) {
+                    "Vatican News · ${article.publishedAt}"
+                } else {
+                    "Vatican News"
+                }
+            ),
+            style = styles.sectionEyebrow,
+            color = design.palette.textTertiary
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
         Text(
             text = article.title,
-            style = MaterialTheme.typography.titleMedium,
-            color = design.palette.textPrimary
+            style = MaterialTheme.typography.titleLarge,
+            color = design.palette.textPrimary,
+            modifier = Modifier.semantics { heading() }
         )
         if (article.summary.isNotBlank()) {
             Spacer(Modifier.height(design.spacing.cardGap / 2))
@@ -1106,20 +1137,34 @@ private fun VaticanNewsCard(
                 text = article.summary,
                 style = MaterialTheme.typography.bodyMedium,
                 color = design.palette.textSecondary,
-                maxLines = 2,
+                maxLines = 3,
                 overflow = TextOverflow.Ellipsis
             )
         }
         Spacer(Modifier.height(design.spacing.cardGap))
-        Text(
-            text = currentLanguage.pick(
-                "Leer en Vatican News →",
-                "Read on Vatican News →",
-                "Ler no Vatican News →"
-            ),
-            style = styles.buttonLabel,
-            color = design.palette.accent
-        )
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Default.OpenInNew,
+                contentDescription = null,
+                tint = design.palette.accent,
+                modifier = Modifier.size(design.decor.rowIconSize)
+            )
+            Spacer(Modifier.width(design.spacing.iconLabelGap))
+            Text(
+                text = currentLanguage.pick(
+                    "Leer en Vatican News →",
+                    "Read on Vatican News →",
+                    "Ler no Vatican News →"
+                ),
+                style = styles.buttonLabel,
+                color = design.palette.accent
+            )
+        }
     }
 }
 
@@ -1137,7 +1182,13 @@ private fun GutterCard(
 ) {
     val design = LocalAppDesign.current
     AppCard(
-        modifier = modifier.padding(horizontal = design.spacing.gutter),
+        modifier = modifier
+            .padding(horizontal = design.spacing.gutter)
+            .widthIn(max = design.spacing.readingMaxWidth)
+            .then(
+                if (onClick != null) Modifier.heightIn(min = MinTouchTarget)
+                else Modifier
+            ),
         onClick = onClick,
         content = content
     )
@@ -1152,8 +1203,9 @@ private fun CardHeading(title: String, meta: String? = null) {
     Column(Modifier.fillMaxWidth()) {
         Text(
             text = title,
-            style = MaterialTheme.typography.titleMedium,
-            color = design.palette.textPrimary
+            style = MaterialTheme.typography.titleLarge,
+            color = design.palette.textPrimary,
+            modifier = Modifier.semantics { heading() }
         )
         if (meta != null && meta.isNotBlank()) {
             Spacer(Modifier.height(design.spacing.cardGap / 4))
@@ -1186,7 +1238,7 @@ private fun Note(
         Spacer(Modifier.height(design.spacing.cardGap / 4))
         Text(
             text = body,
-            style = bodyStyle ?: MaterialTheme.typography.bodyMedium,
+            style = bodyStyle ?: MaterialTheme.typography.bodyLarge,
             color = design.palette.textPrimary
         )
     }
@@ -1200,13 +1252,13 @@ private fun NumberedLine(number: Int, text: String) {
     Row(Modifier.fillMaxWidth()) {
         Text(
             text = "$number",
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodyLarge,
             color = design.palette.accent,
-            modifier = Modifier.width(design.spacing.iconLabelGap + 8.dp)
+            modifier = Modifier.width(design.spacing.iconLabelGap + design.spacing.cardGap)
         )
         Text(
             text = text,
-            style = MaterialTheme.typography.bodyMedium,
+            style = MaterialTheme.typography.bodyLarge,
             color = design.palette.textPrimary,
             modifier = Modifier.weight(1f)
         )

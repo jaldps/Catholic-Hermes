@@ -10,11 +10,14 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -26,10 +29,13 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.SearchOff
+import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
@@ -45,6 +51,8 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -62,7 +70,7 @@ import com.example.data.models.Novena
 import com.example.data.models.VaticanPrayer
 import com.example.data.repository.CatholicDataRepository
 import androidx.activity.compose.BackHandler
-import com.example.ui.components.MenuPickerRow
+import com.example.ui.design.AppChip
 import com.example.ui.components.InlineBackLink
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
@@ -99,18 +107,25 @@ private const val ChapletLeadBeadScale = 1.6f
 /** Ring weight where the identity rules its bead edges rather than filling them. */
 private val BeadRingHairline = 0.5.dp
 
-/**
- * How many entries of the novena index share one list group.
- *
- * There are 246 novenas, so the index has to stay lazy; but a group is what
- * gives Cupertino its inset block and Vatican its head rule, and neither can
- * straddle two lazy items. Blocking the index is the compromise: it scrolls
- * cheaply and still reads as grouped rows rather than 246 loose ones.
- */
-private const val NovenaIndexBlock = 20
-
 /** The frontispiece plate at the head of a novena that ships with an image. */
 private val NovenaPlateHeight = 176.dp
+
+/**
+ * Novena index cards are equal size: fixed height, the plate clipped to the
+ * thumbnail token, title and patron allowed to wrap to three / two lines, and
+ * the progress rule pinned to the card's foot. Fixed height — rather than a
+ * minimum — is what makes every card in a chunked row the same size. The
+ * height is struck for the roomiest identity (Vatican's 24dp card padding
+ * and 20dp gaps at three title lines plus two patron lines); tighter
+ * identities get the slack as air above the pinned progress rule.
+ */
+private val NovenaCardHeight = 312.dp
+
+/** Clipped plate across the top of a novena index card. */
+private val NovenaCardImageHeight = 72.dp
+
+/** Minimum touch target for every control this screen owns (AAA). */
+private val MinTouchTarget = 48.dp
 
 /**
  * The Vatican devotional, the chaplet of Divine Mercy, the 246 official novenas
@@ -219,7 +234,8 @@ fun PrayersAndNovenasScreen(
                             openPrayer.leaderText.get(currentLanguage),
                             openPrayer.responseText?.get(currentLanguage) ?: ""
                         )
-                    }
+                    },
+                    onStopAudio = { ttsManager.stop() }
                 )
             }
 
@@ -281,6 +297,7 @@ fun PrayersAndNovenasScreen(
                         daysPrayed = daysPrayed[novena.id].orEmpty(),
                         currentlySpeaking = currentlySpeaking,
                         onListen = { ttsManager.speakSingle(it) },
+                        onStop = { ttsManager.stop() },
                         onMarkDayPrayed = {
                             val day = activeNovenaDay
                             val prayed = daysPrayed[novena.id].orEmpty() + day
@@ -450,7 +467,14 @@ private fun VaticanDevotionalView(
     }
 }
 
-/** One collapsed choice keeps every intention available without clipped chips. */
+/**
+ * The intention filter as a wrapping row of chips instead of a collapsed
+ * menu: every intention is visible at once (no clipped labels behind a
+ * dropdown), each chip is a 48dp target, and the kit draws the selected
+ * state — checkmark on Material, capsule fill on Apple, rubric rule on
+ * Vatican — from tokens, so this screen carries no colour of its own.
+ */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun PrayerIntentionFilters(
     options: List<Pair<String?, String>>,
@@ -458,15 +482,23 @@ private fun PrayerIntentionFilters(
     onSelect: (String?) -> Unit,
     testTag: String
 ) {
-    AppListGroup {
-        MenuPickerRow(
-            title = options.firstOrNull { it.first == selected }?.second.orEmpty(),
-            options = options,
-            selected = selected,
-            onSelect = onSelect,
-            trailingOverride = "",
-            testTag = testTag
-        )
+    val design = LocalAppDesign.current
+    FlowRow(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .testTag(testTag),
+        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+    ) {
+        options.forEach { (value, label) ->
+            AppChip(
+                label = label,
+                selected = selected == value,
+                onClick = { onSelect(value) },
+                modifier = Modifier.heightIn(min = MinTouchTarget)
+            )
+        }
     }
 }
 
@@ -477,7 +509,8 @@ private fun PrayerDetailView(
     currentLanguage: AppLanguage,
     currentlySpeaking: String?,
     onBack: () -> Unit,
-    onPlayAudio: () -> Unit
+    onPlayAudio: () -> Unit,
+    onStopAudio: () -> Unit
 ) {
     LazyColumn(Modifier.fillMaxSize().testTag("prayer_detail_${prayer.id}")) {
         item {
@@ -496,7 +529,8 @@ private fun PrayerDetailView(
                     prayer = prayer,
                     currentLanguage = currentLanguage,
                     currentlySpeaking = currentlySpeaking,
-                    onPlayAudio = onPlayAudio
+                    onPlayAudio = onPlayAudio,
+                    onStopAudio = onStopAudio
                 )
             }
         }
@@ -509,7 +543,8 @@ private fun VaticanPrayerCard(
     prayer: VaticanPrayer,
     currentLanguage: AppLanguage,
     currentlySpeaking: String?,
-    onPlayAudio: () -> Unit
+    onPlayAudio: () -> Unit,
+    onStopAudio: () -> Unit
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -550,12 +585,20 @@ private fun VaticanPrayerCard(
 
         Spacer(Modifier.height(design.spacing.cardPadding))
 
+        // While the voice is running the same 48dp button offers Stop, so
+        // recitation can be ended without leaving the page.
+        val prayerSpeaking = currentlySpeaking != null
         AppSecondaryButton(
-            label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
-            onClick = onPlayAudio,
-            leadingIcon = Icons.Default.VolumeUp,
+            label = if (prayerSpeaking) {
+                currentLanguage.pick("Detener", "Stop", "Parar")
+            } else {
+                currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+            },
+            onClick = if (prayerSpeaking) onStopAudio else onPlayAudio,
+            leadingIcon = if (prayerSpeaking) Icons.Default.Stop else Icons.Default.VolumeUp,
             modifier = Modifier
                 .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
                 .testTag("play_prayer_audio_${prayer.id}")
         )
     }
@@ -572,6 +615,7 @@ private fun DivineMercyChapletView(
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
+    val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
 
     // 0 = opening prayers, 1 = the five decades, 2 = conclusion, 3 = 3:00 PM
     var chapletStep by remember { mutableIntStateOf(1) }
@@ -662,12 +706,24 @@ private fun DivineMercyChapletView(
                         modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                     )
                     Spacer(Modifier.height(design.spacing.cardPadding))
+                    // While the voice is running the same 48dp button offers Stop, so
+                    // recitation can be ended without leaving the page.
+                    val speaking = currentlySpeaking != null
                     AppSecondaryButton(
-                        label = listenLabel,
-                        onClick = { ttsManager.speakSingle(stepText) },
-                        leadingIcon = Icons.Default.VolumeUp,
+                        label = if (speaking) {
+                            currentLanguage.pick("Detener", "Stop", "Parar")
+                        } else {
+                            listenLabel
+                        },
+                        onClick = if (speaking) {
+                            { ttsManager.stop() }
+                        } else {
+                            { ttsManager.speakSingle(stepText) }
+                        },
+                        leadingIcon = if (speaking) Icons.Default.Stop else Icons.Default.VolumeUp,
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                             .testTag("chaplet_tts_button")
                     )
                 }
@@ -1020,22 +1076,38 @@ private fun NovenaIndexView(
                 AppSectionHeader(
                     title = currentLanguage.pick("En curso", "In progress", "Em andamento")
                 )
-                AppListGroup(modifier = Modifier.testTag("novenas_in_progress")) {
-                    inProgress.forEach { novena ->
-                        val next = nextNovenaDay(novena, daysPrayed[novena.id].orEmpty())
-                        val started = startedOn[novena.id]?.let { dateFormat.format(Date(it)) }
-                        AppListRow(
-                            title = novena.title.get(currentLanguage),
-                            subtitle = started?.let {
-                                currentLanguage.pick(
-                                    "Comenzada el $it",
-                                    "Started $it",
-                                    "Iniciada em $it"
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("novenas_in_progress"),
+                    verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    inProgress.chunked(2).forEach { pair ->
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                        ) {
+                            pair.forEach { novena ->
+                                val prayed = daysPrayed[novena.id].orEmpty()
+                                val started = startedOn[novena.id]?.let { dateFormat.format(Date(it)) }
+                                NovenaCard(
+                                    novena = novena,
+                                    currentLanguage = currentLanguage,
+                                    prayed = prayed,
+                                    extraLine = started?.let {
+                                        currentLanguage.pick(
+                                            "Comenzada el $it",
+                                            "Started $it",
+                                            "Iniciada em $it"
+                                        )
+                                    },
+                                    onOpen = { onOpenNovena(novena) },
+                                    modifier = Modifier.weight(1f)
                                 )
-                            } ?: novena.patron.get(currentLanguage),
-                            trailingText = novenaDayOf(currentLanguage, next, novena.days.size),
-                            onClick = { onOpenNovena(novena) }
-                        )
+                            }
+                            if (pair.size == 1) Spacer(Modifier.weight(1f))
+                        }
                     }
                 }
             }
@@ -1046,14 +1118,30 @@ private fun NovenaIndexView(
                 AppSectionHeader(
                     title = currentLanguage.pick("Completadas", "Completed", "Concluídas")
                 )
-                AppListGroup(modifier = Modifier.testTag("novenas_completed")) {
-                    finished.forEach { novena ->
-                        AppListRow(
-                            title = novena.title.get(currentLanguage),
-                            subtitle = novena.patron.get(currentLanguage),
-                            trailingText = novenaFinishedLabel(currentLanguage),
-                            onClick = { onOpenNovena(novena) }
-                        )
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("novenas_completed"),
+                    verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    finished.chunked(2).forEach { pair ->
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                        ) {
+                            pair.forEach { novena ->
+                                NovenaCard(
+                                    novena = novena,
+                                    currentLanguage = currentLanguage,
+                                    prayed = daysPrayed[novena.id].orEmpty(),
+                                    extraLine = null,
+                                    onOpen = { onOpenNovena(novena) },
+                                    modifier = Modifier.weight(1f)
+                                )
+                            }
+                            if (pair.size == 1) Spacer(Modifier.weight(1f))
+                        }
                     }
                 }
             }
@@ -1094,29 +1182,30 @@ private fun NovenaIndexView(
                 )
             }
 
-            items(filtered.chunked(NovenaIndexBlock)) { block ->
-                AppListGroup {
-                    block.forEach { novena ->
-                        val prayed = daysPrayed[novena.id].orEmpty()
-                        AppListRow(
-                            title = novena.title.get(currentLanguage),
-                            subtitle = novena.patron.get(currentLanguage),
-                            trailingText = when {
-                                prayed.isEmpty() -> currentLanguage.pick(
-                                    "${novena.days.size} días",
-                                    "${novena.days.size} days",
-                                    "${novena.days.size} dias"
-                                )
-                                isNovenaFinished(novena, prayed) -> novenaFinishedLabel(currentLanguage)
-                                else -> novenaDayOf(
-                                    currentLanguage,
-                                    nextNovenaDay(novena, prayed),
-                                    novena.days.size
-                                )
-                            },
-                            onClick = { onOpenNovena(novena) }
+            // Equal-size cards, two per row, lazy like the 246-row index
+            // they replace: each chunked row is one lazy item, so composition
+            // cost stays flat however long the filtered index runs.
+            items(
+                items = filtered.chunked(2),
+                key = { pair -> pair.first().id + "_" + pair.last().id }
+            ) { pair ->
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    pair.forEach { novena ->
+                        NovenaCard(
+                            novena = novena,
+                            currentLanguage = currentLanguage,
+                            prayed = daysPrayed[novena.id].orEmpty(),
+                            extraLine = null,
+                            onOpen = { onOpenNovena(novena) },
+                            modifier = Modifier.weight(1f)
                         )
                     }
+                    if (pair.size == 1) Spacer(Modifier.weight(1f))
                 }
                 Spacer(Modifier.height(blockGap))
             }
@@ -1128,6 +1217,116 @@ private fun NovenaIndexView(
 
 // ------------------------------------------------------------- novena page
 
+/**
+ * One novena in the index: an equal-size tonal card. The plate is clipped to
+ * the thumbnail token and cropped, the title and patron wrap to three / two
+ * lines instead of truncating to one, and the progress rule plus its day
+ * count are pinned to the foot of the card so two cards in a row align.
+ * Colours come only from the palette tokens, so the card is tonal in both
+ * appearances without this screen knowing which one is in force.
+ */
+@Composable
+private fun NovenaCard(
+    novena: Novena,
+    currentLanguage: AppLanguage,
+    prayed: Set<Int>,
+    extraLine: String?,
+    onOpen: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    val total = novena.days.size
+    val fraction = if (total > 0) prayed.size.toFloat() / total.toFloat() else 0f
+    val progressLabel = when {
+        prayed.isEmpty() -> currentLanguage.pick(
+            "$total días",
+            "$total days",
+            "$total dias"
+        )
+        isNovenaFinished(novena, prayed) -> novenaFinishedLabel(currentLanguage)
+        else -> novenaDayOf(currentLanguage, nextNovenaDay(novena, prayed), total)
+    }
+
+    AppCard(
+        onClick = onOpen,
+        modifier = modifier
+            .height(NovenaCardHeight)
+            .testTag("novena_card_${novena.id}")
+    ) {
+        // Tonal ground under the plate: while the image loads — or if it
+        // fails — the card still shows the thumbnail shape in the identity's
+        // own tint instead of a blank gap.
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(NovenaCardImageHeight)
+                .clip(design.shapes.thumbnail)
+                .background(palette.selectionTint),
+            contentAlignment = Alignment.Center
+        ) {
+            novena.imageUrl?.takeIf { it.isNotBlank() }?.let { url ->
+                AsyncImage(
+                    model = url,
+                    contentDescription = novena.title.get(currentLanguage),
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clip(design.shapes.thumbnail)
+                )
+            } ?: Icon(
+                imageVector = Icons.Default.Church,
+                contentDescription = null,
+                tint = palette.textSecondary,
+                modifier = Modifier.size(design.decor.rowIconSize)
+            )
+        }
+        Spacer(Modifier.height(design.spacing.cardGap))
+        Text(
+            text = novena.title.get(currentLanguage),
+            style = styles.rowTitle,
+            color = palette.textPrimary,
+            minLines = 2,
+            maxLines = 3,
+            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        // The started date rides on the patron line rather than taking a
+        // line of its own, so the card's fixed height holds in every
+        // identity even for in-progress novenas.
+        Text(
+            text = listOfNotNull(
+                novena.patron.get(currentLanguage),
+                extraLine
+            ).joinToString(" · "),
+            style = styles.rowSubtitle,
+            color = palette.textSecondary,
+            maxLines = 2,
+            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+        )
+        Spacer(Modifier.weight(1f))
+        Text(
+            text = progressLabel,
+            style = styles.rowSubtitle,
+            color = palette.textSecondary,
+            maxLines = 1,
+            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        LinearProgressIndicator(
+            progress = { fraction },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(4.dp)
+                .semantics { stateDescription = progressLabel },
+            color = palette.accent,
+            trackColor = palette.selectionTint
+        )
+    }
+}
+
 @Composable
 private fun NovenaDayView(
     novena: Novena,
@@ -1137,6 +1336,7 @@ private fun NovenaDayView(
     daysPrayed: Set<Int>,
     currentlySpeaking: String?,
     onListen: (String) -> Unit,
+    onStop: () -> Unit,
     onMarkDayPrayed: () -> Unit,
     onBack: () -> Unit
 ) {
@@ -1166,6 +1366,7 @@ private fun NovenaDayView(
                 Row(
                     Modifier
                         .weight(1f)
+                        .heightIn(min = MinTouchTarget)
                         .clickable(onClick = onBack)
                         .padding(vertical = design.spacing.rowPaddingVertical)
                         .testTag("back_to_novenas_button"),
@@ -1210,16 +1411,24 @@ private fun NovenaDayView(
 
         novena.imageUrl?.let { url ->
             item {
-                AsyncImage(
-                    model = url,
-                    contentDescription = novena.title.get(currentLanguage),
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
+                // Tonal ground so the plate's shape reads while it loads.
+                Box(
+                    Modifier
                         .fillMaxWidth()
                         .padding(horizontal = design.spacing.gutter)
                         .height(NovenaPlateHeight)
                         .clip(design.shapes.cardLarge)
-                )
+                        .background(design.palette.selectionTint)
+                ) {
+                    AsyncImage(
+                        model = url,
+                        contentDescription = novena.title.get(currentLanguage),
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clip(design.shapes.cardLarge)
+                    )
+                }
                 Spacer(Modifier.height(design.spacing.sectionGap / 2))
             }
         }
@@ -1262,6 +1471,29 @@ private fun NovenaDayView(
                     label = { "${it + 1}" },
                     onSelect = { onSelectDay(it + 1) }
                 )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                // The rail shows which days; the rule gives the fraction at a
+                // glance, in the identity's accent on its selection tint —
+                // the same pair the index cards use.
+                val progressFraction = if (novena.days.isEmpty()) {
+                    0f
+                } else {
+                    daysPrayed.size.toFloat() / novena.days.size.toFloat()
+                }
+                val progressText = currentLanguage.pick(
+                    "${daysPrayed.size} de ${novena.days.size} días completados",
+                    "${daysPrayed.size} of ${novena.days.size} days completed",
+                    "${daysPrayed.size} de ${novena.days.size} dias concluídos"
+                )
+                LinearProgressIndicator(
+                    progress = { progressFraction },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(4.dp)
+                        .semantics { stateDescription = progressText },
+                    color = design.palette.accent,
+                    trackColor = design.palette.selectionTint
+                )
             }
         }
 
@@ -1286,9 +1518,12 @@ private fun NovenaDayView(
 
                     if (meditation.isNotBlank()) {
                         Spacer(Modifier.height(design.spacing.cardGap))
+                        // The meditation is read, not chrome: it takes the
+                        // reading face at the reading size, inside the same
+                        // clamped measure as the day's prayer below.
                         Text(
                             text = meditation,
-                            style = styles.quote,
+                            style = styles.scripture,
                             color = design.palette.textPrimary,
                             modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                         )
@@ -1349,12 +1584,20 @@ private fun NovenaDayView(
 
                     // Stacked rather than set two-across: "Completar día" in
                     // tracked Roman capitals needs the full measure at 360dp.
+                    // While this day's prayer is being read the button offers
+                    // Stop instead of Listen, on the same 48dp target.
+                    val daySpeaking = currentlySpeaking == prayerText
                     AppSecondaryButton(
-                        label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
-                        onClick = { onListen(prayerText) },
-                        leadingIcon = Icons.Default.VolumeUp,
+                        label = if (daySpeaking) {
+                            currentLanguage.pick("Detener", "Stop", "Parar")
+                        } else {
+                            currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+                        },
+                        onClick = { if (daySpeaking) onStop() else onListen(prayerText) },
+                        leadingIcon = if (daySpeaking) Icons.Default.Stop else Icons.Default.VolumeUp,
                         modifier = Modifier
                             .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                             .testTag("novena_listen_button")
                     )
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
@@ -1475,7 +1718,11 @@ private fun DevotionRail(
             .coerceIn(0.dp, design.spacing.rowMinHeight / 2)
 
         Row(
-            Modifier.fillMaxWidth(),
+            Modifier
+                .fillMaxWidth()
+                // The rail is a control, so its row is a full 48dp target
+                // tall even though the bead glyphs are smaller.
+                .heightIn(min = MinTouchTarget),
             horizontalArrangement = Arrangement.spacedBy(gap, Alignment.CenterHorizontally),
             verticalAlignment = Alignment.CenterVertically
         ) {

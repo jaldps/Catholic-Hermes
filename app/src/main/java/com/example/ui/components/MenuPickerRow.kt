@@ -51,14 +51,16 @@ fun <T> MenuPickerRow(
     var expanded by remember { mutableStateOf(false) }
     val selectedLabel = options.firstOrNull { it.first == selected }?.second.orEmpty()
 
-    Box(modifier.fillMaxWidth()) {
+    Box(Modifier.fillMaxWidth()) {
         AppListRow(
             title = title,
             subtitle = subtitle,
             leadingIcon = leadingIcon,
             trailingText = trailingOverride ?: selectedLabel,
             onClick = { expanded = true },
-            modifier = if (testTag != null) Modifier.testTag(testTag) else Modifier
+            // The caller's modifier (e.g. a 48dp floor) must reach the
+            // interactive row, not just the wrapper Box.
+            modifier = modifier.then(if (testTag != null) Modifier.testTag(testTag) else Modifier)
         )
         DropdownMenu(
             expanded = expanded,

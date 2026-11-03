@@ -62,7 +62,6 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.runtime.mutableStateListOf
 import android.content.res.Configuration
 import androidx.compose.ui.platform.LocalConfiguration
-import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
@@ -225,6 +224,7 @@ fun BibleScreen(
                 modifier = Modifier
                     .padding(horizontal = tabsInset)
                     .padding(bottom = design.spacing.cardGap / 2)
+                    .heightIn(min = 48.dp)
             )
         }
     }
@@ -466,8 +466,8 @@ private fun BookDirectory(
 
     // Full-text search runs off the composition thread: it walks the whole
     // bundled bible and would otherwise stall every keystroke.
-    val verseMatches by produceState(
-        emptyList<Triple<String, Int, BibleVerse>>(),
+    val verseMatchesState by produceState<List<Triple<String, Int, BibleVerse>>?>(
+        null,
         searchQuery,
         currentLanguage
     ) {
@@ -478,6 +478,10 @@ private fun BookDirectory(
             withContext(Dispatchers.Default) { repository.searchBible(query, 20, currentLanguage) }
         }
     }
+    val verseMatches: List<Triple<String, Int, BibleVerse>> =
+        verseMatchesState ?: emptyList()
+    val versesLoading = verseMatchesState == null &&
+        searchQuery.trim().length >= MinSearchLength
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
@@ -495,6 +499,18 @@ private fun BookDirectory(
                     .padding(horizontal = design.spacing.gutter)
                     .testTag("bible_search_input")
             )
+        }
+        if (versesLoading) {
+            item(key = "bible_verses_loading") {
+                LinearProgressIndicator(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("bible_verses_loading"),
+                    color = design.palette.accent,
+                    trackColor = design.palette.selectionTint
+                )
+            }
         }
 
         item(key = "bible_directory_menu") {
@@ -525,13 +541,13 @@ private fun BookDirectory(
                     .fillMaxWidth()
                     .padding(horizontal = design.spacing.gutter),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.gutter)
             ) {
                 Box(Modifier.weight(1f)) {
                     Row(
                         Modifier
                             .fillMaxWidth()
-                            .heightIn(min = 44.dp)
+                            .heightIn(min = 48.dp)
                             .clickable(role = Role.Button) { showCanonMenu = true }
                             .semantics {
                                 contentDescription = currentLanguage.pick("Filtrar libros", "Filter books", "Filtrar livros")
@@ -583,7 +599,7 @@ private fun BookDirectory(
                 }
                 Box(
                     modifier = Modifier
-                        .heightIn(min = 44.dp)
+                        .heightIn(min = 48.dp)
                         .clickable(role = Role.Button, onClick = onOpenVersions)
                         .semantics {
                             contentDescription = currentLanguage.pick(
@@ -604,7 +620,7 @@ private fun BookDirectory(
             }
         }
 
-        if (filteredBooks.isEmpty() && verseMatches.isEmpty()) {
+        if (filteredBooks.isEmpty() && verseMatches.isEmpty() && !versesLoading) {
             item {
                 AppEmptyState(
                     title = currentLanguage.pick(
@@ -740,8 +756,8 @@ private fun ChapterReader(
         Row(
             Modifier
                 .fillMaxWidth()
-                .heightIn(min = design.spacing.rowMinHeight)
-                .padding(start = 4.dp, end = design.spacing.gutter),
+                .heightIn(min = maxOf(design.spacing.rowMinHeight, 48.dp))
+                .padding(start = design.spacing.cardGap / 2, end = design.spacing.gutter),
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(
@@ -766,12 +782,14 @@ private fun ChapterReader(
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.weight(1f)
             )
-            Spacer(Modifier.width(10.dp))
+            Spacer(Modifier.width(design.spacing.cardGap))
             AppChip(
                 label = chapterLabel,
                 selected = false,
                 onClick = onChooseChapter,
-                modifier = Modifier.testTag("choose_chapter_header_button")
+                modifier = Modifier
+                    .heightIn(min = 48.dp)
+                    .testTag("choose_chapter_header_button")
             )
         }
 
@@ -779,8 +797,8 @@ private fun ChapterReader(
             Modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
-                .padding(bottom = 10.dp),
-            horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.End),
+                .padding(bottom = design.spacing.cardGap),
+            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap, Alignment.End),
             verticalAlignment = Alignment.CenterVertically
         ) {
             AppChip(
@@ -789,7 +807,7 @@ private fun ChapterReader(
                 onClick = {
                     if (fontScale > MinFontScale) onFontScaleChange(fontScale - FontScaleStep)
                 },
-                modifier = Modifier.heightIn(min = 44.dp).semantics {
+                modifier = Modifier.heightIn(min = 48.dp).semantics {
                     contentDescription = currentLanguage.pick(
                         "Reducir el tamaño del texto", "Decrease text size", "Diminuir o tamanho do texto"
                     )
@@ -801,7 +819,7 @@ private fun ChapterReader(
                 onClick = {
                     if (fontScale < MaxFontScale) onFontScaleChange(fontScale + FontScaleStep)
                 },
-                modifier = Modifier.heightIn(min = 44.dp).semantics {
+                modifier = Modifier.heightIn(min = 48.dp).semantics {
                     contentDescription = currentLanguage.pick(
                         "Aumentar el tamaño del texto", "Increase text size", "Aumentar o tamanho do texto"
                     )
@@ -811,9 +829,29 @@ private fun ChapterReader(
                 label = readerFont.label(currentLanguage),
                 selected = readerFont != ReaderFontChoice.FOLLOW_APP,
                 onClick = onReaderFontChange,
-                modifier = Modifier.testTag("bible_reader_font_choice")
+                modifier = Modifier
+                    .heightIn(min = 48.dp)
+                    .testTag("bible_reader_font_choice")
             )
         }
+
+        LinearProgressIndicator(
+            progress = { chapterNumber.toFloat() / chapterCount.coerceAtLeast(1).toFloat() },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+                .semantics {
+                    contentDescription = chapterLabel
+                    stateDescription = currentLanguage.pick(
+                        "Progreso del capítulo",
+                        "Chapter progress",
+                        "Progresso do capítulo"
+                    )
+                }
+                .testTag("bible_reader_progress"),
+            color = palette.accent,
+            trackColor = palette.selectionTint
+        )
 
         AppDivider()
 
@@ -897,7 +935,10 @@ private fun ChapterReader(
                             onClick = { onVerseClick(verse) },
                             modifier = reading
                                 .clip(design.shapes.buttonSmall)
-                                .background(if (marked) palette.selectionTint else Color.Transparent)
+                                .then(
+                                    if (marked) Modifier.background(palette.selectionTint)
+                                    else Modifier
+                                )
                                 .testTag("verse_${verse.number}")
                         )
                     }
@@ -913,8 +954,8 @@ private fun ChapterReader(
             Modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
-                .padding(vertical = 10.dp),
-            horizontalArrangement = Arrangement.spacedBy(10.dp),
+                .padding(vertical = design.spacing.cardGap),
+            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
             verticalAlignment = Alignment.CenterVertically
         ) {
             AppSecondaryButton(
@@ -1001,11 +1042,11 @@ private fun ChapterSelectorDialog(
         text = {
             LazyVerticalGrid(
                 columns = GridCells.Adaptive(minSize = 52.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp),
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+                verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .heightIn(max = 320.dp)
+                    .heightIn(max = design.spacing.readingMaxWidth / 2)
             ) {
                 items(chapterCount) { index ->
                     val number = index + 1
@@ -1013,13 +1054,28 @@ private fun ChapterSelectorDialog(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(44.dp)
+                            .heightIn(min = 48.dp)
                             .clip(design.shapes.buttonSmall)
                             .background(
                                 if (isCurrent) scheme.primary
-                                else palette.selectionTint.copy(alpha = if (design.isDark) 1f else 0.55f)
+                                else palette.selectionTint
                             )
-                            .clickable { onSelect(number) },
+                            .clickable(role = Role.Button) { onSelect(number) }
+                            .semantics {
+                                stateDescription = if (isCurrent) {
+                                    currentLanguage.pick(
+                                        "Capítulo actual",
+                                        "Current chapter",
+                                        "Capítulo atual"
+                                    )
+                                } else {
+                                    currentLanguage.pick(
+                                        "Seleccionar",
+                                        "Select",
+                                        "Selecionar"
+                                    )
+                                }
+                            },
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
@@ -1120,6 +1176,14 @@ private fun DailyMissalView(
 
         if (loadingVatican) {
             item {
+                LinearProgressIndicator(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("daily_missal_loading"),
+                    color = palette.accent,
+                    trackColor = palette.selectionTint
+                )
                 Text(
                     text = currentLanguage.pick(
                         "Cargando las lecturas de hoy desde Vatican News…",
@@ -1288,12 +1352,15 @@ private fun VersionsView(
                 Spacer(Modifier.height(design.spacing.cardGap / 2))
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(10.dp)
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
                 ) {
                     Box(
                         Modifier
                             .background(canonColor.copy(alpha = 0.14f), design.shapes.badge)
-                            .padding(horizontal = 10.dp, vertical = 5.dp)
+                            .padding(
+                                horizontal = design.spacing.cardGap,
+                                vertical = design.spacing.cardGap / 2
+                            )
                     ) {
                         Text(
                             text = if (design.decor.usesAllCapsLabels) canonLabel.uppercase() else canonLabel,
@@ -1320,7 +1387,7 @@ private fun VersionsView(
                 Box(
                     Modifier
                         .fillMaxWidth()
-                        .height(1.dp)
+                        .height(design.depth.cardBorderWidth)
                         .background(palette.hairline)
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))

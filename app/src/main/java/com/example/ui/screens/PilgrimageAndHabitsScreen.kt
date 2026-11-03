@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -31,6 +32,7 @@ import androidx.compose.material.icons.outlined.Checklist
 import androidx.compose.material.icons.outlined.TaskAlt
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Icon
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -40,8 +42,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
@@ -49,13 +56,10 @@ import com.example.data.models.CatholicPilgrimageSanctuary
 import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.models.SpiritualHabitItem
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
+import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
-import com.example.ui.design.AppListGroup
-import com.example.ui.design.AppListRow
 import com.example.ui.design.AppMetricTile
-import com.example.ui.design.AppOrnament
 import com.example.ui.components.TextFormat
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
@@ -70,6 +74,9 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
     AppLanguage.EN -> en
     AppLanguage.PT -> pt
 }
+
+/** M3 minimum touch target (AAA): no interactive element on this screen is smaller. */
+private val MinTouchTarget = 48.dp
 
 /**
  * The sanctuary destination: a catalogue of shrines, the liturgical days around
@@ -122,7 +129,9 @@ fun PilgrimageAndHabitsScreen(
                 options = tabs,
                 selectedIndex = selectedMainTab,
                 onSelect = { selectedMainTab = it },
-                modifier = Modifier.padding(horizontal = tabsInset)
+                modifier = Modifier
+                    .heightIn(min = MinTouchTarget)
+                    .padding(horizontal = tabsInset)
             )
             Spacer(Modifier.height(design.spacing.cardGap / 2))
         }
@@ -205,24 +214,93 @@ private fun LiturgicalCalendarTab(
 
 @Composable
 private fun LiturgicalDayEntry(day: LiturgicalCalendarDay, currentLanguage: AppLanguage) {
-    // One card per celebration: the liturgical colour is data, so it travels
-    // as the banner's accent; the rank rides in its eyebrow; the body names the
-    // feast first, then its precept as a line of its own, and closes with the
-    // day's Gospel, so no detached mini-card trails beneath the hero.
+    // One filled M3 card per celebration (not the kit's single hero banner):
+    // a tonal date badge, the rank as eyebrow, then celebration, precept and
+    // Gospel. All surfaces come from the palette, so the card inverts cleanly
+    // in dark mode. The liturgical colour is data, so it is kept as a small
+    // decorative dot beside the rank — never as a text ground, which would
+    // need the banner kit's dark-mode harmonisation to stay legible.
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
     val gospel = day.gospelVerseRef.takeIf { it.isNotBlank() }?.let {
         currentLanguage.pick("Evangelio", "Gospel", "Evangelho") + " · " + TextFormat.ranges(it)
     }
     val precept = day.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
-    AppBanner(
-        title = currentLanguage.pick(
-            "${day.dayOfMonth} de ${day.monthName.lowercase()}",
-            "${day.monthName} ${day.dayOfMonth}",
-            "${day.dayOfMonth} de ${day.monthName.lowercase()}"
-        ) + " · " + day.rank.get(currentLanguage),
-        body = listOfNotNull(day.celebrationTitle.get(currentLanguage), precept, gospel).joinToString("\n"),
-        accentColorHex = day.liturgicalColorHex,
-        modifier = Modifier.testTag("calendar_day_${day.monthName}_${day.dayOfMonth}")
-    )
+    AppCard(
+        modifier = Modifier
+            .padding(horizontal = design.spacing.gutter)
+            .testTag("calendar_day_${day.monthName}_${day.dayOfMonth}")
+    ) {
+        Row(verticalAlignment = Alignment.Top) {
+            // Date badge: accentMuted is the identity's tinted surface in
+            // both modes, so the numeral keeps its contrast without a
+            // hard-coded tone. Square in Vatican, rounded in M3 — the shape
+            // token, not a literal.
+            Box(
+                modifier = Modifier
+                    .size(MinTouchTarget)
+                    .clip(design.shapes.thumbnail)
+                    .background(palette.accentMuted),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = day.dayOfMonth.toString(),
+                    style = styles.rowTitle,
+                    color = palette.textPrimary,
+                    textAlign = TextAlign.Center
+                )
+            }
+            Spacer(Modifier.width(design.spacing.iconLabelGap))
+            Column(Modifier.weight(1f).widthIn(max = design.spacing.readingMaxWidth)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Box(
+                        modifier = Modifier
+                            .size(8.dp)
+                            .clip(design.shapes.badge)
+                            .background(Color(day.liturgicalColorHex))
+                    )
+                    Spacer(Modifier.width(design.spacing.iconLabelGap / 2))
+                    Text(
+                        text = caps(day.rank.get(currentLanguage)),
+                        style = styles.sectionEyebrow,
+                        color = palette.textSecondary
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Text(
+                    text = day.celebrationTitle.get(currentLanguage),
+                    style = styles.rowTitle,
+                    color = palette.textPrimary
+                )
+                Text(
+                    text = currentLanguage.pick(
+                        "${day.dayOfMonth} de ${day.monthName.lowercase()}",
+                        "${day.monthName} ${day.dayOfMonth}",
+                        "${day.dayOfMonth} de ${day.monthName.lowercase()}"
+                    ),
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+                precept?.let {
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Text(
+                        text = it,
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary
+                    )
+                }
+                gospel?.let {
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Text(
+                        text = it,
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary
+                    )
+                }
+            }
+        }
+    }
 }
 
 // --------------------------------------------------------------------- habits
@@ -287,6 +365,30 @@ private fun HolyHabitsTab(
                         .padding(horizontal = design.spacing.gutter)
                         .testTag("habit_progress_tile")
                 )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                // Progress in bar form as well as the tile's count: colour and
+                // numerals alone are invisible to a reader who cannot see the
+                // tile, so the bar carries the same $completed/$total text as
+                // its stateDescription. Track/indicator are palette tokens, so
+                // the bar inverts with dark mode.
+                val progressLabel = currentLanguage.pick(
+                    "$completedCount de ${habits.size} cumplidos hoy",
+                    "$completedCount of ${habits.size} kept today",
+                    "$completedCount de ${habits.size} cumpridos hoje"
+                )
+                LinearProgressIndicator(
+                    progress = {
+                        if (habits.isEmpty()) 0f
+                        else (completedCount.toFloat() / habits.size).coerceIn(0f, 1f)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .height(4.dp)
+                        .semantics { stateDescription = progressLabel },
+                    color = design.palette.accent,
+                    trackColor = design.palette.selectionTint
+                )
                 Spacer(Modifier.height(design.spacing.cardGap))
             }
 
@@ -322,7 +424,15 @@ private fun HabitEntry(
 
     AppCard(
         modifier = Modifier
+            .heightIn(min = MinTouchTarget)
             .padding(horizontal = design.spacing.gutter)
+            .semantics {
+                stateDescription = if (completed) {
+                    currentLanguage.pick("Cumplido hoy", "Kept today", "Cumprido hoje")
+                } else {
+                    currentLanguage.pick("Pendiente", "Not kept yet", "Pendente")
+                }
+            }
             .testTag("habit_card_${habit.id}"),
         onClick = onToggle
     ) {
@@ -414,7 +524,7 @@ private fun SanctuariesTab(
             }
 
             itemsIndexed(sanctuaries, key = { _, shrine -> shrine.id }) { index, shrine ->
-                if (index > 0) AppOrnament()
+                if (index > 0) Spacer(Modifier.height(design.spacing.sectionGap))
                 SanctuaryEntry(
                     shrine = shrine,
                     currentLanguage = currentLanguage,
@@ -433,51 +543,84 @@ private fun SanctuaryEntry(
     currentLanguage: AppLanguage,
     onNavigateMap: () -> Unit
 ) {
+    // One filled M3 card per shrine: header, origin, relics and indulgence
+    // apparatus, then the map action — instead of a list row plus loose text
+    // plus a button floating under it. Palette tokens throughout, so the card
+    // inverts in dark mode; the header row and the button are both at least
+    // the 48dp minimum.
     val design = LocalAppDesign.current
+    val palette = design.palette
     val styles = LocalAppTextStyles.current
     val place = placeParts(shrine.cityCountry.get(currentLanguage))
 
-    Column(Modifier.testTag("shrine_card_${shrine.id}")) {
-        AppListGroup {
-            AppListRow(
-                title = shrine.name.get(currentLanguage),
-                subtitle = place.locality,
-                leadingIcon = Icons.Default.Place,
-                trailingText = place.region,
-                onClick = onNavigateMap
+    AppCard(
+        modifier = Modifier
+            .padding(horizontal = design.spacing.gutter)
+            .testTag("shrine_card_${shrine.id}")
+    ) {
+        Row(
+            modifier = Modifier.heightIn(min = MinTouchTarget),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Default.Place,
+                contentDescription = null,
+                tint = palette.accent,
+                modifier = Modifier.size(design.decor.rowIconSize)
             )
+            Spacer(Modifier.width(design.spacing.iconLabelGap))
+            Column(Modifier.weight(1f)) {
+                Text(
+                    text = shrine.name.get(currentLanguage),
+                    style = styles.rowTitle,
+                    color = palette.textPrimary
+                )
+                place.locality?.let {
+                    Text(
+                        text = it,
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary
+                    )
+                }
+            }
+            place.region?.let {
+                Spacer(Modifier.width(design.spacing.iconLabelGap))
+                Text(
+                    text = it,
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary,
+                    textAlign = TextAlign.End
+                )
+            }
         }
 
         Spacer(Modifier.height(design.spacing.cardGap))
+        Text(
+            text = shrine.historicalOrigin.get(currentLanguage),
+            style = styles.scripture,
+            color = palette.textPrimary,
+            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+        )
 
-        Column(
-            modifier = Modifier.padding(horizontal = design.spacing.gutter),
-            verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
-        ) {
-            Text(
-                text = shrine.historicalOrigin.get(currentLanguage),
-                style = styles.scripture,
-                color = design.palette.textPrimary,
-                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-            )
-            Apparatus(
-                label = currentLanguage.pick("Reliquias", "Relics", "Relíquias"),
-                text = shrine.relicsAndPatron.get(currentLanguage)
-            )
-            Apparatus(
-                label = currentLanguage.pick(
-                    "Indulgencia Plenaria y Gracia",
-                    "Plenary Indulgence & Grace",
-                    "Indulgência Plenária e Graça"
-                ),
-                text = shrine.plenaryIndulgenceNote.get(currentLanguage)
-            )
-        }
+        Spacer(Modifier.height(design.spacing.cardGap))
+        Apparatus(
+            label = currentLanguage.pick("Reliquias", "Relics", "Relíquias"),
+            text = shrine.relicsAndPatron.get(currentLanguage)
+        )
+        Spacer(Modifier.height(design.spacing.cardGap))
+        Apparatus(
+            label = currentLanguage.pick(
+                "Indulgencia Plenaria y Gracia",
+                "Plenary Indulgence & Grace",
+                "Indulgência Plenária e Graça"
+            ),
+            text = shrine.plenaryIndulgenceNote.get(currentLanguage)
+        )
 
-        Spacer(Modifier.height(design.spacing.sectionGap / 2))
+        Spacer(Modifier.height(design.spacing.cardGap))
+        AppDivider()
+        Spacer(Modifier.height(design.spacing.cardGap))
 
-        // Its own full-width row: "Ver ubicación en Mapa" set in tracked Roman
-        // capitals has no business sharing a line with anything.
         AppSecondaryButton(
             label = currentLanguage.pick(
                 "Ver ubicación en Mapa",
@@ -488,7 +631,7 @@ private fun SanctuaryEntry(
             leadingIcon = Icons.Default.Directions,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
+                .heightIn(min = MinTouchTarget)
                 .testTag("shrine_map_button_${shrine.id}")
         )
     }

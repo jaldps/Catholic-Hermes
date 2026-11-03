@@ -4,10 +4,6 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.Canvas
-import androidx.compose.ui.draw.clip
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -20,10 +16,10 @@ import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.text.rememberTextMeasurer
@@ -46,6 +42,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -62,7 +59,6 @@ import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.WaterDrop
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -1024,6 +1020,38 @@ fun RosaryScreen(
             0 -> {
                 // Holy Rosary: the beads come first, then the prayer itself;
                 // the choice of mysteries and of voices closes the page.
+                // The choice of mysteries comes first, as visible rows rather
+                // than a menu: at 320dp and 130% text a dropdown's longest
+                // ES/PT label can overflow its menu, and a checked row needs
+                // no extra tap to read today's set or each set's days.
+                item {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    val todayLabel = lang.pick("Hoy", "Today", "Hoje")
+                    AppSectionHeader(
+                        title = lang.pick("Misterios", "Mysteries", "Mistérios")
+                    )
+                    AppListGroup(modifier = Modifier.testTag("rosary_mystery_picker")) {
+                        RosaryMysteryType.entries.forEach { mType ->
+                            AppListRow(
+                                title = mType.displayName.get(lang) +
+                                    if (mType == todayMystery.type) " · $todayLabel" else "",
+                                subtitle = mType.recommendedDays.get(lang),
+                                leadingIcon = mysteryIcon(mType),
+                                showsNavigationAffordance = false,
+                                selected = mType == selectedMysteryType,
+                                onClick = {
+                                    if (mType != selectedMysteryType) {
+                                        ttsManager.stop()
+                                        selectedMysteryType = mType
+                                        rosaryStepIndex = 0
+                                    }
+                                },
+                                modifier = Modifier.heightIn(min = 48.dp)
+                            )
+                        }
+                    }
+                }
+
                 item { Spacer(Modifier.height(design.spacing.cardGap)) }
 
                 // Where you are on the beads, and the way forward
@@ -1057,31 +1085,7 @@ fun RosaryScreen(
 
                 item {
                     Spacer(Modifier.height(design.spacing.cardGap))
-                    val todayLabel = lang.pick("Hoy", "Today", "Hoje")
                     AppListGroup {
-                        MenuPickerRow(
-                            title = currentMystery.type.displayName.get(lang),
-                            subtitle = if (selectedMysteryType == todayMystery.type) {
-                                lang.pick("Los misterios de hoy", "Today's mysteries", "Os mistérios de hoje")
-                            } else {
-                                currentMystery.type.recommendedDays.get(lang)
-                            },
-                            leadingIcon = mysteryIcon(selectedMysteryType),
-                            options = RosaryMysteryType.entries.map { mType ->
-                                mType to (mType.displayName.get(lang) +
-                                    if (mType == todayMystery.type) " · $todayLabel" else "")
-                            },
-                            selected = selectedMysteryType,
-                            trailingOverride = lang.pick("Cambiar", "Change", "Mudar"),
-                            onSelect = { mType ->
-                                if (mType != selectedMysteryType) {
-                                    ttsManager.stop()
-                                    selectedMysteryType = mType
-                                    rosaryStepIndex = 0
-                                }
-                            },
-                            testTag = "rosary_mystery_picker"
-                        )
                         MenuPickerRow(
                             title = lang.pick("Voces", "Voices", "Vozes"),
                             leadingIcon = Icons.Default.RecordVoiceOver,
@@ -1092,6 +1096,7 @@ fun RosaryScreen(
                             ),
                             selected = voiceMode,
                             onSelect = { ttsManager.setVoiceMode(it) },
+                            modifier = Modifier.heightIn(min = 48.dp),
                             testTag = "rosary_voice_mode_picker"
                         )
                     }
@@ -1169,7 +1174,8 @@ fun RosaryScreen(
                                 trailingText = if (section.index < rosaryStep.section) prayedLabel else null,
                                 showsNavigationAffordance = false,
                                 selected = section.index == rosaryStep.section,
-                                onClick = { goRosary(section.firstStep) }
+                                onClick = { goRosary(section.firstStep) },
+                                modifier = Modifier.heightIn(min = 48.dp)
                             )
                         }
                     }
@@ -1225,7 +1231,8 @@ fun RosaryScreen(
                                 trailingText = if (section.index < mercyStep.section) prayedLabel else null,
                                 showsNavigationAffordance = false,
                                 selected = section.index == mercyStep.section,
-                                onClick = { goMercy(section.firstStep) }
+                                onClick = { goMercy(section.firstStep) },
+                                modifier = Modifier.heightIn(min = 48.dp)
                             )
                         }
                     }
@@ -1311,10 +1318,7 @@ private fun GuideControlsCard(
             beads = guide.beads,
             activeIndex = step.bead,
             progress = index.toFloat() / guide.steps.lastIndex.coerceAtLeast(1),
-            where = where,
             count = count,
-            stepLabel = stepLabel,
-            context = eyebrow,
             onSelectBead = { bead ->
                 val target = guide.firstStepOn(bead)
                 if (target >= 0) onGo(target)
@@ -1340,6 +1344,26 @@ private fun GuideControlsCard(
                 }
         )
 
+        // Progress as text, not only as a ring: at 130% text the long
+        // ES/PT where/step labels overflowed the loop's centre, and a
+        // progress that is only colour and arc is invisible to a reader
+        // who cannot see the ring. This line wraps instead of clipping.
+        Spacer(Modifier.height(12.dp))
+        Text(
+            text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
+            style = styles.sectionEyebrow,
+            color = design.palette.accent,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
+        Spacer(Modifier.height(4.dp))
+        Text(
+            text = eyebrow + " · " + stepLabel + (count?.let { " · $it" } ?: ""),
+            style = styles.rowSubtitle,
+            color = design.palette.textSecondary,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.fillMaxWidth()
+        )
         Spacer(Modifier.height(12.dp))
         if (step.optional) {
             Text(
@@ -1353,7 +1377,7 @@ private fun GuideControlsCard(
             text = step.name,
             style = styles.sectionTitle,
             color = design.palette.textPrimary,
-            modifier = Modifier.testTag("current_prayer_title")
+            modifier = Modifier.testTag("current_prayer_title").semantics { heading() }
         )
         Spacer(Modifier.height(10.dp))
         PrayerDialogue(
@@ -1418,7 +1442,7 @@ private fun StepCard(step: GuideStep, lang: AppLanguage, spokenNow: String?) {
             label = if (instructionsOpen) lang.pick("Ocultar instrucciones", "Hide instructions", "Ocultar instruções")
                 else lang.pick("Instrucciones", "Instructions", "Instruções"),
             onClick = { instructionsOpen = !instructionsOpen },
-            modifier = Modifier.testTag("prayer_instructions_toggle").semantics {
+            modifier = Modifier.heightIn(min = 48.dp).testTag("prayer_instructions_toggle").semantics {
                 stateDescription = if (instructionsOpen) lang.pick("Expandido", "Expanded", "Expandido")
                     else lang.pick("Contraído", "Collapsed", "Recolhido")
             }
@@ -1457,10 +1481,7 @@ private fun BeadRail(
     beads: List<BeadSpec>,
     activeIndex: Int,
     progress: Float,
-    where: String,
     count: String?,
-    stepLabel: String,
-    context: String?,
     onSelectBead: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -1533,7 +1554,7 @@ private fun BeadRail(
                     .matchParentSize()
                     .pointerInput(geometry) {
                         detectTapGestures { tap ->
-                            val reach = 22.dp.toPx()
+                            val reach = 24.dp.toPx()
                             val hit = geometry.centres.indices.minByOrNull {
                                 (geometry.centres[it] - tap).getDistance()
                             }
@@ -1781,43 +1802,15 @@ private fun BeadRail(
                     .size(loopSize),
                 contentAlignment = Alignment.Center
             ) {
-                Column(
-                    modifier = Modifier.widthIn(max = loopSize * 0.72f),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    if (!context.isNullOrBlank()) {
-                        Text(
-                            text = context,
-                            style = styles.rowSubtitle,
-                            color = palette.textSecondary,
-                            textAlign = TextAlign.Center
-                        )
-                        Spacer(Modifier.height(design.spacing.cardGap / 3))
-                    }
+                // Only the short repetition count stays in the loop; the
+                // where/step progress is set as wrapping text below the rail.
+                if (count != null) {
                     Text(
-                        text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
-                        style = styles.sectionEyebrow,
+                        text = count,
+                        style = styles.rowTitle,
                         color = palette.accent,
-                        textAlign = TextAlign.Center
-                    )
-                    Spacer(Modifier.height(design.spacing.cardGap / 3))
-                    // The current prayer belongs in the reading column below,
-                    // rather than being repeated inside a miniature rosary.
-                    if (count != null) {
-                        Spacer(Modifier.height(design.spacing.cardGap / 4))
-                        Text(
-                            text = count,
-                            style = styles.rowTitle,
-                            color = palette.accent,
-                            textAlign = TextAlign.Center
-                        )
-                    }
-                    Spacer(Modifier.height(design.spacing.cardGap / 3))
-                    Text(
-                        text = stepLabel,
-                        style = styles.rowSubtitle,
-                        color = palette.textSecondary,
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.widthIn(max = loopSize * 0.72f)
                     )
                 }
             }
@@ -2020,9 +2013,15 @@ private fun RecitationControls(
         DesignLanguage.MATERIAL -> MaterialTheme.typography.labelLarge
         else -> styles.buttonLabel
     }
+    // All three labels are measured, not just the step buttons: the
+    // narration control is a labelled button now, and its ES/PT label
+    // ("Rezar en voz alta") is the longest of the three. The buffer is
+    // the three buttons' side insets, the two leading icons and the
+    // two row gaps.
     val minimumRowWidth = with(density) {
         (textMeasurer.measure(previousLabel.uppercase(), labelStyle).size.width +
-            textMeasurer.measure(nextLabel.uppercase(), labelStyle).size.width).toDp() + 192.dp
+            textMeasurer.measure(nextLabel.uppercase(), labelStyle).size.width +
+            textMeasurer.measure(audioLabel.uppercase(), labelStyle).size.width).toDp() + 216.dp
     }
 
     val previous: @Composable (Modifier) -> Unit = { modifier ->
@@ -2034,7 +2033,7 @@ private fun RecitationControls(
                 onPrevious()
             },
             leadingIcon = Icons.AutoMirrored.Filled.ArrowBack,
-            modifier = modifier.testTag(previousTag)
+            modifier = modifier.heightIn(min = 48.dp).testTag(previousTag)
         )
     }
     val next: @Composable (Modifier) -> Unit = { modifier ->
@@ -2045,76 +2044,39 @@ private fun RecitationControls(
                 haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                 onNext()
             },
-            modifier = modifier.testTag(nextTag)
+            modifier = modifier.heightIn(min = 48.dp).testTag(nextTag)
         )
     }
-    val narration: @Composable () -> Unit = {
-        NarrationButton(
-            icon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
+    val narration: @Composable (Modifier) -> Unit = { modifier ->
+        AppSecondaryButton(
             label = audioLabel,
-            active = isPlayingAudio,
             onClick = {
                 haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                 onToggleAudio()
             },
-            modifier = Modifier.testTag(audioTag)
+            leadingIcon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
+            modifier = modifier.heightIn(min = 48.dp).testTag(audioTag)
         )
     }
     BoxWithConstraints(Modifier.fillMaxWidth()) {
         if (maxWidth < minimumRowWidth) {
-            // Preserve complete translated labels at large type sizes. The
-            // primary action gets its own row; secondary controls stay below.
+            // Preserve complete translated labels at large type sizes: each
+            // control gets its own full-width row, Next first. Sharing a row
+            // with the long narration label squeezed Back's label onto two
+            // lines at 320dp and 130% text.
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 next(Modifier.fillMaxWidth())
-                Row(verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    previous(Modifier.weight(1f))
-                    narration()
-                }
+                previous(Modifier.fillMaxWidth())
+                narration(Modifier.fillMaxWidth())
             }
         } else {
             Row(verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 previous(Modifier.weight(1f))
                 next(Modifier.weight(1.15f))
-                narration()
+                narration(Modifier.weight(1f))
             }
         }
-    }
-}
-
-/** A compact secondary audio action, with a full accessible name and hit area. */
-@Composable
-private fun NarrationButton(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
-    label: String,
-    active: Boolean,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier
-) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val engraved = design.depth.cardBorderWidth > 0.dp
-    Box(
-        modifier = modifier
-            .size(48.dp)
-            .clip(androidx.compose.foundation.shape.CircleShape)
-            .then(
-                if (engraved) {
-                    Modifier.border(
-                        design.depth.cardBorderWidth,
-                        palette.gold.copy(alpha = 0.8f),
-                        androidx.compose.foundation.shape.CircleShape
-                    )
-                } else {
-                    Modifier.background(palette.accent.copy(alpha = if (active) 0.20f else 0.10f))
-                }
-            )
-            .clickable(role = Role.Button, onClick = onClick)
-            .semantics { contentDescription = label },
-        contentAlignment = Alignment.Center
-    ) {
-        Icon(imageVector = icon, contentDescription = null, tint = palette.accent, modifier = Modifier.size(22.dp))
     }
 }
 

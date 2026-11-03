@@ -6,26 +6,32 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
-import androidx.compose.foundation.ScrollState
-import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.VolumeUp
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -38,17 +44,20 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.data.models.ChristManifestation
 import com.example.data.models.MarianApparition
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
+import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
-import com.example.ui.components.MenuPickerRow
-import com.example.ui.design.AppListGroup
-import com.example.ui.design.AppListRow
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
@@ -57,6 +66,9 @@ import com.example.ui.theme.LocalAppTextStyles
 
 /** Sentinel for "every region", so the chip's label can be translated freely. */
 private const val EVERY_REGION = "ALL"
+
+/** Minimum touch target for every control this screen owns (AAA). */
+private val MinTouchTarget = 48.dp
 
 /**
  * The Marian advocations and the manifestations of Christ, each one set as a
@@ -84,7 +96,6 @@ fun DevotionsExplorerScreen(
 
     // Held outside the list: a rail that scrolled off screen would otherwise
     // come back rewound, with the chosen chip hidden off to the right.
-
     val marianList = repository.marianApparitions
     val christList = repository.christManifestations
 
@@ -134,6 +145,7 @@ fun DevotionsExplorerScreen(
     }
 
     val showingMarian = selectedCategoryTab == 0
+    val shownCount = if (showingMarian) filteredMarian.size else filteredChrist.size
 
     Column(
         modifier = modifier
@@ -155,35 +167,42 @@ fun DevotionsExplorerScreen(
                         ),
                         modifier = Modifier
                             .padding(horizontal = design.spacing.gutter)
+                            .heightIn(min = MinTouchTarget)
                             .testTag("devotions_search_input")
                     )
                     Spacer(Modifier.height(design.spacing.cardGap))
-                    // Devotion and region are rows with menus, so the tabs
-                    // above stay the page's only visible selector.
-                    AppListGroup {
-                        MenuPickerRow(
-                            title = currentLanguage.pick("Devoción", "Devotion", "Devoção"),
-                            options = categories.mapIndexed { i, label -> i to label },
-                            selected = selectedCategoryTab,
-                            onSelect = {
-                                selectedCategoryTab = it
-                                expandedId = null
-                            },
-                            testTag = "devotions_category_picker"
-                        )
-                        MenuPickerRow(
-                            title = currentLanguage.pick("Región", "Region", "Região"),
-                            options = regions,
-                            selected = selectedRegionFilter,
-                            onSelect = { selectedRegionFilter = it },
-                            testTag = "devotions_region_picker"
-                        )
-                    }
+                    // Devotion and region are visible filter chips rather than
+                    // collapsed menus: every choice is on screen at once, each
+                    // chip is a 48dp target, and the kit draws the selected
+                    // state from tokens, so this screen carries no colour.
+                    FilterChips(
+                        label = currentLanguage.pick("Devoción", "Devotion", "Devoção"),
+                        options = categories.mapIndexed { i, label -> i to label },
+                        selected = selectedCategoryTab,
+                        onSelect = {
+                            selectedCategoryTab = it
+                            expandedId = null
+                        },
+                        testTag = "devotions_category_picker"
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    FilterChips(
+                        label = currentLanguage.pick("Región", "Region", "Região"),
+                        options = regions,
+                        selected = selectedRegionFilter,
+                        onSelect = { selectedRegionFilter = it },
+                        testTag = "devotions_region_picker"
+                    )
                 }
             }
 
             item {
                 ReadingColumn {
+                    val countLine = currentLanguage.pick(
+                        "$shownCount resultados",
+                        "$shownCount results",
+                        "$shownCount resultados"
+                    )
                     if (showingMarian) {
                         AppSectionHeader(
                             title = currentLanguage.pick(
@@ -191,7 +210,7 @@ fun DevotionsExplorerScreen(
                                 "Marian Advocations",
                                 "Advocações Marianas"
                             ),
-                            subtitle = null
+                            subtitle = countLine
                         )
                     } else {
                         AppSectionHeader(
@@ -200,13 +219,12 @@ fun DevotionsExplorerScreen(
                                 "Devotions to Christ",
                                 "Devoções a Cristo"
                             ),
-                            subtitle = null
+                            subtitle = countLine
                         )
                     }
                 }
             }
 
-            val shownCount = if (showingMarian) filteredMarian.size else filteredChrist.size
             if (shownCount == 0) {
                 item {
                     ReadingColumn {
@@ -254,6 +272,58 @@ fun DevotionsExplorerScreen(
     }
 }
 
+/**
+ * One filter group as a wrapping row of chips under its caption: every option
+ * visible at once (no clipped label behind a dropdown), each chip a 48dp
+ * target. The caption keeps the old menu row's title, so the group keeps its
+ * spoken context for assistive technology.
+ */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun <T> FilterChips(
+    label: String,
+    options: List<Pair<T, String>>,
+    selected: T,
+    onSelect: (T) -> Unit,
+    testTag: String
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+    ) {
+        Text(
+            text = caps(label),
+            style = styles.sectionEyebrow,
+            color = design.palette.textSecondary,
+            modifier = Modifier.semantics { heading() }
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        FlowRow(
+            modifier = Modifier
+                .fillMaxWidth()
+                .testTag(testTag),
+            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
+            verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+        ) {
+            // The selection is carried by the chip's own selected state; the
+            // value is compared by equality so Int and String groups share
+            // this composable.
+            options.forEach { (value, optionLabel) ->
+                AppChip(
+                    label = optionLabel,
+                    selected = value == selected,
+                    onClick = { onSelect(value) },
+                    modifier = Modifier.heightIn(min = MinTouchTarget)
+                )
+            }
+        }
+    }
+}
+
 // ------------------------------------------------------- the Marian advocations
 
 @Composable
@@ -268,18 +338,15 @@ private fun ApparitionEntry(
     val styles = LocalAppTextStyles.current
 
     ReadingColumn {
-        AppListGroup {
-            AppListRow(
-                title = item.title.get(currentLanguage),
-                subtitle = item.location.get(currentLanguage),
-                trailingText = item.year,
-                showsNavigationAffordance = false,
-                selected = expanded,
-                onClick = onToggle
-            )
-        }
-
-        if (expanded) EntryBody {
+        DevotionCard(
+            title = item.title.get(currentLanguage),
+            subtitle = item.location.get(currentLanguage),
+            trailingText = item.year,
+            expanded = expanded,
+            onToggle = onToggle,
+            currentLanguage = currentLanguage,
+            testTag = "devotion_card_${item.id}"
+        ) {
             // The feast and the country are a line each, so they read as the
             // two columns of a printed header rather than as two more notes.
             Row(
@@ -359,17 +426,15 @@ private fun ManifestationEntry(
     val styles = LocalAppTextStyles.current
 
     ReadingColumn {
-        AppListGroup {
-            AppListRow(
-                title = item.title.get(currentLanguage),
-                subtitle = item.country.get(currentLanguage),
-                showsNavigationAffordance = false,
-                selected = expanded,
-                onClick = onToggle
-            )
-        }
-
-        if (expanded) EntryBody {
+        DevotionCard(
+            title = item.title.get(currentLanguage),
+            subtitle = item.country.get(currentLanguage),
+            trailingText = null,
+            expanded = expanded,
+            onToggle = onToggle,
+            currentLanguage = currentLanguage,
+            testTag = "devotion_card_${item.id}"
+        ) {
             Note(
                 label = currentLanguage.pick("Fiesta", "Feast day", "Festa"),
                 body = item.feastDay.get(currentLanguage),
@@ -422,6 +487,94 @@ private fun ManifestationEntry(
     }
 }
 
+/**
+ * One devotion as an M3 card: name, place and year on the header line, the
+ * account folded beneath it. The header is a single 48dp button role that
+ * announces its expanded state; the arrow is decoration, so it carries no
+ * description of its own. The body is not part of the toggle, so the prayer
+ * and listen controls inside are never nested inside another tap target.
+ */
+@Composable
+private fun DevotionCard(
+    title: String,
+    subtitle: String,
+    trailingText: String?,
+    expanded: Boolean,
+    onToggle: () -> Unit,
+    currentLanguage: AppLanguage,
+    testTag: String,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    val motion = design.motion
+
+    AppCard(
+        modifier = Modifier
+            .padding(horizontal = design.spacing.gutter)
+            .testTag(testTag)
+    ) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .clickable(role = Role.Button, onClick = onToggle)
+                .semantics(mergeDescendants = true) {
+                    stateDescription = if (expanded) {
+                        currentLanguage.pick("Abierta", "Expanded", "Expandida")
+                    } else {
+                        currentLanguage.pick("Cerrada", "Collapsed", "Recolhida")
+                    }
+                },
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(Modifier.weight(1f)) {
+                Text(
+                    text = title,
+                    style = MaterialTheme.typography.titleLarge,
+                    color = design.palette.textPrimary,
+                    modifier = Modifier.semantics { heading() }
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 4))
+                Text(
+                    text = subtitle,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = design.palette.textSecondary
+                )
+            }
+            if (trailingText != null) {
+                Spacer(Modifier.width(design.spacing.cardGap / 2))
+                Text(
+                    text = trailingText,
+                    style = MaterialTheme.typography.labelLarge,
+                    color = design.palette.textTertiary
+                )
+            }
+            Spacer(Modifier.width(design.spacing.cardGap / 2))
+            Icon(
+                imageVector = if (expanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
+                contentDescription = null,
+                tint = design.palette.textSecondary,
+                modifier = Modifier.size(design.decor.rowIconSize)
+            )
+        }
+
+        AnimatedVisibility(
+            visible = expanded,
+            enter = fadeIn(tween(motion.mediumMillis, easing = motion.standardEasing)) +
+                expandVertically(tween(motion.mediumMillis, easing = motion.standardEasing)),
+            exit = fadeOut(tween(motion.fastMillis)) +
+                shrinkVertically(tween(motion.fastMillis))
+        ) {
+            Column {
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                AppDivider()
+                Spacer(Modifier.height(design.spacing.cardGap))
+                content()
+            }
+        }
+    }
+}
+
 // ------------------------------------------------------------------- fittings
 
 /**
@@ -447,7 +600,9 @@ private fun PrayerDisclosure(
             currentLanguage.pick("Oración", "Prayer", "Oração")
         },
         onClick = { open = !open },
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
+            .heightIn(min = MinTouchTarget)
     )
 
     AnimatedVisibility(
@@ -478,46 +633,13 @@ private fun PrayerDisclosure(
                         label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
                         onClick = { onSpeakText(prayer) },
                         leadingIcon = Icons.Default.VolumeUp,
-                        modifier = Modifier.fillMaxWidth()
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
                     )
                 }
             }
         }
-    }
-}
-
-/** The prose under an index line, inset to the same measure as the line itself. */
-@Composable
-private fun EntryBody(content: @Composable ColumnScope.() -> Unit) {
-    val design = LocalAppDesign.current
-    Column(
-        Modifier
-            .fillMaxWidth()
-            .padding(horizontal = design.spacing.gutter)
-            .padding(top = design.spacing.cardGap),
-        content = content
-    )
-}
-
-/** A rail of chips that scrolls rather than wrapping a label to one letter. */
-@Composable
-private fun ChipRail(
-    scroll: ScrollState,
-    content: @Composable () -> Unit
-) {
-    val design = LocalAppDesign.current
-    Row(
-        Modifier
-            .fillMaxWidth()
-            .horizontalScroll(scroll)
-            .padding(
-                horizontal = design.spacing.gutter,
-                vertical = design.spacing.cardGap / 2
-            ),
-        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        content()
     }
 }
 
@@ -542,7 +664,7 @@ private fun Note(
         Spacer(Modifier.height(design.spacing.cardGap / 4))
         Text(
             text = body,
-            style = bodyStyle ?: MaterialTheme.typography.bodyMedium,
+            style = bodyStyle ?: MaterialTheme.typography.bodyLarge,
             color = design.palette.textPrimary
         )
     }
