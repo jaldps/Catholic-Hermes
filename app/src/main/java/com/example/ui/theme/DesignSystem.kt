@@ -198,11 +198,16 @@ object DesignTokens {
     )
 
     private val MaterialShapes = AppShapes(
-        card = RoundedCornerShape(16.dp),
-        cardLarge = RoundedCornerShape(28.dp),
+        // M3 shape scale: extraSmall 4, small 8, medium 12, large 16,
+        // extraLarge 28, full. card = medium (12) for filled/modest cards,
+        // cardLarge = large→extraLarge (16/28): metric tiles and banners use
+        // 16/28. Buttons and chips are stadiums; fields use the text-field
+        // corner (4dp) — the *search* stadium is shaped at use site.
+        card = RoundedCornerShape(12.dp),
+        cardLarge = RoundedCornerShape(16.dp),
         button = RoundedCornerShape(percent = 50),
         buttonSmall = RoundedCornerShape(percent = 50),
-        field = RoundedCornerShape(16.dp),
+        field = RoundedCornerShape(4.dp),
         chip = RoundedCornerShape(8.dp),
         sheet = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
         dialog = RoundedCornerShape(28.dp),
@@ -250,19 +255,20 @@ object DesignTokens {
     private val MaterialSpacing = AppSpacing(
         gutter = 16.dp,
         // 16, not 24: every section break is this gap *plus* the section
-        // header's own 20dp top, and 24 put 44dp of dead canvas between a
+        // header's own 16dp top, and 24 put 40dp of dead canvas between a
         // segmented group and the next header — twice Settings' rhythm.
         sectionGap = 16.dp,
         cardPadding = 16.dp,
-        cardGap = 12.dp,
+        // 8dp grid: card spacing uses the spacing scale, not 12dp.
+        cardGap = 8.dp,
         // 72dp is M3's two-line list item; 56dp is the one-line height and was
         // squeezing every row that carries a subtitle.
         rowMinHeight = 72.dp,
-        rowPaddingVertical = 12.dp,
+        rowPaddingVertical = 8.dp,
         listItemGap = 8.dp,
-        headerTopGap = 12.dp,
-        contentBottomGap = 28.dp,
-        iconLabelGap = 16.dp,
+        headerTopGap = 8.dp,
+        contentBottomGap = 24.dp,
+        iconLabelGap = 8.dp,
         insetGroupGap = 16.dp,
         readingMaxWidth = 680.dp
     )
@@ -540,10 +546,10 @@ object DesignTokens {
 
     /** Material [androidx.compose.material3.Shapes] derived from an identity. */
     fun materialShapes(shapes: AppShapes) = androidx.compose.material3.Shapes(
-        extraSmall = shapes.buttonSmall,
-        small = shapes.chip,
-        medium = shapes.card,
-        large = shapes.cardLarge,
-        extraLarge = shapes.dialog
+        extraSmall = shapes.field,      // 4dp text-field corner
+        small = shapes.chip,           // 8dp chips/menus
+        medium = shapes.card,          // 12dp cards
+        large = shapes.cardLarge,      // 16dp large cards
+        extraLarge = RoundedCornerShape(28.dp) // 28dp prominent cards / dialogs
     )
 }

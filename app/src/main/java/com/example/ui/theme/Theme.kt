@@ -104,36 +104,62 @@ private fun buildColorScheme(
             scrim = palette.scrim
         )
 
-        DesignLanguage.MATERIAL -> base.copy(
-            primary = accent,
-            onPrimary = onAccent,
-            primaryContainer = palette.accentMuted,
-            onPrimaryContainer = if (isDark) palette.textPrimary else accent,
-            secondary = palette.accent,
-            onSecondary = Color.White,
-            secondaryContainer = palette.selectionTint,
-            onSecondaryContainer = palette.textPrimary,
-            tertiary = palette.gold,
-            onTertiary = Color.White,
-            background = palette.canvas,
-            onBackground = palette.textPrimary,
-            surface = palette.canvas,
-            onSurface = palette.textPrimary,
-            surfaceVariant = palette.raised,
-            onSurfaceVariant = palette.textSecondary,
-            // Five distinct steps, not two values spread over five roles.
-            // Material separates layers by tone rather than by shadow, so a
-            // collapsed ladder leaves dark mode with no visible hierarchy at
-            // all — every card, row and tile renders the same colour.
-            surfaceContainerLowest = palette.groupedSurface,
-            surfaceContainerLow = lerp(palette.groupedSurface, palette.raised, 0.25f),
-            surfaceContainer = lerp(palette.groupedSurface, palette.raised, 0.5f),
-            surfaceContainerHigh = lerp(palette.groupedSurface, palette.raised, 0.75f),
-            surfaceContainerHighest = palette.raised,
-            outline = palette.hairline,
-            outlineVariant = palette.hairline,
-            scrim = palette.scrim
-        )
+        DesignLanguage.MATERIAL -> {
+            // Tonal containers struck from the accent itself (M3 seeded tonal
+            // palette), not the palette's fixed tints. In light, accent toned
+            // toward white (≈ tone 90/87); in dark, toward black (≈ tone 30/25).
+            // onPrimaryContainer is the accent's own tone-10/90 so legible text
+            // on the container stays in-family. onSurfaceVariant/outline* are
+            // seeded neutral tones, and outlineVariant is deliberately paler
+            // than outline (M3 outlineVariant is the hairline used for dividers
+            // and chip borders).
+            val container = accent.tonalToward(isDark, containerAmount = 0.76f)
+            val onContainer = accent.tonalToward(isDark, onAmount = 0.78f)
+            val secondaryContainer = accent.tonalToward(isDark, containerAmount = 0.84f)
+            val onSecondaryContainer = accent.tonalToward(isDark, onAmount = 0.82f)
+            val goldContainer = palette.gold.tonalToward(isDark, containerAmount = 0.80f)
+            val onGoldContainer = palette.gold.tonalToward(isDark, onAmount = 0.78f)
+            base.copy(
+                primary = accent,
+                onPrimary = onAccent,
+                primaryContainer = container,
+                onPrimaryContainer = onContainer,
+                secondary = palette.accent,
+                onSecondary = if (palette.accent.contrastsBetterWithWhite()) Color.White else Color.Black,
+                secondaryContainer = secondaryContainer,
+                onSecondaryContainer = onSecondaryContainer,
+                tertiary = palette.gold,
+                onTertiary = if (palette.gold.contrastsBetterWithWhite()) Color.White else Color.Black,
+                tertiaryContainer = goldContainer,
+                onTertiaryContainer = onGoldContainer,
+                error = base.error,
+                onError = base.onError,
+                errorContainer = base.errorContainer,
+                onErrorContainer = base.onErrorContainer,
+                background = palette.canvas,
+                onBackground = palette.textPrimary,
+                surface = palette.canvas,
+                onSurface = palette.textPrimary,
+                surfaceVariant = palette.raised,
+                onSurfaceVariant = palette.textSecondary,
+                // Surface tint carries the accent under elevated surfaces.
+                surfaceTint = accent,
+                surfaceBright = palette.groupedSurface,
+                surfaceDim = if (isDark) palette.canvas else Color(0xFFDADFD9),
+                // Five distinct steps, not two values spread over five roles.
+                surfaceContainerLowest = palette.groupedSurface,
+                surfaceContainerLow = lerp(palette.groupedSurface, palette.raised, 0.25f),
+                surfaceContainer = lerp(palette.groupedSurface, palette.raised, 0.5f),
+                surfaceContainerHigh = lerp(palette.groupedSurface, palette.raised, 0.75f),
+                surfaceContainerHighest = palette.raised,
+                outline = palette.hairline,
+                outlineVariant = lerp(palette.hairline, palette.canvas, 0.45f),
+                scrim = palette.scrim,
+                inversePrimary = accent,
+                inverseSurface = if (isDark) palette.groupedSurface else palette.raised,
+                inverseOnSurface = palette.textPrimary
+            )
+        }
 
         DesignLanguage.VATICAN -> base.copy(
             primary = accent,
@@ -161,6 +187,20 @@ private fun buildColorScheme(
             outlineVariant = palette.hairline,
             scrim = palette.scrim
         )
+    }
+}
+
+/**
+ * Tonal step of [this] colour. With [containerAmount] it blends toward the
+ * far end (white in light, black in dark) to make a container (≈ tone 90/30).
+ * With [onAmount] (small) it blends the *other* way — toward black in light
+ * (≈ tone 10) and toward white in dark (≈ tone 90) — so an on-colour reads
+ * on its container while staying in the accent's family.
+ */
+private fun Color.tonalToward(isDark: Boolean, containerAmount: Float? = null, onAmount: Float? = null): Color {
+    return when {
+        containerAmount != null -> lerp(this, if (isDark) Color.Black else Color.White, containerAmount)
+        else -> lerp(this, if (isDark) Color.White else Color.Black, onAmount ?: 0f)
     }
 }
 

@@ -323,7 +323,7 @@ object MaterialKit : AppKit {
     private val GroupInnerCorner = 4.dp
 
     /** Outer corner of a segmented list group, and the gap between its rows. */
-    private val GroupOuterCorner = 20.dp
+    private val GroupOuterCorner = 16.dp
     private val GroupGap = 2.dp
 
     /**
@@ -420,7 +420,7 @@ object MaterialKit : AppKit {
         val labelHeight = with(density) {
             (items.maxOfOrNull { measurer.measure(it.label, labelStyle, maxLines = 1).size.height } ?: 0).toDp()
         }
-        Surface(color = c.container) {
+        Surface(color = c.container, shadowElevation = 3.dp) {
             BoxWithConstraints(Modifier.fillMaxWidth().navigationBarsPadding().testTag("bottom_nav_bar")) {
                 val expanded = maxWidth >= 600.dp
                 val barHeight = maxOf(64.dp, labelHeight + if (expanded) 24.dp else 48.dp)
@@ -628,7 +628,7 @@ object MaterialKit : AppKit {
                             IconButton(onClick = onBack, modifier = Modifier.testTag("nav_back")) {
                                 Icon(
                                     Icons.AutoMirrored.Rounded.ArrowBack,
-                                    contentDescription = backLabel,
+                                    contentDescription = backLabel ?: "Back",
                                     tint = palette.textPrimary
                                 )
                             }
@@ -732,7 +732,7 @@ object MaterialKit : AppKit {
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleLarge,
-                        color = palette.textPrimary,
+                        color = MaterialTheme.colorScheme.onSurface,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -740,7 +740,7 @@ object MaterialKit : AppKit {
                         Text(
                             text = subtitle,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = palette.textSecondary,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -752,7 +752,7 @@ object MaterialKit : AppKit {
                     IconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Rounded.ArrowBack,
-                            contentDescription = null
+                            contentDescription = "Back"
                         )
                     }
                 }
@@ -760,9 +760,9 @@ object MaterialKit : AppKit {
             actions = actions,
             colors = TopAppBarDefaults.topAppBarColors(
                 containerColor = c.canvas,
-                titleContentColor = palette.textPrimary,
-                actionIconContentColor = palette.textSecondary,
-                navigationIconContentColor = palette.textSecondary
+                titleContentColor = MaterialTheme.colorScheme.onSurface,
+                actionIconContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                navigationIconContentColor = MaterialTheme.colorScheme.onSurfaceVariant
             )
         )
     }
@@ -830,7 +830,7 @@ object MaterialKit : AppKit {
         Column(
             modifier.fillMaxWidth().then(
                 if (inCard) Modifier.padding(bottom = 8.dp)
-                else Modifier.padding(horizontal = design.spacing.gutter + 16.dp)
+                else Modifier.padding(horizontal = design.spacing.gutter)
                     .padding(top = 16.dp, bottom = 8.dp)
             )
         ) {
@@ -852,7 +852,7 @@ object MaterialKit : AppKit {
                 }
             }
             if (subtitle != null && !shortAside) {
-                Spacer(Modifier.height(2.dp))
+                Spacer(Modifier.height(4.dp))
                 Text(
                     text = subtitle,
                     style = MaterialTheme.typography.bodyMedium,
@@ -872,7 +872,7 @@ object MaterialKit : AppKit {
         val c = roles()
         val inGroup = LocalInListGroup.current
         val interaction = remember { MutableInteractionSource() }
-        val rest = if (inGroup) GroupInnerCorner else 24.dp
+        val rest = if (inGroup) GroupInnerCorner else 12.dp
         val corner = pressMorph(interaction, onClick != null, rest, rest + 12.dp)
         FilledCard(
             modifier = modifier.fillMaxWidth(),
@@ -930,7 +930,7 @@ object MaterialKit : AppKit {
                 if (selected) Modifier.semantics { this.selected = true } else Modifier
             ),
             container = container,
-            shape = RoundedCornerShape(if (LocalInListGroup.current) GroupInnerCorner else 16.dp),
+            shape = if (LocalInListGroup.current) RoundedCornerShape(GroupInnerCorner) else design.shapes.card,
             onClick = onClick
         ) {
             androidx.compose.material3.ListItem(
@@ -956,7 +956,7 @@ object MaterialKit : AppKit {
                             if (showsNavigationAffordance && onClick != null) {
                                 Icon(
                                     Icons.AutoMirrored.Rounded.KeyboardArrowRight,
-                                    contentDescription = null, tint = secondary, modifier = Modifier.size(20.dp)
+                                    contentDescription = null, tint = secondary, modifier = Modifier.size(24.dp)
                                 )
                             }
                         }
@@ -975,7 +975,7 @@ object MaterialKit : AppKit {
         HorizontalDivider(
             modifier = modifier.fillMaxWidth(),
             thickness = 1.dp,
-            color = roles().outline
+            color = MaterialTheme.colorScheme.outlineVariant
         )
     }
 
@@ -1005,7 +1005,9 @@ object MaterialKit : AppKit {
             interactionSource = interaction,
             colors = ButtonDefaults.buttonColors(
                 containerColor = scheme.primary,
-                contentColor = scheme.onPrimary
+                contentColor = scheme.onPrimary,
+                disabledContainerColor = scheme.onSurface.copy(alpha = 0.12f),
+                disabledContentColor = scheme.onSurface.copy(alpha = 0.38f)
             ),
             // 24dp ends, 16dp before the label when a button leads with an
             // icon: the spec's own button insets.
@@ -1033,6 +1035,7 @@ object MaterialKit : AppKit {
         modifier: Modifier
     ) {
         val c = roles()
+        val scheme = MaterialTheme.colorScheme
         val interaction = remember { MutableInteractionSource() }
         FilledTonalButton(
             onClick = onClick,
@@ -1042,7 +1045,9 @@ object MaterialKit : AppKit {
             interactionSource = interaction,
             colors = ButtonDefaults.filledTonalButtonColors(
                 containerColor = c.accentSofter,
-                contentColor = c.onAccentSofter
+                contentColor = c.onAccentSofter,
+                disabledContainerColor = scheme.onSurface.copy(alpha = 0.12f),
+                disabledContentColor = scheme.onSurface.copy(alpha = 0.38f)
             ),
             contentPadding = PaddingValues(
                 start = if (leadingIcon != null) 16.dp else 24.dp,
@@ -1088,7 +1093,7 @@ object MaterialKit : AppKit {
                 Icon(
                     Icons.Rounded.Search,
                     contentDescription = null,
-                    tint = palette.textSecondary,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(start = 4.dp).size(24.dp)
                 )
             },
@@ -1097,8 +1102,8 @@ object MaterialKit : AppKit {
                     IconButton(onClick = { onValueChange("") }) {
                         Icon(
                             Icons.Rounded.Close,
-                            contentDescription = null,
-                            tint = palette.textSecondary
+                            contentDescription = "Clear",
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }
@@ -1253,7 +1258,7 @@ object MaterialKit : AppKit {
                     HorizontalDivider(
                         modifier = Modifier.align(Alignment.BottomStart).fillMaxWidth(),
                         thickness = 1.dp,
-                        color = c.highest
+                        color = MaterialTheme.colorScheme.outlineVariant
                     )
                     if (fixedTabs) {
                         PrimaryTabRow(
@@ -1440,7 +1445,7 @@ object MaterialKit : AppKit {
             shape = design.shapes.chip,
             colors = FilterChipDefaults.filterChipColors(
                 containerColor = Color.Transparent,
-                labelColor = palette.textSecondary,
+                labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
                 selectedContainerColor = if (design.isDark) c.accentSoft else c.accentSofter,
                 selectedLabelColor = if (design.isDark) c.onAccentSoft else c.onAccentSofter,
                 selectedLeadingIconColor = if (design.isDark) c.onAccentSoft else c.onAccentSofter
@@ -1449,7 +1454,7 @@ object MaterialKit : AppKit {
                 enabled = true,
                 selected = selected,
                 borderColor = c.outline,
-                selectedBorderColor = Color.Transparent
+                selectedBorderColor = c.outline
             )
         )
     }
@@ -1662,7 +1667,7 @@ object MaterialKit : AppKit {
         FilledCard(
             modifier = modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
             container = container,
-            shape = RoundedCornerShape(28.dp),
+            shape = design.shapes.dialog,
             onClick = onClick
         ) {
             Row(

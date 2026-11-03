@@ -28,6 +28,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -53,7 +54,6 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.TaskAlt
 import androidx.compose.material.icons.filled.WbTwilight
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
@@ -94,7 +94,6 @@ import com.example.ui.components.TextFormat
 import com.example.ui.components.IllustratedScreenHeader
 import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
-import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
@@ -223,7 +222,7 @@ fun HomeScreen(
                             style = styles.sectionEyebrow,
                             color = palette.accent
                         )
-                        Spacer(Modifier.height(6.dp))
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
                     }
                     Text(
                         text = "«$gospelPreview»",
@@ -236,12 +235,13 @@ fun HomeScreen(
                 } else {
                     Text(
                         text = strings("Lecturas no disponibles sin conexión.", "Readings unavailable offline.", "Leituras indisponíveis offline."),
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = styles.rowSubtitle,
                         color = palette.textSecondary
                     )
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
-                AppSecondaryButton(
+                // The hero action: one filled primary button to the full Mass.
+                AppPrimaryButton(
                     label = strings("Leer Misa", "Read Mass", "Ler Missa"),
                     onClick = onNavigateToMissal,
                     leadingIcon = Icons.Default.AutoStories,
@@ -300,6 +300,81 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
+        // Verse of the day: the screen's hero pull quote, directly after the
+        // reading hero so the devotional core reads in one arc.
+        item {
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("verse_of_the_day_card")
+            ) {
+                CardHeading(
+                    label = strings("Versículo del Día", "Verse of the Day", "Versículo do Dia"),
+                    icon = Icons.Default.FormatQuote,
+                    trailing = verseOfTheDay.reference
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = verseOfTheDay.text.get(currentLanguage),
+                    style = styles.quote,
+                    color = palette.textPrimary,
+                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppDivider()
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = verseOfTheDay.spiritualChallenge.get(currentLanguage),
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
+        // Saint of the day.
+        item {
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("saint_of_the_day_card")
+            ) {
+                CardHeading(
+                    label = strings("Santo del Día", "Saint of the Day", "Santo do Dia"),
+                    trailing = saintOfTheDay.feastDate
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = saintOfTheDay.name.get(currentLanguage),
+                    style = styles.sectionTitle,
+                    color = palette.textPrimary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Text(
+                    text = saintOfTheDay.title.get(currentLanguage),
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = saintOfTheDay.biography.get(currentLanguage),
+                    style = styles.rowSubtitle,
+                    color = palette.textPrimary,
+                    maxLines = 6,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppDivider()
+                Spacer(Modifier.height(design.spacing.cardGap))
+                MarginalQuote(
+                    text = saintOfTheDay.iconicQuote.get(currentLanguage),
+                    attribution = saintOfTheDay.name.get(currentLanguage)
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
         // 4. The routine: the hours of the day, closed by the rule of life,
         // so the practices read as one group rather than a stray card.
         item {
@@ -348,80 +423,6 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.sectionGap / 2))
         }
 
-        // Verse of the day: the screen's hero pull quote.
-        item {
-            AppCard(
-                modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("verse_of_the_day_card")
-            ) {
-                CardHeading(
-                    label = strings("Versículo del Día", "Verse of the Day", "Versículo do Dia"),
-                    icon = Icons.Default.FormatQuote,
-                    trailing = verseOfTheDay.reference
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                Text(
-                    text = verseOfTheDay.text.get(currentLanguage),
-                    style = styles.quote,
-                    color = palette.textPrimary,
-                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppDivider()
-                Spacer(Modifier.height(design.spacing.cardGap))
-                Text(
-                    text = verseOfTheDay.spiritualChallenge.get(currentLanguage),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = palette.textSecondary
-                )
-            }
-            Spacer(Modifier.height(design.spacing.cardGap))
-        }
-
-        // Saint of the day.
-        item {
-            AppCard(
-                modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("saint_of_the_day_card")
-            ) {
-                CardHeading(
-                    label = strings("Santo del Día", "Saint of the Day", "Santo do Dia"),
-                    trailing = saintOfTheDay.feastDate
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                Text(
-                    text = saintOfTheDay.name.get(currentLanguage),
-                    style = styles.sectionTitle,
-                    color = palette.textPrimary
-                )
-                Spacer(Modifier.height(6.dp))
-                Text(
-                    text = saintOfTheDay.title.get(currentLanguage),
-                    style = styles.rowSubtitle,
-                    color = palette.textSecondary
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                Text(
-                    text = saintOfTheDay.biography.get(currentLanguage),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = palette.textPrimary,
-                    maxLines = 6,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppDivider()
-                Spacer(Modifier.height(design.spacing.cardGap))
-                MarginalQuote(
-                    text = saintOfTheDay.iconicQuote.get(currentLanguage),
-                    attribution = saintOfTheDay.name.get(currentLanguage)
-                )
-            }
-            Spacer(Modifier.height(design.spacing.cardGap))
-        }
-
         // Nearby parishes, straight out to the device's map app.
         item {
             val openNearbyChurches = {
@@ -448,34 +449,57 @@ fun HomeScreen(
             )
         }
 
+        // Shortcuts grid: tonal tiles with a 48dp+ target instead of a plain
+        // list, so the gateways to the rest of the app read at a glance.
         item {
-            AppListGroup {
-                AppListRow(
-                    title = strings("Directorio Iglesias", "Church Directory", "Diretório Igrejas"),
-                    leadingIcon = Icons.Default.Church,
-                    onClick = onNavigateToDoctrine
-                )
-                AppListRow(
-                    title = strings("Trivia Católica", "Catholic Trivia", "Quiz Católico"),
-                    leadingIcon = Icons.Default.Star,
-                    onClick = onNavigateToQuiz
-                )
-                AppListRow(
-                    title = strings("Catecismo (CCC)", "Catechism (CCC)", "Catecismo (CIC)"),
-                    leadingIcon = Icons.Default.MenuBook,
-                    onClick = onNavigateToCatechism
-                )
-                AppListRow(
-                    title = strings("Santuarios y Fe", "Shrines & Pilgrims", "Santuários e Fé"),
-                    leadingIcon = Icons.Default.Place,
-                    onClick = onNavigateToPilgrimage
-                )
-                AppListRow(
-                    title = strings("Idioma", "Language", "Idioma"),
-                    leadingIcon = Icons.Default.Language,
-                    trailingText = "${currentLanguage.flag} ${currentLanguage.code.uppercase()}",
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter),
+                verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+            ) {
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    ShortcutTile(
+                        label = strings("Directorio Iglesias", "Church Directory", "Diretório Igrejas"),
+                        icon = Icons.Default.Church,
+                        onClick = onNavigateToDoctrine,
+                        modifier = Modifier.weight(1f)
+                    )
+                    ShortcutTile(
+                        label = strings("Trivia Católica", "Catholic Trivia", "Quiz Católico"),
+                        icon = Icons.Default.Star,
+                        onClick = onNavigateToQuiz,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    ShortcutTile(
+                        label = strings("Catecismo (CCC)", "Catechism (CCC)", "Catecismo (CIC)"),
+                        icon = Icons.Default.MenuBook,
+                        onClick = onNavigateToCatechism,
+                        modifier = Modifier.weight(1f)
+                    )
+                    ShortcutTile(
+                        label = strings("Santuarios y Fe", "Shrines & Pilgrims", "Santuários e Fé"),
+                        icon = Icons.Default.Place,
+                        onClick = onNavigateToPilgrimage,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+                ShortcutTile(
+                    label = strings("Idioma", "Language", "Idioma"),
+                    icon = Icons.Default.Language,
                     onClick = onOpenLanguageSelector,
-                    modifier = Modifier.testTag("widget_lang_button")
+                    trailing = "${currentLanguage.flag} ${currentLanguage.code.uppercase()}",
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("widget_lang_button")
                 )
             }
         }
@@ -565,6 +589,68 @@ private fun CardHeading(
                 color = trailingColor ?: design.palette.textTertiary,
                 maxLines = 1
             )
+        }
+    }
+}
+
+/**
+ * One tonal shortcut tile in the Explore grid. The icon sits in a badge
+ * shaped from identity tokens (a circle in Material, square in Vatican),
+ * the label wraps to two lines, and the whole tile is a 72dp+ button so
+ * the touch target never drops below M3's minimum.
+ */
+@Composable
+private fun ShortcutTile(
+    label: String,
+    icon: ImageVector,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    trailing: String? = null
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    AppCard(
+        modifier = modifier.heightIn(min = 72.dp),
+        onClick = onClick
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(design.decor.rowIconSize * 1.6f)
+                    .clip(design.shapes.badge)
+                    .background(palette.accentMuted),
+                contentAlignment = Alignment.Center
+            ) {
+                Icon(
+                    imageVector = icon,
+                    contentDescription = null,
+                    tint = palette.accent,
+                    modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
+                )
+            }
+            Spacer(Modifier.width(design.spacing.cardGap))
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = label,
+                    style = styles.rowTitle,
+                    color = palette.textPrimary,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
+                )
+                if (trailing != null) {
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Text(
+                        text = trailing,
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary,
+                        maxLines = 1
+                    )
+                }
+            }
         }
     }
 }

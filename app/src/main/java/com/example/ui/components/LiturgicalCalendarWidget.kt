@@ -6,7 +6,6 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,27 +16,19 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AutoStories
-import androidx.compose.material.icons.filled.CalendarMonth
-import androidx.compose.material.icons.filled.ExpandLess
-import androidx.compose.material.icons.filled.ExpandMore
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -49,19 +40,65 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
 import com.example.data.models.LiturgicalCalendarDay
-import com.example.ui.theme.LiturgicalGold
-import com.example.ui.theme.SacredBurgundy
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 
+/** M3 minimum touch target: the meditation toggle and language chip meet it. */
+private val MinTouchTarget = 48.dp
+
+private fun Color.relativeLuminance(): Float {
+    fun ch(c: Float): Float {
+        val v = c.toDouble()
+        return (if (v <= 0.03928) v / 12.92 else Math.pow((v + 0.055) / 1.055, 2.4)).toFloat()
+    }
+    return 0.2126f * ch(red) + 0.7152f * ch(green) + 0.0722f * ch(blue)
+}
+
+private fun Color.contrastAgainst(other: Color): Float {
+    val hi = maxOf(relativeLuminance(), other.relativeLuminance())
+    val lo = minOf(relativeLuminance(), other.relativeLuminance())
+    return (hi + 0.05f) / (lo + 0.05f)
+}
+
+/** Walks this colour toward black or white until it reads on [background]. */
+private fun Color.readableOn(background: Color, target: Float = 4.5f): Color {
+    var candidate = this
+    val goLighter = background.relativeLuminance() < 0.5f
+    repeat(14) {
+        if (contrastAgainst(background) >= target) return candidate
+        candidate = if (goLighter) {
+            Color(
+                red + (1f - red) * 0.11f,
+                green + (1f - green) * 0.11f,
+                blue + (1f - blue) * 0.11f,
+                alpha
+            )
+        } else {
+            Color(red * 0.89f, green * 0.89f, blue * 0.89f, alpha)
+        }
+    }
+    return candidate
+}
+
+/**
+ * The liturgical day as one tonal card: date eyebrow, celebration title,
+ * season/rank line, lectionary and fasting badges, then the Gospel citation
+ * with its expandable meditation. Colours come only from the theme — the
+ * seasonal hex tints the surface container and is never used as text — so
+ * the widget follows the active identity and the light/dark scheme. The two
+ * touch surfaces (language chip, meditation toggle) are at least 48dp tall.
+ */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun LiturgicalCalendarWidget(
@@ -71,7 +108,17 @@ fun LiturgicalCalendarWidget(
     modifier: Modifier = Modifier
 ) {
     var isExpanded by remember { mutableStateOf(false) }
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val scheme = MaterialTheme.colorScheme
+    val type = MaterialTheme.typography
+
+    // The seasonal colour only ever tints a container and fills a dot;
+    // lettering on it is solved for contrast instead of painted raw.
     val liturgicalColor = Color(liturgicalDay.liturgicalColorHex)
+    val colorContainer = liturgicalColor.copy(alpha = 0.14f).compositeOver(scheme.surfaceContainer)
+    val onColorContainer = liturgicalColor.readableOn(colorContainer)
 
     // Liturgical color name translation
     val colorLabel = when (liturgicalDay.liturgicalColorHex) {
@@ -102,34 +149,45 @@ fun LiturgicalCalendarWidget(
         }
     }
 
+    val meditationLabel = when (currentLanguage) {
+        AppLanguage.ES -> "MEDITACIÓN LITÚRGICA DEL DÍA"
+        AppLanguage.EN -> "LITURGICAL MEDITATION OF THE DAY"
+        AppLanguage.PT -> "MEDITAÇÃO LITÚRGICA DO DIA"
+    }
+    val toggleLabel = if (isExpanded) {
+        when (currentLanguage) {
+            AppLanguage.ES -> "Ocultar"
+            AppLanguage.EN -> "Hide"
+            AppLanguage.PT -> "Ocultar"
+        }
+    } else {
+        when (currentLanguage) {
+            AppLanguage.ES -> "Meditación"
+            AppLanguage.EN -> "Meditation"
+            AppLanguage.PT -> "Meditação"
+        }
+    }
+
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 8.dp)
-            .border(
-                width = 1.2.dp,
-                brush = Brush.linearGradient(
-                    colors = listOf(
-                        LiturgicalGold.copy(alpha = 0.85f),
-                        LiturgicalGold.copy(alpha = 0.35f),
-                        LiturgicalGold.copy(alpha = 0.85f)
-                    )
-                ),
-                shape = RoundedCornerShape(20.dp)
+            .padding(
+                horizontal = design.spacing.gutter,
+                vertical = design.spacing.cardGap / 2
             )
             .testTag("liturgical_calendar_widget"),
-        shape = RoundedCornerShape(20.dp),
+        shape = design.shapes.cardLarge,
         colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surface
+            containerColor = scheme.surfaceContainerLow
         ),
-        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(16.dp)
+                .padding(design.spacing.cardPadding)
         ) {
-            // Top Bar: Date, Language Selector & Minimal Gold Cross Motif
+            // Top Bar: Date + Language Selector
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -138,99 +196,100 @@ fun LiturgicalCalendarWidget(
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Box(
                         modifier = Modifier
-                            .size(10.dp)
-                            .clip(CircleShape)
-                            .background(LiturgicalGold)
+                            .size(design.decor.rowIconSize / 2)
+                            .clip(design.shapes.badge)
+                            .background(palette.gold.readableOn(scheme.surfaceContainerLow))
                     )
-                    Spacer(modifier = Modifier.width(6.dp))
+                    Spacer(modifier = Modifier.width(design.spacing.cardGap / 2))
                     Text(
                         text = "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName}".uppercase(),
-                        fontSize = 11.sp,
-                        fontWeight = FontWeight.Bold,
-                        letterSpacing = 1.2.sp,
-                        color = LiturgicalGold,
-                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily
+                        style = styles.sectionEyebrow,
+                        color = palette.textSecondary
                     )
                 }
 
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    // Language flag / switch button
-                    Surface(
-                        modifier = Modifier
-                            .clip(RoundedCornerShape(12.dp))
-                            .clickable(onClick = onOpenLanguageSelector)
-                            .testTag("widget_lang_button"),
-                        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
-                        shape = RoundedCornerShape(12.dp)
+                // Language switch: 48dp hit area on a tonal chip.
+                Surface(
+                    modifier = Modifier
+                        .clip(design.shapes.chip)
+                        .clickable(role = Role.Button, onClick = onOpenLanguageSelector)
+                        .heightIn(min = MinTouchTarget)
+                        .testTag("widget_lang_button"),
+                    color = scheme.surfaceContainer,
+                    shape = design.shapes.chip
+                ) {
+                    Row(
+                        modifier = Modifier.padding(
+                            horizontal = design.spacing.iconLabelGap,
+                            vertical = design.spacing.cardGap / 2
+                        ),
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Text(text = currentLanguage.flag, fontSize = 14.sp)
-                            Spacer(modifier = Modifier.width(4.dp))
-                            Text(
-                                text = currentLanguage.code.uppercase(),
-                                fontSize = 11.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.onSurfaceVariant
-                            )
-                        }
+                        Text(text = currentLanguage.flag, style = type.titleSmall)
+                        Spacer(modifier = Modifier.width(4.dp))
+                        Text(
+                            text = currentLanguage.code.uppercase(),
+                            style = type.labelLarge,
+                            color = scheme.onSurfaceVariant
+                        )
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(design.spacing.cardGap))
 
-            // Celebration Title (Big Serif Header)
+            // Celebration Title, set in the identity's display face.
             Text(
                 text = liturgicalDay.celebrationTitle.get(currentLanguage),
-                fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
-                fontWeight = FontWeight.Bold,
-                fontSize = 19.sp,
-                color = SacredBurgundy,
-                lineHeight = 24.sp
+                style = styles.sectionTitle,
+                color = palette.textPrimary
             )
 
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(design.spacing.cardGap / 2))
 
             // Season and Liturgical Rank
             Text(
                 text = "${liturgicalDay.seasonName.get(currentLanguage)} • ${liturgicalDay.rank.get(currentLanguage)}",
-                fontSize = 13.sp,
-                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.75f)
+                style = type.bodyMedium,
+                color = palette.textSecondary
             )
 
-            Spacer(modifier = Modifier.height(12.dp))
+            Spacer(modifier = Modifier.height(design.spacing.cardGap))
 
-            // Lectionary Cycles & Liturgical Color Badges (Row of Pills)
+            // Lectionary Cycles & Liturgical Color Badges
             FlowRow(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalArrangement = Arrangement.spacedBy(6.dp)
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+                verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
             ) {
-                // Color Badge
+                // Seasonal colour badge.
                 Surface(
-                    shape = RoundedCornerShape(8.dp),
-                    color = liturgicalColor.copy(alpha = 0.12f),
-                    border = androidx.compose.foundation.BorderStroke(1.dp, liturgicalColor.copy(alpha = 0.5f))
+                    shape = design.shapes.chip,
+                    color = colorContainer,
+                    border = androidx.compose.foundation.BorderStroke(
+                        1.dp,
+                        liturgicalColor.copy(alpha = 0.45f)
+                    )
                 ) {
                     Row(
-                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                        modifier = Modifier.padding(
+                            horizontal = design.spacing.cardGap,
+                            vertical = design.spacing.cardGap / 2
+                        ),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Box(
                             modifier = Modifier
-                                .size(9.dp)
-                                .clip(CircleShape)
+                                .size(design.decor.rowIconSize / 2)
+                                .clip(design.shapes.badge)
                                 .background(liturgicalColor)
                         )
-                        Spacer(modifier = Modifier.width(6.dp))
+                        Spacer(modifier = Modifier.width(design.spacing.cardGap / 2))
                         Text(
                             text = colorLabel,
-                            fontSize = 11.sp,
+                            style = type.labelSmall,
                             fontWeight = FontWeight.SemiBold,
-                            color = liturgicalColor
+                            color = onColorContainer
                         )
                     }
                 }
@@ -238,16 +297,21 @@ fun LiturgicalCalendarWidget(
                 // Sunday Cycle (A / B / C)
                 liturgicalDay.sundayCycle?.let { cycle ->
                     Surface(
-                        shape = RoundedCornerShape(8.dp),
-                        color = LiturgicalGold.copy(alpha = 0.12f),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, LiturgicalGold.copy(alpha = 0.6f))
+                        shape = design.shapes.chip,
+                        color = scheme.secondaryContainer,
+                        border = androidx.compose.foundation.BorderStroke(
+                            1.dp,
+                            scheme.outline
+                        )
                     ) {
                         Text(
                             text = cycle.get(currentLanguage),
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = SacredBurgundy,
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                            style = type.labelSmall.copy(fontWeight = FontWeight.Bold),
+                            color = scheme.onSecondaryContainer,
+                            modifier = Modifier.padding(
+                                horizontal = design.spacing.cardGap,
+                                vertical = design.spacing.cardGap / 2
+                            )
                         )
                     }
                 }
@@ -255,69 +319,100 @@ fun LiturgicalCalendarWidget(
                 // Weekday Cycle (I / II)
                 liturgicalDay.weekdayCycle?.let { cycle ->
                     Surface(
-                        shape = RoundedCornerShape(8.dp),
-                        color = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.4f),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, MaterialTheme.colorScheme.outline.copy(alpha = 0.3f))
+                        shape = design.shapes.chip,
+                        color = scheme.tertiaryContainer,
+                        border = androidx.compose.foundation.BorderStroke(
+                            1.dp,
+                            scheme.outline
+                        )
                     ) {
                         Text(
                             text = cycle.get(currentLanguage),
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Medium,
-                            color = MaterialTheme.colorScheme.onSecondaryContainer,
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
+                            style = type.labelSmall,
+                            color = scheme.onTertiaryContainer,
+                            modifier = Modifier.padding(
+                                horizontal = design.spacing.cardGap,
+                                vertical = design.spacing.cardGap / 2
+                            )
                         )
                     }
                 }
 
                 // Fasting / Abstinence or Festive Obligation Indicator
                 liturgicalDay.fastingRule?.let { rule ->
+                    val fastContainer = if (liturgicalDay.isFastOrAbstinence) {
+                        scheme.surfaceContainer
+                    } else {
+                        scheme.primaryContainer
+                    }
+                    val fastContent = if (liturgicalDay.isFastOrAbstinence) {
+                        scheme.onSurfaceVariant
+                    } else {
+                        scheme.onPrimaryContainer
+                    }
                     Surface(
-                        shape = RoundedCornerShape(8.dp),
-                        color = if (liturgicalDay.isFastOrAbstinence) {
-                            Color(0xFF5E2777).copy(alpha = 0.12f)
-                        } else {
-                            Color(0xFF2C6B3E).copy(alpha = 0.1f)
-                        },
+                        shape = design.shapes.chip,
+                        color = fastContainer,
                         border = androidx.compose.foundation.BorderStroke(
                             1.dp,
-                            if (liturgicalDay.isFastOrAbstinence) Color(0xFF5E2777).copy(alpha = 0.4f)
-                            else Color(0xFF2C6B3E).copy(alpha = 0.4f)
+                            fastContent.copy(alpha = 0.35f)
                         )
                     ) {
                         Row(
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp),
+                            modifier = Modifier.padding(
+                                horizontal = design.spacing.cardGap,
+                                vertical = design.spacing.cardGap / 2
+                            ),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Icon(
                                 imageVector = if (liturgicalDay.isFastOrAbstinence) Icons.Default.Restaurant else Icons.Default.Star,
                                 contentDescription = null,
-                                modifier = Modifier.size(11.dp),
-                                tint = if (liturgicalDay.isFastOrAbstinence) Color(0xFF5E2777) else Color(0xFF2C6B3E)
+                                modifier = Modifier.size(design.decor.rowIconSize * 0.6f),
+                                tint = fastContent
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
                                 text = rule.get(currentLanguage),
-                                fontSize = 11.sp,
+                                style = type.labelSmall.copy(fontWeight = FontWeight.SemiBold),
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
-                                color = if (liturgicalDay.isFastOrAbstinence) Color(0xFF5E2777) else Color(0xFF2C6B3E),
-                                fontWeight = FontWeight.SemiBold
+                                color = fastContent
                             )
                         }
                     }
                 }
             }
 
-            Spacer(modifier = Modifier.height(10.dp))
+            Spacer(modifier = Modifier.height(design.spacing.cardGap))
 
-            // Gospel Verse Citation and Expandable Reflection Button
+            // Gospel Verse Citation and Expandable Reflection Button (48dp).
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .clip(RoundedCornerShape(10.dp))
-                    .clickable { isExpanded = !isExpanded }
-                    .background(MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f))
-                    .padding(horizontal = 10.dp, vertical = 8.dp),
+                    .clip(design.shapes.card)
+                    .clickable(role = Role.Button) { isExpanded = !isExpanded }
+                    .background(scheme.surfaceContainer)
+                    .heightIn(min = MinTouchTarget)
+                    .padding(
+                        horizontal = design.spacing.iconLabelGap,
+                        vertical = design.spacing.cardGap / 2
+                    )
+                    .semantics {
+                        stateDescription = if (isExpanded) {
+                            when (currentLanguage) {
+                                AppLanguage.ES -> "Expandida"
+                                AppLanguage.EN -> "Expanded"
+                                AppLanguage.PT -> "Expandida"
+                            }
+                        } else {
+                            when (currentLanguage) {
+                                AppLanguage.ES -> "Contraída"
+                                AppLanguage.EN -> "Collapsed"
+                                AppLanguage.PT -> "Recolhida"
+                            }
+                        }
+                    },
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -327,16 +422,15 @@ fun LiturgicalCalendarWidget(
                 ) {
                     Icon(
                         imageVector = Icons.Default.AutoStories,
-                        contentDescription = "Evangelio",
-                        tint = LiturgicalGold,
-                        modifier = Modifier.size(16.dp)
+                        contentDescription = null,
+                        tint = palette.gold.readableOn(scheme.surfaceContainer),
+                        modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
                     )
-                    Spacer(modifier = Modifier.width(8.dp))
+                    Spacer(modifier = Modifier.width(design.spacing.cardGap))
                     Text(
                         text = liturgicalDay.gospelVerseRef,
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        color = MaterialTheme.colorScheme.onSurface,
+                        style = type.titleSmall,
+                        color = scheme.onSurface,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -344,28 +438,16 @@ fun LiturgicalCalendarWidget(
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        text = if (isExpanded) {
-                            when (currentLanguage) {
-                                AppLanguage.ES -> "Ocultar"
-                                AppLanguage.EN -> "Hide"
-                                AppLanguage.PT -> "Ocultar"
-                            }
-                        } else {
-                            when (currentLanguage) {
-                                AppLanguage.ES -> "Meditación"
-                                AppLanguage.EN -> "Meditation"
-                                AppLanguage.PT -> "Meditação"
-                            }
-                        },
-                        fontSize = 11.sp,
-                        color = LiturgicalGold,
-                        fontWeight = FontWeight.Bold
+                        text = toggleLabel,
+                        style = type.labelLarge,
+                        color = scheme.primary
                     )
+                    Spacer(modifier = Modifier.width(4.dp))
                     Icon(
                         imageVector = if (isExpanded) Icons.Default.KeyboardArrowUp else Icons.Default.KeyboardArrowDown,
-                        contentDescription = if (isExpanded) "Colapsar" else "Expandir",
-                        tint = LiturgicalGold,
-                        modifier = Modifier.size(16.dp)
+                        contentDescription = null,
+                        tint = scheme.primary,
+                        modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
                     )
                 }
             }
@@ -379,33 +461,24 @@ fun LiturgicalCalendarWidget(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(top = 10.dp)
+                        .padding(top = design.spacing.cardGap)
                         .background(
-                            color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.2f),
-                            shape = RoundedCornerShape(10.dp)
+                            color = scheme.surfaceContainerHigh,
+                            shape = design.shapes.card
                         )
-                        .padding(12.dp)
+                        .padding(design.spacing.cardPadding)
                 ) {
                     Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "MEDITACIÓN LITÚRGICA DEL DÍA"
-                            AppLanguage.EN -> "LITURGICAL MEDITATION OF THE DAY"
-                            AppLanguage.PT -> "MEDITAÇÃO LITÚRGICA DO DIA"
-                        },
-                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 11.sp,
-                        color = SacredBurgundy,
-                        letterSpacing = 1.sp
+                        text = meditationLabel,
+                        style = styles.sectionEyebrow,
+                        color = palette.textSecondary
                     )
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(design.spacing.cardGap / 2))
                     Text(
                         text = liturgicalDay.missalMeditation?.get(currentLanguage)
                             ?: liturgicalDay.celebrationTitle.get(currentLanguage),
-                        fontSize = 13.sp,
-                        lineHeight = 18.sp,
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.85f),
-                        fontStyle = androidx.compose.ui.text.font.FontStyle.Italic
+                        style = styles.scripture,
+                        color = palette.textPrimary
                     )
                 }
             }

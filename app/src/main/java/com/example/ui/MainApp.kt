@@ -5,6 +5,8 @@ import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -30,7 +32,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
@@ -139,33 +143,92 @@ fun MainApp(
         )
     }
 
+    // Popping a pushed screen returns to the tab it was opened from; popping
+    // a non-Home tab returns to Home. System back and the top-bar back share
+    // this so the two can never drift apart.
+    fun pop() {
+        if (isPushed) current = origin else go(AppDestination.HOME)
+    }
+
+    // Hoisted above the scaffold so system back is honoured regardless of
+    // which identity is in force or whether the scaffold content is composed.
+    BackHandler(enabled = current != AppDestination.HOME) { pop() }
+
     AppScaffold(
         title = current.title(currentLanguage),
         navItems = navItems,
         selectedNavIndex = tabs.indexOf(if (isPushed) origin else current),
         onNavSelected = { go(tabs[it]) },
-        onBack = if (isPushed) ({ current = origin }) else null,
+        onBack = if (isPushed) ({ pop() }) else null,
         backLabel = if (isPushed) origin.title(currentLanguage) else null
         // Appearance and language are settings, listed under More, not two
         // glyphs floating over every screen.
     ) { innerPadding ->
-        BackHandler(enabled = current != AppDestination.HOME) {
-            if (isPushed) current = origin else go(AppDestination.HOME)
-        }
-
+        // Edge-to-edge: enableEdgeToEdge() lives in MainActivity and every
+        // kit's Scaffold sets contentWindowInsets = safeDrawing, so
+        // innerPadding already carries the status/nav insets plus the top
+        // bar and bottom bar heights. Applying it here keeps content clear
+        // of all four edges for every identity without double-insetting.
         Box(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
+                // Slide transitions must not paint over the top bar or nav
+                // bar while a screen is entering; the frame clips them.
+                .clipToBounds()
         ) {
             AnimatedContent(
                 targetState = current,
                 transitionSpec = {
-                    val spec = tween<Float>(
-                        durationMillis = design.motion.mediumMillis,
-                        easing = design.motion.standardEasing
-                    )
-                    fadeIn(spec) togetherWith fadeOut(spec)
+                    val motion = design.motion
+                    // Enters are emphasised, exits are standard: M3's
+                    // direction-aware pattern. Slides use a fraction of the
+                    // width rather than full width so heavy scrollable
+                    // screens animate without jank on low-end devices.
+                    val enterSlide = tween<IntOffset>(motion.mediumMillis, easing = motion.emphasizedEasing)
+                    val exitFade = tween<Float>(motion.fastMillis, easing = motion.standardEasing)
+                    when {
+                        initialState !in tabs && targetState in tabs -> {
+                            // Pop: pushed screen leaves to the right, the
+                            // origin tab returns from the left.
+                            (slideInHorizontally(
+                                initialOffsetX = { -it / 3 },
+                                animationSpec = enterSlide
+                            ) + fadeIn(exitFade)) togetherWith
+                                (slideOutHorizontally(
+                                    targetOffsetX = { it / 3 },
+                                    animationSpec = enterSlide
+                                ) + fadeOut(exitFade))
+                        }
+                        targetState !in tabs -> {
+                            // Push: new screen arrives from the right over a
+                            // screen that recedes to the left.
+                            (slideInHorizontally(
+                                initialOffsetX = { it / 3 },
+                                animationSpec = enterSlide
+                            ) + fadeIn(exitFade)) togetherWith
+                                (slideOutHorizontally(
+                                    targetOffsetX = { -it / 3 },
+                                    animationSpec = enterSlide
+                                ) + fadeOut(exitFade))
+                        }
+                        else -> {
+                            // Tab switch: short directional glide in the
+                            // direction of travel, never a full push, so
+                            // sibling tabs read as peers rather than a stack.
+                            val direction = (
+                                tabs.indexOf(targetState) - tabs.indexOf(initialState)
+                                ).coerceIn(-1, 1)
+                            (slideInHorizontally(
+                                initialOffsetX = { direction * it / 8 },
+                                animationSpec = tween(motion.fastMillis, easing = motion.standardEasing)
+                            ) + fadeIn(exitFade)) togetherWith
+                                (slideOutHorizontally(
+                                    targetOffsetX = { -direction * it / 8 },
+                                    animationSpec = tween(motion.fastMillis, easing = motion.standardEasing)
+                                ) + fadeOut(exitFade))
+                        }
+                    }
                 },
                 label = "screen_transition"
             ) { target ->
