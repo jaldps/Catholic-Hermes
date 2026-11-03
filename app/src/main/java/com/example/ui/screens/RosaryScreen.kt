@@ -23,8 +23,10 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.CustomAccessibilityAction
 import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.Density
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.runtime.LaunchedEffect
 import kotlinx.coroutines.launch
 import com.example.ui.theme.DesignLanguage
@@ -61,6 +63,7 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.RecordVoiceOver
 import androidx.compose.material.icons.filled.WaterDrop
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -1993,13 +1996,7 @@ private class RosaryGeometry(
     }
 }
 
-/**
- * Navigation across the steps and the narration toggle.
- *
- * The two accessible 48dp step arrows flank a flexible narration action.
- * The action owns the remaining measure so translated labels wrap without
- * pushing either arrow beyond a narrow viewport.
- */
+/** The next prayer is the primary action; optional narration stays secondary. */
 @Composable
 private fun RecitationControls(
     previousLabel: String,
@@ -2015,61 +2012,89 @@ private fun RecitationControls(
     nextTag: String,
     audioTag: String
 ) {
-    val design = LocalAppDesign.current
     val haptics = LocalHapticFeedback.current
+    val styles = LocalAppTextStyles.current
+    val textMeasurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    val labelStyle = when (LocalAppDesign.current.language) {
+        DesignLanguage.MATERIAL -> MaterialTheme.typography.labelLarge
+        else -> styles.buttonLabel
+    }
+    val minimumRowWidth = with(density) {
+        (textMeasurer.measure(previousLabel.uppercase(), labelStyle).size.width +
+            textMeasurer.measure(nextLabel.uppercase(), labelStyle).size.width).toDp() + 192.dp
+    }
 
-    // One compact row: back and next as tonal round buttons flanking the one
-    // filled action, all centred under the beads rather than a full-width slab.
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterHorizontally)
-    ) {
-        StepArrow(
-            icon = Icons.AutoMirrored.Filled.ArrowBack,
+    val previous: @Composable (Modifier) -> Unit = { modifier ->
+        AppSecondaryButton(
             label = previousLabel,
             enabled = canGoPrevious,
             onClick = {
                 haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                 onPrevious()
             },
-            modifier = Modifier.testTag(previousTag)
+            leadingIcon = Icons.AutoMirrored.Filled.ArrowBack,
+            modifier = modifier.testTag(previousTag)
         )
+    }
+    val next: @Composable (Modifier) -> Unit = { modifier ->
         AppPrimaryButton(
-            label = audioLabel,
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                onToggleAudio()
-            },
-            leadingIcon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
-            modifier = Modifier.weight(1f, fill = false).testTag(audioTag)
-        )
-        StepArrow(
-            icon = Icons.AutoMirrored.Filled.ArrowForward,
             label = nextLabel,
             enabled = canGoNext,
             onClick = {
                 haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                 onNext()
             },
-            modifier = Modifier.testTag(nextTag)
+            modifier = modifier.testTag(nextTag)
         )
+    }
+    val narration: @Composable () -> Unit = {
+        NarrationButton(
+            icon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
+            label = audioLabel,
+            active = isPlayingAudio,
+            onClick = {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                onToggleAudio()
+            },
+            modifier = Modifier.testTag(audioTag)
+        )
+    }
+    BoxWithConstraints(Modifier.fillMaxWidth()) {
+        if (maxWidth < minimumRowWidth) {
+            // Preserve complete translated labels at large type sizes. The
+            // primary action gets its own row; secondary controls stay below.
+            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                next(Modifier.fillMaxWidth())
+                Row(verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    previous(Modifier.weight(1f))
+                    narration()
+                }
+            }
+        } else {
+            Row(verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                previous(Modifier.weight(1f))
+                next(Modifier.weight(1.15f))
+                narration()
+            }
+        }
     }
 }
 
-/** A round tonal step button; ruled rather than filled where the identity rules its edges. */
+/** A compact secondary audio action, with a full accessible name and hit area. */
 @Composable
-private fun StepArrow(
+private fun NarrationButton(
     icon: androidx.compose.ui.graphics.vector.ImageVector,
     label: String,
-    enabled: Boolean,
+    active: Boolean,
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
     val palette = design.palette
     val engraved = design.depth.cardBorderWidth > 0.dp
-    val tint = if (enabled) palette.accent else palette.textTertiary.copy(alpha = 0.45f)
     Box(
         modifier = modifier
             .size(48.dp)
@@ -2078,18 +2103,18 @@ private fun StepArrow(
                 if (engraved) {
                     Modifier.border(
                         design.depth.cardBorderWidth,
-                        palette.gold.copy(alpha = if (enabled) 0.8f else 0.35f),
+                        palette.gold.copy(alpha = 0.8f),
                         androidx.compose.foundation.shape.CircleShape
                     )
                 } else {
-                    Modifier.background(palette.accent.copy(alpha = if (enabled) 0.12f else 0.05f))
+                    Modifier.background(palette.accent.copy(alpha = if (active) 0.20f else 0.10f))
                 }
             )
-            .clickable(enabled = enabled, onClick = onClick)
+            .clickable(role = Role.Button, onClick = onClick)
             .semantics { contentDescription = label },
         contentAlignment = Alignment.Center
     ) {
-        Icon(imageVector = icon, contentDescription = null, tint = tint, modifier = Modifier.size(22.dp))
+        Icon(imageVector = icon, contentDescription = null, tint = palette.accent, modifier = Modifier.size(22.dp))
     }
 }
 

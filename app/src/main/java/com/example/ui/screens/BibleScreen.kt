@@ -101,6 +101,8 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
+import com.example.ui.components.IllustratedScreenHeader
+import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
@@ -109,7 +111,7 @@ import com.example.ui.design.AppSegmentedTabs
 import androidx.compose.runtime.LaunchedEffect
 import com.example.data.prefs.ReadingPosition
 import com.example.ui.design.AppVerseRow
-import com.example.ui.theme.AppFonts
+import com.example.ui.theme.ReaderFontChoice
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -186,7 +188,7 @@ fun BibleScreen(
     val landscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
     var searchQuery by remember { mutableStateOf("") }
     var fontSizeMultiplier by remember { mutableFloatStateOf(1f) }
-    var useSerifFont by remember { mutableStateOf(true) }
+    var readerFont by remember { mutableStateOf(ReaderFontChoice.FOLLOW_APP) }
 
     val bottomSheetState = rememberModalBottomSheetState()
 
@@ -196,9 +198,14 @@ fun BibleScreen(
     val tabsInset = segmentedTabsInset()
     val header: LazyListScope.() -> Unit = {
         item(key = "bible_screen_title") {
-            AppScreenTitle(
-                title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada")
-            )
+            if (selectedMainTab == 0) {
+                IllustratedScreenHeader(
+                    title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"),
+                    subject = SacredSubject.SCRIPTURE
+                )
+            } else {
+                AppScreenTitle(title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"))
+            }
         }
         item(key = "bible_screen_tabs") {
             AppSegmentedTabs(
@@ -288,11 +295,11 @@ fun BibleScreen(
                             verses = verses,
                             currentLanguage = currentLanguage,
                             fontScale = fontSizeMultiplier,
-                            serif = useSerifFont,
+                            readerFont = readerFont,
                             onBack = { referenceTrail.clear(); selectedBook = null },
                             onChooseChapter = { showChapterSelectorDialog = true },
                             onFontScaleChange = { fontSizeMultiplier = it },
-                            onSerifToggle = { useSerifFont = !useSerifFont },
+                            onReaderFontChange = { readerFont = readerFont.next() },
                             onChapterChange = { selectedChapterNumber = it; focusVerse = null; studyVerse = null },
                             onVerseClick = {
                                 if (landscape) studyVerse = it.number else selectedVerseForCommentary = it
@@ -480,9 +487,9 @@ private fun BookDirectory(
                 value = searchQuery,
                 onValueChange = onSearchQueryChange,
                 placeholder = currentLanguage.pick(
-                    "Buscar libros y versículos",
-                    "Search books and verses",
-                    "Buscar livros e versículos"
+                    "Buscar",
+                    "Search",
+                    "Buscar"
                 ),
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
@@ -697,11 +704,11 @@ private fun ChapterReader(
     verses: List<BibleVerse>,
     currentLanguage: AppLanguage,
     fontScale: Float,
-    serif: Boolean,
+    readerFont: ReaderFontChoice,
     onBack: () -> Unit,
     onChooseChapter: () -> Unit,
     onFontScaleChange: (Float) -> Unit,
-    onSerifToggle: () -> Unit,
+    onReaderFontChange: () -> Unit,
     onChapterChange: (Int) -> Unit,
     onVerseClick: (BibleVerse) -> Unit,
     /** A verse to bring into view and mark, e.g. after following a reference. */
@@ -801,16 +808,16 @@ private fun ChapterReader(
                 }
             )
             AppChip(
-                label = if (serif) currentLanguage.pick("Serif", "Serif", "Serifa")
-                    else currentLanguage.pick("Sans", "Sans", "Sem serifa"),
-                selected = serif,
-                onClick = onSerifToggle
+                label = readerFont.label(currentLanguage),
+                selected = readerFont != ReaderFontChoice.FOLLOW_APP,
+                onClick = onReaderFontChange,
+                modifier = Modifier.testTag("bible_reader_font_choice")
             )
         }
 
         AppDivider()
 
-        ReadingTypography(scale = fontScale, serif = serif) {
+        ReadingTypography(scale = fontScale, readerFont = readerFont) {
             LazyColumn(
                 state = listState,
                 modifier = Modifier
@@ -939,7 +946,7 @@ private fun ChapterReader(
 }
 
 /**
- * Applies the reader's own type size and serif preference to the scripture
+ * Applies the reader's own type size and optional family override to the scripture
  * styles, so the kit's verse rows — drop cap, superscript figure, tonal badge —
  * all follow the A-/A+ pair instead of each identity being re-implemented here.
  * Only the reading faces move; the chrome keeps its identity's voice.
@@ -947,20 +954,15 @@ private fun ChapterReader(
 @Composable
 private fun ReadingTypography(
     scale: Float,
-    serif: Boolean,
+    readerFont: ReaderFontChoice,
     content: @Composable () -> Unit
 ) {
     val language = LocalAppDesign.current.language
     val base = LocalAppTextStyles.current
-    val styles = remember(base, scale, serif, language) {
-        val readingFamily = when {
-            serif -> AppFonts.EbGaramond
-            language == DesignLanguage.MATERIAL -> AppFonts.Roboto
-            else -> AppFonts.Inter
-        }
+    val styles = remember(base, scale, readerFont, language) {
         base.copy(
-            scripture = base.scripture.asReading(readingFamily, scale),
-            quote = base.quote.asReading(readingFamily, scale),
+            scripture = base.scripture.asReading(readerFont.family(base.scripture.fontFamily, language), scale),
+            quote = base.quote.asReading(readerFont.family(base.quote.fontFamily, language), scale),
             verseNumber = base.verseNumber.asReading(null, scale)
         )
     }

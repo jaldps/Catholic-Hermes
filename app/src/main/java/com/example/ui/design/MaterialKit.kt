@@ -2,6 +2,8 @@ package com.example.ui.design
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -16,6 +18,7 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
@@ -54,9 +57,6 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
@@ -78,6 +78,8 @@ import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.SideEffect
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.contentDescription
@@ -399,22 +401,77 @@ object MaterialKit : AppKit {
     }
 
     /**
-     * The active-destination capsule, at the 64×32dp `NavigationBarItem` draws
-     * its own indicator at. Hand-drawn because this app's ten destinations have
-     * to scroll, and the real component does not.
+     * Compact Expressive navigation: 64dp content, a 56×32 indicator and a
+     * persistent label. At medium width icons and labels share one line.
+     * Dimensions follow the official MDC BottomNavigation guide; touch and
+     * selected semantics remain on the entire destination, not just its icon.
      */
     @Composable
-    private fun NavPill(selected: Boolean, container: Color, content: @Composable () -> Unit) {
-        Box(
-            Modifier
-                .size(width = 64.dp, height = 32.dp)
-                .background(
-                    if (selected) container else Color.Transparent,
-                    RoundedCornerShape(percent = 50)
-                ),
-            contentAlignment = Alignment.Center,
-            content = { content() }
-        )
+    private fun DestinationBar(
+        items: List<AppNavItem>,
+        selectedIndex: Int,
+        onSelect: (Int) -> Unit
+    ) {
+        val c = roles()
+        val palette = LocalAppDesign.current.palette
+        val labelStyle = LocalAppTextStyles.current.navLabel
+        val measurer = rememberTextMeasurer()
+        val density = LocalDensity.current
+        val labelHeight = with(density) {
+            (items.maxOfOrNull { measurer.measure(it.label, labelStyle, maxLines = 1).size.height } ?: 0).toDp()
+        }
+        Surface(color = c.container) {
+            BoxWithConstraints(Modifier.fillMaxWidth().navigationBarsPadding().testTag("bottom_nav_bar")) {
+                val expanded = maxWidth >= 600.dp
+                val barHeight = maxOf(64.dp, labelHeight + if (expanded) 24.dp else 48.dp)
+                Row(
+                    Modifier.fillMaxWidth().height(barHeight).selectableGroup()
+                        .then(if (items.size > 5) Modifier.horizontalScroll(rememberScrollState()) else Modifier),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    items.forEachIndexed { index, item ->
+                        val isSelected = index == selectedIndex
+                        val indicator by androidx.compose.animation.animateColorAsState(
+                            if (isSelected) c.accentSofter else Color.Transparent,
+                            animationSpec = defaultEffects(), label = "destination_indicator"
+                        )
+                        val tint = if (isSelected) c.onAccentSofter else palette.textSecondary
+                        val itemModifier = (if (items.size > 5) Modifier.widthIn(min = 80.dp) else Modifier.weight(1f))
+                            .fillMaxHeight().testTag(item.tag)
+                            .selectable(isSelected, onClick = { onSelect(index) }, role = Role.Tab)
+                        if (expanded) {
+                            Row(
+                                itemModifier.padding(horizontal = 4.dp, vertical = 8.dp)
+                                    .background(indicator, RoundedCornerShape(50)),
+                                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Icon(if (isSelected) item.selectedIcon else item.icon, null, tint = tint, modifier = Modifier.size(24.dp))
+                                Text(item.label, style = labelStyle, color = tint, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                            }
+                        } else {
+                            Column(
+                                itemModifier.padding(vertical = 6.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.spacedBy(4.dp, Alignment.CenterVertically)
+                            ) {
+                                Box(
+                                    Modifier.size(width = 56.dp, height = 32.dp)
+                                        .background(indicator, RoundedCornerShape(50)),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    Icon(if (isSelected) item.selectedIcon else item.icon, null, tint = tint, modifier = Modifier.size(24.dp))
+                                }
+                                Text(
+                                    item.label, style = labelStyle, color = tint, maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /**
@@ -462,6 +519,7 @@ object MaterialKit : AppKit {
     private class TitleEntry {
         var title by mutableStateOf("")
         var subtitle by mutableStateOf<String?>(null)
+        var trailingContent by mutableStateOf<(@Composable () -> Unit)?>(null)
     }
 
     /**
@@ -486,9 +544,6 @@ object MaterialKit : AppKit {
         actions: @Composable RowScope.() -> Unit,
         content: @Composable (PaddingValues) -> Unit
     ) {
-        val design = LocalAppDesign.current
-        val palette = design.palette
-        val styles = LocalAppTextStyles.current
         val c = roles()
 
         // The large flexible top app bar: the screen's headline lives *in*
@@ -509,14 +564,12 @@ object MaterialKit : AppKit {
             contentWindowInsets = WindowInsets.safeDrawing,
             containerColor = c.canvas,
             topBar = {
-                // The headline is read lazily, in the bar's draw phase: a
-                // screen's ScreenTitle usually sits in a lazy list item that
-                // only composes while the content is *measured*, after the
-                // bar. Read in composition it would land a frame late — a
-                // flash of the destination's name before the screen's own.
+                // ScreenTitle supplies the translated headline. Actual text
+                // measurement keeps the flexible bar responsive to font choice.
                 FlexibleTopBar(
                     title = { titles.entries.lastOrNull()?.title?.takeIf { it.isNotBlank() } ?: title },
                     subtitle = { titles.entries.lastOrNull()?.subtitle?.takeIf { it.isNotBlank() } },
+                    trailingContent = titles.entries.lastOrNull()?.trailingContent,
                     onBack = onBack,
                     backLabel = backLabel,
                     actions = actions,
@@ -525,103 +578,7 @@ object MaterialKit : AppKit {
                     scrolled = c.container
                 )
             },
-            bottomBar = {
-                if (navItems.size <= 5) {
-                    // Within the component's specified range, so use it: the
-                    // indicator, the icon crossfade and the insets come free.
-                    NavigationBar(
-                        modifier = Modifier.testTag("bottom_nav_bar"),
-                        // surfaceContainer, and *no* tonal elevation on top of
-                        // it: the bar is already a tone step above the canvas,
-                        // and stacking an elevation overlay on a container
-                        // colour counts the same step twice.
-                        containerColor = c.container,
-                        tonalElevation = 0.dp
-                    ) {
-                        navItems.forEachIndexed { index, item ->
-                            val isSelected = index == selectedNavIndex
-                            NavigationBarItem(
-                                selected = isSelected,
-                                onClick = { onNavSelected(index) },
-                                modifier = Modifier.testTag(item.tag),
-                                alwaysShowLabel = true,
-                                icon = {
-                                    Icon(
-                                        imageVector = if (isSelected) item.selectedIcon else item.icon,
-                                        contentDescription = item.label,
-                                        modifier = Modifier.size(design.decor.navIconSize)
-                                    )
-                                },
-                                label = {
-                                    Text(
-                                        text = item.label,
-                                        style = styles.navLabel,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                },
-                                colors = NavigationBarItemDefaults.colors(
-                                    selectedIconColor = c.onAccentSofter,
-                                    selectedTextColor = palette.textPrimary,
-                                    indicatorColor = c.accentSofter,
-                                    unselectedIconColor = palette.textSecondary,
-                                    unselectedTextColor = palette.textSecondary
-                                )
-                            )
-                        }
-                    }
-                } else {
-                    Surface(color = c.container) {
-                        Row(
-                            Modifier
-                                .fillMaxWidth()
-                                .navigationBarsPadding()
-                                .testTag("bottom_nav_bar")
-                                .horizontalScroll(rememberScrollState())
-                                .padding(horizontal = 8.dp)
-                                // 12 above the pill, 16 below the label: the
-                                // navigation bar's own 80dp vertical rhythm.
-                                .padding(top = 12.dp, bottom = 16.dp),
-                            verticalAlignment = Alignment.Top
-                        ) {
-                            navItems.forEachIndexed { index, item ->
-                                val isSelected = index == selectedNavIndex
-                                Column(
-                                    modifier = Modifier
-                                        .widthIn(min = 72.dp)
-                                        .clip(RoundedCornerShape(percent = 50))
-                                        .clickable { onNavSelected(index) }
-                                        .padding(horizontal = 4.dp)
-                                        .testTag(item.tag),
-                                    horizontalAlignment = Alignment.CenterHorizontally
-                                ) {
-                                    NavPill(isSelected, c.accentSofter) {
-                                        Icon(
-                                            imageVector = if (isSelected) item.selectedIcon else item.icon,
-                                            contentDescription = item.label,
-                                            tint = if (isSelected) {
-                                                c.onAccentSofter
-                                            } else {
-                                                palette.textSecondary
-                                            },
-                                            modifier = Modifier.size(design.decor.navIconSize)
-                                        )
-                                    }
-                                    Spacer(Modifier.height(4.dp))
-                                    Text(
-                                        text = item.label,
-                                        style = styles.navLabel,
-                                        color = if (isSelected) palette.textPrimary else palette.textSecondary,
-                                        textAlign = TextAlign.Center,
-                                        maxLines = 1,
-                                        overflow = TextOverflow.Ellipsis
-                                    )
-                                }
-                            }
-                        }
-                    }
-                }
-            },
+            bottomBar = { DestinationBar(navItems, selectedNavIndex, onNavSelected) },
             content = { padding ->
                 CompositionLocalProvider(LocalBarTitles provides titles) { content(padding) }
             }
@@ -640,6 +597,7 @@ object MaterialKit : AppKit {
     private fun FlexibleTopBar(
         title: () -> String,
         subtitle: () -> String?,
+        trailingContent: (@Composable () -> Unit)?,
         onBack: (() -> Unit)?,
         backLabel: String?,
         actions: @Composable RowScope.() -> Unit,
@@ -700,33 +658,39 @@ object MaterialKit : AppKit {
                             )
                         }
                     }
-                    Column(
+                    Row(
                         Modifier.fillMaxWidth()
                             .padding(horizontal = design.spacing.gutter)
-                            .padding(top = 8.dp, bottom = 24.dp)
+                            .padding(top = 8.dp, bottom = if (trailingContent == null) 24.dp else 16.dp)
                             .graphicsLayer { alpha = (1f - fraction * 1.7f).coerceIn(0f, 1f) },
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(
-                            text = displayTitle,
-                            style = styles.screenTitle,
-                            color = palette.textPrimary,
-                            maxLines = 2,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.then(
-                                if (fraction < 0.6f) Modifier.semantics { heading() }
-                                else Modifier.clearAndSetSemantics {}
-                            )
-                        )
-                        if (supporting != null) {
+                        Column(
+                            Modifier.weight(1f),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
                             Text(
-                                text = supporting,
-                                style = styles.screenSubtitle,
-                                color = palette.textSecondary,
+                                text = displayTitle,
+                                style = styles.screenTitle,
+                                color = palette.textPrimary,
                                 maxLines = 2,
-                                overflow = TextOverflow.Ellipsis
+                                overflow = TextOverflow.Ellipsis,
+                                modifier = Modifier.then(
+                                    if (fraction < 0.6f) Modifier.semantics { heading() }
+                                    else Modifier.clearAndSetSemantics {}
+                                )
                             )
+                            if (supporting != null) {
+                                Text(
+                                    text = supporting,
+                                    style = styles.screenSubtitle,
+                                    color = palette.textSecondary,
+                                    maxLines = 2,
+                                    overflow = TextOverflow.Ellipsis
+                                )
+                            }
                         }
+                        trailingContent?.invoke()
                     }
                 }
             ) { measurables, constraints ->
@@ -804,7 +768,7 @@ object MaterialKit : AppKit {
     }
 
     @Composable
-    override fun ScreenTitle(title: String, subtitle: String?, modifier: Modifier) {
+    override fun ScreenTitle(title: String, subtitle: String?, modifier: Modifier, trailingContent: (@Composable () -> Unit)?) {
         val holder = LocalBarTitles.current
         if (holder != null) {
             // Under the scaffold the headline is the app bar's: hand it up
@@ -815,6 +779,7 @@ object MaterialKit : AppKit {
             SideEffect {
                 entry.title = title
                 entry.subtitle = subtitle
+                entry.trailingContent = trailingContent
             }
             DisposableEffect(holder, entry) {
                 holder.entries.add(entry)
@@ -823,23 +788,27 @@ object MaterialKit : AppKit {
             // The app bar owns both the visible headline and its heading
             // semantics. Keeping another named spacer here would announce
             // the same screen twice to a screen reader.
-            Spacer(modifier.fillMaxWidth().height(0.dp))
+            // Lazy lists may discard a zero-height header before its effects
+            // register with the bar. Keep a real layout participant.
+            Spacer(modifier.fillMaxWidth().height(1.dp))
             return
         }
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
-        Column(
-            modifier
-                .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-                .padding(top = design.spacing.headerTopGap, bottom = 16.dp)
-        ) {
-            Text(text = title, style = styles.screenTitle, color = palette.textPrimary)
-            if (subtitle != null) {
-                Spacer(Modifier.height(4.dp))
-                Text(text = subtitle, style = styles.screenSubtitle, color = palette.textSecondary)
+        Row(modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            Column(
+                Modifier.weight(1f)
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.headerTopGap, bottom = 16.dp)
+            ) {
+                Text(text = title, style = styles.screenTitle, color = palette.textPrimary)
+                if (subtitle != null) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(text = subtitle, style = styles.screenSubtitle, color = palette.textSecondary)
+                }
             }
+            trailingContent?.invoke()
         }
     }
 
@@ -907,7 +876,7 @@ object MaterialKit : AppKit {
         val corner = pressMorph(interaction, onClick != null, rest, rest + 12.dp)
         FilledCard(
             modifier = modifier.fillMaxWidth(),
-            container = c.container,
+            container = c.highest,
             shape = RoundedCornerShape(corner),
             onClick = onClick,
             interactionSource = interaction
@@ -957,7 +926,9 @@ object MaterialKit : AppKit {
         val foreground = if (selected) c.onAccentSofter else design.palette.textPrimary
         val secondary = if (selected) c.onAccentSofter else design.palette.textSecondary
         FilledCard(
-            modifier = modifier.fillMaxWidth(),
+            modifier = modifier.fillMaxWidth().then(
+                if (selected) Modifier.semantics { this.selected = true } else Modifier
+            ),
             container = container,
             shape = RoundedCornerShape(if (LocalInListGroup.current) GroupInnerCorner else 16.dp),
             onClick = onClick
@@ -1553,10 +1524,9 @@ object MaterialKit : AppKit {
         val c = roles()
         FilledCard(
             modifier = modifier,
-            // surfaceContainer, the same step as every other card: a tile one
-            // tone darker than the list rows under it read as a second,
-            // unrelated grey rather than as a sibling surface.
-            container = c.container,
+            // Metrics step to surfaceContainerHigh while list segments remain
+            // on surfaceContainer, giving values a useful tonal hierarchy.
+            container = c.high,
             shape = design.shapes.card,
             onClick = null
         ) {
@@ -1675,17 +1645,24 @@ object MaterialKit : AppKit {
         val palette = design.palette
         val c = roles()
         val primary = MaterialTheme.colorScheme.primary
-        // Colour conveys the liturgical day; it does not need a seal,
-        // illustration or a second container competing with the text.
+        // The celebration has a meaningful custom colour, harmonized into
+        // the scheme. Give that information a tonal field; sacred artwork is
+        // composed by the screen rather than repeated as decorative seals.
         val given = accentColorHex?.let { Color(it).harmonizedWith(primary) }
-        val container = c.low
+        val container = when {
+            given == null -> c.accentSoft
+            design.isDark -> given.tone(0.30f, 0.20f)
+            else -> given.tone(0.34f, 0.92f)
+        }
         val accent = (given ?: primary).readableOn(container)
+        val headlineColor = palette.textPrimary.readableOn(container, target = 7f)
+        val supportingColor = palette.textSecondary.readableOn(container)
         val headline = body?.substringBefore('\n')?.takeIf { it.isNotBlank() }
         val supporting = body?.substringAfter('\n', "")?.takeIf { it.isNotBlank() }
         FilledCard(
             modifier = modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
             container = container,
-            shape = RoundedCornerShape(16.dp),
+            shape = RoundedCornerShape(28.dp),
             onClick = onClick
         ) {
             Row(
@@ -1700,13 +1677,17 @@ object MaterialKit : AppKit {
                     Text(
                         text = title,
                         style = if (headline == null) MaterialTheme.typography.titleMedium else MaterialTheme.typography.labelLarge,
-                        color = if (headline == null) palette.textPrimary else accent
+                        color = if (headline == null) headlineColor else accent
                     )
                     headline?.let {
-                        Text(it, style = MaterialTheme.typography.titleLarge, color = palette.textPrimary)
+                        Text(
+                            it,
+                            style = MaterialTheme.typography.headlineSmall.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Medium),
+                            color = headlineColor
+                        )
                     }
                     supporting?.let {
-                        Text(it, style = MaterialTheme.typography.bodyMedium, color = palette.textSecondary)
+                        Text(it, style = MaterialTheme.typography.bodyMedium, color = supportingColor)
                     }
                 }
             }

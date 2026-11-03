@@ -75,7 +75,7 @@ import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.AppDesign
-import com.example.ui.theme.AppFonts
+import com.example.ui.theme.ReaderFontChoice
 import com.example.ui.theme.AppTextStyles
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
@@ -89,7 +89,7 @@ import com.example.ui.theme.LocalAppTextStyles
  * The browsing half is an index: four parts, their sections, their chapters.
  * The reading half is long-form, so every body text is set in the identity's
  * reading face and held to the reading measure, and the reader's own A-/A+ and
- * serif controls ride on top of whichever type scale is in force.
+ * local font controls ride on top of whichever type scale is in force.
  */
 @Composable
 fun CatechismScreen(
@@ -106,7 +106,7 @@ fun CatechismScreen(
     var selectedOutline by remember { mutableStateOf<CatechismOutlineSection?>(null) }
     var searchQuery by remember { mutableStateOf("") }
     var fontSizeMultiplier by remember { mutableFloatStateOf(1f) }
-    var useSerifFont by remember { mutableStateOf(true) }
+    var readerFont by remember { mutableStateOf(ReaderFontChoice.FOLLOW_APP) }
 
     val modeLabels = listOf(
         currentLanguage.pick("Compendio", "Compendium", "Compêndio"),
@@ -161,8 +161,8 @@ fun CatechismScreen(
                 onSelectOutline = { selectedOutline = it },
                 fontSizeMultiplier = fontSizeMultiplier,
                 onFontSizeChange = { fontSizeMultiplier = it },
-                useSerifFont = useSerifFont,
-                onToggleSerif = { useSerifFont = !useSerifFont }
+                readerFont = readerFont,
+                onReaderFontChange = { readerFont = readerFont.next() }
             )
 
             else -> VaticanOfficialLinksView(
@@ -191,8 +191,8 @@ private fun UniversalCatechismView(
     onSelectOutline: (CatechismOutlineSection?) -> Unit,
     fontSizeMultiplier: Float,
     onFontSizeChange: (Float) -> Unit,
-    useSerifFont: Boolean,
-    onToggleSerif: () -> Unit
+    readerFont: ReaderFontChoice,
+    onReaderFontChange: () -> Unit
 ) {
     val parts = repository.catechismParts
     val currentPart = parts.getOrNull(selectedPartIndex) ?: parts.first()
@@ -228,7 +228,7 @@ private fun UniversalCatechismView(
                     results = results,
                     currentLanguage = currentLanguage,
                     fontSizeMultiplier = fontSizeMultiplier,
-                    useSerifFont = useSerifFont,
+                    readerFont = readerFont,
                     design = design
                 )
             } else {
@@ -262,8 +262,8 @@ private fun UniversalCatechismView(
                 currentLanguage = currentLanguage,
                 fontSizeMultiplier = fontSizeMultiplier,
                 onFontSizeChange = onFontSizeChange,
-                useSerifFont = useSerifFont,
-                onToggleSerif = onToggleSerif,
+                readerFont = readerFont,
+                onReaderFontChange = onReaderFontChange,
                 onBack = { onSelectOutline(null) }
             )
         }
@@ -275,8 +275,8 @@ private fun UniversalCatechismView(
                 currentLanguage = currentLanguage,
                 fontSizeMultiplier = fontSizeMultiplier,
                 onFontSizeChange = onFontSizeChange,
-                useSerifFont = useSerifFont,
-                onToggleSerif = onToggleSerif,
+                readerFont = readerFont,
+                onReaderFontChange = onReaderFontChange,
                 onBack = { onSelectChapter(null) }
             )
         }
@@ -422,8 +422,8 @@ private fun ParagraphRangeView(
     currentLanguage: AppLanguage,
     fontSizeMultiplier: Float,
     onFontSizeChange: (Float) -> Unit,
-    useSerifFont: Boolean,
-    onToggleSerif: () -> Unit,
+    readerFont: ReaderFontChoice,
+    onReaderFontChange: () -> Unit,
     onBack: () -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -463,9 +463,9 @@ private fun ParagraphRangeView(
             )
             Spacer(Modifier.width(design.spacing.cardGap / 2))
             AppChip(
-                label = if (useSerifFont) "Serif" else "Sans",
-                selected = useSerifFont,
-                onClick = onToggleSerif
+                label = readerFont.label(currentLanguage),
+                selected = readerFont != ReaderFontChoice.FOLLOW_APP,
+                onClick = onReaderFontChange
             )
         }
 
@@ -498,7 +498,7 @@ private fun ParagraphRangeView(
                             Spacer(Modifier.height(design.spacing.cardGap / 3))
                             Text(
                                 text = article.content.get(currentLanguage),
-                                style = readingStyle(fontSizeMultiplier, useSerifFont),
+                                style = readingStyle(fontSizeMultiplier, readerFont),
                                 color = design.palette.textPrimary
                             )
                         }
@@ -521,8 +521,8 @@ private fun ChapterReadingView(
     currentLanguage: AppLanguage,
     fontSizeMultiplier: Float,
     onFontSizeChange: (Float) -> Unit,
-    useSerifFont: Boolean,
-    onToggleSerif: () -> Unit,
+    readerFont: ReaderFontChoice,
+    onReaderFontChange: () -> Unit,
     onBack: () -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -571,9 +571,9 @@ private fun ChapterReadingView(
             )
             Spacer(Modifier.width(design.spacing.cardGap / 2))
             AppChip(
-                label = if (useSerifFont) "Serif" else "Sans",
-                selected = useSerifFont,
-                onClick = onToggleSerif
+                label = readerFont.label(currentLanguage),
+                selected = readerFont != ReaderFontChoice.FOLLOW_APP,
+                onClick = onReaderFontChange
             )
         }
 
@@ -597,7 +597,7 @@ private fun ChapterReadingView(
                         article = article,
                         currentLanguage = currentLanguage,
                         fontSizeMultiplier = fontSizeMultiplier,
-                        useSerif = useSerifFont,
+                        readerFont = readerFont,
                         modifier = Modifier.padding(horizontal = design.spacing.gutter)
                     )
                 }
@@ -638,7 +638,7 @@ private fun LazyListScope.catechismSearchItems(
     results: List<CatechismNumberedArticle>,
     currentLanguage: AppLanguage,
     fontSizeMultiplier: Float,
-    useSerifFont: Boolean,
+    readerFont: ReaderFontChoice,
     design: AppDesign
 ) {
     run {
@@ -672,7 +672,7 @@ private fun LazyListScope.catechismSearchItems(
                         article = article,
                         currentLanguage = currentLanguage,
                         fontSizeMultiplier = fontSizeMultiplier,
-                        useSerif = useSerifFont,
+                        readerFont = readerFont,
                         modifier = Modifier.padding(horizontal = design.spacing.gutter)
                     )
                 }
@@ -689,7 +689,7 @@ private fun CatechismArticleCard(
     article: CatechismNumberedArticle,
     currentLanguage: AppLanguage,
     fontSizeMultiplier: Float,
-    useSerif: Boolean,
+    readerFont: ReaderFontChoice,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
@@ -708,7 +708,7 @@ private fun CatechismArticleCard(
         Spacer(Modifier.height(design.spacing.cardGap))
         Text(
             text = article.content.get(currentLanguage),
-            style = readingStyle(fontSizeMultiplier, useSerif),
+            style = readingStyle(fontSizeMultiplier, readerFont),
             color = design.palette.textPrimary
         )
         article.inBriefSummary?.let { summary ->
@@ -1255,19 +1255,17 @@ private fun ReadingColumn(content: @Composable ColumnScope.() -> Unit) {
 
 /**
  * The body of an article. The identity supplies the reading face and the
- * leading; the reader's A-/A+ and serif controls ride on top of it, so the
+ * leading; the reader's A-/A+ and optional font override ride on top of it, so the
  * type scale and the reader's preference stay independent of one another.
  */
 @Composable
-private fun readingStyle(fontSizeMultiplier: Float, useSerif: Boolean): TextStyle {
+private fun readingStyle(fontSizeMultiplier: Float, readerFont: ReaderFontChoice): TextStyle {
     val styles = LocalAppTextStyles.current
     val base = styles.scripture
     return base.copy(
         fontSize = base.fontSize * fontSizeMultiplier,
         lineHeight = base.lineHeight * fontSizeMultiplier,
-        // Sans falls back to the identity's own text face: Vatican is a serif
-        // identity throughout and has no sans to switch to.
-        fontFamily = if (useSerif) AppFonts.EbGaramond else styles.rowTitle.fontFamily
+        fontFamily = readerFont.family(base.fontFamily, LocalAppDesign.current.language)
     )
 }
 

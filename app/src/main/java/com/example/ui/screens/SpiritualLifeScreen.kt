@@ -76,6 +76,8 @@ import com.example.ui.design.AppListRow
 import com.example.ui.design.AppMetricTile
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
+import com.example.ui.components.IllustratedScreenHeader
+import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
@@ -250,10 +252,7 @@ fun SpiritualLifeScreen(
     val tabsInset = tabStripInset()
     val header: LazyListScope.() -> Unit = {
         item(key = "spiritual_life_title") {
-            AppScreenTitle(
-                title = currentLanguage.pick("Vida espiritual", "Spiritual Life", "Vida espiritual"),
-                subtitle = null
-            )
+            IllustratedScreenHeader(title = currentLanguage.pick("Vida espiritual", "Spiritual Life", "Vida espiritual"), subject = SacredSubject.DOVE)
         }
         item(key = "spiritual_life_tabs") {
             // Three destinations: the quiz and the chant share "Learn", chosen

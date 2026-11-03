@@ -871,11 +871,56 @@ object VaticanKit : AppKit {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
+        val measurer = rememberTextMeasurer()
+        val density = LocalDensity.current
+        val captions = navItems.map { it.label.uppercase() }
         Column(Modifier.navigationBarsPadding().testTag("bottom_nav_bar")) {
             Hairline(color = inkRule())
             BoxWithConstraints(Modifier.fillMaxWidth()) {
                 val count = navItems.size.coerceAtLeast(1)
-                val itemWidth = maxOf((maxWidth - 8.dp) / count, 64.dp)
+                val railWidth = maxOf(maxWidth, 48.dp * count + 8.dp)
+                val itemWidth = (railWidth - 8.dp) / count
+                // Weighted children share the actual viewport, including its
+                // padding, without rounding five independent widths upward.
+                val captionWidth = with(density) { itemWidth.toPx().toInt().coerceAtLeast(1) }
+                val baseCaptionStyle = styles.navLabel.tracked(0.08f)
+                val captionStyle = remember(captions, baseCaptionStyle, captionWidth, density) {
+                    fun fits(style: TextStyle) = captions.all {
+                        measurer.measure(it, style, softWrap = false, maxLines = 1).size.width <= captionWidth
+                    }
+                    if (fits(baseCaptionStyle)) {
+                        baseCaptionStyle
+                    } else {
+                        val untracked = baseCaptionStyle.copy(letterSpacing = 0.sp)
+                        if (fits(untracked)) {
+                            var low = 0f
+                            var high = baseCaptionStyle.letterSpacing.value.coerceAtLeast(0f)
+                            repeat(8) {
+                                val mid = (low + high) / 2f
+                                if (fits(untracked.copy(letterSpacing = mid.sp))) low = mid else high = mid
+                            }
+                            untracked.copy(letterSpacing = low.sp)
+                        } else {
+                            val originalSize = baseCaptionStyle.fontSize.value
+                            val minimumSize = minOf(originalSize, maxOf(originalSize * 0.85f, 11.5f))
+                            fun sized(size: Float) = untracked.copy(
+                                fontSize = size.sp,
+                                lineHeight = baseCaptionStyle.lineHeight * (size / originalSize)
+                            )
+                            var low = minimumSize
+                            var high = originalSize
+                            if (fits(sized(low))) {
+                                repeat(8) {
+                                    val mid = (low + high) / 2f
+                                    if (fits(sized(mid))) low = mid else high = mid
+                                }
+                            }
+                            // Extremely long captions wrap at this size rather
+                            // than losing letters or overriding the user's face.
+                            sized(low)
+                        }
+                    }
+                }
                 val ribbonX by animateDpAsState(
                     targetValue = 4.dp + itemWidth * selectedNavIndex.coerceAtLeast(0) + itemWidth / 2,
                     animationSpec = tween(design.motion.slowMillis, easing = design.motion.emphasizedEasing),
@@ -883,7 +928,8 @@ object VaticanKit : AppKit {
                 )
                 Box(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState())) {
                     Row(
-                        Modifier.padding(horizontal = 4.dp).padding(top = 19.dp, bottom = 9.dp),
+                        Modifier.width(railWidth).padding(horizontal = 4.dp)
+                            .padding(top = 19.dp, bottom = 9.dp),
                         verticalAlignment = Alignment.Top
                     ) {
                         navItems.forEachIndexed { index, item ->
@@ -895,7 +941,8 @@ object VaticanKit : AppKit {
                             )
                             Column(
                                 modifier = Modifier
-                                    .width(itemWidth)
+                                    .weight(1f)
+                                    .widthIn(min = 48.dp)
                                     .press { onNavSelected(index) }
                                     .semantics { selected = isSelected; role = Role.Tab }
                                     .heightIn(min = 48.dp)
@@ -910,13 +957,14 @@ object VaticanKit : AppKit {
                                 )
                                 Spacer(Modifier.height(7.dp))
                                 Text(
-                                    text = item.label.uppercase(),
+                                    text = captions[index],
                                     // Small inscriptional labels stay readable at
                                     // phone size without excessive tracking.
-                                    style = styles.navLabel.copy(fontSize = 10.sp, lineHeight = 14.sp).tracked(0.10f),
+                                    style = captionStyle,
+                                    modifier = Modifier.fillMaxWidth(),
                                     color = ink,
                                     textAlign = TextAlign.Center,
-                                    maxLines = 1
+                                    softWrap = true
                                 )
                             }
                         }
@@ -993,7 +1041,14 @@ object VaticanKit : AppKit {
     }
 
     @Composable
-    override fun ScreenTitle(title: String, subtitle: String?, modifier: Modifier) {
+    override fun ScreenTitle(title: String, subtitle: String?, modifier: Modifier, trailingContent: (@Composable () -> Unit)?) {
+        if (trailingContent != null) {
+            Row(modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                ScreenTitle(title, subtitle, Modifier.weight(1f), null)
+                trailingContent()
+            }
+            return
+        }
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
@@ -1005,16 +1060,17 @@ object VaticanKit : AppKit {
         ) {
             if (!alreadyNamed) {
                 Text(
-                    text = title,
-                    style = styles.rowTitle.copy(
-                        fontSize = if (LocalRunningHead.current != null) 25.sp else 32.sp,
-                        lineHeight = if (LocalRunningHead.current != null) 32.sp else 38.sp,
+                    text = title.uppercase(),
+                    style = styles.screenTitle.copy(
+                        fontSize = styles.screenTitle.fontSize * (if (LocalRunningHead.current != null) 21f / 26f else 1f),
+                        lineHeight = styles.screenTitle.lineHeight * (if (LocalRunningHead.current != null) 29f / 38f else 34f / 38f),
                         fontWeight = FontWeight.Normal,
-                        letterSpacing = 0.sp,
                         lineBreak = LineBreak.Heading
-                    ),
+                    ).tracked(if (LocalRunningHead.current != null) 0.045f else 0.065f),
                     color = bodyInk()
                 )
+                Spacer(Modifier.height(9.dp))
+                Box(Modifier.width(48.dp).height(1.dp).background(palette.gold.copy(alpha = 0.85f)))
             }
             if (!subtitle.isNullOrBlank()) {
                 if (!alreadyNamed) Spacer(Modifier.height(4.dp))
@@ -1072,7 +1128,7 @@ object VaticanKit : AppKit {
                 )
             }
             Spacer(Modifier.height(8.dp))
-            Hairline()
+            ScotchRule(gap = 2.dp, thinColor = palette.gold.copy(alpha = 0.55f))
         }
     }
 
@@ -1155,6 +1211,17 @@ object VaticanKit : AppKit {
                     .fillMaxWidth()
                     .then(if (onClick != null) Modifier.press(onClick = onClick) else Modifier)
                     .heightIn(min = design.spacing.rowMinHeight)
+                    .drawBehind {
+                        if (selected) {
+                            val mark = 2.dp.toPx()
+                            drawRect(
+                                palette.accent,
+                                topLeft = Offset(0f, (size.height - 14.dp.toPx()) / 2),
+                                size = Size(mark, 14.dp.toPx())
+                            )
+                        }
+                    }
+                    .padding(start = if (selected) 10.dp else 0.dp)
                     .padding(vertical = design.spacing.rowPaddingVertical),
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -1219,7 +1286,18 @@ object VaticanKit : AppKit {
 
     @Composable
     override fun Ornament(modifier: Modifier) {
-        Spacer(modifier.height(12.dp))
+        val gold = LocalAppDesign.current.palette.gold
+        Row(
+            modifier.fillMaxWidth().padding(vertical = 8.dp),
+            horizontalArrangement = Arrangement.Center,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(Modifier.width(24.dp).height(0.5.dp).background(gold.copy(alpha = 0.55f)))
+            Spacer(Modifier.width(8.dp))
+            Lozenge(3.dp, gold)
+            Spacer(Modifier.width(8.dp))
+            Box(Modifier.width(24.dp).height(0.5.dp).background(gold.copy(alpha = 0.55f)))
+        }
     }
 
     // ------------------------------------------------------------------ inputs
@@ -1973,6 +2051,13 @@ object VaticanKit : AppKit {
             modifier.fillMaxWidth()
                 .then(if (onClick != null) Modifier.press(onClick = onClick) else Modifier)
                 .padding(horizontal = design.spacing.gutter, vertical = 10.dp)
+                .background(design.palette.raised.copy(alpha = if (design.isDark) 0.48f else 0.58f))
+                .drawBehind {
+                    drawRect(accent, size = Size(2.dp.toPx(), size.height))
+                    val y = size.height - 0.5.dp.toPx()
+                    drawLine(design.palette.gold.copy(alpha = 0.55f), Offset(16.dp.toPx(), y), Offset(size.width, y), 0.5.dp.toPx())
+                }
+                .padding(start = 16.dp, end = 12.dp, top = 12.dp, bottom = 14.dp)
         ) {
             Text(
                 text = title.uppercase(),

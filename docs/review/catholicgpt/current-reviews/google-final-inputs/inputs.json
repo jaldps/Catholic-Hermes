@@ -1,0 +1,62 @@
+[
+  {
+    "name": "home_material_light.png",
+    "sha256": "98d1ae2d6e2bd18872304037de24381f15fe8f3ef6e841757eedf54b94d594ee",
+    "dimensions_px": [
+      822,
+      1782
+    ],
+    "source_mtime_ns": 1793675621896918567,
+    "review_copy": "/workspace/.cloud-setup/ui-review/restored-round/google-final-inputs/home_material_light.png"
+  },
+  {
+    "name": "home_material_dark.png",
+    "sha256": "312b159bbc6cc77f20afed33a01764d246fed5144dbe1534724f62b19b1be7c5",
+    "dimensions_px": [
+      822,
+      1782
+    ],
+    "source_mtime_ns": 1793675620436937513,
+    "review_copy": "/workspace/.cloud-setup/ui-review/restored-round/google-final-inputs/home_material_dark.png"
+  },
+  {
+    "name": "bible_material_light.png",
+    "sha256": "d9b915b7982b7313b891aacdaad0bd392b157185c934c036b2a7331e68bb182a",
+    "dimensions_px": [
+      822,
+      1782
+    ],
+    "source_mtime_ns": 1793675622212914419,
+    "review_copy": "/workspace/.cloud-setup/ui-review/restored-round/google-final-inputs/bible_material_light.png"
+  },
+  {
+    "name": "bible_material_dark.png",
+    "sha256": "40c0621b580b88247bd5bf5fc536d6d6ed87355c43c031959cc518cf502dae81",
+    "dimensions_px": [
+      822,
+      1782
+    ],
+    "source_mtime_ns": 1793675620932931222,
+    "review_copy": "/workspace/.cloud-setup/ui-review/restored-round/google-final-inputs/bible_material_dark.png"
+  },
+  {
+    "name": "prayers_material_light.png",
+    "sha256": "f32432f86c1c22021fcb64f8a3c6b999003f610b96e570a56939cfcff6a26516",
+    "dimensions_px": [
+      822,
+      1782
+    ],
+    "source_mtime_ns": 1793675622364912424,
+    "review_copy": "/workspace/.cloud-setup/ui-review/restored-round/google-final-inputs/prayers_material_light.png"
+  },
+  {
+    "name": "prayers_material_dark.png",
+    "sha256": "c8d0cec893838daadee7690b69b0d7b8851b0cee68d6f265db1ef9298138e7ff",
+    "dimensions_px": [
+      822,
+      1782
+    ],
+    "source_mtime_ns": 1793675621228927335,
+    "review_copy": "/workspace/.cloud-setup/ui-review/restored-round/google-final-inputs/prayers_material_dark.png"
+  }
+]

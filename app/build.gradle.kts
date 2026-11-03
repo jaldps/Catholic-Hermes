@@ -16,8 +16,8 @@ android {
     applicationId = "com.aistudio.sanctafides.qvmrpx"
     minSdk = 24
     targetSdk = 36
-    versionCode = 4
-    versionName = "1.3"
+    versionCode = 5
+    versionName = "1.4"
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
@@ -68,9 +68,13 @@ android {
       isIncludeAndroidResources = true
       all { test ->
         // Lets a screenshot run be narrowed: -Pshots.only=home,bible
-        project.findProperty("shots.only")?.let { test.systemProperty("shots.only", it) }
-        project.findProperty("shots.lang")?.let { test.systemProperty("shots.lang", it) }
+        listOf("shots.only", "shots.lang", "shots.font", "shots.scale", "shots.zone", "shots.width", "shots.height").forEach { key ->
+          project.findProperty(key)?.let { test.systemProperty(key, it) }
+        }
         test.maxHeapSize = "3g"
+        // Native Robolectric/Compose window state must not cross test classes.
+        // Each class still executes every test and all normal idleness checks.
+        test.forkEvery = 1L
       }
     }
   }

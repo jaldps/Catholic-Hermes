@@ -72,6 +72,8 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
+import com.example.ui.components.IllustratedScreenHeader
+import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
@@ -178,7 +180,7 @@ fun PrayersAndNovenasScreen(
     // are the first rows of whichever list is showing, so they scroll away.
     val header: LazyListScope.() -> Unit = {
         item(key = "prayers_screen_title") {
-            AppScreenTitle(title = currentLanguage.pick("Oraciones", "Prayers", "Orações"))
+            IllustratedScreenHeader(title = currentLanguage.pick("Oraciones", "Prayers", "Orações"), subject = SacredSubject.PRAYER)
         }
         item(key = "prayers_screen_tabs") {
             AppSegmentedTabs(

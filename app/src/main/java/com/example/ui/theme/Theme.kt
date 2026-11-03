@@ -31,6 +31,7 @@ fun SanctaFidesTheme(
     darkModeSetting: String = "SYSTEM",
     isSerif: Boolean = true,
     fontScale: Float = 1.0f,
+    fontFamilyChoice: String? = null,
     content: @Composable () -> Unit
 ) {
     val systemDark = isSystemInDarkTheme()
@@ -42,7 +43,7 @@ fun SanctaFidesTheme(
 
     val identity = DesignLanguage.fromId(designLanguage)
     val design = DesignTokens.of(identity, isDark)
-    val (typography, textStyles) = AppTypographyFactory.build(identity, isSerif, fontScale)
+    val (typography, textStyles) = AppTypographyFactory.build(identity, isSerif, fontScale, fontFamilyChoice)
 
     val accent = ThemePalettes.getColorScheme(themePreset, isDark).primary
     val colorScheme = buildColorScheme(identity, design.palette, isDark, accent)

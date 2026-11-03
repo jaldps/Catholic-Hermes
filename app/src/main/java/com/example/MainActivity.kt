@@ -69,7 +69,8 @@ class MainActivity : ComponentActivity() {
                 themePreset = preferences.themePreset,
                 darkModeSetting = preferences.darkModeSetting,
                 isSerif = preferences.fontFamilyChoice == "SERIF",
-                fontScale = preferences.fontSizeScale
+                fontScale = preferences.fontSizeScale,
+                fontFamilyChoice = preferences.fontFamilyChoice
             ) {
                 MainApp(
                     repository = repository,

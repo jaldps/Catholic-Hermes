@@ -39,6 +39,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -51,10 +52,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
+import com.example.data.models.FontChoice
 import com.example.data.prefs.UserPreferences
 import com.example.data.prefs.UserPreferencesStore
 import com.example.ui.theme.AppThemePreset
@@ -62,6 +65,7 @@ import com.example.ui.theme.DesignLanguage
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.launch
+import java.io.IOException
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -73,16 +77,24 @@ fun GuiCustomizerModal(
 ) {
     val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+    var saving by remember { mutableStateOf(false) }
+    val dismiss = { if (!saving) onDismiss() }
 
     var selectedDesign by remember(preferences.designLanguage) { mutableStateOf(preferences.designLanguage) }
     var selectedTheme by remember(preferences.themePreset) { mutableStateOf(preferences.themePreset) }
     var selectedDarkMode by remember(preferences.darkModeSetting) { mutableStateOf(preferences.darkModeSetting) }
-    var selectedTypography by remember(preferences.fontFamilyChoice) { mutableStateOf(preferences.fontFamilyChoice) }
+    val persisted by preferencesStore.preferences.collectAsState(initial = preferences)
+    var showFontPicker by remember { mutableStateOf(false) }
     var selectedScale by remember(preferences.fontSizeScale) { mutableFloatStateOf(preferences.fontSizeScale) }
     var selectedAudioSpeed by remember(preferences.audioNarrationSpeed) { mutableFloatStateOf(preferences.audioNarrationSpeed) }
 
+    if (showFontPicker) {
+        FontPickerDialog(preferencesStore, persisted, currentLanguage) { showFontPicker = false }
+    }
+
     ModalBottomSheet(
-        onDismissRequest = onDismiss,
+        onDismissRequest = dismiss,
         sheetState = sheetState,
         containerColor = MaterialTheme.colorScheme.surface,
         modifier = Modifier.testTag("gui_customizer_sheet")
@@ -117,7 +129,7 @@ fun GuiCustomizerModal(
                         fontWeight = FontWeight.Bold
                     )
                 }
-                IconButton(onClick = onDismiss) {
+                IconButton(onClick = dismiss, enabled = !saving) {
                     Icon(imageVector = Icons.Default.Close, contentDescription = "Cerrar")
                 }
             }
@@ -280,43 +292,18 @@ fun GuiCustomizerModal(
 
             Spacer(modifier = Modifier.height(18.dp))
 
-            // 3. Typography Style
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.TextFields, contentDescription = null, modifier = Modifier.size(20.dp), tint = MaterialTheme.colorScheme.primary)
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "Tipografía Sagrada"
-                        AppLanguage.EN -> "Sacred Typography"
-                        AppLanguage.PT -> "Tipografia Sagrada"
-                    },
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.primary
-                )
+            TextButton(
+                onClick = { showFontPicker = true },
+                modifier = Modifier.testTag("appearance_font_button")
+            ) {
+                Text(when (currentLanguage) {
+                    AppLanguage.ES -> "Fuente"
+                    AppLanguage.EN -> "Font"
+                    AppLanguage.PT -> "Fonte"
+                })
+                Spacer(Modifier.width(12.dp))
+                Text(FontChoice.fromId(persisted.fontFamilyChoice).label(currentLanguage))
             }
-            Spacer(modifier = Modifier.height(6.dp))
-
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                listOf(
-                    "SERIF" to Pair("Serif Tradicional (Eclesial)", "Traditional Serif (Ecclesial)"),
-                    "SANS" to Pair("Sans Contemporáneo (Limpio)", "Modern Sans (Minimalist)")
-                ).forEach { (style, labels) ->
-                    val isSelected = selectedTypography == style
-                    FilterChip(
-                        selected = isSelected,
-                        onClick = { selectedTypography = style },
-                        label = {
-                            Text(if (currentLanguage == AppLanguage.EN) labels.second else labels.first)
-                        },
-                        colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = MaterialTheme.colorScheme.primary,
-                            selectedLabelColor = MaterialTheme.colorScheme.onPrimary
-                        )
-                    )
-                }
-            }
-
             Spacer(modifier = Modifier.height(18.dp))
 
             // 4. Text Font Scale
@@ -398,18 +385,32 @@ fun GuiCustomizerModal(
             // Save Button
             Button(
                 onClick = {
+                    saving = true
                     scope.launch {
-                        preferencesStore.saveAppearance(
-                            designLanguage = selectedDesign,
-                            themePreset = selectedTheme,
-                            darkModeSetting = selectedDarkMode,
-                            fontFamilyChoice = selectedTypography,
-                            fontSizeScale = selectedScale,
-                            audioNarrationSpeed = selectedAudioSpeed
-                        )
+                        try {
+                            preferencesStore.saveAppearance(
+                                designLanguage = selectedDesign,
+                                themePreset = selectedTheme,
+                                darkModeSetting = selectedDarkMode,
+                                fontFamilyChoice = persisted.fontFamilyChoice,
+                                fontSizeScale = selectedScale,
+                                audioNarrationSpeed = selectedAudioSpeed,
+                                updateFontFamily = false
+                            )
+                            onDismiss()
+                        } catch (_: IOException) {
+                            val message = when (currentLanguage) {
+                                AppLanguage.ES -> "No se pudieron guardar los cambios"
+                                AppLanguage.EN -> "Couldn't save changes"
+                                AppLanguage.PT -> "Não foi possível salvar as alterações"
+                            }
+                            android.widget.Toast.makeText(context, message, android.widget.Toast.LENGTH_LONG).show()
+                        } finally {
+                            saving = false
+                        }
                     }
-                    onDismiss()
                 },
+                enabled = !saving,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
@@ -421,9 +422,9 @@ fun GuiCustomizerModal(
             ) {
                 Text(
                     text = when (currentLanguage) {
-                        AppLanguage.ES -> "Aplicar y Guardar Preferencias"
-                        AppLanguage.EN -> "Apply & Save Preferences"
-                        AppLanguage.PT -> "Aplicar e Salvar Preferências"
+                        AppLanguage.ES -> "Guardar"
+                        AppLanguage.EN -> "Save"
+                        AppLanguage.PT -> "Salvar"
                     },
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp

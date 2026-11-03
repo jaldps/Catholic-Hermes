@@ -13,6 +13,8 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
+import androidx.compose.ui.test.performSemanticsAction
+import androidx.compose.ui.semantics.SemanticsActions
 import androidx.test.core.app.ApplicationProvider
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.models.AppLanguage
@@ -83,6 +85,42 @@ class RosaryInteractionTest(private val identity: DesignLanguage) {
         compose.onNodeWithText("The Holy Rosary", ignoreCase = true)
             .performScrollTo().performClick()
         compose.onNodeWithTag("current_prayer_title").assertTextEquals("Apostles' Creed")
+    }
+
+    @Test
+    @Config(sdk = [34], qualifiers = "w320dp-h760dp-xhdpi")
+    fun translatedControlsStayWholeAndReachableAtLargeType() {
+        val context = ApplicationProvider.getApplicationContext<Application>()
+        val repository = CatholicDataRepository(context).apply { setLanguage(AppLanguage.ES) }
+        val tts = LiturgicalTtsManager(context).also { narration = it }
+        compose.setContent {
+            SanctaFidesTheme(designLanguage = identity.id, darkModeSetting = "LIGHT",
+                fontFamilyChoice = "ROBOTO", fontScale = 1.3f) {
+                CompositionLocalProvider(LocalInspectionMode provides true) {
+                    Surface { RosaryScreen(repository, tts, AppLanguage.ES) }
+                }
+            }
+        }
+        compose.onNodeWithTag("next_bead_button").performScrollTo().assertIsDisplayed().assertIsEnabled()
+        for (label in listOf("Anterior", "Siguiente")) {
+            compose.onNodeWithTag(if (label == "Anterior") "prev_bead_button" else "next_bead_button")
+                .performScrollTo().assertIsDisplayed()
+            compose.onNodeWithText(label, ignoreCase = true, useUnmergedTree = true)
+                .performSemanticsAction(SemanticsActions.GetTextLayoutResult) { getResults ->
+                    val results = mutableListOf<androidx.compose.ui.text.TextLayoutResult>()
+                    getResults(results)
+                    org.junit.Assert.assertEquals("$identity: $label must stay whole", 1, results.single().lineCount)
+                    val result = results.single()
+                    org.junit.Assert.assertFalse("$identity/$label must not be ellipsized", result.isLineEllipsized(0))
+                    // Native glyph bounds can round up by a fraction of a pixel
+                    // beyond TextLayoutResult's integer size.
+                    org.junit.Assert.assertTrue("$identity/$label must fit its text bounds",
+                        result.getLineRight(0) - result.getLineLeft(0) <= result.size.width + 1f)
+                }
+        }
+        compose.onNodeWithTag("next_bead_button").performClick()
+        compose.onNodeWithTag("prev_bead_button").performScrollTo().assertIsDisplayed().assertIsEnabled().performClick()
+        compose.onNodeWithTag("prev_bead_button").assertIsNotEnabled()
     }
 
     companion object {

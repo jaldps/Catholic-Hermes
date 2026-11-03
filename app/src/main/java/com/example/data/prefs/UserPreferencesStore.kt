@@ -40,11 +40,14 @@ data class UserPreferences(
         const val DEFAULT_DESIGN_LANGUAGE = "VATICAN"
         const val DEFAULT_THEME_PRESET = "LITURGICAL_DYNAMIC"
         const val DEFAULT_DARK_MODE = "SYSTEM"
-        const val DEFAULT_FONT_FAMILY = "SERIF"
+        const val DEFAULT_FONT_FAMILY = "IDENTITY_DEFAULT"
     }
 }
 
-class UserPreferencesStore(private val context: Context) {
+class UserPreferencesStore(
+    private val context: Context,
+    private val dataStore: DataStore<Preferences> = context.preferencesDataStore
+) {
 
     private object Keys {
         val LANGUAGE = stringPreferencesKey("language")
@@ -64,7 +67,7 @@ class UserPreferencesStore(private val context: Context) {
      * A read failure yields defaults rather than propagating, so a corrupt file
      * cannot keep the app from starting.
      */
-    val preferences: Flow<UserPreferences> = context.preferencesDataStore.data
+    val preferences: Flow<UserPreferences> = dataStore.data
         .catch { cause ->
             if (cause is IOException) emit(emptyPreferences()) else throw cause
         }
@@ -90,42 +93,42 @@ class UserPreferencesStore(private val context: Context) {
         }
 
     suspend fun setLanguage(language: AppLanguage) {
-        context.preferencesDataStore.edit {
+        dataStore.edit {
             it[Keys.LANGUAGE] = language.code
             it[Keys.HAS_CHOSEN_LANGUAGE] = true
         }
     }
 
     suspend fun setDesignLanguage(id: String) {
-        context.preferencesDataStore.edit { it[Keys.DESIGN_LANGUAGE] = id }
+        dataStore.edit { it[Keys.DESIGN_LANGUAGE] = id }
     }
 
     suspend fun setThemePreset(id: String) {
-        context.preferencesDataStore.edit { it[Keys.THEME_PRESET] = id }
+        dataStore.edit { it[Keys.THEME_PRESET] = id }
     }
 
     suspend fun setDarkModeSetting(setting: String) {
-        context.preferencesDataStore.edit { it[Keys.DARK_MODE] = setting }
+        dataStore.edit { it[Keys.DARK_MODE] = setting }
     }
 
     suspend fun setFontFamilyChoice(choice: String) {
-        context.preferencesDataStore.edit { it[Keys.FONT_FAMILY] = choice }
+        dataStore.edit { it[Keys.FONT_FAMILY] = com.example.data.models.FontChoice.fromId(choice).id }
     }
 
     suspend fun setFontSizeScale(scale: Float) {
-        context.preferencesDataStore.edit { it[Keys.FONT_SCALE] = scale }
+        dataStore.edit { it[Keys.FONT_SCALE] = scale }
     }
 
     suspend fun setAudioNarrationSpeed(speed: Float) {
-        context.preferencesDataStore.edit { it[Keys.NARRATION_SPEED] = speed }
+        dataStore.edit { it[Keys.NARRATION_SPEED] = speed }
     }
 
     suspend fun setActiveBibleTranslationId(id: String) {
-        context.preferencesDataStore.edit { it[Keys.BIBLE_TRANSLATION] = id }
+        dataStore.edit { it[Keys.BIBLE_TRANSLATION] = id }
     }
 
     suspend fun setFullCccDownloaded(downloaded: Boolean) {
-        context.preferencesDataStore.edit { it[Keys.FULL_CCC_DOWNLOADED] = downloaded }
+        dataStore.edit { it[Keys.FULL_CCC_DOWNLOADED] = downloaded }
     }
 
     /** Writes an entire appearance selection in one transaction. */
@@ -135,13 +138,14 @@ class UserPreferencesStore(private val context: Context) {
         darkModeSetting: String,
         fontFamilyChoice: String,
         fontSizeScale: Float,
-        audioNarrationSpeed: Float
+        audioNarrationSpeed: Float,
+        updateFontFamily: Boolean = true
     ) {
-        context.preferencesDataStore.edit {
+        dataStore.edit {
             it[Keys.DESIGN_LANGUAGE] = designLanguage
             it[Keys.THEME_PRESET] = themePreset
             it[Keys.DARK_MODE] = darkModeSetting
-            it[Keys.FONT_FAMILY] = fontFamilyChoice
+            if (updateFontFamily) it[Keys.FONT_FAMILY] = com.example.data.models.FontChoice.fromId(fontFamilyChoice).id
             it[Keys.FONT_SCALE] = fontSizeScale
             it[Keys.NARRATION_SPEED] = audioNarrationSpeed
         }

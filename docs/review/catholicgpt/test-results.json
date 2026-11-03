@@ -1,0 +1,219 @@
+{
+  "variant": "CatholicGPT debug preview",
+  "counts": {
+    "tests": 134,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "classes": [
+    {
+      "name": "com.example.AppNavigationTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:09:55.304Z"
+    },
+    {
+      "name": "com.example.BibleIntegrityTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:07.999Z"
+    },
+    {
+      "name": "com.example.CatechismCoverageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:30.582Z"
+    },
+    {
+      "name": "com.example.CrossReferenceTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:34.008Z"
+    },
+    {
+      "name": "com.example.DesignContrastTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:38.018Z"
+    },
+    {
+      "name": "com.example.DesignNavigationTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:38.614Z"
+    },
+    {
+      "name": "com.example.ExampleRobolectricTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:45.578Z"
+    },
+    {
+      "name": "com.example.ExampleUnitTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:50.697Z"
+    },
+    {
+      "name": "com.example.FontPickerInteractionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:51.303Z"
+    },
+    {
+      "name": "com.example.FontPreferencesTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:10:59.209Z"
+    },
+    {
+      "name": "com.example.FontTypographyTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:11:02.075Z"
+    },
+    {
+      "name": "com.example.LitanyOfLoretoTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:11:02.565Z"
+    },
+    {
+      "name": "com.example.LiturgicalCalendarTest",
+      "tests": "15",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:11:02.996Z"
+    },
+    {
+      "name": "com.example.MissalTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:11:03.888Z"
+    },
+    {
+      "name": "com.example.ParishFinderTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:12:18.796Z"
+    },
+    {
+      "name": "com.example.ParishScheduleTextTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:12:41.966Z"
+    },
+    {
+      "name": "com.example.ReaderFontChoiceTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:12:42.485Z"
+    },
+    {
+      "name": "com.example.RosaryInteractionTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:12:43.124Z"
+    },
+    {
+      "name": "com.example.VaticanGospelTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:12:52.557Z"
+    },
+    {
+      "name": "com.example.VaticanNavigationLayoutTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:12:56.104Z"
+    },
+    {
+      "name": "com.example.VaticanNewsTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:13:04.189Z"
+    },
+    {
+      "name": "com.example.screenshots.AppScreenshotTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:13:08.144Z"
+    },
+    {
+      "name": "com.example.screenshots.CrossReferenceScreenshotTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:13:20.181Z"
+    },
+    {
+      "name": "com.example.screenshots.FullAppScreenshotTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:14:16.243Z"
+    },
+    {
+      "name": "com.example.screenshots.SacredArtScreenshotTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:14:41.183Z"
+    },
+    {
+      "name": "com.example.screenshots.ScreenshotTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-03T12:14:51.771Z"
+    }
+  ]
+}

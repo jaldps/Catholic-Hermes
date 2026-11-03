@@ -13,6 +13,15 @@ import com.example.R
  */
 object AppFonts {
 
+    /** Null means retain the identity's display/body pairing. */
+    fun family(choice: com.example.data.models.FontChoice): FontFamily? = when (choice) {
+        com.example.data.models.FontChoice.IDENTITY_DEFAULT -> null
+        com.example.data.models.FontChoice.INTER -> Inter
+        com.example.data.models.FontChoice.ROBOTO -> Roboto
+        com.example.data.models.FontChoice.EB_GARAMOND -> EbGaramond
+    }
+
+
     /** Inter — the open grotesque closest to San Francisco. */
     val Inter = FontFamily(
         Font(R.font.inter_regular, FontWeight.Normal),

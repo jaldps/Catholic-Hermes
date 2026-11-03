@@ -46,8 +46,9 @@ fun AppTopBar(
 fun AppScreenTitle(
     title: String,
     subtitle: String? = null,
-    modifier: Modifier = Modifier
-) = appKit().ScreenTitle(title, subtitle, modifier)
+    modifier: Modifier = Modifier,
+    trailingContent: (@Composable () -> Unit)? = null
+) = appKit().ScreenTitle(title, subtitle, modifier, trailingContent)
 
 @Composable
 fun AppSectionHeader(

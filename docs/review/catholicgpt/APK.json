@@ -1,0 +1,10 @@
+{
+  "package": "com.aistudio.sanctafides.qvmrpx.catholicgpt",
+  "versionCode": 5,
+  "versionName": "1.4-CatholicGPT",
+  "label": "CatholicGPT",
+  "sha256": "c63068d73499bcef7353025b19474e9523e22e7d33c98e7440db3078cf59671d",
+  "signingCertificateSha256": "7faf7658062609d34557f94409a3593a9deb8cb379883cdae3f19c9a65b7d7f6",
+  "matchesPreviousPreviewKey": true,
+  "bytes": 39404857
+}

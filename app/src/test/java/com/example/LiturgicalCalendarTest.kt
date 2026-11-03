@@ -162,6 +162,72 @@ class LiturgicalCalendarTest {
     }
 
     @Test
+    fun ordinaryWeekdaysFollowSundayThroughTheAdventBoundary() {
+        val examples = listOf(
+            date(2026, 10, 25) to 30,
+            date(2026, 10, 26) to 30,
+            date(2026, 10, 31) to 30,
+            date(2026, 11, 1) to 31,
+            date(2026, 11, 2) to 31,
+            date(2026, 11, 3) to 31,
+            date(2026, 11, 8) to 32,
+            date(2026, 11, 9) to 32,
+            date(2026, 11, 14) to 32,
+            date(2026, 11, 15) to 33,
+            date(2026, 11, 16) to 33,
+            date(2026, 11, 21) to 33,
+            date(2026, 11, 22) to 34,
+            date(2026, 11, 23) to 34,
+            date(2026, 11, 28) to 34,
+            date(2024, 11, 30) to 34,
+            date(2025, 11, 29) to 34,
+            date(2027, 11, 27) to 34
+        )
+        for ((day, expectedWeek) in examples) {
+            val info = LiturgicalCalendar.dayInfo(day)
+            assertEquals(day.toString(), LiturgicalSeason.ORDINARY_TIME, info.season)
+            assertEquals(day.toString(), expectedWeek, info.weekOfSeason)
+        }
+        val novemberThird = LiturgicalCalendar.dayInfo(date(2026, 11, 3))
+        assertEquals("Tuesday of the Thirty-first Week in Ordinary Time", novemberThird.title.en)
+        assertEquals("ot_31_day2", novemberThird.lectionaryKey)
+        assertEquals("all_saints", LiturgicalCalendar.dayInfo(date(2026, 11, 1)).lectionaryKey)
+        assertEquals("all_souls", LiturgicalCalendar.dayInfo(date(2026, 11, 2)).lectionaryKey)
+        assertEquals("christ_the_king", LiturgicalCalendar.dayInfo(date(2026, 11, 22)).lectionaryKey)
+        assertEquals(2026, LiturgicalCalendar.dayInfo(date(2026, 11, 28)).liturgicalYear)
+        val advent = LiturgicalCalendar.dayInfo(date(2026, 11, 29))
+        assertEquals(LiturgicalSeason.ADVENT, advent.season)
+        assertEquals(1, advent.weekOfSeason)
+        assertEquals(2027, advent.liturgicalYear)
+        assertEquals("advent_1_sunday", advent.lectionaryKey)
+    }
+
+    @Test
+    fun postPentecostOrdinaryWeekdaysShareTheirContainingSundayWeek() {
+        for (year in 2000..2100) {
+            var day = LiturgicalCalendar.pentecost(year).plusDays(1)
+            val advent = LiturgicalCalendar.firstSundayOfAdvent(year)
+            while (day < advent) {
+                val info = LiturgicalCalendar.dayInfo(day)
+                if (!day.isSunday && info.season == LiturgicalSeason.ORDINARY_TIME) {
+                    val sunday = day.plusDays(-day.isoDayOfWeek)
+                    val sundayInfo = LiturgicalCalendar.dayInfo(sunday)
+                    // The first resumed weekdays follow Pentecost, whose
+                    // Easter week number is not an Ordinary Time anchor.
+                    if (sundayInfo.season == LiturgicalSeason.ORDINARY_TIME) {
+                        assertEquals(day.toString(), sundayInfo.weekOfSeason, info.weekOfSeason)
+                        if (info.rank == CelebrationRank.FERIAL) {
+                            assertEquals(day.toString(),
+                                "ot_${sundayInfo.weekOfSeason}_day${day.isoDayOfWeek}", info.lectionaryKey)
+                        }
+                    }
+                }
+                day = day.plusDays(1)
+            }
+        }
+    }
+
+    @Test
     fun coloursFollowTheSeason() {
         assertEquals(LiturgicalColor.VIOLET, LiturgicalCalendar.dayInfo(date(2026, 2, 18)).color)
         assertEquals(LiturgicalColor.RED, LiturgicalCalendar.dayInfo(date(2026, 5, 24)).color)

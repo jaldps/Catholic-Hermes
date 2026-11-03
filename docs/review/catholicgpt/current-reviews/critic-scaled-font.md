@@ -1,0 +1,23 @@
+# Narrow screen / enlarged font visual inspection
+
+Inspected **all 24** supplied PNGs: Home, Bible, Rosary, and More; Apple, Material, and Vatican; light and dark; Roboto, 130% font scale, 320 × 760 layout. No source inspection, code edits, or builds. Image directory: `/workspace/Catholic-Hermes/app/build/screenshots/app/`.
+
+**No screenshot proves a completely unusable destination, overlapping navigation labels, or horizontally clipped main reading text.** Most text reflows successfully. Static top-of-page captures cannot establish whether a lower control can be reached by scrolling, so below-the-fold content is not automatically a clipping defect.
+
+## Findings that merit action
+
+| Priority | Exact files / area | Visible finding and practical effect |
+| --- | --- | --- |
+| P2, confirmed text loss | `bible_material_light_font_roboto_scale_130_w320_h760.png`; `bible_material_dark_font_roboto_scale_130_w320_h760.png` — search field | The placeholder ends at **“Search books and”**; “verses” is absent, with no visible ellipsis or wrap. Search remains recognizable, but its full scope is lost at the supported enlarged size. Use a shorter complete label or allow intentional wrapping. Apple fits its label; Vatican wraps the full phrase to two lines. |
+| P2, verify the full button after scrolling | `rosary_material_light_font_roboto_scale_130_w320_h760.png`; `rosary_material_dark_font_roboto_scale_130_w320_h760.png` — left action pill at bottom of prayer card | The visible first line of Back reads **“Ba”**, suggesting a hard wrap inside an excessively narrow button. The remaining button content is below the navigation edge, so these captures cannot show the complete label. Check the scrolled action row; give Back enough width or change the row layout rather than shrinking its font. |
+| High-priority task-layout concern, not a proven blocked control | `rosary_apple_light_font_roboto_scale_130_w320_h760.png`; `rosary_apple_dark_font_roboto_scale_130_w320_h760.png`; `rosary_material_light_font_roboto_scale_130_w320_h760.png`; `rosary_material_dark_font_roboto_scale_130_w320_h760.png`; `rosary_vatican_light_font_roboto_scale_130_w320_h760.png`; `rosary_vatican_dark_font_roboto_scale_130_w320_h760.png` — prayer and progression | The large bead diagram uses roughly 300 layout pixels of height before the prayer. In Apple/Material the action row is only a cut-off sliver at the bottom navigation boundary; Vatican does not show the end of the opening prayer or any progression controls. A user must scroll before advancing even this short opening step. Compact the diagram at narrow/enlarged settings so reading and progression receive priority. Do not reduce the requested body-text size. Verify scroll access before calling this a functional blocker. |
+
+## Screen-by-screen outcome
+
+- **Home, all six:** Text wraps within its containers. Apple shows the full short quote and Read Mass control. Material's long feast heading grows to four lines and pushes Read Mass below the first viewport. Vatican also places the quote ending/Read Mass below the viewport. This increases scrolling; it does not demonstrate clipped or missing content. No date/art collision is visible.
+- **Bible, all six:** Tabs, All books, Versions, book titles, and chapter counts remain readable and separated. Material search has the confirmed label loss above. Vatican's two-line search hint remains contained. Lower book rows continuing beyond the viewport are ordinary scrolling.
+- **Rosary, all six:** The mystery/stage/count text remains readable inside the diagram. Material and Vatican wrap Joyful Mysteries to two lines without collision. Prayer text reflows within the width. The action-row concern above needs a scrolled capture to settle whether any control is actually unreachable.
+- **More, all six:** Visible row names—including Doctrine & History and Calendar & Shrines—fit without touching chevrons. Settings begins at the lower viewport boundary and its rows require scrolling; no screenshot proves those rows inaccessible.
+- **Bottom navigation, all 24:** All five icon/label destinations fit. No label overlap or horizontal truncation is visible in either mode. Screenshot appearance alone does not verify target sizes, screen-reader semantics, keyboard focus, or scroll behavior.
+
+**Fix order:** complete the Material search label; verify/fix Material Back wrapping; then make the Rosary diagram adapt to narrow enlarged layouts and verify progression after scrolling. I would not report the naturally scrolling Home, Bible, or More pages as accessibility failures from these images alone.

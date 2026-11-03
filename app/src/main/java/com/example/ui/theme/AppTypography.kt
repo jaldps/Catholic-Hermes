@@ -29,24 +29,59 @@ data class AppTextStyles(
     val quote: TextStyle
 )
 
-/**
- * Builds the Material type scale and the extra styles for one identity.
- *
- * [serifPreferred] honours the reader's serif/sans preference where an
- * identity permits it. Cupertino and Material are defined by their sans faces,
- * so there the preference only swaps the scripture body — the chrome keeps its
- * own voice. Vatican is a serif identity throughout and ignores it.
- */
+/** Identity defaults retain their own typography. An explicit user family applies
+ * to every text slot, including Vatican chrome and reading text. */
 object AppTypographyFactory {
 
     fun build(
         language: DesignLanguage,
         serifPreferred: Boolean,
-        scale: Float
-    ): Pair<Typography, AppTextStyles> = when (language) {
-        DesignLanguage.APPLE -> apple(serifPreferred, scale)
-        DesignLanguage.MATERIAL -> material(serifPreferred, scale)
-        DesignLanguage.VATICAN -> vatican(scale)
+        scale: Float,
+        fontFamilyChoice: String? = null
+    ): Pair<Typography, AppTextStyles> {
+        val readingSerif = if (fontFamilyChoice == null) serifPreferred else true
+        val base = when (language) {
+            DesignLanguage.APPLE -> apple(readingSerif, scale)
+            DesignLanguage.MATERIAL -> material(readingSerif, scale)
+            DesignLanguage.VATICAN -> vatican(scale)
+        }
+        // Null retains the legacy Boolean API for existing callers.
+        val family = fontFamilyChoice?.let {
+            AppFonts.family(com.example.data.models.FontChoice.fromId(it))
+        } ?: return base
+        val (type, extras) = base
+        fun TextStyle.withFamily() = copy(fontFamily = family)
+        return type.copy(
+            displayLarge = type.displayLarge.withFamily(),
+            displayMedium = type.displayMedium.withFamily(),
+            displaySmall = type.displaySmall.withFamily(),
+            headlineLarge = type.headlineLarge.withFamily(),
+            headlineMedium = type.headlineMedium.withFamily(),
+            headlineSmall = type.headlineSmall.withFamily(),
+            titleLarge = type.titleLarge.withFamily(),
+            titleMedium = type.titleMedium.withFamily(),
+            titleSmall = type.titleSmall.withFamily(),
+            bodyLarge = type.bodyLarge.withFamily(),
+            bodyMedium = type.bodyMedium.withFamily(),
+            bodySmall = type.bodySmall.withFamily(),
+            labelLarge = type.labelLarge.withFamily(),
+            labelMedium = type.labelMedium.withFamily(),
+            labelSmall = type.labelSmall.withFamily()
+        ) to extras.copy(
+            screenTitle = extras.screenTitle.withFamily(),
+            screenSubtitle = extras.screenSubtitle.withFamily(),
+            sectionEyebrow = extras.sectionEyebrow.withFamily(),
+            sectionTitle = extras.sectionTitle.withFamily(),
+            scripture = extras.scripture.withFamily(),
+            scriptureDropCap = extras.scriptureDropCap.withFamily(),
+            verseNumber = extras.verseNumber.withFamily(),
+            rowTitle = extras.rowTitle.withFamily(),
+            rowSubtitle = extras.rowSubtitle.withFamily(),
+            navLabel = extras.navLabel.withFamily(),
+            buttonLabel = extras.buttonLabel.withFamily(),
+            metric = extras.metric.withFamily(),
+            quote = extras.quote.withFamily()
+        )
     }
 
     private val tightLineHeight = LineHeightStyle(
@@ -185,7 +220,7 @@ object AppTypographyFactory {
     /**
      * Roman inscriptional capitals for anything titular, widely tracked the way
      * cut stone demands, over a Garamond text face for everything read at
-     * length. Serif throughout, so the serif/sans preference does not apply.
+     * length. Explicit user family overrides are applied after these defaults.
      */
     private fun vatican(s: Float): Pair<Typography, AppTextStyles> {
         val display = AppFonts.Cinzel
@@ -234,7 +269,7 @@ object AppTypographyFactory {
             verseNumber = style(11.0, 15.0, FontWeight.SemiBold, 0.6, display),
             rowTitle = style(17.0, 25.0, FontWeight.Medium, 0.2, text),
             rowSubtitle = style(14.0, 20.0, FontWeight.Normal, 0.2, text),
-            navLabel = style(9.0, 12.0, FontWeight.SemiBold, 1.0, display),
+            navLabel = style(12.0, 16.0, FontWeight.SemiBold, 0.8, display),
             buttonLabel = style(13.0, 18.0, FontWeight.Bold, 1.8, display),
             metric = style(30.0, 36.0, FontWeight.Normal, 1.2, display),
             quote = style(19.0, 31.0, FontWeight.Normal, 0.2, text)

@@ -15,6 +15,7 @@ import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Language
 import androidx.compose.material.icons.outlined.Palette
 import androidx.compose.material.icons.outlined.Translate
+import androidx.compose.material.icons.outlined.TextFields
 import androidx.compose.material.icons.sharp.Palette
 import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.Icon
@@ -38,6 +39,8 @@ import com.example.data.prefs.UserPreferences
 import com.example.data.prefs.UserPreferencesStore
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.components.GuiCustomizerModal
+import com.example.ui.components.FontPickerDialog
+import com.example.data.models.FontChoice
 import com.example.ui.components.LanguageSelectorDialog
 import com.example.ui.design.AppIconSlot
 import com.example.ui.design.AppIcons
@@ -120,6 +123,7 @@ fun MainApp(
     var bibleInitialTab by remember { mutableIntStateOf(0) }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCustomizerModal by remember { mutableStateOf(false) }
+    var showFontPicker by remember { mutableStateOf(false) }
 
     val design = LocalAppDesign.current
     val tabs = AppDestination.tabs
@@ -284,6 +288,18 @@ fun MainApp(
                                 ),
                                 MoreEntry(
                                     title = when (currentLanguage) {
+                                        AppLanguage.ES -> "Fuente"
+                                        AppLanguage.EN -> "Font"
+                                        AppLanguage.PT -> "Fonte"
+                                    },
+                                    value = FontChoice.fromId(preferences.fontFamilyChoice).label(currentLanguage),
+                                    iconSlot = AppIconSlot.MORE,
+                                    tag = "font_settings_button",
+                                    onOpen = { showFontPicker = true },
+                                    icon = Icons.Outlined.TextFields
+                                ),
+                                MoreEntry(
+                                    title = when (currentLanguage) {
                                         AppLanguage.ES -> "Idioma"
                                         AppLanguage.EN -> "Language"
                                         AppLanguage.PT -> "Idioma"
@@ -311,6 +327,10 @@ fun MainApp(
             },
             onDismissRequest = { showLanguageSelector = false }
         )
+    }
+
+    if (showFontPicker) {
+        FontPickerDialog(preferencesStore, preferences, currentLanguage) { showFontPicker = false }
     }
 
     if (showCustomizerModal) {

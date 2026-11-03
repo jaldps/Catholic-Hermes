@@ -58,6 +58,8 @@ import com.example.ui.design.AppListRow
 import com.example.data.repository.ParishScheduleText
 import com.example.ui.components.TextFormat
 import com.example.ui.design.AppPrimaryButton
+import com.example.ui.components.IllustratedScreenHeader
+import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
@@ -247,8 +249,9 @@ fun ParishFinderScreen(
 
     LazyColumn(Modifier.fillMaxWidth().testTag("parish_finder_screen")) {
         item {
-            AppScreenTitle(
-                title = strings("Parroquias", "Parishes", "Paróquias")
+            IllustratedScreenHeader(
+                title = strings("Parroquias", "Parishes", "Paróquias"),
+                subject = SacredSubject.CHURCH
             )
         }
 

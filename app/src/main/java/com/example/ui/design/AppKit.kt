@@ -62,7 +62,8 @@ interface AppKit {
     fun ScreenTitle(
         title: String,
         subtitle: String?,
-        modifier: Modifier
+        modifier: Modifier,
+        trailingContent: (@Composable () -> Unit)? = null
     )
 
     // ------------------------------------------------------------ structure

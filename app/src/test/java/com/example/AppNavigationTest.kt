@@ -4,12 +4,21 @@ import android.app.Application
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.SideEffect
+import androidx.compose.ui.text.font.FontFamily
+import java.util.concurrent.atomic.AtomicReference
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.test.assertHasClickAction
+import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.hasAnyAncestor
 import androidx.compose.ui.test.hasClickAction
 import androidx.compose.ui.test.hasTestTag
+import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.performSemanticsAction
+import androidx.compose.ui.semantics.SemanticsActions
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
@@ -21,6 +30,9 @@ import androidx.test.core.app.ApplicationProvider
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDatabase
 import com.example.data.models.AppLanguage
+import com.example.data.models.FontChoice
+import com.example.ui.theme.AppFonts
+import com.example.ui.theme.LocalAppTextStyles
 import com.example.data.prefs.UserPreferences
 import com.example.data.prefs.UserPreferencesStore
 import com.example.data.repository.CatholicDataRepository
@@ -73,10 +85,16 @@ class AppNavigationTest(private val identity: DesignLanguage) {
             hasChosenLanguage = true
         )
 
+        val observedFamily = AtomicReference<FontFamily?>()
         compose.setContent {
-            SanctaFidesTheme(designLanguage = identity.id, darkModeSetting = "LIGHT") {
+            val stored by store.preferences.collectAsState(initial = prefs)
+            val active = prefs.copy(fontFamilyChoice = stored.fontFamilyChoice, fontSizeScale = stored.fontSizeScale)
+            SanctaFidesTheme(designLanguage = identity.id, darkModeSetting = "LIGHT",
+                fontFamilyChoice = active.fontFamilyChoice, fontScale = active.fontSizeScale) {
+                val family = LocalAppTextStyles.current.rowTitle.fontFamily
+                SideEffect { observedFamily.set(family) }
                 CompositionLocalProvider(LocalInspectionMode provides true) {
-                    MainApp(repository, db.dao(), tts, store, prefs)
+                    MainApp(repository, db.dao(), tts, store, active)
                 }
             }
         }
@@ -91,6 +109,9 @@ class AppNavigationTest(private val identity: DesignLanguage) {
             compose.onNodeWithTag(tab).assertHasClickAction().performClick()
             compose.onNodeWithTag(screen).assertIsDisplayed()
             if (tab == "nav_bible") {
+                if (identity == DesignLanguage.MATERIAL) {
+                    compose.onNodeWithTag("screen_header_illustration", useUnmergedTree = true).assertIsDisplayed()
+                }
                 compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()
                 compose.onNodeWithTag("bible_canon_2").performClick()
                 compose.onNodeWithText("Matthew").assertIsDisplayed()
@@ -108,6 +129,10 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("catechism_screen").assertIsDisplayed()
         pressBackToMore()
 
+        clickMoreRow("nav_habits")
+        compose.onNodeWithTag("habits_and_virtues_screen").assertIsDisplayed()
+        pressBackToMore()
+
         clickMoreRow("nav_parishes")
         compose.onNodeWithTag("parish_finder_screen").assertIsDisplayed()
         pressBackToMore()
@@ -119,6 +144,40 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         revealMoreRow("app_bar_lang_button")
         clickableMoreRow("app_bar_lang_button").assertHasClickAction()
         compose.onNodeWithText("English").assertIsDisplayed()
+        clickMoreRow("font_settings_button")
+        compose.onNodeWithTag("font_picker").assertIsDisplayed()
+        compose.onNodeWithTag("font_choice_ROBOTO").assertHasClickAction()
+        compose.onNodeWithTag("font_choice_EB_GARAMOND").assertHasClickAction()
+        val selectedFont = if (observedFamily.get() == AppFonts.Roboto) FontChoice.EB_GARAMOND else FontChoice.ROBOTO
+        compose.onNodeWithTag("font_choice_${selectedFont.id}").performClick()
+        compose.waitUntil(timeoutMillis = 10000) { observedFamily.get() == AppFonts.family(selectedFont) }
+        compose.onNodeWithTag("font_choice_${selectedFont.id}").assertIsSelected()
+        // Closing immediately after the final selection must wait for its
+        // write instead of cancelling it with the dialog's composition.
+        compose.onNodeWithTag("font_choice_INTER").performClick()
+        compose.onNodeWithText("Done").performClick()
+        compose.waitUntil(timeoutMillis = 10000) { observedFamily.get() == AppFonts.Inter }
+        compose.onNodeWithText("Inter").assertIsDisplayed()
+
+        // Verify actual reading content, not only the theme's style slots.
+        compose.onNodeWithTag("nav_bible").performClick()
+        compose.onNode(hasText("Bible", ignoreCase = true) and hasClickAction() and
+            hasAnyAncestor(hasTestTag("bible_screen"))).performClick()
+        compose.onNodeWithTag("book_item_gen").performScrollTo().performClick()
+        compose.onNodeWithTag("verse_1").performScrollTo()
+        fun assertReadingFamily(expected: FontFamily) {
+            compose.onNode(hasText("created", substring = true, ignoreCase = true) and
+                hasAnyAncestor(hasTestTag("verse_1")), useUnmergedTree = true)
+                .performSemanticsAction(SemanticsActions.GetTextLayoutResult) { getResults ->
+                    val results = mutableListOf<androidx.compose.ui.text.TextLayoutResult>()
+                    getResults(results)
+                    org.junit.Assert.assertEquals(expected, results.single().layoutInput.style.fontFamily)
+                }
+        }
+        assertReadingFamily(AppFonts.Inter)
+        compose.onNodeWithTag("bible_reader_font_choice").assertIsDisplayed().performClick()
+        compose.onNodeWithTag("verse_1").performScrollTo()
+        assertReadingFamily(AppFonts.EbGaramond)
     }
 
     private fun clickableMoreRow(tag: String) = compose.onNode(

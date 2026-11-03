@@ -1,0 +1,186 @@
+{
+  "retrieved_at_utc": "2026-11-03T02:42:50.939237+00:00",
+  "retrieval_method": "Verified HTTPS through the session inherited proxy; allowed github.com and raw.githubusercontent.com only. Public official repository content independently published there; no blocked-site relays.",
+  "google_assets": [
+    {
+      "local_path": "google-nowinandroid/screenshots.png",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "docs/images/screenshots.png",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/images/screenshots.png",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/images/screenshots.png",
+      "bytes": 308875,
+      "sha256": "aea8dfd09194245a7bffcafd30d034e65203318153ae10407739d18aa335e7e7",
+      "modified": false,
+      "dimensions_px": [
+        1470,
+        642
+      ],
+      "kind": "Official README screenshot montage showing actual phone and expanded-screen app UI in device frames."
+    },
+    {
+      "local_path": "google-nowinandroid/baseline-compact-medium.png",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "app/src/testDemo/screenshots/compactWidth_mediumHeight_showsNavigationBar.png",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/screenshots/compactWidth_mediumHeight_showsNavigationBar.png",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/screenshots/compactWidth_mediumHeight_showsNavigationBar.png",
+      "bytes": 66450,
+      "sha256": "26fd98a995623b77fdc35378eb25b78ad273913a075d06859fd3b760b10b0abe",
+      "modified": false,
+      "dimensions_px": [
+        600,
+        750
+      ],
+      "kind": "Official checked-in screenshot-test baseline of the NiaApp root; Linux Robolectric/Roborazzi rendering with LocalInspectionMode enabled and deterministic test data."
+    },
+    {
+      "local_path": "google-nowinandroid/baseline-compact-expanded.png",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "app/src/testDemo/screenshots/compactWidth_expandedHeight_showsNavigationBar.png",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/screenshots/compactWidth_expandedHeight_showsNavigationBar.png",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/screenshots/compactWidth_expandedHeight_showsNavigationBar.png",
+      "bytes": 129102,
+      "sha256": "0828030989fa8d66ed54e2adb92681efe05089b1dae338497abec097206da5c7",
+      "modified": false,
+      "dimensions_px": [
+        600,
+        1500
+      ],
+      "kind": "Official checked-in screenshot-test baseline of the NiaApp root; Linux Robolectric/Roborazzi rendering with LocalInspectionMode enabled and deterministic test data."
+    },
+    {
+      "local_path": "google-nowinandroid/baseline-expanded-medium.png",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "app/src/testDemo/screenshots/expandedWidth_mediumHeight_showsNavigationRail.png",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/screenshots/expandedWidth_mediumHeight_showsNavigationRail.png",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/screenshots/expandedWidth_mediumHeight_showsNavigationRail.png",
+      "bytes": 144239,
+      "sha256": "99e7ea40def37ce98438d386679d8aff898e00cd9b625fd0b6ab9fc1c05a32d0",
+      "modified": false,
+      "dimensions_px": [
+        1350,
+        750
+      ],
+      "kind": "Official checked-in screenshot-test baseline of the NiaApp root; Linux Robolectric/Roborazzi rendering with LocalInspectionMode enabled and deterministic test data."
+    },
+    {
+      "local_path": "google-nowinandroid/baseline-expanded-expanded.png",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "app/src/testDemo/screenshots/expandedWidth_expandedHeight_showsNavigationRail.png",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/screenshots/expandedWidth_expandedHeight_showsNavigationRail.png",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/screenshots/expandedWidth_expandedHeight_showsNavigationRail.png",
+      "bytes": 282759,
+      "sha256": "22375a83b4eb3c369df82b87db930beb65463a7258b9f5131a0ca39afd8d83cb",
+      "modified": false,
+      "dimensions_px": [
+        1350,
+        1500
+      ],
+      "kind": "Official checked-in screenshot-test baseline of the NiaApp root; Linux Robolectric/Roborazzi rendering with LocalInspectionMode enabled and deterministic test data."
+    },
+    {
+      "local_path": "google-nowinandroid/Now-In-Android-Design-File.pdf",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "docs/Now-In-Android-Design-File.pdf",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/Now-In-Android-Design-File.pdf",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/docs/Now-In-Android-Design-File.pdf",
+      "bytes": 26375831,
+      "sha256": "de11477c17a9277903c2e6a009122d861c52605faa1b22d36752cb6deb9fd1d2",
+      "modified": false,
+      "kind": "Official GitHub-hosted Material 3 app design case study, 55 pages. Primarily style/component guidance; not an app execution capture."
+    },
+    {
+      "local_path": "google-nowinandroid/README.source.md",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "README.md",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/README.md",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/README.md",
+      "bytes": 10998,
+      "sha256": "d6eeade4c74e4cb521987ac2fe88b43bf90dd16610c27019b337ff6e04bd5536",
+      "modified": false
+    },
+    {
+      "local_path": "google-nowinandroid/LICENSE.source",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/LICENSE",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "modified": false
+    },
+    {
+      "local_path": "google-nowinandroid/NiaAppScreenSizesScreenshotTests.source.kt",
+      "repository": "https://github.com/android/nowinandroid",
+      "commit": "2982e63cb691ad49cd009aab43dc206fee6699c2",
+      "upstream_path": "app/src/testDemo/kotlin/com/google/samples/apps/nowinandroid/ui/NiaAppScreenSizesScreenshotTests.kt",
+      "source_url": "https://raw.githubusercontent.com/android/nowinandroid/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/kotlin/com/google/samples/apps/nowinandroid/ui/NiaAppScreenSizesScreenshotTests.kt",
+      "source_page": "https://github.com/android/nowinandroid/blob/2982e63cb691ad49cd009aab43dc206fee6699c2/app/src/testDemo/kotlin/com/google/samples/apps/nowinandroid/ui/NiaAppScreenSizesScreenshotTests.kt",
+      "bytes": 7714,
+      "sha256": "9fa647c5c9e4fa6322b397b0334ca94a18f294e2020f09fe4f455cff48fae957",
+      "modified": false
+    }
+  ],
+  "apple_inspections": [
+    {
+      "repository": "https://github.com/apple/sample-backyard-birds",
+      "commit": "1843d5655bf884b501e2889ad9862ec58978fdbe",
+      "readme_url": "https://github.com/apple/sample-backyard-birds/blob/1843d5655bf884b501e2889ad9862ec58978fdbe/README.md",
+      "result": "No identifiable whole-app screenshot found in tracked file-tree and README inspection. All tracked raster/PDF images are inside .xcassets catalogs; README has no image markup. No Apple screenshot has been substituted or generated.",
+      "tracked_image_count": 146,
+      "tracked_images_outside_asset_catalogs": [],
+      "readme_image_markdown_count": 0,
+      "files": [
+        {
+          "local_path": "apple-backyard-birds/README.source.md",
+          "source_url": "https://raw.githubusercontent.com/apple/sample-backyard-birds/1843d5655bf884b501e2889ad9862ec58978fdbe/README.md",
+          "bytes": 6356,
+          "sha256": "3537ff5e297acb9c8ac1e5869bca13839a7a85a23370dd369930ea1a98d74c34"
+        },
+        {
+          "local_path": "apple-backyard-birds/LICENSE.source.txt",
+          "source_url": "https://raw.githubusercontent.com/apple/sample-backyard-birds/1843d5655bf884b501e2889ad9862ec58978fdbe/LICENSE.txt",
+          "bytes": 1053,
+          "sha256": "8d1f250e542bf5b121b2b9b0cfc72246c7812ba010b6b6e722e00434b08cba4a"
+        }
+      ]
+    },
+    {
+      "repository": "https://github.com/apple/sample-food-truck",
+      "commit": "3954a769e99f3cc53297d94f2b960ceb2665b3d6",
+      "readme_url": "https://github.com/apple/sample-food-truck/blob/3954a769e99f3cc53297d94f2b960ceb2665b3d6/README.md",
+      "result": "No identifiable whole-app screenshot found in tracked file-tree and README inspection. All tracked raster/PDF images are inside .xcassets catalogs; README has no image markup. No Apple screenshot has been substituted or generated.",
+      "tracked_image_count": 299,
+      "tracked_images_outside_asset_catalogs": [],
+      "readme_image_markdown_count": 0,
+      "files": [
+        {
+          "local_path": "apple-food-truck/README.source.md",
+          "source_url": "https://raw.githubusercontent.com/apple/sample-food-truck/3954a769e99f3cc53297d94f2b960ceb2665b3d6/README.md",
+          "bytes": 13861,
+          "sha256": "c3bf3572e8b2bbf3973ff700dbc249b51fec18e2b4dd33e5d35651590d8e9f03"
+        },
+        {
+          "local_path": "apple-food-truck/LICENSE.source.txt",
+          "source_url": "https://raw.githubusercontent.com/apple/sample-food-truck/3954a769e99f3cc53297d94f2b960ceb2665b3d6/LICENSE.txt",
+          "bytes": 1054,
+          "sha256": "39f3ea9e9fc438419ed8c132f2a6a5f45f6f2d6ba47df100513f2b65d751aecd"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Now in Android is an official Android sample and reference app. Its Android-native layouts do not establish an Apple or web design benchmark.",
+    "The README screenshot montage is a promotional composite with phone/device frames; do not treat its canvas dimensions as app viewport dimensions.",
+    "Checked-in baselines are test renders using demo data and inspection mode; illustration placeholders differ from the README screenshots.",
+    "Only the two named Apple sample repositories were inspected. Their absent screenshots do not imply that Apple publishes no screenshots elsewhere.",
+    "This reference collection does not perform a blind comparison, certify design quality, or verify current HIG/Material compliance."
+  ]
+}

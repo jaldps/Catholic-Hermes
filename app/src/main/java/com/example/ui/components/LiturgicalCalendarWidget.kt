@@ -149,7 +149,7 @@ fun LiturgicalCalendarWidget(
                         fontWeight = FontWeight.Bold,
                         letterSpacing = 1.2.sp,
                         color = LiturgicalGold,
-                        fontFamily = FontFamily.Serif
+                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily
                     )
                 }
 
@@ -185,7 +185,7 @@ fun LiturgicalCalendarWidget(
             // Celebration Title (Big Serif Header)
             Text(
                 text = liturgicalDay.celebrationTitle.get(currentLanguage),
-                fontFamily = FontFamily.Serif,
+                fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
                 fontWeight = FontWeight.Bold,
                 fontSize = 19.sp,
                 color = SacredBurgundy,
@@ -392,7 +392,7 @@ fun LiturgicalCalendarWidget(
                             AppLanguage.EN -> "LITURGICAL MEDITATION OF THE DAY"
                             AppLanguage.PT -> "MEDITAÇÃO LITÚRGICA DO DIA"
                         },
-                        fontFamily = FontFamily.Serif,
+                        fontFamily = MaterialTheme.typography.bodyLarge.fontFamily,
                         fontWeight = FontWeight.Bold,
                         fontSize = 11.sp,
                         color = SacredBurgundy,

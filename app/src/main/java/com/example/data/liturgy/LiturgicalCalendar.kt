@@ -598,7 +598,7 @@ object LiturgicalCalendar {
     /**
      * Ordinary Time runs in two stretches that share one 34-week count: the
      * first picks up after the Baptism of the Lord, the second is counted
-     * backwards from week 34, which always ends at Christ the King.
+     * backwards from week 34, which always starts at Christ the King.
      */
     private fun ordinaryTimeWeek(date: CalendarDate, year: Int): Int {
         val baptism = baptismOfTheLord(year)
@@ -609,7 +609,10 @@ object LiturgicalCalendar {
             if (date < sundayAfterBaptism) 1 else weeksBetween(sundayAfterBaptism, date) + 2
         } else {
             val king = christTheKing(year)
-            (34 - weeksBetween(date, king)).coerceIn(1, 34)
+            // Sunday opens the week. Counting back from a weekday would floor
+            // a partial week and incorrectly advance Monday–Saturday by one.
+            val sunday = date.plusDays(-(date.isoDayOfWeek % 7))
+            (34 - weeksBetween(sunday, king)).coerceIn(1, 34)
         }
     }
 

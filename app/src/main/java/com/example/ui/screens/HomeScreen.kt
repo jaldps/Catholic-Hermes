@@ -91,6 +91,8 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppPrimaryButton
 import com.example.ui.components.TextFormat
+import com.example.ui.components.IllustratedScreenHeader
+import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
@@ -178,16 +180,14 @@ fun HomeScreen(
             .testTag("home_screen")
     ) {
         item {
-            AppScreenTitle(title = strings("Hoy", "Today", "Hoje"))
-            Text(
-                text = strings(
+            IllustratedScreenHeader(
+                title = strings("Hoy", "Today", "Hoje"),
+                subject = SacredSubject.DAY,
+                subtitle = strings(
                     "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
                     "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
                     "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
-                ),
-                style = styles.screenSubtitle,
-                color = palette.textSecondary,
-                modifier = Modifier.padding(horizontal = design.spacing.gutter).padding(bottom = 16.dp)
+                )
             )
         }
 

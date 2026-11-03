@@ -148,6 +148,7 @@ object AppleKit : AppKit {
                 interactionSource = source,
                 indication = null,
                 enabled = enabled,
+                role = Role.Button,
                 onClick = onClick
             )
         }
@@ -166,7 +167,7 @@ object AppleKit : AppKit {
     ): Modifier = if (onClick == null) {
         this
     } else {
-        clickable(interactionSource = source, indication = null, enabled = enabled, onClick = onClick)
+        clickable(interactionSource = source, indication = null, enabled = enabled, role = Role.Button, onClick = onClick)
     }
 
     /** WCAG relative-luminance contrast between two opaque colours. */
@@ -640,6 +641,7 @@ object AppleKit : AppKit {
                             Row(
                                 Modifier
                                     .tap(onBack)
+                                    .widthIn(min = 44.dp)
                                     .heightIn(min = 44.dp)
                                     .padding(end = 8.dp)
                                     .testTag("nav_back"),
@@ -669,7 +671,7 @@ object AppleKit : AppKit {
                         // the large title starts on.
                         val capsule = RoundedCornerShape(50)
                         CompositionLocalProvider(
-                            androidx.compose.material3.LocalMinimumInteractiveComponentSize provides 0.dp
+                            androidx.compose.material3.LocalMinimumInteractiveComponentSize provides 44.dp
                         ) {
                             Row(
                                 Modifier
@@ -683,7 +685,7 @@ object AppleKit : AppKit {
                                             layout(placeable.width, placeable.height) { placeable.place(0, 0) }
                                         }
                                     }
-                                    .height(40.dp)
+                                    .heightIn(min = 44.dp)
                                     .then(
                                         if (!design.isDark) {
                                             Modifier.shadow(
@@ -919,7 +921,14 @@ object AppleKit : AppKit {
     }
 
     @Composable
-    override fun ScreenTitle(title: String, subtitle: String?, modifier: Modifier) {
+    override fun ScreenTitle(title: String, subtitle: String?, modifier: Modifier, trailingContent: (@Composable () -> Unit)?) {
+        if (trailingContent != null) {
+            Row(modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                ScreenTitle(title, subtitle, Modifier.weight(1f), null)
+                trailingContent()
+            }
+            return
+        }
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
@@ -1174,6 +1183,7 @@ object AppleKit : AppKit {
                             Modifier.clickable(
                                 interactionSource = source,
                                 indication = null,
+                                role = Role.Button,
                                 onClick = onClick
                             )
                         } else {
@@ -1193,7 +1203,9 @@ object AppleKit : AppKit {
                     val hue = remember(leadingIcon.name, registry) {
                         registry?.claim(wellHue(leadingIcon)) ?: wellHue(leadingIcon)
                     }
-                    val well = hue.of(design.isDark)
+                    // White glyphs must remain distinct even on the light
+                    // orange/mint system colours (non-text contrast ≥3:1).
+                    val well = inkOn(hue.of(design.isDark), Color.White, 3f)
                     Box(
                         Modifier
                             .size(IconWellSize)
@@ -1365,14 +1377,16 @@ object AppleKit : AppKit {
         val palette = design.palette
         val styles = LocalAppTextStyles.current
         val scheme = MaterialTheme.colorScheme
-        // UISearchBar's field is 36pt. Material's TextField enforces a 56pt
-        // minimum no matter what padding it is given, so the field is built
-        // out of a BasicTextField in a Box whose height we own outright.
+        // Keep the compact native field treatment, with a real 44pt minimum
+        // editable region rather than relying on invisible target expansion.
         val fill = systemFill(3)
         androidx.compose.foundation.text.BasicTextField(
             value = value,
             onValueChange = onValueChange,
-            modifier = modifier.fillMaxWidth().height(36.dp),
+            modifier = modifier
+                .fillMaxWidth()
+                .heightIn(min = 44.dp)
+                .semantics { contentDescription = placeholder },
             singleLine = true,
             textStyle = styles.rowTitle.copy(color = palette.textPrimary),
             cursorBrush = SolidColor(scheme.primary),
@@ -1418,114 +1432,68 @@ object AppleKit : AppKit {
     ) {
         val design = LocalAppDesign.current
         val palette = design.palette
-        val trackShape = design.shapes.buttonSmall
-        val pillShape = RoundedCornerShape(7.dp)
-        // UISegmentedControl's track is secondarySystemFill — translucent, so
-        // it reads the same on the canvas and inside a card. The selected
-        // segment is white in light and a raised grey in dark, *lighter*
-        // than its track in both: a pill darker than the track inverts the
-        // control and is the first thing that looks wrong about it.
+        val styles = MaterialTheme.typography
+        val density = androidx.compose.ui.platform.LocalDensity.current
+        val measurer = rememberTextMeasurer()
+        val count = options.size.coerceAtLeast(1)
         val track = systemFill(2)
         val pill = if (design.isDark) Color(0xFF636366) else Color.White
-        val count = options.size.coerceAtLeast(1)
+        val shape = RoundedCornerShape(8.dp)
+        val labelStyle = styles.labelMedium.copy(fontWeight = FontWeight.Medium)
 
-        BoxWithConstraints(
-            modifier
-                .fillMaxWidth()
-                // 32pt track, 2pt inset, 28pt pill — UISegmentedControl.
-                .height(32.dp)
-                .clip(trackShape)
-                .background(track)
-                .padding(2.dp)
-        ) {
+        BoxWithConstraints(modifier.fillMaxWidth()) {
             val segment = maxWidth / count
-            // The pill is one object that slides between segments on a
-            // critically-damped spring, as UIKit's does — not a background
-            // that blinks from one segment to the next.
+            val labelWidth = with(density) { (segment - 8.dp).roundToPx().coerceAtLeast(1) }
+            // Preserve the person's text scale. Two-line labels grow the
+            // control instead of shrinking translated text toward 9pt.
+            val textHeight = options.maxOfOrNull { option ->
+                measurer.measure(
+                    option, labelStyle.copy(fontWeight = FontWeight.SemiBold),
+                    maxLines = 2,
+                    constraints = androidx.compose.ui.unit.Constraints(maxWidth = labelWidth)
+                ).size.height
+            } ?: 0
+            val targetHeight = maxOf(44.dp, with(density) { textHeight.toDp() } + 12.dp)
             val pillOffset by animateDpAsState(
                 segment * selectedIndex.coerceIn(0, count - 1),
                 spring(dampingRatio = 0.86f, stiffness = 500f),
                 label = "segmentPill"
             )
-            Box(
-                Modifier
-                    .offset(x = pillOffset)
-                    .width(segment)
-                    .fillMaxHeight()
-                    // The only shadow in the whole identity: the selected
-                    // segment is the one thing iOS genuinely lifts, and only
-                    // where there is light to lift it into.
-                    .then(
-                        if (!design.isDark) {
-                            Modifier.shadow(2.dp, pillShape, ambientColor = Color.Black.copy(alpha = 0.10f), spotColor = Color.Black.copy(alpha = 0.14f))
-                        } else {
-                            Modifier
-                        }
-                    )
-                    .clip(pillShape)
-                    .background(pill)
-                    .border(0.5.dp, Color.Black.copy(alpha = if (design.isDark) 0f else 0.04f), pillShape)
-            )
-            Row(Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically) {
-                options.forEachIndexed { index, option ->
-                    val isSelected = index == selectedIndex
-                    Box(
-                        Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .tap({ onSelect(index) }),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        if (index > 0) {
-                            // Apple rules between two unselected segments and
-                            // drops the rule on either side of the selected one.
-                            val ruled = index != selectedIndex && index - 1 != selectedIndex
-                            val ruleAlpha by animateFloatAsState(
-                                if (ruled) 1f else 0f,
-                                tween(design.motion.fastMillis),
-                                label = "segmentRule"
-                            )
-                            Box(
-                                Modifier
-                                    .align(Alignment.CenterStart)
-                                    .width(1.dp)
-                                    .height(16.dp)
-                                    .graphicsLayer { alpha = ruleAlpha }
-                                    .background(palette.hairline)
-                            )
-                        }
-                        // UISegmentedControl shrinks a long title to fit its
-                        // segment (adjustsFontSizeToFitWidth) before it
-                        // truncates. Measured against the semibold weight
-                        // whether selected or not, so a label does not change
-                        // size as selection moves.
-                        val base = MaterialTheme.typography.labelMedium.copy(
-                            fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal
-                        )
-                        val measurer = rememberTextMeasurer()
-                        BoxWithConstraints(
-                            Modifier.padding(horizontal = 4.dp),
+            Box(Modifier.fillMaxWidth().height(targetHeight)) {
+                Box(
+                    Modifier.matchParentSize().padding(vertical = 4.dp)
+                        .clip(shape).background(track)
+                )
+                Box(
+                    Modifier.offset(x = pillOffset).width(segment).height(targetHeight)
+                        .padding(horizontal = 2.dp, vertical = 6.dp)
+                        .shadow(if (design.isDark) 0.dp else 1.dp, RoundedCornerShape(6.dp))
+                        .clip(RoundedCornerShape(6.dp)).background(pill)
+                )
+                Row(Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically) {
+                    options.forEachIndexed { index, option ->
+                        val isSelected = index == selectedIndex
+                        val source = remember { MutableInteractionSource() }
+                        Box(
+                            Modifier.weight(1f).fillMaxHeight()
+                                .clickable(
+                                    interactionSource = source,
+                                    indication = null,
+                                    role = Role.Tab,
+                                    onClick = { onSelect(index) }
+                                )
+                                .semantics { selected = isSelected }
+                                .padding(horizontal = 4.dp),
                             contentAlignment = Alignment.Center
                         ) {
-                            val available = constraints.maxWidth
-                            val natural = measurer.measure(
-                                option,
-                                base.copy(fontWeight = FontWeight.SemiBold),
-                                softWrap = false,
-                                maxLines = 1
-                            ).size.width
-                            val scale = if (natural > available && natural > 0) {
-                                (available.toFloat() / natural).coerceAtLeast(0.7f)
-                            } else {
-                                1f
-                            }
                             Text(
-                                text = option,
-                                style = base.copy(fontSize = base.fontSize * scale),
+                                option,
+                                style = labelStyle.copy(
+                                    fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium
+                                ),
                                 color = palette.textPrimary,
                                 textAlign = TextAlign.Center,
-                                maxLines = 1,
-                                softWrap = false,
+                                maxLines = 2,
                                 overflow = TextOverflow.Ellipsis
                             )
                         }
@@ -1547,14 +1515,16 @@ object AppleKit : AppKit {
             modifier
                 .pressScale(pressed, 0.94f)
                 .graphicsLayer { alpha = if (pressed) 0.7f else 1f }
-                .height(32.dp)
+                .heightIn(min = 44.dp)
+                .widthIn(min = 44.dp)
                 .clip(design.shapes.chip)
                 .background(
                     if (selected) accentFill()
                     else systemFill(2)
                 )
                 .pressable(source, onClick)
-                .padding(horizontal = 14.dp),
+                .semantics { this.selected = selected }
+                .padding(horizontal = 14.dp, vertical = 8.dp),
             contentAlignment = Alignment.Center
         ) {
             Text(

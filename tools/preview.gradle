@@ -1,8 +1,10 @@
 gradle.beforeProject { project ->
     project.pluginManager.withPlugin('com.android.application') {
+        project.android.buildFeatures.resValues = true
         project.android.buildTypes.named('debug') {
             applicationIdSuffix = '.catholicgpt'
             versionNameSuffix = '-CatholicGPT'
+            resValue 'string', 'app_name', 'CatholicGPT'
         }
     }
 }
