@@ -1363,7 +1363,7 @@ private fun GuideControlsCard(
         Text(
             text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
             style = styles.sectionEyebrow,
-            color = design.palette.accent,
+            color = design.palette.textSecondary,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )

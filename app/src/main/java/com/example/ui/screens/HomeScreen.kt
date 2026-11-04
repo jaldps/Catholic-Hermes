@@ -180,6 +180,9 @@ fun HomeScreen(
             .testTag("home_screen")
     ) {
         item {
+            // Extra end inset on the header so the decorative SacredArt
+            // frame (and its glow) reads inside the screen edge instead of
+            // clipped against it; title/subtitle and art are untouched.
             IllustratedScreenHeader(
                 title = strings("Hoy", "Today", "Hoje"),
                 subject = SacredSubject.DAY,
@@ -187,7 +190,8 @@ fun HomeScreen(
                     "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
                     "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
                     "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
-                )
+                ),
+                modifier = Modifier.padding(end = design.spacing.cardGap)
             )
         }
 
