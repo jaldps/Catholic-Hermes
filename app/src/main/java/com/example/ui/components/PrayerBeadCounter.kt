@@ -136,8 +136,11 @@ fun PrayerBeadCounter(
             ) {
                 // Large Our Father bead
                 val isLargeActive = currentBeadInDecade == 0
+                // Pending beads use textSecondary as a solid fill (full
+                // opacity, no alpha wash) so the bead reads against the
+                // card in both modes; the active bead keeps the gold accent.
                 val largeBeadBg by animateColorAsState(
-                    targetValue = if (isLargeActive) palette.gold else MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
+                    targetValue = if (isLargeActive) palette.gold else palette.textSecondary,
                     label = "largeBead"
                 )
 
@@ -163,8 +166,8 @@ fun PrayerBeadCounter(
                             .clip(CircleShape)
                             .background(largeBeadBg)
                             .border(
-                                width = if (isLargeActive) 2.dp else 1.dp,
-                                color = if (isLargeActive) palette.accent else MaterialTheme.colorScheme.outline,
+                                width = 2.dp,
+                                color = if (isLargeActive) palette.accent else palette.textPrimary,
                                 shape = CircleShape
                             ),
                         contentAlignment = Alignment.Center
@@ -173,7 +176,10 @@ fun PrayerBeadCounter(
                             text = "PN",
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Bold,
-                            color = if (isLargeActive) MaterialTheme.colorScheme.onTertiary else MaterialTheme.colorScheme.onPrimaryContainer
+                            // surfaceVariant is the card colour: it inverts
+                            // textSecondary in both modes (dark on light,
+                            // light on dark) for >=4.5:1 on the bead fill.
+                            color = if (isLargeActive) MaterialTheme.colorScheme.onTertiary else MaterialTheme.colorScheme.surfaceVariant
                         )
                     }
                 }
@@ -188,7 +194,7 @@ fun PrayerBeadCounter(
                         targetValue = when {
                             isActive -> palette.accent
                             isCompleted -> palette.gold
-                            else -> MaterialTheme.colorScheme.surface
+                            else -> palette.textSecondary
                         },
                         label = "bead_$beadNumber"
                     )
@@ -219,8 +225,11 @@ fun PrayerBeadCounter(
                                 .clip(CircleShape)
                                 .background(beadBg)
                                 .border(
-                                    width = if (isActive) 2.dp else 1.dp,
-                                    color = if (isActive) palette.gold else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f),
+                                    width = 2.dp,
+                                    // Active keeps the gold accent; pending and
+                                    // completed beads get a full-opacity
+                                    // textPrimary ring instead of outline @ 50%.
+                                    color = if (isActive) palette.gold else palette.textPrimary,
                                     shape = CircleShape
                                 ),
                             contentAlignment = Alignment.Center
@@ -232,7 +241,7 @@ fun PrayerBeadCounter(
                                 color = when {
                                     isActive -> MaterialTheme.colorScheme.onPrimary
                                     isCompleted -> MaterialTheme.colorScheme.onTertiary
-                                    else -> MaterialTheme.colorScheme.onSurfaceVariant
+                                    else -> MaterialTheme.colorScheme.surfaceVariant
                                 }
                             )
                         }
@@ -345,13 +354,14 @@ private fun VoiceChip(
     isSelected: Boolean,
     onClick: () -> Unit
 ) {
+    val palette = LocalAppDesign.current.palette
     Box(
         modifier = Modifier
             .clip(RoundedCornerShape(8.dp))
             .background(if (isSelected) MaterialTheme.colorScheme.primaryContainer else Color.Transparent)
             .border(
-                1.dp,
-                if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.4f),
+                1.5.dp,
+                if (isSelected) MaterialTheme.colorScheme.primary else palette.textSecondary,
                 RoundedCornerShape(8.dp)
             )
             .heightIn(min = 48.dp)

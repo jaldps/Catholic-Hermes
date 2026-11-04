@@ -636,7 +636,7 @@ private fun CardHeading(
             Icon(
                 imageVector = icon,
                 contentDescription = null,
-                tint = design.palette.textSecondary,
+                tint = design.palette.accent,
                 modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
             )
             Spacer(Modifier.width(8.dp))
