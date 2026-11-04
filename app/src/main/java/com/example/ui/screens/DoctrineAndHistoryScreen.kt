@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Call
@@ -36,14 +37,19 @@ import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.Newspaper
 import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Stop
+import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -59,6 +65,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontStyle
@@ -70,7 +77,9 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.CapitalSinVsVirtue
 import com.example.data.models.ChurchHistoryEpoch
 import com.example.data.models.ChurchSchismHistory
+import com.example.data.models.DidacheChapter
 import com.example.data.models.NearbyParish
+import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.news.NewsResult
 import com.example.data.news.VaticanNewsFetcher
 import com.example.data.news.VaticanNewsItem
@@ -197,7 +206,8 @@ fun DoctrineAndHistoryScreen(
                 repository = repository,
                 currentLanguage = currentLanguage,
                 backLabel = topTabs[selectedTopTab],
-                onBack = { openEntry = null }
+                onBack = { openEntry = null },
+                onOpen = { openEntry = it }
             )
         } else when (selectedTopTab) {
             0 -> MoralDoctrinePane(
@@ -317,6 +327,36 @@ private fun MoralDoctrinePane(
             }
         }
 
+        item(key = "didache") {
+            AppSectionHeader(
+                title = currentLanguage.pick("Didaché", "Didaché", "Didaché")
+            )
+            repository.didacheIntro.get(currentLanguage).takeIf { it.isNotBlank() }?.let { intro ->
+                GutterCard {
+                    didacheParagraphs(intro).forEachIndexed { i, paragraph ->
+                        if (i > 0) Spacer(Modifier.height(design.spacing.cardGap))
+                        Text(
+                            text = paragraph,
+                            style = MaterialTheme.typography.bodyLarge,
+                            color = design.palette.textPrimary
+                        )
+                    }
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
+            AppListGroup {
+                repository.didacheChapters.forEachIndexed { i, chapter ->
+                    AppListRow(
+                        title = chapter.heading.get(currentLanguage),
+                        subtitle = numbered(chapter.number, null),
+                        trailingText = if (marginalNumerals) TextFormat.roman(chapter.number) else null,
+                        onClick = { onOpen("didache:$i") },
+                        modifier = Modifier.heightIn(min = MinTouchTarget).testTag("didache_chapter_${chapter.number}")
+                    )
+                }
+            }
+        }
+
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
@@ -345,14 +385,19 @@ private fun DoctrineEntryPage(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
     backLabel: String,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    onOpen: (String) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val kind = key.substringBefore(':')
     val index = key.substringAfter(':').toIntOrNull() ?: 0
+    val listState = rememberLazyListState()
+    // A new entry is a new page: start at its top (matters when Prev/Next
+    // moves between Didache chapters without leaving the page).
+    LaunchedEffect(key) { listState.scrollToItem(0) }
 
-    LazyColumn(Modifier.fillMaxSize().testTag("doctrine_entry_page")) {
+    LazyColumn(state = listState, modifier = Modifier.fillMaxSize().testTag("doctrine_entry_page")) {
         item {
             InlineBackLink(label = backLabel, onClick = onBack, testTag = "doctrine_entry_back")
         }
@@ -539,12 +584,178 @@ private fun DoctrineEntryPage(
                 }
                 item { SchismCard(schism = schism, currentLanguage = currentLanguage) }
             }
+
+            "didache" -> {
+                val chapters = repository.didacheChapters
+                if (chapters.isNotEmpty()) {
+                    val chapterIndex = index.coerceIn(0, chapters.lastIndex)
+                    val chapter = chapters[chapterIndex]
+                    val total = chapters.size
+                    item {
+                        AppScreenTitle(
+                            title = chapter.heading.get(currentLanguage),
+                            subtitle = currentLanguage.pick(
+                                "Capítulo ${TextFormat.roman(chapter.number)}",
+                                "Chapter ${TextFormat.roman(chapter.number)}",
+                                "Capítulo ${TextFormat.roman(chapter.number)}"
+                            )
+                        )
+                    }
+                    item {
+                        val progressLabel = currentLanguage.pick(
+                            "Capítulo ${chapterIndex + 1} de $total",
+                            "Chapter ${chapterIndex + 1} of $total",
+                            "Capítulo ${chapterIndex + 1} de $total"
+                        )
+                        LinearProgressIndicator(
+                            progress = { (chapterIndex + 1).toFloat() / total },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = design.spacing.gutter)
+                                .padding(bottom = design.spacing.cardGap)
+                                .semantics { stateDescription = progressLabel }
+                                .testTag("didache_progress"),
+                            color = design.palette.accent,
+                            trackColor = design.palette.selectionTint
+                        )
+                    }
+                    if (chapterIndex == 0) {
+                        item {
+                            GutterCard {
+                                Text(
+                                    text = eyebrow(currentLanguage.pick("Introducción", "Introduction", "Introdução")),
+                                    style = styles.sectionEyebrow,
+                                    color = design.palette.textSecondary
+                                )
+                                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                                didacheParagraphs(repository.didacheIntro.get(currentLanguage)).forEachIndexed { i, paragraph ->
+                                    if (i > 0) Spacer(Modifier.height(design.spacing.cardGap))
+                                    Text(
+                                        text = paragraph,
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        color = design.palette.textPrimary
+                                    )
+                                }
+                            }
+                        }
+                    }
+                    item {
+                        DidacheReaderCard(
+                            chapter = chapter,
+                            currentLanguage = currentLanguage,
+                            chapterIndex = chapterIndex,
+                            includeIntro = chapterIndex == 0,
+                            introText = repository.didacheIntro.get(currentLanguage)
+                        )
+                    }
+                    item {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = design.spacing.gutter),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            AppSecondaryButton(
+                                label = currentLanguage.pick("Anterior", "Previous", "Anterior"),
+                                onClick = { onOpen("didache:${chapterIndex - 1}") },
+                                enabled = chapterIndex > 0,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("didache_prev_button")
+                            )
+                            Spacer(Modifier.width(design.spacing.cardGap))
+                            AppPrimaryButton(
+                                label = currentLanguage.pick("Siguiente", "Next", "Seguinte"),
+                                onClick = { onOpen("didache:${chapterIndex + 1}") },
+                                enabled = chapterIndex < chapters.lastIndex,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("didache_next_button")
+                            )
+                        }
+                    }
+                }
+            }
         }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
 // --------------------------------------------------- history and the schisms
+
+/** Didache text arrives with paragraphs separated by blank lines. */
+private fun didacheParagraphs(text: String): List<String> =
+    text.split(Regex("\\n\\s*\\n")).map { it.trim() }.filter { it.isNotEmpty() }
+
+/**
+ * One Didache chapter as a reading card: paragraphs in the scripture style
+ * inside the reading-width card, with a Listen/Stop read-aloud button.
+ * This screen receives no shared ttsManager, so the card owns a
+ * repository-independent [LiturgicalTtsManager] for its lifetime only.
+ */
+@Composable
+private fun DidacheReaderCard(
+    chapter: DidacheChapter,
+    currentLanguage: AppLanguage,
+    chapterIndex: Int,
+    includeIntro: Boolean,
+    introText: String
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val context = LocalContext.current
+    val ttsManager = remember { LiturgicalTtsManager(context) }
+    val isPlaying by ttsManager.isPlaying.collectAsState()
+    DisposableEffect(ttsManager) { onDispose { ttsManager.release() } }
+    LaunchedEffect(currentLanguage) { ttsManager.setLanguage(currentLanguage) }
+    LaunchedEffect(chapterIndex) { ttsManager.stop() }
+
+    val bodyText = chapter.body.get(currentLanguage)
+    val speakText = buildString {
+        append(chapter.heading.get(currentLanguage))
+        if (includeIntro && introText.isNotBlank()) {
+            append("\n\n")
+            append(introText)
+        }
+        append("\n\n")
+        append(bodyText)
+    }
+
+    GutterCard {
+        didacheParagraphs(bodyText).forEachIndexed { i, paragraph ->
+            if (i > 0) Spacer(Modifier.height(design.spacing.cardGap))
+            Text(
+                text = paragraph,
+                style = styles.scripture,
+                color = design.palette.textPrimary
+            )
+        }
+        Spacer(Modifier.height(design.spacing.cardGap))
+        AppDivider()
+        Spacer(Modifier.height(design.spacing.cardGap))
+        // While the voice is running the same 48dp button offers Stop, so
+        // recitation can be ended without leaving the page.
+        AppSecondaryButton(
+            label = if (isPlaying) {
+                currentLanguage.pick("Detener", "Stop", "Parar")
+            } else {
+                currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+            },
+            onClick = if (isPlaying) {
+                { ttsManager.stop() }
+            } else {
+                { ttsManager.speakSingle(speakText) }
+            },
+            leadingIcon = if (isPlaying) Icons.Default.Stop else Icons.Default.VolumeUp,
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .testTag("didache_listen_button")
+        )
+    }
+}
 
 @Composable
 private fun ChurchHistoryPane(

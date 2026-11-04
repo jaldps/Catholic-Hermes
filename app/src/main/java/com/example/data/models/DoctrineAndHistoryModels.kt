@@ -76,3 +76,10 @@ data class CatholicNewsArticle(
     val summary: LocalizedText,
     val readTimeMinutes: Int
 )
+
+/** One chapter (1-16) of the Didache, in all three languages. */
+data class DidacheChapter(
+    val number: Int,
+    val heading: LocalizedText,
+    val body: LocalizedText
+)

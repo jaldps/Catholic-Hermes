@@ -247,6 +247,9 @@ class CatholicDataRepository(
     val compendiumQAEntries: List<CompendiumQA> get() = CatechismCompendiumData.keyCompendiumEntries
     val compendiumPartTitles: List<com.example.data.models.LocalizedText> get() = CatechismCompendiumData.compendiumPartTitles
     val doctrineFormulas: List<DoctrineFormula> get() = CatechismCompendiumData.doctrineFormulas
+    /** The Didache (Doctrine of the Twelve Apostles), 16 chapters in ES/EN/PT. */
+    val didacheChapters: List<com.example.data.models.DidacheChapter> get() = DidacheData.chapters
+    val didacheIntro: com.example.data.models.LocalizedText get() = DidacheData.intro
     val officialVaticanLinks: List<CatechismData.OfficialVaticanLink> get() = CatechismData.officialVaticanLinks
 
     /** A browsable index reaching all 2,865 paragraphs of the Catechism. */
