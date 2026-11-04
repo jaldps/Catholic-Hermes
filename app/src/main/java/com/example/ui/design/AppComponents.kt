@@ -16,7 +16,6 @@ import com.example.ui.theme.LocalAppDesign
 fun appKit(): AppKit = when (LocalAppDesign.current.language) {
     DesignLanguage.APPLE -> AppleKit
     DesignLanguage.MATERIAL -> MaterialKit
-    DesignLanguage.VATICAN -> VaticanKit
 }
 
 // Screens call these. They carry the default arguments an interface cannot, and

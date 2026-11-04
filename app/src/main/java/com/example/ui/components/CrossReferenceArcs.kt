@@ -64,7 +64,6 @@ private fun arcInks(): ArcInks {
     return when (design.language) {
         DesignLanguage.APPLE -> ArcInks(Color(0xFFFF9F0A), scheme.primary, p.hairline, p.textPrimary)
         DesignLanguage.MATERIAL -> ArcInks(scheme.tertiary, scheme.primary, scheme.outlineVariant, scheme.onSurface)
-        DesignLanguage.VATICAN -> ArcInks(p.gold, p.accent, p.hairline, p.textPrimary)
     }
 }
 

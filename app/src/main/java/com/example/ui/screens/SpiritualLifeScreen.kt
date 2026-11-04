@@ -25,6 +25,7 @@ import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.BasicTextField
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.VolunteerActivism
 import androidx.compose.material.icons.filled.AutoAwesome
@@ -37,11 +38,13 @@ import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Stop
-import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -52,7 +55,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.platform.testTag
@@ -86,7 +88,6 @@ import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
@@ -132,7 +133,7 @@ private fun journalCategoryLabel(key: String, language: AppLanguage): String =
 @Composable
 private fun tabStripInset(): Dp {
     val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+    return design.spacing.gutter
 }
 
 /**
@@ -167,6 +168,7 @@ private fun JournalField(
     label: String,
     placeholder: String,
     minLines: Int = 1,
+    fieldMinHeight: Dp = 0.dp,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
@@ -187,6 +189,7 @@ private fun JournalField(
                 Box(
                     Modifier
                         .fillMaxWidth()
+                        .heightIn(min = fieldMinHeight)
                         .clip(design.shapes.field)
                         .background(
                             palette.selectionTint.copy(alpha = if (design.isDark) 1f else 0.5f)
@@ -661,90 +664,128 @@ private fun AddJournalEntryDialog(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
 
-    AlertDialog(
+    // A wide sheet rather than the material default's narrow alert: the
+    // writing area needs a reading measure, so the dialog runs up to 560dp
+    // and is full-width (with a screen margin) on phones. Without the
+    // platform default width the dialog cannot shrink back to the alert's
+    // 280dp floor on a phone, and the card surface is the tonal `raised`
+    // token the theme already maps for both modes, so nothing here hardcodes
+    // a light or dark colour. The column scrolls so the keyboard on a short
+    // screen cannot push the actions out of reach.
+    Dialog(
         onDismissRequest = onDismiss,
-        shape = design.shapes.dialog,
-        containerColor = palette.groupedSurface,
-        title = {
-            Text(
-                text = currentLanguage.pick(
-                    "Nueva Intención / Reflexión",
-                    "New Prayer / Intention",
-                    "Nova Intenção / Oração"
-                ),
-                style = styles.sectionTitle,
-                color = palette.textPrimary
-            )
-        },
-        text = {
-            Column(verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)) {
-                JournalField(
-                    value = title,
-                    onValueChange = onTitleChange,
-                    label = currentLanguage.pick("Título", "Title", "Título"),
-                    placeholder = currentLanguage.pick(
-                        "Título de la intención o gracia",
-                        "Title of the intention or grace",
-                        "Título da intenção ou graça"
-                    )
-                )
-
-                Column(verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)) {
+        properties = DialogProperties(usePlatformDefaultWidth = false)
+    ) {
+        Box(
+            Modifier
+                .fillMaxSize()
+                .padding(horizontal = design.spacing.cardPadding, vertical = design.spacing.sectionGap),
+            contentAlignment = Alignment.Center
+        ) {
+            Surface(
+                modifier = Modifier
+                    .widthIn(max = 560.dp)
+                    .fillMaxWidth(),
+                shape = design.shapes.dialog,
+                color = MaterialTheme.colorScheme.surfaceVariant,
+                contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                tonalElevation = 6.dp
+            ) {
+                Column(
+                    Modifier
+                        .heightIn(max = 640.dp)
+                        .verticalScroll(rememberScrollState())
+                        .padding(design.spacing.sectionGap),
+                    verticalArrangement = Arrangement.spacedBy(design.spacing.sectionGap)
+                ) {
                     Text(
-                        text = currentLanguage.pick("Categoría", "Category", "Categoria"),
-                        style = styles.sectionEyebrow,
-                        color = palette.textSecondary
+                        text = currentLanguage.pick(
+                            "Nueva Intención / Reflexión",
+                            "New Prayer / Intention",
+                            "Nova Intenção / Oração"
+                        ),
+                        style = styles.sectionTitle,
+                        color = palette.textPrimary
                     )
-                    // Four categories do not fit a dialog's measure in any of
-                    // the three languages, so the run wraps instead of being
-                    // clipped at the edge.
-                    FlowRow(
-                        Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
-                        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-                    ) {
-                        JournalCategories.forEach { option ->
-                            AppChip(
-                                label = currentLanguage.pick(option.es, option.en, option.pt),
-                                selected = category == option.key,
-                                onClick = { onCategoryChange(option.key) },
-                                modifier = Modifier.heightIn(min = 48.dp)
-                            )
+
+                    JournalField(
+                        value = title,
+                        onValueChange = onTitleChange,
+                        label = currentLanguage.pick("Título", "Title", "Título"),
+                        placeholder = currentLanguage.pick(
+                            "Título de la intención o gracia",
+                            "Title of the intention or grace",
+                            "Título da intenção ou graça"
+                        )
+                    )
+
+                    Column(verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)) {
+                        Text(
+                            text = currentLanguage.pick("Categoría", "Category", "Categoria"),
+                            style = styles.sectionEyebrow,
+                            color = palette.textSecondary
+                        )
+                        // Four categories do not fit even a wide dialog's
+                        // measure in any of the three languages, so the run
+                        // wraps instead of being clipped at the edge.
+                        FlowRow(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+                            verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                        ) {
+                            JournalCategories.forEach { option ->
+                                AppChip(
+                                    label = currentLanguage.pick(option.es, option.en, option.pt),
+                                    selected = category == option.key,
+                                    onClick = { onCategoryChange(option.key) },
+                                    modifier = Modifier.heightIn(min = 48.dp)
+                                )
+                            }
                         }
                     }
-                }
 
-                JournalField(
-                    value = content,
-                    onValueChange = onContentChange,
-                    label = currentLanguage.pick("Tu escrito", "Your writing", "Seu texto"),
-                    placeholder = currentLanguage.pick(
-                        "Escribe tus palabras al Señor...",
-                        "Write your words to the Lord...",
-                        "Escreva suas palavras ao Senhor..."
-                    ),
-                    minLines = 5
-                )
+                    JournalField(
+                        value = content,
+                        onValueChange = onContentChange,
+                        label = currentLanguage.pick("Tu escrito", "Your writing", "Seu texto"),
+                        placeholder = currentLanguage.pick(
+                            "Escribe tus palabras al Señor...",
+                            "Write your words to the Lord...",
+                            "Escreva suas palavras ao Senhor..."
+                        ),
+                        minLines = 6,
+                        fieldMinHeight = 144.dp
+                    )
+
+                    Row(
+                        Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        AppSecondaryButton(
+                            label = currentLanguage.pick("Cancelar", "Cancel", "Cancelar"),
+                            onClick = onDismiss,
+                            modifier = Modifier
+                                .weight(1f)
+                                .heightIn(min = 48.dp)
+                        )
+                        AppPrimaryButton(
+                            label = currentLanguage.pick(
+                                "Guardar en el Diario",
+                                "Save to journal",
+                                "Salvar no Diário"
+                            ),
+                            onClick = onSave,
+                            enabled = title.isNotBlank(),
+                            modifier = Modifier
+                                .weight(1f)
+                                .heightIn(min = 48.dp)
+                        )
+                    }
+                }
             }
-        },
-        confirmButton = {
-            AppPrimaryButton(
-                label = currentLanguage.pick(
-                    "Guardar en el Diario",
-                    "Save to journal",
-                    "Salvar no Diário"
-                ),
-                onClick = onSave,
-                enabled = title.isNotBlank()
-            )
-        },
-        dismissButton = {
-            AppSecondaryButton(
-                label = currentLanguage.pick("Cancelar", "Cancel", "Cancelar"),
-                onClick = onDismiss
-            )
         }
-    )
+    }
 }
 
 // -------------------------------------------------------------------- trivia
@@ -1250,9 +1291,7 @@ private fun ChantTab(
                         Spacer(Modifier.height(design.spacing.cardGap / 2))
                         Text(
                             text = chant.latinLyrics,
-                            style = if (design.language == DesignLanguage.VATICAN) {
-                                styles.scripture.copy(fontStyle = FontStyle.Italic)
-                            } else styles.scripture,
+                            style = styles.scripture,
                             color = palette.textPrimary
                         )
 

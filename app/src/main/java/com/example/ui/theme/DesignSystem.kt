@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.example.data.models.LocalizedText
 
 /**
- * The three visual identities the app can wear. Each one re-specifies the whole
+ * The two visual identities the app can wear. Each one re-specifies the whole
  * surface — type, shape, spacing, depth, motion, navigation pattern, list
  * idiom, iconography and ornament — not merely the palette.
  */
@@ -43,22 +43,11 @@ enum class DesignLanguage(
             "Tonal surfaces, generous shapes and the emphasised motion of Material Design 3.",
             "Superfícies tonais, formas generosas e movimento enfático do Material Design 3."
         )
-    ),
-
-    /** Vatican: Roman capitals, parchment, gold rules, centred folio composition. */
-    VATICAN(
-        "VATICAN",
-        LocalizedText("Vaticano", "Vatican", "Vaticano"),
-        LocalizedText(
-            "Capitales romanas, pergamino, filetes de oro y composición centrada de folio.",
-            "Roman capitals, parchment, gold rules and centred folio composition.",
-            "Capitais romanas, pergaminho, filetes de ouro e composição centrada de fólio."
-        )
     );
 
     companion object {
         fun fromId(id: String?): DesignLanguage =
-            entries.firstOrNull { it.id == id } ?: VATICAN
+            entries.firstOrNull { it.id == id } ?: MATERIAL
     }
 }
 
@@ -173,7 +162,7 @@ data class AppDesign(
 )
 
 val LocalAppDesign = staticCompositionLocalOf {
-    DesignTokens.of(DesignLanguage.VATICAN, isDark = false)
+    DesignTokens.of(DesignLanguage.MATERIAL, isDark = false)
 }
 
 object DesignTokens {
@@ -216,21 +205,6 @@ object DesignTokens {
         listGroup = RoundedCornerShape(16.dp)
     )
 
-    private val VaticanShapes = AppShapes(
-        card = RoundedCornerShape(3.dp),
-        cardLarge = RoundedCornerShape(4.dp),
-        button = RoundedCornerShape(2.dp),
-        buttonSmall = RoundedCornerShape(2.dp),
-        field = RoundedCornerShape(2.dp),
-        // Paper has no radius: anything the screens cut from these tokens
-        // (day badges, sigla, swatches) is square like a set rule box.
-        chip = RoundedCornerShape(0.dp),
-        sheet = RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp),
-        dialog = RoundedCornerShape(4.dp),
-        thumbnail = RoundedCornerShape(0.dp),
-        badge = RoundedCornerShape(0.dp),
-        listGroup = RoundedCornerShape(3.dp)
-    )
 
     // --------------------------------------------------------------- spacing
 
@@ -273,20 +247,6 @@ object DesignTokens {
         readingMaxWidth = 680.dp
     )
 
-    private val VaticanSpacing = AppSpacing(
-        gutter = 24.dp,
-        sectionGap = 40.dp,
-        cardPadding = 24.dp,
-        cardGap = 20.dp,
-        rowMinHeight = 52.dp,
-        rowPaddingVertical = 14.dp,
-        listItemGap = 0.dp,
-        headerTopGap = 20.dp,
-        contentBottomGap = 48.dp,
-        iconLabelGap = 16.dp,
-        insetGroupGap = 32.dp,
-        readingMaxWidth = 600.dp
-    )
 
     // ----------------------------------------------------------------- depth
 
@@ -312,15 +272,6 @@ object DesignTokens {
         usesHairlines = false
     )
 
-    private val VaticanDepth = AppDepth(
-        cardElevation = 0.dp,
-        cardBorderWidth = 1.dp,
-        appBarElevation = 0.dp,
-        navElevation = 0.dp,
-        sheetElevation = 0.dp,
-        usesTonalFill = false,
-        usesHairlines = true
-    )
 
     // ---------------------------------------------------------------- motion
 
@@ -340,13 +291,6 @@ object DesignTokens {
         emphasizedEasing = CubicBezierEasing(0.05f, 0.7f, 0.1f, 1f)
     )
 
-    private val VaticanMotion = AppMotion(
-        fastMillis = 240,
-        mediumMillis = 420,
-        slowMillis = 620,
-        standardEasing = CubicBezierEasing(0.4f, 0f, 0.2f, 1f),
-        emphasizedEasing = CubicBezierEasing(0.33f, 0f, 0.15f, 1f)
-    )
 
     // ----------------------------------------------------------------- decor
 
@@ -382,21 +326,6 @@ object DesignTokens {
         titleAlignment = Alignment.Start
     )
 
-    private val VaticanDecor = AppDecor(
-        headerStyle = HeaderStyle.CREST,
-        navStyle = NavStyle.FOLIO_RAIL,
-        listStyle = ListStyle.RULED_FOLIO,
-        dividerStyle = DividerStyle.ENGRAVED_RULE,
-        backgroundStyle = BackgroundStyle.PARCHMENT,
-        iconVariant = IconVariant.SHARP,
-        navIconSize = 22.dp,
-        rowIconSize = 20.dp,
-        usesChevrons = false,
-        usesDropCaps = true,
-        usesAllCapsLabels = true,
-        usesOrnaments = true,
-        titleAlignment = Alignment.CenterHorizontally
-    )
 
     // --------------------------------------------------------------- palette
 
@@ -476,41 +405,7 @@ object DesignTokens {
     )
 
     // Parchment, ink and gold leaf.
-    private val VaticanPaletteLight = AppPalette(
-        canvas = Color(0xFFF4EDDF),
-        groupedSurface = Color(0xFFFCF8F0),
-        raised = Color(0xFFFFFDF8),
-        hairline = Color(0xFFD9C9A3),
-        // Missal rubric: a vermilion-crimson, not a wine. 7.4:1 on parchment.
-        accent = Color(0xFF951D1C),
-        accentMuted = Color(0xFFF0E2D5),
-        gold = Color(0xFFAC852B),
-        textPrimary = Color(0xFF1F1A17),
-        textSecondary = Color(0xFF5B4F42),
-        textTertiary = Color(0xFF756652),
-        scrim = Color(0x801F1A17),
-        selectionTint = Color(0xFFEADFC6)
-    )
 
-    private val VaticanPaletteDark = AppPalette(
-        // A codex by candlelight: umber vellum, cinnabar rubrics (not pink),
-        // and burnished rather than lemon gold.
-        // Deep warm umber, not black; one deep vermilion (4.5:1 on the
-        // ground) that stays red by candle rather than drifting to coral.
-        canvas = Color(0xFF1B140E),
-        groupedSurface = Color(0xFF221A12),
-        raised = Color(0xFF2A2017),
-        hairline = Color(0xFF55452F),
-        // A clear vermilion with sufficient luminance for small rubrics on umber.
-        accent = Color(0xFFEF5945),
-        accentMuted = Color(0xFF34201A),
-        gold = Color(0xFFD4AD55),
-        textPrimary = Color(0xFFECE0CA),
-        textSecondary = Color(0xFFBDAC92),
-        textTertiary = Color(0xFFAE9A7C),
-        scrim = Color(0xB3000000),
-        selectionTint = Color(0xFF332A20)
-    )
 
     fun of(language: DesignLanguage, isDark: Boolean): AppDesign = when (language) {
         DesignLanguage.APPLE -> AppDesign(
@@ -535,16 +430,6 @@ object DesignTokens {
             palette = if (isDark) MaterialPaletteDark else MaterialPaletteLight
         )
 
-        DesignLanguage.VATICAN -> AppDesign(
-            language = language,
-            isDark = isDark,
-            shapes = VaticanShapes,
-            spacing = VaticanSpacing,
-            depth = VaticanDepth,
-            motion = VaticanMotion,
-            decor = VaticanDecor,
-            palette = if (isDark) VaticanPaletteDark else VaticanPaletteLight
-        )
     }
 
     /** Material [androidx.compose.material3.Shapes] derived from an identity. */

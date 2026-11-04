@@ -56,7 +56,6 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
@@ -87,7 +86,6 @@ import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.ListStyle
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -549,18 +547,8 @@ private fun VaticanPrayerCard(
     onStopAudio: () -> Unit
 ) {
     val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
 
     AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-        val latin = prayer.latinTitle?.takeIf { it.isNotBlank() }
-        if (latin != null && design.language == DesignLanguage.VATICAN) {
-            Text(
-                text = latin,
-                style = styles.rowTitle.copy(fontStyle = FontStyle.Italic),
-                color = design.palette.accent
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-        }
         VersicleAndResponse(
             leaderText = prayer.leaderText.get(currentLanguage),
             responseText = prayer.responseText?.get(currentLanguage),
@@ -1919,7 +1907,7 @@ private fun ReadingColumn(content: @Composable ColumnScope.() -> Unit) {
 @Composable
 private fun segmentedTabsInset(): Dp {
     val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+    return design.spacing.gutter
 }
 
 /** Vatican sets its labels as inscriptional capitals; the other two do not. */

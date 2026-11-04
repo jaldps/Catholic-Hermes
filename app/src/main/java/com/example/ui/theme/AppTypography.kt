@@ -30,7 +30,7 @@ data class AppTextStyles(
 )
 
 /** Identity defaults retain their own typography. An explicit user family applies
- * to every text slot, including Vatican chrome and reading text. */
+ * to every text slot, including chrome and reading text. */
 object AppTypographyFactory {
 
     fun build(
@@ -43,7 +43,6 @@ object AppTypographyFactory {
         val base = when (language) {
             DesignLanguage.APPLE -> apple(readingSerif, scale)
             DesignLanguage.MATERIAL -> material(readingSerif, scale)
-            DesignLanguage.VATICAN -> vatican(scale)
         }
         // Null retains the legacy Boolean API for existing callers.
         val family = fontFamilyChoice?.let {
@@ -215,65 +214,4 @@ object AppTypographyFactory {
         return typography to extras
     }
 
-    // --------------------------------------------------------------- Vatican
-
-    /**
-     * Roman inscriptional capitals for anything titular, widely tracked the way
-     * cut stone demands, over a Garamond text face for everything read at
-     * length. Explicit user family overrides are applied after these defaults.
-     */
-    private fun vatican(s: Float): Pair<Typography, AppTextStyles> {
-        val display = AppFonts.Cinzel
-        val text = AppFonts.EbGaramond
-
-        fun style(
-            size: Double,
-            lineHeight: Double,
-            weight: FontWeight = FontWeight.Normal,
-            tracking: Double = 0.0,
-            family: FontFamily = text
-        ) = TextStyle(
-            fontFamily = family,
-            fontWeight = weight,
-            fontSize = sp(size, s),
-            lineHeight = sp(lineHeight, s),
-            letterSpacing = sp(tracking, s),
-            lineHeightStyle = tightLineHeight
-        )
-
-        val typography = Typography(
-            displayLarge = style(30.0, 42.0, FontWeight.Bold, 3.0, display),
-            displayMedium = style(25.0, 36.0, FontWeight.Bold, 2.6, display),
-            displaySmall = style(21.0, 30.0, FontWeight.SemiBold, 2.2, display),
-            headlineLarge = style(24.0, 34.0, FontWeight.Bold, 2.0, display),
-            headlineMedium = style(20.0, 29.0, FontWeight.Normal, 2.2, display),
-            headlineSmall = style(17.0, 25.0, FontWeight.Normal, 2.2, display),
-            titleLarge = style(16.0, 24.0, FontWeight.Normal, 2.0, display),
-            titleMedium = style(18.0, 26.0, FontWeight.Medium, 0.2, text),
-            titleSmall = style(13.0, 19.0, FontWeight.SemiBold, 1.1, display),
-            bodyLarge = style(18.0, 30.0, FontWeight.Normal, 0.1, text),
-            bodyMedium = style(16.0, 26.0, FontWeight.Normal, 0.1, text),
-            bodySmall = style(14.0, 21.0, FontWeight.Normal, 0.2, text),
-            labelLarge = style(13.0, 18.0, FontWeight.SemiBold, 1.4, display),
-            labelMedium = style(11.0, 16.0, FontWeight.SemiBold, 1.2, display),
-            labelSmall = style(10.0, 14.0, FontWeight.SemiBold, 1.1, display)
-        )
-
-        val extras = AppTextStyles(
-            screenTitle = style(26.0, 38.0, FontWeight.Bold, 3.4, display),
-            screenSubtitle = style(15.0, 23.0, FontWeight.Normal, 0.4, text),
-            sectionEyebrow = style(10.0, 15.0, FontWeight.SemiBold, 2.4, display),
-            sectionTitle = style(18.0, 27.0, FontWeight.Normal, 2.6, display),
-            scripture = style(19.0, 33.0, FontWeight.Normal, 0.1, text),
-            scriptureDropCap = style(46.0, 46.0, FontWeight.Bold, 0.0, display),
-            verseNumber = style(11.0, 15.0, FontWeight.SemiBold, 0.6, display),
-            rowTitle = style(17.0, 25.0, FontWeight.Medium, 0.2, text),
-            rowSubtitle = style(14.0, 20.0, FontWeight.Normal, 0.2, text),
-            navLabel = style(12.0, 16.0, FontWeight.SemiBold, 0.8, display),
-            buttonLabel = style(13.0, 18.0, FontWeight.Bold, 1.8, display),
-            metric = style(30.0, 36.0, FontWeight.Normal, 1.2, display),
-            quote = style(19.0, 31.0, FontWeight.Normal, 0.2, text)
-        )
-        return typography to extras
-    }
 }

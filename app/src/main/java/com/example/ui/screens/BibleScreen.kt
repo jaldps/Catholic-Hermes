@@ -111,7 +111,6 @@ import androidx.compose.runtime.LaunchedEffect
 import com.example.data.prefs.ReadingPosition
 import com.example.ui.design.AppVerseRow
 import com.example.ui.theme.ReaderFontChoice
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.Dispatchers
@@ -140,7 +139,7 @@ private const val MinSearchLength = 3
 @Composable
 private fun segmentedTabsInset(): androidx.compose.ui.unit.Dp {
     val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+    return design.spacing.gutter
 }
 
 private fun TextUnit.scaledBy(factor: Float): TextUnit =

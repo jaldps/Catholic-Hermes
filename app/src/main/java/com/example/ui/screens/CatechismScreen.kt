@@ -90,7 +90,6 @@ import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.AppDesign
 import com.example.ui.theme.ReaderFontChoice
 import com.example.ui.theme.AppTextStyles
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -709,7 +708,9 @@ private fun ChapterReadingView(
 
 /**
  * Search by CCC number — which reaches any of the 2,865 articles — or by topic
- * across the titles and bodies of the indexed ones.
+ * across the full text of all 2,865 paragraphs in all three languages.
+ * Delegates to [CatechismData.searchArticles] via the repository; the curated
+ * index alone (the old behaviour) only covered a few dozen paragraphs.
  */
 private fun searchCatechism(
     repository: CatholicDataRepository,
@@ -717,19 +718,9 @@ private fun searchCatechism(
     searchQuery: String,
     currentLanguage: AppLanguage
 ): List<CatechismNumberedArticle> {
-    val numQuery = searchQuery.trim().toIntOrNull()
-    return if (numQuery != null) {
-        listOfNotNull(repository.findCatechismArticle(numQuery))
-    } else {
-        parts.flatMap { it.sections }
-            .flatMap { it.chapters }
-            .flatMap { it.articles }
-            .filter { art ->
-                art.title.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
-                    art.content.get(currentLanguage).contains(searchQuery, ignoreCase = true) ||
-                    art.cccNumber.toString() == searchQuery.trim()
-            }
-    }
+    // repository.searchCatechismArticles already handles the numeric lookup
+    // and searches every language, regardless of the UI language selected.
+    return repository.searchCatechismArticles(searchQuery)
 }
 
 private fun LazyListScope.catechismSearchItems(
@@ -833,29 +824,50 @@ private fun CompendiumView(
     // 0 = Todas (598), 1..4 = Partes I a IV, 5 = Fórmulas Doctrinales
     var selectedFilterIndex by remember { mutableIntStateOf(0) }
     var compendiumSearch by remember { mutableStateOf("") }
-    val allQuestions: List<CompendiumQA> = repository.compendiumQAEntries
+    // Full list sorted by question number and deduplicated by number, so all
+    // 598 questions are present exactly once before any filter/search runs.
+    // Root cause of "not all show": previously a text search only matched the
+    // current UI language, a numeric query short-circuited to an exact-number
+    // match (hiding every text/CCC-reference match), and the result was then
+    // intersected with the selected Part — a stale Part choice could hide a
+    // question the search had actually found. There was no hard take()/limit.
+    val allQuestions: List<CompendiumQA> = remember(repository) {
+        repository.compendiumQAEntries.distinctBy { it.number }.sortedBy { it.number }
+    }
+    val totalQuestions = allQuestions.size
 
-    val filteredQuestions = remember(selectedFilterIndex, compendiumSearch, currentLanguage) {
-        val byPart = when (selectedFilterIndex) {
-            1 -> allQuestions.filter { it.part == 1 }
-            2 -> allQuestions.filter { it.part == 2 }
-            3 -> allQuestions.filter { it.part == 3 }
-            4 -> allQuestions.filter { it.part == 4 }
-            else -> allQuestions
-        }
-
+    val filteredQuestions = remember(selectedFilterIndex, compendiumSearch, currentLanguage, allQuestions) {
         if (compendiumSearch.isBlank()) {
-            byPart
+            // No search: the Part filter alone decides (0 = Todas / All).
+            when (selectedFilterIndex) {
+                1 -> allQuestions.filter { it.part == 1 }
+                2 -> allQuestions.filter { it.part == 2 }
+                3 -> allQuestions.filter { it.part == 3 }
+                4 -> allQuestions.filter { it.part == 4 }
+                else -> allQuestions
+            }
         } else {
+            // Search runs over ALL 598 questions in ALL three languages, so a
+            // previously selected Part can never hide a match. A query is
+            // matched as a unified OR — never short-circuited — against the
+            // question number, the CCC reference, and question/answer/section
+            // text in ES, EN and PT.
             val query = compendiumSearch.trim()
+            val q = query.lowercase()
             val num = query.toIntOrNull()
-            if (num != null) {
-                byPart.filter { it.number == num || it.cccReference.contains(query) }
-            } else {
-                byPart.filter {
-                    it.question.get(currentLanguage).contains(query, ignoreCase = true) ||
-                        it.answer.get(currentLanguage).contains(query, ignoreCase = true)
-                }
+            allQuestions.filter { entry ->
+                (num != null && entry.number == num) ||
+                    entry.number.toString() == query ||
+                    entry.cccReference.lowercase().contains(q) ||
+                    entry.question.es.lowercase().contains(q) ||
+                    entry.question.en.lowercase().contains(q) ||
+                    entry.question.pt.lowercase().contains(q) ||
+                    entry.answer.es.lowercase().contains(q) ||
+                    entry.answer.en.lowercase().contains(q) ||
+                    entry.answer.pt.lowercase().contains(q) ||
+                    entry.section.es.lowercase().contains(q) ||
+                    entry.section.en.lowercase().contains(q) ||
+                    entry.section.pt.lowercase().contains(q)
             }
         }
     }
@@ -935,10 +947,11 @@ private fun CompendiumView(
                             "Compêndio Oficial"
                         ),
                         subtitle = currentLanguage.pick(
-                            "Mostrando ${filteredQuestions.size} preguntas",
-                            "Showing ${filteredQuestions.size} questions",
-                            "Mostrando ${filteredQuestions.size} perguntas"
-                        )
+                            "Mostrando ${filteredQuestions.size} de $totalQuestions preguntas",
+                            "Showing ${filteredQuestions.size} of $totalQuestions questions",
+                            "Mostrando ${filteredQuestions.size} de $totalQuestions perguntas"
+                        ),
+                        modifier = Modifier.testTag("compendium_count")
                     )
                 }
 
@@ -959,7 +972,7 @@ private fun CompendiumView(
                         )
                     }
                 } else {
-                    items(filteredQuestions) { question ->
+                    items(filteredQuestions, key = { it.number }) { question ->
                         ReadingColumn {
                             CompendiumQuestionCard(
                                 question = question,
@@ -1583,7 +1596,7 @@ private fun readingStyle(fontSizeMultiplier: Float, readerFont: ReaderFontChoice
 @Composable
 private fun segmentedTabsInset(): Dp {
     val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+    return design.spacing.gutter
 }
 
 private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {

@@ -1,10 +1,8 @@
 package com.example.ui.components
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
@@ -56,14 +54,6 @@ fun IllustratedScreenHeader(
                     )
                 }
             })
-        }
-        DesignLanguage.VATICAN -> Column(modifier) {
-            AppScreenTitle(title, subtitle)
-            SacredArt(
-                subject,
-                Modifier.padding(horizontal = design.spacing.gutter).padding(bottom = 12.dp)
-                    .fillMaxWidth().height(112.dp).clipToBounds()
-            )
         }
     }
 }

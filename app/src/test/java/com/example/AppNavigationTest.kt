@@ -104,7 +104,7 @@ class AppNavigationTest(private val identity: DesignLanguage) {
             "nav_bible" to "bible_screen",
             "nav_rosary" to "rosary_screen",
             "nav_prayers" to "prayers_and_novenas_screen",
-            "nav_more" to "more_screen"
+            "nav_habits" to "habits_and_virtues_screen"
         ).forEach { (tab, screen) ->
             compose.onNodeWithTag(tab).assertHasClickAction().performClick()
             compose.onNodeWithTag(screen).assertIsDisplayed()
@@ -123,15 +123,20 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("bible_screen").assertIsDisplayed()
         compose.onNodeWithTag("daily_missal_screen").assertIsDisplayed()
         compose.onNodeWithText("Today's Mass", ignoreCase = true).assertIsDisplayed()
-        compose.onNodeWithTag("nav_more").performClick()
+        // More is no longer a tab: it is only reached via the Home tile.
+        goToMoreFromHome()
 
         clickMoreRow("nav_catechism")
         compose.onNodeWithTag("catechism_screen").assertIsDisplayed()
         pressBackToMore()
 
+        // Habits is a tab now, so opening it from More and pressing back
+        // lands on Home (a tab back goes Home), not back on More.
         clickMoreRow("nav_habits")
         compose.onNodeWithTag("habits_and_virtues_screen").assertIsDisplayed()
-        pressBackToMore()
+        pressBackToHome()
+
+        goToMoreFromHome()
 
         clickMoreRow("nav_parishes")
         compose.onNodeWithTag("parish_finder_screen").assertIsDisplayed()
@@ -181,12 +186,21 @@ class AppNavigationTest(private val identity: DesignLanguage) {
     }
 
     private fun clickableMoreRow(tag: String) = compose.onNode(
-        hasClickAction() and (hasTestTag(tag) or hasAnyAncestor(hasTestTag(tag)))
+        hasClickAction() and (hasTestTag(tag) or hasAnyAncestor(hasTestTag(tag))) and
+            hasAnyAncestor(hasTestTag("more_screen"))
     )
 
     private fun revealMoreRow(tag: String) {
         compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag(tag))
-        compose.onNodeWithTag(tag).assertIsDisplayed()
+        compose.onNode(hasTestTag(tag) and hasAnyAncestor(hasTestTag("more_screen")))
+            .assertIsDisplayed()
+    }
+
+    private fun goToMoreFromHome() {
+        compose.onNodeWithTag("nav_home").performClick()
+        compose.onNodeWithTag("home_screen").assertIsDisplayed()
+        compose.onNodeWithTag("home_more_settings").performScrollTo().performClick()
+        compose.onNodeWithTag("more_screen").assertIsDisplayed()
     }
 
     private fun clickMoreRow(tag: String) {
@@ -197,6 +211,11 @@ class AppNavigationTest(private val identity: DesignLanguage) {
     private fun pressBackToMore() {
         compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
         compose.onNodeWithTag("more_screen").assertIsDisplayed()
+    }
+
+    private fun pressBackToHome() {
+        compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
+        compose.onNodeWithTag("home_screen").assertIsDisplayed()
     }
 
     companion object {

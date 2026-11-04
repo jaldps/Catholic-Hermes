@@ -39,7 +39,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -70,7 +69,6 @@ import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.design.AppVerseRow
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -893,9 +891,7 @@ private fun LiturgicalText(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
 
-    val body = (if (quoted) styles.quote else styles.scripture).let {
-        if (latin && design.language == DesignLanguage.VATICAN) it.copy(fontStyle = FontStyle.Italic) else it
-    }
+    val body = if (quoted) styles.quote else styles.scripture
     val ink = if (muted) design.palette.textSecondary else design.palette.textPrimary
     val rubric = rubricSigil()
 
@@ -1060,7 +1056,7 @@ private fun ReadingColumn(content: @Composable ColumnScope.() -> Unit) {
 @Composable
 private fun segmentedTabsInset(): Dp {
     val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+    return design.spacing.gutter
 }
 
 /** Vatican sets its labels as inscriptional capitals; the other two do not. */

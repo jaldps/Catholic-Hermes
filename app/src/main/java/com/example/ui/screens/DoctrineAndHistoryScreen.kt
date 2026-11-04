@@ -68,7 +68,6 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
@@ -104,7 +103,6 @@ import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.AppDesign
 import com.example.ui.theme.AppTextStyles
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -141,8 +139,8 @@ fun DoctrineAndHistoryScreen(
     // "kind:index"; the panes list one line of each.
     var openEntry by remember { mutableStateOf<String?>(null) }
 
-    // Opened from "Churches & News" the directory is a destination of its own:
-    // a title over three doctrinal tabs it was not asked for would mislead.
+    // Opened from "Churches & News" the destination is news only: no parish
+    // directory or filters, just the Vatican feed under its own title.
     val directoryOnly = initialTopTab == 3
 
     // Short enough that all four sit abreast on a 360dp phone in every
@@ -161,9 +159,9 @@ fun DoctrineAndHistoryScreen(
             if (directoryOnly) {
                 AppScreenTitle(
                     title = currentLanguage.pick(
-                        "Iglesias y Noticias",
-                        "Churches & News",
-                        "Igrejas e Notícias"
+                        "Noticias",
+                        "News",
+                        "Notícias"
                     ),
                     subtitle = null
                 )
@@ -233,7 +231,8 @@ fun DoctrineAndHistoryScreen(
             else -> ParishesAndNewsPane(
                 repository = repository,
                 currentLanguage = currentLanguage,
-                header = header
+                header = header,
+                newsOnly = directoryOnly
             )
         }
     }
@@ -252,7 +251,7 @@ private fun MoralDoctrinePane(
     // Vatican hangs a Roman trailing numeral in the margin as a red figure;
     // elsewhere a numeral beside the chevron reads as a value, so it leads
     // the subtitle instead.
-    val marginalNumerals = design.language == DesignLanguage.VATICAN
+    val marginalNumerals = false
     fun numbered(n: Int, rest: String?) =
         if (marginalNumerals) rest else listOfNotNull(TextFormat.roman(n), rest).joinToString(" · ")
 
@@ -419,9 +418,7 @@ private fun DoctrineEntryPage(
                         Text(
                             text = withoutCitation(cmd.biblicalWording.get(currentLanguage)),
                             // Scripture in true italic where the identity prints it so.
-                            style = if (design.language == DesignLanguage.VATICAN) {
-                                styles.scripture.copy(fontStyle = FontStyle.Italic)
-                            } else styles.scripture,
+                            style = styles.scripture,
                             color = design.palette.textPrimary
                         )
                         scriptureCitation(cmd.biblicalWording.get(currentLanguage))?.let {
@@ -861,17 +858,92 @@ private fun SchismCard(schism: ChurchSchismHistory, currentLanguage: AppLanguage
 
 // ---------------------------------------------------- parishes and the feed
 
+/** Vatican news as list items: loading, failure with a Vatican News link, or the feed. */
+private fun LazyListScope.newsItems(news: NewsResult?, currentLanguage: AppLanguage) {
+    when (news) {
+        null -> item {
+            val design = LocalAppDesign.current
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .heightIn(min = MinTouchTarget)
+                    .padding(design.spacing.gutter),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                CircularProgressIndicator(
+                    modifier = Modifier.size(design.decor.rowIconSize),
+                    color = design.palette.accent
+                )
+                Spacer(Modifier.width(design.spacing.iconLabelGap))
+                Text(
+                    text = currentLanguage.pick(
+                        "Cargando noticias del Vaticano…",
+                        "Loading news from the Vatican…",
+                        "A carregar notícias do Vaticano…"
+                    ),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = design.palette.textSecondary
+                )
+            }
+        }
+
+        is NewsResult.Failure -> item {
+            val context = LocalContext.current
+            val design = LocalAppDesign.current
+            AppEmptyState(
+                title = currentLanguage.pick(
+                    "Noticias no disponibles",
+                    "News unavailable",
+                    "Notícias indisponíveis"
+                ),
+                body = currentLanguage.pick(
+                    "Comprueba tu conexión y vuelve a intentarlo.",
+                    "Check your connection and try again.",
+                    "Verifique a ligação e tente de novo."
+                ),
+                icon = Icons.Default.Newspaper
+            )
+            AppSecondaryButton(
+                label = currentLanguage.pick("Abrir Vatican News", "Open Vatican News", "Abrir o Vatican News"),
+                onClick = {
+                    runCatching {
+                        context.startActivity(
+                            Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vaticannews.va"))
+                        )
+                    }
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .heightIn(min = MinTouchTarget)
+                    .padding(horizontal = design.spacing.gutter)
+            )
+        }
+
+        is NewsResult.Success -> items(news.items, key = { it.link }) { article ->
+            val design = LocalAppDesign.current
+            VaticanNewsCard(article = article, currentLanguage = currentLanguage)
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+    }
+}
+
+
+
 @Composable
 private fun ParishesAndNewsPane(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
-    header: LazyListScope.() -> Unit
+    header: LazyListScope.() -> Unit,
+    newsOnly: Boolean = false
 ) {
     val context = LocalContext.current
     val design = LocalAppDesign.current
 
-    // The screen's one selector: the directory or the news.
-    var section by remember { mutableIntStateOf(0) }
+    // The screen's one selector: the directory or the news. In newsOnly
+    // (directoryOnly) mode the selector and directory are gone and the
+    // Vatican feed is the whole pane.
+    var section by remember { mutableIntStateOf(if (newsOnly) 1 else 0) }
     var openParishId by remember { mutableStateOf<String?>(null) }
     var parishSearchQuery by remember { mutableStateOf("") }
     // 0: all, 1: confessions, 2: adoration, 3: cathedrals.
@@ -972,7 +1044,7 @@ private fun ParishesAndNewsPane(
     LazyColumn(Modifier.fillMaxSize()) {
         header()
 
-        item(key = "churches_news_tabs") {
+        if (!newsOnly) item(key = "churches_news_tabs") {
             AppSegmentedTabs(
                 options = listOf(
                     currentLanguage.pick("Iglesias", "Churches", "Igrejas"),
@@ -1126,68 +1198,7 @@ private fun ParishesAndNewsPane(
                 )
             }
         } else {
-            when (val news = newsState) {
-                null -> item {
-                    Row(
-                        Modifier
-                            .fillMaxWidth()
-                            .heightIn(min = MinTouchTarget)
-                            .padding(design.spacing.gutter),
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        CircularProgressIndicator(
-                            modifier = Modifier.size(design.decor.rowIconSize),
-                            color = design.palette.accent
-                        )
-                        Spacer(Modifier.width(design.spacing.iconLabelGap))
-                        Text(
-                            text = currentLanguage.pick(
-                                "Cargando noticias del Vaticano…",
-                                "Loading news from the Vatican…",
-                                "A carregar notícias do Vaticano…"
-                            ),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = design.palette.textSecondary
-                        )
-                    }
-                }
-
-                is NewsResult.Failure -> item {
-                    AppEmptyState(
-                        title = currentLanguage.pick(
-                            "Noticias no disponibles",
-                            "News unavailable",
-                            "Notícias indisponíveis"
-                        ),
-                        body = currentLanguage.pick(
-                            "Comprueba tu conexión y vuelve a intentarlo.",
-                            "Check your connection and try again.",
-                            "Verifique a ligação e tente de novo."
-                        ),
-                        icon = Icons.Default.Newspaper
-                    )
-                    AppSecondaryButton(
-                        label = currentLanguage.pick("Abrir Vatican News", "Open Vatican News", "Abrir o Vatican News"),
-                        onClick = {
-                            runCatching {
-                                context.startActivity(
-                                    Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vaticannews.va"))
-                                )
-                            }
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .heightIn(min = MinTouchTarget)
-                            .padding(horizontal = design.spacing.gutter)
-                    )
-                }
-
-                is NewsResult.Success -> items(news.items, key = { it.link }) { article ->
-                    VaticanNewsCard(article = article, currentLanguage = currentLanguage)
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                }
-            }
+            newsItems(newsState, currentLanguage)
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
@@ -1489,7 +1500,7 @@ private fun eyebrow(text: String): String =
 @Composable
 private fun tabStripInset(): Dp {
     val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+    return design.spacing.gutter
 }
 
 private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {

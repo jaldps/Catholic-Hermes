@@ -551,6 +551,564 @@ object DevotionsAndHistoryData {
             region = "Europe",
             country = LocalizedText("Francia / Universal", "France / Universal", "França / Universal"),
             patronageOf = LocalizedText("Dispensadora universal de las gracias divinas y amparo de los enfermos y conversos.", "Mediatrix of Graces and haven for converts.", "Dispensadora das graças celestes e refúgio dos aflitos.")
+        ),
+        MarianApparition(
+            id = "rosa_mistica",
+            title = LocalizedText("María Rosa Mística (María, Rosa Mística)", "Mary Mystical Rose", "Maria Rosa Mística"),
+            feastDay = LocalizedText("13 de Julio", "13 July", "13 de Julho"),
+            year = "1947",
+            location = LocalizedText("Montichiello, Brescia, Italia", "Montichiello, Brescia, Italy", "Montichiello, Itália"),
+            primarySanctuary = LocalizedText("Santuario de Rosa Mística (Fontanelle, Brescia)", "Shrine of Rosa Mystica (Fontanelle, Brescia)", "Santuário Rosa Mística em Fontanelle"),
+            historyAndApparition = LocalizedText(
+                "La Virgen se apareció desde 1947 a la enfermera Pierina Gilli en el hospital de Montichiello vestida de blanco con tres rosas (blanca, roja y dorada). Pidió oración, penitencia y reparación ante Jesús por el abandono de tabernáculos y la angustia de los sacerdotes.",
+                "Mary appeared from 1947 to nurse Pierina Gilli in Montichiello, dressed in white with three roses (white, red and golden), asking prayer and reparation for the abandoned tabernacles of the world.",
+                "A Virgem apareceu a partir de 1947 à enfermeira Pierina Gilli pedindo oração, penitência e reparação pela indiferença diante do Santíssimo Sacramento."
+            ),
+            promises = LocalizedText(
+                "Conversión de sacerdotes y religiosos, auxilio a los enfermos y consuelo a las almas en horas de prueba.",
+                "Conversion of priests, aid to the sick, and consolation in times of trial.",
+                "Conversão de sacerdotes, amparo aos enfermos e consolo nas provações."
+            ),
+            recordedMiracles = LocalizedText(
+                "Numerosos enfermos curados tras la oración en Fontanelle, conversiones atestiguadas y la expansión de la devoción en todo el mundo.",
+                "Many sick healed after prayer at Fontanelle, with documented conversions.",
+                "Muitas curas e conversões atestadas após orações no santuário."
+            ),
+            venerationPrayer = LocalizedText(
+                "María, Rosa Mística, consigue para nosotros la gracia de reparar con amor los ultrajes contra Jesús y de vivir en santa humildad. Amén.",
+                "Mary, Mystical Rose, obtain for us the grace to repair with love the offenses against Jesus and to live in holy humility. Amen.",
+                "Maria, Rosa Mística, alcançai-nos a graça de reparar com amor os ultrajes contra Jesus. Amém."
+            ),
+            region = "Europe",
+            country = LocalizedText("Italia / Universal", "Italy / Universal", "Itália / Universal"),
+            patronageOf = LocalizedText("Auxilio de los enfermos y reparación eucarística.", "Help of the sick and Eucharistic reparation.", "Auxílio dos enfermos e reparação eucarística.")
+        ),
+        MarianApparition(
+            id = "salus_populi_romani",
+            title = LocalizedText("Nuestra Señora Salus Populi Romani (Salvación del Pueblo Romano)", "Our Lady Salus Populi Romani", "Nossa Senhora Salus Populi Romani"),
+            feastDay = LocalizedText("Domingo después de la Asunción", "Sunday after the Assumption", "Domingo após a Assunção"),
+            year = "Siglo IX (tradición)",
+            location = LocalizedText("Capilla Paulina, Basílica de Santa María la Mayor, Roma", "Borghese Chapel, St. Mary Major, Rome", "Capela Borghese, Basílica Santa Maria Maior, Roma"),
+            primarySanctuary = LocalizedText("Basílica de Santa María la Mayor (Roma)", "Basilica of St. Mary Major, Rome", "Basílica de Santa Maria Maior em Roma"),
+            historyAndApparition = LocalizedText(
+                "Icono bizantino según la tradición pintado por San Lucas. En 590 el Papa San Gregorio Magno lo llevó en procesión durante la peste en Roma. Es la advocación protectora de la ciudad; el Papa Francisco la veneraba con especial devoción y la visita antes y después de cada viaje apostólico.",
+                "Byzantine icon traditionally attributed to St. Luke. In 590 St. Gregory the Great carried it in procession during a plague in Rome. It is the protector of the city; Pope Francis visited it before and after every apostolic journey.",
+                "Ícone bizantino do século IX venerado em Roma. Em 590 foi levado em procissão durante a peste e continua sendo a proteção de Roma e dos viajantes."
+            ),
+            promises = LocalizedText(
+                "Protección de la ciudad, auxilio en epidemias y guía espiritual en los viajes y decisiones del Pontífice.",
+                "Protection of the city, aid in epidemics, and guidance on journeys.",
+                "Proteção da cidade, auxílio nas epidemias e proteção dos viajantes."
+            ),
+            recordedMiracles = LocalizedText(
+                "El cese de la peste en Roma tras la procesión de 590 y múltiples indulgencias concedidas a su devoción.",
+                "The abatement of the plague in Rome after the 590 procession.",
+                "O fim da peste em Roma após a procissão de 590."
+            ),
+            venerationPrayer = LocalizedText(
+                "¡Salvación del pueblo romano, Virgen santísima!: protege a tu ciudad y a todos los viajeros, y guárdanos siempre bajo tu manto. Amén.",
+                "Salvation of the Roman people, Most Holy Virgin: protect your city and all travelers, keeping us always under your mantle. Amen.",
+                "Salvação do povo romano, Virgem Santíssima: protegei a vossa cidade e todos os viajantes. Amém."
+            ),
+            region = "Europe",
+            country = LocalizedText("Italia / Universal", "Italy / Universal", "Itália / Universal"),
+            patronageOf = LocalizedText("Protectora de Roma y de los viajeros.", "Protector of Rome and travelers.", "Protetora de Roma e dos viajantes.")
+        ),
+        MarianApparition(
+            id = "virgen_dolores",
+            title = LocalizedText("Nuestra Señora de los Dolores (Piedad)", "Our Lady of Sorrows", "Nossa Senhora das Dores"),
+            feastDay = LocalizedText("15 de Septiembre", "15 September", "15 de Setembro"),
+            year = "Tradición medieval",
+            location = LocalizedText("Universal / Florencia, Italia", "Universal / Florence, Italy", "Universal / Florença, Itália"),
+            primarySanctuary = LocalizedText("Basílica de la Santísima Anunciada (Florencia)", "Basilica of the Most Holy Annunciation, Florence", "Basílica da Santíssima Anunciação em Florença"),
+            historyAndApparition = LocalizedText(
+                "Contempla a María al pie de la Cruz, con el corazón traspasado por siete espadas en memoria de sus dolores: la profecía de Simeón, la huida a Egipto, la pérdida de Jesús, el camino al Calvario, la crucifixión, la deposición y la sepultura.",
+                "Mary at the foot of the Cross, her heart pierced by seven swords recalling her sorrows: the prophecy of Simeon, the flight into Egypt, the loss of Jesus, the way to Calvary, the crucifixion, the deposition and burial.",
+                "Contempla Maria ao pé da Cruz, com o coração transpassado por sete espadas em memória de suas dores na vida de Jesus."
+            ),
+            promises = LocalizedText(
+                "Consuelo en el sufrimiento, conversión de los pecadores y perseverancia en la fe junto a la Cruz.",
+                "Consolation in suffering, conversion of sinners, and perseverance beside the Cross.",
+                "Consolo no sofrimento, conversão dos pecadores e perseverança na fé."
+            ),
+            recordedMiracles = LocalizedText(
+                "Innumrables gracias a los devotos del Rosario de los Dolores y la conversión de corazones endurecidos.",
+                "Countless graces through the Rosary of Sorrows and conversions of hardened hearts.",
+                "Inúmeras graças alcançadas pela devoção à Nossa Senhora das Dores."
+            ),
+            venerationPrayer = LocalizedText(
+                "Virgen de los Dolores, que estuviste al pie de la Cruz: concédenos el don de compadecernos de los que sufren y de unir nuestros dolores a los de tu Hijo. Amén.",
+                "Our Lady of Sorrows, who stood beside the Cross: grant us compassion for the suffering and union of our sorrows with those of your Son. Amen.",
+                "Mãe Dolorosa: dai-nos compaixão pelos que sofrem e união de nossas dores à Cruz de vosso Filho. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            patronageOf = LocalizedText("Consuelo de los afligidos y conversión de pecadores.", "Consolation of the afflicted and conversion of sinners.", "Consolação dos aflitos e conversão dos pecadores.")
+        ),
+        MarianApparition(
+            id = "inmaculada_concepcion",
+            title = LocalizedText("Nuestra Señora de la Inmaculada Concepción", "Our Lady of the Immaculate Conception", "Nossa Senhora da Imaculada Conceição"),
+            feastDay = LocalizedText("8 de Diciembre", "8 December", "8 de Dezembro"),
+            year = "1854 (dogma)",
+            location = LocalizedText("Universal / Roma, Italia", "Universal / Rome, Italy", "Universal / Roma, Itália"),
+            primarySanctuary = LocalizedText("Basílica de la Inmaculada Concepción (Roma)", "Basilica of the Immaculate Conception, Rome", "Basílica da Imaculada Conceição em Roma"),
+            historyAndApparition = LocalizedText(
+                "Celebra a María concebida sin pecado original por singular gracia de Dios. El Papa Pío IX proclamó el dogma en 1854 (Ineffabilis Deus); en Lourdes (1858) la Virgen confirmó: 'Yo soy la Inmaculada Concepción'.",
+                "Mary conceived without original sin by a singular grace of God. Proclaimed dogma by Pius IX in 1854; at Lourdes in 1858 she confirmed: 'I am the Immaculate Conception.'",
+                "Celebra Maria concebida sem pecado original. Dogma proclamado em 1854 e confirmado pela Virgem em Lourdes: 'Eu sou a Imaculada Conceição'."
+            ),
+            promises = LocalizedText(
+                "Pureza de corazón, alegría al confesarse y protección contra el pecado en la hora de la tentación.",
+                "Purity of heart, joy in confession, and protection against sin in temptation.",
+                "Pureza de coração, alegria na confissão e proteção contra o pecado."
+            ),
+            recordedMiracles = LocalizedText(
+                "La medalla milagrosa de 1830 y las curaciones de Lourdes unidas a su advocación.",
+                "The Miraculous Medal of 1830 and the healings of Lourdes tied to her advocation.",
+                "A Medalha Milagrosa de 1830 e as curas de Lourdes ligadas à sua invocação."
+            ),
+            venerationPrayer = LocalizedText(
+                "¡Oh María, sin pecado concebida!: rugado por nosotros que recurrimos a ti. Refugio de pecadores, sálvanos. Amén.",
+                "O Mary, conceived without sin: pray for us who have recourse to you. Refuge of sinners, save us. Amen.",
+                "Ó Maria concebida sem pecado: rogai por nós que recorremos a vós. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            patronageOf = LocalizedText("Patrona de las naciones de lengua española y de los pecadores.", "Patroness of Spanish-speaking nations and sinners.", "Padroeira das nações de língua espanhola e dos pecadores.")
+        ),
+        MarianApparition(
+            id = "asuncion",
+            title = LocalizedText("Nuestra Señora de la Asunción (Dormición y Asunción)", "Our Lady of the Assumption", "Nossa Senhora da Assunção"),
+            feastDay = LocalizedText("15 de Agosto", "15 August", "15 de Agosto"),
+            year = "1950 (dogma)",
+            location = LocalizedText("Universal / Jerusalén y Roma", "Universal / Jerusalem and Rome", "Universal / Jerusalém e Roma"),
+            primarySanctuary = LocalizedText("Basílica de la Dormición (Jerusalén) y Basílica de Santa María la Mayor (Roma)", "Dormition Abbey, Jerusalem & St. Mary Major, Rome", "Abadia da Dormição em Jerusalém e Basílica Santa Maria Maior em Roma"),
+            historyAndApparition = LocalizedText(
+                "La Iglesia celebra que María, al término de su vida terrena, fue elevada en cuerpo y alma a la gloria de Dios. Pío XII proclamó el dogma en 1950 (Munificentissimus Deus); la Dormición se guarda en Jerusalén.",
+                "Mary, at the end of her earthly life, was taken body and soul into the glory of God. Proclaimed dogma by Pius XII in 1950; tradition places her Dormition in Jerusalem.",
+                "A Igreja celebra que Maria foi elevada em corpo e alma à glória de Deus. Dogma proclamado em 1950."
+            ),
+            promises = LocalizedText(
+                "Esperanza en la resurrección, buena muerte y certeza de la vida eterna junto a Cristo.",
+                "Hope in the resurrection, holy death, and certainty of eternal life in Christ.",
+                "Esperança na ressurreição e na vida eterna junto a Cristo."
+            ),
+            recordedMiracles = LocalizedText(
+                "Veneración milenaria en la tumba de la Dormición y fiesta universal de Asunción en todos los continentes.",
+                "Millennial veneration at the Dormition tomb and the universal Assumption feast.",
+                "Veneração milenar no sepulcro da Dormição e festa universal da Assunção."
+            ),
+            venerationPrayer = LocalizedText(
+                "¡Virgen Asunta al Cielo, Reina de los ángeles!: intercede por nosotros para que, purificados en esta vida, merezcamos un día acompañarte en la gloria. Amén.",
+                "Virgin assumed into Heaven, Queen of angels: intercede for us so that, purified in this life, we may one day share your glory. Amen.",
+                "Virgem Assunta aos céus, Rainha dos anjos: intercedei por nós nesta vida terrena. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            patronageOf = LocalizedText("Patrona de la buena muerte y de los moribundos.", "Patroness of holy death and the dying.", "Padroeira da boa morte e dos moribundos.")
+        ),
+        MarianApparition(
+            id = "estrella_del_mar",
+            title = LocalizedText("Nuestra Señora Estrella del Mar (Stella Maris)", "Our Lady Star of the Sea", "Nossa Senhora Estrela do Mar"),
+            feastDay = LocalizedText("Último domingo de Septiembre", "Last Sunday of September", "Último domingo de setembro"),
+            year = "Tradición medieval",
+            location = LocalizedText("Universal / puertos y costas", "Universal / ports and coasts", "Universal / portos e costas"),
+            primarySanctuary = LocalizedText("Santuarios portuarios de Stella Maris", "Harbor shrines of Stella Maris", "Santuários portuários de Stella Maris"),
+            historyAndApparition = LocalizedText(
+                "Ancient title from the Fathers: as the polestar guided sailors at night, Mary guides souls through the darkness of earth toward Christ, harbor of salvation. Carmen songs invoke her as Stella Maris.",
+                "Ancient title: as the evening star guided sailors home, Mary guides souls through the darkness of life toward Christ. The Carmelite hymn Flos Carmeli salutes her as Stella Maris.",
+                "Título antigo: como a estrela guiava os navegantes, Maria guia as almas através das trevas da vida até Cristo."
+            ),
+            promises = LocalizedText(
+                "Protección en la navegación, socorro en tempestades y puerto seguro en la hora de la muerte.",
+                "Protection at sea, help in storms, and a safe harbor in the hour of death.",
+                "Proteção no mar, socorro nas tempestades e porto seguro na hora da morte."
+            ),
+            recordedMiracles = LocalizedText(
+                "Navegantes librados de náufragios tras su invocación; campanas y faros de Stella Maris en todos los puertos.",
+                "Sailors rescued from wrecks after invoking her; Stella Maris shrines in ports worldwide.",
+                "Marinheiros livrados de naufrágios após invocá-la."
+            ),
+            venerationPrayer = LocalizedText(
+                "Estrella del Mar, Madre de Dios, en este valle de lágrimas entona tu canto: salvación y guía a navegación. Amén.",
+                "Star of the ocean, Mother of God: through this vale of tears lead us safely home. Amen.",
+                "Estrela do Mar, Mãe de Deus: guia-nos com segurança pela noite da vida. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal / Chile / España", "Universal", "Universal"),
+            patronageOf = LocalizedText("Patrona de marineros, pescadores y puertos.", "Patroness of sailors, fishermen, and ports.", "Padroeira dos marinheiros e pescadores.")
+        ),
+        MarianApparition(
+            id = "rosario_lepanto",
+            title = LocalizedText("Nuestra Señora del Rosario (Lepanto / Victoria)", "Our Lady of the Rosary (Lepanto/Victory)", "Nossa Senhora do Rosário (Lepanto)"),
+            feastDay = LocalizedText("7 de Octubre", "7 October", "7 de Outubro"),
+            year = "1571",
+            location = LocalizedText("Golfo de Lepanto, Grecia", "Gulf of Lepanto, Greece", "Golfo de Lepanto, Grécia"),
+            primarySanctuary = LocalizedText("Basílica de Santa María sobre Minerva (Roma)", "St. Mary over Minerva, Rome", "Santa Maria sobre Minerva em Roma"),
+            historyAndApparition = LocalizedText(
+                "El 7 de octubre de 1571 la flota cristiana venció en Lepanto a la flota otomana invocarndo el auxilio de María. San Pío V instituyó la fiesta; los dominicos propagaron universalmente el rezo del Santo Rosario.",
+                "On 7 October 1571 the Christian fleet defeated the Ottoman navy at Lepanto invoking Mary's aid. St. Pius V instituted the feast; Dominicans spread the Rosary worldwide.",
+                "Em 7 de outubro de 1571 a frota cristã venceu em Lepanto invocando Maria. São Pio V instituiu a festa e os dominicanos difundiram o Santo Rosário."
+            ),
+            promises = LocalizedText(
+                "«Cien mil avemarías han ganado la batalla». Victoria sobre el mal por el Rosario: paz, conversión y protección de los hogares.",
+                "The Rosary's victories: peace, conversion, and protection of homes.",
+                "Vitórias mediante o Santo Rosário: paz, conversão e proteção das famílias."
+            ),
+            recordedMiracles = LocalizedText(
+                "La victoria naval de Lepanto, salvación de provincias y ciudades por el Rosario en los siglos siguientes.",
+                "The naval victory at Lepanto and the Rosary's protection of cities and provinces thereafter.",
+                "A vitória de Lepanto e a proteção de cidades e nações pelo Santo Rosário."
+            ),
+            venerationPrayer = LocalizedText(
+                "Reina del Santo Rosario, auxilio de los cristianos: apiádate de nosotros, alcance la paz y concédenos la perseverancia. Amén.",
+                "Queen of the Holy Rosary, help of Christians: obtain peace for us and perseverance in prayer. Amen.",
+                "Rainha do Santo Rosário, auxílio dos cristãos: alcançai-nos a paz e a perseverança. Amém."
+            ),
+            region = "Europe",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            patronageOf = LocalizedText("Patrona del Rosario y Victory over adversaries of the faith.", "Patroness of the Rosary.", "Padroeira do Santo Rosário.")
+        ),
+        MarianApparition(
+            id = "candelaria",
+            title = LocalizedText("Nuestra Señora de la Candelaria", "Our Lady of Candelaria", "Nossa Senhora da Candelária"),
+            feastDay = LocalizedText("2 de Febrero", "2 February", "2 de Fevereiro"),
+            year = "1392 (Canarias)",
+            location = LocalizedText("Candelaria, Tenerife, España", "Candelaria, Tenerife, Spain", "Candelaria, Tenerife, Espanha"),
+            primarySanctuary = LocalizedText("Basílica de Nuestra Señora de la Candelaria (Tenerife)", "Basilica of Candelaria, Tenerife", "Basílica da Candelária em Tenerife"),
+            historyAndApparition = LocalizedText(
+                "Imagen hallada en 1392 por dos pescadores guanches en una playa de Tenerife; resguardada en una cueva y luego llevada a la iglesia. La advocación de la Presentación del Señor (Candelaria) se extendió a toda América Latina, especialmente a Bolivia.",
+                "Image found in 1392 by Guanches on a Tenerife beach, enshrined in a cave then church. The Presentation advocation spread across Latin America, above all to Bolivia.",
+                "Imagem encontrada em 1392 em Tenerife. A devoção da Candelária se espalhou por toda a América Latina, sobretudo na Bolívia."
+            ),
+            promises = LocalizedText(
+                "Luz para caminar en verdad, protección de los pueblos originarios y de los peregrinos.",
+                "Light to walk in truth, protection of indigenous peoples and pilgrims.",
+                "Luz para caminhar na verdade e proteção dos fiéis."
+            ),
+            recordedMiracles = LocalizedText(
+                "Prodigios de la versión tinerfeña y fiestas patronales multitudinarias en Copacabana y en el Altiplano.",
+                "Miracles of the Tenerife image and massive patronal feasts across the Andes.",
+                "Milagres da imagem de Tenerife e festas patronais nos Andes."
+            ),
+            venerationPrayer = LocalizedText(
+                "Virgen de la Candelaria, luz que disipa las sombras: alumbra nuestros caminos, aviva la fe y llévanos a Cristo. Amén.",
+                "Our Lady of Candelaria, light of the world: illumine our paths and lead us to Christ. Amen.",
+                "Nossa Senhora da Candelária, luz que dissipa as trevas: iluminai os nossos caminhos. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("España / Bolivia / América Latina", "Spain / Bolivia / Latin America", "Espanha / Bolívia / América Latina"),
+            patronageOf = LocalizedText("Patrona de las Canarias y de los pueblos del Altiplano.", "Patroness of the Canaries and Andean peoples.", "Padroeira das Canárias e dos povos andinos.")
+        ),
+        MarianApparition(
+            id = "mercedes",
+            title = LocalizedText("Nuestra Señora de la Merced (Redentora de Cautivos)", "Our Lady of Mercy (Redeemer of Captives)", "Nossa Senhora da Merced (Resgate dos Cativos)"),
+            feastDay = LocalizedText("24 de Septiembre", "24 September", "24 de Setembro"),
+            year = "1218",
+            location = LocalizedText("Barcelona, España", "Barcelona, Spain", "Barcelona, Espanha"),
+            primarySanctuary = LocalizedText("Basílica de la Merced (Barcelona)", "Basilica of La Merced, Barcelona", "Basílica da Merced em Barcelona"),
+            historyAndApparition = LocalizedText(
+                "La Virgen se apareció a San Pedro Nolasco, San Raimundo de Peñafort y el rey Jaime I de Aragón entregándole el hábito blanco y las llaves para redimir cautivos. Fundó la Orden de los Mercedarios dedicada a rescatar prisioneros.",
+                "Mary appeared to St. Peter Nolasco, St. Raymond of Penafort and King James I handing over the white habit to ransom captives. She founded the Mercedarian order devoted to freeing prisoners.",
+                "A Virgem entregou a São Pedro Nolasco o hábito branco para fundar a Ordem de Nossa Senhora da Merced dedicada ao resgate dos cativos."
+            ),
+            promises = LocalizedText(
+                "Redención de las cautividades del alma, libertad de conciencia y consuelo a presos y perseguidos.",
+                "Ransom from spiritual captivity, freedom of conscience, and consolation of prisoners.",
+                "Libertação das prisões do pecado e consolo aos perseguidos."
+            ),
+            recordedMiracles = LocalizedText(
+                "Cadenas que se abren solas ante su imagen y liberación de cautivos documentada por los Mercedarios.",
+                "Chains that opened by themselves before her image and prisoners ransomed by the Mercedarians.",
+                "Calabouços que se abriram ante sua imagem e libertações documentadas."
+            ),
+            venerationPrayer = LocalizedText(
+                "Virgen de la Merced, Madre y Redentora: rompe las cadenas de nuestros pecados y líbranos del cautiverio del mal. Amén.",
+                "Our Lady of Mercy, Mother and Redeemer: break the chains of our sins and free us from evil. Amen.",
+                "Nossa Senhora da Merced, Mãe e Redentora: quebrai as correntes de nossos pecados. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("España / América Latina (Chile, Perú)", "Spain / Latin America", "Espanha / América Latina"),
+            patronageOf = LocalizedText("Patrona de los cautivos, presos y de la Orden Mercedaria.", "Patroness of captives, prisoners, and the Mercedarians.", "Padroeira dos cativos e da Ordem da Merced.")
+        ),
+        MarianApparition(
+            id = "caacupe",
+            title = LocalizedText("Nuestra Señora de los Milagros de Caacupé", "Our Lady of Caacupé", "Nossa Senhora de Caacupé"),
+            feastDay = LocalizedText("8 de Diciembre", "8 December", "8 de Dezembro"),
+            year = "1760",
+            location = LocalizedText("Caacupé, Cordillera, Paraguay", "Caacupé, Paraguay", "Caacupé, Paraguai"),
+            primarySanctuary = LocalizedText("Catedral-Basílica de Caacupé", "Cathedral-Basilica of Caacupé", "Catedral-Basílica de Caacupé"),
+            historyAndApparition = LocalizedText(
+                "El tallador José Félix Zarza talló en madera dos imágenes: una grande para la ciudad y una pequeña para el río. Tras una inundación, la pequeña indígena 'yvyra' fue hallada intacta y condujo al santuario de Caacupé, patrona de Paraguay.",
+                "Carver José Félix Zarza carved two images; after a flood the small one was found intact and set at Caacupé, becoming patroness of Paraguay.",
+                "A imagem de Caacupé foi encontrada intacta após uma inundação e se tornou a Padroeira do Paraguai."
+            ),
+            promises = LocalizedText(
+                "Protección de los labradores, salud de los enfermos y amparo de las familias paraguayas.",
+                "Protection of farmers, health of the sick, and shelter of Paraguayan families.",
+                "Proteção dos trabalhadores, saúde dos enfermos e amparo das famílias paraguayas."
+            ),
+            recordedMiracles = LocalizedText(
+                "Inundaciones detenidas, cosechas salvadas y devución nacional cada 8 de diciembre.",
+                "Floods halted, harvests saved, and the national pilgrimage every 8 December.",
+                "Cheias detidas, colheitas salvas e peregrinação nacional anual."
+            ),
+            venerationPrayer = LocalizedText(
+                "Madre de Caacupé, Señora de los Milagros: cubre con tu manto a Paraguay, sana a nuestros enfermos y fortalece la fe de tu pueblo. Amén.",
+                "Mother of Caacupé: cover Paraguay with your mantle, heal our sick, and strengthen our faith. Amen.",
+                "Mãe de Caacupé: protegei o Paraguai, curai os nossos enfermos e fortalecei a fé do vosso povo. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("Paraguay", "Paraguay", "Paraguai"),
+            patronageOf = LocalizedText("Patrona principal de Paraguay.", "Principal patroness of Paraguay.", "Padroeira principal do Paraguai.")
+        ),
+        MarianApparition(
+            id = "altagracia",
+            title = LocalizedText("Nuestra Señora de la Altagracia", "Our Lady of Altagracia", "Nossa Senhora da Altagracia"),
+            feastDay = LocalizedText("15 de Agosto", "15 August", "15 de Agosto"),
+            year = "1515",
+            location = LocalizedText("Higüey, República Dominicana", "Higüey, Dominican Republic", "Higüey, República Dominicana"),
+            primarySanctuary = LocalizedText("Basílica de Nuestra Señora de la Altagracia (Higüey)", "Basilica of Altagracia, Higüey", "Basílica da Altagracia em Higüey"),
+            historyAndApparition = LocalizedText(
+                "Cuadro traído de España en 1515 y colocado en Higüey. Francisco y Alberto de Astacio desaparecieron una noche y reaparecieron ilesos invocándola; de ahí 'Nuestra Señora de la Altagracia'. Protectora del pueblo dominicano.",
+                "Painting brought from Spain in 1515 to Higüey. Two brothers missing one night reappeared unharmed invoking her, giving 'Our Lady of High Grace'. Protector of the Dominican people.",
+                "Quadro trazido em 1515 para Higüey. Protege o povo dominicano como Mãe da Altagracia."
+            ),
+            promises = LocalizedText(
+                "Gracia alta para los que se pierden, hallazgo de lo perdido y amparo en la noche de la angustia.",
+                "Strength for the lost, finding of what is lost, and shelter in the night of anguish.",
+                "Graça para os extraviados, encontro dos perdidos e amparo nas angústias."
+            ),
+            recordedMiracles = LocalizedText(
+                "El hallazgo milagroso de los Astacio en 1515 y peregrinaciones nacionales al santuario de Higüey.",
+                "The miraculous finding of the Astacio brothers in 1515 and national pilgrimages to Higüey.",
+                "O encontro milagroso dos irmãos Astacio em 1515."
+            ),
+            venerationPrayer = LocalizedText(
+                "¡Virgen de la Altagracia, Madre y Reina!: ampara a tu pueblo, guárdanos en la gracia y llévanos a tu Hijo Jesucristo. Amén.",
+                "Virgin of Altagracia: shelter your people, keep us in grace, and bring us to Jesus. Amen.",
+                "Virgem da Altagracia: amparai o vosso povo e guardai-nos na graça. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("República Dominicana", "Dominican Republic", "República Dominicana"),
+            patronageOf = LocalizedText("Protectora y Reina del pueblo dominicano.", "Protectress and Queen of the Dominican people.", "Protetora do povo dominicano.")
+        ),
+        MarianApparition(
+            id = "perpetuo_socorro",
+            title = LocalizedText("Nuestra Señora del Perpetuo Socorro", "Our Lady of Perpetual Help", "Nossa Senhora do Perpétuo Socorro"),
+            feastDay = LocalizedText("27 de Junio", "27 June", "27 de Junho"),
+            year = "1499 (icono milenario)",
+            location = LocalizedText("Iglesia de San Alfonso (Roma)", "Church of St. Alphonsus, Rome", "Igreja de Santo Afonso em Roma"),
+            primarySanctuary = LocalizedText("Iglesia de San Alfonso María de Ligorio (Roma)", "Church of St. Alphonsus, Rome", "Igreja de Santo Afonso em Roma"),
+            historyAndApparition = LocalizedText(
+                "Icono cretense de los siglos XIV-XV de la Virgen con el Niño Jesús y los arcángeles Miguel y Gabriel, rescatado de la iglesia de San Mateo tras el saqueo de Roma en 1527. Los Redentoristas lo guardan por orden de Pío IX desde 1866.",
+                "Cretan icon of the 14th-15th centuries of Mary and the Child with Michael and Gabriel, saved after the 1527 sack of Rome. Redemptorists guard it by order of Pius IX since 1866.",
+                "Ícone dos séculos XIV-XV venerado em Roma. Salvo no saqueio de 1527, guardado pelos Redentoristas desde 1866."
+            ),
+            promises = LocalizedText(
+                "«El que visita esta imagen y la honra obtendrá siempre y en todo lugar socorro perpetuo».",
+                "Devotion to this icon obtains perpetual help in life and in death.",
+                "A devoção a este ícone obtém perpétuo socorro na vida e na morte."
+            ),
+            recordedMiracles = LocalizedText(
+                "Incontables gracias ante el icono; la imagen del Niño que se aparta temeroso y la Madre que lo sostiene.",
+                "Countless graces before the icon; the Child turning in fear while the Mother holds Him.",
+                "Inúmeras graças diante do ícone milagroso."
+            ),
+            venerationPrayer = LocalizedText(
+                "Madre del Perpetuo Socorro: acude a nosotros en toda tentación, cura a nuestros enfermos y condúcenos al puerto de la salvación. Amén.",
+                "Mother of Perpetual Help: come to us in every temptation, heal our sick, and guide us to salvation. Amen.",
+                "Mãe do Perpétuo Socorro: socorrei-nos nas tentações e curai os nossos enfermos. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal / Italia", "Universal / Italy", "Universal / Itália"),
+            patronageOf = LocalizedText("Auxilio perpetuo de enfermos y moribundos.", "Perpetual help of the sick and dying.", "Auxílio perpétuo dos enfermos e moribundos.")
+        ),
+        MarianApparition(
+            id = "akita",
+            title = LocalizedText("Nuestra Señora de Akita", "Our Lady of Akita", "Nossa Senhora de Akita"),
+            feastDay = LocalizedText("15 de Agosto", "15 August", "15 de Agosto"),
+            year = "1973",
+            location = LocalizedText("Akita, Japón", "Akita, Japan", "Akita, Japão"),
+            primarySanctuary = LocalizedText("Santuarios de Akita (Japón)", "Shrines at Akita, Japan", "Santuários de Akita no Japão"),
+            historyAndApparition = LocalizedText(
+                "La Hermana Agnes Sasagawaha oyó mensajes en la capilla (1973) y una estatua de madera lloró lágrimas y sangre. La Virgen advirtió sobre la necesidad de oración, penitencia y sacrificio ante la apostasía y la confusión del mundo.",
+                "Sister Agnes Sasagawaha received messages in the chapel (1973) and a wooden statue wept tears and blood. Mary warned of prayer, penance and sacrifice amid apostasy.",
+                "Irmã Inês Sasagawaha recebeu mensagens em 1973 e a estátua lacrimou sangue. Maria exorta à oração e penitência."
+            ),
+            promises = LocalizedText(
+                "Conversión de pecadores, reconciliación de los pueblos y consuelo en medio de la confusión moderna.",
+                "Conversion of sinners, reconciliation of peoples, and consolation amid modern confusion.",
+                "Conversão dos pecadores e consolo em meio à confusão."
+            ),
+            recordedMiracles = LocalizedText(
+                "La estatua que lloró 101 veces, el cáncer de la hermana curado y la sordera de un sordo sanada tras la oración.",
+                "The statue weeping 101 times, the sister's cancer healed, and a deaf man's hearing restored.",
+                "A estátua que chorou 101 vezes e curas atestadas após a oração."
+            ),
+            venerationPrayer = LocalizedText(
+                "María de Akita, Madre fiel: ruega por la conversión de los pecadores, por la paz del mundo y por los sacerdotes perseguidos. Amén.",
+                "Mary of Akita: pray for the conversion of sinners, peace in the world, and persecuted priests. Amen.",
+                "Maria de Akita: rogai pela conversão dos pecadores e pela paz no mundo. Amém."
+            ),
+            region = "Asia_Africa",
+            country = LocalizedText("Japón", "Japan", "Japão"),
+            patronageOf = LocalizedText("Patrona de los enfermos y de los sordos.", "Patroness of the sick and deaf.", "Padroeira dos enfermos e dos surdos.")
+        ),
+        MarianApparition(
+            id = "kibeho",
+            title = LocalizedText("Nuestra Señora de Kibeho (Madre del Verbo)", "Our Lady of Kibeho", "Nossa Senhora de Kibeho"),
+            feastDay = LocalizedText("28 de Noviembre", "28 November", "28 de Novembro"),
+            year = "1981",
+            location = LocalizedText("Kibeho, Ruanda", "Kibeho, Rwanda", "Kibeho, Ruanda"),
+            primarySanctuary = LocalizedText("Santuarios de Kibeho (Ruanda)", "Shrines at Kibeho, Rwanda", "Santuários de Kibeho em Ruanda"),
+            historyAndApparition = LocalizedText(
+                "Entre 1981 y 1989 la Virgen se apareció a tres jóvenes ruandesas profetizando la guerra civil de 1994. Pidió oración, conversión y reconciliación; su mensaje: 'No vendan su conciencia por dinero'.",
+                "Between 1981 and 1989 Mary appeared to three Rwandan girls foretelling the 1994 civil war. She asked prayer, conversion and reconciliation; 'Do not sell your conscience for money.'",
+                "Entre 1981 e 1989 a Virgem apareceu a três jovens ruandesas, profetizando a guerra de 1994 e chamando à oração."
+            ),
+            promises = LocalizedText(
+                "Reconciliación entre pueblos, consuelo a las viudas y huérfanos, fidelidad a la conciencia.",
+                "Reconciliation of peoples, consolation of widows and orphans, fidelity of conscience.",
+                "Reconciliação dos povos e consolo às viúvas e órfãos."
+            ),
+            recordedMiracles = LocalizedText(
+                "Apariciones verificadas por la comisión diocesana y la paz incansable de los aldeanos tras la guerra.",
+                "Apparitions approved by the diocesan commission and the enduring peace of the villages.",
+                "Aparições reconhecidas pela comissão diocesana."
+            ),
+            venerationPrayer = LocalizedText(
+                "Virgen de Kibeho, Madre del Verbo: reconcilia a nuestros pueblos, sana las heridas de la guerra y denuestos la paz de Cristo. Amén.",
+                "Virgin of Kibeho: reconcile our peoples, heal the wounds of war, and give us Christ's peace. Amen.",
+                "Virgem de Kibeho: reconciliai os nossos povos e curai as feridas da guerra. Amém."
+            ),
+            region = "Asia_Africa",
+            country = LocalizedText("Ruanda", "Rwanda", "Ruanda"),
+            patronageOf = LocalizedText("Patrona de la reconciliación en África.", "Patroness of reconciliation in Africa.", "Padroeira da reconciliação na África.")
+        ),
+        MarianApparition(
+            id = "remedios_cholula",
+            title = LocalizedText("Nuestra Señora de los Remedios (Cholula)", "Our Lady of Remedies (Cholula)", "Nossa Senhora dos Remédios (Cholula)"),
+            feastDay = LocalizedText("8 de Septiembre", "8 September", "8 de Setembro"),
+            year = "1519 (templo)",
+            location = LocalizedText("Santuario de Cholula, Puebla, México", "Cholula Shrine, Puebla, Mexico", "Santuário de Cholula, Puebla, México"),
+            primarySanctuary = LocalizedText("Santuario de la Virgen de los Remedios (Cholula)", "Shrine of Our Lady of Remedies, Cholula", "Santuário da Virgem dos Remédios em Cholula"),
+            historyAndApparition = LocalizedText(
+                "Tras la evangelización de Cholula se levantó el santuario sobre la gran pirámide dedicada a Quetzalcóatl. La Virgen de los Remedios protege a los pueblos del Valle de México y de Puebla contra pestes y calamidades.",
+                "After the evangelization of Cholula the shrine rose above the great pyramid of Quetzalcoatl. Our Lady of Remedies protects the towns of Puebla from plagues.",
+                "Após a evangelização de Cholula ergueu-se o santuário sobre a pirâmide de Quetzalcóatl. Protege os povos de Puebla."
+            ),
+            promises = LocalizedText(
+                "Remedio celestial para las epidemias, amparo a los agricultores y salud de los niños.",
+                "Heavenly remedy in epidemics, protection of farmers, and health of children.",
+                "Auxílio celeste nas epidemias e proteção dos agricultores."
+            ),
+            recordedMiracles = LocalizedText(
+                "El cese de epidemias tras peregrinaciones a la pirámide-santuario y feria patronal de septiembre.",
+                "Epidemics ceasing after pilgrimages to the pyramid-shrine.",
+                "Epidemias que cessaram após peregrinações ao santuário."
+            ),
+            venerationPrayer = LocalizedText(
+                "Virgen de los Remedios, refugio de los enfermos: cúbrenos con tu manto, sáname las heridas del alma y del cuerpo. Amén.",
+                "Our Lady of Remedies: cover us with your mantle and heal our wounds of soul and body. Amen.",
+                "Virgem dos Remédios: cobri-nos o vosso manto e curai nossas feridas. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("México", "Mexico", "México"),
+            patronageOf = LocalizedText("Patrona del Valle de Puebla y protectora contra epidemias.", "Patroness of the Puebla Valley.", "Padroeira do Vale de Puebla.")
+        ),
+        MarianApparition(
+            id = "copacabana",
+            title = LocalizedText("Nuestra Señora de Copacabana", "Our Lady of Copacabana", "Nossa Senhora de Copacabana"),
+            feastDay = LocalizedText("5 de Agosto", "5 August", "5 de Agosto"),
+            year = "1583",
+            location = LocalizedText("Copacabana, lago Titicaca, Bolivia", "Copacabana, Lake Titicaca, Bolivia", "Copacabana, Lago Titicaca, Bolívia"),
+            primarySanctuary = LocalizedText("Basílica de Nuestra Señora de Copacabana", "Basilica of Our Lady of Copacabana", "Basílica de Nossa Senhora de Copacabana"),
+            historyAndApparition = LocalizedText(
+                "Tallas de maguey realizadas por Francisco Tito Yupanqui (1583) tras un naufragio en el Titicaca en el que se invocó a la Virgen. Su imagen de candelaria (Virgen Morena) preside el santuario más grande del Altiplano.",
+                "Carved by Francisco Tito Yupanqui (1583) after a wreck on Lake Titicaca survived invoking the Virgin. Her dark image presides over the greatest Andean shrine.",
+                "Esculpida por Francisco Tito Yupanqui após um naufrágio no Titicaca, tornou-se a maior devoção do Altiplano."
+            ),
+            promises = LocalizedText(
+                "Protección de navegantes del Titicaca, abundancia en la pesca y fe de los pueblos aymaras.",
+                "Protection of Titicaca sailors, abundance of the catch, and faith of the Aymara peoples.",
+                "Proteção dos navegantes do Titicaca e dos povos andinos."
+            ),
+            recordedMiracles = LocalizedText(
+                "Naufragios salvados en el Titicaca y peregrinación nacional de agosto a Copacabana.",
+                "Wrecks survived on Lake Titicaca and the national August pilgrimage.",
+                "Naufrágios salvos no Titicaca e peregrinação nacional de agosto."
+            ),
+            venerationPrayer = LocalizedText(
+                "Virgen de Copacabana, Reina del lago: guía las barcas de nuestra vida y arrímanos dulces a puerto seguro. Amén.",
+                "Virgin of Copacabana: guide the boats of our life to safe harbor. Amen.",
+                "Virgem de Copacabana: guia-nos à porto seguro na travessia da vida. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("Bolivia", "Bolivia", "Bolívia"),
+            patronageOf = LocalizedText("Patrona de los navegantes del Altiplano.", "Patroness of Andean sailors.", "Padroeira dos navegantes do Altiplano.")
+        ),
+        MarianApparition(
+            id = "san_juan_lagos",
+            title = LocalizedText("Nuestra Señora de San Juan de los Lagos", "Our Lady of San Juan de los Lagos", "Nossa Senhora de San Juan de los Lagos"),
+            feastDay = LocalizedText("2 de Febrero", "2 February", "2 de Fevereiro"),
+            year = "1623",
+            location = LocalizedText("San Juan de los Lagos, Jalisco, México", "San Juan de los Lagos, Jalisco, Mexico", "San Juan de los Lagos, Jalisco, México"),
+            primarySanctuary = LocalizedText("Basílica-Catedral de San Juan de los Lagos", "Cathedral-Basilica of San Juan de los Lagos", "Catedral-Basílica de San Juan de los Lagos"),
+            historyAndApparition = LocalizedText(
+                "En 1623 la imagen de la Inmaculada salvó por prodigio a una niña aplastada por un circo de acróbatas. La noticia corrió por todo Nueva Galicia y cada año millones de peregrinos visitan la basílica de San Juan.",
+                "In 1623 the Immaculate image instantly healed a girl crushed by acrobats. News spread through New Galicia; millions pilgrimage yearly to San Juan.",
+                "Em 1623 a imagem salvou milagrosamente uma menina. Milhões de peregrinos visitam anualmente a basílica."
+            ),
+            promises = LocalizedText(
+                "Curación instantánea de los enfermos, amparo de los niños y luz para los peregrinos.",
+                "Instant healing of the sick, protection of children, and light for pilgrims.",
+                "Cura dos enfermos e proteção das crianças."
+            ),
+            recordedMiracles = LocalizedText(
+                "La niña curada en 1623 y miles de exvotos que cubren las paredes de la basílica.",
+                "The healed girl of 1623 and thousands of ex-votos covering the basilica walls.",
+                "A menina curada em 1623 e milhares de ex-votos."
+            ),
+            venerationPrayer = LocalizedText(
+                "Madre de San Juan de los Lagos: sáname, Señor, por tu Madre; cúbreme con su gracia y guíame a Cristo. Amén.",
+                "Mother of San Juan: heal me through your Mother; cover me with grace and lead me to Christ. Amen.",
+                "Mãe de San Juan: curai-nos e guia-nos a Cristo. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("México", "Mexico", "México"),
+            patronageOf = LocalizedText("Reina de los Altos de Jalisco y de los peregrinos.", "Queen of the Jalisco Highlands.", "Rainha dos Altos de Jalisco.")
+        ),
+        MarianApparition(
+            id = "angeles_costa_rica",
+            title = LocalizedText("Nuestra Señora de los Ángeles (Patrona de Costa Rica)", "Our Lady of the Angels (Costa Rica)", "Nossa Senhora dos Anjos (Costa Rica)"),
+            feastDay = LocalizedText("2 de Agosto", "2 August", "2 de Agosto"),
+            year = "1635",
+            location = LocalizedText("Cartago, Costa Rica (Piedra de los Ángeles)", "Cartago, Costa Rica", "Cartago, Costa Rica"),
+            primarySanctuary = LocalizedText("Basílica de los Ángeles (Cartago)", "Basilica of Our Lady of the Angels, Cartago", "Basílica dos Anjos em Cartago"),
+            historyAndApparition = LocalizedText(
+                "Imagen hallada en 1635 en la Piedra de los Ángeles por una india llamada Juana Pereira. La Romería nacional reúne millones; patrona proclamada por el Congreso en 1824 y por la Iglesia en el siglo XX.",
+                "Image found in 1635 at the Stone of the Angels by an indigenous woman. National pilgrimage draws millions; proclaimed patroness in 1824.",
+                "Imagem encontrada em 1635 na Pedra dos Anjos. Padroeira da Costa Rica e peregrinação nacional anual."
+            ),
+            promises = LocalizedText(
+                "Paz para Costa Rica, compañía de los ángeles en las pruebas y luz para los peregrinos de la Romería.",
+                "Peace for Costa Rica, angelic company in trials, and light for Romería pilgrims.",
+                "Paz para a Costa Rica e proteção angelical aos peregrinos."
+            ),
+            recordedMiracles = LocalizedText(
+                "La imagen que retornaba siempre a la Piedra de los Ángeles y la preservación de la paz costarricense.",
+                "The image always returning to the Stone of the Angels and Costa Rica's enduring peace.",
+                "A imagem que retornava sempre à Pedra dos Anjos."
+            ),
+            venerationPrayer = LocalizedText(
+                "Virgen de los Ángeles, Madre y Patrona: cubre a Costa Rica con tu manto, libra al mundo de la violencia y dame a conocer a Jesús. Amén.",
+                "Virgin of the Angels: cover Costa Rica with your mantle and bring us to Jesus. Amen.",
+                "Virgem dos Anjos: protegei a Costa Rica e guia-nos a Jesus. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("Costa Rica", "Costa Rica", "Costa Rica"),
+            patronageOf = LocalizedText("Patrona principal de Costa Rica.", "Principal patroness of Costa Rica.", "Padroeira principal da Costa Rica.")
         )
     )
 
@@ -818,6 +1376,402 @@ object DevotionsAndHistoryData {
                 "The miraculous recovery of Archbishop Pardo de Figueroa in 1737 and historical peace agreements blessed at the shrine.",
                 "A cura do Arcebispo da Guatemala em 1737 e incontáveis graças alcançadas por peregrinos de todo o continente."
             )
+        ),
+        ChristManifestation(
+            id = "cristo_rey",
+            title = LocalizedText("Cristo Rey del Universo (Cristo Rey)", "Christ the King of the Universe", "Cristo Rei do Universo"),
+            feastDay = LocalizedText("Último Domingo del Tiempo Ordinario", "Last Sunday in Ordinary Time", "Último domingo do Tempo Comum"),
+            originHistory = LocalizedText(
+                "Fiesta instituida por Pío XI en 1925 (Quas Primas) ante el laicismo militante. Cristo es Rey no por poder terreno sino por la verdad y la Cruz: 'Mi Reino no es de este mundo'.",
+                "Feast instituted by Pius XI in 1925 (Quas Primas). Christ is King not by earthly power but by truth and the Cross: 'My Kingdom is not of this world.'",
+                "Festa instituída por Pio XI em 1925. Cristo é Rei pela verdade e pela Cruz: 'O meu Reino não é deste mundo'."
+            ),
+            promises = LocalizedText(
+                "Reinar con Cristo en la gloria, integridad moral en la vida pública y esperanza en medio de las ideologías.",
+                "To reign with Christ in glory, moral integrity in public life, and hope amid hostile ideologies.",
+                "Reinar com Cristo na glória e integridade moral na vida pública."
+            ),
+            theologicalMeaning = LocalizedText(
+                "Jesucristo es soberano de la creación y de la historia; su realeza es servicio, verdad y amor hasta la Cruz.",
+                "Christ is sovereign of creation and history; His kingship is truth, service, and love to the Cross.",
+                "Cristo é soberano da criação e da história; sua realeza é verdade e amor até a Cruz."
+            ),
+            officialPrayer = LocalizedText(
+                "Ven, Señor, a reinar: reina en mi vida, en mi hogar y en el mundo entero. Cristo Rey, vengo a Ti.",
+                "Come, Lord, and reign: reign in my life, in my home, and in the whole world. Christ the King, I come to You.",
+                "Vinde, Senhor, e reinai: reinai na minha vida, no meu lar e no mundo inteiro. Cristo Rei, eu venho a Vós."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            primarySanctuary = LocalizedText("Santuarios y Basílicas de Cristo Rey", "Shrines and Basilicas of Christ the King", "Santuários e Basílicas de Cristo Rei"),
+            recordedMiracles = LocalizedText(
+                "La consagración de naciones (España 1919, Polonia 2016) y la paz preservada en medio de guerras.",
+                "Consecrations of nations (Spain 1919, Poland 2016) and peace preserved amid wars.",
+                "As consagrações de nações a Cristo Rei e a paz preservada em meio às guerras."
+            )
+        ),
+        ChristManifestation(
+            id = "cristo_milagros",
+            title = LocalizedText("Cristo de los Milagros (Señor de los Milagros de Chile)", "Christ of the Miracles (Chile)", "Cristo dos Milagres (Chile)"),
+            feastDay = LocalizedText("Segundo Domingo de Noviembre", "Second Sunday of November", "Segundo domingo de novembro"),
+            originHistory = LocalizedText(
+                "Imagen pintada en el lienzo del siglo XVIII del templo de San Agustín en Santiago, salvada por prodigio del terremoto de 1647 que arruinó la ciudad. El muro y el lienzo permanecieron intactos.",
+                "Painting from the 18th century of St. Augustine's church in Santiago, saved miraculously from the 1647 earthquake that ruined the city; wall and canvas stood intact.",
+                "Quadro do século XVIII em Santiago, salvo milagrosamente do terremoto de 1647 que destruiu a cidade."
+            ),
+            promises = LocalizedText(
+                "Amparo ante terremotos, curación de enfermos y reconstrucción espiritual de las naciones.",
+                "Protection in earthquakes, healing of the sick, and spiritual rebuilding of nations.",
+                "Proteção nos terremotos, cura dos enfermos e reconstrução espiritual das nações."
+            ),
+            theologicalMeaning = LocalizedText(
+                "La Cruz como trono de misericordia: Dios es más grande que la naturaleza y la muerte; en ella, los milagros.",
+                "The Cross as throne of mercy: God is greater than nature and death; upon it, the miracles.",
+                "A Cruz como trono de misericórdia: Deus é maior que a natureza e a morte."
+            ),
+            officialPrayer = LocalizedText(
+                "Señor de los Milagros, mira a tu pueblo: protégenos de todo mal, perdona nuestros pecados y levántanos. Amén.",
+                "Lord of Miracles, look upon your people: protect us from all evil, forgive our sins, and lift us up. Amen.",
+                "Senhor dos Milagres, olhai para o vosso povo: protegei-nos e perdoai nossos pecados. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("Chile", "Chile", "Chile"),
+            primarySanctuary = LocalizedText("Templo de San Agustín (Santiago, Chile)", "St. Augustine's Church, Santiago, Chile", "Igreja de Santo Agostinho em Santiago"),
+            recordedMiracles = LocalizedText(
+                "El lienzo intacto tras el terremoto de 1647 y la reconstrucción de Santiago tras la obra de la Virgen.",
+                "The canvas intact after the 1647 earthquake and the rebuilding of Santiago.",
+                "O quadro intacto após o terremoto de 1647."
+            )
+        ),
+        ChristManifestation(
+            id = "santo_rostro",
+            title = LocalizedText("El Santo Rostro de Jesús (de Verónica)", "The Holy Face of Jesus", "A Santa Face de Jesus"),
+            feastDay = LocalizedText("Martes de Carnaval", "Shrove Tuesday", "Terça-feira de Carnaval"),
+            originHistory = LocalizedText(
+                "La Verónica enjuga el rostro de Jesús en el Vía Crucis y queda impresa su faz sangrienta. La devoción fue promovida en el siglo XIX; la 'obrita' y la reparación piden consolar la faz agredida.",
+                "Veronica wipes Jesus' face on the Way of the Cross, and His bloodied features are imprinted. The 19th-century devotion asks reparation for the outraged Face.",
+                "Verônica enxugou o rosto de Jesus no caminho da Cruz. A devoção pede reparação pela face agredida."
+            ),
+            promises = LocalizedText(
+                "«Carguen conmigo el rostro»: quien ofrece reparación recibe luz en la noche, paz en la agonía y el Rostro sin velo en el cielo.",
+                "Light in the night, peace in agony, and the unveiled Face in heaven for those who make reparation.",
+                "Luz na noite, paz na agonia e a Face desvelada no céu para quem promove a reparação."
+            ),
+            theologicalMeaning = LocalizedText(
+                "Contemplar la faz humillada de Cristo enseña a honrar el rostro de cada persona y a reparar los agravios.",
+                "To contemplate Christ's humiliated face teaches honor for every human face and reparation for offenses.",
+                "Contemplar a face humilhada de Cristo ensina a honrar cada rosto humano."
+            ),
+            officialPrayer = LocalizedText(
+                "Rostro adorable de mi Jesús, consuela tu Faz ultrajeada, enjuga tu Sangre y mira con amor a los que te contemplan. Amén.",
+                "Adorable Face of Jesus, console Your outraged Face, wipe Your Blood, and look with love on those who contemplate You. Amen.",
+                "Rosto adorável de Jesus, consolai a vossa Face ultrajeada e olhai com amor os que vos contemplam. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal / Francia", "Universal / France", "Universal / França"),
+            primarySanctuary = LocalizedText("Catedral de Manoppello (Italia) y Tours (Francia)", "Cathedral of Manoppello, Italy", "Catedral de Manoppello na Itália"),
+            recordedMiracles = LocalizedText(
+                "El lienzo de Manoppello conservado sin corrosión y conversiones de incrédulos tras contemplarlo.",
+                "The Manoppello cloth preserved undecayed and conversions of skeptics who contemplated it.",
+                "O pano de Manoppello preservado e conversões de incrédulos."
+            )
+        ),
+        ChristManifestation(
+            id = "cristo_redentor",
+            title = LocalizedText("Cristo Redentor (Corcovado)", "Christ the Redeemer (Corcovado)", "Cristo Redentor (Corcovado)"),
+            feastDay = LocalizedText("Domingo de Ramos (Cardozo)", "Palm Sunday", "Domingo de Ramos"),
+            originHistory = LocalizedText(
+                "Estatua de 38 metros sobre el Cerro del Corcovado en Río de Janeiro, bendecida en 1931. Símbolo de la fe y de la acogida: brazos abiertos sobre la bahía de Guanabara.",
+                "38-metre statue atop Corcovado in Rio de Janeiro, blessed in 1931. Symbol of faith and welcome: open arms over Guanabara Bay.",
+                "Estátua de 38 metros sobre o Corcovado no Rio, abençoada em 1931, símbolo de fé e acolhimento."
+            ),
+            promises = LocalizedText(
+                "Brazo del Redentor sobre los que buscan trabajo, barco y hogar; paz para la ciudad y para Brasil.",
+                "The Redeemer's arm over seekers of work and home; peace for the city of Rio and for Brazil.",
+                "O braço do Redentor sobre os que buscam trabalho e lar; paz para o Rio e para o Brasil."
+            ),
+            theologicalMeaning = LocalizedText(
+                "La Redención con los brazos de la Cruz: Cristo abraza a todos sin excepción, de norte a sur y de oriente a occidente.",
+                "Redemption with the arms of the Cross: Christ embraces all without exception.",
+                "A Redenção de braços abertos: Cristo acolhe a todos sem exceção."
+            ),
+            officialPrayer = LocalizedText(
+                "Cristo Redentor, que de la cruz con los brazos extendidos llamáis a vuestros hijos a la reconciliación: abre vuestro corazón a mi oración. Amén.",
+                "Christ the Redeemer, who from the Cross with arms outstretched call your children to reconciliation: open your heart to my prayer. Amen.",
+                "Cristo Redentor, que da Cruz de braços abertos chama os vossos filhos: abri vosso coração à minha oração. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("Brasil", "Brazil", "Brasil"),
+            primarySanctuary = LocalizedText("Santuario del Cristo Redentor (Corcovado, Río)", "Sanctuary of Christ the Redeemer, Rio", "Santuário do Cristo Redentor no Rio"),
+            recordedMiracles = LocalizedText(
+                "La estatua intacta tras tormentas y caída de rayos; las misa de apertura del santuario cada domingo.",
+                "The statue unharmed by storms and lightning; weekly Sunday Masses at the summit.",
+                "A estátua intacta após tempestades e raios."
+            )
+        ),
+        ChristManifestation(
+            id = "buen_pastor",
+            title = LocalizedText("Cristo Buen Pastor (Buen Pastor de Ovejas)", "Christ the Good Shepherd", "Cristo Bom Pastor"),
+            feastDay = LocalizedText("IV Domingo de Pascua", "4th Sunday of Easter", "IV Domingo da Páscoa"),
+            originHistory = LocalizedText(
+                "En el arte de las catacumbas (siglos II-III) Jesús aparece como pastor joven con la oveja rescatada sobre los hombros. El Salmo 22 y Juan 10 fundan esta iconografía milenaria.",
+                "In catacomb art (2nd-3rd centuries) Jesus appears as a youthful shepherd bearing the rescued sheep. Psalm 22 and John 10 ground this ancient iconography.",
+                "Na arte das catacumbas Jesus aparece como pastor que carrega a ovelha resgatada nos ombros."
+            ),
+            promises = LocalizedText(
+                "«El Buen Pastor conoce a sus ovejas y sus ovejas le conocen». Guía en el discernimiento y búsqueda de los descarriados.",
+                "The Good Shepherd knows His own and His own know Him. Guidance for the lost.",
+                "O Bom Pastor conhece as suas ovelhas e as conduz à vida plena."
+            ),
+            theologicalMeaning = LocalizedText(
+                "Cristo nos busca, nos conoce por nombre y da la vida por nosotros; nadie es demasiado pequeño para Él.",
+                "Christ seeks us, knows us by name, and lays down His life for us; no one is too small for Him.",
+                "Cristo nos busca, nos conhece pelo nome e dá a vida por nós."
+            ),
+            officialPrayer = LocalizedText(
+                "Buen Pastor, busca a la oveja perdida que soy: halla mi nombre, llévame en tus hombros y devuélveme al redil. Amén.",
+                "Good Shepherd, seek the lost sheep that I am: find my name, bear me on Your shoulders, and bring me home. Amen.",
+                "Bom Pastor, buscai a ovelha perdida que sou: encontrai meu nome e conduzi-me de volta. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            primarySanctuary = LocalizedText("Santuarios del Buen Pastor", "Shrines of the Good Shepherd", "Santuários do Bom Pastor"),
+            recordedMiracles = LocalizedText(
+                "Vocaciones y conversiones de extraviados tras la devoción al Buen Pastor.",
+                "Vocations and conversions of the strayed following devotion to the Good Shepherd.",
+                "Vocações e conversões após a devoção ao Bom Pastor."
+            )
+        ),
+        ChristManifestation(
+            id = "cristo_veracruz",
+            title = LocalizedText("Santo Cristo de Veracruz (Cristo de la Veracruz)", "Holy Christ of Vera Cruz", "Santo Cristo da Veracruz"),
+            feastDay = LocalizedText("Viernes Santo", "Good Friday", "Sexta-feira Santa"),
+            originHistory = LocalizedText(
+                "Crucifijo de marfil con coral, llamado 'Cristo de la Luz', venerado en la ermita de la Vera Cruz de La Laguna (Tenerife). Devoción antigua de los isleños y marineros canarios.",
+                "Ivory crucifix with coral, known as the Christ of Light, venerated in the hermitage of Vera Cruz in La Laguna, Tenerife. Ancient devotion of Canarian sailors.",
+                "Crucifixo de marfim venerado em La Laguna, Tenerife, devoção antiga dos marinheiros canários."
+            ),
+            promises = LocalizedText(
+                "Amparo de los navegantes, luz en la oscuridad y fidelidad en la hora de la tempestad.",
+                "Protection of sailors, light in darkness, and faithfulness in the storm.",
+                "Proteção dos navegantes e luz nas trevas."
+            ),
+            theologicalMeaning = LocalizedText(
+                "La Veracruz del Señor es la cruz que nos salva; Cristo, luz del mundo, ilumina también la navegación.",
+                "Christ, Light of the world, illumines the seafarer as He illumines the soul.",
+                "Cristo, Luz do mundo, ilumina o navegante como ilumina a alma."
+            ),
+            officialPrayer = LocalizedText(
+                "Santo Cristo de la Veracruz, luz que en las tinieblas brilla: ilumina mi camino y lleva a buen puerto la nave de mi vida. Amén.",
+                "Holy Christ of Vera Cruz, Light shining in darkness: illumine my path and bring my life's ship to safe harbor. Amen.",
+                "Santo Cristo da Veracruz, luz que brilha nas trevas: iluminai meu caminho. Amém."
+            ),
+            region = "Europe",
+            country = LocalizedText("España / Canarias", "Spain / Canary Islands", "Espanha / Canárias"),
+            primarySanctuary = LocalizedText("Ermita de la Vera Cruz (La Laguna, Tenerife)", "Hermitage of Vera Cruz, La Laguna", "Ermida da Vera Cruz em La Laguna"),
+            recordedMiracles = LocalizedText(
+                "Náufragos librados en las costas canarias invocando al Cristo de la Luz.",
+                "Shipwrecked sailors rescued on Canarian coasts invoking the Christ of Light.",
+                "Náufragos salvos invocando o Cristo da Luz."
+            )
+        ),
+        ChristManifestation(
+            id = "senor_columna",
+            title = LocalizedText("El Señor de la Columna (Cristo de la Columna)", "Lord of the Column (Christ of the Column)", "Senhor da Coluna"),
+            feastDay = LocalizedText("Lunes Santo", "Holy Monday", "Segunda-feira Santa"),
+            originHistory = LocalizedText(
+                "Escultura de la Flagelación venerada en muchas ciudades latinoamericanas. El Señor atado a la columna soporta la corona de espinas y el azote para redimir el maltrato del hombre.",
+                "Devotion to the Flagellation venerated in many cities. The Lord bound to the column endures scourging and crowning with thorns.",
+                "Devoção à Flagelação venerada em muitas cidades. O Senhor atado à coluna sofre por amor a nós."
+            ),
+            promises = LocalizedText(
+                "Sanación de las heridas del maltrato, fortaleza en la humillación y paciencia ante la injusticia.",
+                "Healing of wounds of abuse, strength in humiliation, and patience under injustice.",
+                "Cura das feridas do maltrato e paciência ante a injustiça."
+            ),
+            theologicalMeaning = LocalizedText(
+                "Cristo asume la humillación para dignificar a la víctima: nada de lo que te han hecho es ajeno a Él.",
+                "Christ assumes humiliation to dignify the victim: nothing done to you is alien to Him.",
+                "Cristo assume a humilhação para dignificar a vítima."
+            ),
+            officialPrayer = LocalizedText(
+                "Señor de la Columna, que hiciste mías mis heridas: sáname, Señor, por la sangre que de Ti derramas y dame paz en la humillación. Amén.",
+                "Lord of the Column, who made my wounds Your own: heal me, Lord, through the blood You shed, and give me peace in humiliation. Amen.",
+                "Senhor da Coluna: curai-me por vosso sangue derramado e dai-me paz na humilhação. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("Latinoamérica", "Latin America", "América Latina"),
+            primarySanctuary = LocalizedText("Iglesias del Señor de la Columna", "Churches of the Lord of the Column", "Igrejas do Senhor da Coluna"),
+            recordedMiracles = LocalizedText(
+                "Curaciones de enfermos sometidos a humillaciones y reconciliaciones familiares atestiguadas.",
+                "Cures of the humiliated and family reconciliations attested.",
+                "Curas de pessoas humilhadas e reconciliações familiares."
+            )
+        ),
+        ChristManifestation(
+            id = "cristo_yacente",
+            title = LocalizedText("El Santo Cristo Yacente (Cristo Muerto)", "The Holy Recumbent Christ", "O Santo Cristo Jacente"),
+            feastDay = LocalizedText("Viernes Santo (Santo Entierro)", "Good Friday (Entombment)", "Sexta-feira Santa (Santo Enterro)"),
+            originHistory = LocalizedText(
+                "Imagen del Cristo muerto en el regazo de la Madre o en el sepulcro, venerada en la liturgia de la Semana Santa. Recuerda el descanso del cuerpo tras la Cruz antes de la Resurrección.",
+                "Image of the dead Christ in the Mother's lap or in the tomb, venerated in Holy Week liturgy. Recalling the rest of the body after the Cross before the Resurrection.",
+                "Imagem do Cristo morto venerada na liturgia da Semana Santa, lembrando o descanso após a Cruz."
+            ),
+            promises = LocalizedText(
+                "Consuelo a los que lloran a sus difuntos, esperanza en la muerte y confianza para no temer el sepulcro.",
+                "Consolation for mourners, hope in death, and trust not to fear the tomb.",
+                "Consolo aos que choram seus mortos e esperança diante da morte."
+            ),
+            theologicalMeaning = LocalizedText(
+                "Cristo verdaderamente muerto y verdaderamente resucitado: la muerte no es la última palabra, la vida eterna lo es.",
+                "Christ truly dead and truly risen: death is not the last word, eternal life is.",
+                "Cristo verdadeiramente morto e ressuscitado: a morte não é a última palavra."
+            ),
+            officialPrayer = LocalizedText(
+                "Cristo Yacente, que en la tumba esperaste la gloria de la Resurrección: en Ti reposamos y en Ti resucitaremos. Amén.",
+                "Recumbent Christ, who in the tomb awaited the glory of the Resurrection: in You we rest, and in You we shall rise. Amen.",
+                "Cristo Jacente, que no túmulo aguardastes a glória da Ressurreição: em Vós descansamos. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            primarySanctuary = LocalizedText("Capillas del Santo Entierro", "Chapels of the Entombment", "Capelas do Santo Enterro"),
+            recordedMiracles = LocalizedText(
+                "Consuelo a fieles en duelo y conversiones junto al sepulcro en la Semana Santa.",
+                "Consolation to mourners and conversions beside the tomb in Holy Week.",
+                "Consolo aos enlutados e conversões na Semana Santa."
+            )
+        ),
+        ChristManifestation(
+            id = "cristo_camino",
+            title = LocalizedText("Cristo del Camino (Cristo Peregrino)", "Christ of the Way (Wayfarer Christ)", "Cristo do Caminho"),
+            feastDay = LocalizedText("V Domingo de Cuaresma", "5th Sunday of Lent", "V Domingo da Quaresma"),
+            originHistory = LocalizedText(
+                "Cristo caminante de Emaús (Lc 24) que se hace presente en el camino. Devoción de caminantes, emigrantes y peregrinos que reconocen al Señor en la fracción del pan.",
+                "The wayfaring Christ of Emmaus (Lk 24) present on the road. Devotion of walkers, migrants and pilgrims who recognize the Lord in the breaking of bread.",
+                "Cristo caminhante de Emaús presente no caminho. Devoção de peregrinos e migrantes."
+            ),
+            promises = LocalizedText(
+                "Compañía en el camino, pan en el desierto y reconocimiento del Señor en la Eucaristía.",
+                "Companionship on the road, bread in the desert, and recognition of the Lord in the Eucharist.",
+                "Companhia no caminho e reconhecimento do Senhor na Eucaristia."
+            ),
+            theologicalMeaning = LocalizedText(
+                "El Resucitado camina con nosotros; no somos abandonados en el camino, Él es el Camino.",
+                "The Risen One walks with us; we are not abandoned on the road, He is the Way.",
+                "O Ressuscitado caminha conosco; Ele é o Caminho."
+            ),
+            officialPrayer = LocalizedText(
+                "Cristo del Camino, que a Emaús caminaste con dos discípulos: camina conmigo, quédate con nosotros y parte el pan. Amén.",
+                "Christ of the Way, who walked to Emmaus: walk with me, stay with us, and break the bread. Amen.",
+                "Cristo do Caminho, caminhai conosco e permanecei conosco. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            primarySanctuary = LocalizedText("Santuarios de Emaús y del Camino", "Shrines of Emmaus and the Way", "Santuários de Emaús"),
+            recordedMiracles = LocalizedText(
+                "Peregrinos librados de peligros en los caminos y encuentros eucarísticos transformantes.",
+                "Pilgrims delivered from perils on the road and transforming Eucharistic encounters.",
+                "Peregrinos livrados de perigos e encontros transformadores."
+            )
+        ),
+        ChristManifestation(
+            id = "cristo_paciencia",
+            title = LocalizedText("El Cristo de la Paciencia (Señor de la Paciencia)", "Christ of Patience (Lord of Patience)", "Cristo da Paciência"),
+            feastDay = LocalizedText("Jueves Santo", "Holy Thursday", "Quinta-feira Santa"),
+            originHistory = LocalizedText(
+                "Cristo paciente en la Pasión que no responde con violencia a los que le ofenden. Devoción que exalta la mansedumbre del Corazón frente a la ira.",
+                "The patient Christ of the Passion who does not answer violence with violence. Devotion extolling the meekness of the Heart before anger.",
+                "Cristo paciente da Paixão que não responde com violência. Devoção à mansidão do Coração."
+            ),
+            promises = LocalizedText(
+                "Paciencia en las pruebas, mansedumbre ante la ofensa y serenidad en las dificultades.",
+                "Patience in trials, meekness before offense, and serenity in difficulties.",
+                "Paciência nas provações, mansidão ante a ofensa e serenidade nas dificuldades."
+            ),
+            theologicalMeaning = LocalizedText(
+                "Frente a la ira del mundo, Cristo venció por la paciencia; esa es la fuerza que salva.",
+                "Before the world's anger, Christ conquered through patience; that is the saving strength.",
+                "Diante da ira do mundo, Cristo venceu pela paciência."
+            ),
+            officialPrayer = LocalizedText(
+                "Señor de la Paciencia, que callaste ante tus acusadores: formame a tu imagen, dame tu serenidad y tu perdón. Amén.",
+                "Lord of Patience, who kept silence before Your accusers: form me in Your image, give me Your serenity and Your forgiveness. Amen.",
+                "Senhor da Paciência: formai-me à vossa imagem e dai-me vossa serenidade. Amém."
+            ),
+            region = "Universal",
+            country = LocalizedText("Universal", "Universal", "Universal"),
+            primarySanctuary = LocalizedText("Iglesias de la Paciencia de Cristo", "Churches of the Patience of Christ", "Igrejas da Paciência de Cristo"),
+            recordedMiracles = LocalizedText(
+                "Reconciliaciones tras años de rencor y paciencia heroica en enfermos atestiguada.",
+                "Reconciliations after years of resentment and heroic patience in the sick attested.",
+                "Reconciliações após anos de rancor."
+            )
+        ),
+        ChristManifestation(
+            id = "cristo_humildad",
+            title = LocalizedText("Cristo de la Humildad y Paciencia (Cristo Humilde)", "Christ of Humility (Humble Christ)", "Cristo da Humildade"),
+            feastDay = LocalizedText("II Domingo de Adviento", "Second Sunday of Advent", "II Domingo do Advento"),
+            originHistory = LocalizedText(
+                "Advoción de Cristo humilde, abogado de los pobres; popularizada en México y en la iconografía del Niño pobre de Belén. El Rey de reyes nace en un pesebre.",
+                "Advocation of the humble Christ, advocate of the poor; popular in Mexico and in the iconography of the Bethlehem crib. The King of kings is born in a stable.",
+                "Advocação de Cristo humilde, advogado dos pobres. O Rei dos reis nasce em um presépio."
+            ),
+            promises = LocalizedText(
+                "Dignidad para los pequeños, pan para los pobres y riqueza verdadera en la humildad de espíritu.",
+                "Dignity for the lowly, bread for the poor, and true riches in humility of spirit.",
+                "Dignidade para os pequenos e riqueza na humildade."
+            ),
+            theologicalMeaning = LocalizedText(
+                "Dios se hace pequeño para que el pequeño no tema acercarse; la humildad es el camino de la grandeza.",
+                "God becomes small so the small may not fear to approach; humility is the way of greatness.",
+                "Deus se faz pequeno para que o pequeno não tema aproximar-se."
+            ),
+            officialPrayer = LocalizedText(
+                "Cristo humilde, Rey pobre de Belén: enséñame a despojarme de todo orgullo y a reconocer tu grandeza en la sencillez. Amén.",
+                "Humble Christ, poor King of Bethlehem: teach me to strip off all pride and to see Your greatness in simplicity. Amen.",
+                "Cristo humilde, Rei pobre de Belém: ensinai-me a despojar-me do orgulho. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("México / Universal", "Mexico / Universal", "México / Universal"),
+            primarySanctuary = LocalizedText("Capillas del Niño Pobre de Belén", "Chapels of the Poor Child of Bethlehem", "Capelas do Menino Pobre de Belém"),
+            recordedMiracles = LocalizedText(
+                "Limosnas que se multiplican y dignificación de los olvidados por la sociedad.",
+                "Alms multiplied and the forgotten of society dignified.",
+                "Esmolas multiplicadas e dignificação dos esquecidos."
+            )
+        ),
+        ChristManifestation(
+            id = "cristo_sentenciado",
+            title = LocalizedText("Cristo Sentenciado (Padre Jesús Sentenciado)", "Christ Sentenced (Christ the Condemned)", "Cristo Sentenciado"),
+            feastDay = LocalizedText("Viernes de Dolores", "Friday of Sorrows", "Sexta-feira das Dores"),
+            originHistory = LocalizedText(
+                "Cristo condenado por Pilatos, atado y con la cruz a cuestas, venerado como Padre Jesús Sentenciado en Tecla (El Salvador) y en La Plata (Bolivia).",
+                "Christ condemned by Pilate, bound and carrying the Cross, venerated as Padre Jesús Sentenciado in Tecla (El Salvador) and La Plata (Bolivia).",
+                "Cristo condenado por Pilatos, atado e com a cruz às costas, venerado em El Salvador e na Bolívia."
+            ),
+            promises = LocalizedText(
+                "Fortaleza ante sentencias injustas, absolución de la conciencia y paciencia al cargar la cruz diaria.",
+                "Strength before unjust judgments, absolution of conscience, and patience to carry the daily cross.",
+                "Fortaleza ante sentenças injustas e paciência para carregar a cruz diária."
+            ),
+            theologicalMeaning = LocalizedText(
+                "Cristo condenado por nosotros para absolvernos; su sentencia es nuestra justificación.",
+                "Christ condemned for us to absolve us; His sentence is our justification.",
+                "Cristo condenado por nós para nos absolver; sua sentença é nossa justificação."
+            ),
+            officialPrayer = LocalizedText(
+                "Padre Jesús Sentenciado: carguaste la sentencia del mundo para librarme: por tu Sangre me absolverás. Amén.",
+                "Father Jesus Sentenced: You carried the world's sentence to free me; by Your Blood absolve me. Amen.",
+                "Pai Jesus Sentenciado: carregastes a sentença do mundo para me livrar. Amém."
+            ),
+            region = "Americas",
+            country = LocalizedText("El Salvador / Bolivia", "El Salvador / Bolivia", "El Salvador / Bolívia"),
+            primarySanctuary = LocalizedText("Templo de Padre Jesús Sentenciado (Tecla, El Salvador)", "Church of Padre Jesús Sentenciado, Tecla", "Igreja de Padre Jesús Sentenciado em Tecla"),
+            recordedMiracles = LocalizedText(
+                "Presos absueltos y librados tras su intercesión; procesiones de penitencia en Semana Santa.",
+                "Prisoners acquitted and delivered through his intercession; penitential processions in Holy Week.",
+                "Prisioneiros absolvidos e procissões penitenciais na Semana Santa."
+            )
         )
     )
 
@@ -861,6 +1815,97 @@ object DevotionsAndHistoryData {
             keyPopes = LocalizedText("San Pío V, San Pío X, San Juan XXIII, San Pablo VI, San Juan Pablo II, Benedicto XVI, Papa Francisco.", "St. Pius V, St. Pius X, St. John XXIII, St. Paul VI, St. John Paul II, Pope Francis.", "São Pio V, São Pio X, São João XXIII, São João Paulo II e Papa Francisco."),
             ecumenicalCouncils = LocalizedText("Concilio de Trento (1545-1563), Concilio Vaticano I (1869-1870), Concilio Vaticano II (1962-1965).", "Council of Trent (1545-1563), Vatican I (1869-1870), Vatican II (1962-1965).", "Concílio de Trento (1545-1563), Vaticano I (1870) e Vaticano II (1962-1965)."),
             historicalSaints = LocalizedText("San Ignacio de Loyola, Santa Teresa de Jesús, San Juan Bosco, San Pío de Pietrelcina, Santa Teresa de Calcuta.", "St. Ignatius of Loyola, St. Teresa of Avila, St. John Bosco, St. Padre Pio, St. Teresa of Calcutta.", "Santo Inácio de Loyola, Santa Teresa d'Ávila, São João Bosco e São Padre Pio.")
+        ),
+        ChurchHistoryEpoch(
+            epochId = "papal_states_medieval",
+            title = LocalizedText("Los Estados Pontificios y la Edad Media Central", "The Papal States & the Central Middle Ages", "Os Estados Pontifícios e a Idade Média Central"),
+            centuryRange = "Siglos VIII - XI (754 - 1073)",
+            narrative = LocalizedText(
+                "El Papa Esteban II recibe en 754 la Donación de Pipino y nacen los Estados Pontificios, base temporal del papado. Carlomagno es coronado emperador en Roma (800) por León III, fundando la cristiandad latina. Catedral, monasterio y universidad estructuran la vida de Europa.",
+                "Pope Stephen II receives the Donation of Pepin in 754, founding the Papal States. Charlemagne is crowned emperor in Rome (800), founding Latin Christendom. Cathedrals, monasteries and universities shape medieval Europe.",
+                "O Papa Estevão II recebe a Doação de Pipino (754) e nascem os Estados Pontifícios. Carlos Magno é coroado imperador em Roma (800)."
+            ),
+            keyPopes = LocalizedText("San Gregorio Magno, San León III (corona a Carlomagno), San Nicolás I, San Gregorio VII (inicio de la reforma).", "St. Gregory the Great, Leo III (crowns Charlemagne), Nicholas I, Gregory VII.", "São Gregório Magno, Leão III, Nicolau I e Gregório VII."),
+            ecumenicalCouncils = LocalizedText("Concilio de Constantinopla IV (869-870, contra Focio); concilios de reforma del siglo IX.", "Fourth Council of Constantinople (869-870); Carolingian reform councils.", "IV Concílio de Constantinopla (869) e concílios carolíngios de reforma."),
+            historicalSaints = LocalizedText("San Benito de Nursia, San Beda, San Cirilo y Metodio, Santa Edith Steinline, San Ansgario.", "St. Benedict of Nursia, St. Bede, St. Cyril and Methodius, St. Ansgar.", "São Bento de Núrsia, São Beda, São Cirilo e São Metódio.")
+        ),
+        ChurchHistoryEpoch(
+            epochId = "gregorian_reform",
+            title = LocalizedText("La Reforma Gregoriana y la Libertad de la Iglesia", "The Gregorian Reform & the Freedom of the Church", "A Reforma Gregoriana e a Liberdade da Igreja"),
+            centuryRange = "Siglos XI - XII (1073 - 1122)",
+            narrative = LocalizedText(
+                "Gregorio VII excomulga en 1076 al emperador Enrique IV y el Dictatus Papae afirma la independencia espiritual del papado. La Querella de las Investiduras culmina en Worms (1122) con la libertad canónica de la Iglesia frente al poder laico.",
+                "Gregory VII excommunicates Emperor Henry IV in 1076 and the Dictatus Papae affirms papal spiritual independence. The Investiture Contest ends at Worms (1122) with canonical liberty from lay power.",
+                "Gregório VII excomungou o imperador em 1076. A Querela das Investiduras terminou em Worms (1122) com a liberdade da Igreja."
+            ),
+            keyPopes = LocalizedText("San Gregorio VII, Pascual II, Gelasio II, Calixto II.", "St. Gregory VII, Paschal II, Gelasius II, Callixtus II.", "São Gregório VII, Pascual II, Gelásio II e Calisto II."),
+            ecumenicalCouncils = LocalizedText("Concilio de Letrán I (1123) consagra el Concordato de Worms; sin concilios ecuménicos plenos del período.", "First Lateran Council (1123) promulgates the Worms Concordat; no full ecumenical council of the period.", "I Concílio de Latrão (1123) promulga o Concordato de Worms."),
+            historicalSaints = LocalizedText("San Bruno de Colonia, San Anselmo de Canterbury, San Norberto de Xanten, San Bernardo de Claraval.", "St. Bruno of Cologne, St. Anselm of Canterbury, St. Norbert, St. Bernard of Clairvaux.", "São Bruno de Colônia, Santo Anselmo, São Norberto e São Bernardo de Claraval.")
+        ),
+        ChurchHistoryEpoch(
+            epochId = "mendicant_orders",
+            title = LocalizedText("Órdenes Mendicantes y la Escolástica", "Mendicant Orders & Scholasticism", "Ordens Mendicantes e a Escolástica"),
+            centuryRange = "Siglos XIII - XIV (1209 - 1378)",
+            narrative = LocalizedText(
+                "San Francisco de Asís (1209) y Santo Domingo (1216) fundan órdenes mendicantes que viven de la mendicidad y predican a los pobres y a las ciudades. La escolástica de Alberto Magno y Tomás de Aquino dialoga con Aristóteles y funda la universidad.",
+                "St. Francis of Assisi (1209) and St. Dominic (1216) found mendicant orders living by begging and preaching to the poor and cities. Scholasticism of Albert the Great and Thomas Aquinas opens the university to Aristotle.",
+                "São Francisco (1209) e São Domingos (1216) fundam as ordens mendicantes. A escolástica de Tomás de Aquino floresce nas universidades."
+            ),
+            keyPopes = LocalizedText("Inocencio III, Gregorio IX, Inocencio IV, Gregorio X, Nicolás III, Martín IV, Bonifacio VIII.", "Innocent III, Gregory IX, Innocent IV, Gregory X, Nicholas III, Martin IV, Boniface VIII.", "Inocêncio III, Gregório IX, Inocêncio IV e Bonifácio VIII."),
+            ecumenicalCouncils = LocalizedText("Letrán IV (1215, confesión anual y Eucaristía), Lyon I (1245), Lyon II (1274), Vienne (1311-1312).", "Lateran IV (1215), Lyon I (1245), Lyon II (1274), Vienne (1311-1312).", "Latrão IV (1215), Lyon I e II, Vienne (1312)."),
+            historicalSaints = LocalizedText("San Francisco de Asís, Santo Domingo, Santa Clara, San Antonio de Padua, San Buenaventura, Santo Tomás de Aquino.", "St. Francis of Assisi, St. Dominic, St. Clare, St. Anthony of Padua, St. Bonaventure, St. Thomas Aquinas.", "São Francisco de Assis, São Domingos, Santa Clara, Santo Antônio de Pádua, São Tomás de Aquino.")
+        ),
+        ChurchHistoryEpoch(
+            epochId = "reformation_trent",
+            title = LocalizedText("La Reforma Protestante y el Concilio de Trento", "The Protestant Reformation & the Council of Trent", "A Reforma Protestante e o Concílio de Trento"),
+            centuryRange = "Siglos XVI (1517 - 1563)",
+            narrative = LocalizedText(
+                "Lutero publica las 95 tesis en 1517; la ruptura se extiende y nacen luteranos, anglicanos y calvinistas. La Iglesia responde con el Concilio de Trento (1545-1563), que fija el canon bíblico, los siete sacramentos, la justificación y la renovación del clero y de las órdenes.",
+                "Luther posts the 95 Theses in 1517; the rupture spreads and Lutheran, Anglican and Calvinist churches arise. The Church answers with the Council of Trent (1545-1563), fixing the biblical canon, the seven sacraments, justification and renewal.",
+                "Lutero publica as 95 teses em 1517. A Igreja responde com o Concílio de Trento (1545-1563), reafirmando o cânon bíblico e os sete sacramentos."
+            ),
+            keyPopes = LocalizedText("León X, Adriano VI, Clemente VII, Pablo III, Julio III, Marcelo II, Pablo IV, Pío IV.", "Leo X, Adrian VI, Clement VII, Paul III, Julius III, Marcellus II, Paul IV, Pius IV.", "Leão X, Adriano VI, Clemente VII, Paulo III, Júlio III, Pio IV."),
+            ecumenicalCouncils = LocalizedText("Concilio de Trento (1545-1563): Escritura y Tradición, pecado original, justificación, sacramentos, Misa y purgatorio.", "Council of Trent (1545-1563): Scripture and Tradition, original sin, justification, sacraments, Mass, purgatory.", "Concílio de Trento: Escritura e Tradição, pecado original, justificação e sacramentos."),
+            historicalSaints = LocalizedText("San Ignacio de Loyola, San Francisco Javier, Santa Teresa de Jesús, San Felipe Neri, San Juan de la Cruz.", "St. Ignatius of Loyola, St. Francis Xavier, St. Teresa of Avila, St. Philip Neri, St. John of the Cross.", "Santo Inácio de Loyola, São Francisco Xavier, Santa Teresa d'Ávila, São Filipe Néri.")
+        ),
+        ChurchHistoryEpoch(
+            epochId = "baroque_missions",
+            title = LocalizedText("Misiones Barrocas y la Contrarreforma", "Baroque Missions & the Counter-Reformation", "Missões Barrocas e a Contrarreforma"),
+            centuryRange = "Siglos XVII - XVIII (1600 - 1750)",
+            narrative = LocalizedText(
+                "La Companía de Jesús y las órdenes mendicantes llevan el Evangelio a América, África y Asia con colegios, reducciones y barroco. Propaganda Fide (1622) coordina las misiones; las congregaciones reformadas y la devoción al Sagrado Corazón renuevan la vida interior.",
+                "The Society of Jesus and mendicant orders carry the Gospel to America, Africa and Asia with schools, reductions and baroque art. Propaganda Fide (1622) coordinates missions; the Sacred Heart devotion renews interior life.",
+                "Jesuítas e mendicantes levam o Evangelho à América, África e Ásia. Propaganda Fide (1622) organiza as missões."
+            ),
+            keyPopes = LocalizedText("Pablo V, Urbano VIII, Alejandro VII, Clemente XI, Clemente XII, Benedicto XIV.", "Paul V, Urban VIII, Alexander VII, Clement XI, Clement XII, Benedict XIV.", "Paulo V, Urbano VIII, Alexandre VII, Clemente XI e Bento XIV."),
+            ecumenicalCouncils = LocalizedText("Sin concilios ecuménicos; Catecismo Romano (1566) y reformas post-tridentinas.", "No ecumenical council; the Roman Catechism (1566) and post-Tridentine reforms.", "Sem concílios ecumênicos; Catecismo Romano (1566) e reformas pós-tridentinas."),
+            historicalSaints = LocalizedText("San Vicente de Paúl, San Luis de Montfort, Santa Margarita María de Alacoque, San Pedro Claver, San Francisco de Sales.", "St. Vincent de Paul, St. Louis de Montfort, St. Margaret Mary Alacoque, St. Peter Claver, St. Francis de Sales.", "São Vicente de Paulo, São Luís de Montfort, Santa Margarida Maria, São Pedro Claver.")
+        ),
+        ChurchHistoryEpoch(
+            epochId = "enlightenment_suppression",
+            title = LocalizedText("La Ilustración y la Supresión de la Compañía", "The Enlightenment & the Suppression of the Jesuits", "O Iluminismo e a Supressão da Companhia"),
+            centuryRange = "Siglos XVIII - XIX (1700 - 1830)",
+            narrative = LocalizedText(
+                "La Ilustración critica el poder de la Iglesia; José II y los déspotas ilustrados someten órdenes y bienes eclesiásticos. Clemente XIV suprime la Compañía de Jesús (1773); Pío VII la restaura en 1814. La Iglesia pierde Estados Pontificios en 1870.",
+                "Enlightenment thought criticizes Church power; Joseph II and enlightened despots subject orders and goods. Clement XIV suppresses the Jesuits (1773); Pius VII restores them in 1814. The Church loses the Papal States in 1870.",
+                "O Iluminismo critica o poder da Igreja. Clemente XIV suprime os Jesuítas (1773); Pio VII os restaura (1814)."
+            ),
+            keyPopes = LocalizedText("Clemente XI, Clemente XII, Benedicto XIV, Clemente XIII, Clemente XIV, Pío VI, Pío VII, Gregorio XVI.", "Clement XI, Clement XII, Benedict XIV, Clement XIII, Clement XIV, Pius VI, Pius VII, Gregory XVI.", "Clemente XI, Bento XIV, Clemente XIV, Pio VI, Pio VII e Gregório XVI."),
+            ecumenicalCouncils = LocalizedText("Sin concilios ecuménicos; encíclicas contra el liberalismo y la masonería.", "No ecumenical council; encyclicals against liberalism and freemasonry.", "Sem concílios ecumênicos; encíclicas contra o liberalismo."),
+            historicalSaints = LocalizedText("San Alfonso María de Ligorio, San Gerardo Mayela, Santa Teresita de Lisieux (precursora), Santa Faustina Kowalska.", "St. Alphonsus Maria de Liguori, St. Gerard Majella, St. Thérèse of Lisieux, St. Faustina Kowalska.", "Santo Afonso de Ligório, São Geraldo Majella, Santa Faustina Kowalska.")
+        ),
+        ChurchHistoryEpoch(
+            epochId = "vatican_i_modern",
+            title = LocalizedText("El Vaticano I y la Iglesia Moderna", "Vatican I & the Modern Church", "O Vaticano I e a Igreja Moderna"),
+            centuryRange = "Siglos XIX - XX (1870 - 1960)",
+            narrative = LocalizedText(
+                "El Vaticano I (1869-1870) define la infalibilidad papal y la divinidad de Cristo. Los papas sociales construyen el magisterio moderno: la Inmaculada (1854), la Asunción (1950), las apariciones de Lourdes, Fátima y la consagración al Sagrado Corazón marcan el ciclo.",
+                "Vatican I (1869-1870) defines papal infallibility and the divinity of Christ. Social popes build modern teaching: the Immaculate Conception (1854), the Assumption (1950), Lourdes, Fatima and the Sacred Heart consecration mark the period.",
+                "O Vaticano I (1869-1870) define a infalibilidade papal. Imaculada (1854) e Assunção (1950) são proclamadas."
+            ),
+            keyPopes = LocalizedText("Pío IX, León XIII, Pío X, Benedicto XV, Pío XI, Pío XII.", "Pius IX, Leo XIII, Pius X, Benedict XV, Pius XI, Pius XII.", "Pio IX, Leão XIII, Pio X, Bento XV, Pio XI e Pio XII."),
+            ecumenicalCouncils = LocalizedText("Concilio Vaticano I (1869-1870): Dei Filius e Pastor Aeternus.", "First Vatican Council (1869-1870): Dei Filius and Pastor Aeternus.", "I Concílio do Vaticano: Dei Filius e Pastor Aeternus."),
+            historicalSaints = LocalizedText("San Juan Bosco, Santa Teresa de Lisieux, San Pío de Pietrelcina, Santa Bernadette, San Maximiliano Kolbe.", "St. John Bosco, St. Therese of Lisieux, St. Padre Pio, St. Bernadette, St. Maximilian Kolbe.", "São João Bosco, Santa Teresa de Lisieux, São Padre Pio, Santa Bernadette, São Maximiliano Kolbe.")
         )
     )
 

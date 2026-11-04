@@ -29,16 +29,16 @@ class FontTypographyTest {
         }
     }
 
-    @Test fun identityDefaultRetainsPairingAndLegacyPreferencesWorkInVatican() {
+    @Test fun identityDefaultRetainsPairingAndLegacyPreferencesWorkInMaterial() {
         for (identity in DesignLanguage.entries) {
             assertEquals(AppTypographyFactory.build(identity, true, 1f),
                 AppTypographyFactory.build(identity, true, 1f, "IDENTITY_DEFAULT"))
         }
-        val defaults = AppTypographyFactory.build(DesignLanguage.VATICAN, true, 1f, "IDENTITY_DEFAULT")
-        assertEquals(AppFonts.Cinzel, defaults.second.screenTitle.fontFamily)
+        val defaults = AppTypographyFactory.build(DesignLanguage.MATERIAL, true, 1f, "IDENTITY_DEFAULT")
+        assertEquals(AppFonts.Roboto, defaults.second.screenTitle.fontFamily)
         assertEquals(AppFonts.EbGaramond, defaults.second.scripture.fontFamily)
         assertEquals(AppFonts.Inter,
-            AppTypographyFactory.build(DesignLanguage.VATICAN, true, 1f, "SANS").second.scripture.fontFamily)
+            AppTypographyFactory.build(DesignLanguage.MATERIAL, true, 1f, "SANS").second.scripture.fontFamily)
         assertEquals(AppFonts.EbGaramond,
             AppTypographyFactory.build(DesignLanguage.APPLE, false, 1f, "SERIF").second.navLabel.fontFamily)
     }

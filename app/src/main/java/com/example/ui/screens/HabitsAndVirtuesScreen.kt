@@ -91,7 +91,6 @@ import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
@@ -828,7 +827,7 @@ private fun LazyListScope.paneHeader(
 @Composable
 private fun segmentedTabsInset(): Dp {
     val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
+    return design.spacing.gutter
 }
 
 /** Today's fidelity: the ring, the week behind it, and the way out of a fall. */
@@ -962,7 +961,7 @@ private fun FidelityRing(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
     val fraction = completionRate.coerceIn(0f, 1f)
-    val cap = if (design.language == DesignLanguage.VATICAN) StrokeCap.Butt else StrokeCap.Round
+    val cap = StrokeCap.Round
     val ringDescription = if (currentLanguage != null) {
         currentLanguage.pick(
             "$completedCount de $totalCount cumplidos hoy, ${(fraction * 100).toInt()}%",

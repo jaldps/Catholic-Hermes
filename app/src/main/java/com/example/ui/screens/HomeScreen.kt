@@ -48,6 +48,8 @@ import androidx.compose.material.icons.filled.NearMe
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Restaurant
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.outlined.Checklist
 import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.filled.Star
@@ -60,8 +62,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -83,6 +87,8 @@ import com.example.data.models.DailyMassReading
 import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.models.SaintOfTheDay
 import com.example.data.models.VerseOfTheDay
+import com.example.data.local.SanctaFidesDao
+import com.example.data.local.SinOvercomeLogEntity
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.data.repository.BibleData
 import com.example.data.prefs.ReadingPosition
@@ -96,9 +102,12 @@ import com.example.ui.components.IllustratedScreenHeader
 import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSectionHeader
-import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 /**
  * The app's front door: today's liturgical day, the Mass of the day, the verse
@@ -123,6 +132,12 @@ fun HomeScreen(
     onNavigateToCatechism: () -> Unit = {},
     onNavigateToPilgrimage: () -> Unit = {},
     onNavigateToHabits: () -> Unit = {},
+    onNavigateToMore: () -> Unit = {},
+    onOpenAppearance: () -> Unit = {},
+    onOpenFontPicker: () -> Unit = {},
+    // Nullable so previews/screenshot callers that pass no database keep
+    // compiling; the fidelity card is the only thing gated on it.
+    dao: SanctaFidesDao? = null,
     liturgicalDay: LiturgicalCalendarDay = PilgrimageAndHabitsData.upcomingLiturgicalDays.first(),
     modifier: Modifier = Modifier
 ) {
@@ -428,6 +443,18 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.sectionGap / 2))
         }
 
+        // Today's spiritual fidelity: one point per habit kept today, plus a
+        // quick victory log. Gated on dao so callers without a database
+        // (screenshots, previews) keep the plain Home.
+        if (dao != null) item {
+            FidelityCard(
+                dao = dao,
+                currentLanguage = currentLanguage,
+                onOpenHabits = onNavigateToHabits
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
         // Nearby parishes, straight out to the device's map app.
         item {
             val openNearbyChurches = {
@@ -506,10 +533,159 @@ fun HomeScreen(
                         .fillMaxWidth()
                         .testTag("widget_lang_button")
                 )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    ShortcutTile(
+                        label = strings("Apariencia", "Appearance", "Aparência"),
+                        icon = Icons.Default.LightMode,
+                        onClick = onOpenAppearance,
+                        modifier = Modifier
+                            .weight(1f)
+                            .testTag("home_appearance_settings")
+                    )
+                    ShortcutTile(
+                        label = strings("Fuente", "Font", "Fonte"),
+                        icon = Icons.Default.TextFields,
+                        onClick = onOpenFontPicker,
+                        modifier = Modifier
+                            .weight(1f)
+                            .testTag("home_font_settings")
+                    )
+                }
+                // More is no longer a tab: this tile is its entry point, and
+                // More keeps every other destination plus the same Settings.
+                ShortcutTile(
+                    label = strings("Más / Ajustes", "More / Settings", "Mais / Ajustes"),
+                    icon = Icons.Default.Settings,
+                    onClick = onNavigateToMore,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .testTag("home_more_settings")
+                )
             }
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+/**
+ * Today's spiritual fidelity: one point per habit completion logged for today
+ * (distinct habits kept), the total victories kept in Christ, and a one-tap
+ * "I overcame a temptation" that writes to the same victory log the Habits
+ * screen reads and confirms inline. The generic TEMPTATION key keeps the
+ * quick log from inflating any one catalogued vice's count.
+ */
+@Composable
+private fun FidelityCard(
+    dao: SanctaFidesDao,
+    currentLanguage: AppLanguage,
+    onOpenHabits: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val scope = rememberCoroutineScope()
+
+    fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
+    }
+
+    val todayDateStr = remember {
+        SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Date())
+    }
+    val habits by dao.getAllHabits().collectAsState(initial = emptyList())
+    val todayCompletions by dao.getCompletionsForDate(todayDateStr).collectAsState(initial = emptyList())
+    val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
+    var victoryLogged by rememberSaveable { mutableStateOf(false) }
+
+    val keptIds = remember(todayCompletions) { todayCompletions.map { it.habitId }.toSet() }
+    val points = keptIds.size
+
+    AppCard(
+        modifier = Modifier
+            .padding(horizontal = design.spacing.gutter)
+            .testTag("home_fidelity_card")
+    ) {
+        CardHeading(
+            label = strings("Fidelidad de hoy", "Today's fidelity", "Fidelidade de hoje"),
+            icon = Icons.Default.Star,
+            trailing = "$points"
+        )
+        Spacer(Modifier.height(design.spacing.cardGap))
+        Text(
+            text = if (habits.isNotEmpty()) {
+                strings(
+                    "$points de ${habits.size} prácticas cumplidas hoy",
+                    "$points of ${habits.size} practices kept today",
+                    "$points de ${habits.size} práticas cumpridas hoje"
+                )
+            } else {
+                strings(
+                    "Aún no hay prácticas en tu regla de vida",
+                    "No practices in your rule of life yet",
+                    "Ainda não há práticas na sua regra de vida"
+                )
+            },
+            style = styles.rowSubtitle,
+            color = palette.textSecondary
+        )
+        if (totalVictories > 0) {
+            Spacer(Modifier.height(design.spacing.cardGap / 2))
+            Text(
+                text = strings(
+                    "$totalVictories tentaciones vencidas en Cristo",
+                    "$totalVictories temptations overcome in Christ",
+                    "$totalVictories tentações vencidas em Cristo"
+                ),
+                style = styles.rowSubtitle,
+                color = palette.textSecondary
+            )
+        }
+        Spacer(Modifier.height(design.spacing.cardGap))
+        AppPrimaryButton(
+            label = strings(
+                "Vencí una tentación",
+                "I overcame a temptation",
+                "Venci uma tentação"
+            ),
+            onClick = {
+                scope.launch {
+                    dao.insertSinOvercomeLog(
+                        SinOvercomeLogEntity(
+                            sinKey = "TEMPTATION",
+                            counterVirtue = "",
+                            prayerUsed = "HAIL_MARY"
+                        )
+                    )
+                    victoryLogged = true
+                }
+            },
+            leadingIcon = Icons.Default.TaskAlt,
+            modifier = Modifier.testTag("home_overcome_temptation_button")
+        )
+        if (victoryLogged) {
+            Spacer(Modifier.height(design.spacing.cardGap / 2))
+            Text(
+                text = strings("¡Victoria registrada!", "Victory recorded!", "Vitória registada!"),
+                style = styles.rowSubtitle,
+                color = palette.accent,
+                modifier = Modifier.testTag("home_victory_confirmation")
+            )
+        }
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        Text(
+            text = strings("Ver mi regla de vida", "View my rule of life", "Ver a minha regra de vida"),
+            style = styles.sectionEyebrow,
+            color = palette.accent,
+            modifier = Modifier
+                .clickable(onClick = onOpenHabits)
+                .testTag("home_fidelity_open_habits")
+        )
     }
 }
 
@@ -632,7 +808,7 @@ private fun CardHeading(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        if (icon != null && design.language != DesignLanguage.VATICAN) {
+        if (icon != null) {
             Icon(
                 imageVector = icon,
                 contentDescription = null,

@@ -62,6 +62,7 @@ import com.example.data.repository.ParishScheduleText
 import com.example.ui.components.TextFormat
 import com.example.ui.design.AppPrimaryButton
 import com.example.ui.components.IllustratedScreenHeader
+import com.example.ui.components.InAppBrowserDialog
 import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
@@ -71,6 +72,9 @@ import com.example.ui.theme.LocalAppDesign
 import kotlinx.coroutines.launch
 import kotlin.coroutines.cancellation.CancellationException
 import kotlinx.coroutines.withTimeoutOrNull
+import kotlin.math.cos
+import kotlin.math.max
+import kotlin.math.min
 
 private enum class SearchState { IDLE, LOADING, DONE }
 
@@ -86,7 +90,9 @@ private const val UI_TIMEOUT_MS = 22_000L
  * Finds Catholic parishes, either around the device or around a place the user
  * names, each with its distance and Sunday Mass where known. The bundled
  * directory of great churches lives in Churches & News and is linked, not
- * repeated; Google Maps is the fallback when the online lookup fails.
+ * repeated; when the online lookup fails or finds nothing, Google Maps is
+ * launched automatically, and when it does find parishes an OpenStreetMap
+ * embed (in-app, via [InAppBrowserDialog]) shows them on a map.
  *
  * AAA M3 treatment, kept inside the shared kit on purpose: the screen paints
  * with nothing but [LocalAppDesign] tokens (canvas, spacing, shape via the kit
@@ -120,6 +126,12 @@ fun ParishFinderScreen(
     var message by remember { mutableStateOf<String?>(null) }
     var searchedPlace by remember { mutableStateOf<String?>(null) }
     var expandedParishId by remember { mutableStateOf<String?>(null) }
+    // Coordinates/radius of the last lookup, so a failed or empty lookup can
+    // hand Google Maps the exact spot and the OSM embed can frame it.
+    var lastLatitude by remember { mutableStateOf<Double?>(null) }
+    var lastLongitude by remember { mutableStateOf<Double?>(null) }
+    var lastRadiusKm by remember { mutableStateOf(10) }
+    var showOsmMap by remember { mutableStateOf(false) }
 
     fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
         AppLanguage.ES -> es
@@ -144,6 +156,51 @@ fun ParishFinderScreen(
                 "Não foi possível abrir o Google Maps."
             )
         }
+    }
+
+    /**
+     * Google Maps at exact coordinates: a `geo:` intent with an
+     * 'iglesia católica'/'parroquia' query near the point first, then the
+     * same query on the web. Returns whether anything opened. When both
+     * coordinates are null it falls back to a generic nearby search.
+     */
+    fun openMapsAt(latitude: Double?, longitude: Double?): Boolean {
+        val query = if (latitude != null && longitude != null) {
+            Uri.encode("iglesia católica parroquia cerca de $latitude,$longitude")
+        } else {
+            Uri.encode("iglesia católica parroquia")
+        }
+        val geo = if (latitude != null && longitude != null) "geo:$latitude,$longitude?q=$query" else "geo:0,0?q=$query"
+        return runCatching {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(geo)))
+        }.isSuccess || runCatching {
+            context.startActivity(
+                Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com/maps/search/$query"))
+            )
+        }.isSuccess
+    }
+
+    /**
+     * OpenStreetMap embed URL framing every result (plus the searched
+     * point), with a marker on the nearest parish. Null when there are no
+     * OSM results — callers use the Google Maps auto-launch instead.
+     * OSM's embed takes a single `marker`, so the full set remains in the
+     * list below the map.
+     */
+    fun osmEmbedUrl(): String? {
+        if (results.isEmpty()) return null
+        val lat = lastLatitude ?: results.first().latitude
+        val lon = lastLongitude ?: results.first().longitude
+        val latPad = max(lastRadiusKm / 111.0, 0.02)
+        val lonPad = max(lastRadiusKm / (111.0 * max(cos(Math.toRadians(lat)), 0.2)), 0.02)
+        val minLat = min(results.minOf { it.latitude }, lat - latPad)
+        val maxLat = max(results.maxOf { it.latitude }, lat + latPad)
+        val minLon = min(results.minOf { it.longitude }, lon - lonPad)
+        val maxLon = max(results.maxOf { it.longitude }, lon + lonPad)
+        val first = results.first()
+        return "https://www.openstreetmap.org/export/embed.html" +
+            "?bbox=$minLon,$minLat,$maxLon,$maxLat&layer=mapnik" +
+            "&marker=${first.latitude},${first.longitude}"
     }
 
     fun callParish(parish: NearbyParish) {
@@ -188,6 +245,10 @@ fun ParishFinderScreen(
         state = SearchState.LOADING
         message = null
         searchedPlace = label
+        lastLatitude = latitude
+        lastLongitude = longitude
+        lastRadiusKm = radiusKm
+        showOsmMap = false
         scope.launch {
             // Whatever happens below — success, failure, an exception — the
             // spinner must end. It previously stayed on "Searching" for good if
@@ -209,21 +270,26 @@ fun ParishFinderScreen(
                 is ParishLookupResult.Empty -> {
                     results = emptyList()
                     message = strings(
-                        "No se encontraron parroquias en ${outcome.searchedRadiusKm} km. Prueba un radio mayor.",
-                        "No parishes found within ${outcome.searchedRadiusKm} km. Try a wider radius.",
-                        "Nenhuma paróquia encontrada em ${outcome.searchedRadiusKm} km. Tente um raio maior."
+                        "No se encontraron parroquias en ${outcome.searchedRadiusKm} km. Prueba un radio mayor. Se abrió Google Maps para buscar cerca de ti.",
+                        "No parishes found within ${outcome.searchedRadiusKm} km. Try a wider radius. Google Maps was opened to search near you.",
+                        "Nenhuma paróquia encontrada em ${outcome.searchedRadiusKm} km. Tente um raio maior. O Google Maps foi aberto para buscar perto de você."
                     )
                 }
                 is ParishLookupResult.Failure -> {
                     results = emptyList()
                     message = strings(
-                        "El directorio en línea no respondió. Google Maps puede buscar por ti.",
-                        "The online directory did not answer. Google Maps can search for you.",
-                        "O diretório online não respondeu. O Google Maps pode buscar por você."
+                        "El directorio en línea no respondió. Se abrió Google Maps para buscar por ti.",
+                        "The online directory did not answer. Google Maps was opened to search for you.",
+                        "O diretório online não respondeu. O Google Maps foi aberto para buscar por você."
                     )
                 }
             }
             state = SearchState.DONE
+            // The online directory failed or returned nothing: hand over to
+            // Google Maps automatically instead of only offering it.
+            if (outcome !is ParishLookupResult.Success) {
+                openMapsAt(latitude, longitude)
+            }
         }
     }
 
@@ -237,11 +303,12 @@ fun ParishFinderScreen(
             val location = runCatching { locationProvider.lastKnownLocation() }.getOrNull()
             if (location == null) {
                 message = strings(
-                    "El teléfono aún no tiene tu ubicación. Activa la ubicación o busca en Google Maps.",
-                    "The phone has no location fix yet. Turn on location, or search in Google Maps.",
-                    "O telefone ainda não tem a sua localização. Ative a localização ou busque no Google Maps."
+                    "El teléfono aún no tiene tu ubicación. Activa la ubicación. Se abrió Google Maps para buscar parroquias.",
+                    "The phone has no location fix yet. Turn on location. Google Maps was opened to search for parishes.",
+                    "O telefone ainda não tem a sua localização. Ative a localização. O Google Maps foi aberto para buscar paróquias."
                 )
                 state = SearchState.DONE
+                openMapsAt(null, null)
                 return@launch
             }
             runLookup(
@@ -422,7 +489,13 @@ fun ParishFinderScreen(
                     Spacer(Modifier.height(design.spacing.cardGap))
                     AppSecondaryButton(
                         label = strings("Abrir Google Maps", "Open Google Maps", "Abrir o Google Maps"),
-                        onClick = { openNearbyInMaps(placeQuery.takeIf { it.isNotBlank() }) },
+                        onClick = {
+                            if (lastLatitude != null && lastLongitude != null) {
+                                openMapsAt(lastLatitude, lastLongitude)
+                            } else {
+                                openNearbyInMaps(placeQuery.takeIf { it.isNotBlank() })
+                            }
+                        },
                         leadingIcon = Icons.Default.Map,
                         modifier = Modifier
                             .fillMaxWidth()
@@ -503,6 +576,30 @@ fun ParishFinderScreen(
                     subtitle = listOfNotNull(searchedPlace, countLine)
                         .joinToString(" · ").ifBlank { null }
                 )
+            }
+            if (osmEmbedUrl() != null) {
+                item(key = "parish_osm_map") {
+                    AppSecondaryButton(
+                        label = strings(
+                            "Ver en el mapa (OpenStreetMap)",
+                            "View on map (OpenStreetMap)",
+                            "Ver no mapa (OpenStreetMap)"
+                        ),
+                        onClick = {
+                            // Results exist, so the embed has markers; if
+                            // they somehow vanished, fall back to Maps.
+                            if (osmEmbedUrl() != null) showOsmMap = true
+                            else openMapsAt(lastLatitude, lastLongitude)
+                        },
+                        leadingIcon = Icons.Default.Map,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
+                            .padding(horizontal = design.spacing.gutter)
+                            .testTag("parish_osm_map_button")
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                }
             }
             // Each parish is its name, its street and its next Mass, with the
             // distance trailing; a tap opens Mass times, telephone and
@@ -590,6 +687,15 @@ fun ParishFinderScreen(
 
         item(key = "parish_bottom_gap") {
             Spacer(Modifier.height(design.spacing.contentBottomGap))
+        }
+    }
+
+    // In-app OpenStreetMap embed with the parish markers. With no OSM
+    // results there is nothing to frame, so that path never reaches here —
+    // the Google Maps auto-launch in runLookup covers it instead.
+    if (showOsmMap) {
+        osmEmbedUrl()?.let { url ->
+            InAppBrowserDialog(url = url, onDismiss = { showOsmMap = false })
         }
     }
 }

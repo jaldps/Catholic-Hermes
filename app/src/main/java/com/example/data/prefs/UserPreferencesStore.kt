@@ -37,7 +37,7 @@ data class UserPreferences(
     val hasChosenLanguage: Boolean
 ) {
     companion object {
-        const val DEFAULT_DESIGN_LANGUAGE = "VATICAN"
+        const val DEFAULT_DESIGN_LANGUAGE = "MATERIAL"
         const val DEFAULT_THEME_PRESET = "LITURGICAL_DYNAMIC"
         const val DEFAULT_DARK_MODE = "SYSTEM"
         const val DEFAULT_FONT_FAMILY = "IDENTITY_DEFAULT"

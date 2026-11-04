@@ -90,9 +90,11 @@ enum class AppDestination(
     companion object {
         /**
          * What the tab bar carries. iOS and Material both cap a bottom bar at
-         * five; everything else is listed by [MORE] and pushed from it.
+         * five; Habits sits next to Prayers as a first-class tab, and
+         * everything else (including [MORE] itself, with Settings) is reached
+         * by pushing from a Home tile.
          */
-        val tabs = listOf(HOME, BIBLE, ROSARY, PRAYERS, MORE)
+        val tabs = listOf(HOME, BIBLE, ROSARY, PRAYERS, HABITS_VIRTUES)
     }
 
     fun title(language: AppLanguage): String = when (language) {
@@ -114,13 +116,20 @@ fun MainApp(
     val currentLanguage by repository.currentLanguage.collectAsState()
     var current by remember { mutableStateOf(initialDestination) }
     // The tab a pushed screen was opened from, so back and the tab bar's
-    // highlight return to it: Home's shortcuts push onto Home, not onto More.
+    // highlight return to it: Home's shortcuts push onto Home, and screens
+    // opened from More push back to More (More is itself a pushed screen now).
     var origin by remember {
-        mutableStateOf(if (initialDestination in AppDestination.tabs) initialDestination else AppDestination.MORE)
+        mutableStateOf(
+            when {
+                initialDestination in AppDestination.tabs -> initialDestination
+                initialDestination == AppDestination.MORE -> AppDestination.HOME
+                else -> AppDestination.MORE
+            }
+        )
     }
     fun go(destination: AppDestination) {
         if (destination in AppDestination.tabs) origin = destination
-        else if (current in AppDestination.tabs) origin = current
+        else if (current in AppDestination.tabs || current == AppDestination.MORE) origin = current
         current = destination
     }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
@@ -239,7 +248,11 @@ fun MainApp(
                         saintOfTheDay = repository.saintOfTheDay,
                         currentLanguage = currentLanguage,
                         liturgicalDay = repository.getCurrentLiturgicalDay(),
+                        dao = dao,
                         onOpenLanguageSelector = { showLanguageSelector = true },
+                        onOpenAppearance = { showCustomizerModal = true },
+                        onOpenFontPicker = { showFontPicker = true },
+                        onNavigateToMore = { go(AppDestination.MORE) },
                         onNavigateToHabits = { go(AppDestination.HABITS_VIRTUES) },
                         onNavigateToBible = {
                             bibleInitialTab = 0

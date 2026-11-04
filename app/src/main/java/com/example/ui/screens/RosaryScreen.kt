@@ -1339,7 +1339,6 @@ private fun GuideControlsCard(
                 .widthIn(max = when (design.language) {
                     DesignLanguage.APPLE -> 224.dp
                     DesignLanguage.MATERIAL -> 232.dp
-                    DesignLanguage.VATICAN -> 240.dp
                 })
                 .testTag(railTag)
                 .semantics {
@@ -1516,10 +1515,7 @@ private fun BeadRail(
     val toldThread = if (engraved) palette.gold else palette.accent.copy(alpha = 0.85f)
     val current = palette.accent
     val halo = palette.accent.copy(alpha = if (dark) 0.22f else 0.14f)
-    val track = when (idiom) {
-        DesignLanguage.VATICAN -> palette.gold.copy(alpha = 0.40f)
-        else -> palette.accent.copy(alpha = if (dark) 0.20f else 0.12f)
-    }
+    val track = palette.accent.copy(alpha = if (dark) 0.20f else 0.12f)
     val corpusInk = palette.raised
     val stroke = maxOf(design.depth.cardBorderWidth, 1.dp)
 
@@ -1647,33 +1643,6 @@ private fun BeadRail(
                         }
                     }
 
-                    DesignLanguage.VATICAN -> {
-                        // A ruled band: two gilt hairlines, the rubric arc between.
-                        val gap = 3.dp.toPx()
-                        drawCircle(track, radius = ringR - gap, center = geometry.centre, style = Stroke(strokePx))
-                        drawCircle(track, radius = ringR + gap, center = geometry.centre, style = Stroke(strokePx))
-                        if (f > 0f) {
-                            drawArc(
-                                color = current,
-                                startAngle = 90f,
-                                sweepAngle = 360f * f,
-                                useCenter = false,
-                                topLeft = ringTopLeft,
-                                size = ringSize,
-                                style = Stroke(2.5.dp.toPx(), cap = StrokeCap.Butt)
-                            )
-                        }
-                        // A small lozenge marks where the band begins.
-                        val m = 3.2.dp.toPx()
-                        val c0 = Offset(geometry.centre.x, geometry.centre.y + ringR)
-                        drawPath(
-                            Path().apply {
-                                moveTo(c0.x, c0.y - m); lineTo(c0.x + m, c0.y)
-                                lineTo(c0.x, c0.y + m); lineTo(c0.x - m, c0.y); close()
-                            },
-                            current
-                        )
-                    }
                 }
 
                 // The thread, trimmed at every bead so no ring is crossed; the
@@ -1722,11 +1691,8 @@ private fun BeadRail(
                 val haloAt = lerp(geometry.centres[lower], geometry.centres[upper], pos - lower)
                 val onCrucifix = beads[activeIndex].kind == BeadKind.CRUCIFIX
                 val haloRadius = if (onCrucifix) geometry.crucifixHeight * 0.64f else geometry.large * 2.4f
-                // The Vatican crucifix is engraved rubric ink, not a web glow.
-                if (idiom != DesignLanguage.VATICAN || !onCrucifix) {
-                    drawCircle(halo, radius = haloRadius, center = haloAt)
-                }
-                if (bloom.value < 1f && (idiom != DesignLanguage.VATICAN || !onCrucifix)) {
+                drawCircle(halo, radius = haloRadius, center = haloAt)
+                if (bloom.value < 1f) {
                     drawCircle(
                         color = current.copy(alpha = 0.4f * (1f - bloom.value)),
                         radius = haloRadius * (0.7f + 0.9f * bloom.value),

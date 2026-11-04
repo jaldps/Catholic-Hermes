@@ -611,15 +611,54 @@ object CatechismData {
         )
     }
 
+    /**
+     * Lower-cased full text of every paragraph, built once and reused by every
+     * search. Without this index each keystroke would lowercase ~3 languages
+     * x 2,865 paragraphs from scratch.
+     */
+    private data class FullTextEntry(
+        val number: Int,
+        val es: String,
+        val en: String,
+        val pt: String
+    )
+
+    private val fullTextIndex: List<FullTextEntry> by lazy {
+        CatechismFullData.contentByNumber.entries
+            .sortedBy { it.key }
+            .map { (number, text) ->
+                FullTextEntry(
+                    number = number,
+                    es = text.es.lowercase(),
+                    en = text.en.lowercase(),
+                    pt = text.pt.lowercase()
+                )
+            }
+    }
+
+    /**
+     * Full-text search over all 2,865 paragraphs in all three languages.
+     *
+     * A bare paragraph number (optionally written "§1324" / "#1324") keeps the
+     * exact number-lookup behaviour. Any other query matches the curated
+     * articles (titles, bodies and references) AND every paragraph in
+     * [CatechismFullData.contentByNumber], deduplicated by paragraph number
+     * and returned in paragraph order, so results always carry their number.
+     */
     fun searchArticles(query: String): List<CatechismNumberedArticle> {
         val q = query.trim().lowercase()
-        val num = q.toIntOrNull()
+        if (q.isEmpty()) return emptyList()
+
+        val digits = q.trim('§', '#', ' ')
+        val num = digits.takeIf { it.isNotEmpty() && it.all(Char::isDigit) }?.toIntOrNull()
         if (num != null && num in 1..2865) {
             val art = findArticleByNumber(num)
             return if (art != null) listOf(art) else emptyList()
         }
 
-        val results = mutableListOf<CatechismNumberedArticle>()
+        val matchedNumbers = sortedSetOf<Int>()
+
+        // Curated articles: titles / bodies / references in every language.
         for (part in catechismParts) {
             for (sec in part.sections) {
                 for (ch in sec.chapters) {
@@ -631,13 +670,23 @@ object CatechismData {
                             art.content.en.lowercase().contains(q) ||
                             art.content.pt.lowercase().contains(q) ||
                             (art.biblicalReferences?.lowercase()?.contains(q) == true)) {
-                            results.add(art)
+                            matchedNumbers.add(art.cccNumber)
                         }
                     }
                 }
             }
         }
-        return results
+
+        // The full corpus: every one of the 2,865 paragraphs, all languages.
+        for (entry in fullTextIndex) {
+            if (entry.es.contains(q) || entry.en.contains(q) || entry.pt.contains(q)) {
+                matchedNumbers.add(entry.number)
+            }
+        }
+
+        // findArticleByNumber prefers the curated article when one exists and
+        // otherwise builds the paragraph from CatechismFullData.
+        return matchedNumbers.mapNotNull { findArticleByNumber(it) }
     }
 }
 

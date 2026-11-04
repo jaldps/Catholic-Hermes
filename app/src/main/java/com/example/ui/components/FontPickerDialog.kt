@@ -35,7 +35,6 @@ import com.example.data.prefs.UserPreferences
 import com.example.data.prefs.UserPreferencesStore
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.AppFonts
-import com.example.ui.theme.DesignLanguage
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.Job
 import java.io.IOException
@@ -89,11 +88,7 @@ fun FontPicker(
         AppLanguage.PT -> pt
     }
     val design = LocalAppDesign.current
-    val selectionColor = if (design.language == DesignLanguage.VATICAN) {
-        design.palette.accent
-    } else {
-        MaterialTheme.colorScheme.primary
-    }
+    val selectionColor = MaterialTheme.colorScheme.primary
     AlertDialog(
         shape = design.shapes.dialog,
         containerColor = design.palette.raised,

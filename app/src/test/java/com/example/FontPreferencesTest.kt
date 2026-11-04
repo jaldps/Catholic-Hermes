@@ -46,7 +46,7 @@ class FontPreferencesTest {
                 assertEquals("ROBOTO", reopened.preferences.first().fontFamilyChoice)
                 assertEquals(1.3f, reopened.preferences.first().fontSizeScale, 0f)
                 // An appearance sheet opened earlier must not restore its stale font draft.
-                reopened.saveAppearance("VATICAN", "LITURGICAL_DYNAMIC", "DARK", "INTER", 1.3f, 1f, updateFontFamily = false)
+                reopened.saveAppearance("MATERIAL", "LITURGICAL_DYNAMIC", "DARK", "INTER", 1.3f, 1f, updateFontFamily = false)
                 assertEquals("ROBOTO", reopened.preferences.first().fontFamilyChoice)
                 reopened.setFontFamilyChoice("EB_GARAMOND")
                 assertEquals("EB_GARAMOND", reopened.preferences.first().fontFamilyChoice)

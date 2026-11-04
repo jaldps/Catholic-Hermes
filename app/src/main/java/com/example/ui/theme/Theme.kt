@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 
 val LocalAppTextStyles = staticCompositionLocalOf {
-    AppTypographyFactory.build(DesignLanguage.VATICAN, serifPreferred = true, scale = 1f).second
+    AppTypographyFactory.build(DesignLanguage.MATERIAL, serifPreferred = true, scale = 1f).second
 }
 
 /**
@@ -26,7 +26,7 @@ val LocalAppTextStyles = staticCompositionLocalOf {
  */
 @Composable
 fun SanctaFidesTheme(
-    designLanguage: String = DesignLanguage.VATICAN.id,
+    designLanguage: String = DesignLanguage.MATERIAL.id,
     themePreset: String = "LITURGICAL_DYNAMIC",
     darkModeSetting: String = "SYSTEM",
     isSerif: Boolean = true,
@@ -65,7 +65,7 @@ fun SanctaFidesTheme(
  * Maps an identity's [AppPalette] onto the Material colour roles, tinted with
  * [accent]. Each identity assigns the roles differently on purpose: Cupertino
  * keeps surfaces flat and near-white so hairlines do the separating, Material
- * steps its surfaces tonally, and Vatican sits everything on parchment.
+ * steps its surfaces tonally.
  */
 private fun buildColorScheme(
     identity: DesignLanguage,
@@ -173,33 +173,7 @@ private fun buildColorScheme(
                 inverseOnSurface = palette.textPrimary
             )
         }
-
-        DesignLanguage.VATICAN -> base.copy(
-            primary = accent,
-            onPrimary = onAccent,
-            primaryContainer = palette.accentMuted,
-            onPrimaryContainer = palette.textPrimary,
-            secondary = palette.gold,
-            onSecondary = if (isDark) Color.Black else Color.White,
-            secondaryContainer = palette.selectionTint,
-            onSecondaryContainer = palette.textPrimary,
-            tertiary = palette.accent,
-            onTertiary = Color.White,
-            background = palette.canvas,
-            onBackground = palette.textPrimary,
-            surface = palette.groupedSurface,
-            onSurface = palette.textPrimary,
-            surfaceVariant = palette.raised,
-            onSurfaceVariant = palette.textSecondary,
-            surfaceContainerLowest = palette.raised,
-            surfaceContainerLow = palette.groupedSurface,
-            surfaceContainer = palette.groupedSurface,
-            surfaceContainerHigh = palette.raised,
-            surfaceContainerHighest = palette.raised,
-            outline = palette.hairline,
-            outlineVariant = palette.hairline,
-            scrim = palette.scrim
-        )
+ 
     }
 }
 
