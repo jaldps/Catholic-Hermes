@@ -66,6 +66,7 @@ import com.example.data.local.NovenaProgressEntity
 import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
 import com.example.data.models.Novena
+import com.example.data.models.PrayerCategory
 import com.example.data.models.VaticanPrayer
 import com.example.data.repository.CatholicDataRepository
 import androidx.activity.compose.BackHandler
@@ -364,9 +365,22 @@ private fun VaticanDevotionalView(
 
     val prayers = repository.searchPrayers(query = searchQuery, tag = selectedTag)
     val filtering = searchQuery.isNotBlank() || selectedTag != null
+    var howToPrayExpanded by remember { mutableStateOf(false) }
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
+
+        // "How to pray" sits at the top of the Prayers tab when the list is
+        // unfiltered; searching or filtering hides it so results stay clean.
+        if (!filtering) {
+            item(key = "how_to_pray") {
+                HowToPraySection(
+                    currentLanguage = currentLanguage,
+                    expanded = howToPrayExpanded,
+                    onToggle = { howToPrayExpanded = !howToPrayExpanded }
+                )
+            }
+        }
 
         item {
             AppSearchField(
@@ -420,13 +434,22 @@ private fun VaticanDevotionalView(
             // The daily rhythm is a useful first choice, not seven equally
             // weighted categories with one row each. Search results remain a
             // single index; grouping never conceals or changes filtering.
+            // When unfiltered, Fundamental Prayers (PrayerCategory.BASIC,
+            // straight from repository.vaticanPrayers — never a hard-coded
+            // title list) lead, so newcomers start with the prayers the
+            // Church teaches first. Each prayer appears once: a BASIC prayer
+            // that is also daily_routine shows only under Fundamental, and
+            // "Other" excludes both earlier groups.
+            val fundamental = prayers.filter { it.category == PrayerCategory.BASIC }
             val daily = prayers.filter { "daily_routine" in it.thematicTags }
+                .filterNot { it in fundamental }
             val groups = if (filtering) {
                 listOf(currentLanguage.pick("Resultados", "Results", "Resultados") to prayers)
             } else {
                 listOf(
+                    PrayerCategory.BASIC.title.get(currentLanguage) to fundamental,
                     currentLanguage.pick("Cada día", "Every day", "Todos os dias") to daily,
-                    currentLanguage.pick("Otras oraciones", "Other prayers", "Outras orações") to prayers.filterNot { it in daily }
+                    currentLanguage.pick("Otras oraciones", "Other prayers", "Outras orações") to prayers.filterNot { it in fundamental || it in daily }
                 )
             }
             groups.filter { it.second.isNotEmpty() }.forEachIndexed { groupIndex, (label, entries) ->
@@ -499,6 +522,150 @@ private fun PrayerIntentionFilters(
                 modifier = Modifier.heightIn(min = MinTouchTarget)
             )
         }
+    }
+}
+
+/**
+ * "How to pray" at the top of the Prayers tab: a collapsible tonal card whose
+ * five steps open as five more tonal cards. Tokens only (palette, spacing,
+ * shapes come from the kit cards and the design system), so light and dark
+ * appearances restyle together; the toggle is a full 48dp target.
+ *
+ * Guidance is short pastoral prose, not doctrine: preparation, the words
+ * themselves, petition, thanksgiving, and silence at the end. Each step
+ * carries its own ES/EN/PT text, picked by [currentLanguage].
+ */
+private data class HowToPrayStep(val title: String, val body: String)
+
+@Composable
+private fun HowToPraySection(
+    currentLanguage: AppLanguage,
+    expanded: Boolean,
+    onToggle: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    val steps = listOf(
+        HowToPrayStep(
+            title = currentLanguage.pick("Qué hacer", "What to do", "O que fazer"),
+            body = currentLanguage.pick(
+                "Busca un lugar tranquilo, siéntate o arrodíllate con el cuerpo atento, y comienza con la señal de la cruz: en el nombre del Padre, y del Hijo, y del Espíritu Santo.",
+                "Find a quiet place, sit or kneel with an attentive body, and begin with the sign of the cross: in the name of the Father, and of the Son, and of the Holy Spirit.",
+                "Procura um lugar tranquilo, senta-te ou ajoelha-te com o corpo atento e começa com o sinal da cruz: em nome do Pai, e do Filho, e do Espírito Santo."
+            )
+        ),
+        HowToPrayStep(
+            title = currentLanguage.pick("Qué decir", "What to say", "O que dizer"),
+            body = currentLanguage.pick(
+                "Reza con el corazón: lee la Escritura en voz baja, usa las palabras de la Iglesia o habla con tus propias palabras, sin prisa.",
+                "Pray from the heart: read Scripture quietly, use the words of the Church or speak in your own words, without haste.",
+                "Reza com o coração: lê a Escritura em voz baixa, usa as palavras da Igreja ou fala com as tuas próprias palavras, sem pressa."
+            )
+        ),
+        HowToPrayStep(
+            title = currentLanguage.pick("Cómo pedir", "How to ask", "Como pedir"),
+            body = currentLanguage.pick(
+                "Pide con confianza y humildad: nombra tu intención, confía en la voluntad de Dios y pide también por los demás.",
+                "Ask with trust and humility: name your intention, trust God's will, and pray for others too.",
+                "Pede com confiança e humildade: nomeia a tua intenção, confia na vontade de Deus e pede também pelos outros."
+            )
+        ),
+        HowToPrayStep(
+            title = currentLanguage.pick("Dar gracias", "Give thanks", "Dar graças"),
+            body = currentLanguage.pick(
+                "Da gracias por lo recibido y por lo que aún esperas: nombra los dones concretos de hoy, aunque sean pequeños.",
+                "Give thanks for what you have received and what you still await: name today's concrete gifts, however small.",
+                "Dá graças pelo que recebeste e pelo que ainda esperas: nomeia os dons concretos de hoje, por menores que sejam."
+            )
+        ),
+        HowToPrayStep(
+            title = currentLanguage.pick("Silencio y escucha", "Silence and listening", "Silêncio e escuta"),
+            body = currentLanguage.pick(
+                "Termina quedándote en silencio: escucha sin exigir respuesta y deja que la Palabra resuene en tu corazón.",
+                "End by remaining in silence: listen without demanding an answer, and let the Word echo in your heart.",
+                "Termina ficando em silêncio: escuta sem exigir resposta e deixa que a Palavra ressoe no teu coração."
+            )
+        )
+    )
+
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .testTag("how_to_pray_section")
+    ) {
+        AppSectionHeader(
+            title = currentLanguage.pick("Cómo orar", "How to pray", "Como orar"),
+            subtitle = currentLanguage.pick(
+                "Cinco pasos para empezar",
+                "Five steps to begin",
+                "Cinco passos para começar"
+            )
+        )
+        AppCard(
+            onClick = onToggle,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+                .heightIn(min = MinTouchTarget)
+                .testTag("how_to_pray_toggle")
+        ) {
+            Row(
+                Modifier
+                    .fillMaxWidth()
+                    .heightIn(min = MinTouchTarget),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(Modifier.weight(1f)) {
+                    Text(
+                        text = currentLanguage.pick("Cómo orar", "How to pray", "Como orar"),
+                        style = styles.sectionTitle,
+                        color = design.palette.textPrimary
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap / 3))
+                    Text(
+                        text = currentLanguage.pick(
+                            if (expanded) "Toca para ocultar los pasos" else "Toca para ver los pasos",
+                            if (expanded) "Tap to hide the steps" else "Tap to see the steps",
+                            if (expanded) "Toque para ocultar os passos" else "Toque para ver os passos"
+                        ),
+                        style = styles.rowSubtitle,
+                        color = design.palette.textSecondary
+                    )
+                }
+                Spacer(Modifier.width(design.spacing.cardGap))
+                Text(
+                    text = currentLanguage.pick(
+                        if (expanded) "Ocultar" else "Ver más",
+                        if (expanded) "Hide" else "Show more",
+                        if (expanded) "Ocultar" else "Ver mais"
+                    ),
+                    style = styles.buttonLabel,
+                    color = design.palette.accent
+                )
+            }
+        }
+        if (expanded) {
+            steps.forEachIndexed { index, step ->
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppCard(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("how_to_pray_step_$index")
+                ) {
+                    BlockHeading(eyebrow = step.title, detail = null)
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Text(
+                        text = step.body,
+                        style = styles.quote,
+                        color = design.palette.textPrimary,
+                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                    )
+                }
+            }
+        }
+        Spacer(Modifier.height(design.spacing.cardGap))
     }
 }
 

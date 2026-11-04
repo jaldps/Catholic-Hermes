@@ -47,7 +47,7 @@ enum class DesignLanguage(
 
     companion object {
         fun fromId(id: String?): DesignLanguage =
-            entries.firstOrNull { it.id == id } ?: MATERIAL
+            entries.firstOrNull { it.id == id } ?: APPLE
     }
 }
 
@@ -162,7 +162,7 @@ data class AppDesign(
 )
 
 val LocalAppDesign = staticCompositionLocalOf {
-    DesignTokens.of(DesignLanguage.MATERIAL, isDark = false)
+    DesignTokens.of(DesignLanguage.APPLE, isDark = false)
 }
 
 object DesignTokens {

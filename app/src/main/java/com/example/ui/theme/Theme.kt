@@ -12,7 +12,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 
 val LocalAppTextStyles = staticCompositionLocalOf {
-    AppTypographyFactory.build(DesignLanguage.MATERIAL, serifPreferred = true, scale = 1f).second
+    AppTypographyFactory.build(DesignLanguage.APPLE, serifPreferred = true, scale = 1f).second
 }
 
 /**
@@ -26,7 +26,7 @@ val LocalAppTextStyles = staticCompositionLocalOf {
  */
 @Composable
 fun SanctaFidesTheme(
-    designLanguage: String = DesignLanguage.MATERIAL.id,
+    designLanguage: String = DesignLanguage.APPLE.id,
     themePreset: String = "LITURGICAL_DYNAMIC",
     darkModeSetting: String = "SYSTEM",
     isSerif: Boolean = true,

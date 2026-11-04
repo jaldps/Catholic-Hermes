@@ -104,7 +104,8 @@ class AppNavigationTest(private val identity: DesignLanguage) {
             "nav_bible" to "bible_screen",
             "nav_rosary" to "rosary_screen",
             "nav_prayers" to "prayers_and_novenas_screen",
-            "nav_habits" to "habits_and_virtues_screen"
+            "nav_habits" to "habits_and_virtues_screen",
+            "nav_more" to "more_screen"
         ).forEach { (tab, screen) ->
             compose.onNodeWithTag(tab).assertHasClickAction().performClick()
             compose.onNodeWithTag(screen).assertIsDisplayed()
@@ -123,7 +124,7 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("bible_screen").assertIsDisplayed()
         compose.onNodeWithTag("daily_missal_screen").assertIsDisplayed()
         compose.onNodeWithText("Today's Mass", ignoreCase = true).assertIsDisplayed()
-        // More is no longer a tab: it is only reached via the Home tile.
+        // More is a tab (nav_more above) and is also reached via the Home tile.
         goToMoreFromHome()
 
         clickMoreRow("nav_catechism")

@@ -89,12 +89,11 @@ enum class AppDestination(
 
     companion object {
         /**
-         * What the tab bar carries. iOS and Material both cap a bottom bar at
-         * five; Habits sits next to Prayers as a first-class tab, and
-         * everything else (including [MORE] itself, with Settings) is reached
-         * by pushing from a Home tile.
+         * What the tab bar carries. Habits sits next to Prayers as a
+         * first-class tab, and [MORE] (with Settings) is the sixth tab;
+         * everything else is reached by pushing from a tab.
          */
-        val tabs = listOf(HOME, BIBLE, ROSARY, PRAYERS, HABITS_VIRTUES)
+        val tabs = listOf(HOME, BIBLE, ROSARY, PRAYERS, HABITS_VIRTUES, MORE)
     }
 
     fun title(language: AppLanguage): String = when (language) {
@@ -135,6 +134,11 @@ enum class AppDestination(
             AppLanguage.EN -> "Habits"
             AppLanguage.PT -> "Hábitos"
         }
+        MORE -> when (language) {
+            AppLanguage.ES -> "Más"
+            AppLanguage.EN -> "More"
+            AppLanguage.PT -> "Mais"
+        }
         else -> title(language)
     }
 }
@@ -152,19 +156,18 @@ fun MainApp(
     var current by remember { mutableStateOf(initialDestination) }
     // The tab a pushed screen was opened from, so back and the tab bar's
     // highlight return to it: Home's shortcuts push onto Home, and screens
-    // opened from More push back to More (More is itself a pushed screen now).
+    // opened from More push back to More.
     var origin by remember {
         mutableStateOf(
             when {
                 initialDestination in AppDestination.tabs -> initialDestination
-                initialDestination == AppDestination.MORE -> AppDestination.HOME
                 else -> AppDestination.MORE
             }
         )
     }
     fun go(destination: AppDestination) {
         if (destination in AppDestination.tabs) origin = destination
-        else if (current in AppDestination.tabs || current == AppDestination.MORE) origin = current
+        else if (current in AppDestination.tabs) origin = current
         current = destination
     }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
