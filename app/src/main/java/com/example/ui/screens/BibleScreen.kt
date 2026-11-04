@@ -404,6 +404,7 @@ fun BibleScreen(
                             icon = Icons.AutoMirrored.Filled.MenuBook
                         )
                     }
+                    item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
                 }
             }
         }
@@ -944,7 +945,7 @@ private fun ChapterReader(
                     }
                 }
 
-                item { Spacer(Modifier.height(design.spacing.sectionGap)) }
+                item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
             }
         }
 

@@ -53,7 +53,10 @@ import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.TaskAlt
 import androidx.compose.material.icons.filled.WbTwilight
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
@@ -67,14 +70,13 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.clipToBounds
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.data.models.DailyMassReading
@@ -84,7 +86,6 @@ import com.example.data.models.VerseOfTheDay
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.data.repository.BibleData
 import com.example.data.prefs.ReadingPosition
-import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppListGroup
@@ -192,7 +193,7 @@ fun HomeScreen(
 
         // The celebration and any obligation, with its liturgical color.
         item {
-            AppBanner(
+            LiturgicalSeasonBanner(
                 title = liturgicalDay.seasonName.get(currentLanguage),
                 body = listOfNotNull(
                     liturgicalDay.celebrationTitle.get(currentLanguage),
@@ -511,40 +512,101 @@ fun HomeScreen(
 /**
  * The readings card while the day's Mass is on its way: a fixed-height block in
  * the shape of what is coming (the Gospel's eyebrow and four lines of text, then
- * two citations), so the card keeps its size and the page does not jump.
+ * two citations), so the card keeps its size and the page does not jump. Every
+ * bar is the same height and width and sits on a uniform gap, in the subtle
+ * `surfaceContainerHighest` tone, so it reads as text lines rather than a
+ * staircase of shimmering blocks.
  */
 @Composable
 private fun ReadingsPlaceholder(description: String) {
     val design = LocalAppDesign.current
-    val base = design.palette.textTertiary.copy(alpha = if (design.isDark) 0.20f else 0.12f)
-    val sheen = design.palette.textTertiary.copy(alpha = if (design.isDark) 0.34f else 0.22f)
-    // A still sheen across the bars: the shimmer's frame, without a clock.
-    val ink = Brush.linearGradient(listOf(base, sheen, base))
+    val barColor = MaterialTheme.colorScheme.surfaceContainerHighest
     Column(
-        Modifier
+        modifier = Modifier
             .fillMaxWidth()
             .height(156.dp)
             .semantics { contentDescription = description }
-            .testTag("home_readings_placeholder")
+            .testTag("home_readings_placeholder"),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        @Composable
-        fun bar(fraction: Float, height: Dp) = Box(
-            Modifier
-                .fillMaxWidth(fraction)
-                .height(height)
-                .clip(design.shapes.chip)
-                .background(ink)
-        )
-        bar(0.34f, 10.dp)
-        Spacer(Modifier.height(10.dp))
-        listOf(1f, 0.94f, 0.97f, 0.58f).forEach {
-            bar(it, 13.dp)
-            Spacer(Modifier.height(7.dp))
+        repeat(7) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(12.dp)
+                    .clip(design.shapes.chip)
+                    .background(barColor)
+            )
         }
-        Spacer(Modifier.height(9.dp))
-        bar(0.26f, 9.dp)
-        Spacer(Modifier.height(6.dp))
-        bar(0.48f, 12.dp)
+    }
+}
+
+/**
+ * The liturgical season banner: the seasonal color stays on the container (a
+ * low-alpha tint over `surfaceContainer`) and the dot, while the lettering is
+ * set in `onSurface` / `onSurfaceVariant` ink, so "Ordinary Time" and the
+ * celebration read at AAA contrast on the pale tint instead of muted seasonal
+ * green. Inner padding is the `cardPadding` token, the same rhythm
+ * `AppCard` gives the verse card.
+ */
+@Composable
+private fun LiturgicalSeasonBanner(
+    title: String,
+    body: String?,
+    accentColorHex: Long?,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val scheme = MaterialTheme.colorScheme
+    val liturgicalColor = accentColorHex?.let { Color(it) } ?: scheme.primary
+    val container = liturgicalColor.copy(alpha = 0.14f).compositeOver(scheme.surfaceContainer)
+    val headline = body?.substringBefore('\n')?.takeIf { it.isNotBlank() }
+    val supporting = body?.substringAfter('\n', "")?.takeIf { it.isNotBlank() }
+    Card(
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter),
+        shape = design.shapes.dialog,
+        colors = CardDefaults.cardColors(containerColor = container),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+    ) {
+        Row(
+            modifier = Modifier.padding(design.spacing.cardPadding),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.Top
+        ) {
+            Box(
+                modifier = Modifier
+                    .padding(top = 5.dp)
+                    .size(8.dp)
+                    .clip(design.shapes.badge)
+                    .background(liturgicalColor)
+            )
+            Column(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                Text(
+                    text = title,
+                    style = if (headline == null) MaterialTheme.typography.titleMedium else MaterialTheme.typography.labelLarge,
+                    color = scheme.onSurface
+                )
+                headline?.let {
+                    Text(
+                        text = it,
+                        style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Medium),
+                        color = scheme.onSurface
+                    )
+                }
+                supporting?.let {
+                    Text(
+                        text = it,
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = scheme.onSurfaceVariant
+                    )
+                }
+            }
+        }
     }
 }
 

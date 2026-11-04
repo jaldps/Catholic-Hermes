@@ -1,5 +1,6 @@
 package com.example.ui.components
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -31,17 +32,29 @@ fun IllustratedScreenHeader(
             verticalAlignment = Alignment.CenterVertically
         ) {
             AppScreenTitle(title, subtitle, Modifier.weight(1f))
-            SacredArt(subject, Modifier.size(112.dp), transparentBackground = true)
+            // Clipped, inset frame: the art's glow/flame can never paint to
+            // the screen's right edge.
+            Box(Modifier.clipToBounds().padding(end = 4.dp), contentAlignment = Alignment.Center) {
+                SacredArt(subject, Modifier.size(112.dp), transparentBackground = true)
+            }
         }
         DesignLanguage.MATERIAL -> {
             // One flexible bar owns the title, date and illustration together.
             // Search and reading follow immediately instead of another banner.
             AppScreenTitle(title, subtitle, modifier, trailingContent = {
-                SacredArt(
-                    subject,
-                    Modifier.padding(start = 12.dp).size(96.dp).testTag("screen_header_illustration"),
-                    transparentBackground = true
-                )
+                // Scroll-safe frame inside the bar's gutter: clipped to its
+                // bounds with an end inset, so flame/art stay fully inside
+                // the frame instead of clipping at the right edge.
+                Box(
+                    Modifier.padding(start = 12.dp, end = 4.dp).clipToBounds(),
+                    contentAlignment = Alignment.Center
+                ) {
+                    SacredArt(
+                        subject,
+                        Modifier.size(96.dp).testTag("screen_header_illustration"),
+                        transparentBackground = true
+                    )
+                }
             })
         }
         DesignLanguage.VATICAN -> Column(modifier) {

@@ -1359,7 +1359,7 @@ private fun GuideControlsCard(
         // ES/PT where/step labels overflowed the loop's centre, and a
         // progress that is only colour and arc is invisible to a reader
         // who cannot see the ring. This line wraps instead of clipping.
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(6.dp))
         Text(
             text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
             style = styles.sectionEyebrow,
@@ -1367,30 +1367,30 @@ private fun GuideControlsCard(
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(Modifier.height(4.dp))
+        Spacer(Modifier.height(2.dp))
         Text(
             text = eyebrow + " · " + stepLabel + (count?.let { " · $it" } ?: ""),
-            style = styles.rowSubtitle,
+            style = MaterialTheme.typography.bodyLarge,
             color = design.palette.textSecondary,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(6.dp))
         if (step.optional) {
             Text(
                 text = lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
                 style = styles.rowSubtitle,
                 color = design.palette.textSecondary
             )
-            Spacer(Modifier.height(4.dp))
+            Spacer(Modifier.height(2.dp))
         }
         Text(
             text = step.name,
-            style = styles.sectionTitle,
+            style = styles.rowTitle,
             color = design.palette.textPrimary,
             modifier = Modifier.testTag("current_prayer_title").semantics { heading() }
         )
-        Spacer(Modifier.height(10.dp))
+        Spacer(Modifier.height(6.dp))
         PrayerDialogue(
             leaderText = step.leader,
             responseText = step.response,

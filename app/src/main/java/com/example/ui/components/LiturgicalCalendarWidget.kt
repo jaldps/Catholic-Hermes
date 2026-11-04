@@ -115,10 +115,9 @@ fun LiturgicalCalendarWidget(
     val type = MaterialTheme.typography
 
     // The seasonal colour only ever tints a container and fills a dot;
-    // lettering on it is solved for contrast instead of painted raw.
+    // lettering on it is neutral `onSurface` ink, not the seasonal hue itself.
     val liturgicalColor = Color(liturgicalDay.liturgicalColorHex)
     val colorContainer = liturgicalColor.copy(alpha = 0.14f).compositeOver(scheme.surfaceContainer)
-    val onColorContainer = liturgicalColor.readableOn(colorContainer)
 
     // Liturgical color name translation
     val colorLabel = when (liturgicalDay.liturgicalColorHex) {
@@ -171,10 +170,7 @@ fun LiturgicalCalendarWidget(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(
-                horizontal = design.spacing.gutter,
-                vertical = design.spacing.cardGap / 2
-            )
+            .padding(horizontal = design.spacing.gutter)
             .testTag("liturgical_calendar_widget"),
         shape = design.shapes.cardLarge,
         colors = CardDefaults.cardColors(
@@ -289,7 +285,7 @@ fun LiturgicalCalendarWidget(
                             text = colorLabel,
                             style = type.labelSmall,
                             fontWeight = FontWeight.SemiBold,
-                            color = onColorContainer
+                            color = scheme.onSurface
                         )
                     }
                 }
@@ -466,7 +462,9 @@ fun LiturgicalCalendarWidget(
                             color = scheme.surfaceContainerHigh,
                             shape = design.shapes.card
                         )
-                        .padding(design.spacing.cardPadding)
+                        // Half the cardPadding token: this inset sits inside the
+                        // cardPadding column, so a full token would double up.
+                        .padding(design.spacing.cardPadding / 2)
                 ) {
                     Text(
                         text = meditationLabel,

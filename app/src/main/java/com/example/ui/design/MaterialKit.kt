@@ -298,7 +298,12 @@ object MaterialKit : AppKit {
         return Roles(
             canvas = canvas,
             low = canvas.step(ink, a[0]),
-            container = canvas.step(ink, a[1]),
+            // One ladder step deeper than surfaceContainer (a[2], the
+            // surfaceContainerHigh alpha): at a[1] a filled book/list card
+            // on the tone-98 canvas was nearly indistinguishable from it.
+            // Stepped through the ink composite, so dark mode lightens the
+            // card off its dark canvas by the same step instead of inverting.
+            container = canvas.step(ink, a[2]),
             high = high,
             highest = canvas.step(ink, a[3]),
             accentSoft = accentSoft,

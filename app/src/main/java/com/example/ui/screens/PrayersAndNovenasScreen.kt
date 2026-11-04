@@ -488,6 +488,8 @@ private fun PrayerIntentionFilters(
             .fillMaxWidth()
             .padding(horizontal = design.spacing.gutter)
             .testTag(testTag),
+        // Start-aligned on every line: a wrapped last line must sit under
+        // the first chip's edge, not float centred as an orphan.
         horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
         verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
     ) {
