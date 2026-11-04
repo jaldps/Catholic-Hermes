@@ -168,20 +168,42 @@ fun BibleScreen(
     ttsManager: LiturgicalTtsManager? = null,
     /** 0 reader · 1 missal · 2 versions · 3 study. */
     initialMainTab: Int = 0,
+    /** Deep-link: preselected book id (e.g. "gen"), or null for the directory. */
+    initialBookId: String? = null,
+    /** Deep-link: preselected chapter (1-based), or null for chapter 1. */
+    initialChapter: Int? = null,
+    /** Deep-link: verse to highlight/scroll to on open, or null for none. */
+    initialVerseStart: Int? = null,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
 
     var selectedMainTab by remember(initialMainTab) { mutableIntStateOf(initialMainTab) }
     var selectedTestamentTab by remember { mutableIntStateOf(0) }
-    var selectedBook by remember { mutableStateOf<BibleBook?>(null) }
-    var selectedChapterNumber by remember { mutableIntStateOf(1) }
+    // Deep-link initial state is keyed so a new link (new book/chapter)
+    // re-preselects, while ordinary in-screen navigation is untouched.
+    var selectedBook by remember(initialBookId, initialChapter) {
+        mutableStateOf(
+            initialBookId?.let { id ->
+                BibleData.catholicCanonBooks.firstOrNull { it.id == id }
+            }
+        )
+    }
+    var selectedChapterNumber by remember(initialBookId, initialChapter) {
+        mutableIntStateOf((initialChapter ?: 1).coerceAtLeast(1))
+    }
     var showChapterSelectorDialog by remember { mutableStateOf(false) }
     var selectedVerseForCommentary by remember { mutableStateOf<BibleVerse?>(null) }
     // Following cross-references: the verse to land on, the verse studied in
     // landscape, and the trail back to where the reader started.
-    var focusVerse by remember { mutableStateOf<Int?>(null) }
-    var studyVerse by remember { mutableStateOf<Int?>(null) }
+    // A deep-link verse reuses focusVerse, which ChapterReader already
+    // scrolls to and marks.
+    var focusVerse by remember(initialBookId, initialChapter, initialVerseStart) {
+        mutableStateOf(initialVerseStart)
+    }
+    var studyVerse by remember(initialBookId, initialChapter, initialVerseStart) {
+        mutableStateOf(initialVerseStart)
+    }
     val referenceTrail = remember { mutableStateListOf<VerseRef>() }
     val landscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
     var searchQuery by remember { mutableStateOf("") }

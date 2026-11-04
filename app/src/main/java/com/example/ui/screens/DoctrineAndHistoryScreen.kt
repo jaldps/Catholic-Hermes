@@ -72,6 +72,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
+import com.example.data.liturgy.FoundationRef
+import com.example.data.liturgy.parseFoundation
 import com.example.data.models.AppLanguage
 import com.example.data.models.ApologeticsQuestion
 import com.example.data.models.CapitalSinVsVirtue
@@ -129,12 +131,14 @@ fun DoctrineAndHistoryScreen(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
     initialTopTab: Int = 0,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit = { _, _, _ -> },
+    onOpenCatechism: (paragraph: Int) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
 
     // 0 = Catechism & doctrine, 1 = Mary & Christ, 2 = history & schisms,
-    // 3 = parishes & news.
+    // 3 = 101 Questions, 4 = news only (opened from Churches & News).
     var selectedTopTab by remember { mutableIntStateOf(initialTopTab) }
     // A commandment, precept, vice or epoch opens as its own page, keyed
     // "kind:index"; the panes list one line of each.
@@ -142,14 +146,15 @@ fun DoctrineAndHistoryScreen(
 
     // Opened from "Churches & News" the destination is news only: no parish
     // directory or filters, just the Vatican feed under its own title.
-    val directoryOnly = initialTopTab == 3
+    val directoryOnly = initialTopTab == 4
 
-    // Short enough that all four sit abreast on a 360dp phone in every
-    // identity; the full names head each pane as its section header.
+    // Short enough that all sit abreast on a 360dp phone in every identity;
+    // the full names head each pane as its section header.
     val topTabs = listOf(
         currentLanguage.pick("Doctrina", "Doctrine", "Doutrina"),
         currentLanguage.pick("María y Jesús", "Mary & Jesus", "Maria e Jesus"),
-        currentLanguage.pick("Historia", "History", "História")
+        currentLanguage.pick("Historia", "History", "História"),
+        currentLanguage.pick("Preguntas", "Questions", "Perguntas")
     )
     val tabsInset = tabStripInset()
 
@@ -198,7 +203,7 @@ fun DoctrineAndHistoryScreen(
             .testTag("doctrine_and_history_screen")
     ) {
         val entry = openEntry
-        if (entry != null && selectedTopTab in 0..2) {
+        if (entry != null && selectedTopTab in 0..3) {
             BackHandler { openEntry = null }
             DoctrineEntryPage(
                 key = entry,
@@ -206,7 +211,9 @@ fun DoctrineAndHistoryScreen(
                 currentLanguage = currentLanguage,
                 backLabel = topTabs[selectedTopTab],
                 onBack = { openEntry = null },
-                onOpen = { openEntry = it }
+                onOpen = { openEntry = it },
+                onOpenBible = onOpenBible,
+                onOpenCatechism = onOpenCatechism
             )
         } else when (selectedTopTab) {
             0 -> MoralDoctrinePane(
@@ -229,6 +236,13 @@ fun DoctrineAndHistoryScreen(
                 header = header
             )
 
+            3 -> CatholicQuestionsPane(
+                repository = repository,
+                currentLanguage = currentLanguage,
+                onOpen = { openEntry = it },
+                header = header
+            )
+
             else -> ParishesAndNewsPane(
                 repository = repository,
                 currentLanguage = currentLanguage,
@@ -236,6 +250,73 @@ fun DoctrineAndHistoryScreen(
                 newsOnly = directoryOnly
             )
         }
+    }
+}
+
+// ------------------------------------------------------ 101 Catholic Questions
+
+@Composable
+private fun CatholicQuestionsPane(
+    repository: CatholicDataRepository,
+    currentLanguage: AppLanguage,
+    onOpen: (String) -> Unit,
+    header: LazyListScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    LazyColumn(Modifier.fillMaxSize()) {
+        header()
+        if (repository.catholicQuestions.isNotEmpty()) {
+            item(key = "catholic_questions") {
+                AppSectionHeader(
+                    title = currentLanguage.pick(
+                        "101 preguntas sobre la fe católica",
+                        "101 Questions on the Catholic Faith",
+                        "101 Perguntas sobre a fé católica"
+                    )
+                )
+                Text(
+                    text = currentLanguage.pick(
+                        "101 preguntas y respuestas breves sobre la fe católica, agrupadas por temas.",
+                        "101 short questions and answers on the Catholic faith, grouped by theme.",
+                        "101 perguntas e respostas breves sobre a fé católica, agrupadas por tema."
+                    ),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = design.palette.textSecondary,
+                    modifier = Modifier.padding(horizontal = design.spacing.gutter)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                // groupBy keeps the order in which each section first appears,
+                // so the 11 themes read in the data's own sequence rather
+                // than alphabetically.
+                repository.catholicQuestions
+                    .withIndex()
+                    .groupBy { it.value.section.get(currentLanguage) }
+                    .forEach { (sectionName, entries) ->
+                        Text(
+                            text = eyebrow(sectionName),
+                            style = LocalAppTextStyles.current.sectionEyebrow,
+                            color = design.palette.textSecondary,
+                            modifier = Modifier.padding(horizontal = design.spacing.gutter)
+                        )
+                        AppListGroup {
+                            entries.forEach { indexed ->
+                                val question = indexed.value
+                                AppListRow(
+                                    title = question.question.get(currentLanguage),
+                                    subtitle = question.section.get(currentLanguage),
+                                    onClick = { onOpen("qa:${indexed.index}") },
+                                    modifier = Modifier
+                                        .heightIn(min = MinTouchTarget)
+                                        .testTag("catholic_question_${question.number}")
+                                )
+                            }
+                        }
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                    }
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
@@ -357,57 +438,6 @@ private fun MoralDoctrinePane(
             }
         }
 
-        if (repository.catholicQuestions.isNotEmpty()) {
-            item(key = "catholic_questions") {
-                AppSectionHeader(
-                    title = currentLanguage.pick(
-                        "101 preguntas sobre la fe católica",
-                        "101 Questions on the Catholic Faith",
-                        "101 Perguntas sobre a fé católica"
-                    )
-                )
-                Text(
-                    text = currentLanguage.pick(
-                        "101 preguntas y respuestas breves sobre la fe católica, agrupadas por temas.",
-                        "101 short questions and answers on the Catholic faith, grouped by theme.",
-                        "101 perguntas e respostas breves sobre a fé católica, agrupadas por tema."
-                    ),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = design.palette.textSecondary,
-                    modifier = Modifier.padding(horizontal = design.spacing.gutter)
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                // groupBy keeps the order in which each section first appears,
-                // so the 11 themes read in the data's own sequence rather
-                // than alphabetically.
-                repository.catholicQuestions
-                    .withIndex()
-                    .groupBy { it.value.section.get(currentLanguage) }
-                    .forEach { (sectionName, entries) ->
-                        Text(
-                            text = eyebrow(sectionName),
-                            style = LocalAppTextStyles.current.sectionEyebrow,
-                            color = design.palette.textSecondary,
-                            modifier = Modifier.padding(horizontal = design.spacing.gutter)
-                        )
-                        AppListGroup {
-                            entries.forEach { indexed ->
-                                val question = indexed.value
-                                AppListRow(
-                                    title = question.question.get(currentLanguage),
-                                    subtitle = question.section.get(currentLanguage),
-                                    onClick = { onOpen("qa:${indexed.index}") },
-                                    modifier = Modifier
-                                        .heightIn(min = MinTouchTarget)
-                                        .testTag("catholic_question_${question.number}")
-                                )
-                            }
-                        }
-                        Spacer(Modifier.height(design.spacing.cardGap))
-                    }
-            }
-        }
-
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
@@ -437,7 +467,9 @@ private fun DoctrineEntryPage(
     currentLanguage: AppLanguage,
     backLabel: String,
     onBack: () -> Unit,
-    onOpen: (String) -> Unit = {}
+    onOpen: (String) -> Unit = {},
+    onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit = { _, _, _ -> },
+    onOpenCatechism: (paragraph: Int) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -762,7 +794,10 @@ private fun DoctrineEntryPage(
                         CatholicQuestionReaderCard(
                             question = question,
                             currentLanguage = currentLanguage,
-                            questionIndex = questionIndex
+                            questionIndex = questionIndex,
+                            repository = repository,
+                            onOpenBible = onOpenBible,
+                            onOpenCatechism = onOpenCatechism
                         )
                     }
                     item {
@@ -885,7 +920,10 @@ private fun DidacheReaderCard(
 private fun CatholicQuestionReaderCard(
     question: ApologeticsQuestion,
     currentLanguage: AppLanguage,
-    questionIndex: Int
+    questionIndex: Int,
+    repository: CatholicDataRepository? = null,
+    onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit = { _, _, _ -> },
+    onOpenCatechism: (paragraph: Int) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -949,6 +987,53 @@ private fun CatholicQuestionReaderCard(
                     labelColor = design.palette.gold,
                     bodyStyle = styles.scripture
                 )
+                // Deep links: every parsed Bible / CCC reference opens its
+                // passage in the Bible or Catechism for deeper study.
+                if (repository != null) {
+                    val refs = remember(foundationText, currentLanguage) {
+                        parseFoundation(foundationText, currentLanguage, repository.catholicBooks)
+                    }
+                    if (refs.isNotEmpty()) {
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        @OptIn(ExperimentalLayoutApi::class)
+                        FlowRow(
+                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
+                            verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+                        ) {
+                            refs.forEach { ref ->
+                                when (ref) {
+                                    is FoundationRef.BibleRef -> {
+                                        val r = ref.reference
+                                        val bookName = repository.catholicBooks
+                                            .firstOrNull { it.id == r.bookId }
+                                            ?.name?.get(currentLanguage) ?: r.bookId
+                                        AppChip(
+                                            label = bookName + " " + r.chapter +
+                                                (r.verseStart?.let { ", $it" } ?: "") +
+                                                (r.verseEnd?.let { "-$it" } ?: ""),
+                                            selected = true,
+                                            onClick = { onOpenBible(r.bookId, r.chapter, r.verseStart) },
+                                            modifier = Modifier.heightIn(min = MinTouchTarget)
+                                        )
+                                    }
+                                    is FoundationRef.CatechismRef -> AppChip(
+                                        label = currentLanguage.pick(
+                                            "Catecismo ${ref.startParagraph}" +
+                                                (ref.endParagraph?.let { "-$it" } ?: ""),
+                                            "Catechism ${ref.startParagraph}" +
+                                                (ref.endParagraph?.let { "-$it" } ?: ""),
+                                            "Catecismo ${ref.startParagraph}" +
+                                                (ref.endParagraph?.let { "-$it" } ?: "")
+                                        ),
+                                        selected = true,
+                                        onClick = { onOpenCatechism(ref.startParagraph) },
+                                        modifier = Modifier.heightIn(min = MinTouchTarget)
+                                    )
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         // Aclaración: the nuance, smaller type on the neutral selectionTint

@@ -38,6 +38,7 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
@@ -107,15 +108,29 @@ import com.example.ui.theme.LocalAppTextStyles
 fun CatechismScreen(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
+    /** Deep-link: CCC paragraph (§) to open on entry, or null for Sources. */
+    initialParagraph: Int? = null,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
 
+    // The outline section tiling 1..2865 that contains the deep-linked
+    // paragraph, resolved once per link target.
+    val initialOutlineSection = remember(initialParagraph, repository) {
+        initialParagraph?.let { paragraph ->
+            repository.catechismOutline.firstOrNull { paragraph in it.firstNumber..it.lastNumber }
+        }
+    }
     // 0 = Compendio (598), 1 = Catecismo Universal (1-2865), 2 = Fuentes Oficiales
-    var mainMode by remember { mutableIntStateOf(2) }
+    // A deep link lands on the Universal Catechism at its paragraph.
+    var mainMode by remember(initialParagraph) {
+        mutableIntStateOf(if (initialParagraph != null) 1 else 2)
+    }
     var selectedPartIndex by remember { mutableIntStateOf(0) }
     var selectedChapter by remember { mutableStateOf<CatechismChapter?>(null) }
-    var selectedOutline by remember { mutableStateOf<CatechismOutlineSection?>(null) }
+    var selectedOutline by remember(initialParagraph) {
+        mutableStateOf(initialOutlineSection)
+    }
     var searchQuery by remember { mutableStateOf("") }
     var fontSizeMultiplier by remember { mutableFloatStateOf(1f) }
     var readerFont by remember { mutableStateOf(ReaderFontChoice.FOLLOW_APP) }
@@ -163,6 +178,7 @@ fun CatechismScreen(
                 header = header,
                 repository = repository,
                 currentLanguage = currentLanguage,
+                initialParagraph = initialParagraph,
                 searchQuery = searchQuery,
                 onSearchQueryChange = { searchQuery = it },
                 selectedPartIndex = selectedPartIndex,
@@ -193,6 +209,7 @@ private fun UniversalCatechismView(
     header: LazyListScope.() -> Unit,
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
+    initialParagraph: Int? = null,
     searchQuery: String,
     onSearchQueryChange: (String) -> Unit,
     selectedPartIndex: Int,
@@ -271,6 +288,7 @@ private fun UniversalCatechismView(
             ParagraphRangeView(
                 repository = repository,
                 section = selectedOutline,
+                focusParagraph = initialParagraph,
                 currentLanguage = currentLanguage,
                 fontSizeMultiplier = fontSizeMultiplier,
                 onFontSizeChange = onFontSizeChange,
@@ -431,6 +449,7 @@ private fun LazyListScope.catechismIndexItems(
 private fun ParagraphRangeView(
     repository: CatholicDataRepository,
     section: CatechismOutlineSection,
+    focusParagraph: Int? = null,
     currentLanguage: AppLanguage,
     fontSizeMultiplier: Float,
     onFontSizeChange: (Float) -> Unit,
@@ -445,6 +464,13 @@ private fun ParagraphRangeView(
 
     val paragraphCount = section.lastNumber - section.firstNumber + 1
     val listState = rememberLazyListState()
+    // A deep-linked paragraph is scrolled into view on open (item 0 is the
+    // title, paragraphs start at item 1).
+    LaunchedEffect(focusParagraph, section) {
+        if (focusParagraph != null && focusParagraph in section.firstNumber..section.lastNumber) {
+            listState.scrollToItem(focusParagraph - section.firstNumber + 1)
+        }
+    }
     // List item 0 is the title; paragraph offsets live at items 1..count, and
     // the final item is the bottom gap. The first visible paragraph is where
     // the reader actually is, which is what progress and prev/next follow.

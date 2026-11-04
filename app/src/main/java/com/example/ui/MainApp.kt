@@ -172,6 +172,25 @@ fun MainApp(
     }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
     var bibleInitialTab by remember { mutableIntStateOf(0) }
+    // Deep-link state: set by onOpenBible/onOpenCatechism (Doctrine screen
+    // calls these once it exposes them), consumed as the initial params of
+    // BibleScreen/CatechismScreen.
+    var bibleInitialBook by remember { mutableStateOf<String?>(null) }
+    var bibleInitialChapter by remember { mutableStateOf<Int?>(null) }
+    var bibleInitialVerse by remember { mutableStateOf<Int?>(null) }
+    var catechismInitialParagraph by remember { mutableStateOf<Int?>(null) }
+    val onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit =
+        { bookId, chapter, verseStart ->
+            bibleInitialBook = bookId
+            bibleInitialChapter = chapter
+            bibleInitialVerse = verseStart
+            bibleInitialTab = 0
+            go(AppDestination.BIBLE)
+        }
+    val onOpenCatechism: (paragraph: Int) -> Unit = { paragraph ->
+        catechismInitialParagraph = paragraph
+        go(AppDestination.CATECHISM)
+    }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCustomizerModal by remember { mutableStateOf(false) }
     var showFontPicker by remember { mutableStateOf(false) }
@@ -205,7 +224,17 @@ fun MainApp(
         title = current.title(currentLanguage),
         navItems = navItems,
         selectedNavIndex = tabs.indexOf(if (isPushed) origin else current),
-        onNavSelected = { go(tabs[it]) },
+        onNavSelected = {
+            val dest = tabs[it]
+            if (dest == AppDestination.BIBLE) {
+                bibleInitialBook = null
+                bibleInitialChapter = null
+                bibleInitialVerse = null
+            } else if (dest == AppDestination.CATECHISM) {
+                catechismInitialParagraph = null
+            }
+            go(dest)
+        },
         onBack = if (isPushed) ({ pop() }) else null,
         backLabel = if (isPushed) origin.title(currentLanguage) else null
         // Appearance and language are settings, listed under More, not two
@@ -293,14 +322,23 @@ fun MainApp(
                         onNavigateToMore = { go(AppDestination.MORE) },
                         onNavigateToHabits = { go(AppDestination.HABITS_VIRTUES) },
                         onNavigateToBible = {
+                            bibleInitialBook = null
+                            bibleInitialChapter = null
+                            bibleInitialVerse = null
                             bibleInitialTab = 0
                             go(AppDestination.BIBLE)
                         },
                         onNavigateToMissal = {
+                            bibleInitialBook = null
+                            bibleInitialChapter = null
+                            bibleInitialVerse = null
                             bibleInitialTab = 1
                             go(AppDestination.BIBLE)
                         },
-                        onNavigateToCatechism = { go(AppDestination.CATECHISM) },
+                        onNavigateToCatechism = {
+                            catechismInitialParagraph = null
+                            go(AppDestination.CATECHISM)
+                        },
                         onNavigateToRosary = { go(AppDestination.ROSARY) },
                         onNavigateToPrayers = { go(AppDestination.PRAYERS) },
                         onNavigateToPilgrimage = { go(AppDestination.PILGRIMAGE_HABITS) },
@@ -326,12 +364,16 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         dao = dao,
                         ttsManager = ttsManager,
-                        initialMainTab = bibleInitialTab
+                        initialMainTab = bibleInitialTab,
+                        initialBookId = bibleInitialBook,
+                        initialChapter = bibleInitialChapter,
+                        initialVerseStart = bibleInitialVerse
                     )
 
                     AppDestination.CATECHISM -> CatechismScreen(
                         repository = repository,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        initialParagraph = catechismInitialParagraph
                     )
 
                     AppDestination.ROSARY -> RosaryScreen(
@@ -354,7 +396,9 @@ fun MainApp(
 
                     AppDestination.DOCTRINE -> DoctrineAndHistoryScreen(
                         repository = repository,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        onOpenBible = onOpenBible,
+                        onOpenCatechism = onOpenCatechism
                     )
 
                     AppDestination.PARISHES -> ParishFinderScreen(
@@ -366,7 +410,9 @@ fun MainApp(
                     AppDestination.CHURCHES_NEWS -> DoctrineAndHistoryScreen(
                         repository = repository,
                         currentLanguage = currentLanguage,
-                        initialTopTab = 3
+                        initialTopTab = 4,
+                        onOpenBible = onOpenBible,
+                        onOpenCatechism = onOpenCatechism
                     )
 
                     AppDestination.SPIRITUAL_LIFE -> SpiritualLifeScreen(
@@ -381,6 +427,13 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         sections = moreSections(currentLanguage) { destination ->
                             if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
+                            if (destination == AppDestination.BIBLE) {
+                                bibleInitialBook = null
+                                bibleInitialChapter = null
+                                bibleInitialVerse = null
+                            } else if (destination == AppDestination.CATECHISM) {
+                                catechismInitialParagraph = null
+                            }
                             go(destination)
                         } + MoreSection(
                             when (currentLanguage) {
