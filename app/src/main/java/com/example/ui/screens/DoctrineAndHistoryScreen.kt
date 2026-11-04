@@ -29,6 +29,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.AutoStories
+import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.Directions
@@ -987,49 +989,67 @@ private fun CatholicQuestionReaderCard(
                     labelColor = design.palette.gold,
                     bodyStyle = styles.scripture
                 )
-                // Deep links: every parsed Bible / CCC reference opens its
-                // passage in the Bible or Catechism for deeper study.
-                if (repository != null) {
-                    val refs = remember(foundationText, currentLanguage) {
-                        parseFoundation(foundationText, currentLanguage, repository.catholicBooks)
-                    }
-                    if (refs.isNotEmpty()) {
-                        Spacer(Modifier.height(design.spacing.cardGap / 2))
-                        @OptIn(ExperimentalLayoutApi::class)
-                        FlowRow(
-                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2),
-                            verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-                        ) {
-                            refs.forEach { ref ->
-                                when (ref) {
-                                    is FoundationRef.BibleRef -> {
-                                        val r = ref.reference
-                                        val bookName = repository.catholicBooks
-                                            .firstOrNull { it.id == r.bookId }
-                                            ?.name?.get(currentLanguage) ?: r.bookId
-                                        AppChip(
-                                            label = bookName + " " + r.chapter +
-                                                (r.verseStart?.let { ", $it" } ?: "") +
-                                                (r.verseEnd?.let { "-$it" } ?: ""),
-                                            selected = true,
-                                            onClick = { onOpenBible(r.bookId, r.chapter, r.verseStart) },
-                                            modifier = Modifier.heightIn(min = MinTouchTarget)
-                                        )
-                                    }
-                                    is FoundationRef.CatechismRef -> AppChip(
-                                        label = currentLanguage.pick(
-                                            "Catecismo ${ref.startParagraph}" +
-                                                (ref.endParagraph?.let { "-$it" } ?: ""),
-                                            "Catechism ${ref.startParagraph}" +
-                                                (ref.endParagraph?.let { "-$it" } ?: ""),
-                                            "Catecismo ${ref.startParagraph}" +
-                                                (ref.endParagraph?.let { "-$it" } ?: "")
+            }
+            // Deep links as their own reference group below the panel (not
+            // chips over the text): one tappable row per Bible/CCC passage.
+            if (repository != null) {
+                val refs = remember(foundationText, currentLanguage) {
+                    parseFoundation(foundationText, currentLanguage, repository.catholicBooks)
+                }
+                if (refs.isNotEmpty()) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    Text(
+                        text = currentLanguage.pick(
+                            "Referencias — toca para profundizar",
+                            "References — tap to go deeper",
+                            "Referências — toque para aprofundar"
+                        ),
+                        style = styles.sectionEyebrow,
+                        color = design.palette.textSecondary
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    AppListGroup {
+                        refs.forEach { ref ->
+                            when (ref) {
+                                is FoundationRef.BibleRef -> {
+                                    val r = ref.reference
+                                    val bookName = repository.catholicBooks
+                                        .firstOrNull { it.id == r.bookId }
+                                        ?.name?.get(currentLanguage) ?: r.bookId
+                                    AppListRow(
+                                        title = bookName + " " + r.chapter +
+                                            (r.verseStart?.let { ", $it" } ?: "") +
+                                            (r.verseEnd?.let { "-$it" } ?: ""),
+                                        subtitle = currentLanguage.pick(
+                                            "Abrir en la Biblia",
+                                            "Open in the Bible",
+                                            "Abrir na Bíblia"
                                         ),
-                                        selected = true,
-                                        onClick = { onOpenCatechism(ref.startParagraph) },
+                                        leadingIcon = Icons.Default.MenuBook,
+                                        showsNavigationAffordance = true,
+                                        onClick = { onOpenBible(r.bookId, r.chapter, r.verseStart) },
                                         modifier = Modifier.heightIn(min = MinTouchTarget)
                                     )
                                 }
+                                is FoundationRef.CatechismRef -> AppListRow(
+                                    title = currentLanguage.pick(
+                                        "Catecismo ${ref.startParagraph}" +
+                                            (ref.endParagraph?.let { "-$it" } ?: ""),
+                                        "Catechism ${ref.startParagraph}" +
+                                            (ref.endParagraph?.let { "-$it" } ?: ""),
+                                        "Catecismo ${ref.startParagraph}" +
+                                            (ref.endParagraph?.let { "-$it" } ?: "")
+                                    ),
+                                    subtitle = currentLanguage.pick(
+                                        "Abrir en el Catecismo",
+                                        "Open in the Catechism",
+                                        "Abrir no Catecismo"
+                                    ),
+                                    leadingIcon = Icons.Default.AutoStories,
+                                    showsNavigationAffordance = true,
+                                    onClick = { onOpenCatechism(ref.startParagraph) },
+                                    modifier = Modifier.heightIn(min = MinTouchTarget)
+                                )
                             }
                         }
                     }

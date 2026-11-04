@@ -84,6 +84,7 @@ enum class AppDestination(
     DOCTRINE("Doctrina e Historia", "Doctrine & History", "Doutrina e História", AppIconSlot.DOCTRINE, "nav_doctrine"),
     PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PARISH, "nav_parishes"),
     CHURCHES_NEWS("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias", AppIconSlot.NEWS, "nav_churches_news"),
+    QUESTIONS("101 preguntas sobre la fe católica", "101 Questions on the Catholic Faith", "101 Perguntas sobre a fé católica", AppIconSlot.DOCTRINE, "nav_questions"),
     SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
     MORE("Más", "More", "Mais", AppIconSlot.MORE, "nav_more");
 
@@ -415,6 +416,14 @@ fun MainApp(
                         onOpenCatechism = onOpenCatechism
                     )
 
+                    AppDestination.QUESTIONS -> DoctrineAndHistoryScreen(
+                        repository = repository,
+                        currentLanguage = currentLanguage,
+                        initialTopTab = 3,
+                        onOpenBible = onOpenBible,
+                        onOpenCatechism = onOpenCatechism
+                    )
+
                     AppDestination.SPIRITUAL_LIFE -> SpiritualLifeScreen(
                         repository = repository,
                         dao = dao,
@@ -528,6 +537,7 @@ private fun moreSections(
             listOf(
                 entry(AppDestination.CATECHISM),
                 entry(AppDestination.DOCTRINE),
+                entry(AppDestination.QUESTIONS),
                 entry(AppDestination.CHURCHES_NEWS)
             )
         ),
