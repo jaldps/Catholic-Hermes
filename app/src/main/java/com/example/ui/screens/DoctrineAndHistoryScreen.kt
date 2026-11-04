@@ -73,6 +73,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
+import com.example.data.models.ApologeticsQuestion
 import com.example.data.models.CapitalSinVsVirtue
 import com.example.data.models.ChurchHistoryEpoch
 import com.example.data.models.ChurchSchismHistory
@@ -353,6 +354,57 @@ private fun MoralDoctrinePane(
                         modifier = Modifier.heightIn(min = MinTouchTarget).testTag("didache_chapter_${chapter.number}")
                     )
                 }
+            }
+        }
+
+        if (repository.catholicQuestions.isNotEmpty()) {
+            item(key = "catholic_questions") {
+                AppSectionHeader(
+                    title = currentLanguage.pick(
+                        "101 preguntas sobre la fe católica",
+                        "101 Questions on the Catholic Faith",
+                        "101 Perguntas sobre a fé católica"
+                    )
+                )
+                Text(
+                    text = currentLanguage.pick(
+                        "101 preguntas y respuestas breves sobre la fe católica, agrupadas por temas.",
+                        "101 short questions and answers on the Catholic faith, grouped by theme.",
+                        "101 perguntas e respostas breves sobre a fé católica, agrupadas por tema."
+                    ),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = design.palette.textSecondary,
+                    modifier = Modifier.padding(horizontal = design.spacing.gutter)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                // groupBy keeps the order in which each section first appears,
+                // so the 11 themes read in the data's own sequence rather
+                // than alphabetically.
+                repository.catholicQuestions
+                    .withIndex()
+                    .groupBy { it.value.section.get(currentLanguage) }
+                    .forEach { (sectionName, entries) ->
+                        Text(
+                            text = eyebrow(sectionName),
+                            style = LocalAppTextStyles.current.sectionEyebrow,
+                            color = design.palette.textSecondary,
+                            modifier = Modifier.padding(horizontal = design.spacing.gutter)
+                        )
+                        AppListGroup {
+                            entries.forEach { indexed ->
+                                val question = indexed.value
+                                AppListRow(
+                                    title = question.question.get(currentLanguage),
+                                    subtitle = question.section.get(currentLanguage),
+                                    onClick = { onOpen("qa:${indexed.index}") },
+                                    modifier = Modifier
+                                        .heightIn(min = MinTouchTarget)
+                                        .testTag("catholic_question_${question.number}")
+                                )
+                            }
+                        }
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                    }
             }
         }
 
@@ -675,6 +727,74 @@ private fun DoctrineEntryPage(
                     }
                 }
             }
+
+            "qa" -> {
+                val questions = repository.catholicQuestions
+                if (questions.isNotEmpty()) {
+                    val questionIndex = index.coerceIn(0, questions.lastIndex)
+                    val question = questions[questionIndex]
+                    val total = questions.size
+                    item {
+                        AppScreenTitle(
+                            title = question.question.get(currentLanguage),
+                            subtitle = question.section.get(currentLanguage)
+                        )
+                    }
+                    item {
+                        val progressLabel = currentLanguage.pick(
+                            "Pregunta ${questionIndex + 1} de $total",
+                            "Question ${questionIndex + 1} of $total",
+                            "Pergunta ${questionIndex + 1} de $total"
+                        )
+                        LinearProgressIndicator(
+                            progress = { (questionIndex + 1).toFloat() / total },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = design.spacing.gutter)
+                                .padding(bottom = design.spacing.cardGap)
+                                .semantics { stateDescription = progressLabel }
+                                .testTag("catholic_qa_progress"),
+                            color = design.palette.accent,
+                            trackColor = design.palette.selectionTint
+                        )
+                    }
+                    item {
+                        CatholicQuestionReaderCard(
+                            question = question,
+                            currentLanguage = currentLanguage,
+                            questionIndex = questionIndex
+                        )
+                    }
+                    item {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = design.spacing.gutter),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            AppSecondaryButton(
+                                label = currentLanguage.pick("Anterior", "Previous", "Anterior"),
+                                onClick = { onOpen("qa:${questionIndex - 1}") },
+                                enabled = questionIndex > 0,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("catholic_qa_prev")
+                            )
+                            Spacer(Modifier.width(design.spacing.cardGap))
+                            AppPrimaryButton(
+                                label = currentLanguage.pick("Siguiente", "Next", "Seguinte"),
+                                onClick = { onOpen("qa:${questionIndex + 1}") },
+                                enabled = questionIndex < questions.lastIndex,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("catholic_qa_next")
+                            )
+                        }
+                    }
+                }
+            }
         }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
@@ -750,6 +870,126 @@ private fun DidacheReaderCard(
                 .fillMaxWidth()
                 .heightIn(min = MinTouchTarget)
                 .testTag("didache_listen_button")
+        )
+    }
+}
+
+/**
+ * One apologetics question as a reading card: the answer first in the
+ * primary treatment, then the foundation and the clarification, each with
+ * its own tonal panel. Like the Didache reader, this screen receives no
+ * shared ttsManager, so the card owns a [LiturgicalTtsManager] for its
+ * lifetime only.
+ */
+@Composable
+private fun CatholicQuestionReaderCard(
+    question: ApologeticsQuestion,
+    currentLanguage: AppLanguage,
+    questionIndex: Int
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val context = LocalContext.current
+    val ttsManager = remember { LiturgicalTtsManager(context) }
+    val isPlaying by ttsManager.isPlaying.collectAsState()
+    DisposableEffect(ttsManager) { onDispose { ttsManager.release() } }
+    LaunchedEffect(currentLanguage) { ttsManager.setLanguage(currentLanguage) }
+    LaunchedEffect(questionIndex) { ttsManager.stop() }
+
+    val answerLabel = currentLanguage.pick("Respuesta", "Answer", "Resposta")
+    val foundationLabel = currentLanguage.pick("Fundamento", "Foundation", "Fundamento")
+    val clarificationLabel = currentLanguage.pick("Aclaración", "Clarification", "Esclarecimento")
+
+    val answerText = question.answer.get(currentLanguage)
+    val foundationText = question.foundation.get(currentLanguage)
+    val clarificationText = question.clarification.get(currentLanguage)
+
+    val speakText = buildString {
+        append(question.question.get(currentLanguage))
+        append("\n\n")
+        append(answerLabel)
+        append(": ")
+        append(answerText)
+        if (foundationText.isNotBlank()) {
+            append("\n\n")
+            append(foundationLabel)
+            append(": ")
+            append(foundationText)
+        }
+        if (clarificationText.isNotBlank()) {
+            append("\n\n")
+            append(clarificationLabel)
+            append(": ")
+            append(clarificationText)
+        }
+    }
+
+    GutterCard {
+        // Respuesta: the direct answer, primary type on the card itself.
+        Note(
+            label = answerLabel,
+            body = answerText,
+            labelColor = design.palette.accent
+        )
+        // Fundamento: the scriptural/doctrinal ground, scripture type on
+        // the accentMuted tonal panel with a gold label.
+        if (foundationText.isNotBlank()) {
+            Spacer(Modifier.height(design.spacing.cardGap))
+            AppDivider()
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(design.palette.accentMuted, design.shapes.card)
+                    .padding(design.spacing.cardPadding)
+            ) {
+                Note(
+                    label = foundationLabel,
+                    body = foundationText,
+                    labelColor = design.palette.gold,
+                    bodyStyle = styles.scripture
+                )
+            }
+        }
+        // Aclaración: the nuance, smaller type on the neutral selectionTint
+        // panel with a secondary label, so it sits apart from the answer.
+        if (clarificationText.isNotBlank()) {
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(design.palette.selectionTint, design.shapes.card)
+                    .padding(design.spacing.cardPadding)
+            ) {
+                Note(
+                    label = clarificationLabel,
+                    body = clarificationText,
+                    labelColor = design.palette.textSecondary,
+                    bodyStyle = MaterialTheme.typography.bodyMedium
+                )
+            }
+        }
+        Spacer(Modifier.height(design.spacing.cardGap))
+        AppDivider()
+        Spacer(Modifier.height(design.spacing.cardGap))
+        // While the voice is running the same 48dp button offers Stop, so
+        // recitation can be ended without leaving the page.
+        AppSecondaryButton(
+            label = if (isPlaying) {
+                currentLanguage.pick("Detener", "Stop", "Parar")
+            } else {
+                currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+            },
+            onClick = if (isPlaying) {
+                { ttsManager.stop() }
+            } else {
+                { ttsManager.speakSingle(speakText) }
+            },
+            leadingIcon = if (isPlaying) Icons.Default.Stop else Icons.Default.VolumeUp,
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .testTag("catholic_qa_listen_button")
         )
     }
 }

@@ -83,3 +83,13 @@ data class DidacheChapter(
     val heading: LocalizedText,
     val body: LocalizedText
 )
+
+/** One apologetics Q&A (101 Catholic Questions): Respuesta/Fundamento/Aclaración. */
+data class ApologeticsQuestion(
+    val number: Int,
+    val section: LocalizedText,
+    val question: LocalizedText,
+    val answer: LocalizedText,
+    val foundation: LocalizedText,
+    val clarification: LocalizedText
+)
