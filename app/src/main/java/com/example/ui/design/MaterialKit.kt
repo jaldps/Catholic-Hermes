@@ -156,9 +156,9 @@ object MaterialKit : AppKit {
         val canvas: Color,
         /** `surfaceContainerLow`. */
         val low: Color,
-        /** `surfaceContainer`: list rows, the navigation bar. */
+        /** `surfaceContainer`: list rows. */
         val container: Color,
-        /** `surfaceContainerHigh`: the search field, metric tiles. */
+        /** `surfaceContainerHigh`: the search field, metric tiles, navigation bar. */
         val high: Color,
         /** `surfaceContainerHighest`. */
         val highest: Color,
@@ -367,7 +367,11 @@ object MaterialKit : AppKit {
         val labelHeight = with(density) {
             (items.maxOfOrNull { measurer.measure(it.label, labelStyle, maxLines = 1).size.height } ?: 0).toDp()
         }
-        Surface(color = c.container, shadowElevation = 0.dp) {
+        // surfaceContainerHigh, not surfaceContainer: the bar must read as a
+        // separate surface over the canvas (surface) and the rows it sits
+        // below (surfaceContainer), in light and dark alike, by tone alone —
+        // shadowElevation stays 0dp, per the tonal-only depth rule above.
+        Surface(color = c.high, shadowElevation = 0.dp) {
             BoxWithConstraints(Modifier.fillMaxWidth().navigationBarsPadding().testTag("bottom_nav_bar")) {
                 val expanded = maxWidth >= 600.dp
                 val barHeight = maxOf(64.dp, labelHeight + if (expanded) 24.dp else 48.dp)

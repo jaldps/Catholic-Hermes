@@ -102,6 +102,41 @@ enum class AppDestination(
         AppLanguage.EN -> titleEn
         AppLanguage.PT -> titlePt
     }
+
+    /**
+     * Short label for the tab bar only. [title] is too long for a tab
+     * ("Habits & Virtues" truncates), so tab destinations carry a compact
+     * label; non-tab destinations fall back to [title] and never appear in
+     * the tab bar. Screen titles and back labels keep using [title].
+     */
+    fun tabLabel(language: AppLanguage): String = when (this) {
+        HOME -> when (language) {
+            AppLanguage.ES -> "Inicio"
+            AppLanguage.EN -> "Home"
+            AppLanguage.PT -> "Início"
+        }
+        BIBLE -> when (language) {
+            AppLanguage.ES -> "Biblia"
+            AppLanguage.EN -> "Bible"
+            AppLanguage.PT -> "Bíblia"
+        }
+        ROSARY -> when (language) {
+            AppLanguage.ES -> "Rosario"
+            AppLanguage.EN -> "Rosary"
+            AppLanguage.PT -> "Terço"
+        }
+        PRAYERS -> when (language) {
+            AppLanguage.ES -> "Oraciones"
+            AppLanguage.EN -> "Prayers"
+            AppLanguage.PT -> "Orações"
+        }
+        HABITS_VIRTUES -> when (language) {
+            AppLanguage.ES -> "Hábitos"
+            AppLanguage.EN -> "Habits"
+            AppLanguage.PT -> "Hábitos"
+        }
+        else -> title(language)
+    }
 }
 
 @Composable
@@ -145,7 +180,7 @@ fun MainApp(
     val navItems = tabs.map { destination ->
         val (resting, active) = AppIcons.pair(destination.iconSlot)
         AppNavItem(
-            label = destination.title(currentLanguage),
+            label = destination.tabLabel(currentLanguage),
             icon = resting,
             selectedIcon = active,
             tag = destination.tag
