@@ -199,7 +199,9 @@ class AppNavigationTest(private val identity: DesignLanguage) {
     private fun goToMoreFromHome() {
         compose.onNodeWithTag("nav_home").performClick()
         compose.onNodeWithTag("home_screen").assertIsDisplayed()
-        compose.onNodeWithTag("home_more_settings").performScrollTo().performClick()
+        compose.onNodeWithTag("home_screen")
+            .performScrollToNode(hasTestTag("home_more_settings"))
+        compose.onNodeWithTag("home_more_settings").performClick()
         compose.onNodeWithTag("more_screen").assertIsDisplayed()
     }
 
