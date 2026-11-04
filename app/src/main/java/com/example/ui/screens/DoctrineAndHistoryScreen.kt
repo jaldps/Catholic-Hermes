@@ -943,6 +943,11 @@ private fun CatholicQuestionReaderCard(
     val answerText = question.answer.get(currentLanguage)
     val foundationText = question.foundation.get(currentLanguage)
     val clarificationText = question.clarification.get(currentLanguage)
+    // The foundation reference the reader has opened inline, if any; keyed to
+    // the question so a new page starts with every reference collapsed.
+    var expandedRef by remember(question.number, foundationText, currentLanguage) {
+        mutableStateOf<FoundationRef?>(null)
+    }
 
     val speakText = buildString {
         append(question.question.get(currentLanguage))
@@ -1008,48 +1013,153 @@ private fun CatholicQuestionReaderCard(
                         color = design.palette.textSecondary
                     )
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    val tapToReadHint = currentLanguage.pick(
+                        "Toca para leer",
+                        "Tap to read",
+                        "Toque para ler"
+                    )
                     AppListGroup {
                         refs.forEach { ref ->
-                            when (ref) {
+                            val expanded = expandedRef == ref
+                            val refKey = when (ref) {
                                 is FoundationRef.BibleRef -> {
                                     val r = ref.reference
-                                    val bookName = repository.catholicBooks
-                                        .firstOrNull { it.id == r.bookId }
-                                        ?.name?.get(currentLanguage) ?: r.bookId
-                                    AppListRow(
-                                        title = bookName + " " + r.chapter +
-                                            (r.verseStart?.let { ", $it" } ?: "") +
-                                            (r.verseEnd?.let { "-$it" } ?: ""),
-                                        subtitle = currentLanguage.pick(
-                                            "Abrir en la Biblia",
-                                            "Open in the Bible",
-                                            "Abrir na Bíblia"
-                                        ),
-                                        leadingIcon = Icons.Default.MenuBook,
-                                        showsNavigationAffordance = true,
-                                        onClick = { onOpenBible(r.bookId, r.chapter, r.verseStart) },
-                                        modifier = Modifier.heightIn(min = MinTouchTarget)
-                                    )
+                                    "bible_${r.bookId}_${r.chapter}_${r.verseStart ?: "all"}_${r.verseEnd ?: ""}"
                                 }
-                                is FoundationRef.CatechismRef -> AppListRow(
-                                    title = currentLanguage.pick(
-                                        "Catecismo ${ref.startParagraph}" +
-                                            (ref.endParagraph?.let { "-$it" } ?: ""),
-                                        "Catechism ${ref.startParagraph}" +
-                                            (ref.endParagraph?.let { "-$it" } ?: ""),
-                                        "Catecismo ${ref.startParagraph}" +
-                                            (ref.endParagraph?.let { "-$it" } ?: "")
-                                    ),
-                                    subtitle = currentLanguage.pick(
-                                        "Abrir en el Catecismo",
-                                        "Open in the Catechism",
-                                        "Abrir no Catecismo"
-                                    ),
-                                    leadingIcon = Icons.Default.AutoStories,
-                                    showsNavigationAffordance = true,
-                                    onClick = { onOpenCatechism(ref.startParagraph) },
-                                    modifier = Modifier.heightIn(min = MinTouchTarget)
-                                )
+                                is FoundationRef.CatechismRef ->
+                                    "ccc_${ref.startParagraph}_${ref.endParagraph ?: ""}"
+                            }
+                            Column(Modifier.fillMaxWidth()) {
+                                when (ref) {
+                                    is FoundationRef.BibleRef -> {
+                                        val r = ref.reference
+                                        val bookName = repository.catholicBooks
+                                            .firstOrNull { it.id == r.bookId }
+                                            ?.name?.get(currentLanguage) ?: r.bookId
+                                        AppListRow(
+                                            title = bookName + " " + r.chapter +
+                                                (r.verseStart?.let { ", $it" } ?: "") +
+                                                (r.verseEnd?.let { "-$it" } ?: ""),
+                                            subtitle = if (expanded) null else tapToReadHint,
+                                            leadingIcon = Icons.Default.MenuBook,
+                                            showsNavigationAffordance = true,
+                                            selected = expanded,
+                                            onClick = {
+                                                expandedRef = if (expanded) null else ref
+                                            },
+                                            modifier = Modifier
+                                                .heightIn(min = MinTouchTarget)
+                                                .testTag("foundation_ref_$refKey")
+                                        )
+                                        if (expanded) {
+                                            val chapter = repository.getChapter(r.bookId, r.chapter, currentLanguage)
+                                            val selectedVerses = run {
+                                                val start = r.verseStart
+                                                if (start == null) {
+                                                    chapter.verses
+                                                } else {
+                                                    chapter.verses.filter {
+                                                        it.number in start..(r.verseEnd ?: start)
+                                                    }
+                                                }
+                                            }
+                                            if (selectedVerses.isNotEmpty()) {
+                                                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                                                Box(
+                                                    modifier = Modifier
+                                                        .fillMaxWidth()
+                                                        .background(design.palette.accentMuted, design.shapes.card)
+                                                        .padding(design.spacing.cardPadding)
+                                                        .testTag("foundation_ref_text_$refKey")
+                                                ) {
+                                                    Text(
+                                                        text = selectedVerses.joinToString("\n\n") { verse ->
+                                                            "${verse.number}  ${verse.text.get(currentLanguage)}"
+                                                        },
+                                                        style = styles.scripture,
+                                                        color = design.palette.textPrimary
+                                                    )
+                                                }
+                                                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                                            }
+                                            AppPrimaryButton(
+                                                label = currentLanguage.pick(
+                                                    "Abrir en la Biblia",
+                                                    "Open in the Bible",
+                                                    "Abrir na Bíblia"
+                                                ),
+                                                onClick = { onOpenBible(r.bookId, r.chapter, r.verseStart) },
+                                                leadingIcon = Icons.Default.MenuBook,
+                                                modifier = Modifier
+                                                    .fillMaxWidth()
+                                                    .heightIn(min = MinTouchTarget)
+                                                    .testTag("foundation_ref_open_$refKey")
+                                            )
+                                        }
+                                    }
+
+                                    is FoundationRef.CatechismRef -> {
+                                        AppListRow(
+                                            title = currentLanguage.pick(
+                                                "Catecismo ${ref.startParagraph}" +
+                                                    (ref.endParagraph?.let { "-$it" } ?: ""),
+                                                "Catechism ${ref.startParagraph}" +
+                                                    (ref.endParagraph?.let { "-$it" } ?: ""),
+                                                "Catecismo ${ref.startParagraph}" +
+                                                    (ref.endParagraph?.let { "-$it" } ?: "")
+                                            ),
+                                            subtitle = if (expanded) null else tapToReadHint,
+                                            leadingIcon = Icons.Default.AutoStories,
+                                            showsNavigationAffordance = true,
+                                            selected = expanded,
+                                            onClick = {
+                                                expandedRef = if (expanded) null else ref
+                                            },
+                                            modifier = Modifier
+                                                .heightIn(min = MinTouchTarget)
+                                                .testTag("foundation_ref_$refKey")
+                                        )
+                                        if (expanded) {
+                                            val paragraphText = (ref.startParagraph..(ref.endParagraph ?: ref.startParagraph))
+                                                .mapNotNull { number ->
+                                                    repository.catechismParagraphText(number, currentLanguage)
+                                                        ?.trim()
+                                                        ?.takeIf { it.isNotBlank() }
+                                                }
+                                                .joinToString("\n\n")
+                                            if (paragraphText.isNotBlank()) {
+                                                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                                                Box(
+                                                    modifier = Modifier
+                                                        .fillMaxWidth()
+                                                        .background(design.palette.accentMuted, design.shapes.card)
+                                                        .padding(design.spacing.cardPadding)
+                                                        .testTag("foundation_ref_text_$refKey")
+                                                ) {
+                                                    Text(
+                                                        text = paragraphText,
+                                                        style = styles.scripture,
+                                                        color = design.palette.textPrimary
+                                                    )
+                                                }
+                                                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                                            }
+                                            AppPrimaryButton(
+                                                label = currentLanguage.pick(
+                                                    "Abrir en el Catecismo",
+                                                    "Open in the Catechism",
+                                                    "Abrir no Catecismo"
+                                                ),
+                                                onClick = { onOpenCatechism(ref.startParagraph) },
+                                                leadingIcon = Icons.Default.AutoStories,
+                                                modifier = Modifier
+                                                    .fillMaxWidth()
+                                                    .heightIn(min = MinTouchTarget)
+                                                    .testTag("foundation_ref_open_$refKey")
+                                            )
+                                        }
+                                    }
+                                }
                             }
                         }
                     }

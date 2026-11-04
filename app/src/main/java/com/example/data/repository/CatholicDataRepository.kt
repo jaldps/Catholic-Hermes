@@ -244,6 +244,17 @@ class CatholicDataRepository(
     val catechismParts: List<com.example.data.models.CatechismPart> get() = CatechismData.catechismParts
     fun findCatechismArticle(num: Int) = CatechismData.findArticleByNumber(num)
     fun searchCatechismArticles(query: String) = CatechismData.searchArticles(query)
+    /**
+     * Full text of CCC paragraph [number] in [language]; read directly from
+     * [CatechismFullData], falling back to the article content (curated or
+     * synthesized) so a blank localized field still resolves to filled text.
+     * Returns null when no paragraph exists for [number].
+     */
+    fun catechismParagraphText(number: Int, language: AppLanguage): String? {
+        val direct = CatechismFullData.contentByNumber[number]?.get(language)
+        if (!direct.isNullOrBlank()) return direct
+        return findCatechismArticle(number)?.content?.get(language)?.takeIf { it.isNotBlank() }
+    }
     val compendiumQAEntries: List<CompendiumQA> get() = CatechismCompendiumData.keyCompendiumEntries
     val compendiumPartTitles: List<com.example.data.models.LocalizedText> get() = CatechismCompendiumData.compendiumPartTitles
     val doctrineFormulas: List<DoctrineFormula> get() = CatechismCompendiumData.doctrineFormulas
