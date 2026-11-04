@@ -546,7 +546,7 @@ private fun DevotionCard(
                 Text(
                     text = trailingText,
                     style = MaterialTheme.typography.labelLarge,
-                    color = design.palette.textTertiary
+                    color = design.palette.textSecondary
                 )
             }
             Spacer(Modifier.width(design.spacing.cardGap / 2))

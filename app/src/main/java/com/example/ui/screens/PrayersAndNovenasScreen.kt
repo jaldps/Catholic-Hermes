@@ -1859,7 +1859,7 @@ private fun BlockHeading(eyebrow: String, detail: String?) {
             Text(
                 text = detail,
                 style = styles.rowSubtitle,
-                color = design.palette.textTertiary
+                color = design.palette.textSecondary
             )
         }
     }

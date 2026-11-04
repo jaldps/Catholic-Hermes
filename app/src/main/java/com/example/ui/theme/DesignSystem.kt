@@ -412,10 +412,11 @@ object DesignTokens {
         textPrimary = Color(0xFF000000),
         // secondaryLabel at 60% measures 3.5:1 on white and reads as a
         // ghost in captions; struck firmer to clear 4.5:1 on the grouped
-        // canvas, and tertiary lifted to where a disabled label is still
-        // legible.
+        // canvas. Tertiary is the opaque iOS gray 6E6E73 (4.54:1 on canvas,
+        // 5.07:1 on groupedSurface): the old 3C3C43 at 55% composited to
+        // 2.92:1 on canvas, unreadable as caption/meta text.
         textSecondary = Color(0xC23C3C43),
-        textTertiary = Color(0x8C3C3C43),
+        textTertiary = Color(0xFF6E6E73),
         scrim = Color(0x66000000),
         selectionTint = Color(0xFFD1D1D6)
     )
@@ -452,7 +453,9 @@ object DesignTokens {
         gold = Color(0xFF8A6B12),
         textPrimary = Color(0xFF171D19),
         textSecondary = Color(0xFF414941),
-        textTertiary = Color(0xFF717A74),
+        // Darkened from 717A74 (4.22:1 on canvas / 4.40:1 grouped) to
+        // clear 4.5:1 on every tonal surface (5.30:1 canvas, 4.90:1 raised).
+        textTertiary = Color(0xFF5F6B62),
         scrim = Color(0x52000000),
         selectionTint = Color(0xFFDAE8DE)
     )

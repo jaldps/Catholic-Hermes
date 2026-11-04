@@ -33,6 +33,8 @@ import kotlin.math.sin
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -1028,16 +1030,25 @@ fun RosaryScreen(
                     Spacer(Modifier.height(design.spacing.cardGap))
                     val todayLabel = lang.pick("Hoy", "Today", "Hoje")
                     AppSectionHeader(
-                        title = lang.pick("Misterios", "Mysteries", "Mistérios")
+                        title = lang.pick("Misterios", "Mysteries", "Mistérios"),
+                        subtitle = selectedMysteryType.recommendedDays.get(lang)
                     )
-                    AppListGroup(modifier = Modifier.testTag("rosary_mystery_picker")) {
+                    // Compact chip row (not four full rows) so the current
+                    // prayer stays above the fold; the selected set's days
+                    // are captioned below in one line.
+                    @OptIn(ExperimentalLayoutApi::class)
+                    FlowRow(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
+                            .testTag("rosary_mystery_picker"),
+                        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
+                        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
+                    ) {
                         RosaryMysteryType.entries.forEach { mType ->
-                            AppListRow(
-                                title = mType.displayName.get(lang) +
+                            AppChip(
+                                label = mType.displayName.get(lang) +
                                     if (mType == todayMystery.type) " · $todayLabel" else "",
-                                subtitle = mType.recommendedDays.get(lang),
-                                leadingIcon = mysteryIcon(mType),
-                                showsNavigationAffordance = false,
                                 selected = mType == selectedMysteryType,
                                 onClick = {
                                     if (mType != selectedMysteryType) {
@@ -2136,7 +2147,7 @@ private fun CardHeading(eyebrow: String, detail: String?) {
             Text(
                 text = detail,
                 style = styles.rowSubtitle,
-                color = design.palette.textTertiary
+                color = design.palette.textSecondary
             )
         }
     }

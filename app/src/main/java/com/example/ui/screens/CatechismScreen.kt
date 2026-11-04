@@ -1159,7 +1159,7 @@ private fun DocumentLink(
         color = design.palette.textPrimary
     )
     Spacer(Modifier.height(design.spacing.cardGap / 3))
-    Text(text = detail, style = styles.rowSubtitle, color = design.palette.textTertiary)
+    Text(text = detail, style = styles.rowSubtitle, color = design.palette.textSecondary)
     Spacer(Modifier.height(design.spacing.cardGap))
     Row(
         Modifier.fillMaxWidth(),

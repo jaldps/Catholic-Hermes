@@ -1371,7 +1371,7 @@ private fun VersionsView(
                     Text(
                         text = "${version.abbreviation} · ${version.language.uppercase()}",
                         style = styles.rowSubtitle,
-                        color = palette.textTertiary
+                        color = palette.textSecondary
                     )
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -1484,15 +1484,8 @@ fun OfflineBibleDownloadsView(
                         trackColor = palette.selectionTint
                     )
                 }
-                Spacer(Modifier.height(design.spacing.cardGap))
-                if (downloaded) {
-                    AppSecondaryButton(
-                        label = currentLanguage.pick("Descargado", "Downloaded", "Baixado"),
-                        onClick = {},
-                        enabled = false,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                } else {
+                if (!downloaded) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
                     AppPrimaryButton(
                         label = currentLanguage.pick("Descargar", "Download", "Baixar"),
                         onClick = {

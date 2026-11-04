@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -112,6 +113,7 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
@@ -420,7 +422,7 @@ object MaterialKit : AppKit {
         val labelHeight = with(density) {
             (items.maxOfOrNull { measurer.measure(it.label, labelStyle, maxLines = 1).size.height } ?: 0).toDp()
         }
-        Surface(color = c.container, shadowElevation = 3.dp) {
+        Surface(color = c.container, shadowElevation = 0.dp) {
             BoxWithConstraints(Modifier.fillMaxWidth().navigationBarsPadding().testTag("bottom_nav_bar")) {
                 val expanded = maxWidth >= 600.dp
                 val barHeight = maxOf(64.dp, labelHeight + if (expanded) 24.dp else 48.dp)
@@ -1114,13 +1116,14 @@ object MaterialKit : AppKit {
             // loudest "not a Google app" signal the screen gives off.
             shape = RoundedCornerShape(percent = 50),
             singleLine = true,
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
             colors = TextFieldDefaults.colors(
                 focusedContainerColor = c.high,
-                unfocusedContainerColor = c.high,
-                disabledContainerColor = c.high,
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-                disabledIndicatorColor = Color.Transparent,
+                unfocusedContainerColor = c.container,
+                disabledContainerColor = c.container,
+                focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                unfocusedIndicatorColor = c.outline,
+                disabledIndicatorColor = c.outline,
                 focusedTextColor = palette.textPrimary,
                 unfocusedTextColor = palette.textPrimary,
                 cursorColor = MaterialTheme.colorScheme.primary
@@ -1479,7 +1482,7 @@ object MaterialKit : AppKit {
             modifier
                 .fillMaxWidth()
                 .widthIn(max = design.spacing.readingMaxWidth)
-                .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+                .then(if (onClick != null) Modifier.clickable(role = Role.Button, onClick = onClick) else Modifier)
                 // decor.usesDropCaps is false, so a chapter opens with air
                 // rather than with an initial.
                 .padding(top = if (isFirstOfChapter) 16.dp else 6.dp)
@@ -1495,7 +1498,7 @@ object MaterialKit : AppKit {
             ) {
                 Text(
                     text = "$number",
-                    style = MaterialTheme.typography.labelSmall,
+                    style = styles.verseNumber,
                     color = palette.textSecondary,
                     textAlign = TextAlign.Center,
                     maxLines = 1
@@ -1512,7 +1515,7 @@ object MaterialKit : AppKit {
                 Spacer(Modifier.width(8.dp))
                 Icon(
                     Icons.Rounded.AutoAwesome,
-                    contentDescription = null,
+                    contentDescription = "Has commentary",
                     tint = MaterialTheme.colorScheme.primary,
                     // 6dp drops the 16dp glyph onto the optical centre of the
                     // 28sp first line rather than its ascender.

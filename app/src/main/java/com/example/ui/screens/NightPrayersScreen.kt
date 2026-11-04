@@ -262,7 +262,7 @@ private fun ComplineView(
                             "Narrando o ofício…"
                         ),
                         style = styles.rowSubtitle,
-                        color = design.palette.textTertiary,
+                        color = design.palette.textSecondary,
                         modifier = Modifier
                             .align(design.decor.titleAlignment)
                             .padding(horizontal = design.spacing.gutter)
@@ -810,7 +810,7 @@ private fun IgnatianExamenView(
                                     "Narração em curso…"
                                 ),
                                 style = styles.rowSubtitle,
-                                color = design.palette.textTertiary
+                                color = design.palette.textSecondary
                             )
                         }
                     }
