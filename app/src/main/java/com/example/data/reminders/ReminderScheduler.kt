@@ -24,6 +24,7 @@ object ReminderScheduler {
     const val EXTRA_ID = "reminder_id"
     const val EXTRA_TITLE = "reminder_title"
     const val EXTRA_BODY = "reminder_body"
+    const val EXTRA_LANG = "reminder_lang"
 
     private fun intentFor(context: Context, reminder: DevotionReminder, language: String): Intent =
         Intent(context, ReminderReceiver::class.java).apply {
@@ -31,6 +32,7 @@ object ReminderScheduler {
             putExtra(EXTRA_ID, reminder.id)
             putExtra(EXTRA_TITLE, reminder.title(language))
             putExtra(EXTRA_BODY, reminder.body(language))
+            putExtra(EXTRA_LANG, language)
         }
 
     private fun pendingFor(context: Context, reminder: DevotionReminder, language: String): PendingIntent =
@@ -99,6 +101,30 @@ object ReminderScheduler {
             }
         }
     }
+
+    /**
+     * Fires an immediate notification on the reminder channel so the user can
+     * verify the channel and POST_NOTIFICATIONS on device without waiting for
+     * the next exact alarm. Returns false when the system refuses the post
+     * (permission not granted on Android 13+).
+     */
+    fun sendTestNotification(context: Context, title: String, body: String): Boolean {
+        ensureChannel(context)
+        val notification = NotificationCompat.Builder(context, REMINDER_CHANNEL_ID)
+            .setSmallIcon(android.R.drawable.ic_dialog_info)
+            .setContentTitle(title)
+            .setContentText(body)
+            .setStyle(NotificationCompat.BigTextStyle().bigText(body))
+            .setAutoCancel(true)
+            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+            .build()
+        return try {
+            NotificationManagerCompat.from(context).notify("test".hashCode(), notification)
+            true
+        } catch (_: SecurityException) {
+            false
+        }
+    }
 }
 
 class ReminderReceiver : BroadcastReceiver() {
@@ -123,10 +149,7 @@ class ReminderReceiver : BroadcastReceiver() {
         }
         // Chain the next daily occurrence.
         val reminder = ReminderCatalog.byId(id) ?: return
-        val language = runCatching {
-            context.getSharedPreferences("sancta_fides_preferences", Context.MODE_PRIVATE)
-                .getString("language", "es")
-        }.getOrNull() ?: "es"
+        val language = intent.getStringExtra(ReminderScheduler.EXTRA_LANG) ?: "es"
         val store = ReminderStore(context.applicationContext)
         CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
             val pref = store.reminders.first()[id] ?: return@launch
@@ -142,10 +165,12 @@ class ReminderReceiver : BroadcastReceiver() {
 class ReminderBootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         if (intent?.action != Intent.ACTION_BOOT_COMPLETED) return
-        val language = runCatching {
-            context.getSharedPreferences("sancta_fides_preferences", Context.MODE_PRIVATE)
-                .getString("language", "es")
-        }.getOrNull() ?: "es"
-        ReminderScheduler.rescheduleAll(context, language)
+        val app = context.applicationContext
+        CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
+            val language = runCatching {
+                com.example.data.prefs.UserPreferencesStore(app).preferences.first().language.code
+            }.getOrNull() ?: "es"
+            ReminderScheduler.rescheduleAll(app, language)
+        }
     }
 }

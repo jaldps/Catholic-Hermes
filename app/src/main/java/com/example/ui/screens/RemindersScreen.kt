@@ -1,8 +1,13 @@
 package com.example.ui.screens
 
 import android.Manifest
+import android.app.AlarmManager
+import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
+import android.provider.Settings
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
@@ -21,19 +26,16 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.material3.TimePicker
 import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
@@ -140,11 +142,24 @@ fun RemindersScreen(
         ) == PackageManager.PERMISSION_GRANTED
     }
 
+    fun hasExactAlarmPermission(): Boolean {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) return true
+        val alarms = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        return alarms.canScheduleExactAlarms()
+    }
+
     fun hasCalendarPermissions(): Boolean =
         ContextCompat.checkSelfPermission(context, Manifest.permission.READ_CALENDAR) ==
             PackageManager.PERMISSION_GRANTED &&
             ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_CALENDAR) ==
             PackageManager.PERMISSION_GRANTED
+
+    // Bumped whenever permissions may have changed (permission launcher
+    // returns, settings intents launched) so the status banner recomputes on
+    // the next composition and stays honest after returning from Settings.
+    var permissionTick by remember { mutableStateOf(0) }
+    val notificationGranted = remember(permissionTick) { hasNotificationPermission() }
+    val exactAlarmGranted = remember(permissionTick) { hasExactAlarmPermission() }
 
     fun syncToCalendar(reminder: DevotionReminder, hour: Int, minute: Int) {
         scope.launch(Dispatchers.IO) {
@@ -181,7 +196,7 @@ fun RemindersScreen(
     // notification. Requested once per toggle-ON (no-op when already granted).
     val notificationLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
-    ) { /* granted or not, the alarm is already scheduled */ }
+    ) { permissionTick++ }
 
     fun onToggle(reminder: DevotionReminder, enabled: Boolean) {
         val pref = prefs[reminder.id]
@@ -193,9 +208,24 @@ fun RemindersScreen(
                 ReminderScheduler.schedule(
                     context.applicationContext, reminder, hour, minute, languageCode
                 )
+                val timeLabel = "%02d:%02d".format(hour, minute)
+                snackbarHostState.showSnackbar(
+                    currentLanguage.pick(
+                        "${reminder.title(languageCode)} sonará a las $timeLabel",
+                        "${reminder.title(languageCode)} will ring at $timeLabel",
+                        "${reminder.title(languageCode)} vai tocar às $timeLabel"
+                    )
+                )
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
                     !hasNotificationPermission()
                 ) {
+                    snackbarHostState.showSnackbar(
+                        currentLanguage.pick(
+                            "Las notificaciones están desactivadas: el aviso no será visible hasta que las actives.",
+                            "Notifications are off: the reminder won't appear until you allow them.",
+                            "As notificações estão desativadas: o lembrete não aparecerá até você permitir."
+                        )
+                    )
                     notificationLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
                 }
             } else {
@@ -293,6 +323,56 @@ fun RemindersScreen(
     val cancelLabel = currentLanguage.pick("Cancelar", "Cancel", "Cancelar")
     val closeLabel = currentLanguage.pick("Cerrar", "Close", "Fechar")
     val timePickerTitle = currentLanguage.pick("Hora del recordatorio", "Reminder time", "Horário do lembrete")
+    val permissionsTitleLabel = currentLanguage.pick(
+        "Permisos para recordatorios",
+        "Reminder permissions",
+        "Permissões para lembretes"
+    )
+    val notifMissingLabel = currentLanguage.pick(
+        "Las notificaciones están desactivadas: los recordatorios no se verán.",
+        "Notifications are off: reminders won't be visible.",
+        "As notificações estão desativadas: os lembretes não serão visíveis."
+    )
+    val exactAlarmMissingLabel = currentLanguage.pick(
+        "El sistema no permite alarmas exactas: la hora puede retrasarse.",
+        "Exact alarms aren't allowed: the time may drift.",
+        "Alarmes exatos não são permitidos: o horário pode atrasar."
+    )
+    val openNotifSettingsLabel = currentLanguage.pick(
+        "Abrir ajustes de notificaciones",
+        "Open notification settings",
+        "Abrir configurações de notificações"
+    )
+    val allowExactAlarmsLabel = currentLanguage.pick(
+        "Permitir alarmas exactas",
+        "Allow exact alarms",
+        "Permitir alarmes exatos"
+    )
+    val testNotificationLabel = currentLanguage.pick(
+        "Enviar notificación de prueba",
+        "Send test notification",
+        "Enviar notificação de teste"
+    )
+    val testTitleLabel = currentLanguage.pick(
+        "Notificación de prueba",
+        "Test notification",
+        "Notificação de teste"
+    )
+    val testBodyLabel = currentLanguage.pick(
+        "Así se verán tus recordatorios de oración.",
+        "This is what your prayer reminders look like.",
+        "É assim que seus lembretes de oração aparecerão."
+    )
+    val testSentLabel = currentLanguage.pick(
+        "Notificación de prueba enviada: revisa tu panel de notificaciones.",
+        "Test notification sent: check your notification panel.",
+        "Notificação de teste enviada: verifique o painel de notificações."
+    )
+    val testFailedLabel = currentLanguage.pick(
+        "No se pudo enviar la notificación de prueba; revisa los permisos.",
+        "Could not send the test notification; check the permissions.",
+        "Não foi possível enviar a notificação de teste; verifique as permissões."
+    )
 
     val activeNovena = novena
 
@@ -337,6 +417,74 @@ fun RemindersScreen(
                 }
             }
 
+            // ---- Permission status banner: visible only while something is missing ----
+            if (!notificationGranted || !exactAlarmGranted) {
+                item(key = "permissions_status") {
+                    AppCard(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
+                            .testTag("reminders_status")
+                    ) {
+                        Column(verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)) {
+                            Text(text = permissionsTitleLabel, style = styles.sectionTitle)
+                            if (!notificationGranted) {
+                                Text(text = notifMissingLabel, style = styles.rowSubtitle)
+                                AppSecondaryButton(
+                                    label = openNotifSettingsLabel,
+                                    onClick = {
+                                        runCatching {
+                                            context.startActivity(
+                                                Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).apply {
+                                                    putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)
+                                                }
+                                            )
+                                        }
+                                        permissionTick++
+                                    }
+                                )
+                            }
+                            if (!exactAlarmGranted) {
+                                Text(text = exactAlarmMissingLabel, style = styles.rowSubtitle)
+                                AppSecondaryButton(
+                                    label = allowExactAlarmsLabel,
+                                    onClick = {
+                                        runCatching {
+                                            context.startActivity(
+                                                Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM).apply {
+                                                    data = Uri.parse("package:" + context.packageName)
+                                                }
+                                            )
+                                        }
+                                        permissionTick++
+                                    }
+                                )
+                            }
+                        }
+                    }
+                }
+            }
+
+            // ---- On-device check: fires an immediate notification on the channel ----
+            item(key = "test_notification_item") {
+                AppSecondaryButton(
+                    label = testNotificationLabel,
+                    onClick = {
+                        val ok = runCatching {
+                            ReminderScheduler.sendTestNotification(
+                                context.applicationContext, testTitleLabel, testBodyLabel
+                            )
+                        }.getOrDefault(false)
+                        showMessage(if (ok) testSentLabel else testFailedLabel)
+                    },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .heightIn(min = MinTouchTarget)
+                        .testTag("test_notification")
+                )
+            }
+
             // ---- Novena section ----
             item(key = "novena") {
                 Column(
@@ -358,7 +506,8 @@ fun RemindersScreen(
                                     .heightIn(min = MinTouchTarget)
                             )
                             Spacer(Modifier.height(design.spacing.cardGap))
-                            Button(
+                            AppPrimaryButton(
+                                label = startNovenaLabel,
                                 onClick = {
                                     val name = novenaName.trim()
                                     if (name.isNotEmpty()) {
@@ -373,9 +522,7 @@ fun RemindersScreen(
                                     .fillMaxWidth()
                                     .heightIn(min = MinTouchTarget)
                                     .testTag("novena_start")
-                            ) {
-                                Text(startNovenaLabel)
-                            }
+                            )
                         } else {
                             val dayNumber = activeNovena.dayNumber(todayEpochDay)
                             val isComplete = activeNovena.isComplete(todayEpochDay)
@@ -402,15 +549,14 @@ fun RemindersScreen(
                                 Text(text = completedLabel, style = styles.rowSubtitle)
                             }
                             Spacer(Modifier.height(design.spacing.cardGap))
-                            OutlinedButton(
+                            AppSecondaryButton(
+                                label = finishNovenaLabel,
                                 onClick = { scope.launch { store.clearNovena() } },
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .heightIn(min = MinTouchTarget)
                                     .testTag("novena_finish")
-                            ) {
-                                Text(finishNovenaLabel)
-                            }
+                            )
                         }
                     }
                 }
@@ -443,21 +589,15 @@ fun RemindersScreen(
                             Text(text = reminder.title(languageCode), style = styles.rowTitle)
                             Text(text = reminder.body(languageCode), style = styles.rowSubtitle)
                         }
-                        TextButton(
+                        AppSecondaryButton(
+                            label = timeLabel,
                             onClick = { timePickerFor = reminder },
+                            leadingIcon = Icons.Filled.Schedule,
                             modifier = Modifier
                                 .heightIn(min = MinTouchTarget)
                                 .testTag("reminder_time_${reminder.id}")
                                 .semantics { contentDescription = changeTimeDescription }
-                        ) {
-                            Icon(
-                                imageVector = Icons.Filled.Schedule,
-                                contentDescription = changeTimeDescription,
-                                modifier = Modifier.size(20.dp)
-                            )
-                            Spacer(Modifier.size(4.dp))
-                            Text(timeLabel)
-                        }
+                        )
                         Switch(
                             checked = enabled,
                             onCheckedChange = { onToggle(reminder, it) },
@@ -505,7 +645,8 @@ fun RemindersScreen(
             AlertDialog(
             onDismissRequest = { timePickerFor = null },
             confirmButton = {
-                TextButton(
+                AppPrimaryButton(
+                    label = okLabel,
                     onClick = {
                         val hour = timePickerState.hour
                         val minute = timePickerState.minute
@@ -522,19 +663,14 @@ fun RemindersScreen(
                             }
                             timePickerFor = null
                         }
-                    },
-                    modifier = Modifier.heightIn(min = MinTouchTarget)
-                ) {
-                    Text(okLabel)
-                }
+                    }
+                )
             },
             dismissButton = {
-                TextButton(
-                    onClick = { timePickerFor = null },
-                    modifier = Modifier.heightIn(min = MinTouchTarget)
-                ) {
-                    Text(cancelLabel)
-                }
+                AppSecondaryButton(
+                    label = cancelLabel,
+                    onClick = { timePickerFor = null }
+                )
             },
                 text = {
                     Column {
@@ -556,12 +692,10 @@ fun RemindersScreen(
         AlertDialog(
             onDismissRequest = { gcalDialog = null },
             confirmButton = {
-                TextButton(
-                    onClick = { gcalDialog = null },
-                    modifier = Modifier.heightIn(min = MinTouchTarget)
-                ) {
-                    Text(closeLabel)
-                }
+                AppSecondaryButton(
+                    label = closeLabel,
+                    onClick = { gcalDialog = null }
+                )
             },
             text = { Text(dialog.second) }
         )

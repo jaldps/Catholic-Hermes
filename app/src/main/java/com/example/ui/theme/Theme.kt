@@ -1,8 +1,10 @@
 package com.example.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -10,6 +12,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
+import androidx.compose.ui.unit.dp
 
 val LocalAppTextStyles = staticCompositionLocalOf {
     AppTypographyFactory.build(DesignLanguage.APPLE, serifPreferred = true, scale = 1f).second
@@ -55,7 +58,17 @@ fun SanctaFidesTheme(
         MaterialTheme(
             colorScheme = colorScheme,
             typography = typography,
-            shapes = DesignTokens.materialShapes(design.shapes),
+            // Straight minor corners like the kit buttons: extraSmall takes
+            // buttonSmall (8dp), small takes button (12dp) so every M3
+            // component (Button, chips, menus) renders with slightly rounded
+            // corners instead of the 4dp field / 50% pill defaults.
+            shapes = Shapes(
+                extraSmall = design.shapes.buttonSmall,
+                small = design.shapes.button,
+                medium = design.shapes.card,
+                large = design.shapes.cardLarge,
+                extraLarge = RoundedCornerShape(28.dp)
+            ),
             content = content
         )
     }
