@@ -1358,7 +1358,7 @@ private fun GuideControlsCard(
                 .align(Alignment.CenterHorizontally)
                 .widthIn(max = when (design.language) {
                     DesignLanguage.APPLE -> 224.dp
-                    DesignLanguage.TRANSPARENCIAS -> 232.dp
+                    DesignLanguage.IVE -> 232.dp
                 })
                 .testTag(railTag)
                 .semantics {
@@ -1628,7 +1628,7 @@ private fun BeadRail(
                         )
                     }
 
-                    DesignLanguage.TRANSPARENCIAS -> {
+                    DesignLanguage.IVE -> {
                         val w = 4.dp.toPx()
                         val amp = 2.2.dp.toPx()
                         val waves = 36

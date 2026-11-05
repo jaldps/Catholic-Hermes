@@ -63,7 +63,7 @@ private fun arcInks(): ArcInks {
     val scheme = androidx.compose.material3.MaterialTheme.colorScheme
     return when (design.language) {
         DesignLanguage.APPLE -> ArcInks(Color(0xFFFF9F0A), scheme.primary, p.hairline, p.textPrimary)
-        DesignLanguage.TRANSPARENCIAS -> ArcInks(scheme.tertiary, scheme.primary, scheme.outlineVariant, scheme.onSurface)
+        DesignLanguage.IVE -> ArcInks(scheme.tertiary, scheme.primary, scheme.outlineVariant, scheme.onSurface)
     }
 }
 

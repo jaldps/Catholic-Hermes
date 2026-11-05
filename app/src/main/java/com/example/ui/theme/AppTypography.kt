@@ -42,7 +42,7 @@ object AppTypographyFactory {
         val readingSerif = if (fontFamilyChoice == null) serifPreferred else true
         val base = when (language) {
             DesignLanguage.APPLE -> apple(readingSerif, scale)
-            DesignLanguage.TRANSPARENCIAS -> material(readingSerif, scale)
+            DesignLanguage.IVE -> material(readingSerif, scale)
         }
         // Null retains the legacy Boolean API for existing callers.
         val family = fontFamilyChoice?.let {

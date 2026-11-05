@@ -90,7 +90,7 @@ private fun buildColorScheme(
     val base = if (isDark) darkColorScheme() else lightColorScheme()
 
     return when (identity) {
-        DesignLanguage.APPLE, DesignLanguage.TRANSPARENCIAS -> base.copy(
+        DesignLanguage.APPLE, DesignLanguage.IVE -> base.copy(
             primary = accent,
             onPrimary = onAccent,
             primaryContainer = palette.accentMuted,

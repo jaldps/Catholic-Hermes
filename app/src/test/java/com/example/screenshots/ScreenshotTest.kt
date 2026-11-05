@@ -115,6 +115,6 @@ class ScreenshotTest {
 
     @Test fun appleLight() = capture(DesignLanguage.APPLE, dark = false)
     @Test fun appleDark() = capture(DesignLanguage.APPLE, dark = true)
-    @Test fun materialLight() = capture(DesignLanguage.TRANSPARENCIAS, dark = false)
-    @Test fun materialDark() = capture(DesignLanguage.TRANSPARENCIAS, dark = true)
+    @Test fun materialLight() = capture(DesignLanguage.IVE, dark = false)
+    @Test fun materialDark() = capture(DesignLanguage.IVE, dark = true)
 }

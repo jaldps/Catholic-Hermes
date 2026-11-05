@@ -40,13 +40,13 @@ enum class DesignLanguage(
      * full-saturation accent, hairlines instead of shadows, SF-like type.
      * Surfaces let the wallpaper breathe through; ink stays opaque.
      */
-    TRANSPARENCIAS(
-        "TRANSPARENT",
-        LocalizedText("Transparencias", "Translucency", "Transparência"),
+    IVE(
+        "IVE",
+        LocalizedText("Ive", "Ive", "Ive"),
         LocalizedText(
-            "Superficies translúcidas, acento vibrante y bordes finos al estilo de iOS 7 en adelante.",
-            "Frosted translucent surfaces, a vibrant accent and hairline edges, iOS 7 style and on.",
-            "Superfícies translúcidas, acento vibrante e bordas finas no estilo do iOS 7 em diante."
+            "Papel cálido, tarjetas frosted, títulos serenos y verde litúrgico al estilo de la referencia iOS.",
+            "Warm paper, frosted cards, serene titles and liturgical green in the iOS reference style.",
+            "Papel quente, cartões foscos, títulos serenos e verde litúrgico no estilo da referência iOS."
         )
     );
 
@@ -189,6 +189,24 @@ object DesignTokens {
         // Same radius as a card: groups and cards share one column on every
         // screen, and a 10/12 mismatch side by side reads as two systems.
         listGroup = RoundedCornerShape(12.dp)
+    )
+
+    /**
+     * Ive: the reference's geometry — 20dp frosted cards, pill primary
+     * buttons and chips, 16dp tiles, generous 20dp screen gutters.
+     */
+    private val IveShapes = AppShapes(
+        card = RoundedCornerShape(20.dp),
+        cardLarge = RoundedCornerShape(24.dp),
+        button = RoundedCornerShape(percent = 50),
+        buttonSmall = RoundedCornerShape(12.dp),
+        field = RoundedCornerShape(16.dp),
+        chip = RoundedCornerShape(percent = 50),
+        sheet = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
+        dialog = RoundedCornerShape(20.dp),
+        thumbnail = RoundedCornerShape(16.dp),
+        badge = RoundedCornerShape(percent = 50),
+        listGroup = RoundedCornerShape(20.dp)
     )
 
     private val MaterialShapes = AppShapes(
@@ -374,33 +392,33 @@ object DesignTokens {
     // opaque (contrast), surfaces sit at ~88-95% so the ground reads
     // through like iOS frosted glass.
     private val MaterialPaletteLight = AppPalette(
-        canvas = Color(0xFFF2F2F7),
-        groupedSurface = Color(0xE6FFFFFF),
-        raised = Color(0xD9FFFFFF),
-        hairline = Color(0xFFC6C6C8),
-        accent = Color(0xFF0066CC),
-        accentMuted = Color(0xFFD6E9FF),
-        gold = Color(0xFFB8860B),
-        textPrimary = Color(0xFF000000),
-        textSecondary = Color(0xFF414941),
+        canvas = Color(0xFFF7F3ED),
+        groupedSurface = Color(0xD9FFFFFF),
+        raised = Color(0xE6FFFFFF),
+        hairline = Color(0x14000000),
+        accent = Color(0xFF35751A),
+        accentMuted = Color(0xFFE7F2DC),
+        gold = Color(0xFFC9A86A),
+        textPrimary = Color(0xFF1C1C1E),
+        textSecondary = Color(0xFF6E6A61),
         // Darkened from 717A74 (4.22:1 on canvas / 4.40:1 grouped) to
         // clear 4.5:1 on every tonal surface (5.30:1 canvas, 4.90:1 raised).
-        textTertiary = Color(0xFF5F6B62),
+        textTertiary = Color(0xFF6B665E),
         scrim = Color(0x52000000),
         selectionTint = Color(0xFFDAE8DE)
     )
 
     private val MaterialPaletteDark = AppPalette(
-        canvas = Color(0xFF000000),
-        groupedSurface = Color(0xE61C1C1E),
-        raised = Color(0xD92C2C2E),
-        hairline = Color(0xFF38383A),
-        accent = Color(0xFF409CFF),
-        accentMuted = Color(0xFF1A2F47),
-        gold = Color(0xFFD4AF37),
-        textPrimary = Color(0xFFFFFFFF),
+        canvas = Color(0xFF171512),
+        groupedSurface = Color(0xD92A2723),
+        raised = Color(0xE6332F2A),
+        hairline = Color(0xFF3A352F),
+        accent = Color(0xFF9ADE6B),
+        accentMuted = Color(0xFF2C3A22),
+        gold = Color(0xFFD4B78F),
+        textPrimary = Color(0xFFF5F1EA),
         textSecondary = Color(0xFFC2CCC5),
-        textTertiary = Color(0xFF8C968F),
+        textTertiary = Color(0xFFA8B0A6),
         scrim = Color(0x7A000000),
         selectionTint = Color(0xFF34453A)
     )
@@ -420,11 +438,11 @@ object DesignTokens {
             palette = if (isDark) ApplePaletteDark else ApplePaletteLight
         )
 
-        DesignLanguage.TRANSPARENCIAS -> AppDesign(
+        DesignLanguage.IVE -> AppDesign(
             language = language,
             isDark = isDark,
-            shapes = AppleShapes,
-            spacing = AppleSpacing,
+            shapes = IveShapes,
+            spacing = AppleSpacing.copy(gutter = 20.dp, cardGap = 14.dp),
             depth = AppleDepth,
             motion = AppleMotion,
             decor = AppleDecor,
