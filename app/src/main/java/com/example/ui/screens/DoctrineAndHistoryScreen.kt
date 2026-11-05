@@ -53,6 +53,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
@@ -210,6 +211,9 @@ fun DoctrineAndHistoryScreen(
         val entry = openEntry
         if (entry != null && selectedTopTab in 0..4) {
             BackHandler { openEntry = null }
+            // Keyed by entry so Prev/Next disposes and recreates the whole
+            // page: title and body can never show different entries.
+            key(entry) {
             DoctrineEntryPage(
                 key = entry,
                 repository = repository,
@@ -220,6 +224,7 @@ fun DoctrineAndHistoryScreen(
                 onOpenBible = onOpenBible,
                 onOpenCatechism = onOpenCatechism
             )
+            }
         } else when (selectedTopTab) {
             0 -> MoralDoctrinePane(
                 repository = repository,
