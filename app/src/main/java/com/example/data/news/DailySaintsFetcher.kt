@@ -130,8 +130,15 @@ class DailySaintsFetcher(
             return value.toString()
         }
 
-        /** Headings that are page chrome, never the saint. */
-        private val NAV_HEADINGS = setOf("menu", "search")
+        /**
+         * Headings that are page chrome, never the saint: navigation labels
+         * in every language (the Spanish/Portuguese search headings are
+         * "Buscar"/"Busca", not "Search") plus the page's own title.
+         */
+        private val NAV_HEADINGS = setOf(
+            "menu", "search", "buscar", "busca", "menú",
+            "santo del día", "saint of the day", "santo do dia"
+        )
 
         /**
          * Parses one Vatican News saint page. Exposed so parsing can be
