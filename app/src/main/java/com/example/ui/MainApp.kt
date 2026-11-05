@@ -154,6 +154,8 @@ fun MainApp(
     initialDestination: AppDestination = AppDestination.HOME
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
+    // Bundled saint while the feed loads, then the feed's saint for today.
+    val saintOfTheDay by repository.saintOfTheDayFlow.collectAsState()
     var current by remember { mutableStateOf(initialDestination) }
     // The tab a pushed screen was opened from, so back and the tab bar's
     // highlight return to it: Home's shortcuts push onto Home, and screens
@@ -191,6 +193,11 @@ fun MainApp(
     val onOpenCatechism: (paragraph: Int) -> Unit = { paragraph ->
         catechismInitialParagraph = paragraph
         go(AppDestination.CATECHISM)
+    }
+    var prayersInitialPrayerId by remember { mutableStateOf<String?>(null) }
+    val onOpenPrayer: (prayerId: String) -> Unit = { prayerId ->
+        prayersInitialPrayerId = prayerId
+        go(AppDestination.PRAYERS)
     }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCustomizerModal by remember { mutableStateOf(false) }
@@ -313,10 +320,12 @@ fun MainApp(
                     AppDestination.HOME -> HomeScreen(
                         dailyReading = repository.dailyMassReading,
                         verseOfTheDay = repository.verseOfTheDay,
-                        saintOfTheDay = repository.saintOfTheDay,
+                        saintOfTheDay = saintOfTheDay,
                         currentLanguage = currentLanguage,
                         liturgicalDay = repository.getCurrentLiturgicalDay(),
                         dao = dao,
+                        catholicQuestions = repository.catholicQuestions,
+                        onOpenQuestions = { go(AppDestination.QUESTIONS) },
                         onOpenLanguageSelector = { showLanguageSelector = true },
                         onOpenAppearance = { showCustomizerModal = true },
                         onOpenFontPicker = { showFontPicker = true },
@@ -387,7 +396,8 @@ fun MainApp(
                         repository = repository,
                         ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
-                        dao = dao
+                        dao = dao,
+                        initialPrayerId = prayersInitialPrayerId
                     )
 
                     AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(
@@ -399,7 +409,8 @@ fun MainApp(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         onOpenBible = onOpenBible,
-                        onOpenCatechism = onOpenCatechism
+                        onOpenCatechism = onOpenCatechism,
+                        onOpenPrayer = onOpenPrayer
                     )
 
                     AppDestination.PARISHES -> ParishFinderScreen(
@@ -413,7 +424,8 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         initialTopTab = 5,
                         onOpenBible = onOpenBible,
-                        onOpenCatechism = onOpenCatechism
+                        onOpenCatechism = onOpenCatechism,
+                        onOpenPrayer = onOpenPrayer
                     )
 
                     AppDestination.QUESTIONS -> DoctrineAndHistoryScreen(
@@ -421,7 +433,8 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         initialTopTab = 3,
                         onOpenBible = onOpenBible,
-                        onOpenCatechism = onOpenCatechism
+                        onOpenCatechism = onOpenCatechism,
+                        onOpenPrayer = onOpenPrayer
                     )
 
                     AppDestination.SPIRITUAL_LIFE -> SpiritualLifeScreen(

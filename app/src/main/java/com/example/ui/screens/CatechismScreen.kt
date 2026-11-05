@@ -68,6 +68,7 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.CatechismChapter
 import com.example.data.models.CatechismNumberedArticle
 import com.example.data.models.CatechismPart
+import com.example.data.repository.CatechismData
 import com.example.data.repository.CatechismOutlineSection
 import com.example.data.repository.CatholicDataRepository
 import com.example.data.repository.CompendiumQA
@@ -234,9 +235,15 @@ private fun UniversalCatechismView(
     // focus while the first letter typed turns the one into the other.
     @Composable
     fun IndexAndSearch() {
-        val results = remember(searchQuery, currentLanguage) {
-            if (searchQuery.isBlank()) emptyList() else searchCatechism(repository, parts, searchQuery, currentLanguage)
+        // Hybrid v2 ranking: uncapped, so the header can report the true
+        // total and the list shows the top 50 paragraph numbers.
+        val scored = remember(searchQuery) {
+            if (searchQuery.isBlank()) emptyList() else searchCatechism(searchQuery)
         }
+        val results = remember(scored, repository) {
+            scored.take(50).mapNotNull { repository.findCatechismArticle(it.number) }
+        }
+        val paragraphNumbers = remember(scored) { scored.take(50).map { it.number } }
         LazyColumn(Modifier.fillMaxSize()) {
             header()
             item(key = "ccc_search_row") {
@@ -255,6 +262,8 @@ private fun UniversalCatechismView(
             if (searchQuery.isNotBlank()) {
                 catechismSearchItems(
                     results = results,
+                    totalCount = scored.size,
+                    paragraphNumbers = paragraphNumbers,
                     currentLanguage = currentLanguage,
                     fontSizeMultiplier = fontSizeMultiplier,
                     readerFont = readerFont,
@@ -733,39 +742,68 @@ private fun ChapterReadingView(
 }
 
 /**
- * Search by CCC number — which reaches any of the 2,865 articles — or by topic
- * across the full text of all 2,865 paragraphs in all three languages.
- * Delegates to [CatechismData.searchArticles] via the repository; the curated
- * index alone (the old behaviour) only covered a few dozen paragraphs.
+ * Offline hybrid search (v2): tokenised, accent/case-insensitive,
+ * trilingual, with theological synonym expansion, ranked
+ * title/heading > exact phrase > all-words AND > any-word OR and capped
+ * at 50. Returns the uncapped [CatechismData.ScoredParagraph] list so the
+ * UI can report the true total and show the top-50 paragraph numbers;
+ * repository.searchCatechismArticles keeps the same ranking for other
+ * callers.
  */
 private fun searchCatechism(
-    repository: CatholicDataRepository,
-    parts: List<CatechismPart>,
-    searchQuery: String,
-    currentLanguage: AppLanguage
-): List<CatechismNumberedArticle> {
-    // repository.searchCatechismArticles already handles the numeric lookup
-    // and searches every language, regardless of the UI language selected.
-    return repository.searchCatechismArticles(searchQuery)
-}
+    searchQuery: String
+): List<CatechismData.ScoredParagraph> =
+    CatechismData.searchCatechismHybrid(searchQuery, cap = Int.MAX_VALUE)
 
 private fun LazyListScope.catechismSearchItems(
     results: List<CatechismNumberedArticle>,
+    totalCount: Int,
+    paragraphNumbers: List<Int>,
     currentLanguage: AppLanguage,
     fontSizeMultiplier: Float,
     readerFont: ReaderFontChoice,
     design: AppDesign
 ) {
     run {
-        item {
+        val shownCount = results.size
+        val countLabel = when {
+            totalCount == 0 -> currentLanguage.pick(
+                "0 artículos encontrados",
+                "0 articles found",
+                "0 artigos encontrados"
+            )
+            totalCount > shownCount -> currentLanguage.pick(
+                "Mostrando $shownCount de $totalCount artículos",
+                "Showing $shownCount of $totalCount articles",
+                "Mostrando $shownCount de $totalCount artigos"
+            )
+            else -> currentLanguage.pick(
+                "$totalCount artículos encontrados",
+                "$totalCount articles found",
+                "$totalCount artigos encontrados"
+            )
+        }
+        item(key = "ccc_search_results_header") {
             AppSectionHeader(
                 title = currentLanguage.pick("Resultados", "Results", "Resultados"),
-                subtitle = currentLanguage.pick(
-                    "${results.size} artículos encontrados",
-                    "${results.size} articles found",
-                    "${results.size} artigos encontrados"
-                )
+                subtitle = countLabel,
+                modifier = Modifier.testTag("catechism_search_count")
             )
+        }
+
+        if (paragraphNumbers.isNotEmpty()) {
+            item(key = "ccc_search_paragraph_numbers") {
+                ReadingColumn {
+                    Text(
+                        text = paragraphNumbers.joinToString(" · ") { "§ $it" },
+                        style = LocalAppTextStyles.current.rowSubtitle,
+                        color = design.palette.textSecondary,
+                        modifier = Modifier
+                            .padding(horizontal = design.spacing.gutter)
+                            .testTag("catechism_search_paragraph_numbers")
+                    )
+                }
+            }
         }
 
         if (results.isEmpty()) {

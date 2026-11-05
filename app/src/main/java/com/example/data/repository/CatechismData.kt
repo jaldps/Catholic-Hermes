@@ -5,6 +5,7 @@ import com.example.data.models.CatechismNumberedArticle
 import com.example.data.models.CatechismPart
 import com.example.data.models.CatechismSection
 import com.example.data.models.LocalizedText
+import java.text.Normalizer
 
 object CatechismData {
 
@@ -612,82 +613,250 @@ object CatechismData {
     }
 
     /**
-     * Lower-cased full text of every paragraph, built once and reused by every
-     * search. Without this index each keystroke would lowercase ~3 languages
-     * x 2,865 paragraphs from scratch.
+     * A paragraph scored by the hybrid search. [number] is the CCC paragraph
+     * (§ 1..2865); [score] is the ranking score described on
+     * [searchCatechismHybrid] — higher is always better, and equal scores are
+     * ordered by paragraph number.
+     */
+    data class ScoredParagraph(val number: Int, val score: Double)
+
+    /**
+     * Lower-cased, accent-stripped, tokenised full text of every paragraph,
+     * built once and reused by every search. Without this index each
+     * keystroke would re-normalise ~3 languages x 2,865 paragraphs from
+     * scratch.
      */
     private data class FullTextEntry(
         val number: Int,
+        /** Normalised (no accents, single spaces) ES / EN / PT bodies. */
         val es: String,
         val en: String,
-        val pt: String
+        val pt: String,
+        /** Every body token across the three languages, with repeats. */
+        val tokens: List<String>,
+        /** [tokens] as a set, for O(1) concept lookups. */
+        val tokenSet: Set<String>
     )
+
+    private fun normalizeText(text: String): String {
+        val withoutMarks = Normalizer.normalize(text.lowercase(), Normalizer.Form.NFD)
+            .replace(Regex("\\p{Mn}+"), "")
+        return withoutMarks
+            .replace(Regex("[^\\p{L}\\p{N}]+"), " ")
+            .trim()
+            .replace(Regex("\\s+"), " ")
+    }
+
+    private fun tokenize(normalized: String): List<String> =
+        if (normalized.isBlank()) emptyList() else normalized.split(" ")
 
     private val fullTextIndex: List<FullTextEntry> by lazy {
         CatechismFullData.contentByNumber.entries
             .sortedBy { it.key }
             .map { (number, text) ->
-                FullTextEntry(
-                    number = number,
-                    es = text.es.lowercase(),
-                    en = text.en.lowercase(),
-                    pt = text.pt.lowercase()
-                )
+                val es = normalizeText(text.es)
+                val en = normalizeText(text.en)
+                val pt = normalizeText(text.pt)
+                val tokens = tokenize(es) + tokenize(en) + tokenize(pt)
+                FullTextEntry(number, es, en, pt, tokens, tokens.toSet())
             }
     }
 
-    /**
-     * Full-text search over all 2,865 paragraphs in all three languages.
-     *
-     * A bare paragraph number (optionally written "§1324" / "#1324") keeps the
-     * exact number-lookup behaviour. Any other query matches the curated
-     * articles (titles, bodies and references) AND every paragraph in
-     * [CatechismFullData.contentByNumber], deduplicated by paragraph number
-     * and returned in paragraph order, so results always carry their number.
-     */
-    fun searchArticles(query: String): List<CatechismNumberedArticle> {
-        val q = query.trim().lowercase()
-        if (q.isEmpty()) return emptyList()
+    /** Title/heading text per paragraph: outline section + curated title. */
+    private data class HeadingEntry(val normalized: String, val tokens: Set<String>)
 
-        val digits = q.trim('§', '#', ' ')
-        val num = digits.takeIf { it.isNotEmpty() && it.all(Char::isDigit) }?.toIntOrNull()
-        if (num != null && num in 1..2865) {
-            val art = findArticleByNumber(num)
-            return if (art != null) listOf(art) else emptyList()
-        }
-
-        val matchedNumbers = sortedSetOf<Int>()
-
-        // Curated articles: titles / bodies / references in every language.
+    private val headingByNumber: Map<Int, HeadingEntry> by lazy {
+        val curated = HashMap<Int, LocalizedText>()
         for (part in catechismParts) {
             for (sec in part.sections) {
                 for (ch in sec.chapters) {
                     for (art in ch.articles) {
-                        if (art.title.es.lowercase().contains(q) ||
-                            art.title.en.lowercase().contains(q) ||
-                            art.title.pt.lowercase().contains(q) ||
-                            art.content.es.lowercase().contains(q) ||
-                            art.content.en.lowercase().contains(q) ||
-                            art.content.pt.lowercase().contains(q) ||
-                            (art.biblicalReferences?.lowercase()?.contains(q) == true)) {
-                            matchedNumbers.add(art.cccNumber)
-                        }
+                        curated[art.cccNumber] = art.title
                     }
                 }
             }
         }
-
-        // The full corpus: every one of the 2,865 paragraphs, all languages.
-        for (entry in fullTextIndex) {
-            if (entry.es.contains(q) || entry.en.contains(q) || entry.pt.contains(q)) {
-                matchedNumbers.add(entry.number)
+        val headings = HashMap<Int, HeadingEntry>()
+        for (section in CatechismOutline.sections) {
+            val sectionHeading = normalizeText(
+                section.title.es + " " + section.title.en + " " + section.title.pt
+            )
+            for (number in section.firstNumber..section.lastNumber) {
+                val curatedTitle = curated[number]?.let {
+                    normalizeText(it.es + " " + it.en + " " + it.pt)
+                }
+                val combined = (sectionHeading + " " + (curatedTitle ?: "")).trim()
+                headings[number] = HeadingEntry(combined, tokenize(combined).toSet())
             }
         }
-
-        // findArticleByNumber prefers the curated article when one exists and
-        // otherwise builds the paragraph from CatechismFullData.
-        return matchedNumbers.mapNotNull { findArticleByNumber(it) }
+        headings
     }
+
+    /**
+     * Trilingual theological synonym groups (ES / EN / PT). A query token is
+     * expanded to its whole group, so "gracia" also matches "grace" and
+     * "graça". Forms are stored raw and normalised on lookup, so accents in
+     * this list never need to match the query's accents.
+     */
+    private val synonymGroups: List<List<String>> = listOf(
+        listOf("gracia", "grace", "graça"),
+        listOf("pecado", "sin", "pecado"),
+        listOf("fe", "faith", "fé"),
+        listOf("esperanza", "hope", "esperança"),
+        listOf("caridad", "charity", "caridade"),
+        listOf("oración", "prayer", "oração"),
+        listOf("resurrección", "resurrection", "ressurreição"),
+        listOf("purgatorio", "purgatory", "purgatório"),
+        listOf("sacrificio", "sacrifice", "sacrifício"),
+        listOf("bautismo", "baptism", "batismo"),
+        listOf("comunión", "communion", "comunhão"),
+        listOf("santidad", "holiness", "santidade"),
+        listOf("muerte", "death", "morte"),
+        listOf("vida", "life", "vida"),
+        listOf("dios", "god", "deus"),
+        listOf("cristo", "christ", "cristo"),
+        listOf("iglesia", "church", "igreja"),
+        listOf("espíritu", "spirit", "espírito"),
+        listOf("virgen", "virgin", "virgem"),
+        listOf("eucaristía", "eucharist", "eucaristia"),
+        listOf("penitencia", "penance", "penitência"),
+        listOf("amor", "love", "amor"),
+        listOf("cielo", "heaven", "céu"),
+        listOf("infierno", "hell", "inferno"),
+        listOf("alma", "soul", "alma"),
+        listOf("matrimonio", "marriage", "matrimônio"),
+        listOf("perdón", "forgiveness", "perdão"),
+        listOf("salvación", "salvation", "salvação")
+    )
+
+    /** Normalised token -> its synonym group (itself when it has none). */
+    private val synonymExpansion: Map<String, Set<String>> by lazy {
+        val map = HashMap<String, Set<String>>()
+        for (group in synonymGroups) {
+            val normalizedGroup = group.map { normalizeText(it) }.toSet()
+            for (form in normalizedGroup) {
+                map[form] = normalizedGroup
+            }
+        }
+        map
+    }
+
+    /** Tiny ES/EN/PT stop-words dropped from token scoring (never from
+     *  phrase matching, and never a content word such as "fe"). */
+    private val stopWords: Set<String> = setOf(
+        "de", "la", "el", "en", "y", "los", "del", "las", "una", "unos", "un",
+        "por", "que", "con", "para", "se", "su", "al", "es", "lo", "como",
+        "of", "the", "to", "in", "and", "a", "an", "do", "da", "o", "os",
+        "as", "um", "uma", "em", "no", "na", "nos", "com", "ao", "à", "seu"
+    )
+
+    private const val SEARCH_CAP = 50
+
+    /**
+     * Offline hybrid search (v2), trilingual, over all 2,865 paragraphs.
+     *
+     * The query is normalised (case- and accent-insensitive) and split into
+     * tokens. Every token is expanded through [synonymGroups], so a Spanish
+     * query also matches the English and Portuguese paragraphs. Each
+     * paragraph is scored, highest first:
+     *
+     *  - title/heading hit: +100 per query concept found in the paragraph's
+     *    outline-section heading or curated article title;
+     *  - exact phrase: +80 when the whole normalised query appears verbatim
+     *    in a body (multi-word queries only), +150 more when it appears in
+     *    the heading;
+     *  - all-words AND: +50 when every query concept occurs somewhere in the
+     *    paragraph (heading or any language's body);
+     *  - any-word OR: +10 per concept found in a body, plus +1 per further
+     *    occurrence of that concept, capped at +5 per concept.
+     *
+     * Results are the paragraph numbers with a positive score, sorted by
+     * score descending then paragraph number ascending, capped at [cap]
+     * (default 50). A bare paragraph number ("§1324", "#1324", "1324")
+     * keeps the exact number-lookup behaviour with a top score.
+     *
+     * Examples: "gracia" matches §1999/§2000-style grace paragraphs in EN/PT
+     * bodies too; "oración y fe" ranks a paragraph whose heading is about
+     * prayer and faith above one that merely mentions both words once; a
+     * query typed without accents ("oracion", "ressurreicao") matches the
+     * accented text in every language.
+     */
+    fun searchCatechismHybrid(query: String, cap: Int = SEARCH_CAP): List<ScoredParagraph> {
+        val raw = query.trim()
+        if (raw.isEmpty()) return emptyList()
+
+        val digits = raw.trimStart('§', '#', ' ').trim()
+        val num = digits.takeIf { it.isNotEmpty() && digits.all(Char::isDigit) }?.toIntOrNull()
+        if (num != null && num in 1..2865) {
+            return listOf(ScoredParagraph(num, 1_000.0))
+        }
+
+        val normalizedQuery = normalizeText(raw)
+        if (normalizedQuery.isBlank()) return emptyList()
+        val queryTokens = tokenize(normalizedQuery)
+        // Concepts: distinct content tokens, each expanded to its synonym
+        // group. Stop-words only score as part of the exact phrase.
+        val concepts: List<Set<String>> = queryTokens
+            .filter { it !in stopWords }
+            .distinct()
+            .map { synonymExpansion[it] ?: setOf(it) }
+        if (concepts.isEmpty()) return emptyList()
+
+        val headings = headingByNumber
+        val scored = ArrayList<ScoredParagraph>()
+        for (entry in fullTextIndex) {
+            val heading = headings[entry.number]
+            var score = 0.0
+            var allConceptsFound = true
+
+            for (variants in concepts) {
+                val inHeading = heading != null && variants.any { it in heading.tokens }
+                val inBody = variants.any { it in entry.tokenSet }
+                if (inHeading) score += 100.0
+                if (inBody) {
+                    val occurrences = entry.tokens.count { it in variants }
+                    score += 10.0 + minOf(occurrences - 1, 5).coerceAtLeast(0)
+                }
+                if (!inHeading && !inBody) allConceptsFound = false
+            }
+            if (allConceptsFound) score += 50.0
+
+            // Exact phrase: multi-token queries only, so a single word is
+            // ranked by heading/AND/OR rather than boosted as its own phrase.
+            if (queryTokens.size >= 2) {
+                if (entry.es.contains(normalizedQuery) ||
+                    entry.en.contains(normalizedQuery) ||
+                    entry.pt.contains(normalizedQuery)
+                ) {
+                    score += 80.0
+                }
+                if (heading != null && heading.normalized.contains(normalizedQuery)) {
+                    score += 150.0
+                }
+            }
+
+            if (score > 0.0) scored.add(ScoredParagraph(entry.number, score))
+        }
+
+        return scored
+            .sortedWith(compareByDescending<ScoredParagraph> { it.score }.thenBy { it.number })
+            .take(cap.coerceAtLeast(0))
+    }
+
+    /** Just the ranked paragraph numbers of [searchCatechismHybrid]. */
+    fun searchCatechismNumbers(query: String, cap: Int = SEARCH_CAP): List<Int> =
+        searchCatechismHybrid(query, cap).map { it.number }
+
+    /**
+     * Full-text search over all 2,865 paragraphs in all three languages.
+     *
+     * Delegates to the hybrid ranking in [searchCatechismHybrid]: the
+     * curated articles (titles, bodies and references) are part of the
+     * indexed headings and bodies, every paragraph is reachable, results
+     * carry their number, and at most 50 come back in rank order.
+     */
+    fun searchArticles(query: String): List<CatechismNumberedArticle> =
+        searchCatechismHybrid(query).mapNotNull { findArticleByNumber(it.number) }
 }
 
 /**

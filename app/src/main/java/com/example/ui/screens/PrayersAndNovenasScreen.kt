@@ -40,6 +40,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -62,6 +63,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.data.audio.LiturgicalTtsManager
+import com.example.data.liturgy.LiturgicalCalendar
+import com.example.data.liturgy.LiturgicalDayInfo
+import com.example.data.liturgy.LiturgicalSeason
 import com.example.data.local.NovenaProgressEntity
 import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
@@ -142,7 +146,8 @@ fun PrayersAndNovenasScreen(
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier,
-    dao: SanctaFidesDao? = null
+    dao: SanctaFidesDao? = null,
+    initialPrayerId: String? = null
 ) {
     val design = LocalAppDesign.current
     val scope = rememberCoroutineScope()
@@ -153,7 +158,17 @@ fun PrayersAndNovenasScreen(
     var prayerSearchQuery by remember { mutableStateOf("") }
     var selectedThematicTag by remember { mutableStateOf<String?>(null) }
     // A prayer opens as its own page; the list carries only a line of each.
+    // A deep link (initialPrayerId, e.g. from Doctrine's "Rezar ahora") opens
+    // its prayer on arrival; an unknown id is ignored, never a blank page.
     var openPrayerId by remember { mutableStateOf<String?>(null) }
+    LaunchedEffect(initialPrayerId) {
+        if (initialPrayerId != null &&
+            repository.vaticanPrayers.any { it.id == initialPrayerId }
+        ) {
+            selectedTab = 0
+            openPrayerId = initialPrayerId
+        }
+    }
     var showChaplet by remember { mutableStateOf(false) }
 
     // Novenas
@@ -366,9 +381,42 @@ private fun VaticanDevotionalView(
     val prayers = repository.searchPrayers(query = searchQuery, tag = selectedTag)
     val filtering = searchQuery.isNotBlank() || selectedTag != null
     var howToPrayExpanded by remember { mutableStateOf(false) }
+    // The season-relevant prayer, resolved once from the liturgical day.
+    // Shown only when unfiltered, floated as the first content; it is then
+    // excluded from the groups below so it appears exactly once.
+    val seasonPrayer = remember(repository) {
+        val info = LiturgicalCalendar.dayInfo(LiturgicalCalendar.today())
+        val id = seasonPrayerId(info)
+        repository.vaticanPrayers.firstOrNull { it.id == id }
+            ?: repository.vaticanPrayers.firstOrNull { it.id == "our_father" }
+            ?: repository.vaticanPrayers.firstOrNull()
+    }
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
+
+        // The season prayer floats first when the list is unfiltered;
+        // searching or filtering hides it so results stay clean.
+        if (!filtering && seasonPrayer != null) {
+            item(key = "season_prayer") {
+                AppSectionHeader(
+                    title = currentLanguage.pick(
+                        "Del tiempo litúrgico",
+                        "For this season",
+                        "Para este tempo"
+                    )
+                )
+                AppListGroup {
+                    AppListRow(
+                        title = seasonPrayer.title.get(currentLanguage),
+                        subtitle = LiturgicalCalendar.dayInfo(LiturgicalCalendar.today())
+                            .season.displayName.get(currentLanguage),
+                        onClick = { onOpenPrayer(seasonPrayer) },
+                        modifier = Modifier.testTag("season_prayer")
+                    )
+                }
+            }
+        }
 
         // "How to pray" sits at the top of the Prayers tab when the list is
         // unfiltered; searching or filtering hides it so results stay clean.
@@ -443,13 +491,16 @@ private fun VaticanDevotionalView(
             val fundamental = prayers.filter { it.category == PrayerCategory.BASIC }
             val daily = prayers.filter { "daily_routine" in it.thematicTags }
                 .filterNot { it in fundamental }
+            // The floated season prayer is excluded here (it is already shown
+            // first above) so it is never listed twice when unfiltered.
+            val withoutSeason = prayers.filterNot { it.id == seasonPrayer?.id }
             val groups = if (filtering) {
                 listOf(currentLanguage.pick("Resultados", "Results", "Resultados") to prayers)
             } else {
                 listOf(
-                    PrayerCategory.BASIC.title.get(currentLanguage) to fundamental,
-                    currentLanguage.pick("Cada día", "Every day", "Todos os dias") to daily,
-                    currentLanguage.pick("Otras oraciones", "Other prayers", "Outras orações") to prayers.filterNot { it in fundamental || it in daily }
+                    PrayerCategory.BASIC.title.get(currentLanguage) to fundamental.filterNot { it.id == seasonPrayer?.id },
+                    currentLanguage.pick("Cada día", "Every day", "Todos os dias") to daily.filterNot { it.id == seasonPrayer?.id },
+                    currentLanguage.pick("Otras oraciones", "Other prayers", "Outras orações") to withoutSeason.filterNot { it in fundamental || it in daily }
                 )
             }
             groups.filter { it.second.isNotEmpty() }.forEachIndexed { groupIndex, (label, entries) ->
@@ -486,6 +537,36 @@ private fun VaticanDevotionalView(
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
+}
+
+/**
+ * Lectionary keys of the Marian solemnities/feasts in the General Calendar
+ * ([LiturgicalCalendar.fixedDays]): on these, the season prayer yields to a
+ * Marian prayer instead of the season default.
+ */
+private val MarianSeasonKeys = setOf(
+    "mary_mother_of_god",
+    "annunciation",
+    "assumption",
+    "immaculate_conception"
+)
+
+/**
+ * The `VaticanPrayer` id for [info]'s season, resolved by stable data ids —
+ * never by matching a displayed title. Lent (and Holy Week/Triduum) yields the
+ * Act of Contrition, Advent the Advent antiphons, Easter the Easter prayer,
+ * Christmas its own prayer, Ordinary Time the Lord's Prayer, and Marian
+ * feasts the Memorare.
+ */
+private fun seasonPrayerId(info: LiturgicalDayInfo): String = when {
+    info.lectionaryKey in MarianSeasonKeys -> "memorare"
+    info.season == LiturgicalSeason.LENT ||
+        info.season == LiturgicalSeason.HOLY_WEEK ||
+        info.season == LiturgicalSeason.TRIDUUM -> "act_of_contrition"
+    info.season == LiturgicalSeason.ADVENT -> "advent_antiphons"
+    info.season == LiturgicalSeason.EASTER -> "easter_prayer"
+    info.season == LiturgicalSeason.CHRISTMAS -> "christmas_prayer"
+    else -> "our_father"
 }
 
 /**

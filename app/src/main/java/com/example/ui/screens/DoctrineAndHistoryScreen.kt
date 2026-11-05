@@ -39,6 +39,7 @@ import androidx.compose.material.icons.filled.Map
 import androidx.compose.material.icons.filled.Newspaper
 import androidx.compose.material.icons.filled.OpenInNew
 import androidx.compose.material.icons.filled.Public
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.CircularProgressIndicator
@@ -88,6 +89,8 @@ import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.news.NewsResult
 import com.example.data.news.VaticanNewsFetcher
 import com.example.data.news.VaticanNewsItem
+import com.example.data.prefs.UserPreferencesStore
+import com.example.data.models.TriviaQuestion
 import com.example.data.repository.CatholicDataRepository
 import com.example.data.repository.ParishScheduleText
 import com.example.ui.design.AppCard
@@ -137,7 +140,8 @@ fun DoctrineAndHistoryScreen(
     initialTopTab: Int = 0,
     modifier: Modifier = Modifier,
     onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit = { _, _, _ -> },
-    onOpenCatechism: (paragraph: Int) -> Unit = {}
+    onOpenCatechism: (paragraph: Int) -> Unit = {},
+    onOpenPrayer: (prayerId: String) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
 
@@ -222,7 +226,8 @@ fun DoctrineAndHistoryScreen(
                 onBack = { openEntry = null },
                 onOpen = { openEntry = it },
                 onOpenBible = onOpenBible,
-                onOpenCatechism = onOpenCatechism
+                onOpenCatechism = onOpenCatechism,
+                onOpenPrayer = onOpenPrayer
             )
             }
         } else when (selectedTopTab) {
@@ -272,6 +277,108 @@ fun DoctrineAndHistoryScreen(
 
 // ------------------------------------------------------ 101 Catholic Questions
 
+/** One guided learning track: a contiguous question range (1-based numbers). */
+private data class LearningTrack(val index: Int, val startQuestion: Int, val endQuestion: Int) {
+    val total: Int get() = endQuestion - startQuestion + 1
+    /** Questions completed = those up to the highest reached question number. */
+    fun completedCount(reachedQuestion: Int): Int =
+        (reachedQuestion - startQuestion + 1).coerceIn(0, total)
+}
+
+private val LEARNING_TRACKS = listOf(
+    LearningTrack(index = 0, startQuestion = 1, endQuestion = 30),
+    LearningTrack(index = 1, startQuestion = 41, endQuestion = 60),
+    LearningTrack(index = 2, startQuestion = 61, endQuestion = 100)
+)
+
+private fun learningTrackTitle(track: LearningTrack, language: AppLanguage): String = when (track.index) {
+    0 -> language.pick("Fundamentos", "Foundations", "Fundamentos")
+    1 -> language.pick("Iglesia y sacramentos", "Church and sacraments", "Igreja e sacramentos")
+    else -> language.pick("Vida y moral", "Life and morals", "Vida e moral")
+}
+
+/** Deterministic mini-quiz sample: 3 trivia questions chosen by track index alone. */
+private fun trackQuizQuestions(trivia: List<TriviaQuestion>, trackIndex: Int): List<TriviaQuestion> {
+    if (trivia.isEmpty()) return emptyList()
+    val start = (trackIndex * 3) % trivia.size
+    return (0 until 3).map { k -> trivia[(start + k) % trivia.size] }
+}
+
+/**
+ * End-of-track mini-quiz: three sampled trivia questions with immediate
+ * correct/incorrect feedback and the doctrinal explanation. Answers live
+ * only in composition state — no persistence beyond the reached index.
+ */
+@Composable
+private fun TrackMiniQuiz(
+    track: LearningTrack,
+    questions: List<TriviaQuestion>,
+    currentLanguage: AppLanguage
+) {
+    val design = LocalAppDesign.current
+    var answers by remember(track.index) { mutableStateOf<Map<Int, Int>>(emptyMap()) }
+    AppCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .testTag("qa_track_quiz_${track.index}")
+    ) {
+        Text(
+            text = currentLanguage.pick(
+                "Mini-quiz: ${learningTrackTitle(track, currentLanguage)}",
+                "Mini-quiz: ${learningTrackTitle(track, currentLanguage)}",
+                "Mini-quiz: ${learningTrackTitle(track, currentLanguage)}"
+            ),
+            style = MaterialTheme.typography.titleMedium,
+            color = design.palette.textPrimary
+        )
+        Spacer(Modifier.height(design.spacing.cardGap))
+        questions.forEachIndexed { qi, trivia ->
+            if (qi > 0) {
+                AppDivider()
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
+            Text(
+                text = trivia.question.get(currentLanguage),
+                style = MaterialTheme.typography.bodyLarge,
+                color = design.palette.textPrimary
+            )
+            Spacer(Modifier.height(design.spacing.cardGap / 2))
+            val answered = answers[qi]
+            trivia.options.forEachIndexed { oi, option ->
+                AppSecondaryButton(
+                    label = option.get(currentLanguage),
+                    onClick = { if (answered == null) answers = answers + (qi to oi) },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(min = MinTouchTarget)
+                        .testTag("qa_track_quiz_${track.index}_${qi}_opt_$oi")
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+            }
+            if (answered != null) {
+                val correct = answered == trivia.correctIndex
+                Text(
+                    text = currentLanguage.pick(
+                        if (correct) "Correcto" else "Incorrecto",
+                        if (correct) "Correct" else "Incorrect",
+                        if (correct) "Correto" else "Incorreto"
+                    ),
+                    style = MaterialTheme.typography.titleSmall,
+                    color = if (correct) design.palette.accent else design.palette.textPrimary,
+                    modifier = Modifier.testTag("qa_track_quiz_${track.index}_${qi}_feedback")
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Text(
+                    text = trivia.doctrinalExplanation.get(currentLanguage),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = design.palette.textSecondary
+                )
+            }
+        }
+    }
+}
+
 @Composable
 private fun CatholicQuestionsPane(
     repository: CatholicDataRepository,
@@ -282,6 +389,152 @@ private fun CatholicQuestionsPane(
     val design = LocalAppDesign.current
     LazyColumn(Modifier.fillMaxSize()) {
         header()
+        item(key = "sources_entry") {
+            AppListGroup {
+                AppListRow(
+                    title = currentLanguage.pick(
+                        "Fuentes y método",
+                        "Sources & method",
+                        "Fontes e método"
+                    ),
+                    subtitle = currentLanguage.pick(
+                        "Catecismo, Didaché y documentos del Vaticano",
+                        "Catechism, Didache and Vatican documents",
+                        "Catecismo, Didaché e documentos do Vaticano"
+                    ),
+                    leadingIcon = Icons.Default.MenuBook,
+                    onClick = { onOpen("sources:0") },
+                    modifier = Modifier
+                        .heightIn(min = MinTouchTarget)
+                        .testTag("sources_entry")
+                )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+        // Guided learning tracks: three cards with a progress ring, one
+        // Continuar chip, and an end-of-track mini-quiz per completed track.
+        item(key = "learning_tracks") {
+            val context = LocalContext.current
+            val prefsStore = remember { UserPreferencesStore(context) }
+            val trackProgress by prefsStore.trackProgress.collectAsState(initial = emptyMap())
+            AppSectionHeader(
+                title = currentLanguage.pick(
+                    "Itinerarios guiados",
+                    "Guided learning tracks",
+                    "Itinerários guiados"
+                )
+            )
+            Text(
+                text = currentLanguage.pick(
+                    "Tres recorridos por las preguntas; tu avance se guarda solo.",
+                    "Three routes through the questions; your progress is saved automatically.",
+                    "Três percursos pelas perguntas; o seu progresso é guardado automaticamente."
+                ),
+                style = MaterialTheme.typography.bodyMedium,
+                color = design.palette.textSecondary,
+                modifier = Modifier.padding(horizontal = design.spacing.gutter)
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            LEARNING_TRACKS.forEach { track ->
+                val reached = trackProgress[track.index] ?: 0
+                val completed = track.completedCount(reached)
+                val fraction = if (track.total > 0) completed.toFloat() / track.total else 0f
+                val progressLabel = currentLanguage.pick(
+                    "$completed de ${track.total} preguntas",
+                    "$completed of ${track.total} questions",
+                    "$completed de ${track.total} perguntas"
+                )
+                AppCard(
+                    onClick = { onOpen("qa:${track.startQuestion - 1}") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .heightIn(min = MinTouchTarget)
+                        .testTag("qa_track_${track.index}")
+                ) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(modifier = Modifier.weight(1f)) {
+                            Text(
+                                text = learningTrackTitle(track, currentLanguage),
+                                style = MaterialTheme.typography.titleMedium,
+                                color = design.palette.textPrimary
+                            )
+                            Text(
+                                text = currentLanguage.pick(
+                                    "Preguntas ${track.startQuestion}–${track.endQuestion}",
+                                    "Questions ${track.startQuestion}–${track.endQuestion}",
+                                    "Perguntas ${track.startQuestion}–${track.endQuestion}"
+                                ),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = design.palette.textSecondary
+                            )
+                            Text(
+                                text = progressLabel,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = design.palette.textSecondary
+                            )
+                        }
+                        Spacer(Modifier.width(design.spacing.cardGap))
+                        Box(contentAlignment = Alignment.Center) {
+                            CircularProgressIndicator(
+                                progress = { fraction },
+                                modifier = Modifier
+                                    .size(MinTouchTarget)
+                                    .semantics { stateDescription = progressLabel }
+                                    .testTag("qa_track_ring_${track.index}"),
+                                color = design.palette.accent,
+                                trackColor = design.palette.selectionTint
+                            )
+                            Text(
+                                text = "${(fraction * 100).toInt()}%",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = design.palette.textPrimary
+                            )
+                        }
+                    }
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
+            // One Continuar chip: jumps to the last reached question of the
+            // track with the highest reached question number.
+            val continueTarget = trackProgress.entries
+                .mapNotNull { (trackIndex, reached) ->
+                    val track = LEARNING_TRACKS.firstOrNull { it.index == trackIndex } ?: return@mapNotNull null
+                    if (reached >= track.startQuestion) track to reached else null
+                }
+                .maxByOrNull { it.second }
+            if (continueTarget != null) {
+                AppChip(
+                    label = currentLanguage.pick("Continuar", "Continue", "Continuar"),
+                    selected = true,
+                    onClick = { onOpen("qa:${continueTarget.second - 1}") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .heightIn(min = MinTouchTarget)
+                        .testTag("qa_track_continue")
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
+            // End-of-track mini-quiz cards for completed tracks.
+            LEARNING_TRACKS.forEach { track ->
+                val reached = trackProgress[track.index] ?: 0
+                if (track.completedCount(reached) >= track.total) {
+                    val quizQuestions = trackQuizQuestions(repository.triviaQuestions, track.index)
+                    if (quizQuestions.isNotEmpty()) {
+                        TrackMiniQuiz(
+                            track = track,
+                            questions = quizQuestions,
+                            currentLanguage = currentLanguage
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                    }
+                }
+            }
+        }
         if (repository.catholicQuestions.isNotEmpty()) {
             item(key = "catholic_questions") {
                 AppSectionHeader(
@@ -576,7 +829,8 @@ private fun DoctrineEntryPage(
     onBack: () -> Unit,
     onOpen: (String) -> Unit = {},
     onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit = { _, _, _ -> },
-    onOpenCatechism: (paragraph: Int) -> Unit = {}
+    onOpenCatechism: (paragraph: Int) -> Unit = {},
+    onOpenPrayer: (prayerId: String) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -586,6 +840,18 @@ private fun DoctrineEntryPage(
     // A new entry is a new page: start at its top (matters when Prev/Next
     // moves between Didache chapters without leaving the page).
     LaunchedEffect(key) { listState.scrollToItem(0) }
+    // Guided tracks: opening (or stepping to) a question raises its track's
+    // persisted highest-reached number. Hoisted above the LazyColumn so the
+    // remember/LaunchedEffect sit in a proper composable context.
+    val trackPrefsContext = LocalContext.current
+    val trackPrefsStore = remember { UserPreferencesStore(trackPrefsContext) }
+    LaunchedEffect(key) {
+        if (kind == "qa") {
+            repository.catholicQuestions.getOrNull(index)?.let {
+                trackPrefsStore.recordTrackProgress(it.number)
+            }
+        }
+    }
 
     LazyColumn(state = listState, modifier = Modifier.fillMaxSize().testTag("doctrine_entry_page")) {
         item {
@@ -833,7 +1099,8 @@ private fun DoctrineEntryPage(
                             currentLanguage = currentLanguage,
                             chapterIndex = chapterIndex,
                             includeIntro = chapterIndex == 0,
-                            introText = repository.didacheIntro.get(currentLanguage)
+                            introText = repository.didacheIntro.get(currentLanguage),
+                            onOpenPrayer = onOpenPrayer
                         )
                     }
                     item {
@@ -861,6 +1128,96 @@ private fun DoctrineEntryPage(
                                     .weight(1f)
                                     .heightIn(min = MinTouchTarget)
                                     .testTag("didache_next_button")
+                            )
+                        }
+                    }
+                }
+            }
+
+            "sources" -> {
+                item {
+                    AppScreenTitle(
+                        title = currentLanguage.pick(
+                            "Fuentes y método",
+                            "Sources & method",
+                            "Fontes e método"
+                        ),
+                        subtitle = currentLanguage.pick(
+                            "De dónde sale cada respuesta y cómo leer su señal",
+                            "Where each answer comes from and how to read its signal",
+                            "De onde vem cada resposta e como ler o seu sinal"
+                        )
+                    )
+                }
+                item {
+                    Box(Modifier.testTag("sources_page")) {
+                        GutterCard {
+                            Note(
+                                label = currentLanguage.pick(
+                                    "Catecismo — texto completo",
+                                    "Catechism — full text",
+                                    "Catecismo — texto completo"
+                                ),
+                                body = currentLanguage.pick(
+                                    "Catechism of the Catholic Church (CCC), texto completo en vatican.va. Las referencias del tipo «Catecismo, 309-314» enlazan a los párrafos citados en la app.",
+                                    "Catechism of the Catholic Church (CCC), full text at vatican.va. References such as \"Catechism, 309-314\" open the cited paragraphs in the app.",
+                                    "Catecismo da Igreja Católica (CCC), texto completo em vatican.va. As referências do tipo «Catecismo, 309-314» abrem os parágrafos citados na app."
+                                ),
+                                labelColor = design.palette.accent
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            Note(
+                                label = currentLanguage.pick(
+                                    "Didaché — clerus.org",
+                                    "Didache — clerus.org",
+                                    "Didaché — clerus.org"
+                                ),
+                                body = currentLanguage.pick(
+                                    "Texto de la Didaché según la fuente de clerus.org, reproducido en la sección de Doctrina. Se conserva la traducción y el orden de capítulos de esa fuente.",
+                                    "Didache text from the clerus.org source, reproduced in the Doctrine section. The translation and chapter order of that source are kept.",
+                                    "Texto da Didaché segundo a fonte clerus.org, reproduzido na secção de Doutrina. Mantêm-se a tradução e a ordem dos capítulos dessa fonte."
+                                ),
+                                labelColor = design.palette.accent
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            Note(
+                                label = currentLanguage.pick(
+                                    "Documentos del Vaticano / Vaticano",
+                                    "Vatican documents",
+                                    "Documentos do Vaticano"
+                                ),
+                                body = currentLanguage.pick(
+                                    "• Mater Populi fidelis (2025)\n• Fiducia supplicans (2023)\n• Humanae vitae\n• Dignitas infinita / Dignitas personae — sobre la dignidad humana",
+                                    "• Mater Populi fidelis (2025)\n• Fiducia supplicans (2023)\n• Humanae vitae\n• Dignitas infinita / Dignitas personae — on human dignity",
+                                    "• Mater Populi fidelis (2025)\n• Fiducia supplicans (2023)\n• Humanae vitae\n• Dignitas infinita / Dignitas personae — sobre a dignidade humana"
+                                ),
+                                labelColor = design.palette.accent
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            Note(
+                                label = currentLanguage.pick(
+                                    "Niveles de fundamento (señal automática)",
+                                    "Foundation levels (automatic signal)",
+                                    "Níveis de fundamento (sinal automático)"
+                                ),
+                                body = listOf('A', 'B', 'C', 'D').joinToString("\n") { level ->
+                                    "$level · ${foundationLevelLabel(level, currentLanguage)}: ${foundationLevelExplanation(level, currentLanguage)}"
+                                },
+                                labelColor = design.palette.accent
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            Note(
+                                label = currentLanguage.pick(
+                                    "Uso honesto",
+                                    "Honest use",
+                                    "Uso honesto"
+                                ),
+                                body = currentLanguage.pick(
+                                    "La señal de nivel es una heurística automática sobre el texto del Fundamento y la Aclaración: puede no detectar citas en latín, abreviaturas no reconocidas o referencias sin formato «Libro capítulo,versículo». No sustituye la lectura de la fuente original ni la orientación de un sacerdote o catequista.",
+                                    "The level signal is an automatic heuristic over the Foundation and Clarification text: it may miss Latin citations, unrecognized abbreviations, or references not in \"Book chapter,verse\" format. It does not replace reading the original source or guidance from a priest or catechist.",
+                                    "O sinal de nível é uma heurística automática sobre o texto do Fundamento e do Esclarecimento: pode não detetar citações em latim, abreviaturas não reconhecidas ou referências fora do formato «Livro capítulo,versículo». Não substitui a leitura da fonte original nem a orientação de um sacerdote ou catequista."
+                                ),
+                                labelColor = design.palette.textSecondary
                             )
                         }
                     }
@@ -904,7 +1261,8 @@ private fun DoctrineEntryPage(
                             questionIndex = questionIndex,
                             repository = repository,
                             onOpenBible = onOpenBible,
-                            onOpenCatechism = onOpenCatechism
+                            onOpenCatechism = onOpenCatechism,
+                            onOpenPrayer = onOpenPrayer
                         )
                     }
                     item {
@@ -1093,6 +1451,21 @@ private fun DoctrineEntryPage(
 private fun didacheParagraphs(text: String): List<String> =
     text.split(Regex("\\n\\s*\\n")).map { it.trim() }.filter { it.isNotEmpty() }
 
+/** Shares plain text through the system chooser; a missing handler is a no-op. */
+private fun sharePlainText(context: Context, text: String) {
+    runCatching {
+        context.startActivity(
+            Intent.createChooser(
+                Intent(Intent.ACTION_SEND).apply {
+                    type = "text/plain"
+                    putExtra(Intent.EXTRA_TEXT, text)
+                },
+                null
+            )
+        )
+    }
+}
+
 /**
  * One religious order or Church office as a reading card: description, then
  * the charism where there is one, with a Listen/Stop read-aloud button.
@@ -1184,7 +1557,8 @@ private fun DidacheReaderCard(
     currentLanguage: AppLanguage,
     chapterIndex: Int,
     includeIntro: Boolean,
-    introText: String
+    introText: String,
+    onOpenPrayer: (prayerId: String) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -1205,6 +1579,13 @@ private fun DidacheReaderCard(
         append("\n\n")
         append(bodyText)
     }
+    // Shared text is the chapter itself (heading + body), not the read-aloud
+    // script, so the intro is not duplicated into the shared message.
+    val shareText = buildString {
+        append(chapter.heading.get(currentLanguage))
+        append("\n\n")
+        append(bodyText)
+    }
 
     GutterCard {
         didacheParagraphs(bodyText).forEachIndexed { i, paragraph ->
@@ -1217,6 +1598,17 @@ private fun DidacheReaderCard(
         }
         Spacer(Modifier.height(design.spacing.cardGap))
         AppDivider()
+        Spacer(Modifier.height(design.spacing.cardGap))
+        // Reading closes the loop: the chapter's related prayer opens in the
+        // Prayers tab. Primary button, 48dp, above Listen/Share.
+        AppPrimaryButton(
+            label = currentLanguage.pick("Rezar ahora", "Pray now", "Rezar agora"),
+            onClick = { onOpenPrayer(didacheRelatedPrayerId(chapter.number)) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .testTag("pray_now")
+        )
         Spacer(Modifier.height(design.spacing.cardGap))
         // While the voice is running the same 48dp button offers Stop, so
         // recitation can be ended without leaving the page.
@@ -1237,6 +1629,16 @@ private fun DidacheReaderCard(
                 .heightIn(min = MinTouchTarget)
                 .testTag("didache_listen_button")
         )
+        Spacer(Modifier.height(design.spacing.cardGap))
+        AppSecondaryButton(
+            label = currentLanguage.pick("Compartir", "Share", "Partilhar"),
+            onClick = { sharePlainText(context, shareText) },
+            leadingIcon = Icons.Default.Share,
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .testTag("didache_share")
+        )
     }
 }
 
@@ -1254,7 +1656,8 @@ private fun CatholicQuestionReaderCard(
     questionIndex: Int,
     repository: CatholicDataRepository? = null,
     onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit = { _, _, _ -> },
-    onOpenCatechism: (paragraph: Int) -> Unit = {}
+    onOpenCatechism: (paragraph: Int) -> Unit = {},
+    onOpenPrayer: (prayerId: String) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
@@ -1277,6 +1680,16 @@ private fun CatholicQuestionReaderCard(
     var expandedRef by remember(question.number, foundationText, currentLanguage) {
         mutableStateOf<FoundationRef?>(null)
     }
+    // Parsed once here so the foundation-level badge and the reference rows
+    // below read the same refs — the badge never disagrees with what is
+    // actually linked.
+    val foundationRefs = remember(foundationText, currentLanguage, repository?.catholicBooks) {
+        repository?.let { parseFoundation(foundationText, currentLanguage, it.catholicBooks) }
+            ?: emptyList()
+    }
+    val foundationLevel = remember(foundationRefs, clarificationText) {
+        foundationLevelFor(foundationRefs, clarificationText)
+    }
 
     val speakText = buildString {
         append(question.question.get(currentLanguage))
@@ -1295,6 +1708,17 @@ private fun CatholicQuestionReaderCard(
             append(clarificationLabel)
             append(": ")
             append(clarificationText)
+        }
+    }
+    // Shared text is question + answer + foundation (the clarification is left
+    // for the in-app reader, keeping the shared message to the core teaching).
+    val shareText = buildString {
+        append(question.question.get(currentLanguage))
+        append("\n\n")
+        append(answerText)
+        if (foundationText.isNotBlank()) {
+            append("\n\n")
+            append(foundationText)
         }
     }
 
@@ -1327,9 +1751,7 @@ private fun CatholicQuestionReaderCard(
             // Deep links as their own reference group below the panel (not
             // chips over the text): one tappable row per Bible/CCC passage.
             if (repository != null) {
-                val refs = remember(foundationText, currentLanguage) {
-                    parseFoundation(foundationText, currentLanguage, repository.catholicBooks)
-                }
+                val refs = foundationRefs
                 if (refs.isNotEmpty()) {
                     Spacer(Modifier.height(design.spacing.cardGap))
                     Text(
@@ -1497,6 +1919,9 @@ private fun CatholicQuestionReaderCard(
         }
         // Aclaración: the nuance, smaller type on the neutral selectionTint
         // panel with a secondary label, so it sits apart from the answer.
+        // The foundation-level badge rides in this panel's header area: when
+        // there is no clarification text the badge still shows on its own, in
+        // the same place, so the signal is never silently absent.
         if (clarificationText.isNotBlank()) {
             Spacer(Modifier.height(design.spacing.cardGap))
             Box(
@@ -1505,16 +1930,34 @@ private fun CatholicQuestionReaderCard(
                     .background(design.palette.selectionTint, design.shapes.card)
                     .padding(design.spacing.cardPadding)
             ) {
-                Note(
-                    label = clarificationLabel,
-                    body = clarificationText,
-                    labelColor = design.palette.textSecondary,
-                    bodyStyle = MaterialTheme.typography.bodyMedium
-                )
+                Column(Modifier.fillMaxWidth()) {
+                    FoundationLevelBadge(level = foundationLevel, currentLanguage = currentLanguage)
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Note(
+                        label = clarificationLabel,
+                        body = clarificationText,
+                        labelColor = design.palette.textSecondary,
+                        bodyStyle = MaterialTheme.typography.bodyMedium
+                    )
+                }
             }
+        } else {
+            Spacer(Modifier.height(design.spacing.cardGap))
+            FoundationLevelBadge(level = foundationLevel, currentLanguage = currentLanguage)
         }
         Spacer(Modifier.height(design.spacing.cardGap))
         AppDivider()
+        Spacer(Modifier.height(design.spacing.cardGap))
+        // Reading closes the loop: the question's related prayer opens in the
+        // Prayers tab. Primary button, 48dp, above Listen/Share.
+        AppPrimaryButton(
+            label = currentLanguage.pick("Rezar ahora", "Pray now", "Rezar agora"),
+            onClick = { onOpenPrayer(qaRelatedPrayerId(question.number)) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .testTag("pray_now")
+        )
         Spacer(Modifier.height(design.spacing.cardGap))
         // While the voice is running the same 48dp button offers Stop, so
         // recitation can be ended without leaving the page.
@@ -1535,7 +1978,52 @@ private fun CatholicQuestionReaderCard(
                 .heightIn(min = MinTouchTarget)
                 .testTag("catholic_qa_listen_button")
         )
+        Spacer(Modifier.height(design.spacing.cardGap))
+        AppSecondaryButton(
+            label = currentLanguage.pick("Compartir", "Share", "Partilhar"),
+            onClick = { sharePlainText(context, shareText) },
+            leadingIcon = Icons.Default.Share,
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .testTag("catholic_qa_share")
+        )
     }
+}
+
+/**
+ * The `VaticanPrayer` id related to a 101-Questions entry, by question
+ * number (the ten-per-section data order is stable, so this never depends on
+ * matching displayed text in any language).
+ */
+private fun qaRelatedPrayerId(questionNumber: Int): String = when (questionNumber) {
+    in 1..10 -> "act_of_hope"
+    in 11..20 -> "come_holy_spirit"
+    in 21..30 -> "sign_of_the_cross"
+    in 31..40 -> "memorare"
+    in 41..50 -> "creed"
+    in 51..60 -> "act_of_contrition"
+    in 61..70 -> "eternal_rest"
+    in 71..80 -> "st_joseph"
+    in 81..90 -> "peace_prayer"
+    in 91..100 -> "suscipe_prayer"
+    else -> "our_father"
+}
+
+/**
+ * The `VaticanPrayer` id related to a Didache chapter, by chapter number.
+ * Chapter 8 (fasting and prayer) carries the Lord's Prayer in the Didache
+ * itself, so it opens the Our Father.
+ */
+private fun didacheRelatedPrayerId(chapterNumber: Int): String = when (chapterNumber) {
+    7 -> "sign_of_the_cross"
+    8 -> "our_father"
+    9, 10 -> "adoro_te_devote"
+    11 -> "come_holy_spirit"
+    12, 13 -> "act_of_charity"
+    14 -> "te_deum"
+    15, 16 -> "creed"
+    else -> "act_of_contrition"
 }
 
 @Composable
@@ -2246,6 +2734,87 @@ private fun Note(
             text = body,
             style = bodyStyle ?: MaterialTheme.typography.bodyLarge,
             color = design.palette.textPrimary
+        )
+    }
+}
+
+/**
+ * Foundation level, in the order the reader sees it — an honest heuristic,
+ * computed from the refs [parseFoundation] actually found in the foundation
+ * text plus a plain word check on the clarification:
+ * A) only BibleRef, no CatechismRef; B) any CatechismRef (its loci are the
+ * strong CCC paragraphs cited); C) the clarification mentions Tradition in
+ * ES/EN/PT, accent-folded; D) everything else (development/discipline).
+ * A blank or unparseable foundation therefore lands on D, never on A.
+ */
+private fun foundationLevelFor(refs: List<FoundationRef>, clarificationText: String): Char {
+    val hasBible = refs.any { it is FoundationRef.BibleRef }
+    val hasCcc = refs.any { it is FoundationRef.CatechismRef }
+    if (hasBible && !hasCcc) return 'A'
+    if (hasCcc) return 'B'
+    val folded = clarificationText.lowercase()
+        .replace("á", "a").replace("é", "e").replace("í", "i")
+        .replace("ó", "o").replace("ú", "u").replace("ç", "c").replace("ã", "a")
+    if ("tradicion" in folded || "tradicao" in folded) return 'C'
+    return 'D'
+}
+
+private fun foundationLevelLabel(level: Char, language: AppLanguage): String = when (level) {
+    'A' -> language.pick("Bíblico explícito", "Explicitly biblical", "Bíblico explícito")
+    'B' -> language.pick("Interpretativo", "Interpretive", "Interpretativo")
+    'C' -> language.pick("Tradicional", "Traditional", "Tradicional")
+    else -> language.pick("Desarrollo/disciplina", "Development/discipline", "Desenvolvimento/disciplina")
+}
+
+private fun foundationLevelExplanation(level: Char, language: AppLanguage): String = when (level) {
+    'A' -> language.pick(
+        "Cita solo referencias bíblicas; señal automática, puede no capturar latín u otras citas.",
+        "Cites only Bible references; automatic signal, may miss Latin or other citations.",
+        "Cita apenas referências bíblicas; sinal automático, pode não capturar latim ou outras citações."
+    )
+    'B' -> language.pick(
+        "Cita el Catecismo (CCC); señal automática, no sustituye leer los párrafos citados.",
+        "Cites the Catechism (CCC); automatic signal, does not replace reading the cited paragraphs.",
+        "Cita o Catecismo (CCC); sinal automático, não substitui ler os parágrafos citados."
+    )
+    'C' -> language.pick(
+        "La aclaración menciona la Tradición; señal automática y orientativa.",
+        "The clarification mentions Tradition; automatic, indicative signal.",
+        "O esclarecimento menciona a Tradição; sinal automático e indicativo."
+    )
+    else -> language.pick(
+        "Sin cita bíblica o del CCC detectada; señal automática, no clasifica todo el contenido.",
+        "No Bible or CCC citation detected; automatic signal, does not classify all content.",
+        "Nenhuma citação bíblica ou do CCC detetada; sinal automático, não classifica todo o conteúdo."
+    )
+}
+
+/** The level badge: code + localized label on one line, one-line explanation under it. */
+@Composable
+private fun FoundationLevelBadge(level: Char, currentLanguage: AppLanguage) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .testTag("foundation_level_badge")
+    ) {
+        Text(
+            text = eyebrow(
+                currentLanguage.pick(
+                    "Fundamento $level · ${foundationLevelLabel(level, currentLanguage)}",
+                    "Foundation $level · ${foundationLevelLabel(level, currentLanguage)}",
+                    "Fundamento $level · ${foundationLevelLabel(level, currentLanguage)}"
+                )
+            ),
+            style = styles.sectionEyebrow,
+            color = design.palette.gold
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 4))
+        Text(
+            text = foundationLevelExplanation(level, currentLanguage),
+            style = MaterialTheme.typography.bodyMedium,
+            color = design.palette.textSecondary
         )
     }
 }

@@ -49,6 +49,7 @@ import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Share
 import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.outlined.Checklist
 import com.example.ui.design.DevotionalGlyphs
@@ -82,6 +83,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.example.data.models.ApologeticsQuestion
 import com.example.data.models.AppLanguage
 import com.example.data.models.DailyMassReading
 import com.example.data.models.LiturgicalCalendarDay
@@ -97,6 +99,7 @@ import com.example.ui.design.AppDivider
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppPrimaryButton
+import com.example.ui.design.AppSecondaryButton
 import com.example.ui.components.TextFormat
 import com.example.ui.components.IllustratedScreenHeader
 import com.example.ui.components.SacredSubject
@@ -106,6 +109,7 @@ import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
@@ -135,6 +139,14 @@ fun HomeScreen(
     onNavigateToMore: () -> Unit = {},
     onOpenAppearance: () -> Unit = {},
     onOpenFontPicker: () -> Unit = {},
+    // Pregunta del día data + entry point. MainApp wiring (follow-up, out of
+    // scope for this change): pass repository.catholicQuestions and
+    // onOpenQuestions = { go(AppDestination.QUESTIONS) } so "Leer respuesta"
+    // opens the Questions tab (DoctrineAndHistoryScreen, initialTopTab = 3).
+    // Defaults keep previews/screenshot callers compiling; the card renders
+    // only when the list is non-empty.
+    catholicQuestions: List<ApologeticsQuestion> = emptyList(),
+    onOpenQuestions: () -> Unit = {},
     // Nullable so previews/screenshot callers that pass no database keep
     // compiling; the fidelity card is the only thing gated on it.
     dao: SanctaFidesDao? = null,
@@ -187,6 +199,35 @@ fun HomeScreen(
             val end = Regex("""[.!?](?=\s|$)""").find(text)?.range?.last
             if (end != null) text.take(end + 1) else text
         }
+    }
+
+    // Pregunta del día: deterministic by date, no stored state — the index is
+    // dayOfYear % question count (101 with the full bundled list), so every
+    // reader sees the same question on the same day.
+    val dailyQuestion = remember(catholicQuestions) {
+        if (catholicQuestions.isEmpty()) null
+        else catholicQuestions[Calendar.getInstance().get(Calendar.DAY_OF_YEAR) % catholicQuestions.size]
+    }
+    val dailyAnswerFirstLine = remember(dailyQuestion, currentLanguage) {
+        dailyQuestion?.answer?.get(currentLanguage)?.let { firstLineOf(it) }?.takeIf { it.isNotBlank() }
+    }
+    val shareDailyQuestion: () -> Unit = {
+        val q = dailyQuestion
+        if (q != null && dailyAnswerFirstLine != null) {
+            val text = "${q.question.get(currentLanguage)}\n\n$dailyAnswerFirstLine\n\nCatholic Hermes"
+            runCatching {
+                context.startActivity(
+                    Intent.createChooser(
+                        Intent(Intent.ACTION_SEND).apply {
+                            type = "text/plain"
+                            putExtra(Intent.EXTRA_TEXT, text)
+                        },
+                        null
+                    )
+                )
+            }
+        }
+        Unit
     }
 
     LazyColumn(
@@ -391,6 +432,61 @@ fun HomeScreen(
                     text = saintOfTheDay.iconicQuote.get(currentLanguage),
                     attribution = saintOfTheDay.name.get(currentLanguage)
                 )
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
+        // Pregunta del día: question + first line of its answer, a route to
+        // the full answer in the Questions tab, and a share action. Renders
+        // only when MainApp passes the question list (see onOpenQuestions).
+        if (dailyQuestion != null && dailyAnswerFirstLine != null) item {
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("home_daily_question")
+            ) {
+                CardHeading(
+                    label = strings("Pregunta del día", "Question of the day", "Pergunta do dia"),
+                    icon = Icons.Default.MenuBook
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = dailyQuestion.question.get(currentLanguage),
+                    style = styles.sectionTitle,
+                    color = palette.textPrimary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Text(
+                    text = dailyAnswerFirstLine,
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary,
+                    maxLines = 4,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    AppPrimaryButton(
+                        label = strings("Leer respuesta", "Read answer", "Ler resposta"),
+                        onClick = onOpenQuestions,
+                        modifier = Modifier
+                            .weight(1f)
+                            .heightIn(min = 48.dp)
+                            .testTag("home_daily_question_read")
+                    )
+                    AppSecondaryButton(
+                        label = strings("Compartir", "Share", "Partilhar"),
+                        onClick = shareDailyQuestion,
+                        leadingIcon = Icons.Default.Share,
+                        modifier = Modifier
+                            .weight(1f)
+                            .heightIn(min = 48.dp)
+                            .testTag("home_daily_question_share")
+                    )
+                }
             }
             Spacer(Modifier.height(design.spacing.cardGap))
         }
@@ -946,3 +1042,10 @@ private fun MarginalQuote(text: String, attribution: String? = null) {
 @ReadOnlyComposable
 private fun String.caps(): String =
     if (LocalAppDesign.current.decor.usesAllCapsLabels) uppercase() else this
+
+/** First line of a multi-paragraph answer: its first physical line, cut at the first sentence end. */
+private fun firstLineOf(text: String): String {
+    val line = text.trim().substringBefore('\n').trim()
+    val end = Regex("""[.!?](?=\s|$)""").find(line)?.range?.last
+    return if (end != null) line.take(end + 1) else line
+}
