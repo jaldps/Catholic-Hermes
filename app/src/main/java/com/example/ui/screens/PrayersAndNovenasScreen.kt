@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
@@ -37,6 +38,7 @@ import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.Composable
@@ -122,10 +124,10 @@ private val NovenaPlateHeight = 176.dp
  * and 20dp gaps at three title lines plus two patron lines); tighter
  * identities get the slack as air above the pinned progress rule.
  */
-private val NovenaCardHeight = 312.dp
+private val NovenaCardHeight = 288.dp
 
 /** Clipped plate across the top of a novena index card. */
-private val NovenaCardImageHeight = 72.dp
+private val NovenaCardImageHeight = 108.dp
 
 /** Minimum touch target for every control this screen owns (AAA). */
 private val MinTouchTarget = 48.dp
@@ -192,8 +194,10 @@ fun PrayersAndNovenasScreen(
     val startedOn = remember(persistedProgress) {
         persistedProgress.associate { it.novenaId to it.startDate }
     }
-    // Days only ever get added, so the union of the stored rows and this
-    // session's marks is the truth in both the persisted and fallback modes.
+    // The session's marks are the optimistic echo of a write until the
+    // database flow hands the row back when there is one. A toggle writes the
+    // whole set back, so the union converges on the toggled set once the
+    // flow lands.
     val daysPrayed = remember(persistedProgress, sessionDaysPrayed) {
         val stored = persistedProgress.associate { it.novenaId to decodeNovenaDays(it.currentDay) }
         (stored.keys + sessionDaysPrayed.keys).associateWith {
@@ -314,29 +318,41 @@ fun PrayersAndNovenasScreen(
                         onStop = { ttsManager.stop() },
                         onMarkDayPrayed = {
                             val day = activeNovenaDay
-                            val prayed = daysPrayed[novena.id].orEmpty() + day
+                            val currently = daysPrayed[novena.id].orEmpty()
+                            val wasPrayed = currently.contains(day)
+                            // Toggle: a prayed day unmarks (undo) instead of
+                            // the set only ever growing.
+                            val prayed = if (wasPrayed) currently - day else currently + day
                             sessionDaysPrayed = sessionDaysPrayed + (novena.id to prayed)
                             if (dao != null) {
                                 scope.launch {
-                                    // Read back rather than trust the flow: a mark
-                                    // must never drop a day another write just added.
                                     val existing = dao.getNovenaProgress(novena.id)
-                                    val days = prayed + decodeNovenaDays(existing?.currentDay ?: 0)
                                     val now = System.currentTimeMillis()
+                                    // Write the toggled set whole: re-unioning
+                                    // with the stored row would resurrect a day
+                                    // the user just undid.
                                     dao.saveNovenaProgress(
                                         NovenaProgressEntity(
                                             novenaId = novena.id,
-                                            currentDay = encodeNovenaDays(days),
+                                            currentDay = encodeNovenaDays(prayed),
                                             personalIntention = existing?.personalIntention
                                                 ?: personalIntention,
                                             startDate = existing?.startDate ?: now,
                                             lastUpdated = now,
-                                            isCompleted = isNovenaFinished(novena, days)
+                                            isCompleted = isNovenaFinished(novena, prayed)
                                         )
                                     )
                                 }
                             }
-                            if (activeNovenaDay < novena.days.size) activeNovenaDay++
+                            // Advance only on a fresh mark; undo stays on the day.
+                            if (!wasPrayed && activeNovenaDay < novena.days.size) activeNovenaDay++
+                        },
+                        onResetNovena = {
+                            sessionDaysPrayed = sessionDaysPrayed + (novena.id to emptySet())
+                            activeNovenaDay = 1
+                            if (dao != null) {
+                                scope.launch { dao.deleteNovenaProgress(novena.id) }
+                            }
                         },
                         onBack = { selectedNovena = null }
                     )
@@ -1275,7 +1291,12 @@ private fun NovenaIndexView(
         design.spacing.listItemGap
     }
 
-    LazyColumn(Modifier.fillMaxSize()) {
+    // Bottom padding clears the floating nav bar so the last row of cards
+    // is never clipped under it.
+    LazyColumn(
+        Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(bottom = 96.dp)
+    ) {
         header()
 
         item {
@@ -1568,6 +1589,7 @@ private fun NovenaDayView(
     onListen: (String) -> Unit,
     onStop: () -> Unit,
     onMarkDayPrayed: () -> Unit,
+    onResetNovena: () -> Unit = {},
     onBack: () -> Unit
 ) {
     val design = LocalAppDesign.current
@@ -1724,6 +1746,23 @@ private fun NovenaDayView(
                     color = design.palette.accent,
                     trackColor = design.palette.selectionTint
                 )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                TextButton(
+                    onClick = onResetNovena,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .heightIn(min = MinTouchTarget)
+                        .testTag("restart_novena_button")
+                ) {
+                    Text(
+                        text = currentLanguage.pick(
+                            "Reiniciar novena",
+                            "Restart novena",
+                            "Reiniciar novena"
+                        ),
+                        style = styles.buttonLabel
+                    )
+                }
             }
         }
 
@@ -1833,7 +1872,7 @@ private fun NovenaDayView(
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
                     AppPrimaryButton(
                         label = if (daysPrayed.contains(activeDay)) {
-                            currentLanguage.pick("Día rezado", "Day prayed", "Dia rezado")
+                            currentLanguage.pick("Deshacer día", "Undo day", "Desfazer dia")
                         } else {
                             currentLanguage.pick("Completar día", "Complete day", "Completar dia")
                         },

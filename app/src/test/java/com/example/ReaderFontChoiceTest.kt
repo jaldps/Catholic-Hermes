@@ -17,7 +17,7 @@ class ReaderFontChoiceTest {
                 assertEquals("${identity.id}/${global.id}", base.fontFamily,
                     ReaderFontChoice.FOLLOW_APP.family(base.fontFamily, identity))
                 assertEquals(AppFonts.EbGaramond, ReaderFontChoice.SERIF.family(base.fontFamily, identity))
-                assertEquals(if (identity == DesignLanguage.MATERIAL) AppFonts.Roboto else AppFonts.Inter,
+                assertEquals(if (identity == DesignLanguage.APPLE) AppFonts.Roboto else AppFonts.Inter,
                     ReaderFontChoice.SANS.family(base.fontFamily, identity))
             }
         }

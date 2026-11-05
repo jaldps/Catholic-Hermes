@@ -138,6 +138,7 @@ fun DoctrineAndHistoryScreen(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
     initialTopTab: Int = 0,
+    showTabs: Boolean = false,
     modifier: Modifier = Modifier,
     onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit = { _, _, _ -> },
     onOpenCatechism: (paragraph: Int) -> Unit = {},
@@ -192,7 +193,7 @@ fun DoctrineAndHistoryScreen(
                 )
             }
         }
-        if (!directoryOnly) {
+        if (!directoryOnly && showTabs) {
             item(key = "doctrine_tabs") {
                 AppSegmentedTabs(
                     options = topTabs,

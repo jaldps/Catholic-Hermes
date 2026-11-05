@@ -110,7 +110,7 @@ class AppNavigationTest(private val identity: DesignLanguage) {
             compose.onNodeWithTag(tab).assertHasClickAction().performClick()
             compose.onNodeWithTag(screen).assertIsDisplayed()
             if (tab == "nav_bible") {
-                if (identity == DesignLanguage.MATERIAL) {
+                if (identity == DesignLanguage.TRANSPARENCIAS) {
                     compose.onNodeWithTag("screen_header_illustration", useUnmergedTree = true).assertIsDisplayed()
                 }
                 compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()

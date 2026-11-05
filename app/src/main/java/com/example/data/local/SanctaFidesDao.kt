@@ -33,6 +33,9 @@ interface SanctaFidesDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun saveNovenaProgress(progress: NovenaProgressEntity)
 
+    @Query("DELETE FROM novena_progress WHERE novenaId = :novenaId")
+    suspend fun deleteNovenaProgress(novenaId: String)
+
     // Memorized Verses
     @Query("SELECT * FROM memorized_verses")
     fun getAllMemorizedVerses(): Flow<List<MemorizedVerseEntity>>

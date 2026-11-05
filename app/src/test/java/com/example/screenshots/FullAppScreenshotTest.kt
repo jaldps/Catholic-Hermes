@@ -197,6 +197,6 @@ class FullAppScreenshotTest {
 
     @Test fun appleLight() = render(DesignLanguage.APPLE, false)
     @Test fun appleDark() = render(DesignLanguage.APPLE, true)
-    @Test fun materialLight() = render(DesignLanguage.MATERIAL, false)
-    @Test fun materialDark() = render(DesignLanguage.MATERIAL, true)
+    @Test fun materialLight() = render(DesignLanguage.TRANSPARENCIAS, false)
+    @Test fun materialDark() = render(DesignLanguage.TRANSPARENCIAS, true)
 }

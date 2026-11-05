@@ -220,16 +220,13 @@ fun HabitsAndVirtuesScreen(
     // Prayer reminders live here as a full-screen overlay; the Habits screen
     // itself is untouched while they are open.
     var showReminders by remember { mutableStateOf(false) }
-    if (showReminders) {
-        RemindersScreen(
-            repository = repository,
-            onBack = { showReminders = false }
-        )
-        return
-    }
 
-    Column(
-        modifier = modifier
+    // Reminders overlay as a Box/stack: the Habits Column stays composed and
+    // RemindersScreen draws over it when showReminders is true. No early
+    // return, so the composable hook order below stays stable.
+    Box(modifier = modifier.fillMaxSize()) {
+        Column(
+        modifier = Modifier
             .fillMaxSize()
             .testTag("habits_and_virtues_screen")
     ) {
@@ -499,6 +496,15 @@ fun HabitsAndVirtuesScreen(
 
                 item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
             }
+        }
+    }
+
+        if (showReminders) {
+            RemindersScreen(
+                repository = repository,
+                onBack = { showReminders = false },
+                modifier = Modifier.fillMaxSize()
+            )
         }
     }
 

@@ -85,6 +85,10 @@ enum class AppDestination(
     PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PARISH, "nav_parishes"),
     CHURCHES_NEWS("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias", AppIconSlot.NEWS, "nav_churches_news"),
     QUESTIONS("101 preguntas sobre la fe católica", "101 Questions on the Catholic Faith", "101 Perguntas sobre a fé católica", AppIconSlot.DOCTRINE, "nav_questions"),
+    STUDY_DOCTRINE("Doctrina", "Doctrine", "Doutrina", AppIconSlot.DOCTRINE, "nav_study_doctrine"),
+    STUDY_MARY_JESUS("María y Jesús", "Mary & Jesus", "Maria e Jesus", AppIconSlot.DOCTRINE, "nav_study_mary_jesus"),
+    STUDY_HISTORY("Historia", "History", "História", AppIconSlot.DOCTRINE, "nav_study_history"),
+    STUDY_ORDERS("Órdenes y oficios", "Orders & Offices", "Ordens e ofícios", AppIconSlot.DOCTRINE, "nav_study_orders"),
     SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
     MORE("Más", "More", "Mais", AppIconSlot.MORE, "nav_more");
 
@@ -408,6 +412,48 @@ fun MainApp(
                     AppDestination.DOCTRINE -> DoctrineAndHistoryScreen(
                         repository = repository,
                         currentLanguage = currentLanguage,
+                        initialTopTab = 0,
+                        showTabs = false,
+                        onOpenBible = onOpenBible,
+                        onOpenCatechism = onOpenCatechism,
+                        onOpenPrayer = onOpenPrayer
+                    )
+
+                    AppDestination.STUDY_DOCTRINE -> DoctrineAndHistoryScreen(
+                        repository = repository,
+                        currentLanguage = currentLanguage,
+                        initialTopTab = 0,
+                        showTabs = false,
+                        onOpenBible = onOpenBible,
+                        onOpenCatechism = onOpenCatechism,
+                        onOpenPrayer = onOpenPrayer
+                    )
+
+                    AppDestination.STUDY_MARY_JESUS -> DoctrineAndHistoryScreen(
+                        repository = repository,
+                        currentLanguage = currentLanguage,
+                        initialTopTab = 1,
+                        showTabs = false,
+                        onOpenBible = onOpenBible,
+                        onOpenCatechism = onOpenCatechism,
+                        onOpenPrayer = onOpenPrayer
+                    )
+
+                    AppDestination.STUDY_HISTORY -> DoctrineAndHistoryScreen(
+                        repository = repository,
+                        currentLanguage = currentLanguage,
+                        initialTopTab = 2,
+                        showTabs = false,
+                        onOpenBible = onOpenBible,
+                        onOpenCatechism = onOpenCatechism,
+                        onOpenPrayer = onOpenPrayer
+                    )
+
+                    AppDestination.STUDY_ORDERS -> DoctrineAndHistoryScreen(
+                        repository = repository,
+                        currentLanguage = currentLanguage,
+                        initialTopTab = 4,
+                        showTabs = false,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
                         onOpenPrayer = onOpenPrayer
@@ -423,6 +469,7 @@ fun MainApp(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         initialTopTab = 5,
+                        showTabs = false,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
                         onOpenPrayer = onOpenPrayer
@@ -432,6 +479,7 @@ fun MainApp(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         initialTopTab = 3,
+                        showTabs = false,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
                         onOpenPrayer = onOpenPrayer
@@ -549,8 +597,11 @@ private fun moreSections(
             pick("Estudio", "Study", "Estudo"),
             listOf(
                 entry(AppDestination.CATECHISM),
-                entry(AppDestination.DOCTRINE),
+                entry(AppDestination.STUDY_DOCTRINE),
+                entry(AppDestination.STUDY_MARY_JESUS),
+                entry(AppDestination.STUDY_HISTORY),
                 entry(AppDestination.QUESTIONS),
+                entry(AppDestination.STUDY_ORDERS),
                 entry(AppDestination.CHURCHES_NEWS)
             )
         ),

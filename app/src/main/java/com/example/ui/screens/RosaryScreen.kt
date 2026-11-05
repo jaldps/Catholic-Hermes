@@ -22,7 +22,6 @@ import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.unit.Density
-import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.runtime.LaunchedEffect
 import kotlinx.coroutines.launch
 import com.example.ui.theme.DesignLanguage
@@ -81,6 +80,7 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -96,7 +96,6 @@ import com.example.data.repository.LitanyOfLoreto
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
 import com.example.ui.components.MenuPickerRow
-import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
@@ -1045,20 +1044,41 @@ fun RosaryScreen(
                         horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
                         verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
                     ) {
+                        // Symmetry: every set is a button of the identity (design.shapes.button,
+                        // straighter and slightly rounded) at the same 48dp height, so the selected
+                        // set stands out by fill alone, not by a different height or radius.
                         RosaryMysteryType.entries.forEach { mType ->
-                            AppChip(
-                                label = mType.displayName.get(lang) +
-                                    if (mType == todayMystery.type) " · $todayLabel" else "",
-                                selected = mType == selectedMysteryType,
-                                onClick = {
-                                    if (mType != selectedMysteryType) {
-                                        ttsManager.stop()
-                                        selectedMysteryType = mType
-                                        rosaryStepIndex = 0
-                                    }
-                                },
-                                modifier = Modifier.heightIn(min = 48.dp)
-                            )
+                            val label = mType.displayName.get(lang) +
+                                    if (mType == todayMystery.type) " · $todayLabel" else ""
+                            val isSelected = mType == selectedMysteryType
+                            val buttonModifier = Modifier
+                                .height(48.dp)
+                                .clip(design.shapes.button)
+                            if (isSelected) {
+                                AppPrimaryButton(
+                                    label = label,
+                                    onClick = {
+                                        if (mType != selectedMysteryType) {
+                                            ttsManager.stop()
+                                            selectedMysteryType = mType
+                                            rosaryStepIndex = 0
+                                        }
+                                    },
+                                    modifier = buttonModifier
+                                )
+                            } else {
+                                AppSecondaryButton(
+                                    label = label,
+                                    onClick = {
+                                        if (mType != selectedMysteryType) {
+                                            ttsManager.stop()
+                                            selectedMysteryType = mType
+                                            rosaryStepIndex = 0
+                                        }
+                                    },
+                                    modifier = buttonModifier
+                                )
+                            }
                         }
                     }
                 }
@@ -1338,7 +1358,7 @@ private fun GuideControlsCard(
                 .align(Alignment.CenterHorizontally)
                 .widthIn(max = when (design.language) {
                     DesignLanguage.APPLE -> 224.dp
-                    DesignLanguage.MATERIAL -> 232.dp
+                    DesignLanguage.TRANSPARENCIAS -> 232.dp
                 })
                 .testTag(railTag)
                 .semantics {
@@ -1608,7 +1628,7 @@ private fun BeadRail(
                         )
                     }
 
-                    DesignLanguage.MATERIAL -> {
+                    DesignLanguage.TRANSPARENCIAS -> {
                         val w = 4.dp.toPx()
                         val amp = 2.2.dp.toPx()
                         val waves = 36
@@ -1983,24 +2003,6 @@ private fun RecitationControls(
     audioTag: String
 ) {
     val haptics = LocalHapticFeedback.current
-    val styles = LocalAppTextStyles.current
-    val textMeasurer = rememberTextMeasurer()
-    val density = LocalDensity.current
-    val labelStyle = when (LocalAppDesign.current.language) {
-        DesignLanguage.MATERIAL -> MaterialTheme.typography.labelLarge
-        else -> styles.buttonLabel
-    }
-    // All three labels are measured, not just the step buttons: the
-    // narration control is a labelled button now, and its ES/PT label
-    // ("Rezar en voz alta") is the longest of the three. The buffer is
-    // the three buttons' side insets, the two leading icons and the
-    // two row gaps.
-    val minimumRowWidth = with(density) {
-        (textMeasurer.measure(previousLabel.uppercase(), labelStyle).size.width +
-            textMeasurer.measure(nextLabel.uppercase(), labelStyle).size.width +
-            textMeasurer.measure(audioLabel.uppercase(), labelStyle).size.width).toDp() + 216.dp
-    }
-
     val previous: @Composable (Modifier) -> Unit = { modifier ->
         AppSecondaryButton(
             label = previousLabel,
@@ -2010,7 +2012,7 @@ private fun RecitationControls(
                 onPrevious()
             },
             leadingIcon = Icons.AutoMirrored.Filled.ArrowBack,
-            modifier = modifier.heightIn(min = 48.dp).testTag(previousTag)
+            modifier = modifier.height(48.dp).testTag(previousTag)
         )
     }
     val next: @Composable (Modifier) -> Unit = { modifier ->
@@ -2021,7 +2023,7 @@ private fun RecitationControls(
                 haptics.performHapticFeedback(HapticFeedbackType.LongPress)
                 onNext()
             },
-            modifier = modifier.heightIn(min = 48.dp).testTag(nextTag)
+            modifier = modifier.height(48.dp).testTag(nextTag)
         )
     }
     val narration: @Composable (Modifier) -> Unit = { modifier ->
@@ -2032,28 +2034,25 @@ private fun RecitationControls(
                 onToggleAudio()
             },
             leadingIcon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
-            modifier = modifier.heightIn(min = 48.dp).testTag(audioTag)
+            modifier = modifier.height(48.dp).testTag(audioTag)
         )
     }
-    BoxWithConstraints(Modifier.fillMaxWidth()) {
-        if (maxWidth < minimumRowWidth) {
-            // Preserve complete translated labels at large type sizes: each
-            // control gets its own full-width row, Next first. Sharing a row
-            // with the long narration label squeezed Back's label onto two
-            // lines at 320dp and 130% text.
-            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                next(Modifier.fillMaxWidth())
-                previous(Modifier.fillMaxWidth())
-                narration(Modifier.fillMaxWidth())
-            }
-        } else {
-            Row(verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                previous(Modifier.weight(1f))
-                next(Modifier.weight(1.15f))
-                narration(Modifier.weight(1f))
-            }
+    // Anterior and Siguiente share one row, equal weight and height, so the
+    // step is read as one back/forward choice; the spoken recitation stays a
+    // secondary action on its own full-width row below them.
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            previous(Modifier.weight(1f))
+            next(Modifier.weight(1f))
         }
+        narration(Modifier.fillMaxWidth())
     }
 }
 

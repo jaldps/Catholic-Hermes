@@ -77,7 +77,7 @@ private fun buildColorScheme(
     val base = if (isDark) darkColorScheme() else lightColorScheme()
 
     return when (identity) {
-        DesignLanguage.APPLE -> base.copy(
+        DesignLanguage.APPLE, DesignLanguage.TRANSPARENCIAS -> base.copy(
             primary = accent,
             onPrimary = onAccent,
             primaryContainer = palette.accentMuted,
@@ -104,75 +104,6 @@ private fun buildColorScheme(
             scrim = palette.scrim
         )
 
-        DesignLanguage.MATERIAL -> {
-            // Tonal containers struck from the accent itself (M3 seeded tonal
-            // palette), not the palette's fixed tints. In light, accent toned
-            // toward white (≈ tone 90/87); in dark, toward black (≈ tone 30/25).
-            // onPrimaryContainer is the accent's own tone-10/90 so legible text
-            // on the container stays in-family. onSurfaceVariant/outline* are
-            // seeded neutral tones, and outlineVariant is deliberately paler
-            // than outline (M3 outlineVariant is the hairline used for dividers
-            // and chip borders).
-            val container = accent.tonalToward(isDark, containerAmount = 0.76f)
-            val onContainer = accent.tonalToward(isDark, onAmount = 0.78f)
-            val secondaryContainer = accent.tonalToward(isDark, containerAmount = 0.84f)
-            val onSecondaryContainer = accent.tonalToward(isDark, onAmount = 0.82f)
-            val goldContainer = palette.gold.tonalToward(isDark, containerAmount = 0.80f)
-            val onGoldContainer = palette.gold.tonalToward(isDark, onAmount = 0.78f)
-            // Deep end of the surfaceContainer ladder (see below).
-            val ladderEnd = lerp(palette.raised, palette.hairline, 0.5f)
-            base.copy(
-                primary = accent,
-                onPrimary = onAccent,
-                primaryContainer = container,
-                onPrimaryContainer = onContainer,
-                secondary = palette.accent,
-                onSecondary = if (palette.accent.contrastsBetterWithWhite()) Color.White else Color.Black,
-                secondaryContainer = secondaryContainer,
-                onSecondaryContainer = onSecondaryContainer,
-                tertiary = palette.gold,
-                onTertiary = if (palette.gold.contrastsBetterWithWhite()) Color.White else Color.Black,
-                tertiaryContainer = goldContainer,
-                onTertiaryContainer = onGoldContainer,
-                error = base.error,
-                onError = base.onError,
-                errorContainer = base.errorContainer,
-                onErrorContainer = base.onErrorContainer,
-                background = palette.canvas,
-                onBackground = palette.textPrimary,
-                surface = palette.canvas,
-                onSurface = palette.textPrimary,
-                surfaceVariant = palette.raised,
-                onSurfaceVariant = palette.textSecondary,
-                // Surface tint carries the accent under elevated surfaces.
-                surfaceTint = accent,
-                surfaceBright = palette.groupedSurface,
-                surfaceDim = if (isDark) palette.canvas else Color(0xFFDADFD9),
-                // Five distinct steps, stepped from the canvas itself — not
-                // from groupedSurface. The old groupedSurface→raised ladder
-                // sat almost on top of the canvas in light mode (the middle
-                // step was ~0.01 of a channel off surface), so list cards —
-                // which read surfaceContainer — were invisible on it. The deep
-                // end is halfway from raised toward hairline, the palette's
-                // own mid tone, so the full ladder spans a visible tone range
-                // in both modes without leaving the palette family: in light
-                // the steps darken toward it, in dark they lighten toward it,
-                // and every step (including the middle, surfaceContainer)
-                // clears the canvas by a visible margin. The tonal
-                // containers above stay accent-derived and untouched.
-                surfaceContainerLowest = lerp(palette.canvas, ladderEnd, 0.08f),
-                surfaceContainerLow = lerp(palette.canvas, ladderEnd, 0.30f),
-                surfaceContainer = lerp(palette.canvas, ladderEnd, 0.52f),
-                surfaceContainerHigh = lerp(palette.canvas, ladderEnd, 0.76f),
-                surfaceContainerHighest = ladderEnd,
-                outline = palette.hairline,
-                outlineVariant = lerp(palette.hairline, palette.canvas, 0.45f),
-                scrim = palette.scrim,
-                inversePrimary = accent,
-                inverseSurface = if (isDark) palette.groupedSurface else palette.raised,
-                inverseOnSurface = palette.textPrimary
-            )
-        }
  
     }
 }

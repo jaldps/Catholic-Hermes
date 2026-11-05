@@ -149,7 +149,7 @@ fun SacredArt(
                 val stage = Stage(size, density)
                 val painter = when (inks.language) {
                     DesignLanguage.APPLE -> ApplePainter(stage, inks, transparentBackground)
-                    DesignLanguage.MATERIAL -> MaterialPainter(stage, inks, transparentBackground)
+                    DesignLanguage.TRANSPARENCIAS -> MaterialPainter(stage, inks, transparentBackground)
                 }
                 when (subject) {
                     SacredSubject.DAY -> painter.day()

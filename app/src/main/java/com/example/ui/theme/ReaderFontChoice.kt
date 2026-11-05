@@ -26,6 +26,6 @@ enum class ReaderFontChoice {
     fun family(appFamily: FontFamily?, identity: DesignLanguage): FontFamily? = when (this) {
         FOLLOW_APP -> appFamily
         SERIF -> AppFonts.EbGaramond
-        SANS -> if (identity == DesignLanguage.MATERIAL) AppFonts.Roboto else AppFonts.Inter
+        SANS -> if (identity == DesignLanguage.APPLE) AppFonts.Roboto else AppFonts.Inter
     }
 }

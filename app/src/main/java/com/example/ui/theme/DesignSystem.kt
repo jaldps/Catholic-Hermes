@@ -35,13 +35,18 @@ enum class DesignLanguage(
     ),
 
     /** Material 3: tonal surfaces, stadium buttons, pill navigation indicator. */
-    MATERIAL(
-        "MATERIAL",
-        LocalizedText("Material 3", "Material 3", "Material 3"),
+    /**
+     * Translucency, iOS 7 and on: frosted surfaces at ~90% opacity, vibrant
+     * full-saturation accent, hairlines instead of shadows, SF-like type.
+     * Surfaces let the wallpaper breathe through; ink stays opaque.
+     */
+    TRANSPARENCIAS(
+        "TRANSPARENT",
+        LocalizedText("Transparencias", "Translucency", "Transparência"),
         LocalizedText(
-            "Superficies tonales, formas generosas y movimiento enfático de Material Design 3.",
-            "Tonal surfaces, generous shapes and the emphasised motion of Material Design 3.",
-            "Superfícies tonais, formas generosas e movimento enfático do Material Design 3."
+            "Superficies translúcidas, acento vibrante y bordes finos al estilo de iOS 7 en adelante.",
+            "Frosted translucent surfaces, a vibrant accent and hairline edges, iOS 7 style and on.",
+            "Superfícies translúcidas, acento vibrante e bordas finas no estilo do iOS 7 em diante."
         )
     );
 
@@ -365,22 +370,18 @@ object DesignTokens {
         selectionTint = Color(0xFF3A3A3C)
     )
 
-    // Material 3 tonal surfaces. In a seeded M3 scheme every container and
-    // neutral is struck from the seed's tonal palette, so these are the
-    // liturgical accent at neutral chroma rather than the baseline purple —
-    // baseline containers under a green primary produced lilac discs holding
-    // green glyphs, a pairing no M3 app has. The same goes for the ink: the
-    // baseline onSurface #1D1B20 / #E6E0E9 is violet-neutral, so text is
-    // struck from the green-neutral palette too (tone 10 / 90).
+    // Translucency, iOS 7+: frosted surfaces over the canvas. Inks stay
+    // opaque (contrast), surfaces sit at ~88-95% so the ground reads
+    // through like iOS frosted glass.
     private val MaterialPaletteLight = AppPalette(
-        canvas = Color(0xFFF4FBF6),
-        groupedSurface = Color(0xFFFCFFFD),
-        raised = Color(0xFFEBF2ED),
-        hairline = Color(0xFFC2CCC5),
-        accent = Color(0xFF2C6B3E),
-        accentMuted = Color(0xFFC0DEC9),
-        gold = Color(0xFF8A6B12),
-        textPrimary = Color(0xFF171D19),
+        canvas = Color(0xFFF2F2F7),
+        groupedSurface = Color(0xE6FFFFFF),
+        raised = Color(0xD9FFFFFF),
+        hairline = Color(0xFFC6C6C8),
+        accent = Color(0xFF0066CC),
+        accentMuted = Color(0xFFD6E9FF),
+        gold = Color(0xFFB8860B),
+        textPrimary = Color(0xFF000000),
         textSecondary = Color(0xFF414941),
         // Darkened from 717A74 (4.22:1 on canvas / 4.40:1 grouped) to
         // clear 4.5:1 on every tonal surface (5.30:1 canvas, 4.90:1 raised).
@@ -390,14 +391,14 @@ object DesignTokens {
     )
 
     private val MaterialPaletteDark = AppPalette(
-        canvas = Color(0xFF0E1410),
-        groupedSurface = Color(0xFF161D18),
-        raised = Color(0xFF212A24),
-        hairline = Color(0xFF414A44),
-        accent = Color(0xFF81C784),
-        accentMuted = Color(0xFF2A4432),
-        gold = Color(0xFFE5C158),
-        textPrimary = Color(0xFFDEE4DD),
+        canvas = Color(0xFF000000),
+        groupedSurface = Color(0xE61C1C1E),
+        raised = Color(0xD92C2C2E),
+        hairline = Color(0xFF38383A),
+        accent = Color(0xFF409CFF),
+        accentMuted = Color(0xFF1A2F47),
+        gold = Color(0xFFD4AF37),
+        textPrimary = Color(0xFFFFFFFF),
         textSecondary = Color(0xFFC2CCC5),
         textTertiary = Color(0xFF8C968F),
         scrim = Color(0x7A000000),
@@ -419,14 +420,14 @@ object DesignTokens {
             palette = if (isDark) ApplePaletteDark else ApplePaletteLight
         )
 
-        DesignLanguage.MATERIAL -> AppDesign(
+        DesignLanguage.TRANSPARENCIAS -> AppDesign(
             language = language,
             isDark = isDark,
-            shapes = MaterialShapes,
-            spacing = MaterialSpacing,
-            depth = MaterialDepth,
-            motion = MaterialMotion,
-            decor = MaterialDecor,
+            shapes = AppleShapes,
+            spacing = AppleSpacing,
+            depth = AppleDepth,
+            motion = AppleMotion,
+            decor = AppleDecor,
             palette = if (isDark) MaterialPaletteDark else MaterialPaletteLight
         )
 

@@ -39,6 +39,7 @@ import androidx.compose.material3.rememberTimePickerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -488,15 +489,20 @@ fun RemindersScreen(
     }
 
     // ---- Time picker dialog ----
+    // Hoisted above the conditional: rememberTimePickerState is remembered
+    // unconditionally inside key(pickerReminder) so the slot table stays
+    // stable, and keying on the reminder recreates it per-reminder so the
+    // initial hour/minute match the reminder being edited.
     val pickerReminder = timePickerFor
-    if (pickerReminder != null) {
-        val pref = prefs[pickerReminder.id]
+    key(pickerReminder) {
+        val pickerPref = pickerReminder?.let { prefs[it.id] }
         val timePickerState = rememberTimePickerState(
-            initialHour = pref?.hour ?: pickerReminder.defaultHour,
-            initialMinute = pref?.minute ?: pickerReminder.defaultMinute,
+            initialHour = pickerReminder?.let { pickerPref?.hour ?: it.defaultHour } ?: 0,
+            initialMinute = pickerReminder?.let { pickerPref?.minute ?: it.defaultMinute } ?: 0,
             is24Hour = true
         )
-        AlertDialog(
+        if (pickerReminder != null) {
+            AlertDialog(
             onDismissRequest = { timePickerFor = null },
             confirmButton = {
                 TextButton(
@@ -530,17 +536,18 @@ fun RemindersScreen(
                     Text(cancelLabel)
                 }
             },
-            text = {
-                Column {
-                    Text(
-                        text = timePickerTitle,
-                        style = styles.sectionTitle,
-                        modifier = Modifier.padding(bottom = design.spacing.cardGap)
-                    )
-                    TimePicker(state = timePickerState)
+                text = {
+                    Column {
+                        Text(
+                            text = timePickerTitle,
+                            style = styles.sectionTitle,
+                            modifier = Modifier.padding(bottom = design.spacing.cardGap)
+                        )
+                        TimePicker(state = timePickerState)
+                    }
                 }
-            }
-        )
+            )
+        }
     }
 
     // ---- Calendar result dialog (failure / denied only; success is a snackbar) ----
