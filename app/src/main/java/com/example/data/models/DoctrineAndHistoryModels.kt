@@ -93,3 +93,21 @@ data class ApologeticsQuestion(
     val foundation: LocalizedText,
     val clarification: LocalizedText
 )
+
+/** A religious order/congregation in the Study compendium. */
+data class ReligiousOrder(
+    val id: String,
+    val name: LocalizedText,
+    val abbreviation: String,
+    val foundationYear: String,
+    val founder: LocalizedText,
+    val description: LocalizedText,
+    val charism: LocalizedText
+)
+
+/** A rank/office in the Church hierarchy guide. */
+data class ChurchOffice(
+    val id: String,
+    val name: LocalizedText,
+    val description: LocalizedText
+)

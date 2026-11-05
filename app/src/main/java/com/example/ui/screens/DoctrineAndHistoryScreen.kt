@@ -122,11 +122,12 @@ private const val ANY_PLACE = "__any__"
 private val MinTouchTarget = 48.dp
 
 /**
- * Doctrine, history and the directory, behind four panes: the moral teaching of
+ * Doctrine, history and the directory, behind five panes: the moral teaching of
  * the Catechism (the Decalogue, the precepts, the capital vices against the
  * virtues that cure them, and the gravity of sin), the Marian and
  * Christological devotions, the Church's own timeline with the schisms that
- * mark it, and the parish directory beside the Vatican's live feed.
+ * mark it, the religious orders and Church offices, and the parish directory
+ * beside the Vatican's live feed.
  */
 @Composable
 fun DoctrineAndHistoryScreen(
@@ -140,7 +141,8 @@ fun DoctrineAndHistoryScreen(
     val design = LocalAppDesign.current
 
     // 0 = Catechism & doctrine, 1 = Mary & Christ, 2 = history & schisms,
-    // 3 = 101 Questions, 4 = news only (opened from Churches & News).
+    // 3 = 101 Questions, 4 = Orders & Offices, 5 = news only (opened from
+    // Churches & News).
     var selectedTopTab by remember { mutableIntStateOf(initialTopTab) }
     // A commandment, precept, vice or epoch opens as its own page, keyed
     // "kind:index"; the panes list one line of each.
@@ -148,7 +150,7 @@ fun DoctrineAndHistoryScreen(
 
     // Opened from "Churches & News" the destination is news only: no parish
     // directory or filters, just the Vatican feed under its own title.
-    val directoryOnly = initialTopTab == 4
+    val directoryOnly = initialTopTab == 5
 
     // Short enough that all sit abreast on a 360dp phone in every identity;
     // the full names head each pane as its section header.
@@ -156,7 +158,8 @@ fun DoctrineAndHistoryScreen(
         currentLanguage.pick("Doctrina", "Doctrine", "Doutrina"),
         currentLanguage.pick("María y Jesús", "Mary & Jesus", "Maria e Jesus"),
         currentLanguage.pick("Historia", "History", "História"),
-        currentLanguage.pick("Preguntas", "Questions", "Perguntas")
+        currentLanguage.pick("Preguntas", "Questions", "Perguntas"),
+        currentLanguage.pick("Órdenes y oficios", "Orders & Offices", "Ordens e ofícios")
     )
     val tabsInset = tabStripInset()
 
@@ -205,7 +208,7 @@ fun DoctrineAndHistoryScreen(
             .testTag("doctrine_and_history_screen")
     ) {
         val entry = openEntry
-        if (entry != null && selectedTopTab in 0..3) {
+        if (entry != null && selectedTopTab in 0..4) {
             BackHandler { openEntry = null }
             DoctrineEntryPage(
                 key = entry,
@@ -239,6 +242,13 @@ fun DoctrineAndHistoryScreen(
             )
 
             3 -> CatholicQuestionsPane(
+                repository = repository,
+                currentLanguage = currentLanguage,
+                onOpen = { openEntry = it },
+                header = header
+            )
+
+            4 -> OrdersOfficesPane(
                 repository = repository,
                 currentLanguage = currentLanguage,
                 onOpen = { openEntry = it },
@@ -316,6 +326,96 @@ private fun CatholicQuestionsPane(
                         Spacer(Modifier.height(design.spacing.cardGap))
                     }
             }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+// ------------------------------------------- religious orders and offices
+
+@Composable
+private fun OrdersOfficesPane(
+    repository: CatholicDataRepository,
+    currentLanguage: AppLanguage,
+    onOpen: (String) -> Unit,
+    header: LazyListScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    LazyColumn(Modifier.fillMaxSize()) {
+        header()
+
+        item(key = "religious_orders") {
+            AppSectionHeader(
+                title = currentLanguage.pick(
+                    "Órdenes religiosas",
+                    "Religious orders",
+                    "Ordens religiosas"
+                )
+            )
+            if (repository.religiousOrders.isEmpty()) {
+                AppEmptyState(
+                    title = currentLanguage.pick(
+                        "Sin órdenes por mostrar",
+                        "No orders to show",
+                        "Sem ordens para mostrar"
+                    ),
+                    icon = Icons.Default.Church
+                )
+            } else {
+                // A single list in data order: the data may interleave men's
+                // and women's orders, so no men/women split is inferred here.
+                AppListGroup {
+                    repository.religiousOrders.forEachIndexed { i, order ->
+                        val subtitle = listOfNotNull(
+                            order.abbreviation.takeIf { it.isNotBlank() },
+                            order.foundationYear.takeIf { it.isNotBlank() }
+                        ).joinToString(" · ").takeIf { it.isNotBlank() }
+                        AppListRow(
+                            title = order.name.get(currentLanguage),
+                            subtitle = subtitle,
+                            onClick = { onOpen("order:$i") },
+                            modifier = Modifier
+                                .heightIn(min = MinTouchTarget)
+                                .testTag("order_${order.id}")
+                        )
+                    }
+                }
+            }
+        }
+
+        item(key = "church_offices") {
+            AppSectionHeader(
+                title = currentLanguage.pick(
+                    "Oficios eclesiásticos",
+                    "Church offices",
+                    "Ofícios eclesiásticos"
+                )
+            )
+            if (repository.churchOffices.isEmpty()) {
+                AppEmptyState(
+                    title = currentLanguage.pick(
+                        "Sin oficios por mostrar",
+                        "No offices to show",
+                        "Sem ofícios para mostrar"
+                    ),
+                    icon = Icons.Default.LocationCity
+                )
+            } else {
+                // Hierarchy order is the data order.
+                AppListGroup {
+                    repository.churchOffices.forEachIndexed { i, office ->
+                        AppListRow(
+                            title = office.name.get(currentLanguage),
+                            onClick = { onOpen("office:$i") },
+                            modifier = Modifier
+                                .heightIn(min = MinTouchTarget)
+                                .testTag("office_${office.id}")
+                        )
+                    }
+                }
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
@@ -832,6 +932,151 @@ private fun DoctrineEntryPage(
                     }
                 }
             }
+
+            "order" -> {
+                val orders = repository.religiousOrders
+                if (orders.isNotEmpty()) {
+                    val orderIndex = index.coerceIn(0, orders.lastIndex)
+                    val order = orders[orderIndex]
+                    val total = orders.size
+                    val founderText = order.founder.get(currentLanguage)
+                    val meta = listOfNotNull(
+                        order.abbreviation.takeIf { it.isNotBlank() },
+                        order.foundationYear.takeIf { it.isNotBlank() },
+                        founderText.takeIf { it.isNotBlank() }
+                    ).joinToString(" · ").takeIf { it.isNotBlank() }
+                    item {
+                        AppScreenTitle(
+                            title = order.name.get(currentLanguage),
+                            subtitle = meta
+                        )
+                    }
+                    item {
+                        val progressLabel = currentLanguage.pick(
+                            "Orden ${orderIndex + 1} de $total",
+                            "Order ${orderIndex + 1} of $total",
+                            "Ordem ${orderIndex + 1} de $total"
+                        )
+                        LinearProgressIndicator(
+                            progress = { (orderIndex + 1).toFloat() / total },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = design.spacing.gutter)
+                                .padding(bottom = design.spacing.cardGap)
+                                .semantics { stateDescription = progressLabel }
+                                .testTag("order_progress"),
+                            color = design.palette.accent,
+                            trackColor = design.palette.selectionTint
+                        )
+                    }
+                    item {
+                        OrderOfficeReaderCard(
+                            title = order.name.get(currentLanguage),
+                            description = order.description.get(currentLanguage),
+                            charism = order.charism.get(currentLanguage),
+                            currentLanguage = currentLanguage,
+                            readerIndex = orderIndex,
+                            listenTestTag = "order_listen_button"
+                        )
+                    }
+                    item {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = design.spacing.gutter),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            AppSecondaryButton(
+                                label = currentLanguage.pick("Anterior", "Previous", "Anterior"),
+                                onClick = { onOpen("order:${orderIndex - 1}") },
+                                enabled = orderIndex > 0,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("order_prev_button")
+                            )
+                            Spacer(Modifier.width(design.spacing.cardGap))
+                            AppPrimaryButton(
+                                label = currentLanguage.pick("Siguiente", "Next", "Seguinte"),
+                                onClick = { onOpen("order:${orderIndex + 1}") },
+                                enabled = orderIndex < orders.lastIndex,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("order_next_button")
+                            )
+                        }
+                    }
+                }
+            }
+
+            "office" -> {
+                val offices = repository.churchOffices
+                if (offices.isNotEmpty()) {
+                    val officeIndex = index.coerceIn(0, offices.lastIndex)
+                    val office = offices[officeIndex]
+                    val total = offices.size
+                    item {
+                        AppScreenTitle(title = office.name.get(currentLanguage))
+                    }
+                    item {
+                        val progressLabel = currentLanguage.pick(
+                            "Oficio ${officeIndex + 1} de $total",
+                            "Office ${officeIndex + 1} of $total",
+                            "Ofício ${officeIndex + 1} de $total"
+                        )
+                        LinearProgressIndicator(
+                            progress = { (officeIndex + 1).toFloat() / total },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = design.spacing.gutter)
+                                .padding(bottom = design.spacing.cardGap)
+                                .semantics { stateDescription = progressLabel }
+                                .testTag("office_progress"),
+                            color = design.palette.accent,
+                            trackColor = design.palette.selectionTint
+                        )
+                    }
+                    item {
+                        OrderOfficeReaderCard(
+                            title = office.name.get(currentLanguage),
+                            description = office.description.get(currentLanguage),
+                            charism = null,
+                            currentLanguage = currentLanguage,
+                            readerIndex = officeIndex,
+                            listenTestTag = "office_listen_button"
+                        )
+                    }
+                    item {
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = design.spacing.gutter),
+                            horizontalArrangement = Arrangement.SpaceBetween
+                        ) {
+                            AppSecondaryButton(
+                                label = currentLanguage.pick("Anterior", "Previous", "Anterior"),
+                                onClick = { onOpen("office:${officeIndex - 1}") },
+                                enabled = officeIndex > 0,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("office_prev_button")
+                            )
+                            Spacer(Modifier.width(design.spacing.cardGap))
+                            AppPrimaryButton(
+                                label = currentLanguage.pick("Siguiente", "Next", "Seguinte"),
+                                onClick = { onOpen("office:${officeIndex + 1}") },
+                                enabled = officeIndex < offices.lastIndex,
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("office_next_button")
+                            )
+                        }
+                    }
+                }
+            }
         }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
@@ -842,6 +1087,85 @@ private fun DoctrineEntryPage(
 /** Didache text arrives with paragraphs separated by blank lines. */
 private fun didacheParagraphs(text: String): List<String> =
     text.split(Regex("\\n\\s*\\n")).map { it.trim() }.filter { it.isNotEmpty() }
+
+/**
+ * One religious order or Church office as a reading card: description, then
+ * the charism where there is one, with a Listen/Stop read-aloud button.
+ * Like the Didache reader, this screen receives no shared ttsManager, so
+ * the card owns a repository-independent [LiturgicalTtsManager] for its
+ * lifetime only.
+ */
+@Composable
+private fun OrderOfficeReaderCard(
+    title: String,
+    description: String,
+    charism: String?,
+    currentLanguage: AppLanguage,
+    readerIndex: Int,
+    listenTestTag: String
+) {
+    val design = LocalAppDesign.current
+    val context = LocalContext.current
+    val ttsManager = remember { LiturgicalTtsManager(context) }
+    val isPlaying by ttsManager.isPlaying.collectAsState()
+    DisposableEffect(ttsManager) { onDispose { ttsManager.release() } }
+    LaunchedEffect(currentLanguage) { ttsManager.setLanguage(currentLanguage) }
+    LaunchedEffect(readerIndex) { ttsManager.stop() }
+
+    val charismLabel = currentLanguage.pick("Carisma", "Charism", "Carisma")
+    val hasCharism = !charism.isNullOrBlank()
+    val speakText = buildString {
+        append(title)
+        append("\n\n")
+        append(description)
+        if (hasCharism) {
+            append("\n\n")
+            append(charismLabel)
+            append(": ")
+            append(charism)
+        }
+    }
+
+    GutterCard {
+        Text(
+            text = description,
+            style = MaterialTheme.typography.bodyLarge,
+            color = design.palette.textPrimary
+        )
+        if (hasCharism) {
+            Spacer(Modifier.height(design.spacing.cardGap))
+            AppDivider()
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Note(
+                label = charismLabel,
+                body = charism.orEmpty(),
+                labelColor = design.palette.accent
+            )
+        }
+        Spacer(Modifier.height(design.spacing.cardGap))
+        AppDivider()
+        Spacer(Modifier.height(design.spacing.cardGap))
+        // While the voice is running the same 48dp button offers Stop, so
+        // recitation can be ended without leaving the page.
+        AppSecondaryButton(
+            label = if (isPlaying) {
+                currentLanguage.pick("Detener", "Stop", "Parar")
+            } else {
+                currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+            },
+            onClick = if (isPlaying) {
+                { ttsManager.stop() }
+            } else {
+                { ttsManager.speakSingle(speakText) }
+            },
+            leadingIcon = if (isPlaying) Icons.Default.Stop else Icons.Default.VolumeUp,
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .testTag(listenTestTag)
+        )
+    }
+}
 
 /**
  * One Didache chapter as a reading card: paragraphs in the scripture style

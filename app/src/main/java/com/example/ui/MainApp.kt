@@ -411,7 +411,7 @@ fun MainApp(
                     AppDestination.CHURCHES_NEWS -> DoctrineAndHistoryScreen(
                         repository = repository,
                         currentLanguage = currentLanguage,
-                        initialTopTab = 4,
+                        initialTopTab = 5,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism
                     )

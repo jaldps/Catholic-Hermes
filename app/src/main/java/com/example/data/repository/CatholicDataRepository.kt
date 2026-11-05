@@ -263,6 +263,9 @@ class CatholicDataRepository(
     val didacheIntro: com.example.data.models.LocalizedText get() = DidacheData.intro
     /** 101 Catholic Questions (apologetics Q&A) in ES/EN/PT. */
     val catholicQuestions: List<com.example.data.models.ApologeticsQuestion> get() = CatholicQuestionsData.questions
+    /** Religious orders compendium + Church offices guide in ES/EN/PT. */
+    val religiousOrders: List<com.example.data.models.ReligiousOrder> get() = ReligiousOrdersData.orders
+    val churchOffices: List<com.example.data.models.ChurchOffice> get() = ReligiousOrdersData.offices
     val officialVaticanLinks: List<CatechismData.OfficialVaticanLink> get() = CatechismData.officialVaticanLinks
 
     /** A browsable index reaching all 2,865 paragraphs of the Catechism. */
