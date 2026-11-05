@@ -217,11 +217,41 @@ fun HabitsAndVirtuesScreen(
         }
     }
 
+    // Prayer reminders live here as a full-screen overlay; the Habits screen
+    // itself is untouched while they are open.
+    var showReminders by remember { mutableStateOf(false) }
+    if (showReminders) {
+        RemindersScreen(
+            repository = repository,
+            onBack = { showReminders = false }
+        )
+        return
+    }
+
     Column(
         modifier = modifier
             .fillMaxSize()
             .testTag("habits_and_virtues_screen")
     ) {
+        // Entry point to the prayer-reminder overlay, parked at the very top
+        // of the screen so it is reachable from either tab.
+        AppPrimaryButton(
+            label = currentLanguage.pick(
+                "Recordatorios de oración",
+                "Prayer reminders",
+                "Lembretes de oração"
+            ),
+            onClick = { showReminders = true },
+            leadingIcon = Icons.Filled.Schedule,
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = MinTouchTarget)
+                .padding(
+                    horizontal = design.spacing.gutter,
+                    vertical = design.spacing.cardGap
+                )
+                .testTag("open_reminders")
+        )
         // AppSegmentedTabs takes no tag per option, so the two tab tags name
         // the pane each option reveals.
         if (selectedTab == 0) {
