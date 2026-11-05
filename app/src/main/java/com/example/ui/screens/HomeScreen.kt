@@ -393,49 +393,6 @@ fun HomeScreen(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
-        // Saint of the day.
-        item {
-            AppCard(
-                modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("saint_of_the_day_card")
-            ) {
-                CardHeading(
-                    label = strings("Santo del Día", "Saint of the Day", "Santo do Dia"),
-                    trailing = saintOfTheDay.feastDate
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                Text(
-                    text = saintOfTheDay.name.get(currentLanguage),
-                    style = styles.sectionTitle,
-                    color = palette.textPrimary
-                )
-                Spacer(Modifier.height(design.spacing.cardGap / 2))
-                Text(
-                    text = saintOfTheDay.title.get(currentLanguage),
-                    style = styles.rowSubtitle,
-                    color = palette.textSecondary
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                Text(
-                    text = saintOfTheDay.biography.get(currentLanguage),
-                    style = styles.rowSubtitle,
-                    color = palette.textPrimary,
-                    maxLines = 6,
-                    overflow = TextOverflow.Ellipsis,
-                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppDivider()
-                Spacer(Modifier.height(design.spacing.cardGap))
-                MarginalQuote(
-                    text = saintOfTheDay.iconicQuote.get(currentLanguage),
-                    attribution = saintOfTheDay.name.get(currentLanguage)
-                )
-            }
-            Spacer(Modifier.height(design.spacing.cardGap))
-        }
-
         // Pregunta del día: question + first line of its answer, a route to
         // the full answer in the Questions tab, and a share action. Renders
         // only when MainApp passes the question list (see onOpenQuestions).
@@ -487,6 +444,49 @@ fun HomeScreen(
                             .testTag("home_daily_question_share")
                     )
                 }
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
+        // Saint of the day.
+        item {
+            AppCard(
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .testTag("saint_of_the_day_card")
+            ) {
+                CardHeading(
+                    label = strings("Santo del Día", "Saint of the Day", "Santo do Dia"),
+                    trailing = saintOfTheDay.feastDate
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = saintOfTheDay.name.get(currentLanguage),
+                    style = styles.sectionTitle,
+                    color = palette.textPrimary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Text(
+                    text = saintOfTheDay.title.get(currentLanguage),
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = saintOfTheDay.biography.get(currentLanguage),
+                    style = styles.rowSubtitle,
+                    color = palette.textPrimary,
+                    maxLines = 6,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                AppDivider()
+                Spacer(Modifier.height(design.spacing.cardGap))
+                MarginalQuote(
+                    text = saintOfTheDay.iconicQuote.get(currentLanguage),
+                    attribution = saintOfTheDay.name.get(currentLanguage)
+                )
             }
             Spacer(Modifier.height(design.spacing.cardGap))
         }
@@ -663,7 +663,8 @@ fun HomeScreen(
             }
         }
 
-        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+        // Extra clearance so the last card never hides behind the floating tab bar.
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap + 72.dp)) }
     }
 }
 

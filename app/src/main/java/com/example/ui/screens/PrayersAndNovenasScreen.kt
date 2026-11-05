@@ -675,14 +675,6 @@ private fun HowToPraySection(
             .fillMaxWidth()
             .testTag("how_to_pray_section")
     ) {
-        AppSectionHeader(
-            title = currentLanguage.pick("Cómo orar", "How to pray", "Como orar"),
-            subtitle = currentLanguage.pick(
-                "Cinco pasos para empezar",
-                "Five steps to begin",
-                "Cinco passos para começar"
-            )
-        )
         AppCard(
             onClick = onToggle,
             modifier = Modifier
@@ -706,9 +698,9 @@ private fun HowToPraySection(
                     Spacer(Modifier.height(design.spacing.cardGap / 3))
                     Text(
                         text = currentLanguage.pick(
-                            if (expanded) "Toca para ocultar los pasos" else "Toca para ver los pasos",
-                            if (expanded) "Tap to hide the steps" else "Tap to see the steps",
-                            if (expanded) "Toque para ocultar os passos" else "Toque para ver os passos"
+                            if (expanded) "Cinco pasos · Toca para ocultar" else "Cinco pasos · Toca para ver",
+                            if (expanded) "Five steps · Tap to hide" else "Five steps · Tap to see",
+                            if (expanded) "Cinco passos · Toque para ocultar" else "Cinco passos · Toque para ver"
                         ),
                         style = styles.rowSubtitle,
                         color = design.palette.textSecondary
