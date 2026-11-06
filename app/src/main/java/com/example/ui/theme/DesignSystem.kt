@@ -198,7 +198,7 @@ object DesignTokens {
      */
     private val IveShapes = AppShapes(
         card = RoundedCornerShape(20.dp),
-        cardLarge = RoundedCornerShape(24.dp),
+        cardLarge = RoundedCornerShape(20.dp),
         button = RoundedCornerShape(12.dp),
         buttonSmall = RoundedCornerShape(12.dp),
         field = RoundedCornerShape(16.dp),
