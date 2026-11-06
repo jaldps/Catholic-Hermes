@@ -909,10 +909,16 @@ private fun HowToPraySection(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(Modifier.weight(1f)) {
+                    // Demoted to the 22sp sectionTitle at SemiBold — the same
+                    // demotion PrayersSectionHeader applies — so this tile
+                    // title no longer dwarfs the prayer rows below it
+                    // (rowTitle, e.g. "Our Father").
                     Text(
                         text = currentLanguage.pick("Cómo orar", "How to pray", "Como orar"),
-                        style = styles.sectionTitle,
-                        color = design.palette.textPrimary
+                        style = styles.sectionTitle.copy(fontWeight = FontWeight.SemiBold),
+                        color = design.palette.textPrimary,
+                        maxLines = 1,
+                        overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
                     )
                     Spacer(Modifier.height(design.spacing.cardGap / 3))
                     Text(

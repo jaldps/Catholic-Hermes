@@ -350,44 +350,42 @@ fun HomeScreen(
                 } else {
                     // Offline fallback: the bundled lectionary carries no
                     // entry for most ferial days (the repository leaves those
-                    // citations empty rather than inventing them), so the
-                    // card must never show a dead placeholder. The liturgical
-                    // title, season and saint below are always available
-                    // offline — real content instead of an error line.
-                    val celebration = liturgicalDay.celebrationTitle.get(currentLanguage)
-                        .takeIf { it.isNotBlank() }
-                        ?: dailyReading.feastTitle.get(currentLanguage).takeIf { it.isNotBlank() }
-                    val season = liturgicalDay.seasonName.get(currentLanguage)
-                        .takeIf { it.isNotBlank() }
-                        ?: dailyReading.liturgicalSeason.get(currentLanguage).takeIf { it.isNotBlank() }
-                    val saintName = saintOfTheDay.name.get(currentLanguage)
-                        .takeIf { it.isNotBlank() }
-                    val saintTitle = saintOfTheDay.title.get(currentLanguage)
-                        .takeIf { it.isNotBlank() }
-                    if (celebration != null) {
+                    // citations empty rather than inventing them). The
+                    // celebration and season already headline the liturgical
+                    // banner above and the saint has its own card below, so
+                    // this card never repeats them — it shows only what is
+                    // unique to the Mass: the citations, or the first line
+                    // of today's homily reflection when no citation landed.
+                    var showedFallback = false
+                    if (firstReadingReference.isNotBlank()) {
                         Text(
-                            text = celebration,
-                            style = styles.rowTitle,
-                            color = palette.textPrimary
+                            text = TextFormat.ranges(firstReadingReference),
+                            style = styles.sectionEyebrow,
+                            color = palette.accent
                         )
-                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        showedFallback = true
                     }
-                    if (season != null) {
+                    if (gospelReference.isNotBlank()) {
+                        if (showedFallback) Spacer(Modifier.height(design.spacing.cardGap / 2))
                         Text(
-                            text = season,
-                            style = styles.rowSubtitle,
-                            color = palette.textSecondary
+                            text = TextFormat.ranges(gospelReference),
+                            style = styles.sectionEyebrow,
+                            color = palette.accent
                         )
+                        showedFallback = true
                     }
-                    if (saintName != null) {
-                        if (celebration != null || season != null) {
-                            Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    if (!showedFallback) {
+                        val homilyFirstLine = dailyReading.homilyReflection.get(currentLanguage)
+                            .takeIf { it.isNotBlank() }
+                            ?.let { firstSentenceOf(it) }
+                        if (!homilyFirstLine.isNullOrBlank()) {
+                            Text(
+                                text = "«$homilyFirstLine»",
+                                style = styles.scripture,
+                                color = palette.textPrimary,
+                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                            )
                         }
-                        Text(
-                            text = saintName + (saintTitle?.let { " · $it" } ?: ""),
-                            style = styles.rowSubtitle,
-                            color = palette.textSecondary
-                        )
                     }
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -543,7 +541,15 @@ fun HomeScreen(
         // duplicate fields on uncurated days (title == name, quote == bio),
         // so distinctness is checked before rendering.
         item {
-            val saintName = saintOfTheDay.name.get(currentLanguage).trim()
+            val rawSaintName = saintOfTheDay.name.get(currentLanguage).trim()
+            // The bundled fallback embeds its Spanish date in the name
+            // ("Saint of Today (5 de Noviembre)") and the raw feastDate is
+            // stored in whatever locale its source used, so neither is
+            // shown verbatim in a non-Spanish UI: the inline date is
+            // stripped from the name and the trailing date is re-rendered
+            // in the current UI language (or dropped when unparseable).
+            val saintName = stripInlineFeastDate(rawSaintName, saintOfTheDay.feastDate)
+            val feastDateLocalized = localizedFeastDateLabel(saintOfTheDay.feastDate, currentLanguage)
             val saintTitle = saintOfTheDay.title.get(currentLanguage).trim()
             val saintBiography = saintOfTheDay.biography.get(currentLanguage).trim()
             val saintQuote = saintOfTheDay.iconicQuote.get(currentLanguage).trim()
@@ -559,21 +565,25 @@ fun HomeScreen(
             ) {
                 CardHeading(
                     label = strings("Santo del Día", "Saint of the Day", "Santo do Dia"),
-                    trailing = saintOfTheDay.feastDate
-                        .takeIf { it.isNotBlank() && !saintName.contains(it) }
+                    trailing = feastDateLocalized
+                        ?.takeIf { it.isNotBlank() && !saintName.contains(it, ignoreCase = true) }
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
                 Text(
                     text = saintName,
                     style = styles.rowTitle,
-                    color = palette.textPrimary
+                    color = palette.textPrimary,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
                 )
                 if (showTitle) {
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
                     Text(
                         text = saintTitle,
                         style = styles.rowSubtitle,
-                        color = palette.textSecondary
+                        color = palette.textSecondary,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
                     )
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -777,6 +787,69 @@ private fun firstSentenceOf(text: String): String {
     val trimmed = text.trim()
     val end = Regex("""[.!?](?=\s|$)""").find(trimmed)?.range?.last
     return if (end != null) trimmed.take(end + 1) else trimmed
+}
+
+/** Month names as (ES, EN, PT), indexed by [Calendar.MONTH]. */
+private val SAINT_MONTH_NAMES = listOf(
+    Triple("Enero", "January", "Janeiro"),
+    Triple("Febrero", "February", "Fevereiro"),
+    Triple("Marzo", "March", "Março"),
+    Triple("Abril", "April", "Abril"),
+    Triple("Mayo", "May", "Maio"),
+    Triple("Junio", "June", "Junho"),
+    Triple("Julio", "July", "Julho"),
+    Triple("Agosto", "August", "Agosto"),
+    Triple("Septiembre", "September", "Setembro"),
+    Triple("Octubre", "October", "Outubro"),
+    Triple("Noviembre", "November", "Novembro"),
+    Triple("Diciembre", "December", "Dezembro")
+)
+
+/**
+ * Re-renders a stored feast-date string ("5 de Noviembre" / "November 5" /
+ * "5 de Novembro") in [language]; returns null when the string carries no
+ * day+month — the caller drops the meta instead of showing a mixed-locale
+ * date inside a non-Spanish UI.
+ */
+private fun localizedFeastDateLabel(raw: String, language: AppLanguage): String? {
+    val trimmed = raw.trim()
+    if (trimmed.isBlank()) return null
+    val day = Regex("""\d{1,2}""").find(trimmed)?.value?.toIntOrNull() ?: return null
+    val monthIndex = SAINT_MONTH_NAMES.indexOfFirst { (es, en, pt) ->
+        trimmed.contains(es, ignoreCase = true) ||
+            trimmed.contains(en, ignoreCase = true) ||
+            trimmed.contains(pt, ignoreCase = true)
+    }
+    if (monthIndex < 0) return null
+    val (es, en, pt) = SAINT_MONTH_NAMES[monthIndex]
+    return when (language) {
+        AppLanguage.ES -> "$day de ${es.lowercase()}"
+        AppLanguage.EN -> "$en $day"
+        AppLanguage.PT -> "$day de ${pt.lowercase()}"
+    }
+}
+
+/**
+ * Removes a trailing parenthetical feast date from a saint name when it
+ * embeds [feastDate] ("Saint of Today (5 de Noviembre)") or any digit-bearing
+ * parenthetical; parentheticals without a date (roles, titles) are kept.
+ */
+private fun stripInlineFeastDate(name: String, feastDate: String): String {
+    val trimmed = name.trim()
+    if (trimmed.isBlank()) return trimmed
+    if (feastDate.isNotBlank() && trimmed.contains(feastDate)) {
+        val without = trimmed.replace(
+            Regex("""\s*\([^)]*${Regex.escape(feastDate)}[^)]*\)"""),
+            ""
+        ).trim()
+        if (without.isNotBlank()) return without
+    }
+    val dateParenthetical = Regex("""\s*\([^)]*\d[^)]*\)\s*$""")
+    if (dateParenthetical.containsMatchIn(trimmed)) {
+        val without = dateParenthetical.replace(trimmed, "").trim()
+        if (without.isNotBlank()) return without
+    }
+    return trimmed
 }
 
 /**
@@ -1014,7 +1087,8 @@ private fun CardHeading(
                 text = trailing.caps(),
                 style = styles.sectionEyebrow,
                 color = trailingColor ?: design.palette.textTertiary,
-                maxLines = 1
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
             )
         }
     }
