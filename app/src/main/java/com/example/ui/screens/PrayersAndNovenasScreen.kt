@@ -835,7 +835,7 @@ private fun PrayerIntentionFilters(
                 Text(
                     text = label,
                     style = LocalAppTextStyles.current.screenSubtitle,
-                    color = if (isSelected) Color.White else design.palette.textPrimary,
+                    color = if (isSelected) design.palette.accent else design.palette.textPrimary,
                     maxLines = 1
                 )
             }
