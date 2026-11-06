@@ -235,8 +235,10 @@ fun HabitsAndVirtuesScreen(
             .testTag("habits_and_virtues_screen")
     ) {
         // Entry point to the prayer-reminder overlay, parked at the very top
-        // of the screen so it is reachable from either tab.
-        AppPrimaryButton(
+        // of the screen so it is reachable from either tab. Secondary (ghost)
+        // on purpose: the suggested-habits CTA below is the screen's one
+        // primary; two black pills side by side read as one duplicated act.
+        AppSecondaryButton(
             label = currentLanguage.pick(
                 "Recordatorios de oración",
                 "Prayer reminders",
@@ -322,14 +324,10 @@ fun HabitsAndVirtuesScreen(
                         item {
                             AppListGroup {
                                 suggestedHabits.forEach { habit ->
-                                    AppListRow(
+                                    MonoHabitRow(
                                         title = habit.localizedTitle(currentLanguage),
                                         subtitle = com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage),
-                                        leadingIcon = habitIcon(habit.iconName),
-                                        // The glyph already says what kind of
-                                        // practice it is; a category on every
-                                        // row repeated "Prayer" five times.
-                                        showsNavigationAffordance = false
+                                        icon = habitIcon(habit.iconName)
                                     )
                                 }
                             }
@@ -1261,21 +1259,21 @@ private fun HabitRow(
             Icon(
                 imageVector = habitIcon(habit.iconName),
                 contentDescription = null,
-                tint = palette.textTertiary,
+                tint = palette.textSecondary,
                 modifier = Modifier.size(20.dp)
             )
         }
     }
 
     if (onDeleteCustomHabit != null) {
-        AppListRow(
+        MonoHabitRow(
             title = currentLanguage.pick(
                 "Eliminar hábito personalizado",
                 "Delete custom habit",
                 "Excluir hábito personalizado"
             ),
-            leadingIcon = Icons.Default.Delete,
-            showsNavigationAffordance = false,
+            icon = Icons.Default.Delete,
+            subtitle = null,
             onClick = onDeleteCustomHabit,
             modifier = Modifier.heightIn(min = MinTouchTarget)
         )
@@ -1357,6 +1355,49 @@ private fun GraceAntidoteCard(
                 .heightIn(min = MinTouchTarget)
                 .testTag("emergency_overcome_button")
         )
+    }
+}
+
+/**
+ * A habit/category row in the liturgical monochrome set: the glyph is
+ * always palette.textSecondary, never the kit row's saturated category
+ * wells (orange/blue/purple/red). Green is reserved for completed checks
+ * and the progress ring, so nothing here carries colour of its own.
+ * Metrics are unchanged — 48dp minimum, role-button when tappable.
+ */
+@Composable
+private fun MonoHabitRow(
+    title: String,
+    icon: ImageVector,
+    subtitle: String? = null,
+    onClick: (() -> Unit)? = null,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    Row(
+        modifier = modifier
+            .fillMaxWidth()
+            .then(if (onClick != null) Modifier.clickable(role = Role.Button, onClick = onClick) else Modifier)
+            .heightIn(min = MinTouchTarget)
+            .padding(horizontal = 16.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            tint = palette.textSecondary,
+            modifier = Modifier.size(20.dp)
+        )
+        Spacer(Modifier.width(design.spacing.iconLabelGap))
+        Column(Modifier.weight(1f)) {
+            Text(title, style = styles.rowTitle, color = palette.textPrimary)
+            if (subtitle != null) {
+                Spacer(Modifier.height(1.dp))
+                Text(subtitle, style = styles.rowSubtitle, color = palette.textSecondary)
+            }
+        }
     }
 }
 

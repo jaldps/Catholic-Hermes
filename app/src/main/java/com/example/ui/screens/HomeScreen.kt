@@ -16,7 +16,6 @@ import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -48,7 +47,6 @@ import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.NearMe
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Place
-import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Share
@@ -61,7 +59,6 @@ import androidx.compose.material.icons.filled.WbTwilight
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.ReadOnlyComposable
@@ -193,15 +190,21 @@ fun HomeScreen(
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
 
     val gospel = vatican?.sections?.lastOrNull()
+    val firstSection = vatican?.sections?.firstOrNull()
     val gospelReference = gospel?.citation?.takeIf { it.isNotBlank() } ?: dailyReading.gospelRef
     val gospelExcerpt = gospel?.text?.takeIf { it.isNotBlank() }
         ?: dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
-    val gospelPreview = remember(gospelExcerpt) {
-        gospelExcerpt?.trim()?.let { text ->
-            val end = Regex("""[.!?](?=\s|$)""").find(text)?.range?.last
-            if (end != null) text.take(end + 1) else text
-        }
-    }
+    val gospelPreview = remember(gospelExcerpt) { gospelExcerpt?.let { firstSentenceOf(it) } }
+    // First reading from the same missal data the "Read Mass" destination
+    // opens (dailyReading, with the Vatican feed's first section preferred
+    // when it has landed), so the card is populated offline and immediately
+    // instead of showing a fixed-height skeleton.
+    val firstReadingReference = firstSection?.citation?.takeIf { it.isNotBlank() }
+        ?: dailyReading.firstReadingRef
+    val firstReadingExcerpt = firstSection?.text?.takeIf { it.isNotBlank() }
+        ?: dailyReading.firstReadingText.get(currentLanguage).takeIf { it.isNotBlank() }
+    val firstReadingPreview = remember(firstReadingExcerpt) { firstReadingExcerpt?.let { firstSentenceOf(it) } }
+    val hasReadings = firstReadingPreview != null || gospelPreview != null
 
     // Pregunta del día: deterministic by date, no stored state — the index is
     // dayOfYear % question count (101 with the full bundled list), so every
@@ -310,37 +313,45 @@ fun HomeScreen(
                     icon = Icons.Default.AutoStories
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
-                Row(verticalAlignment = Alignment.Top) {
-                    Column(Modifier.weight(1f)) {
-                        if (gospelPreview != null) {
-                            if (gospelReference.isNotBlank()) {
-                                Text(
-                                    text = TextFormat.ranges(gospelReference),
-                                    style = styles.sectionEyebrow,
-                                    color = palette.accent
-                                )
-                                Spacer(Modifier.height(design.spacing.cardGap / 2))
-                            }
+                if (hasReadings) {
+                    if (firstReadingPreview != null) {
+                        if (firstReadingReference.isNotBlank()) {
                             Text(
-                                text = "«$gospelPreview»",
-                                style = styles.scripture,
-                                color = palette.textPrimary,
-                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                                text = TextFormat.ranges(firstReadingReference),
+                                style = styles.sectionEyebrow,
+                                color = palette.accent
                             )
-                        } else if (vaticanResult == null) {
-                            ReadingsPlaceholder(strings("Cargando lecturas", "Loading readings", "A carregar leituras"))
-                        } else {
-                            Text(
-                                text = strings("Lecturas no disponibles sin conexión.", "Readings unavailable offline.", "Leituras indisponíveis offline."),
-                                style = styles.rowSubtitle,
-                                color = palette.textSecondary
-                            )
+                            Spacer(Modifier.height(design.spacing.cardGap / 2))
                         }
+                        Text(
+                            text = "«$firstReadingPreview»",
+                            style = styles.scripture,
+                            color = palette.textPrimary,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+                        if (gospelPreview != null) Spacer(Modifier.height(design.spacing.cardGap))
                     }
-                    Spacer(Modifier.width(12.dp))
-                    CircularPlayButton(
-                        onClick = onNavigateToMissal,
-                        contentDescription = strings("Escuchar Evangelio", "Listen to Gospel", "Ouvir Evangelho")
+                    if (gospelPreview != null) {
+                        if (gospelReference.isNotBlank()) {
+                            Text(
+                                text = TextFormat.ranges(gospelReference),
+                                style = styles.sectionEyebrow,
+                                color = palette.accent
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        }
+                        Text(
+                            text = "«$gospelPreview»",
+                            style = styles.scripture,
+                            color = palette.textPrimary,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+                    }
+                } else {
+                    Text(
+                        text = strings("Lecturas no disponibles sin conexión.", "Readings unavailable offline.", "Leituras indisponíveis offline."),
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary
                     )
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -453,7 +464,7 @@ fun HomeScreen(
                 Spacer(Modifier.height(design.spacing.cardGap))
                 Text(
                     text = dailyQuestion.question.get(currentLanguage),
-                    style = styles.sectionTitle,
+                    style = styles.rowTitle,
                     color = palette.textPrimary
                 )
                 Spacer(Modifier.height(design.spacing.cardGap / 2))
@@ -506,7 +517,7 @@ fun HomeScreen(
                 Spacer(Modifier.height(design.spacing.cardGap))
                 Text(
                     text = saintOfTheDay.name.get(currentLanguage),
-                    style = styles.sectionTitle,
+                    style = styles.rowTitle,
                     color = palette.textPrimary
                 )
                 Spacer(Modifier.height(design.spacing.cardGap / 2))
@@ -712,36 +723,11 @@ fun HomeScreen(
     }
 }
 
-/**
- * Circular play affordance for the Evangelio card: a 48dp touch target, a
- * liturgical-green disc with a white glyph and a soft lift, routed to the
- * full Mass — the same destination as the card's primary button.
- */
-@Composable
-private fun CircularPlayButton(
-    onClick: () -> Unit,
-    contentDescription: String,
-    modifier: Modifier = Modifier
-) {
-    val design = LocalAppDesign.current
-    Box(
-        modifier = modifier
-            .size(48.dp)
-            .shadow(4.dp, CircleShape)
-            .clip(CircleShape)
-            .background(design.palette.accent)
-            .clickable(onClick = onClick)
-            .semantics { this.contentDescription = contentDescription }
-            .testTag("home_gospel_play_button"),
-        contentAlignment = Alignment.Center
-    ) {
-        Icon(
-            imageVector = Icons.Default.PlayArrow,
-            contentDescription = null,
-            tint = Color.White,
-            modifier = Modifier.size(26.dp)
-        )
-    }
+/** First sentence of [text]: up to the first sentence-ending punctuation. */
+private fun firstSentenceOf(text: String): String {
+    val trimmed = text.trim()
+    val end = Regex("""[.!?](?=\s|$)""").find(trimmed)?.range?.last
+    return if (end != null) trimmed.take(end + 1) else trimmed
 }
 
 /**
@@ -864,38 +850,6 @@ private fun FidelityCard(
 }
 
 /**
- * The readings card while the day's Mass is on its way: a fixed-height block in
- * the shape of what is coming (the Gospel's eyebrow and four lines of text, then
- * two citations), so the card keeps its size and the page does not jump. Every
- * bar is the same height and width and sits on a uniform gap, in the subtle
- * `surfaceContainerHighest` tone, so it reads as text lines rather than a
- * staircase of shimmering blocks.
- */
-@Composable
-private fun ReadingsPlaceholder(description: String) {
-    val design = LocalAppDesign.current
-    val barColor = MaterialTheme.colorScheme.surfaceContainerHighest
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(156.dp)
-            .semantics { contentDescription = description }
-            .testTag("home_readings_placeholder"),
-        verticalArrangement = Arrangement.spacedBy(12.dp)
-    ) {
-        repeat(7) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(12.dp)
-                    .clip(design.shapes.chip)
-                    .background(barColor)
-            )
-        }
-    }
-}
-
-/**
  * The liturgical season banner, in the Ive reference idiom: a frosted card
  * (translucent `raised` at `design.shapes.card`, 20dp in Ive, with a soft
  * shadow over the warm paper) carrying a pill for the liturgical time — a
@@ -957,7 +911,7 @@ private fun LiturgicalSeasonBanner(
             headline?.let {
                 Text(
                     text = it,
-                    style = styles.sectionTitle.copy(fontWeight = FontWeight.W400),
+                    style = styles.rowTitle.copy(fontWeight = FontWeight.W400),
                     color = palette.textPrimary
                 )
             }

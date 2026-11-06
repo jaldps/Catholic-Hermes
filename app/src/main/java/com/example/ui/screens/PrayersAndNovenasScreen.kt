@@ -57,6 +57,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
@@ -95,7 +96,6 @@ import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
-import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.ListStyle
 import com.example.ui.theme.LocalAppDesign
@@ -147,6 +147,10 @@ private val PrayerRowRadius = RoundedCornerShape(16.dp)
 
 /** Minimum touch target for every control this screen owns (AAA). */
 private val MinTouchTarget = 48.dp
+
+/** Vertical gap between stacked prayer cards/groups: 12-16dp, so the
+ *  season card and the tile below it never touch as a 0dp seam. */
+private val CardStackGap = 14.dp
 
 /**
  * The Vatican devotional, the chaplet of Divine Mercy, the 246 official novenas
@@ -431,7 +435,7 @@ private fun VaticanDevotionalView(
         // searching or filtering hides it so results stay clean.
         if (!filtering && seasonPrayer != null) {
             item(key = "season_prayer") {
-                AppSectionHeader(
+                PrayersSectionHeader(
                     title = currentLanguage.pick(
                         "Del tiempo litúrgico",
                         "For this season",
@@ -442,7 +446,7 @@ private fun VaticanDevotionalView(
                     Modifier
                         .fillMaxWidth()
                         .padding(horizontal = IveGutter),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    verticalArrangement = Arrangement.spacedBy(CardStackGap)
                 ) {
                     FrostedPrayerRow(
                         title = seasonPrayer.title.get(currentLanguage),
@@ -452,6 +456,10 @@ private fun VaticanDevotionalView(
                         modifier = Modifier.testTag("season_prayer")
                     )
                 }
+                // 12-16dp air before the next card ("How to pray"): without
+                // it the season row and that tile met as a 0dp seam that
+                // read as one overlapping surface.
+                Spacer(Modifier.height(CardStackGap))
             }
         }
 
@@ -542,12 +550,12 @@ private fun VaticanDevotionalView(
             }
             groups.filter { it.second.isNotEmpty() }.forEachIndexed { groupIndex, (label, entries) ->
                 item(key = "prayer_group_$groupIndex") {
-                    AppSectionHeader(title = label)
+                    PrayersSectionHeader(title = label)
                     Column(
                         Modifier
                             .fillMaxWidth()
                             .padding(horizontal = IveGutter),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                        verticalArrangement = Arrangement.spacedBy(CardStackGap)
                     ) {
                         entries.forEach { prayer ->
                             FrostedPrayerRow(
@@ -561,12 +569,12 @@ private fun VaticanDevotionalView(
             }
             if (!filtering) {
                 item(key = "guided_chaplet") {
-                    Spacer(Modifier.height(design.spacing.cardGap))
+                    Spacer(Modifier.height(CardStackGap))
                     Column(
                         Modifier
                             .fillMaxWidth()
                             .padding(horizontal = IveGutter),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                        verticalArrangement = Arrangement.spacedBy(CardStackGap)
                     ) {
                         FrostedPrayerRow(
                             title = currentLanguage.pick(
@@ -699,7 +707,67 @@ private fun IveBlackPillButton(
     }
 }
 
-/** 18dp frosted category tile. */
+/**
+ * Section header for this screen only, demoted to SemiBold (600): the kit
+ * header sets the section title bold (700), which outweighed the screen
+ * title's large regular (400) line. The 20sp scaled section title at 600
+ * still labels its group, while the 34sp screen title leads by size.
+ * Layout mirrors the kit's outside-card header (gutter + 1dp, group gap on
+ * top, 8dp below) so rhythm is unchanged; only the weight changes.
+ */
+@Composable
+private fun PrayersSectionHeader(
+    title: String,
+    subtitle: String? = null,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    Column(
+        modifier
+            .fillMaxWidth()
+            .padding(horizontal = IveGutter + 1.dp)
+            .padding(top = design.spacing.insetGroupGap, bottom = 8.dp)
+    ) {
+        val trailing = subtitle != null && subtitle.length <= 18 && !subtitle.endsWith(".")
+        Row(verticalAlignment = Alignment.Bottom) {
+            Text(
+                text = title,
+                style = styles.sectionTitle.copy(
+                    fontSize = styles.sectionTitle.fontSize * (20f / 22f),
+                    fontWeight = FontWeight.SemiBold
+                ),
+                color = palette.textPrimary,
+                modifier = Modifier.weight(1f).alignByBaseline()
+            )
+            if (trailing) {
+                Spacer(Modifier.width(12.dp))
+                Text(
+                    text = subtitle!!,
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary,
+                    maxLines = 1,
+                    modifier = Modifier.alignByBaseline()
+                )
+            }
+        }
+        if (subtitle != null && !trailing) {
+            Spacer(Modifier.height(2.dp))
+            Text(
+                text = subtitle,
+                style = styles.rowSubtitle,
+                color = palette.textSecondary
+            )
+        }
+    }
+}
+
+/**
+ * 18dp frosted category tile. A tile with an [onClick] is a button: it is
+ * exposed with button semantics (not a bare text link) and reaches the
+ * 48dp minimum target through its content's heightIn.
+ */
 @Composable
 private fun CategoryTile(
     onClick: (() -> Unit)? = null,
@@ -712,7 +780,7 @@ private fun CategoryTile(
             .fillMaxWidth()
             .clip(CategoryTileRadius)
             .background(design.palette.groupedSurface)
-            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+            .then(if (onClick != null) Modifier.clickable(role = Role.Button, onClick = onClick) else Modifier)
             .padding(design.spacing.cardPadding),
         content = content
     )
@@ -858,15 +926,23 @@ private fun HowToPraySection(
                     )
                 }
                 Spacer(Modifier.width(design.spacing.cardGap))
-                Text(
-                    text = currentLanguage.pick(
-                        if (expanded) "Ocultar" else "Ver más",
-                        if (expanded) "Hide" else "Show more",
-                        if (expanded) "Ocultar" else "Ver mais"
-                    ),
-                    style = styles.buttonLabel,
-                    color = design.palette.accent
-                )
+                // The "Show more" label is never a naked text link: it sits
+                // in a 48dp-high target inside the tile that carries button
+                // semantics, so neither sight nor TalkBack meets a bare word.
+                Box(
+                    modifier = Modifier.heightIn(min = MinTouchTarget),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = currentLanguage.pick(
+                            if (expanded) "Ocultar" else "Ver más",
+                            if (expanded) "Hide" else "Show more",
+                            if (expanded) "Ocultar" else "Ver mais"
+                        ),
+                        style = styles.buttonLabel,
+                        color = design.palette.accent
+                    )
+                }
             }
         }
         if (expanded) {
@@ -1112,7 +1188,7 @@ private fun DivineMercyChapletView(
         }
 
         item {
-            AppSectionHeader(
+            PrayersSectionHeader(
                 title = currentLanguage.pick("Partes de la coronilla", "Parts of the chaplet", "Partes do terço")
             )
             AppSegmentedTabs(
@@ -1459,7 +1535,7 @@ private fun NovenaIndexView(
 
         if (inProgress.isNotEmpty()) {
             item {
-                AppSectionHeader(
+                PrayersSectionHeader(
                     title = currentLanguage.pick("En curso", "In progress", "Em andamento")
                 )
                 Column(
@@ -1467,7 +1543,7 @@ private fun NovenaIndexView(
                         .fillMaxWidth()
                         .padding(horizontal = IveGutter)
                         .testTag("novenas_in_progress"),
-                    verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                    verticalArrangement = Arrangement.spacedBy(CardStackGap)
                 ) {
                     inProgress.chunked(2).forEach { pair ->
                         Row(
@@ -1501,7 +1577,7 @@ private fun NovenaIndexView(
 
         if (finished.isNotEmpty()) {
             item {
-                AppSectionHeader(
+                PrayersSectionHeader(
                     title = currentLanguage.pick("Completadas", "Completed", "Concluídas")
                 )
                 Column(
@@ -1509,7 +1585,7 @@ private fun NovenaIndexView(
                         .fillMaxWidth()
                         .padding(horizontal = IveGutter)
                         .testTag("novenas_completed"),
-                    verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                    verticalArrangement = Arrangement.spacedBy(CardStackGap)
                 ) {
                     finished.chunked(2).forEach { pair ->
                         Row(
@@ -1558,7 +1634,7 @@ private fun NovenaIndexView(
         } else {
             item {
                 // The count is said only when a search has narrowed the index.
-                AppSectionHeader(
+                PrayersSectionHeader(
                     title = currentLanguage.pick("Todas las novenas", "All novenas", "Todas as novenas"),
                     subtitle = if (filtered.size < novenas.size) currentLanguage.pick(
                         "${filtered.size} de ${novenas.size}",
@@ -2032,7 +2108,7 @@ private fun NovenaDayView(
         item { AppOrnament() }
 
         item {
-            AppSectionHeader(
+            PrayersSectionHeader(
                 title = currentLanguage.pick("Los nueve días", "The nine days", "Os nove dias")
             )
             AppListGroup {
@@ -2054,7 +2130,7 @@ private fun NovenaDayView(
         val history = novena.miraculousHistory.get(currentLanguage)
         if (promises.isNotBlank() || history.isNotBlank()) {
             item {
-                AppSectionHeader(
+                PrayersSectionHeader(
                     title = currentLanguage.pick(
                         "Promesas y milagros registrados",
                         "Recorded promises and miracles",

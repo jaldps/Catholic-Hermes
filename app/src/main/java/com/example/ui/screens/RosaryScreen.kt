@@ -1209,7 +1209,7 @@ fun RosaryScreen(
                                     )
                                 ),
                                 style = styles.sectionEyebrow,
-                                color = palette.textTertiary
+                                color = palette.textSecondary
                             )
                             Spacer(Modifier.height(design.spacing.cardGap / 3))
                             Text(
@@ -1321,7 +1321,7 @@ fun RosaryScreen(
                                 )
                             ),
                             style = styles.sectionEyebrow,
-                            color = palette.textTertiary
+                            color = palette.textSecondary
                         )
                     }
                 }
@@ -1366,7 +1366,7 @@ private fun MysteryPickerDropdown(
                 containerColor = palette.raised,
                 contentColor = palette.textPrimary
             ),
-            contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 0.dp, bottom = 96.dp),
+            contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 0.dp, bottom = 0.dp),
             modifier = Modifier
                 .height(48.dp)
                 .fillMaxWidth()
@@ -1743,7 +1743,7 @@ private fun BeadRail(
         val geometry = remember(beads, maxWidth, density) {
             with(density) { RosaryGeometry.layout(beads, maxWidth.toPx(), this) }
         }
-        val heightDp = with(density) { geometry.height.toDp() }
+        val heightDp = with(density) { geometry.height.toDp() }.coerceAtMost(200.dp)
         val loopTop = with(density) { (geometry.centre.y - geometry.radius).toDp() }
         val loopSize = with(density) { (geometry.radius * 2).toDp() }
 
@@ -2072,9 +2072,11 @@ private class RosaryGeometry(
         fun layout(beads: List<BeadSpec>, width: Float, density: Density): RosaryGeometry = with(density) {
             val ringInset = 16.dp.toPx()
             val top = 12.dp.toPx() + ringInset
-            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 132.dp.toPx())
+            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 48.dp.toPx())
             // Beads scale with the loop, so a narrow phone keeps its gaps.
-            val unit = radius / 132.dp.toPx()
+            // Radius is capped so the whole rail (loop + pendant) stays
+            // under ~200dp and the current prayer starts above the fold.
+            val unit = radius / 48.dp.toPx()
             val small = 4.6.dp.toPx() * unit
             val large = 7.2.dp.toPx() * unit
             val medal = 9.dp.toPx() * unit
