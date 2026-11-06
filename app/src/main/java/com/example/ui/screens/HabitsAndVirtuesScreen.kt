@@ -3,6 +3,8 @@ package com.example.ui.screens
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,6 +28,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bolt
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.Delete
@@ -41,7 +44,6 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material.icons.filled.WbSunny
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedTextField
@@ -59,11 +61,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontStyle
@@ -255,7 +259,8 @@ fun HabitsAndVirtuesScreen(
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
-                    .testTag("tab_habits_rule")
+                    .testTag("tab_habits_rule"),
+                contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 96.dp)
             ) {
                 paneHeader(
                     title = screenTitle,
@@ -363,8 +368,15 @@ fun HabitsAndVirtuesScreen(
                     }
 
                     item {
-                        AppListGroup {
-                            habitsList.forEach { habit ->
+                        // Ive checklist card: AppCard is frosted (translucent
+                        // groupedSurface) at shapes.card — 20dp under Ive, 20dp
+                        // gutters via design.spacing.gutter.
+                        AppCard(
+                            modifier = Modifier
+                                .padding(horizontal = design.spacing.gutter)
+                                .testTag("habits_checklist_card")
+                        ) {
+                            habitsList.forEachIndexed { index, habit ->
                                 HabitRow(
                                     habit = habit,
                                     isCompletedToday = completedHabitIds.contains(habit.id),
@@ -376,6 +388,9 @@ fun HabitsAndVirtuesScreen(
                                         { deleteHabit(habit) }
                                     } else null
                                 )
+                                if (index < habitsList.lastIndex) {
+                                    AppDivider()
+                                }
                             }
                         }
                     }
@@ -882,73 +897,57 @@ private fun FidelityCard(
     val styles = LocalAppTextStyles.current
 
     AppCard(modifier = modifier.padding(horizontal = design.spacing.gutter)) {
-        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            Column(Modifier.weight(1f)) {
-                Text(
-                    text = caps(currentLanguage.pick("Fidelidad espiritual", "Spiritual fidelity", "Fidelidade espiritual")),
-                    style = styles.sectionEyebrow,
-                    color = palette.textSecondary
-                )
-                Spacer(Modifier.height(6.dp))
-                Text(
-                    text = currentLanguage.pick(
-                        "$completedCount de $totalCount cumplidos hoy",
-                        "$completedCount of $totalCount kept today",
-                        "$completedCount de $totalCount cumpridos hoje"
-                    ),
-                    style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
-                    color = palette.textPrimary
-                )
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    text = when {
-                        completionRate >= 1.0f -> currentLanguage.pick(
-                            "¡Día consagrado en plenitud!",
-                            "A day consecrated in full!",
-                            "Dia consagrado em plenitude!"
-                        )
-                        completionRate >= 0.5f -> currentLanguage.pick(
-                            "Buen camino, persevera hasta la noche.",
-                            "Good progress — persevere until nightfall.",
-                            "Bom caminho, persevere até à noite."
-                        )
-                        else -> currentLanguage.pick(
-                            "Empieza con un ofrecimiento de obras.",
-                            "Begin with an offering of the day's work.",
-                            "Comece com um oferecimento de obras."
-                        )
-                    },
-                    style = styles.rowSubtitle,
-                    color = palette.textSecondary
-                )
-            }
-            Spacer(Modifier.width(design.spacing.cardGap))
+        // Ive reference (screen 10): serene, centred stats header — the green
+        // circular progress ring leads, counts sit beneath it.
+        Column(
+            Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = caps(currentLanguage.pick("Fidelidad espiritual", "Spiritual fidelity", "Fidelidade espiritual")),
+                style = styles.sectionEyebrow,
+                color = palette.textSecondary
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
             FidelityRing(
                 completionRate = completionRate,
                 completedCount = completedCount,
                 totalCount = totalCount,
                 currentLanguage = currentLanguage
             )
+            Spacer(Modifier.height(design.spacing.cardGap))
+            Text(
+                text = currentLanguage.pick(
+                    "$completedCount de $totalCount cumplidos hoy",
+                    "$completedCount of $totalCount kept today",
+                    "$completedCount de $totalCount cumpridos hoje"
+                ),
+                style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+                color = palette.textPrimary
+            )
+            Spacer(Modifier.height(4.dp))
+            Text(
+                text = when {
+                    completionRate >= 1.0f -> currentLanguage.pick(
+                        "¡Día consagrado en plenitud!",
+                        "A day consecrated in full!",
+                        "Dia consagrado em plenitude!"
+                    )
+                    completionRate >= 0.5f -> currentLanguage.pick(
+                        "Buen camino, persevera hasta la noche.",
+                        "Good progress — persevere until nightfall.",
+                        "Bom caminho, persevere até à noite."
+                    )
+                    else -> currentLanguage.pick(
+                        "Empieza con un ofrecimiento de obras.",
+                        "Begin with an offering of the day's work.",
+                        "Comece com um oferecimento de obras."
+                    )
+                },
+                style = styles.rowSubtitle,
+                color = palette.textSecondary
+            )
         }
-
-        // Progress as a determinate bar as well as the ring: colour/arc alone
-        // is invisible to a reader who cannot see the ring, and the bar's
-        // stateDescription carries the same $completed/$total text.
-        val progressLabel = currentLanguage.pick(
-            "$completedCount de $totalCount cumplidos hoy",
-            "$completedCount of $totalCount kept today",
-            "$completedCount de $totalCount cumpridos hoje"
-        )
-        Spacer(Modifier.height(design.spacing.cardGap))
-        LinearProgressIndicator(
-            progress = { completionRate.coerceIn(0f, 1f) },
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(4.dp)
-                .semantics { stateDescription = progressLabel },
-            color = palette.accent,
-            trackColor = palette.selectionTint
-        )
 
         Spacer(Modifier.height(design.spacing.cardPadding))
         AppDivider()
@@ -1019,13 +1018,13 @@ private fun FidelityRing(
             val box = Size(size.width - stroke, size.height - stroke)
             val origin = Offset(stroke / 2f, stroke / 2f)
             drawArc(
-                color = palette.hairline,
+                color = palette.selectionTint,
                 startAngle = 0f,
                 sweepAngle = 360f,
                 useCenter = false,
                 topLeft = origin,
                 size = box,
-                style = Stroke(width = stroke, cap = StrokeCap.Butt)
+                style = Stroke(width = stroke, cap = cap)
             )
             if (fraction > 0f) {
                 drawArc(
@@ -1039,12 +1038,22 @@ private fun FidelityRing(
                 )
             }
         }
-        Text(
-            text = "${(fraction * 100).toInt()}%",
-            style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
-            color = palette.textPrimary,
-            maxLines = 1
-        )
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            Text(
+                text = "${(fraction * 100).toInt()}%",
+                style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+                color = palette.textPrimary,
+                maxLines = 1
+            )
+            if (totalCount > 0) {
+                Text(
+                    text = "$completedCount/$totalCount",
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary,
+                    maxLines = 1
+                )
+            }
+        }
     }
 }
 
@@ -1160,9 +1169,11 @@ private fun MetricRow(
 }
 
 /**
- * One practice of the rule. Tapping the row is what keeps or un-keeps it today,
- * and a kept habit is the row's [AppListRow] selected state — rubricated on the
- * Vatican leaf, tinted under the other two.
+ * One practice of the rule. Tapping the row is what keeps or un-keeps it today.
+ * Ive checklist: a green checked circle leads the row when kept today
+ * (palette.accent — green #35751A under Ive), an open ring when pending.
+ * The category glyph moves to a muted trailing mark so the check stays the
+ * row's primary affordance. Toggle logic, tags and semantics are unchanged.
  */
 @Composable
 private fun HabitRow(
@@ -1177,6 +1188,7 @@ private fun HabitRow(
         AppLanguage.EN -> habit.titleEn
         AppLanguage.PT -> habit.titlePt
     }
+    val styles = LocalAppTextStyles.current
 
     val streakLine = if (habit.currentStreak > 0) {
         "\n" + currentLanguage.pick(
@@ -1189,17 +1201,15 @@ private fun HabitRow(
     // Two tags on one row: the habit's card is now the habit's toggle, and a
     // click anywhere in it does what the toggle used to.
     val design = LocalAppDesign.current
+    val palette = design.palette
     val rowMinHeight = maxOf(design.spacing.rowMinHeight, MinTouchTarget)
     Box(Modifier.testTag("habit_card_${habit.id}")) {
-        AppListRow(
-            title = title,
-            subtitle = "${com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage)} · ${habit.description}" + streakLine,
-            leadingIcon = habitIcon(habit.iconName),
-            showsNavigationAffordance = false,
-            selected = isCompletedToday,
-            onClick = onToggleCompletion,
+        Row(
             modifier = Modifier
+                .fillMaxWidth()
+                .clickable(role = Role.Button, onClick = onToggleCompletion)
                 .heightIn(min = rowMinHeight)
+                .padding(vertical = 10.dp)
                 .semantics {
                     stateDescription = if (isCompletedToday) {
                         currentLanguage.pick("Cumplido hoy", "Kept today", "Cumprido hoje")
@@ -1207,8 +1217,54 @@ private fun HabitRow(
                         currentLanguage.pick("Pendiente hoy", "Pending today", "Pendente hoje")
                     }
                 }
-                .testTag("toggle_habit_${habit.id}")
-        )
+                .testTag("toggle_habit_${habit.id}"),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            // Green checked circle when kept, open ring when pending.
+            Box(
+                modifier = Modifier
+                    .size(28.dp)
+                    .clip(CircleShape)
+                    .then(
+                        if (isCompletedToday) {
+                            Modifier.background(palette.accent)
+                        } else {
+                            Modifier.border(1.5.dp, palette.textTertiary, CircleShape)
+                        }
+                    ),
+                contentAlignment = Alignment.Center
+            ) {
+                if (isCompletedToday) {
+                    Icon(
+                        imageVector = Icons.Default.Check,
+                        contentDescription = null,
+                        tint = if (design.isDark) Color.Black else Color.White,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
+            }
+            Spacer(Modifier.width(design.spacing.iconLabelGap))
+            Column(Modifier.weight(1f)) {
+                Text(
+                    text = title,
+                    style = styles.rowTitle,
+                    color = if (isCompletedToday) palette.accent else palette.textPrimary
+                )
+                Spacer(Modifier.height(1.dp))
+                Text(
+                    text = "${com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage)} · ${habit.description}" + streakLine,
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+            }
+            Spacer(Modifier.width(8.dp))
+            Icon(
+                imageVector = habitIcon(habit.iconName),
+                contentDescription = null,
+                tint = palette.textTertiary,
+                modifier = Modifier.size(20.dp)
+            )
+        }
     }
 
     if (onDeleteCustomHabit != null) {
@@ -1356,8 +1412,8 @@ private fun categoryLabel(category: String, language: AppLanguage): String = whe
     else -> language.pick("Virtud", "Virtue", "Virtude")
 }
 
-private val RingSize = 68.dp
-private val RingStroke = 6.dp
+private val RingSize = 112.dp
+private val RingStroke = 10.dp
 private val MarkerSize = 24.dp
 
 /** M3 minimum touch target; rows also honour the identity's rowMinHeight. */

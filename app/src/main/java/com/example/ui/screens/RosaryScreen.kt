@@ -81,6 +81,20 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.draw.clip
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.Icon
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -1032,6 +1046,20 @@ fun RosaryScreen(
                         title = lang.pick("Misterios", "Mysteries", "Mistérios"),
                         subtitle = selectedMysteryType.recommendedDays.get(lang)
                     )
+                    if (design.language == DesignLanguage.IVE) {
+                        MysteryPickerDropdown(
+                            selected = selectedMysteryType,
+                            today = todayMystery.type,
+                            lang = lang,
+                            onSelect = { mType ->
+                                if (mType != selectedMysteryType) {
+                                    ttsManager.stop()
+                                    selectedMysteryType = mType
+                                    rosaryStepIndex = 0
+                                }
+                            }
+                        )
+                    } else {
                     // Compact chip row (not four full rows) so the current
                     // prayer stays above the fold; the selected set's days
                     // are captioned below in one line.
@@ -1080,6 +1108,7 @@ fun RosaryScreen(
                                 )
                             }
                         }
+                    }
                     }
                 }
 
@@ -1303,6 +1332,112 @@ fun RosaryScreen(
     }
 }
 
+/**
+ * Ive reference: the mystery set as a frosted-white pill (radius 999) that
+ * opens a dropdown. The pill names the current set and its days, with today's
+ * set marked; the menu repeats the same choices a chip row would, one per
+ * row, and closes on selection. Selection logic is unchanged.
+ */
+@Composable
+private fun MysteryPickerDropdown(
+    selected: RosaryMysteryType,
+    today: RosaryMysteryType,
+    lang: AppLanguage,
+    onSelect: (RosaryMysteryType) -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val todayLabel = lang.pick("hoy", "Today", "Hoje")
+    var expanded by remember { mutableStateOf(false) }
+    fun labelFor(mType: RosaryMysteryType) =
+        mType.displayName.get(lang) + if (mType == today) " · $todayLabel" else ""
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .testTag("rosary_mystery_picker")
+    ) {
+        Button(
+            onClick = { expanded = true },
+            shape = RoundedCornerShape(999.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = palette.raised,
+                contentColor = palette.textPrimary
+            ),
+            contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 0.dp, bottom = 96.dp),
+            modifier = Modifier
+                .height(48.dp)
+                .fillMaxWidth()
+        ) {
+            Icon(
+                imageVector = mysteryIcon(selected),
+                contentDescription = null,
+                modifier = Modifier.size(18.dp)
+            )
+            Spacer(Modifier.width(8.dp))
+            Text(
+                text = labelFor(selected),
+                style = styles.rowTitle,
+                color = palette.textPrimary,
+                maxLines = 1,
+                modifier = Modifier.weight(1f)
+            )
+            Text(
+                text = selected.recommendedDays.get(lang),
+                style = styles.rowSubtitle,
+                color = palette.textSecondary,
+                maxLines = 1
+            )
+            Spacer(Modifier.width(8.dp))
+            Icon(
+                imageVector = Icons.Default.KeyboardArrowDown,
+                contentDescription = null,
+                tint = palette.textSecondary,
+                modifier = Modifier.size(20.dp)
+            )
+        }
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false },
+            modifier = Modifier
+                .align(Alignment.TopStart)
+                .padding(top = 52.dp)
+                .fillMaxWidth()
+        ) {
+            RosaryMysteryType.entries.forEach { mType ->
+                DropdownMenuItem(
+                    text = {
+                        Column {
+                            Text(
+                                text = labelFor(mType),
+                                style = styles.rowTitle,
+                                color = palette.textPrimary
+                            )
+                            Text(
+                                text = mType.recommendedDays.get(lang),
+                                style = styles.rowSubtitle,
+                                color = palette.textSecondary
+                            )
+                        }
+                    },
+                    leadingIcon = { Icon(mysteryIcon(mType), contentDescription = null) },
+                    trailingIcon = if (mType == selected) {
+                        { Icon(Icons.Default.Check, contentDescription = null, tint = palette.accent) }
+                    } else {
+                        null
+                    },
+                    onClick = {
+                        expanded = false
+                        onSelect(mType)
+                    }
+                )
+            }
+        }
+    }
+}
+
 private fun mysteryIcon(type: RosaryMysteryType) = when (type) {
     RosaryMysteryType.JOYFUL -> Icons.Default.LocalFlorist
     RosaryMysteryType.SORROWFUL -> Icons.Default.WaterDrop
@@ -1345,7 +1480,30 @@ private fun GuideControlsCard(
             "Step ${index + 1} of ${guide.steps.size}",
             "Passo ${index + 1} de ${guide.steps.size}"
         )
-        BeadRail(
+        // Ive reference: the rosary sits on warm paper with a soft radial
+        // glow behind the rail, like artwork on a lit stage.
+        Box(
+            modifier = Modifier.fillMaxWidth(),
+            contentAlignment = Alignment.Center
+        ) {
+            if (design.language == DesignLanguage.IVE) {
+                Canvas(Modifier.matchParentSize()) {
+                    val centre = Offset(size.width / 2f, size.height / 2f)
+                    val glowR = size.width * 0.62f
+                    drawCircle(
+                        brush = Brush.radialGradient(
+                            0.0f to design.palette.accentMuted.copy(alpha = 0.55f),
+                            0.55f to design.palette.gold.copy(alpha = 0.18f),
+                            1.0f to design.palette.gold.copy(alpha = 0f),
+                            center = centre,
+                            radius = glowR
+                        ),
+                        radius = glowR,
+                        center = centre
+                    )
+                }
+            }
+            BeadRail(
             beads = guide.beads,
             activeIndex = step.bead,
             progress = index.toFloat() / guide.steps.lastIndex.coerceAtLeast(1),
@@ -1355,7 +1513,6 @@ private fun GuideControlsCard(
                 if (target >= 0) onGo(target)
             },
             modifier = Modifier
-                .align(Alignment.CenterHorizontally)
                 .widthIn(max = when (design.language) {
                     DesignLanguage.APPLE -> 224.dp
                     DesignLanguage.IVE -> 232.dp
@@ -1373,6 +1530,7 @@ private fun GuideControlsCard(
                     )
                 }
         )
+        }
 
         // Progress as text, not only as a ring: at 130% text the long
         // ES/PT where/step labels overflowed the loop's centre, and a
@@ -1395,6 +1553,24 @@ private fun GuideControlsCard(
             modifier = Modifier.fillMaxWidth()
         )
         Spacer(Modifier.height(6.dp))
+        if (design.language == DesignLanguage.IVE) {
+            Spacer(Modifier.height(10.dp))
+            TransportCluster(
+                canGoPrevious = index > 0,
+                canGoNext = index < guide.steps.lastIndex,
+                isPlayingAudio = isPlayingAudio,
+                onPrevious = { onGo(index - 1) },
+                onNext = { onGo(index + 1) },
+                onToggleAudio = onToggleAudio
+            )
+            Spacer(Modifier.height(8.dp))
+            PageDots(
+                guide = guide,
+                activeSection = step.section,
+                onGo = onGo
+            )
+            Spacer(Modifier.height(6.dp))
+        }
         if (step.optional) {
             Text(
                 text = lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
@@ -1981,6 +2157,130 @@ private class RosaryGeometry(
                 medal = medal,
                 crucifixHeight = crucifixHeight,
                 height = height
+            )
+        }
+    }
+}
+
+/**
+ * Ive reference transport: a big circular black play/pause button (64dp)
+ * flanked by 44dp frosted circular step buttons. The text prev/next row and
+ * the narration button below (RecitationControls) stay as the previous fix
+ * left them; these circles are the hero's quick transport and carry their
+ * own tags so the kept row's testTags stay unique.
+ */
+@Composable
+private fun TransportCluster(
+    canGoPrevious: Boolean,
+    canGoNext: Boolean,
+    isPlayingAudio: Boolean,
+    onPrevious: () -> Unit,
+    onNext: () -> Unit,
+    onToggleAudio: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val haptics = LocalHapticFeedback.current
+    val playBg = if (design.isDark) palette.textPrimary else Color.Black
+    val playFg = if (design.isDark) Color.Black else Color.White
+    val flankBg = palette.raised
+
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        IconButton(
+            onClick = {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                onPrevious()
+            },
+            enabled = canGoPrevious,
+            modifier = Modifier
+                .size(44.dp)
+                .clip(CircleShape)
+                .background(flankBg)
+                .testTag("transport_prev_button")
+        ) {
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                contentDescription = null,
+                tint = if (canGoPrevious) palette.textPrimary else palette.textTertiary
+            )
+        }
+        Spacer(Modifier.width(20.dp))
+        IconButton(
+            onClick = {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                onToggleAudio()
+            },
+            modifier = Modifier
+                .size(64.dp)
+                .clip(CircleShape)
+                .background(playBg)
+                .testTag("transport_play_button")
+        ) {
+            Icon(
+                imageVector = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
+                contentDescription = null,
+                tint = playFg,
+                modifier = Modifier.size(30.dp)
+            )
+        }
+        Spacer(Modifier.width(20.dp))
+        IconButton(
+            onClick = {
+                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
+                onNext()
+            },
+            enabled = canGoNext,
+            modifier = Modifier
+                .size(44.dp)
+                .clip(CircleShape)
+                .background(flankBg)
+                .testTag("transport_next_button")
+        ) {
+            Icon(
+                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                contentDescription = null,
+                tint = if (canGoNext) palette.textPrimary else palette.textTertiary
+            )
+        }
+    }
+}
+
+/**
+ * Ive reference page dots: one dot per part of the devotion (opening,
+ * decades, closing). The current part is a pill; tapping a dot jumps to
+ * that part's first step.
+ */
+@Composable
+private fun PageDots(
+    guide: PrayerGuide,
+    activeSection: Int,
+    onGo: (Int) -> Unit
+) {
+    val palette = LocalAppDesign.current.palette
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .testTag("page_dots"),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        guide.sections.forEach { section ->
+            val active = section.index == activeSection
+            Box(
+                modifier = Modifier
+                    .padding(horizontal = 3.dp, vertical = 6.dp)
+                    .height(6.dp)
+                    .width(if (active) 16.dp else 6.dp)
+                    .clip(CircleShape)
+                    .background(
+                        if (active) palette.accent else palette.textTertiary.copy(alpha = 0.35f)
+                    )
+                    .clickable(role = Role.Button) { onGo(section.firstStep) }
+                    .semantics { contentDescription = section.title }
             )
         }
     }

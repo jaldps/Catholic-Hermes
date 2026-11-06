@@ -443,7 +443,7 @@ object DesignTokens {
             isDark = isDark,
             shapes = IveShapes,
             spacing = AppleSpacing.copy(gutter = 20.dp, cardGap = 14.dp),
-            depth = AppleDepth,
+            depth = AppleDepth.copy(cardElevation = 3.dp, cardBorderWidth = 1.dp),
             motion = AppleMotion,
             decor = AppleDecor,
             palette = if (isDark) MaterialPaletteDark else MaterialPaletteLight

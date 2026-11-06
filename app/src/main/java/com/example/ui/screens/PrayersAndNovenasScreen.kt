@@ -27,11 +27,13 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.VolumeUp
@@ -51,9 +53,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.AnnotatedString
@@ -128,6 +132,18 @@ private val NovenaCardHeight = 288.dp
 
 /** Clipped plate across the top of a novena index card. */
 private val NovenaCardImageHeight = 108.dp
+
+/** Ive reference geometry: 20dp screen gutters. */
+private val IveGutter = 20.dp
+
+/** Category tiles: 18dp radius, frosted. */
+private val CategoryTileRadius = RoundedCornerShape(18.dp)
+
+/** Novena image cards: full-bleed photo, 20dp radius. */
+private val NovenaCardRadius = RoundedCornerShape(20.dp)
+
+/** Prayer list rows: 16dp radius, frosted. */
+private val PrayerRowRadius = RoundedCornerShape(16.dp)
 
 /** Minimum touch target for every control this screen owns (AAA). */
 private val MinTouchTarget = 48.dp
@@ -422,8 +438,13 @@ private fun VaticanDevotionalView(
                         "Para este tempo"
                     )
                 )
-                AppListGroup {
-                    AppListRow(
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = IveGutter),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    FrostedPrayerRow(
                         title = seasonPrayer.title.get(currentLanguage),
                         subtitle = LiturgicalCalendar.dayInfo(LiturgicalCalendar.today())
                             .season.displayName.get(currentLanguage),
@@ -456,7 +477,7 @@ private fun VaticanDevotionalView(
                     "Buscar uma oração"
                 ),
                 modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
+                    .padding(horizontal = IveGutter)
                     .testTag("prayer_search_input")
             )
             Spacer(Modifier.height(design.spacing.cardGap))
@@ -490,7 +511,7 @@ private fun VaticanDevotionalView(
                     },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
+                        .padding(horizontal = IveGutter)
                         .testTag("prayer_clear_filters")
                 )
             }
@@ -522,9 +543,14 @@ private fun VaticanDevotionalView(
             groups.filter { it.second.isNotEmpty() }.forEachIndexed { groupIndex, (label, entries) ->
                 item(key = "prayer_group_$groupIndex") {
                     AppSectionHeader(title = label)
-                    AppListGroup {
+                    Column(
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = IveGutter),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
                         entries.forEach { prayer ->
-                            AppListRow(
+                            FrostedPrayerRow(
                                 title = prayer.title.get(currentLanguage),
                                 onClick = { onOpenPrayer(prayer) },
                                 modifier = Modifier.testTag("prayer_row_${prayer.id}")
@@ -536,8 +562,13 @@ private fun VaticanDevotionalView(
             if (!filtering) {
                 item(key = "guided_chaplet") {
                     Spacer(Modifier.height(design.spacing.cardGap))
-                    AppListGroup {
-                        AppListRow(
+                    Column(
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = IveGutter),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        FrostedPrayerRow(
                             title = currentLanguage.pick(
                                 "Coronilla de la Divina Misericordia",
                                 "Chaplet of Divine Mercy",
@@ -604,7 +635,7 @@ private fun PrayerIntentionFilters(
     FlowRow(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = design.spacing.gutter)
+            .padding(horizontal = IveGutter)
             .testTag(testTag),
         // Start-aligned on every line: a wrapped last line must sit under
         // the first chip's edge, not float centred as an orphan.
@@ -612,15 +643,119 @@ private fun PrayerIntentionFilters(
         verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
     ) {
         options.forEach { (value, label) ->
-            AppChip(
-                label = label,
-                selected = selected == value,
-                onClick = { onSelect(value) },
-                modifier = Modifier.heightIn(min = MinTouchTarget)
+            val isSelected = selected == value
+            Box(
+                Modifier
+                    .heightIn(min = 40.dp)
+                    .clip(CircleShape)
+                    .background(if (isSelected) Color.Black else design.palette.groupedSurface)
+                    .clickable { onSelect(value) }
+                    .semantics { this.selected = isSelected }
+                    .padding(horizontal = 16.dp, vertical = 8.dp),
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = label,
+                    style = LocalAppTextStyles.current.screenSubtitle,
+                    color = if (isSelected) Color.White else design.palette.textPrimary,
+                    maxLines = 1
+                )
+            }
+        }
+    }
+}
+
+/** Black pill primary CTA for start/complete actions. */
+@Composable
+private fun IveBlackPillButton(
+    label: String,
+    onClick: () -> Unit,
+    leadingIcon: androidx.compose.ui.graphics.vector.ImageVector? = null,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    Row(
+        modifier
+            .heightIn(min = MinTouchTarget)
+            .height(52.dp)
+            .fillMaxWidth()
+            .clip(CircleShape)
+            .background(Color.Black)
+            .clickable(onClick = onClick)
+            .padding(horizontal = 20.dp, vertical = 12.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.Center
+    ) {
+        if (leadingIcon != null) {
+            Icon(leadingIcon, null, tint = Color.White, modifier = Modifier.size(18.dp))
+            Spacer(Modifier.width(8.dp))
+        }
+        Text(
+            text = label,
+            style = LocalAppTextStyles.current.buttonLabel,
+            color = Color.White,
+            maxLines = 1
+        )
+    }
+}
+
+/** 18dp frosted category tile. */
+@Composable
+private fun CategoryTile(
+    onClick: (() -> Unit)? = null,
+    modifier: Modifier = Modifier,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    Column(
+        modifier
+            .fillMaxWidth()
+            .clip(CategoryTileRadius)
+            .background(design.palette.groupedSurface)
+            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+            .padding(design.spacing.cardPadding),
+        content = content
+    )
+}
+
+/** 16dp frosted row with chevron. */
+@Composable
+private fun FrostedPrayerRow(
+    title: String,
+    subtitle: String? = null,
+    onClick: (() -> Unit)? = null,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Row(
+        modifier
+            .fillMaxWidth()
+            .clip(PrayerRowRadius)
+            .background(design.palette.groupedSurface)
+            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+            .padding(horizontal = 16.dp, vertical = 14.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Column(Modifier.weight(1f)) {
+            Text(title, style = styles.rowTitle, color = design.palette.textPrimary)
+            if (subtitle != null) {
+                Spacer(Modifier.height(2.dp))
+                Text(subtitle, style = styles.rowSubtitle, color = design.palette.textSecondary)
+            }
+        }
+        if (onClick != null) {
+            Spacer(Modifier.width(8.dp))
+            Icon(
+                Icons.Default.KeyboardArrowRight,
+                null,
+                tint = design.palette.textTertiary,
+                modifier = Modifier.size(22.dp)
             )
         }
     }
 }
+
 
 /**
  * "How to pray" at the top of the Prayers tab: a collapsible tonal card whose
@@ -691,11 +826,11 @@ private fun HowToPraySection(
             .fillMaxWidth()
             .testTag("how_to_pray_section")
     ) {
-        AppCard(
+        CategoryTile(
             onClick = onToggle,
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
+                .padding(horizontal = IveGutter)
                 .heightIn(min = MinTouchTarget)
                 .testTag("how_to_pray_toggle")
         ) {
@@ -737,10 +872,10 @@ private fun HowToPraySection(
         if (expanded) {
             steps.forEachIndexed { index, step ->
                 Spacer(Modifier.height(design.spacing.cardGap))
-                AppCard(
+                CategoryTile(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
+                        .padding(horizontal = IveGutter)
                         .testTag("how_to_pray_step_$index")
                 ) {
                     BlockHeading(eyebrow = step.title, detail = null)
@@ -804,7 +939,7 @@ private fun VaticanPrayerCard(
 ) {
     val design = LocalAppDesign.current
 
-    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+    AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
         VersicleAndResponse(
             leaderText = prayer.leaderText.get(currentLanguage),
             responseText = prayer.responseText?.get(currentLanguage),
@@ -940,7 +1075,7 @@ private fun DivineMercyChapletView(
 
         item {
             ReadingColumn {
-                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                     Text(
                         text = currentLanguage.pick(
                             "Promesa de Nuestro Señor: «Quienquiera que la rece recibirá gran misericordia a la hora de la muerte... Defenderé como Mi propia gloria a cada alma que rece esta coronilla» (Diario, 687).",
@@ -992,7 +1127,7 @@ private fun DivineMercyChapletView(
             0 -> item {
                 Spacer(Modifier.height(design.spacing.cardGap))
                 ReadingColumn {
-                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                    AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                         BlockHeading(
                             eyebrow = currentLanguage.pick(
                                 "Oraciones iniciales",
@@ -1009,7 +1144,7 @@ private fun DivineMercyChapletView(
                             modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                         )
                         Spacer(Modifier.height(design.spacing.cardPadding))
-                        AppPrimaryButton(
+                        IveBlackPillButton(
                             label = currentLanguage.pick(
                                 "Comenzar la 1ª decena",
                                 "Begin the 1st decade",
@@ -1029,7 +1164,7 @@ private fun DivineMercyChapletView(
             1 -> {
                 item {
                     Spacer(Modifier.height(design.spacing.cardGap))
-                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                    AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                         BlockHeading(
                             eyebrow = if (currentBead == 0) {
                                 currentLanguage.pick(
@@ -1114,7 +1249,7 @@ private fun DivineMercyChapletView(
                                 )
                             }
                             if (!atLastBead) {
-                                AppPrimaryButton(
+                                IveBlackPillButton(
                                     label = currentLanguage.pick("Avanzar", "Next", "Avançar"),
                                     onClick = {
                                         if (currentBead < ChapletBeadsPerDecade) {
@@ -1131,7 +1266,7 @@ private fun DivineMercyChapletView(
 
                         if (atLastBead) {
                             Spacer(Modifier.height(design.spacing.cardGap / 2))
-                            AppPrimaryButton(
+                            IveBlackPillButton(
                                 label = currentLanguage.pick(
                                     "Ir a la conclusión",
                                     "Go to the conclusion",
@@ -1148,7 +1283,7 @@ private fun DivineMercyChapletView(
             2 -> item {
                 Spacer(Modifier.height(design.spacing.cardGap))
                 ReadingColumn {
-                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                    AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                         BlockHeading(
                             eyebrow = currentLanguage.pick(
                                 "Doxología trinitaria y conclusión",
@@ -1165,7 +1300,7 @@ private fun DivineMercyChapletView(
                             modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                         )
                         Spacer(Modifier.height(design.spacing.cardPadding))
-                        AppPrimaryButton(
+                        IveBlackPillButton(
                             label = currentLanguage.pick(
                                 "Rezar la novena de 9 días",
                                 "Pray the 9-day novena",
@@ -1193,7 +1328,7 @@ private fun DivineMercyChapletView(
                 item {
                     Spacer(Modifier.height(design.spacing.cardGap))
                     ReadingColumn {
-                        AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                             Text(
                                 text = hourOfMercyText,
                                 style = styles.quote,
@@ -1309,7 +1444,7 @@ private fun NovenaIndexView(
                     "Buscar novena..."
                 ),
                 modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
+                    .padding(horizontal = IveGutter)
                     .testTag("novena_search_input")
             )
             Spacer(Modifier.height(design.spacing.cardGap))
@@ -1330,7 +1465,7 @@ private fun NovenaIndexView(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
+                        .padding(horizontal = IveGutter)
                         .testTag("novenas_in_progress"),
                     verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
                 ) {
@@ -1372,7 +1507,7 @@ private fun NovenaIndexView(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
+                        .padding(horizontal = IveGutter)
                         .testTag("novenas_completed"),
                     verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
                 ) {
@@ -1417,7 +1552,7 @@ private fun NovenaIndexView(
                     },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
+                        .padding(horizontal = IveGutter)
                 )
             }
         } else {
@@ -1443,7 +1578,7 @@ private fun NovenaIndexView(
                 Row(
                     Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter),
+                        .padding(horizontal = IveGutter),
                     horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
                 ) {
                     pair.forEach { novena ->
@@ -1501,80 +1636,88 @@ private fun NovenaCard(
         else -> novenaDayOf(currentLanguage, nextNovenaDay(novena, prayed), total)
     }
 
-    AppCard(
-        onClick = onOpen,
-        modifier = modifier
+    // Full-bleed photo, 20dp radius, bottom scrim with overlaid title.
+    Box(
+        modifier
             .height(NovenaCardHeight)
+            .clip(NovenaCardRadius)
+            .background(palette.selectionTint)
+            .clickable(onClick = onOpen)
             .testTag("novena_card_${novena.id}")
     ) {
-        // Tonal ground under the plate: while the image loads — or if it
-        // fails — the card still shows the thumbnail shape in the identity's
-        // own tint instead of a blank gap.
-        Box(
+        novena.imageUrl?.takeIf { it.isNotBlank() }?.let { url ->
+            AsyncImage(
+                model = url,
+                contentDescription = novena.title.get(currentLanguage),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .clip(NovenaCardRadius)
+            )
+        } ?: Icon(
+            imageVector = Icons.Default.Church,
+            contentDescription = null,
+            tint = Color.White.copy(alpha = 0.85f),
             modifier = Modifier
+                .size(40.dp)
+                .align(Alignment.Center)
+        )
+        // Bottom scrim, full bleed, overlaid title.
+        Box(
+            Modifier
+                .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .height(NovenaCardImageHeight)
-                .clip(design.shapes.thumbnail)
-                .background(palette.selectionTint),
-            contentAlignment = Alignment.Center
-        ) {
-            novena.imageUrl?.takeIf { it.isNotBlank() }?.let { url ->
-                AsyncImage(
-                    model = url,
-                    contentDescription = novena.title.get(currentLanguage),
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .clip(design.shapes.thumbnail)
+                .height(140.dp)
+                .background(
+                    Brush.verticalGradient(
+                        listOf(Color.Transparent, Color.Black.copy(alpha = 0.78f))
+                    )
                 )
-            } ?: Icon(
-                imageVector = Icons.Default.Church,
-                contentDescription = null,
-                tint = palette.textSecondary,
-                modifier = Modifier.size(design.decor.rowIconSize)
+        )
+        Column(
+            Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .padding(14.dp)
+        ) {
+            Text(
+                text = novena.title.get(currentLanguage),
+                style = styles.rowTitle,
+                color = Color.White,
+                minLines = 1,
+                maxLines = 2,
+                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+            )
+            Spacer(Modifier.height(4.dp))
+            Text(
+                text = listOfNotNull(
+                    novena.patron.get(currentLanguage),
+                    extraLine
+                ).joinToString(" · "),
+                style = styles.rowSubtitle,
+                color = Color.White.copy(alpha = 0.88f),
+                maxLines = 1,
+                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+            )
+            Spacer(Modifier.height(6.dp))
+            Text(
+                text = progressLabel,
+                style = styles.rowSubtitle,
+                color = Color.White,
+                maxLines = 1,
+                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+            )
+            Spacer(Modifier.height(6.dp))
+            LinearProgressIndicator(
+                progress = { fraction },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(4.dp)
+                    .semantics { stateDescription = progressLabel },
+                color = Color.White,
+                trackColor = Color.White.copy(alpha = 0.35f)
             )
         }
-        Spacer(Modifier.height(design.spacing.cardGap))
-        Text(
-            text = novena.title.get(currentLanguage),
-            style = styles.rowTitle,
-            color = palette.textPrimary,
-            minLines = 2,
-            maxLines = 3,
-            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-        )
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-        // The started date rides on the patron line rather than taking a
-        // line of its own, so the card's fixed height holds in every
-        // identity even for in-progress novenas.
-        Text(
-            text = listOfNotNull(
-                novena.patron.get(currentLanguage),
-                extraLine
-            ).joinToString(" · "),
-            style = styles.rowSubtitle,
-            color = palette.textSecondary,
-            maxLines = 2,
-            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-        )
-        Spacer(Modifier.weight(1f))
-        Text(
-            text = progressLabel,
-            style = styles.rowSubtitle,
-            color = palette.textSecondary,
-            maxLines = 1,
-            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-        )
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-        LinearProgressIndicator(
-            progress = { fraction },
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(4.dp)
-                .semantics { stateDescription = progressLabel },
-            color = palette.accent,
-            trackColor = palette.selectionTint
-        )
     }
 }
 
@@ -1611,7 +1754,7 @@ private fun NovenaDayView(
             Row(
                 Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
+                    .padding(horizontal = IveGutter)
                     .padding(top = design.spacing.cardGap),
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -1667,7 +1810,7 @@ private fun NovenaDayView(
                 Box(
                     Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
+                        .padding(horizontal = IveGutter)
                         .height(NovenaPlateHeight)
                         .clip(design.shapes.cardLarge)
                         .background(design.palette.selectionTint)
@@ -1693,7 +1836,7 @@ private fun NovenaDayView(
                         style = styles.quote,
                         color = design.palette.textSecondary,
                         modifier = Modifier
-                            .padding(horizontal = design.spacing.gutter)
+                            .padding(horizontal = IveGutter)
                             .widthIn(max = design.spacing.readingMaxWidth)
                     )
                 }
@@ -1702,7 +1845,7 @@ private fun NovenaDayView(
         }
 
         item {
-            AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+            AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                 BlockHeading(
                     eyebrow = currentLanguage.pick(
                         "Progreso: día $activeDay de ${novena.days.size}",
@@ -1769,7 +1912,7 @@ private fun NovenaDayView(
         item {
             Spacer(Modifier.height(design.spacing.cardGap))
             ReadingColumn {
-                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                     BlockHeading(
                         eyebrow = currentLanguage.pick(
                             "Día $activeDay",
@@ -1828,7 +1971,7 @@ private fun NovenaDayView(
         item {
             Spacer(Modifier.height(design.spacing.cardGap))
             ReadingColumn {
-                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                     BlockHeading(
                         eyebrow = currentLanguage.pick(
                             "Oración del Día $activeDay",
@@ -1870,7 +2013,7 @@ private fun NovenaDayView(
                             .testTag("novena_listen_button")
                     )
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
-                    AppPrimaryButton(
+                    IveBlackPillButton(
                         label = if (daysPrayed.contains(activeDay)) {
                             currentLanguage.pick("Deshacer día", "Undo day", "Desfazer dia")
                         } else {
@@ -1919,7 +2062,7 @@ private fun NovenaDayView(
                     )
                 )
                 ReadingColumn {
-                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                    AppCard(modifier = Modifier.padding(horizontal = IveGutter)) {
                         if (promises.isNotBlank()) {
                             Text(
                                 text = promises,

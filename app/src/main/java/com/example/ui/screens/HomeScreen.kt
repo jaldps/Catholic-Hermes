@@ -16,6 +16,7 @@ import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -47,6 +48,7 @@ import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.NearMe
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Place
+import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Share
@@ -75,8 +77,9 @@ import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
@@ -101,9 +104,8 @@ import com.example.ui.design.AppListRow
 import com.example.ui.design.AppPrimaryButton
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.components.TextFormat
-import com.example.ui.components.IllustratedScreenHeader
+import com.example.ui.components.SacredArt
 import com.example.ui.components.SacredSubject
-import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -233,22 +235,50 @@ fun HomeScreen(
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
-            .testTag("home_screen")
+            .testTag("home_screen"),
+        contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 96.dp)
     ) {
         item {
-            // Extra end inset on the header so the decorative SacredArt
-            // frame (and its glow) reads inside the screen edge instead of
-            // clipped against it; title/subtitle and art are untouched.
-            IllustratedScreenHeader(
-                title = strings("Hoy", "Today", "Hoje"),
-                subject = SacredSubject.DAY,
-                subtitle = strings(
-                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
-                    "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
-                    "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
-                ),
-                modifier = Modifier.padding(end = design.spacing.cardGap)
-            )
+            // Serene large title per the Ive reference: styles.screenTitle at
+            // weight 400 keeps its tight letter-spacing, the date rides below
+            // as the subtitle, and the day's art stays at the trailing edge.
+            Row(
+                modifier = Modifier.fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = design.spacing.headerTopGap, bottom = 10.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Column(Modifier.weight(1f)) {
+                    Text(
+                        text = strings("Hoy", "Today", "Hoje"),
+                        style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
+                        color = palette.textPrimary,
+                        maxLines = 1
+                    )
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        text = strings(
+                            "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
+                            "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
+                            "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
+                        ),
+                        style = styles.screenSubtitle,
+                        color = palette.textSecondary,
+                        maxLines = 1
+                    )
+                }
+                Spacer(Modifier.width(12.dp))
+                Box(
+                    modifier = Modifier.clipToBounds().padding(end = 4.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    SacredArt(
+                        SacredSubject.DAY,
+                        Modifier.size(96.dp).testTag("screen_header_illustration"),
+                        transparentBackground = true
+                    )
+                }
+            }
         }
 
         // The celebration and any obligation, with its liturgical color.
@@ -262,13 +292,17 @@ fun HomeScreen(
                 accentColorHex = liturgicalDay.liturgicalColorHex,
                 modifier = Modifier.testTag("liturgical_calendar_widget")
             )
-            Spacer(Modifier.height(design.spacing.cardGap))
+            Spacer(Modifier.height(16.dp))
         }
 
         // A complete reading preview and one route to the full Mass.
+        // Frosted hero card: AppCard already paints the translucent
+        // groupedSurface at design.shapes.card (20dp in Ive); the soft
+        // shadow lifts it off the warm paper canvas.
         item {
             AppCard(
                 modifier = Modifier.padding(horizontal = design.spacing.gutter)
+                    .shadow(6.dp, design.shapes.card)
                     .testTag("daily_mass_card")
             ) {
                 CardHeading(
@@ -276,28 +310,37 @@ fun HomeScreen(
                     icon = Icons.Default.AutoStories
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
-                if (gospelPreview != null) {
-                    if (gospelReference.isNotBlank()) {
-                        Text(
-                            text = TextFormat.ranges(gospelReference),
-                            style = styles.sectionEyebrow,
-                            color = palette.accent
-                        )
-                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                Row(verticalAlignment = Alignment.Top) {
+                    Column(Modifier.weight(1f)) {
+                        if (gospelPreview != null) {
+                            if (gospelReference.isNotBlank()) {
+                                Text(
+                                    text = TextFormat.ranges(gospelReference),
+                                    style = styles.sectionEyebrow,
+                                    color = palette.accent
+                                )
+                                Spacer(Modifier.height(design.spacing.cardGap / 2))
+                            }
+                            Text(
+                                text = "«$gospelPreview»",
+                                style = styles.scripture,
+                                color = palette.textPrimary,
+                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                            )
+                        } else if (vaticanResult == null) {
+                            ReadingsPlaceholder(strings("Cargando lecturas", "Loading readings", "A carregar leituras"))
+                        } else {
+                            Text(
+                                text = strings("Lecturas no disponibles sin conexión.", "Readings unavailable offline.", "Leituras indisponíveis offline."),
+                                style = styles.rowSubtitle,
+                                color = palette.textSecondary
+                            )
+                        }
                     }
-                    Text(
-                        text = "«$gospelPreview»",
-                        style = styles.scripture,
-                        color = palette.textPrimary,
-                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                    )
-                } else if (vaticanResult == null) {
-                    ReadingsPlaceholder(strings("Cargando lecturas", "Loading readings", "A carregar leituras"))
-                } else {
-                    Text(
-                        text = strings("Lecturas no disponibles sin conexión.", "Readings unavailable offline.", "Leituras indisponíveis offline."),
-                        style = styles.rowSubtitle,
-                        color = palette.textSecondary
+                    Spacer(Modifier.width(12.dp))
+                    CircularPlayButton(
+                        onClick = onNavigateToMissal,
+                        contentDescription = strings("Escuchar Evangelio", "Listen to Gospel", "Ouvir Evangelho")
                     )
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
@@ -309,7 +352,7 @@ fun HomeScreen(
                     modifier = Modifier.testTag("read_mass_full_button")
                 )
             }
-            Spacer(Modifier.height(design.spacing.cardGap))
+            Spacer(Modifier.height(16.dp))
         }
 
         // Resume the reader's place or open today's reflection.
@@ -358,7 +401,7 @@ fun HomeScreen(
                     )
                 }
             }
-            Spacer(Modifier.height(design.spacing.cardGap))
+            Spacer(Modifier.height(16.dp))
         }
 
         // Verse of the day: the screen's hero pull quote, directly after the
@@ -367,6 +410,7 @@ fun HomeScreen(
             AppCard(
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
+                    .shadow(6.dp, design.shapes.card)
                     .testTag("verse_of_the_day_card")
             ) {
                 CardHeading(
@@ -390,7 +434,7 @@ fun HomeScreen(
                     color = palette.textSecondary
                 )
             }
-            Spacer(Modifier.height(design.spacing.cardGap))
+            Spacer(Modifier.height(16.dp))
         }
 
         // Pregunta del día: question + first line of its answer, a route to
@@ -445,7 +489,7 @@ fun HomeScreen(
                     )
                 }
             }
-            Spacer(Modifier.height(design.spacing.cardGap))
+            Spacer(Modifier.height(16.dp))
         }
 
         // Saint of the day.
@@ -488,7 +532,7 @@ fun HomeScreen(
                     attribution = saintOfTheDay.name.get(currentLanguage)
                 )
             }
-            Spacer(Modifier.height(design.spacing.cardGap))
+            Spacer(Modifier.height(16.dp))
         }
 
         // 4. The routine: the hours of the day, closed by the rule of life,
@@ -536,7 +580,7 @@ fun HomeScreen(
                     modifier = Modifier.testTag("home_habit_tracker_card")
                 )
             }
-            Spacer(Modifier.height(design.spacing.sectionGap / 2))
+            Spacer(Modifier.height(16.dp))
         }
 
         // Today's spiritual fidelity: one point per habit kept today, plus a
@@ -548,7 +592,7 @@ fun HomeScreen(
                 currentLanguage = currentLanguage,
                 onOpenHabits = onNavigateToHabits
             )
-            Spacer(Modifier.height(design.spacing.cardGap))
+            Spacer(Modifier.height(16.dp))
         }
 
         // Nearby parishes, straight out to the device's map app.
@@ -669,6 +713,38 @@ fun HomeScreen(
 }
 
 /**
+ * Circular play affordance for the Evangelio card: a 48dp touch target, a
+ * liturgical-green disc with a white glyph and a soft lift, routed to the
+ * full Mass — the same destination as the card's primary button.
+ */
+@Composable
+private fun CircularPlayButton(
+    onClick: () -> Unit,
+    contentDescription: String,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    Box(
+        modifier = modifier
+            .size(48.dp)
+            .shadow(4.dp, CircleShape)
+            .clip(CircleShape)
+            .background(design.palette.accent)
+            .clickable(onClick = onClick)
+            .semantics { this.contentDescription = contentDescription }
+            .testTag("home_gospel_play_button"),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(
+            imageVector = Icons.Default.PlayArrow,
+            contentDescription = null,
+            tint = Color.White,
+            modifier = Modifier.size(26.dp)
+        )
+    }
+}
+
+/**
  * Today's spiritual fidelity: one point per habit completion logged for today
  * (distinct habits kept), the total victories kept in Christ, and a one-tap
  * "I overcame a temptation" that writes to the same victory log the Habits
@@ -706,6 +782,7 @@ private fun FidelityCard(
     AppCard(
         modifier = Modifier
             .padding(horizontal = design.spacing.gutter)
+            .shadow(6.dp, design.shapes.card)
             .testTag("home_fidelity_card")
     ) {
         CardHeading(
@@ -819,12 +896,12 @@ private fun ReadingsPlaceholder(description: String) {
 }
 
 /**
- * The liturgical season banner: the seasonal color stays on the container (a
- * low-alpha tint over `surfaceContainer`) and the dot, while the lettering is
- * set in `onSurface` / `onSurfaceVariant` ink, so "Ordinary Time" and the
- * celebration read at AAA contrast on the pale tint instead of muted seasonal
- * green. Inner padding is the `cardPadding` token, the same rhythm
- * `AppCard` gives the verse card.
+ * The liturgical season banner, in the Ive reference idiom: a frosted card
+ * (translucent `raised` at `design.shapes.card`, 20dp in Ive, with a soft
+ * shadow over the warm paper) carrying a pill for the liturgical time — a
+ * green dot in the season's own color beside the season name — above the
+ * celebration in a serene weight-400 title and any obligation below.
+ * Lettering stays in opaque primary/secondary ink for AAA contrast.
  */
 @Composable
 private fun LiturgicalSeasonBanner(
@@ -834,54 +911,62 @@ private fun LiturgicalSeasonBanner(
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
-    val scheme = MaterialTheme.colorScheme
-    val liturgicalColor = accentColorHex?.let { Color(it) } ?: scheme.primary
-    val container = liturgicalColor.copy(alpha = 0.14f).compositeOver(scheme.surfaceContainer)
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val liturgicalColor = accentColorHex?.let { Color(it) } ?: palette.accent
     val headline = body?.substringBefore('\n')?.takeIf { it.isNotBlank() }
     val supporting = body?.substringAfter('\n', "")?.takeIf { it.isNotBlank() }
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .padding(horizontal = design.spacing.gutter),
-        shape = design.shapes.dialog,
-        colors = CardDefaults.cardColors(containerColor = container),
+            .padding(horizontal = design.spacing.gutter)
+            .shadow(6.dp, design.shapes.card),
+        shape = design.shapes.card,
+        colors = CardDefaults.cardColors(containerColor = palette.raised),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
-        Row(
+        Column(
             modifier = Modifier.padding(design.spacing.cardPadding),
-            horizontalArrangement = Arrangement.spacedBy(12.dp),
-            verticalAlignment = Alignment.Top
+            verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
+            // Liturgical-time pill: dot + season name on a tinted capsule.
             Box(
                 modifier = Modifier
-                    .padding(top = 5.dp)
-                    .size(8.dp)
-                    .clip(design.shapes.badge)
-                    .background(liturgicalColor)
-            )
-            Column(
-                modifier = Modifier.weight(1f),
-                verticalArrangement = Arrangement.spacedBy(4.dp)
+                    .clip(design.shapes.chip)
+                    .background(palette.accentMuted)
+                    .padding(horizontal = 12.dp, vertical = 6.dp)
             ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(8.dp)
+                            .clip(design.shapes.badge)
+                            .background(liturgicalColor)
+                    )
+                    Text(
+                        text = title,
+                        style = styles.sectionEyebrow,
+                        color = palette.accent,
+                        maxLines = 1
+                    )
+                }
+            }
+            headline?.let {
                 Text(
-                    text = title,
-                    style = if (headline == null) MaterialTheme.typography.titleMedium else MaterialTheme.typography.labelLarge,
-                    color = scheme.onSurface
+                    text = it,
+                    style = styles.sectionTitle.copy(fontWeight = FontWeight.W400),
+                    color = palette.textPrimary
                 )
-                headline?.let {
-                    Text(
-                        text = it,
-                        style = MaterialTheme.typography.headlineSmall.copy(fontWeight = FontWeight.Medium),
-                        color = scheme.onSurface
-                    )
-                }
-                supporting?.let {
-                    Text(
-                        text = it,
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = scheme.onSurfaceVariant
-                    )
-                }
+            }
+            supporting?.let {
+                Text(
+                    text = it,
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
             }
         }
     }

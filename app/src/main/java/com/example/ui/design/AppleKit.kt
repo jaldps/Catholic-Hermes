@@ -92,6 +92,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -204,6 +205,10 @@ object AppleKit : AppKit {
     @Composable
     private fun accentFill(): Color {
         val design = LocalAppDesign.current
+        // Ive reference: primary CTAs are black (cream in dark), not green.
+        if (design.language == DesignLanguage.IVE) {
+            return if (design.isDark) Color(0xFFF5F1EA) else Color(0xFF1C1C1E)
+        }
         val primary = MaterialTheme.colorScheme.primary
         return remember(primary, design.isDark) {
             val hsv = FloatArray(3)
