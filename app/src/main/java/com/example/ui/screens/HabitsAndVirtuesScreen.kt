@@ -265,7 +265,7 @@ fun HabitsAndVirtuesScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .testTag("tab_habits_rule"),
-                contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 96.dp)
+                contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 16.dp)
             ) {
                 paneHeader(
                     title = screenTitle,

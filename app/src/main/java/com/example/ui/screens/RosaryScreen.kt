@@ -1019,7 +1019,7 @@ fun RosaryScreen(
         modifier = modifier
             .fillMaxSize()
             .testTag("rosary_screen"),
-        contentPadding = PaddingValues(bottom = 120.dp)
+        contentPadding = PaddingValues(bottom = 16.dp)
     ) {
         item {
             // The masthead names the screen and holds still; the segmented

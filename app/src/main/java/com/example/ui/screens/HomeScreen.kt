@@ -239,7 +239,7 @@ fun HomeScreen(
         modifier = modifier
             .fillMaxSize()
             .testTag("home_screen"),
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 96.dp)
+        contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 16.dp)
     ) {
         item {
             // Serene large title per the Ive reference: styles.screenTitle at

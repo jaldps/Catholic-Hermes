@@ -857,18 +857,9 @@ object AppleKit : AppKit {
                             .fillMaxSize()
                             .nestedScroll(scrollWatcher)
                     ) {
-                        // The floating dock overlays the scaffold's bottom
-                        // bar area in every screen, so content gets a global
-                        // +96dp bottom inset on top of the scaffold padding.
-                        val layoutDirection = androidx.compose.ui.platform.LocalLayoutDirection.current
-                        content(
-                            PaddingValues(
-                                start = padding.calculateStartPadding(layoutDirection),
-                                end = padding.calculateEndPadding(layoutDirection),
-                                top = padding.calculateTopPadding(),
-                                bottom = padding.calculateBottomPadding() + 96.dp
-                            )
-                        )
+                        // The scaffold's bottomBar slot already reserves the
+                        // floating dock's height; content uses it as-is.
+                        content(padding)
                         // Only the scrolled navigation edge needs a veil.
                         // The floating dock has its own material: fading the
                         // content above it obscures actual prayers and rows.

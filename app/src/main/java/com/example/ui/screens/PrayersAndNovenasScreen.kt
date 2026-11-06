@@ -1515,7 +1515,7 @@ private fun NovenaIndexView(
     // is never clipped under it.
     LazyColumn(
         Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(bottom = 96.dp)
+        contentPadding = PaddingValues(bottom = 16.dp)
     ) {
         header()
 
