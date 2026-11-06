@@ -82,14 +82,20 @@ import com.example.ui.design.AppListRow
 import com.example.ui.design.AppMetricTile
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
-import com.example.ui.components.IllustratedScreenHeader
-import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import kotlinx.coroutines.launch
 
 private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
@@ -262,7 +268,11 @@ fun SpiritualLifeScreen(
     val tabsInset = tabStripInset()
     val header: LazyListScope.() -> Unit = {
         item(key = "spiritual_life_title") {
-            IllustratedScreenHeader(title = currentLanguage.pick("Vida espiritual", "Spiritual Life", "Vida espiritual"), subject = SacredSubject.DOVE)
+            // Photographic hero (sunrise) with fade; title rides the fade.
+            PhotoHeader(
+                title = currentLanguage.pick("Vida espiritual", "Spiritual Life", "Vida espiritual"),
+                asset = "heroes/sunrise_mountains.jpg"
+            )
         }
         item(key = "spiritual_life_tabs") {
             // Three destinations: the quiz and the chant share "Learn", chosen
@@ -1250,7 +1260,7 @@ private fun ChantTab(
                             Icon(
                                 imageVector = Icons.Default.MusicNote,
                                 contentDescription = null,
-                                tint = if (isSelected) palette.accent else palette.textTertiary,
+                                tint = if (isSelected) palette.textPrimary else palette.textTertiary,
                                 modifier = Modifier.size(design.decor.rowIconSize)
                             )
                             Spacer(Modifier.width(design.spacing.iconLabelGap))
@@ -1331,5 +1341,100 @@ private fun ChantTab(
         }
 
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
+// ------------------------------------------------------ bundled hero photos
+
+/** Photographic hero band height (Prayers/Doctrine idiom). */
+private val PhotoBandHeight = 168.dp
+
+/** Bundled hero photos are decoded at most this many pixels on a side. */
+private const val HeroMaxDimension = 1080
+
+/** Ive screen gutter: the identity's own token already resolves to 20dp. */
+private val IveGutter = 20.dp
+
+/**
+ * Decodes a bundled `assets/heroes/` photo once per [assetPath], sampled
+ * down to at most [HeroMaxDimension]px on either side. Returns null when
+ * the asset is missing or unreadable; callers keep their tonal ground.
+ */
+@Composable
+private fun rememberHeroBitmap(assetPath: String): ImageBitmap? {
+    val context = LocalContext.current
+    return remember(assetPath) {
+        try {
+            val bytes = context.assets.open(assetPath).use { it.readBytes() }
+            val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, bounds)
+            if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+                null
+            } else {
+                var sample = 1
+                while (
+                    bounds.outWidth / sample > HeroMaxDimension ||
+                    bounds.outHeight / sample > HeroMaxDimension
+                ) {
+                    sample *= 2
+                }
+                val options = BitmapFactory.Options().apply { inSampleSize = sample }
+                BitmapFactory.decodeByteArray(bytes, 0, bytes.size, options)?.asImageBitmap()
+            }
+        } catch (_: Exception) {
+            null
+        }
+    }
+}
+
+/**
+ * Photographic hero with fade: a full-bleed bundled photo band that melts
+ * into the canvas at its foot, with the serene screen title overlaid on the
+ * fade so photo and word share one block (Prayers/Home idiom). Replaces the
+ * vector header art for every identity: the photo reads in Ive and Apple.
+ */
+@Composable
+private fun PhotoHeader(title: String, asset: String) {
+    val palette = LocalAppDesign.current.palette
+    val bitmap = rememberHeroBitmap(asset)
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .height(PhotoBandHeight)
+            .background(palette.selectionTint)
+    ) {
+        if (bitmap != null) {
+            Image(
+                bitmap = bitmap,
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .testTag("screen_header_illustration")
+            )
+        } else {
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .background(palette.selectionTint)
+                    .testTag("screen_header_illustration")
+            )
+        }
+        // Fade: transparent over the photo, canvas at the foot.
+        Box(
+            Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .height(88.dp)
+                .background(
+                    Brush.verticalGradient(
+                        listOf(Color.Transparent, palette.canvas)
+                    )
+                )
+        )
+        AppScreenTitle(
+            title = title,
+            modifier = Modifier.align(Alignment.BottomStart)
+        )
     }
 }

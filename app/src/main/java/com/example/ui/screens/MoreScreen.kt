@@ -1,14 +1,29 @@
 package com.example.ui.screens
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
@@ -40,23 +55,38 @@ data class MoreSection(val title: String, val entries: List<MoreEntry>)
  * tap away here, grouped by what the reader is doing rather than listed flat:
  * a tab bar holds five items in iOS and Material alike, and the app has eleven.
  *
- * AAA M3 treatment, kept inside the shared kit on purpose: the screen paints
- * with nothing but [LocalAppDesign] tokens (canvas, spacing, shape via
- * [AppListGroup]/[AppListRow]) and lets the active identity — Material 3
- * included — resolve tonal surfaces, icon style, chevrons and the dark palette
- * (MaterialPaletteDark / ApplePaletteDark / VaticanPaletteDark). No hardcoded
- * colour or dimension, so dark mode is the token's job, not this file's.
+ * Ive treatment, kept inside the shared kit on purpose: the screen paints
+ * with nothing but [LocalAppDesign] tokens (warm-paper canvas, spacing, shape
+ * via [AppListGroup]/[AppListRow]) and lets the active identity resolve the
+ * frosted grouped surfaces (translucent groupedSurface at the one 20dp card
+ * radius in Ive), the 16dp row insets, the icon wells, the chevrons and the
+ * dark palette. No hardcoded colour or dimension, so dark mode is the token's
+ * job, not this file's. Titles stay the kit's serene ones: [AppScreenTitle]
+ * under a photographic hero band, [AppSectionHeader] over each group.
+ *
+ * Photography (reuse only, `assets/heroes/`): a sunrise band crowns the
+ * screen and dissolves into the paper canvas, Doctrine-style, above the
+ * title; each named section carries a small 88dp photo strip above its
+ * header, matched by title keyword so it follows the section into every
+ * language, and a section with no match (Settings) simply gets no strip. All
+ * photos are decorative, drawn behind text never over it, decoded once at
+ * the top of this screen (never inside a LazyColumn item), down-sampled, and
+ * a failed decode falls back to a gradient band so legibility never depends
+ * on the photo.
  *
  * Rows are tappable at a 48dp floor on top of the identity's own row height
  * — `maxOf(rowMinHeight, 48.dp)`, the same floor the other redesigned screens
  * use — so a one-line setting row never shrinks below the AAA touch target
- * even under the Apple identity's 44dp token.
+ * even under the Apple identity's 44dp token. The list ends with the token's
+ * contentBottomGap only: no extra dock-sized inset stacked on the scaffold's
+ * own reservation, so there is no dead void above the tab bar.
  */
 @Composable
 fun MoreScreen(
     currentLanguage: AppLanguage,
     sections: List<MoreSection>
 ) {
+    val context = LocalContext.current
     val design = LocalAppDesign.current
     val palette = design.palette
     val rowMinHeight = maxOf(design.spacing.rowMinHeight, 48.dp)
@@ -74,24 +104,111 @@ fun MoreScreen(
         "$name · $mode"
     }
 
+    val titleText = when (currentLanguage) {
+        AppLanguage.ES -> "Más"
+        AppLanguage.EN -> "More"
+        AppLanguage.PT -> "Mais"
+    }
+
+    // Drop empty groups: a header over no rows reads as a broken section
+    // and costs a full section-gap of dead canvas.
+    val visibleSections = sections.filter { it.entries.isNotEmpty() }
+
+    // Photographic heroes (assets/heroes/), decoded once off the composition
+    // path. Hoisted unconditionally to the top of MoreScreen — never inside
+    // a LazyColumn item or a conditional branch (slot-table crash). Null
+    // (asset missing / decode failure in a test host) draws no photo, so the
+    // gradient fallback and the frosted groups carry the screen alone.
+    val heroPhoto = remember(context) {
+        decodeSampledBitmap(context, "heroes/sunrise_mountains.jpg", maxWidthPx = 1080)
+    }
+    val studyPhoto = remember(context) {
+        decodeSampledBitmap(context, "heroes/church_window_light.jpg", maxWidthPx = 720)
+    }
+    val innerLifePhoto = remember(context) {
+        decodeSampledBitmap(context, "heroes/votive_candles.jpg", maxWidthPx = 720)
+    }
+    val placesPhoto = remember(context) {
+        decodeSampledBitmap(context, "heroes/cathedral_dome.jpg", maxWidthPx = 720)
+    }
+    // One photo per visible section, matched by title keyword so it follows
+    // the section across ES/EN/PT; an unmatched section (Settings) gets none.
+    val sectionPhotos = remember(visibleSections, studyPhoto, innerLifePhoto, placesPhoto) {
+        visibleSections.map { section ->
+            val t = section.title
+            when {
+                t.contains("Estudio", ignoreCase = true) ||
+                    t.contains("Study", ignoreCase = true) ||
+                    t.contains("Estudo", ignoreCase = true) -> studyPhoto
+                t.contains("Vida interior", ignoreCase = true) ||
+                    t.contains("Inner life", ignoreCase = true) -> innerLifePhoto
+                t.contains("Lugares", ignoreCase = true) ||
+                    t.contains("Places", ignoreCase = true) -> placesPhoto
+                else -> null
+            }
+        }
+    }
+
     LazyColumn(
         Modifier
             .fillMaxSize()
             .background(palette.canvas)
             .testTag("more_screen")
     ) {
-        item(key = "more_title") {
-            AppScreenTitle(
-                title = when (currentLanguage) {
-                    AppLanguage.ES -> "Más"
-                    AppLanguage.EN -> "More"
-                    AppLanguage.PT -> "Mais"
+        item(key = "more_hero") {
+            // Photographic hero: a full-bleed sunrise band dissolving into the
+            // warm paper canvas through a vertical gradient, above the serene
+            // title. Decorative only; the title and groups carry the text.
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(168.dp)
+                    .background(palette.canvas)
+                    .testTag("more_hero_photo")
+            ) {
+                val hero = heroPhoto
+                if (hero != null) {
+                    Image(
+                        bitmap = hero,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .alpha(0.92f),
+                        contentScale = ContentScale.Crop
+                    )
+                } else {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(
+                                Brush.verticalGradient(
+                                    listOf(
+                                        palette.accentMuted,
+                                        palette.canvas
+                                    )
+                                )
+                            )
+                    )
                 }
-            )
+                // Fade: clear over the upper photo, canvas by the foot of
+                // the band, so the hero dissolves into the page.
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    palette.canvas
+                                )
+                            )
+                        )
+                )
+            }
         }
-        // Drop empty groups: a header over no rows reads as a broken section
-        // and costs a full section-gap of dead canvas.
-        val visibleSections = sections.filter { it.entries.isNotEmpty() }
+        item(key = "more_title") {
+            AppScreenTitle(title = titleText)
+        }
         visibleSections.forEachIndexed { sectionIndex, section ->
             if (sectionIndex > 0) {
                 item(key = "more_section_gap_$sectionIndex") {
@@ -99,6 +216,41 @@ fun MoreScreen(
                 }
             }
             item(key = "more_section_$sectionIndex") {
+                // Mini-hero per section: a small clipped photograph above the
+                // header, only where the section has one. No photo means no
+                // strip and no spacer, so an unmatched section leaves no gap.
+                val photo = sectionPhotos.getOrNull(sectionIndex)
+                if (photo != null) {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = design.spacing.gutter)
+                            .height(88.dp)
+                            .clip(design.shapes.thumbnail)
+                            .testTag("more_section_hero_$sectionIndex")
+                    ) {
+                        Image(
+                            bitmap = photo,
+                            contentDescription = null,
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .alpha(0.92f),
+                            contentScale = ContentScale.Crop
+                        )
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            palette.canvas.copy(alpha = 0.35f)
+                                        )
+                                    )
+                                )
+                        )
+                    }
+                }
                 AppSectionHeader(title = section.title)
                 AppListGroup {
                     section.entries.forEach { entry ->
@@ -136,6 +288,36 @@ fun MoreScreen(
             Spacer(Modifier.height(design.spacing.contentBottomGap))
         }
     }
+}
+
+/**
+ * Decodes an asset JPEG down-sampled so its width does not exceed
+ * [maxWidthPx] (power-of-two [BitmapFactory.Options.inSampleSize]), so a
+ * photographic hero set never lands full-resolution on memory-constrained
+ * devices. Returns null on any failure (missing asset, host without a real
+ * decoder in tests) so callers fall back to a plain gradient band instead of
+ * crashing.
+ */
+private fun decodeSampledBitmap(
+    context: Context,
+    assetPath: String,
+    maxWidthPx: Int = 1080
+): ImageBitmap? = try {
+    val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+    context.assets.open(assetPath).use { BitmapFactory.decodeStream(it, null, bounds) }
+    if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+        null
+    } else {
+        var sampleSize = 1
+        while (bounds.outWidth / sampleSize > maxWidthPx) sampleSize *= 2
+        val options = BitmapFactory.Options().apply { inSampleSize = sampleSize }
+        val bitmap: Bitmap? = context.assets.open(assetPath).use {
+            BitmapFactory.decodeStream(it, null, options)
+        }
+        bitmap?.asImageBitmap()
+    }
+} catch (_: Exception) {
+    null
 }
 
 /**

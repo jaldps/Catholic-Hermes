@@ -1,6 +1,9 @@
 package com.example.ui.screens
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -47,6 +50,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.ui.platform.LocalContext
@@ -56,6 +60,12 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.draw.alpha
 import com.example.data.repository.BibleData
 import com.example.data.xref.VerseRef
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -177,6 +187,14 @@ fun BibleScreen(
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
+    val bibleContext = LocalContext.current
+
+    // Photographic hero, decoded once off the composition path and hoisted
+    // unconditionally (never inside a LazyColumn item or a branch). Null on
+    // any decode failure so the band falls back to the canvas.
+    val heroPhoto = remember(bibleContext) {
+        decodeSampledBitmap(bibleContext, "heroes/church_window_light.jpg", maxWidthPx = 1080)
+    }
 
     var selectedMainTab by remember(initialMainTab) { mutableIntStateOf(initialMainTab) }
     var selectedTestamentTab by remember { mutableIntStateOf(0) }
@@ -217,6 +235,40 @@ fun BibleScreen(
     // rows of whichever list is showing, so it scrolls away with the content.
     val tabsInset = segmentedTabsInset()
     val header: LazyListScope.() -> Unit = {
+        // Photographic hero band: full-bleed church-window photograph with a
+        // fade into the paper canvas at its foot, above the title. The band
+        // carries no text, so legibility never depends on the photo loading;
+        // the illustrated title below it stays the screen's heading.
+        item(key = "bible_hero") {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(168.dp)
+                    .background(design.palette.canvas)
+                    .testTag("bible_hero_photo")
+            ) {
+                val hero = heroPhoto
+                if (hero != null) {
+                    Image(
+                        bitmap = hero,
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier.matchParentSize().alpha(0.9f)
+                    )
+                }
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(
+                            Brush.verticalGradient(
+                                0f to Color.Transparent,
+                                0.55f to design.palette.canvas.copy(alpha = 0.35f),
+                                1f to design.palette.canvas
+                            )
+                        )
+                )
+            }
+        }
         item(key = "bible_screen_title") {
             if (selectedMainTab == 0) {
                 IllustratedScreenHeader(
@@ -543,7 +595,8 @@ private fun BookDirectory(
                     AppListRow(
                         title = currentLanguage.pick("Seguir leyendo", "Continue reading", "Continuar a ler"),
                         subtitle = "${resume.first.name.get(currentLanguage)} ${resume.second}",
-                        leadingIcon = Icons.Default.AutoStories,
+                        // No leading icon: a kit well would saturate this
+                        // row in a system colour; Ive rows stay monochrome.
                         onClick = { onOpenBook(resume.first, resume.second) },
                         modifier = Modifier.testTag("bible_continue_reading")
                     )
@@ -604,12 +657,11 @@ private fun BookDirectory(
                                     Text(
                                         label,
                                         style = LocalAppTextStyles.current.rowTitle,
-                                        color = if (selectedFilter == index) design.palette.accent
-                                            else design.palette.textPrimary
+                                        color = design.palette.textPrimary
                                     )
                                 },
                                 trailingIcon = if (selectedFilter == index) {
-                                    { Icon(Icons.Default.Check, contentDescription = null, tint = design.palette.accent) }
+                                    { Icon(Icons.Default.Check, contentDescription = null, tint = design.palette.textPrimary) }
                                 } else null,
                                 onClick = {
                                     onFilterChange(index)
@@ -637,7 +689,7 @@ private fun BookDirectory(
                     Text(
                         text = currentLanguage.pick("Versiones", "Versions", "Versões") + " ›",
                         style = LocalAppTextStyles.current.rowSubtitle.copy(fontWeight = FontWeight.Medium),
-                        color = design.palette.accent
+                        color = design.palette.textPrimary
                     )
                 }
             }
@@ -658,7 +710,7 @@ private fun BookDirectory(
                     ),
                     icon = Icons.Default.SearchOff
                 )
-                AppSecondaryButton(
+                AppPrimaryButton(
                     label = currentLanguage.pick("Borrar la búsqueda", "Clear search", "Limpar a busca"),
                     onClick = { onSearchQueryChange("") },
                     modifier = Modifier
@@ -993,7 +1045,7 @@ private fun ChapterReader(
                     .weight(1f)
                     .testTag("prev_chapter_button")
             )
-            AppSecondaryButton(
+            AppPrimaryButton(
                 label = if (chapterNumber < chapterCount) currentLanguage.pick(
                     "Cap. ${chapterNumber + 1} →",
                     "Ch. ${chapterNumber + 1} →",
@@ -1045,7 +1097,6 @@ private fun ChapterSelectorDialog(
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
-    val scheme = MaterialTheme.colorScheme
 
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -1080,7 +1131,10 @@ private fun ChapterSelectorDialog(
                             .heightIn(min = 48.dp)
                             .clip(design.shapes.buttonSmall)
                             .background(
-                                if (isCurrent) scheme.primary
+                                // Monochrome ink fill for the current
+                                // chapter (black in light, cream in dark);
+                                // the canvas inverts it for the label.
+                                if (isCurrent) palette.textPrimary
                                 else palette.selectionTint
                             )
                             .clickable(role = Role.Button) { onSelect(number) }
@@ -1106,7 +1160,7 @@ private fun ChapterSelectorDialog(
                             style = styles.rowSubtitle.copy(
                                 fontWeight = if (isCurrent) FontWeight.Bold else FontWeight.Medium
                             ),
-                            color = if (isCurrent) scheme.onPrimary else palette.textPrimary
+                            color = if (isCurrent) palette.canvas else palette.textPrimary
                         )
                     }
                 }
@@ -1331,7 +1385,6 @@ private fun VersionsView(
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
-    val scheme = MaterialTheme.colorScheme
 
     LazyColumn(Modifier.fillMaxSize()) {
         header()
@@ -1351,7 +1404,9 @@ private fun VersionsView(
         }
 
         items(versions, key = { it.id }) { version ->
-            val canonColor = if (version.isCatholicCanon) scheme.primary else scheme.error
+            // Monochrome canon badge: ink for the Catholic canon, secondary
+            // ink otherwise — never a saturated green/red well.
+            val canonColor = if (version.isCatholicCanon) palette.textPrimary else palette.textSecondary
             val canonLabel = if (version.isCatholicCanon) {
                 currentLanguage.pick(
                     "Canon católico (73)",
@@ -1379,7 +1434,7 @@ private fun VersionsView(
                 ) {
                     Box(
                         Modifier
-                            .background(canonColor.copy(alpha = 0.14f), design.shapes.badge)
+                            .background(palette.selectionTint, design.shapes.badge)
                             .padding(
                                 horizontal = design.spacing.cardGap,
                                 vertical = design.spacing.cardGap / 2
@@ -1417,7 +1472,7 @@ private fun VersionsView(
                 Text(
                     text = version.canonicalDifferenceNote.get(currentLanguage),
                     style = styles.rowSubtitle,
-                    color = if (version.isCatholicCanon) palette.textSecondary else scheme.error
+                    color = palette.textSecondary
                 )
             }
             Spacer(Modifier.height(design.spacing.cardGap))
@@ -1539,4 +1594,32 @@ fun OfflineBibleDownloadsView(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
     }
+}
+
+/**
+ * Decodes an asset JPEG down-sampled so its width does not exceed
+ * [maxWidthPx], so a photographic hero never lands full-resolution on
+ * memory-constrained devices. Returns null on any failure (missing asset,
+ * host without a real decoder) so callers fall back to the canvas band.
+ */
+private fun decodeSampledBitmap(
+    context: Context,
+    assetPath: String,
+    maxWidthPx: Int = 1080
+): ImageBitmap? = try {
+    val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+    context.assets.open(assetPath).use { BitmapFactory.decodeStream(it, null, bounds) }
+    if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+        null
+    } else {
+        var sampleSize = 1
+        while (bounds.outWidth / sampleSize > maxWidthPx) sampleSize *= 2
+        val options = BitmapFactory.Options().apply { inSampleSize = sampleSize }
+        val bitmap: Bitmap? = context.assets.open(assetPath).use {
+            BitmapFactory.decodeStream(it, null, options)
+        }
+        bitmap?.asImageBitmap()
+    }
+} catch (_: Exception) {
+    null
 }

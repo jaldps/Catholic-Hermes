@@ -4,6 +4,7 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -71,6 +72,15 @@ import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.design.AppVerseRow
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.draw.clip
 
 /** Minimum touch target for every control this screen owns (AAA). */
 private val MinTouchTarget = 48.dp
@@ -136,6 +146,51 @@ fun NightPrayersScreen(
         // second strip of views: two chips under the screen's own control.
         val officeHeader: LazyListScope.() -> Unit = {
             header()
+
+            // Photographic hero (sunrise) with fade between the host title
+            // and the office picker: the night office opens on the same
+            // sunrise the day begins from, clipped to the 20dp card radius.
+            item(key = "night_sunrise_hero") {
+                val sunriseBitmap = rememberHeroBitmap("heroes/sunrise_mountains.jpg")
+                Box(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = IveGutter)
+                        .height(132.dp)
+                        .clip(LocalAppDesign.current.shapes.card)
+                        .background(LocalAppDesign.current.palette.selectionTint)
+                        .testTag("night_sunrise_hero")
+                ) {
+                    if (sunriseBitmap != null) {
+                        Image(
+                            bitmap = sunriseBitmap,
+                            contentDescription = currentLanguage.pick(
+                                "Amanecer entre montañas",
+                                "Sunrise over mountains",
+                                "Nascer do sol sobre montanhas"
+                            ),
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .clip(LocalAppDesign.current.shapes.card)
+                        )
+                    }
+                    Box(
+                        Modifier
+                            .fillMaxSize()
+                            .background(
+                                Brush.verticalGradient(
+                                    listOf(
+                                        Color.Transparent,
+                                        LocalAppDesign.current.palette.canvas.copy(alpha = 0.85f)
+                                    )
+                                )
+                            )
+                    )
+                }
+                Spacer(Modifier.height(LocalAppDesign.current.spacing.cardGap))
+            }
+
             item(key = "night_office_choice") {
                 OfficeChoice(
                     labels = listOf(
@@ -825,10 +880,11 @@ private fun IgnatianExamenView(
                             Modifier.fillMaxWidth(),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
+                            // Monochrome: plain ink glyph, not gold-washed.
                             Icon(
                                 imageVector = Icons.Default.CheckCircle,
                                 contentDescription = null,
-                                tint = design.palette.gold,
+                                tint = design.palette.textPrimary,
                                 modifier = Modifier.size(design.decor.rowIconSize + 8.dp)
                             )
                             Spacer(Modifier.height(design.spacing.cardGap))
@@ -1063,3 +1119,46 @@ private fun segmentedTabsInset(): Dp {
 @Composable
 private fun caps(text: String): String =
     if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
+
+// ------------------------------------------------------ bundled hero photos
+
+/** Photographic hero band height (Prayers/Doctrine idiom). */
+private val PhotoBandHeight = 168.dp
+
+/** Bundled hero photos are decoded at most this many pixels on a side. */
+private const val HeroMaxDimension = 1080
+
+/** Ive screen gutter: the identity token already resolves to 20dp. */
+private val IveGutter = 20.dp
+
+/**
+ * Decodes a bundled assets/heroes photo once per assetPath, sampled down
+ * to at most HeroMaxDimension px on either side. Returns null when the
+ * asset is missing or unreadable; callers keep their tonal ground.
+ */
+@Composable
+private fun rememberHeroBitmap(assetPath: String): ImageBitmap? {
+    val context = LocalContext.current
+    return remember(assetPath) {
+        try {
+            val bytes = context.assets.open(assetPath).use { it.readBytes() }
+            val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, bounds)
+            if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+                null
+            } else {
+                var sample = 1
+                while (
+                    bounds.outWidth / sample > HeroMaxDimension ||
+                    bounds.outHeight / sample > HeroMaxDimension
+                ) {
+                    sample *= 2
+                }
+                val options = BitmapFactory.Options().apply { inSampleSize = sample }
+                BitmapFactory.decodeByteArray(bytes, 0, bytes.size, options)?.asImageBitmap()
+            }
+        } catch (_: Exception) {
+            null
+        }
+    }
+}

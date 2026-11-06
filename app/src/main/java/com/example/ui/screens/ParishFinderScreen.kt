@@ -10,7 +10,10 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -42,6 +45,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -61,9 +69,7 @@ import com.example.ui.design.AppListRow
 import com.example.data.repository.ParishScheduleText
 import com.example.ui.components.TextFormat
 import com.example.ui.design.AppPrimaryButton
-import com.example.ui.components.IllustratedScreenHeader
 import com.example.ui.components.InAppBrowserDialog
-import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
@@ -364,9 +370,10 @@ fun ParishFinderScreen(
             .testTag("parish_finder_screen")
     ) {
         item(key = "parish_header") {
-            IllustratedScreenHeader(
+            // Photographic hero (church window light) with fade; title rides the fade.
+            PhotoHeader(
                 title = strings("Parroquias", "Parishes", "Paróquias"),
-                subject = SacredSubject.CHURCH
+                asset = "heroes/church_window_light.jpg"
             )
         }
 
@@ -703,3 +710,97 @@ fun ParishFinderScreen(
 /** "Calle de Bailén, 10, Centro, 28013 Madrid" → "Calle de Bailén, 10". */
 private fun streetOf(address: String): String =
     address.split(',').map { it.trim() }.filter { it.isNotEmpty() }.take(2).joinToString(", ")
+
+// ------------------------------------------------------ bundled hero photos
+
+/** Photographic hero band height (Prayers/Doctrine idiom). */
+private val PhotoBandHeight = 168.dp
+
+/** Bundled hero photos are decoded at most this many pixels on a side. */
+private const val HeroMaxDimension = 1080
+
+/** Ive screen gutter: the identity token already resolves to 20dp. */
+private val IveGutter = 20.dp
+
+/**
+ * Decodes a bundled assets/heroes photo once per assetPath, sampled down
+ * to at most HeroMaxDimension px on either side. Returns null when the
+ * asset is missing or unreadable; callers keep their tonal ground.
+ */
+@Composable
+private fun rememberHeroBitmap(assetPath: String): ImageBitmap? {
+    val context = LocalContext.current
+    return remember(assetPath) {
+        try {
+            val bytes = context.assets.open(assetPath).use { it.readBytes() }
+            val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, bounds)
+            if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+                null
+            } else {
+                var sample = 1
+                while (
+                    bounds.outWidth / sample > HeroMaxDimension ||
+                    bounds.outHeight / sample > HeroMaxDimension
+                ) {
+                    sample *= 2
+                }
+                val options = BitmapFactory.Options().apply { inSampleSize = sample }
+                BitmapFactory.decodeByteArray(bytes, 0, bytes.size, options)?.asImageBitmap()
+            }
+        } catch (_: Exception) {
+            null
+        }
+    }
+}
+
+/**
+ * Photographic hero with fade: a full-bleed bundled photo band that melts
+ * into the canvas at its foot, with the serene screen title overlaid on the
+ * fade so photo and word share one block (Prayers/Home idiom). Replaces
+ * the vector header art for every identity: the photo reads in Ive and Apple.
+ */
+@Composable
+private fun PhotoHeader(title: String, asset: String) {
+    val palette = LocalAppDesign.current.palette
+    val bitmap = rememberHeroBitmap(asset)
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .height(PhotoBandHeight)
+            .background(palette.selectionTint)
+    ) {
+        if (bitmap != null) {
+            Image(
+                bitmap = bitmap,
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .testTag("screen_header_illustration")
+            )
+        } else {
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .background(palette.selectionTint)
+                    .testTag("screen_header_illustration")
+            )
+        }
+        Box(
+            Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .height(88.dp)
+                .background(
+                    Brush.verticalGradient(
+                        listOf(Color.Transparent, palette.canvas)
+                    )
+                )
+        )
+        AppScreenTitle(
+            title = title,
+            modifier = Modifier.align(Alignment.BottomStart)
+        )
+    }
+}

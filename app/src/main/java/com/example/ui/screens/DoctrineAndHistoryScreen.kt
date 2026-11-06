@@ -5,10 +5,19 @@ import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
 import androidx.compose.foundation.background
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontWeight
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
@@ -115,10 +124,10 @@ import com.example.ui.components.TextFormat
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
-import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.AppDesign
 import com.example.ui.theme.AppTextStyles
+import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -195,13 +204,18 @@ fun DoctrineAndHistoryScreen(
                     contentDescription = null,
                     modifier = Modifier.matchParentSize().alpha(0.9f)
                 )
+                // The Ive photo treatment: the photograph melts into the warm
+                // paper canvas through a deepening groupedSurface fade — a
+                // near-opaque zone at the foot so the title below never sits
+                // on a hard photographic edge (no dead void, no seam).
                 Box(
                     modifier = Modifier
                         .matchParentSize()
                         .background(
                             Brush.verticalGradient(
                                 0f to Color.Transparent,
-                                0.55f to design.palette.groupedSurface.copy(alpha = 0.35f),
+                                0.45f to design.palette.groupedSurface.copy(alpha = 0.55f),
+                                0.75f to design.palette.groupedSurface.copy(alpha = 0.85f),
                                 1f to design.palette.groupedSurface
                             )
                         )
@@ -358,6 +372,7 @@ private fun TrackMiniQuiz(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = design.spacing.gutter)
+            .frostedCardChrome()
             .testTag("qa_track_quiz_${track.index}")
     ) {
         Text(
@@ -454,7 +469,7 @@ private fun CatholicQuestionsPane(
             val context = LocalContext.current
             val prefsStore = remember { UserPreferencesStore(context) }
             val trackProgress by prefsStore.trackProgress.collectAsState(initial = emptyMap())
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick(
                     "Itinerarios guiados",
                     "Guided learning tracks",
@@ -486,6 +501,7 @@ private fun CatholicQuestionsPane(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = design.spacing.gutter)
+                        .frostedCardChrome()
                         .heightIn(min = MinTouchTarget)
                         .testTag("qa_track_${track.index}")
                 ) {
@@ -574,7 +590,7 @@ private fun CatholicQuestionsPane(
         }
         if (repository.catholicQuestions.isNotEmpty()) {
             item(key = "catholic_questions") {
-                AppSectionHeader(
+                StudySectionHeader(
                     title = currentLanguage.pick(
                         "101 preguntas sobre la fe católica",
                         "101 Questions on the Catholic Faith",
@@ -643,7 +659,7 @@ private fun OrdersOfficesPane(
         header()
 
         item(key = "religious_orders") {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick(
                     "Órdenes religiosas",
                     "Religious orders",
@@ -660,9 +676,10 @@ private fun OrdersOfficesPane(
                     icon = Icons.Default.Church
                 )
             } else {
-                // A single list in data order: the data may interleave men's
-                // and women's orders, so no men/women split is inferred here.
-                AppListGroup {
+                // A single frosted grouped list in data order: the data may
+                // interleave men's and women's orders, so no men/women split
+                // is inferred here.
+                FrostedListGroup {
                     repository.religiousOrders.forEachIndexed { i, order ->
                         val subtitle = listOfNotNull(
                             order.abbreviation.takeIf { it.isNotBlank() },
@@ -682,7 +699,7 @@ private fun OrdersOfficesPane(
         }
 
         item(key = "church_offices") {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick(
                     "Oficios eclesiásticos",
                     "Church offices",
@@ -700,7 +717,7 @@ private fun OrdersOfficesPane(
                 )
             } else {
                 // Hierarchy order is the data order.
-                AppListGroup {
+                FrostedListGroup {
                     repository.churchOffices.forEachIndexed { i, office ->
                         AppListRow(
                             title = office.name.get(currentLanguage),
@@ -745,7 +762,7 @@ private fun MoralDoctrinePane(
         header()
 
         item(key = "commandments") {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick("Los Diez Mandamientos", "The Ten Commandments", "Os Dez Mandamentos")
             )
             AppListGroup {
@@ -762,7 +779,7 @@ private fun MoralDoctrinePane(
         }
 
         item(key = "precepts") {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick("Los preceptos de la Iglesia", "The Precepts of the Church", "Os Mandamentos da Igreja")
             )
             AppListGroup {
@@ -779,7 +796,7 @@ private fun MoralDoctrinePane(
         }
 
         item(key = "vices") {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick("Vicios capitales y virtudes", "Capital Vices and Virtues", "Vícios capitais e virtudes")
             )
             AppListGroup {
@@ -799,7 +816,7 @@ private fun MoralDoctrinePane(
         }
 
         item(key = "gravity") {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick("El pecado y la confesión", "Sin and Confession", "O pecado e a confissão")
             )
             AppListGroup {
@@ -810,7 +827,7 @@ private fun MoralDoctrinePane(
         }
 
         item(key = "didache") {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick("Didaché", "Didaché", "Didaché")
             )
             repository.didacheIntro.get(currentLanguage).takeIf { it.isNotBlank() }?.let { intro ->
@@ -1632,14 +1649,27 @@ private fun DidacheReaderCard(
         append(bodyText)
     }
 
-    GutterCard {
-        didacheParagraphs(bodyText).forEachIndexed { i, paragraph ->
-            if (i > 0) Spacer(Modifier.height(design.spacing.cardGap))
-            Text(
-                text = paragraph,
-                style = styles.scripture,
-                color = design.palette.textPrimary
-            )
+    GutterCard(modifier = Modifier.testTag("didache_reader")) {
+        // Paper-warm reading surface: the warm paper canvas inside the
+        // frosted card, paragraphs in the serif scripture face — the
+        // Didaché reads as a leaf, not a settings row.
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(design.shapes.card)
+                .background(design.palette.canvas)
+                .padding(design.spacing.cardPadding)
+        ) {
+            Column {
+                didacheParagraphs(bodyText).forEachIndexed { i, paragraph ->
+                    if (i > 0) Spacer(Modifier.height(design.spacing.cardGap))
+                    Text(
+                        text = paragraph,
+                        style = styles.scripture,
+                        color = design.palette.textPrimary
+                    )
+                }
+            }
         }
         Spacer(Modifier.height(design.spacing.cardGap))
         AppDivider()
@@ -2084,7 +2114,7 @@ private fun ChurchHistoryPane(
         header()
 
         item {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick("Línea de tiempo", "Timeline", "Linha do tempo")
             )
             AppListGroup {
@@ -2100,7 +2130,7 @@ private fun ChurchHistoryPane(
         }
 
         item {
-            AppSectionHeader(
+            StudySectionHeader(
                 title = currentLanguage.pick("Los grandes cismas", "The great schisms", "Os grandes cismas")
             )
             AppListGroup {
@@ -2486,7 +2516,7 @@ private fun ParishesAndNewsPane(
                 }
             } else {
                 item(key = "parish_results") {
-                    AppSectionHeader(
+                    StudySectionHeader(
                         title = currentLanguage.pick("Iglesias", "Churches", "Igrejas")
                     )
                     AppListGroup {
@@ -2725,6 +2755,110 @@ private fun VaticanNewsCard(
 
 // ------------------------------------------------------------------ fittings
 
+/**
+ * Pane section header for the Study panes, in the Ive serene idiom: the
+ * kit header's section title is SemiBold (600), which outweighed the
+ * screen title's large regular (400) line; here it drops to weight 400 so
+ * the pane title leads and the section labels recede. Layout mirrors the
+ * kit's outside-card header (gutter + 1dp, group gap on top, 8dp below),
+ * so rhythm is unchanged; only the weight changes.
+ */
+@Composable
+private fun StudySectionHeader(
+    title: String,
+    subtitle: String? = null,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    Column(
+        modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter + 1.dp)
+            .padding(top = design.spacing.insetGroupGap, bottom = 8.dp)
+    ) {
+        val trailing = subtitle != null && subtitle.length <= 18 && !subtitle.endsWith(".")
+        Row(verticalAlignment = Alignment.Bottom) {
+            Text(
+                text = title,
+                style = styles.sectionTitle.copy(
+                    fontSize = styles.sectionTitle.fontSize * (20f / 22f),
+                    fontWeight = FontWeight.Normal
+                ),
+                color = palette.textPrimary,
+                modifier = Modifier.weight(1f).alignByBaseline()
+            )
+            if (trailing) {
+                Spacer(Modifier.width(12.dp))
+                Text(
+                    text = subtitle,
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary,
+                    maxLines = 1,
+                    modifier = Modifier.alignByBaseline()
+                )
+            }
+        }
+        if (subtitle != null && !trailing) {
+            Spacer(Modifier.height(2.dp))
+            Text(
+                text = subtitle,
+                style = styles.rowSubtitle,
+                color = palette.textSecondary
+            )
+        }
+    }
+}
+
+/**
+ * Frosted-card chrome for this screen's cards: a soft shadow plus a 1dp
+ * hairline stroke. `AppCard` (AppleKit) already paints the frosted
+ * `groupedSurface` at `design.shapes.card` (20dp in Ive), but its fill is
+ * drawn *after* the caller's modifier — so a plain `.border()` passed in
+ * would be painted over by that fill. `drawWithContent` strokes after the
+ * card's own content instead, so the hairline sits on top at the card's
+ * real (gutter-inset) bounds. Radius follows the identity's one card
+ * system: 20dp in Ive, 12dp elsewhere.
+ */
+@Composable
+private fun Modifier.frostedCardChrome(): Modifier {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val radius = if (design.language == DesignLanguage.IVE) 20.dp else 12.dp
+    val width = design.depth.cardBorderWidth.coerceAtLeast(1.dp)
+    return this
+        .shadow(6.dp, design.shapes.card)
+        .drawWithContent {
+            drawContent()
+            drawRoundRect(
+                color = palette.hairline,
+                topLeft = Offset.Zero,
+                size = size,
+                cornerRadius = CornerRadius(radius.toPx()),
+                style = Stroke(width = width.toPx())
+            )
+        }
+}
+
+/**
+ * A frosted grouped list: [AppListGroup] already paints the translucent
+ * `groupedSurface` at `design.shapes.listGroup` (20dp in Ive); the soft
+ * shadow lifts the group off the warm paper canvas. Used for the
+ * orders/offices lists, whose rows are grouped rather than carded.
+ */
+@Composable
+private fun FrostedListGroup(
+    modifier: Modifier = Modifier,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    val design = LocalAppDesign.current
+    AppListGroup(
+        modifier = modifier.shadow(6.dp, design.shapes.listGroup),
+        content = content
+    )
+}
+
 /** [AppCard] leaves the screen's inset to its caller; every card here wants it. */
 @Composable
 private fun GutterCard(
@@ -2736,6 +2870,7 @@ private fun GutterCard(
     AppCard(
         modifier = modifier
             .padding(horizontal = design.spacing.gutter)
+            .frostedCardChrome()
             .widthIn(max = design.spacing.readingMaxWidth)
             .then(
                 if (onClick != null) Modifier.heightIn(min = MinTouchTarget)
@@ -2925,9 +3060,12 @@ private fun Context.openMaps(uri: String): Boolean =
     runCatching { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri))) }.isSuccess
 
 /**
- * Photographic hero art bundled under assets/heroes/. Decoded once per asset
- * path; a missing or undecodable asset draws nothing, so the surface beneath
- * shows through and text legibility never depends on the photo loading.
+ * Photographic hero art bundled under assets/heroes/. Decoded down-sampled
+ * so its width does not exceed 1080px (power-of-two inSampleSize) — a
+ * ~200KB+ photographic hero never lands full-resolution on memory-
+ * constrained devices. A missing or undecodable asset draws nothing, so
+ * the surface beneath shows through and text legibility never depends on
+ * the photo loading.
  */
 @Composable
 private fun AssetPhoto(
@@ -2936,11 +3074,7 @@ private fun AssetPhoto(
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
-    val bitmap = remember(assetPath) {
-        runCatching {
-            context.assets.open(assetPath).use { BitmapFactory.decodeStream(it) }?.asImageBitmap()
-        }.getOrNull()
-    }
+    val bitmap = remember(assetPath) { decodeSampledBitmap(context, assetPath) }
     if (bitmap != null) {
         Image(
             bitmap = bitmap,
@@ -2949,4 +3083,26 @@ private fun AssetPhoto(
             modifier = modifier
         )
     }
+}
+
+private fun decodeSampledBitmap(
+    context: Context,
+    assetPath: String,
+    maxWidthPx: Int = 1080
+): ImageBitmap? = try {
+    val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+    context.assets.open(assetPath).use { BitmapFactory.decodeStream(it, null, bounds) }
+    if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+        null
+    } else {
+        var sampleSize = 1
+        while (bounds.outWidth / sampleSize > maxWidthPx) sampleSize *= 2
+        val options = BitmapFactory.Options().apply { inSampleSize = sampleSize }
+        val bitmap: Bitmap? = context.assets.open(assetPath).use {
+            BitmapFactory.decodeStream(it, null, options)
+        }
+        bitmap?.asImageBitmap()
+    }
+} catch (_: Exception) {
+    null
 }

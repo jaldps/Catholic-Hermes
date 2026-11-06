@@ -67,6 +67,12 @@ import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
 
 private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
     AppLanguage.ES -> es
@@ -114,13 +120,14 @@ fun PilgrimageAndHabitsScreen(
     // the pane. Each pane opens on a section header, never a second title.
     val header: LazyListScope.() -> Unit = {
         item(key = "pilgrimage_title") {
-            AppScreenTitle(
+            // Photographic hero (votive candles) with fade; title rides the fade.
+            PhotoHeader(
                 title = currentLanguage.pick(
                     "Calendario y Santuarios",
                     "Calendar & Shrines",
                     "Calendário e Santuários"
                 ),
-                subtitle = null
+                asset = "heroes/votive_candles.jpg"
             )
         }
         item(key = "pilgrimage_tabs") {
@@ -443,7 +450,7 @@ private fun HabitEntry(
                     Icons.Default.RadioButtonUnchecked
                 },
                 contentDescription = null,
-                tint = if (completed) design.palette.accent else design.palette.textTertiary,
+                tint = if (completed) design.palette.textPrimary else design.palette.textTertiary,
                 modifier = Modifier
                     // Nudged onto the title's x-height instead of its cap line.
                     .padding(top = 2.dp)
@@ -522,6 +529,45 @@ private fun SanctuariesTab(
                 )
             }
 
+            // Candle-prayer plate: the shrine pilgrimage photo inside the
+            // shrines pane, clipped to the 20dp card radius with a fade.
+            item(key = "pilgrimage_shrine_plate") {
+                val plateBitmap = rememberHeroBitmap("heroes/candle_prayer.jpg")
+                Box(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = IveGutter)
+                        .height(132.dp)
+                        .clip(design.shapes.card)
+                        .background(design.palette.selectionTint)
+                        .testTag("pilgrimage_shrine_plate")
+                ) {
+                    if (plateBitmap != null) {
+                        Image(
+                            bitmap = plateBitmap,
+                            contentDescription = currentLanguage.pick("Velas de oración", "Prayer candles", "Velas de oração"),
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .clip(design.shapes.card)
+                        )
+                    }
+                    Box(
+                        Modifier
+                            .fillMaxSize()
+                            .background(
+                                Brush.verticalGradient(
+                                    listOf(
+                                        Color.Transparent,
+                                        design.palette.canvas.copy(alpha = 0.85f)
+                                    )
+                                )
+                            )
+                    )
+                }
+                Spacer(Modifier.height(design.spacing.cardGap))
+            }
+
             itemsIndexed(sanctuaries, key = { _, shrine -> shrine.id }) { index, shrine ->
                 if (index > 0) Spacer(Modifier.height(design.spacing.sectionGap))
                 SanctuaryEntry(
@@ -561,10 +607,11 @@ private fun SanctuaryEntry(
             modifier = Modifier.heightIn(min = MinTouchTarget),
             verticalAlignment = Alignment.CenterVertically
         ) {
+            // Monochrome: plain ink glyph, not accent-washed.
             Icon(
                 imageVector = Icons.Default.Place,
                 contentDescription = null,
-                tint = palette.accent,
+                tint = palette.textPrimary,
                 modifier = Modifier.size(design.decor.rowIconSize)
             )
             Spacer(Modifier.width(design.spacing.iconLabelGap))
@@ -717,4 +764,98 @@ private fun placeParts(place: String): PlaceParts {
 private fun segmentedTabsInset(): Dp {
     val design = LocalAppDesign.current
     return design.spacing.gutter
+}
+
+// ------------------------------------------------------ bundled hero photos
+
+/** Photographic hero band height (Prayers/Doctrine idiom). */
+private val PhotoBandHeight = 168.dp
+
+/** Bundled hero photos are decoded at most this many pixels on a side. */
+private const val HeroMaxDimension = 1080
+
+/** Ive screen gutter: the identity token already resolves to 20dp. */
+private val IveGutter = 20.dp
+
+/**
+ * Decodes a bundled assets/heroes photo once per assetPath, sampled down
+ * to at most HeroMaxDimension px on either side. Returns null when the
+ * asset is missing or unreadable; callers keep their tonal ground.
+ */
+@Composable
+private fun rememberHeroBitmap(assetPath: String): ImageBitmap? {
+    val context = LocalContext.current
+    return remember(assetPath) {
+        try {
+            val bytes = context.assets.open(assetPath).use { it.readBytes() }
+            val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, bounds)
+            if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+                null
+            } else {
+                var sample = 1
+                while (
+                    bounds.outWidth / sample > HeroMaxDimension ||
+                    bounds.outHeight / sample > HeroMaxDimension
+                ) {
+                    sample *= 2
+                }
+                val options = BitmapFactory.Options().apply { inSampleSize = sample }
+                BitmapFactory.decodeByteArray(bytes, 0, bytes.size, options)?.asImageBitmap()
+            }
+        } catch (_: Exception) {
+            null
+        }
+    }
+}
+
+/**
+ * Photographic hero with fade: a full-bleed bundled photo band that melts
+ * into the canvas at its foot, with the serene screen title overlaid on the
+ * fade so photo and word share one block (Prayers/Home idiom). Replaces
+ * the vector header art for every identity: the photo reads in Ive and Apple.
+ */
+@Composable
+private fun PhotoHeader(title: String, asset: String) {
+    val palette = LocalAppDesign.current.palette
+    val bitmap = rememberHeroBitmap(asset)
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .height(PhotoBandHeight)
+            .background(palette.selectionTint)
+    ) {
+        if (bitmap != null) {
+            Image(
+                bitmap = bitmap,
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .testTag("screen_header_illustration")
+            )
+        } else {
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .background(palette.selectionTint)
+                    .testTag("screen_header_illustration")
+            )
+        }
+        Box(
+            Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .height(88.dp)
+                .background(
+                    Brush.verticalGradient(
+                        listOf(Color.Transparent, palette.canvas)
+                    )
+                )
+        )
+        AppScreenTitle(
+            title = title,
+            modifier = Modifier.align(Alignment.BottomStart)
+        )
+    }
 }
