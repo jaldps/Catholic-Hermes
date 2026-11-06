@@ -653,14 +653,10 @@ private fun PrayerIntentionFilters(
         options.forEach { (value, label) ->
             val isSelected = selected == value
             Box(
-                // Weighted so each wrapped row distributes its chips evenly
-                // across the full width — a lone last chip (e.g. Forgiveness)
-                // stretches to its row instead of orphaning at the start edge.
-                // fill = false: chips grow toward their share, never shrink
-                // below their label, so long labels (Todas las intenciones)
-                // are never clipped.
+                // Natural intrinsic width: no weight, so each chip sizes to
+                // its full label and wraps to the next line instead of
+                // shrinking/clipping (e.g. 'Health &', 'Peace of').
                 Modifier
-                    .weight(1f, fill = false)
                     .heightIn(min = 48.dp)
                     .clip(CircleShape)
                     .background(if (isSelected) Color.Black else design.palette.groupedSurface)

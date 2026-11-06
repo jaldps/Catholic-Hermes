@@ -2136,11 +2136,14 @@ private fun LazyListScope.newsItems(news: NewsResult?, currentLanguage: AppLangu
     when (news) {
         null -> item {
             val design = LocalAppDesign.current
-            // Loading fills the viewport and centers both axes, instead of a
-            // 48dp top-pinned row. Content (spinner + label) is unchanged.
+            // Loading fills the viewport height via fillParentMaxHeight
+            // (LazyItemScope): fillMaxSize inside a LazyColumn item only wraps
+            // content and stays top-pinned. Content (spinner + label) is
+            // unchanged and centered on both axes.
             Box(
                 modifier = Modifier
-                    .fillMaxSize()
+                    .fillMaxWidth()
+                    .fillParentMaxHeight()
                     .testTag("news_loading"),
                 contentAlignment = Alignment.Center
             ) {
