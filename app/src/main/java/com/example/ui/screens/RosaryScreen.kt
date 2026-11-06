@@ -1018,7 +1018,8 @@ fun RosaryScreen(
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
-            .testTag("rosary_screen")
+            .testTag("rosary_screen"),
+        contentPadding = PaddingValues(bottom = 120.dp)
     ) {
         item {
             // The masthead names the screen and holds still; the segmented

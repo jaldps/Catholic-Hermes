@@ -2136,27 +2136,32 @@ private fun LazyListScope.newsItems(news: NewsResult?, currentLanguage: AppLangu
     when (news) {
         null -> item {
             val design = LocalAppDesign.current
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .height(48.dp),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
+            // Loading fills the viewport and centers both axes, instead of a
+            // 48dp top-pinned row. Content (spinner + label) is unchanged.
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .testTag("news_loading"),
+                contentAlignment = Alignment.Center
             ) {
-                CircularProgressIndicator(
-                    modifier = Modifier.size(design.decor.rowIconSize),
-                    color = design.palette.accent
-                )
-                Spacer(Modifier.width(design.spacing.iconLabelGap))
-                Text(
-                    text = currentLanguage.pick(
-                        "Cargando noticias del Vaticano…",
-                        "Loading news from the Vatican…",
-                        "A carregar notícias do Vaticano…"
-                    ),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = design.palette.textSecondary
-                )
+                Row(
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    CircularProgressIndicator(
+                        modifier = Modifier.size(design.decor.rowIconSize),
+                        color = design.palette.accent
+                    )
+                    Spacer(Modifier.width(design.spacing.iconLabelGap))
+                    Text(
+                        text = currentLanguage.pick(
+                            "Cargando noticias del Vaticano…",
+                            "Loading news from the Vatican…",
+                            "A carregar notícias do Vaticano…"
+                        ),
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = design.palette.textSecondary
+                    )
+                }
             }
         }
 
