@@ -107,6 +107,7 @@ import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.ListStyle
 import com.example.ui.theme.LocalAppDesign
+import coil.compose.AsyncImage
 import com.example.ui.theme.LocalAppTextStyles
 import android.graphics.BitmapFactory
 import java.text.DateFormat
@@ -1895,6 +1896,8 @@ private fun NovenaCard(
             .clickable(onClick = onOpen)
             .testTag("novena_card_${novena.id}")
     ) {
+        // Bundled photo as the fallback ground; the novena's own
+        // illustration covers it when one ships with the data.
         if (heroBitmap != null) {
             Image(
                 bitmap = heroBitmap,
@@ -1912,6 +1915,20 @@ private fun NovenaCard(
                 modifier = Modifier
                     .size(40.dp)
                     .align(Alignment.Center)
+            )
+        }
+        // The novena's own illustration: when the data carries an imageUrl,
+        // it covers the bundled fallback, so the 246 novenas keep their real
+        // per-novena art. Only a blank/null imageUrl leaves the bundled
+        // photo on top.
+        if (!novena.imageUrl.isNullOrBlank()) {
+            AsyncImage(
+                model = novena.imageUrl,
+                contentDescription = novena.title.get(currentLanguage),
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .clip(NovenaCardRadius)
             )
         }
         // Bottom scrim, full bleed: transparent at the top so the
@@ -2064,8 +2081,10 @@ private fun NovenaDayView(
             )
         }
 
-        // Bundled hero plate (same mapping as the index cards): tonal
-        // ground shows until the decoded photo fills the frame.
+        // Frontispiece plate: the novena's own illustration (AsyncImage over
+        // imageUrl) covers the bundled fallback photo, so only a novena with
+        // a blank/null imageUrl keeps the bundled plate. The bundled ground
+        // also shows through if the remote image has not loaded yet.
         item {
             Box(
                 Modifier
@@ -2078,6 +2097,16 @@ private fun NovenaDayView(
                 if (heroBitmap != null) {
                     Image(
                         bitmap = heroBitmap,
+                        contentDescription = novena.title.get(currentLanguage),
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clip(design.shapes.cardLarge)
+                    )
+                }
+                if (!novena.imageUrl.isNullOrBlank()) {
+                    AsyncImage(
+                        model = novena.imageUrl,
                         contentDescription = novena.title.get(currentLanguage),
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
@@ -2636,11 +2665,13 @@ private fun rememberHeroBitmap(assetPath: String): ImageBitmap? {
 }
 
 /**
- * Bundled photo for a novena: the Divine Mercy novena (id or any-language
- * title containing "misericord") gets the Divine Mercy image; a novena
- * without a shipped photo URL falls back to the Marian statue default;
- * every other novena uses the votive candles. The remote `imageUrl` is
- * never fetched — the bundled bytes are always available offline.
+ * Bundled fallback photo for a novena: shown only when the novena has no
+ * shipped photo URL (blank/null `imageUrl`), or while its own illustration
+ * is still loading. The Divine Mercy novena (id or any-language title
+ * containing "misericord") gets the Divine Mercy image; a novena without a
+ * shipped photo URL falls back to the Marian statue default; every other
+ * novena uses the votive candles. The novena's own `imageUrl` is fetched
+ * with AsyncImage on top of this ground.
  */
 private fun novenaHeroAsset(novena: Novena): String {
     val names = listOf(novena.id, novena.title.es, novena.title.en, novena.title.pt)

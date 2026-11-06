@@ -1,6 +1,10 @@
 package com.example.ui.screens
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 
 import androidx.compose.foundation.border
@@ -61,9 +65,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.Role
@@ -907,57 +915,73 @@ private fun FidelityCard(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
 
-    // Expert v3: no candle photo behind the ring — the reference hero is
-    // the ring on clean paper. One Box clipped to the card radius on the
-    // plain groupedSurface, no photo, no scrim.
+    // Photographic strip on top, ring on frosted paper below: the candle
+    // photo sits as a distinct ~120dp band clipped to the card radius,
+    // above the ring section — never behind the text — so the ring and
+    // count stay legible on groupedSurface.
     Box(
         modifier = modifier
             .padding(horizontal = design.spacing.gutter)
             .clip(design.shapes.card)
             .background(palette.groupedSurface)
     ) {
-        // Serene, centred header: eyebrow, ring, count, one subtitle line.
-        Column(
-            Modifier
-                .fillMaxWidth()
-                .padding(design.spacing.cardPadding),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                text = caps(currentLanguage.pick("Fidelidad espiritual", "Spiritual fidelity", "Fidelidade espiritual")),
-                style = styles.sectionEyebrow,
-                color = palette.textPrimary
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            FidelityRing(
-                completionRate = completionRate,
-                completedCount = completedCount,
-                totalCount = totalCount,
-                currentLanguage = currentLanguage
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
-            Text(
-                text = when {
-                    completionRate >= 1.0f -> currentLanguage.pick(
-                        "¡Día consagrado en plenitud!",
-                        "A day consecrated in full!",
-                        "Dia consagrado em plenitude!"
-                    )
-                    completionRate >= 0.5f -> currentLanguage.pick(
-                        "Buen camino, persevera hasta la noche.",
-                        "Good progress — persevere until nightfall.",
-                        "Bom caminho, persevere até à noite."
-                    )
-                    else -> currentLanguage.pick(
-                        "Empieza con un ofrecimiento de obras.",
-                        "Begin with an offering of the day's work.",
-                        "Comece com um oferecimento de obras."
-                    )
-                },
-                style = styles.rowSubtitle,
-                color = palette.textPrimary,
-                maxLines = 1
-            )
+        Column(Modifier.fillMaxWidth()) {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(120.dp)
+                    .background(palette.selectionTint)
+                    .testTag("fidelity_card_photo")
+            ) {
+                AssetPhoto(
+                    assetPath = "heroes/candle_prayer.jpg",
+                    contentDescription = null,
+                    modifier = Modifier.matchParentSize()
+                )
+            }
+            // Serene, centred header: eyebrow, ring, count, one subtitle line.
+            Column(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(design.spacing.cardPadding),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                Text(
+                    text = caps(currentLanguage.pick("Fidelidad espiritual", "Spiritual fidelity", "Fidelidade espiritual")),
+                    style = styles.sectionEyebrow,
+                    color = palette.textPrimary
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                FidelityRing(
+                    completionRate = completionRate,
+                    completedCount = completedCount,
+                    totalCount = totalCount,
+                    currentLanguage = currentLanguage
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                Text(
+                    text = when {
+                        completionRate >= 1.0f -> currentLanguage.pick(
+                            "¡Día consagrado en plenitud!",
+                            "A day consecrated in full!",
+                            "Dia consagrado em plenitude!"
+                        )
+                        completionRate >= 0.5f -> currentLanguage.pick(
+                            "Buen camino, persevera hasta la noche.",
+                            "Good progress — persevere until nightfall.",
+                            "Bom caminho, persevere até à noite."
+                        )
+                        else -> currentLanguage.pick(
+                            "Empieza con un ofrecimiento de obras.",
+                            "Begin with an offering of the day's work.",
+                            "Comece com um oferecimento de obras."
+                        )
+                    },
+                    style = styles.rowSubtitle,
+                    color = palette.textPrimary,
+                    maxLines = 1
+                )
+            }
         }
     }
 }
@@ -1371,4 +1395,49 @@ private val RingStroke = 10.dp
 
 /** M3 minimum touch target; rows also honour the identity's rowMinHeight. */
 private val MinTouchTarget = 48.dp
+
+/**
+ * Photographic hero art bundled under assets/heroes/. Decoded down-sampled
+ * so its width does not exceed 1080px — a missing asset draws nothing so
+ * the surface beneath shows through.
+ */
+@Composable
+private fun AssetPhoto(
+    assetPath: String,
+    contentDescription: String?,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+    val bitmap = remember(assetPath) { decodeSampledBitmap(context, assetPath) }
+    if (bitmap != null) {
+        Image(
+            bitmap = bitmap,
+            contentDescription = contentDescription,
+            contentScale = ContentScale.Crop,
+            modifier = modifier
+        )
+    }
+}
+
+private fun decodeSampledBitmap(
+    context: Context,
+    assetPath: String,
+    maxWidthPx: Int = 1080
+): ImageBitmap? = try {
+    val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+    context.assets.open(assetPath).use { BitmapFactory.decodeStream(it, null, bounds) }
+    if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+        null
+    } else {
+        var sampleSize = 1
+        while (bounds.outWidth / sampleSize > maxWidthPx) sampleSize *= 2
+        val options = BitmapFactory.Options().apply { inSampleSize = sampleSize }
+        val bitmap: Bitmap? = context.assets.open(assetPath).use {
+            BitmapFactory.decodeStream(it, null, options)
+        }
+        bitmap?.asImageBitmap()
+    }
+} catch (_: Exception) {
+    null
+}
 

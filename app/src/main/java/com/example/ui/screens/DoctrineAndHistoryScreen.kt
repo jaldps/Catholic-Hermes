@@ -142,6 +142,22 @@ private const val ANY_PLACE = "__any__"
 private val MinTouchTarget = 48.dp
 
 /**
+ * One distinctive photo per pane, mapped by the pane index (initialised
+ * from initialTopTab, tracked as selectedTopTab):
+ * 0 Doctrina → cathedral dome, 1 María y Jesús → Mary statue,
+ * 2 Historia → church-window light, 3 101 Preguntas → sunrise,
+ * 4 Órdenes y Oficios → votive candles. Fallback is church-window light.
+ */
+private fun doctrineHeroForPane(tab: Int): String = when (tab) {
+    0 -> "heroes/cathedral_dome.jpg"
+    1 -> "heroes/mary_statue.jpg"
+    2 -> "heroes/church_window_light.jpg"
+    3 -> "heroes/sunrise_mountains.jpg"
+    4 -> "heroes/votive_candles.jpg"
+    else -> "heroes/church_window_light.jpg"
+}
+
+/**
  * Doctrine, history and the directory, behind five panes: the moral teaching of
  * the Catechism (the Decalogue, the precepts, the capital vices against the
  * virtues that cure them, and the gravity of sin), the Marian and
@@ -188,10 +204,13 @@ fun DoctrineAndHistoryScreen(
     // The large title, then the selector — the order every identity's own
     // platform uses. Both scroll away with the pane beneath them.
     val header: LazyListScope.() -> Unit = {
-        // Entrance hero: full-bleed church-window photograph band with a
-        // fade into the surface at its foot, above the pane title.
-        // Decorative only; the title and panes carry the text.
+        // Entrance hero: full-bleed photograph band with a fade into the
+        // surface at its foot, above the pane title. Each pane carries its
+        // own distinctive photo (mapped by the current pane, initialised
+        // from initialTopTab — see doctrineHeroForPane). Decorative only;
+        // the title and panes carry the text.
         item(key = "doctrine_hero") {
+            val heroAsset = doctrineHeroForPane(selectedTopTab)
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -200,7 +219,7 @@ fun DoctrineAndHistoryScreen(
                     .testTag("doctrine_hero_photo")
             ) {
                 AssetPhoto(
-                    assetPath = "heroes/church_window_light.jpg",
+                    assetPath = heroAsset,
                     contentDescription = null,
                     modifier = Modifier.matchParentSize().alpha(0.9f)
                 )

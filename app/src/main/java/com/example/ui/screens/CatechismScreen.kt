@@ -2,8 +2,11 @@ package com.example.ui.screens
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.net.Uri
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
@@ -50,6 +53,12 @@ import androidx.compose.runtime.setValue
 import kotlinx.coroutines.launch
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
@@ -146,6 +155,40 @@ fun CatechismScreen(
     // One title for the screen, then the control that picks the view: the
     // first rows of whichever list is showing, so they scroll away with it.
     val header: LazyListScope.() -> Unit = {
+        // Photographic hero band at the top of the catechism directory:
+        // full-bleed church-window photograph with a fade into the
+        // surface at its foot, above the title. Decorative only.
+        item(key = "catechism_hero") {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(168.dp)
+                    .background(design.palette.selectionTint)
+                    .testTag("catechism_hero_photo")
+            ) {
+                AssetPhoto(
+                    assetPath = "heroes/church_window_light.jpg",
+                    contentDescription = null,
+                    modifier = Modifier.fillMaxSize().alpha(0.9f)
+                )
+                // The photograph melts into the paper canvas through a
+                // deepening groupedSurface fade — a near-opaque zone at
+                // the foot so the title below never sits on a hard
+                // photographic edge.
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(
+                            Brush.verticalGradient(
+                                0f to Color.Transparent,
+                                0.45f to design.palette.groupedSurface.copy(alpha = 0.55f),
+                                0.75f to design.palette.groupedSurface.copy(alpha = 0.85f),
+                                1f to design.palette.groupedSurface
+                            )
+                        )
+                )
+            }
+        }
         item(key = "catechism_screen_title") {
             AppScreenTitle(
                 title = currentLanguage.pick("Catecismo", "Catechism", "Catecismo")
@@ -1669,4 +1712,49 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
 
 private fun Context.openExternally(url: String) {
     runCatching { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url))) }
+}
+
+/**
+ * Photographic hero art bundled under assets/heroes/. Decoded down-sampled
+ * so its width does not exceed 1080px — a missing asset draws nothing so
+ * the surface beneath shows through.
+ */
+@Composable
+private fun AssetPhoto(
+    assetPath: String,
+    contentDescription: String?,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+    val bitmap = remember(assetPath) { decodeSampledBitmap(context, assetPath) }
+    if (bitmap != null) {
+        Image(
+            bitmap = bitmap,
+            contentDescription = contentDescription,
+            contentScale = ContentScale.Crop,
+            modifier = modifier
+        )
+    }
+}
+
+private fun decodeSampledBitmap(
+    context: Context,
+    assetPath: String,
+    maxWidthPx: Int = 1080
+): ImageBitmap? = try {
+    val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+    context.assets.open(assetPath).use { BitmapFactory.decodeStream(it, null, bounds) }
+    if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+        null
+    } else {
+        var sampleSize = 1
+        while (bounds.outWidth / sampleSize > maxWidthPx) sampleSize *= 2
+        val options = BitmapFactory.Options().apply { inSampleSize = sampleSize }
+        val bitmap: Bitmap? = context.assets.open(assetPath).use {
+            BitmapFactory.decodeStream(it, null, options)
+        }
+        bitmap?.asImageBitmap()
+    }
+} catch (_: Exception) {
+    null
 }

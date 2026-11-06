@@ -1108,8 +1108,8 @@ fun RosaryScreen(
                         modifier = Modifier
                             .padding(horizontal = design.spacing.gutter)
                             .fillMaxWidth()
-                            .height(220.dp)
-                            .clip(design.shapes.card)
+                            .height(240.dp)
+                            .clip(RoundedCornerShape(20.dp))
                             .background(Color.Black)
                             .testTag("rosary_hero_photo")
                     ) {
@@ -1344,6 +1344,77 @@ fun RosaryScreen(
                 // Divine Mercy Chaplet
                 item { Spacer(Modifier.height(20.dp)) }
 
+                // True photo hero, mirror of the Rosary's: full-bleed
+                // rosary_pearls.jpg at 240dp carrying the Coronilla title,
+                // step counter and the shared narrate toggle CTA on a
+                // strong bottom scrim. Subject right, text left clear of
+                // the subject.
+                item {
+                    Box(
+                        modifier = Modifier
+                            .padding(horizontal = design.spacing.gutter)
+                            .fillMaxWidth()
+                            .height(240.dp)
+                            .clip(RoundedCornerShape(20.dp))
+                            .background(Color.Black)
+                            .testTag("rosary_hero_photo")
+                    ) {
+                        AssetPhoto(
+                            assetPath = "heroes/rosary_pearls.jpg",
+                            contentDescription = null,
+                            modifier = Modifier.matchParentSize(),
+                            alignment = Alignment.CenterEnd
+                        )
+                        Box(
+                            modifier = Modifier
+                                .matchParentSize()
+                                .background(
+                                    Brush.verticalGradient(
+                                        0f to Color.Transparent,
+                                        0.45f to Color.Black.copy(alpha = 0.40f),
+                                        0.75f to Color.Black.copy(alpha = 0.80f),
+                                        1f to Color.Black.copy(alpha = 0.88f)
+                                    )
+                                )
+                        )
+                        Column(
+                            modifier = Modifier
+                                .align(Alignment.BottomStart)
+                                .fillMaxWidth(0.68f)
+                                .padding(design.spacing.cardPadding),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(
+                                text = lang.pick("Coronilla", "Chaplet", "Coroinha"),
+                                style = styles.sectionTitle,
+                                color = Color.White,
+                                maxLines = 1,
+                                modifier = Modifier.testTag("mercy_hero_title")
+                            )
+                            Text(
+                                text = lang.pick(
+                                    "Paso ${mercyIndex + 1} de ${mercyGuide.steps.size}",
+                                    "Step ${mercyIndex + 1} of ${mercyGuide.steps.size}",
+                                    "Passo ${mercyIndex + 1} de ${mercyGuide.steps.size}"
+                                ),
+                                style = styles.rowSubtitle,
+                                color = Color.White.copy(alpha = 0.85f),
+                                maxLines = 1,
+                                modifier = Modifier.testTag("mercy_hero_step_counter")
+                            )
+                            AppPrimaryButton(
+                                label = if (narrationActive) pauseLabel else playLabel,
+                                onClick = { toggleNarration() },
+                                leadingIcon = if (narrationActive) Icons.Default.Pause else Icons.Default.PlayArrow,
+                                modifier = Modifier
+                                    .heightIn(min = 48.dp)
+                                    .testTag("mercy_hero_start_button")
+                            )
+                        }
+                    }
+                    Spacer(Modifier.height(16.dp))
+                }
+
                 item {
                     GuideControlsCard(
                         eyebrow = lang.pick("Coronilla", "Chaplet", "Coroinha"),
@@ -1457,7 +1528,7 @@ private fun MysteryPickerDropdown(
             onClick = { expanded = true },
             shape = RoundedCornerShape(999.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = palette.raised,
+                containerColor = palette.raised.copy(alpha = 0.72f),
                 contentColor = palette.textPrimary
             ),
             contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 0.dp, bottom = 0.dp),
@@ -1610,11 +1681,11 @@ private fun GuideControlsCard(
             },
             modifier = Modifier
                 .widthIn(max = when (design.language) {
-                    // Enlarged ~24dp (max 200dp) so the beads read as
+                    // Enlarged ~64dp (max 272dp) so the beads read as
                     // beads, not as texture: the loop geometry below
                     // grows with this width.
-                    DesignLanguage.APPLE -> 192.dp
-                    DesignLanguage.IVE -> 200.dp
+                    DesignLanguage.APPLE -> 264.dp
+                    DesignLanguage.IVE -> 272.dp
                 })
                 .testTag(railTag)
                 .semantics {
@@ -1663,24 +1734,21 @@ private fun GuideControlsCard(
             )
         }
         Spacer(Modifier.height(16.dp))
-        if (design.language == DesignLanguage.IVE) {
-            Spacer(Modifier.height(16.dp))
-            TransportCluster(
-                canGoPrevious = index > 0,
-                canGoNext = index < guide.steps.lastIndex,
-                isPlayingAudio = isPlayingAudio,
-                onPrevious = { onGo(index - 1) },
-                onNext = { onGo(index + 1) },
-                onToggleAudio = onToggleAudio
-            )
-            Spacer(Modifier.height(16.dp))
-            PageDots(
-                guide = guide,
-                activeSection = step.section,
-                onGo = onGo
-            )
-            Spacer(Modifier.height(16.dp))
-        }
+        TransportCluster(
+            canGoPrevious = index > 0,
+            canGoNext = index < guide.steps.lastIndex,
+            isPlayingAudio = isPlayingAudio,
+            onPrevious = { onGo(index - 1) },
+            onNext = { onGo(index + 1) },
+            onToggleAudio = onToggleAudio
+        )
+        Spacer(Modifier.height(16.dp))
+        PageDots(
+            guide = guide,
+            activeSection = step.section,
+            onGo = onGo
+        )
+        Spacer(Modifier.height(16.dp))
         // Ive reference audio player: the prayer text sits over a full-bleed
         // rosary-pearls photograph (alpha 0.85, behind), with a white
         // gradient scrim fading to the card surface so the ink stays
@@ -1689,29 +1757,30 @@ private fun GuideControlsCard(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(design.shapes.card)
+                .clip(RoundedCornerShape(20.dp))
                 .testTag("prayer_text_art")
         ) {
-            if (design.language == DesignLanguage.IVE) {
-                AssetPhoto(
-                    assetPath = "heroes/rosary_pearls.jpg",
-                    contentDescription = null,
-                    modifier = Modifier
-                        .matchParentSize()
-                        .alpha(0.85f)
-                )
-                Box(
-                    modifier = Modifier
-                        .matchParentSize()
-                        .background(
-                            Brush.verticalGradient(
-                                0f to Color.White.copy(alpha = 0.25f),
-                                0.55f to Color.White.copy(alpha = 0.6f),
-                                1f to design.palette.raised
-                            )
+            // Frosted prayer field in every identity: the pearl photo
+            // behind the text at 0.85 with a white scrim fading to the
+            // raised surface, so the serif prayer ink stays legible.
+            AssetPhoto(
+                assetPath = "heroes/rosary_pearls.jpg",
+                contentDescription = null,
+                modifier = Modifier
+                    .matchParentSize()
+                    .alpha(0.85f)
+            )
+            Box(
+                modifier = Modifier
+                    .matchParentSize()
+                    .background(
+                        Brush.verticalGradient(
+                            0f to Color.White.copy(alpha = 0.25f),
+                            0.55f to Color.White.copy(alpha = 0.6f),
+                            1f to design.palette.raised
                         )
-                )
-            }
+                    )
+            )
             Column(Modifier.padding(vertical = 12.dp)) {
                 if (step.optional) {
                     Text(
@@ -1887,7 +1956,7 @@ private fun BeadRail(
         val geometry = remember(beads, maxWidth, density) {
             with(density) { RosaryGeometry.layout(beads, maxWidth.toPx(), this) }
         }
-        val heightDp = with(density) { geometry.height.toDp() }.coerceAtMost(248.dp)
+        val heightDp = with(density) { geometry.height.toDp() }.coerceAtMost(330.dp)
         val loopTop = with(density) { (geometry.centre.y - geometry.radius).toDp() }
         val loopSize = with(density) { (geometry.radius * 2).toDp() }
 
@@ -2217,17 +2286,17 @@ private class RosaryGeometry(
             val ringInset = 10.dp.toPx()
             val top = 8.dp.toPx() + ringInset
             // Larger loop and beads than the texture-like 50dp/2.4dp
-            // sizing: at a 200dp rail the loop radius is 58dp and the
-            // small bead is 2.8dp in radius (5.6dp across), so the
+            // sizing: at a 272dp rail the loop radius is 88dp and the
+            // small bead is 3.6dp in radius (7.2dp across), so the
             // beads read as beads. Radius and beads grew together so
             // the loop spacing (arc minus diameters) stays positive.
             // Radius/top/bottom are budgeted so geometry height stays
-            // <=248dp and the prayer text below starts clear of the rail.
-            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 58.dp.toPx())
-            val small = 2.8.dp.toPx()
-            val large = 4.2.dp.toPx()
-            val medal = 6.8.dp.toPx()
-            val crucifixHeight = 24.dp.toPx()
+            // <=330dp and the prayer text below starts clear of the rail.
+            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 88.dp.toPx())
+            val small = 3.6.dp.toPx()
+            val large = 5.4.dp.toPx()
+            val medal = 8.dp.toPx()
+            val crucifixHeight = 28.dp.toPx()
             val centre = Offset(width / 2, top + radius)
 
             val kinds = beads.map { it.kind }
@@ -2267,7 +2336,7 @@ private class RosaryGeometry(
             // The pendant hangs from the medal, its last bead highest; the
             // first gap clears the progress ring. Pitch is a clear visual
             // gap of at least 6dp between bead edges (not centre pitch).
-            val pitch = 6.dp.toPx()
+            val pitch = 7.dp.toPx()
             var previous = medalIndex.takeIf { it >= 0 }?.let { medal } ?: 0f
             val pendantRuns = mutableListOf<Pair<Int, Int>>()
             var upper: Int? = medalIndex.takeIf { it >= 0 }
