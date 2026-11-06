@@ -1090,20 +1090,27 @@ fun RosaryScreen(
 
                 item { Spacer(Modifier.height(20.dp)) }
 
-                // Photographic pearl-rosary hero band above the guide card:
-                // ~180dp photograph with a bottom fade into the card surface,
-                // replacing the flat line-art rail as the page's hero. The
+                // Photographic pearl-rosary hero above the guide card:
+                // ~220dp photograph carrying title, step counter and CTA
+                // on a strong bottom scrim (see the item below). The
                 // compact bead rail stays in the card below (with its tap
                 // interactivity, counter and step controls) — the photo
-                // carries the visual, the rail carries the interaction.
+                // is the page's hero, the rail carries the interaction.
                 item {
+                    // True hero (Expert v3): the pearl photo is no longer an
+                    // orphaned band — the title, step counter and the black
+                    // Start/Pray CTA all ride ON the photo, over a strong
+                    // bottom scrim so white ink keeps AAA contrast on any
+                    // pearl tone. The CTA reuses the narration toggle, so
+                    // it is the same action as the guide card's audio
+                    // button, not a second dead control.
                     Box(
                         modifier = Modifier
                             .padding(horizontal = design.spacing.gutter)
                             .fillMaxWidth()
-                            .height(180.dp)
+                            .height(220.dp)
                             .clip(design.shapes.card)
-                            .background(palette.selectionTint)
+                            .background(Color.Black)
                             .testTag("rosary_hero_photo")
                     ) {
                         AssetPhoto(
@@ -1111,17 +1118,55 @@ fun RosaryScreen(
                             contentDescription = null,
                             modifier = Modifier.matchParentSize()
                         )
+                        // Strong bottom scrim: clear at the top of the
+                        // photo, near-opaque black at the foot where the
+                        // title, counter and CTA sit.
                         Box(
                             modifier = Modifier
                                 .matchParentSize()
                                 .background(
                                     Brush.verticalGradient(
                                         0f to Color.Transparent,
-                                        0.6f to palette.raised.copy(alpha = 0.45f),
-                                        1f to palette.raised
+                                        0.45f to Color.Black.copy(alpha = 0.25f),
+                                        0.75f to Color.Black.copy(alpha = 0.65f),
+                                        1f to Color.Black.copy(alpha = 0.88f)
                                     )
                                 )
                         )
+                        Column(
+                            modifier = Modifier
+                                .align(Alignment.BottomStart)
+                                .fillMaxWidth()
+                                .padding(design.spacing.cardPadding),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(
+                                text = lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço"),
+                                style = styles.sectionTitle,
+                                color = Color.White,
+                                maxLines = 1,
+                                modifier = Modifier.testTag("rosary_hero_title")
+                            )
+                            Text(
+                                text = lang.pick(
+                                    "Paso ${rosaryIndex + 1} de ${rosaryGuide.steps.size}",
+                                    "Step ${rosaryIndex + 1} of ${rosaryGuide.steps.size}",
+                                    "Passo ${rosaryIndex + 1} de ${rosaryGuide.steps.size}"
+                                ),
+                                style = styles.rowSubtitle,
+                                color = Color.White.copy(alpha = 0.85f),
+                                maxLines = 1,
+                                modifier = Modifier.testTag("rosary_hero_step_counter")
+                            )
+                            AppPrimaryButton(
+                                label = if (narrationActive) pauseLabel else playLabel,
+                                onClick = { toggleNarration() },
+                                leadingIcon = if (narrationActive) Icons.Default.Pause else Icons.Default.PlayArrow,
+                                modifier = Modifier
+                                    .heightIn(min = 48.dp)
+                                    .testTag("rosary_hero_start_button")
+                            )
+                        }
                     }
                     Spacer(Modifier.height(16.dp))
                 }
@@ -1129,7 +1174,9 @@ fun RosaryScreen(
                 // Where you are on the beads, and the way forward
                 item {
                     GuideControlsCard(
-                        eyebrow = currentMystery.type.displayName.get(lang),
+                        // No mystery name here: the picker above is the one
+                        // place that names the set (Expert v3 de-dupe).
+                        eyebrow = "",
                         guide = rosaryGuide,
                         index = rosaryIndex,
                         lang = lang,
@@ -1589,7 +1636,7 @@ private fun GuideControlsCard(
         )
         Spacer(Modifier.height(2.dp))
         Text(
-            text = eyebrow + " · " + stepLabel + (count?.let { " · $it" } ?: ""),
+            text = (if (eyebrow.isBlank()) stepLabel else eyebrow + " · " + stepLabel) + (count?.let { " · $it" } ?: ""),
             style = MaterialTheme.typography.bodyLarge,
             color = design.palette.textPrimary.copy(alpha = 0.8f),
             textAlign = TextAlign.Center,

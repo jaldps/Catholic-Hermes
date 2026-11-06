@@ -2656,8 +2656,10 @@ private fun novenaHeroAsset(novena: Novena): String {
 
 /**
  * Prayers header: a full-bleed votive-candle photo band that fades into
- * the canvas at its foot, with the screen title overlaid on the fade so
- * the photo and the word share one block. Replaces the vector header art.
+ * the canvas at its foot (64dp fade, Expert v3 — a longer fade ghosted
+ * extra flames behind the title), with the screen title overlaid on the
+ * fade so the photo and the word share one block. Replaces the vector
+ * header art. The crop is centred on the centre candle flame.
  */
 @Composable
 private fun PrayersPhotoHeader(title: String) {
@@ -2674,6 +2676,8 @@ private fun PrayersPhotoHeader(title: String) {
                 bitmap = bitmap,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
+                // Focal point on the centre candle flame (Expert v3).
+                alignment = Alignment.Center,
                 modifier = Modifier
                     .fillMaxSize()
                     .testTag("screen_header_illustration")
@@ -2687,7 +2691,7 @@ private fun PrayersPhotoHeader(title: String) {
             Modifier
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .height(112.dp)
+                .height(64.dp)
                 .background(
                     Brush.verticalGradient(
                         listOf(

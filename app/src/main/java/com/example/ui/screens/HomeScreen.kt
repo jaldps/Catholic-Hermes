@@ -321,7 +321,7 @@ fun HomeScreen(
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .fillMaxWidth()
-                        .height(120.dp)
+                        .height(64.dp)
                         .background(
                             Brush.verticalGradient(
                                 colors = listOf(
@@ -1123,9 +1123,9 @@ private fun LiturgicalSeasonBanner(
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             // Photographic strip (church window light) heading the banner;
-            // right-aligned crop biases the center crop toward the window
-            // so the near-black side panels shrink instead of filling ~60%
-            // of the strip; text below stays on the raised card.
+            // centre-aligned crop keeps the focal point on the centre
+            // window, so the near-black side panels shrink instead of
+            // filling ~60% of the strip; text below stays on the raised card.
             photo?.let { windowPhoto ->
                 Image(
                     bitmap = windowPhoto,
@@ -1136,7 +1136,7 @@ private fun LiturgicalSeasonBanner(
                         .clip(design.shapes.card)
                         .testTag("liturgical_banner_photo"),
                     contentScale = ContentScale.Crop,
-                    alignment = Alignment.CenterEnd
+                    alignment = Alignment.Center
                 )
             }
             // Liturgical-time pill: dot + season name on a tinted capsule.

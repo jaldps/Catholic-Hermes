@@ -2,11 +2,6 @@ package com.example.ui.screens
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import android.graphics.BitmapFactory
-import androidx.compose.foundation.Image
-import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -62,11 +57,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -901,7 +894,7 @@ private fun segmentedTabsInset(): Dp {
     return design.spacing.gutter
 }
 
-/** Today's fidelity, calm and ring-only: eyebrow, ring, count, one subtitle. */
+/** Today's fidelity, calm and ring-only on plain paper: eyebrow, ring (count only), one subtitle. */
 @Composable
 private fun FidelityCard(
     completedCount: Int,
@@ -914,37 +907,15 @@ private fun FidelityCard(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
 
-    // The photo is the card surface itself: one Box clipped to the card
-    // radius, with the photo and scrim drawn inside that single clip.
-    // (Inside AppCard the photo sat inset by cardPadding, so its corners
-    // were clipped a second time inside the card's own clip — square
-    // corners and frosted L-gaps around the frame. Edge-to-edge here
-    // the radius clips the photo fully, with no inner frame.)
+    // Expert v3: no candle photo behind the ring — the reference hero is
+    // the ring on clean paper. One Box clipped to the card radius on the
+    // plain groupedSurface, no photo, no scrim.
     Box(
         modifier = modifier
             .padding(horizontal = design.spacing.gutter)
             .clip(design.shapes.card)
             .background(palette.groupedSurface)
     ) {
-        AssetPhoto(
-            assetPath = "heroes/candle_prayer.jpg",
-            contentDescription = null,
-            modifier = Modifier
-                .matchParentSize()
-                .alpha(0.85f)
-                .testTag("fidelity_hero_art")
-        )
-        Box(
-            modifier = Modifier
-                .matchParentSize()
-                .background(
-                    Brush.verticalGradient(
-                        0f to design.palette.groupedSurface.copy(alpha = 0.88f),
-                        0.55f to design.palette.groupedSurface.copy(alpha = 0.93f),
-                        1f to design.palette.groupedSurface
-                    )
-                )
-        )
         // Serene, centred header: eyebrow, ring, count, one subtitle line.
         Column(
             Modifier
@@ -965,16 +936,6 @@ private fun FidelityCard(
                 currentLanguage = currentLanguage
             )
             Spacer(Modifier.height(design.spacing.cardGap))
-            Text(
-                text = currentLanguage.pick(
-                    "$completedCount de $totalCount cumplidos hoy",
-                    "$completedCount of $totalCount kept today",
-                    "$completedCount de $totalCount cumpridos hoje"
-                ),
-                style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
-                color = palette.textPrimary
-            )
-            Spacer(Modifier.height(4.dp))
             Text(
                 text = when {
                     completionRate >= 1.0f -> currentLanguage.pick(
@@ -1004,8 +965,8 @@ private fun FidelityCard(
 /**
  * The day's completion as a ring. No kit component draws one, so it is built
  * from the palette and closed with a square cap where the identity has no
- * rounded forms at all. The percentage is also a contentDescription so the
- * value does not live only in the arc.
+ * rounded forms at all. The count (not a percentage) is the centre label
+ * and the contentDescription, so the value does not live only in the arc.
  */
 @Composable
 private fun FidelityRing(
@@ -1020,14 +981,17 @@ private fun FidelityRing(
     val styles = LocalAppTextStyles.current
     val fraction = completionRate.coerceIn(0f, 1f)
     val cap = StrokeCap.Round
+    // Expert v3: single progress encoding — count only, no %. The arc
+    // still shows the fraction visually, but the readable value is the
+    // count, in the centre and in the description.
     val ringDescription = if (currentLanguage != null) {
         currentLanguage.pick(
-            "$completedCount de $totalCount cumplidos hoy, ${(fraction * 100).toInt()}%",
-            "$completedCount of $totalCount kept today, ${(fraction * 100).toInt()}%",
-            "$completedCount de $totalCount cumpridos hoje, ${(fraction * 100).toInt()}%"
+            "$completedCount de $totalCount cumplidos hoy",
+            "$completedCount of $totalCount kept today",
+            "$completedCount de $totalCount cumpridos hoje"
         )
     } else {
-        "${(fraction * 100).toInt()}%"
+        "$completedCount/$totalCount"
     }
 
     Box(
@@ -1061,22 +1025,12 @@ private fun FidelityRing(
                 )
             }
         }
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(
-                text = "${(fraction * 100).toInt()}%",
-                style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
-                color = palette.textPrimary,
-                maxLines = 1
-            )
-            if (totalCount > 0) {
-                Text(
-                    text = "$completedCount/$totalCount",
-                    style = styles.rowSubtitle,
-                    color = palette.textPrimary,
-                    maxLines = 1
-                )
-            }
-        }
+        Text(
+            text = "$completedCount/$totalCount",
+            style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+            color = palette.textPrimary,
+            maxLines = 1
+        )
     }
 }
 
@@ -1373,29 +1327,3 @@ private val RingStroke = 10.dp
 /** M3 minimum touch target; rows also honour the identity's rowMinHeight. */
 private val MinTouchTarget = 48.dp
 
-/**
- * Photographic hero art bundled under assets/heroes/. Decoded once per asset
- * path; a missing or undecodable asset draws nothing, so the surface beneath
- * shows through and text legibility never depends on the photo loading.
- */
-@Composable
-private fun AssetPhoto(
-    assetPath: String,
-    contentDescription: String?,
-    modifier: Modifier = Modifier
-) {
-    val context = LocalContext.current
-    val bitmap = remember(assetPath) {
-        runCatching {
-            context.assets.open(assetPath).use { BitmapFactory.decodeStream(it) }?.asImageBitmap()
-        }.getOrNull()
-    }
-    if (bitmap != null) {
-        Image(
-            bitmap = bitmap,
-            contentDescription = contentDescription,
-            contentScale = ContentScale.Crop,
-            modifier = modifier
-        )
-    }
-}
