@@ -130,13 +130,15 @@ private val BeadRingHairline = 0.5.dp
 private val NovenaPlateHeight = 176.dp
 
 /**
- * Novena photo cards: full-bleed width minus the 20dp gutters, 20dp radius,
- * title overlaid on the bottom scrim. One card per row so the patron's
- * photograph, not a half-width thumbnail, carries the card; 200dp tall
- * leaves room for a two-line title, the patron line and the progress rule
- * above the scrim.
+ * Novena index cards are equal size: fixed height, the plate clipped to the
+ * thumbnail token, title and patron allowed to wrap to three / two lines, and
+ * the progress rule pinned to the card's foot. Fixed height — rather than a
+ * minimum — is what makes every card in a chunked row the same size. The
+ * height is struck for the roomiest identity (Vatican's 24dp card padding
+ * and 20dp gaps at three title lines plus two patron lines); tighter
+ * identities get the slack as air above the pinned progress rule.
  */
-private val NovenaCardHeight = 200.dp
+private val NovenaCardHeight = 312.dp
 
 /** Clipped plate across the top of a novena index card. */
 private val NovenaCardImageHeight = 108.dp
@@ -1741,23 +1743,31 @@ private fun NovenaIndexView(
                         .testTag("novenas_in_progress"),
                     verticalArrangement = Arrangement.spacedBy(CardStackGap)
                 ) {
-                    inProgress.forEach { novena ->
-                        val prayed = daysPrayed[novena.id].orEmpty()
-                        val started = startedOn[novena.id]?.let { dateFormat.format(Date(it)) }
-                        NovenaCard(
-                            novena = novena,
-                            currentLanguage = currentLanguage,
-                            prayed = prayed,
-                            extraLine = started?.let {
-                                currentLanguage.pick(
-                                    "Comenzada el $it",
-                                    "Started $it",
-                                    "Iniciada em $it"
+                    inProgress.chunked(2).forEach { pair ->
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(CardStackGap)
+                        ) {
+                            pair.forEach { novena ->
+                                val prayed = daysPrayed[novena.id].orEmpty()
+                                val started = startedOn[novena.id]?.let { dateFormat.format(Date(it)) }
+                                NovenaCard(
+                                    novena = novena,
+                                    currentLanguage = currentLanguage,
+                                    prayed = prayed,
+                                    extraLine = started?.let {
+                                        currentLanguage.pick(
+                                            "Comenzada el $it",
+                                            "Started $it",
+                                            "Iniciada em $it"
+                                        )
+                                    },
+                                    onOpen = { onOpenNovena(novena) },
+                                    modifier = Modifier.weight(1f)
                                 )
-                            },
-                            onOpen = { onOpenNovena(novena) },
-                            modifier = Modifier.fillMaxWidth()
-                        )
+                            }
+                            if (pair.size == 1) Spacer(Modifier.weight(1f))
+                        }
                     }
                 }
             }
@@ -1775,15 +1785,23 @@ private fun NovenaIndexView(
                         .testTag("novenas_completed"),
                     verticalArrangement = Arrangement.spacedBy(CardStackGap)
                 ) {
-                    finished.forEach { novena ->
-                        NovenaCard(
-                            novena = novena,
-                            currentLanguage = currentLanguage,
-                            prayed = daysPrayed[novena.id].orEmpty(),
-                            extraLine = null,
-                            onOpen = { onOpenNovena(novena) },
-                            modifier = Modifier.fillMaxWidth()
-                        )
+                    finished.chunked(2).forEach { pair ->
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(CardStackGap)
+                        ) {
+                            pair.forEach { novena ->
+                                NovenaCard(
+                                    novena = novena,
+                                    currentLanguage = currentLanguage,
+                                    prayed = daysPrayed[novena.id].orEmpty(),
+                                    extraLine = null,
+                                    onOpen = { onOpenNovena(novena) },
+                                    modifier = Modifier.weight(1f)
+                                )
+                            }
+                            if (pair.size == 1) Spacer(Modifier.weight(1f))
+                        }
                     }
                 }
             }
@@ -1824,24 +1842,31 @@ private fun NovenaIndexView(
                 )
             }
 
-            // Full-bleed photo cards, one per row, lazy like the 246-row
-            // index they replace: each novena is one lazy item, so
-            // composition cost stays flat however long the filtered index
-            // runs.
+            // Equal-size cards, two per row, lazy like the 246-row index
+            // they replace: each chunked row is one lazy item, so composition
+            // cost stays flat however long the filtered index runs.
             items(
-                items = filtered,
-                key = { it.id }
-            ) { novena ->
-                NovenaCard(
-                    novena = novena,
-                    currentLanguage = currentLanguage,
-                    prayed = daysPrayed[novena.id].orEmpty(),
-                    extraLine = null,
-                    onOpen = { onOpenNovena(novena) },
-                    modifier = Modifier
+                items = filtered.chunked(2),
+                key = { pair -> pair.first().id + "_" + pair.last().id }
+            ) { pair ->
+                Row(
+                    Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = IveGutter)
-                )
+                        .padding(horizontal = IveGutter),
+                    horizontalArrangement = Arrangement.spacedBy(CardStackGap)
+                ) {
+                    pair.forEach { novena ->
+                        NovenaCard(
+                            novena = novena,
+                            currentLanguage = currentLanguage,
+                            prayed = daysPrayed[novena.id].orEmpty(),
+                            extraLine = null,
+                            onOpen = { onOpenNovena(novena) },
+                            modifier = Modifier.weight(1f)
+                        )
+                    }
+                    if (pair.size == 1) Spacer(Modifier.weight(1f))
+                }
                 Spacer(Modifier.height(blockGap))
             }
         }
@@ -1853,13 +1878,12 @@ private fun NovenaIndexView(
 // ------------------------------------------------------------- novena page
 
 /**
- * One novena in the index: a full-bleed photo card (screen width minus
- * the 20dp gutters), 20dp radius. The photograph fills the card, a bottom
- * scrim darkens its foot, and title, patron and progress sit overlaid on
- * that scrim in white so they read on any photograph. The progress rule
- * is pinned to the card's foot. Colours come only from the palette
- * tokens, so the card is tonal in both appearances without this screen
- * knowing which one is in force.
+ * One novena in the index: an equal-size tonal card. The plate is clipped to
+ * the thumbnail token and cropped, the title and patron wrap to three / two
+ * lines instead of truncating to one, and the progress rule plus its day
+ * count are pinned to the foot of the card so two cards in a row align.
+ * Colours come only from the palette tokens, so the card is tonal in both
+ * appearances without this screen knowing which one is in force.
  */
 @Composable
 private fun NovenaCard(
@@ -1886,97 +1910,80 @@ private fun NovenaCard(
         else -> novenaDayOf(currentLanguage, nextNovenaDay(novena, prayed), total)
     }
 
-    // Full-bleed photo, 20dp radius, bottom scrim with overlaid title.
-    val heroBitmap = rememberHeroBitmap(novenaHeroAsset(novena))
-    Box(
-        modifier
+    AppCard(
+        onClick = onOpen,
+        modifier = modifier
             .height(NovenaCardHeight)
-            .clip(NovenaCardRadius)
-            .background(palette.selectionTint)
-            .clickable(onClick = onOpen)
             .testTag("novena_card_${novena.id}")
     ) {
-        if (heroBitmap != null) {
-            Image(
-                bitmap = heroBitmap,
-                contentDescription = novena.title.get(currentLanguage),
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .clip(NovenaCardRadius)
-            )
-        } else {
-            Icon(
+        // Tonal ground under the plate: while the image loads — or if it
+        // fails — the card still shows the thumbnail shape in the identity's
+        // own tint instead of a blank gap.
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(NovenaCardImageHeight)
+                .clip(design.shapes.thumbnail)
+                .background(palette.selectionTint),
+            contentAlignment = Alignment.Center
+        ) {
+            novena.imageUrl?.takeIf { it.isNotBlank() }?.let { url ->
+                AsyncImage(
+                    model = url,
+                    contentDescription = novena.title.get(currentLanguage),
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clip(design.shapes.thumbnail)
+                )
+            } ?: Icon(
                 imageVector = Icons.Default.Church,
                 contentDescription = null,
-                tint = Color.White.copy(alpha = 0.85f),
-                modifier = Modifier
-                    .size(40.dp)
-                    .align(Alignment.Center)
+                tint = palette.textSecondary,
+                modifier = Modifier.size(design.decor.rowIconSize)
             )
         }
-        // Bottom scrim, full bleed: transparent at the top so the
-        // photograph shows, darkening through the overlaid text block so
-        // white title/patron/progress stay legible on any image.
-        Box(
-            Modifier
-                .align(Alignment.BottomCenter)
-                .fillMaxWidth()
-                .height(NovenaCardHeight)
-                .background(
-                    Brush.verticalGradient(
-                        listOf(
-                            Color.Transparent,
-                            Color.Black.copy(alpha = 0.45f),
-                            Color.Black.copy(alpha = 0.82f)
-                        )
-                    )
-                )
+        Spacer(Modifier.height(design.spacing.cardGap))
+        Text(
+            text = novena.title.get(currentLanguage),
+            style = styles.rowTitle,
+            color = palette.textPrimary,
+            minLines = 2,
+            maxLines = 3,
+            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
         )
-        Column(
-            Modifier
-                .align(Alignment.BottomCenter)
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        // The started date rides on the patron line rather than taking a
+        // line of its own, so the card's fixed height holds in every
+        // identity even for in-progress novenas.
+        Text(
+            text = listOfNotNull(
+                novena.patron.get(currentLanguage),
+                extraLine
+            ).joinToString(" · "),
+            style = styles.rowSubtitle,
+            color = palette.textSecondary,
+            maxLines = 2,
+            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+        )
+        Spacer(Modifier.weight(1f))
+        Text(
+            text = progressLabel,
+            style = styles.rowSubtitle,
+            color = palette.textSecondary,
+            maxLines = 1,
+            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        LinearProgressIndicator(
+            progress = { fraction },
+            modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 14.dp)
-        ) {
-            Text(
-                text = novena.title.get(currentLanguage),
-                style = styles.rowTitle,
-                color = Color.White,
-                minLines = 1,
-                maxLines = 2,
-                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-            )
-            Spacer(Modifier.height(4.dp))
-            Text(
-                text = listOfNotNull(
-                    novena.patron.get(currentLanguage),
-                    extraLine
-                ).joinToString(" · "),
-                style = styles.rowSubtitle,
-                color = Color.White.copy(alpha = 0.88f),
-                maxLines = 1,
-                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-            )
-            Spacer(Modifier.height(6.dp))
-            Text(
-                text = progressLabel,
-                style = styles.rowSubtitle,
-                color = Color.White,
-                maxLines = 1,
-                overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
-            )
-            Spacer(Modifier.height(6.dp))
-            LinearProgressIndicator(
-                progress = { fraction },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(4.dp)
-                    .semantics { stateDescription = progressLabel },
-                color = Color.White,
-                trackColor = Color.White.copy(alpha = 0.35f)
-            )
-        }
+                .height(4.dp)
+                .semantics { stateDescription = progressLabel },
+            color = palette.accent,
+            trackColor = palette.selectionTint
+        )
     }
 }
 
