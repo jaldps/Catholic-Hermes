@@ -236,14 +236,14 @@ fun BibleScreen(
     val tabsInset = segmentedTabsInset()
     val header: LazyListScope.() -> Unit = {
         // Photographic hero band: full-bleed church-window photograph with a
-        // fade into the paper canvas at its foot, above the title. The band
-        // carries no text, so legibility never depends on the photo loading;
-        // the illustrated title below it stays the screen's heading.
+        // fade into the paper canvas at its foot. The illustrated title
+        // rides overlaid low in the faded zone (Home-style), so the title
+        // starts at the same height in every section.
         item(key = "bible_hero") {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(168.dp)
+                    .height(220.dp)
                     .background(design.palette.canvas)
                     .testTag("bible_hero_photo")
             ) {
@@ -256,27 +256,55 @@ fun BibleScreen(
                         modifier = Modifier.matchParentSize().alpha(0.9f)
                     )
                 }
+                // Fade: clear over the upper photo, canvas by the foot of
+                // the band, so the hero dissolves into the page.
                 Box(
                     modifier = Modifier
                         .matchParentSize()
                         .background(
                             Brush.verticalGradient(
-                                0f to Color.Transparent,
-                                0.55f to design.palette.canvas.copy(alpha = 0.35f),
-                                1f to design.palette.canvas
+                                colors = listOf(
+                                    Color.Transparent,
+                                    design.palette.canvas
+                                )
                             )
                         )
                 )
-            }
-        }
-        item(key = "bible_screen_title") {
-            if (selectedMainTab == 0) {
-                IllustratedScreenHeader(
-                    title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"),
-                    subject = SacredSubject.SCRIPTURE
+                // Light scrim behind the title zone: the title stays
+                // palette.textPrimary, so the photo is lightened to the
+                // paper canvas under it rather than darkened.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(160.dp)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    design.palette.canvas.copy(alpha = 0.55f),
+                                    design.palette.canvas.copy(alpha = 0.92f),
+                                    design.palette.canvas
+                                )
+                            )
+                        )
                 )
-            } else {
-                AppScreenTitle(title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"))
+                // Title overlaid at BottomStart, Home-style, so the title
+                // starts at the same height in every section.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .fillMaxWidth()
+                ) {
+                    if (selectedMainTab == 0) {
+                        IllustratedScreenHeader(
+                            title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"),
+                            subject = SacredSubject.SCRIPTURE
+                        )
+                    } else {
+                        AppScreenTitle(title = currentLanguage.pick("Sagrada Biblia", "Holy Bible", "Bíblia Sagrada"))
+                    }
+                }
             }
         }
         item(key = "bible_screen_tabs") {

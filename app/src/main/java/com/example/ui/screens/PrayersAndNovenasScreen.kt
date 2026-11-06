@@ -150,7 +150,7 @@ private val IveGutter = 20.dp
 private val CategoryTileRadius = RoundedCornerShape(18.dp)
 
 /** Prayers header: full-bleed votive-candle photo band above the title. */
-private val PrayersPhotoBandHeight = 168.dp
+private val PrayersPhotoBandHeight = 220.dp
 
 /** Bundled hero photos are decoded at most this many pixels on a side. */
 private const val HeroMaxDimension = 1080
@@ -2682,13 +2682,15 @@ private fun novenaHeroAsset(novena: Novena): String {
  */
 @Composable
 private fun PrayersPhotoHeader(title: String) {
-    val palette = LocalAppDesign.current.palette
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
     val bitmap = rememberHeroBitmap("heroes/votive_candles.jpg")
     Box(
         Modifier
             .fillMaxWidth()
             .height(PrayersPhotoBandHeight)
-            .background(palette.selectionTint)
+            .background(palette.canvas)
     ) {
         if (bitmap != null) {
             Image(
@@ -2704,29 +2706,58 @@ private fun PrayersPhotoHeader(title: String) {
                     .testTag("screen_header_illustration")
             )
         }
-        // Light scrim behind the title zone: transparent over the photo
-        // above, then paper canvas at 0.92 across the whole title zone so
-        // the black title stays legible over busy candle flames without
-        // the mid-toned step that ghosted extra flames behind it.
+        // Fade: clear over the upper photo, canvas by the foot of the
+        // band, so the hero dissolves into the page.
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(
+                    Brush.verticalGradient(
+                        colors = listOf(
+                            Color.Transparent,
+                            palette.canvas
+                        )
+                    )
+                )
+        )
+        // Light scrim behind the title zone: the title stays
+        // palette.textPrimary, so the photo is lightened to the paper
+        // canvas under it rather than darkened.
         Box(
             Modifier
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .height(64.dp)
+                .height(160.dp)
                 .background(
                     Brush.verticalGradient(
-                        listOf(
+                        colors = listOf(
                             Color.Transparent,
+                            palette.canvas.copy(alpha = 0.55f),
                             palette.canvas.copy(alpha = 0.92f),
                             palette.canvas
                         )
                     )
                 )
         )
-        AppScreenTitle(
-            title = title,
-            modifier = Modifier.align(Alignment.BottomStart)
-        )
+        // Title overlaid at BottomStart with gutter + 24dp vertical
+        // padding, Home-style.
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.BottomStart)
+                .padding(
+                    horizontal = design.spacing.gutter,
+                    vertical = 24.dp
+                ),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = title,
+                style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
+                color = palette.textPrimary,
+                maxLines = 1
+            )
+        }
     }
 }
 

@@ -214,8 +214,8 @@ fun DoctrineAndHistoryScreen(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(168.dp)
-                    .background(design.palette.selectionTint)
+                    .height(220.dp)
+                    .background(design.palette.canvas)
                     .testTag("doctrine_hero_photo")
             ) {
                 AssetPhoto(
@@ -223,43 +223,62 @@ fun DoctrineAndHistoryScreen(
                     contentDescription = null,
                     modifier = Modifier.matchParentSize().alpha(0.9f)
                 )
-                // The Ive photo treatment: the photograph melts into the warm
-                // paper canvas through a deepening groupedSurface fade — a
-                // near-opaque zone at the foot so the title below never sits
-                // on a hard photographic edge (no dead void, no seam).
+                // Fade: clear over the upper photo, canvas by the foot of
+                // the band, so the hero dissolves into the page.
                 Box(
                     modifier = Modifier
                         .matchParentSize()
                         .background(
                             Brush.verticalGradient(
-                                0f to Color.Transparent,
-                                0.45f to design.palette.groupedSurface.copy(alpha = 0.55f),
-                                0.75f to design.palette.groupedSurface.copy(alpha = 0.85f),
-                                1f to design.palette.groupedSurface
+                                colors = listOf(
+                                    Color.Transparent,
+                                    design.palette.canvas
+                                )
                             )
                         )
                 )
-            }
-        }
-        item(key = "doctrine_title") {
-            if (directoryOnly) {
-                AppScreenTitle(
-                    title = currentLanguage.pick(
-                        "Noticias",
-                        "News",
-                        "Notícias"
-                    ),
-                    subtitle = null
+                // Light scrim behind the title zone: the title stays
+                // palette.textPrimary, so the photo is lightened to the
+                // paper canvas under it rather than darkened.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(160.dp)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    design.palette.canvas.copy(alpha = 0.55f),
+                                    design.palette.canvas.copy(alpha = 0.92f),
+                                    design.palette.canvas
+                                )
+                            )
+                        )
                 )
-            } else {
-                AppScreenTitle(
-                    title = currentLanguage.pick(
-                        "Doctrina e Historia",
-                        "Doctrine & History",
-                        "Doutrina e História"
-                    ),
-                    subtitle = null
-                )
+                // Title overlaid at BottomStart with gutter + 24dp vertical
+                // padding, Home-style.
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .align(Alignment.BottomStart)
+                        .padding(
+                            horizontal = design.spacing.gutter,
+                            vertical = 24.dp
+                        ),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = if (directoryOnly) {
+                            currentLanguage.pick("Noticias", "News", "Notícias")
+                        } else {
+                            currentLanguage.pick("Doctrina e Historia", "Doctrine & History", "Doutrina e História")
+                        },
+                        style = LocalAppTextStyles.current.screenTitle.copy(fontWeight = FontWeight.W400),
+                        color = design.palette.textPrimary,
+                        maxLines = 1
+                    )
+                }
             }
         }
         if (!directoryOnly && showTabs) {

@@ -162,8 +162,8 @@ fun CatechismScreen(
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(168.dp)
-                    .background(design.palette.selectionTint)
+                    .height(220.dp)
+                    .background(design.palette.canvas)
                     .testTag("catechism_hero_photo")
             ) {
                 AssetPhoto(
@@ -171,28 +171,59 @@ fun CatechismScreen(
                     contentDescription = null,
                     modifier = Modifier.fillMaxSize().alpha(0.9f)
                 )
-                // The photograph melts into the paper canvas through a
-                // deepening groupedSurface fade — a near-opaque zone at
-                // the foot so the title below never sits on a hard
-                // photographic edge.
+                // Fade: clear over the upper photo, canvas by the foot of
+                // the band, so the hero dissolves into the page.
                 Box(
                     modifier = Modifier
                         .fillMaxSize()
                         .background(
                             Brush.verticalGradient(
-                                0f to Color.Transparent,
-                                0.45f to design.palette.groupedSurface.copy(alpha = 0.55f),
-                                0.75f to design.palette.groupedSurface.copy(alpha = 0.85f),
-                                1f to design.palette.groupedSurface
+                                colors = listOf(
+                                    Color.Transparent,
+                                    design.palette.canvas
+                                )
                             )
                         )
                 )
+                // Light scrim behind the title zone: the title stays
+                // palette.textPrimary, so the photo is lightened to the
+                // paper canvas under it rather than darkened.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(160.dp)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    design.palette.canvas.copy(alpha = 0.55f),
+                                    design.palette.canvas.copy(alpha = 0.92f),
+                                    design.palette.canvas
+                                )
+                            )
+                        )
+                )
+                // Title overlaid at BottomStart with gutter + 24dp vertical
+                // padding, Home-style.
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .align(Alignment.BottomStart)
+                        .padding(
+                            horizontal = design.spacing.gutter,
+                            vertical = 24.dp
+                        ),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = currentLanguage.pick("Catecismo", "Catechism", "Catecismo"),
+                        style = LocalAppTextStyles.current.screenTitle.copy(fontWeight = FontWeight.W400),
+                        color = design.palette.textPrimary,
+                        maxLines = 1
+                    )
+                }
             }
-        }
-        item(key = "catechism_screen_title") {
-            AppScreenTitle(
-                title = currentLanguage.pick("Catecismo", "Catechism", "Catecismo")
-            )
         }
         item(key = "catechism_screen_tabs") {
             AppSegmentedTabs(

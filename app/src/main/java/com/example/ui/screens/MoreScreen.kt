@@ -55,13 +55,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.font.FontWeight
 import com.example.data.models.AppLanguage
 import com.example.ui.design.AppIconSlot
 import com.example.ui.design.DevotionalGlyphs
 import com.example.ui.design.AppListGroup
-import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 
 /** One secondary destination as the More screen lists it. */
 data class MoreEntry(
@@ -188,15 +189,13 @@ fun MoreScreen(
     ) {
         item(key = "more_hero") {
             // Photographic hero: a full-bleed sunrise band dissolving into the
-            // warm paper canvas through a vertical gradient, above the serene
-            // title. The band carries no text (Bible-style): the kit's
-            // AppScreenTitle below is the screen's single "Explorar" title,
-            // so the old white-over-black overlay text is gone — no second
-            // title, no black scrim.
+            // warm paper canvas through a vertical gradient. The serene
+            // screen title rides overlaid low in the faded zone
+            // (Home-style) — no second title, no black scrim.
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(168.dp)
+                    .height(220.dp)
                     .background(palette.canvas)
                     .testTag("more_hero_photo")
             ) {
@@ -238,10 +237,45 @@ fun MoreScreen(
                             )
                         )
                 )
+                // Light scrim behind the title zone: the title stays
+                // palette.textPrimary, so the photo is lightened to the
+                // paper canvas under it rather than darkened.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(160.dp)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    palette.canvas.copy(alpha = 0.55f),
+                                    palette.canvas.copy(alpha = 0.92f),
+                                    palette.canvas
+                                )
+                            )
+                        )
+                )
+                // Title overlaid at BottomStart with gutter + 24dp vertical
+                // padding, Home-style.
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .align(Alignment.BottomStart)
+                        .padding(
+                            horizontal = design.spacing.gutter,
+                            vertical = 24.dp
+                        ),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = titleText,
+                        style = LocalAppTextStyles.current.screenTitle.copy(fontWeight = FontWeight.W400),
+                        color = palette.textPrimary,
+                        maxLines = 1
+                    )
+                }
             }
-        }
-        item(key = "more_title") {
-            AppScreenTitle(title = titleText)
         }
         visibleSections.forEachIndexed { sectionIndex, section ->
             if (sectionIndex > 0) {

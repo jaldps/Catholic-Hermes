@@ -48,6 +48,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -61,7 +62,6 @@ import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppMetricTile
 import com.example.ui.components.TextFormat
-import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
@@ -769,7 +769,7 @@ private fun segmentedTabsInset(): Dp {
 // ------------------------------------------------------ bundled hero photos
 
 /** Photographic hero band height (Prayers/Doctrine idiom). */
-private val PhotoBandHeight = 168.dp
+private val PhotoBandHeight = 220.dp
 
 /** Bundled hero photos are decoded at most this many pixels on a side. */
 private const val HeroMaxDimension = 1080
@@ -817,13 +817,15 @@ private fun rememberHeroBitmap(assetPath: String): ImageBitmap? {
  */
 @Composable
 private fun PhotoHeader(title: String, asset: String) {
-    val palette = LocalAppDesign.current.palette
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
     val bitmap = rememberHeroBitmap(asset)
     Box(
         Modifier
             .fillMaxWidth()
             .height(PhotoBandHeight)
-            .background(palette.selectionTint)
+            .background(palette.canvas)
     ) {
         if (bitmap != null) {
             Image(
@@ -842,20 +844,57 @@ private fun PhotoHeader(title: String, asset: String) {
                     .testTag("screen_header_illustration")
             )
         }
+        // Fade: clear over the upper photo, canvas by the foot of the
+        // band, so the hero dissolves into the page.
+        Box(
+            Modifier
+                .fillMaxSize()
+                .background(
+                    Brush.verticalGradient(
+                        colors = listOf(
+                            Color.Transparent,
+                            palette.canvas
+                        )
+                    )
+                )
+        )
+        // Light scrim behind the title zone: the title stays
+        // palette.textPrimary, so the photo is lightened to the paper
+        // canvas under it rather than darkened.
         Box(
             Modifier
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .height(88.dp)
+                .height(160.dp)
                 .background(
                     Brush.verticalGradient(
-                        listOf(Color.Transparent, palette.canvas)
+                        colors = listOf(
+                            Color.Transparent,
+                            palette.canvas.copy(alpha = 0.55f),
+                            palette.canvas.copy(alpha = 0.92f),
+                            palette.canvas
+                        )
                     )
                 )
         )
-        AppScreenTitle(
-            title = title,
-            modifier = Modifier.align(Alignment.BottomStart)
-        )
+        // Title overlaid at BottomStart with gutter + 24dp vertical
+        // padding, Home-style.
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.BottomStart)
+                .padding(
+                    horizontal = design.spacing.gutter,
+                    vertical = 24.dp
+                ),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = title,
+                style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
+                color = palette.textPrimary,
+                maxLines = 1
+            )
+        }
     }
 }

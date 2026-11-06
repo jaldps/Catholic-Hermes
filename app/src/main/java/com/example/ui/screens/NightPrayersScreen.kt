@@ -156,7 +156,7 @@ fun NightPrayersScreen(
                     Modifier
                         .fillMaxWidth()
                         .padding(horizontal = IveGutter)
-                        .height(132.dp)
+                        .height(220.dp)
                         .clip(LocalAppDesign.current.shapes.card)
                         .background(LocalAppDesign.current.palette.selectionTint)
                         .testTag("night_sunrise_hero")
@@ -175,14 +175,35 @@ fun NightPrayersScreen(
                                 .clip(LocalAppDesign.current.shapes.card)
                         )
                     }
+                    // Fade: clear over the upper photo, canvas by the foot
+                    // of the band, so the hero dissolves into the page.
                     Box(
                         Modifier
                             .fillMaxSize()
                             .background(
                                 Brush.verticalGradient(
-                                    listOf(
+                                    colors = listOf(
                                         Color.Transparent,
-                                        LocalAppDesign.current.palette.canvas.copy(alpha = 0.85f)
+                                        LocalAppDesign.current.palette.canvas
+                                    )
+                                )
+                            )
+                    )
+                    // Light scrim behind the title zone: the photo is
+                    // lightened to the paper canvas under it rather than
+                    // darkened.
+                    Box(
+                        Modifier
+                            .align(Alignment.BottomCenter)
+                            .fillMaxWidth()
+                            .height(160.dp)
+                            .background(
+                                Brush.verticalGradient(
+                                    colors = listOf(
+                                        Color.Transparent,
+                                        LocalAppDesign.current.palette.canvas.copy(alpha = 0.55f),
+                                        LocalAppDesign.current.palette.canvas.copy(alpha = 0.92f),
+                                        LocalAppDesign.current.palette.canvas
                                     )
                                 )
                             )
@@ -1123,7 +1144,7 @@ private fun caps(text: String): String =
 // ------------------------------------------------------ bundled hero photos
 
 /** Photographic hero band height (Prayers/Doctrine idiom). */
-private val PhotoBandHeight = 168.dp
+private val PhotoBandHeight = 220.dp
 
 /** Bundled hero photos are decoded at most this many pixels on a side. */
 private const val HeroMaxDimension = 1080
