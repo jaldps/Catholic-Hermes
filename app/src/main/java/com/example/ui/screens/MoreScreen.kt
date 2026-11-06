@@ -54,7 +54,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.ui.design.AppIconSlot
@@ -96,13 +95,15 @@ data class MoreSection(val title: String, val entries: List<MoreEntry>)
  * screen and dissolves into the paper canvas, Doctrine-style, above the
  * title; each named section carries a small 88dp photo strip above its
  * header, matched by title keyword so it follows the section into every
- * language, and a section with no match (Settings) simply gets no strip.
- * Every banner carries its title in white over a bottom scrim, so a photo
- * never reads as decoration alone and an off-center crop never hides the
- * label. All photos are decorative, drawn behind text never over it,
- * decoded once at the top of this screen (never inside a LazyColumn item),
- * down-sampled, and a failed decode falls back to a gradient band so
- * legibility never depends on the photo.
+ * language, and a section with no match (Settings, and Estudio — whose
+ * stained-glass window strip was removed as a duplicate of the top band)
+ * simply gets no strip. The top band carries no text: the kit's
+ * [AppScreenTitle] below it is the screen's single "Explorar" title, and
+ * each photo strip likewise carries no title — the [AppSectionHeader] under
+ * it is its section's single title. All photos are decorative, drawn behind
+ * text never over it, decoded once at the top of this screen (never inside
+ * a LazyColumn item), down-sampled, and a failed decode falls back to a
+ * gradient band so legibility never depends on the photo.
  *
  * Rows are monochrome: each entry gets a distinct outlined glyph in a single
  * tint (palette.textSecondary), never a saturated icon well. The kit's
@@ -154,9 +155,9 @@ fun MoreScreen(
     val heroPhoto = remember(context) {
         decodeSampledBitmap(context, "heroes/sunrise_mountains.jpg", maxWidthPx = 1080)
     }
-    val studyPhoto = remember(context) {
-        decodeSampledBitmap(context, "heroes/church_window_light.jpg", maxWidthPx = 720)
-    }
+    // No church_window_light strip for Estudio: it repeated the top band's
+    // job (the screen already shows two photographs and two titles without
+    // it), so Estudio now goes straight to its section header.
     val innerLifePhoto = remember(context) {
         decodeSampledBitmap(context, "heroes/votive_candles.jpg", maxWidthPx = 720)
     }
@@ -164,14 +165,12 @@ fun MoreScreen(
         decodeSampledBitmap(context, "heroes/cathedral_dome.jpg", maxWidthPx = 720)
     }
     // One photo per visible section, matched by title keyword so it follows
-    // the section across ES/EN/PT; an unmatched section (Settings) gets none.
-    val sectionPhotos = remember(visibleSections, studyPhoto, innerLifePhoto, placesPhoto) {
+    // the section across ES/EN/PT; an unmatched section (Settings, Estudio)
+    // gets none.
+    val sectionPhotos = remember(visibleSections, innerLifePhoto, placesPhoto) {
         visibleSections.map { section ->
             val t = section.title
             when {
-                t.contains("Estudio", ignoreCase = true) ||
-                    t.contains("Study", ignoreCase = true) ||
-                    t.contains("Estudo", ignoreCase = true) -> studyPhoto
                 t.contains("Vida interior", ignoreCase = true) ||
                     t.contains("Inner life", ignoreCase = true) -> innerLifePhoto
                 t.contains("Lugares", ignoreCase = true) ||
@@ -190,9 +189,10 @@ fun MoreScreen(
         item(key = "more_hero") {
             // Photographic hero: a full-bleed sunrise band dissolving into the
             // warm paper canvas through a vertical gradient, above the serene
-            // title. The screen title rides on the photo in white over a
-            // bottom scrim so the banner is titled, not decorative; the
-            // kit's AppScreenTitle below is unchanged.
+            // title. The band carries no text (Bible-style): the kit's
+            // AppScreenTitle below is the screen's single "Explorar" title,
+            // so the old white-over-black overlay text is gone — no second
+            // title, no black scrim.
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -238,33 +238,6 @@ fun MoreScreen(
                             )
                         )
                 )
-                // Title scrim: bottom-aligned black scrim plus white title,
-                // so the title stays legible over any crop.
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(
-                            Brush.verticalGradient(
-                                colors = listOf(
-                                    Color.Transparent,
-                                    Color.Black.copy(alpha = 0.45f)
-                                )
-                            )
-                        )
-                )
-                Box(
-                    modifier = Modifier
-                        .align(Alignment.BottomStart)
-                        .padding(horizontal = design.spacing.gutter, vertical = 12.dp)
-                ) {
-                    Text(
-                        text = titleText,
-                        color = Color.White,
-                        style = MaterialTheme.typography.headlineSmall,
-                        fontWeight = FontWeight.Bold,
-                        maxLines = 1
-                    )
-                }
             }
         }
         item(key = "more_title") {

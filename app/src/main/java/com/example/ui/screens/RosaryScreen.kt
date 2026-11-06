@@ -123,7 +123,6 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
-import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
@@ -1031,11 +1030,110 @@ fun RosaryScreen(
         contentPadding = PaddingValues(bottom = 16.dp)
     ) {
         item {
-            // The masthead names the screen and holds still; the segmented
-            // control below it names the two devotions it carries.
-            // No subtitle: the beads are the page, and they must sit above
-            // the fold on a phone.
-            AppScreenTitle(title = lang.pick("Rosario", "Rosary", "Terço"))
+            // Home-style hero, first on the page: the pearl photo fills the
+            // full-bleed 220dp band at the top, melting into the paper canvas
+            // through the same vertical fade as Home (photo -> canvas) so
+            // there is no hard frame edge. Title, step counter and the black
+            // Pray/Pause CTA ride overlaid bottom-left in the faded/scrimmed
+            // zone where palette ink stays legible — one frame, not a band
+            // below a picker. The CTA reuses toggleNarration, so it is the
+            // same action as the guide card's audio button, not a duplicate.
+            // Content switches with the segmented tab below (Santo Rosario /
+            // Coronilla); testTags/logic per devotion are preserved.
+            val isRosaryHero = selectedTab == 0
+            val heroIndex = if (isRosaryHero) rosaryIndex else mercyIndex
+            val heroTotal = if (isRosaryHero) rosaryGuide.steps.size else mercyGuide.steps.size
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(220.dp)
+                    .background(palette.canvas)
+                    .testTag("rosary_hero_photo")
+            ) {
+                AssetPhoto(
+                    assetPath = "heroes/rosary_pearls.jpg",
+                    contentDescription = null,
+                    modifier = Modifier.matchParentSize(),
+                    // Subject right, text zone left: Crop anchored
+                    // CenterEnd keeps the crucifix/pearls subject
+                    // off the bottom-left title/counter/CTA stack.
+                    alignment = Alignment.CenterEnd
+                )
+                // Fade: clear over the upper photo, canvas by the foot of
+                // the band, so the hero dissolves into the page (Home fade).
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    palette.canvas
+                                )
+                            )
+                        )
+                )
+                // Light scrim behind the title zone: the title stays
+                // palette.textPrimary, so the photo is lightened to the
+                // paper canvas under it rather than darkened. Extends
+                // 160dp up the band so the title/counter/CTA stay legible.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(160.dp)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    palette.canvas.copy(alpha = 0.55f),
+                                    palette.canvas.copy(alpha = 0.92f),
+                                    palette.canvas
+                                )
+                            )
+                        )
+                )
+                Column(
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .fillMaxWidth()
+                        .padding(
+                            horizontal = design.spacing.gutter,
+                            vertical = 24.dp
+                        )
+                ) {
+                    Text(
+                        text = lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço").takeIf { isRosaryHero }
+                            ?: lang.pick("Coronilla", "Chaplet", "Coroinha"),
+                        style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
+                        color = palette.textPrimary,
+                        maxLines = 1,
+                        modifier = Modifier.testTag(if (isRosaryHero) "rosary_hero_title" else "mercy_hero_title")
+                    )
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        text = lang.pick(
+                            "Paso ${heroIndex + 1} de $heroTotal",
+                            "Step ${heroIndex + 1} of $heroTotal",
+                            "Passo ${heroIndex + 1} de $heroTotal"
+                        ),
+                        style = styles.screenSubtitle,
+                        color = palette.textSecondary,
+                        maxLines = 1,
+                        modifier = Modifier.testTag(if (isRosaryHero) "rosary_hero_step_counter" else "mercy_hero_step_counter")
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppPrimaryButton(
+                        label = if (narrationActive) pauseLabel else playLabel,
+                        onClick = { toggleNarration() },
+                        leadingIcon = if (narrationActive) Icons.Default.Pause else Icons.Default.PlayArrow,
+                        modifier = Modifier
+                            .heightIn(min = 48.dp)
+                            .testTag(if (isRosaryHero) "rosary_hero_start_button" else "mercy_hero_start_button")
+                    )
+                }
+            }
+            Spacer(Modifier.height(16.dp))
         }
 
         item {
@@ -1059,10 +1157,11 @@ fun RosaryScreen(
 
         when (selectedTab) {
             0 -> {
-                // Holy Rosary: the beads come first, then the prayer itself;
-                // the choice of mysteries and of voices closes the page.
+                // Holy Rosary: hero on top (above the segmented tabs),
+                // then the Misterios picker, then the beads and the prayer
+                // itself; voices and the parts list close the page.
                 // Mysteries as a dropdown pill (see MysteryPickerDropdown),
-                // with >=16dp clear of the tabs above and of the hero rail below.
+                // with >=16dp clear of the tabs above.
                 item {
                     Spacer(Modifier.height(16.dp))
                     // Header alone: the recommended days ("Martes y Viernes"
@@ -1091,111 +1190,6 @@ fun RosaryScreen(
                 }
 
                 item { Spacer(Modifier.height(16.dp)) }
-
-                // Photographic pearl-rosary hero above the guide card:
-                // ~220dp photograph carrying title, step counter and CTA
-                // on a strong bottom scrim (see the item below). The
-                // compact bead rail stays in the card below (with its tap
-                // interactivity, counter and step controls) — the photo
-                // is the page's hero, the rail carries the interaction.
-                item {
-                    // True hero (Expert v3): the pearl photo is no longer an
-                    // orphaned band — the title, step counter and the black
-                    // Start/Pray CTA all ride ON the photo, over a strong
-                    // bottom scrim so white ink keeps AAA contrast on any
-                    // pearl tone. The CTA reuses the narration toggle, so
-                    // it is the same action as the guide card's audio
-                    // button, not a second dead control.
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(220.dp)
-                            .background(palette.canvas)
-                            .testTag("rosary_hero_photo")
-                    ) {
-                        AssetPhoto(
-                            assetPath = "heroes/rosary_pearls.jpg",
-                            contentDescription = null,
-                            modifier = Modifier.matchParentSize(),
-                            // Subject right, text zone left: Crop anchored
-                            // CenterEnd keeps the crucifix/pearls subject
-                            // off the bottom-left title/counter/CTA stack.
-                            alignment = Alignment.CenterEnd
-                        )
-                        // Strong bottom scrim: clear at the top of the
-                        // photo, near-opaque black at the foot where the
-                        // title, counter and CTA sit — 0.88 black at the
-                        // text zone, steeper through the lower half than
-                        // before so the left text zone reads clean.
-                        Box(
-                            modifier = Modifier
-                                .matchParentSize()
-                                .background(
-                                    Brush.verticalGradient(
-                                        colors = listOf(
-                                            Color.Transparent,
-                                            palette.canvas
-                                        )
-                                    )
-                                )
-                        )
-                        Box(
-                            modifier = Modifier
-                                .align(Alignment.BottomCenter)
-                                .fillMaxWidth()
-                                .height(160.dp)
-                                .background(
-                                    Brush.verticalGradient(
-                                        colors = listOf(
-                                            Color.Transparent,
-                                            palette.canvas.copy(alpha = 0.55f),
-                                            palette.canvas.copy(alpha = 0.92f),
-                                            palette.canvas
-                                        )
-                                    )
-                                )
-                        )
-                        Column(
-                            modifier = Modifier
-                                .align(Alignment.BottomStart)
-                                .fillMaxWidth()
-                                .padding(
-                                    horizontal = design.spacing.gutter,
-                                    vertical = 24.dp
-                                )
-                        ) {
-                            Text(
-                                text = lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço"),
-                                style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
-                                color = palette.textPrimary,
-                                maxLines = 1,
-                                modifier = Modifier.testTag("rosary_hero_title")
-                            )
-                            Spacer(Modifier.height(2.dp))
-                            Text(
-                                text = lang.pick(
-                                    "Paso ${rosaryIndex + 1} de ${rosaryGuide.steps.size}",
-                                    "Step ${rosaryIndex + 1} of ${rosaryGuide.steps.size}",
-                                    "Passo ${rosaryIndex + 1} de ${rosaryGuide.steps.size}"
-                                ),
-                                style = styles.screenSubtitle,
-                                color = palette.textSecondary,
-                                maxLines = 1,
-                                modifier = Modifier.testTag("rosary_hero_step_counter")
-                            )
-                            Spacer(Modifier.height(design.spacing.cardGap))
-                            AppPrimaryButton(
-                                label = if (narrationActive) pauseLabel else playLabel,
-                                onClick = { toggleNarration() },
-                                leadingIcon = if (narrationActive) Icons.Default.Pause else Icons.Default.PlayArrow,
-                                modifier = Modifier
-                                    .heightIn(min = 48.dp)
-                                    .testTag("rosary_hero_start_button")
-                            )
-                        }
-                    }
-                    Spacer(Modifier.height(16.dp))
-                }
 
                 // Where you are on the beads, and the way forward
                 item {
@@ -1363,95 +1357,6 @@ fun RosaryScreen(
             1 -> {
                 // Divine Mercy Chaplet
                 item { Spacer(Modifier.height(16.dp)) }
-
-                // True photo hero, mirror of the Rosary's: full-bleed
-                // rosary_pearls.jpg at 220dp carrying the Coronilla title,
-                // step counter and the shared narrate toggle CTA on a
-                // strong bottom scrim. Subject right, text left clear of
-                // the subject.
-                item {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(220.dp)
-                            .background(palette.canvas)
-                            .testTag("rosary_hero_photo")
-                    ) {
-                        AssetPhoto(
-                            assetPath = "heroes/rosary_pearls.jpg",
-                            contentDescription = null,
-                            modifier = Modifier.matchParentSize(),
-                            alignment = Alignment.CenterEnd
-                        )
-                        Box(
-                            modifier = Modifier
-                                .matchParentSize()
-                                .background(
-                                    Brush.verticalGradient(
-                                        colors = listOf(
-                                            Color.Transparent,
-                                            palette.canvas
-                                        )
-                                    )
-                                )
-                        )
-                        Box(
-                            modifier = Modifier
-                                .align(Alignment.BottomCenter)
-                                .fillMaxWidth()
-                                .height(160.dp)
-                                .background(
-                                    Brush.verticalGradient(
-                                        colors = listOf(
-                                            Color.Transparent,
-                                            palette.canvas.copy(alpha = 0.55f),
-                                            palette.canvas.copy(alpha = 0.92f),
-                                            palette.canvas
-                                        )
-                                    )
-                                )
-                        )
-                        Column(
-                            modifier = Modifier
-                                .align(Alignment.BottomStart)
-                                .fillMaxWidth()
-                                .padding(
-                                    horizontal = design.spacing.gutter,
-                                    vertical = 24.dp
-                                )
-                        ) {
-                            Text(
-                                text = lang.pick("Coronilla", "Chaplet", "Coroinha"),
-                                style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
-                                color = palette.textPrimary,
-                                maxLines = 1,
-                                modifier = Modifier.testTag("mercy_hero_title")
-                            )
-                            Spacer(Modifier.height(2.dp))
-                            Text(
-                                text = lang.pick(
-                                    "Paso ${mercyIndex + 1} de ${mercyGuide.steps.size}",
-                                    "Step ${mercyIndex + 1} of ${mercyGuide.steps.size}",
-                                    "Passo ${mercyIndex + 1} de ${mercyGuide.steps.size}"
-                                ),
-                                style = styles.screenSubtitle,
-                                color = palette.textSecondary,
-                                maxLines = 1,
-                                modifier = Modifier.testTag("mercy_hero_step_counter")
-                            )
-                            Spacer(Modifier.height(design.spacing.cardGap))
-                            AppPrimaryButton(
-                                label = if (narrationActive) pauseLabel else playLabel,
-                                onClick = { toggleNarration() },
-                                leadingIcon = if (narrationActive) Icons.Default.Pause else Icons.Default.PlayArrow,
-                                modifier = Modifier
-                                    .heightIn(min = 48.dp)
-                                    .testTag("mercy_hero_start_button")
-                            )
-                        }
-                    }
-                    Spacer(Modifier.height(16.dp))
-                }
 
                 item {
                     GuideControlsCard(

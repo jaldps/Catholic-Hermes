@@ -102,7 +102,6 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
-import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
@@ -139,6 +138,15 @@ fun HabitsAndVirtuesScreen(
     val currentLanguage by repository.currentLanguage.collectAsState()
     val design = LocalAppDesign.current
     val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+
+    // Photographic hero, decoded once off the composition path and hoisted
+    // unconditionally to the top of the screen — never inside a LazyColumn
+    // item or a conditional branch (slot-table crash). Null on any decode
+    // failure so the band falls back to the canvas gradient, like Home.
+    val heroPhoto = remember(context) {
+        decodeSampledBitmap(context, "heroes/candle_prayer.jpg", maxWidthPx = 1080)
+    }
 
     val todayDateStr = remember {
         SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Date())
@@ -243,29 +251,11 @@ fun HabitsAndVirtuesScreen(
             .fillMaxSize()
             .testTag("habits_and_virtues_screen")
     ) {
-        // Entry point to the prayer-reminder overlay, parked at the very top
-        // of the screen so it is reachable from either tab. Secondary (ghost)
-        // on purpose: the suggested-habits CTA below is the screen's one
-        // primary; two black pills side by side read as one duplicated act.
-        AppSecondaryButton(
-            label = currentLanguage.pick(
-                "Recordatorios de oración",
-                "Prayer reminders",
-                "Lembretes de oração"
-            ),
-            onClick = { showReminders = true },
-            leadingIcon = Icons.Outlined.Schedule,
-            modifier = Modifier
-                .fillMaxWidth()
-                .heightIn(min = MinTouchTarget)
-                .padding(
-                    horizontal = design.spacing.gutter,
-                    vertical = design.spacing.cardGap
-                )
-                .testTag("open_reminders")
-        )
         // AppSegmentedTabs takes no tag per option, so the two tab tags name
-        // the pane each option reveals.
+        // the pane each option reveals. Each pane opens with the same
+        // photographic hero band (Home standard) and carries the reminders
+        // entry point as its first action below the tabs, so it stays
+        // reachable from either tab without sitting above the hero.
         if (selectedTab == 0) {
             LazyColumn(
                 modifier = Modifier
@@ -279,13 +269,42 @@ fun HabitsAndVirtuesScreen(
                     bottom = design.spacing.contentBottomGap + MinTouchTarget
                 )
             ) {
+                // Photographic hero band on top (Home standard): full-bleed
+                // candle photo, 220dp, fading into the paper canvas, with
+                // the serene screen title overlaid low in the faded zone.
+                // This is the screen's single title; paneHeader no longer
+                // repeats it below the band.
+                item(key = "habits_hero") {
+                    HabitsHeroBand(title = screenTitle, heroPhoto = heroPhoto)
+                }
+
                 paneHeader(
-                    title = screenTitle,
-                    subtitle = null,
                     tabLabels = tabLabels,
                     selectedTab = selectedTab,
                     onSelectTab = { selectedTab = it }
                 )
+
+                item(key = "habits_reminders") {
+                    // Entry point to the prayer-reminder overlay. Secondary
+                    // (ghost) on purpose: the suggested-habits CTA below is
+                    // the screen's one primary; two black pills side by side
+                    // read as one duplicated act.
+                    AppSecondaryButton(
+                        label = currentLanguage.pick(
+                            "Recordatorios de oración",
+                            "Prayer reminders",
+                            "Lembretes de oração"
+                        ),
+                        onClick = { showReminders = true },
+                        leadingIcon = Icons.Outlined.Schedule,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
+                            .padding(horizontal = design.spacing.gutter)
+                            .testTag("open_reminders")
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                }
 
                 if (habitsList.isEmpty()) {
                     // Nothing configured: no counters at all, since "0 of 0"
@@ -427,13 +446,35 @@ fun HabitsAndVirtuesScreen(
                     .fillMaxSize()
                     .testTag("tab_sin_avoider")
             ) {
+                // Same hero band on top as the other pane (Home standard),
+                // so switching tabs never moves the screen's title.
+                item(key = "habits_hero") {
+                    HabitsHeroBand(title = screenTitle, heroPhoto = heroPhoto)
+                }
+
                 paneHeader(
-                    title = screenTitle,
-                    subtitle = null,
                     tabLabels = tabLabels,
                     selectedTab = selectedTab,
                     onSelectTab = { selectedTab = it }
                 )
+
+                item(key = "habits_reminders") {
+                    AppSecondaryButton(
+                        label = currentLanguage.pick(
+                            "Recordatorios de oración",
+                            "Prayer reminders",
+                            "Lembretes de oração"
+                        ),
+                        onClick = { showReminders = true },
+                        leadingIcon = Icons.Outlined.Schedule,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
+                            .padding(horizontal = design.spacing.gutter)
+                            .testTag("open_reminders")
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                }
 
                 item {
                     GraceAntidoteCard(
@@ -864,19 +905,114 @@ fun HabitsAndVirtuesScreen(
 }
 
 /**
- * The opening of either pane: the pane's own title, then the selector that
- * swaps between the two.
+ * Photographic hero band on top, Home standard: the candle_prayer photo
+ * fills a full-width 220dp band, melting into the paper canvas through a
+ * vertical gradient, with the serene screen title overlaid low in the faded
+ * zone. The title stays palette.textPrimary on a lightened scrim (never
+ * white-on-black), and the band falls back to a canvas gradient when the
+ * decode fails, so legibility never depends on the photo loading.
+ */
+@Composable
+private fun HabitsHeroBand(title: String, heroPhoto: ImageBitmap?) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(220.dp)
+            .background(palette.canvas)
+            // Kept from the old in-card photo strip so the established tag
+            // still names the screen's photograph.
+            .testTag("fidelity_card_photo")
+    ) {
+        val hero = heroPhoto
+        if (hero != null) {
+            Image(
+                bitmap = hero,
+                contentDescription = null,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .testTag("screen_header_illustration"),
+                contentScale = ContentScale.Crop
+            )
+        } else {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(
+                        Brush.verticalGradient(
+                            listOf(
+                                palette.accentMuted,
+                                palette.canvas
+                            )
+                        )
+                    )
+                    .testTag("screen_header_illustration")
+            )
+        }
+        // Fade: clear over the upper photo, canvas by the foot of the band.
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(
+                    Brush.verticalGradient(
+                        colors = listOf(
+                            Color.Transparent,
+                            palette.canvas
+                        )
+                    )
+                )
+        )
+        // Light scrim behind the title zone, Home-style: the photo is
+        // lightened to the paper canvas under the text rather than darkened.
+        Box(
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .height(160.dp)
+                .background(
+                    Brush.verticalGradient(
+                        colors = listOf(
+                            Color.Transparent,
+                            palette.canvas.copy(alpha = 0.55f),
+                            palette.canvas.copy(alpha = 0.92f),
+                            palette.canvas
+                        )
+                    )
+                )
+        )
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.BottomStart)
+                .padding(
+                    horizontal = design.spacing.gutter,
+                    vertical = 24.dp
+                ),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Text(
+                text = title,
+                style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
+                color = palette.textPrimary,
+                maxLines = 1
+            )
+        }
+    }
+}
+
+/**
+ * The opening of either pane below the photographic hero band: the selector
+ * that swaps between the two. The screen title rides on the hero band above
+ * (Home standard), so it is not repeated here.
  */
 private fun LazyListScope.paneHeader(
-    title: String,
-    subtitle: String?,
     tabLabels: List<String>,
     selectedTab: Int,
     onSelectTab: (Int) -> Unit
 ) {
-    item {
-        AppScreenTitle(title = title, subtitle = subtitle)
-    }
     item {
         val design = LocalAppDesign.current
         AppSegmentedTabs(
@@ -916,43 +1052,15 @@ private fun FidelityCard(
     val styles = LocalAppTextStyles.current
 
     // Frosted card like Home cards (AppCard + frostedCardChrome at
-    // design.shapes.card, 20dp in Ive), with the candle photo as a Home
-    // banner strip on top: 128dp, clipped to design.shapes.card, fading
-    // into the card surface at its foot - never behind the ring/text, so
-    // the count stays legible on groupedSurface.
+    // design.shapes.card, 20dp in Ive). The screen's candle photograph now
+    // heads the screen as the 220dp hero band above (Home standard), so the
+    // card carries only the ring and its count — no second photo strip.
     AppCard(
         modifier = modifier
             .padding(horizontal = design.spacing.gutter)
             .frostedCardChrome()
     ) {
         Column(Modifier.fillMaxWidth()) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(128.dp)
-                    .clip(design.shapes.card)
-                    .background(palette.selectionTint)
-                    .testTag("fidelity_card_photo")
-            ) {
-                AssetPhoto(
-                    assetPath = "heroes/candle_prayer.jpg",
-                    contentDescription = null,
-                    modifier = Modifier.matchParentSize()
-                )
-                Box(
-                    modifier = Modifier
-                        .matchParentSize()
-                        .background(
-                            Brush.verticalGradient(
-                                colors = listOf(
-                                    Color.Transparent,
-                                    palette.groupedSurface
-                                )
-                            )
-                        )
-                )
-            }
-            Spacer(Modifier.height(design.spacing.cardGap))
             // Serene, centred header: eyebrow, ring, count, one subtitle line.
             Column(
                 Modifier.fillMaxWidth(),
@@ -1426,28 +1534,11 @@ private fun Modifier.frostedCardChrome(): Modifier {
 }
 
 /**
- * Photographic hero art bundled under assets/heroes/. Decoded down-sampled
- * so its width does not exceed 1080px — a missing asset draws nothing so
- * the surface beneath shows through.
+ * Decodes bundled photographic hero art (assets/heroes/) down-sampled so its
+ * width does not exceed 1080px. Returns null on any failure (missing asset,
+ * host without a real decoder in tests) so callers fall back to a gradient
+ * band instead of crashing.
  */
-@Composable
-private fun AssetPhoto(
-    assetPath: String,
-    contentDescription: String?,
-    modifier: Modifier = Modifier
-) {
-    val context = LocalContext.current
-    val bitmap = remember(assetPath) { decodeSampledBitmap(context, assetPath) }
-    if (bitmap != null) {
-        Image(
-            bitmap = bitmap,
-            contentDescription = contentDescription,
-            contentScale = ContentScale.Crop,
-            modifier = modifier
-        )
-    }
-}
-
 private fun decodeSampledBitmap(
     context: Context,
     assetPath: String,
