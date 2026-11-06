@@ -1063,9 +1063,12 @@ fun RosaryScreen(
                 // with >=16dp clear of the tabs above and of the hero rail below.
                 item {
                     Spacer(Modifier.height(16.dp))
+                    // Header alone: the recommended days ("Martes y Viernes"
+                    // et al.) are shown once, in the picker pill below —
+                    // repeating them here as a grey subtitle duplicated the
+                    // picker text on the same screen.
                     AppSectionHeader(
-                        title = lang.pick("Misterios", "Mysteries", "Mistérios"),
-                        subtitle = selectedMysteryType.recommendedDays.get(lang)
+                        title = lang.pick("Misterios", "Mysteries", "Mistérios")
                     )
                     Spacer(Modifier.height(16.dp))
                     // Universal dropdown (both identities): the frosted pill
@@ -1086,6 +1089,42 @@ fun RosaryScreen(
                 }
 
                 item { Spacer(Modifier.height(20.dp)) }
+
+                // Photographic pearl-rosary hero band above the guide card:
+                // ~180dp photograph with a bottom fade into the card surface,
+                // replacing the flat line-art rail as the page's hero. The
+                // compact bead rail stays in the card below (with its tap
+                // interactivity, counter and step controls) — the photo
+                // carries the visual, the rail carries the interaction.
+                item {
+                    Box(
+                        modifier = Modifier
+                            .padding(horizontal = design.spacing.gutter)
+                            .fillMaxWidth()
+                            .height(180.dp)
+                            .clip(design.shapes.card)
+                            .background(palette.selectionTint)
+                            .testTag("rosary_hero_photo")
+                    ) {
+                        AssetPhoto(
+                            assetPath = "heroes/rosary_pearls.jpg",
+                            contentDescription = null,
+                            modifier = Modifier.matchParentSize()
+                        )
+                        Box(
+                            modifier = Modifier
+                                .matchParentSize()
+                                .background(
+                                    Brush.verticalGradient(
+                                        0f to Color.Transparent,
+                                        0.6f to palette.raised.copy(alpha = 0.45f),
+                                        1f to palette.raised
+                                    )
+                                )
+                        )
+                    }
+                    Spacer(Modifier.height(16.dp))
+                }
 
                 // Where you are on the beads, and the way forward
                 item {
@@ -1513,8 +1552,10 @@ private fun GuideControlsCard(
             },
             modifier = Modifier
                 .widthIn(max = when (design.language) {
-                    DesignLanguage.APPLE -> 224.dp
-                    DesignLanguage.IVE -> 232.dp
+                    // Compact under the photographic hero band: the photo
+                    // carries the visual, this rail stays tappable and small.
+                    DesignLanguage.APPLE -> 168.dp
+                    DesignLanguage.IVE -> 176.dp
                 })
                 .testTag(railTag)
                 .semantics {
@@ -2323,7 +2364,10 @@ private fun PageDots(
                     .width(if (active) 16.dp else 6.dp)
                     .clip(CircleShape)
                     .background(
-                        if (active) palette.accent else palette.textTertiary.copy(alpha = 0.35f)
+                        // Active dot in the accent; inactive dots darker
+                        // for contrast — textSecondary at 40% instead of the
+                        // washed-out tertiary tint.
+                        if (active) palette.accent else palette.textSecondary.copy(alpha = 0.40f)
                     )
                     .clickable(role = Role.Button) { onGo(section.firstStep) }
                     .semantics { contentDescription = section.title }

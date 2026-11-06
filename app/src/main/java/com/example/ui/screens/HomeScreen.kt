@@ -314,6 +314,25 @@ fun HomeScreen(
                             )
                         )
                 )
+                // Light scrim behind the Hoy/date title zone: the title
+                // stays palette.textPrimary, so the photo is lightened to
+                // the paper canvas under it rather than darkened.
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomCenter)
+                        .fillMaxWidth()
+                        .height(120.dp)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    palette.canvas.copy(alpha = 0.55f),
+                                    palette.canvas.copy(alpha = 0.92f),
+                                    palette.canvas
+                                )
+                            )
+                        )
+                )
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -464,7 +483,6 @@ fun HomeScreen(
                 AppPrimaryButton(
                     label = strings("Leer Misa", "Read Mass", "Ler Missa"),
                     onClick = onNavigateToMissal,
-                    leadingIcon = Icons.Default.AutoStories,
                     modifier = Modifier.testTag("read_mass_full_button")
                 )
             }
@@ -1105,7 +1123,9 @@ private fun LiturgicalSeasonBanner(
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             // Photographic strip (church window light) heading the banner;
-            // text below stays on the raised card for AAA contrast.
+            // right-aligned crop biases the center crop toward the window
+            // so the near-black side panels shrink instead of filling ~60%
+            // of the strip; text below stays on the raised card.
             photo?.let { windowPhoto ->
                 Image(
                     bitmap = windowPhoto,
@@ -1115,7 +1135,8 @@ private fun LiturgicalSeasonBanner(
                         .height(96.dp)
                         .clip(design.shapes.card)
                         .testTag("liturgical_banner_photo"),
-                    contentScale = ContentScale.Crop
+                    contentScale = ContentScale.Crop,
+                    alignment = Alignment.CenterEnd
                 )
             }
             // Liturgical-time pill: dot + season name on a tinted capsule.

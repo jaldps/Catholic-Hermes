@@ -16,10 +16,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -36,10 +34,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.LocalFireDepartment
 import androidx.compose.material.icons.filled.MenuBook
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Restaurant
@@ -99,7 +95,6 @@ import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
-import com.example.ui.design.AppMetricTile
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
 import com.example.ui.design.AppScreenTitle
@@ -110,7 +105,6 @@ import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
-import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 import java.util.UUID
@@ -147,7 +141,6 @@ fun HabitsAndVirtuesScreen(
 
     val habitsList by dao.getAllHabits().collectAsState(initial = emptyList())
     val todayCompletions by dao.getCompletionsForDate(todayDateStr).collectAsState(initial = emptyList())
-    val allCompletions by dao.getAllCompletions().collectAsState(initial = emptyList())
     val sinOvercomeLogs by dao.getAllSinOvercomeLogs().collectAsState(initial = emptyList())
     val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
 
@@ -273,7 +266,13 @@ fun HabitsAndVirtuesScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .testTag("tab_habits_rule"),
-                contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 16.dp)
+                // Bottom clearance beyond the trailing spacer: enough scroll
+                // room for the "Prácticas diarias" heading and its first
+                // checklist row to move fully clear of the dock instead of
+                // stranding the heading alone at the bottom edge.
+                contentPadding = androidx.compose.foundation.layout.PaddingValues(
+                    bottom = design.spacing.contentBottomGap + MinTouchTarget
+                )
             ) {
                 paneHeader(
                     title = screenTitle,
@@ -350,18 +349,6 @@ fun HabitsAndVirtuesScreen(
                             completedCount = completedHabitIds.size,
                             totalCount = habitsList.size,
                             completionRate = completionRate,
-                            allCompletions = allCompletions,
-                            currentLanguage = currentLanguage,
-                            onOpenSinAvoider = { openSinAvoider(repository.sinAvoiderCatalog.first()) }
-                        )
-                    }
-
-                    item {
-                        Spacer(Modifier.height(design.spacing.cardGap))
-                        MetricRow(
-                            bestStreak = habitsList.maxOfOrNull { it.bestStreak } ?: 0,
-                            totalCompletions = allCompletions.size,
-                            totalVictories = totalVictories,
                             currentLanguage = currentLanguage
                         )
                     }
@@ -914,59 +901,57 @@ private fun segmentedTabsInset(): Dp {
     return design.spacing.gutter
 }
 
-/** Today's fidelity: the ring, the week behind it, and the way out of a fall. */
+/** Today's fidelity, calm and ring-only: eyebrow, ring, count, one subtitle. */
 @Composable
 private fun FidelityCard(
     completedCount: Int,
     totalCount: Int,
     completionRate: Float,
-    allCompletions: List<HabitCompletionLogEntity>,
     currentLanguage: AppLanguage,
-    onOpenSinAvoider: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
 
-    AppCard(modifier = modifier.padding(horizontal = design.spacing.gutter)) {
-        // Ive reference (screen 10): warm paper hero fading behind the
-        // ring. A candle-prayer photograph clipped to frame, with a
-        // vertical fade scrim melting it into the card's frosted surface
-        // so the ring and counts stay legible over the photo. The photo
-        // never obscures text: scrim + alpha, and it draws behind the
-        // content, not over it.
+    // The photo is the card surface itself: one Box clipped to the card
+    // radius, with the photo and scrim drawn inside that single clip.
+    // (Inside AppCard the photo sat inset by cardPadding, so its corners
+    // were clipped a second time inside the card's own clip — square
+    // corners and frosted L-gaps around the frame. Edge-to-edge here
+    // the radius clips the photo fully, with no inner frame.)
+    Box(
+        modifier = modifier
+            .padding(horizontal = design.spacing.gutter)
+            .clip(design.shapes.card)
+            .background(palette.groupedSurface)
+    ) {
+        AssetPhoto(
+            assetPath = "heroes/candle_prayer.jpg",
+            contentDescription = null,
+            modifier = Modifier
+                .matchParentSize()
+                .alpha(0.85f)
+                .testTag("fidelity_hero_art")
+        )
         Box(
             modifier = Modifier
-                .fillMaxWidth()
-                .clip(design.shapes.card)
-        ) {
-            AssetPhoto(
-                assetPath = "heroes/candle_prayer.jpg",
-                contentDescription = null,
-                modifier = Modifier
-                    .matchParentSize()
-                    .clip(design.shapes.card)
-                    .alpha(0.85f)
-                    .testTag("fidelity_hero_art")
-            )
-            Box(
-                modifier = Modifier
-                    .matchParentSize()
-                    .clip(design.shapes.card)
-                    .background(
-                        Brush.verticalGradient(
-                            0f to design.palette.groupedSurface.copy(alpha = 0.88f),
-                            0.55f to design.palette.groupedSurface.copy(alpha = 0.93f),
-                            1f to design.palette.groupedSurface
-                        )
+                .matchParentSize()
+                .background(
+                    Brush.verticalGradient(
+                        0f to design.palette.groupedSurface.copy(alpha = 0.88f),
+                        0.55f to design.palette.groupedSurface.copy(alpha = 0.93f),
+                        1f to design.palette.groupedSurface
                     )
-            )
-            // Serene, centred stats header: eyebrow, ring, counts beneath.
-            Column(
-                Modifier.fillMaxWidth(),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
+                )
+        )
+        // Serene, centred header: eyebrow, ring, count, one subtitle line.
+        Column(
+            Modifier
+                .fillMaxWidth()
+                .padding(design.spacing.cardPadding),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Text(
                 text = caps(currentLanguage.pick("Fidelidad espiritual", "Spiritual fidelity", "Fidelidade espiritual")),
                 style = styles.sectionEyebrow,
@@ -1009,37 +994,10 @@ private fun FidelityCard(
                     )
                 },
                 style = styles.rowSubtitle,
-                color = palette.textPrimary
+                color = palette.textPrimary,
+                maxLines = 1
             )
-            }
         }
-
-        Spacer(Modifier.height(design.spacing.cardPadding))
-        AppDivider()
-        Spacer(Modifier.height(design.spacing.cardPadding))
-
-        Text(
-            text = caps(currentLanguage.pick("Últimos 7 días", "Last 7 days", "Últimos 7 dias")),
-            style = styles.sectionEyebrow,
-            color = palette.textSecondary
-        )
-        Spacer(Modifier.height(design.spacing.cardGap))
-        WeeklyFidelityStrip(allCompletions = allCompletions, currentLanguage = currentLanguage)
-
-        Spacer(Modifier.height(design.spacing.cardPadding))
-        AppSecondaryButton(
-            label = currentLanguage.pick(
-                "¿Tentado? Reza un Ave María",
-                "Tempted? Pray a Hail Mary",
-                "Tentado? Reze uma Ave Maria"
-            ),
-            onClick = onOpenSinAvoider,
-            leadingIcon = Icons.Default.Shield,
-            modifier = Modifier
-                .fillMaxWidth()
-                .heightIn(min = MinTouchTarget)
-                .testTag("grace_sos_quick_button")
-        )
     }
 }
 
@@ -1119,117 +1077,6 @@ private fun FidelityRing(
                 )
             }
         }
-    }
-}
-
-/**
- * Seven markers for the seven days behind today. Each one takes the identity's
- * badge shape, so the week reads as a row of discs under Cupertino and Material
- * and as a row of squares on the Vatican leaf.
- */
-@Composable
-private fun WeeklyFidelityStrip(
-    allCompletions: List<HabitCompletionLogEntity>,
-    currentLanguage: AppLanguage,
-    modifier: Modifier = Modifier
-) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-
-    val dayLabels = when (currentLanguage) {
-        AppLanguage.ES -> listOf("L", "M", "X", "J", "V", "S", "D")
-        AppLanguage.EN -> listOf("M", "T", "W", "T", "F", "S", "S")
-        AppLanguage.PT -> listOf("S", "T", "Q", "Q", "S", "S", "D")
-    }
-
-    // Each date carries the index of its own weekday, so the letter over a
-    // marker is the day that date actually fell on rather than its position.
-    val week = remember {
-        val format = SimpleDateFormat("yyyy-MM-dd", Locale.US)
-        val base = Calendar.getInstance()
-        (6 downTo 0).map { offset ->
-            val day = (base.clone() as Calendar).apply {
-                add(Calendar.DAY_OF_YEAR, -offset)
-            }
-            format.format(day.time) to (day.get(Calendar.DAY_OF_WEEK) + 5) % 7
-        }
-    }
-
-    val completionDatesSet = remember(allCompletions) {
-        allCompletions.map { it.completionDate }.toSet()
-    }
-
-    Row(
-        modifier = modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        week.forEachIndexed { index, (dateStr, weekdayIndex) ->
-            val kept = completionDatesSet.contains(dateStr)
-            val isToday = index == week.lastIndex
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(
-                    text = dayLabels[weekdayIndex],
-                    style = styles.sectionEyebrow,
-                    color = if (isToday) palette.accent else palette.textTertiary
-                )
-                Spacer(Modifier.height(6.dp))
-                Box(
-                    Modifier
-                        .size(MarkerSize)
-                        .clip(design.shapes.badge)
-                        .background(
-                            if (kept) palette.accent else palette.hairline.copy(alpha = 0.4f)
-                        )
-                        .then(
-                            if (isToday) {
-                                Modifier.border(1.5.dp, palette.accent, design.shapes.badge)
-                            } else {
-                                Modifier
-                            }
-                        )
-                )
-            }
-        }
-    }
-}
-
-/** The three standing totals, held to one height so their figures line up. */
-@Composable
-private fun MetricRow(
-    bestStreak: Int,
-    totalCompletions: Int,
-    totalVictories: Int,
-    currentLanguage: AppLanguage,
-    modifier: Modifier = Modifier
-) {
-    val design = LocalAppDesign.current
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .height(IntrinsicSize.Max)
-            .padding(horizontal = design.spacing.gutter),
-        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
-    ) {
-        AppMetricTile(
-            value = bestStreak.toString(),
-            caption = currentLanguage.pick("Mejor racha", "Best streak", "Melhor sequência"),
-            icon = Icons.Default.LocalFireDepartment,
-            modifier = Modifier.weight(1f).fillMaxHeight()
-        )
-        AppMetricTile(
-            value = totalCompletions.toString(),
-            caption = currentLanguage.pick("Cumplimientos", "Completions", "Cumprimentos"),
-            icon = Icons.Default.CheckCircle,
-            modifier = Modifier.weight(1f).fillMaxHeight()
-        )
-        AppMetricTile(
-            value = totalVictories.toString(),
-            caption = currentLanguage.pick("Victorias", "Victories", "Vitórias"),
-            icon = Icons.Default.Shield,
-            modifier = Modifier.weight(1f).fillMaxHeight()
-        )
     }
 }
 
@@ -1522,7 +1369,6 @@ private fun categoryLabel(category: String, language: AppLanguage): String = whe
 
 private val RingSize = 112.dp
 private val RingStroke = 10.dp
-private val MarkerSize = 24.dp
 
 /** M3 minimum touch target; rows also honour the identity's rowMinHeight. */
 private val MinTouchTarget = 48.dp

@@ -490,6 +490,25 @@ private fun VaticanDevotionalView(
     LazyColumn(Modifier.fillMaxSize()) {
         header()
 
+        // Reference order: title -> search -> tiles. Search sits directly
+        // under the title/segmented tabs, above the featured liturgical
+        // cards and the category tiles.
+        item {
+            AppSearchField(
+                value = searchQuery,
+                onValueChange = onSearchQueryChange,
+                placeholder = currentLanguage.pick(
+                    "Buscar una oración",
+                    "Search prayers",
+                    "Buscar uma oração"
+                ),
+                modifier = Modifier
+                    .padding(horizontal = IveGutter)
+                    .testTag("prayer_search_input")
+            )
+            Spacer(Modifier.height(design.spacing.cardGap))
+        }
+
         // The season prayer floats first when the list is unfiltered;
         // searching or filtering hides it so results stay clean.
         if (!filtering && seasonPrayer != null) {
@@ -532,22 +551,6 @@ private fun VaticanDevotionalView(
                     onToggle = { howToPrayExpanded = !howToPrayExpanded }
                 )
             }
-        }
-
-        item {
-            AppSearchField(
-                value = searchQuery,
-                onValueChange = onSearchQueryChange,
-                placeholder = currentLanguage.pick(
-                    "Buscar una oración",
-                    "Search prayers",
-                    "Buscar uma oração"
-                ),
-                modifier = Modifier
-                    .padding(horizontal = IveGutter)
-                    .testTag("prayer_search_input")
-            )
-            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
         item {
@@ -2676,16 +2679,23 @@ private fun PrayersPhotoHeader(title: String) {
                     .testTag("screen_header_illustration")
             )
         }
-        // Fade: transparent over the photograph, opaque canvas at the
-        // foot so the title below it sits on the page ground.
+        // Light scrim behind the title zone: transparent over the photo
+        // above, lightening to the paper canvas at the foot so the black
+        // title sits on a lightened, paper-side ground instead of busy
+        // candle flames.
         Box(
             Modifier
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .height(88.dp)
+                .height(112.dp)
                 .background(
                     Brush.verticalGradient(
-                        listOf(Color.Transparent, palette.canvas)
+                        listOf(
+                            Color.Transparent,
+                            palette.canvas.copy(alpha = 0.55f),
+                            palette.canvas.copy(alpha = 0.92f),
+                            palette.canvas
+                        )
                     )
                 )
         )
