@@ -561,6 +561,7 @@ private fun BookDirectory(
             Row(
                 Modifier
                     .fillMaxWidth()
+                    .heightIn(min = 48.dp)
                     .padding(horizontal = design.spacing.gutter),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(design.spacing.gutter)

@@ -285,11 +285,18 @@ fun HomeScreen(
         }
 
         // The celebration and any obligation, with its liturgical color.
+        // The season pill inside the banner is the only place the season
+        // name appears: a celebration that merely repeats it (data feeds
+        // do this on uncurated days) is dropped from the body.
         item {
+            val seasonName = liturgicalDay.seasonName.get(currentLanguage)
+            val celebrationTitle = liturgicalDay.celebrationTitle.get(currentLanguage)
             LiturgicalSeasonBanner(
-                title = liturgicalDay.seasonName.get(currentLanguage),
+                title = seasonName,
                 body = listOfNotNull(
-                    liturgicalDay.celebrationTitle.get(currentLanguage),
+                    celebrationTitle.takeUnless {
+                        it.isBlank() || it.equals(seasonName, ignoreCase = true)
+                    },
                     liturgicalDay.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
                 ).joinToString("\n"),
                 accentColorHex = liturgicalDay.liturgicalColorHex,
@@ -1086,9 +1093,13 @@ private fun CardHeading(
             Text(
                 text = trailing.caps(),
                 style = styles.sectionEyebrow,
-                color = trailingColor ?: design.palette.textTertiary,
+                color = trailingColor ?: design.palette.textSecondary,
                 maxLines = 1,
-                overflow = TextOverflow.Ellipsis
+                overflow = TextOverflow.Ellipsis,
+                // Cap the trailing value (e.g. a saint's feast date) so a
+                // long one ellipsizes on one line instead of wrapping or
+                // squeezing the heading label out of the row.
+                modifier = Modifier.widthIn(max = 144.dp)
             )
         }
     }

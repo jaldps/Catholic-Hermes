@@ -653,8 +653,15 @@ private fun PrayerIntentionFilters(
         options.forEach { (value, label) ->
             val isSelected = selected == value
             Box(
+                // Weighted so each wrapped row distributes its chips evenly
+                // across the full width — a lone last chip (e.g. Forgiveness)
+                // stretches to its row instead of orphaning at the start edge.
+                // fill = false: chips grow toward their share, never shrink
+                // below their label, so long labels (Todas las intenciones)
+                // are never clipped.
                 Modifier
-                    .heightIn(min = 40.dp)
+                    .weight(1f, fill = false)
+                    .heightIn(min = 48.dp)
                     .clip(CircleShape)
                     .background(if (isSelected) Color.Black else design.palette.groupedSurface)
                     .clickable { onSelect(value) }
@@ -817,7 +824,7 @@ private fun FrostedPrayerRow(
             Icon(
                 Icons.Default.KeyboardArrowRight,
                 null,
-                tint = design.palette.textTertiary,
+                tint = design.palette.textSecondary,
                 modifier = Modifier.size(22.dp)
             )
         }
@@ -2031,7 +2038,7 @@ private fun NovenaDayView(
                             Icon(
                                 imageVector = Icons.Default.Info,
                                 contentDescription = null,
-                                tint = design.palette.textTertiary,
+                                tint = design.palette.textSecondary,
                                 modifier = Modifier.size(design.decor.rowIconSize)
                             )
                             Spacer(Modifier.width(design.spacing.iconLabelGap))
@@ -2374,7 +2381,7 @@ private fun NoteBlock(
         Text(
             text = caps(label),
             style = styles.sectionEyebrow,
-            color = design.palette.textTertiary
+            color = design.palette.textSecondary
         )
         Spacer(Modifier.height(design.spacing.cardGap / 3))
         Text(
