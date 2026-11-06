@@ -226,10 +226,16 @@ object AppleKit : AppKit {
         }
     }
 
-    /** White, always: [accentFill] is struck so that white passes on it. */
-    @Suppress("FunctionOnlyReturningConstant")
+    /**
+     * White, except on Ive's cream dark fill (F5F1EA) where white is
+     * white-on-white — there the label is black. Light Ive fill is
+     * near-black, so white passes at well over 4.5:1 there.
+     */
     @Composable
-    private fun onAccentFill(): Color = Color.White
+    private fun onAccentFill(): Color {
+        val design = LocalAppDesign.current
+        return if (design.language == DesignLanguage.IVE && design.isDark) Color.Black else Color.White
+    }
 
     /**
      * The iOS system colours, light and dark, that Settings strikes its icon
@@ -1336,16 +1342,21 @@ object AppleKit : AppKit {
         modifier: Modifier
     ) {
         val design = LocalAppDesign.current
+        val palette = design.palette
         val styles = LocalAppTextStyles.current
         val scheme = MaterialTheme.colorScheme
-        // iOS's tinted button: the accent at low alpha, label in the accent.
-        // Derived from the live accent rather than from palette.accentMuted,
-        // which is keyed to the palette's own iOS blue and turns this button
-        // blue in a green app.
-        val wash = scheme.primary.copy(alpha = if (design.isDark) 0.24f else 0.12f)
+        val isIve = design.language == DesignLanguage.IVE
+        // Ive: an opaque accentMuted wash (a translucent scheme.primary at
+        // 12% over a white card is invisible) with a label struck to >=4.5:1
+        // on that wash via inkOn — never the raw tint at 12%.
+        // Apple: iOS's tinted button: the accent at low alpha, label in
+        // the accent.
+        val wash = if (isIve) palette.accentMuted else scheme.primary.copy(alpha = if (design.isDark) 0.24f else 0.12f)
         val source = remember { MutableInteractionSource() }
         val pressed by source.collectIsPressedAsState()
-        val content = if (enabled) scheme.primary else design.palette.textTertiary
+        val content = if (enabled) {
+            if (isIve) inkOn(palette.accent, wash, 4.5f) else scheme.primary
+        } else design.palette.textTertiary
         Row(
             modifier
                 .pressScale(pressed)

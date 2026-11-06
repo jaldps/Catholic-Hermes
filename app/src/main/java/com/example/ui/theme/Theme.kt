@@ -96,7 +96,7 @@ private fun buildColorScheme(
             primaryContainer = palette.accentMuted,
             onPrimaryContainer = accent,
             secondary = palette.accent,
-            onSecondary = Color.White,
+            onSecondary = if (palette.accent.contrastsBetterWithWhite()) Color.White else Color.Black,
             secondaryContainer = palette.selectionTint,
             onSecondaryContainer = palette.textPrimary,
             tertiary = palette.gold,

@@ -21,6 +21,7 @@ import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.rememberScrollState
@@ -46,6 +47,7 @@ import androidx.compose.material.icons.filled.WbSunny
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -74,6 +76,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.HabitCompletionLogEntity
 import com.example.data.local.SanctaFidesDao
@@ -536,6 +539,13 @@ fun HabitsAndVirtuesScreen(
                 showSinAvoiderModal = false
                 ttsManager.stop()
             },
+            // Was the default narrow AlertDialog width: the advice and the
+            // prayer wrapped into a thin column. Fill the window up to 460dp
+            // with a 24dp side inset so the text has room to breathe.
+            modifier = Modifier
+                .fillMaxWidth()
+                .widthIn(max = 460.dp)
+                .padding(horizontal = 24.dp),
             shape = design.shapes.dialog,
             containerColor = palette.groupedSurface,
             title = {
@@ -567,13 +577,16 @@ fun HabitsAndVirtuesScreen(
                     Text(
                         text = "${option.title.get(currentLanguage)} ➔ " +
                             option.counterVirtue.get(currentLanguage),
-                        style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
+                        style = styles.rowTitle.copy(
+                            fontWeight = FontWeight.SemiBold,
+                            lineHeight = 26.sp
+                        ),
                         color = palette.accent
                     )
                     Spacer(Modifier.height(design.spacing.cardGap / 2))
                     Text(
                         text = option.advice.get(currentLanguage),
-                        style = styles.rowSubtitle,
+                        style = MaterialTheme.typography.bodyLarge,
                         color = palette.textSecondary
                     )
 
@@ -625,7 +638,9 @@ fun HabitsAndVirtuesScreen(
                     ) {
                         Text(
                             text = hailMaryPrayer,
-                            style = styles.rowSubtitle.copy(fontStyle = FontStyle.Italic),
+                            style = MaterialTheme.typography.bodyLarge.copy(
+                                fontStyle = FontStyle.Italic
+                            ),
                             color = palette.textPrimary
                         )
                     }
@@ -654,38 +669,50 @@ fun HabitsAndVirtuesScreen(
                 }
             },
             confirmButton = {
-                AppPrimaryButton(
-                    label = currentLanguage.pick(
-                        "Registrar Victoria",
-                        "Record Victory",
-                        "Registar Vitória"
-                    ),
-                    onClick = {
-                        scope.launch {
-                            dao.insertSinOvercomeLog(
-                                SinOvercomeLogEntity(
-                                    sinKey = option.sinKey,
-                                    counterVirtue = option.counterVirtue.get(currentLanguage),
-                                    prayerUsed = "HAIL_MARY",
-                                    note = victoryNote
+                // Stacked full-width instead of the side-by-side AlertDialog
+                // button row: in the wider dialog the two labels no longer
+                // need to fight for horizontal space.
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    AppPrimaryButton(
+                        label = currentLanguage.pick(
+                            "Registrar Victoria",
+                            "Record Victory",
+                            "Registar Vitória"
+                        ),
+                        onClick = {
+                            scope.launch {
+                                dao.insertSinOvercomeLog(
+                                    SinOvercomeLogEntity(
+                                        sinKey = option.sinKey,
+                                        counterVirtue = option.counterVirtue.get(currentLanguage),
+                                        prayerUsed = "HAIL_MARY",
+                                        note = victoryNote
+                                    )
                                 )
-                            )
-                            victoryNote = ""
+                                victoryNote = ""
+                                showSinAvoiderModal = false
+                                ttsManager.stop()
+                            }
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
+                            .testTag("confirm_victory_button")
+                    )
+                    AppSecondaryButton(
+                        label = currentLanguage.pick("Cerrar", "Close", "Fechar"),
+                        onClick = {
                             showSinAvoiderModal = false
                             ttsManager.stop()
-                        }
-                    },
-                    modifier = Modifier.heightIn(min = MinTouchTarget).testTag("confirm_victory_button")
-                )
-            },
-            dismissButton = {
-                AppSecondaryButton(
-                    label = currentLanguage.pick("Cerrar", "Close", "Fechar"),
-                    onClick = {
-                        showSinAvoiderModal = false
-                        ttsManager.stop()
-                    }
-                )
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
+                    )
+                }
             }
         )
     }

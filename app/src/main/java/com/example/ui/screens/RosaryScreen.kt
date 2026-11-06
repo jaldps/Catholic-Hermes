@@ -32,8 +32,6 @@ import kotlin.math.sin
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -943,9 +941,12 @@ fun RosaryScreen(
     // Divine Mercy State
     var mercyStepIndex by remember { mutableIntStateOf(0) }
 
-    val isPlayingAudio by ttsManager.isPlaying.collectAsState()
     val voiceMode by ttsManager.voiceMode.collectAsState()
     val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
+    // Persistent pray-aloud flag: unlike the transient isPlaying flow (which
+    // drops to false when an utterance finishes), this stays true from the
+    // play press until the pause/stop press, so every step change speaks.
+    var narrationActive by remember { mutableStateOf(false) }
 
     // The full Creed and the Faustina opening prayers already live in the
     // repository; the guide reads them from there rather than restating them.
@@ -979,15 +980,33 @@ fun RosaryScreen(
     }
 
     fun goRosary(index: Int) {
-        val target = index.coerceIn(0, rosaryGuide.steps.lastIndex)
-        rosaryStepIndex = target
-        if (isPlayingAudio) narrate(rosaryGuide.steps[target])
+        // Step change only moves the index; the LaunchedEffect below speaks
+        // the new step while narrationActive, so prev/next/bead-tap and
+        // section jumps all continue aloud without re-pressing play.
+        rosaryStepIndex = index.coerceIn(0, rosaryGuide.steps.lastIndex)
     }
 
     fun goMercy(index: Int) {
-        val target = index.coerceIn(0, mercyGuide.steps.lastIndex)
-        mercyStepIndex = target
-        if (isPlayingAudio) narrate(mercyGuide.steps[target])
+        mercyStepIndex = index.coerceIn(0, mercyGuide.steps.lastIndex)
+    }
+
+    // Persistent narration: speaks the current step whenever narration is
+    // active and the step/context changes — play press, prev/next, bead tap,
+    // section jump, mystery change (guide rebuild + index reset) or tab
+    // change. Stopping happens only via the pause/stop toggle below.
+    LaunchedEffect(narrationActive, selectedTab, selectedMysteryType, lang, rosaryIndex, mercyIndex) {
+        if (narrationActive) {
+            narrate(if (selectedTab == 0) rosaryStep else mercyStep)
+        }
+    }
+
+    fun toggleNarration() {
+        if (narrationActive) {
+            narrationActive = false
+            ttsManager.stop()
+        } else {
+            narrationActive = true
+        }
     }
 
     val playLabel = lang.pick("Rezar en voz alta", "Pray aloud", "Rezar em voz alta")
@@ -1023,10 +1042,7 @@ fun RosaryScreen(
                     lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia")
                 ),
                 selectedIndex = selectedTab,
-                onSelect = {
-                    if (it != selectedTab) ttsManager.stop()
-                    selectedTab = it
-                },
+                onSelect = { selectedTab = it },
                 modifier = tabsModifier
             )
         }
@@ -1035,84 +1051,33 @@ fun RosaryScreen(
             0 -> {
                 // Holy Rosary: the beads come first, then the prayer itself;
                 // the choice of mysteries and of voices closes the page.
-                // The choice of mysteries comes first, as visible rows rather
-                // than a menu: at 320dp and 130% text a dropdown's longest
-                // ES/PT label can overflow its menu, and a checked row needs
-                // no extra tap to read today's set or each set's days.
+                // Mysteries as a dropdown pill (see MysteryPickerDropdown),
+                // with >=16dp clear of the tabs above and of the hero rail below.
                 item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    val todayLabel = lang.pick("Hoy", "Today", "Hoje")
+                    Spacer(Modifier.height(16.dp))
                     AppSectionHeader(
                         title = lang.pick("Misterios", "Mysteries", "Mistérios"),
                         subtitle = selectedMysteryType.recommendedDays.get(lang)
                     )
-                    if (design.language == DesignLanguage.IVE) {
-                        MysteryPickerDropdown(
-                            selected = selectedMysteryType,
-                            today = todayMystery.type,
-                            lang = lang,
-                            onSelect = { mType ->
-                                if (mType != selectedMysteryType) {
-                                    ttsManager.stop()
-                                    selectedMysteryType = mType
-                                    rosaryStepIndex = 0
-                                }
-                            }
-                        )
-                    } else {
-                    // Compact chip row (not four full rows) so the current
-                    // prayer stays above the fold; the selected set's days
-                    // are captioned below in one line.
-                    @OptIn(ExperimentalLayoutApi::class)
-                    FlowRow(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = design.spacing.gutter)
-                            .testTag("rosary_mystery_picker"),
-                        horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap),
-                        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap / 2)
-                    ) {
-                        // Symmetry: every set is a button of the identity (design.shapes.button,
-                        // straighter and slightly rounded) at the same 48dp height, so the selected
-                        // set stands out by fill alone, not by a different height or radius.
-                        RosaryMysteryType.entries.forEach { mType ->
-                            val label = mType.displayName.get(lang) +
-                                    if (mType == todayMystery.type) " · $todayLabel" else ""
-                            val isSelected = mType == selectedMysteryType
-                            val buttonModifier = Modifier
-                                .height(48.dp)
-                                .clip(design.shapes.button)
-                            if (isSelected) {
-                                AppPrimaryButton(
-                                    label = label,
-                                    onClick = {
-                                        if (mType != selectedMysteryType) {
-                                            ttsManager.stop()
-                                            selectedMysteryType = mType
-                                            rosaryStepIndex = 0
-                                        }
-                                    },
-                                    modifier = buttonModifier
-                                )
-                            } else {
-                                AppSecondaryButton(
-                                    label = label,
-                                    onClick = {
-                                        if (mType != selectedMysteryType) {
-                                            ttsManager.stop()
-                                            selectedMysteryType = mType
-                                            rosaryStepIndex = 0
-                                        }
-                                    },
-                                    modifier = buttonModifier
-                                )
+                    Spacer(Modifier.height(16.dp))
+                    // Universal dropdown (both identities): the frosted pill
+                    // pattern opened the mystery menu in every design.
+                    // Mystery change keeps narrationActive; the LaunchedEffect
+                    // speaks the new guide's first step, it does not stop TTS.
+                    MysteryPickerDropdown(
+                        selected = selectedMysteryType,
+                        today = todayMystery.type,
+                        lang = lang,
+                        onSelect = { mType ->
+                            if (mType != selectedMysteryType) {
+                                selectedMysteryType = mType
+                                rosaryStepIndex = 0
                             }
                         }
-                    }
-                    }
+                    )
                 }
 
-                item { Spacer(Modifier.height(design.spacing.cardGap)) }
+                item { Spacer(Modifier.height(20.dp)) }
 
                 // Where you are on the beads, and the way forward
                 item {
@@ -1123,13 +1088,11 @@ fun RosaryScreen(
                         lang = lang,
                         previousLabel = previousLabel,
                         nextLabel = nextLabel,
-                        audioLabel = if (isPlayingAudio) pauseLabel else playLabel,
-                        isPlayingAudio = isPlayingAudio,
+                        audioLabel = if (narrationActive) pauseLabel else playLabel,
+                        isPlayingAudio = narrationActive,
                         spokenNow = currentlySpeaking,
                         onGo = { goRosary(it) },
-                        onToggleAudio = {
-                            if (isPlayingAudio) ttsManager.stop() else narrate(rosaryStep)
-                        },
+                        onToggleAudio = { toggleNarration() },
                         railTag = "prayer_bead_counter",
                         previousTag = "prev_bead_button",
                         nextTag = "next_bead_button",
@@ -1139,7 +1102,7 @@ fun RosaryScreen(
 
                 // Beginner instructions and meditation beneath the current prayer
                 item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
+                    Spacer(Modifier.height(20.dp))
                     StepCard(step = rosaryStep, lang = lang, spokenNow = currentlySpeaking)
                 }
 
@@ -1246,7 +1209,7 @@ fun RosaryScreen(
 
             1 -> {
                 // Divine Mercy Chaplet
-                item { Spacer(Modifier.height(design.spacing.cardGap)) }
+                item { Spacer(Modifier.height(20.dp)) }
 
                 item {
                     GuideControlsCard(
@@ -1256,13 +1219,11 @@ fun RosaryScreen(
                         lang = lang,
                         previousLabel = previousLabel,
                         nextLabel = nextLabel,
-                        audioLabel = if (isPlayingAudio) pauseLabel else playLabel,
-                        isPlayingAudio = isPlayingAudio,
+                        audioLabel = if (narrationActive) pauseLabel else playLabel,
+                        isPlayingAudio = narrationActive,
                         spokenNow = currentlySpeaking,
                         onGo = { goMercy(it) },
-                        onToggleAudio = {
-                            if (isPlayingAudio) ttsManager.stop() else narrate(mercyStep)
-                        },
+                        onToggleAudio = { toggleNarration() },
                         railTag = "mercy_step_counter",
                         previousTag = "prev_mercy_step_button",
                         nextTag = "next_mercy_step_button",
@@ -1271,7 +1232,7 @@ fun RosaryScreen(
                 }
 
                 item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
+                    Spacer(Modifier.height(20.dp))
                     StepCard(step = mercyStep, lang = lang, spokenNow = currentlySpeaking)
                 }
 
@@ -1536,7 +1497,7 @@ private fun GuideControlsCard(
         // ES/PT where/step labels overflowed the loop's centre, and a
         // progress that is only colour and arc is invisible to a reader
         // who cannot see the ring. This line wraps instead of clipping.
-        Spacer(Modifier.height(6.dp))
+        Spacer(Modifier.height(16.dp))
         // Eyebrow ink: textPrimary at 80% (4.5:1+ on the frosted card in
         // every identity) — textSecondary and tertiary both read as faint
         // taupe here, so neither is used for these progress lines.
@@ -1555,9 +1516,9 @@ private fun GuideControlsCard(
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(Modifier.height(6.dp))
+        Spacer(Modifier.height(16.dp))
         if (design.language == DesignLanguage.IVE) {
-            Spacer(Modifier.height(10.dp))
+            Spacer(Modifier.height(16.dp))
             TransportCluster(
                 canGoPrevious = index > 0,
                 canGoNext = index < guide.steps.lastIndex,
@@ -1566,13 +1527,13 @@ private fun GuideControlsCard(
                 onNext = { onGo(index + 1) },
                 onToggleAudio = onToggleAudio
             )
-            Spacer(Modifier.height(8.dp))
+            Spacer(Modifier.height(16.dp))
             PageDots(
                 guide = guide,
                 activeSection = step.section,
                 onGo = onGo
             )
-            Spacer(Modifier.height(6.dp))
+            Spacer(Modifier.height(16.dp))
         }
         if (step.optional) {
             Text(
@@ -1588,7 +1549,7 @@ private fun GuideControlsCard(
             color = design.palette.textPrimary,
             modifier = Modifier.testTag("current_prayer_title").semantics { heading() }
         )
-        Spacer(Modifier.height(6.dp))
+        Spacer(Modifier.height(16.dp))
         PrayerDialogue(
             leaderText = step.leader,
             responseText = step.response,
@@ -2073,19 +2034,20 @@ private class RosaryGeometry(
 
     companion object {
         fun layout(beads: List<BeadSpec>, width: Float, density: Density): RosaryGeometry = with(density) {
-            val ringInset = 16.dp.toPx()
-            val top = 12.dp.toPx() + ringInset
-            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 48.dp.toPx())
-            // Beads scale with the loop, so a narrow phone keeps its gaps.
-            // Radius is capped so the whole rail (loop + pendant) stays
-            // under ~200dp and the current prayer starts above the fold.
-            val unit = radius / 48.dp.toPx()
-            val small = 4.6.dp.toPx() * unit
-            val large = 7.2.dp.toPx() * unit
-            val medal = 9.dp.toPx() * unit
-            // Compact crucifix: it must stay inside the rail so its bar
-            // never strikes through the copy set below it.
-            val crucifixHeight = 28.dp.toPx() * unit
+            val ringInset = 10.dp.toPx()
+            val top = 8.dp.toPx() + ringInset
+            // Larger loop than before (50dp vs 48dp cap) with much smaller
+            // beads: the old 4.6/7.2dp beads summed wider than the whole
+            // circumference, so spacing went negative and beads overlapped.
+            // Small beads + the wider loop give a positive visual gap on
+            // the loop, and the pendant below uses a >=6dp visual gap.
+            // Radius/top/bottom are budgeted so geometry height stays
+            // <=200dp and the prayer text below starts clear of the rail.
+            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 50.dp.toPx())
+            val small = 2.4.dp.toPx()
+            val large = 3.8.dp.toPx()
+            val medal = 6.dp.toPx()
+            val crucifixHeight = 22.dp.toPx()
             val centre = Offset(width / 2, top + radius)
 
             val kinds = beads.map { it.kind }
@@ -2123,14 +2085,15 @@ private class RosaryGeometry(
                 centres[medalIndex] = Offset(centre.x, y)
             }
             // The pendant hangs from the medal, its last bead highest; the
-            // first gap clears the progress ring.
-            val pitch = small * 1.25f
+            // first gap clears the progress ring. Pitch is a clear visual
+            // gap of at least 6dp between bead edges (not centre pitch).
+            val pitch = 6.dp.toPx()
             var previous = medalIndex.takeIf { it >= 0 }?.let { medal } ?: 0f
             val pendantRuns = mutableListOf<Pair<Int, Int>>()
             var upper: Int? = medalIndex.takeIf { it >= 0 }
             var first = true
             pendant.reversed().forEach { i ->
-                val extra = if (first) ringInset * 0.9f else 0f
+                val extra = 0f // 6dp pitch gap already clears the ring
                 y += previous + pitch + extra + r(i)
                 centres[i] = Offset(centre.x, y)
                 previous = r(i)
@@ -2138,7 +2101,7 @@ private class RosaryGeometry(
                 upper = i
                 first = false
             }
-            val height = y + previous + 16.dp.toPx()
+            val height = y + previous + 8.dp.toPx()
 
             val ring = buildList {
                 if (medalIndex >= 0) add(medalIndex)

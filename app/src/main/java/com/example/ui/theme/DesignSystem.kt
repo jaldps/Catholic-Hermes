@@ -178,10 +178,10 @@ object DesignTokens {
         card = RoundedCornerShape(12.dp),
         cardLarge = RoundedCornerShape(16.dp),
         button = RoundedCornerShape(12.dp),
-        buttonSmall = RoundedCornerShape(8.dp),
+        buttonSmall = RoundedCornerShape(12.dp),
         field = RoundedCornerShape(10.dp),
-        // Filter buttons are capsules in every current Apple app.
-        chip = RoundedCornerShape(percent = 50),
+        // One visual language for every button-like control: 12dp.
+        chip = RoundedCornerShape(12.dp),
         sheet = RoundedCornerShape(topStart = 14.dp, topEnd = 14.dp),
         dialog = RoundedCornerShape(14.dp),
         thumbnail = RoundedCornerShape(10.dp),
@@ -192,16 +192,17 @@ object DesignTokens {
     )
 
     /**
-     * Ive: the reference's geometry — 20dp frosted cards, pill primary
-     * buttons and chips, 16dp tiles, generous 20dp screen gutters.
+     * Ive: the reference's geometry — 20dp frosted cards, 12dp buttons/chips
+     * (one straight, slightly rounded language for every button), 16dp tiles,
+     * generous 20dp screen gutters.
      */
     private val IveShapes = AppShapes(
         card = RoundedCornerShape(20.dp),
         cardLarge = RoundedCornerShape(24.dp),
-        button = RoundedCornerShape(percent = 50),
+        button = RoundedCornerShape(12.dp),
         buttonSmall = RoundedCornerShape(12.dp),
         field = RoundedCornerShape(16.dp),
-        chip = RoundedCornerShape(percent = 50),
+        chip = RoundedCornerShape(12.dp),
         sheet = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
         dialog = RoundedCornerShape(20.dp),
         thumbnail = RoundedCornerShape(16.dp),
@@ -213,14 +214,15 @@ object DesignTokens {
         // M3 shape scale: extraSmall 4, small 8, medium 12, large 16,
         // extraLarge 28, full. card = medium (12) for filled/modest cards,
         // cardLarge = large→extraLarge (16/28): metric tiles and banners use
-        // 16/28. Buttons and chips are stadiums; fields use the text-field
-        // corner (4dp) — the *search* stadium is shaped at use site.
+        // 16/28. Buttons and chips share the one 12dp language; fields use
+        // the text-field corner (4dp) — the *search* stadium is shaped at
+        // use site.
         card = RoundedCornerShape(12.dp),
         cardLarge = RoundedCornerShape(16.dp),
-        button = RoundedCornerShape(percent = 50),
-        buttonSmall = RoundedCornerShape(percent = 50),
+        button = RoundedCornerShape(12.dp),
+        buttonSmall = RoundedCornerShape(12.dp),
         field = RoundedCornerShape(4.dp),
-        chip = RoundedCornerShape(8.dp),
+        chip = RoundedCornerShape(12.dp),
         sheet = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
         dialog = RoundedCornerShape(28.dp),
         thumbnail = RoundedCornerShape(12.dp),
@@ -453,8 +455,8 @@ object DesignTokens {
 
     /** Material [androidx.compose.material3.Shapes] derived from an identity. */
     fun materialShapes(shapes: AppShapes) = androidx.compose.material3.Shapes(
-        extraSmall = shapes.field,      // 4dp text-field corner
-        small = shapes.chip,           // 8dp chips/menus
+        extraSmall = shapes.buttonSmall, // 12dp — M3 defaults can read this
+        small = shapes.button,           // 12dp — M3 Button/chips read this
         medium = shapes.card,          // 12dp cards
         large = shapes.cardLarge,      // 16dp large cards
         extraLarge = RoundedCornerShape(28.dp) // 28dp prominent cards / dialogs

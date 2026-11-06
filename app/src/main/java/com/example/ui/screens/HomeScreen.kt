@@ -539,8 +539,19 @@ fun HomeScreen(
             Spacer(Modifier.height(16.dp))
         }
 
-        // Saint of the day.
+        // Saint of the day. Each piece renders exactly once: mapped feeds
+        // duplicate fields on uncurated days (title == name, quote == bio),
+        // so distinctness is checked before rendering.
         item {
+            val saintName = saintOfTheDay.name.get(currentLanguage).trim()
+            val saintTitle = saintOfTheDay.title.get(currentLanguage).trim()
+            val saintBiography = saintOfTheDay.biography.get(currentLanguage).trim()
+            val saintQuote = saintOfTheDay.iconicQuote.get(currentLanguage).trim()
+            val showTitle = saintTitle.isNotBlank() && !saintTitle.equals(saintName, ignoreCase = true)
+            val showQuote = saintQuote.isNotBlank() &&
+                !saintQuote.equals(saintBiography, ignoreCase = true) &&
+                !saintQuote.equals(saintName, ignoreCase = true) &&
+                !saintQuote.equals(saintTitle, ignoreCase = true)
             AppCard(
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
@@ -549,35 +560,37 @@ fun HomeScreen(
                 CardHeading(
                     label = strings("Santo del Día", "Saint of the Day", "Santo do Dia"),
                     trailing = saintOfTheDay.feastDate
+                        .takeIf { it.isNotBlank() && !saintName.contains(it) }
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
                 Text(
-                    text = saintOfTheDay.name.get(currentLanguage),
+                    text = saintName,
                     style = styles.rowTitle,
                     color = palette.textPrimary
                 )
-                Spacer(Modifier.height(design.spacing.cardGap / 2))
-                Text(
-                    text = saintOfTheDay.title.get(currentLanguage),
-                    style = styles.rowSubtitle,
-                    color = palette.textSecondary
-                )
+                if (showTitle) {
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    Text(
+                        text = saintTitle,
+                        style = styles.rowSubtitle,
+                        color = palette.textSecondary
+                    )
+                }
                 Spacer(Modifier.height(design.spacing.cardGap))
                 Text(
-                    text = saintOfTheDay.biography.get(currentLanguage),
+                    text = saintBiography,
                     style = styles.rowSubtitle,
                     color = palette.textPrimary,
                     maxLines = 6,
                     overflow = TextOverflow.Ellipsis,
                     modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                 )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppDivider()
-                Spacer(Modifier.height(design.spacing.cardGap))
-                MarginalQuote(
-                    text = saintOfTheDay.iconicQuote.get(currentLanguage),
-                    attribution = saintOfTheDay.name.get(currentLanguage)
-                )
+                if (showQuote) {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    AppDivider()
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    MarginalQuote(text = saintQuote)
+                }
             }
             Spacer(Modifier.height(16.dp))
         }
