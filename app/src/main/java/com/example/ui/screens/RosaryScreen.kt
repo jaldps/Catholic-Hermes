@@ -80,6 +80,9 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.foundation.background
 import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image
@@ -124,7 +127,6 @@ import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
-import com.example.ui.theme.ListStyle
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -1037,13 +1039,10 @@ fun RosaryScreen(
         }
 
         item {
-            // The inset-grouped identity expects a segmented control to sit in
-            // the gutter; the other two inset it themselves.
-            val tabsModifier = if (design.decor.listStyle == ListStyle.INSET_GROUPED) {
-                Modifier.padding(horizontal = design.spacing.gutter)
-            } else {
-                Modifier
-            }
+            // Bible top-tab language: the caller insets the segmented
+            // control by the gutter (20dp in Ive via design.spacing.gutter),
+            // with the same 48dp minimum and cardGap/2 breathing room below
+            // as Bible tabs.
             AppSegmentedTabs(
                 options = listOf(
                     lang.pick("El Santo Rosario", "The Holy Rosary", "O Santo Terço"),
@@ -1051,7 +1050,10 @@ fun RosaryScreen(
                 ),
                 selectedIndex = selectedTab,
                 onSelect = { selectedTab = it },
-                modifier = tabsModifier
+                modifier = Modifier
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(bottom = design.spacing.cardGap / 2)
+                    .heightIn(min = 48.dp)
             )
         }
 
@@ -1088,7 +1090,7 @@ fun RosaryScreen(
                     )
                 }
 
-                item { Spacer(Modifier.height(20.dp)) }
+                item { Spacer(Modifier.height(16.dp)) }
 
                 // Photographic pearl-rosary hero above the guide card:
                 // ~220dp photograph carrying title, step counter and CTA
@@ -1106,11 +1108,9 @@ fun RosaryScreen(
                     // button, not a second dead control.
                     Box(
                         modifier = Modifier
-                            .padding(horizontal = design.spacing.gutter)
                             .fillMaxWidth()
-                            .height(240.dp)
-                            .clip(RoundedCornerShape(20.dp))
-                            .background(Color.Black)
+                            .height(220.dp)
+                            .background(palette.canvas)
                             .testTag("rosary_hero_photo")
                     ) {
                         AssetPhoto(
@@ -1132,38 +1132,58 @@ fun RosaryScreen(
                                 .matchParentSize()
                                 .background(
                                     Brush.verticalGradient(
-                                        0f to Color.Transparent,
-                                        0.45f to Color.Black.copy(alpha = 0.40f),
-                                        0.75f to Color.Black.copy(alpha = 0.80f),
-                                        1f to Color.Black.copy(alpha = 0.88f)
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            palette.canvas
+                                        )
+                                    )
+                                )
+                        )
+                        Box(
+                            modifier = Modifier
+                                .align(Alignment.BottomCenter)
+                                .fillMaxWidth()
+                                .height(160.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            palette.canvas.copy(alpha = 0.55f),
+                                            palette.canvas.copy(alpha = 0.92f),
+                                            palette.canvas
+                                        )
                                     )
                                 )
                         )
                         Column(
                             modifier = Modifier
                                 .align(Alignment.BottomStart)
-                                .fillMaxWidth(0.68f)
-                                .padding(design.spacing.cardPadding),
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                                .fillMaxWidth()
+                                .padding(
+                                    horizontal = design.spacing.gutter,
+                                    vertical = 24.dp
+                                )
                         ) {
                             Text(
                                 text = lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço"),
-                                style = styles.sectionTitle,
-                                color = Color.White,
+                                style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
+                                color = palette.textPrimary,
                                 maxLines = 1,
                                 modifier = Modifier.testTag("rosary_hero_title")
                             )
+                            Spacer(Modifier.height(2.dp))
                             Text(
                                 text = lang.pick(
                                     "Paso ${rosaryIndex + 1} de ${rosaryGuide.steps.size}",
                                     "Step ${rosaryIndex + 1} of ${rosaryGuide.steps.size}",
                                     "Passo ${rosaryIndex + 1} de ${rosaryGuide.steps.size}"
                                 ),
-                                style = styles.rowSubtitle,
-                                color = Color.White.copy(alpha = 0.85f),
+                                style = styles.screenSubtitle,
+                                color = palette.textSecondary,
                                 maxLines = 1,
                                 modifier = Modifier.testTag("rosary_hero_step_counter")
                             )
+                            Spacer(Modifier.height(design.spacing.cardGap))
                             AppPrimaryButton(
                                 label = if (narrationActive) pauseLabel else playLabel,
                                 onClick = { toggleNarration() },
@@ -1205,7 +1225,7 @@ fun RosaryScreen(
 
                 // Beginner instructions and meditation beneath the current prayer
                 item {
-                    Spacer(Modifier.height(20.dp))
+                    Spacer(Modifier.height(16.dp))
                     StepCard(step = rosaryStep, lang = lang, spokenNow = currentlySpeaking)
                 }
 
@@ -1242,7 +1262,7 @@ fun RosaryScreen(
                             modifier = Modifier
                                 .padding(horizontal = design.spacing.gutter)
                                 .fillMaxWidth()
-                                .height(144.dp)
+                                .height(128.dp)
                                 .clip(design.shapes.card)
                                 .background(palette.selectionTint)
                                 .testTag("mystery_hero_photo")
@@ -1265,7 +1285,7 @@ fun RosaryScreen(
                             )
                         }
                         Spacer(Modifier.height(design.spacing.cardGap))
-                        AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter).frostedCardChrome()) {
                             CardHeading(
                                 eyebrow = lang.pick(
                                     "${currentDecade.number}º Misterio",
@@ -1342,21 +1362,19 @@ fun RosaryScreen(
 
             1 -> {
                 // Divine Mercy Chaplet
-                item { Spacer(Modifier.height(20.dp)) }
+                item { Spacer(Modifier.height(16.dp)) }
 
                 // True photo hero, mirror of the Rosary's: full-bleed
-                // rosary_pearls.jpg at 240dp carrying the Coronilla title,
+                // rosary_pearls.jpg at 220dp carrying the Coronilla title,
                 // step counter and the shared narrate toggle CTA on a
                 // strong bottom scrim. Subject right, text left clear of
                 // the subject.
                 item {
                     Box(
                         modifier = Modifier
-                            .padding(horizontal = design.spacing.gutter)
                             .fillMaxWidth()
-                            .height(240.dp)
-                            .clip(RoundedCornerShape(20.dp))
-                            .background(Color.Black)
+                            .height(220.dp)
+                            .background(palette.canvas)
                             .testTag("rosary_hero_photo")
                     ) {
                         AssetPhoto(
@@ -1370,38 +1388,58 @@ fun RosaryScreen(
                                 .matchParentSize()
                                 .background(
                                     Brush.verticalGradient(
-                                        0f to Color.Transparent,
-                                        0.45f to Color.Black.copy(alpha = 0.40f),
-                                        0.75f to Color.Black.copy(alpha = 0.80f),
-                                        1f to Color.Black.copy(alpha = 0.88f)
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            palette.canvas
+                                        )
+                                    )
+                                )
+                        )
+                        Box(
+                            modifier = Modifier
+                                .align(Alignment.BottomCenter)
+                                .fillMaxWidth()
+                                .height(160.dp)
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            palette.canvas.copy(alpha = 0.55f),
+                                            palette.canvas.copy(alpha = 0.92f),
+                                            palette.canvas
+                                        )
                                     )
                                 )
                         )
                         Column(
                             modifier = Modifier
                                 .align(Alignment.BottomStart)
-                                .fillMaxWidth(0.68f)
-                                .padding(design.spacing.cardPadding),
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                                .fillMaxWidth()
+                                .padding(
+                                    horizontal = design.spacing.gutter,
+                                    vertical = 24.dp
+                                )
                         ) {
                             Text(
                                 text = lang.pick("Coronilla", "Chaplet", "Coroinha"),
-                                style = styles.sectionTitle,
-                                color = Color.White,
+                                style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
+                                color = palette.textPrimary,
                                 maxLines = 1,
                                 modifier = Modifier.testTag("mercy_hero_title")
                             )
+                            Spacer(Modifier.height(2.dp))
                             Text(
                                 text = lang.pick(
                                     "Paso ${mercyIndex + 1} de ${mercyGuide.steps.size}",
                                     "Step ${mercyIndex + 1} of ${mercyGuide.steps.size}",
                                     "Passo ${mercyIndex + 1} de ${mercyGuide.steps.size}"
                                 ),
-                                style = styles.rowSubtitle,
-                                color = Color.White.copy(alpha = 0.85f),
+                                style = styles.screenSubtitle,
+                                color = palette.textSecondary,
                                 maxLines = 1,
                                 modifier = Modifier.testTag("mercy_hero_step_counter")
                             )
+                            Spacer(Modifier.height(design.spacing.cardGap))
                             AppPrimaryButton(
                                 label = if (narrationActive) pauseLabel else playLabel,
                                 onClick = { toggleNarration() },
@@ -1436,7 +1474,7 @@ fun RosaryScreen(
                 }
 
                 item {
-                    Spacer(Modifier.height(20.dp))
+                    Spacer(Modifier.height(16.dp))
                     StepCard(step = mercyStep, lang = lang, spokenNow = currentlySpeaking)
                 }
 
@@ -1465,7 +1503,7 @@ fun RosaryScreen(
 
                 item {
                     Spacer(Modifier.height(design.spacing.cardGap))
-                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter).frostedCardChrome()) {
                         Text(
                             text = lang.pick(
                                 "«A las tres de la tarde implora mi misericordia… En esta hora nada le será negado al alma que lo pida».",
@@ -1498,8 +1536,8 @@ fun RosaryScreen(
 }
 
 /**
- * Ive reference: the mystery set as a frosted-white pill (radius 999) that
- * opens a dropdown. The pill names the current set and its days, with today's
+ * The mystery set as a chip-shaped control (design.shapes.chip, the same
+ * 12dp language as Bible chips/tabs) that opens a dropdown. The control names the current set and its days, with today's
  * set marked; the menu repeats the same choices a chip row would, one per
  * row, and closes on selection. Selection logic is unchanged.
  */
@@ -1526,9 +1564,9 @@ private fun MysteryPickerDropdown(
     ) {
         Button(
             onClick = { expanded = true },
-            shape = RoundedCornerShape(999.dp),
+            shape = design.shapes.chip,
             colors = ButtonDefaults.buttonColors(
-                containerColor = palette.raised.copy(alpha = 0.72f),
+                containerColor = palette.groupedSurface,
                 contentColor = palette.textPrimary
             ),
             contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 0.dp, bottom = 0.dp),
@@ -1639,7 +1677,7 @@ private fun GuideControlsCard(
     val styles = LocalAppTextStyles.current
     val step = guide.steps[index]
 
-    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter).frostedCardChrome()) {
         val where = guide.whereLine(step, lang)
         val count = countLine(step, lang)
         val stepLabel = lang.pick(
@@ -1749,39 +1787,19 @@ private fun GuideControlsCard(
             onGo = onGo
         )
         Spacer(Modifier.height(16.dp))
-        // Ive reference audio player: the prayer text sits over a full-bleed
-        // rosary-pearls photograph (alpha 0.85, behind), with a white
-        // gradient scrim fading to the card surface so the ink stays
-        // legible over the photo. The photo clips to frame and never
-        // obscures text (scrim + alpha); it draws behind the content.
+        // Prayer text on the card tonal surface: the Bible reader sets
+        // scripture in serif ink on the reading surface with no photograph
+        // behind it, and this field follows that - accentMuted at
+        // design.shapes.card (20dp in Ive), no photo, so the serif ink
+        // never competes with an image.
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .clip(RoundedCornerShape(20.dp))
+                .clip(design.shapes.card)
+                .background(design.palette.accentMuted)
                 .testTag("prayer_text_art")
         ) {
-            // Frosted prayer field in every identity: the pearl photo
-            // behind the text at 0.85 with a white scrim fading to the
-            // raised surface, so the serif prayer ink stays legible.
-            AssetPhoto(
-                assetPath = "heroes/rosary_pearls.jpg",
-                contentDescription = null,
-                modifier = Modifier
-                    .matchParentSize()
-                    .alpha(0.85f)
-            )
-            Box(
-                modifier = Modifier
-                    .matchParentSize()
-                    .background(
-                        Brush.verticalGradient(
-                            0f to Color.White.copy(alpha = 0.25f),
-                            0.55f to Color.White.copy(alpha = 0.6f),
-                            1f to design.palette.raised
-                        )
-                    )
-            )
-            Column(Modifier.padding(vertical = 12.dp)) {
+            Column(Modifier.padding(design.spacing.cardGap)) {
                 if (step.optional) {
                     Text(
                         text = lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
@@ -1838,7 +1856,7 @@ private fun StepCard(step: GuideStep, lang: AppLanguage, spokenNow: String?) {
 
     Column(Modifier.padding(horizontal = design.spacing.gutter)) {
         if (hasReflection) {
-            AppCard {
+            AppCard(modifier = Modifier.frostedCardChrome()) {
                 step.intention?.let {
                     Text(it, style = styles.rowTitle, color = palette.accent)
                 }
@@ -2602,19 +2620,19 @@ private fun PrayerDialogue(
         if (responseText.isBlank()) {
             Text(
                 text = leaderText,
-                style = styles.quote,
+                style = styles.scripture,
                 color = if (leaderSpoken) palette.accent else palette.textPrimary
             )
         } else {
             Text(
                 text = rubricated("\u2123", leaderText, palette.accent),
-                style = styles.quote,
+                style = styles.scripture,
                 color = if (leaderSpoken) palette.accent else palette.textPrimary
             )
             Spacer(Modifier.height(design.spacing.cardGap / 2))
             Text(
                 text = rubricated("\u211F", responseText, palette.accent),
-                style = styles.quote,
+                style = styles.scripture,
                 color = if (responseSpoken) palette.accent else palette.textSecondary
             )
         }
@@ -2655,6 +2673,32 @@ private fun rubricated(sign: String, text: String, rubric: Color): AnnotatedStri
         append("\u2002")
         append(text)
     }
+
+/**
+ * Frosted-card chrome matching Home cards (see HomeScreen): a soft shadow
+ * plus a 1dp hairline stroke drawn over AppCard frosted groupedSurface at
+ * design.shapes.card (20dp in Ive). The same values Home uses, so the
+ * guide/bead-rail cards share the one card system.
+ */
+@Composable
+private fun Modifier.frostedCardChrome(): Modifier {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val radius = if (design.language == DesignLanguage.IVE) 20.dp else 12.dp
+    val width = design.depth.cardBorderWidth.coerceAtLeast(1.dp)
+    return this
+        .shadow(6.dp, design.shapes.card)
+        .drawWithContent {
+            drawContent()
+            drawRoundRect(
+                color = palette.hairline,
+                topLeft = Offset.Zero,
+                size = size,
+                cornerRadius = CornerRadius(radius.toPx()),
+                style = Stroke(width = width.toPx())
+            )
+        }
+}
 
 /**
  * Photographic hero art bundled under assets/heroes/. Decoded once per asset

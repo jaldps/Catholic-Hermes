@@ -62,6 +62,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
@@ -365,15 +369,14 @@ fun HabitsAndVirtuesScreen(
                     }
 
                     item {
-                        // Ive checklist card: AppCard is frosted (translucent
-                        // groupedSurface) at shapes.card — 20dp under Ive, 20dp
-                        // gutters via design.spacing.gutter.
-                        AppCard(
-                            modifier = Modifier
-                                .padding(horizontal = design.spacing.gutter)
-                                .testTag("habits_checklist_card")
+                        // Inset grouped list like Bible's book directory:
+                        // AppListGroup insets by design.spacing.gutter (20dp
+                        // in Ive), clips to shapes.listGroup and paints each
+                        // row hairline itself, so no manual AppDivider.
+                        AppListGroup(
+                            modifier = Modifier.testTag("habits_checklist_card")
                         ) {
-                            habitsList.forEachIndexed { index, habit ->
+                            habitsList.forEach { habit ->
                                 HabitRow(
                                     habit = habit,
                                     isCompletedToday = completedHabitIds.contains(habit.id),
@@ -385,9 +388,6 @@ fun HabitsAndVirtuesScreen(
                                         { deleteHabit(habit) }
                                     } else null
                                 )
-                                if (index < habitsList.lastIndex) {
-                                    AppDivider()
-                                }
                             }
                         }
                     }
@@ -915,21 +915,22 @@ private fun FidelityCard(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
 
-    // Photographic strip on top, ring on frosted paper below: the candle
-    // photo sits as a distinct ~120dp band clipped to the card radius,
-    // above the ring section — never behind the text — so the ring and
-    // count stay legible on groupedSurface.
-    Box(
+    // Frosted card like Home cards (AppCard + frostedCardChrome at
+    // design.shapes.card, 20dp in Ive), with the candle photo as a Home
+    // banner strip on top: 128dp, clipped to design.shapes.card, fading
+    // into the card surface at its foot - never behind the ring/text, so
+    // the count stays legible on groupedSurface.
+    AppCard(
         modifier = modifier
             .padding(horizontal = design.spacing.gutter)
-            .clip(design.shapes.card)
-            .background(palette.groupedSurface)
+            .frostedCardChrome()
     ) {
         Column(Modifier.fillMaxWidth()) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(120.dp)
+                    .height(128.dp)
+                    .clip(design.shapes.card)
                     .background(palette.selectionTint)
                     .testTag("fidelity_card_photo")
             ) {
@@ -938,12 +939,23 @@ private fun FidelityCard(
                     contentDescription = null,
                     modifier = Modifier.matchParentSize()
                 )
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    palette.groupedSurface
+                                )
+                            )
+                        )
+                )
             }
+            Spacer(Modifier.height(design.spacing.cardGap))
             // Serene, centred header: eyebrow, ring, count, one subtitle line.
             Column(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(design.spacing.cardPadding),
+                Modifier.fillMaxWidth(),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
@@ -1108,7 +1120,7 @@ private fun HabitRow(
                 .fillMaxWidth()
                 .clickable(role = Role.Button, onClick = onToggleCompletion)
                 .heightIn(min = rowMinHeight)
-                .padding(vertical = 10.dp)
+                .padding(horizontal = 16.dp, vertical = 10.dp)
                 .semantics {
                     stateDescription = if (isCompletedToday) {
                         currentLanguage.pick("Cumplido hoy", "Kept today", "Cumprido hoje")
@@ -1156,13 +1168,6 @@ private fun HabitRow(
                     color = palette.textSecondary
                 )
             }
-            Spacer(Modifier.width(8.dp))
-            Icon(
-                imageVector = habitIcon(habit.iconName),
-                contentDescription = null,
-                tint = palette.textSecondary,
-                modifier = Modifier.size(20.dp)
-            )
         }
     }
 
@@ -1193,7 +1198,7 @@ private fun GraceAntidoteCard(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
 
-    AppCard(modifier = modifier.padding(horizontal = design.spacing.gutter)) {
+    AppCard(modifier = modifier.padding(horizontal = design.spacing.gutter).frostedCardChrome()) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             // Tonal badge behind the shield: accentMuted carries the separation
             // in Material, and the dark variant of the same token does in dark mode.
@@ -1395,6 +1400,30 @@ private val RingStroke = 10.dp
 
 /** M3 minimum touch target; rows also honour the identity's rowMinHeight. */
 private val MinTouchTarget = 48.dp
+
+/** Frosted-card chrome matching Home cards (see HomeScreen): a soft shadow
+ * plus a 1dp hairline stroke over AppCard frosted groupedSurface at
+ * design.shapes.card (20dp in Ive). The same values Home uses.
+ */
+@Composable
+private fun Modifier.frostedCardChrome(): Modifier {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val radius = if (design.language == com.example.ui.theme.DesignLanguage.IVE) 20.dp else 12.dp
+    val width = design.depth.cardBorderWidth.coerceAtLeast(1.dp)
+    return this
+        .shadow(6.dp, design.shapes.card)
+        .drawWithContent {
+            drawContent()
+            drawRoundRect(
+                color = palette.hairline,
+                topLeft = Offset.Zero,
+                size = size,
+                cornerRadius = CornerRadius(radius.toPx()),
+                style = Stroke(width = width.toPx())
+            )
+        }
+}
 
 /**
  * Photographic hero art bundled under assets/heroes/. Decoded down-sampled

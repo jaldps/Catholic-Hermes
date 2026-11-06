@@ -1896,8 +1896,6 @@ private fun NovenaCard(
             .clickable(onClick = onOpen)
             .testTag("novena_card_${novena.id}")
     ) {
-        // Bundled photo as the fallback ground; the novena's own
-        // illustration covers it when one ships with the data.
         if (heroBitmap != null) {
             Image(
                 bitmap = heroBitmap,
@@ -1915,20 +1913,6 @@ private fun NovenaCard(
                 modifier = Modifier
                     .size(40.dp)
                     .align(Alignment.Center)
-            )
-        }
-        // The novena's own illustration: when the data carries an imageUrl,
-        // it covers the bundled fallback, so the 246 novenas keep their real
-        // per-novena art. Only a blank/null imageUrl leaves the bundled
-        // photo on top.
-        if (!novena.imageUrl.isNullOrBlank()) {
-            AsyncImage(
-                model = novena.imageUrl,
-                contentDescription = novena.title.get(currentLanguage),
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxSize()
-                    .clip(NovenaCardRadius)
             )
         }
         // Bottom scrim, full bleed: transparent at the top so the
