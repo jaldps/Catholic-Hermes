@@ -19,18 +19,24 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
+import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Checklist
 import androidx.compose.material.icons.outlined.Church
 import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.outlined.GridView
 import androidx.compose.material.icons.outlined.Groups
 import androidx.compose.material.icons.outlined.Help
 import androidx.compose.material.icons.outlined.History
+import androidx.compose.material.icons.outlined.HistoryEdu
+import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.MenuBook
 import androidx.compose.material.icons.outlined.Newspaper
 import androidx.compose.material.icons.outlined.Place
 import androidx.compose.material.icons.outlined.School
+import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material.icons.outlined.Spa
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -52,7 +58,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.ui.design.AppIconSlot
-import com.example.ui.design.AppIcons
+import com.example.ui.design.DevotionalGlyphs
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSectionHeader
@@ -131,9 +137,9 @@ fun MoreScreen(
     }
 
     val titleText = when (currentLanguage) {
-        AppLanguage.ES -> "Más"
-        AppLanguage.EN -> "More"
-        AppLanguage.PT -> "Mais"
+        AppLanguage.ES -> "Explorar"
+        AppLanguage.EN -> "Explore"
+        AppLanguage.PT -> "Explorar"
     }
 
     // Drop empty groups: a header over no rows reads as a broken section
@@ -367,7 +373,7 @@ fun MoreScreen(
                                 imageVector = icon,
                                 contentDescription = null,
                                 tint = palette.textSecondary,
-                                modifier = Modifier.size(22.dp)
+                                modifier = Modifier.size(20.dp)
                             )
                             Text(
                                 text = entry.title,
@@ -386,7 +392,7 @@ fun MoreScreen(
                                 )
                             }
                             Icon(
-                                imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                                imageVector = Icons.AutoMirrored.Outlined.KeyboardArrowRight,
                                 contentDescription = null,
                                 tint = palette.textSecondary,
                                 modifier = Modifier.size(20.dp)
@@ -405,9 +411,10 @@ fun MoreScreen(
 /**
  * One distinct outlined glyph per destination, from the single monochrome
  * line family. Caller-supplied overrides (Settings: Palette/TextFields/
- * Language) win; section rows resolve by testTag so the five DOCTRINE-slot
- * entries never reuse the temple glyph; unknown tags fall back to the
- * slot pair.
+ * Language — all Icons.Outlined in the caller) win; section rows resolve by
+ * testTag so the five DOCTRINE-slot entries never reuse the temple glyph;
+ * unknown tags fall back to the slot's own outlined glyph, never the active
+ * identity's filled/rounded/sharp variant, so every row stays one line weight.
  */
 @Composable
 private fun distinctIconFor(entry: MoreEntry): ImageVector {
@@ -424,7 +431,20 @@ private fun distinctIconFor(entry: MoreEntry): ImageVector {
         "nav_spiritual" -> Icons.Outlined.Spa
         "nav_parishes" -> Icons.Outlined.Church
         "nav_pilgrimage" -> Icons.Outlined.Place
-        else -> AppIcons.pair(entry.iconSlot).first
+        else -> when (entry.iconSlot) {
+            AppIconSlot.HOME -> Icons.Outlined.Home
+            AppIconSlot.HABITS -> Icons.Outlined.Shield
+            AppIconSlot.BIBLE -> Icons.Outlined.AutoStories
+            AppIconSlot.CATECHISM -> Icons.Outlined.MenuBook
+            AppIconSlot.ROSARY -> DevotionalGlyphs.rosaryOutlined
+            AppIconSlot.PRAYERS -> DevotionalGlyphs.candleOutlined
+            AppIconSlot.PILGRIMAGE -> Icons.Outlined.Place
+            AppIconSlot.PARISH -> Icons.Outlined.Church
+            AppIconSlot.DOCTRINE -> Icons.Outlined.HistoryEdu
+            AppIconSlot.NEWS -> Icons.Outlined.Newspaper
+            AppIconSlot.JOURNAL -> Icons.Outlined.Star
+            AppIconSlot.MORE -> Icons.Outlined.GridView
+        }
     }
 }
 

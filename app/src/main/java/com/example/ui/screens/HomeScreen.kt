@@ -174,7 +174,7 @@ fun HomeScreen(
         decodeSampledBitmap(context, "heroes/cathedral_dome.jpg", maxWidthPx = 1080)
     }
     val bannerPhoto = remember(context) {
-        decodeSampledBitmap(context, "heroes/mary_statue.jpg", maxWidthPx = 1080)
+        decodeSampledBitmap(context, "heroes/sunrise_mountains.jpg", maxWidthPx = 1080)
     }
 
     // Hoisted out of the list so the disclosure survives being scrolled off.
@@ -1119,7 +1119,7 @@ private fun FidelityCard(
  * green dot in the season's own color beside the season name — above the
  * celebration in a serene weight-400 title and any obligation below.
  * Lettering stays in opaque primary/secondary ink for AAA contrast.
- * When [photo] is present (mary_statue.jpg) it heads the card as a
+ * When [photo] is present (sunrise_mountains.jpg) it heads the card as a
  * cropped strip; when null the banner keeps its existing pill/dot art
  * alone — no layout or tag change either way.
  */
@@ -1154,10 +1154,9 @@ private fun LiturgicalSeasonBanner(
             modifier = Modifier.padding(design.spacing.cardPadding),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            // Photographic strip (mary statue) heading the banner; the
-            // taller 128dp strip with a centre-aligned crop keeps the
-            // focal point centred instead of the near-black side panels
-            // filling ~60% of the strip; text below stays on the raised card.
+            // Photographic strip (sunrise over mountains, full landscape) heading the banner; the
+            // centre-aligned crop of a landscape with no focal subject cannot
+            // decapitate or crop a subject at the waist — no head to miss.
             photo?.let { windowPhoto ->
                 Image(
                     bitmap = windowPhoto,

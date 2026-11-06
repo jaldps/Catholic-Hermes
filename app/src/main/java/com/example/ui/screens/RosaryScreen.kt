@@ -1116,19 +1116,25 @@ fun RosaryScreen(
                         AssetPhoto(
                             assetPath = "heroes/rosary_pearls.jpg",
                             contentDescription = null,
-                            modifier = Modifier.matchParentSize()
+                            modifier = Modifier.matchParentSize(),
+                            // Subject right, text zone left: Crop anchored
+                            // CenterEnd keeps the crucifix/pearls subject
+                            // off the bottom-left title/counter/CTA stack.
+                            alignment = Alignment.CenterEnd
                         )
                         // Strong bottom scrim: clear at the top of the
                         // photo, near-opaque black at the foot where the
-                        // title, counter and CTA sit.
+                        // title, counter and CTA sit — 0.88 black at the
+                        // text zone, steeper through the lower half than
+                        // before so the left text zone reads clean.
                         Box(
                             modifier = Modifier
                                 .matchParentSize()
                                 .background(
                                     Brush.verticalGradient(
                                         0f to Color.Transparent,
-                                        0.45f to Color.Black.copy(alpha = 0.25f),
-                                        0.75f to Color.Black.copy(alpha = 0.65f),
+                                        0.45f to Color.Black.copy(alpha = 0.40f),
+                                        0.75f to Color.Black.copy(alpha = 0.80f),
                                         1f to Color.Black.copy(alpha = 0.88f)
                                     )
                                 )
@@ -1136,7 +1142,7 @@ fun RosaryScreen(
                         Column(
                             modifier = Modifier
                                 .align(Alignment.BottomStart)
-                                .fillMaxWidth()
+                                .fillMaxWidth(0.68f)
                                 .padding(design.spacing.cardPadding),
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
@@ -2590,7 +2596,8 @@ private fun rubricated(sign: String, text: String, rubric: Color): AnnotatedStri
 private fun AssetPhoto(
     assetPath: String,
     contentDescription: String?,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    alignment: Alignment = Alignment.Center
 ) {
     val context = LocalContext.current
     val bitmap = remember(assetPath) {
@@ -2603,6 +2610,7 @@ private fun AssetPhoto(
             bitmap = bitmap,
             contentDescription = contentDescription,
             contentScale = ContentScale.Crop,
+            alignment = alignment,
             modifier = modifier
         )
     }
