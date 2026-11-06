@@ -487,7 +487,12 @@ private fun VaticanDevotionalView(
             ?: repository.vaticanPrayers.firstOrNull()
     }
 
-    LazyColumn(Modifier.fillMaxSize()) {
+    // No top content padding or spacer above the header: the photo band
+    // is the first item and sits flush at the top of the list.
+    LazyColumn(
+        Modifier.fillMaxSize(),
+        contentPadding = PaddingValues(top = 0.dp)
+    ) {
         header()
 
         // Reference order: title -> search -> tiles. Search sits directly
@@ -1093,23 +1098,16 @@ private fun HowToPraySection(
                     )
                 }
                 Spacer(Modifier.width(design.spacing.cardGap))
-                // The "Show more" label is never a naked text link: it sits
-                // in a 48dp-high target inside the tile that carries button
-                // semantics, so neither sight nor TalkBack meets a bare word.
-                Box(
-                    modifier = Modifier.heightIn(min = MinTouchTarget),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        text = currentLanguage.pick(
-                            if (expanded) "Ocultar" else "Ver más",
-                            if (expanded) "Hide" else "Show more",
-                            if (expanded) "Ocultar" else "Ver mais"
-                        ),
-                        style = styles.buttonLabel,
-                        color = design.palette.accent
-                    )
-                }
+                // Chevron only, matching FrostedPrayerRow ("Padre Nuestro"):
+                // one affordance for every tappable row on this list. The
+                // tile itself carries the tap (button semantics, 48dp
+                // target); no green text link.
+                Icon(
+                    Icons.Default.KeyboardArrowRight,
+                    null,
+                    tint = design.palette.textSecondary,
+                    modifier = Modifier.size(22.dp)
+                )
             }
         }
         if (expanded) {
@@ -1703,7 +1701,7 @@ private fun NovenaIndexView(
     // is never clipped under it.
     LazyColumn(
         Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(bottom = 16.dp)
+        contentPadding = PaddingValues(top = 0.dp, bottom = 16.dp)
     ) {
         header()
 
@@ -2685,9 +2683,9 @@ private fun PrayersPhotoHeader(title: String) {
             )
         }
         // Light scrim behind the title zone: transparent over the photo
-        // above, lightening to the paper canvas at the foot so the black
-        // title sits on a lightened, paper-side ground instead of busy
-        // candle flames.
+        // above, then paper canvas at 0.92 across the whole title zone so
+        // the black title stays legible over busy candle flames without
+        // the mid-toned step that ghosted extra flames behind it.
         Box(
             Modifier
                 .align(Alignment.BottomCenter)
@@ -2697,7 +2695,6 @@ private fun PrayersPhotoHeader(title: String) {
                     Brush.verticalGradient(
                         listOf(
                             Color.Transparent,
-                            palette.canvas.copy(alpha = 0.55f),
                             palette.canvas.copy(alpha = 0.92f),
                             palette.canvas
                         )

@@ -322,19 +322,9 @@ fun MoreScreen(
                                     )
                                 )
                         )
-                        Box(
-                            modifier = Modifier
-                                .align(Alignment.BottomStart)
-                                .padding(horizontal = 16.dp, vertical = 10.dp)
-                        ) {
-                            Text(
-                                text = section.title,
-                                color = Color.White,
-                                style = MaterialTheme.typography.titleMedium,
-                                fontWeight = FontWeight.Bold,
-                                maxLines = 1
-                            )
-                        }
+                        // Photo strip carries no title: the section heading
+                        // below (AppSectionHeader) is the single instance,
+                        // so it never repeats in the same 150px window.
                     }
                 }
                 AppSectionHeader(title = section.title)
