@@ -94,12 +94,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.DropdownMenu
-import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.Icon
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.semantics.Role
@@ -122,7 +116,6 @@ import com.example.ui.design.AppDivider
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
-import com.example.ui.design.AppPrimaryButton
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
@@ -1017,8 +1010,6 @@ fun RosaryScreen(
         }
     }
 
-    val playLabel = lang.pick("Rezar en voz alta", "Pray aloud", "Rezar em voz alta")
-    val pauseLabel = lang.pick("Pausar", "Pause", "Pausar")
     val previousLabel = lang.pick("Anterior", "Back", "Anterior")
     val nextLabel = lang.pick("Siguiente", "Next", "Seguinte")
     val prayedLabel = lang.pick("Rezado", "Prayed", "Rezado")
@@ -1031,22 +1022,21 @@ fun RosaryScreen(
     ) {
         item {
             // Home-style hero, first on the page: the pearl photo fills the
-            // full-bleed 220dp band at the top, melting into the paper canvas
+            // full-bleed 180dp band at the top, melting into the paper canvas
             // through the same vertical fade as Home (photo -> canvas) so
-            // there is no hard frame edge. Title, step counter and the black
-            // Pray/Pause CTA ride overlaid bottom-left in the faded/scrimmed
-            // zone where palette ink stays legible — one frame, not a band
-            // below a picker. The CTA reuses toggleNarration, so it is the
-            // same action as the guide card's audio button, not a duplicate.
+            // there is no hard frame edge. Title and step counter ride overlaid
+            // bottom-left in the faded/scrimmed zone where palette ink stays
+            // legible — one frame, not a band below a picker. Narration is
+            // toggled from the guide card's integrated transport below.
             // Content switches with the segmented tab below (Santo Rosario /
-            // Coronilla); testTags/logic per devotion are preserved.
+            // Coronilla); title/counter testTags per devotion are preserved.
             val isRosaryHero = selectedTab == 0
             val heroIndex = if (isRosaryHero) rosaryIndex else mercyIndex
             val heroTotal = if (isRosaryHero) rosaryGuide.steps.size else mercyGuide.steps.size
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(220.dp)
+                    .height(180.dp)
                     .background(palette.canvas)
                     .testTag("rosary_hero_photo")
             ) {
@@ -1056,7 +1046,7 @@ fun RosaryScreen(
                     modifier = Modifier.matchParentSize(),
                     // Subject right, text zone left: Crop anchored
                     // CenterEnd keeps the crucifix/pearls subject
-                    // off the bottom-left title/counter/CTA stack.
+                    // off the bottom-left title/counter stack.
                     alignment = Alignment.CenterEnd
                 )
                 // Fade: clear over the upper photo, canvas by the foot of
@@ -1076,12 +1066,12 @@ fun RosaryScreen(
                 // Light scrim behind the title zone: the title stays
                 // palette.textPrimary, so the photo is lightened to the
                 // paper canvas under it rather than darkened. Extends
-                // 160dp up the band so the title/counter/CTA stay legible.
+                // 120dp up the band so the title/counter stay legible.
                 Box(
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .fillMaxWidth()
-                        .height(160.dp)
+                        .height(120.dp)
                         .background(
                             Brush.verticalGradient(
                                 colors = listOf(
@@ -1099,7 +1089,7 @@ fun RosaryScreen(
                         .fillMaxWidth()
                         .padding(
                             horizontal = design.spacing.gutter,
-                            vertical = 24.dp
+                            vertical = 12.dp
                         )
                 ) {
                     Text(
@@ -1122,18 +1112,9 @@ fun RosaryScreen(
                         maxLines = 1,
                         modifier = Modifier.testTag(if (isRosaryHero) "rosary_hero_step_counter" else "mercy_hero_step_counter")
                     )
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    AppPrimaryButton(
-                        label = if (narrationActive) pauseLabel else playLabel,
-                        onClick = { toggleNarration() },
-                        leadingIcon = if (narrationActive) Icons.Default.Pause else Icons.Default.PlayArrow,
-                        modifier = Modifier
-                            .heightIn(min = 48.dp)
-                            .testTag(if (isRosaryHero) "rosary_hero_start_button" else "mercy_hero_start_button")
-                    )
                 }
             }
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
         }
 
         item {
@@ -1158,43 +1139,13 @@ fun RosaryScreen(
         when (selectedTab) {
             0 -> {
                 // Holy Rosary: hero on top (above the segmented tabs),
-                // then the Misterios picker, then the beads and the prayer
-                // itself; voices and the parts list close the page.
-                // Mysteries as a dropdown pill (see MysteryPickerDropdown),
-                // with >=16dp clear of the tabs above.
-                item {
-                    Spacer(Modifier.height(16.dp))
-                    // Header alone: the recommended days ("Martes y Viernes"
-                    // et al.) are shown once, in the picker pill below —
-                    // repeating them here as a grey subtitle duplicated the
-                    // picker text on the same screen.
-                    AppSectionHeader(
-                        title = lang.pick("Misterios", "Mysteries", "Mistérios")
-                    )
-                    Spacer(Modifier.height(16.dp))
-                    // Universal dropdown (both identities): the frosted pill
-                    // pattern opened the mystery menu in every design.
-                    // Mystery change keeps narrationActive; the LaunchedEffect
-                    // speaks the new guide's first step, it does not stop TTS.
-                    MysteryPickerDropdown(
-                        selected = selectedMysteryType,
-                        today = todayMystery.type,
-                        lang = lang,
-                        onSelect = { mType ->
-                            if (mType != selectedMysteryType) {
-                                selectedMysteryType = mType
-                                rosaryStepIndex = 0
-                            }
-                        }
-                    )
-                }
-
-                item { Spacer(Modifier.height(16.dp)) }
+                // then the beads and the prayer itself; instructions, the
+                // Misterios picker and voices follow below, in that order.
 
                 // Where you are on the beads, and the way forward
                 item {
                     GuideControlsCard(
-                        // No mystery name here: the picker above is the one
+                        // No mystery name here: the picker below is the one
                         // place that names the set (Expert v3 de-dupe).
                         eyebrow = "",
                         guide = rosaryGuide,
@@ -1202,7 +1153,6 @@ fun RosaryScreen(
                         lang = lang,
                         previousLabel = previousLabel,
                         nextLabel = nextLabel,
-                        audioLabel = if (narrationActive) pauseLabel else playLabel,
                         isPlayingAudio = narrationActive,
                         spokenNow = currentlySpeaking,
                         onGo = { goRosary(it) },
@@ -1219,8 +1169,36 @@ fun RosaryScreen(
 
                 // Beginner instructions and meditation beneath the current prayer
                 item {
-                    Spacer(Modifier.height(16.dp))
+                    Spacer(Modifier.height(8.dp))
                     StepCard(step = rosaryStep, lang = lang, spokenNow = currentlySpeaking)
+                }
+
+                item {
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                    // Misterios sits with the secondary pickers under the
+                    // prayer text and instructions, styled like Voces.
+                    AppListGroup {
+                        MenuPickerRow(
+                            title = lang.pick("Misterios", "Mysteries", "Mistérios"),
+                            leadingIcon = mysteryIcon(selectedMysteryType),
+                            options = RosaryMysteryType.entries.map { mType ->
+                                mType to (
+                                    mType.displayName.get(lang) + " · " +
+                                        mType.recommendedDays.get(lang) +
+                                        if (mType == todayMystery.type) " · " + lang.pick("hoy", "Today", "Hoje") else ""
+                                    )
+                            },
+                            selected = selectedMysteryType,
+                            onSelect = { mType ->
+                                if (mType != selectedMysteryType) {
+                                    selectedMysteryType = mType
+                                    rosaryStepIndex = 0
+                                }
+                            },
+                            modifier = Modifier.heightIn(min = 48.dp),
+                            testTag = "rosary_mystery_picker"
+                        )
+                    }
                 }
 
                 item {
@@ -1356,7 +1334,7 @@ fun RosaryScreen(
 
             1 -> {
                 // Divine Mercy Chaplet
-                item { Spacer(Modifier.height(16.dp)) }
+                item { Spacer(Modifier.height(8.dp)) }
 
                 item {
                     GuideControlsCard(
@@ -1366,7 +1344,6 @@ fun RosaryScreen(
                         lang = lang,
                         previousLabel = previousLabel,
                         nextLabel = nextLabel,
-                        audioLabel = if (narrationActive) pauseLabel else playLabel,
                         isPlayingAudio = narrationActive,
                         spokenNow = currentlySpeaking,
                         onGo = { goMercy(it) },
@@ -1379,7 +1356,7 @@ fun RosaryScreen(
                 }
 
                 item {
-                    Spacer(Modifier.height(16.dp))
+                    Spacer(Modifier.height(8.dp))
                     StepCard(step = mercyStep, lang = lang, spokenNow = currentlySpeaking)
                 }
 
@@ -1440,112 +1417,6 @@ fun RosaryScreen(
     }
 }
 
-/**
- * The mystery set as a chip-shaped control (design.shapes.chip, the same
- * 12dp language as Bible chips/tabs) that opens a dropdown. The control names the current set and its days, with today's
- * set marked; the menu repeats the same choices a chip row would, one per
- * row, and closes on selection. Selection logic is unchanged.
- */
-@Composable
-private fun MysteryPickerDropdown(
-    selected: RosaryMysteryType,
-    today: RosaryMysteryType,
-    lang: AppLanguage,
-    onSelect: (RosaryMysteryType) -> Unit
-) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-    val todayLabel = lang.pick("hoy", "Today", "Hoje")
-    var expanded by remember { mutableStateOf(false) }
-    fun labelFor(mType: RosaryMysteryType) =
-        mType.displayName.get(lang) + if (mType == today) " · $todayLabel" else ""
-
-    Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = design.spacing.gutter)
-            .testTag("rosary_mystery_picker")
-    ) {
-        Button(
-            onClick = { expanded = true },
-            shape = design.shapes.chip,
-            colors = ButtonDefaults.buttonColors(
-                containerColor = palette.groupedSurface,
-                contentColor = palette.textPrimary
-            ),
-            contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 0.dp, bottom = 0.dp),
-            modifier = Modifier
-                .height(48.dp)
-                .fillMaxWidth()
-        ) {
-            Icon(
-                imageVector = mysteryIcon(selected),
-                contentDescription = null,
-                modifier = Modifier.size(18.dp)
-            )
-            Spacer(Modifier.width(8.dp))
-            Text(
-                text = labelFor(selected),
-                style = styles.rowTitle,
-                color = palette.textPrimary,
-                maxLines = 1,
-                modifier = Modifier.weight(1f)
-            )
-            Text(
-                text = selected.recommendedDays.get(lang),
-                style = styles.rowSubtitle,
-                color = palette.textSecondary,
-                maxLines = 1
-            )
-            Spacer(Modifier.width(8.dp))
-            Icon(
-                imageVector = Icons.Default.KeyboardArrowDown,
-                contentDescription = null,
-                tint = palette.textSecondary,
-                modifier = Modifier.size(20.dp)
-            )
-        }
-        DropdownMenu(
-            expanded = expanded,
-            onDismissRequest = { expanded = false },
-            modifier = Modifier
-                .align(Alignment.TopStart)
-                .padding(top = 52.dp)
-                .fillMaxWidth()
-        ) {
-            RosaryMysteryType.entries.forEach { mType ->
-                DropdownMenuItem(
-                    text = {
-                        Column {
-                            Text(
-                                text = labelFor(mType),
-                                style = styles.rowTitle,
-                                color = palette.textPrimary
-                            )
-                            Text(
-                                text = mType.recommendedDays.get(lang),
-                                style = styles.rowSubtitle,
-                                color = palette.textSecondary
-                            )
-                        }
-                    },
-                    leadingIcon = { Icon(mysteryIcon(mType), contentDescription = null) },
-                    trailingIcon = if (mType == selected) {
-                        { Icon(Icons.Default.Check, contentDescription = null, tint = palette.accent) }
-                    } else {
-                        null
-                    },
-                    onClick = {
-                        expanded = false
-                        onSelect(mType)
-                    }
-                )
-            }
-        }
-    }
-}
-
 private fun mysteryIcon(type: RosaryMysteryType) = when (type) {
     RosaryMysteryType.JOYFUL -> Icons.Default.LocalFlorist
     RosaryMysteryType.SORROWFUL -> Icons.Default.WaterDrop
@@ -1565,7 +1436,6 @@ private fun GuideControlsCard(
     lang: AppLanguage,
     previousLabel: String,
     nextLabel: String,
-    audioLabel: String,
     isPlayingAudio: Boolean,
     spokenNow: String?,
     onGo: (Int) -> Unit,
@@ -1627,8 +1497,8 @@ private fun GuideControlsCard(
                     // Enlarged ~64dp (max 272dp) so the beads read as
                     // beads, not as texture: the loop geometry below
                     // grows with this width.
-                    DesignLanguage.APPLE -> 264.dp
-                    DesignLanguage.IVE -> 272.dp
+                    DesignLanguage.APPLE -> 216.dp
+                    DesignLanguage.IVE -> 224.dp
                 })
                 .testTag(railTag)
                 .semantics {
@@ -1649,7 +1519,7 @@ private fun GuideControlsCard(
         // ES/PT where/step labels overflowed the loop's centre, and a
         // progress that is only colour and arc is invisible to a reader
         // who cannot see the ring. This line wraps instead of clipping.
-        Spacer(Modifier.height(16.dp))
+        Spacer(Modifier.height(8.dp))
         // Eyebrow ink: textSecondary — the "Inicio"/Opening where-line
         // reads as a secondary label, not as body ink.
         Text(
@@ -1676,22 +1546,25 @@ private fun GuideControlsCard(
                 modifier = Modifier.fillMaxWidth()
             )
         }
-        Spacer(Modifier.height(16.dp))
+        Spacer(Modifier.height(8.dp))
         TransportCluster(
             canGoPrevious = index > 0,
             canGoNext = index < guide.steps.lastIndex,
             isPlayingAudio = isPlayingAudio,
             onPrevious = { onGo(index - 1) },
             onNext = { onGo(index + 1) },
-            onToggleAudio = onToggleAudio
+            onToggleAudio = onToggleAudio,
+            previousTag = previousTag,
+            nextTag = nextTag,
+            audioTag = audioTag
         )
-        Spacer(Modifier.height(16.dp))
+        Spacer(Modifier.height(8.dp))
         PageDots(
             guide = guide,
             activeSection = step.section,
             onGo = onGo
         )
-        Spacer(Modifier.height(16.dp))
+        Spacer(Modifier.height(8.dp))
         // Prayer text on the card tonal surface: the Bible reader sets
         // scripture in serif ink on the reading surface with no photograph
         // behind it, and this field follows that - accentMuted at
@@ -1719,7 +1592,7 @@ private fun GuideControlsCard(
                     color = design.palette.textPrimary,
                     modifier = Modifier.testTag("current_prayer_title").semantics { heading() }
                 )
-                Spacer(Modifier.height(16.dp))
+                Spacer(Modifier.height(8.dp))
                 PrayerDialogue(
                     leaderText = step.leader,
                     responseText = step.response,
@@ -1728,23 +1601,6 @@ private fun GuideControlsCard(
                 )
             }
         }
-        Spacer(Modifier.height(design.spacing.cardGap))
-
-        RecitationControls(
-            previousLabel = previousLabel,
-            nextLabel = nextLabel,
-            audioLabel = audioLabel,
-            isPlayingAudio = isPlayingAudio,
-            canGoPrevious = index > 0,
-            canGoNext = index < guide.steps.lastIndex,
-            onPrevious = { onGo(index - 1) },
-            onNext = { onGo(index + 1) },
-            onToggleAudio = onToggleAudio,
-            previousTag = previousTag,
-            nextTag = nextTag,
-            audioTag = audioTag
-        )
-
         extra()
     }
 }
@@ -1879,7 +1735,7 @@ private fun BeadRail(
         val geometry = remember(beads, maxWidth, density) {
             with(density) { RosaryGeometry.layout(beads, maxWidth.toPx(), this) }
         }
-        val heightDp = with(density) { geometry.height.toDp() }.coerceAtMost(330.dp)
+        val heightDp = with(density) { geometry.height.toDp() }.coerceAtMost(240.dp)
         val loopTop = with(density) { (geometry.centre.y - geometry.radius).toDp() }
         val loopSize = with(density) { (geometry.radius * 2).toDp() }
 
@@ -2208,18 +2064,18 @@ private class RosaryGeometry(
         fun layout(beads: List<BeadSpec>, width: Float, density: Density): RosaryGeometry = with(density) {
             val ringInset = 10.dp.toPx()
             val top = 8.dp.toPx() + ringInset
-            // Larger loop and beads than the texture-like 50dp/2.4dp
-            // sizing: at a 272dp rail the loop radius is 88dp and the
-            // small bead is 3.6dp in radius (7.2dp across), so the
-            // beads read as beads. Radius and beads grew together so
-            // the loop spacing (arc minus diameters) stays positive.
-            // Radius/top/bottom are budgeted so geometry height stays
-            // <=330dp and the prayer text below starts clear of the rail.
-            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 88.dp.toPx())
-            val small = 3.6.dp.toPx()
-            val large = 5.4.dp.toPx()
-            val medal = 8.dp.toPx()
-            val crucifixHeight = 28.dp.toPx()
+            // Compact rail so hero, beads, prayer text and transport fit
+            // one screen: at a 224dp rail the loop radius is 64dp and the
+            // small bead is 3.0dp in radius (6.0dp across), so the beads
+            // still read as beads. Radius and beads shrank together so the
+            // loop spacing (arc minus diameters) stays positive.
+            // Geometry height stays well under 240dp and the prayer text
+            // below starts clear of the rail.
+            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 64.dp.toPx())
+            val small = 3.0.dp.toPx()
+            val large = 4.4.dp.toPx()
+            val medal = 6.5.dp.toPx()
+            val crucifixHeight = 22.dp.toPx()
             val centre = Offset(width / 2, top + radius)
 
             val kinds = beads.map { it.kind }
@@ -2305,11 +2161,11 @@ private class RosaryGeometry(
 }
 
 /**
- * Ive reference transport: a big circular black play/pause button (64dp)
- * flanked by 44dp frosted circular step buttons. The text prev/next row and
- * the narration button below (RecitationControls) stay as the previous fix
- * left them; these circles are the hero's quick transport and carry their
- * own tags so the kept row's testTags stay unique.
+ * Ive reference transport: a big circular play/pause button (64dp) flanked
+ * by 44dp frosted circular step buttons. This integrated cluster is the one
+ * transport on the guide card; it carries the devotion's prev/next/audio
+ * testTags, so there is no second Anterior/Siguiente row below the prayer
+ * text (the former RecitationControls duplicate was removed).
  */
 @Composable
 private fun TransportCluster(
@@ -2318,15 +2174,16 @@ private fun TransportCluster(
     isPlayingAudio: Boolean,
     onPrevious: () -> Unit,
     onNext: () -> Unit,
-    onToggleAudio: () -> Unit
+    onToggleAudio: () -> Unit,
+    previousTag: String,
+    nextTag: String,
+    audioTag: String
 ) {
     val design = LocalAppDesign.current
     val palette = design.palette
     val haptics = LocalHapticFeedback.current
-    // ONE black primary CTA per view: the RecitationControls Next button
-    // (AppPrimaryButton, black in light / cream in dark) is it. This hero
-    // play circle stays a large frosted/raised transport control — same
-    // 64dp size, testTag and toggle logic, but not a second black fill.
+    // The play circle is the card's one narration toggle, kept as a large
+    // frosted/raised transport control — same 64dp size and toggle logic.
     val playBg = palette.raised
     val playFg = palette.textPrimary
     val flankBg = palette.raised
@@ -2346,7 +2203,7 @@ private fun TransportCluster(
                 .size(44.dp)
                 .clip(CircleShape)
                 .background(flankBg)
-                .testTag("transport_prev_button")
+                .testTag(previousTag)
         ) {
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowBack,
@@ -2364,7 +2221,7 @@ private fun TransportCluster(
                 .size(64.dp)
                 .clip(CircleShape)
                 .background(playBg)
-                .testTag("transport_play_button")
+                .testTag(audioTag)
         ) {
             Icon(
                 imageVector = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
@@ -2384,7 +2241,7 @@ private fun TransportCluster(
                 .size(44.dp)
                 .clip(CircleShape)
                 .background(flankBg)
-                .testTag("transport_next_button")
+                .testTag(nextTag)
         ) {
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.ArrowForward,
@@ -2432,76 +2289,6 @@ private fun PageDots(
                     .semantics { contentDescription = section.title }
             )
         }
-    }
-}
-
-/** The next prayer is the primary action; optional narration stays secondary. */
-@Composable
-private fun RecitationControls(
-    previousLabel: String,
-    nextLabel: String,
-    audioLabel: String,
-    isPlayingAudio: Boolean,
-    canGoPrevious: Boolean,
-    canGoNext: Boolean,
-    onPrevious: () -> Unit,
-    onNext: () -> Unit,
-    onToggleAudio: () -> Unit,
-    previousTag: String,
-    nextTag: String,
-    audioTag: String
-) {
-    val haptics = LocalHapticFeedback.current
-    val previous: @Composable (Modifier) -> Unit = { modifier ->
-        AppSecondaryButton(
-            label = previousLabel,
-            enabled = canGoPrevious,
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                onPrevious()
-            },
-            leadingIcon = Icons.AutoMirrored.Filled.ArrowBack,
-            modifier = modifier.height(48.dp).testTag(previousTag)
-        )
-    }
-    val next: @Composable (Modifier) -> Unit = { modifier ->
-        AppPrimaryButton(
-            label = nextLabel,
-            enabled = canGoNext,
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                onNext()
-            },
-            modifier = modifier.height(48.dp).testTag(nextTag)
-        )
-    }
-    val narration: @Composable (Modifier) -> Unit = { modifier ->
-        AppSecondaryButton(
-            label = audioLabel,
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                onToggleAudio()
-            },
-            leadingIcon = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
-            modifier = modifier.height(48.dp).testTag(audioTag)
-        )
-    }
-    // Anterior and Siguiente share one row, equal weight and height, so the
-    // step is read as one back/forward choice; the spoken recitation stays a
-    // secondary action on its own full-width row below them.
-    Column(
-        modifier = Modifier.fillMaxWidth(),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
-    ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            previous(Modifier.weight(1f))
-            next(Modifier.weight(1f))
-        }
-        narration(Modifier.fillMaxWidth())
     }
 }
 
