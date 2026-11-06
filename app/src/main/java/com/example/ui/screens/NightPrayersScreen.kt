@@ -57,6 +57,7 @@ import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.models.AppLanguage
 import com.example.data.models.ComplineOffice
 import com.example.data.models.IgnatianExamenStep
+import com.example.data.models.VaticanPrayer
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
@@ -129,10 +130,11 @@ fun NightPrayersScreen(
     /** The host screen's title and view switcher, set as the first rows. */
     header: LazyListScope.() -> Unit = {}
 ) {
-    var selectedNightOfficeTab by remember { mutableIntStateOf(0) } // 0 = Roman Compline, 1 = Ignatian Examen
+    var selectedNightOfficeTab by remember { mutableIntStateOf(0) } // 0 = Roman Compline, 1 = Ignatian Examen, 2 = Traditional night prayer
 
     val compline = repository.complineOffice
     val examenSteps = repository.ignatianExamenSteps
+    val prayers = repository.vaticanPrayers
     val isPlayingAudio by ttsManager.isPlaying.collectAsState()
 
     val tabsInset = segmentedTabsInset()
@@ -216,7 +218,8 @@ fun NightPrayersScreen(
                 OfficeChoice(
                     labels = listOf(
                         currentLanguage.pick("Completas", "Compline", "Completas"),
-                        currentLanguage.pick("Examen ignaciano", "Ignatian examen", "Exame inaciano")
+                        currentLanguage.pick("Examen ignaciano", "Ignatian examen", "Exame inaciano"),
+                        currentLanguage.pick("Tradicional", "Traditional", "Tradicional")
                     ),
                     selectedIndex = selectedNightOfficeTab,
                     onSelect = { selectedNightOfficeTab = it },
@@ -236,6 +239,13 @@ fun NightPrayersScreen(
             1 -> IgnatianExamenView(
                 header = officeHeader,
                 steps = examenSteps,
+                ttsManager = ttsManager,
+                isNarrating = isPlayingAudio,
+                currentLanguage = currentLanguage
+            )
+            2 -> TraditionalView(
+                header = officeHeader,
+                prayers = prayers,
                 ttsManager = ttsManager,
                 isNarrating = isPlayingAudio,
                 currentLanguage = currentLanguage
@@ -943,6 +953,341 @@ private fun IgnatianExamenView(
     }
 }
 
+// ----------------------------------------------------------------- tradicional
+
+/** One step of the traditional night prayer: a title and its text. */
+private data class TraditionalStep(val title: String, val body: String, val guidance: String? = null)
+
+@Composable
+private fun TraditionalView(
+    header: LazyListScope.() -> Unit,
+    prayers: List<VaticanPrayer>,
+    ttsManager: LiturgicalTtsManager,
+    isNarrating: Boolean,
+    currentLanguage: AppLanguage
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+
+    var completedSteps by remember { mutableStateOf(emptySet<Int>()) }
+    var selectedStepIndex by remember { mutableIntStateOf(0) }
+
+    fun prayerById(id: String): VaticanPrayer? = prayers.find { it.id == id }
+
+    fun prayerBody(prayer: VaticanPrayer): String {
+        val leader = prayer.leaderText.get(currentLanguage)
+        val response = prayer.responseText?.get(currentLanguage)
+        // The guardian angel entry's response is a stray Hail Mary fragment in
+        // the bundled data; its leader text is the complete prayer.
+        return if (prayer.id == "guardian_angel" || response.isNullOrBlank()) leader
+        else "$leader\n\n$response"
+    }
+
+    // Steps 1-7 wire the existing Vatican prayer entries by id; step 8 is the
+    // Immaculate Conception ejaculation (also an existing entry); step 9, the
+    // good-night thanksgiving, has no bundled entry and is carried inline.
+    val traditionalSteps: List<TraditionalStep> = listOfNotNull(
+        prayerById("persignarse")?.let {
+            TraditionalStep(it.title.get(currentLanguage), prayerBody(it), it.whenToPray.get(currentLanguage))
+        },
+        prayerById("our_father")?.let { TraditionalStep(it.title.get(currentLanguage), prayerBody(it)) },
+        prayerById("hail_mary")?.let { TraditionalStep(it.title.get(currentLanguage), prayerBody(it)) },
+        prayerById("glory_be")?.let { TraditionalStep(it.title.get(currentLanguage), prayerBody(it)) },
+        prayerById("guardian_angel")?.let { TraditionalStep(it.title.get(currentLanguage), prayerBody(it)) },
+        prayerById("bendita_sea_tu_pureza")?.let { TraditionalStep(it.title.get(currentLanguage), prayerBody(it)) },
+        prayerById("signarse")?.let {
+            TraditionalStep(it.title.get(currentLanguage), prayerBody(it), it.whenToPray.get(currentLanguage))
+        },
+        prayerById("immaculate_conception")?.let { TraditionalStep(it.title.get(currentLanguage), prayerBody(it)) }
+    ) + TraditionalStep(
+        title = currentLanguage.pick("Gracias por el día", "Thanks for the day", "Obrigado pelo dia"),
+        body = currentLanguage.pick(
+            "Gracias te doy buen Señor y alabo tu gran poder, pues con el alma en el cuerpo me has dejado anochecer. Así te pido Señor por tu santísima madre y por el Eterno Padre me dejes amanecer, para poder alabar a Jesús, María y José, por los siglos de los siglos. Amén.",
+            "I thank you, good Lord, and I praise your great power, for with my soul in my body you have allowed me to see the nightfall. So I ask you, Lord, through your most holy Mother and through the eternal Father, to let me see the dawn, so that I may praise Jesus, Mary and Joseph, for ever and ever. Amen.",
+            "Dou-vos graças, bom Senhor, e louvo o vosso grande poder, pois com a alma no corpo me deixastes chegar ao anoitecer. Assim vos peço, Senhor, por vossa santíssima Mãe e pelo Pai eterno, que me deixeis amanhecer, para poder louvar Jesus, Maria e José, pelos séculos dos séculos. Amém."
+        )
+    )
+
+    val step = traditionalSteps.getOrNull(selectedStepIndex) ?: traditionalSteps.firstOrNull()
+    val percentDone = if (traditionalSteps.isEmpty()) 0 else completedSteps.size * 100 / traditionalSteps.size
+
+    LazyColumn(Modifier.fillMaxSize()) {
+        header()
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick(
+                    "Oración tradicional de la noche",
+                    "Traditional night prayer",
+                    "Oração tradicional da noite"
+                ),
+                subtitle = currentLanguage.pick(
+                    "Persignarse, Padre Nuestro, Ave María, Gloria, Ángel de la Guarda, Bendita sea tu pureza, signarse y dos oraciones finales.",
+                    "Sign of the cross, Our Father, Hail Mary, Glory Be, Guardian Angel, Blessed Be Your Purity, sign of the cross again, and two closing prayers.",
+                    "Sinal da cruz, Pai Nosso, Ave Maria, Glória, Anjo da Guarda, Bendita seja a vossa pureza, sinal da cruz e duas orações finais."
+                )
+            )
+        }
+
+        item {
+            ReadingColumn {
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter),
+                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                ) {
+                    AppMetricTile(
+                        value = "${completedSteps.size}/${traditionalSteps.size}",
+                        caption = currentLanguage.pick(
+                            "Pasos de la oración",
+                            "Prayer steps",
+                            "Passos da oração"
+                        ),
+                        icon = Icons.Default.Check,
+                        modifier = Modifier.weight(1f)
+                    )
+                    AppMetricTile(
+                        value = "$percentDone%",
+                        caption = currentLanguage.pick("Completado", "Completed", "Concluído"),
+                        icon = Icons.Default.NightsStay,
+                        modifier = Modifier.weight(1f)
+                    )
+                }
+                val progressFraction = if (traditionalSteps.isEmpty()) 0f else
+                    completedSteps.size.toFloat() / traditionalSteps.size.toFloat()
+                val progressLabel = currentLanguage.pick(
+                    "${completedSteps.size} de ${traditionalSteps.size} pasos completados",
+                    "${completedSteps.size} of ${traditionalSteps.size} steps completed",
+                    "${completedSteps.size} de ${traditionalSteps.size} passos concluídos"
+                )
+                Spacer(Modifier.height(design.spacing.cardGap))
+                LinearProgressIndicator(
+                    progress = { progressFraction },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(4.dp)
+                        .padding(horizontal = design.spacing.gutter)
+                        .semantics {
+                            contentDescription = currentLanguage.pick(
+                                "Progreso de la oración", "Prayer progress", "Progresso da oração"
+                            )
+                            stateDescription = progressLabel
+                        },
+                    color = design.palette.accent,
+                    trackColor = design.palette.selectionTint
+                )
+            }
+        }
+
+        item {
+            AppSectionHeader(
+                title = currentLanguage.pick("Los pasos", "The steps", "Os passos"),
+                subtitle = currentLanguage.pick(
+                    "Toca un paso para rezarlo",
+                    "Tap a step to pray it",
+                    "Toque num passo para rezá-lo"
+                )
+            )
+            AppListGroup {
+                traditionalSteps.forEachIndexed { index, traditionalStep ->
+                    AppListRow(
+                        title = traditionalStep.title,
+                        trailingText = if ((index + 1) in completedSteps) {
+                            currentLanguage.pick("Hecho", "Done", "Feito")
+                        } else {
+                            null
+                        },
+                        showsNavigationAffordance = false,
+                        selected = index == selectedStepIndex,
+                        onClick = { selectedStepIndex = index },
+                        modifier = Modifier
+                            .heightIn(min = MinTouchTarget)
+                            .semantics {
+                                stateDescription = if ((index + 1) in completedSteps) {
+                                    currentLanguage.pick("Hecho", "Done", "Feito")
+                                } else {
+                                    currentLanguage.pick("Pendiente", "Pending", "Pendente")
+                                }
+                            }
+                    )
+                }
+            }
+        }
+
+        if (step != null) {
+            item {
+                val stepNumber = selectedStepIndex + 1
+                val isStepDone = stepNumber in completedSteps
+
+                Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                ReadingColumn {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        Text(
+                            text = caps(
+                                currentLanguage.pick(
+                                    "Paso $stepNumber de ${traditionalSteps.size}",
+                                    "Step $stepNumber of ${traditionalSteps.size}",
+                                    "Passo $stepNumber de ${traditionalSteps.size}"
+                                )
+                            ),
+                            style = styles.sectionEyebrow,
+                            color = design.palette.textSecondary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        Text(
+                            text = caps(step.title),
+                            style = styles.sectionTitle,
+                            color = design.palette.textPrimary,
+                            modifier = Modifier.semantics { heading() }
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap))
+                        LiturgicalText(text = step.body, quoted = true, inCard = true)
+                        if (!step.guidance.isNullOrBlank()) {
+                            Spacer(Modifier.height(design.spacing.sectionGap / 2))
+                            LiturgicalText(text = step.guidance, muted = true, inCard = true)
+                        }
+
+                        Spacer(Modifier.height(design.spacing.cardPadding))
+                        AppSecondaryButton(
+                            label = if (isNarrating) {
+                                currentLanguage.pick("Detener", "Stop", "Parar")
+                            } else {
+                                currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+                            },
+                            onClick = {
+                                if (isNarrating) ttsManager.stop() else ttsManager.speakSingle(step.body)
+                            },
+                            leadingIcon = if (isNarrating) Icons.Default.Stop else Icons.Default.VolumeUp,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(min = MinTouchTarget)
+                                .testTag("tradicional_tts_button")
+                                .semantics {
+                                    stateDescription = if (isNarrating) {
+                                        currentLanguage.pick("Narrando", "Narrating", "Narrando")
+                                    } else {
+                                        currentLanguage.pick("Detenido", "Stopped", "Parado")
+                                    }
+                                }
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        AppPrimaryButton(
+                            label = if (isStepDone) {
+                                currentLanguage.pick("Deshacer", "Undo", "Desfazer")
+                            } else {
+                                currentLanguage.pick("Hecho", "Done", "Feito")
+                            },
+                            onClick = {
+                                completedSteps = if (isStepDone) {
+                                    completedSteps - stepNumber
+                                } else {
+                                    completedSteps + stepNumber
+                                }
+                            },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .heightIn(min = MinTouchTarget)
+                                .semantics {
+                                    stateDescription = if (isStepDone) {
+                                        currentLanguage.pick("Hecho", "Done", "Feito")
+                                    } else {
+                                        currentLanguage.pick("Pendiente", "Pending", "Pendente")
+                                    }
+                                }
+                        )
+                        // Prev/Next in one row so neither direction costs a
+                        // second trip through the step list.
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        Row(
+                            Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+                        ) {
+                            AppSecondaryButton(
+                                label = currentLanguage.pick("Anterior", "Previous", "Anterior"),
+                                onClick = {
+                                    if (selectedStepIndex > 0) selectedStepIndex -= 1
+                                },
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                            )
+                            AppSecondaryButton(
+                                label = currentLanguage.pick("Siguiente", "Next", "Seguinte"),
+                                onClick = {
+                                    if (selectedStepIndex < traditionalSteps.lastIndex) selectedStepIndex += 1
+                                },
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                            )
+                        }
+                        if (isNarrating) {
+                            Spacer(Modifier.height(design.spacing.cardGap / 2))
+                            Text(
+                                text = currentLanguage.pick(
+                                    "Narración en curso…",
+                                    "Narration in progress…",
+                                    "Narração em curso…"
+                                ),
+                                style = styles.rowSubtitle,
+                                color = design.palette.textSecondary
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        if (traditionalSteps.isNotEmpty() && completedSteps.size == traditionalSteps.size) {
+            item { AppOrnament() }
+            item {
+                ReadingColumn {
+                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
+                        Column(
+                            Modifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.CheckCircle,
+                                contentDescription = null,
+                                tint = design.palette.textPrimary,
+                                modifier = Modifier.size(design.decor.rowIconSize + 8.dp)
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            Text(
+                                text = caps(
+                                    currentLanguage.pick(
+                                        "¡Oración completada!",
+                                        "Prayer complete",
+                                        "Oração concluída!"
+                                    )
+                                ),
+                                style = styles.sectionTitle,
+                                color = design.palette.textPrimary,
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.semantics { heading() }
+                            )
+                            Spacer(Modifier.height(design.spacing.cardGap))
+                            Text(
+                                text = currentLanguage.pick(
+                                    "Descansa en la paz del Señor. Que la Virgen María y los santos Ángeles custodien tu sueño.",
+                                    "Rest in the peace of the Lord. May the Virgin Mary and the holy Angels keep watch over your sleep.",
+                                    "Descansa na paz do Senhor. Que a Virgem Maria e os santos Anjos guardem o teu sono."
+                                ),
+                                style = styles.quote,
+                                color = design.palette.textSecondary,
+                                textAlign = TextAlign.Center
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+    }
+}
+
 // -------------------------------------------------------------------- setting
 
 /**
@@ -1075,11 +1420,11 @@ private fun stichs(text: String): List<String> =
     text.split(StichBreak).map { it.trim() }.filter { it.isNotEmpty() }
 
 /**
- * The two offices of the night as a segmented control, so the choice is
+ * The offices of the night as a segmented control, so the choice is
  * visible without opening a menu: at 320dp and 130% text the long ES/PT
  * labels ("Examen ignaciano") can overflow a dropdown, and the kit's
  * segmented control falls back to tabs when its segments cannot hold
- * both labels.
+ * all the labels.
  */
 @Composable
 private fun OfficeChoice(

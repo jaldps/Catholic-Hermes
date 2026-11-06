@@ -35,12 +35,15 @@ class ReminderStore(
     private fun enabledKey(id: String) = booleanPreferencesKey("rem_enabled_$id")
     private fun timeKey(id: String) = stringPreferencesKey("rem_time_$id")
 
-    /** Full preference map, defaulting to the catalog defaults (all off). */
+    /** Full preference map, defaulting to the catalog defaults. */
     val reminders: Flow<Map<String, ReminderPref>> = dataStore.data
         .catch { e -> if (e is IOException) emit(emptyPreferences()) else throw e }
         .map { prefs ->
             ReminderCatalog.DEFAULTS.associate { r ->
-                val enabled = prefs[enabledKey(r.id)] ?: false
+                // Midday Angelus (12:00) and Divine Mercy Chaplet (15:00) are
+                // scheduled by default; the evening Angelus (18:00) stays off
+                // until the user opts in.
+                val enabled = prefs[enabledKey(r.id)] ?: (r.id in DEFAULT_ON)
                 val time = prefs[timeKey(r.id)]
                 val parsed = time?.split(":")?.mapNotNull { it.toIntOrNull() }
                 val hour = parsed?.getOrNull(0) ?: r.defaultHour
@@ -55,6 +58,11 @@ class ReminderStore(
 
     suspend fun setTime(id: String, hour: Int, minute: Int) {
         dataStore.edit { it[timeKey(id)] = "%02d:%02d".format(hour, minute) }
+    }
+
+    /** Reminders scheduled by default (evening Angelus excluded). */
+    private companion object DEFAULT_ON_IDS {
+        val DEFAULT_ON: Set<String> = setOf("angelus_midday", "coronilla")
     }
 
     val novena: Flow<NovenaState?> = dataStore.data

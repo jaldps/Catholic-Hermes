@@ -91,6 +91,7 @@ import com.example.data.local.HabitCompletionLogEntity
 import com.example.data.local.SanctaFidesDao
 import com.example.data.local.SinOvercomeLogEntity
 import com.example.data.local.SpiritualHabitEntity
+import com.example.data.temptation.TemptationStore
 import com.example.data.models.AppLanguage
 import com.example.data.models.SinAvoiderOption
 import com.example.data.repository.CatholicDataRepository
@@ -156,6 +157,10 @@ fun HabitsAndVirtuesScreen(
     val todayCompletions by dao.getCompletionsForDate(todayDateStr).collectAsState(initial = emptyList())
     val sinOvercomeLogs by dao.getAllSinOvercomeLogs().collectAsState(initial = emptyList())
     val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
+
+    // Per-day temptation counter for the monthly calendar (Victoria tab).
+    val temptationStore = remember(context) { TemptationStore(context.applicationContext) }
+    val temptationCounts by temptationStore.counts.collectAsState(initial = emptyMap())
 
     // The suggested rule is offered, not imposed: with nothing configured the
     // pane shows these practices and one action that adopts them.
@@ -487,6 +492,24 @@ fun HabitsAndVirtuesScreen(
                 item {
                     AppSectionHeader(
                         title = currentLanguage.pick(
+                            "Victoria mes a mes",
+                            "Victory month by month",
+                            "Vitória mês a mês"
+                        )
+                    )
+                }
+
+                item(key = "temptation_calendar") {
+                    TemptationCalendar(
+                        counts = temptationCounts,
+                        currentLanguage = currentLanguage
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap))
+                }
+
+                item {
+                    AppSectionHeader(
+                        title = currentLanguage.pick(
                             "Las siete raíces",
                             "The seven roots",
                             "As sete raízes"
@@ -729,6 +752,8 @@ fun HabitsAndVirtuesScreen(
                                         note = victoryNote
                                     )
                                 )
+                                // Same victory, per-day counter for the calendar.
+                                temptationStore.recordVictory()
                                 victoryNote = ""
                                 showSinAvoiderModal = false
                                 ttsManager.stop()

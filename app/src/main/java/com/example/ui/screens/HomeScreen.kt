@@ -99,6 +99,7 @@ import com.example.data.models.SaintOfTheDay
 import com.example.data.models.VerseOfTheDay
 import com.example.data.local.SanctaFidesDao
 import com.example.data.local.SinOvercomeLogEntity
+import com.example.data.temptation.TemptationStore
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.data.repository.BibleData
 import com.example.data.prefs.ReadingPosition
@@ -136,6 +137,8 @@ fun HomeScreen(
     onNavigateToMissal: () -> Unit = onNavigateToBible,
     onNavigateToRosary: () -> Unit,
     onNavigateToPrayers: () -> Unit,
+    onNavigateToLaudes: () -> Unit = onNavigateToPrayers,
+    onNavigateToAngelus: () -> Unit = onNavigateToPrayers,
     onNavigateToDoctrine: () -> Unit,
     onNavigateToSpiritualLife: () -> Unit,
     onNavigateToQuiz: () -> Unit = onNavigateToSpiritualLife,
@@ -721,13 +724,15 @@ fun HomeScreen(
                     title = strings("Laudes", "Morning Prayer", "Laudes"),
                     leadingIcon = Icons.Default.LightMode,
                     trailingText = TextFormat.clock(6, 0, currentLanguage),
-                    onClick = onNavigateToPrayers
+                    onClick = onNavigateToLaudes,
+                    modifier = Modifier.testTag("home_laudes_tile")
                 )
                 AppListRow(
                     title = strings("El Ángelus", "The Angelus", "O Angelus"),
                     leadingIcon = Icons.Default.WbTwilight,
                     trailingText = TextFormat.clock(12, 0, currentLanguage),
-                    onClick = onNavigateToPrayers
+                    onClick = onNavigateToAngelus,
+                    modifier = Modifier.testTag("home_angelus_tile")
                 )
                 AppListRow(
                     title = strings("Santo Rosario", "Holy Rosary", "Santo Terço"),
@@ -1010,6 +1015,8 @@ private fun FidelityCard(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
     val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val temptationStore = remember(context) { TemptationStore(context.applicationContext) }
 
     fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
         AppLanguage.ES -> es
@@ -1085,6 +1092,8 @@ private fun FidelityCard(
                             prayerUsed = "HAIL_MARY"
                         )
                     )
+                    // Same victory, per-day counter for the temptation calendar.
+                    temptationStore.recordVictory()
                     victoryLogged = true
                 }
             },

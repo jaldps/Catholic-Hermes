@@ -355,6 +355,8 @@ fun MainApp(
                         },
                         onNavigateToRosary = { go(AppDestination.ROSARY) },
                         onNavigateToPrayers = { go(AppDestination.PRAYERS) },
+                        onNavigateToLaudes = { onOpenPrayer("laudes") },
+                        onNavigateToAngelus = { onOpenPrayer("angelus") },
                         onNavigateToPilgrimage = { go(AppDestination.PILGRIMAGE_HABITS) },
                         onNavigateToDoctrine = { go(AppDestination.DOCTRINE) },
                         onNavigateToSpiritualLife = {
