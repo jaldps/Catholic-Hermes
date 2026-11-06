@@ -5,16 +5,38 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.outlined.Checklist
+import androidx.compose.material.icons.outlined.Church
+import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.outlined.Groups
+import androidx.compose.material.icons.outlined.Help
+import androidx.compose.material.icons.outlined.History
+import androidx.compose.material.icons.outlined.MenuBook
+import androidx.compose.material.icons.outlined.Newspaper
+import androidx.compose.material.icons.outlined.Place
+import androidx.compose.material.icons.outlined.School
+import androidx.compose.material.icons.outlined.Spa
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
@@ -26,12 +48,12 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.ui.design.AppIconSlot
 import com.example.ui.design.AppIcons
 import com.example.ui.design.AppListGroup
-import com.example.ui.design.AppListRow
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.theme.LocalAppDesign
@@ -57,29 +79,33 @@ data class MoreSection(val title: String, val entries: List<MoreEntry>)
  *
  * Ive treatment, kept inside the shared kit on purpose: the screen paints
  * with nothing but [LocalAppDesign] tokens (warm-paper canvas, spacing, shape
- * via [AppListGroup]/[AppListRow]) and lets the active identity resolve the
- * frosted grouped surfaces (translucent groupedSurface at the one 20dp card
- * radius in Ive), the 16dp row insets, the icon wells, the chevrons and the
- * dark palette. No hardcoded colour or dimension, so dark mode is the token's
- * job, not this file's. Titles stay the kit's serene ones: [AppScreenTitle]
- * under a photographic hero band, [AppSectionHeader] over each group.
+ * via [AppListGroup]) and lets the active identity resolve the frosted grouped
+ * surfaces (translucent groupedSurface at the one 20dp card radius in Ive)
+ * and the dark palette. No hardcoded colour or dimension, so dark mode is the
+ * token's job, not this file's. Titles stay the kit's serene ones:
+ * [AppScreenTitle] under a photographic hero band, [AppSectionHeader] over
+ * each group.
  *
  * Photography (reuse only, `assets/heroes/`): a sunrise band crowns the
  * screen and dissolves into the paper canvas, Doctrine-style, above the
  * title; each named section carries a small 88dp photo strip above its
  * header, matched by title keyword so it follows the section into every
- * language, and a section with no match (Settings) simply gets no strip. All
- * photos are decorative, drawn behind text never over it, decoded once at
- * the top of this screen (never inside a LazyColumn item), down-sampled, and
- * a failed decode falls back to a gradient band so legibility never depends
- * on the photo.
+ * language, and a section with no match (Settings) simply gets no strip.
+ * Every banner carries its title in white over a bottom scrim, so a photo
+ * never reads as decoration alone and an off-center crop never hides the
+ * label. All photos are decorative, drawn behind text never over it,
+ * decoded once at the top of this screen (never inside a LazyColumn item),
+ * down-sampled, and a failed decode falls back to a gradient band so
+ * legibility never depends on the photo.
  *
- * Rows are tappable at a 48dp floor on top of the identity's own row height
- * — `maxOf(rowMinHeight, 48.dp)`, the same floor the other redesigned screens
- * use — so a one-line setting row never shrinks below the AAA touch target
- * even under the Apple identity's 44dp token. The list ends with the token's
- * contentBottomGap only: no extra dock-sized inset stacked on the scaffold's
- * own reservation, so there is no dead void above the tab bar.
+ * Rows are monochrome: each entry gets a distinct outlined glyph in a single
+ * tint (palette.textSecondary), never a saturated icon well. The kit's
+ * AppListRow paints a per-icon coloured well in the Apple identity, which
+ * clashes with the liturgical palette and reuses the same temple glyph for
+ * every [AppIconSlot.DOCTRINE] destination; this screen therefore draws its
+ * rows directly with one tint and a per-tag glyph, preserving the 48dp
+ * floor, the current-value trailing slot, the navigation chevron and every
+ * testTag.
  */
 @Composable
 fun MoreScreen(
@@ -158,7 +184,9 @@ fun MoreScreen(
         item(key = "more_hero") {
             // Photographic hero: a full-bleed sunrise band dissolving into the
             // warm paper canvas through a vertical gradient, above the serene
-            // title. Decorative only; the title and groups carry the text.
+            // title. The screen title rides on the photo in white over a
+            // bottom scrim so the banner is titled, not decorative; the
+            // kit's AppScreenTitle below is unchanged.
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -204,6 +232,33 @@ fun MoreScreen(
                             )
                         )
                 )
+                // Title scrim: bottom-aligned black scrim plus white title,
+                // so the title stays legible over any crop.
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    Color.Black.copy(alpha = 0.45f)
+                                )
+                            )
+                        )
+                )
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .padding(horizontal = design.spacing.gutter, vertical = 12.dp)
+                ) {
+                    Text(
+                        text = titleText,
+                        color = Color.White,
+                        style = MaterialTheme.typography.headlineSmall,
+                        fontWeight = FontWeight.Bold,
+                        maxLines = 1
+                    )
+                }
             }
         }
         item(key = "more_title") {
@@ -249,37 +304,94 @@ fun MoreScreen(
                                     )
                                 )
                         )
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .background(
+                                    Brush.verticalGradient(
+                                        colors = listOf(
+                                            Color.Transparent,
+                                            Color.Black.copy(alpha = 0.55f)
+                                        )
+                                    )
+                                )
+                        )
+                        Box(
+                            modifier = Modifier
+                                .align(Alignment.BottomStart)
+                                .padding(horizontal = 16.dp, vertical = 10.dp)
+                        ) {
+                            Text(
+                                text = section.title,
+                                color = Color.White,
+                                style = MaterialTheme.typography.titleMedium,
+                                fontWeight = FontWeight.Bold,
+                                maxLines = 1
+                            )
+                        }
                     }
                 }
                 AppSectionHeader(title = section.title)
                 AppListGroup {
                     section.entries.forEach { entry ->
-                        val icon: ImageVector = entry.icon ?: AppIcons.pair(entry.iconSlot).first
-                        AppListRow(
-                            title = entry.title,
-                            // The trailing slot is the current value, not
-                            // decoration: Font/Language arrive with one from
-                            // the caller; Appearance/Language fall back to
-                            // what this screen can know on its own (the
-                            // identity in force + dark mode, the active
-                            // language) so the row never shows a bare title.
-                            trailingText = entry.value ?: settingsFallbackValue(
-                                entry = entry,
-                                appearanceValue = appearanceValue,
-                                currentLanguage = currentLanguage
-                            ),
-                            leadingIcon = icon,
-                            // Every entry navigates somewhere (a destination
-                            // or a picker), so every row carries the
-                            // navigation affordance — the chevron in the
-                            // identities that use one.
-                            showsNavigationAffordance = true,
-                            onClick = entry.onOpen,
+                        val icon = distinctIconFor(entry)
+                        // The trailing slot is the current value, not
+                        // decoration: Font/Language arrive with one from
+                        // the caller; Appearance/Language fall back to
+                        // what this screen can know on its own (the
+                        // identity in force + dark mode, the active
+                        // language) so the row never shows a bare title.
+                        val trailingText = entry.value ?: settingsFallbackValue(
+                            entry = entry,
+                            appearanceValue = appearanceValue,
+                            currentLanguage = currentLanguage
+                        )
+                        // Monochrome row: distinct outlined glyph in
+                        // palette.textSecondary, no saturated well. Keeps
+                        // the 48dp floor, testTag and chevron affordance
+                        // the kit's row provided.
+                        Row(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .heightIn(min = rowMinHeight)
-                                .testTag(entry.tag)
-                        )
+                                .clickable(onClick = entry.onOpen)
+                                .padding(
+                                    horizontal = design.spacing.gutter,
+                                    vertical = 12.dp
+                                )
+                                .testTag(entry.tag),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(12.dp)
+                        ) {
+                            Icon(
+                                imageVector = icon,
+                                contentDescription = null,
+                                tint = palette.textSecondary,
+                                modifier = Modifier.size(22.dp)
+                            )
+                            Text(
+                                text = entry.title,
+                                color = palette.textPrimary,
+                                style = MaterialTheme.typography.bodyLarge,
+                                maxLines = 2,
+                                modifier = Modifier.weight(1f, fill = true)
+                            )
+                            if (!trailingText.isNullOrBlank()) {
+                                Text(
+                                    text = trailingText,
+                                    color = palette.textSecondary,
+                                    style = MaterialTheme.typography.bodyMedium,
+                                    maxLines = 1,
+                                    modifier = Modifier.widthIn(max = 120.dp)
+                                )
+                            }
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                                contentDescription = null,
+                                tint = palette.textSecondary,
+                                modifier = Modifier.size(20.dp)
+                            )
+                        }
                     }
                 }
             }
@@ -287,6 +399,32 @@ fun MoreScreen(
         item(key = "more_bottom_gap") {
             Spacer(Modifier.height(design.spacing.contentBottomGap))
         }
+    }
+}
+
+/**
+ * One distinct outlined glyph per destination, from the single monochrome
+ * line family. Caller-supplied overrides (Settings: Palette/TextFields/
+ * Language) win; section rows resolve by testTag so the five DOCTRINE-slot
+ * entries never reuse the temple glyph; unknown tags fall back to the
+ * slot pair.
+ */
+@Composable
+private fun distinctIconFor(entry: MoreEntry): ImageVector {
+    entry.icon?.let { return it }
+    return when (entry.tag) {
+        "nav_catechism" -> Icons.Outlined.MenuBook
+        "nav_study_doctrine" -> Icons.Outlined.School
+        "nav_study_mary_jesus" -> Icons.Outlined.Favorite
+        "nav_study_history" -> Icons.Outlined.History
+        "nav_questions" -> Icons.Outlined.Help
+        "nav_study_orders" -> Icons.Outlined.Groups
+        "nav_churches_news" -> Icons.Outlined.Newspaper
+        "nav_habits" -> Icons.Outlined.Checklist
+        "nav_spiritual" -> Icons.Outlined.Spa
+        "nav_parishes" -> Icons.Outlined.Church
+        "nav_pilgrimage" -> Icons.Outlined.Place
+        else -> AppIcons.pair(entry.iconSlot).first
     }
 }
 

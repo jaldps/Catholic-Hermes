@@ -174,7 +174,7 @@ fun HomeScreen(
         decodeSampledBitmap(context, "heroes/cathedral_dome.jpg", maxWidthPx = 1080)
     }
     val bannerPhoto = remember(context) {
-        decodeSampledBitmap(context, "heroes/church_window_light.jpg", maxWidthPx = 1080)
+        decodeSampledBitmap(context, "heroes/mary_statue.jpg", maxWidthPx = 1080)
     }
 
     // Hoisted out of the list so the disclosure survives being scrolled off.
@@ -214,7 +214,9 @@ fun HomeScreen(
     val gospelReference = gospel?.citation?.takeIf { it.isNotBlank() } ?: dailyReading.gospelRef
     val gospelExcerpt = gospel?.text?.takeIf { it.isNotBlank() }
         ?: dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
-    val gospelPreview = remember(gospelExcerpt) { gospelExcerpt?.let { firstSentenceOf(it) } }
+    val gospelPreview = remember(gospelExcerpt, currentLanguage) {
+        gospelExcerpt?.let { normalizeExcerptQuotes(firstSentenceOf(it), currentLanguage) }
+    }
     // First reading from the same missal data the "Read Mass" destination
     // opens (dailyReading, with the Vatican feed's first section preferred
     // when it has landed), so the card is populated offline and immediately
@@ -223,7 +225,9 @@ fun HomeScreen(
         ?: dailyReading.firstReadingRef
     val firstReadingExcerpt = firstSection?.text?.takeIf { it.isNotBlank() }
         ?: dailyReading.firstReadingText.get(currentLanguage).takeIf { it.isNotBlank() }
-    val firstReadingPreview = remember(firstReadingExcerpt) { firstReadingExcerpt?.let { firstSentenceOf(it) } }
+    val firstReadingPreview = remember(firstReadingExcerpt, currentLanguage) {
+        firstReadingExcerpt?.let { normalizeExcerptQuotes(firstSentenceOf(it), currentLanguage) }
+    }
     val hasReadings = firstReadingPreview != null || gospelPreview != null
 
     // Pregunta del día: deterministic by date, no stored state — the index is
@@ -316,12 +320,14 @@ fun HomeScreen(
                 )
                 // Light scrim behind the Hoy/date title zone: the title
                 // stays palette.textPrimary, so the photo is lightened to
-                // the paper canvas under it rather than darkened.
+                // the paper canvas under it rather than darkened. The
+                // gradient extends 160dp up the band so the date stays
+                // legible over the busy dome photo.
                 Box(
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
                         .fillMaxWidth()
-                        .height(64.dp)
+                        .height(160.dp)
                         .background(
                             Brush.verticalGradient(
                                 colors = listOf(
@@ -467,7 +473,7 @@ fun HomeScreen(
                     if (!showedFallback) {
                         val homilyFirstLine = dailyReading.homilyReflection.get(currentLanguage)
                             .takeIf { it.isNotBlank() }
-                            ?.let { firstSentenceOf(it) }
+                            ?.let { normalizeExcerptQuotes(firstSentenceOf(it), currentLanguage) }
                         if (!homilyFirstLine.isNullOrBlank()) {
                             Text(
                                 text = "«$homilyFirstLine»",
@@ -898,6 +904,32 @@ private fun firstSentenceOf(text: String): String {
     return if (end != null) trimmed.take(end + 1) else trimmed
 }
 
+/**
+ * Normalizes quote marks inside a scripture excerpt for display. Spanish
+ * (and Portuguese) renderings use « » exclusively, so straight (" ") and
+ * curly (“ ”) quotes from the source — e.g. a Lucas gospel passage that
+ * mixes them with the « » the card itself adds — are folded to « »,
+ * alternating open/close for straight quotes. Other languages keep the
+ * source marks. Already-« » passages pass through untouched.
+ */
+private fun normalizeExcerptQuotes(text: String, language: AppLanguage): String {
+    if (language != AppLanguage.ES && language != AppLanguage.PT) return text
+    val out = StringBuilder(text.length)
+    var openNext = true
+    for (ch in text) {
+        when (ch) {
+            '“' -> out.append('«')
+            '”' -> out.append('»')
+            '"' -> {
+                out.append(if (openNext) '«' else '»')
+                openNext = !openNext
+            }
+            else -> out.append(ch)
+        }
+    }
+    return out.toString()
+}
+
 /** Month names as (ES, EN, PT), indexed by [Calendar.MONTH]. */
 private val SAINT_MONTH_NAMES = listOf(
     Triple("Enero", "January", "Janeiro"),
@@ -1087,7 +1119,7 @@ private fun FidelityCard(
  * green dot in the season's own color beside the season name — above the
  * celebration in a serene weight-400 title and any obligation below.
  * Lettering stays in opaque primary/secondary ink for AAA contrast.
- * When [photo] is present (church_window_light.jpg) it heads the card as a
+ * When [photo] is present (mary_statue.jpg) it heads the card as a
  * cropped strip; when null the banner keeps its existing pill/dot art
  * alone — no layout or tag change either way.
  */
@@ -1122,9 +1154,9 @@ private fun LiturgicalSeasonBanner(
             modifier = Modifier.padding(design.spacing.cardPadding),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            // Photographic strip (church window light) heading the banner;
-            // centre-aligned crop keeps the focal point on the centre
-            // window, so the near-black side panels shrink instead of
+            // Photographic strip (mary statue) heading the banner; the
+            // taller 128dp strip with a centre-aligned crop keeps the
+            // focal point centred instead of the near-black side panels
             // filling ~60% of the strip; text below stays on the raised card.
             photo?.let { windowPhoto ->
                 Image(
@@ -1132,7 +1164,7 @@ private fun LiturgicalSeasonBanner(
                     contentDescription = null,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .height(96.dp)
+                        .height(128.dp)
                         .clip(design.shapes.card)
                         .testTag("liturgical_banner_photo"),
                     contentScale = ContentScale.Crop,

@@ -29,18 +29,18 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Bolt
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Church
-import androidx.compose.material.icons.filled.Delete
-import androidx.compose.material.icons.filled.MenuBook
-import androidx.compose.material.icons.filled.NightsStay
-import androidx.compose.material.icons.filled.Restaurant
-import androidx.compose.material.icons.filled.Schedule
+import androidx.compose.material.icons.outlined.Church
+import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.MenuBook
+import androidx.compose.material.icons.outlined.NightsStay
+import androidx.compose.material.icons.outlined.Restaurant
+import androidx.compose.material.icons.outlined.Schedule
 import androidx.compose.material.icons.outlined.Checklist
 import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.filled.Shield
-import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material.icons.filled.VolumeUp
-import androidx.compose.material.icons.filled.WbSunny
+import androidx.compose.material.icons.outlined.WbSunny
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -242,7 +242,7 @@ fun HabitsAndVirtuesScreen(
                 "Lembretes de oração"
             ),
             onClick = { showReminders = true },
-            leadingIcon = Icons.Filled.Schedule,
+            leadingIcon = Icons.Outlined.Schedule,
             modifier = Modifier
                 .fillMaxWidth()
                 .heightIn(min = MinTouchTarget)
@@ -1056,12 +1056,21 @@ private fun HabitRow(
     }
     val styles = LocalAppTextStyles.current
 
+    // Singular/plural in all three languages: "1 día" not "1 días".
     val streakLine = if (habit.currentStreak > 0) {
-        "\n" + currentLanguage.pick(
-            "${habit.currentStreak} días de fidelidad (Récord: ${habit.bestStreak})",
-            "${habit.currentStreak} days of fidelity (best: ${habit.bestStreak})",
-            "${habit.currentStreak} dias de fidelidade (recorde: ${habit.bestStreak})"
-        )
+        "\n" + if (habit.currentStreak == 1) {
+            currentLanguage.pick(
+                "1 día de fidelidad (Récord: ${habit.bestStreak})",
+                "1 day of fidelity (best: ${habit.bestStreak})",
+                "1 dia de fidelidade (recorde: ${habit.bestStreak})"
+            )
+        } else {
+            currentLanguage.pick(
+                "${habit.currentStreak} días de fidelidad (Récord: ${habit.bestStreak})",
+                "${habit.currentStreak} days of fidelity (best: ${habit.bestStreak})",
+                "${habit.currentStreak} dias de fidelidade (recorde: ${habit.bestStreak})"
+            )
+        }
     } else ""
 
     // Two tags on one row: the habit's card is now the habit's toggle, and a
@@ -1118,7 +1127,7 @@ private fun HabitRow(
                 )
                 Spacer(Modifier.height(1.dp))
                 Text(
-                    text = "${com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage)} · ${habit.description}" + streakLine,
+                    text = habitSubtitleText(habit, currentLanguage) + streakLine,
                     style = styles.rowSubtitle,
                     color = palette.textSecondary
                 )
@@ -1140,7 +1149,7 @@ private fun HabitRow(
                 "Delete custom habit",
                 "Excluir hábito personalizado"
             ),
-            icon = Icons.Default.Delete,
+            icon = Icons.Outlined.Delete,
             subtitle = null,
             onClick = onDeleteCustomHabit,
             modifier = Modifier.heightIn(min = MinTouchTarget)
@@ -1302,15 +1311,51 @@ private fun SpiritualHabitEntity.localizedTitle(language: AppLanguage): String =
     AppLanguage.PT -> titlePt
 }
 
+/**
+ * Single time rendering for a habit row: the localized timeSuggestion is
+ * the only clock shown. If the stored description already restates that
+ * same clock ("Pausa mariana a las 12:00 PM recordando…", timeSuggestion
+ * "12:00 PM"), the clock — with its "a las/at" lead-in — is stripped
+ * from the description, so the row never reads "12:00 · …12:00 PM".
+ * Descriptions without that clock are shown unchanged.
+ */
+private fun habitSubtitleText(habit: SpiritualHabitEntity, language: AppLanguage): String {
+    val localizedTime = com.example.data.models.localizedHabitTime(habit.timeSuggestion, language)
+    val timeMinutes = habitClockMinutes(habit.timeSuggestion)
+    val description = if (timeMinutes != null && habitClockMinutes(habit.description) == timeMinutes) {
+        habit.description
+            .replace(Regex("""(?i)\b(a las|las|à\s+as|as|at)\s+\d{1,2}:\d{2}\s*([AaPp][Mm])?\b"""), "")
+            .replace(Regex("""\b\d{1,2}:\d{2}\s*([AaPp][Mm])?\b"""), "")
+            .replace(Regex("""\s{2,}"""), " ")
+            .trim()
+            .trim('.', ' ', ',', ';')
+            .replaceFirstChar { it.uppercase() }
+    } else {
+        habit.description
+    }
+    return if (description.isBlank()) localizedTime else "$localizedTime · $description"
+}
+
+/** Minutes since midnight for the first clock time in [text], or null. */
+private fun habitClockMinutes(text: String): Int? {
+    val match = Regex("""\b(\d{1,2}):(\d{2})\s*([AaPp][Mm])?\b""").find(text) ?: return null
+    var hour = match.groupValues[1].toInt()
+    val minute = match.groupValues[2].toInt()
+    val meridiem = match.groupValues[3]
+    if (meridiem.equals("p", ignoreCase = true) && hour < 12) hour += 12
+    if (meridiem.equals("a", ignoreCase = true) && hour == 12) hour = 0
+    return hour * 60 + minute
+}
+
 private fun habitIcon(iconName: String): ImageVector = when (iconName) {
-    "wb_sunny" -> Icons.Default.WbSunny
-    "schedule" -> Icons.Default.Schedule
+    "wb_sunny" -> Icons.Outlined.WbSunny
+    "schedule" -> Icons.Outlined.Schedule
     "self_improvement", "rosary" -> DevotionalGlyphs.rosaryOutlined
-    "church" -> Icons.Default.Church
-    "menu_book" -> Icons.Default.MenuBook
-    "restaurant" -> Icons.Default.Restaurant
-    "nights_stay" -> Icons.Default.NightsStay
-    else -> Icons.Default.Star
+    "church" -> Icons.Outlined.Church
+    "menu_book" -> Icons.Outlined.MenuBook
+    "restaurant" -> Icons.Outlined.Restaurant
+    "nights_stay" -> Icons.Outlined.NightsStay
+    else -> Icons.Outlined.Star
 }
 
 private fun categoryLabel(category: String, language: AppLanguage): String = when (category) {

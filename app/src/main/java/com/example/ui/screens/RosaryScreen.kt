@@ -1190,7 +1190,10 @@ fun RosaryScreen(
                         railTag = "prayer_bead_counter",
                         previousTag = "prev_bead_button",
                         nextTag = "next_bead_button",
-                        audioTag = "toggle_prayer_audio_button"
+                        audioTag = "toggle_prayer_audio_button",
+                        // Hero already shows "Paso N de M"; the rail card
+                        // must not repeat that counter.
+                        showStepCounter = false
                     )
                 }
 
@@ -1551,6 +1554,8 @@ private fun GuideControlsCard(
     previousTag: String,
     nextTag: String,
     audioTag: String,
+    // False when a hero already carries the step counter (Holy Rosary).
+    showStepCounter: Boolean = true,
     extra: @Composable ColumnScope.() -> Unit = {}
 ) {
     val design = LocalAppDesign.current
@@ -1599,14 +1604,15 @@ private fun GuideControlsCard(
             },
             modifier = Modifier
                 .widthIn(max = when (design.language) {
-                    // Compact under the photographic hero band: the photo
-                    // carries the visual, this rail stays tappable and small.
-                    DesignLanguage.APPLE -> 168.dp
-                    DesignLanguage.IVE -> 176.dp
+                    // Enlarged ~24dp (max 200dp) so the beads read as
+                    // beads, not as texture: the loop geometry below
+                    // grows with this width.
+                    DesignLanguage.APPLE -> 192.dp
+                    DesignLanguage.IVE -> 200.dp
                 })
                 .testTag(railTag)
                 .semantics {
-                    contentDescription = listOfNotNull(where, step.name, count, stepLabel).joinToString(", ")
+                    contentDescription = listOfNotNull(where, step.name, count, stepLabel.takeIf { showStepCounter }).joinToString(", ")
                     customActions = listOf(
                         CustomAccessibilityAction(previousLabel) {
                             if (index > 0) { onGo(index - 1); true } else false
@@ -1624,24 +1630,32 @@ private fun GuideControlsCard(
         // progress that is only colour and arc is invisible to a reader
         // who cannot see the ring. This line wraps instead of clipping.
         Spacer(Modifier.height(16.dp))
-        // Eyebrow ink: textPrimary at 80% (4.5:1+ on the frosted card in
-        // every identity) — textSecondary and tertiary both read as faint
-        // taupe here, so neither is used for these progress lines.
+        // Eyebrow ink: textSecondary — the "Inicio"/Opening where-line
+        // reads as a secondary label, not as body ink.
         Text(
             text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
             style = styles.sectionEyebrow,
-            color = design.palette.textPrimary.copy(alpha = 0.8f),
+            color = design.palette.textSecondary,
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
-        Spacer(Modifier.height(2.dp))
-        Text(
-            text = (if (eyebrow.isBlank()) stepLabel else eyebrow + " · " + stepLabel) + (count?.let { " · $it" } ?: ""),
-            style = MaterialTheme.typography.bodyLarge,
-            color = design.palette.textPrimary.copy(alpha = 0.8f),
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth()
-        )
+        // Step counter only where no hero already shows it (the Holy
+        // Rosary hero owns "Paso N de M"); the repetition count stays.
+        val progressParts = buildList {
+            if (eyebrow.isNotBlank()) add(eyebrow)
+            if (showStepCounter) add(stepLabel)
+            count?.let { add(it) }
+        }
+        if (progressParts.isNotEmpty()) {
+            Spacer(Modifier.height(2.dp))
+            Text(
+                text = progressParts.joinToString(" · "),
+                style = MaterialTheme.typography.bodyLarge,
+                color = design.palette.textPrimary.copy(alpha = 0.8f),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth()
+            )
+        }
         Spacer(Modifier.height(16.dp))
         if (design.language == DesignLanguage.IVE) {
             Spacer(Modifier.height(16.dp))
@@ -1867,7 +1881,7 @@ private fun BeadRail(
         val geometry = remember(beads, maxWidth, density) {
             with(density) { RosaryGeometry.layout(beads, maxWidth.toPx(), this) }
         }
-        val heightDp = with(density) { geometry.height.toDp() }.coerceAtMost(200.dp)
+        val heightDp = with(density) { geometry.height.toDp() }.coerceAtMost(248.dp)
         val loopTop = with(density) { (geometry.centre.y - geometry.radius).toDp() }
         val loopSize = with(density) { (geometry.radius * 2).toDp() }
 
@@ -2196,18 +2210,18 @@ private class RosaryGeometry(
         fun layout(beads: List<BeadSpec>, width: Float, density: Density): RosaryGeometry = with(density) {
             val ringInset = 10.dp.toPx()
             val top = 8.dp.toPx() + ringInset
-            // Larger loop than before (50dp vs 48dp cap) with much smaller
-            // beads: the old 4.6/7.2dp beads summed wider than the whole
-            // circumference, so spacing went negative and beads overlapped.
-            // Small beads + the wider loop give a positive visual gap on
-            // the loop, and the pendant below uses a >=6dp visual gap.
+            // Larger loop and beads than the texture-like 50dp/2.4dp
+            // sizing: at a 200dp rail the loop radius is 58dp and the
+            // small bead is 2.8dp in radius (5.6dp across), so the
+            // beads read as beads. Radius and beads grew together so
+            // the loop spacing (arc minus diameters) stays positive.
             // Radius/top/bottom are budgeted so geometry height stays
-            // <=200dp and the prayer text below starts clear of the rail.
-            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 50.dp.toPx())
-            val small = 2.4.dp.toPx()
-            val large = 3.8.dp.toPx()
-            val medal = 6.dp.toPx()
-            val crucifixHeight = 22.dp.toPx()
+            // <=248dp and the prayer text below starts clear of the rail.
+            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 58.dp.toPx())
+            val small = 2.8.dp.toPx()
+            val large = 4.2.dp.toPx()
+            val medal = 6.8.dp.toPx()
+            val crucifixHeight = 24.dp.toPx()
             val centre = Offset(width / 2, top + radius)
 
             val kinds = beads.map { it.kind }

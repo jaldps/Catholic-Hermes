@@ -1071,13 +1071,12 @@ private fun HowToPraySection(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(Modifier.weight(1f)) {
-                    // Demoted to the 22sp sectionTitle at SemiBold — the same
-                    // demotion PrayersSectionHeader applies — so this tile
-                    // title no longer dwarfs the prayer rows below it
-                    // (rowTitle, e.g. "Our Father").
+                    // Unified card-title weight: rowTitle (regular), the
+                    // same style FrostedPrayerRow uses for prayer titles
+                    // such as "Padre Nuestro" — no bold/larger outlier.
                     Text(
                         text = currentLanguage.pick("Cómo orar", "How to pray", "Como orar"),
-                        style = styles.sectionTitle.copy(fontWeight = FontWeight.SemiBold),
+                        style = styles.rowTitle,
                         color = design.palette.textPrimary,
                         maxLines = 1,
                         overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
@@ -2676,7 +2675,9 @@ private fun PrayersPhotoHeader(title: String) {
                 bitmap = bitmap,
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
-                // Focal point on the centre candle flame (Expert v3).
+                // Centre-aligned crop: the full candle row stays centred
+                // in frame instead of a candle being cut mid-shape at the
+                // right edge.
                 alignment = Alignment.Center,
                 modifier = Modifier
                     .fillMaxSize()
