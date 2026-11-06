@@ -1537,10 +1537,13 @@ private fun GuideControlsCard(
         // progress that is only colour and arc is invisible to a reader
         // who cannot see the ring. This line wraps instead of clipping.
         Spacer(Modifier.height(6.dp))
+        // Eyebrow ink: textPrimary at 80% (4.5:1+ on the frosted card in
+        // every identity) — textSecondary and tertiary both read as faint
+        // taupe here, so neither is used for these progress lines.
         Text(
             text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
             style = styles.sectionEyebrow,
-            color = design.palette.textSecondary,
+            color = design.palette.textPrimary.copy(alpha = 0.8f),
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
@@ -1548,7 +1551,7 @@ private fun GuideControlsCard(
         Text(
             text = eyebrow + " · " + stepLabel + (count?.let { " · $it" } ?: ""),
             style = MaterialTheme.typography.bodyLarge,
-            color = design.palette.textSecondary,
+            color = design.palette.textPrimary.copy(alpha = 0.8f),
             textAlign = TextAlign.Center,
             modifier = Modifier.fillMaxWidth()
         )
@@ -2080,7 +2083,9 @@ private class RosaryGeometry(
             val small = 4.6.dp.toPx() * unit
             val large = 7.2.dp.toPx() * unit
             val medal = 9.dp.toPx() * unit
-            val crucifixHeight = 38.dp.toPx() * unit
+            // Compact crucifix: it must stay inside the rail so its bar
+            // never strikes through the copy set below it.
+            val crucifixHeight = 28.dp.toPx() * unit
             val centre = Offset(width / 2, top + radius)
 
             val kinds = beads.map { it.kind }
@@ -2133,7 +2138,7 @@ private class RosaryGeometry(
                 upper = i
                 first = false
             }
-            val height = y + previous + 8.dp.toPx()
+            val height = y + previous + 16.dp.toPx()
 
             val ring = buildList {
                 if (medalIndex >= 0) add(medalIndex)

@@ -400,7 +400,7 @@ object DesignTokens {
         accentMuted = Color(0xFFE7F2DC),
         gold = Color(0xFFC9A86A),
         textPrimary = Color(0xFF1C1C1E),
-        textSecondary = Color(0xFF6E6A61),
+        textSecondary = Color(0xFF5F5A52),
         // Darkened from 717A74 (4.22:1 on canvas / 4.40:1 grouped) to
         // clear 4.5:1 on every tonal surface (5.30:1 canvas, 4.90:1 raised).
         textTertiary = Color(0xFF6B665E),

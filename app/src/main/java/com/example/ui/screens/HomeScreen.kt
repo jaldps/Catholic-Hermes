@@ -348,11 +348,47 @@ fun HomeScreen(
                         )
                     }
                 } else {
-                    Text(
-                        text = strings("Lecturas no disponibles sin conexión.", "Readings unavailable offline.", "Leituras indisponíveis offline."),
-                        style = styles.rowSubtitle,
-                        color = palette.textSecondary
-                    )
+                    // Offline fallback: the bundled lectionary carries no
+                    // entry for most ferial days (the repository leaves those
+                    // citations empty rather than inventing them), so the
+                    // card must never show a dead placeholder. The liturgical
+                    // title, season and saint below are always available
+                    // offline — real content instead of an error line.
+                    val celebration = liturgicalDay.celebrationTitle.get(currentLanguage)
+                        .takeIf { it.isNotBlank() }
+                        ?: dailyReading.feastTitle.get(currentLanguage).takeIf { it.isNotBlank() }
+                    val season = liturgicalDay.seasonName.get(currentLanguage)
+                        .takeIf { it.isNotBlank() }
+                        ?: dailyReading.liturgicalSeason.get(currentLanguage).takeIf { it.isNotBlank() }
+                    val saintName = saintOfTheDay.name.get(currentLanguage)
+                        .takeIf { it.isNotBlank() }
+                    val saintTitle = saintOfTheDay.title.get(currentLanguage)
+                        .takeIf { it.isNotBlank() }
+                    if (celebration != null) {
+                        Text(
+                            text = celebration,
+                            style = styles.rowTitle,
+                            color = palette.textPrimary
+                        )
+                        Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    }
+                    if (season != null) {
+                        Text(
+                            text = season,
+                            style = styles.rowSubtitle,
+                            color = palette.textSecondary
+                        )
+                    }
+                    if (saintName != null) {
+                        if (celebration != null || season != null) {
+                            Spacer(Modifier.height(design.spacing.cardGap / 2))
+                        }
+                        Text(
+                            text = saintName + (saintTitle?.let { " · $it" } ?: ""),
+                            style = styles.rowSubtitle,
+                            color = palette.textSecondary
+                        )
+                    }
                 }
                 Spacer(Modifier.height(design.spacing.cardGap))
                 // The hero action: one filled primary button to the full Mass.
