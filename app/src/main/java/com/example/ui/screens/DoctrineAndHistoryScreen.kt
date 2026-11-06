@@ -5,6 +5,11 @@ import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
 import androidx.compose.foundation.background
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.layout.Arrangement
@@ -63,6 +68,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
@@ -172,6 +179,35 @@ fun DoctrineAndHistoryScreen(
     // The large title, then the selector — the order every identity's own
     // platform uses. Both scroll away with the pane beneath them.
     val header: LazyListScope.() -> Unit = {
+        // Entrance hero: full-bleed church-window photograph band with a
+        // fade into the surface at its foot, above the pane title.
+        // Decorative only; the title and panes carry the text.
+        item(key = "doctrine_hero") {
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(168.dp)
+                    .background(design.palette.selectionTint)
+                    .testTag("doctrine_hero_photo")
+            ) {
+                AssetPhoto(
+                    assetPath = "heroes/church_window_light.jpg",
+                    contentDescription = null,
+                    modifier = Modifier.matchParentSize().alpha(0.9f)
+                )
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(
+                            Brush.verticalGradient(
+                                0f to Color.Transparent,
+                                0.55f to design.palette.groupedSurface.copy(alpha = 0.35f),
+                                1f to design.palette.groupedSurface
+                            )
+                        )
+                )
+            }
+        }
         item(key = "doctrine_title") {
             if (directoryOnly) {
                 AppScreenTitle(
@@ -2887,3 +2923,30 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
 /** Opens [uri] in whatever handles maps, reporting whether anything did. */
 private fun Context.openMaps(uri: String): Boolean =
     runCatching { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri))) }.isSuccess
+
+/**
+ * Photographic hero art bundled under assets/heroes/. Decoded once per asset
+ * path; a missing or undecodable asset draws nothing, so the surface beneath
+ * shows through and text legibility never depends on the photo loading.
+ */
+@Composable
+private fun AssetPhoto(
+    assetPath: String,
+    contentDescription: String?,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+    val bitmap = remember(assetPath) {
+        runCatching {
+            context.assets.open(assetPath).use { BitmapFactory.decodeStream(it) }?.asImageBitmap()
+        }.getOrNull()
+    }
+    if (bitmap != null) {
+        Image(
+            bitmap = bitmap,
+            contentDescription = contentDescription,
+            contentScale = ContentScale.Crop,
+            modifier = modifier
+        )
+    }
+}

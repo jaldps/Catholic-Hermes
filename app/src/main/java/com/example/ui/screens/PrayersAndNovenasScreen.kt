@@ -2,6 +2,7 @@ package com.example.ui.screens
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -61,8 +62,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.selected
@@ -75,7 +79,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import coil.compose.AsyncImage
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.liturgy.LiturgicalCalendar
 import com.example.data.liturgy.LiturgicalDayInfo
@@ -98,8 +101,6 @@ import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppOrnament
 import com.example.ui.design.AppPrimaryButton
-import com.example.ui.components.IllustratedScreenHeader
-import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppScreenTitle
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
@@ -107,6 +108,7 @@ import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.theme.ListStyle
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import android.graphics.BitmapFactory
 import java.text.DateFormat
 import java.util.Date
 import java.util.Locale
@@ -143,6 +145,12 @@ private val IveGutter = 20.dp
 
 /** Category tiles: 18dp radius, frosted. */
 private val CategoryTileRadius = RoundedCornerShape(18.dp)
+
+/** Prayers header: full-bleed votive-candle photo band above the title. */
+private val PrayersPhotoBandHeight = 168.dp
+
+/** Bundled hero photos are decoded at most this many pixels on a side. */
+private const val HeroMaxDimension = 1080
 
 /** Novena image cards: full-bleed photo, 20dp radius. */
 private val NovenaCardRadius = RoundedCornerShape(20.dp)
@@ -238,7 +246,7 @@ fun PrayersAndNovenasScreen(
     // are the first rows of whichever list is showing, so they scroll away.
     val header: LazyListScope.() -> Unit = {
         item(key = "prayers_screen_title") {
-            IllustratedScreenHeader(title = currentLanguage.pick("Oraciones", "Prayers", "Orações"), subject = SacredSubject.PRAYER)
+            PrayersPhotoHeader(title = currentLanguage.pick("Oraciones", "Prayers", "Orações"))
         }
         item(key = "prayers_screen_tabs") {
             AppSegmentedTabs(
@@ -1282,6 +1290,7 @@ private fun DivineMercyChapletView(
         else -> hourOfMercyText
     }
     val listenLabel = currentLanguage.pick("Escuchar", "Listen", "Ouvir")
+    val heroBitmap = rememberHeroBitmap("heroes/divine_mercy.jpg")
 
     LazyColumn(Modifier.fillMaxSize()) {
         item {
@@ -1304,6 +1313,35 @@ private fun DivineMercyChapletView(
                     "Revelado a santa Faustina em Vilna, 1935"
                 )
             )
+        }
+
+        item {
+            // Bundled Divine Mercy hero plate under the title.
+            Box(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = IveGutter)
+                    .height(NovenaPlateHeight)
+                    .clip(design.shapes.cardLarge)
+                    .background(design.palette.selectionTint)
+                    .testTag("chaplet_hero")
+            ) {
+                if (heroBitmap != null) {
+                    Image(
+                        bitmap = heroBitmap,
+                        contentDescription = currentLanguage.pick(
+                            "Coronilla de la Divina Misericordia",
+                            "Chaplet of Divine Mercy",
+                            "Terço da Divina Misericórdia"
+                        ),
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .clip(design.shapes.cardLarge)
+                    )
+                }
+            }
+            Spacer(Modifier.height(design.spacing.cardGap))
         }
 
         item {
@@ -1848,6 +1886,7 @@ private fun NovenaCard(
     }
 
     // Full-bleed photo, 20dp radius, bottom scrim with overlaid title.
+    val heroBitmap = rememberHeroBitmap(novenaHeroAsset(novena))
     Box(
         modifier
             .height(NovenaCardHeight)
@@ -1856,23 +1895,25 @@ private fun NovenaCard(
             .clickable(onClick = onOpen)
             .testTag("novena_card_${novena.id}")
     ) {
-        novena.imageUrl?.takeIf { it.isNotBlank() }?.let { url ->
-            AsyncImage(
-                model = url,
+        if (heroBitmap != null) {
+            Image(
+                bitmap = heroBitmap,
                 contentDescription = novena.title.get(currentLanguage),
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxSize()
                     .clip(NovenaCardRadius)
             )
-        } ?: Icon(
-            imageVector = Icons.Default.Church,
-            contentDescription = null,
-            tint = Color.White.copy(alpha = 0.85f),
-            modifier = Modifier
-                .size(40.dp)
-                .align(Alignment.Center)
-        )
+        } else {
+            Icon(
+                imageVector = Icons.Default.Church,
+                contentDescription = null,
+                tint = Color.White.copy(alpha = 0.85f),
+                modifier = Modifier
+                    .size(40.dp)
+                    .align(Alignment.Center)
+            )
+        }
         // Bottom scrim, full bleed: transparent at the top so the
         // photograph shows, darkening through the overlaid text block so
         // white title/patron/progress stay legible on any image.
@@ -1966,6 +2007,8 @@ private fun NovenaDayView(
     val guidance = dayData.intentionGuidance.get(currentLanguage)
     val description = novena.description.get(currentLanguage)
 
+    val heroBitmap = rememberHeroBitmap(novenaHeroAsset(novena))
+
     LazyColumn(Modifier.fillMaxSize()) {
         item {
             Row(
@@ -2021,19 +2064,20 @@ private fun NovenaDayView(
             )
         }
 
-        novena.imageUrl?.let { url ->
-            item {
-                // Tonal ground so the plate's shape reads while it loads.
-                Box(
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = IveGutter)
-                        .height(NovenaPlateHeight)
-                        .clip(design.shapes.cardLarge)
-                        .background(design.palette.selectionTint)
-                ) {
-                    AsyncImage(
-                        model = url,
+        // Bundled hero plate (same mapping as the index cards): tonal
+        // ground shows until the decoded photo fills the frame.
+        item {
+            Box(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = IveGutter)
+                    .height(NovenaPlateHeight)
+                    .clip(design.shapes.cardLarge)
+                    .background(design.palette.selectionTint)
+            ) {
+                if (heroBitmap != null) {
+                    Image(
+                        bitmap = heroBitmap,
                         contentDescription = novena.title.get(currentLanguage),
                         contentScale = ContentScale.Crop,
                         modifier = Modifier
@@ -2041,8 +2085,8 @@ private fun NovenaDayView(
                             .clip(design.shapes.cardLarge)
                     )
                 }
-                Spacer(Modifier.height(design.spacing.sectionGap / 2))
             }
+            Spacer(Modifier.height(design.spacing.sectionGap / 2))
         }
 
         if (description.isNotBlank()) {
@@ -2558,6 +2602,98 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
     AppLanguage.ES -> es
     AppLanguage.EN -> en
     AppLanguage.PT -> pt
+}
+
+// ------------------------------------------------------ bundled hero photos
+
+/**
+ * Decodes a bundled `assets/heroes/` photo once per [assetPath], sampled
+ * down to at most [HeroMaxDimension]px on either side so a 246-card index
+ * never holds full-resolution bitmaps. Returns null when the asset is
+ * missing or unreadable; callers keep their tonal/placeholder ground.
+ */
+@Composable
+private fun rememberHeroBitmap(assetPath: String): ImageBitmap? {
+    val context = LocalContext.current
+    return remember(assetPath) {
+        try {
+            val bytes = context.assets.open(assetPath).use { it.readBytes() }
+            val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, bounds)
+            var sample = 1
+            while (
+                bounds.outWidth / sample > HeroMaxDimension ||
+                bounds.outHeight / sample > HeroMaxDimension
+            ) {
+                sample *= 2
+            }
+            val options = BitmapFactory.Options().apply { inSampleSize = sample }
+            BitmapFactory.decodeByteArray(bytes, 0, bytes.size, options)?.asImageBitmap()
+        } catch (_: Exception) {
+            null
+        }
+    }
+}
+
+/**
+ * Bundled photo for a novena: the Divine Mercy novena (id or any-language
+ * title containing "misericord") gets the Divine Mercy image; a novena
+ * without a shipped photo URL falls back to the Marian statue default;
+ * every other novena uses the votive candles. The remote `imageUrl` is
+ * never fetched — the bundled bytes are always available offline.
+ */
+private fun novenaHeroAsset(novena: Novena): String {
+    val names = listOf(novena.id, novena.title.es, novena.title.en, novena.title.pt)
+    return when {
+        names.any { it.contains("misericord", ignoreCase = true) } -> "heroes/divine_mercy.jpg"
+        novena.imageUrl.isNullOrBlank() -> "heroes/mary_statue.jpg"
+        else -> "heroes/votive_candles.jpg"
+    }
+}
+
+/**
+ * Prayers header: a full-bleed votive-candle photo band that fades into
+ * the canvas at its foot, with the screen title overlaid on the fade so
+ * the photo and the word share one block. Replaces the vector header art.
+ */
+@Composable
+private fun PrayersPhotoHeader(title: String) {
+    val palette = LocalAppDesign.current.palette
+    val bitmap = rememberHeroBitmap("heroes/votive_candles.jpg")
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .height(PrayersPhotoBandHeight)
+            .background(palette.selectionTint)
+    ) {
+        if (bitmap != null) {
+            Image(
+                bitmap = bitmap,
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .fillMaxSize()
+                    .testTag("screen_header_illustration")
+            )
+        }
+        // Fade: transparent over the photograph, opaque canvas at the
+        // foot so the title below it sits on the page ground.
+        Box(
+            Modifier
+                .align(Alignment.BottomCenter)
+                .fillMaxWidth()
+                .height(88.dp)
+                .background(
+                    Brush.verticalGradient(
+                        listOf(Color.Transparent, palette.canvas)
+                    )
+                )
+        )
+        AppScreenTitle(
+            title = title,
+            modifier = Modifier.align(Alignment.BottomStart)
+        )
+    }
 }
 
 // ------------------------------------------------------- novena progress

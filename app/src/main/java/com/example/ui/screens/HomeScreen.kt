@@ -5,13 +5,17 @@ import androidx.compose.runtime.produceState
 import com.example.data.liturgy.LiturgicalCalendar
 import com.example.data.news.VaticanGospelFetcher
 import com.example.data.news.ReadingsResult
+import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.BorderStroke
@@ -75,13 +79,15 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawWithContent
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -103,8 +109,6 @@ import com.example.ui.design.AppListRow
 import com.example.ui.design.AppPrimaryButton
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.components.TextFormat
-import com.example.ui.components.SacredArt
-import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppSectionHeader
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
@@ -159,6 +163,19 @@ fun HomeScreen(
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
+
+    // Photographic heroes (assets/heroes/), decoded once off the composition
+    // path. Hoisted unconditionally to the top of HomeScreen — never inside
+    // a LazyColumn item or a conditional branch (slot-table crash). Photo
+    // for both identities: no vector gate, the same hero reads in Ive and
+    // Apple. Null (asset missing / decode failure in a test host) falls
+    // back to the canvas gradient band, keeping the header tag present.
+    val heroPhoto = remember(context) {
+        decodeSampledBitmap(context, "heroes/cathedral_dome.jpg", maxWidthPx = 1080)
+    }
+    val bannerPhoto = remember(context) {
+        decodeSampledBitmap(context, "heroes/church_window_light.jpg", maxWidthPx = 1080)
+    }
 
     // Hoisted out of the list so the disclosure survives being scrolled off.
     var meditationExpanded by rememberSaveable { mutableStateOf(false) }
@@ -245,36 +262,62 @@ fun HomeScreen(
         contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 16.dp)
     ) {
         item {
-            // Photographic hero, Ive reference: the day's sacred art fills
-            // the full ~180dp band right-aligned, over a vertical gradient
-            // (art colour -> paper canvas) so the hero melts into the page
-            // instead of ending in a hard frame. Transparent art lets the
-            // gradient show through; the title rides over it, weight 400.
+            // Photographic hero: the cathedral dome fills the full-width
+            // ~220dp band at the top of the header area, melting into the
+            // paper canvas through a vertical gradient (photo -> canvas)
+            // so there is no hard frame edge. Title/date ride overlaid
+            // left, low in the faded zone where the canvas blend keeps the
+            // ink legible. screen_header_illustration stays on the photo
+            // (or its gradient fallback box when decode fails).
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(180.dp)
-                    .background(
-                        Brush.verticalGradient(
-                            listOf(
-                                lerp(palette.accentMuted, palette.gold, 0.25f),
-                                palette.canvas
+                    .height(220.dp)
+                    .background(palette.canvas)
+            ) {
+                val hero = heroPhoto
+                if (hero != null) {
+                    Image(
+                        bitmap = hero,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .testTag("screen_header_illustration"),
+                        contentScale = ContentScale.Crop
+                    )
+                } else {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(
+                                Brush.verticalGradient(
+                                    listOf(
+                                        palette.accentMuted,
+                                        palette.canvas
+                                    )
+                                )
+                            )
+                            .testTag("screen_header_illustration")
+                    )
+                }
+                // Fade: clear over the upper photo, canvas by the foot of
+                // the band, so the hero dissolves into the page.
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    Color.Transparent,
+                                    palette.canvas
+                                )
                             )
                         )
-                    )
-            ) {
-                SacredArt(
-                    SacredSubject.DAY,
-                    Modifier
-                        .size(180.dp)
-                        .align(Alignment.CenterEnd)
-                        .testTag("screen_header_illustration"),
-                    transparentBackground = true
                 )
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .align(Alignment.CenterStart)
+                        .align(Alignment.BottomStart)
                         .padding(
                             horizontal = design.spacing.gutter,
                             vertical = 24.dp
@@ -320,6 +363,7 @@ fun HomeScreen(
                     liturgicalDay.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
                 ).joinToString("\n"),
                 accentColorHex = liturgicalDay.liturgicalColorHex,
+                photo = bannerPhoto,
                 modifier = Modifier.testTag("liturgical_calendar_widget")
             )
             Spacer(Modifier.height(16.dp))
@@ -799,6 +843,36 @@ private fun Modifier.frostedCardChrome(): Modifier {
         }
 }
 
+/**
+ * Decodes an asset JPEG down-sampled so its width does not exceed
+ * [maxWidthPx] (power-of-two [BitmapFactory.Options.inSampleSize]), so a
+ * ~1.7MB photographic hero set never lands full-resolution on memory-
+ * constrained devices. Returns null on any failure (missing asset, host
+ * without a real decoder in tests) so callers fall back to a plain
+ * gradient band instead of crashing.
+ */
+private fun decodeSampledBitmap(
+    context: Context,
+    assetPath: String,
+    maxWidthPx: Int = 1080
+): ImageBitmap? = try {
+    val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
+    context.assets.open(assetPath).use { BitmapFactory.decodeStream(it, null, bounds) }
+    if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
+        null
+    } else {
+        var sampleSize = 1
+        while (bounds.outWidth / sampleSize > maxWidthPx) sampleSize *= 2
+        val options = BitmapFactory.Options().apply { inSampleSize = sampleSize }
+        val bitmap: Bitmap? = context.assets.open(assetPath).use {
+            BitmapFactory.decodeStream(it, null, options)
+        }
+        bitmap?.asImageBitmap()
+    }
+} catch (_: Exception) {
+    null
+}
+
 /** First sentence of [text]: up to the first sentence-ending punctuation. */
 private fun firstSentenceOf(text: String): String {
     val trimmed = text.trim()
@@ -995,13 +1069,17 @@ private fun FidelityCard(
  * green dot in the season's own color beside the season name — above the
  * celebration in a serene weight-400 title and any obligation below.
  * Lettering stays in opaque primary/secondary ink for AAA contrast.
+ * When [photo] is present (church_window_light.jpg) it heads the card as a
+ * cropped strip; when null the banner keeps its existing pill/dot art
+ * alone — no layout or tag change either way.
  */
 @Composable
 private fun LiturgicalSeasonBanner(
     title: String,
     body: String?,
     accentColorHex: Long?,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    photo: ImageBitmap? = null
 ) {
     val design = LocalAppDesign.current
     val palette = design.palette
@@ -1026,6 +1104,20 @@ private fun LiturgicalSeasonBanner(
             modifier = Modifier.padding(design.spacing.cardPadding),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
+            // Photographic strip (church window light) heading the banner;
+            // text below stays on the raised card for AAA contrast.
+            photo?.let { windowPhoto ->
+                Image(
+                    bitmap = windowPhoto,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(96.dp)
+                        .clip(design.shapes.card)
+                        .testTag("liturgical_banner_photo"),
+                    contentScale = ContentScale.Crop
+                )
+            }
             // Liturgical-time pill: dot + season name on a tinted capsule.
             Box(
                 modifier = Modifier

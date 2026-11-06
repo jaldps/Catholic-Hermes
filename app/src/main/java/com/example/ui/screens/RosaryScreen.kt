@@ -81,6 +81,12 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.foundation.background
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.CircleShape
@@ -109,8 +115,6 @@ import com.example.data.repository.LitanyOfLoreto
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
 import com.example.ui.components.MenuPickerRow
-import com.example.ui.components.SacredArt
-import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
@@ -1136,6 +1140,36 @@ fun RosaryScreen(
                     val currentDecade = currentMystery.decades[decadeIndex]
                     item {
                         Spacer(Modifier.height(design.spacing.cardGap))
+                        // Mystery hero: votive-candle photograph band above
+                        // the decade card, fading into the card surface at
+                        // its foot. Decorative only; the card carries text.
+                        Box(
+                            modifier = Modifier
+                                .padding(horizontal = design.spacing.gutter)
+                                .fillMaxWidth()
+                                .height(144.dp)
+                                .clip(design.shapes.card)
+                                .background(palette.selectionTint)
+                                .testTag("mystery_hero_photo")
+                        ) {
+                            AssetPhoto(
+                                assetPath = "heroes/votive_candles.jpg",
+                                contentDescription = null,
+                                modifier = Modifier.matchParentSize().alpha(0.9f)
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .matchParentSize()
+                                    .background(
+                                        Brush.verticalGradient(
+                                            0f to Color.Transparent,
+                                            0.6f to palette.raised.copy(alpha = 0.45f),
+                                            1f to palette.raised
+                                        )
+                                    )
+                            )
+                        }
+                        Spacer(Modifier.height(design.spacing.cardGap))
                         AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
                             CardHeading(
                                 eyebrow = lang.pick(
@@ -1539,10 +1573,11 @@ private fun GuideControlsCard(
             )
             Spacer(Modifier.height(16.dp))
         }
-        // Ive reference audio player: the prayer text sits over full-bleed
-        // SacredArt (faint, behind), with a bottom gradient scrim fading
-        // to the card surface so the ink stays legible over the art.
-        // The art clips to frame and never obscures text (scrim + alpha).
+        // Ive reference audio player: the prayer text sits over a full-bleed
+        // rosary-pearls photograph (alpha 0.85, behind), with a white
+        // gradient scrim fading to the card surface so the ink stays
+        // legible over the photo. The photo clips to frame and never
+        // obscures text (scrim + alpha); it draws behind the content.
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -1550,20 +1585,20 @@ private fun GuideControlsCard(
                 .testTag("prayer_text_art")
         ) {
             if (design.language == DesignLanguage.IVE) {
-                SacredArt(
-                    subject = SacredSubject.ROSARY,
+                AssetPhoto(
+                    assetPath = "heroes/rosary_pearls.jpg",
+                    contentDescription = null,
                     modifier = Modifier
                         .matchParentSize()
-                        .alpha(0.38f),
-                    transparentBackground = true
+                        .alpha(0.85f)
                 )
                 Box(
                     modifier = Modifier
                         .matchParentSize()
                         .background(
                             Brush.verticalGradient(
-                                0f to Color.Transparent,
-                                0.55f to design.palette.raised.copy(alpha = 0.35f),
+                                0f to Color.White.copy(alpha = 0.25f),
+                                0.55f to Color.White.copy(alpha = 0.6f),
                                 1f to design.palette.raised
                             )
                         )
@@ -2440,3 +2475,30 @@ private fun rubricated(sign: String, text: String, rubric: Color): AnnotatedStri
         append("\u2002")
         append(text)
     }
+
+/**
+ * Photographic hero art bundled under assets/heroes/. Decoded once per asset
+ * path; a missing or undecodable asset draws nothing, so the surface beneath
+ * shows through and text legibility never depends on the photo loading.
+ */
+@Composable
+private fun AssetPhoto(
+    assetPath: String,
+    contentDescription: String?,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+    val bitmap = remember(assetPath) {
+        runCatching {
+            context.assets.open(assetPath).use { BitmapFactory.decodeStream(it) }?.asImageBitmap()
+        }.getOrNull()
+    }
+    if (bitmap != null) {
+        Image(
+            bitmap = bitmap,
+            contentDescription = contentDescription,
+            contentScale = ContentScale.Crop,
+            modifier = modifier
+        )
+    }
+}

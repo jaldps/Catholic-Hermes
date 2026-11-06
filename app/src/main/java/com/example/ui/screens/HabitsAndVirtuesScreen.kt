@@ -2,6 +2,12 @@ package com.example.ui.screens
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
+import android.graphics.BitmapFactory
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.shape.CircleShape
@@ -39,8 +45,6 @@ import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.outlined.Checklist
-import com.example.ui.components.SacredArt
-import com.example.ui.components.SacredSubject
 import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.Star
@@ -927,27 +931,27 @@ private fun FidelityCard(
 
     AppCard(modifier = modifier.padding(horizontal = design.spacing.gutter)) {
         // Ive reference (screen 10): warm paper hero fading behind the
-        // ring. Faint SacredArt (votive candles for the rule kept) clipped
-        // to frame, with a vertical scrim fading it into the card's frosted
-        // surface so the ring and counts stay legible over the art. The art
-        // never obscures text: scrim + low alpha (Rosary's audio-player
-        // idiom), and it draws behind the content, not over it.
+        // ring. A candle-prayer photograph clipped to frame, with a
+        // vertical fade scrim melting it into the card's frosted surface
+        // so the ring and counts stay legible over the photo. The photo
+        // never obscures text: scrim + alpha, and it draws behind the
+        // content, not over it.
         Box(Modifier.fillMaxWidth()) {
-            SacredArt(
-                subject = SacredSubject.PRAYER,
+            AssetPhoto(
+                assetPath = "heroes/candle_prayer.jpg",
+                contentDescription = null,
                 modifier = Modifier
                     .matchParentSize()
-                    .alpha(0.38f)
-                    .testTag("fidelity_hero_art"),
-                transparentBackground = true
+                    .alpha(0.85f)
+                    .testTag("fidelity_hero_art")
             )
             Box(
                 modifier = Modifier
                     .matchParentSize()
                     .background(
                         Brush.verticalGradient(
-                            0f to Color.Transparent,
-                            0.55f to design.palette.groupedSurface.copy(alpha = 0.35f),
+                            0f to design.palette.groupedSurface.copy(alpha = 0.45f),
+                            0.55f to design.palette.groupedSurface.copy(alpha = 0.65f),
                             1f to design.palette.groupedSurface
                         )
                     )
@@ -1516,3 +1520,30 @@ private val MarkerSize = 24.dp
 
 /** M3 minimum touch target; rows also honour the identity's rowMinHeight. */
 private val MinTouchTarget = 48.dp
+
+/**
+ * Photographic hero art bundled under assets/heroes/. Decoded once per asset
+ * path; a missing or undecodable asset draws nothing, so the surface beneath
+ * shows through and text legibility never depends on the photo loading.
+ */
+@Composable
+private fun AssetPhoto(
+    assetPath: String,
+    contentDescription: String?,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+    val bitmap = remember(assetPath) {
+        runCatching {
+            context.assets.open(assetPath).use { BitmapFactory.decodeStream(it) }?.asImageBitmap()
+        }.getOrNull()
+    }
+    if (bitmap != null) {
+        Image(
+            bitmap = bitmap,
+            contentDescription = contentDescription,
+            contentScale = ContentScale.Crop,
+            modifier = modifier
+        )
+    }
+}
