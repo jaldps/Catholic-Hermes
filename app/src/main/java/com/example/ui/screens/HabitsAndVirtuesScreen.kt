@@ -936,22 +936,28 @@ private fun FidelityCard(
         // so the ring and counts stay legible over the photo. The photo
         // never obscures text: scrim + alpha, and it draws behind the
         // content, not over it.
-        Box(Modifier.fillMaxWidth()) {
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(design.shapes.card)
+        ) {
             AssetPhoto(
                 assetPath = "heroes/candle_prayer.jpg",
                 contentDescription = null,
                 modifier = Modifier
                     .matchParentSize()
+                    .clip(design.shapes.card)
                     .alpha(0.85f)
                     .testTag("fidelity_hero_art")
             )
             Box(
                 modifier = Modifier
                     .matchParentSize()
+                    .clip(design.shapes.card)
                     .background(
                         Brush.verticalGradient(
-                            0f to design.palette.groupedSurface.copy(alpha = 0.45f),
-                            0.55f to design.palette.groupedSurface.copy(alpha = 0.65f),
+                            0f to design.palette.groupedSurface.copy(alpha = 0.88f),
+                            0.55f to design.palette.groupedSurface.copy(alpha = 0.93f),
                             1f to design.palette.groupedSurface
                         )
                     )
@@ -964,7 +970,7 @@ private fun FidelityCard(
             Text(
                 text = caps(currentLanguage.pick("Fidelidad espiritual", "Spiritual fidelity", "Fidelidade espiritual")),
                 style = styles.sectionEyebrow,
-                color = palette.textSecondary
+                color = palette.textPrimary
             )
             Spacer(Modifier.height(design.spacing.cardGap))
             FidelityRing(
@@ -1003,7 +1009,7 @@ private fun FidelityCard(
                     )
                 },
                 style = styles.rowSubtitle,
-                color = palette.textSecondary
+                color = palette.textPrimary
             )
             }
         }
@@ -1108,7 +1114,7 @@ private fun FidelityRing(
                 Text(
                     text = "$completedCount/$totalCount",
                     style = styles.rowSubtitle,
-                    color = palette.textSecondary,
+                    color = palette.textPrimary,
                     maxLines = 1
                 )
             }
