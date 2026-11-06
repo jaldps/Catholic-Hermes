@@ -6,7 +6,6 @@ import com.example.data.liturgy.LiturgicalCalendar
 import com.example.data.news.VaticanGospelFetcher
 import com.example.data.news.ReadingsResult
 import android.content.Intent
-import android.net.Uri
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
@@ -15,6 +14,7 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -40,17 +40,14 @@ import androidx.compose.material.icons.filled.Church
 import androidx.compose.material.icons.filled.FormatQuote
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.MenuBook
-import androidx.compose.material.icons.filled.NearMe
 import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Share
-import androidx.compose.material.icons.filled.TextFields
 import androidx.compose.material.icons.outlined.Checklist
 import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.filled.Star
@@ -73,8 +70,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.clipToBounds
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -104,6 +106,7 @@ import com.example.ui.components.TextFormat
 import com.example.ui.components.SacredArt
 import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppSectionHeader
+import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
@@ -242,44 +245,61 @@ fun HomeScreen(
         contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 16.dp)
     ) {
         item {
-            // Serene large title per the Ive reference: styles.screenTitle at
-            // weight 400 keeps its tight letter-spacing, the date rides below
-            // as the subtitle, and the day's art stays at the trailing edge.
-            Row(
-                modifier = Modifier.fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(top = design.spacing.headerTopGap, bottom = 10.dp),
-                verticalAlignment = Alignment.CenterVertically
+            // Photographic hero, Ive reference: the day's sacred art fills
+            // the full ~180dp band right-aligned, over a vertical gradient
+            // (art colour -> paper canvas) so the hero melts into the page
+            // instead of ending in a hard frame. Transparent art lets the
+            // gradient show through; the title rides over it, weight 400.
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(180.dp)
+                    .background(
+                        Brush.verticalGradient(
+                            listOf(
+                                lerp(palette.accentMuted, palette.gold, 0.25f),
+                                palette.canvas
+                            )
+                        )
+                    )
             ) {
-                Column(Modifier.weight(1f)) {
-                    Text(
-                        text = strings("Hoy", "Today", "Hoje"),
-                        style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
-                        color = palette.textPrimary,
-                        maxLines = 1
-                    )
-                    Spacer(Modifier.height(2.dp))
-                    Text(
-                        text = strings(
-                            "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
-                            "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
-                            "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
+                SacredArt(
+                    SacredSubject.DAY,
+                    Modifier
+                        .size(180.dp)
+                        .align(Alignment.CenterEnd)
+                        .testTag("screen_header_illustration"),
+                    transparentBackground = true
+                )
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .align(Alignment.CenterStart)
+                        .padding(
+                            horizontal = design.spacing.gutter,
+                            vertical = 24.dp
                         ),
-                        style = styles.screenSubtitle,
-                        color = palette.textSecondary,
-                        maxLines = 1
-                    )
-                }
-                Spacer(Modifier.width(12.dp))
-                Box(
-                    modifier = Modifier.clipToBounds().padding(end = 4.dp),
-                    contentAlignment = Alignment.Center
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    SacredArt(
-                        SacredSubject.DAY,
-                        Modifier.size(96.dp).testTag("screen_header_illustration"),
-                        transparentBackground = true
-                    )
+                    Column(Modifier.weight(1f)) {
+                        Text(
+                            text = strings("Hoy", "Today", "Hoje"),
+                            style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
+                            color = palette.textPrimary,
+                            maxLines = 1
+                        )
+                        Spacer(Modifier.height(2.dp))
+                        Text(
+                            text = strings(
+                                "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}",
+                                "${liturgicalDay.monthName} ${liturgicalDay.dayOfMonth}",
+                                "${liturgicalDay.dayOfMonth} de ${liturgicalDay.monthName.lowercase()}"
+                            ),
+                            style = styles.screenSubtitle,
+                            color = palette.textSecondary,
+                            maxLines = 1
+                        )
+                    }
                 }
             }
         }
@@ -312,7 +332,7 @@ fun HomeScreen(
         item {
             AppCard(
                 modifier = Modifier.padding(horizontal = design.spacing.gutter)
-                    .shadow(6.dp, design.shapes.card)
+                    .frostedCardChrome()
                     .testTag("daily_mass_card")
             ) {
                 CardHeading(
@@ -444,6 +464,7 @@ fun HomeScreen(
                     modifier = Modifier
                         .padding(horizontal = design.spacing.gutter)
                         .padding(top = design.spacing.cardGap)
+                        .frostedCardChrome()
                 ) {
                     Text(
                         text = meditation.orEmpty(),
@@ -462,7 +483,7 @@ fun HomeScreen(
             AppCard(
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
-                    .shadow(6.dp, design.shapes.card)
+                    .frostedCardChrome()
                     .testTag("verse_of_the_day_card")
             ) {
                 CardHeading(
@@ -496,6 +517,7 @@ fun HomeScreen(
             AppCard(
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
+                    .frostedCardChrome()
                     .testTag("home_daily_question")
             ) {
                 CardHeading(
@@ -568,6 +590,7 @@ fun HomeScreen(
             AppCard(
                 modifier = Modifier
                     .padding(horizontal = design.spacing.gutter)
+                    .frostedCardChrome()
                     .testTag("saint_of_the_day_card")
             ) {
                 CardHeading(
@@ -672,25 +695,9 @@ fun HomeScreen(
             Spacer(Modifier.height(16.dp))
         }
 
-        // Nearby parishes, straight out to the device's map app.
-        item {
-            val openNearbyChurches = {
-                runCatching {
-                    context.startActivity(
-                        Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=parroquia+catolica"))
-                    )
-                }
-                Unit
-            }
-            AppListGroup {
-                AppListRow(
-                    title = strings("Iglesias cercanas", "Nearby churches", "Igrejas próximas"),
-                    leadingIcon = Icons.Default.NearMe,
-                    onClick = openNearbyChurches,
-                    modifier = Modifier.testTag("home_nearby_churches_banner")
-                )
-            }
-        }
+        // Subtraction: the lone "Nearby churches" row duplicated the
+        // Church Directory shortcut below (and left the device map app),
+        // so it was cut — Directory is its one home.
 
         item {
             AppSectionHeader(
@@ -741,36 +748,9 @@ fun HomeScreen(
                         modifier = Modifier.weight(1f)
                     )
                 }
-                ShortcutTile(
-                    label = strings("Idioma", "Language", "Idioma"),
-                    icon = Icons.Default.Language,
-                    onClick = onOpenLanguageSelector,
-                    trailing = "${currentLanguage.flag} ${currentLanguage.code.uppercase()}",
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag("widget_lang_button")
-                )
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
-                ) {
-                    ShortcutTile(
-                        label = strings("Apariencia", "Appearance", "Aparência"),
-                        icon = Icons.Default.LightMode,
-                        onClick = onOpenAppearance,
-                        modifier = Modifier
-                            .weight(1f)
-                            .testTag("home_appearance_settings")
-                    )
-                    ShortcutTile(
-                        label = strings("Fuente", "Font", "Fonte"),
-                        icon = Icons.Default.TextFields,
-                        onClick = onOpenFontPicker,
-                        modifier = Modifier
-                            .weight(1f)
-                            .testTag("home_font_settings")
-                    )
-                }
+                // Subtraction: Language / Appearance / Font tiles duplicated
+                // More / Settings below (which keeps the same Settings), so
+                // they were cut from Home — one settings door, not four.
                 // More is no longer a tab: this tile is its entry point, and
                 // More keeps every other destination plus the same Settings.
                 ShortcutTile(
@@ -787,6 +767,36 @@ fun HomeScreen(
         // Extra clearance so the last card never hides behind the floating tab bar.
         item { Spacer(Modifier.height(design.spacing.contentBottomGap + 72.dp)) }
     }
+}
+
+/**
+ * Frosted-card chrome for [AppCard] on Home: a soft shadow plus a 1dp
+ * hairline stroke. `AppCard` (AppleKit) already paints the frosted
+ * `groupedSurface` at `design.shapes.card` (20dp in Ive), but its fill is
+ * drawn *after* the caller's modifier — so a plain `.border()` passed in
+ * would be painted over by that fill. `drawWithContent` strokes after the
+ * card's own content instead, so the hairline sits on top at the card's
+ * real (gutter-inset) bounds. Radius follows the identity's one card
+ * system: 20dp in Ive, 12dp elsewhere.
+ */
+@Composable
+private fun Modifier.frostedCardChrome(): Modifier {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val radius = if (design.language == DesignLanguage.IVE) 20.dp else 12.dp
+    val width = design.depth.cardBorderWidth.coerceAtLeast(1.dp)
+    return this
+        .shadow(6.dp, design.shapes.card)
+        .drawWithContent {
+            drawContent()
+            drawRoundRect(
+                color = palette.hairline,
+                topLeft = Offset.Zero,
+                size = size,
+                cornerRadius = CornerRadius(radius.toPx()),
+                style = Stroke(width = width.toPx())
+            )
+        }
 }
 
 /** First sentence of [text]: up to the first sentence-ending punctuation. */
@@ -897,7 +907,7 @@ private fun FidelityCard(
     AppCard(
         modifier = Modifier
             .padding(horizontal = design.spacing.gutter)
-            .shadow(6.dp, design.shapes.card)
+            .frostedCardChrome()
             .testTag("home_fidelity_card")
     ) {
         CardHeading(
@@ -1006,7 +1016,11 @@ private fun LiturgicalSeasonBanner(
             .shadow(6.dp, design.shapes.card),
         shape = design.shapes.card,
         colors = CardDefaults.cardColors(containerColor = palette.raised),
-        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
+        border = BorderStroke(
+            design.depth.cardBorderWidth.coerceAtLeast(1.dp),
+            palette.hairline
+        )
     ) {
         Column(
             modifier = Modifier.padding(design.spacing.cardPadding),
@@ -1123,7 +1137,7 @@ private fun ShortcutTile(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
     AppCard(
-        modifier = modifier.heightIn(min = 72.dp),
+        modifier = modifier.heightIn(min = 72.dp).frostedCardChrome(),
         onClick = onClick
     ) {
         Row(

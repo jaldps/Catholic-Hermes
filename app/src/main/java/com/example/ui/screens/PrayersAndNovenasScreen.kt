@@ -37,6 +37,12 @@ import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.SearchOff
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.VolumeUp
+import androidx.compose.material.icons.outlined.FormatListBulleted
+import androidx.compose.material.icons.outlined.Groups
+import androidx.compose.material.icons.outlined.Handshake
+import androidx.compose.material.icons.outlined.Healing
+import androidx.compose.material.icons.outlined.MenuBook
+import androidx.compose.material.icons.outlined.Shield
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
@@ -55,6 +61,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
@@ -120,15 +127,13 @@ private val BeadRingHairline = 0.5.dp
 private val NovenaPlateHeight = 176.dp
 
 /**
- * Novena index cards are equal size: fixed height, the plate clipped to the
- * thumbnail token, title and patron allowed to wrap to three / two lines, and
- * the progress rule pinned to the card's foot. Fixed height — rather than a
- * minimum — is what makes every card in a chunked row the same size. The
- * height is struck for the roomiest identity (Vatican's 24dp card padding
- * and 20dp gaps at three title lines plus two patron lines); tighter
- * identities get the slack as air above the pinned progress rule.
+ * Novena photo cards: full-bleed width minus the 20dp gutters, 20dp radius,
+ * title overlaid on the bottom scrim. One card per row so the patron's
+ * photograph, not a half-width thumbnail, carries the card; 200dp tall
+ * leaves room for a two-line title, the patron line and the progress rule
+ * above the scrim.
  */
-private val NovenaCardHeight = 288.dp
+private val NovenaCardHeight = 200.dp
 
 /** Clipped plate across the top of a novena index card. */
 private val NovenaCardImageHeight = 108.dp
@@ -405,17 +410,63 @@ private fun VaticanDevotionalView(
 ) {
     val design = LocalAppDesign.current
 
-    val themes = listOf(
-        null to currentLanguage.pick("Todas las intenciones", "All intentions", "Todas as intenções"),
-        "health" to currentLanguage.pick("Salud y sanación", "Health & healing", "Saúde e cura"),
-        "peace" to currentLanguage.pick("Paz interior", "Peace of mind", "Paz interior"),
-        "family" to currentLanguage.pick("Familia", "Family", "Família"),
-        "protection" to currentLanguage.pick("Protección", "Protection", "Proteção"),
-        "forgiveness" to currentLanguage.pick("Perdón", "Forgiveness", "Perdão")
+    // Reference screen 2 grid: six tiles in three columns. "Básicas" filters
+    // by PrayerCategory.BASIC (the Fundamental prayers, straight from
+    // repository data); "Intenciones" clears the filter (all intentions);
+    // the rest filter by the thematic tags the prayers already carry.
+    // Tiles are mutually exclusive: picking one clears the other kind.
+    var selectedCategory by remember { mutableStateOf<PrayerCategory?>(null) }
+    val categoryTiles = listOf(
+        PrayerCategoryTile(
+            key = "basic",
+            label = currentLanguage.pick("Básicas", "Basics", "Básicas"),
+            icon = Icons.Outlined.MenuBook,
+            tag = null,
+            category = PrayerCategory.BASIC
+        ),
+        PrayerCategoryTile(
+            key = "all",
+            label = currentLanguage.pick("Intenciones", "Intentions", "Intenções"),
+            icon = Icons.Outlined.FormatListBulleted,
+            tag = null,
+            category = null
+        ),
+        PrayerCategoryTile(
+            key = "family",
+            label = currentLanguage.pick("Familia", "Family", "Família"),
+            icon = Icons.Outlined.Groups,
+            tag = "family",
+            category = null
+        ),
+        PrayerCategoryTile(
+            key = "protection",
+            label = currentLanguage.pick("Protección", "Protection", "Proteção"),
+            icon = Icons.Outlined.Shield,
+            tag = "protection",
+            category = null
+        ),
+        PrayerCategoryTile(
+            key = "health",
+            label = currentLanguage.pick("Sanación", "Healing", "Cura"),
+            icon = Icons.Outlined.Healing,
+            tag = "health",
+            category = null
+        ),
+        PrayerCategoryTile(
+            key = "forgiveness",
+            label = currentLanguage.pick("Perdón", "Forgiveness", "Perdão"),
+            icon = Icons.Outlined.Handshake,
+            tag = "forgiveness",
+            category = null
+        )
     )
 
-    val prayers = repository.searchPrayers(query = searchQuery, tag = selectedTag)
-    val filtering = searchQuery.isNotBlank() || selectedTag != null
+    val prayers = repository.searchPrayers(
+        query = searchQuery,
+        category = selectedCategory,
+        tag = selectedTag
+    )
+    val filtering = searchQuery.isNotBlank() || selectedTag != null || selectedCategory != null
     var howToPrayExpanded by remember { mutableStateOf(false) }
     // The season-relevant prayer, resolved once from the liturgical day.
     // Shown only when unfiltered, floated as the first content; it is then
@@ -492,10 +543,17 @@ private fun VaticanDevotionalView(
         }
 
         item {
-            PrayerIntentionFilters(
-                options = themes,
-                selected = selectedTag,
-                onSelect = onSelectTag,
+            PrayersSectionHeader(
+                title = currentLanguage.pick("Categorías", "Categories", "Categorias")
+            )
+            PrayerCategoryTiles(
+                tiles = categoryTiles,
+                selectedTag = selectedTag,
+                selectedCategory = selectedCategory,
+                onSelect = { tile ->
+                    selectedCategory = tile.category
+                    onSelectTag(tile.tag)
+                },
                 testTag = "prayer_theme_picker"
             )
         }
@@ -516,6 +574,7 @@ private fun VaticanDevotionalView(
                     onClick = {
                         onSearchQueryChange("")
                         onSelectTag(null)
+                        selectedCategory = null
                     },
                     modifier = Modifier
                         .fillMaxWidth()
@@ -624,6 +683,95 @@ private fun seasonPrayerId(info: LiturgicalDayInfo): String = when {
     else -> "our_father"
 }
 
+/** One prayer-category grid tile: its filter is either a thematic tag or
+ * a [PrayerCategory]; the "all intentions" tile carries neither. */
+private data class PrayerCategoryTile(
+    val key: String,
+    val label: String,
+    val icon: ImageVector,
+    val tag: String?,
+    val category: PrayerCategory?
+)
+
+/** Prayer categories as a 3-column grid of ~104dp frosted tiles (18dp
+ * radius, line icon over label), per the reference screen. A tile is
+ * selected when its tag — or, for "Básicas", its category — matches; the
+ * all-intentions tile is selected when nothing is filtered. Selected
+ * tiles go black with white content, the same affordance the old chips
+ * used. The list rows below the grid (Fundamental prayers with chevrons)
+ * are untouched. */
+@Composable
+private fun PrayerCategoryTiles(
+    tiles: List<PrayerCategoryTile>,
+    selectedTag: String?,
+    selectedCategory: PrayerCategory?,
+    onSelect: (PrayerCategoryTile) -> Unit,
+    testTag: String
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = IveGutter)
+            .testTag(testTag),
+        verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+    ) {
+        tiles.chunked(3).forEach { rowTiles ->
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
+            ) {
+                rowTiles.forEach { tile ->
+                    val isSelected = if (tile.category != null) {
+                        selectedCategory == tile.category
+                    } else if (tile.tag != null) {
+                        selectedTag == tile.tag
+                    } else {
+                        selectedTag == null && selectedCategory == null
+                    }
+                    Column(
+                        modifier = Modifier
+                            .weight(1f)
+                            .height(104.dp)
+                            .clip(CategoryTileRadius)
+                            .background(
+                                if (isSelected) design.palette.accentMuted else design.palette.groupedSurface
+                            )
+                            .clickable(role = Role.Button) { onSelect(tile) }
+                            .semantics { this.selected = isSelected }
+                            .padding(horizontal = 8.dp, vertical = 12.dp)
+                            .testTag("prayer_category_tile_${tile.key}"),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(
+                            8.dp,
+                            Alignment.CenterVertically
+                        )
+                    ) {
+                        Icon(
+                            imageVector = tile.icon,
+                            contentDescription = null,
+                            tint = if (isSelected) design.palette.accent else design.palette.textPrimary,
+                            modifier = Modifier.size(28.dp)
+                        )
+                        Text(
+                            text = tile.label,
+                            style = styles.rowTitle,
+                            color = if (isSelected) design.palette.accent else design.palette.textPrimary,
+                            maxLines = 2,
+                            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                        )
+                    }
+                }
+                // Keep a short last row (e.g. a tile removed from the data)
+                // on the same 3-column rhythm instead of stretching wide.
+                repeat(3 - rowTiles.size) { Spacer(Modifier.weight(1f)) }
+            }
+        }
+    }
+}
+
 /**
  * The intention filter as a wrapping row of chips instead of a collapsed
  * menu: every intention is visible at once (no clipped labels behind a
@@ -659,7 +807,7 @@ private fun PrayerIntentionFilters(
                 Modifier
                     .heightIn(min = 48.dp)
                     .clip(CircleShape)
-                    .background(if (isSelected) Color.Black else design.palette.groupedSurface)
+                    .background(if (isSelected) design.palette.accentMuted else design.palette.groupedSurface)
                     .clickable { onSelect(value) }
                     .semantics { this.selected = isSelected }
                     .padding(horizontal = 16.dp, vertical = 8.dp),
@@ -1554,31 +1702,23 @@ private fun NovenaIndexView(
                         .testTag("novenas_in_progress"),
                     verticalArrangement = Arrangement.spacedBy(CardStackGap)
                 ) {
-                    inProgress.chunked(2).forEach { pair ->
-                        Row(
-                            Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
-                        ) {
-                            pair.forEach { novena ->
-                                val prayed = daysPrayed[novena.id].orEmpty()
-                                val started = startedOn[novena.id]?.let { dateFormat.format(Date(it)) }
-                                NovenaCard(
-                                    novena = novena,
-                                    currentLanguage = currentLanguage,
-                                    prayed = prayed,
-                                    extraLine = started?.let {
-                                        currentLanguage.pick(
-                                            "Comenzada el $it",
-                                            "Started $it",
-                                            "Iniciada em $it"
-                                        )
-                                    },
-                                    onOpen = { onOpenNovena(novena) },
-                                    modifier = Modifier.weight(1f)
+                    inProgress.forEach { novena ->
+                        val prayed = daysPrayed[novena.id].orEmpty()
+                        val started = startedOn[novena.id]?.let { dateFormat.format(Date(it)) }
+                        NovenaCard(
+                            novena = novena,
+                            currentLanguage = currentLanguage,
+                            prayed = prayed,
+                            extraLine = started?.let {
+                                currentLanguage.pick(
+                                    "Comenzada el $it",
+                                    "Started $it",
+                                    "Iniciada em $it"
                                 )
-                            }
-                            if (pair.size == 1) Spacer(Modifier.weight(1f))
-                        }
+                            },
+                            onOpen = { onOpenNovena(novena) },
+                            modifier = Modifier.fillMaxWidth()
+                        )
                     }
                 }
             }
@@ -1596,23 +1736,15 @@ private fun NovenaIndexView(
                         .testTag("novenas_completed"),
                     verticalArrangement = Arrangement.spacedBy(CardStackGap)
                 ) {
-                    finished.chunked(2).forEach { pair ->
-                        Row(
-                            Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
-                        ) {
-                            pair.forEach { novena ->
-                                NovenaCard(
-                                    novena = novena,
-                                    currentLanguage = currentLanguage,
-                                    prayed = daysPrayed[novena.id].orEmpty(),
-                                    extraLine = null,
-                                    onOpen = { onOpenNovena(novena) },
-                                    modifier = Modifier.weight(1f)
-                                )
-                            }
-                            if (pair.size == 1) Spacer(Modifier.weight(1f))
-                        }
+                    finished.forEach { novena ->
+                        NovenaCard(
+                            novena = novena,
+                            currentLanguage = currentLanguage,
+                            prayed = daysPrayed[novena.id].orEmpty(),
+                            extraLine = null,
+                            onOpen = { onOpenNovena(novena) },
+                            modifier = Modifier.fillMaxWidth()
+                        )
                     }
                 }
             }
@@ -1653,31 +1785,24 @@ private fun NovenaIndexView(
                 )
             }
 
-            // Equal-size cards, two per row, lazy like the 246-row index
-            // they replace: each chunked row is one lazy item, so composition
-            // cost stays flat however long the filtered index runs.
+            // Full-bleed photo cards, one per row, lazy like the 246-row
+            // index they replace: each novena is one lazy item, so
+            // composition cost stays flat however long the filtered index
+            // runs.
             items(
-                items = filtered.chunked(2),
-                key = { pair -> pair.first().id + "_" + pair.last().id }
-            ) { pair ->
-                Row(
-                    Modifier
+                items = filtered,
+                key = { it.id }
+            ) { novena ->
+                NovenaCard(
+                    novena = novena,
+                    currentLanguage = currentLanguage,
+                    prayed = daysPrayed[novena.id].orEmpty(),
+                    extraLine = null,
+                    onOpen = { onOpenNovena(novena) },
+                    modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = IveGutter),
-                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
-                ) {
-                    pair.forEach { novena ->
-                        NovenaCard(
-                            novena = novena,
-                            currentLanguage = currentLanguage,
-                            prayed = daysPrayed[novena.id].orEmpty(),
-                            extraLine = null,
-                            onOpen = { onOpenNovena(novena) },
-                            modifier = Modifier.weight(1f)
-                        )
-                    }
-                    if (pair.size == 1) Spacer(Modifier.weight(1f))
-                }
+                        .padding(horizontal = IveGutter)
+                )
                 Spacer(Modifier.height(blockGap))
             }
         }
@@ -1689,12 +1814,13 @@ private fun NovenaIndexView(
 // ------------------------------------------------------------- novena page
 
 /**
- * One novena in the index: an equal-size tonal card. The plate is clipped to
- * the thumbnail token and cropped, the title and patron wrap to three / two
- * lines instead of truncating to one, and the progress rule plus its day
- * count are pinned to the foot of the card so two cards in a row align.
- * Colours come only from the palette tokens, so the card is tonal in both
- * appearances without this screen knowing which one is in force.
+ * One novena in the index: a full-bleed photo card (screen width minus
+ * the 20dp gutters), 20dp radius. The photograph fills the card, a bottom
+ * scrim darkens its foot, and title, patron and progress sit overlaid on
+ * that scrim in white so they read on any photograph. The progress rule
+ * is pinned to the card's foot. Colours come only from the palette
+ * tokens, so the card is tonal in both appearances without this screen
+ * knowing which one is in force.
  */
 @Composable
 private fun NovenaCard(
@@ -1747,15 +1873,21 @@ private fun NovenaCard(
                 .size(40.dp)
                 .align(Alignment.Center)
         )
-        // Bottom scrim, full bleed, overlaid title.
+        // Bottom scrim, full bleed: transparent at the top so the
+        // photograph shows, darkening through the overlaid text block so
+        // white title/patron/progress stay legible on any image.
         Box(
             Modifier
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .height(140.dp)
+                .height(NovenaCardHeight)
                 .background(
                     Brush.verticalGradient(
-                        listOf(Color.Transparent, Color.Black.copy(alpha = 0.78f))
+                        listOf(
+                            Color.Transparent,
+                            Color.Black.copy(alpha = 0.45f),
+                            Color.Black.copy(alpha = 0.82f)
+                        )
                     )
                 )
         )
@@ -1763,7 +1895,7 @@ private fun NovenaCard(
             Modifier
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .padding(14.dp)
+                .padding(horizontal = 16.dp, vertical = 14.dp)
         ) {
             Text(
                 text = novena.title.get(currentLanguage),

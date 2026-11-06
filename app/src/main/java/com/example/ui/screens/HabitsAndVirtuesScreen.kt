@@ -39,6 +39,8 @@ import androidx.compose.material.icons.filled.NightsStay
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.Schedule
 import androidx.compose.material.icons.outlined.Checklist
+import com.example.ui.components.SacredArt
+import com.example.ui.components.SacredSubject
 import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.filled.Shield
 import androidx.compose.material.icons.filled.Star
@@ -60,9 +62,11 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -922,12 +926,37 @@ private fun FidelityCard(
     val styles = LocalAppTextStyles.current
 
     AppCard(modifier = modifier.padding(horizontal = design.spacing.gutter)) {
-        // Ive reference (screen 10): serene, centred stats header — the green
-        // circular progress ring leads, counts sit beneath it.
-        Column(
-            Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
+        // Ive reference (screen 10): warm paper hero fading behind the
+        // ring. Faint SacredArt (votive candles for the rule kept) clipped
+        // to frame, with a vertical scrim fading it into the card's frosted
+        // surface so the ring and counts stay legible over the art. The art
+        // never obscures text: scrim + low alpha (Rosary's audio-player
+        // idiom), and it draws behind the content, not over it.
+        Box(Modifier.fillMaxWidth()) {
+            SacredArt(
+                subject = SacredSubject.PRAYER,
+                modifier = Modifier
+                    .matchParentSize()
+                    .alpha(0.38f)
+                    .testTag("fidelity_hero_art"),
+                transparentBackground = true
+            )
+            Box(
+                modifier = Modifier
+                    .matchParentSize()
+                    .background(
+                        Brush.verticalGradient(
+                            0f to Color.Transparent,
+                            0.55f to design.palette.groupedSurface.copy(alpha = 0.35f),
+                            1f to design.palette.groupedSurface
+                        )
+                    )
+            )
+            // Serene, centred stats header: eyebrow, ring, counts beneath.
+            Column(
+                Modifier.fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
             Text(
                 text = caps(currentLanguage.pick("Fidelidad espiritual", "Spiritual fidelity", "Fidelidade espiritual")),
                 style = styles.sectionEyebrow,
@@ -972,6 +1001,7 @@ private fun FidelityCard(
                 style = styles.rowSubtitle,
                 color = palette.textSecondary
             )
+            }
         }
 
         Spacer(Modifier.height(design.spacing.cardPadding))

@@ -78,6 +78,7 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -108,6 +109,8 @@ import com.example.data.repository.LitanyOfLoreto
 import com.example.ui.design.AppBanner
 import com.example.ui.design.AppCard
 import com.example.ui.components.MenuPickerRow
+import com.example.ui.components.SacredArt
+import com.example.ui.components.SacredSubject
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
@@ -1536,27 +1539,60 @@ private fun GuideControlsCard(
             )
             Spacer(Modifier.height(16.dp))
         }
-        if (step.optional) {
-            Text(
-                text = lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
-                style = styles.rowSubtitle,
-                color = design.palette.textSecondary
-            )
-            Spacer(Modifier.height(2.dp))
+        // Ive reference audio player: the prayer text sits over full-bleed
+        // SacredArt (faint, behind), with a bottom gradient scrim fading
+        // to the card surface so the ink stays legible over the art.
+        // The art clips to frame and never obscures text (scrim + alpha).
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(design.shapes.card)
+                .testTag("prayer_text_art")
+        ) {
+            if (design.language == DesignLanguage.IVE) {
+                SacredArt(
+                    subject = SacredSubject.ROSARY,
+                    modifier = Modifier
+                        .matchParentSize()
+                        .alpha(0.38f),
+                    transparentBackground = true
+                )
+                Box(
+                    modifier = Modifier
+                        .matchParentSize()
+                        .background(
+                            Brush.verticalGradient(
+                                0f to Color.Transparent,
+                                0.55f to design.palette.raised.copy(alpha = 0.35f),
+                                1f to design.palette.raised
+                            )
+                        )
+                )
+            }
+            Column(Modifier.padding(vertical = 12.dp)) {
+                if (step.optional) {
+                    Text(
+                        text = lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
+                        style = styles.rowSubtitle,
+                        color = design.palette.textSecondary
+                    )
+                    Spacer(Modifier.height(2.dp))
+                }
+                Text(
+                    text = step.name,
+                    style = styles.rowTitle,
+                    color = design.palette.textPrimary,
+                    modifier = Modifier.testTag("current_prayer_title").semantics { heading() }
+                )
+                Spacer(Modifier.height(16.dp))
+                PrayerDialogue(
+                    leaderText = step.leader,
+                    responseText = step.response,
+                    leaderSpoken = spokenNow != null && (spokenNow == step.leader || spokenNow == step.narration),
+                    responseSpoken = spokenNow != null && spokenNow == step.response
+                )
+            }
         }
-        Text(
-            text = step.name,
-            style = styles.rowTitle,
-            color = design.palette.textPrimary,
-            modifier = Modifier.testTag("current_prayer_title").semantics { heading() }
-        )
-        Spacer(Modifier.height(16.dp))
-        PrayerDialogue(
-            leaderText = step.leader,
-            responseText = step.response,
-            leaderSpoken = spokenNow != null && (spokenNow == step.leader || spokenNow == step.narration),
-            responseSpoken = spokenNow != null && spokenNow == step.response
-        )
         Spacer(Modifier.height(design.spacing.cardGap))
 
         RecitationControls(
@@ -2152,8 +2188,12 @@ private fun TransportCluster(
     val design = LocalAppDesign.current
     val palette = design.palette
     val haptics = LocalHapticFeedback.current
-    val playBg = if (design.isDark) palette.textPrimary else Color.Black
-    val playFg = if (design.isDark) Color.Black else Color.White
+    // ONE black primary CTA per view: the RecitationControls Next button
+    // (AppPrimaryButton, black in light / cream in dark) is it. This hero
+    // play circle stays a large frosted/raised transport control — same
+    // 64dp size, testTag and toggle logic, but not a second black fill.
+    val playBg = palette.raised
+    val playFg = palette.textPrimary
     val flankBg = palette.raised
 
     Row(

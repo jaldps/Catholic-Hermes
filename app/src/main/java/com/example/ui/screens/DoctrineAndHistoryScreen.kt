@@ -587,6 +587,8 @@ private fun CatholicQuestionsPane(
             }
         }
 
+        // The list ends under a small ornament, never an empty void.
+        item { AppOrnament() }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
@@ -677,6 +679,8 @@ private fun OrdersOfficesPane(
             Spacer(Modifier.height(design.spacing.cardGap))
         }
 
+        // The list ends under a small ornament, never an empty void.
+        item { AppOrnament() }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
@@ -799,6 +803,8 @@ private fun MoralDoctrinePane(
             }
         }
 
+        // The list ends under a small ornament, never an empty void.
+        item { AppOrnament() }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
@@ -1442,6 +1448,8 @@ private fun DoctrineEntryPage(
                 }
             }
         }
+        // The list ends under a small ornament, never an empty void.
+        item { AppOrnament() }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
@@ -2071,6 +2079,8 @@ private fun ChurchHistoryPane(
             }
         }
 
+        // The list ends under a small ornament, never an empty void.
+        item { AppOrnament() }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
@@ -2481,6 +2491,8 @@ private fun ParishesAndNewsPane(
             newsItems(newsState, currentLanguage)
         }
 
+        // The list ends under a small ornament, never an empty void.
+        item { AppOrnament() }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
@@ -2585,6 +2597,8 @@ private fun ParishDetail(
                 }
             }
         }
+        // The list ends under a small ornament, never an empty void.
+        item { AppOrnament() }
         item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
