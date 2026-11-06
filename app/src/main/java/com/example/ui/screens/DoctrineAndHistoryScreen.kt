@@ -2139,8 +2139,7 @@ private fun LazyListScope.newsItems(news: NewsResult?, currentLanguage: AppLangu
             Row(
                 Modifier
                     .fillMaxWidth()
-                    .heightIn(min = MinTouchTarget)
-                    .padding(design.spacing.gutter),
+                    .height(48.dp),
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -2595,7 +2594,7 @@ private fun VaticanNewsCard(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
 
-    // Semantic palette only: source/date textTertiary, title textPrimary,
+    // Semantic palette only: source/date textSecondary, title textPrimary,
     // summary textSecondary, CTA accent -- every rank resolves per identity
     // and dark mode, so no hardcoded colour survives here.
     GutterCard(
@@ -2617,7 +2616,7 @@ private fun VaticanNewsCard(
                 }
             ),
             style = styles.sectionEyebrow,
-            color = design.palette.textTertiary
+            color = design.palette.textSecondary
         )
         Spacer(Modifier.height(design.spacing.cardGap / 2))
         Text(

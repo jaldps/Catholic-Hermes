@@ -16,6 +16,8 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.calculateEndPadding
+import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -408,7 +410,7 @@ object AppleKit : AppKit {
     /** The disclosure chevron's grey: iOS's tertiary label, a touch firmer. */
     @Composable
     private fun chevronGrey(): Color =
-        if (LocalAppDesign.current.isDark) Color(0xFF5E5E63) else Color(0xFFB8B8BE)
+        LocalAppDesign.current.palette.textSecondary
 
     /**
      * UIKit's fill colours are translucent greys, not opaque swatches: the
@@ -758,7 +760,7 @@ object AppleKit : AppKit {
                             )
                             .border(
                                 HairlineWeight,
-                                if (design.isDark) Color.White.copy(alpha = 0.14f) else Color.White.copy(alpha = 0.96f),
+                                if (design.isDark) Color.White.copy(alpha = 0.14f) else Color.Black.copy(alpha = 0.05f),
                                 dockShape
                             )
                             .padding(5.dp)
@@ -855,7 +857,18 @@ object AppleKit : AppKit {
                             .fillMaxSize()
                             .nestedScroll(scrollWatcher)
                     ) {
-                        content(padding)
+                        // The floating dock overlays the scaffold's bottom
+                        // bar area in every screen, so content gets a global
+                        // +96dp bottom inset on top of the scaffold padding.
+                        val layoutDirection = androidx.compose.ui.platform.LocalLayoutDirection.current
+                        content(
+                            PaddingValues(
+                                start = padding.calculateStartPadding(layoutDirection),
+                                end = padding.calculateEndPadding(layoutDirection),
+                                top = padding.calculateTopPadding(),
+                                bottom = padding.calculateBottomPadding() + 96.dp
+                            )
+                        )
                         // Only the scrolled navigation edge needs a veil.
                         // The floating dock has its own material: fading the
                         // content above it obscures actual prayers and rows.
@@ -1454,7 +1467,9 @@ object AppleKit : AppKit {
         val count = options.size.coerceAtLeast(1)
         val track = systemFill(2)
         val pill = if (design.isDark) Color(0xFF636366) else Color.White
-        val shape = RoundedCornerShape(8.dp)
+        // 12dp system radius (design.shapes.button) for the track — the
+        // previous 8dp track / 6dp pill mismatched the button system.
+        val shape = design.shapes.button
         val labelStyle = styles.labelMedium.copy(fontWeight = FontWeight.Medium)
 
         BoxWithConstraints(modifier.fillMaxWidth()) {
@@ -1483,8 +1498,8 @@ object AppleKit : AppKit {
                 Box(
                     Modifier.offset(x = pillOffset).width(segment).height(targetHeight)
                         .padding(horizontal = 2.dp, vertical = 6.dp)
-                        .shadow(if (design.isDark) 0.dp else 1.dp, RoundedCornerShape(6.dp))
-                        .clip(RoundedCornerShape(6.dp)).background(pill)
+                        .shadow(if (design.isDark) 0.dp else 1.dp, design.shapes.button)
+                        .clip(design.shapes.button).background(pill)
                 )
                 Row(Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically) {
                     options.forEachIndexed { index, option ->

@@ -1162,7 +1162,6 @@ private fun VaticanOfficialLinksView(
                             "Complete text · §§ 1–2865",
                             "Texto completo · §§ 1–2865"
                         ),
-                        leadingIcon = Icons.Default.MenuBook,
                         onClick = { webViewUrl = own.catechismUrl },
                         modifier = Modifier.testTag("catechism_source_ccc")
                     )
@@ -1177,7 +1176,6 @@ private fun VaticanOfficialLinksView(
                             "598 questions and answers · vatican.va",
                             "598 perguntas e respostas · vatican.va"
                         ),
-                        leadingIcon = Icons.Default.MenuBook,
                         onClick = { context.openExternally(own.compendiumUrl) },
                         modifier = Modifier.testTag("catechism_source_compendium")
                     )
@@ -1393,7 +1391,7 @@ private fun InBriefNote(label: String, text: String) {
                 Icon(
                     imageVector = Icons.Default.Info,
                     contentDescription = null,
-                    tint = design.palette.gold,
+                    tint = design.palette.textSecondary,
                     modifier = Modifier.size(14.dp)
                 )
                 Spacer(Modifier.width(design.spacing.iconLabelGap / 2))
