@@ -36,8 +36,11 @@ class ReminderStore(
     private fun timeKey(id: String) = stringPreferencesKey("rem_time_$id")
 
     /** Full preference map, defaulting to the catalog defaults. */
+    // Any DataStore read failure (corrupt preferences among them) falls back
+    // to defaults instead of rethrowing into the screen's collector, which
+    // would crash the reminders screen instead of opening it.
     val reminders: Flow<Map<String, ReminderPref>> = dataStore.data
-        .catch { e -> if (e is IOException) emit(emptyPreferences()) else throw e }
+        .catch { emit(emptyPreferences()) }
         .map { prefs ->
             ReminderCatalog.DEFAULTS.associate { r ->
                 // Midday Angelus (12:00) and Divine Mercy Chaplet (15:00) are
@@ -66,7 +69,7 @@ class ReminderStore(
     }
 
     val novena: Flow<NovenaState?> = dataStore.data
-        .catch { e -> if (e is IOException) emit(emptyPreferences()) else throw e }
+        .catch { emit(emptyPreferences()) }
         .map { prefs ->
             val name = prefs[Keys.NOVENA_NAME]?.trim().orEmpty()
             val start = prefs[Keys.NOVENA_START]

@@ -31,11 +31,15 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Church
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.MonetizationOn
 import androidx.compose.material.icons.filled.SearchOff
+import androidx.compose.material.icons.filled.SelfImprovement
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material.icons.outlined.FormatListBulleted
@@ -44,6 +48,7 @@ import androidx.compose.material.icons.outlined.Handshake
 import androidx.compose.material.icons.outlined.Healing
 import androidx.compose.material.icons.outlined.MenuBook
 import androidx.compose.material.icons.outlined.Shield
+import com.example.ui.components.MenuPickerRow
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
@@ -185,12 +190,22 @@ fun PrayersAndNovenasScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier,
     dao: SanctaFidesDao? = null,
-    initialPrayerId: String? = null
+    initialPrayerId: String? = null,
+    /** Tab opened on arrival (0 = Prayers, 1 = Novenas, 2 = Night). */
+    initialTab: Int = 0,
+    /** Night office opened on arrival when [initialTab] is 2. */
+    initialNightOfficeTab: Int = 0,
+    /**
+     * Opens the Divine Mercy chaplet (Coronilla) on arrival instead of the
+     * prayers list. The screen remounts on every Home visit, so an open-flag
+     * is enough — there is no stale "already opened" state to re-arm.
+     */
+    initialOpenChaplet: Boolean = false
 ) {
     val design = LocalAppDesign.current
     val scope = rememberCoroutineScope()
 
-    var selectedTab by remember { mutableIntStateOf(0) }
+    var selectedTab by remember { mutableIntStateOf(initialTab.coerceIn(0, 2)) }
 
     // Devotional
     var prayerSearchQuery by remember { mutableStateOf("") }
@@ -208,6 +223,13 @@ fun PrayersAndNovenasScreen(
         }
     }
     var showChaplet by remember { mutableStateOf(false) }
+    LaunchedEffect(initialOpenChaplet) {
+        if (initialOpenChaplet) {
+            selectedTab = 0
+            openPrayerId = null
+            showChaplet = true
+        }
+    }
 
     // Novenas
     var selectedNovena by remember { mutableStateOf<Novena?>(null) }
@@ -399,7 +421,8 @@ fun PrayersAndNovenasScreen(
                 repository = repository,
                 ttsManager = ttsManager,
                 currentLanguage = currentLanguage,
-                header = header
+                header = header,
+                initialOfficeTab = initialNightOfficeTab
             )
         }
     }
@@ -789,6 +812,19 @@ private fun PrayerCategoryTiles(
             }
         }
     }
+}
+
+/** Icon of the selected novena intention: one mark per intention type. */
+private fun novenaIntentionIcon(tag: String?): ImageVector = when (tag) {
+    "impossible" -> Icons.Outlined.Shield
+    "blessings" -> Icons.Default.AutoAwesome
+    "love" -> Icons.Default.Favorite
+    "money" -> Icons.Default.MonetizationOn
+    "comfort" -> Icons.Default.SelfImprovement
+    "health" -> Icons.Outlined.Healing
+    "family" -> Icons.Outlined.Groups
+    "peace" -> Icons.Outlined.MenuBook
+    else -> Icons.Outlined.FormatListBulleted
 }
 
 /**
@@ -1722,13 +1758,23 @@ private fun NovenaIndexView(
                     .testTag("novena_search_input")
             )
             Spacer(Modifier.height(design.spacing.cardGap))
-            PrayerIntentionFilters(
-                options = listOf<Pair<String?, String>>(null to currentLanguage.pick("Todas las intenciones", "All intentions", "Todas as intenções")) +
-                    availableTags.map { it to (tagLabels[it] ?: it) },
-                selected = selectedTag,
-                onSelect = onSelectTag,
-                testTag = "novena_intention_picker"
-            )
+            // One dropdown like the Rosary's Misterios picker, instead of a
+            // row of individual intention buttons. The leading icon follows
+            // the selected intention, so each type carries its own mark
+            // (all intentions, impossible cases, blessings, love, money /
+            // work, comfort, health, family, peace).
+            AppListGroup {
+                MenuPickerRow(
+                    title = currentLanguage.pick("Intenciones", "Intentions", "Intenções"),
+                    leadingIcon = novenaIntentionIcon(selectedTag),
+                    options = listOf<Pair<String?, String>>(null to currentLanguage.pick("Todas las intenciones", "All intentions", "Todas as intenções")) +
+                        availableTags.map { it to (tagLabels[it] ?: it) },
+                    selected = selectedTag,
+                    onSelect = onSelectTag,
+                    modifier = Modifier.heightIn(min = MinTouchTarget),
+                    testTag = "novena_intention_picker"
+                )
+            }
         }
 
         if (inProgress.isNotEmpty()) {

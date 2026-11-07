@@ -563,7 +563,11 @@ fun RemindersScreen(
             }
 
             // ---- Reminders list ----
-            item(key = "reminders_header") {
+            // Was "reminders_header" again: a duplicate LazyColumn key with
+            // the screen header above makes LazyColumn throw
+            // IllegalArgumentException on composition, so opening this screen
+            // force-closed the app. Distinct key for the list heading.
+            item(key = "reminders_list_header") {
                 AppSectionHeader(
                     title = remindersHeaderLabel,
                     modifier = Modifier.padding(horizontal = design.spacing.gutter)

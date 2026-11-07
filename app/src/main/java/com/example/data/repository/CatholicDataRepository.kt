@@ -27,6 +27,8 @@ import com.example.data.models.SinTheologyExplanation
 import com.example.data.models.TriviaQuestion
 import com.example.data.models.VaticanPrayer
 import com.example.data.models.VerseOfTheDay
+import com.example.data.verse.DailyVerseMeditation
+import com.example.data.verse.DailyVerseRotation
 import com.example.data.models.ViaCrucisStation
 import com.example.data.liturgy.CalendarDate
 import com.example.data.xref.BibleLine
@@ -434,10 +436,39 @@ class CatholicDataRepository(
         val shared = feedTokens.intersect(bundledTokens).size
         return shared * 2 >= minOf(feedTokens.size, bundledTokens.size)
     }
+    /**
+     * Today's verse: rotates by day-of-year over
+     * [DailyVerseRotation.REFERENCES] so it *changes* daily without stored
+     * state. Text is resolved from the bundled Bible (the same source as the
+     * lectionary passages) in all three languages; a verse that cannot be
+     * resolved falls back to the curated trilingual text so the card never
+     * renders blank. The home screen refines the text from bible-api.com
+     * when online (see DailyVerseFetcher/Store) with this as the offline
+     * baseline.
+     */
     val verseOfTheDay: VerseOfTheDay
-        get() = DevotionsAndHistoryData.verseOfTheDay.let {
-            it.copy(reference = scriptureResolver.display(it.reference, _currentLanguage.value))
+        get() = dailyVerseFor(LiturgicalCalendar.today())
+
+    fun dailyVerseFor(date: CalendarDate): VerseOfTheDay {
+        val referenceId = DailyVerseRotation.referenceFor(
+            java.time.LocalDate.of(date.year, date.month, date.day)
+        )
+        val bundled = DevotionsAndHistoryData.verseOfTheDay
+        val texts = AppLanguage.entries.associateWith { language ->
+            scriptureResolver.passage(referenceId, language) ?: bundled.text.get(language)
         }
+        val text = com.example.data.models.LocalizedText(
+            texts.getValue(AppLanguage.ES),
+            texts.getValue(AppLanguage.EN),
+            texts.getValue(AppLanguage.PT)
+        )
+        return VerseOfTheDay(
+            reference = scriptureResolver.display(referenceId, _currentLanguage.value),
+            text = text,
+            meditation = DailyVerseMeditation.meditation,
+            spiritualChallenge = DailyVerseMeditation.challenge
+        )
+    }
     val marianApparitions: List<MarianApparition> get() = DevotionsAndHistoryData.marianApparitions
     val christManifestations: List<ChristManifestation> get() = DevotionsAndHistoryData.christManifestations
 

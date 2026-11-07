@@ -48,6 +48,7 @@ import androidx.compose.material.icons.outlined.WbSunny
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -92,6 +93,7 @@ import com.example.data.local.SanctaFidesDao
 import com.example.data.local.SinOvercomeLogEntity
 import com.example.data.local.SpiritualHabitEntity
 import com.example.data.temptation.TemptationStore
+import java.time.LocalDate
 import com.example.data.models.AppLanguage
 import com.example.data.models.SinAvoiderOption
 import com.example.data.repository.CatholicDataRepository
@@ -134,7 +136,17 @@ fun HabitsAndVirtuesScreen(
     repository: CatholicDataRepository,
     dao: SanctaFidesDao,
     ttsManager: LiturgicalTtsManager,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    /** Open a prayer by id on the Prayers screen (Ángelus, jaculatorias…). */
+    onOpenPrayer: (String) -> Unit = { _ -> },
+    /** Open the Prayers tab (the "How to pray" section lives there). */
+    onOpenPrayers: () -> Unit = {},
+    /** Open the Rosary screen; 0 = Rosary, 1 = Divine Mercy Chaplet. */
+    onOpenRosary: (Int) -> Unit = { _ -> },
+    /** Open the daily readings / missal (Bible screen, missal tab). */
+    onOpenMissal: () -> Unit = {},
+    /** Open the Night office; 0 = Compline, 1 = Examen, 2 = Traditional. */
+    onOpenNight: (Int) -> Unit = { _ -> }
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
     val design = LocalAppDesign.current
@@ -155,12 +167,15 @@ fun HabitsAndVirtuesScreen(
 
     val habitsList by dao.getAllHabits().collectAsState(initial = emptyList())
     val todayCompletions by dao.getCompletionsForDate(todayDateStr).collectAsState(initial = emptyList())
+    val allCompletions by dao.getAllCompletions().collectAsState(initial = emptyList())
     val sinOvercomeLogs by dao.getAllSinOvercomeLogs().collectAsState(initial = emptyList())
     val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
 
-    // Per-day temptation counter for the monthly calendar (Victoria tab).
+    // Per-day temptation counters for the monthly calendars (Victoria tab):
+    // victories and falls, each resetting daily and monthly per date key.
     val temptationStore = remember(context) { TemptationStore(context.applicationContext) }
     val temptationCounts by temptationStore.counts.collectAsState(initial = emptyMap())
+    val temptationFellCounts by temptationStore.fellCounts.collectAsState(initial = emptyMap())
 
     // The suggested rule is offered, not imposed: with nothing configured the
     // pane shows these practices and one action that adopts them.
@@ -184,8 +199,8 @@ fun HabitsAndVirtuesScreen(
         todayCompletions.map { it.habitId }.toSet()
     }
 
-    val completionRate = if (habitsList.isNotEmpty()) {
-        completedHabitIds.size.toFloat() / habitsList.size.toFloat()
+    val completionRate = if (DailyHabits.isNotEmpty()) {
+        completedHabitIds.size.toFloat() / DailyHabits.size.toFloat()
     } else 0f
 
     // The full names of the two halves of the screen head their own pane; the
@@ -240,6 +255,37 @@ fun HabitsAndVirtuesScreen(
         scope.launch {
             dao.deleteHabit(habit)
             dao.deleteCompletionForDate(habit.id, todayDateStr)
+        }
+    }
+
+    /** One check/uncheck of a fixed daily habit for today (one log row). */
+    fun toggleDailyHabit(habitId: String, wasDone: Boolean) {
+        scope.launch {
+            if (wasDone) {
+                dao.deleteCompletionForDate(habitId, todayDateStr)
+            } else {
+                dao.insertCompletion(
+                    HabitCompletionLogEntity(
+                        habitId = habitId,
+                        completionDate = todayDateStr
+                    )
+                )
+            }
+        }
+    }
+
+    /** Where tapping a habit's text goes; the circle itself only toggles. */
+    fun openDailyHabit(action: DailyHabitAction) {
+        when (action) {
+            DailyHabitAction.HOW_TO_PRAY -> onOpenPrayers()
+            DailyHabitAction.MISSAL -> onOpenMissal()
+            DailyHabitAction.ANGELUS -> onOpenPrayer("angelus")
+            DailyHabitAction.CHAPLET -> onOpenRosary(1)
+            DailyHabitAction.JACULATORY -> onOpenPrayer("jesus_prayer")
+            DailyHabitAction.EXAMEN -> onOpenNight(1)
+            DailyHabitAction.ROSARY -> onOpenRosary(0)
+            DailyHabitAction.TRADITIONAL -> onOpenNight(2)
+            DailyHabitAction.NONE -> {}
         }
     }
 
@@ -311,136 +357,64 @@ fun HabitsAndVirtuesScreen(
                     Spacer(Modifier.height(design.spacing.cardGap))
                 }
 
-                if (habitsList.isEmpty()) {
-                    // Nothing configured: no counters at all, since "0 of 0"
-                    // only ever reads as broken. An invitation instead.
-                    item {
-                        AppEmptyState(
-                            title = currentLanguage.pick(
-                                "Empieza tu regla de vida",
-                                "Begin your rule of life",
-                                "Comece a sua regra de vida"
-                            ),
-                            body = currentLanguage.pick(
-                                "Unas pocas prácticas, guardadas cada día, forman una vida en Cristo.",
-                                "A few practices, kept every day, shape a life in Christ.",
-                                "Umas poucas práticas, guardadas cada dia, formam uma vida em Cristo."
-                            ),
-                            icon = Icons.Outlined.Checklist,
-                            modifier = Modifier.testTag("habits_empty_state")
-                        )
-                    }
+                // Fixed daily rule (exactly twelve practices, no custom
+                // rows): three groups — morning, day, nightfall — each
+                // checkable per day; tapping the text opens the practice.
+                item {
+                    FidelityCard(
+                        completedCount = completedHabitIds.size,
+                        totalCount = DailyHabits.size,
+                        completionRate = completionRate,
+                        currentLanguage = currentLanguage
+                    )
+                }
 
-                    if (suggestedHabits.isNotEmpty()) {
-                        item {
-                            Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-                                AppPrimaryButton(
-                                    label = currentLanguage.pick(
-                                        "Empezar con ${suggestedHabits.size} prácticas sugeridas",
-                                        "Start with ${suggestedHabits.size} suggested practices",
-                                        "Começar com ${suggestedHabits.size} práticas sugeridas"
-                                    ),
-                                    onClick = {
-                                        scope.launch { dao.insertDefaultHabits(suggestedHabits) }
-                                    },
-                                    leadingIcon = Icons.Default.Add,
-                                    modifier = Modifier
-                                        .heightIn(min = MinTouchTarget)
-                                        .padding(horizontal = design.spacing.gutter)
-                                        .testTag("adopt_suggested_habits")
-                                )
-                            }
-                        }
-                        item {
-                            AppSectionHeader(
-                                title = currentLanguage.pick(
-                                    "Prácticas sugeridas",
-                                    "Suggested practices",
-                                    "Práticas sugeridas"
-                                )
-                            )
-                        }
-                        item {
-                            AppListGroup {
-                                suggestedHabits.forEach { habit ->
-                                    MonoHabitRow(
-                                        title = habit.localizedTitle(currentLanguage),
-                                        subtitle = com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage),
-                                        icon = habitIcon(habit.iconName)
-                                    )
-                                }
-                            }
-                        }
-                    }
-                } else {
-                    item {
-                        FidelityCard(
-                            completedCount = completedHabitIds.size,
-                            totalCount = habitsList.size,
-                            completionRate = completionRate,
-                            currentLanguage = currentLanguage
-                        )
-                    }
+                item {
+                    DailyCompletionCard(
+                        todayDone = completedHabitIds.size,
+                        todayTotal = DailyHabits.size,
+                        allCompletions = allCompletions,
+                        todayDateStr = todayDateStr,
+                        dailyIds = DailyHabits.map { it.id }.toSet(),
+                        currentLanguage = currentLanguage
+                    )
+                }
 
+                dailyHabitGroups.forEachIndexed { groupIndex, groupHabits ->
                     item {
                         AppSectionHeader(
-                            title = currentLanguage.pick(
-                                "Prácticas diarias",
-                                "Daily practices",
-                                "Práticas diárias"
+                            title = dailyHabitGroupLabel(groupIndex, currentLanguage),
+                            subtitle = currentLanguage.pick(
+                                "${groupHabits.count { completedHabitIds.contains(it.id) }} de ${groupHabits.size} hoy",
+                                "${groupHabits.count { completedHabitIds.contains(it.id) }} of ${groupHabits.size} today",
+                                "${groupHabits.count { completedHabitIds.contains(it.id) }} de ${groupHabits.size} hoje"
                             )
                         )
                     }
-
                     item {
                         // Inset grouped list like Bible's book directory:
                         // AppListGroup insets by design.spacing.gutter (20dp
                         // in Ive), clips to shapes.listGroup and paints each
                         // row hairline itself, so no manual AppDivider.
                         AppListGroup(
-                            modifier = Modifier.testTag("habits_checklist_card")
+                            modifier = Modifier.testTag(
+                                if (groupIndex == 0) "habits_checklist_card"
+                                else "habits_checklist_card_$groupIndex"
+                            )
                         ) {
-                            habitsList.forEach { habit ->
-                                HabitRow(
+                            groupHabits.forEach { habit ->
+                                DailyHabitRow(
                                     habit = habit,
                                     isCompletedToday = completedHabitIds.contains(habit.id),
                                     currentLanguage = currentLanguage,
                                     onToggleCompletion = {
-                                        toggleHabit(habit, completedHabitIds.contains(habit.id))
+                                        toggleDailyHabit(habit.id, completedHabitIds.contains(habit.id))
                                     },
-                                    onDeleteCustomHabit = if (habit.isCustom) {
-                                        { deleteHabit(habit) }
-                                    } else null
+                                    onOpen = { openDailyHabit(habit.action) }
                                 )
                             }
                         }
                     }
-                }
-
-                item {
-                    Spacer(Modifier.height(design.spacing.sectionGap / 2))
-                    AppSecondaryButton(
-                        label = if (habitsList.isEmpty()) {
-                            currentLanguage.pick(
-                                "Escribir la mía",
-                                "Write my own",
-                                "Escrever a minha"
-                            )
-                        } else {
-                            currentLanguage.pick(
-                                "Añadir práctica",
-                                "Add a practice",
-                                "Adicionar prática"
-                            )
-                        },
-                        onClick = { showAddHabitDialog = true },
-                        leadingIcon = Icons.Default.Add,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .heightIn(min = MinTouchTarget)
-                            .padding(horizontal = design.spacing.gutter)
-                            .testTag("fab_add_habit")
-                    )
                 }
 
                 item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
@@ -502,7 +476,8 @@ fun HabitsAndVirtuesScreen(
                 item(key = "temptation_calendar") {
                     TemptationCalendar(
                         counts = temptationCounts,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        fellCounts = temptationFellCounts
                     )
                     Spacer(Modifier.height(design.spacing.cardGap))
                 }
@@ -600,12 +575,12 @@ fun HabitsAndVirtuesScreen(
                 ttsManager.stop()
             },
             // Was the default narrow AlertDialog width: the advice and the
-            // prayer wrapped into a thin column. Fill the window up to 460dp
-            // with a 24dp side inset so the text has room to breathe.
+            // prayer wrapped into a thin column. Fill the window up to 520dp
+            // with a 16dp side inset so the text has room to breathe.
             modifier = Modifier
                 .fillMaxWidth()
-                .widthIn(max = 460.dp)
-                .padding(horizontal = 24.dp),
+                .widthIn(max = 520.dp)
+                .padding(horizontal = 16.dp),
             shape = design.shapes.dialog,
             containerColor = palette.groupedSurface,
             title = {
@@ -709,6 +684,23 @@ fun HabitsAndVirtuesScreen(
                     AppDivider()
                     Spacer(Modifier.height(design.spacing.cardGap))
 
+                    // Running counts for victories and falls: today, this
+                    // week, this month. All three windows reset on their own
+                    // boundary because every entry is keyed by date.
+                    TemptationStatsBlock(
+                        label = currentLanguage.pick("Vencí", "I overcame", "Venci"),
+                        counts = temptationCounts,
+                        tagPrefix = "victory_stats",
+                        currentLanguage = currentLanguage
+                    )
+                    Spacer(Modifier.height(design.spacing.cardGap / 2))
+                    TemptationStatsBlock(
+                        label = currentLanguage.pick("Caí", "I fell", "Caí"),
+                        counts = temptationFellCounts,
+                        tagPrefix = "fall_stats",
+                        currentLanguage = currentLanguage
+                    )
+
                     OutlinedTextField(
                         value = victoryNote,
                         onValueChange = { victoryNote = it },
@@ -763,6 +755,26 @@ fun HabitsAndVirtuesScreen(
                             .fillMaxWidth()
                             .heightIn(min = MinTouchTarget)
                             .testTag("confirm_victory_button")
+                    )
+                    AppSecondaryButton(
+                        label = currentLanguage.pick(
+                            "Caí en una tentación",
+                            "I fell into temptation",
+                            "Caí numa tentação"
+                        ),
+                        onClick = {
+                            scope.launch {
+                                // Separate counter, same calendar styling.
+                                temptationStore.recordFall()
+                                victoryNote = ""
+                                showSinAvoiderModal = false
+                                ttsManager.stop()
+                            }
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .heightIn(min = MinTouchTarget)
+                            .testTag("record_fall_button")
                     )
                     AppSecondaryButton(
                         label = currentLanguage.pick("Cerrar", "Close", "Fechar"),
@@ -1203,6 +1215,330 @@ private fun FidelityRing(
     }
 }
 
+// ----------------------------------------------------- fixed daily rule
+
+/** Where tapping a fixed daily habit's text opens its practice. */
+private enum class DailyHabitAction {
+    NONE, HOW_TO_PRAY, MISSAL, ANGELUS, CHAPLET, JACULATORY, EXAMEN, ROSARY, TRADITIONAL
+}
+
+/** One of the exactly twelve fixed daily practices. */
+private data class DailyHabit(
+    val id: String,
+    val group: Int,
+    val titleEs: String,
+    val titleEn: String,
+    val titlePt: String,
+    val subtitleEs: String,
+    val subtitleEn: String,
+    val subtitlePt: String,
+    val action: DailyHabitAction
+) {
+    fun title(language: AppLanguage): String = when (language) {
+        AppLanguage.ES -> titleEs
+        AppLanguage.EN -> titleEn
+        AppLanguage.PT -> titlePt
+    }
+    fun subtitle(language: AppLanguage): String = when (language) {
+        AppLanguage.ES -> subtitleEs
+        AppLanguage.EN -> subtitleEn
+        AppLanguage.PT -> subtitlePt
+    }
+}
+
+/**
+ * Totally twelve, in rule order: 0 = morning (4), 1 = day (5),
+ * 2 = nightfall (3). Titles in PT follow the requested rule; ES/EN
+ * carry the same practices in the other two languages.
+ */
+private val DailyHabits: List<DailyHabit> = listOf(
+    DailyHabit(
+        id = "daily_offering", group = 0,
+        titleEs = "Ofrecimiento del día", titleEn = "Offering of the day", titlePt = "Oferecimento do dia",
+        subtitleEs = "Consagrar el día a Dios", subtitleEn = "Offer the day to God", subtitlePt = "Ofereça o dia a Deus",
+        action = DailyHabitAction.HOW_TO_PRAY
+    ),
+    DailyHabit(
+        id = "daily_morning_prayers", group = 0,
+        titleEs = "Oraciones matutinas", titleEn = "Morning prayers", titlePt = "Orações matutinas",
+        subtitleEs = "Padre Nuestro · Ave María · Gloria", subtitleEn = "Our Father · Hail Mary · Glory Be", subtitlePt = "Pai Nosso · Ave Maria · Glória",
+        action = DailyHabitAction.NONE
+    ),
+    DailyHabit(
+        id = "daily_mental_prayer", group = 0,
+        titleEs = "Oración mental y silencio", titleEn = "Mental prayer and silence", titlePt = "Oração mental e silêncio",
+        subtitleEs = "15–30 min", subtitleEn = "15–30 min", subtitlePt = "15–30 min",
+        action = DailyHabitAction.NONE
+    ),
+    DailyHabit(
+        id = "daily_spiritual_reading", group = 0,
+        titleEs = "Lectura espiritual", titleEn = "Spiritual reading", titlePt = "Leitura espiritual",
+        subtitleEs = "Lecturas de hoy · Misal del día", subtitleEn = "Today's readings · Daily missal", subtitlePt = "Leituras do dia · Missal do dia",
+        action = DailyHabitAction.MISSAL
+    ),
+    DailyHabit(
+        id = "daily_angelus", group = 1,
+        titleEs = "Ángelus 6h · 12h · 18h", titleEn = "Angelus 6am · 12pm · 6pm", titlePt = "Ângelus 6h · 12h · 18h",
+        subtitleEs = "El Ángelus de la mañana, el mediodía y la tarde", subtitleEn = "The Angelus morning, midday and evening", subtitlePt = "O Angelus da manhã, do meio-dia e da tarde",
+        action = DailyHabitAction.ANGELUS
+    ),
+    DailyHabit(
+        id = "daily_chaplet", group = 1,
+        titleEs = "Coronilla 15:00", titleEn = "Divine Mercy Chaplet 3:00 PM", titlePt = "Coronilha 15:00",
+        subtitleEs = "Coronilla de la Divina Misericordia", subtitleEn = "Chaplet of Divine Mercy", subtitlePt = "Coronilha da Divina Misericórdia",
+        action = DailyHabitAction.CHAPLET
+    ),
+    DailyHabit(
+        id = "daily_jaculatorias", group = 1,
+        titleEs = "Jaculatorias", titleEn = "Ejaculations", titlePt = "Jaculatórias",
+        subtitleEs = "Invocaciones breves del corazón", subtitleEn = "Short prayers of the heart", subtitlePt = "Invocações breves do coração",
+        action = DailyHabitAction.JACULATORY
+    ),
+    DailyHabit(
+        id = "daily_mass", group = 1,
+        titleEs = "Santa Misa / Misa del día", titleEn = "Holy Mass / Daily readings", titlePt = "Santa Missa / Missa do dia",
+        subtitleEs = "Lecturas y Evangelio de hoy", subtitleEn = "Today's readings and Gospel", subtitlePt = "Leituras e Evangelho de hoje",
+        action = DailyHabitAction.MISSAL
+    ),
+    DailyHabit(
+        id = "daily_meal_blessing", group = 1,
+        titleEs = "Bendición de las comidas", titleEn = "Blessing of meals", titlePt = "Bênção das refeições",
+        subtitleEs = "Antes y después de comer", subtitleEn = "Before and after meals", subtitlePt = "Antes e depois das refeições",
+        action = DailyHabitAction.NONE
+    ),
+    DailyHabit(
+        id = "daily_examen", group = 2,
+        titleEs = "Examen de conciencia", titleEn = "Examination of conscience", titlePt = "Exame de consciência",
+        subtitleEs = "Revisar el día ante Dios", subtitleEn = "Review the day before God", subtitlePt = "Rever o dia diante de Deus",
+        action = DailyHabitAction.EXAMEN
+    ),
+    DailyHabit(
+        id = "daily_rosary", group = 2,
+        titleEs = "Rosario", titleEn = "Rosary", titlePt = "Terço",
+        subtitleEs = "Cinco misterios de la vida de Cristo", subtitleEn = "Five mysteries of the life of Christ", subtitlePt = "Cinco mistérios da vida de Cristo",
+        action = DailyHabitAction.ROSARY
+    ),
+    DailyHabit(
+        id = "daily_traditional_prayers", group = 2,
+        titleEs = "Oraciones tradicionales", titleEn = "Traditional prayers", titlePt = "Orações tradicionais",
+        subtitleEs = "Padre Nuestro, Ave María, Gloria, Ángel de la Guarda…", subtitleEn = "Our Father, Hail Mary, Glory Be, Guardian Angel…", subtitlePt = "Pai Nosso, Ave Maria, Glória, Anjo da Guarda…",
+        action = DailyHabitAction.TRADITIONAL
+    )
+)
+
+private val dailyHabitGroups: List<List<DailyHabit>> = (0..2).map { group ->
+    DailyHabits.filter { it.group == group }
+}
+
+private fun dailyHabitGroupLabel(group: Int, language: AppLanguage): String = when (group) {
+    0 -> language.pick("Mañana", "Morning", "Manhã")
+    1 -> language.pick("Día", "Day", "Dia")
+    else -> language.pick("Anoitecer", "Nightfall", "Anoitecer")
+}
+
+/**
+ * One fixed daily practice. The leading circle toggles today's check; the
+ * text opens the practice where one is linked (a trailing › marks those).
+ */
+@Composable
+private fun DailyHabitRow(
+    habit: DailyHabit,
+    isCompletedToday: Boolean,
+    currentLanguage: AppLanguage,
+    onToggleCompletion: () -> Unit,
+    onOpen: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+    val rowMinHeight = maxOf(design.spacing.rowMinHeight, MinTouchTarget)
+
+    Box(Modifier.testTag("habit_card_${habit.id}")) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = rowMinHeight)
+                .padding(horizontal = 16.dp, vertical = 10.dp)
+                .semantics {
+                    stateDescription = if (isCompletedToday) {
+                        currentLanguage.pick("Cumplido hoy", "Kept today", "Cumprido hoje")
+                    } else {
+                        currentLanguage.pick("Pendiente hoy", "Pending today", "Pendente hoje")
+                    }
+                },
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(28.dp)
+                    .clip(CircleShape)
+                    .then(
+                        if (isCompletedToday) {
+                            Modifier.background(palette.accent)
+                        } else {
+                            Modifier.border(1.5.dp, palette.textTertiary, CircleShape)
+                        }
+                    )
+                    .clickable(role = Role.Button, onClick = onToggleCompletion)
+                    .testTag("toggle_habit_${habit.id}"),
+                contentAlignment = Alignment.Center
+            ) {
+                if (isCompletedToday) {
+                    Icon(
+                        imageVector = Icons.Default.Check,
+                        contentDescription = null,
+                        tint = if (design.isDark) Color.Black else Color.White,
+                        modifier = Modifier.size(18.dp)
+                    )
+                }
+            }
+            Spacer(Modifier.width(design.spacing.iconLabelGap))
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .then(
+                        if (habit.action != DailyHabitAction.NONE) {
+                            Modifier.clickable(role = Role.Button, onClick = onOpen)
+                        } else {
+                            Modifier
+                        }
+                    )
+            ) {
+                Text(
+                    text = habit.title(currentLanguage),
+                    style = styles.rowTitle,
+                    color = if (isCompletedToday) palette.accent else palette.textPrimary
+                )
+                Spacer(Modifier.height(1.dp))
+                Text(
+                    text = habit.subtitle(currentLanguage),
+                    style = styles.rowSubtitle,
+                    color = palette.textSecondary
+                )
+            }
+            if (habit.action != DailyHabitAction.NONE) {
+                Text(
+                    text = "›",
+                    style = styles.rowTitle,
+                    color = palette.textTertiary
+                )
+            }
+        }
+    }
+}
+
+/**
+ * Daily completion control: today's X/Y plus the current month — checked
+ * practices so far over the practices possible up to today, the distinct
+ * days with any check, and one dot per day elapsed this month.
+ */
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun DailyCompletionCard(
+    todayDone: Int,
+    todayTotal: Int,
+    allCompletions: List<HabitCompletionLogEntity>,
+    todayDateStr: String,
+    dailyIds: Set<String>,
+    currentLanguage: AppLanguage,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val palette = design.palette
+    val styles = LocalAppTextStyles.current
+
+    val monthPrefix = todayDateStr.take(7)
+    val dayOfMonth = todayDateStr.takeLast(2).toIntOrNull() ?: 1
+    val monthLogs = remember(allCompletions, monthPrefix) {
+        allCompletions.filter {
+            it.completionDate.startsWith(monthPrefix) && it.habitId in dailyIds
+        }
+    }
+    val monthCheckedPairs = remember(monthLogs) {
+        monthLogs.map { it.habitId to it.completionDate }.distinct().size
+    }
+    val monthPossible = todayTotal * dayOfMonth
+    val activeDays = remember(monthLogs) {
+        monthLogs.map { it.completionDate }.distinct().toSet()
+    }
+    val monthRate = if (monthPossible > 0) monthCheckedPairs.toFloat() / monthPossible.toFloat() else 0f
+
+    AppCard(
+        modifier = modifier
+            .padding(horizontal = design.spacing.gutter)
+            .testTag("daily_completion_control")
+    ) {
+        Text(
+            text = currentLanguage.pick(
+                "Control de cumplimiento",
+                "Completion control",
+                "Controle de cumprimento"
+            ),
+            style = styles.sectionEyebrow,
+            color = palette.textSecondary
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        Text(
+            text = currentLanguage.pick(
+                "Hoy: $todayDone de $todayTotal",
+                "Today: $todayDone of $todayTotal",
+                "Hoje: $todayDone de $todayTotal"
+            ),
+            style = styles.rowTitle,
+            color = palette.textPrimary,
+            modifier = Modifier.semantics { stateDescription = "today $todayDone/$todayTotal" }
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        Text(
+            text = currentLanguage.pick(
+                "Este mes: $monthCheckedPairs de $monthPossible · ${activeDays.size} ${if (activeDays.size == 1) "día activo" else "días activos"}",
+                "This month: $monthCheckedPairs of $monthPossible · ${activeDays.size} ${if (activeDays.size == 1) "active day" else "active days"}",
+                "Este mês: $monthCheckedPairs de $monthPossible · ${activeDays.size} ${if (activeDays.size == 1) "dia ativo" else "dias ativos"}"
+            ),
+            style = styles.rowSubtitle,
+            color = palette.textPrimary,
+            modifier = Modifier.testTag("habits_monthly_summary")
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        LinearProgressIndicator(
+            progress = { monthRate.coerceIn(0f, 1f) },
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(4.dp)
+                .semantics {
+                    stateDescription = "$monthCheckedPairs/$monthPossible"
+                },
+            color = palette.accent,
+            trackColor = palette.selectionTint
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        FlowRow(
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+            verticalArrangement = Arrangement.spacedBy(4.dp)
+        ) {
+            for (day in 1..dayOfMonth) {
+                val date = "$monthPrefix-${day.toString().padStart(2, '0')}"
+                val active = date in activeDays
+                Box(
+                    modifier = Modifier
+                        .size(22.dp)
+                        .clip(CircleShape)
+                        .background(if (active) palette.accent else palette.selectionTint)
+                        .semantics { contentDescription = date }
+                        .testTag("habit_month_day_$day"),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = day.toString(),
+                        style = styles.rowSubtitle,
+                        color = if (active) Color.White else palette.textSecondary
+                    )
+                }
+            }
+        }
+    }
+}
+
 /**
  * One practice of the rule. Tapping the row is what keeps or un-keeps it today.
  * Ive checklist: a green checked circle leads the row when kept today
@@ -1556,6 +1892,57 @@ private fun Modifier.frostedCardChrome(): Modifier {
                 style = Stroke(width = width.toPx())
             )
         }
+}
+
+/**
+ * One line of running counts for a per-date counter map: today, this week
+ * (Mon–Sun), this month. Each window is a sum over date keys, so every one
+ * resets on its own boundary (day / week / month rollover). Shared by the
+ * victory and fall blocks of the temptation dialog.
+ */
+@Composable
+private fun TemptationStatsBlock(
+    label: String,
+    counts: Map<String, Int>,
+    tagPrefix: String,
+    currentLanguage: AppLanguage
+) {
+    val palette = LocalAppDesign.current.palette
+    val styles = LocalAppTextStyles.current
+    val today = LocalDate.now()
+    val todayCount = counts[TemptationStore.dateKey(today)] ?: 0
+    val weekCount = TemptationStore.weeklyCount(counts, today)
+    val monthCount = TemptationStore.monthlyCount(counts, today)
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+        Text(
+            text = label,
+            style = styles.sectionEyebrow,
+            color = palette.textSecondary,
+            modifier = Modifier.weight(1f)
+        )
+        Text(
+            text = currentLanguage.pick("$todayCount hoy", "$todayCount today", "$todayCount hoje"),
+            style = styles.rowSubtitle,
+            color = palette.textPrimary,
+            modifier = Modifier.testTag("${tagPrefix}_today")
+        )
+        Text(
+            text = currentLanguage.pick("$weekCount esta semana", "$weekCount this week", "$weekCount esta semana"),
+            style = styles.rowSubtitle,
+            color = palette.textPrimary,
+            modifier = Modifier.testTag("${tagPrefix}_week")
+        )
+        Text(
+            text = currentLanguage.pick("$monthCount este mes", "$monthCount this month", "$monthCount este mês"),
+            style = styles.rowSubtitle,
+            color = palette.textPrimary,
+            modifier = Modifier.testTag("${tagPrefix}_month")
+        )
+    }
 }
 
 /**

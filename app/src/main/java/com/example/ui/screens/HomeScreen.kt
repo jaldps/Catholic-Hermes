@@ -99,6 +99,10 @@ import com.example.data.models.SaintOfTheDay
 import com.example.data.models.VerseOfTheDay
 import com.example.data.local.SanctaFidesDao
 import com.example.data.local.SinOvercomeLogEntity
+import com.example.data.fidelity.FidelityStore
+import com.example.data.verse.DailyVerseFetcher
+import com.example.data.verse.DailyVerseRotation
+import com.example.data.verse.DailyVerseStore
 import com.example.data.temptation.TemptationStore
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.data.repository.BibleData
@@ -139,6 +143,9 @@ fun HomeScreen(
     onNavigateToPrayers: () -> Unit,
     onNavigateToLaudes: () -> Unit = onNavigateToPrayers,
     onNavigateToAngelus: () -> Unit = onNavigateToPrayers,
+    onNavigateToMorningPrayers: () -> Unit = {},
+    onNavigateToChaplet: () -> Unit = {},
+    onNavigateToNightPrayers: () -> Unit = {},
     onNavigateToDoctrine: () -> Unit,
     onNavigateToSpiritualLife: () -> Unit,
     onNavigateToQuiz: () -> Unit = onNavigateToSpiritualLife,
@@ -148,14 +155,16 @@ fun HomeScreen(
     onNavigateToMore: () -> Unit = {},
     onOpenAppearance: () -> Unit = {},
     onOpenFontPicker: () -> Unit = {},
-    // Pregunta del día data + entry point. MainApp wiring (follow-up, out of
-    // scope for this change): pass repository.catholicQuestions and
-    // onOpenQuestions = { go(AppDestination.QUESTIONS) } so "Leer respuesta"
-    // opens the Questions tab (DoctrineAndHistoryScreen, initialTopTab = 3).
+    // Pregunta del día data + entry point. MainApp wiring: pass
+    // repository.catholicQuestions and onOpenQuestions = { index ->
+    // questionsInitialIndex = index; go(AppDestination.QUESTIONS) } so
+    // "Leer respuesta" opens the Questions tab at the SPECIFIC question's
+    // answer (DoctrineAndHistoryScreen initialQuestionIndex), not the
+    // general Doctrine area.
     // Defaults keep previews/screenshot callers compiling; the card renders
     // only when the list is non-empty.
     catholicQuestions: List<ApologeticsQuestion> = emptyList(),
-    onOpenQuestions: () -> Unit = {},
+    onOpenQuestions: (Int) -> Unit = {},
     // Nullable so previews/screenshot callers that pass no database keep
     // compiling; the fidelity card is the only thing gated on it.
     dao: SanctaFidesDao? = null,
@@ -235,10 +244,15 @@ fun HomeScreen(
 
     // Pregunta del día: deterministic by date, no stored state — the index is
     // dayOfYear % question count (101 with the full bundled list), so every
-    // reader sees the same question on the same day.
-    val dailyQuestion = remember(catholicQuestions) {
-        if (catholicQuestions.isEmpty()) null
-        else catholicQuestions[Calendar.getInstance().get(Calendar.DAY_OF_YEAR) % catholicQuestions.size]
+    // reader sees the same question on the same day. The index is passed to
+    // onOpenQuestions so "Leer respuesta" deep-links to THIS question's
+    // answer, not the general Doctrine area.
+    val dayOfYear = remember { Calendar.getInstance().get(Calendar.DAY_OF_YEAR) }
+    val dailyQuestionIndex = remember(catholicQuestions, dayOfYear) {
+        if (catholicQuestions.isEmpty()) -1 else dayOfYear % catholicQuestions.size
+    }
+    val dailyQuestion = remember(catholicQuestions, dailyQuestionIndex) {
+        if (dailyQuestionIndex < 0) null else catholicQuestions[dailyQuestionIndex]
     }
     val dailyAnswerFirstLine = remember(dailyQuestion, currentLanguage) {
         dailyQuestion?.answer?.get(currentLanguage)?.let { firstLineOf(it) }?.takeIf { it.isNotBlank() }
@@ -260,6 +274,98 @@ fun HomeScreen(
             }
         }
         Unit
+    }
+
+    // Verse of the day refinement: the passed verse is the offline baseline
+    // (already rotated daily by the repository from the bundled Bible); when
+    // online, bible-api.com text for the same reference replaces it and is
+    // cached per date, so the verse still changes daily without a network
+    // and never re-downloads the same day's verse.
+    val verseToday = remember { java.time.LocalDate.now() }
+    val verseReferenceId = remember(verseToday) { DailyVerseRotation.referenceFor(verseToday) }
+    val verseCache = remember(context) { DailyVerseStore(context.applicationContext) }
+    val verseFetcher = remember { DailyVerseFetcher() }
+    fun verseWithText(verse: VerseOfTheDay, language: AppLanguage, text: String): VerseOfTheDay =
+        verse.copy(
+            text = when (language) {
+                AppLanguage.ES -> verse.text.copy(es = text)
+                AppLanguage.EN -> verse.text.copy(en = text)
+                AppLanguage.PT -> verse.text.copy(pt = text)
+            }
+        )
+    val dynamicVerse by produceState(
+        initialValue = verseOfTheDay,
+        verseOfTheDay,
+        currentLanguage,
+        verseToday,
+        verseReferenceId
+    ) {
+        val cached = verseCache.cachedText(verseToday, currentLanguage)
+        if (cached != null) {
+            value = verseWithText(verseOfTheDay, currentLanguage, cached)
+        } else {
+            val fetched = verseFetcher.fetchText(verseReferenceId, currentLanguage)
+            if (fetched != null) {
+                verseCache.saveText(verseToday, currentLanguage, fetched)
+                value = verseWithText(verseOfTheDay, currentLanguage, fetched)
+            }
+        }
+    }
+
+    // Time-based daily prayer: same list style as before (AppListGroup of
+    // AppListRows), but the hour decides WHICH content shows — the current
+    // hour's prayer first, then the next upcoming one, then the rule of
+    // life. `morning -> Morning Prayers` is the 5am slot before the 6am
+    // Laudes; the small hours stay on the traditional night prayers.
+    val prayerHour = remember { Calendar.getInstance().get(Calendar.HOUR_OF_DAY) }
+    val currentPrayerSlot = dailyPrayerSlotForHour(prayerHour)
+    val nextPrayerSlot = nextDailyPrayerSlot(currentPrayerSlot)
+
+    @Composable
+    fun DailyPrayerRow(slot: DailyPrayerSlot) {
+        val title = when (slot) {
+            DailyPrayerSlot.MORNING_PRAYERS ->
+                strings("Oraciones de la mañana", "Morning Prayers", "Orações da manhã")
+            DailyPrayerSlot.LAUDES ->
+                strings("Laudes", "Morning Prayer", "Laudes")
+            DailyPrayerSlot.ANGELUS ->
+                strings("El Ángelus", "The Angelus", "O Angelus")
+            DailyPrayerSlot.CORONILLA ->
+                strings(
+                    "Coronilla de la Divina Misericordia",
+                    "Chaplet of Divine Mercy",
+                    "Coroa da Divina Misericórdia"
+                )
+            DailyPrayerSlot.ANGELUS_EVENING ->
+                strings("El Ángelus", "The Angelus", "O Angelus")
+            DailyPrayerSlot.NIGHT_PRAYERS ->
+                strings(
+                    "Oraciones tradicionales de la noche",
+                    "Traditional night prayers",
+                    "Orações tradicionais da noite"
+                )
+        }
+        val (icon, onClick, clockHour, testTag) = when (slot) {
+            DailyPrayerSlot.MORNING_PRAYERS ->
+                Quad(Icons.Default.LightMode, onNavigateToMorningPrayers, 5, "home_morning_prayers_tile")
+            DailyPrayerSlot.LAUDES ->
+                Quad(Icons.Default.LightMode, onNavigateToLaudes, 6, "home_laudes_tile")
+            DailyPrayerSlot.ANGELUS ->
+                Quad(Icons.Default.WbTwilight, onNavigateToAngelus, 12, "home_angelus_tile")
+            DailyPrayerSlot.CORONILLA ->
+                Quad(DevotionalGlyphs.rosaryOutlined, onNavigateToChaplet, 15, "home_chaplet_tile")
+            DailyPrayerSlot.ANGELUS_EVENING ->
+                Quad(Icons.Default.WbTwilight, onNavigateToAngelus, 18, "home_angelus_tile")
+            DailyPrayerSlot.NIGHT_PRAYERS ->
+                Quad(Icons.Default.NightsStay, onNavigateToNightPrayers, 20, "home_night_prayers_tile")
+        }
+        AppListRow(
+            title = title,
+            leadingIcon = icon,
+            trailingText = TextFormat.clock(clockHour, 0, currentLanguage),
+            onClick = onClick,
+            modifier = Modifier.testTag(testTag)
+        )
     }
 
     LazyColumn(
@@ -560,11 +666,11 @@ fun HomeScreen(
                 CardHeading(
                     label = strings("Versículo del Día", "Verse of the Day", "Versículo do Dia"),
                     icon = Icons.Default.FormatQuote,
-                    trailing = verseOfTheDay.reference
+                    trailing = dynamicVerse.reference
                 )
                 Spacer(Modifier.height(design.spacing.cardGap))
                 Text(
-                    text = verseOfTheDay.text.get(currentLanguage),
+                    text = dynamicVerse.text.get(currentLanguage),
                     style = styles.quote,
                     color = palette.textPrimary,
                     modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
@@ -573,7 +679,7 @@ fun HomeScreen(
                 AppDivider()
                 Spacer(Modifier.height(design.spacing.cardGap))
                 Text(
-                    text = verseOfTheDay.spiritualChallenge.get(currentLanguage),
+                    text = dynamicVerse.spiritualChallenge.get(currentLanguage),
                     style = styles.rowSubtitle,
                     color = palette.textSecondary
                 )
@@ -617,7 +723,7 @@ fun HomeScreen(
                 ) {
                     AppPrimaryButton(
                         label = strings("Leer respuesta", "Read answer", "Ler resposta"),
-                        onClick = onOpenQuestions,
+                        onClick = { onOpenQuestions(dailyQuestionIndex) },
                         modifier = Modifier
                             .weight(1f)
                             .heightIn(min = 48.dp)
@@ -718,34 +824,13 @@ fun HomeScreen(
             )
         }
 
+        // 4. Time-based daily prayer: same AppListGroup style, hour picks the
+        // content (current hour's prayer, next upcoming prayer, rule of
+        // life) — the schedule lives in DailyPrayerSlot above.
         item {
             AppListGroup {
-                AppListRow(
-                    title = strings("Laudes", "Morning Prayer", "Laudes"),
-                    leadingIcon = Icons.Default.LightMode,
-                    trailingText = TextFormat.clock(6, 0, currentLanguage),
-                    onClick = onNavigateToLaudes,
-                    modifier = Modifier.testTag("home_laudes_tile")
-                )
-                AppListRow(
-                    title = strings("El Ángelus", "The Angelus", "O Angelus"),
-                    leadingIcon = Icons.Default.WbTwilight,
-                    trailingText = TextFormat.clock(12, 0, currentLanguage),
-                    onClick = onNavigateToAngelus,
-                    modifier = Modifier.testTag("home_angelus_tile")
-                )
-                AppListRow(
-                    title = strings("Santo Rosario", "Holy Rosary", "Santo Terço"),
-                    leadingIcon = DevotionalGlyphs.rosaryOutlined,
-                    trailingText = TextFormat.clock(18, 0, currentLanguage),
-                    onClick = onNavigateToRosary
-                )
-                AppListRow(
-                    title = strings("Completas", "Night Prayer", "Completas"),
-                    leadingIcon = Icons.Default.NightsStay,
-                    trailingText = TextFormat.clock(21, 0, currentLanguage),
-                    onClick = onNavigateToPrayers
-                )
+                DailyPrayerRow(currentPrayerSlot)
+                DailyPrayerRow(nextPrayerSlot)
                 AppListRow(
                     title = strings("Regla de vida", "Rule of life", "Regra de vida"),
                     leadingIcon = Icons.Outlined.Checklist,
@@ -1000,10 +1085,15 @@ private fun stripInlineFeastDate(name: String, feastDate: String): String {
 
 /**
  * Today's spiritual fidelity: one point per habit completion logged for today
- * (distinct habits kept), the total victories kept in Christ, and a one-tap
+ * (distinct habits kept), the total victories kept in Christ, a one-tap
  * "I overcame a temptation" that writes to the same victory log the Habits
  * screen reads and confirms inline. The generic TEMPTATION key keeps the
  * quick log from inflating any one catalogued vice's count.
+ *
+ * Daily counter: points are read for today's date only, so the counter
+ * resets every new day on its own. Monthly tracker below the card in
+ * [FidelityCalendar]: per-date completions from [FidelityStore] with a
+ * cumulative monthly total that restarts when the month rolls over.
  */
 @Composable
 private fun FidelityCard(
@@ -1017,6 +1107,9 @@ private fun FidelityCard(
     val scope = rememberCoroutineScope()
     val context = LocalContext.current
     val temptationStore = remember(context) { TemptationStore(context.applicationContext) }
+    // Monthly tracker: per-date completions from the same Room table the
+    // daily points come from, so the two can never disagree.
+    val fidelityStore = remember(dao) { FidelityStore(dao) }
 
     fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
         AppLanguage.ES -> es
@@ -1029,6 +1122,7 @@ private fun FidelityCard(
     }
     val habits by dao.getAllHabits().collectAsState(initial = emptyList())
     val todayCompletions by dao.getCompletionsForDate(todayDateStr).collectAsState(initial = emptyList())
+    val fidelityCounts by fidelityStore.counts.collectAsState(initial = emptyMap())
     val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
     var victoryLogged by rememberSaveable { mutableStateOf(false) }
 
@@ -1117,6 +1211,23 @@ private fun FidelityCard(
             modifier = Modifier
                 .clickable(onClick = onOpenHabits)
                 .testTag("home_fidelity_open_habits")
+        )
+        Spacer(Modifier.height(design.spacing.cardGap))
+        AppDivider()
+        Spacer(Modifier.height(design.spacing.cardGap))
+        Text(
+            text = strings(
+                "Progreso mensual",
+                "Monthly progress",
+                "Progresso mensal"
+            ),
+            style = styles.sectionEyebrow,
+            color = palette.textSecondary
+        )
+        Spacer(Modifier.height(design.spacing.cardGap / 2))
+        FidelityCalendar(
+            counts = fidelityCounts,
+            currentLanguage = currentLanguage
         )
     }
 }
@@ -1390,3 +1501,47 @@ private fun firstLineOf(text: String): String {
     val end = Regex("""[.!?](?=\s|$)""").find(line)?.range?.last
     return if (end != null) line.take(end + 1) else line
 }
+
+/** Time-based daily-prayer slot: which prayer the hour calls for. */
+private enum class DailyPrayerSlot {
+    MORNING_PRAYERS,
+    LAUDES,
+    ANGELUS,
+    CORONILLA,
+    ANGELUS_EVENING,
+    NIGHT_PRAYERS
+}
+
+/** The schedule's next prayer after [slot]; the cycle wraps from night back to morning. */
+private fun nextDailyPrayerSlot(slot: DailyPrayerSlot): DailyPrayerSlot = when (slot) {
+    DailyPrayerSlot.MORNING_PRAYERS -> DailyPrayerSlot.LAUDES
+    DailyPrayerSlot.LAUDES -> DailyPrayerSlot.ANGELUS
+    DailyPrayerSlot.ANGELUS -> DailyPrayerSlot.CORONILLA
+    DailyPrayerSlot.CORONILLA -> DailyPrayerSlot.ANGELUS_EVENING
+    DailyPrayerSlot.ANGELUS_EVENING -> DailyPrayerSlot.NIGHT_PRAYERS
+    DailyPrayerSlot.NIGHT_PRAYERS -> DailyPrayerSlot.MORNING_PRAYERS
+}
+
+/**
+ * The slot for [hour]: `morning -> Morning Prayers` (5am, before the 6am
+ * Laudes), 06:00 Laudes, 12:00 Angelus, 15:00 Coronilla, 18:00 Angelus,
+ * 20:00+ traditional night prayers. The small hours (0–4) stay on the
+ * night prayers.
+ */
+private fun dailyPrayerSlotForHour(hour: Int): DailyPrayerSlot = when (hour) {
+    in 0..4 -> DailyPrayerSlot.NIGHT_PRAYERS
+    5 -> DailyPrayerSlot.MORNING_PRAYERS
+    in 6..11 -> DailyPrayerSlot.LAUDES
+    in 12..14 -> DailyPrayerSlot.ANGELUS
+    in 15..17 -> DailyPrayerSlot.CORONILLA
+    in 18..19 -> DailyPrayerSlot.ANGELUS_EVENING
+    else -> DailyPrayerSlot.NIGHT_PRAYERS
+}
+
+/** One daily-prayer row payload: icon, tap, clock hour and test tag. */
+private data class Quad(
+    val icon: ImageVector,
+    val onClick: () -> Unit,
+    val clockHour: Int,
+    val testTag: String
+)

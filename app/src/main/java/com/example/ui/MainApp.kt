@@ -199,8 +199,17 @@ fun MainApp(
         go(AppDestination.CATECHISM)
     }
     var prayersInitialPrayerId by remember { mutableStateOf<String?>(null) }
+    var prayersInitialTab by remember { mutableIntStateOf(0) }
+    var prayersInitialNightTab by remember { mutableIntStateOf(0) }
+    var prayersInitialOpenChaplet by remember { mutableStateOf(false) }
+    // Deep link from Home's "Pregunta del día": the 0-based index of the
+    // question whose answer opens directly (DoctrineAndHistoryScreen
+    // initialQuestionIndex). Cleared on the next direct nav.
+    var questionsInitialIndex by remember { mutableStateOf<Int?>(null) }
+    var rosaryInitialTab by remember { mutableIntStateOf(0) }
     val onOpenPrayer: (prayerId: String) -> Unit = { prayerId ->
         prayersInitialPrayerId = prayerId
+        prayersInitialTab = 0
         go(AppDestination.PRAYERS)
     }
     var showLanguageSelector by remember { mutableStateOf(false) }
@@ -244,6 +253,13 @@ fun MainApp(
                 bibleInitialVerse = null
             } else if (dest == AppDestination.CATECHISM) {
                 catechismInitialParagraph = null
+            } else if (dest == AppDestination.PRAYERS) {
+                prayersInitialPrayerId = null
+                prayersInitialTab = 0
+                prayersInitialNightTab = 0
+                prayersInitialOpenChaplet = false
+            } else if (dest == AppDestination.ROSARY) {
+                rosaryInitialTab = 0
             }
             go(dest)
         },
@@ -329,7 +345,10 @@ fun MainApp(
                         liturgicalDay = repository.getCurrentLiturgicalDay(),
                         dao = dao,
                         catholicQuestions = repository.catholicQuestions,
-                        onOpenQuestions = { go(AppDestination.QUESTIONS) },
+                        onOpenQuestions = { index ->
+                            questionsInitialIndex = index
+                            go(AppDestination.QUESTIONS)
+                        },
                         onOpenLanguageSelector = { showLanguageSelector = true },
                         onOpenAppearance = { showCustomizerModal = true },
                         onOpenFontPicker = { showFontPicker = true },
@@ -357,6 +376,20 @@ fun MainApp(
                         onNavigateToPrayers = { go(AppDestination.PRAYERS) },
                         onNavigateToLaudes = { onOpenPrayer("laudes") },
                         onNavigateToAngelus = { onOpenPrayer("angelus") },
+                        onNavigateToMorningPrayers = { onOpenPrayer("morning_offering") },
+                        onNavigateToChaplet = {
+                            prayersInitialPrayerId = null
+                            prayersInitialTab = 0
+                            prayersInitialOpenChaplet = true
+                            go(AppDestination.PRAYERS)
+                        },
+                        onNavigateToNightPrayers = {
+                            prayersInitialPrayerId = null
+                            prayersInitialTab = 2
+                            prayersInitialNightTab = 2
+                            prayersInitialOpenChaplet = false
+                            go(AppDestination.PRAYERS)
+                        },
                         onNavigateToPilgrimage = { go(AppDestination.PILGRIMAGE_HABITS) },
                         onNavigateToDoctrine = { go(AppDestination.DOCTRINE) },
                         onNavigateToSpiritualLife = {
@@ -372,7 +405,30 @@ fun MainApp(
                     AppDestination.HABITS_VIRTUES -> HabitsAndVirtuesScreen(
                         repository = repository,
                         dao = dao,
-                        ttsManager = ttsManager
+                        ttsManager = ttsManager,
+                        onOpenPrayer = onOpenPrayer,
+                        onOpenPrayers = {
+                            prayersInitialPrayerId = null
+                            prayersInitialTab = 0
+                            go(AppDestination.PRAYERS)
+                        },
+                        onOpenRosary = { tab ->
+                            rosaryInitialTab = tab
+                            go(AppDestination.ROSARY)
+                        },
+                        onOpenMissal = {
+                            bibleInitialBook = null
+                            bibleInitialChapter = null
+                            bibleInitialVerse = null
+                            bibleInitialTab = 1
+                            go(AppDestination.BIBLE)
+                        },
+                        onOpenNight = { office ->
+                            prayersInitialPrayerId = null
+                            prayersInitialTab = 2
+                            prayersInitialNightTab = office
+                            go(AppDestination.PRAYERS)
+                        }
                     )
 
                     AppDestination.BIBLE -> BibleScreen(
@@ -395,7 +451,8 @@ fun MainApp(
                     AppDestination.ROSARY -> RosaryScreen(
                         repository = repository,
                         ttsManager = ttsManager,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        initialTab = rosaryInitialTab
                     )
 
                     AppDestination.PRAYERS -> PrayersAndNovenasScreen(
@@ -403,7 +460,10 @@ fun MainApp(
                         ttsManager = ttsManager,
                         currentLanguage = currentLanguage,
                         dao = dao,
-                        initialPrayerId = prayersInitialPrayerId
+                        initialPrayerId = prayersInitialPrayerId,
+                        initialTab = prayersInitialTab,
+                        initialNightOfficeTab = prayersInitialNightTab,
+                        initialOpenChaplet = prayersInitialOpenChaplet
                     )
 
                     AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(
@@ -482,6 +542,7 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         initialTopTab = 3,
                         showTabs = false,
+                        initialQuestionIndex = questionsInitialIndex,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
                         onOpenPrayer = onOpenPrayer

@@ -174,7 +174,14 @@ fun DoctrineAndHistoryScreen(
     modifier: Modifier = Modifier,
     onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit = { _, _, _ -> },
     onOpenCatechism: (paragraph: Int) -> Unit = {},
-    onOpenPrayer: (prayerId: String) -> Unit = {}
+    onOpenPrayer: (prayerId: String) -> Unit = {},
+    /**
+     * 0-based index into [com.example.data.models.ApologeticsQuestion] list
+     * (the same index Home's "Pregunta del día" uses). When set, the
+     * Questions pane opens directly on that question's answer instead of
+     * the list — the deep link behind Home's "Leer respuesta".
+     */
+    initialQuestionIndex: Int? = null
 ) {
     val design = LocalAppDesign.current
 
@@ -185,6 +192,18 @@ fun DoctrineAndHistoryScreen(
     // A commandment, precept, vice or epoch opens as its own page, keyed
     // "kind:index"; the panes list one line of each.
     var openEntry by remember { mutableStateOf<String?>(null) }
+
+    // Deep link from Home's "Pregunta del día": open the Questions tab at
+    // the SPECIFIC question's answer ("qa:<index>", the same entry the
+    // Questions pane opens by tap). Out-of-range indices are ignored, never
+    // a blank page.
+    LaunchedEffect(initialQuestionIndex) {
+        val index = initialQuestionIndex
+        if (index != null && index in repository.catholicQuestions.indices) {
+            selectedTopTab = 3
+            openEntry = "qa:$index"
+        }
+    }
 
     // Opened from "Churches & News" the destination is news only: no parish
     // directory or filters, just the Vatican feed under its own title.
@@ -723,14 +742,30 @@ private fun OrdersOfficesPane(
                             order.abbreviation.takeIf { it.isNotBlank() },
                             order.foundationYear.takeIf { it.isNotBlank() }
                         ).joinToString(" · ").takeIf { it.isNotBlank() }
-                        AppListRow(
-                            title = order.name.get(currentLanguage),
-                            subtitle = subtitle,
-                            onClick = { onOpen("order:$i") },
-                            modifier = Modifier
-                                .heightIn(min = MinTouchTarget)
-                                .testTag("order_${order.id}")
-                        )
+                        Row(
+                            verticalAlignment = Alignment.CenterVertically,
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            // The order's official emblem, small at the row's
+                            // leading edge. A missing asset draws nothing, so
+                            // the row reads the same as before.
+                            OrderEmblem(
+                                orderId = order.id,
+                                contentDescription = null,
+                                modifier = Modifier
+                                    .padding(start = design.spacing.gutter, end = 4.dp)
+                                    .size(40.dp)
+                            )
+                            AppListRow(
+                                title = order.name.get(currentLanguage),
+                                subtitle = subtitle,
+                                onClick = { onOpen("order:$i") },
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .heightIn(min = MinTouchTarget)
+                                    .testTag("order_${order.id}")
+                            )
+                        }
                     }
                 }
             }
@@ -1409,7 +1444,19 @@ private fun DoctrineEntryPage(
                     item {
                         AppScreenTitle(
                             title = order.name.get(currentLanguage),
-                            subtitle = meta
+                            subtitle = meta,
+                            // The order's official emblem beside the title
+                            // on its detail page.
+                            trailingContent = {
+                                OrderEmblem(
+                                    orderId = order.id,
+                                    contentDescription = order.name.get(currentLanguage),
+                                    modifier = Modifier
+                                        .padding(end = design.spacing.gutter)
+                                        .size(56.dp)
+                                        .testTag("order_emblem_detail")
+                                )
+                            }
                         )
                     }
                     item {
@@ -3096,6 +3143,31 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
 /** Opens [uri] in whatever handles maps, reporting whether anything did. */
 private fun Context.openMaps(uri: String): Boolean =
     runCatching { startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(uri))) }.isSuccess
+
+/**
+ * A religious order's official emblem from assets/orders/<order-id>.png.
+ * Drawn with [ContentScale.Fit] so shields, seals and wide logotypes all
+ * show whole. A missing or undecodable asset draws nothing, so the row or
+ * title beneath reads the same as before.
+ */
+@Composable
+private fun OrderEmblem(
+    orderId: String,
+    contentDescription: String?,
+    modifier: Modifier = Modifier
+) {
+    val context = LocalContext.current
+    val assetPath = "orders/$orderId.png"
+    val bitmap = remember(assetPath) { decodeSampledBitmap(context, assetPath, maxWidthPx = 256) }
+    if (bitmap != null) {
+        Image(
+            bitmap = bitmap,
+            contentDescription = contentDescription,
+            contentScale = ContentScale.Fit,
+            modifier = modifier
+        )
+    }
+}
 
 /**
  * Photographic hero art bundled under assets/heroes/. Decoded down-sampled

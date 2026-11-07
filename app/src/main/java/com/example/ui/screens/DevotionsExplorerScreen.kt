@@ -27,9 +27,14 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AutoAwesome
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material.icons.filled.LightMode
+import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -54,10 +59,12 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.ChristManifestation
 import com.example.data.models.MarianApparition
 import com.example.data.repository.CatholicDataRepository
+import com.example.ui.components.MenuPickerRow
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppChip
 import com.example.ui.design.AppDivider
 import com.example.ui.design.AppEmptyState
+import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppSearchField
 import com.example.ui.design.AppSecondaryButton
 import com.example.ui.design.AppSectionHeader
@@ -171,28 +178,34 @@ fun DevotionsExplorerScreen(
                             .testTag("devotions_search_input")
                     )
                     Spacer(Modifier.height(design.spacing.cardGap))
-                    // Devotion and region are visible filter chips rather than
-                    // collapsed menus: every choice is on screen at once, each
-                    // chip is a 48dp target, and the kit draws the selected
-                    // state from tokens, so this screen carries no colour.
-                    FilterChips(
-                        label = currentLanguage.pick("Devoción", "Devotion", "Devoção"),
-                        options = categories.mapIndexed { i, label -> i to label },
-                        selected = selectedCategoryTab,
-                        onSelect = {
-                            selectedCategoryTab = it
-                            expandedId = null
-                        },
-                        testTag = "devotions_category_picker"
-                    )
-                    Spacer(Modifier.height(design.spacing.cardGap / 2))
-                    FilterChips(
-                        label = currentLanguage.pick("Región", "Region", "Região"),
-                        options = regions,
-                        selected = selectedRegionFilter,
-                        onSelect = { selectedRegionFilter = it },
-                        testTag = "devotions_region_picker"
-                    )
+                    // Devotion and region consolidated into dropdown rows
+                    // (like the Rosary's Misterios picker) instead of
+                    // individual chip buttons. The leading icon follows the
+                    // selection: Marian / Christ devotion, and one mark per
+                    // region.
+                    AppListGroup {
+                        MenuPickerRow(
+                            title = currentLanguage.pick("Devoción", "Devotion", "Devoção"),
+                            leadingIcon = devotionIcon(selectedCategoryTab),
+                            options = categories.mapIndexed { i, label -> i to label },
+                            selected = selectedCategoryTab,
+                            onSelect = {
+                                selectedCategoryTab = it
+                                expandedId = null
+                            },
+                            modifier = Modifier.heightIn(min = MinTouchTarget),
+                            testTag = "devotions_category_picker"
+                        )
+                        MenuPickerRow(
+                            title = currentLanguage.pick("Región", "Region", "Região"),
+                            leadingIcon = regionIcon(selectedRegionFilter),
+                            options = regions,
+                            selected = selectedRegionFilter,
+                            onSelect = { selectedRegionFilter = it },
+                            modifier = Modifier.heightIn(min = MinTouchTarget),
+                            testTag = "devotions_region_picker"
+                        )
+                    }
                 }
             }
 
@@ -270,6 +283,18 @@ fun DevotionsExplorerScreen(
             item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
         }
     }
+}
+
+/** Icon of the selected devotion: Marian or Christ. */
+private fun devotionIcon(tab: Int) =
+    if (tab == 0) Icons.Default.Favorite else Icons.Default.LightMode
+
+/** Icon of the selected region: one mark per region. */
+private fun regionIcon(region: String) = when (region) {
+    "Americas" -> Icons.Default.Public
+    "Europe" -> Icons.Default.Star
+    "Universal" -> Icons.Default.AutoAwesome
+    else -> Icons.Default.AutoAwesome
 }
 
 /**

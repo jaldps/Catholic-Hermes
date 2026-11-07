@@ -128,9 +128,11 @@ fun NightPrayersScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier,
     /** The host screen's title and view switcher, set as the first rows. */
-    header: LazyListScope.() -> Unit = {}
+    header: LazyListScope.() -> Unit = {},
+    /** Office opened on arrival (0 = Compline, 1 = Examen, 2 = Traditional). */
+    initialOfficeTab: Int = 0
 ) {
-    var selectedNightOfficeTab by remember { mutableIntStateOf(0) } // 0 = Roman Compline, 1 = Ignatian Examen, 2 = Traditional night prayer
+    var selectedNightOfficeTab by remember { mutableIntStateOf(initialOfficeTab.coerceIn(0, 2)) } // 0 = Roman Compline, 1 = Ignatian Examen, 2 = Traditional night prayer
 
     val compline = repository.complineOffice
     val examenSteps = repository.ignatianExamenSteps
@@ -144,75 +146,10 @@ fun NightPrayersScreen(
             .fillMaxSize()
             .testTag("night_prayers_screen")
     ) {
-        // Compline or the examen is a choice inside the night's prayer, not a
-        // second strip of views: two chips under the screen's own control.
+        // Stacked directly: the host's tab rows, then this screen's office
+        // picker — no banner between them.
         val officeHeader: LazyListScope.() -> Unit = {
             header()
-
-            // Photographic hero (sunrise) with fade between the host title
-            // and the office picker: the night office opens on the same
-            // sunrise the day begins from, clipped to the 20dp card radius.
-            item(key = "night_sunrise_hero") {
-                val sunriseBitmap = rememberHeroBitmap("heroes/sunrise_mountains.jpg")
-                Box(
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = IveGutter)
-                        .height(220.dp)
-                        .clip(LocalAppDesign.current.shapes.card)
-                        .background(LocalAppDesign.current.palette.selectionTint)
-                        .testTag("night_sunrise_hero")
-                ) {
-                    if (sunriseBitmap != null) {
-                        Image(
-                            bitmap = sunriseBitmap,
-                            contentDescription = currentLanguage.pick(
-                                "Amanecer entre montañas",
-                                "Sunrise over mountains",
-                                "Nascer do sol sobre montanhas"
-                            ),
-                            contentScale = ContentScale.Crop,
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .clip(LocalAppDesign.current.shapes.card)
-                        )
-                    }
-                    // Fade: clear over the upper photo, canvas by the foot
-                    // of the band, so the hero dissolves into the page.
-                    Box(
-                        Modifier
-                            .fillMaxSize()
-                            .background(
-                                Brush.verticalGradient(
-                                    colors = listOf(
-                                        Color.Transparent,
-                                        LocalAppDesign.current.palette.canvas
-                                    )
-                                )
-                            )
-                    )
-                    // Light scrim behind the title zone: the photo is
-                    // lightened to the paper canvas under it rather than
-                    // darkened.
-                    Box(
-                        Modifier
-                            .align(Alignment.BottomCenter)
-                            .fillMaxWidth()
-                            .height(160.dp)
-                            .background(
-                                Brush.verticalGradient(
-                                    colors = listOf(
-                                        Color.Transparent,
-                                        LocalAppDesign.current.palette.canvas.copy(alpha = 0.55f),
-                                        LocalAppDesign.current.palette.canvas.copy(alpha = 0.92f),
-                                        LocalAppDesign.current.palette.canvas
-                                    )
-                                )
-                            )
-                    )
-                }
-                Spacer(Modifier.height(LocalAppDesign.current.spacing.cardGap))
-            }
 
             item(key = "night_office_choice") {
                 OfficeChoice(

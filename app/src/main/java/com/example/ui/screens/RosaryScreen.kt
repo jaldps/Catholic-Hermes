@@ -924,14 +924,16 @@ fun RosaryScreen(
     repository: CatholicDataRepository,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    /** Tab opened on arrival (0 = Rosary, 1 = Divine Mercy Chaplet). */
+    initialTab: Int = 0
 ) {
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
     val lang = currentLanguage
 
-    var selectedTab by remember { mutableIntStateOf(0) } // 0 = Santo Rosario, 1 = Coronilla de la Divina Misericordia
+    var selectedTab by remember { mutableIntStateOf(initialTab.coerceIn(0, 1)) } // 0 = Santo Rosario, 1 = Coronilla de la Divina Misericordia
 
     val todayMystery = remember { repository.getTodayRosaryMystery() }
 
