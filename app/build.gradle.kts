@@ -68,7 +68,7 @@ android {
       isIncludeAndroidResources = true
       all { test ->
         // Lets a screenshot run be narrowed: -Pshots.only=home,bible
-        listOf("shots.only", "shots.lang", "shots.font", "shots.scale", "shots.zone", "shots.width", "shots.height").forEach { key ->
+        listOf("shots.only", "shots.lang", "shots.font", "shots.scale", "shots.zone", "shots.width", "shots.height", "shots.identity", "shots.mode").forEach { key ->
           project.findProperty(key)?.let { test.systemProperty(key, it) }
         }
         test.maxHeapSize = "3g"

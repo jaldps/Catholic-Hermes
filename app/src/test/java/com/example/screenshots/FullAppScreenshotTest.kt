@@ -80,7 +80,17 @@ class FullAppScreenshotTest {
     private fun appComposeView(): ComposeView =
         compose.activity.findViewById<ViewGroup>(android.R.id.content).getChildAt(0) as ComposeView
 
+    /**
+     * Both stored identities render Lumen, so by default only APPLE renders.
+     * -Pshots.identity=all|apple|ive and -Pshots.mode=light|dark narrow or
+     * widen a run (renders are slow on the review PC).
+     */
+    private val identityFilter = System.getProperty("shots.identity")?.trim()?.lowercase() ?: "apple"
+    private val modeFilter = System.getProperty("shots.mode")?.trim()?.lowercase()
+
     private fun render(identity: DesignLanguage, dark: Boolean) {
+        if (identityFilter != "all" && identity.id.lowercase() != identityFilter) return
+        if (modeFilter != null && modeFilter != (if (dark) "dark" else "light")) return
         val destinations = AppDestination.entries.filter { only == null || it.name.lowercase() in only }
         if (destinations.isEmpty()) return
 

@@ -10,12 +10,14 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 
-/** The kit for the identity currently in force. */
+/**
+ * The kit in force. Lumen is the app's single identity; both stored
+ * [DesignLanguage] values resolve to it.
+ */
 @Composable
 @ReadOnlyComposable
 fun appKit(): AppKit = when (LocalAppDesign.current.language) {
-    DesignLanguage.APPLE -> AppleKit
-    DesignLanguage.IVE -> AppleKit
+    DesignLanguage.APPLE, DesignLanguage.IVE -> LumenKit
 }
 
 // Screens call these. They carry the default arguments an interface cannot, and

@@ -26,7 +26,35 @@ data class AppTextStyles(
     val navLabel: TextStyle,
     val buttonLabel: TextStyle,
     val metric: TextStyle,
-    val quote: TextStyle
+    val quote: TextStyle,
+    // ---- Lumen type scale (docs/redesign/DESIGN.md). Defaults keep older
+    // constructors compiling; the factory always fills them.
+    /** 44/48 hero title on a tab root ("Hoy"). */
+    val display: TextStyle = screenTitle,
+    /** 34/40 tab-root title without a hero. */
+    val largeTitle: TextStyle = screenTitle,
+    /** 28/34 detail title ("Misa de hoy"). */
+    val title1: TextStyle = screenTitle,
+    /** 22/28 medium: step and prayer titles. */
+    val title2: TextStyle = sectionTitle,
+    /** 20/25 semibold: section headers. */
+    val title3: TextStyle = sectionTitle,
+    /** 17/22 semibold: card titles, emphasised rows. */
+    val headline: TextStyle = rowTitle,
+    /** 17/24 regular: rows, body copy. */
+    val body: TextStyle = rowTitle,
+    /** 16/22: card body. */
+    val callout: TextStyle = rowTitle,
+    /** 15/20: card subtitles. */
+    val subhead: TextStyle = rowSubtitle,
+    /** 13/18: meta. */
+    val footnote: TextStyle = rowSubtitle,
+    /** 13/18 medium: date above a hero title, sentence case. */
+    val eyebrow: TextStyle = sectionEyebrow,
+    /** 12/16 medium: tile labels, chip meta. */
+    val caption: TextStyle = navLabel,
+    /** Long-form reading in the user's reader font (scripture, prayers). */
+    val reading: TextStyle = scripture
 )
 
 /** Identity defaults retain their own typography. An explicit user family applies
@@ -40,17 +68,7 @@ object AppTypographyFactory {
         fontFamilyChoice: String? = null
     ): Pair<Typography, AppTextStyles> {
         val readingSerif = if (fontFamilyChoice == null) serifPreferred else true
-        val base = when (language) {
-            DesignLanguage.APPLE -> apple(readingSerif, scale)
-            DesignLanguage.IVE -> apple(readingSerif, scale)
-        }.let { pair ->
-            if (language == DesignLanguage.IVE) {
-                pair.first to pair.second.copy(
-                    screenTitle = pair.second.screenTitle.copy(fontWeight = FontWeight.Normal),
-                    sectionTitle = pair.second.sectionTitle.copy(fontWeight = FontWeight.SemiBold)
-                )
-            } else pair
-        }
+        val base = lumen(readingSerif, scale)
         // Null retains the legacy Boolean API for existing callers.
         val family = fontFamilyChoice?.let {
             AppFonts.family(com.example.data.models.FontChoice.fromId(it))
@@ -86,7 +104,20 @@ object AppTypographyFactory {
             navLabel = extras.navLabel.withFamily(),
             buttonLabel = extras.buttonLabel.withFamily(),
             metric = extras.metric.withFamily(),
-            quote = extras.quote.withFamily()
+            quote = extras.quote.withFamily(),
+            display = extras.display.withFamily(),
+            largeTitle = extras.largeTitle.withFamily(),
+            title1 = extras.title1.withFamily(),
+            title2 = extras.title2.withFamily(),
+            title3 = extras.title3.withFamily(),
+            headline = extras.headline.withFamily(),
+            body = extras.body.withFamily(),
+            callout = extras.callout.withFamily(),
+            subhead = extras.subhead.withFamily(),
+            footnote = extras.footnote.withFamily(),
+            eyebrow = extras.eyebrow.withFamily(),
+            caption = extras.caption.withFamily(),
+            reading = extras.reading.withFamily()
         )
     }
 
@@ -155,6 +186,99 @@ object AppTypographyFactory {
             buttonLabel = style(17.0, 22.0, FontWeight.SemiBold, -0.4),
             metric = style(28.0, 32.0, FontWeight.Bold, -0.5),
             quote = style(17.0, 26.0, FontWeight.Normal, -0.3, reading)
+        )
+        return typography to extras
+    }
+
+    // ----------------------------------------------------------------- Lumen
+
+    /**
+     * Lumen's scale: Inter set the way SF Pro is on iOS 26 — regular-weight
+     * display sizes with tight optical tracking, generous leading below, and
+     * the reader font (EB Garamond by default) only for long-form text.
+     */
+    private fun lumen(serifPreferred: Boolean, s: Float): Pair<Typography, AppTextStyles> {
+        val sans = AppFonts.Inter
+        val reading = if (serifPreferred) AppFonts.EbGaramond else AppFonts.Inter
+
+        fun style(
+            size: Double,
+            lineHeight: Double,
+            weight: FontWeight = FontWeight.Normal,
+            tracking: Double = 0.0,
+            family: FontFamily = sans
+        ) = TextStyle(
+            fontFamily = family,
+            fontWeight = weight,
+            fontSize = sp(size, s),
+            lineHeight = sp(lineHeight, s),
+            letterSpacing = sp(tracking, s),
+            lineHeightStyle = tightLineHeight
+        )
+
+        val display = style(44.0, 48.0, FontWeight.Normal, -1.0)
+        val largeTitle = style(34.0, 40.0, FontWeight.Normal, -0.6)
+        val title1 = style(28.0, 34.0, FontWeight.Normal, -0.4)
+        val title2 = style(22.0, 28.0, FontWeight.Medium, -0.2)
+        val title3 = style(20.0, 25.0, FontWeight.SemiBold, -0.3)
+        val headline = style(17.0, 22.0, FontWeight.SemiBold, -0.2)
+        val body = style(17.0, 24.0, FontWeight.Normal, -0.2)
+        val callout = style(16.0, 22.0, FontWeight.Normal, -0.1)
+        val subhead = style(15.0, 20.0, FontWeight.Normal, 0.0)
+        val footnote = style(13.0, 18.0, FontWeight.Normal, 0.0)
+        val eyebrow = style(13.0, 18.0, FontWeight.Medium, 0.0)
+        val caption = style(12.0, 16.0, FontWeight.Medium, 0.0)
+        val readingStyle = if (serifPreferred) {
+            style(19.0, 30.0, FontWeight.Normal, 0.0, reading)
+        } else {
+            style(18.0, 28.0, FontWeight.Normal, -0.1, reading)
+        }
+
+        val typography = Typography(
+            displayLarge = largeTitle,
+            displayMedium = title1,
+            displaySmall = title2,
+            headlineLarge = title1,
+            headlineMedium = title2,
+            headlineSmall = title3,
+            titleLarge = headline,
+            titleMedium = style(16.0, 21.0, FontWeight.SemiBold, -0.2),
+            titleSmall = style(15.0, 20.0, FontWeight.Medium, -0.1),
+            bodyLarge = body,
+            bodyMedium = subhead,
+            bodySmall = footnote,
+            labelLarge = style(16.0, 22.0, FontWeight.SemiBold, -0.2),
+            labelMedium = eyebrow,
+            labelSmall = style(11.0, 13.0, FontWeight.Medium, 0.1)
+        )
+
+        val extras = AppTextStyles(
+            screenTitle = largeTitle,
+            screenSubtitle = subhead,
+            sectionEyebrow = eyebrow,
+            sectionTitle = title3,
+            scripture = readingStyle,
+            scriptureDropCap = readingStyle,
+            verseNumber = style(11.0, 14.0, FontWeight.SemiBold, 0.1),
+            rowTitle = body,
+            rowSubtitle = footnote,
+            navLabel = style(10.0, 12.0, FontWeight.Medium, 0.1),
+            buttonLabel = style(16.0, 22.0, FontWeight.SemiBold, -0.2),
+            metric = style(30.0, 34.0, FontWeight.Normal, -0.6),
+            quote = style(17.0, 26.0, FontWeight.Normal, -0.2, reading),
+            display = display,
+            largeTitle = largeTitle,
+            title1 = title1,
+            title2 = title2,
+            title3 = title3,
+            headline = headline,
+            body = body,
+            callout = callout,
+            subhead = subhead,
+            footnote = footnote,
+            eyebrow = eyebrow,
+            caption = caption,
+            reading = readingStyle
         )
         return typography to extras
     }

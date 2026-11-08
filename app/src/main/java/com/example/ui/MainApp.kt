@@ -27,9 +27,14 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.layout.layout
+import com.example.ui.design.LocalScreenFrame
+import com.example.ui.design.ScreenFrame
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
@@ -61,6 +66,7 @@ import com.example.ui.screens.MoreSection
 import com.example.ui.screens.ParishFinderScreen
 import com.example.ui.screens.PilgrimageAndHabitsScreen
 import com.example.ui.screens.PrayersAndNovenasScreen
+import com.example.ui.screens.RemindersScreen
 import com.example.ui.screens.RosaryScreen
 import com.example.ui.screens.SpiritualLifeScreen
 import com.example.ui.theme.DesignLanguage
@@ -83,14 +89,15 @@ enum class AppDestination(
     PILGRIMAGE_HABITS("Calendario y Santuarios", "Calendar & Shrines", "Calendário e Santuários", AppIconSlot.PILGRIMAGE, "nav_pilgrimage"),
     DOCTRINE("Doctrina e Historia", "Doctrine & History", "Doutrina e História", AppIconSlot.DOCTRINE, "nav_doctrine"),
     PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PARISH, "nav_parishes"),
-    CHURCHES_NEWS("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias", AppIconSlot.NEWS, "nav_churches_news"),
+    CHURCHES_NEWS("Noticias", "News", "Notícias", AppIconSlot.NEWS, "nav_churches_news"),
     QUESTIONS("101 preguntas sobre la fe católica", "101 Questions on the Catholic Faith", "101 Perguntas sobre a fé católica", AppIconSlot.DOCTRINE, "nav_questions"),
     STUDY_DOCTRINE("Doctrina", "Doctrine", "Doutrina", AppIconSlot.DOCTRINE, "nav_study_doctrine"),
     STUDY_MARY_JESUS("María y Jesús", "Mary & Jesus", "Maria e Jesus", AppIconSlot.DOCTRINE, "nav_study_mary_jesus"),
     STUDY_HISTORY("Historia", "History", "História", AppIconSlot.DOCTRINE, "nav_study_history"),
     STUDY_ORDERS("Órdenes y oficios", "Orders & Offices", "Ordens e ofícios", AppIconSlot.DOCTRINE, "nav_study_orders"),
     SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
-    MORE("Más", "More", "Mais", AppIconSlot.MORE, "nav_more");
+    REMINDERS("Recordatorios", "Reminders", "Lembretes", AppIconSlot.HABITS, "nav_reminders"),
+    MORE("Explorar", "Explore", "Explorar", AppIconSlot.MORE, "nav_more");
 
     companion object {
         /**
@@ -160,22 +167,21 @@ fun MainApp(
     val currentLanguage by repository.currentLanguage.collectAsState()
     // Bundled saint while the feed loads, then the feed's saint for today.
     val saintOfTheDay by repository.saintOfTheDayFlow.collectAsState()
-    var current by remember { mutableStateOf(initialDestination) }
-    // The tab a pushed screen was opened from, so back and the tab bar's
-    // highlight return to it: Home's shortcuts push onto Home, and screens
-    // opened from More push back to More.
-    var origin by remember {
-        mutableStateOf(
-            when {
-                initialDestination in AppDestination.tabs -> initialDestination
-                else -> AppDestination.MORE
-            }
-        )
+    // A real back stack, saved across rotation and process death: pushing
+    // from a pushed screen (101 Questions → Catechism) pops back to it, and
+    // the tab bar highlights the tab at the bottom of the stack.
+    var currentName by rememberSaveable { mutableStateOf(initialDestination.name) }
+    var stackNames by rememberSaveable {
+        mutableStateOf(if (initialDestination in AppDestination.tabs) "" else AppDestination.MORE.name)
     }
+    val current = AppDestination.valueOf(currentName)
+    val stack = stackNames.split(',').filter { it.isNotEmpty() }.map { AppDestination.valueOf(it) }
+    val origin = stack.firstOrNull { it in AppDestination.tabs }
+        ?: if (current in AppDestination.tabs) current else AppDestination.MORE
     fun go(destination: AppDestination) {
-        if (destination in AppDestination.tabs) origin = destination
-        else if (current in AppDestination.tabs) origin = current
-        current = destination
+        if (destination == current) return
+        stackNames = if (destination in AppDestination.tabs) "" else (stack + current).joinToString(",") { it.name }
+        currentName = destination.name
     }
     var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
     var bibleInitialTab by remember { mutableIntStateOf(0) }
@@ -234,13 +240,20 @@ fun MainApp(
     // a non-Home tab returns to Home. System back and the top-bar back share
     // this so the two can never drift apart.
     fun pop() {
-        if (isPushed) current = origin else go(AppDestination.HOME)
+        val previous = stack.lastOrNull()
+        if (previous != null) {
+            stackNames = stack.dropLast(1).joinToString(",") { it.name }
+            currentName = previous.name
+        } else if (current != AppDestination.HOME) {
+            go(AppDestination.HOME)
+        }
     }
 
     // Hoisted above the scaffold so system back is honoured regardless of
     // which identity is in force or whether the scaffold content is composed.
     BackHandler(enabled = current != AppDestination.HOME) { pop() }
 
+    CompositionLocalProvider(com.example.ui.design.LocalPreferencesStore provides preferencesStore) {
     AppScaffold(
         title = current.title(currentLanguage),
         navItems = navItems,
@@ -264,21 +277,19 @@ fun MainApp(
             go(dest)
         },
         onBack = if (isPushed) ({ pop() }) else null,
-        backLabel = if (isPushed) origin.title(currentLanguage) else null
+        backLabel = if (isPushed) (stack.lastOrNull() ?: origin).title(currentLanguage) else null
         // Appearance and language are settings, listed under More, not two
         // glyphs floating over every screen.
     ) { innerPadding ->
-        // Edge-to-edge: enableEdgeToEdge() lives in MainActivity and every
-        // kit's Scaffold sets contentWindowInsets = safeDrawing, so
-        // innerPadding already carries the status/nav insets plus the top
-        // bar and bottom bar heights. Applying it here keeps content clear
-        // of all four edges for every identity without double-insetting.
+        // Edge-to-edge: the scaffold draws the canvas, the floating dock and
+        // an overlaid top bar; innerPadding is what clears the status bar
+        // (plus the back row on a pushed screen) and the dock. Each screen
+        // gets its own frame: a screen that calls AppEdgeToEdge() draws
+        // from the top of the display to the bottom and pads itself with
+        // those insets; any other screen is padded here.
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(innerPadding)
-                // Slide transitions must not paint over the top bar or nav
-                // bar while a screen is entering; the frame clips them.
                 .clipToBounds()
         ) {
             AnimatedContent(
@@ -336,6 +347,26 @@ fun MainApp(
                 },
                 label = "screen_transition"
             ) { target ->
+              val frame = remember(target) { ScreenFrame() }
+              if (frame.insets != innerPadding) frame.insets = innerPadding
+              CompositionLocalProvider(LocalScreenFrame provides frame) {
+              Box(
+                  Modifier
+                      .fillMaxSize()
+                      .layout { measurable, constraints ->
+                          // Read in layout, so a screen that declares itself
+                          // edge-to-edge while composing is right on its
+                          // first frame.
+                          val top = if (frame.edgeToEdge) 0 else innerPadding.calculateTopPadding().roundToPx()
+                          val bottom = if (frame.edgeToEdge) 0 else innerPadding.calculateBottomPadding().roundToPx()
+                          val inner = constraints.copy(
+                              minHeight = (constraints.minHeight - top - bottom).coerceAtLeast(0),
+                              maxHeight = (constraints.maxHeight - top - bottom).coerceAtLeast(0)
+                          )
+                          val placeable = measurable.measure(inner)
+                          layout(constraints.maxWidth, constraints.maxHeight) { placeable.place(0, top) }
+                      }
+              ) {
                 when (target) {
                     AppDestination.HOME -> HomeScreen(
                         dailyReading = repository.dailyMassReading,
@@ -399,7 +430,10 @@ fun MainApp(
                         onNavigateToQuiz = {
                             spiritualLifeInitialTab = 1
                             go(AppDestination.SPIRITUAL_LIFE)
-                        }
+                        },
+                        onOpenReminders = { go(AppDestination.REMINDERS) },
+                        onNavigateToChurches = { go(AppDestination.CHURCHES_NEWS) },
+                        ttsManager = ttsManager
                     )
 
                     AppDestination.HABITS_VIRTUES -> HabitsAndVirtuesScreen(
@@ -556,10 +590,16 @@ fun MainApp(
                         initialTab = spiritualLifeInitialTab
                     )
 
+                    AppDestination.REMINDERS -> RemindersScreen(
+                        repository = repository,
+                        onBack = { pop() }
+                    )
+
                     AppDestination.MORE -> MoreScreen(
                         currentLanguage = currentLanguage,
                         sections = moreSections(currentLanguage) { destination ->
                             if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
+                            if (destination == AppDestination.QUESTIONS) questionsInitialIndex = null
                             if (destination == AppDestination.BIBLE) {
                                 bibleInitialBook = null
                                 bibleInitialChapter = null
@@ -582,6 +622,11 @@ fun MainApp(
                                         AppLanguage.PT -> "Aparência"
                                     },
                                     iconSlot = AppIconSlot.MORE,
+                                    value = when (preferences.darkModeSetting) {
+                                        "LIGHT" -> when (currentLanguage) { AppLanguage.ES -> "Claro"; AppLanguage.EN -> "Light"; AppLanguage.PT -> "Claro" }
+                                        "DARK" -> when (currentLanguage) { AppLanguage.ES -> "Oscuro"; AppLanguage.EN -> "Dark"; AppLanguage.PT -> "Escuro" }
+                                        else -> when (currentLanguage) { AppLanguage.ES -> "Automático"; AppLanguage.EN -> "Automatic"; AppLanguage.PT -> "Automático" }
+                                    },
                                     tag = "app_bar_theme_button",
                                     onOpen = { showCustomizerModal = true },
                                     icon = Icons.Outlined.Palette
@@ -614,8 +659,12 @@ fun MainApp(
                         )
                     )
                 }
+              }
+              }
             }
         }
+    }
+
     }
 
     if (showLanguageSelector) {

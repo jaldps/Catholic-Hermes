@@ -2,72 +2,46 @@ package com.example.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.filled.FormatSize
-import androidx.compose.material.icons.filled.Palette
-import androidx.compose.material.icons.filled.Speed
-import androidx.compose.material.icons.filled.TextFields
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.RadioButton
-import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
-import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
-import com.example.data.models.FontChoice
 import com.example.data.prefs.UserPreferences
 import com.example.data.prefs.UserPreferencesStore
+import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.design.AppSheet
+import com.example.ui.design.lumenPress
 import com.example.ui.theme.AppThemePreset
-import com.example.ui.theme.DesignLanguage
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.rememberCoroutineScope
+import com.example.ui.theme.LocalAppDesign
+import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
-import java.io.IOException
 
-@OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
+/**
+ * Appearance, as a Lumen sheet: every choice applies the moment it is made
+ * (no Save button). Mode, tint, text size and narration speed — the font
+ * lives in its own picker under More, so it is not repeated here.
+ */
 @Composable
 fun GuiCustomizerModal(
     preferencesStore: UserPreferencesStore,
@@ -75,363 +49,91 @@ fun GuiCustomizerModal(
     currentLanguage: AppLanguage = AppLanguage.ES,
     onDismiss: () -> Unit
 ) {
-    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
     val scope = rememberCoroutineScope()
-    val context = LocalContext.current
-    var saving by remember { mutableStateOf(false) }
-    val dismiss = { if (!saving) onDismiss() }
-
-    var selectedDesign by remember(preferences.designLanguage) { mutableStateOf(preferences.designLanguage) }
-    var selectedTheme by remember(preferences.themePreset) { mutableStateOf(preferences.themePreset) }
-    var selectedDarkMode by remember(preferences.darkModeSetting) { mutableStateOf(preferences.darkModeSetting) }
-    val persisted by preferencesStore.preferences.collectAsState(initial = preferences)
-    var showFontPicker by remember { mutableStateOf(false) }
-    var selectedScale by remember(preferences.fontSizeScale) { mutableFloatStateOf(preferences.fontSizeScale) }
-    var selectedAudioSpeed by remember(preferences.audioNarrationSpeed) { mutableFloatStateOf(preferences.audioNarrationSpeed) }
-
-    if (showFontPicker) {
-        FontPickerDialog(preferencesStore, persisted, currentLanguage) { showFontPicker = false }
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    fun t(es: String, en: String, pt: String) = when (currentLanguage) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
     }
 
-    ModalBottomSheet(
-        onDismissRequest = dismiss,
-        sheetState = sheetState,
-        containerColor = MaterialTheme.colorScheme.surface,
-        modifier = Modifier.testTag("gui_customizer_sheet")
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp, vertical = 8.dp)
-                .verticalScroll(rememberScrollState())
+    @Composable
+    fun Label(text: String) {
+        Text(
+            text,
+            style = styles.footnote,
+            color = p.textSecondary,
+            modifier = Modifier.padding(start = design.spacing.gutter + 4.dp, end = design.spacing.gutter, top = 18.dp, bottom = 8.dp)
+        )
+    }
+
+    AppSheet(onDismiss = onDismiss, title = t("Apariencia", "Appearance", "Aparência"), tag = "gui_customizer_sheet") {
+        Label(t("Modo", "Mode", "Modo"))
+        val modes = listOf("SYSTEM", "LIGHT", "DARK")
+        AppSegmentedTabs(
+            options = listOf(t("Automático", "Automatic", "Automático"), t("Claro", "Light", "Claro"), t("Oscuro", "Dark", "Escuro")),
+            selectedIndex = modes.indexOf(preferences.darkModeSetting).coerceAtLeast(0),
+            onSelect = { i -> scope.launch { preferencesStore.setDarkModeSetting(modes[i]) } },
+            modifier = Modifier.testTag("appearance_mode")
+        )
+
+        Label(t("Color de acento", "Accent colour", "Cor de destaque"))
+        Row(
+            Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
+            horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            // Header
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(
-                        imageVector = Icons.Default.Palette,
-                        contentDescription = "Personalización",
-                        tint = MaterialTheme.colorScheme.primary,
-                        modifier = Modifier.size(24.dp)
-                    )
-                    Spacer(modifier = Modifier.width(10.dp))
-                    Text(
-                        text = when (currentLanguage) {
-                            AppLanguage.ES -> "Personalizar Interfaz y Tema"
-                            AppLanguage.EN -> "Customize Interface & Theme"
-                            AppLanguage.PT -> "Personalizar Interface e Tema"
-                        },
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold
-                    )
+            AppThemePreset.entries.forEach { preset ->
+                val selected = preferences.themePreset == preset.id
+                val swatch = when (preset.id) {
+                    "MONASTIC_MINIMALIST" -> if (design.isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
+                    "SACRED_BURGUNDY" -> if (design.isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
+                    "MARIAN_AZURE" -> if (design.isDark) Color(0xFF8FC2EC) else Color(0xFF2A6597)
+                    else -> if (design.isDark) Color(0xFF7FC48A) else Color(0xFF2F7A3E)
                 }
-                IconButton(onClick = dismiss, enabled = !saving) {
-                    Icon(imageVector = Icons.Default.Close, contentDescription = "Cerrar")
-                }
-            }
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            // 0. Visual identity. This is the widest-reaching control in the
-            // app: it swaps type, shape, spacing, depth, motion, navigation and
-            // ornament, not only colour.
-            Text(
-                text = when (currentLanguage) {
-                    AppLanguage.ES -> "Identidad Visual"
-                    AppLanguage.EN -> "Visual Identity"
-                    AppLanguage.PT -> "Identidade Visual"
-                },
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.primary
-            )
-            Spacer(modifier = Modifier.height(10.dp))
-            DesignLanguage.entries.forEach { identity ->
-                val isSelected = selectedDesign == identity.id
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 4.dp)
-                        .clip(RoundedCornerShape(12.dp))
-                        .background(
-                            if (isSelected) MaterialTheme.colorScheme.primaryContainer
-                            else MaterialTheme.colorScheme.surfaceVariant
-                        )
-                        .clickable { selectedDesign = identity.id }
-                        .padding(14.dp)
-                        .testTag("design_language_${identity.id}"),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    RadioButton(selected = isSelected, onClick = { selectedDesign = identity.id })
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Column(modifier = Modifier.weight(1f)) {
-                        Text(
-                            text = identity.label.get(currentLanguage),
-                            style = MaterialTheme.typography.titleSmall,
-                            fontWeight = FontWeight.Bold
-                        )
-                        Spacer(modifier = Modifier.height(3.dp))
-                        Text(
-                            text = identity.tagline.get(currentLanguage),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                }
-            }
-
-            Spacer(modifier = Modifier.height(22.dp))
-
-            // 1. Theme Presets Selection
-            Text(
-                text = when (currentLanguage) {
-                    AppLanguage.ES -> "Estilo Visual y Paleta Litúrgica"
-                    AppLanguage.EN -> "Visual Style & Liturgical Palette"
-                    AppLanguage.PT -> "Estilo Visual e Paleta Litúrgica"
-                },
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.primary
-            )
-            Spacer(modifier = Modifier.height(8.dp))
-
-            AppThemePreset.values().forEach { preset ->
-                val isSelected = selectedTheme == preset.id
-                Card(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 4.dp)
-                        .clickable { selectedTheme = preset.id }
+                Box(
+                    Modifier
+                        .size(52.dp)
+                        .lumenPress({ scope.launch { preferencesStore.setThemePreset(preset.id) } }, 0.9f)
+                        .semantics {
+                            this.selected = selected
+                            contentDescription = preset.label.get(currentLanguage)
+                        }
                         .testTag("theme_preset_${preset.id}"),
-                    colors = CardDefaults.cardColors(
-                        containerColor = if (isSelected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant
-                    ),
-                    shape = RoundedCornerShape(12.dp)
+                    contentAlignment = Alignment.Center
                 ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(14.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween
+                    Box(
+                        Modifier
+                            .size(40.dp)
+                            .border(if (selected) 2.dp else 0.dp, if (selected) p.textPrimary else Color.Transparent, CircleShape)
+                            .padding(if (selected) 4.dp else 0.dp)
+                            .background(swatch, CircleShape),
+                        contentAlignment = Alignment.Center
                     ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Box(
-                                modifier = Modifier
-                                    .size(26.dp)
-                                    .clip(CircleShape)
-                                    .background(preset.previewPrimary)
-                                    .border(2.dp, Color.White, CircleShape)
-                            )
-                            Spacer(modifier = Modifier.width(12.dp))
-                            Text(
-                                text = when (currentLanguage) {
-                                    AppLanguage.ES -> preset.label.es
-                                    AppLanguage.EN -> preset.label.en
-                                    AppLanguage.PT -> preset.label.pt
-                                },
-                                style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium
-                            )
-                        }
-                        if (isSelected) {
-                            Icon(
-                                imageVector = Icons.Default.Check,
-                                contentDescription = "Seleccionado",
-                                tint = MaterialTheme.colorScheme.primary
-                            )
-                        }
+                        if (selected) Icon(Icons.Filled.Check, null, tint = Color.White, modifier = Modifier.size(16.dp))
                     }
                 }
             }
-
-            Spacer(modifier = Modifier.height(18.dp))
-
-            // 2. Dark Mode Mode
-            Text(
-                text = when (currentLanguage) {
-                    AppLanguage.ES -> "Modo de Brillo"
-                    AppLanguage.EN -> "Brightness Mode"
-                    AppLanguage.PT -> "Modo de Brilho"
-                },
-                style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
-                color = MaterialTheme.colorScheme.primary
-            )
-            Spacer(modifier = Modifier.height(6.dp))
-
-            FlowRow(
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                listOf(
-                    "SYSTEM" to Pair("Sistema", "System"),
-                    "LIGHT" to Pair("Claro", "Light"),
-                    "DARK" to Pair("Oscuro", "Dark")
-                ).forEach { (mode, labels) ->
-                    val isSelected = selectedDarkMode == mode
-                    FilterChip(
-                        selected = isSelected,
-                        onClick = { selectedDarkMode = mode },
-                        label = {
-                            Text(if (currentLanguage == AppLanguage.EN) labels.second else labels.first)
-                        },
-                        leadingIcon = if (isSelected) {
-                            { Icon(Icons.Default.Check, contentDescription = null, modifier = Modifier.size(16.dp)) }
-                        } else null,
-                        colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = MaterialTheme.colorScheme.primary,
-                            selectedLabelColor = MaterialTheme.colorScheme.onPrimary
-                        )
-                    )
-                }
-            }
-
-            Spacer(modifier = Modifier.height(18.dp))
-
-            TextButton(
-                onClick = { showFontPicker = true },
-                modifier = Modifier.testTag("appearance_font_button")
-            ) {
-                Text(when (currentLanguage) {
-                    AppLanguage.ES -> "Fuente"
-                    AppLanguage.EN -> "Font"
-                    AppLanguage.PT -> "Fonte"
-                })
-                Spacer(Modifier.width(12.dp))
-                Text(FontChoice.fromId(persisted.fontFamilyChoice).label(currentLanguage))
-            }
-            Spacer(modifier = Modifier.height(18.dp))
-
-            // 4. Text Font Scale
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.FormatSize, contentDescription = null, modifier = Modifier.size(20.dp), tint = MaterialTheme.colorScheme.primary)
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "Tamaño de Lectura: ${(selectedScale * 100).toInt()}%"
-                        AppLanguage.EN -> "Reading Size: ${(selectedScale * 100).toInt()}%"
-                        AppLanguage.PT -> "Tamanho do Texto: ${(selectedScale * 100).toInt()}%"
-                    },
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.primary
-                )
-            }
-            Spacer(modifier = Modifier.height(6.dp))
-
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                listOf(
-                    1.0f to "100% (Normal)",
-                    1.15f to "115% (Grande)",
-                    1.30f to "130% (Muy Grande)"
-                ).forEach { (scale, label) ->
-                    val isSelected = kotlin.math.abs(selectedScale - scale) < 0.05f
-                    FilterChip(
-                        selected = isSelected,
-                        onClick = { selectedScale = scale },
-                        label = { Text(label) },
-                        colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = MaterialTheme.colorScheme.primary,
-                            selectedLabelColor = MaterialTheme.colorScheme.onPrimary
-                        )
-                    )
-                }
-            }
-
-            Spacer(modifier = Modifier.height(18.dp))
-
-            // 5. Audio Speed
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Icon(Icons.Default.Speed, contentDescription = null, modifier = Modifier.size(20.dp), tint = MaterialTheme.colorScheme.primary)
-                Spacer(modifier = Modifier.width(8.dp))
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "Velocidad de Canto y Oración: ${selectedAudioSpeed}x"
-                        AppLanguage.EN -> "Chant & Audio Speed: ${selectedAudioSpeed}x"
-                        AppLanguage.PT -> "Velocidade do Áudio: ${selectedAudioSpeed}x"
-                    },
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
-                    color = MaterialTheme.colorScheme.primary
-                )
-            }
-            Spacer(modifier = Modifier.height(6.dp))
-
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                listOf(
-                    0.8f to "0.8x (Pausado)",
-                    1.0f to "1.0x (Estándar)",
-                    1.2f to "1.2x (Fluido)"
-                ).forEach { (speed, label) ->
-                    val isSelected = kotlin.math.abs(selectedAudioSpeed - speed) < 0.05f
-                    FilterChip(
-                        selected = isSelected,
-                        onClick = { selectedAudioSpeed = speed },
-                        label = { Text(label) },
-                        colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = MaterialTheme.colorScheme.primary,
-                            selectedLabelColor = MaterialTheme.colorScheme.onPrimary
-                        )
-                    )
-                }
-            }
-
-            Spacer(modifier = Modifier.height(24.dp))
-
-            // Save Button
-            Button(
-                onClick = {
-                    saving = true
-                    scope.launch {
-                        try {
-                            preferencesStore.saveAppearance(
-                                designLanguage = selectedDesign,
-                                themePreset = selectedTheme,
-                                darkModeSetting = selectedDarkMode,
-                                fontFamilyChoice = persisted.fontFamilyChoice,
-                                fontSizeScale = selectedScale,
-                                audioNarrationSpeed = selectedAudioSpeed,
-                                updateFontFamily = false
-                            )
-                            onDismiss()
-                        } catch (_: IOException) {
-                            val message = when (currentLanguage) {
-                                AppLanguage.ES -> "No se pudieron guardar los cambios"
-                                AppLanguage.EN -> "Couldn't save changes"
-                                AppLanguage.PT -> "Não foi possível salvar as alterações"
-                            }
-                            android.widget.Toast.makeText(context, message, android.widget.Toast.LENGTH_LONG).show()
-                        } finally {
-                            saving = false
-                        }
-                    }
-                },
-                enabled = !saving,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(50.dp)
-                    .testTag("save_preferences_button"),
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.primary
-                ),
-                shape = RoundedCornerShape(12.dp)
-            ) {
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "Guardar"
-                        AppLanguage.EN -> "Save"
-                        AppLanguage.PT -> "Salvar"
-                    },
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp
-                )
-            }
-
-            Spacer(modifier = Modifier.height(24.dp))
         }
+
+        Label(t("Tamaño del texto", "Text size", "Tamanho do texto"))
+        val scales = listOf(0.9f, 1.0f, 1.15f, 1.3f)
+        AppSegmentedTabs(
+            options = listOf("A−", "A", "A+", "A++"),
+            selectedIndex = scales.indexOfFirst { kotlin.math.abs(it - preferences.fontSizeScale) < 0.03f }.coerceAtLeast(1),
+            onSelect = { i -> scope.launch { preferencesStore.setFontSizeScale(scales[i]) } },
+            modifier = Modifier.testTag("appearance_text_size")
+        )
+
+        Label(t("Velocidad de la voz", "Narration speed", "Velocidade da voz"))
+        val speeds = listOf(0.75f, 1.0f, 1.25f, 1.5f)
+        AppSegmentedTabs(
+            options = listOf("0.75×", "1×", "1.25×", "1.5×"),
+            selectedIndex = speeds.indexOfFirst { kotlin.math.abs(it - preferences.audioNarrationSpeed) < 0.03f }.coerceAtLeast(1),
+            onSelect = { i -> scope.launch { preferencesStore.setAudioNarrationSpeed(speeds[i]) } },
+            modifier = Modifier.testTag("appearance_narration_speed")
+        )
+        Spacer(Modifier.height(20.dp))
     }
 }

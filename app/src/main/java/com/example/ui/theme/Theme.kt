@@ -45,11 +45,27 @@ fun SanctaFidesTheme(
     }
 
     val identity = DesignLanguage.fromId(designLanguage)
-    val design = DesignTokens.of(identity, isDark)
+    val base = DesignTokens.of(identity, isDark)
     val (typography, textStyles) = AppTypographyFactory.build(identity, isSerif, fontScale, fontFamilyChoice)
 
-    val accent = ThemePalettes.getColorScheme(themePreset, isDark).primary
+    // The preset only tints: Lumen calibrates each preset's ink so it clears
+    // 4.5:1 on canvas and glass in both modes.
+    val accent = lumenAccent(themePreset, isDark)
+    val design = base.copy(palette = base.palette.copy(accent = accent, ringEnd = if (themePreset == "LITURGICAL_DYNAMIC") base.palette.ringEnd else accent))
     val colorScheme = buildColorScheme(identity, design.palette, isDark, accent)
+
+    // Edge-to-edge: system bar glyphs follow the app's own mode, not the
+    // system's, so a light app on a dark phone still gets dark status icons.
+    val view = androidx.compose.ui.platform.LocalView.current
+    if (!view.isInEditMode) {
+        androidx.compose.runtime.SideEffect {
+            val window = (view.context as? android.app.Activity)?.window ?: return@SideEffect
+            androidx.core.view.WindowCompat.getInsetsController(window, view).apply {
+                isAppearanceLightStatusBars = !isDark
+                isAppearanceLightNavigationBars = !isDark
+            }
+        }
+    }
 
     CompositionLocalProvider(
         LocalAppDesign provides design,
@@ -72,6 +88,14 @@ fun SanctaFidesTheme(
             content = content
         )
     }
+}
+
+/** Lumen ink for each tint preset, light and dark. */
+private fun lumenAccent(preset: String, isDark: Boolean): Color = when (preset) {
+    "MONASTIC_MINIMALIST" -> if (isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
+    "SACRED_BURGUNDY" -> if (isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
+    "MARIAN_AZURE" -> if (isDark) Color(0xFF8FC2EC) else Color(0xFF2A6597)
+    else -> if (isDark) Color(0xFF7FC48A) else Color(0xFF2F7A3E)
 }
 
 /**

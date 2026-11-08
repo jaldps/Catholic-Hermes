@@ -151,7 +151,32 @@ data class AppPalette(
     val textSecondary: Color,
     val textTertiary: Color,
     val scrim: Color,
-    val selectionTint: Color
+    val selectionTint: Color,
+    // ---- Lumen surface roles. Defaults keep older constructors compiling.
+    /** Top and bottom of the full-screen canvas gradient. */
+    val canvasTop: Color = canvas,
+    val canvasBottom: Color = canvas,
+    /** Translucent frosted fill of cards, tiles, groups and chips. */
+    val glass: Color = groupedSurface,
+    /** Denser glass for floating controls and the segmented thumb. */
+    val glassStrong: Color = raised,
+    /** The lit edge of a glass surface, drawn top to bottom. */
+    val glassEdgeTop: Color = hairline,
+    val glassEdgeBottom: Color = hairline,
+    /** Colour of the soft lift shadow under glass. */
+    val shadow: Color = Color.Black.copy(alpha = 0.08f),
+    /** Inset hairline between rows. */
+    val separator: Color = hairline,
+    /** Primary capsule, selected chip: charcoal in light, ivory in dark. */
+    val action: Color = textPrimary,
+    val onAction: Color = canvas,
+    /** Completed habit checks. */
+    val success: Color = accent,
+    /** Progress ring gradient. */
+    val ringStart: Color = accentMuted,
+    val ringEnd: Color = accent,
+    /** Decorative-only ink (placeholders, disabled glyphs); never body text. */
+    val inkQuiet: Color = textTertiary
 )
 
 @Immutable
@@ -430,30 +455,138 @@ object DesignTokens {
     // Parchment, ink and gold leaf.
 
 
-    fun of(language: DesignLanguage, isDark: Boolean): AppDesign = when (language) {
-        DesignLanguage.APPLE -> AppDesign(
-            language = language,
-            isDark = isDark,
-            shapes = AppleShapes,
-            spacing = AppleSpacing,
-            depth = AppleDepth,
-            motion = AppleMotion,
-            decor = AppleDecor,
-            palette = if (isDark) ApplePaletteDark else ApplePaletteLight
-        )
+    // ----------------------------------------------------------------- Lumen
 
-        DesignLanguage.IVE -> AppDesign(
-            language = language,
-            isDark = isDark,
-            shapes = IveShapes,
-            spacing = AppleSpacing.copy(gutter = 20.dp, cardGap = 14.dp),
-            depth = AppleDepth.copy(cardElevation = 3.dp, cardBorderWidth = 1.dp),
-            motion = AppleMotion,
-            decor = AppleDecor,
-            palette = if (isDark) MaterialPaletteDark else MaterialPaletteLight
-        )
+    /**
+     * Lumen: one radius per element type — cards 24, groups and tiles 20,
+     * image cards 22, sheets 28, and every button-like control a capsule.
+     */
+    private val LumenShapes = AppShapes(
+        card = RoundedCornerShape(24.dp),
+        cardLarge = RoundedCornerShape(24.dp),
+        button = RoundedCornerShape(percent = 50),
+        buttonSmall = RoundedCornerShape(percent = 50),
+        field = RoundedCornerShape(percent = 50),
+        chip = RoundedCornerShape(percent = 50),
+        sheet = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
+        dialog = RoundedCornerShape(28.dp),
+        thumbnail = RoundedCornerShape(16.dp),
+        badge = RoundedCornerShape(percent = 50),
+        listGroup = RoundedCornerShape(20.dp)
+    )
 
-    }
+    private val LumenSpacing = AppSpacing(
+        gutter = 20.dp,
+        sectionGap = 28.dp,
+        cardPadding = 20.dp,
+        cardGap = 14.dp,
+        rowMinHeight = 52.dp,
+        rowPaddingVertical = 14.dp,
+        listItemGap = 0.dp,
+        headerTopGap = 12.dp,
+        contentBottomGap = 40.dp,
+        iconLabelGap = 14.dp,
+        insetGroupGap = 28.dp,
+        readingMaxWidth = 640.dp
+    )
+
+    private val LumenDepth = AppDepth(
+        cardElevation = 0.dp,
+        cardBorderWidth = 1.dp,
+        appBarElevation = 0.dp,
+        navElevation = 0.dp,
+        sheetElevation = 0.dp,
+        usesTonalFill = false,
+        usesHairlines = true
+    )
+
+    private val LumenMotion = AppMotion(
+        fastMillis = 200,
+        mediumMillis = 300,
+        slowMillis = 420,
+        standardEasing = CubicBezierEasing(0.25f, 0.1f, 0.25f, 1f),
+        emphasizedEasing = CubicBezierEasing(0.32f, 0.72f, 0f, 1f)
+    )
+
+    /**
+     * Warm daylight. Glass is drawn translucent ([AppPalette.glass]); the
+     * opaque [AppPalette.groupedSurface]/[AppPalette.raised] are that glass
+     * composited over the canvas, for code that needs a solid colour and for
+     * contrast checks. Every ink clears 4.5:1 on canvas and glass.
+     */
+    private val LumenLight = AppPalette(
+        canvas = Color(0xFFF2F0ED),
+        groupedSurface = Color(0xFFFBFAF9),
+        raised = Color(0xFFFFFFFF),
+        hairline = Color(0x0F000000),
+        accent = Color(0xFF2F7A3E),
+        accentMuted = Color(0xFFE3EEDF),
+        gold = Color(0xFF8A6A1F),
+        textPrimary = Color(0xFF1D1C1A),
+        textSecondary = Color(0xFF6B6661),
+        textTertiary = Color(0xFF706B66),
+        scrim = Color(0x52000000),
+        selectionTint = Color(0xFFE8E4DE),
+        canvasTop = Color(0xFFF6F4F1),
+        canvasBottom = Color(0xFFECE9E5),
+        glass = Color(0xB8FFFFFF),
+        glassStrong = Color(0xE0FFFFFF),
+        glassEdgeTop = Color(0xF2FFFFFF),
+        glassEdgeBottom = Color(0x59FFFFFF),
+        shadow = Color(0x143B2F22),
+        separator = Color(0x0F000000),
+        action = Color(0xFF2B2A28),
+        onAction = Color(0xFFFFFFFF),
+        success = Color(0xFF43A047),
+        ringStart = Color(0xFFCFE6C6),
+        ringEnd = Color(0xFF4E9F4A),
+        inkQuiet = Color(0xFF9C968F)
+    )
+
+    /** Night chapel: warm charcoal, quiet glass, nothing glows. */
+    private val LumenDark = AppPalette(
+        canvas = Color(0xFF131211),
+        groupedSurface = Color(0xFF242321),
+        raised = Color(0xFF2E2D2B),
+        hairline = Color(0x14FFFFFF),
+        accent = Color(0xFF7FC48A),
+        accentMuted = Color(0xFF223326),
+        gold = Color(0xFFD9BC7A),
+        textPrimary = Color(0xFFF3F0EB),
+        textSecondary = Color(0xFFA8A29B),
+        textTertiary = Color(0xFF9A958F),
+        scrim = Color(0x8C000000),
+        selectionTint = Color(0xFF34322F),
+        canvasTop = Color(0xFF171614),
+        canvasBottom = Color(0xFF0E0D0C),
+        glass = Color(0x12FFFFFF),
+        glassStrong = Color(0x1FFFFFFF),
+        glassEdgeTop = Color(0x24FFFFFF),
+        glassEdgeBottom = Color(0x0AFFFFFF),
+        shadow = Color(0x73000000),
+        separator = Color(0x14FFFFFF),
+        action = Color(0xFFF3F0EB),
+        onAction = Color(0xFF171614),
+        success = Color(0xFF5DB762),
+        ringStart = Color(0xFF2C4A2E),
+        ringEnd = Color(0xFF7FC48A),
+        inkQuiet = Color(0xFF77726C)
+    )
+
+    /**
+     * Both stored identities now render Lumen. The enum stays so saved
+     * preferences keep resolving; the identity picker is hidden.
+     */
+    fun of(language: DesignLanguage, isDark: Boolean): AppDesign = AppDesign(
+        language = language,
+        isDark = isDark,
+        shapes = LumenShapes,
+        spacing = LumenSpacing,
+        depth = LumenDepth,
+        motion = LumenMotion,
+        decor = AppleDecor.copy(navIconSize = 24.dp, rowIconSize = 22.dp),
+        palette = if (isDark) LumenDark else LumenLight
+    )
 
     /** Material [androidx.compose.material3.Shapes] derived from an identity. */
     fun materialShapes(shapes: AppShapes) = androidx.compose.material3.Shapes(
