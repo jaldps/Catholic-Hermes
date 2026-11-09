@@ -1,59 +1,54 @@
 package com.example.ui.screens
 
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.spring
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ChevronLeft
-import androidx.compose.material.icons.filled.ChevronRight
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.data.models.AppLanguage
 import com.example.data.temptation.TemptationStore
-import com.example.ui.design.AppCard
-import com.example.ui.design.AppDivider
+import com.example.ui.design.lumenPress
+import com.example.ui.design.softShadow
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
-import java.time.DayOfWeek
-import java.time.LocalDate
 import java.time.YearMonth
-import java.time.format.DateTimeFormatter
-import java.util.Locale
-
-/** Minimum touch target for the month arrows (AAA). */
-private val CalendarTouchTarget = 48.dp
 
 /**
- * Monthly calendars of temptations overcome and of falls — one grid, two
- * counters, switched by the tab row. Each day cell shows that day's active
- * count (the daily counter, which resets every new day) over the cumulative
- * total for the month up to that day (which resets after the month). Days
- * with entries are highlighted with the identity's tinted surface; today
- * carries a gold-ring badge. Plain grid reading (no interaction on the days
- * themselves) so the cell testTags `temptation_day_<d>` stay stable for
- * Compose tests. The fall tab renders only when [fellCounts] is passed, so
- * existing single-counter callers keep the original card unchanged.
+ * Monthly calendar of temptations overcome and of falls: one grid, two
+ * separate counters, switched by a glass segmented control ("Vencí | Caí",
+ * shown only when [fellCounts] is passed).
+ *
+ * Days with entries carry a monochrome ink disc whose density follows the
+ * count (1, 2, 3+). Falls use exactly the same quiet treatment as victories:
+ * never red, never a badge. Tapping a day shows its line ("Martes 4 · 2
+ * vencidas · 7 en el mes"): the daily counter (which resets every day) and
+ * the cumulative for the month (which resets every month), from per-date keys.
  */
 @Composable
 fun TemptationCalendar(
@@ -62,232 +57,129 @@ fun TemptationCalendar(
     modifier: Modifier = Modifier,
     initialMonth: YearMonth = YearMonth.now(),
     fellCounts: Map<String, Int>? = null,
+    framed: Boolean = true,
 ) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-
-    var month by remember(initialMonth) { mutableStateOf(initialMonth) }
+    val lang = currentLanguage
     var showFalls by remember { mutableStateOf(false) }
-    val today = LocalDate.now()
-    val activeCounts = if (showFalls && fellCounts != null) fellCounts else counts
-    val cumulative = remember(activeCounts, month) { TemptationStore.cumulativeForMonth(activeCounts, month) }
-    val monthTotal = cumulative.values.lastOrNull() ?: 0
-    val daysInMonth = month.lengthOfMonth()
-    val firstDow = month.atDay(1).dayOfWeek.value // 1 = Monday .. 7 = Sunday
+    val active = if (showFalls && fellCounts != null) fellCounts else counts
+    val falls = showFalls && fellCounts != null
 
-    fun pick(es: String, en: String, pt: String) = when (currentLanguage) {
-        AppLanguage.ES -> es
-        AppLanguage.EN -> en
-        AppLanguage.PT -> pt
-    }
-
-    AppCard(
-        modifier = modifier
-            .padding(horizontal = design.spacing.gutter)
-            .testTag("temptation_calendar")
-    ) {
-        Column(modifier = Modifier.fillMaxWidth()) {
-            // Victory/fall switch: same calendar, separate counter. Rendered
-            // only when the caller passes falls, so single-counter use keeps
-            // the original header.
+    CalendarFrame(framed = framed, modifier = modifier.testTag("temptation_calendar")) {
+        Column(Modifier.fillMaxWidth()) {
             if (fellCounts != null) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
-                ) {
-                    Text(
-                        text = pick("Vencí", "I overcame", "Venci"),
-                        style = styles.rowSubtitle.copy(fontWeight = if (!showFalls) FontWeight.Bold else FontWeight.Normal),
-                        color = if (!showFalls) palette.accent else palette.textSecondary,
-                        modifier = Modifier
-                            .weight(1f)
-                            .clickable { showFalls = false }
-                            .padding(vertical = 12.dp)
-                            .testTag("temptation_tab_victories"),
-                        textAlign = TextAlign.Center
-                    )
-                    Text(
-                        text = pick("Caí", "I fell", "Caí"),
-                        style = styles.rowSubtitle.copy(fontWeight = if (showFalls) FontWeight.Bold else FontWeight.Normal),
-                        color = if (showFalls) palette.accent else palette.textSecondary,
-                        modifier = Modifier
-                            .weight(1f)
-                            .clickable { showFalls = true }
-                            .padding(vertical = 12.dp)
-                            .testTag("temptation_tab_falls"),
-                        textAlign = TextAlign.Center
-                    )
-                }
-            }
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                IconButton(
-                    onClick = { month = month.minusMonths(1) },
-                    modifier = Modifier
-                        .size(CalendarTouchTarget)
-                        .testTag("temptation_prev_month")
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.ChevronLeft,
-                        contentDescription = pick("Mes anterior", "Previous month", "Mês anterior"),
-                        tint = palette.textPrimary
-                    )
-                }
-                Text(
-                    text = month.format(DateTimeFormatter.ofPattern("MMMM yyyy", localeFor(currentLanguage))),
-                    style = styles.rowTitle.copy(fontWeight = FontWeight.SemiBold),
-                    color = palette.textPrimary,
-                    modifier = Modifier.weight(1f),
-                    textAlign = TextAlign.Center
+                TwoSegments(
+                    first = lang.pick3("Vencí", "I overcame", "Venci"),
+                    second = lang.pick3("Caí", "I fell", "Caí"),
+                    secondSelected = showFalls,
+                    onSelect = { showFalls = it },
+                    firstTag = "temptation_tab_victories",
+                    secondTag = "temptation_tab_falls"
                 )
-                IconButton(
-                    onClick = { month = month.plusMonths(1) },
-                    modifier = Modifier
-                        .size(CalendarTouchTarget)
-                        .testTag("temptation_next_month")
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.ChevronRight,
-                        contentDescription = pick("Mes siguiente", "Next month", "Mês seguinte"),
-                        tint = palette.textPrimary
-                    )
-                }
+                Spacer(Modifier.height(14.dp))
             }
-
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-
-            // Weekday header (Monday-first, localized short names).
-            val weekdayNames = remember(currentLanguage) {
-                (0..6).map { offset ->
-                    DayOfWeek.MONDAY.plus(offset.toLong()).getDisplayName(
-                        java.time.format.TextStyle.SHORT, localeFor(currentLanguage)
-                    ).let { raw ->
-                        // Some locales return longer short names than a cell
-                        // can carry; the first two letters read best in a grid.
-                        raw.take(2).uppercase(localeFor(currentLanguage))
-                    }
-                }
-            }
-            Row(modifier = Modifier.fillMaxWidth()) {
-                weekdayNames.forEach { name ->
-                    Text(
-                        text = name,
-                        style = styles.rowSubtitle,
-                        color = palette.textSecondary,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.weight(1f)
-                    )
-                }
-            }
-
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-
-            // Day grid: leading blanks so day 1 lands under its weekday.
-            val cells: List<Int?> = (List(firstDow - 1) { null } + (1..daysInMonth).toList())
-            cells.chunked(7).forEach { week ->
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
-                ) {
-                    week.forEach { day ->
-                        if (day == null) {
-                            Spacer(Modifier.weight(1f))
-                        } else {
-                            val dayCount = activeCounts[TemptationStore.dateKey(month.atDay(day))] ?: 0
-                            val cum = cumulative[day] ?: 0
-                            val isToday = day == today.dayOfMonth && month == YearMonth.now()
-                            TemptationDayCell(
-                                day = day,
-                                dayCount = dayCount,
-                                cumulative = cum,
-                                isToday = isToday,
-                                modifier = Modifier.weight(1f)
-                            )
-                        }
-                    }
-                    // Pad the final week so every row holds seven cells.
-                    repeat(7 - week.size) { Spacer(Modifier.weight(1f)) }
-                }
-                Spacer(Modifier.height(4.dp))
-            }
-
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            AppDivider()
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            Text(
-                text = if (showFalls && fellCounts != null) {
-                    pick(
-                        "$monthTotal caídas este mes",
-                        "$monthTotal falls this month",
-                        "$monthTotal quedas este mês"
-                    )
-                } else {
-                    pick(
-                        "$monthTotal vencidas este mes",
-                        "$monthTotal overcome this month",
-                        "$monthTotal vencidas este mês"
-                    )
+            MonthCalendar(
+                language = lang,
+                initialMonth = initialMonth,
+                tagPrefix = "temptation",
+                footerTag = "temptation_month_total",
+                footerText = { month ->
+                    val total = TemptationStore.cumulativeForMonth(active, month).values.lastOrNull() ?: 0
+                    if (falls) lang.pick3("$total caídas este mes", "$total falls this month", "$total quedas este mês")
+                    else lang.pick3("$total vencidas este mes", "$total overcome this month", "$total vencidas este mês")
                 },
-                style = styles.rowSubtitle.copy(fontWeight = FontWeight.SemiBold),
-                color = palette.textPrimary,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .testTag("temptation_month_total"),
-                textAlign = TextAlign.Center
-            )
+                detailText = { date ->
+                    val count = active[TemptationStore.dateKey(date)] ?: 0
+                    val cumulative = TemptationStore.cumulativeForMonth(active, YearMonth.from(date))[date.dayOfMonth] ?: 0
+                    val dayPart = if (falls) lang.pick3(
+                        if (count == 1) "1 caída" else "$count caídas",
+                        if (count == 1) "1 fall" else "$count falls",
+                        if (count == 1) "1 queda" else "$count quedas"
+                    ) else lang.pick3(
+                        if (count == 1) "1 vencida" else "$count vencidas",
+                        "$count overcome",
+                        if (count == 1) "1 vencida" else "$count vencidas"
+                    )
+                    "${dayName(date, lang)} · $dayPart · " +
+                        lang.pick3("$cumulative en el mes", "$cumulative this month", "$cumulative no mês")
+                },
+                dayDescription = { date ->
+                    val count = active[TemptationStore.dateKey(date)] ?: 0
+                    fullDate(date, lang) + ", " + if (falls) lang.pick3("$count caídas", "$count falls", "$count quedas")
+                    else lang.pick3("$count vencidas", "$count overcome", "$count vencidas")
+                }
+            ) { date, isToday, isFuture, _ ->
+                DiscDayCell(
+                    day = date.dayOfMonth,
+                    count = active[TemptationStore.dateKey(date)] ?: 0,
+                    isToday = isToday,
+                    isFuture = isFuture
+                )
+            }
         }
     }
 }
 
+/**
+ * Two-option glass segmented control with one test tag per segment (the
+ * kit's control takes none). Track = glass, thumb = white (dark: 16% white)
+ * with a soft shadow, sliding on a spring.
+ */
 @Composable
-private fun TemptationDayCell(
-    day: Int,
-    dayCount: Int,
-    cumulative: Int,
-    isToday: Boolean,
+internal fun TwoSegments(
+    first: String,
+    second: String,
+    secondSelected: Boolean,
+    onSelect: (Boolean) -> Unit,
+    firstTag: String,
+    secondTag: String,
     modifier: Modifier = Modifier,
 ) {
     val design = LocalAppDesign.current
-    val palette = design.palette
+    val p = design.palette
     val styles = LocalAppTextStyles.current
-
-    Box(
-        modifier = modifier
-            .clip(design.shapes.card)
-            .then(
-                if (dayCount > 0) Modifier.background(palette.accentMuted)
-                else Modifier
-            )
-            .padding(vertical = 6.dp)
-            .testTag("temptation_day_$day"),
-        contentAlignment = Alignment.Center
+    val track = RoundedCornerShape(percent = 50)
+    BoxWithConstraints(
+        modifier
+            .fillMaxWidth()
+            .height(40.dp)
+            .background(p.textPrimary.copy(alpha = if (design.isDark) 0.10f else 0.06f), track)
+            .padding(3.dp)
     ) {
-        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text(
-                text = day.toString(),
-                style = styles.rowSubtitle.copy(
-                    fontWeight = if (isToday || dayCount > 0) FontWeight.Bold else FontWeight.Normal,
-                    color = if (isToday) palette.gold else palette.textPrimary
-                ),
-                textAlign = TextAlign.Center
-            )
-            if (dayCount > 0 || cumulative > 0) {
-                Text(
-                    text = "$dayCount·$cumulative",
-                    style = styles.rowSubtitle,
-                    color = palette.textSecondary,
-                    textAlign = TextAlign.Center
-                )
+        val segment = maxWidth / 2
+        val offset by animateDpAsState(
+            if (secondSelected) segment else 0.dp,
+            spring(dampingRatio = 0.85f, stiffness = 500f),
+            label = "seg"
+        )
+        Box(
+            Modifier
+                .offset(x = offset)
+                .width(segment)
+                .fillMaxHeight()
+                .softShadow(track, p.shadow, 10.dp, 2.dp)
+                .background(if (design.isDark) Color.White.copy(alpha = 0.16f) else Color.White, track)
+        )
+        Row(Modifier.fillMaxWidth().fillMaxHeight()) {
+            listOf(first to false, second to true).forEach { (label, isSecond) ->
+                val isSel = isSecond == secondSelected
+                Box(
+                    Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
+                        .lumenPress({ onSelect(isSecond) }, 0.97f, Role.Tab)
+                        .semantics { selected = isSel }
+                        .testTag(if (isSecond) secondTag else firstTag),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = label,
+                        style = styles.subhead.copy(fontWeight = if (isSel) FontWeight.SemiBold else FontWeight.Medium),
+                        color = p.textPrimary,
+                        textAlign = TextAlign.Center,
+                        maxLines = 1
+                    )
+                }
             }
         }
     }
-}
-
-private fun localeFor(language: AppLanguage): Locale = when (language) {
-    AppLanguage.ES -> Locale("es", "ES")
-    AppLanguage.EN -> Locale("en", "US")
-    AppLanguage.PT -> Locale("pt", "BR")
 }

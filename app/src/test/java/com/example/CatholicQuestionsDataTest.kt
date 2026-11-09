@@ -31,6 +31,26 @@ class CatholicQuestionsDataTest {
     }
 
     @Test
+    fun noClarificationStartsWithAStrayColon() {
+        for (q in CatholicQuestionsData.questions) {
+            for (lang in languages) {
+                assertTrue(
+                    "Q${q.number} ${lang.code} clarification starts with ':'",
+                    !q.clarification.get(lang).trimStart().startsWith(":")
+                )
+            }
+        }
+    }
+
+    @Test
+    fun everyLanguageGroupsTheSameElevenThemes() {
+        for (lang in languages) {
+            val names = CatholicQuestionsData.questions.map { it.section.get(lang) }.distinct()
+            assertEquals("themes in ${lang.code}", 11, names.size)
+        }
+    }
+
+    @Test
     fun elevenSectionsPresent() {
         val sections = CatholicQuestionsData.questions
             .map { it.section.es }.distinct()

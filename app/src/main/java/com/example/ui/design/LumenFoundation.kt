@@ -21,6 +21,7 @@ import androidx.compose.runtime.Stable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
@@ -47,6 +48,8 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.ui.theme.LocalAppDesign
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import org.json.JSONObject
 
 // -----------------------------------------------------------------------------
@@ -99,6 +102,15 @@ fun Modifier.softShadow(shape: Shape, color: Color, blur: Dp = 30.dp, offsetY: D
 fun Modifier.lumenGlass(shape: Shape, strong: Boolean = false, lifted: Boolean = true): Modifier = composed {
     val design = LocalAppDesign.current
     val p = design.palette
+    val base = if (strong) p.glassStrong else p.glass
+    // A faint sheen: a touch denser at the top, lighter below, so the surface
+    // reads as lit glass and not a flat white card.
+    val fill = Brush.verticalGradient(
+        listOf(
+            base.copy(alpha = (base.alpha * 1.12f).coerceAtMost(1f)),
+            base.copy(alpha = base.alpha * 0.9f)
+        )
+    )
     this
         .then(
             if (lifted) softShadow(
@@ -108,7 +120,13 @@ fun Modifier.lumenGlass(shape: Shape, strong: Boolean = false, lifted: Boolean =
                 offsetY = if (design.isDark) 6.dp else 10.dp
             ) else Modifier
         )
-        .background(if (strong) p.glassStrong else p.glass, shape)
+        // Light mode only: a tight contact shadow so the edge is defined
+        // (the wide lift alone reads as a blurry halo).
+        .then(
+            if (lifted && !design.isDark) softShadow(shape, p.shadow.copy(alpha = p.shadow.alpha * 0.7f), blur = 6.dp, offsetY = 1.dp)
+            else Modifier
+        )
+        .background(fill, shape)
         .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), shape)
 }
 
@@ -223,7 +241,16 @@ fun AppBackHandler(enabled: Boolean = true, onBack: () -> Unit) {
 // ------------------------------------------------------------------ heroes
 
 /** Where to anchor a hero's crop, and whether the art is bright or dark. */
-data class HeroMeta(val focusX: Float = 0.5f, val focusY: Float = 0.4f, val tone: String = "dark") {
+data class HeroMeta(
+    val focusX: Float = 0.5f,
+    val focusY: Float = 0.4f,
+    val tone: String = "dark",
+    /** > 1 crops tighter than "cover" around the focus point (art with a small subject). */
+    val zoom: Float = 1f,
+    /** Where, in the hero box (0..1), the focus point lands when [zoom] > 1. */
+    val anchorX: Float = 0.5f,
+    val anchorY: Float = 0.5f
+) {
     val alignment: Alignment get() = BiasAlignment(focusX * 2f - 1f, focusY * 2f - 1f)
 }
 
@@ -233,6 +260,10 @@ private object HeroCache {
     }
     private val manifests = java.util.concurrent.ConcurrentHashMap<String, JSONObject>()
 
+    /** A bitmap already decoded and cached, or null (never decodes). Safe on the main thread. */
+    fun peek(path: String, maxWidthPx: Int): ImageBitmap? = bitmaps.get("$path@$maxWidthPx")
+
+    /** Decodes (and caches) a bitmap. Blocking: call it off the main thread. */
     fun bitmap(context: Context, path: String, maxWidthPx: Int): ImageBitmap? {
         val key = "$path@$maxWidthPx"
         bitmaps.get(key)?.let { return it }
@@ -261,7 +292,10 @@ private object HeroCache {
         return HeroMeta(
             focusX = entry.optDouble("focusX", 0.5).toFloat(),
             focusY = entry.optDouble("focusY", 0.4).toFloat(),
-            tone = entry.optString("tone", "dark")
+            tone = entry.optString("tone", "dark"),
+            zoom = entry.optDouble("zoom", 1.0).toFloat(),
+            anchorX = entry.optDouble("anchorX", 0.5).toFloat(),
+            anchorY = entry.optDouble("anchorY", 0.5).toFloat()
         )
     }
 
@@ -270,13 +304,25 @@ private object HeroCache {
     }.getOrDefault(false)
 }
 
-/** Decodes a bundled `assets/` image once (down-sampled, LRU-cached). */
+/**
+ * Decodes a bundled `assets/` image once (down-sampled, LRU-cached). The decode
+ * runs on [Dispatchers.IO], never on the main thread: the result is null until
+ * it lands (a cache hit is returned on the first frame).
+ */
 @Composable
 fun rememberAssetBitmap(assetPath: String?, maxWidthPx: Int = 1080): ImageBitmap? {
     val context = LocalContext.current
-    return remember(assetPath, maxWidthPx) {
-        assetPath?.let { HeroCache.bitmap(context, it, maxWidthPx) }
+    val state = produceState(
+        initialValue = assetPath?.let { HeroCache.peek(it, maxWidthPx) },
+        assetPath, maxWidthPx
+    ) {
+        if (assetPath == null) {
+            value = null
+        } else if (value == null) {
+            value = withContext(Dispatchers.IO) { HeroCache.bitmap(context, assetPath, maxWidthPx) }
+        }
     }
+    return state.value
 }
 
 /** Focus point and tone for a bundled hero, from its folder's `manifest.json`. */

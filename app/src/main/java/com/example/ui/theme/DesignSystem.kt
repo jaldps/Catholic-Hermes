@@ -532,7 +532,7 @@ object DesignTokens {
         glass = Color(0xB8FFFFFF),
         glassStrong = Color(0xE0FFFFFF),
         glassEdgeTop = Color(0xF2FFFFFF),
-        glassEdgeBottom = Color(0x59FFFFFF),
+        glassEdgeBottom = Color(0x1F3B2F22),
         shadow = Color(0x143B2F22),
         separator = Color(0x0F000000),
         action = Color(0xFF2B2A28),

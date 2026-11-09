@@ -276,7 +276,7 @@ object DoctrineAndSpiritualData {
     val viaCrucisStations: List<ViaCrucisStation> = listOf(
         ViaCrucisStation(
             stationNumber = 1,
-            title = LocalizedText("I Estación: Jesús es condenado a muerte", "1st Station: Jesus is Condemned to Death", "1ª Estação: Jesus é condenado à morte"),
+            title = LocalizedText("I Estación: Jesús es condenado a muerte", "1st Station: Jesus Is Condemned to Death", "1ª Estação: Jesus é condenado à morte"),
             scripture = LocalizedText("Mateo 27, 26: «Pilato les soltó a Barrabás y a Jesús, después de azotarlo, lo entregó para que fuera crucificado».", "Matthew 27:26: “Pilate released Barabbas to them; but after having Jesus scourged, he handed Him over to be crucified.”", "Mateus 27, 26: “Pilatos soltou-lhes Barrabás e entregou Jesus para ser crucificado.”"),
             meditation = LocalizedText(
                 "Considera cómo Jesús, inocente y sin culpa, comparece manso ante Pilato y acepta la sentencia de muerte por nuestros pecados.",
@@ -307,7 +307,7 @@ object DoctrineAndSpiritualData {
         ViaCrucisStation(
             stationNumber = 3,
             title = LocalizedText("III Estación: Jesús cae por primera vez bajo la Cruz", "3rd Station: Jesus Falls the First Time", "3ª Estação: Jesus cai pela primeira vez"),
-            scripture = LocalizedText("Isaías 53, 4: «Él soportó nuestros sufrimientos y aguantó nuestros dolores».", "Isaiah 53:4: “Yet it was our infirmities that He bore, our sufferings that He endured.”", "Isaías 53, 4: “Ele tomou sobre si as nossas dores e suportou as nossas enfermidades.”"),
+            scripture = LocalizedText("Isaías 53, 4 (texto profético; las caídas son tradición piadosa): «Él soportó nuestros sufrimientos y aguantó nuestros dolores».", "Isaiah 53:4 (prophetic text; the falls are a pious tradition): “Yet it was our infirmities that He bore, our sufferings that He endured.”", "Isaías 53, 4 (texto profético; as quedas são tradição piedosa): “Ele tomou sobre si as nossas dores e suportou as nossas enfermidades.”"),
             meditation = LocalizedText(
                 "La pérdida de sangre por los azotes y las espinas hace que el Salvador caiga al suelo. Sin embargo, se levanta de nuevo.",
                 "Weakened by torture and agonizing loss of blood, the Savior collapses, yet rises out of burning love.",
@@ -317,6 +317,215 @@ object DoctrineAndSpiritualData {
                 "Señor, no permitas que me quede postrado en mis caídas; alcánzame la gracia de levantarme siempre.",
                 "Lord, never let me despair after falling into sin; grant me the grace to rise promptly in repentance.",
                 "Senhor, levantai-me de minhas quedas e livrai-me do pecado."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 4,
+            title = LocalizedText("IV Estación: Jesús encuentra a su Madre santísima", "4th Station: Jesus Meets His Mother", "4ª Estação: Jesus encontra sua Mãe santíssima"),
+            scripture = LocalizedText(
+                "Lucas 2, 35 (el encuentro en el camino es tradición piadosa; el texto evoca el dolor de María): «Y a ti misma una espada te traspasará el alma».",
+                "Luke 2:35 (the meeting on the road is a pious tradition; the text evokes Mary's sorrow): “and you yourself a sword will pierce.”",
+                "Lucas 2, 35 (o encontro no caminho é tradição piedosa; o texto evoca a dor de Maria): “e uma espada transpassará a tua alma.”"
+            ),
+            meditation = LocalizedText(
+                "Considera el encuentro de Jesús con su Madre: sus miradas se cruzan y cada una atraviesa el corazón de la otra. María, que lo llevó en su seno, comparte ahora su dolor y no se aparta de él.",
+                "Consider the meeting of Jesus and his Mother: their eyes meet, and each look pierces the heart of the other. Mary, who bore him in her womb, now shares his sorrow and does not leave his side.",
+                "Considera o encontro de Jesus com sua Mãe: os seus olhares se cruzam, e cada um transpassa o coração do outro. Maria, que o trouxe em seu seio, partilha agora a sua dor e não se afasta dele."
+            ),
+            prayer = LocalizedText(
+                "Madre dolorosa, alcánzame la gracia de acompañar a tu Hijo con compasión sincera y de permanecer fiel a él en la prueba.",
+                "Sorrowful Mother, obtain for me the grace to accompany your Son with a compassionate heart and to remain faithful to him in trial.",
+                "Mãe dolorosa, alcançai-me a graça de acompanhar vosso Filho com compaixão sincera e de permanecer fiel a ele na provação."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 5,
+            title = LocalizedText("V Estación: El Cireneo ayuda a Jesús a llevar la Cruz", "5th Station: Simon of Cyrene Helps Jesus Carry the Cross", "5ª Estação: Simão Cireneu ajuda Jesus a carregar a Cruz"),
+            scripture = LocalizedText(
+                "Lucas 23, 26: «Cuando lo llevaban, echaron mano de un tal Simón de Cirene, que venía del campo, y le cargaron la cruz para que la llevara detrás de Jesús».",
+                "Luke 23:26: “As they led him away they took hold of a certain Simon, a Cyrenian, who was coming in from the country; and after laying the cross on him, they made him carry it behind Jesus.”",
+                "Lucas 23, 26: “Enquanto o conduziam, pegaram um certo Simão de Cirene, que voltava do campo, e puseram-lhe a cruz às costas, para que a carregasse atrás de Jesus.”"
+            ),
+            meditation = LocalizedText(
+                "Considera que los verdugos, temiendo que Jesús muera en el camino, fuerzan a Simón de Cirene a llevar la Cruz tras él. Lo que empezó como una obligación se convierte, junto a Jesús, en una gracia.",
+                "Consider how the soldiers, afraid that Jesus will die before reaching Calvary, force Simon of Cyrene to carry the Cross behind him. What began as compulsion becomes, at the side of Jesus, a grace.",
+                "Considera como os soldados, temendo que Jesus morra antes de chegar ao Calvário, obrigam Simão Cireneu a levar a Cruz atrás dele. O que começou como obrigação torna-se, ao lado de Jesus, uma graça."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, no quiero llevar mi cruz a regañadientes; enséñame a cargarla contigo y a ayudar a quienes sufren a mi alrededor.",
+                "My Jesus, I do not want to carry my cross grudgingly; teach me to bear it with you and to help those who suffer around me.",
+                "Jesus meu, não quero carregar a minha cruz de má vontade; ensinai-me a levá-la convosco e a ajudar os que sofrem ao meu redor."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 6,
+            title = LocalizedText("VI Estación: La Verónica enjuga el rostro de Jesús", "6th Station: Veronica Wipes the Face of Jesus", "6ª Estação: Verônica enxuga o rosto de Jesus"),
+            scripture = LocalizedText(
+                "Salmo 27, 8-9 (la Verónica es tradición piadosa, no aparece en los Evangelios): «Tu rostro, Señor, es lo que busco; no me ocultes tu rostro».",
+                "Psalm 27:8-9 (Veronica is a pious tradition, not found in the Gospels): “Your presence, LORD, I seek. Do not hide your face from me.”",
+                "Salmo 27, 8-9 (Verônica é tradição piedosa, não aparece nos Evangelhos): “É a tua face, Senhor, que eu procuro. Não me escondas a tua face.”"
+            ),
+            meditation = LocalizedText(
+                "Considera la valentía de una mujer piadosa que se abre paso entre la multitud y enjuga con un lienzo el rostro de Jesús, cubierto de sudor y sangre. La tradición cuenta que el Señor dejó impresa en él su santa imagen, como premio a su compasión.",
+                "Consider the courage of a devout woman who makes her way through the crowd and wipes the face of Jesus, covered with sweat and blood, with a cloth. Tradition tells that the Lord left the imprint of his holy face upon it as a reward for her compassion.",
+                "Considera a coragem de uma mulher piedosa que se abre caminho entre a multidão e enxuga com um pano o rosto de Jesus, coberto de suor e sangue. A tradição conta que o Senhor deixou nele impressa a sua santa face, como recompensa de sua compaixão."
+            ),
+            prayer = LocalizedText(
+                "Señor, imprime en mi corazón la imagen de tu rostro doliente y dame un amor valiente que no tema consolarte en los más pequeños.",
+                "Lord, imprint upon my heart the image of your suffering face, and give me a courageous love that does not fear to console you in the least of your brethren.",
+                "Senhor, imprimi em meu coração a imagem do vosso rosto sofredor e dai-me um amor corajoso, que não tema consolar-vos nos menores dos vossos irmãos."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 7,
+            title = LocalizedText("VII Estación: Jesús cae por segunda vez", "7th Station: Jesus Falls the Second Time", "7ª Estação: Jesus cai pela segunda vez"),
+            scripture = LocalizedText(
+                "Isaías 53, 5 (texto profético; las caídas son tradición piadosa): «Fue traspasado por nuestras rebeldías y triturado por nuestros pecados; el castigo que nos da la paz cayó sobre él, y por sus llagas hemos sido curados».",
+                "Isaiah 53:5 (prophetic text; the falls are a pious tradition): “He was pierced for our offenses, crushed for our sins; upon him was the chastisement that makes us whole, by his stripes we were healed.”",
+                "Isaías 53, 5 (texto profético; as quedas são tradição piedosa): “Foi transpassado por causa das nossas transgressões, esmagado por causa das nossas iniquidades; o castigo que nos traz a paz caiu sobre ele, e pelas suas feridas fomos curados.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo Jesús, agotado por el camino, cae por segunda vez bajo el peso de la Cruz. Nuestras recaídas lo derriban de nuevo, pero él se levanta otra vez, paciente con nuestra debilidad.",
+                "Consider how Jesus, exhausted by the road, falls a second time beneath the weight of the Cross. Our relapses bring him to the ground again, yet he rises once more, patient with our weakness.",
+                "Considera como Jesus, esgotado pelo caminho, cai pela segunda vez sob o peso da Cruz. As nossas recaídas o derrubam de novo, mas ele se levanta outra vez, paciente com a nossa fraqueza."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, por esta segunda caída, perdona mis recaídas y dame la perseverancia de volver a ti cuantas veces haga falta.",
+                "My Jesus, by this second fall, forgive my relapses and give me the perseverance to return to you as often as I need.",
+                "Jesus meu, por esta segunda queda, perdoai as minhas recaídas e dai-me a perseverança de voltar a vós quantas vezes for preciso."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 8,
+            title = LocalizedText("VIII Estación: Jesús consuela a las mujeres de Jerusalén", "8th Station: Jesus Meets the Women of Jerusalem", "8ª Estação: Jesus consola as mulheres de Jerusalém"),
+            scripture = LocalizedText(
+                "Lucas 23, 27-28: «Lo seguía una gran multitud del pueblo y de mujeres que se golpeaban el pecho y se lamentaban por él. Jesús se volvió hacia ellas y les dijo: “Hijas de Jerusalén, no lloren por mí; lloren más bien por ustedes y por sus hijos”».",
+                "Luke 23:27-28: “A large crowd of people followed Jesus, including many women who mourned and lamented him. Jesus turned to them and said, ‘Daughters of Jerusalem, do not weep for me; weep instead for yourselves and for your children.’”",
+                "Lucas 23, 27-28: “Seguia-o uma grande multidão do povo e de mulheres que batiam no peito e se lamentavam por ele. Jesus voltou-se para elas e disse: ‘Filhas de Jerusalém, não choreis por mim; chorai antes por vós mesmas e por vossos filhos.’”"
+            ),
+            meditation = LocalizedText(
+                "Considera la compasión de las mujeres de Jerusalén, que lloran al ver sufrir al Señor. Olvidándose de sí mismo, Jesús las invita a llorar por sus pecados y los de sus hijos: las lágrimas que Dios espera son las del arrepentimiento.",
+                "Consider the compassion of the women of Jerusalem, who weep at the sight of the Lord's suffering. Forgetting himself, Jesus bids them weep for their own sins and those of their children: the tears God asks for are those of repentance.",
+                "Considera a compaixão das mulheres de Jerusalém, que choram ao ver o Senhor sofrer. Esquecendo-se de si mesmo, Jesus as convida a chorar pelos seus pecados e pelos de seus filhos: as lágrimas que Deus espera são as do arrependimento."
+            ),
+            prayer = LocalizedText(
+                "Señor, dame lágrimas de verdadero arrepentimiento por mis pecados y un corazón que sepa compadecerse de quien sufre.",
+                "Lord, give me tears of true repentance for my sins, and a heart that knows how to feel for those who suffer.",
+                "Senhor, dai-me lágrimas de sincero arrependimento pelos meus pecados e um coração que saiba compadecer-se de quem sofre."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 9,
+            title = LocalizedText("IX Estación: Jesús cae por tercera vez", "9th Station: Jesus Falls the Third Time", "9ª Estação: Jesus cai pela terceira vez"),
+            scripture = LocalizedText(
+                "Lamentaciones 1, 12 (texto profético; las caídas son tradición piadosa): «Ustedes, los que pasan por el camino, miren y vean si hay dolor semejante a mi dolor».",
+                "Lamentations 1:12 (prophetic text; the falls are a pious tradition): “Come, all you who pass by the way, look and see whether there is any suffering like my suffering.”",
+                "Lamentações 1, 12 (texto profético; as quedas são tradição piedosa): “Vós todos, que passais pelo caminho, olhai e vede se existe dor semelhante à minha dor.”"
+            ),
+            meditation = LocalizedText(
+                "Considera la tercera caída de Jesús, ya cerca del Calvario, cuando las fuerzas casi lo abandonan. Su dolor es inmenso, pero su amor es mayor: quiere llegar hasta el final para salvarnos, aunque le cueste el último aliento.",
+                "Consider the third fall of Jesus, close to Calvary, when his strength almost fails him. His pain is immense, but his love is greater: he wants to reach the end to save us, even at the cost of his last breath.",
+                "Considera a terceira queda de Jesus, já perto do Calvário, quando as forças quase o abandonam. A sua dor é imensa, mas o seu amor é maior: quer chegar até o fim para nos salvar, ainda que isso lhe custe o último alento."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, que nunca me rinda ante el cansancio ni la tibieza; sostén mi fe cuando ya no tenga fuerzas para levantarme.",
+                "My Jesus, never let me yield to weariness or lukewarmness; sustain my faith when I have no strength left to rise.",
+                "Jesus meu, que eu nunca me renda ao cansaço nem à tibieza; sustentai a minha fé quando já não tiver forças para me levantar."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 10,
+            title = LocalizedText("X Estación: Jesús es despojado de sus vestiduras", "10th Station: Jesus Is Stripped of His Garments", "10ª Estação: Jesus é despojado de suas vestes"),
+            scripture = LocalizedText(
+                "Juan 19, 23: «Cuando los soldados crucificaron a Jesús, tomaron sus vestidos y los repartieron en cuatro partes, una para cada soldado».",
+                "John 19:23: “When the soldiers had crucified Jesus, they took his clothes and divided them into four shares, a share for each soldier.”",
+                "João 19, 23: “Os soldados, depois de crucificarem Jesus, tomaram as suas vestes e fizeram quatro partes, uma para cada soldado.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo los soldados arrancan a Jesús sus vestiduras, pegadas a las heridas, y reabren así sus llagas. Sin nada que lo cubra, el Rey del universo se ofrece pobre y humillado, para revestirnos de su gracia.",
+                "Consider how the soldiers tear the garments from Jesus, clinging to his wounds, and reopen his sores. Stripped of everything, the King of the universe offers himself poor and humiliated, to clothe us with his grace.",
+                "Considera como os soldados arrancam de Jesus as suas vestes, coladas às feridas, e reabrem assim as suas chagas. Sem nada que o cubra, o Rei do universo oferece-se pobre e humilhado, para nos revestir da sua graça."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, despójame de todo apego desordenado y vísteme con tu gracia, para que pertenezca solo a ti.",
+                "My Jesus, strip me of every disordered attachment and clothe me with your grace, that I may belong to you alone.",
+                "Jesus meu, despojai-me de todo apego desordenado e revesti-me da vossa graça, para que eu pertença somente a vós."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 11,
+            title = LocalizedText("XI Estación: Jesús es clavado en la Cruz", "11th Station: Jesus Is Nailed to the Cross", "11ª Estação: Jesus é pregado na Cruz"),
+            scripture = LocalizedText(
+                "Lucas 23, 33: «Cuando llegaron al lugar llamado Calvario, lo crucificaron allí, a él y a los malhechores, uno a la derecha y otro a la izquierda».",
+                "Luke 23:33: “When they came to the place called the Skull, they crucified him and the criminals there, one on his right, the other on his left.”",
+                "Lucas 23, 33: “Quando chegaram ao lugar chamado Calvário, ali o crucificaram, e também os malfeitores, um à direita e outro à esquerda.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo Jesús se tiende sobre la Cruz y entrega sus manos y sus pies a los clavos. Cada golpe del martillo resuena como una oración de perdón por quienes lo crucifican, y por nosotros.",
+                "Consider how Jesus stretches himself upon the Cross and surrenders his hands and feet to the nails. Every blow of the hammer echoes as a prayer of forgiveness for those who crucify him, and for us.",
+                "Considera como Jesus se estende sobre a Cruz e entrega as suas mãos e os seus pés aos cravos. Cada golpe do martelo ressoa como uma oração de perdão por aqueles que o crucificam e por nós."
+            ),
+            prayer = LocalizedText(
+                "Señor, clava mi voluntad a la tuya y no permitas que me separe jamás de ti.",
+                "Lord, nail my will to yours and never let me be separated from you.",
+                "Senhor, pregai a minha vontade à vossa e não permitais que eu me separe jamais de vós."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 12,
+            title = LocalizedText("XII Estación: Jesús muere en la Cruz", "12th Station: Jesus Dies on the Cross", "12ª Estação: Jesus morre na Cruz"),
+            scripture = LocalizedText(
+                "Lucas 23, 46: «Jesús, clamando con voz fuerte, dijo: “Padre, en tus manos encomiendo mi espíritu”. Y, dicho esto, expiró».",
+                "Luke 23:46: “Jesus cried out in a loud voice, ‘Father, into your hands I commend my spirit’; and when he had said this he breathed his last.”",
+                "Lucas 23, 46: “Jesus, dando um grande grito, disse: ‘Pai, nas tuas mãos entrego o meu espírito.’ Dito isto, expirou.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo Jesús, después de tres horas de agonía, inclina la cabeza y entrega su espíritu al Padre. El cielo se oscurece y la tierra tiembla: el Hijo de Dios ha muerto por amor a los pecadores.",
+                "Consider how Jesus, after three hours of agony, bows his head and gives up his spirit to the Father. The sky darkens and the earth trembles: the Son of God has died out of love for sinners.",
+                "Considera como Jesus, depois de três horas de agonia, inclina a cabeça e entrega o espírito ao Pai. O céu escurece e a terra treme: o Filho de Deus morreu por amor dos pecadores."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, tú que moriste por mí, haz que yo muera al pecado y viva solo para ti.",
+                "My Jesus, who died for me, grant that I may die to sin and live for you alone.",
+                "Jesus meu, que morrestes por mim, fazei que eu morra para o pecado e viva somente para vós."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 13,
+            title = LocalizedText("XIII Estación: Jesús es bajado de la Cruz y entregado a su Madre", "13th Station: Jesus Is Taken Down from the Cross", "13ª Estação: Jesus é descido da Cruz e entregue a sua Mãe"),
+            scripture = LocalizedText(
+                "Juan 19, 38 (la tradición coloca el cuerpo en brazos de María): «José de Arimatea pidió a Pilato que le permitiera retirar el cuerpo de Jesús. Pilato se lo concedió, y José fue y lo retiró».",
+                "John 19:38 (tradition places the body in Mary's arms): “Joseph of Arimathea asked Pilate if he could remove the body of Jesus. And Pilate permitted it. So he came and took his body.”",
+                "João 19, 38 (a tradição coloca o corpo nos braços de Maria): “José de Arimateia pediu a Pilatos para retirar o corpo de Jesus. Pilatos permitiu, e José foi retirar o corpo.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo los discípulos bajan de la Cruz el cuerpo sin vida de Jesús y lo ponen en los brazos de su Madre. María estrecha al Hijo que concibió por obra del Espíritu Santo, ahora muerto; su dolor es la espada de la que habló Simeón.",
+                "Consider how the disciples take the lifeless body of Jesus down from the Cross and place it in the arms of his Mother. Mary holds the Son she conceived by the Holy Spirit, now dead; her sorrow is the sword of which Simeon spoke.",
+                "Considera como os discípulos descem da Cruz o corpo sem vida de Jesus e o colocam nos braços de sua Mãe. Maria acolhe o Filho que concebeu por obra do Espírito Santo, agora morto; a sua dor é a espada de que falou Simeão."
+            ),
+            prayer = LocalizedText(
+                "Madre dolorosa, ruega por mí; que tus lágrimas me obtengan un verdadero dolor de mis pecados.",
+                "Sorrowful Mother, pray for me; may your tears obtain for me true sorrow for my sins.",
+                "Mãe dolorosa, rogai por mim; que as vossas lágrimas me alcancem verdadeira dor dos meus pecados."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 14,
+            title = LocalizedText("XIV Estación: Jesús es colocado en el sepulcro", "14th Station: Jesus Is Laid in the Tomb", "14ª Estação: Jesus é colocado no sepulcro"),
+            scripture = LocalizedText(
+                "Juan 19, 41-42: «En el lugar donde fue crucificado había un huerto, y en el huerto una tumba nueva, en la que todavía no habían puesto a nadie. Allí pusieron a Jesús».",
+                "John 19:41-42: “Now in the place where he had been crucified there was a garden, and in the garden a new tomb, in which no one had yet been buried. So they laid Jesus there.”",
+                "João 19, 41-42: “No lugar onde Jesus foi crucificado havia um jardim e, no jardim, um sepulcro novo, onde ninguém ainda fora colocado. Foi ali que puseram Jesus.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo el cuerpo de Jesús es envuelto en lienzos con aromas y colocado en un sepulcro nuevo. Todo parece terminado, pero la tumba es solo el lugar donde el grano de trigo cae en tierra para dar fruto. Espera con María la Resurrección.",
+                "Consider how the body of Jesus is wrapped in linen with spices and laid in a new tomb. All seems finished, yet the tomb is only where the grain of wheat falls to the earth in order to bear fruit. Wait with Mary for the Resurrection.",
+                "Considera como o corpo de Jesus é envolvido em panos com aromas e colocado num sepulcro novo. Tudo parece acabado, mas o sepulcro é apenas o lugar onde o grão de trigo cai na terra para dar fruto. Espera com Maria a Ressurreição."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, sepulta mis pecados en tu tumba y, cuando llegue mi hora, haz que repose en ti y resucite contigo. Amén.",
+                "My Jesus, bury my sins in your tomb, and when my hour comes, let me rest in you and rise with you. Amen.",
+                "Jesus meu, sepultai os meus pecados no vosso sepulcro e, quando chegar a minha hora, fazei que eu repouse em vós e ressuscite convosco. Amém."
             )
         )
     )

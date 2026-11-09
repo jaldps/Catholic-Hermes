@@ -110,9 +110,9 @@ class AppNavigationTest(private val identity: DesignLanguage) {
             compose.onNodeWithTag(tab).assertHasClickAction().performClick()
             compose.onNodeWithTag(screen).assertIsDisplayed()
             if (tab == "nav_bible") {
-                if (identity == DesignLanguage.IVE) {
-                    compose.onNodeWithTag("screen_header_illustration", useUnmergedTree = true).assertIsDisplayed()
-                }
+                // Lumen: the Bible opens on its large title and the
+                // continue-reading card instead of the identity illustration.
+                compose.onNodeWithTag("bible_continue_reading").assertIsDisplayed()
                 compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()
                 compose.onNodeWithTag("bible_canon_2").performClick()
                 compose.onNodeWithText("Matthew").assertIsDisplayed()
@@ -181,7 +181,10 @@ class AppNavigationTest(private val identity: DesignLanguage) {
                 }
         }
         assertReadingFamily(AppFonts.Inter)
-        compose.onNodeWithTag("bible_reader_font_choice").assertIsDisplayed().performClick()
+        // The reader's face lives in its "Aa" sheet.
+        compose.onNodeWithTag("bible_reader_text_button").assertIsDisplayed().performClick()
+        compose.onNodeWithTag("bible_reader_font_choice").assertIsDisplayed()
+        compose.onNodeWithTag("bible_reader_font_SERIF").performClick()
         compose.onNodeWithTag("verse_1").performScrollTo()
         assertReadingFamily(AppFonts.EbGaramond)
     }

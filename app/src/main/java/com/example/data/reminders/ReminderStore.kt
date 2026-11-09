@@ -34,6 +34,7 @@ class ReminderStore(
 
     private fun enabledKey(id: String) = booleanPreferencesKey("rem_enabled_$id")
     private fun timeKey(id: String) = stringPreferencesKey("rem_time_$id")
+    private fun calendarEventKey(id: String) = longPreferencesKey("rem_gcal_event_$id")
 
     /** Full preference map, defaulting to the catalog defaults. */
     // Any DataStore read failure (corrupt preferences among them) falls back
@@ -61,6 +62,25 @@ class ReminderStore(
 
     suspend fun setTime(id: String, hour: Int, minute: Int) {
         dataStore.edit { it[timeKey(id)] = "%02d:%02d".format(hour, minute) }
+    }
+
+    /**
+     * Google Calendar event written for each reminder (`reminder id -> event
+     * id`). Kept so a second "Add to Google Calendar" updates that event
+     * instead of inserting a duplicate daily event.
+     */
+    val calendarEvents: Flow<Map<String, Long>> = dataStore.data
+        .catch { emit(emptyPreferences()) }
+        .map { prefs ->
+            ReminderCatalog.DEFAULTS.mapNotNull { r ->
+                prefs[calendarEventKey(r.id)]?.let { r.id to it }
+            }.toMap()
+        }
+
+    suspend fun setCalendarEvent(id: String, eventId: Long?) {
+        dataStore.edit {
+            if (eventId == null) it.remove(calendarEventKey(id)) else it[calendarEventKey(id)] = eventId
+        }
     }
 
     /** Reminders scheduled by default (evening Angelus excluded). */

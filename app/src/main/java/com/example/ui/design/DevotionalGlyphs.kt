@@ -27,43 +27,57 @@ internal object DevotionalGlyphs {
         close()
     }
 
-    /** A chaplet of beads hanging to one side, a pendant and a Latin cross. */
+    /**
+     * A rosary: a loop of beads open at the bottom, a medal, and a Latin
+     * cross hanging from it (the classic chaplet silhouette, so it never reads
+     * as a magnifier). Strokes match Material's outlined weight.
+     */
     private fun rosary(name: String, filled: Boolean, sharp: Boolean): ImageVector =
         ImageVector.Builder(name, 24.dp, 24.dp, 24f, 24f).apply {
-            val cx = 9.6f
-            val cy = 8.6f
-            val r = 6.2f
-            val open = Math.PI / 4
-            val beadR = if (filled) 1.45f else 1.25f
+            val cx = 12f
+            val cy = 7.6f
+            val r = 5.4f
+            val beadR = if (filled) 1.5f else 1.25f
             val ink = SolidColor(Color.Black)
-            val beads: PathBuilder.() -> Unit = {
-                for (k in 1 until 12) {
-                    val t = open + Math.PI * 2 * k / 12
+            val count = 9
+            val gap = Math.toRadians(24.0)
+            path(fill = ink) {
+                for (k in 0 until count) {
+                    val t = Math.PI / 2 + gap + (2 * Math.PI - 2 * gap) * k / (count - 1)
                     circle(cx + r * cos(t).toFloat(), cy + r * sin(t).toFloat(), beadR)
                 }
             }
-            if (filled) path(fill = ink, pathBuilder = beads)
-            else path(
-                stroke = ink, strokeLineWidth = 1.5f,
-                pathBuilder = beads
-            )
-            val mx = cx + r * cos(open).toFloat()
-            val my = cy + r * sin(open).toFloat()
-            path(fill = ink) {
-                // The centre medal and two pendant beads.
-                moveTo(mx, my - 1.5f); lineTo(mx + 1.5f, my); lineTo(mx, my + 1.5f); lineTo(mx - 1.5f, my); close()
-                circle(mx + 1.85f, my + 1.85f, 0.95f)
+            val join = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
+            val cap = if (sharp) StrokeCap.Butt else StrokeCap.Round
+            val w = if (filled) 2.2f else 1.8f
+            // The medal that joins the loop to the cross.
+            if (filled) path(fill = ink) { circle(cx, cy + r + 1.7f, 1.35f) }
+            else path(stroke = ink, strokeLineWidth = 1.5f) { circle(cx, cy + r + 1.7f, 1.1f) }
+            // The cross.
+            path(stroke = ink, strokeLineWidth = w, strokeLineCap = cap, strokeLineJoin = join) {
+                moveTo(cx, cy + r + 3.4f); lineTo(cx, 22.8f)
+                moveTo(cx - 2.5f, 18.4f); lineTo(cx + 2.5f, 18.4f)
             }
-            // The cross, stroked so its arms keep the identity's joins.
-            path(
-                stroke = ink,
-                strokeLineWidth = if (filled) 2.2f else 1.9f,
-                strokeLineCap = if (sharp) StrokeCap.Butt else StrokeCap.Round,
-                strokeLineJoin = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
-            ) {
-                val x = mx + 3.5f
-                moveTo(x, my + 3.1f); lineTo(x, 23f)
-                moveTo(x - 2.7f, my + 5.9f); lineTo(x + 2.7f, my + 5.9f)
+        }.build()
+
+    /** The Angelus hour: a sun at the horizon, in the same outline weight as the rest. */
+    private fun sunrise(name: String, filled: Boolean, sharp: Boolean): ImageVector =
+        ImageVector.Builder(name, 24.dp, 24.dp, 24f, 24f).apply {
+            val ink = SolidColor(Color.Black)
+            val cap = if (sharp) StrokeCap.Butt else StrokeCap.Round
+            val join = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
+            val sun: PathBuilder.() -> Unit = {
+                moveTo(6.5f, 16f)
+                arcTo(5.5f, 5.5f, 0f, false, true, 17.5f, 16f)
+                close()
+            }
+            if (filled) path(fill = ink, pathBuilder = sun)
+            else path(stroke = ink, strokeLineWidth = 1.8f, strokeLineCap = cap, strokeLineJoin = join, pathBuilder = sun)
+            path(stroke = ink, strokeLineWidth = 1.8f, strokeLineCap = cap) {
+                moveTo(3f, 19.5f); lineTo(21f, 19.5f)
+                moveTo(12f, 4f); lineTo(12f, 6.2f)
+                moveTo(4.7f, 8.9f); lineTo(6.3f, 10.4f)
+                moveTo(19.3f, 8.9f); lineTo(17.7f, 10.4f)
             }
         }.build()
 
@@ -109,6 +123,8 @@ internal object DevotionalGlyphs {
     val rosaryOutlined by lazy { rosary("rosary.outlined", filled = false, sharp = false) }
     val rosaryFilled by lazy { rosary("rosary.filled", filled = true, sharp = false) }
     val rosarySharp by lazy { rosary("rosary.sharp", filled = true, sharp = true) }
+    val sunriseOutlined by lazy { sunrise("sunrise.outlined", filled = false, sharp = false) }
+    val sunriseFilled by lazy { sunrise("sunrise.filled", filled = true, sharp = false) }
     val candleOutlined by lazy { candle("candle.outlined", filled = false, sharp = false) }
     val candleFilled by lazy { candle("candle.filled", filled = true, sharp = false) }
     val candleSharp by lazy { candle("candle.sharp", filled = true, sharp = true) }

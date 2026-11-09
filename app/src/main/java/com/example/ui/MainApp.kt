@@ -213,6 +213,12 @@ fun MainApp(
     // initialQuestionIndex). Cleared on the next direct nav.
     var questionsInitialIndex by remember { mutableStateOf<Int?>(null) }
     var rosaryInitialTab by remember { mutableIntStateOf(0) }
+    // Home's "Santuarios" tile opens Calendar & Shrines on its shrines tab
+    // (PilgrimageAndHabitsScreen initialTab); every other entry opens the calendar.
+    var pilgrimageInitialTab by remember { mutableIntStateOf(0) }
+    // Churches & News opens on the church directory (1) from Home's "Iglesias"
+    // tile and Parishes' "Directorio"; More opens it on the news (0).
+    var churchesInitialSection by remember { mutableIntStateOf(0) }
     val onOpenPrayer: (prayerId: String) -> Unit = { prayerId ->
         prayersInitialPrayerId = prayerId
         prayersInitialTab = 0
@@ -421,7 +427,14 @@ fun MainApp(
                             prayersInitialOpenChaplet = false
                             go(AppDestination.PRAYERS)
                         },
-                        onNavigateToPilgrimage = { go(AppDestination.PILGRIMAGE_HABITS) },
+                        onNavigateToPilgrimage = {
+                            pilgrimageInitialTab = 0
+                            go(AppDestination.PILGRIMAGE_HABITS)
+                        },
+                        onNavigateToShrines = {
+                            pilgrimageInitialTab = 1
+                            go(AppDestination.PILGRIMAGE_HABITS)
+                        },
                         onNavigateToDoctrine = { go(AppDestination.DOCTRINE) },
                         onNavigateToSpiritualLife = {
                             spiritualLifeInitialTab = 0
@@ -432,7 +445,10 @@ fun MainApp(
                             go(AppDestination.SPIRITUAL_LIFE)
                         },
                         onOpenReminders = { go(AppDestination.REMINDERS) },
-                        onNavigateToChurches = { go(AppDestination.CHURCHES_NEWS) },
+                        onNavigateToChurches = {
+                            churchesInitialSection = 1
+                            go(AppDestination.CHURCHES_NEWS)
+                        },
                         ttsManager = ttsManager
                     )
 
@@ -462,7 +478,8 @@ fun MainApp(
                             prayersInitialTab = 2
                             prayersInitialNightTab = office
                             go(AppDestination.PRAYERS)
-                        }
+                        },
+                        onOpenReminders = { go(AppDestination.REMINDERS) }
                     )
 
                     AppDestination.BIBLE -> BibleScreen(
@@ -502,7 +519,8 @@ fun MainApp(
 
                     AppDestination.PILGRIMAGE_HABITS -> PilgrimageAndHabitsScreen(
                         repository = repository,
-                        currentLanguage = currentLanguage
+                        currentLanguage = currentLanguage,
+                        initialTab = pilgrimageInitialTab
                     )
 
                     AppDestination.DOCTRINE -> DoctrineAndHistoryScreen(
@@ -558,13 +576,17 @@ fun MainApp(
                     AppDestination.PARISHES -> ParishFinderScreen(
                         repository = repository,
                         currentLanguage = currentLanguage,
-                        onOpenDirectory = { go(AppDestination.CHURCHES_NEWS) }
+                        onOpenDirectory = {
+                            churchesInitialSection = 1
+                            go(AppDestination.CHURCHES_NEWS)
+                        }
                     )
 
                     AppDestination.CHURCHES_NEWS -> DoctrineAndHistoryScreen(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         initialTopTab = 5,
+                        initialChurchesSection = churchesInitialSection,
                         showTabs = false,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
@@ -600,6 +622,8 @@ fun MainApp(
                         sections = moreSections(currentLanguage) { destination ->
                             if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
                             if (destination == AppDestination.QUESTIONS) questionsInitialIndex = null
+                            if (destination == AppDestination.PILGRIMAGE_HABITS) pilgrimageInitialTab = 0
+                            if (destination == AppDestination.CHURCHES_NEWS) churchesInitialSection = 0
                             if (destination == AppDestination.BIBLE) {
                                 bibleInitialBook = null
                                 bibleInitialChapter = null

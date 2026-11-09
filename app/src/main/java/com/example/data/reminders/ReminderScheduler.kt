@@ -75,16 +75,32 @@ object ReminderScheduler {
         alarms.cancel(pendingFor(context, reminder, language))
     }
 
-    /** Reschedules every enabled reminder from the store (boot, language change…). */
+    /**
+     * Reschedules every enabled reminder from the store (app start, boot,
+     * language change…). Called at app start too, so the reminders that are
+     * ON by default (midday Angelus, Chaplet) really ring on a fresh install
+     * instead of only after a reboot or a manual toggle. Idempotent: each
+     * reminder owns one PendingIntent, which FLAG_UPDATE_CURRENT replaces.
+     */
     fun rescheduleAll(context: Context, language: String) {
         val app = context.applicationContext
         CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
-            val prefs = ReminderStore(app).reminders.first()
-            for ((id, pref) in prefs) {
-                val reminder = ReminderCatalog.byId(id) ?: continue
-                if (pref.enabled) schedule(app, reminder, pref.hour, pref.minute, language)
+            runCatching { scheduleEnabled(app, language) }
+        }
+    }
+
+    /** Schedules every enabled reminder now; returns how many were scheduled. */
+    suspend fun scheduleEnabled(context: Context, language: String, store: ReminderStore = ReminderStore(context.applicationContext)): Int {
+        val app = context.applicationContext
+        var scheduled = 0
+        for ((id, pref) in store.reminders.first()) {
+            val reminder = ReminderCatalog.byId(id) ?: continue
+            if (pref.enabled) {
+                schedule(app, reminder, pref.hour, pref.minute, language)
+                scheduled++
             }
         }
+        return scheduled
     }
 
     fun ensureChannel(context: Context) {

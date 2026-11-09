@@ -157,3 +157,103 @@ Keep every existing `testTag`.
 - Pushed screens don't need an `onBack` param: the scaffold's glass back pops the stack, and `AppBackHandler` overrides it
   for in-screen details. If you add an `onBack` param anyway, the foundation owner will wire it to `pop()`.
   `PilgrimageAndHabitsScreen(initialTab)` will be wired once the life owner adds the param.
+
+**Reading slot note:** screens that let the reader pick a font override `AppTextStyles.scripture` (BibleScreen does).
+`AppVerseRow` renders `scripture`, so use `styles.scripture` for anything that must follow a per-screen reader-font override.
+`styles.reading` is the app-wide default and equals `scripture` unless a screen overrides it.
+
+## Round 2 foundation changes (home + foundation owner)
+
+All source-compatible: no signature lost, new parameters are defaulted and
+placed so existing named/trailing-lambda calls compile unchanged.
+
+### Chrome (the owner's 6-tab dock, layout/labels/order unchanged)
+
+- **Material:** a near-opaque warm sheet, not see-through. Light
+  `#F5F3F0 → #F0EEEA` @ 94%, dark `#252321 → #1E1C1A` @ 92%, 1dp lit edge,
+  soft shadow. Content never ghosts through it.
+- **Labels:** one line, 11sp / -0.2 tracking, one shared size for all six tabs
+  that steps down by 0.25sp to a 9.5sp floor if any label would overflow its
+  slot ("Oraciones" no longer clips at any font scale / language).
+- **Icons:** one outline family at 22dp in ink; the selected tab shows its
+  filled twin on a quiet ink pill (`ink @ 7%` light, `white @ 12%` dark).
+  No accent colour in the bar any more (the green fill/label/pill is gone).
+- **Content-under-bar fade:** the scaffold draws a canvas fade over the last
+  20dp above the dock and a quiet canvas behind it (hidden with
+  `AppHideTabBar`). Screens still pad list bottoms with the dock inset from
+  `AppEdgeToEdge()` — **add 32dp** (not 24) so the last row ends clear of the
+  fade.
+
+### Glass and depth
+
+- `lumenGlass` now has a faint sheen (fill 112% at the top → 90% at the
+  bottom), and in light mode a tight contact shadow next to the wide lift
+  shadow, so edges are defined instead of a blurry halo.
+- Light `glassEdgeBottom` is now a warm keyline (`#3B2F22 @ 12%`); the edge
+  reads white at the top and falls to a warm hairline at the bottom.
+  Dark edge tokens are unchanged (14% → 4%).
+- `AppGlassIconButton(onImage = true)` in dark: 12% white glass over a faint
+  22% black backing, **no shadow**. Dark glass never casts a shadow.
+- `AppPrimaryCapsule`: 8% warm shadow in light, none in dark.
+
+### Heroes
+
+- `AppHeroImage`: dark mode is graded about -0.6 EV with a warm cast (+R/-B)
+  and less saturation (art whose manifest `tone` is `"dark"` gets a milder
+  grade); top scrim is black 35% → 0 over 120dp; the fade to canvas is
+  parametric in `fadeStart` and reaches 88% canvas at `fadeStart + 58%` of the
+  remainder (so the eyebrow line sits on >= 85% canvas). Light: 15% less
+  saturation, lifted blacks, 16% canvas mist.
+- **Manifest zoom/anchor (new, optional):** a `manifest.json` entry may set
+  `zoom` (> 1 crops tighter than "cover" around the focus point),
+  `anchorX`/`anchorY` (where in the hero box the focus point lands, 0..1).
+  `HeroMeta` carries them; entries without them behave exactly as before.
+  `home.jpg` uses `zoom 1.3`, anchor (0.74, 0.40): the cross sits on the right
+  third.
+- `AppHeroHeader(..., overlap: Dp = 0.dp, actions)`: new `overlap` lets the next
+  sibling (the season card) ride up over the hero's fade: the hero reports
+  `overlap` less height and lifts its title clear. Eyebrow is 82% ink in dark.
+  Actions are placed so a 40dp glass circle sits 8dp under the status bar on
+  the 20dp gutter.
+
+### Season card, dot, chevron
+
+- `AppSeasonCard`: compact (~68dp) row: flat **8dp** dot centred on the cap
+  height of the season name (headline), the detail on **one** footnote line
+  under the name (aligned with the name, ellipsized, never wraps), chevron in
+  `inkQuiet`. Callers should pass a short detail ("Domingo XXXII · Precepto de
+  Santa Misa"): do not repeat the season name in it.
+- `AppSeasonDot` default size is now 8dp (was 10dp); `AppChevron` unchanged.
+
+### Glyphs
+
+- `DevotionalGlyphs.rosary*` redrawn: a loop of beads open at the bottom with a
+  medal and a Latin cross hanging from it (it used to read as a magnifier).
+- New `DevotionalGlyphs.sunriseOutlined` / `sunriseFilled` (the Angelus hour),
+  same stroke weight as Material outlined. Home uses it for the Ángelus rows.
+
+### Type scale roles (unchanged tokens, now applied consistently on Home)
+
+eyebrow 13/500 inkSecondary (date, card eyebrows) · card title headline 17/600
+· section header title3 20/600 with **32dp above** (use `Spacer(22.dp)` then
+`AppSectionHeader`, which adds 10dp) and 12dp to its group · reading text
+`styles.reading` 19/30 serif for scripture/verse (3 lines max in cards) ·
+callout 16/22 for card body · footnote 13 for meta/hints (inkSecondary, never
+an accent colour).
+
+### Spacing rhythm used on Home (recommended elsewhere)
+
+12dp between cards of one cluster, 32dp between sections, 12dp section header
+→ group, 24dp season-card overlap into the hero fade, 20dp card padding,
+list-end clearance = dock inset + 32dp.
+
+### MainApp wiring
+
+- `HomeScreen(onNavigateToShrines)`: new, defaulted. Home's "Santuarios" tile
+  opens `PilgrimageAndHabitsScreen(initialTab = 1)`; the season card opens
+  tab 0. `PILGRIMAGE_HABITS` from More resets to tab 0.
+- `DoctrineAndHistoryScreen(initialChurchesSection)` does **not exist yet**:
+  Home's "Iglesias" tile still opens CHURCHES_NEWS. Wire it when the doctrine
+  owner adds the parameter.
+- Home reads the habits owner's `DailyRule` (ids, goal 12, `countsFrom`) and
+  `FidelityCalendar(framed = false, dailyGoal = DailyRule.size)`.

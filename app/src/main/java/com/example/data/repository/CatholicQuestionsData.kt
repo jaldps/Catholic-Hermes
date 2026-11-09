@@ -28,7 +28,7 @@ Pense em uma família que espera na sala de um hospital: pode acompanhar seu fil
 
 A objeção mais forte diz: "Se Deus pode impedi-lo e não o faz, é cúmplice ou não tem poder". A Igreja responde que a liberdade explica parte do mal — guerras, assassinatos, abusos —, mas não os terremotos nem o câncer infantil. Não possui uma explicação exaustiva para cada caso, e o mistério permanece. O que oferece é esperança: o sofrimento terá fim (Apocalipse 21,4), não uma demonstração de por que ocorreu cada tragédia concreta."""),
         foundation = LocalizedText("""Romanos 8,18-23; Juan 9,1-3; Apocalipsis 21,4. Catecismo, 309-314.""", """Romans 8:18-23; John 9:1-3; Revelation 21:4. Catechism, 309-314.""", """Romanos 8,18-23; João 9,1-3; Apocalipse 21,4. Catecismo, 309-314."""),
-        clarification = LocalizedText(""": Esto no demuestra por qué Dios permite cada tragedia. El problema del sufrimiento inocente sigue siendo una de las dificultades filosóficas más fuertes para el teísmo. La esperanza cristiana ofrece una respuesta sobre el destino del sufrimiento, pero no una explicación exhaustiva de cada caso.""", """: This does not demonstrate why God allows every tragedy. The problem of innocent suffering remains one of the strongest philosophical difficulties for theism. Christian hope offers an answer about the destiny of suffering, but not an exhaustive explanation of every case.""", """: Isso não demonstra por que Deus permite cada tragédia. O problema do sofrimento inocente continua sendo uma das dificuldades filosóficas mais fortes para o teísmo. A esperança cristã oferece uma resposta sobre o destino do sofrimento, mas não uma explicação exaustiva de cada caso.""")
+        clarification = LocalizedText("""Esto no demuestra por qué Dios permite cada tragedia. El problema del sufrimiento inocente sigue siendo una de las dificultades filosóficas más fuertes para el teísmo. La esperanza cristiana ofrece una respuesta sobre el destino del sufrimiento, pero no una explicación exhaustiva de cada caso.""", """This does not demonstrate why God allows every tragedy. The problem of innocent suffering remains one of the strongest philosophical difficulties for theism. Christian hope offers an answer about the destiny of suffering, but not an exhaustive explanation of every case.""", """Isso não demonstra por que Deus permite cada tragédia. O problema do sofrimento inocente continua sendo uma das dificuldades filosóficas mais fortes para o teísmo. A esperança cristã oferece uma resposta sobre o destino do sofrimento, mas não uma explicação exaustiva de cada caso.""")
     ),
     ApologeticsQuestion(
         number = 2,
@@ -48,7 +48,7 @@ Imagine um pai que conhece tão bem seu filho adolescente que sabe que, diante d
 
 A objeção mais forte afirma: "Se Deus já sabe que escolherei o mal e não pode se surpreender, minha escolha já está fixada". A resposta honesta é que os filósofos discutem como se reconciliam presciência, graça e liberdade, e nenhuma analogia o resolve totalmente. A Igreja sustenta, contudo, que Deus não anula nossa responsabilidade nem nossa capacidade real de escolher."""),
         foundation = LocalizedText("""Salmo 139,1-16; Deuteronomio 30,19; Eclesiástico 15,11-20; Catecismo, 1730-1742.""", """Psalm 139:1-16; Deuteronomy 30:19; Sirach 15:11-20; Catechism, 1730-1742.""", """Salmo 139,1-16; Deuteronômio 30,19; Eclesiástico 15,11-20; Catecismo, 1730-1742."""),
-        clarification = LocalizedText(""": La comparación con un observador humano ayuda, pero no resuelve por completo el problema filosófico. Existen diversas explicaciones católicas sobre cómo se relacionan la presciencia, la gracia y la libertad.
+        clarification = LocalizedText("""La comparación con un observador humano ayuda, pero no resuelve por completo el problema filosófico. Existen diversas explicaciones católicas sobre cómo se relacionan la presciencia, la gracia y la libertad.
 
 La Iglesia sostiene las dos afirmaciones fundamentales: Dios conoce todas las cosas y el ser humano es realmente responsable de sus elecciones.""", """: The comparison with a human observer helps, but does not fully resolve the philosophical problem. There are various Catholic explanations of how foreknowledge, grace and freedom relate.
 
@@ -74,7 +74,7 @@ Pense em um pai que escreve cartas de reconciliação ao filho adulto e o filho 
 
 A objeção mais forte diz: "Um castigo eterno por pecados finitos é desproporcional e contrário à misericórdia". A resposta honesta reconhece que a liberdade oferece uma explicação parcial, não uma demonstração conclusiva. A Igreja não ensina que conhecemos o destino eterno de pessoas concretas e anima a rezar pela salvação de todos."""),
         foundation = LocalizedText("""Mateo 25,31-46; Marcos 9,43-48; 1 Timoteo 2,4; Catecismo, 1033-1037.""", """Matthew 25:31-46; Mark 9:43-48; 1 Timothy 2:4; Catechism, 1033-1037.""", """Mateus 25,31-46; Marcos 9,43-48; 1 Timóteo 2,4; Catecismo, 1033-1037."""),
-        clarification = LocalizedText(""": La objeción más difícil permanece: ¿por qué un Dios infinitamente misericordioso permitiría que ese rechazo fuese definitivo?
+        clarification = LocalizedText("""La objeción más difícil permanece: ¿por qué un Dios infinitamente misericordioso permitiría que ese rechazo fuese definitivo?
 
 Apelar a la libertad constituye una respuesta parcial, no una demostración concluyente. La Iglesia no enseña que debamos considerar condenada a una persona concreta y anima a rezar por la salvación de todos.""", """: The most difficult objection remains: why would an infinitely merciful God allow that rejection to be definitive?
 
@@ -100,7 +100,7 @@ Imagine dois amigos: um poderá dizer que conhece a vida do outro por suas carta
 
 A objeção ateia mais forte é a do ocultamento divino: "Se Deus existe e quer uma relação, deveria dar evidência suficiente a todos, inclusive a quem o busca sinceramente". A resposta católica não pode resolvê-la com a frase fácil de que Deus se oculta para proteger nossa liberdade, porque conhecer alguém não elimina nossa capacidade de amá-lo ou rejeitá-lo. A fé afirma que Deus busca a todos, mas reconhece que o silêncio divino continua sendo um problema filosófico sério."""),
         foundation = LocalizedText("""Romanos 1,19-20; Salmo 19,2-5; Juan 1,18; Hebreos 1,1-2; Catecismo, 31-35.""", """Romans 1:19-20; Psalm 19:2-5; John 1:18; Hebrews 1:1-2; Catechism, 31-35.""", """Romanos 1,19-20; Salmo 19,2-5; João 1,18; Hebreus 1,1-2; Catecismo, 31-35."""),
-        clarification = LocalizedText(""": Es importante no responder simplemente que Dios se oculta para proteger nuestra libertad. Conocer que alguien existe no elimina nuestra capacidad de amarlo o rechazarlo.
+        clarification = LocalizedText("""Es importante no responder simplemente que Dios se oculta para proteger nuestra libertad. Conocer que alguien existe no elimina nuestra capacidad de amarlo o rechazarlo.
 
 La ocultación divina sigue siendo un problema filosófico serio, especialmente cuando hablamos de personas sinceramente abiertas a creer que no encuentran razones suficientes.
 
@@ -132,7 +132,7 @@ Imagine um detetive que recebe uma carta atribuída a um avô desaparecido: comp
 
 A objeção mais forte diz: "Os argumentos filosóficos provam demais ou de menos, e a ressurreição não é um fato histórico neutro". A resposta honesta é que nenhum argumento universalmente aceito demonstra por si só todos os dogmas. A existência histórica de Jesus e sua crucifixão estão amplamente respaldadas; avaliar a ressurreição como intervenção divina exige também um juízo filosófico e de fé."""),
         foundation = LocalizedText("""Sabiduría 13,1-9; Romanos 1,20; 1 Corintios 15,3-8; Catecismo, 31-38.""", """Wisdom 13:1-9; Romans 1:20; 1 Corinthians 15:3-8; Catechism, 31-38.""", """Sabedoria 13,1-9; Romanos 1,20; 1 Coríntios 15,3-8; Catecismo, 31-38."""),
-        clarification = LocalizedText(""": Ningún argumento filosófico universalmente aceptado demuestra todos los dogmas cristianos. La historicidad de Jesús y de su crucifixión está ampliamente respaldada; la resurrección, como intervención divina, requiere una valoración histórica y filosófica adicional.""", """: No universally accepted philosophical argument demonstrates all Christian dogmas. The historicity of Jesus and His crucifixion is widely supported; the resurrection, as a divine intervention, requires additional historical and philosophical assessment.""", """: Nenhum argumento filosófico universalmente aceito demonstra todos os dogmas cristãos. A historicidade de Jesus e de sua crucifixão é amplamente respaldada; a ressurreição, como intervenção divina, requer uma avaliação histórica e filosófica adicional.""")
+        clarification = LocalizedText("""Ningún argumento filosófico universalmente aceptado demuestra todos los dogmas cristianos. La historicidad de Jesús y de su crucifixión está ampliamente respaldada; la resurrección, como intervención divina, requiere una valoración histórica y filosófica adicional.""", """No universally accepted philosophical argument demonstrates all Christian dogmas. The historicity of Jesus and His crucifixion is widely supported; the resurrection, as a divine intervention, requires additional historical and philosophical assessment.""", """Nenhum argumento filosófico universalmente aceito demonstra todos os dogmas cristãos. A historicidade de Jesus e de sua crucifixão é amplamente respaldada; a ressurreição, como intervenção divina, requer uma avaliação histórica e filosófica adicional.""")
     ),
     ApologeticsQuestion(
         number = 6,
@@ -152,7 +152,7 @@ Pense em um professor que ensina crianças pequenas a escrever: não precisa de 
 
 A objeção mais forte diz: "Se Deus não precisa de adoração, pedi-la é vaidade ou narcisismo". A resposta é que a adoração cristã não é um elogio para um Deus inseguro, mas disciplina do coração: implica justiça, amor e transformação de vida, não apenas palavras. Ainda assim, "Deus criou por amor" é uma afirmação teológica, não uma conclusão verificável em um laboratório."""),
         foundation = LocalizedText("""Hechos 17,24-25; Salmo 50,9-15; Efesios 1,3-12; Catecismo, 293-294 y 2096-2097.""", """Acts 17:24-25; Psalm 50:9-15; Ephesians 1:3-12; Catechism, 293-294 and 2096-2097.""", """Atos 17,24-25; Salmo 50,9-15; Efésios 1,3-12; Catecismo, 293-294 e 2096-2097."""),
-        clarification = LocalizedText(""": Decir que Dios crea por amor pertenece a la interpretación teológica de la creación. No es una conclusión que podamos comprobar experimentalmente.
+        clarification = LocalizedText("""Decir que Dios crea por amor pertenece a la interpretación teológica de la creación. No es una conclusión que podamos comprobar experimentalmente.
 
 La adoración auténtica tampoco consiste solamente en palabras: implica justicia, amor y transformación de vida.""", """: To say that God created out of love belongs to the theological interpretation of creation. It is not a conclusion we can verify experimentally.
 
@@ -178,7 +178,7 @@ Imagine uma criança que antes do almoço pede um sorvete e seu pai, que a ama, 
 
 A objeção mais forte diz: "Se Deus não concede o que é pedido, a oração é inútil ou placebo". A resposta honesta é que a fé não pode identificar com certeza os motivos de Deus em cada caso particular nem afirmar que alguém não se curou por falta de fé. Reconhecer o mistério faz parte da oração adulta."""),
         foundation = LocalizedText("""Mateo 26,39; 2 Corintios 12,7-10; 1 Juan 5,14-15; Catecismo, 2734-2737.""", """Matthew 26:39; 2 Corinthians 12:7-10; 1 John 5:14-15; Catechism, 2734-2737.""", """Mateus 26,39; 2 Coríntios 12,7-10; 1 João 5,14-15; Catecismo, 2734-2737."""),
-        clarification = LocalizedText(""": No debemos afirmar que una persona no sanó porque le faltó fe, ni que la muerte de un niño fue necesaria para enseñar una lección.
+        clarification = LocalizedText("""No debemos afirmar que una persona no sanó porque le faltó fe, ni que la muerte de un niño fue necesaria para enseñar una lección.
 
 La explicación católica reconoce que Dios puede actuar, pero no permite identificar con certeza sus motivos en acontecimientos particulares.""", """: We must not say that a person was not healed because they lacked faith, nor that a child's death was necessary to teach a lesson.
 
@@ -204,7 +204,7 @@ Imagine um árbitro que permite que um jogador cometa uma falta tática porque n
 
 A objeção mais forte diz: "Se Deus podia impedi-lo e o permitiu sabendo, é cúmplice". A resposta honesta é que a providência não torna a tragédia boa nem desculpa o agressor, nem deve ser usada para impedir denúncias. O mal continua sendo mal; a esperança cristã é que ele também não terá a última palavra."""),
         foundation = LocalizedText("""Santiago 1,13; Génesis 50,20; Romanos 8,28; Catecismo, 311-314.""", """James 1:13; Genesis 50:20; Romans 8:28; Catechism, 311-314.""", """Tiago 1,13; Gênesis 50,20; Romanos 8,28; Catecismo, 311-314."""),
-        clarification = LocalizedText(""": Que Dios pueda obtener un bien después de una tragedia no convierte la tragedia en buena.
+        clarification = LocalizedText("""Que Dios pueda obtener un bien después de una tragedia no convierte la tragedia en buena.
 
 Y nunca debe utilizarse la providencia para excusar al agresor, impedir una denuncia o convencer a una víctima de que debe aceptar el mal.""", """: That God can bring good after a tragedy does not make the tragedy good.
 
@@ -230,7 +230,7 @@ Pense no código de trânsito de uma aldeia há cem anos: permitia circular à v
 
 A objeção mais forte diz: "Há ordens explícitas de violência e extermínio atribuídas a Deus; não basta dizer que é um gênero literário". A resposta honesta é que não basta negar esses textos nem declará-los automaticamente simbólicos. A interpretação católica deve atender ao gênero, ao contexto e à finalidade e reconhece que sobre alguns trechos continua um debate teológico sério."""),
         foundation = LocalizedText("""Mateo 5,17-48; Lucas 9,54-56; Hebreos 1,1-3; Catecismo, 121-123.""", """Matthew 5:17-48; Luke 9:54-56; Hebrews 1:1-3; Catechism, 121-123.""", """Mateus 5,17-48; Lucas 9,54-56; Hebreus 1,1-3; Catecismo, 121-123."""),
-        clarification = LocalizedText(""": Algunos relatos del Antiguo Testamento atribuyen explícitamente a Dios órdenes de violencia. No resulta suficiente negar que esos textos existan o declararlos automáticamente simbólicos.
+        clarification = LocalizedText("""Algunos relatos del Antiguo Testamento atribuyen explícitamente a Dios órdenes de violencia. No resulta suficiente negar que esos textos existan o declararlos automáticamente simbólicos.
 
 La interpretación católica debe estudiar su género, contexto, finalidad y relación con Cristo. Sigue existiendo un debate teológico importante sobre cómo entender determinados pasajes.""", """: Some Old Testament accounts explicitly attribute commands of violence to God. It is not enough to deny that those texts exist or to declare them automatically symbolic.
 
@@ -256,7 +256,7 @@ Imagine um paciente que recebe um remédio que o cura sem saber seu nome nem sua
 
 A objeção protestante mais forte diz: "Se os bons sem fé podem se salvar, Cristo é desnecessário e a fé não importa". A resposta é que a Igreja não diz que Cristo seja desnecessário, mas que sua graça pode atuar também onde não há conhecimento explícito dEle. Não conhecemos o destino eterno de pessoas concretas nem podemos declarar que alguém esteja condenado."""),
         foundation = LocalizedText("""Romanos 2,14-16; 1 Timoteo 2,4-6; Mateo 25,31-46; Catecismo, 846-848.""", """Romans 2:14-16; 1 Timothy 2:4-6; Matthew 25:31-46; Catechism, 846-848.""", """Romanos 2,14-16; 1 Timóteo 2,4-6; Mateus 25,31-46; Catecismo, 846-848."""),
-        clarification = LocalizedText(""": La Iglesia no afirma conocer el destino eterno de cada persona ni sostiene que cualquier creencia sea igualmente verdadera.
+        clarification = LocalizedText("""La Iglesia no afirma conocer el destino eterno de cada persona ni sostiene que cualquier creencia sea igualmente verdadera.
 
 Tampoco enseña que una persona deba declarar explícitamente su fe católica para que Dios pueda actuar en ella cuando existe ignorancia no culpable.""", """: The Church does not claim to know the eternal destiny of each person, nor does it hold that every belief is equally true.
 
@@ -282,7 +282,7 @@ Pense em uma receita de família da avó: a família cozinhou o prato durante d�
 
 A objeção protestante mais forte diz: "Esses versículos provam que houve tradição oral, não que o Magistério atual tenha autoridade". A resposta honesta é que nenhum versículo isolado prova automaticamente que cada tradição posterior seja apostólica: é preciso demonstrar a continuidade de cada ensino com a revelação."""),
         foundation = LocalizedText("""2 Tesalonicenses 2,15; 2 Timoteo 2,2; 1 Timoteo 3,15; Juan 21,25; Catecismo, 74-87.""", """2 Thessalonians 2:15; 2 Timothy 2:2; 1 Timothy 3:15; John 21:25; Catechism, 74-87.""", """2 Tessalonicenses 2,15; 2 Timóteo 2,2; 1 Timóteo 3,15; João 21,25; Catecismo, 74-87."""),
-        clarification = LocalizedText(""": Estos versículos no prueban automáticamente que toda tradición católica posterior sea apostólica. Para sostener una enseñanza concreta hay que mostrar su continuidad con la revelación, no simplemente llamarla tradición.
+        clarification = LocalizedText("""Estos versículos no prueban automáticamente que toda tradición católica posterior sea apostólica. Para sostener una enseñanza concreta hay que mostrar su continuidad con la revelación, no simplemente llamarla tradición.
 
 La discusión con sola Scriptura consiste en determinar qué autoridad normativa corresponde a la transmisión apostólica y cómo reconocerla.""", """: These verses do not automatically prove that every later Catholic tradition is apostolic. To sustain a concrete teaching one must show its continuity with revelation, not simply call it tradition.
 
@@ -308,7 +308,7 @@ Imagine a biblioteca de uma escola que durante anos usa os mesmos livros em aula
 
 A objeção mais forte diz: "Se a Igreja escolheu os livros, pôde inventá-los". A resposta é que escolher ou reconhecer não equivale a inventar, embora isso por si só não demonstre todas as afirmações posteriores sobre a autoridade do Magistério. Por isso o fundamento se apoia em 2 Pedro 3,15-16 e 1 Timóteo 3,15, não em uma lista entregue em um dia concreto."""),
         foundation = LocalizedText("""2 Pedro 3,15-16; 1 Timoteo 3,15; Catecismo, 120.""", """2 Peter 3:15-16; 1 Timothy 3:15; Catechism, 120.""", """2 Pedro 3,15-16; 1 Timóteo 3,15; Catecismo, 120."""),
-        clarification = LocalizedText(""": La formación histórica del canon es más compleja que afirmar que un único concilio decidió todo. Hubo debates y variaciones regionales.
+        clarification = LocalizedText("""La formación histórica del canon es más compleja que afirmar que un único concilio decidió todo. Hubo debates y variaciones regionales.
 
 El razonamiento católico destaca la necesidad de una tradición eclesial para identificar el canon. Pero esto, por sí solo, no demuestra todas las afirmaciones posteriores sobre la autoridad del Magisterio.""", """: The historical formation of the canon is more complex than claiming that a single council decided everything. There were debates and regional variations.
 
@@ -334,7 +334,7 @@ Imagine duas bibliotecas escolares: uma guarda 66 volumes e outra guarda 73 porq
 
 A objeção protestante mais forte diz: "Esses livros não estavam no cânon hebraico e não são citados por Jesus, logo não são inspirados". A resposta honesta é que tampouco é exato afirmar que todos os judeus do século I usavam exatamente o mesmo cânon, nem que todos os primeiros cristãos aceitavam os mesmos livros sem discussão. A controvérsia exige história da recepção, não apenas contar livros."""),
         foundation = LocalizedText("""Catecismo, 120; concilios históricos de Hipona y Cartago y definiciones de Florencia y Trento.""", """Catechism, 120; historical councils of Hippo and Carthage and the definitions of Florence and Trent.""", """Catecismo, 120; concílios históricos de Hipona e Cartago e definições de Florença e Trento."""),
-        clarification = LocalizedText(""": No es históricamente preciso decir que todos los judíos del siglo I utilizaban exactamente el mismo canon, ni que todos los primeros cristianos aceptaban sin discusión los mismos libros.
+        clarification = LocalizedText("""No es históricamente preciso decir que todos los judíos del siglo I utilizaban exactamente el mismo canon, ni que todos los primeros cristianos aceptaban sin discusión los mismos libros.
 
 La Reforma favoreció un Antiguo Testamento basado en el canon hebreo rabínico. La controversia requiere estudiar la recepción histórica de los libros, no solamente contar cuántos aparecen en cada Biblia.""", """: It is not historically accurate to say that all Jews of the first century used exactly the same canon, nor that all early Christians accepted the same books without discussion.
 
@@ -360,7 +360,7 @@ Pense em um chat de família: alguém escreve "já cheguei" e dois minutos depoi
 
 A objeção mais forte diz: "Algumas contradições reais não desaparecem com o gênero e a inerrância é falsa". A resposta honesta é que algumas discrepâncias entre relatos são difíceis de harmonizar e não se devem inventar explicações para fazê-las desaparecer. A Pontifícia Comissão Bíblica insiste em estudar gênero e contexto, não em forçar harmonias."""),
         foundation = LocalizedText("""Lucas 1,1-4; 2 Timoteo 3,16; Catecismo, 105-119.""", """Luke 1:1-4; 2 Timothy 3:16; Catechism, 105-119.""", """Lucas 1,1-4; 2 Timóteo 3,16; Catecismo, 105-119."""),
-        clarification = LocalizedText(""": Algunas discrepancias entre relatos bíblicos son difíciles de armonizar. No debemos inventar explicaciones para hacer desaparecer cada diferencia.
+        clarification = LocalizedText("""Algunas discrepancias entre relatos bíblicos son difíciles de armonizar. No debemos inventar explicaciones para hacer desaparecer cada diferencia.
 
 La Pontificia Comisión Bíblica insiste en estudiar los textos según sus géneros y contextos históricos.""", """: Some discrepancies between biblical accounts are difficult to harmonize. We must not invent explanations to make every difference disappear.
 
@@ -386,7 +386,7 @@ Imagine pedreiros que explicam como colocam os tijolos e a família que explica 
 
 A objeção ateia mais forte diz: "A ciência mostra populações, não um único casal, e sem Adão histórico o pecado original desmorona". A resposta honesta é que essa harmonia exige uma reflexão teológica cuidadosa e continua aberta em pontos concretos, incluindo a pergunta pelos primeiros seres humanos."""),
         foundation = LocalizedText("""Génesis 1-3; Sabiduría 2,23-24; Romanos 5,12-21; Catecismo, 283-289 y 390.""", """Genesis 1-3; Wisdom 2:23-24; Romans 5:12-21; Catechism, 283-289 and 390.""", """Gênesis 1-3; Sabedoria 2,23-24; Romanos 5,12-21; Catecismo, 283-289 e 390."""),
-        clarification = LocalizedText(""": La cuestión de los primeros seres humanos, el pecado original y el origen histórico de la humanidad sigue requiriendo una reflexión teológica cuidadosa.
+        clarification = LocalizedText("""La cuestión de los primeros seres humanos, el pecado original y el origen histórico de la humanidad sigue requiriendo una reflexión teológica cuidadosa.
 
 La Iglesia no exige interpretar cada detalle narrativo del Génesis como un informe científico, pero tampoco reduce el pecado original a una simple metáfora sin relación con la condición humana.""", """: The question of the first human beings, original sin and the historical origin of humanity still requires careful theological reflection.
 
@@ -412,7 +412,7 @@ Pense em um regulamento de fábrica de 1800 que fixa uma jornada de catorze hora
 
 A objeção mais forte diz: "Se Deus inspirou leis injustas, como é bom?". A resposta honesta é que isso não elimina o problema nem justifica que cristãos de séculos posteriores perpetuassem essas práticas. As injustiças bíblicas e eclesiais merecem ser examinadas, não encobertas com uma interpretação cômoda."""),
         foundation = LocalizedText("""Mateo 19,8; Gálatas 3,28; Filemón 15-16; Mateo 22,37-40.""", """Matthew 19:8; Galatians 3:28; Philemon 15-16; Matthew 22:37-40.""", """Mateus 19,8; Gálatas 3,28; Filemom 15-16; Mateus 22,37-40."""),
-        clarification = LocalizedText(""": Esto no elimina el problema de por qué los textos permitieron determinadas prácticas ni justifica que los cristianos históricos las perpetuaran.
+        clarification = LocalizedText("""Esto no elimina el problema de por qué los textos permitieron determinadas prácticas ni justifica que los cristianos históricos las perpetuaran.
 
 Las injusticias bíblicas y eclesiales merecen ser examinadas, no encubiertas mediante una interpretación conveniente.""", """: This does not remove the problem of why the texts allowed certain practices, nor does it justify historical Christians perpetuating them.
 
@@ -438,7 +438,7 @@ Pense em um amigo que diz "estou morrendo" com gripe no sofá: você não chama 
 
 A objeção mais forte diz: "Os católicos escolhem literal ou simbólico conforme convém". A resposta honesta é que nem sempre é fácil decidir o que é histórico e o que é figurado, e católicos e protestantes podem usar métodos rigorosos e chegar a conclusões distintas. É preciso raciocinar cada interpretação, não declarar evidente a própria."""),
         foundation = LocalizedText("""Lucas 24,27; Nehemías 8,8; 2 Pedro 3,15-16; Catecismo, 109-119.""", """Luke 24:27; Nehemiah 8:8; 2 Peter 3:15-16; Catechism, 109-119.""", """Lucas 24,27; Neemias 8,8; 2 Pedro 3,15-16; Catecismo, 109-119."""),
-        clarification = LocalizedText(""": No siempre es fácil decidir qué elementos son históricos o figurados. Los católicos y los protestantes pueden compartir métodos rigurosos de exégesis y llegar a conclusiones distintas.
+        clarification = LocalizedText("""No siempre es fácil decidir qué elementos son históricos o figurados. Los católicos y los protestantes pueden compartir métodos rigurosos de exégesis y llegar a conclusiones distintas.
 
 Por eso es necesario razonar cada interpretación y no resolver las controversias simplemente afirmando que la propia lectura es evidente.""", """: It is not always easy to decide which elements are historical or figurative. Catholics and Protestants can share rigorous exegetical methods and reach different conclusions.
 
@@ -464,7 +464,7 @@ Imagine uma biografia de um avô escrita trinta anos depois de sua morte por net
 
 A objeção mais forte diz: "São escritos de fé e propaganda, não história neutra". A resposta honesta é que não são transcrições neutras: seus autores escrevem a partir da fé e com propósito teológico. Isso não os desqualifica como fontes históricas, mas exige analisar criticamente cada trecho."""),
         foundation = LocalizedText("""Lucas 1,1-4; 1 Corintios 15,3-8; Gálatas 1,18-19.""", """Luke 1:1-4; 1 Corinthians 15:3-8; Galatians 1:18-19.""", """Lucas 1,1-4; 1 Coríntios 15,3-8; Gálatas 1,18-19."""),
-        clarification = LocalizedText(""": Los Evangelios no son transcripciones neutrales. Sus autores escribieron desde la fe y con propósitos teológicos.
+        clarification = LocalizedText("""Los Evangelios no son transcripciones neutrales. Sus autores escribieron desde la fe y con propósitos teológicos.
 
 Eso no los descalifica automáticamente como fuentes históricas, pero exige analizarlos críticamente. La fiabilidad debe argumentarse pasaje por pasaje cuando corresponda.""", """: The Gospels are not neutral transcripts. Their authors wrote from faith and with theological purposes.
 
@@ -490,7 +490,7 @@ Imagine uma carta escolar assinada como se a tivesse escrito o diretor, mas em p
 
 A objeção mais forte sustenta que houve uma conspiração para apagar textos incômodos. A resposta honesta é que não há provas de uma única conspiração desse tipo, nem é correto declarar todos os apócrifos falsificações sem valor histórico. Cada escrito deve ser investigado por si mesmo."""),
         foundation = LocalizedText("""Lucas 1,1-4; 2 Tesalonicenses 2,15; 1 Juan 4,1; Catecismo, 120.""", """Luke 1:1-4; 2 Thessalonians 2:15; 1 John 4:1; Catechism, 120.""", """Lucas 1,1-4; 2 Tessalonicenses 2,15; 1 João 4,1; Catecismo, 120."""),
-        clarification = LocalizedText(""": No es correcto afirmar que todos los apócrifos son falsificaciones sin valor histórico. Tampoco hay pruebas de una conspiración única destinada a eliminar todos los textos que cuestionaban una supuesta versión oficial.
+        clarification = LocalizedText("""No es correcto afirmar que todos los apócrifos son falsificaciones sin valor histórico. Tampoco hay pruebas de una conspiración única destinada a eliminar todos los textos que cuestionaban una supuesta versión oficial.
 
 Cada escrito debe investigarse según su fecha, fuentes, transmisión y contenido.""", """: It is incorrect to claim that all apocrypha are worthless forgeries. Nor is there evidence of a single conspiracy aimed at eliminating all texts that questioned a supposed official version.
 
@@ -516,7 +516,7 @@ Pense no regulamento de segurança de uma empresa: o princípio "proteger as pes
 
 A objeção mais forte diz: "O desenvolvimento doutrinal justifica qualquer mudança". A resposta honesta é não: cada ensino novo deve guardar continuidade substancial com a fé apostólica. Determinar se um desenvolvimento conserva essa continuidade é precisamente um dos grandes debates entre católicos, ortodoxos e protestantes."""),
         foundation = LocalizedText("""Juan 16,13; Judas 3; Hechos 15,1-29; Catecismo, 66-67 y 94.""", """John 16:13; Jude 3; Acts 15:1-29; Catechism, 66-67 and 94.""", """João 16,13; Judas 3; Atos 15,1-29; Catecismo, 66-67 e 94."""),
-        clarification = LocalizedText(""": La idea de desarrollo doctrinal no permite justificar cualquier cambio. Una enseñanza nueva debe guardar continuidad sustancial con la fe apostólica.
+        clarification = LocalizedText("""La idea de desarrollo doctrinal no permite justificar cualquier cambio. Una enseñanza nueva debe guardar continuidad sustancial con la fe apostólica.
 
 Determinar si un desarrollo conserva esa continuidad es precisamente uno de los grandes asuntos discutidos entre católicos, ortodoxos y protestantes.""", """: The idea of doctrinal development does not allow justifying any change. A new teaching must preserve substantial continuity with apostolic faith.
 
@@ -542,7 +542,7 @@ Pense em uma família formada por pai, mãe e filho: são três pessoas, mas nã
 
 A objeção mais forte diz que a fórmula é tardia, não está em um só versículo e soa contraditória: "um e três ao mesmo tempo". A resposta honesta é que nenhum versículo contém por si só toda a formulação posterior, que se desenvolveu nos primeiros séculos, e que não há uma analogia matemática que a demonstre. A Igreja a apresenta como um mistério coerente com o conjunto bíblico, não como uma equação resolvida."""),
         foundation = LocalizedText("""Deuteronomio 6,4; Mateo 28,19; Juan 1,1-3; Juan 20,28; Hechos 5,3-4; 2 Corintios 13,13; Catecismo, 232-267.""", """Deuteronomy 6:4; Matthew 28:19; John 1:1-3; John 20:28; Acts 5:3-4; 2 Corinthians 13:13; Catechism, 232-267.""", """Deuteronômio 6,4; Mateus 28,19; João 1,1-3; João 20,28; Atos 5,3-4; 2 Coríntios 13,13; Catecismo, 232-267."""),
-        clarification = LocalizedText(""": Ningún versículo contiene por sí solo toda la formulación posterior del dogma. Esta surge de la interpretación conjunta de las Escrituras y del desarrollo teológico de los primeros siglos.
+        clarification = LocalizedText("""Ningún versículo contiene por sí solo toda la formulación posterior del dogma. Esta surge de la interpretación conjunta de las Escrituras y del desarrollo teológico de los primeros siglos.
 
 La Trinidad tampoco puede demostrarse mediante una analogía matemática sencilla. Su coherencia depende de distinguir los conceptos de naturaleza y persona.""", """: No verse alone contains the whole later formulation of the dogma. This emerges from joint interpretation of the Scriptures and theological development in the first centuries.
 
@@ -568,7 +568,7 @@ Imagine a mesma pessoa que é mãe em casa e médica no hospital: em cada lugar 
 
 A objeção mais forte afirma que "o Pai é maior" prova que Jesus é inferior e que sua oração mostra isso. A resposta honesta é que este texto foi interpretado de diversas maneiras pelos cristãos, e que a leitura católica depende de lê-lo junto com os trechos que falam de sua divindade. Não há uma prova isolada que obrigue a uma única interpretação."""),
         foundation = LocalizedText("""Juan 1,1.14; Juan 14,28; Filipenses 2,5-11; Hebreos 5,7-9; Catecismo, 464-469.""", """John 1:1.14; John 14:28; Philippians 2:5-11; Hebrews 5:7-9; Catechism, 464-469.""", """João 1,1.14; João 14,28; Filipenses 2,5-11; Hebreus 5,7-9; Catecismo, 464-469."""),
-        clarification = LocalizedText(""": Este texto ha sido interpretado de distintas maneras por los cristianos. La explicación trinitaria no nace de ignorarlo, sino de leerlo junto con los pasajes que atribuyen divinidad a Jesucristo.""", """: This text has been interpreted in different ways by Christians. The Trinitarian explanation does not arise from ignoring it, but from reading it together with passages attributing divinity to Jesus Christ.""", """: Este texto tem sido interpretado de maneiras diferentes pelos cristãos. A explicação trinitária não nasce de ignorá-lo, mas de lê-lo junto com os trechos que atribuem divindade a Jesus Cristo.""")
+        clarification = LocalizedText("""Este texto ha sido interpretado de distintas maneras por los cristianos. La explicación trinitaria no nace de ignorarlo, sino de leerlo junto con los pasajes que atribuyen divinidad a Jesucristo.""", """This text has been interpreted in different ways by Christians. The Trinitarian explanation does not arise from ignoring it, but from reading it together with passages attributing divinity to Jesus Christ.""", """Este texto tem sido interpretado de maneiras diferentes pelos cristãos. A explicação trinitária não nasce de ignorá-lo, mas de lê-lo junto com os trechos que atribuem divindade a Jesus Cristo.""")
     ),
     ApologeticsQuestion(
         number = 23,
@@ -588,7 +588,7 @@ Pense em um autor que entra em seu próprio romance como personagem: continua se
 
 A objeção mais forte diz que isso é contraditório: se Deus não pode morrer, não morreu; se morreu, deixou de ser Deus. A resposta honesta é que a união de duas naturezas em uma pessoa é um mistério que a Igreja afirma sem poder explicá-lo por completo com categorias ordinárias. Não significa que a divindade deixou de existir."""),
         foundation = LocalizedText("""Juan 1,14; Filipenses 2,6-8; Hebreos 2,14-18; 1 Pedro 3,18; Catecismo, 470-478 y 624-626.""", """John 1:14; Philippians 2:6-8; Hebrews 2:14-18; 1 Peter 3:18; Catechism, 470-478 and 624-626.""", """João 1,14; Filipenses 2,6-8; Hebreus 2,14-18; 1 Pedro 3,18; Catecismo, 470-478 e 624-626."""),
-        clarification = LocalizedText(""": La expresión «Dios murió por nosotros» es correcta en el lenguaje cristológico porque quien murió es la persona divina del Hijo, según su naturaleza humana.
+        clarification = LocalizedText("""La expresión «Dios murió por nosotros» es correcta en el lenguaje cristológico porque quien murió es la persona divina del Hijo, según su naturaleza humana.
 
 No significa que la divinidad haya dejado de existir.""", """: The expression “God died for us” is correct in Christological language because the one who died is the divine person of the Son, according to His human nature.
 
@@ -614,7 +614,7 @@ Pense em uma criança que, adulta, será um grande matemático: na escola primá
 
 A objeção mais forte é Marcos 13,32: "ninguém conhece o dia nem a hora, nem o Filho". Para muitos, isso contradiz a onisciência. A resposta honesta é que como se relacionam exatamente o conhecimento humano de Jesus, sua consciência messiânica e sua divindade é uma questão teológica complexa. Não é rigoroso dizer que Jesus simplesmente fingia ignorância nem que o texto seja irrelevante."""),
         foundation = LocalizedText("""Lucas 2,52; Marcos 13,32; Juan 16,30; Colosenses 2,9; Catecismo, 471-474.""", """Luke 2:52; Mark 13:32; John 16:30; Colossians 2:9; Catechism, 471-474.""", """Lucas 2,52; Marcos 13,32; João 16,30; Colossenses 2,9; Catecismo, 471-474."""),
-        clarification = LocalizedText(""": Cómo se relacionan exactamente el conocimiento humano de Jesús, su conciencia mesiánica y su divinidad es una cuestión teológica compleja.
+        clarification = LocalizedText("""Cómo se relacionan exactamente el conocimiento humano de Jesús, su conciencia mesiánica y su divinidad es una cuestión teológica compleja.
 
 No resulta riguroso afirmar que Marcos 13,32 es irrelevante o que Jesús simplemente fingía ignorancia. El texto debe tomarse en serio dentro de la doctrina de sus dos naturalezas.""", """: How exactly Jesus' human knowledge, His messianic consciousness and His divinity relate is a complex theological question.
 
@@ -640,7 +640,7 @@ Pense em um amigo que paga a dívida de outro para libertá-lo e ensiná-lo a vi
 
 A objeção mais forte diz que é injusto punir um inocente e que um Deus onipotente poderia perdoar sem morte. A resposta honesta é que há diversas teorias cristãs sobre como a morte de Cristo realiza a redenção —sacrifício, vitória, reconciliação— e que não se pode demonstrar filosoficamente que Deus estivesse absolutamente obrigado a fazê-lo assim."""),
         foundation = LocalizedText("""Juan 3,16-17; Romanos 5,6-11; 2 Corintios 5,18-21; Hebreos 9,11-15; Catecismo, 599-618.""", """John 3:16-17; Romans 5:6-11; 2 Corinthians 5:18-21; Hebrews 9:11-15; Catechism, 599-618.""", """João 3,16-17; Romanos 5,6-11; 2 Coríntios 5,18-21; Hebreus 9,11-15; Catecismo, 599-618."""),
-        clarification = LocalizedText(""": Hay distintas teorías cristianas sobre cómo la muerte de Cristo realiza la redención: sacrificio, victoria sobre el mal, satisfacción, reconciliación y transformación del ser humano.
+        clarification = LocalizedText("""Hay distintas teorías cristianas sobre cómo la muerte de Cristo realiza la redención: sacrificio, victoria sobre el mal, satisfacción, reconciliación y transformación del ser humano.
 
 La cruz es central para la fe cristiana, pero no podemos demostrar filosóficamente que Dios estuviera absolutamente obligado a salvarnos de esta única manera.""", """: There are different Christian theories about how Christ's death effects redemption: sacrifice, victory over evil, satisfaction, reconciliation and transformation of the human being.
 
@@ -666,7 +666,7 @@ Imagine investigar um acidente ocorrido décadas atrás apenas com relatórios p
 
 A objeção mais forte diz que a história não pode provar milagres e que há explicações alternativas, como o luto ou a lenda. A resposta honesta é que essas explicações também devem ser examinadas, não descartadas automaticamente. A ressurreição é uma afirmação histórica e de fé: os testemunhos são antigos e próximos, mas aceitá-la como intervenção divina exige uma avaliação que vai além do mero fato."""),
         foundation = LocalizedText("""1 Corintios 15,3-8; Hechos 2,22-36; Lucas 24; Juan 20.""", """1 Corinthians 15:3-8; Acts 2:22-36; Luke 24; John 20.""", """1 Coríntios 15,3-8; Atos 2,22-36; Lucas 24; João 20."""),
-        clarification = LocalizedText(""": La historia puede estudiar testimonios, creencias y acontecimientos accesibles a sus métodos. Demostrar una intervención sobrenatural como tal es más problemático.
+        clarification = LocalizedText("""La historia puede estudiar testimonios, creencias y acontecimientos accesibles a sus métodos. Demostrar una intervención sobrenatural como tal es más problemático.
 
 Las explicaciones alternativas también deben ser examinadas, no descartadas automáticamente. La resurrección es una afirmación histórica central del cristianismo y, al mismo tiempo, un acontecimiento reconocido mediante la fe.""", """: History can study testimonies, beliefs and events accessible to its methods. Demonstrating a supernatural intervention as such is more problematic.
 
@@ -692,7 +692,7 @@ Pense em uma grande família reunida para um aniversário: todos compartilham o 
 
 A objeção mais forte diz que, se Jesus fundou uma só Igreja, a existência de tantas denominações demonstra que ninguém pode reivindicar com certeza essa continuidade. A resposta honesta é que a divisão tem causas históricas, humanas e doutrinais, e que discutir a Igreja verdadeira exige investigar a continuidade apostólica, a doutrina e a história, não resolvê-lo com um só versículo."""),
         foundation = LocalizedText("""Juan 17,20-23; Mateo 16,18; Efesios 4,4-6; 1 Corintios 1,10-13; Catecismo, 811-822.""", """John 17:20-23; Matthew 16:18; Ephesians 4:4-6; 1 Corinthians 1:10-13; Catechism, 811-822.""", """João 17,20-23; Mateus 16,18; Efésios 4,4-6; 1 Coríntios 1,10-13; Catecismo, 811-822."""),
-        clarification = LocalizedText(""": La Iglesia católica reconoce elementos auténticos de santificación y verdad en otras comunidades cristianas, y considera a los cristianos bautizados no católicos como hermanos en Cristo.
+        clarification = LocalizedText("""La Iglesia católica reconoce elementos auténticos de santificación y verdad en otras comunidades cristianas, y considera a los cristianos bautizados no católicos como hermanos en Cristo.
 
 La discusión sobre la Iglesia verdadera requiere investigar la continuidad apostólica, la doctrina, la historia y la autoridad, no limitarse a contar denominaciones.""", """: The Catholic Church recognizes authentic elements of sanctification and truth in other Christian communities, and considers non-Catholic baptized Christians as brothers and sisters in Christ.
 
@@ -718,7 +718,7 @@ Pense no vento que move as folhas de uma árvore: tem força, mas não fala, nã
 
 A objeção mais forte diz que essas expressões são metáforas poéticas e não provam uma pessoa. A resposta honesta é que algumas expressões, isoladas, poderiam ser interpretadas figurativamente. A afirmação doutrinal não nasce de um só verbo, mas da leitura conjunta das Escrituras, e por isso sustenta que o Espírito é uma pessoa divina, não uma simples força."""),
         foundation = LocalizedText("""Juan 14,16-17.26; Juan 16,13; Hechos 13,2; 1 Corintios 12,11; Efesios 4,30; Catecismo, 683-747.""", """John 14:16-17.26; John 16:13; Acts 13:2; 1 Corinthians 12:11; Ephesians 4:30; Catechism, 683-747.""", """João 14,16-17.26; João 16,13; Atos 13,2; 1 Coríntios 12,11; Efésios 4,30; Catecismo, 683-747."""),
-        clarification = LocalizedText(""": Algunas expresiones podrían interpretarse figuradamente si estuvieran aisladas. La afirmación doctrinal procede de la lectura conjunta de las Escrituras, no de un solo verbo.""", """: Some expressions could be interpreted figuratively if isolated. The doctrinal affirmation comes from joint reading of the Scriptures, not from a single verb.""", """: Algumas expressões poderiam interpretar-se figuradamente se estivessem isoladas. A afirmação doutrinal procede da leitura conjunta das Escrituras, não de um único verbo.""")
+        clarification = LocalizedText("""Algunas expresiones podrían interpretarse figuradamente si estuvieran aisladas. La afirmación doctrinal procede de la lectura conjunta de las Escrituras, no de un solo verbo.""", """Some expressions could be interpreted figuratively if isolated. The doctrinal affirmation comes from joint reading of the Scriptures, not from a single verb.""", """Algumas expressões poderiam interpretar-se figuradamente se estivessem isoladas. A afirmação doutrinal procede da leitura conjunta das Escrituras, não de um único verbo.""")
     ),
     ApologeticsQuestion(
         number = 29,
@@ -738,7 +738,7 @@ Pense em um professor que, por conhecer seu aluno, sabe que ele copiará na prov
 
 A objeção mais forte lembra que os textos relacionam a traição com o cumprimento das Escrituras e que Jesus escolheu Judas sabendo o que ele faria. A resposta honesta é que como se harmonizam profecia, providência e liberdade é uma questão filosófica complexa e misteriosa. Além disso, a Igreja não definiu que Judas esteja no inferno, e seu destino eterno não deve ser afirmado com certeza."""),
         foundation = LocalizedText("""Mateo 26,14-25; Lucas 22,3-6; Juan 13,21-30; Hechos 1,16-20.""", """Matthew 26:14-25; Luke 22:3-6; John 13:21-30; Acts 1:16-20.""", """Mateus 26,14-25; Lucas 22,3-6; João 13,21-30; Atos 1,16-20."""),
-        clarification = LocalizedText(""": Los textos también relacionan la traición con el cumplimiento de las Escrituras. Cómo se armonizan exactamente profecía, providencia y libertad constituye una cuestión filosófica compleja.
+        clarification = LocalizedText("""Los textos también relacionan la traición con el cumplimiento de las Escrituras. Cómo se armonizan exactamente profecía, providencia y libertad constituye una cuestión filosófica compleja.
 
 Además, la Iglesia no ha definido que Judas se encuentre en el infierno. Su destino eterno no debe afirmarse como si lo conociéramos.""", """: The texts also relate the betrayal to the fulfillment of the Scriptures. How exactly prophecy, providence and freedom are harmonized is a complex philosophical question.
 
@@ -764,7 +764,7 @@ Pense em uma família que espera um filho que viaja por trabalho: sabe que ele v
 
 A objeção mais forte diz que vários textos dão a impressão de que o fim estava muito próximo —"esta geração não passará"— e que dois mil anos de espera enfraquecem a credibilidade. A resposta honesta é que algumas expectativas das primeiras comunidades refletem essa proximidade, e a fé católica distingue entre essa expectativa histórica e a afirmação doutrinal de que Cristo voltará. Não existe uma data revelada."""),
         foundation = LocalizedText("""Mateo 24,36; Hechos 1,6-11; 2 Pedro 3,8-9; Catecismo, 668-682.""", """Matthew 24:36; Acts 1:6-11; 2 Peter 3:8-9; Catechism, 668-682.""", """Mateus 24,36; Atos 1,6-11; 2 Pedro 3,8-9; Catecismo, 668-682."""),
-        clarification = LocalizedText(""": Es legítimo investigar las expectativas escatológicas de las primeras comunidades cristianas. Algunos textos reflejan la impresión de que el cumplimiento estaba próximo.
+        clarification = LocalizedText("""Es legítimo investigar las expectativas escatológicas de las primeras comunidades cristianas. Algunos textos reflejan la impresión de que el cumplimiento estaba próximo.
 
 La respuesta católica distingue entre esa expectativa histórica y la afirmación doctrinal de que Cristo volverá. No existe una demostración histórica de que el acontecimiento futuro ocurrirá.""", """: It is legitimate to investigate the eschatological expectations of the first Christian communities. Some texts reflect the impression that fulfillment was near.
 
@@ -790,7 +790,7 @@ Pense em alguém enfermo no hospital que pede à família que o acompanhe e ore 
 
 A objeção mais forte diz que Cristo é o único mediador e que nenhum texto bíblico ordena dirigir-se aos santos falecidos pelo nome. A resposta honesta é que a prática não se fundamenta em um mandamento textual explícito, mas em uma interpretação da comunhão dos santos e na Tradição. Por isso deve ser apresentada como doutrina católica com fundamentos, não como um mandato bíblico literal."""),
         foundation = LocalizedText("""1 Timoteo 2,1-5; Santiago 5,16; Apocalipsis 5,8; Hebreos 12,1; Catecismo, 954-959.""", """1 Timothy 2:1-5; James 5:16; Revelation 5:8; Hebrews 12:1; Catechism, 954-959.""", """1 Timóteo 2,1-5; Tiago 5,16; Apocalipse 5,8; Hebreus 12,1; Catecismo, 954-959."""),
-        clarification = LocalizedText(""": Ningún texto bíblico ordena explícitamente dirigirse a los santos fallecidos por su nombre. La práctica se fundamenta en una interpretación de la comunión de los santos y en la Tradición.
+        clarification = LocalizedText("""Ningún texto bíblico ordena explícitamente dirigirse a los santos fallecidos por su nombre. La práctica se fundamenta en una interpretación de la comunión de los santos y en la Tradición.
 
 Por eso debemos presentarla como una doctrina católica con fundamentos, no como una orden bíblica textual indiscutible.""", """: No biblical text explicitly commands addressing deceased saints by name. The practice is founded on an interpretation of the communion of saints and on Tradition.
 
@@ -816,7 +816,7 @@ Pense na foto da sua mãe que você leva na carteira: pode beijá-la e guardá-l
 
 A objeção mais forte diz que, na prática, muitos crentes atribuem poderes às imagens e que a distinção entre adoração e veneração desmorona. A resposta honesta é que uma pessoa pode cair em idolatria se atribuir a uma imagem poder divino autônomo, e que ter uma estátua católica não torna automaticamente correto qualquer comportamento diante dela. A doutrina condena esse abuso."""),
         foundation = LocalizedText("""Éxodo 20,3-5; Éxodo 25,18-22; Números 21,8-9; 1 Reyes 6,23-29; Catecismo, 2112-2114 y 2131-2132.""", """Exodus 20:3-5; Exodus 25:18-22; Numbers 21:8-9; 1 Kings 6:23-29; Catechism, 2112-2114 and 2131-2132.""", """Êxodo 20,3-5; Êxodo 25,18-22; Números 21,8-9; 1 Reis 6,23-29; Catecismo, 2112-2114 e 2131-2132."""),
-        clarification = LocalizedText(""": Una persona sí puede caer en idolatría si atribuye a una imagen poder divino autónomo o la trata como un dios.
+        clarification = LocalizedText("""Una persona sí puede caer en idolatría si atribuye a una imagen poder divino autónomo o la trata como un dios.
 
 No basta tener una estatua católica para que cualquier comportamiento ante ella sea automáticamente correcto.""", """: A person can indeed fall into idolatry if they attribute autonomous divine power to an image or treat it as a god.
 
@@ -842,7 +842,7 @@ Pense em uma mesma pessoa chamada de formas distintas conforme o contexto: para 
 
 A objeção mais forte diz que a proliferação de virgens parece indicar várias deusas ou uma confusão pagã. A resposta honesta é que a teologia católica insiste que é a mesma Maria, mas que nem todas as invocações implicam aparições sobrenaturais reconhecidas, e que uma devoção culturalmente importante não converte automaticamente todos os seus relatos em fatos históricos demonstrados."""),
         foundation = LocalizedText("""Lucas 1,26-56; Juan 19,25-27; Catecismo, 963-975.""", """Luke 1:26-56; John 19:25-27; Catechism, 963-975.""", """Lucas 1,26-56; João 19,25-27; Catecismo, 963-975."""),
-        clarification = LocalizedText(""": No todas las advocaciones implican apariciones sobrenaturales reconocidas.
+        clarification = LocalizedText("""No todas las advocaciones implican apariciones sobrenaturales reconocidas.
 
 El hecho de que una devoción esté permitida o sea culturalmente importante no convierte automáticamente todos los relatos asociados a ella en hechos históricos demostrados.""", """: Not all titles imply recognized supernatural apparitions.
 
@@ -868,7 +868,7 @@ Pense na mãe de um rei: é chamada rainha-mãe por ser a mãe do rei, não porq
 
 A objeção mais forte diz que "Mãe de Deus" soa como se Maria tivesse criado Deus e que "Rainha do Céu" lembra deusas pagãs. A resposta honesta é que os títulos devem ser interpretados em seu sentido teológico, e que nem todos têm a mesma força textual: Lucas 1,43 é especialmente importante para Mãe de Deus, enquanto a interpretação de Apocalipse 12 é mais discutida. A adoração de Maria seria contrária à doutrina católica."""),
         foundation = LocalizedText("""Lucas 1,43; Juan 1,1.14; Gálatas 4,4; Apocalipsis 12; Catecismo, 495 y 963-975.""", """Luke 1:43; John 1:1.14; Galatians 4:4; Revelation 12; Catechism, 495 and 963-975.""", """Lucas 1,43; João 1,1.14; Gálatas 4,4; Apocalipse 12; Catecismo, 495 e 963-975."""),
-        clarification = LocalizedText(""": Los fundamentos de los títulos marianos no poseen todos la misma fuerza textual. Por ejemplo, Lucas 1,43 es especialmente importante para Madre de Dios, mientras que la interpretación de Apocalipsis 12 es más discutida.
+        clarification = LocalizedText("""Los fundamentos de los títulos marianos no poseen todos la misma fuerza textual. Por ejemplo, Lucas 1,43 es especialmente importante para Madre de Dios, mientras que la interpretación de Apocalipsis 12 es más discutida.
 
 La adoración de María sería contraria a la doctrina católica.""", """: The foundations of Marian titles do not all have the same textual force. For example, Luke 1:43 is especially important for Mother of God, while the interpretation of Revelation 12 is more debated.
 
@@ -894,7 +894,7 @@ Pense em duas pessoas resgatadas de um incêndio: uma é retirada depois de cair
 
 A objeção mais forte diz que Lucas 1,28 não demonstra por si só toda a doutrina e que um dogma definido em 1854 chega tarde demais. A resposta honesta é que se trata de um dogma sustentado desde a Escritura interpretada à luz da Tradição, não de um ensinamento que possa ser provado com uma citação bíblica inequívoca. Quem não compartilha essa leitura da Tradição não estará obrigado pela só citação."""),
         foundation = LocalizedText("""Lucas 1,28; Génesis 3,15; Efesios 1,4; Catecismo, 490-493.""", """Luke 1:28; Genesis 3:15; Ephesians 1:4; Catechism, 490-493.""", """Lucas 1,28; Gênesis 3,15; Efésios 1,4; Catecismo, 490-493."""),
-        clarification = LocalizedText(""": Lucas 1,28 no demuestra por sí solo toda la doctrina de la concepción sin pecado original.
+        clarification = LocalizedText("""Lucas 1,28 no demuestra por sí solo toda la doctrina de la concepción sin pecado original.
 
 Es un dogma definido en 1854, sostenido desde la Escritura interpretada a la luz de la Tradición, no una enseñanza que pueda probarse mediante una cita bíblica inequívoca.""", """: Luke 1:28 does not by itself demonstrate the whole doctrine of conception without original sin.
 
@@ -920,7 +920,7 @@ Pense em uma comunidade religiosa onde dois monges se chamam "irmãos" e "pai" s
 
 A objeção mais forte diz que o grego adelphoi normalmente significa irmãos carnais e que a leitura mais simples é que Maria teve mais filhos. A resposta honesta é que esse é o uso habitual, embora o contexto de parentesco permita debate, e que o argumento de João 19 não é conclusivo por si só. A virgindade perpétua pertence ao ensinamento católico sustentado também pela Tradição antiga."""),
         foundation = LocalizedText("""Marcos 6,3; Mateo 13,55-56; Juan 19,26-27; Catecismo, 499-501.""", """Mark 6:3; Matthew 13:55-56; John 19:26-27; Catechism, 499-501.""", """Marcos 6,3; Mateus 13,55-56; João 19,26-27; Catecismo, 499-501."""),
-        clarification = LocalizedText(""": Este último argumento no es concluyente por sí solo. Y el término griego adelphoi normalmente significa hermanos, aunque su uso y los contextos de parentesco permiten un debate interpretativo.
+        clarification = LocalizedText("""Este último argumento no es concluyente por sí solo. Y el término griego adelphoi normalmente significa hermanos, aunque su uso y los contextos de parentesco permiten un debate interpretativo.
 
 La virginidad perpetua pertenece a la enseñanza católica sostenida también por la Tradición antigua. No debe presentarse como una conclusión lingüística que todos los especialistas necesariamente aceptan.""", """: That last argument is not conclusive by itself. And the Greek term adelphoi normally means brothers, although its use and the contexts of kinship allow an interpretive debate.
 
@@ -946,7 +946,7 @@ Pense na família de um general vitorioso, convidada a presidir o desfile do tri
 
 A objeção mais forte diz que o silêncio da Bíblia e a data tardia da definição mostram que é uma invenção. A resposta honesta é que Apocalipse 12,1 admite diferentes interpretações —Israel, a Igreja, Maria— e não constitui por si só uma narrativa histórica da Assunção. Este dogma depende da recepção da Tradição e da autoridade doutrinal da Igreja; um cristão que não compartilha essa tradição não o aceitará por um só versículo."""),
         foundation = LocalizedText("""1 Corintios 15,20-23; Apocalipsis 12,1; Lucas 1,28; Catecismo, 966.""", """1 Corinthians 15:20-23; Revelation 12:1; Luke 1:28; Catechism, 966.""", """1 Coríntios 15,20-23; Apocalipse 12,1; Lucas 1,28; Catecismo, 966."""),
-        clarification = LocalizedText(""": Apocalipsis 12 admite distintas interpretaciones, entre ellas las relacionadas con Israel, la Iglesia y María.
+        clarification = LocalizedText("""Apocalipsis 12 admite distintas interpretaciones, entre ellas las relacionadas con Israel, la Iglesia y María.
 
 No constituye por sí solo una narración histórica de la Asunción.
 
@@ -978,7 +978,7 @@ Pense em uma grande empresa onde o diretor não lê pessoalmente cada e-mail, ma
 
 A objeção mais forte diz que não há explicação de como um santo conheceria milhões de pedidos concretos em diferentes línguas e lugares. A resposta honesta é que a Bíblia não explica o mecanismo, e a Igreja não oferece uma explicação física de como isso acontece. Afirma a intercessão dos santos, mas não apresenta esse mecanismo como um fato demonstrado."""),
         foundation = LocalizedText("""Lucas 15,7; Apocalipsis 5,8; Apocalipsis 8,3-4; 1 Corintios 13,12; Catecismo, 954-956.""", """Luke 15:7; Revelation 5:8; Revelation 8:3-4; 1 Corinthians 13:12; Catechism, 954-956.""", """Lucas 15,7; Apocalipse 5,8; Apocalipse 8,3-4; 1 Coríntios 13,12; Catecismo, 954-956."""),
-        clarification = LocalizedText(""": La Biblia no explica el mecanismo mediante el cual un santo conocería peticiones particulares formuladas desde distintos lugares.
+        clarification = LocalizedText("""La Biblia no explica el mecanismo mediante el cual un santo conocería peticiones particulares formuladas desde distintos lugares.
 
 Por tanto, no debemos describir ese mecanismo como un hecho demostrado.
 
@@ -1010,7 +1010,7 @@ Pense na medalha de um avô guardada por sua família: não tem poderes, mas é 
 
 A objeção mais forte diz que venerar relíquias parece superstição, que há falsificações e que na prática se comercia com elas. A resposta honesta é que um objeto não possui poder mágico por ser uma relíquia, que a autenticidade histórica de cada uma deve ser examinada, e que vender falsas relíquias ou explorá-las economicamente é um abuso, não uma consequência legítima da fé."""),
         foundation = LocalizedText("""2 Reyes 13,20-21; Hechos 19,11-12; Marcos 5,27-34; Catecismo, 1674-1676 y 2110-2111.""", """2 Kings 13:20-21; Acts 19:11-12; Mark 5:27-34; Catechism, 1674-1676 and 2110-2111.""", """2 Reis 13,20-21; Atos 19,11-12; Marcos 5,27-34; Catecismo, 1674-1676 e 2110-2111."""),
-        clarification = LocalizedText(""": Un objeto no posee poder mágico por ser una reliquia.
+        clarification = LocalizedText("""Un objeto no posee poder mágico por ser una reliquia.
 
 La autenticidad histórica de cada reliquia también debe examinarse. Vender falsas reliquias, atribuirles propiedades garantizadas o explotarlas económicamente constituye un abuso, no una consecuencia legítima de la fe.""", """: An object does not possess magical power because it is a relic.
 
@@ -1036,7 +1036,7 @@ Pense em um amigo que lhe conta uma experiência pessoal muito importante para e
 
 A objeção mais forte diz que, se a Igreja reconhece algumas aparições, deveria exigir que se acredite nelas, e que o discernimento é subjetivo demais. A resposta honesta é que a Igreja propõe essas devoções com prudência, distingue entre fé central e experiências particulares, e sabe que uma experiência religiosa pode ser valiosa sem ser uma obrigação universal. A atitude mais sólida combina abertura, exame crítico e liberdade de consciência."""),
         foundation = LocalizedText("""Hebreos 1,1-2; Gálatas 1,8; Catecismo, 66-67.""", """Hebrews 1:1-2; Galatians 1:8; Catechism, 66-67.""", """Hebreus 1,1-2; Gálatas 1,8; Catecismo, 66-67."""),
-        clarification = LocalizedText(""": La autorización de una devoción no equivale necesariamente a una demostración histórica o científica de que ocurrió una aparición sobrenatural.
+        clarification = LocalizedText("""La autorización de una devoción no equivale necesariamente a una demostración histórica o científica de que ocurrió una aparición sobrenatural.
 
 Una experiencia religiosa puede ser importante para muchos creyentes sin convertirse en obligación de fe para todos.
 
@@ -1068,7 +1068,7 @@ Pense no mordomo de um palácio em Isaías 22: ele recebe a chave da casa de seu
 
 A objeção mais forte diz: “Esses textos provam a importância de Pedro, não a estrutura do papado moderno nem sua sucessão em Roma”. É justo pedir mais: a doutrina do primado romano depende também da história e da sucessão apostólica. Jesus não deixa uma descrição completa da instituição posterior, e essa é uma das discussões centrais com protestantes e ortodoxos."""),
         foundation = LocalizedText("""Mateo 16,18-19; Lucas 22,31-32; Juan 21,15-17; Isaías 22,20-22; Catecismo, 880-882.""", """Matthew 16:18-19; Luke 22:31-32; John 21:15-17; Isaiah 22:20-22; Catechism, 880-882.""", """Mateus 16,18-19; Lucas 22,31-32; João 21,15-17; Isaías 22,20-22; Catecismo, 880-882."""),
-        clarification = LocalizedText(""": Los pasajes muestran la importancia de Pedro, pero no describen explícitamente toda la estructura del papado moderno ni establecen con detalle cómo se transmitiría su ministerio a los obispos de Roma.
+        clarification = LocalizedText("""Los pasajes muestran la importancia de Pedro, pero no describen explícitamente toda la estructura del papado moderno ni establecen con detalle cómo se transmitiría su ministerio a los obispos de Roma.
 
 La doctrina del primado romano también depende de argumentos históricos y de la sucesión apostólica. Esta es una de las discusiones centrales con protestantes y ortodoxos.""", """: These passages show Peter's importance, but they do not explicitly describe the whole structure of the modern papacy nor establish in detail how his ministry would be transmitted to the bishops of Rome.
 
@@ -1094,7 +1094,7 @@ Pense em um embaixador que assina um tratado em nome de seu governo: suas dívid
 
 A objeção mais forte diz: “Se Deus protege a definição, por que não protege a pessoa e evita um Papa corrupto?”. A resposta honesta é que os versículos não enunciam literalmente a definição do Vaticano I: é preciso aceitar uma interpretação particular das promessas de Cristo à sua Igreja. A distinção entre pecado pessoal e erro definitivo na doutrina pode ser sustentada, mas não é uma prova neutra."""),
         foundation = LocalizedText("""Lucas 22,31-32; Mateo 16,18; Juan 16,13; Gálatas 2,11-14; Catecismo, 889-892.""", """Luke 22:31-32; Matthew 16:18; John 16:13; Galatians 2:11-14; Catechism, 889-892.""", """Lucas 22,31-32; Mateus 16,18; João 16,13; Gálatas 2,11-14; Catecismo, 889-892."""),
-        clarification = LocalizedText(""": Los versículos citados no enuncian literalmente la definición de infalibilidad del Concilio Vaticano I.
+        clarification = LocalizedText("""Los versículos citados no enuncian literalmente la definición de infalibilidad del Concilio Vaticano I.
 
 La argumentación católica es que el don de preservar a la Iglesia del error definitivo puede coexistir con los pecados personales de sus ministros.
 
@@ -1126,7 +1126,7 @@ Pense em uma família numerosa que conserva as cartas de seu fundador: todos pod
 
 A objeção mais forte diz: “É circular: a Igreja usa a Bíblia para provar sua autoridade e sua autoridade para interpretar a Bíblia”. É uma crítica séria. Que tenha existido autoridade apostólica não demonstra automaticamente todos os alcances hoje atribuídos ao Magistério: é preciso justificar também sua continuidade histórica e os limites de seu exercício. Um cristão, além disso, pode e deve ler a Bíblia pessoalmente."""),
         foundation = LocalizedText("""Mateo 28,18-20; Hechos 15,1-29; 1 Timoteo 3,15; 2 Pedro 1,20-21; Catecismo, 85-87.""", """Matthew 28:18-20; Acts 15:1-29; 1 Timothy 3:15; 2 Peter 1:20-21; Catechism, 85-87.""", """Mateus 28,18-20; Atos 15,1-29; 1 Timóteo 3,15; 2 Pedro 1,20-21; Catecismo, 85-87."""),
-        clarification = LocalizedText(""": El argumento de que existió autoridad apostólica no demuestra automáticamente todos los alcances que hoy se atribuyen al Magisterio católico.
+        clarification = LocalizedText("""El argumento de que existió autoridad apostólica no demuestra automáticamente todos los alcances que hoy se atribuyen al Magisterio católico.
 
 Es necesario justificar también su continuidad histórica y los límites de su ejercicio.""", """: The argument that there was apostolic authority does not automatically demonstrate all the scopes now attributed to the Catholic Magisterium.
 
@@ -1152,7 +1152,7 @@ Pense em um hospital: médicos, enfermeiros e administrativos têm a mesma digni
 
 A objeção mais forte diz: “Na prática, a hierarquia se torna clericalismo, obediência abusiva e privilégio”. É uma denúncia com fundamento histórico. Que a estrutura ministerial tenha fundamentos bíblicos não torna aceitáveis suas más formas de exercício: devem ser examinadas criticamente à luz do Evangelho."""),
         foundation = LocalizedText("""Marcos 3,13-19; Lucas 22,24-27; Hechos 6,1-6; 1 Corintios 12,27-30; 1 Timoteo 3,1-13.""", """Mark 3:13-19; Luke 22:24-27; Acts 6:1-6; 1 Corinthians 12:27-30; 1 Timothy 3:1-13.""", """Marcos 3,13-19; Lucas 22,24-27; Atos 6,1-6; 1 Coríntios 12,27-30; 1 Timóteo 3,1-13."""),
-        clarification = LocalizedText(""": La jerarquía puede convertirse en clericalismo cuando sus miembros se consideran superiores en dignidad, exigen obediencia abusiva o utilizan su posición para obtener privilegios.
+        clarification = LocalizedText("""La jerarquía puede convertirse en clericalismo cuando sus miembros se consideran superiores en dignidad, exigen obediencia abusiva o utilizan su posición para obtener privilegios.
 
 La estructura ministerial tiene fundamentos bíblicos; las formas concretas de ejercerla deben ser examinadas críticamente a la luz del Evangelio.""", """: Hierarchy can become clericalism when its members regard themselves as superior in dignity, demand abusive obedience or use their position to obtain privileges.
 
@@ -1178,7 +1178,7 @@ Pense em uma família extensa com uma casa principal e outras moradias onde tamb
 
 A objeção mais forte diz: “Se há diferenças reais em sacramentos, ministérios e sucessão, falar de plena verdade pode soar a exclusivismo”. É verdade: não seria honesto fingir que essas diferenças não têm importância. Mas tampouco seria católico negar a ação de Deus em outros cristãos. A unidade é uma responsabilidade, não uma desculpa para o desprezo."""),
         foundation = LocalizedText("""Juan 17,21; Efesios 4,4-6; 1 Corintios 12,13; Catecismo, 817-819 y 838.""", """John 17:21; Ephesians 4:4-6; 1 Corinthians 12:13; Catechism, 817-819 and 838.""", """João 17,21; Efésios 4,4-6; 1 Coríntios 12,13; Catecismo, 817-819 e 838."""),
-        clarification = LocalizedText(""": Hay diferencias doctrinales reales sobre sacramentos, ministerios, autoridad y sucesión apostólica.
+        clarification = LocalizedText("""Hay diferencias doctrinales reales sobre sacramentos, ministerios, autoridad y sucesión apostólica.
 
 No sería honesto fingir que esas diferencias carecen de importancia. Pero tampoco sería católico negar la acción de Dios en otros cristianos o tratarlos como personas de menor dignidad.""", """: There are real doctrinal differences about the sacraments, ministries, authority and apostolic succession.
 
@@ -1204,7 +1204,7 @@ Pense na tomada de Jerusalém em 1099: compreender a rivalidade política e mili
 
 A objeção mais forte diz: “Se a Igreja pregou e abençoou campanhas violentas, o que resta do ensino de Jesus sobre a paz e sobre não empunhar a espada (Mateus 26,52)?”. É uma tensão real. Reconhecer o contexto histórico não basta para justificar os fatos, e a melhor defesa da fé não consiste em afirmar que todos os cristãos da história agiram corretamente."""),
         foundation = LocalizedText("""Mateo 5,9; 5,44; Mateo 26,52; Juan 18,36; Catecismo, 2307-2317.""", """Matthew 5:9,44; Matthew 26:52; John 18:36; Catechism, 2307-2317.""", """Mateus 5,9; 5,44; Mateus 26,52; João 18,36; Catecismo, 2307-2317."""),
-        clarification = LocalizedText(""": Esa distinción no convierte automáticamente todas las Cruzadas en moralmente legítimas.
+        clarification = LocalizedText("""Esa distinción no convierte automáticamente todas las Cruzadas en moralmente legítimas.
 
 Los ataques contra civiles, las matanzas y la imposición violenta de la fe deben juzgarse críticamente.
 
@@ -1242,7 +1242,7 @@ Pense em uma assinatura obtida sob ameaça em um contrato: o papel pode estar as
 
 A objeção mais forte diz: “Se a Igreja hoje condena a coerção religiosa, por que a tolerou ou dela participou durante séculos?”. É uma pergunta legítima. Houve processos injustos e formas de violência religiosa que contradizem a dignidade humana, e a defesa católica da liberdade religiosa do Vaticano II oferece um critério para julgá-las criticamente, sem cair em exageros históricos."""),
         foundation = LocalizedText("""Juan 18,36; Mateo 13,24-30; 2 Corintios 3,17; Catecismo, 2104-2109.""", """John 18:36; Matthew 13:24-30; 2 Corinthians 3:17; Catechism, 2104-2109.""", """João 18,36; Mateus 13,24-30; 2 Coríntios 3,17; Catecismo, 2104-2109."""),
-        clarification = LocalizedText(""": Hubo procesos injustos y formas de violencia religiosa que contradicen el respeto a la dignidad humana.
+        clarification = LocalizedText("""Hubo procesos injustos y formas de violencia religiosa que contradicen el respeto a la dignidad humana.
 
 Es importante reconocerlos sin caer en exageraciones históricas ni utilizar la existencia de abusos como argumento para negar cualquier cuestión doctrinal.
 
@@ -1274,7 +1274,7 @@ Pense em um juiz que proíbe um mapa novo usando um livro de história como se f
 
 A objeção mais forte diz: “Se as autoridades puderam errar tão gravemente ao interpretar a Bíblia, por que confiar em outras interpretações?”. É um alerta válido: interpretações humanas podem falhar. Tampouco seria rigoroso afirmar que Galileu já havia demonstrado de modo conclusivo todos os aspectos do heliocentrismo no momento do processo. A lição é dupla: respeitar os métodos científicos e não converter interpretações humanas em verdades intocáveis."""),
         foundation = LocalizedText("""Salmo 19; Génesis 1; Catecismo, 159.""", """Psalm 19; Genesis 1; Catechism, 159.""", """Salmo 19; Gênesis 1; Catecismo, 159."""),
-        clarification = LocalizedText(""": Eso no significa que la Iglesia haya actuado correctamente en el proceso contra Galileo.
+        clarification = LocalizedText("""Eso no significa que la Iglesia haya actuado correctamente en el proceso contra Galileo.
 
 Las autoridades eclesiásticas cometieron errores de juicio y de interpretación.
 
@@ -1312,7 +1312,7 @@ Pense em Bartolomé de las Casas defendendo os indígenas diante da coroa enquan
 
 A objeção mais forte diz: “Se instituições eclesiásticas se beneficiaram da encomienda e do padroado, distinguir evangelização e conquista pode ser uma desculpa”. É uma suspeita fundamentada. Seria historicamente falso negar os abusos e as cumplicidades, e uma resposta católica séria deve incluir investigação histórica, reconhecimento do dano e respeito pela liberdade de consciência dos povos."""),
         foundation = LocalizedText("""Mateo 28,19-20; Lucas 4,18-19; Gálatas 3,28; Catecismo, 1934-1938.""", """Matthew 28:19-20; Luke 4:18-19; Galatians 3:28; Catechism, 1934-1938.""", """Mateus 28,19-20; Lucas 4,18-19; Gálatas 3,28; Catecismo, 1934-1938."""),
-        clarification = LocalizedText(""": Sería históricamente falso presentar a todos los misioneros como opresores o a toda la Iglesia como defensora de los indígenas.
+        clarification = LocalizedText("""Sería históricamente falso presentar a todos los misioneros como opresores o a toda la Iglesia como defensora de los indígenas.
 
 También sería falso negar los abusos y las complicidades.
 
@@ -1344,7 +1344,7 @@ Pense em um tesouro em vasos de barro (2 Coríntios 4,7): o valor do tesouro nã
 
 A objeção mais forte diz: “Essa distinção pode ser usada como imunidade moral para não prestar contas”. É correto apontá-lo: a distinção não concede imunidade aos dirigentes religiosos. Quando há corrupção, abuso de autoridade ou injustiça, a credibilidade exige verdade, responsabilidade, reparação e reforma. Uma Igreja que prega a conversão deve começar por aplicá-la a si mesma."""),
         foundation = LocalizedText("""Mateo 7,15-23; Mateo 23; 2 Corintios 4,7; Juan 15,1-8; Catecismo, 823-827.""", """Matthew 7:15-23; Matthew 23; 2 Corinthians 4:7; John 15:1-8; Catechism, 823-827.""", """Mateus 7,15-23; Mateus 23; 2 Coríntios 4,7; João 15,1-8; Catecismo, 823-827."""),
-        clarification = LocalizedText(""": Esa distinción no otorga inmunidad moral o institucional a los dirigentes religiosos.
+        clarification = LocalizedText("""Esa distinción no otorga inmunidad moral o institucional a los dirigentes religiosos.
 
 Cuando hay corrupción, abuso de autoridad o injusticia, la credibilidad exige verdad, responsabilidad, reparación y reforma.
 
@@ -1376,7 +1376,7 @@ Pense em cristãos dos primeiros séculos que se reuniam em segredo para partir 
 
 A objeção mais forte diz: “João 6 fala de crer em Cristo, não de pão transformado”. Alguns protestantes o interpretam assim, e outros aceitam formas de presença real sem adotar a transubstanciação. A defesa católica mais forte utiliza o conjunto dos textos, a liturgia primitiva e o testemunho dos primeiros escritores cristãos, e não apenas um versículo isolado."""),
         foundation = LocalizedText("""Juan 6,51-58; Mateo 26,26-28; Lucas 22,19-20; 1 Corintios 10,16; 1 Corintios 11,27-29; Catecismo, 1373-1381.""", """John 6:51-58; Matthew 26:26-28; Luke 22:19-20; 1 Corinthians 10:16; 1 Corinthians 11:27-29; Catechism, 1373-1381.""", """João 6,51-58; Mateus 26,26-28; Lucas 22,19-20; 1 Coríntios 10,16; 1 Coríntios 11,27-29; Catecismo, 1373-1381."""),
-        clarification = LocalizedText(""": Algunos protestantes interpretan Juan 6 principalmente como una enseñanza sobre creer en Cristo. Otros aceptan formas de presencia real sin adoptar la transubstanciación.
+        clarification = LocalizedText("""Algunos protestantes interpretan Juan 6 principalmente como una enseñanza sobre creer en Cristo. Otros aceptan formas de presencia real sin adoptar la transubstanciación.
 
 La defensa católica más fuerte utiliza el conjunto de los textos, la liturgia primitiva y el testimonio de los primeros escritores cristianos, no solamente un versículo aislado.""", """: Some Protestants interpret John 6 mainly as teaching about believing in Christ. Others accept forms of real presence without adopting transubstantiation.
 
@@ -1402,7 +1402,7 @@ Pense em um casal que celebra cada aniversário renovando seus votos: não se ca
 
 A objeção mais forte diz: “Hebreus ensina que Cristo se ofereceu uma só vez; falar de sacrifício na Missa sugere outro sacrifício”. É um alerta que toda explicação católica deve respeitar: não há morte repetida nem sacrifício novo. A afirmação da presença sacramental pertence à interpretação teológica católica e deve preservar a verdade do “uma só vez”."""),
         foundation = LocalizedText("""Hebreos 7,27; Hebreos 9,24-28; Hebreos 10,10-14; Lucas 22,19-20; 1 Corintios 11,26; Catecismo, 1362-1367.""", """Hebrews 7:27; Hebrews 9:24-28; Hebrews 10:10-14; Luke 22:19-20; 1 Corinthians 11:26; Catechism, 1362-1367.""", """Hebreus 7,27; Hebreus 9,24-28; Hebreus 10,10-14; Lucas 22,19-20; 1 Coríntios 11,26; Catecismo, 1362-1367."""),
-        clarification = LocalizedText(""": La afirmación de que la Misa hace presente sacramentalmente el sacrificio de Cristo pertenece a la interpretación teológica católica.
+        clarification = LocalizedText("""La afirmación de que la Misa hace presente sacramentalmente el sacrificio de Cristo pertenece a la interpretación teológica católica.
 
 Hebreos enseña inequívocamente que Cristo se ofreció una sola vez. Cualquier explicación católica debe preservar esa verdad y evitar sugerir un sacrificio nuevo o una muerte repetida.""", """: The affirmation that the Mass makes Christ's sacrifice sacramentally present belongs to Catholic theological interpretation.
 
@@ -1428,7 +1428,7 @@ Pense em um embaixador: exteriormente é um homem como qualquer outro, mas jurid
 
 A objeção mais forte diz: “Se nada muda sob o microscópio, não há conversão verificável”. É correto: a transubstanciação não é uma transformação química e não deve ser apresentada como uma conclusão científica demonstrada. É uma explicação metafísica de uma afirmação sacramental recebida pela fé."""),
         foundation = LocalizedText("""Mateo 26,26-28; Juan 6,53-56; 1 Corintios 11,23-29; Catecismo, 1376 y 1413.""", """Matthew 26:26-28; John 6:53-56; 1 Corinthians 11:23-29; Catechism, 1376 and 1413.""", """Mateus 26,26-28; João 6,53-56; 1 Coríntios 11,23-29; Catecismo, 1376 e 1413."""),
-        clarification = LocalizedText(""": La transubstanciación no es una transformación química.
+        clarification = LocalizedText("""La transubstanciación no es una transformación química.
 
 No se puede verificar mediante un microscopio que las propiedades físicas del pan desaparecieron, porque la doctrina afirma precisamente que esas propiedades permanecen.
 
@@ -1460,7 +1460,7 @@ Pense em um embaixador que concede vistos em nome de seu governo: o visto é rea
 
 A objeção mais forte diz: “Se Deus perdoa diretamente, o sacerdote é desnecessário”. A Igreja responde que Deus não é incapaz de perdoar fora do confessionário: a contrição perfeita pode obter o perdão dos pecados graves se incluir o propósito de confessar-se quando for possível (Catecismo, 1452). A controvérsia centra-se no alcance ministerial de João 20, não em saber se Deus pode perdoar."""),
         foundation = LocalizedText("""Juan 20,21-23; Mateo 16,19; Mateo 18,18; Santiago 5,14-16; 2 Corintios 5,18-20; Catecismo, 1422-1498.""", """John 20:21-23; Matthew 16:19; Matthew 18:18; James 5:14-16; 2 Corinthians 5:18-20; Catechism, 1422-1498.""", """João 20,21-23; Mateus 16,19; Mateus 18,18; Tiago 5,14-16; 2 Coríntios 5,18-20; Catecismo, 1422-1498."""),
-        clarification = LocalizedText(""": La Iglesia no enseña que Dios sea incapaz de perdonar fuera del confesionario.
+        clarification = LocalizedText("""La Iglesia no enseña que Dios sea incapaz de perdonar fuera del confesionario.
 
 El Catecismo, 1452, reconoce que la contrición perfecta puede obtener el perdón de los pecados graves si incluye el propósito de acudir a la confesión cuando sea posible.
 
@@ -1492,7 +1492,7 @@ Pense em um carteiro que entrega uma carta importante: o valor da carta vem de q
 
 A objeção mais forte diz: “Se um sacerdote abusador pode batizar ou consagrar validamente, o sistema parece proteger o ministro”. É uma preocupação legítima: que um sacramento possa ser válido não significa que o comportamento do ministro seja aceitável. A validade também requer ministro apto, matéria, forma e intenção correspondentes, e um sacerdote que comete crimes ou abusos deve responder por eles; seu ministério pode ser restringido ou retirado conforme o direito."""),
         foundation = LocalizedText("""2 Corintios 4,7; 1 Corintios 3,5-7; Juan 20,21-23; Catecismo, 1127-1128 y 1584.""", """2 Corinthians 4:7; 1 Corinthians 3:5-7; John 20:21-23; Catechism, 1127-1128 and 1584.""", """2 Coríntios 4,7; 1 Coríntios 3,5-7; João 20,21-23; Catecismo, 1127-1128 e 1584."""),
-        clarification = LocalizedText(""": La validez también requiere condiciones sacramentales concretas, como ministro apto, materia, forma e intención correspondientes.
+        clarification = LocalizedText("""La validez también requiere condiciones sacramentales concretas, como ministro apto, materia, forma e intención correspondientes.
 
 Además, que un sacramento pueda ser válido no significa que el comportamiento del ministro sea aceptable.
 
@@ -1524,7 +1524,7 @@ Pense em um bebê inscrito no registro civil por seus pais: ele não escolhe sua
 
 A objeção mais forte diz: “A Bíblia não ordena explicitamente batizar recém-nascidos”. É correto: os relatos de batismos de famílias (Atos 16,15.33) são compatíveis com o batismo infantil, mas não demonstram por si sós que houvesse bebês presentes. Por isso o argumento católico inclui também a Tradição e uma determinada compreensão do sacramento, e, ao crescer a criança, sua liberdade e sua consciência devem ser respeitadas."""),
         foundation = LocalizedText("""Juan 3,5; Hechos 2,38-39; Hechos 16,15.33; Colosenses 2,11-12; Catecismo, 1250-1252.""", """John 3:5; Acts 2:38-39; Acts 16:15,33; Colossians 2:11-12; Catechism, 1250-1252.""", """João 3,5; Atos 2,38-39; Atos 16,15.33; Colossenses 2,11-12; Catecismo, 1250-1252."""),
-        clarification = LocalizedText(""": La Biblia no contiene una orden explícita formulada como «bautizad a los recién nacidos».
+        clarification = LocalizedText("""La Biblia no contiene una orden explícita formulada como «bautizad a los recién nacidos».
 
 Por eso, el argumento católico incluye también la Tradición y una determinada comprensión del sacramento.
 
@@ -1556,7 +1556,7 @@ Pense em pais que enterram seu bebê e rezam por ele: a Igreja acompanha esse lu
 
 A objeção mais forte diz: “Se Deus quer que todos se salvem (1 Timóteo 2,4) e o batismo é o meio ordinário, eles não estão condenados?”. A Igreja responde que não: a antiga hipótese teológica do limbo não é dogma, e seria incorreto ensinar que essas crianças estão condenadas, do mesmo modo que seria incorreto apresentar uma explicação particular de seu destino como conhecimento definitivo."""),
         foundation = LocalizedText("""Marcos 10,13-16; Mateo 18,10-14; 1 Timoteo 2,4; Catecismo, 1261.""", """Mark 10:13-16; Matthew 18:10-14; 1 Timothy 2:4; Catechism, 1261.""", """Marcos 10,13-16; Mateus 18,10-14; 1 Timóteo 2,4; Catecismo, 1261."""),
-        clarification = LocalizedText(""": La Iglesia no ha revelado ni definido con certeza el destino individual de todos los niños muertos sin bautismo.
+        clarification = LocalizedText("""La Iglesia no ha revelado ni definido con certeza el destino individual de todos los niños muertos sin bautismo.
 
 La antigua hipótesis teológica del limbo no es un dogma.
 
@@ -1588,7 +1588,7 @@ Pense em uma família que se reúne a cada domingo: quem falta sem motivo não a
 
 A objeção mais forte diz: “Converter a ausência em pecado grave parece legalista”. A Igreja responde que nem toda ausência constitui automaticamente pecado mortal: requer-se matéria grave, pleno conhecimento e consentimento deliberado. Também existem causas justificadas, como doença, atendimento necessário a outras pessoas ou impossibilidade real. A vida cristã não pode ser reduzida a registrar presenças."""),
         foundation = LocalizedText("""Hechos 2,42; Hechos 20,7; Hebreos 10,24-25; 1 Corintios 11,23-26; Catecismo, 2177-2183.""", """Acts 2:42; Acts 20:7; Hebrews 10:24-25; 1 Corinthians 11:23-26; Catechism, 2177-2183.""", """Atos 2,42; Atos 20,7; Hebreus 10,24-25; 1 Coríntios 11,23-26; Catecismo, 2177-2183."""),
-        clarification = LocalizedText(""": No cualquier ausencia constituye automáticamente pecado mortal.
+        clarification = LocalizedText("""No cualquier ausencia constituye automáticamente pecado mortal.
 
 Se requiere materia grave, pleno conocimiento y consentimiento deliberado. También existen causas justificadas, como enfermedad, atención necesaria a otras personas o imposibilidad real.
 
@@ -1620,7 +1620,7 @@ Pense em uma cerimônia de formatura: receber o diploma expressa publicamente qu
 
 A objeção mais forte diz: “Se Jesus acolhia pecadores e excluídos, por que a Igreja impõe condições?”. É uma tensão que deve ser explicada com respeito e aplicada conforme o direito da Igreja. Existem exceções e situações particulares para cristãos não católicos, reguladas pela disciplina sacramental, e uma pessoa que não comunga não está excluída da oração, de escutar a Palavra ou de buscar a Deus. Tampouco corresponde julgar publicamente o estado interior de cada fiel."""),
         foundation = LocalizedText("""1 Corintios 10,16-17; 1 Corintios 11,27-29; Mateo 5,23-24; Catecismo, 1385 y 1395-1396.""", """1 Corinthians 10:16-17; 1 Corinthians 11:27-29; Matthew 5:23-24; Catechism, 1385 and 1395-1396.""", """1 Coríntios 10,16-17; 1 Coríntios 11,27-29; Mateus 5,23-24; Catecismo, 1385 e 1395-1396."""),
-        clarification = LocalizedText(""": Las condiciones de acceso deben explicarse con respeto y aplicarse conforme al derecho de la Iglesia.
+        clarification = LocalizedText("""Las condiciones de acceso deben explicarse con respeto y aplicarse conforme al derecho de la Iglesia.
 
 Existen excepciones y situaciones particulares para cristianos no católicos, reguladas por la disciplina sacramental.
 
@@ -1658,7 +1658,7 @@ Pense em um anel de compromisso ou em uma foto na carteira: não protege por mag
 
 A objeção mais forte diz: “Na prática, muita gente os usa como amuletos”. É verdade, e a própria Igreja o condena: uma medalha não garante proteção física, a água benta não é uma substância mágica e portar um escapulário não substitui a conversão, a caridade nem a confiança em Deus. Se alguém atribui a um objeto uma eficácia automática desligada de Deus e da fé, pode cair em superstição."""),
         foundation = LocalizedText("""Éxodo 30,22-30; Marcos 6,13; Santiago 5,14; Hechos 19,11-12; Catecismo, 1667-1679.""", """Exodus 30:22-30; Mark 6:13; James 5:14; Acts 19:11-12; Catechism, 1667-1679.""", """Êxodo 30,22-30; Marcos 6,13; Tiago 5,14; Atos 19,11-12; Catecismo, 1667-1679."""),
-        clarification = LocalizedText(""": Una medalla no garantiza protección física; el agua bendita no es una sustancia mágica; y portar un escapulario no sustituye la conversión, la caridad ni la confianza en Dios.
+        clarification = LocalizedText("""Una medalla no garantiza protección física; el agua bendita no es una sustancia mágica; y portar un escapulario no sustituye la conversión, la caridad ni la confianza en Dios.
 
 Si alguien atribuye a un objeto una eficacia automática desligada de Dios y de la fe, puede caer en superstición, que la propia Iglesia condena.""", """: A medal does not guarantee physical protection; holy water is not a magical substance; and carrying a scapular does not replace conversion, charity or trust in God.
 
@@ -1820,7 +1820,7 @@ Essa tensão entre o desejo salvífico universal de Deus e o respeito pela liber
     ),
     ApologeticsQuestion(
         number = 68,
-        section = LocalizedText("""La salvación, el purgatorio, el pecado y la vida eterna""", """Salvation, purgatory, sin and eternal life""", """Salvação, purgatório, pecado e vida eterna"""),
+        section = LocalizedText("""La salvación, el purgatorio, el pecado y la vida eterna""", """Salvation, purgatory, sin and eternal life""", """A salvação, o purgatório, o pecado e a vida eterna"""),
         question = LocalizedText("""¿Qué sucede con quienes nunca conocieron a Jesús?""", """What happens to those who never knew Jesus?""", """O que acontece com quem nunca conheceu Jesus?"""),
         answer = LocalizedText("""La respuesta directa es que Dios no juzga a las personas como si todas hubieran recibido la misma información y las mismas oportunidades.
 
@@ -1840,7 +1840,7 @@ Isso não cria uma segunda fonte de salvação independente de Cristo: a Igreja 
     ),
     ApologeticsQuestion(
         number = 69,
-        section = LocalizedText("""La salvación, el purgatorio, el pecado y la vida eterna""", """Salvation, purgatory, sin and eternal life""", """Salvação, purgatório, pecado e vida eterna"""),
+        section = LocalizedText("""La salvación, el purgatorio, el pecado y la vida eterna""", """Salvation, purgatory, sin and eternal life""", """A salvação, o purgatório, o pecado e a vida eterna"""),
         question = LocalizedText("""¿Para qué rezar por los muertos si Dios ya conoce su destino?""", """Why pray for the dead if God already knows their destiny?""", """Para que rezar pelos mortos, se Deus já conhece o destino deles?"""),
         answer = LocalizedText("""La respuesta directa es que la oración cristiana no busca informar a Dios de algo que desconoce, como si Él necesitara un aviso.
 
@@ -1860,7 +1860,7 @@ A oração pelos defuntos é coerente com a doutrina católica da comunhão dos 
     ),
     ApologeticsQuestion(
         number = 70,
-        section = LocalizedText("""La salvación, el purgatorio, el pecado y la vida eterna""", """Salvation, purgatory, sin and eternal life""", """Salvação, purgatório, pecado e vida eterna"""),
+        section = LocalizedText("""La salvación, el purgatorio, el pecado y la vida eterna""", """Salvation, purgatory, sin and eternal life""", """A salvação, o purgatório, o pecado e a vida eterna"""),
         question = LocalizedText("""¿Qué son las indulgencias y por qué existieron abusos relacionados con ellas?""", """What are indulgences, and why were there abuses connected with them?""", """O que são as indulgências e por que existiram abusos relacionados a elas?"""),
         answer = LocalizedText("""La respuesta directa es que una indulgencia no es el perdón comprado de un pecado.
 

@@ -1,52 +1,69 @@
 package com.example.ui.screens
 
-import androidx.activity.compose.BackHandler
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.MenuBook
-import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.automirrored.outlined.MenuBook
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Stop
+import androidx.compose.material.icons.outlined.AutoStories
+import androidx.compose.material.icons.outlined.Church
+import androidx.compose.material.icons.outlined.Verified
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDao
@@ -55,21 +72,23 @@ import com.example.data.models.AppLanguage
 import com.example.data.models.ScriptureCourseTrack
 import com.example.data.models.ScriptureLesson
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.components.MenuPickerRow
-import com.example.ui.design.AppBanner
-import com.example.ui.design.AppCard
-import com.example.ui.design.AppChip
+import com.example.ui.design.AppBackHandler
+import com.example.ui.design.AppChevron
 import com.example.ui.design.AppEmptyState
-import com.example.ui.design.AppListGroup
-import com.example.ui.design.AppListRow
-import com.example.ui.design.AppOrnament
-import com.example.ui.design.AppPrimaryButton
-import com.example.ui.design.AppScreenTitle
-import com.example.ui.design.AppSecondaryButton
-import com.example.ui.design.AppSectionHeader
-import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.design.AppGlassSurface
+import com.example.ui.design.AppInlineTitle
+import com.example.ui.design.AppPrimaryCapsule
+import com.example.ui.design.AppProgressBar
+import com.example.ui.design.AppProgressRing
+import com.example.ui.design.AppSecondaryCapsule
+import com.example.ui.design.GroupPosition
+import com.example.ui.design.appScreenInsets
+import com.example.ui.design.groupedItem
+import com.example.ui.design.lumenGlass
+import com.example.ui.design.lumenPress
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
@@ -78,53 +97,16 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
     AppLanguage.PT -> pt
 }
 
-/** Vatican sets its labels as inscriptional capitals; the other two do not. */
-@Composable
-private fun caps(text: String): String =
-    if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
-
-/**
- * Holds long-form text to the identity's reading measure and centres it, so a
- * wide screen reads as a column of a book instead of a wall of type. The two
- * gutters are added back because the block inside carries them itself.
- */
-@Composable
-private fun ReadingColumn(content: @Composable ColumnScope.() -> Unit) {
-    val design = LocalAppDesign.current
-    Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
-        Column(
-            Modifier
-                .widthIn(max = design.spacing.readingMaxWidth + design.spacing.gutter * 2)
-                .fillMaxWidth(),
-            content = content
-        )
-    }
+private fun trackIcon(track: ScriptureCourseTrack): ImageVector = when (track.iconName) {
+    "Church" -> Icons.Outlined.Church
+    "AutoStories" -> Icons.Outlined.AutoStories
+    else -> Icons.AutoMirrored.Outlined.MenuBook
 }
 
 /**
- * The label the track strip can actually hold: a segment is about one word
- * wide at 360dp, and the course data carries no short title, so the three
- * bundled itineraries get one here and anything added later falls back to its
- * own title. The full title opens the overview immediately below the strip.
- */
-private fun trackStripLabel(
-    track: ScriptureCourseTrack,
-    index: Int,
-    language: AppLanguage
-): String {
-    val short = when (track.id) {
-        "track_sacraments" -> language.pick("Sacramentos", "Sacraments", "Sacramentos")
-        "track_parables" -> language.pick("Parábolas", "Parables", "Parábolas")
-        "track_apostolic" -> language.pick("Cartas", "Letters", "Cartas")
-        else -> track.title.get(language)
-    }
-    return "${index + 1}. $short"
-}
-
-/**
- * The guided scripture course, shown as the study tab of [BibleScreen]: a strip
- * of itineraries, the lessons of the selected one, and one lesson read as a
- * lectio divina. Completion and the reader's own notes live in Room.
+ * The guided scripture course, shown as the study tab of [BibleScreen]: the
+ * itineraries as cards, the lessons of the selected one, and one lesson read
+ * as a lectio divina. Completion and the reader's own notes live in Room.
  */
 @Composable
 fun ScriptureStudyScreen(
@@ -137,292 +119,321 @@ fun ScriptureStudyScreen(
     header: LazyListScope.() -> Unit = {}
 ) {
     val tracks = repository.scriptureStudyTracks
-    var selectedTrackIndex by remember { mutableIntStateOf(0) }
+    var selectedTrackIndex by rememberSaveable { mutableIntStateOf(0) }
+    var activeLessonId by rememberSaveable { mutableStateOf<String?>(null) }
 
     val allProgress by dao.getAllScriptureProgress().collectAsState(initial = emptyList())
     val completedLessonIds = remember(allProgress) {
         allProgress.filter { it.isCompleted }.map { it.lessonId }.toSet()
     }
-
-    var activeLesson by remember { mutableStateOf<ScriptureLesson?>(null) }
     val scope = rememberCoroutineScope()
+    val bottom = appScreenInsets().calculateBottomPadding() + 32.dp
 
-    Column(
-        modifier = modifier
-            .fillMaxSize()
-            .testTag("scripture_study_screen")
-    ) {
+    Box(modifier.fillMaxSize().testTag("scripture_study_screen")) {
         if (tracks.isEmpty()) {
-            LazyColumn(Modifier.fillMaxSize()) {
+            LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = bottom)) {
                 header()
                 item {
                     AppEmptyState(
-                        title = currentLanguage.pick(
-                            "Sin itinerarios",
-                            "No study tracks",
-                            "Sem itinerários"
-                        ),
+                        title = currentLanguage.pick("Sin itinerarios", "No study tracks", "Sem itinerários"),
                         body = currentLanguage.pick(
                             "El curso bíblico no está disponible en esta edición.",
                             "The scripture course is not available in this edition.",
                             "O curso bíblico não está disponível nesta edição."
                         ),
-                        icon = Icons.AutoMirrored.Filled.MenuBook
+                        icon = Icons.AutoMirrored.Outlined.MenuBook
                     )
                 }
             }
+            return@Box
+        }
+        val currentTrack = tracks.getOrElse(selectedTrackIndex) { tracks.first() }
+        val lesson = activeLessonId?.let { id -> tracks.flatMap { it.lessons }.firstOrNull { it.id == id } }
+        if (lesson == null) {
+            TrackOverviewView(
+                header = header,
+                tracks = tracks,
+                track = currentTrack,
+                selectedTrackIndex = selectedTrackIndex,
+                completedLessonIds = completedLessonIds,
+                currentLanguage = currentLanguage,
+                bottom = bottom,
+                onSelectTrack = { selectedTrackIndex = it },
+                onSelectLesson = { activeLessonId = it.id }
+            )
         } else {
-            val currentTrack = tracks.getOrElse(selectedTrackIndex) { tracks.first() }
-            val stripLabels = remember(tracks, currentLanguage) {
-                tracks.mapIndexed { index, track ->
-                    trackStripLabel(track, index, currentLanguage)
-                }
-            }
-
-            val lesson = activeLesson
-            if (lesson == null) {
-                TrackOverviewView(
-                    header = header,
-                    stripLabels = stripLabels,
-                    tracks = tracks,
-                    track = currentTrack,
-                    selectedTrackIndex = selectedTrackIndex,
-                    completedLessonIds = completedLessonIds,
-                    currentLanguage = currentLanguage,
-                    onSelectTrack = { index ->
-                        selectedTrackIndex = index
-                        activeLesson = null
-                    },
-                    onSelectLesson = { selected -> activeLesson = selected }
-                )
-            } else {
-                val isLessonDone = completedLessonIds.contains(lesson.id)
-                val currentEntity = allProgress.firstOrNull { it.lessonId == lesson.id }
-
-                BackHandler { activeLesson = null }
-
-                LessonDetailView(
-                    lesson = lesson,
-                    isCompleted = isLessonDone,
-                    existingNotes = currentEntity?.personalNotes ?: "",
-                    ttsManager = ttsManager,
-                    currentLanguage = currentLanguage,
-                    onBack = { activeLesson = null },
-                    onToggleComplete = { notes ->
-                        scope.launch {
-                            dao.saveScriptureProgress(
-                                ScriptureStudyProgressEntity(
-                                    lessonId = lesson.id,
-                                    trackId = lesson.trackId,
-                                    isCompleted = !isLessonDone,
-                                    completedTimestamp =
-                                        if (!isLessonDone) System.currentTimeMillis() else 0L,
-                                    personalNotes = notes
-                                )
+            val isLessonDone = completedLessonIds.contains(lesson.id)
+            val currentEntity = allProgress.firstOrNull { it.lessonId == lesson.id }
+            AppBackHandler { activeLessonId = null }
+            LessonDetailView(
+                lesson = lesson,
+                isCompleted = isLessonDone,
+                existingNotes = currentEntity?.personalNotes ?: "",
+                ttsManager = ttsManager,
+                currentLanguage = currentLanguage,
+                onToggleComplete = { notes ->
+                    scope.launch {
+                        dao.saveScriptureProgress(
+                            ScriptureStudyProgressEntity(
+                                lessonId = lesson.id,
+                                trackId = lesson.trackId,
+                                isCompleted = !isLessonDone,
+                                completedTimestamp = if (!isLessonDone) System.currentTimeMillis() else 0L,
+                                personalNotes = notes
                             )
-                        }
-                    },
-                    // Saving the notes of a lesson already marked done must not
-                    // un-mark it, nor re-date when it was completed.
-                    onSaveNotes = { notes ->
-                        scope.launch {
-                            dao.saveScriptureProgress(
-                                ScriptureStudyProgressEntity(
-                                    lessonId = lesson.id,
-                                    trackId = lesson.trackId,
-                                    isCompleted = isLessonDone,
-                                    completedTimestamp = currentEntity?.completedTimestamp ?: 0L,
-                                    personalNotes = notes
-                                )
-                            )
-                        }
+                        )
                     }
-                )
-            }
+                },
+                // Saving the notes of a lesson already marked done must not
+                // un-mark it, nor re-date when it was completed.
+                onSaveNotes = { notes ->
+                    scope.launch {
+                        dao.saveScriptureProgress(
+                            ScriptureStudyProgressEntity(
+                                lessonId = lesson.id,
+                                trackId = lesson.trackId,
+                                isCompleted = isLessonDone,
+                                completedTimestamp = currentEntity?.completedTimestamp ?: 0L,
+                                personalNotes = notes
+                            )
+                        )
+                    }
+                }
+            )
         }
     }
 }
 
 // ------------------------------------------------------------------- overview
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun TrackOverviewView(
     header: LazyListScope.() -> Unit,
-    stripLabels: List<String>,
     tracks: List<ScriptureCourseTrack>,
     track: ScriptureCourseTrack,
     selectedTrackIndex: Int,
     completedLessonIds: Set<String>,
     currentLanguage: AppLanguage,
+    bottom: androidx.compose.ui.unit.Dp,
     onSelectTrack: (Int) -> Unit,
     onSelectLesson: (ScriptureLesson) -> Unit
 ) {
     val design = LocalAppDesign.current
-    val palette = design.palette
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
 
     val total = track.lessons.size
     val done = track.lessons.count { completedLessonIds.contains(it.id) }
     val fraction = if (total > 0) done.toFloat() / total.toFloat() else 0f
     val progressSummary = currentLanguage.pick(
-        "$done de $total lecciones · ${(fraction * 100).toInt()}% del curso",
+        "$done de $total lecciones · ${(fraction * 100).toInt()} % del curso",
         "$done of $total lessons · ${(fraction * 100).toInt()}% of the course",
-        "$done de $total lições · ${(fraction * 100).toInt()}% do curso"
+        "$done de $total lições · ${(fraction * 100).toInt()} % do curso"
     )
+    val nextLesson = track.lessons.firstOrNull { !completedLessonIds.contains(it.id) }
 
-    LazyColumn(Modifier.fillMaxSize()) {
+    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = bottom)) {
         header()
 
-        // The itinerary is one row with a menu under the screen's own
-        // segmented control, not a second row of chips.
-        item {
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            AppListGroup {
-                MenuPickerRow(
-                    title = currentLanguage.pick("Itinerario", "Course", "Itinerário"),
-                    options = stripLabels.mapIndexed { i, label -> i to label },
-                    selected = selectedTrackIndex,
-                    onSelect = onSelectTrack,
-                    // Row height comes from the kit's rowMinHeight; the
-                    // modifier is a no-op in MenuPickerRow today (it only
-                    // forwards the test tag), so no 48dp floor is promised
-                    // here — the track index rows below carry the floor.
-                    testTag = "study_track_picker"
-                )
+        // The itineraries as cards: each shows how far it has been read and
+        // selects itself, so no second index of tracks is needed.
+        item(key = "study_tracks") {
+            LazyRow(
+                Modifier.fillMaxWidth().testTag("study_track_picker"),
+                contentPadding = PaddingValues(horizontal = design.spacing.gutter),
+                horizontalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                itemsIndexed(tracks, key = { _, t -> t.id }) { index, candidate ->
+                    val read = candidate.lessons.count { completedLessonIds.contains(it.id) }
+                    TrackCard(
+                        track = candidate,
+                        read = read,
+                        selected = index == selectedTrackIndex,
+                        currentLanguage = currentLanguage,
+                        onClick = { onSelectTrack(index) }
+                    )
+                }
             }
         }
 
-        item {
-            AppSectionHeader(
-                title = track.title.get(currentLanguage),
-                subtitle = track.description.get(currentLanguage)
-            )
-        }
-
-        item {
-            AppBanner(
-                title = currentLanguage.pick(
-                    "Fundamento magisterial",
-                    "Magisterial grounding",
-                    "Fundamento magisterial"
-                ),
-                body = currentLanguage.pick(
-                    "Alineado con el Catecismo y Dei Verbum del Vaticano",
-                    "Aligned with the Catechism and the Vatican's Dei Verbum",
-                    "Alinhado com o Catecismo e a Dei Verbum do Vaticano"
+        item(key = "study_track_head") {
+            Column(Modifier.padding(horizontal = design.spacing.gutter).padding(top = 28.dp)) {
+                Text(track.title.get(currentLanguage), style = styles.title2, color = p.textPrimary, modifier = Modifier.semantics { heading() })
+                Spacer(Modifier.height(8.dp))
+                Text(track.description.get(currentLanguage), style = styles.callout, color = p.textSecondary)
+                Spacer(Modifier.height(12.dp))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Icon(Icons.Outlined.Verified, null, tint = p.textSecondary, modifier = Modifier.size(16.dp))
+                    Spacer(Modifier.width(6.dp))
+                    Text(
+                        currentLanguage.pick(
+                            "Alineado con el Catecismo y Dei Verbum del Vaticano",
+                            "Aligned with the Catechism and the Vatican's Dei Verbum",
+                            "Alinhado com o Catecismo e a Dei Verbum do Vaticano"
+                        ),
+                        style = styles.footnote, color = p.textSecondary
+                    )
+                }
+                Spacer(Modifier.height(20.dp))
+                AppProgressBar(
+                    progress = fraction,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .semantics {
+                            contentDescription = track.title.get(currentLanguage)
+                            stateDescription = progressSummary
+                        }
+                        .testTag("study_course_progress"),
+                    height = 4.dp
                 )
-            )
-        }
-
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Lecciones del Curso",
-                    "Course Lessons",
-                    "Lições do Curso"
-                ),
-                subtitle = progressSummary
-            )
-            // No kit component carries a progress bar, so the course rule is
-            // the indicator dressed in the identity's own colours. It speaks:
-            // progress is only colour and fill to a sighted reader, so the
-            // done/total summary rides as its state description.
-            LinearProgressIndicator(
-                progress = { fraction },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(bottom = design.spacing.cardGap)
-                    .semantics {
-                        contentDescription = track.title.get(currentLanguage)
-                        stateDescription = progressSummary
-                    }
-                    .testTag("study_course_progress"),
-                color = palette.accent,
-                trackColor = palette.selectionTint
-            )
+                Spacer(Modifier.height(8.dp))
+                Text(progressSummary, style = styles.footnote, color = p.textSecondary)
+                if (track.lessons.isNotEmpty()) {
+                    Spacer(Modifier.height(18.dp))
+                    AppPrimaryCapsule(
+                        label = when {
+                            done == 0 -> currentLanguage.pick("Empezar el itinerario", "Begin the course", "Começar o itinerário")
+                            nextLesson != null -> currentLanguage.pick(
+                                "Continuar · Lección ${nextLesson.lessonNumber}",
+                                "Continue · Lesson ${nextLesson.lessonNumber}",
+                                "Continuar · Lição ${nextLesson.lessonNumber}"
+                            )
+                            else -> currentLanguage.pick("Repasar el itinerario", "Review the course", "Rever o itinerário")
+                        },
+                        onClick = { onSelectLesson(nextLesson ?: track.lessons.first()) },
+                        icon = Icons.Filled.PlayArrow,
+                        tag = "study_continue_button"
+                    )
+                }
+                Spacer(Modifier.height(28.dp))
+                Text(
+                    currentLanguage.pick("Lecciones", "Lessons", "Lições"),
+                    style = styles.title3, color = p.textPrimary,
+                    modifier = Modifier.padding(bottom = 10.dp).semantics { heading() }
+                )
+            }
         }
 
         if (track.lessons.isEmpty()) {
             item {
                 AppEmptyState(
-                    title = currentLanguage.pick(
-                        "Sin lecciones",
-                        "No lessons",
-                        "Sem lições"
-                    ),
+                    title = currentLanguage.pick("Sin lecciones", "No lessons", "Sem lições"),
                     body = currentLanguage.pick(
                         "Este itinerario aún no tiene lecciones en la edición incluida.",
                         "This track has no lessons in the bundled edition yet.",
                         "Este itinerário ainda não tem lições na edição incluída."
                     ),
-                    icon = Icons.AutoMirrored.Filled.MenuBook
+                    icon = Icons.AutoMirrored.Outlined.MenuBook
                 )
             }
         } else {
-            item {
-                AppListGroup {
-                    track.lessons.forEach { lesson ->
-                        val isDone = completedLessonIds.contains(lesson.id)
-                        AppListRow(
-                            title = "${lesson.lessonNumber}. ${lesson.title.get(currentLanguage)}",
-                            subtitle = lesson.biblicalReference,
-                            trailingText = if (isDone) {
-                                currentLanguage.pick("Hecha", "Done", "Feita")
-                            } else {
-                                null
-                            },
-                            onClick = { onSelectLesson(lesson) },
-                            modifier = Modifier
-                                .heightIn(min = 48.dp)
-                                .testTag("lesson_row_${lesson.id}")
-                        )
-                    }
-                }
-            }
-        }
-
-        // The strip above names the itineraries but cannot show how far each
-        // one has been read; this index can, and switches between them.
-        if (tracks.size > 1) {
-            item { AppOrnament() }
-            item {
-                AppSectionHeader(
-                    title = currentLanguage.pick(
-                        "Itinerarios del curso",
-                        "Course itineraries",
-                        "Itinerários do curso"
-                    )
+            itemsIndexed(track.lessons, key = { _, l -> "lesson_${l.id}" }) { index, lesson ->
+                LessonRow(
+                    lesson = lesson,
+                    done = completedLessonIds.contains(lesson.id),
+                    position = positionOf(index, track.lessons.size),
+                    currentLanguage = currentLanguage,
+                    onClick = { onSelectLesson(lesson) }
                 )
             }
-            item {
-                AppListGroup {
-                    tracks.forEachIndexed { index, candidate ->
-                        val read = candidate.lessons.count { completedLessonIds.contains(it.id) }
-                        AppListRow(
-                            title = candidate.title.get(currentLanguage),
-                            trailingText = currentLanguage.pick(
-                                "$read de ${candidate.lessons.size}",
-                                "$read of ${candidate.lessons.size}",
-                                "$read de ${candidate.lessons.size}"
-                            ),
-                            selected = index == selectedTrackIndex,
-                            onClick = { onSelectTrack(index) },
-                            modifier = Modifier
-                                .heightIn(min = 48.dp)
-                                .testTag("track_row_${candidate.id}")
-                        )
-                    }
-                }
-            }
         }
+    }
+}
 
-        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
+@Composable
+private fun TrackCard(
+    track: ScriptureCourseTrack,
+    read: Int,
+    selected: Boolean,
+    currentLanguage: AppLanguage,
+    onClick: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val shape = RoundedCornerShape(24.dp)
+    val total = track.lessons.size.coerceAtLeast(1)
+    Box(
+        Modifier
+            .width(252.dp)
+            .height(184.dp)
+            .lumenPress(onClick, 0.97f, Role.Tab)
+            .lumenGlass(shape, strong = selected)
+            .then(if (selected) Modifier.border(1.5.dp, p.textPrimary, shape) else Modifier)
+            .semantics { this.selected = selected }
+            .testTag("track_row_${track.id}")
+            .padding(18.dp)
+    ) {
+        Column(Modifier.fillMaxSize()) {
+            AppProgressRing(progress = read.toFloat() / total, size = 44.dp, stroke = 3.dp) {
+                Icon(trackIcon(track), null, tint = p.textPrimary, modifier = Modifier.size(20.dp))
+            }
+            Spacer(Modifier.weight(1f))
+            Text(
+                track.title.get(currentLanguage),
+                style = styles.headline,
+                color = p.textPrimary,
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis
+            )
+            Spacer(Modifier.height(4.dp))
+            Text(
+                currentLanguage.pick("$read de ${track.lessons.size} lecciones", "$read of ${track.lessons.size} lessons", "$read de ${track.lessons.size} lições"),
+                style = styles.footnote, color = p.textSecondary
+            )
+        }
+    }
+}
+
+/** A lesson as a step: its number in a glass circle, a check once it is done. */
+@Composable
+private fun LessonRow(
+    lesson: ScriptureLesson,
+    done: Boolean,
+    position: GroupPosition,
+    currentLanguage: AppLanguage,
+    onClick: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    Column(
+        Modifier.groupedItem(position)
+            .semantics { if (done) stateDescription = currentLanguage.pick("Hecha", "Done", "Feita") }
+            .testTag("lesson_row_${lesson.id}")
+    ) {
+        Row(
+            Modifier.fillMaxWidth().lumenPress(onClick, 0.99f).heightIn(min = 64.dp).padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Box(
+                Modifier.size(32.dp).then(
+                    if (done) Modifier.clip(CircleShape).background(p.success)
+                    else Modifier.lumenGlass(CircleShape, strong = true, lifted = false)
+                ),
+                contentAlignment = Alignment.Center
+            ) {
+                if (done) Icon(Icons.Filled.Check, null, tint = androidx.compose.ui.graphics.Color.White, modifier = Modifier.size(18.dp))
+                else Text("${lesson.lessonNumber}", style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textPrimary)
+            }
+            Spacer(Modifier.width(14.dp))
+            Column(Modifier.weight(1f)) {
+                Text(lesson.title.get(currentLanguage), style = styles.body, color = p.textPrimary)
+                Spacer(Modifier.height(2.dp))
+                Text(lesson.biblicalReference, style = styles.footnote, color = p.textSecondary)
+            }
+            Spacer(Modifier.width(10.dp))
+            AppChevron()
+        }
+        if (position == GroupPosition.First || position == GroupPosition.Middle) {
+            Box(Modifier.fillMaxWidth().padding(start = 62.dp).height(0.5.dp).background(p.separator))
+        }
     }
 }
 
 // --------------------------------------------------------------------- lesson
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun LessonDetailView(
     lesson: ScriptureLesson,
@@ -430,334 +441,224 @@ private fun LessonDetailView(
     existingNotes: String,
     ttsManager: LiturgicalTtsManager,
     currentLanguage: AppLanguage,
-    onBack: () -> Unit,
     onToggleComplete: (notes: String) -> Unit,
     onSaveNotes: (notes: String) -> Unit
 ) {
     val design = LocalAppDesign.current
-    val palette = design.palette
+    val p = design.palette
     val styles = LocalAppTextStyles.current
-
+    val insets = appScreenInsets()
     var notesText by remember(lesson.id) { mutableStateOf(existingNotes) }
-
+    var savedFlash by remember(lesson.id) { mutableIntStateOf(0) }
     val passage = lesson.biblicalPassageText.get(currentLanguage)
+    val speaking by ttsManager.currentlySpeaking.collectAsState()
+    val playing by ttsManager.isPlaying.collectAsState()
+    val readingPassage = playing && speaking == passage
+    val inset = design.spacing.gutter + 4.dp
 
-    LazyColumn(Modifier.fillMaxSize()) {
-        item {
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(top = design.spacing.cardGap),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Row(
-                    Modifier
-                        .weight(1f)
-                        .heightIn(min = 48.dp)
-                        .clickable(role = Role.Button, onClick = onBack)
-                        .padding(vertical = design.spacing.rowPaddingVertical)
-                        .semantics {
-                            contentDescription = currentLanguage.pick(
-                                "Volver al Curso",
-                                "Back to the Course",
-                                "Voltar ao Curso"
-                            )
-                        }
-                        .testTag("back_to_course_button"),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                        contentDescription = currentLanguage.pick(
-                            "Volver al Curso",
-                            "Back to the Course",
-                            "Voltar ao Curso"
-                        ),
-                        tint = palette.accent,
-                        modifier = Modifier.size(design.decor.rowIconSize)
-                    )
-                    Spacer(Modifier.width(design.spacing.iconLabelGap / 2))
-                    // One word, not "Volver al Curso": beside the status chip
-                    // the row has about 140dp left, and Vatican's tracked
-                    // capitals spend all of it on the longer phrase.
+    AppInlineTitle(lesson.title.get(currentLanguage))
+    LaunchedEffect(savedFlash) { if (savedFlash > 0) { delay(1600); savedFlash = 0 } }
+
+    LazyColumn(
+        Modifier.fillMaxSize().imePadding(),
+        contentPadding = PaddingValues(top = insets.calculateTopPadding(), bottom = insets.calculateBottomPadding() + 40.dp)
+    ) {
+        item(key = "lesson_head") {
+            Column(Modifier.padding(horizontal = inset).padding(top = 8.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        text = caps(currentLanguage.pick("Volver", "Back", "Voltar")),
-                        style = styles.buttonLabel,
-                        color = palette.accent,
-                        maxLines = 1
+                        currentLanguage.pick("Lección ${lesson.lessonNumber}", "Lesson ${lesson.lessonNumber}", "Lição ${lesson.lessonNumber}"),
+                        style = styles.eyebrow, color = p.textSecondary, modifier = Modifier.weight(1f)
                     )
+                    // Done / not done, one tap either way.
+                    Row(
+                        Modifier
+                            .heightIn(min = 40.dp)
+                            .lumenPress({ onToggleComplete(notesText) }, 0.96f)
+                            .then(
+                                if (isCompleted) Modifier.clip(RoundedCornerShape(percent = 50)).background(p.success)
+                                else Modifier.lumenGlass(RoundedCornerShape(percent = 50), strong = true)
+                            )
+                            .semantics { stateDescription = if (isCompleted) currentLanguage.pick("Completada", "Completed", "Concluída") else "" }
+                            .testTag("toggle_lesson_complete_button")
+                            .padding(horizontal = 14.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Icon(
+                            Icons.Filled.Check, null,
+                            tint = if (isCompleted) androidx.compose.ui.graphics.Color.White else p.textSecondary,
+                            modifier = Modifier.size(16.dp)
+                        )
+                        Spacer(Modifier.width(6.dp))
+                        Text(
+                            if (isCompleted) currentLanguage.pick("Completada", "Completed", "Concluída")
+                            else currentLanguage.pick("Marcar como hecha", "Mark as done", "Marcar como feita"),
+                            style = styles.subhead.copy(fontWeight = FontWeight.Medium),
+                            color = if (isCompleted) androidx.compose.ui.graphics.Color.White else p.textPrimary
+                        )
+                    }
                 }
-                Spacer(Modifier.width(design.spacing.cardGap))
-                AppChip(
-                    label = if (isCompleted) {
-                        currentLanguage.pick("Completada", "Completed", "Concluída")
-                    } else {
-                        currentLanguage.pick("Marcar Hecha", "Mark done", "Marcar feita")
-                    },
-                    selected = isCompleted,
-                    onClick = { onToggleComplete(notesText) },
-                    modifier = Modifier
-                        .heightIn(min = 48.dp)
-                        .testTag("toggle_lesson_complete_button")
-                )
+                Spacer(Modifier.height(6.dp))
+                Text(lesson.title.get(currentLanguage), style = styles.title1, color = p.textPrimary, modifier = Modifier.semantics { heading() })
+                Spacer(Modifier.height(6.dp))
+                Text(lesson.biblicalReference, style = styles.subhead, color = p.textSecondary)
             }
         }
 
-        item {
-            AppScreenTitle(
-                title = lesson.title.get(currentLanguage),
-                subtitle = currentLanguage.pick(
-                    "Lección ${lesson.lessonNumber} · ${lesson.biblicalReference}",
-                    "Lesson ${lesson.lessonNumber} · ${lesson.biblicalReference}",
-                    "Lição ${lesson.lessonNumber} · ${lesson.biblicalReference}"
-                )
-            )
-        }
-
-        // The passage is not boxed: a lectio is read, so the rubric names the
-        // step and the text runs at the identity's reading measure under it.
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Paso 1: Lectura de la Escritura (Lectio)",
-                    "Step 1: Reading of Scripture (Lectio)",
-                    "Passo 1: Leitura da Escritura (Lectio)"
-                )
-            )
-        }
-
-        item {
-            ReadingColumn {
+        // Step 1: the passage, read and heard.
+        item(key = "lesson_lectio") {
+            LessonSection(
+                eyebrow = currentLanguage.pick("Paso 1 · Lectio", "Step 1 · Lectio", "Passo 1 · Lectio"),
+                title = currentLanguage.pick("Lectura de la Escritura", "Reading of Scripture", "Leitura da Escritura")
+            ) {
                 Text(
-                    text = passage,
-                    style = styles.scripture,
-                    color = palette.textPrimary,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
+                    passage, style = styles.reading, color = p.textPrimary,
+                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                 )
-                Spacer(Modifier.height(design.spacing.cardGap))
-                AppSecondaryButton(
-                    label = currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
-                    onClick = { ttsManager.speakSingle(passage) },
-                    leadingIcon = Icons.AutoMirrored.Filled.VolumeUp,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
-                        .heightIn(min = 48.dp)
-                        .testTag("lesson_listen_button")
+                Spacer(Modifier.height(16.dp))
+                AppSecondaryCapsule(
+                    label = if (readingPassage) currentLanguage.pick("Detener", "Stop", "Parar")
+                    else currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
+                    onClick = { if (readingPassage) ttsManager.stop() else ttsManager.speakSingle(passage) },
+                    icon = if (readingPassage) Icons.Filled.Stop else Icons.Filled.PlayArrow,
+                    tag = "lesson_listen_button"
                 )
             }
         }
 
-        item { AppOrnament() }
-
-        item {
-            AppSectionHeader(
+        item(key = "lesson_magisterium") {
+            LessonSection(
+                eyebrow = currentLanguage.pick("Contexto", "Context", "Contexto"),
                 title = currentLanguage.pick(
                     "Magisterio del Vaticano y Catecismo",
                     "Vatican Magisterium & Catechism",
                     "Magistério do Vaticano e Catecismo"
-                ),
-                // The citations are apparatus, so they sit under the rubric the
-                // way a reference does in a printed commentary.
-                subtitle = lesson.catechismRefs
-                    .joinToString(" · ")
-                    .ifBlank { null }
-            )
-        }
-
-        item {
-            ReadingColumn {
+                )
+            ) {
+                if (lesson.catechismRefs.isNotEmpty()) {
+                    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        lesson.catechismRefs.forEach { ref ->
+                            Box(
+                                Modifier.lumenGlass(RoundedCornerShape(percent = 50), lifted = false)
+                                    .padding(horizontal = 12.dp, vertical = 5.dp)
+                            ) { Text(ref, style = styles.caption, color = p.textPrimary) }
+                        }
+                    }
+                    Spacer(Modifier.height(14.dp))
+                }
                 Text(
-                    text = lesson.vaticanContext.get(currentLanguage),
-                    style = styles.scripture,
-                    color = palette.textPrimary,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
+                    lesson.vaticanContext.get(currentLanguage), style = styles.callout, color = p.textPrimary,
+                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                 )
             }
         }
 
-        item { AppOrnament() }
-
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Guía de Lectio Divina",
-                    "Guide to Lectio Divina",
-                    "Guia de Lectio Divina"
-                )
-            )
-        }
-
-        item {
-            ReadingColumn {
-                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                    LectioStep(
-                        badge = "1. Lectio",
-                        question = currentLanguage.pick(
-                            "¿Qué dice el texto sagrado?",
-                            "What does the sacred text say?",
-                            "O que diz o texto sagrado?"
-                        ),
-                        content = lesson.lectioStep.get(currentLanguage)
+        item(key = "lesson_guide") {
+            LessonSection(
+                eyebrow = currentLanguage.pick("Oración", "Prayer", "Oração"),
+                title = currentLanguage.pick("Guía de lectio divina", "Guide to lectio divina", "Guia de lectio divina")
+            ) {}
+            AppGlassSurface(
+                Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
+                contentPadding = PaddingValues(vertical = 6.dp)
+            ) {
+                Column {
+                    val steps = listOf(
+                        Triple("Lectio", currentLanguage.pick("¿Qué dice el texto sagrado?", "What does the sacred text say?", "O que diz o texto sagrado?"), lesson.lectioStep),
+                        Triple("Meditatio", currentLanguage.pick("¿Qué me dice Dios hoy a mí a través de este pasaje?", "What is God saying to me today through this passage?", "O que Deus me diz hoje através desta passagem?"), lesson.meditatioStep),
+                        Triple("Oratio", currentLanguage.pick("¿Qué le respondo a Dios en mi corazón?", "What do I answer God in my heart?", "O que respondo a Deus no meu coração?"), lesson.oratioStep),
+                        Triple("Contemplatio", currentLanguage.pick("¿Cómo transforma mi vida esta verdad hoy?", "How does this truth change my life today?", "Como esta verdade transforma a minha vida hoje?"), lesson.contemplatioStep)
                     )
-                    LectioRule()
-                    LectioStep(
-                        badge = "2. Meditatio",
-                        question = currentLanguage.pick(
-                            "¿Qué me dice Dios hoy a mí a través de este pasaje?",
-                            "What is God saying to me today through this passage?",
-                            "O que Deus me diz hoje através desta passagem?"
-                        ),
-                        content = lesson.meditatioStep.get(currentLanguage)
-                    )
-                    LectioRule()
-                    LectioStep(
-                        badge = "3. Oratio",
-                        question = currentLanguage.pick(
-                            "¿Qué le respondo a Dios en mi corazón?",
-                            "What do I answer God in my heart?",
-                            "O que respondo a Deus no meu coração?"
-                        ),
-                        content = lesson.oratioStep.get(currentLanguage)
-                    )
-                    LectioRule()
-                    LectioStep(
-                        badge = "4. Contemplatio",
-                        question = currentLanguage.pick(
-                            "¿Cómo transforma mi vida esta verdad hoy?",
-                            "How does this truth change my life today?",
-                            "Como esta verdade transforma a minha vida hoje?"
-                        ),
-                        content = lesson.contemplatioStep.get(currentLanguage)
-                    )
+                    steps.forEachIndexed { i, (name, question, content) ->
+                        LectioStep(number = i + 1, name = name, question = question, content = content.get(currentLanguage))
+                        if (i < steps.lastIndex) {
+                            Box(Modifier.fillMaxWidth().padding(start = 64.dp).height(0.5.dp).background(p.separator))
+                        }
+                    }
                 }
             }
         }
 
-        item { AppOrnament() }
-
-        item {
-            AppSectionHeader(
-                title = currentLanguage.pick(
-                    "Mis Notas y Frutos Espirituales",
-                    "My Notes & Spiritual Fruits",
-                    "Minhas Notas e Frutos Espirituais"
-                ),
-                subtitle = currentLanguage.pick(
-                    "Escribe una breve resolución o lo que Dios te ha inspirado en esta lección.",
-                    "Write a short resolution, or whatever God has inspired in you in this lesson.",
-                    "Escreva uma breve resolução ou o que Deus lhe inspirou nesta lição."
+        item(key = "lesson_notes") {
+            LessonSection(
+                eyebrow = currentLanguage.pick("Fruto", "Fruit", "Fruto"),
+                title = currentLanguage.pick("Mis notas y frutos espirituales", "My notes & spiritual fruits", "Minhas notas e frutos espirituais")
+            ) {
+                Text(
+                    currentLanguage.pick(
+                        "Escribe una breve resolución o lo que Dios te ha inspirado en esta lección.",
+                        "Write a short resolution, or whatever God has inspired in you in this lesson.",
+                        "Escreva uma breve resolução ou o que Deus lhe inspirou nesta lição."
+                    ),
+                    style = styles.footnote, color = p.textSecondary
                 )
-            )
-        }
-
-        item {
-            ReadingColumn {
-                AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter)) {
-                    NotesField(
-                        value = notesText,
-                        onValueChange = { notesText = it },
-                        placeholder = currentLanguage.pick(
-                            "Mi resolución de hoy...",
-                            "My resolution for today...",
-                            "A minha resolução de hoje..."
-                        ),
-                        modifier = Modifier.testTag("lesson_notes_field")
-                    )
-                    Spacer(Modifier.height(design.spacing.cardPadding))
-                    // One label, one full-width row: "Guardar y Completar
-                    // Lección" cannot be defended in half a row at 360dp.
-                    AppPrimaryButton(
-                        label = if (isCompleted) {
-                            currentLanguage.pick(
-                                "Guardar Cambios",
-                                "Save changes",
-                                "Guardar alterações"
-                            )
-                        } else {
-                            currentLanguage.pick(
-                                "Guardar y Completar Lección",
-                                "Save & complete lesson",
-                                "Guardar e concluir a lição"
-                            )
-                        },
-                        onClick = {
-                            if (isCompleted) onSaveNotes(notesText) else onToggleComplete(notesText)
-                        },
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .heightIn(min = 48.dp)
-                            .testTag("save_lesson_button")
-                    )
+                Spacer(Modifier.height(12.dp))
+                NotesField(
+                    value = notesText,
+                    onValueChange = { notesText = it },
+                    placeholder = currentLanguage.pick("Mi resolución de hoy…", "My resolution for today…", "A minha resolução de hoje…"),
+                    modifier = Modifier.testTag("lesson_notes_field")
+                )
+                Spacer(Modifier.height(16.dp))
+                AppPrimaryCapsule(
+                    label = if (isCompleted) currentLanguage.pick("Guardar cambios", "Save changes", "Guardar alterações")
+                    else currentLanguage.pick("Guardar y completar lección", "Save & complete lesson", "Guardar e concluir a lição"),
+                    onClick = {
+                        if (isCompleted) onSaveNotes(notesText) else onToggleComplete(notesText)
+                        savedFlash++
+                    },
+                    tag = "save_lesson_button"
+                )
+                AnimatedVisibility(savedFlash > 0, enter = fadeIn(), exit = fadeOut()) {
+                    Row(Modifier.fillMaxWidth().padding(top = 10.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Filled.Check, null, tint = p.success, modifier = Modifier.size(16.dp))
+                        Spacer(Modifier.width(6.dp))
+                        Text(currentLanguage.pick("Guardado", "Saved", "Guardado"), style = styles.footnote, color = p.textSecondary)
+                    }
                 }
             }
         }
-
-        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
-/** One of the four movements: its Latin name, its question, its guidance. */
+/** A section of the lesson: a quiet eyebrow, a heading, then its content. */
 @Composable
-private fun LectioStep(
-    badge: String,
-    question: String,
-    content: String
-) {
+private fun LessonSection(eyebrow: String, title: String, content: @Composable () -> Unit) {
     val design = LocalAppDesign.current
+    val p = design.palette
     val styles = LocalAppTextStyles.current
-
-    Column(Modifier.fillMaxWidth()) {
-        Text(
-            text = caps(badge),
-            style = styles.sectionEyebrow,
-            color = design.palette.gold
-        )
-        Spacer(Modifier.height(design.spacing.cardGap / 3))
-        Text(
-            text = question,
-            style = styles.rowTitle,
-            color = design.palette.textPrimary
-        )
-        Spacer(Modifier.height(design.spacing.cardGap / 2))
-        Text(
-            text = content,
-            style = styles.rowSubtitle,
-            color = design.palette.textSecondary
-        )
+    Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter + 4.dp).padding(top = 36.dp, bottom = 12.dp)) {
+        Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
+        Spacer(Modifier.height(2.dp))
+        Text(title, style = styles.title3, color = p.textPrimary, modifier = Modifier.semantics { heading() })
+        Spacer(Modifier.height(14.dp))
+        content()
     }
 }
 
-/**
- * The rule between two movements. `AppDivider` is inset to the gutter in
- * Cupertino, which reads as a mistake inside a card's own padding, so the rule
- * is drawn to the card's measure instead.
- */
+/** One of the four movements: its number, its Latin name, its question, its guidance. */
 @Composable
-private fun LectioRule() {
+private fun LectioStep(number: Int, name: String, question: String, content: String) {
     val design = LocalAppDesign.current
-    Spacer(Modifier.height(design.spacing.cardPadding))
-    Box(
-        Modifier
-            .fillMaxWidth()
-            .height(1.dp)
-            .background(design.palette.hairline)
-    )
-    Spacer(Modifier.height(design.spacing.cardPadding))
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    Row(Modifier.fillMaxWidth().padding(horizontal = 18.dp, vertical = 16.dp)) {
+        Box(
+            Modifier.size(30.dp).lumenGlass(CircleShape, strong = true, lifted = false),
+            contentAlignment = Alignment.Center
+        ) { Text("$number", style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textPrimary) }
+        Spacer(Modifier.width(16.dp))
+        Column(Modifier.weight(1f)) {
+            Text(name, style = styles.headline, color = p.textPrimary)
+            Spacer(Modifier.height(4.dp))
+            Text(question, style = styles.callout.copy(fontStyle = FontStyle.Italic), color = p.textPrimary)
+            Spacer(Modifier.height(6.dp))
+            Text(content, style = styles.subhead, color = p.textSecondary)
+        }
+    }
 }
 
-/**
- * The reader's own page.
- *
- * The kit's search field is single-line and wears a magnifier, which suits
- * neither a resolution nor a page of writing, so this is cut from the
- * identity's own field shape, rule weight and type instead.
- */
+/** The reader's own page: a glass field of several lines. */
 @Composable
 private fun NotesField(
     value: String,
@@ -766,43 +667,21 @@ private fun NotesField(
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
-    val palette = design.palette
+    val p = design.palette
     val styles = LocalAppTextStyles.current
-
+    val shape = RoundedCornerShape(20.dp)
     BasicTextField(
         value = value,
         onValueChange = onValueChange,
         modifier = modifier.fillMaxWidth(),
-        textStyle = styles.rowTitle.copy(color = palette.textPrimary),
+        textStyle = styles.body.copy(color = p.textPrimary),
         minLines = 4,
-        cursorBrush = SolidColor(palette.accent),
+        cursorBrush = SolidColor(p.textPrimary),
         decorationBox = { inner ->
             Box(
-                Modifier
-                    .fillMaxWidth()
-                    .clip(design.shapes.field)
-                    // The selection tint is struck dark-aware in the
-                    // palette; no alpha hack per mode. The border weight is
-                    // the depth token: 0 in the tonal identities (the fill
-                    // carries the edge), 1dp in Vatican.
-                    .background(palette.selectionTint)
-                    .border(
-                        design.depth.cardBorderWidth,
-                        palette.hairline,
-                        design.shapes.field
-                    )
-                    .padding(
-                        horizontal = design.spacing.cardPadding,
-                        vertical = design.spacing.rowPaddingVertical
-                    )
+                Modifier.fillMaxWidth().lumenGlass(shape, lifted = false).padding(horizontal = 18.dp, vertical = 14.dp)
             ) {
-                if (value.isEmpty()) {
-                    Text(
-                        text = placeholder,
-                        style = styles.rowTitle,
-                        color = palette.textTertiary
-                    )
-                }
+                if (value.isEmpty()) Text(placeholder, style = styles.body, color = p.textSecondary)
                 inner()
             }
         }

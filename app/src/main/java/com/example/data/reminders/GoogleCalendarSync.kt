@@ -1,9 +1,9 @@
 package com.example.data.reminders
 
+import android.content.ContentUris
 import android.content.ContentValues
 import android.content.Context
 import android.provider.CalendarContract
-import java.util.Calendar
 
 /**
  * Phase 2: writes a daily recurring event into the user's own Google
@@ -39,9 +39,14 @@ object GoogleCalendarSync {
     }
 
     /**
-     * Inserts one daily recurring event (15 min) starting at the next
-     * [hour]:[minute], with a popup reminder at event time.
-     * Returns true when the event was created.
+     * Writes one daily recurring event (15 min) starting at the next
+     * [hour]:[minute], with a popup reminder at event time, and returns its
+     * event id (null on failure).
+     *
+     * When [existingEventId] still names an event in the calendar, that event
+     * is updated in place (new time, title, description) instead of inserting
+     * a second copy, so tapping "Add to Google Calendar" twice never leaves
+     * duplicate daily events behind.
      */
     fun syncReminder(
         context: Context,
@@ -49,24 +54,36 @@ object GoogleCalendarSync {
         hour: Int,
         minute: Int,
         language: String,
-    ): Boolean {
-        val calendarId = firstWritableCalendarId(context) ?: return false
+        existingEventId: Long? = null,
+    ): Long? {
         val start = ReminderScheduler.nextTriggerMillis(hour, minute)
-        val cal = Calendar.getInstance().apply { timeInMillis = start }
-        val end = (cal.clone() as Calendar).apply { add(Calendar.MINUTE, 15) }.timeInMillis
-
+        // Recurring events take a DURATION, not a DTEND (CalendarContract).
         val values = ContentValues().apply {
-            put(CalendarContract.Events.CALENDAR_ID, calendarId)
             put(CalendarContract.Events.TITLE, reminder.title(language))
             put(CalendarContract.Events.DESCRIPTION, reminder.body(language))
             put(CalendarContract.Events.DTSTART, start)
-            put(CalendarContract.Events.DTEND, end)
+            put(CalendarContract.Events.DURATION, "PT15M")
             put(CalendarContract.Events.EVENT_TIMEZONE, java.util.TimeZone.getDefault().id)
             put(CalendarContract.Events.RRULE, "FREQ=DAILY")
         }
+
+        if (existingEventId != null) {
+            val updated = runCatching {
+                context.contentResolver.update(
+                    ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, existingEventId),
+                    values,
+                    "${CalendarContract.Events.DELETED} = 0",
+                    null
+                )
+            }.getOrDefault(0)
+            if (updated > 0) return existingEventId
+        }
+
+        val calendarId = firstWritableCalendarId(context) ?: return null
+        values.put(CalendarContract.Events.CALENDAR_ID, calendarId)
         val eventUri = context.contentResolver.insert(CalendarContract.Events.CONTENT_URI, values)
-            ?: return false
-        val eventId = eventUri.lastPathSegment?.toLongOrNull() ?: return false
+            ?: return null
+        val eventId = eventUri.lastPathSegment?.toLongOrNull() ?: return null
 
         val reminderValues = ContentValues().apply {
             put(CalendarContract.Reminders.EVENT_ID, eventId)
@@ -74,6 +91,6 @@ object GoogleCalendarSync {
             put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT)
         }
         context.contentResolver.insert(CalendarContract.Reminders.CONTENT_URI, reminderValues)
-        return true
+        return eventId
     }
 }

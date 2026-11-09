@@ -48,6 +48,7 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -77,6 +78,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -158,6 +160,28 @@ object LumenKit : AppKit {
                     Box(Modifier.fillMaxSize().nestedScroll(watcher)) {
                         content(inner)
 
+                        // Content-under-bar fade: scrolling content dissolves into the
+                        // canvas over 20dp above the dock and is quiet behind it, so
+                        // nothing ghosts through the bar.
+                        if (!chrome.dockHidden) {
+                            val total = bottom + 20.dp
+                            val lift = 20.dp / total
+                            Box(
+                                Modifier
+                                    .align(Alignment.BottomCenter)
+                                    .fillMaxWidth()
+                                    .height(total)
+                                    .background(
+                                        Brush.verticalGradient(
+                                            0f to Color.Transparent,
+                                            lift to palette.canvasBottom.copy(alpha = 0.55f),
+                                            (lift + 0.14f).coerceAtMost(0.98f) to palette.canvasBottom.copy(alpha = 0.92f),
+                                            1f to palette.canvasBottom.copy(alpha = 0.97f)
+                                        )
+                                    )
+                            )
+                        }
+
                         // The bar material, only once content has scrolled under it.
                         Column(Modifier.fillMaxWidth().graphicsLayer { alpha = edge }) {
                             Box(
@@ -219,16 +243,21 @@ object LumenKit : AppKit {
     }
 
     /**
-     * The owner's floating dock: six labelled tabs on one capsule, the
-     * selected tab on a tinted pill. Unchanged in layout; glass material.
+     * The owner's floating dock: six labelled tabs on one capsule. Layout,
+     * labels and order are the owner's. Material: a near-opaque warm sheet
+     * (light #F2F0ED @ 94%, dark #1E1C1A @ 92%) with a lit edge, so content
+     * never ghosts through it. One outline glyph family at 22dp in ink; the
+     * selected tab turns to its filled twin on a quiet pill (no accent colour).
+     * Labels are one line at 11sp with one shared size that steps down to a
+     * 9.5sp floor when any label would overflow its slot.
      */
     @Composable
     private fun Dock(navItems: List<AppNavItem>, selectedNavIndex: Int, onNavSelected: (Int) -> Unit) {
         val design = LocalAppDesign.current
         val palette = design.palette
         val styles = LocalAppTextStyles.current
-        val scheme = MaterialTheme.colorScheme
         val dockShape = RoundedCornerShape(32.dp)
+        var labelSize by remember(navItems.map { it.label }) { mutableFloatStateOf(11f) }
         Box(
             Modifier
                 .fillMaxWidth()
@@ -238,27 +267,27 @@ object LumenKit : AppKit {
             Row(
                 Modifier
                     .fillMaxWidth()
-                    .softShadow(dockShape, palette.shadow.copy(alpha = (palette.shadow.alpha * 1.5f).coerceAtMost(1f)), 32.dp, 10.dp)
+                    .softShadow(dockShape, palette.shadow.copy(alpha = (palette.shadow.alpha * 1.4f).coerceAtMost(1f)), 32.dp, 10.dp)
                     .clip(dockShape)
                     .background(
                         Brush.verticalGradient(
-                            if (design.isDark) listOf(Color(0xF22C2B29), Color(0xF2201F1D))
-                            else listOf(Color(0xF5FFFFFF), Color(0xF2F8F6F3))
+                            if (design.isDark) listOf(Color(0xEB252321), Color(0xEB1E1C1A))
+                            else listOf(Color(0xF0F5F3F0), Color(0xF0F0EEEA))
                         )
                     )
                     .border(1.dp, Brush.verticalGradient(listOf(palette.glassEdgeTop, palette.glassEdgeBottom)), dockShape)
-                    .padding(5.dp)
+                    .padding(horizontal = 4.dp, vertical = 5.dp)
                     .testTag("bottom_nav_bar"),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 navItems.forEachIndexed { index, item ->
                     val isSelected = index == selectedNavIndex
                     val tint by animateColorAsState(
-                        if (isSelected) scheme.primary else palette.textSecondary,
+                        if (isSelected) palette.textPrimary else palette.textSecondary,
                         tween(design.motion.fastMillis), label = "tabTint"
                     )
                     val tabFill by animateColorAsState(
-                        if (isSelected) scheme.primary.copy(alpha = if (design.isDark) 0.18f else 0.10f) else Color.Transparent,
+                        if (isSelected) palette.textPrimary.copy(alpha = if (design.isDark) 0.12f else 0.07f) else Color.Transparent,
                         tween(design.motion.fastMillis), label = "tabFill"
                     )
                     val source = remember { MutableInteractionSource() }
@@ -273,7 +302,7 @@ object LumenKit : AppKit {
                             .background(tabFill)
                             .clickable(source, indication = null, role = Role.Tab, onClick = { onNavSelected(index) })
                             .semantics { selected = isSelected }
-                            .padding(horizontal = 2.dp, vertical = 5.dp)
+                            .padding(horizontal = 1.dp, vertical = 5.dp)
                             .testTag(item.tag),
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
@@ -286,20 +315,27 @@ object LumenKit : AppKit {
                             },
                             contentDescription = null,
                             tint = tint,
-                            modifier = Modifier.size(23.dp)
+                            modifier = Modifier.size(22.dp)
                         )
                         Spacer(Modifier.height(3.dp))
                         Text(
                             text = item.label,
                             style = styles.navLabel.copy(
-                                fontSize = styles.navLabel.fontSize * 1.1f,
-                                lineHeight = styles.navLabel.lineHeight * 1.17f,
+                                fontSize = labelSize.sp,
+                                lineHeight = (labelSize + 3f).sp,
+                                letterSpacing = (-0.2).sp,
                                 fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium
                             ),
                             color = tint,
                             textAlign = TextAlign.Center,
                             maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
+                            softWrap = false,
+                            overflow = TextOverflow.Clip,
+                            onTextLayout = { layout ->
+                                if (layout.hasVisualOverflow && labelSize > 9.5f) {
+                                    labelSize = (labelSize - 0.25f).coerceAtLeast(9.5f)
+                                }
+                            }
                         )
                     }
                 }
@@ -702,7 +738,9 @@ object LumenKit : AppKit {
                 .then(if (onClick != null) Modifier.clickable(remember { MutableInteractionSource() }, null, onClick = onClick) else Modifier)
                 .padding(horizontal = design.spacing.gutter, vertical = 4.dp)
         ) {
-            Text(annotated, style = styles.reading, color = p.textPrimary, modifier = Modifier.weight(1f))
+            // `scripture`, not `reading`: readers override this slot with the
+            // user's reader font (BibleScreen's Aa choice).
+            Text(annotated, style = styles.scripture, color = p.textPrimary, modifier = Modifier.weight(1f))
             if (hasCommentary) {
                 Spacer(Modifier.width(8.dp))
                 Box(Modifier.padding(top = 12.dp).size(6.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary))

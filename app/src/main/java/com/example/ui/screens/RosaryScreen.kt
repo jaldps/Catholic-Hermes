@@ -1,43 +1,29 @@
 package com.example.ui.screens
 
+import android.os.Build
+import android.view.HapticFeedbackConstants
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.Spring
-import androidx.compose.animation.core.spring
-import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.geometry.lerp
-import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.graphics.StrokeJoin
-import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.graphics.lerp
-import androidx.compose.ui.input.pointer.pointerInput
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.heading
-import androidx.compose.ui.semantics.CustomAccessibilityAction
-import androidx.compose.ui.semantics.customActions
-import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.semantics.stateDescription
-import androidx.compose.ui.unit.Density
-import androidx.compose.runtime.LaunchedEffect
-import kotlinx.coroutines.launch
-import com.example.ui.theme.DesignLanguage
-import kotlin.math.PI
-import kotlin.math.abs
-import kotlin.math.cos
-import kotlin.math.sin
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
-import androidx.compose.foundation.horizontalScroll
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -46,59 +32,78 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.ArrowForward
-import androidx.compose.material.icons.filled.AutoAwesome
-import androidx.compose.material.icons.filled.LightMode
-import androidx.compose.material.icons.filled.LocalFlorist
-import androidx.compose.material.icons.filled.Pause
-import androidx.compose.material.icons.filled.PlayArrow
-import androidx.compose.material.icons.filled.RecordVoiceOver
-import androidx.compose.material.icons.filled.WaterDrop
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.IconButton
+import androidx.compose.material.icons.filled.Lightbulb
+import androidx.compose.material.icons.outlined.Lightbulb
+import androidx.compose.material.icons.outlined.MoreHoriz
+import androidx.compose.material.icons.rounded.Check
+import androidx.compose.material.icons.rounded.ChevronRight
+import androidx.compose.material.icons.rounded.KeyboardArrowDown
+import androidx.compose.material.icons.rounded.Pause
+import androidx.compose.material.icons.rounded.PlayArrow
+import androidx.compose.material.icons.rounded.SkipNext
+import androidx.compose.material.icons.rounded.SkipPrevious
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.withStyle
-import androidx.compose.ui.text.buildAnnotatedString
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.AnnotatedString
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.hapticfeedback.HapticFeedbackType
-import androidx.compose.ui.platform.LocalHapticFeedback
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.drawWithContent
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.geometry.CornerRadius
-import androidx.compose.foundation.background
-import android.graphics.BitmapFactory
-import androidx.compose.foundation.Image
-import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
-
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Icon
+import androidx.compose.ui.graphics.BlendMode
 import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.ColorMatrix
+import androidx.compose.ui.graphics.CompositingStrategy
+import androidx.compose.ui.graphics.FilterQuality
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.layout.onPlaced
+import androidx.compose.ui.layout.positionInParent
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalInspectionMode
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.semantics.CustomAccessibilityAction
+import androidx.compose.ui.semantics.ProgressBarRangeInfo
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.customActions
+import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.progressBarRangeInfo
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.Constraints
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.audio.RecitationVoiceMode
@@ -109,18 +114,26 @@ import com.example.data.models.RosaryMysteryType
 import com.example.data.repository.CatholicDataRepository
 import com.example.data.repository.LitanyLine
 import com.example.data.repository.LitanyOfLoreto
-import com.example.ui.design.AppBanner
-import com.example.ui.design.AppCard
-import com.example.ui.components.MenuPickerRow
-import com.example.ui.design.AppDivider
+import com.example.ui.components.BeadKind
+import com.example.ui.components.BeadReel
+import com.example.ui.components.RosaryLoopMap
+import com.example.ui.design.AppEdgeToEdge
+import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
-import com.example.ui.design.AppOrnament
-import com.example.ui.design.AppSecondaryButton
-import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.design.AppSheet
+import com.example.ui.design.AppStatusBarGlyphs
+import com.example.ui.design.lumenGlass
+import com.example.ui.design.lumenPress
+import com.example.ui.design.rememberAssetBitmap
+import com.example.ui.design.rememberFirstAsset
+import com.example.ui.design.rememberHeroMeta
+import com.example.ui.design.softShadow
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 
 private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
     AppLanguage.ES -> es
@@ -135,7 +148,6 @@ private const val HailMarysPerDecade = 10
 // The guide as data
 // ---------------------------------------------------------------------------
 
-private enum class BeadKind { CRUCIFIX, LARGE, SMALL, MEDAL }
 
 /** One physical bead on the rail; [row] groups the pendant, each decade and the medal. */
 private data class BeadSpec(val kind: BeadKind, val row: Int)
@@ -908,16 +920,66 @@ private fun countLine(step: GuideStep, lang: AppLanguage): String? =
     }
 
 // ---------------------------------------------------------------------------
-// Screen
+// Screen: "Now Praying"
 // ---------------------------------------------------------------------------
+//
+// One screen, no page scroll on a phone: the current mystery's painting is
+// the stage (it changes only when the decade or set changes), the bead reel
+// is the scrubber, the prayer is the lyrics and the glass transport sits in
+// the thumb zone. Everything reads the same GuideStep, so the painting, the
+// rail, the counters and the narration can never disagree.
+
+private enum class RosarySheet { MYSTERIES, OPTIONS, MYSTERY }
+
+private val MysteryArtNames = mapOf(
+    RosaryMysteryType.JOYFUL to listOf("annunciation", "visitation", "nativity", "presentation", "finding"),
+    RosaryMysteryType.SORROWFUL to listOf("agony", "scourging", "crowning", "carrying", "crucifixion"),
+    RosaryMysteryType.GLORIOUS to listOf("resurrection", "ascension", "pentecost", "assumption", "coronation"),
+    RosaryMysteryType.LUMINOUS to listOf("baptism", "cana", "proclamation", "transfiguration", "eucharist")
+)
+
+/** The bundled painting for one mystery (0-based [decade]). */
+private fun mysteryArt(type: RosaryMysteryType, decade: Int): String {
+    val set = type.name.lowercase()
+    val names = MysteryArtNames.getValue(type)
+    val n = decade.coerceIn(0, names.lastIndex)
+    return "heroes/mysteries/${set}_${n + 1}_${names[n]}.jpg"
+}
+
+private const val MercyArt = "heroes/mysteries/divine_mercy.jpg"
+
+/** Title, artist and date of a bundled painting, from its folder's manifest. */
+private data class ArtCredit(val title: String, val artist: String, val year: String)
+
+private object ArtCredits {
+    private val cache = java.util.concurrent.ConcurrentHashMap<String, org.json.JSONObject>()
+    fun of(context: android.content.Context, path: String): ArtCredit? {
+        val dir = path.substringBeforeLast('/', "")
+        val manifest = cache.getOrPut(dir) {
+            runCatching {
+                org.json.JSONObject(context.assets.open("$dir/manifest.json").bufferedReader().use { it.readText() })
+            }.getOrElse { org.json.JSONObject() }
+        }
+        val entry = manifest.optJSONObject(path.substringAfterLast('/')) ?: return null
+        val title = entry.optString("title")
+        if (title.isBlank()) return null
+        return ArtCredit(title, entry.optString("artist"), entry.optString("year"))
+    }
+}
+
+private fun stepLabel(lang: AppLanguage, index: Int, total: Int) = lang.pick(
+    "Paso ${index + 1} de $total",
+    "Step ${index + 1} of $total",
+    "Passo ${index + 1} de $total"
+)
 
 /**
  * The Holy Rosary and the Divine Mercy chaplet, guided one prayer at a time
  * from the first Sign of the Cross to the last, with the bead it is said on
- * marked on a rail of the whole rosary, and spoken recitation.
+ * centred on a reel of the whole rosary, and spoken recitation.
  *
- * Each devotion is a [PrayerGuide] built once: the page, the rail, the progress
- * line and the narration all read the same step, so they cannot disagree.
+ * Each devotion is a [PrayerGuide] built once: the stage, the rail, the
+ * progress and the narration all read the same step.
  */
 @Composable
 fun RosaryScreen(
@@ -928,31 +990,29 @@ fun RosaryScreen(
     /** Tab opened on arrival (0 = Rosary, 1 = Divine Mercy Chaplet). */
     initialTab: Int = 0
 ) {
+    val insets = AppEdgeToEdge()
     val design = LocalAppDesign.current
-    val palette = design.palette
+    val p = design.palette
     val styles = LocalAppTextStyles.current
     val lang = currentLanguage
+    val view = LocalView.current
+    val density = LocalDensity.current
 
-    var selectedTab by remember { mutableIntStateOf(initialTab.coerceIn(0, 1)) } // 0 = Santo Rosario, 1 = Coronilla de la Divina Misericordia
-
+    var selectedTab by rememberSaveable { mutableIntStateOf(initialTab.coerceIn(0, 1)) }
     val todayMystery = remember { repository.getTodayRosaryMystery() }
-
-    // Rosary State
-    var selectedMysteryType by remember { mutableStateOf(todayMystery.type) }
-    var rosaryStepIndex by remember { mutableIntStateOf(0) }
-
-    // Divine Mercy State
-    var mercyStepIndex by remember { mutableIntStateOf(0) }
+    var selectedMysteryType by rememberSaveable { mutableStateOf(todayMystery.type) }
+    var rosaryStepIndex by rememberSaveable { mutableIntStateOf(0) }
+    var mercyStepIndex by rememberSaveable { mutableIntStateOf(0) }
+    // Beginner guidance stays on from step to step once turned on.
+    var instructionsOn by rememberSaveable { mutableStateOf(false) }
+    var sheet by remember { mutableStateOf<RosarySheet?>(null) }
 
     val voiceMode by ttsManager.voiceMode.collectAsState()
     val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
-    // Persistent pray-aloud flag: unlike the transient isPlaying flow (which
-    // drops to false when an utterance finishes), this stays true from the
-    // play press until the pause/stop press, so every step change speaks.
+    // Persistent pray-aloud flag: stays true from the play press until the
+    // pause press, so every step change speaks.
     var narrationActive by remember { mutableStateOf(false) }
 
-    // The full Creed and the Faustina opening prayers already live in the
-    // repository; the guide reads them from there rather than restating them.
     val creedSource = remember { repository.vaticanPrayers.firstOrNull { it.id == "creed" } }
     val mercySource = remember { repository.divineMercySteps }
     val creed = creedSource?.let { it.leaderText.said(lang, it.responseText) }
@@ -960,47 +1020,31 @@ fun RosaryScreen(
     val opening = mercySource.firstOrNull { it.stepIndex == 1 }?.let { it.leaderText.said(lang, it.responseText) }
 
     val currentMystery = repository.getRosaryMystery(selectedMysteryType)
-    val rosaryGuide = remember(selectedMysteryType, lang) {
-        buildRosaryGuide(currentMystery, creed, lang)
-    }
+    val rosaryGuide = remember(selectedMysteryType, lang) { buildRosaryGuide(currentMystery, creed, lang) }
     val mercyGuide = remember(lang) { buildMercyGuide(creed, opening, lang) }
 
     val rosaryIndex = rosaryStepIndex.coerceIn(0, rosaryGuide.steps.lastIndex)
-    val rosaryStep = rosaryGuide.steps[rosaryIndex]
     val mercyIndex = mercyStepIndex.coerceIn(0, mercyGuide.steps.lastIndex)
-    val mercyStep = mercyGuide.steps[mercyIndex]
+    val isRosary = selectedTab == 0
+    val guide = if (isRosary) rosaryGuide else mercyGuide
+    val index = if (isRosary) rosaryIndex else mercyIndex
+    val step = guide.steps[index]
+    val section = guide.sections.lastOrNull { it.index == step.section } ?: guide.sections.first()
 
-    fun caps(text: String) = if (design.decor.usesAllCapsLabels) text.uppercase() else text
-
-    // A prayer split between leader and people is spoken as a dialogue; one
-    // said straight through is read by a single voice.
-    fun narrate(step: GuideStep) {
-        if (step.response.isBlank()) {
-            ttsManager.speakSingle(step.narration)
-        } else {
-            ttsManager.speakDialogue(step.leader, step.response)
-        }
+    fun narrate(s: GuideStep) {
+        ttsManager.setLanguage(lang)
+        if (s.response.isBlank()) ttsManager.speakSingle(s.narration)
+        else ttsManager.speakDialogue(s.leader, s.response)
     }
 
-    fun goRosary(index: Int) {
-        // Step change only moves the index; the LaunchedEffect below speaks
-        // the new step while narrationActive, so prev/next/bead-tap and
-        // section jumps all continue aloud without re-pressing play.
-        rosaryStepIndex = index.coerceIn(0, rosaryGuide.steps.lastIndex)
+    LaunchedEffect(lang) { ttsManager.setLanguage(lang) }
+    LaunchedEffect(narrationActive, selectedTab, selectedMysteryType, lang, rosaryIndex, mercyIndex, voiceMode) {
+        if (narrationActive) narrate(step)
     }
-
-    fun goMercy(index: Int) {
-        mercyStepIndex = index.coerceIn(0, mercyGuide.steps.lastIndex)
-    }
-
-    // Persistent narration: speaks the current step whenever narration is
-    // active and the step/context changes — play press, prev/next, bead tap,
-    // section jump, mystery change (guide rebuild + index reset) or tab
-    // change. Stopping happens only via the pause/stop toggle below.
-    LaunchedEffect(narrationActive, selectedTab, selectedMysteryType, lang, rosaryIndex, mercyIndex) {
-        if (narrationActive) {
-            narrate(if (selectedTab == 0) rosaryStep else mercyStep)
-        }
+    // Leaving the tab ends the recitation instead of orphaning it.
+    val narrating by rememberUpdatedState(narrationActive)
+    DisposableEffect(Unit) {
+        onDispose { if (narrating) ttsManager.stop() }
     }
 
     fun toggleNarration() {
@@ -1012,1413 +1056,1248 @@ fun RosaryScreen(
         }
     }
 
+    fun go(target: Int) {
+        val clamped = target.coerceIn(0, guide.steps.lastIndex)
+        if (clamped == index) return
+        val from = guide.steps[index]
+        val to = guide.steps[clamped]
+        // A decade completed: a firmer tick than a bead.
+        val finishedDecade = clamped == index + 1 && to.section != from.section && from.section in 1..guide.decadeCount
+        view.performHapticFeedback(
+            if (finishedDecade) {
+                if (Build.VERSION.SDK_INT >= 30) HapticFeedbackConstants.CONFIRM else HapticFeedbackConstants.LONG_PRESS
+            } else HapticFeedbackConstants.KEYBOARD_TAP
+        )
+        if (isRosary) rosaryStepIndex = clamped else mercyStepIndex = clamped
+    }
+
     val previousLabel = lang.pick("Anterior", "Back", "Anterior")
     val nextLabel = lang.pick("Siguiente", "Next", "Seguinte")
-    val prayedLabel = lang.pick("Rezado", "Prayed", "Rezado")
+    val where = guide.whereLine(step, lang)
+    val count = countLine(step, lang)
+    val stepText = stepLabel(lang, index, guide.steps.size)
 
-    LazyColumn(
-        modifier = modifier
+    // The painting for this part of the devotion.
+    val artCandidate = if (isRosary) mysteryArt(selectedMysteryType, (step.section - 1).coerceIn(0, guide.decadeCount - 1)) else MercyArt
+    val artPath = rememberFirstAsset(artCandidate, if (isRosary) "heroes/lumen/rosary.jpg" else "heroes/divine_mercy.jpg", "heroes/mary_statue.jpg")
+    val artMeta = rememberHeroMeta(artPath)
+    AppStatusBarGlyphs(lightGlyphs = design.isDark || artMeta.tone == "dark")
+
+    val stepsOnBead = remember(guide, step.bead) { guide.steps.indices.filter { guide.steps[it].bead == step.bead } }
+
+    // Shared between the stage's mist and the layout: where the label begins.
+    val labelTopPx = remember { mutableFloatStateOf(0f) }
+
+    BoxWithConstraints(
+        modifier
             .fillMaxSize()
-            .testTag("rosary_screen"),
-        contentPadding = PaddingValues(bottom = 16.dp)
+            .testTag("rosary_screen")
     ) {
-        item {
-            // Home-style hero, first on the page: the pearl photo fills the
-            // full-bleed 180dp band at the top, melting into the paper canvas
-            // through the same vertical fade as Home (photo -> canvas) so
-            // there is no hard frame edge. Title and step counter ride overlaid
-            // bottom-left in the faded/scrimmed zone where palette ink stays
-            // legible — one frame, not a band below a picker. Narration is
-            // toggled from the guide card's integrated transport below.
-            // Content switches with the segmented tab below (Santo Rosario /
-            // Coronilla); title/counter testTags per devotion are preserved.
-            val isRosaryHero = selectedTab == 0
-            val heroIndex = if (isRosaryHero) rosaryIndex else mercyIndex
-            val heroTotal = if (isRosaryHero) rosaryGuide.steps.size else mercyGuide.steps.size
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(180.dp)
-                    .background(palette.canvas)
-                    .testTag("rosary_hero_photo")
-            ) {
-                AssetPhoto(
-                    assetPath = "heroes/rosary_pearls.jpg",
-                    contentDescription = null,
-                    modifier = Modifier.matchParentSize(),
-                    // Subject right, text zone left: Crop anchored
-                    // CenterEnd keeps the crucifix/pearls subject
-                    // off the bottom-left title/counter stack.
-                    alignment = Alignment.CenterEnd
-                )
-                // Fade: clear over the upper photo, canvas by the foot of
-                // the band, so the hero dissolves into the page (Home fade).
-                Box(
-                    modifier = Modifier
-                        .matchParentSize()
-                        .background(
-                            Brush.verticalGradient(
-                                colors = listOf(
-                                    Color.Transparent,
-                                    palette.canvas
-                                )
-                            )
-                        )
-                )
-                // Light scrim behind the title zone: the title stays
-                // palette.textPrimary, so the photo is lightened to the
-                // paper canvas under it rather than darkened. Extends
-                // 120dp up the band so the title/counter stay legible.
-                Box(
-                    modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .fillMaxWidth()
-                        .height(120.dp)
-                        .background(
-                            Brush.verticalGradient(
-                                colors = listOf(
-                                    Color.Transparent,
-                                    palette.canvas.copy(alpha = 0.55f),
-                                    palette.canvas.copy(alpha = 0.92f),
-                                    palette.canvas
-                                )
-                            )
-                        )
-                )
-                Column(
-                    modifier = Modifier
-                        .align(Alignment.BottomStart)
-                        .fillMaxWidth()
-                        .padding(
-                            horizontal = design.spacing.gutter,
-                            vertical = 12.dp
-                        )
-                ) {
-                    Text(
-                        text = lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço").takeIf { isRosaryHero }
-                            ?: lang.pick("Coronilla", "Chaplet", "Coroinha"),
-                        style = styles.screenTitle.copy(fontWeight = FontWeight.W400),
-                        color = palette.textPrimary,
-                        maxLines = 1,
-                        modifier = Modifier.testTag(if (isRosaryHero) "rosary_hero_title" else "mercy_hero_title")
-                    )
-                    Spacer(Modifier.height(2.dp))
-                    Text(
-                        text = lang.pick(
-                            "Paso ${heroIndex + 1} de $heroTotal",
-                            "Step ${heroIndex + 1} of $heroTotal",
-                            "Passo ${heroIndex + 1} de $heroTotal"
-                        ),
-                        style = styles.screenSubtitle,
-                        color = palette.textSecondary,
-                        maxLines = 1,
-                        modifier = Modifier.testTag(if (isRosaryHero) "rosary_hero_step_counter" else "mercy_hero_step_counter")
-                    )
-                }
-            }
-            Spacer(Modifier.height(8.dp))
+        val wide = maxWidth >= 600.dp
+        val gutter = design.spacing.gutter
+        val viewport = maxHeight
+        val topInset = insets.calculateTopPadding()
+        val bottomInset = insets.calculateBottomPadding()
+        val columnWidth = if (wide) (maxWidth * 0.55f).coerceAtMost(600.dp) else maxWidth
+
+        // The prayer area is sized for the devotion's characteristic prayer
+        // (Our Father / Eternal Father), so the frequent prayers never scroll
+        // and the layout never jumps between steps.
+        val measurer = rememberTextMeasurer()
+        val textWidthPx = with(density) { (columnWidth - gutter * 2).roundToPx().coerceAtLeast(1) }
+        val readingStyle = styles.reading
+        val textTarget = remember(isRosary, lang, textWidthPx, readingStyle, density) {
+            val said = if (isRosary) ourFather(lang) else eternalFather(lang)
+            val c = Constraints(maxWidth = textWidthPx)
+            val a = measurer.measure(rubricated("℣", said.leader, Color.Unspecified), readingStyle, constraints = c).size.height
+            val b = measurer.measure(rubricated("℟", said.response, Color.Unspecified), readingStyle, constraints = c).size.height
+            with(density) { (a + b).toDp() } + 10.dp + 22.dp
         }
 
-        item {
-            // Bible top-tab language: the caller insets the segmented
-            // control by the gutter (20dp in Ive via design.spacing.gutter),
-            // with the same 48dp minimum and cardGap/2 breathing room below
-            // as Bible tabs.
-            AppSegmentedTabs(
-                options = listOf(
-                    lang.pick("El Santo Rosario", "The Holy Rosary", "O Santo Terço"),
-                    lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia")
-                ),
-                selectedIndex = selectedTab,
-                onSelect = { selectedTab = it },
+        val stage: @Composable () -> Unit = {
+            MysteryStage(
+                assetPath = artPath,
+                labelTopPx = { labelTopPx.floatValue },
+                credit = artPath?.let { ArtCredits.of(LocalContext.current, it) },
+                inDecade = isRosary && step.section in 1..guide.decadeCount,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+        val topBar: @Composable () -> Unit = {
+            DevotionSwitch(
+                lang = lang,
+                selected = selectedTab,
+                onSelect = { if (it != selectedTab) selectedTab = it }
+            )
+        }
+        val label: @Composable () -> Unit = {
+            StageLabel(
+                lang = lang,
+                isRosary = isRosary,
+                setName = selectedMysteryType.displayName.get(lang),
+                headline = section.subtitle,
+                inDecade = isRosary && step.section in 1..guide.decadeCount,
+                onPickMysteries = { sheet = RosarySheet.MYSTERIES },
+                onOpenMystery = { sheet = RosarySheet.MYSTERY }
+            )
+        }
+        val progress: @Composable () -> Unit = {
+            SectionProgress(
+                guide = guide,
+                index = index,
+                stepText = stepText,
+                where = where,
+                counterTag = if (isRosary) "rosary_hero_step_counter" else "mercy_hero_step_counter",
+                onClick = { sheet = RosarySheet.OPTIONS }
+            )
+        }
+        val reel: @Composable () -> Unit = {
+            BeadReel(
+                beads = guide.beads.map { it.kind },
+                activeBead = step.bead,
+                onSelectBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let { go(it) } },
+                subStepCount = stepsOnBead.size,
+                subStepIndex = stepsOnBead.indexOf(index).coerceAtLeast(0),
                 modifier = Modifier
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(bottom = design.spacing.cardGap / 2)
-                    .heightIn(min = 48.dp)
+                    .testTag(if (isRosary) "prayer_bead_counter" else "mercy_step_counter")
+                    .semantics {
+                        contentDescription = listOfNotNull(where, step.name, count).joinToString(", ")
+                        stateDescription = stepText
+                        customActions = listOf(
+                            CustomAccessibilityAction(previousLabel) {
+                                if (index > 0) { go(index - 1); true } else false
+                            },
+                            CustomAccessibilityAction(nextLabel) {
+                                if (index < guide.steps.lastIndex) { go(index + 1); true } else false
+                            }
+                        )
+                    }
+            )
+        }
+        val title: @Composable () -> Unit = {
+            PrayerTitleRow(
+                step = step,
+                count = count,
+                lang = lang,
+                onSkip = {
+                    val next = (index + 1 until guide.steps.size).firstOrNull { !guide.steps[it].optional }
+                    if (next != null) go(next)
+                }
+            )
+        }
+        val prayer: @Composable () -> Unit = {
+            PrayerArea(
+                step = step,
+                stepKey = "$selectedTab/$selectedMysteryType/$index",
+                lang = lang,
+                spokenNow = currentlySpeaking,
+                instructionsOn = instructionsOn
+            )
+        }
+        val transport: @Composable () -> Unit = {
+            TransportRow(
+                lang = lang,
+                instructionsOn = instructionsOn,
+                onToggleInstructions = { instructionsOn = !instructionsOn },
+                canGoPrevious = index > 0,
+                canGoNext = index < guide.steps.lastIndex,
+                isPlaying = narrationActive,
+                onPrevious = { go(index - 1) },
+                onNext = { go(index + 1) },
+                onToggleAudio = {
+                    view.performHapticFeedback(HapticFeedbackConstants.KEYBOARD_TAP)
+                    toggleNarration()
+                },
+                onMore = { sheet = RosarySheet.OPTIONS },
+                previousLabel = previousLabel,
+                nextLabel = nextLabel,
+                previousTag = if (isRosary) "prev_bead_button" else "prev_mercy_step_button",
+                nextTag = if (isRosary) "next_bead_button" else "next_mercy_step_button",
+                audioTag = if (isRosary) "toggle_prayer_audio_button" else "toggle_mercy_audio_button"
             )
         }
 
-        when (selectedTab) {
-            0 -> {
-                // Holy Rosary: hero on top (above the segmented tabs),
-                // then the beads and the prayer itself; instructions, the
-                // Misterios picker and voices follow below, in that order.
-
-                // Where you are on the beads, and the way forward
-                item {
-                    GuideControlsCard(
-                        // No mystery name here: the picker below is the one
-                        // place that names the set (Expert v3 de-dupe).
-                        eyebrow = "",
-                        guide = rosaryGuide,
-                        index = rosaryIndex,
-                        lang = lang,
-                        previousLabel = previousLabel,
-                        nextLabel = nextLabel,
-                        isPlayingAudio = narrationActive,
-                        spokenNow = currentlySpeaking,
-                        onGo = { goRosary(it) },
-                        onToggleAudio = { toggleNarration() },
-                        railTag = "prayer_bead_counter",
-                        previousTag = "prev_bead_button",
-                        nextTag = "next_bead_button",
-                        audioTag = "toggle_prayer_audio_button",
-                        // Hero already shows "Paso N de M"; the rail card
-                        // must not repeat that counter.
-                        showStepCounter = false
-                    )
+        if (!wide) {
+            PracticeLayout(
+                viewport = viewport,
+                topInset = topInset,
+                bottomInset = bottomInset,
+                textTarget = textTarget,
+                labelTopPx = labelTopPx,
+                stage = stage, topBar = topBar, label = label, progress = progress,
+                reel = reel, title = title, prayer = prayer, transport = transport,
+                modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState())
+            )
+        } else {
+            // Tablets, foldables and landscape: the painting holds the left,
+            // the practice column the right.
+            Row(Modifier.fillMaxSize()) {
+                Box(Modifier.weight(1f).fillMaxHeight()) {
+                    Layout(
+                        contents = listOf(stage, topBar, label),
+                        modifier = Modifier.fillMaxSize()
+                    ) { (stageM, topM, labelM), c ->
+                        val w = c.maxWidth
+                        val h = c.maxHeight
+                        val loose = Constraints(maxWidth = w)
+                        val labelP = labelM.first().measure(loose)
+                        val topP = topM.first().measure(loose)
+                        val labelTop = h - labelP.height - bottomInset.roundToPx() - 8.dp.roundToPx()
+                        labelTopPx.floatValue = labelTop.toFloat()
+                        val stageP = stageM.first().measure(Constraints.fixed(w, h))
+                        layout(w, h) {
+                            stageP.place(0, 0)
+                            topP.place(0, topInset.roundToPx() + 6.dp.roundToPx())
+                            labelP.place(0, labelTop)
+                        }
+                    }
                 }
-
-                // Beginner instructions and meditation beneath the current prayer
-                item {
+                Column(
+                    Modifier
+                        .width(columnWidth)
+                        .fillMaxHeight()
+                        .verticalScroll(rememberScrollState())
+                        .padding(top = topInset + 24.dp)
+                ) {
+                    progress()
                     Spacer(Modifier.height(8.dp))
-                    StepCard(step = rosaryStep, lang = lang, spokenNow = currentlySpeaking)
-                }
-
-                item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    // Misterios sits with the secondary pickers under the
-                    // prayer text and instructions, styled like Voces.
-                    AppListGroup {
-                        MenuPickerRow(
-                            title = lang.pick("Misterios", "Mysteries", "Mistérios"),
-                            leadingIcon = mysteryIcon(selectedMysteryType),
-                            options = RosaryMysteryType.entries.map { mType ->
-                                mType to (
-                                    mType.displayName.get(lang) + " · " +
-                                        mType.recommendedDays.get(lang) +
-                                        if (mType == todayMystery.type) " · " + lang.pick("hoy", "Today", "Hoje") else ""
-                                    )
-                            },
-                            selected = selectedMysteryType,
-                            onSelect = { mType ->
-                                if (mType != selectedMysteryType) {
-                                    selectedMysteryType = mType
-                                    rosaryStepIndex = 0
-                                }
-                            },
-                            modifier = Modifier.heightIn(min = 48.dp),
-                            testTag = "rosary_mystery_picker"
-                        )
-                    }
-                }
-
-                item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    AppListGroup {
-                        MenuPickerRow(
-                            title = lang.pick("Voces", "Voices", "Vozes"),
-                            leadingIcon = Icons.Default.RecordVoiceOver,
-                            options = listOf(
-                                RecitationVoiceMode.DUAL_DIALOGUE to lang.pick("Diálogo", "Dialogue", "Diálogo"),
-                                RecitationVoiceMode.MALE to lang.pick("Solo quien guía", "Leader only", "Só quem conduz"),
-                                RecitationVoiceMode.FEMALE to lang.pick("Solo la respuesta", "Response only", "Só a resposta")
-                            ),
-                            selected = voiceMode,
-                            onSelect = { ttsManager.setVoiceMode(it) },
-                            modifier = Modifier.heightIn(min = 48.dp),
-                            testTag = "rosary_voice_mode_picker"
-                        )
-                    }
-                }
-
-                // While the decade is prayed, its mystery stays in view
-                val decadeIndex = rosaryStep.section - 1
-                val inDecade = decadeIndex in currentMystery.decades.indices
-                if (inDecade && rosaryStep.meditation == null) {
-                    val currentDecade = currentMystery.decades[decadeIndex]
-                    item {
-                        Spacer(Modifier.height(design.spacing.cardGap))
-                        // Mystery hero: votive-candle photograph band above
-                        // the decade card, fading into the card surface at
-                        // its foot. Decorative only; the card carries text.
-                        Box(
-                            modifier = Modifier
-                                .padding(horizontal = design.spacing.gutter)
-                                .fillMaxWidth()
-                                .height(128.dp)
-                                .clip(design.shapes.card)
-                                .background(palette.selectionTint)
-                                .testTag("mystery_hero_photo")
-                        ) {
-                            AssetPhoto(
-                                assetPath = "heroes/votive_candles.jpg",
-                                contentDescription = null,
-                                modifier = Modifier.matchParentSize().alpha(0.9f)
-                            )
-                            Box(
-                                modifier = Modifier
-                                    .matchParentSize()
-                                    .background(
-                                        Brush.verticalGradient(
-                                            0f to Color.Transparent,
-                                            0.6f to palette.raised.copy(alpha = 0.45f),
-                                            1f to palette.raised
-                                        )
-                                    )
-                            )
-                        }
-                        Spacer(Modifier.height(design.spacing.cardGap))
-                        AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter).frostedCardChrome()) {
-                            CardHeading(
-                                eyebrow = lang.pick(
-                                    "${currentDecade.number}º Misterio",
-                                    "Mystery ${currentDecade.number}",
-                                    "${currentDecade.number}º Mistério"
-                                ),
-                                detail = currentDecade.scriptureRef
-                            )
-
-                            Spacer(Modifier.height(design.spacing.cardGap / 2))
-
-                            Text(
-                                text = currentDecade.title.get(lang),
-                                style = styles.sectionTitle,
-                                color = palette.textPrimary
-                            )
-
-                            Spacer(Modifier.height(design.spacing.cardGap))
-
-                            Text(
-                                text = currentDecade.meditation.get(lang),
-                                style = styles.quote,
-                                color = palette.textPrimary,
-                                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                            )
-
-                            Spacer(Modifier.height(design.spacing.cardPadding))
-                            AppDivider()
-                            Spacer(Modifier.height(design.spacing.cardGap))
-
-                            Text(
-                                text = caps(
-                                    lang.pick(
-                                        "Fruto del misterio",
-                                        "Fruit of the mystery",
-                                        "Fruto do mistério"
-                                    )
-                                ),
-                                style = styles.sectionEyebrow,
-                                color = palette.textSecondary
-                            )
-                            Spacer(Modifier.height(design.spacing.cardGap / 3))
-                            Text(
-                                text = currentDecade.fruitOfMystery.get(lang),
-                                style = styles.rowTitle,
-                                color = palette.accent
-                            )
-                        }
-                    }
-                }
-
-                // The parts of the Rosary, to see the whole and jump to one
-                item {
-                    AppSectionHeader(
-                        title = lang.pick("Partes del Rosario", "Parts of the Rosary", "Partes do Rosário")
-                    )
-                    AppListGroup {
-                        rosaryGuide.sections.forEach { section ->
-                            AppListRow(
-                                title = section.title,
-                                subtitle = section.subtitle,
-                                trailingText = if (section.index < rosaryStep.section) prayedLabel else null,
-                                showsNavigationAffordance = false,
-                                selected = section.index == rosaryStep.section,
-                                onClick = { goRosary(section.firstStep) },
-                                modifier = Modifier.heightIn(min = 48.dp)
-                            )
-                        }
-                    }
-                }
-
-                item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
-            }
-
-            1 -> {
-                // Divine Mercy Chaplet
-                item { Spacer(Modifier.height(8.dp)) }
-
-                item {
-                    GuideControlsCard(
-                        eyebrow = lang.pick("Coronilla", "Chaplet", "Coroinha"),
-                        guide = mercyGuide,
-                        index = mercyIndex,
-                        lang = lang,
-                        previousLabel = previousLabel,
-                        nextLabel = nextLabel,
-                        isPlayingAudio = narrationActive,
-                        spokenNow = currentlySpeaking,
-                        onGo = { goMercy(it) },
-                        onToggleAudio = { toggleNarration() },
-                        railTag = "mercy_step_counter",
-                        previousTag = "prev_mercy_step_button",
-                        nextTag = "next_mercy_step_button",
-                        audioTag = "toggle_mercy_audio_button"
-                    )
-                }
-
-                item {
+                    reel()
+                    Spacer(Modifier.height(6.dp))
+                    title()
                     Spacer(Modifier.height(8.dp))
-                    StepCard(step = mercyStep, lang = lang, spokenNow = currentlySpeaking)
+                    val fixed = 24.dp + 40.dp + 76.dp + 40.dp + 80.dp + topInset + bottomInset + 40.dp
+                    Box(Modifier.fillMaxWidth().height((viewport - fixed).coerceAtLeast(180.dp))) { prayer() }
+                    Spacer(Modifier.height(10.dp))
+                    transport()
+                    Spacer(Modifier.height(bottomInset + 12.dp))
                 }
-
-                item {
-                    AppSectionHeader(
-                        title = lang.pick(
-                            "Pasos de la coronilla",
-                            "Steps of the chaplet",
-                            "Passos da coroinha"
-                        )
-                    )
-                    AppListGroup {
-                        mercyGuide.sections.forEach { section ->
-                            AppListRow(
-                                title = section.title,
-                                subtitle = section.subtitle,
-                                trailingText = if (section.index < mercyStep.section) prayedLabel else null,
-                                showsNavigationAffordance = false,
-                                selected = section.index == mercyStep.section,
-                                onClick = { goMercy(section.firstStep) },
-                                modifier = Modifier.heightIn(min = 48.dp)
-                            )
-                        }
-                    }
-                }
-
-                item {
-                    Spacer(Modifier.height(design.spacing.cardGap))
-                    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter).frostedCardChrome()) {
-                        Text(
-                            text = lang.pick(
-                                "«A las tres de la tarde implora mi misericordia… En esta hora nada le será negado al alma que lo pida».",
-                                "“At three o'clock, implore My mercy… In this hour nothing will be denied the soul that makes a request of Me.”",
-                                "«Às três horas da tarde, implora a minha misericórdia… Nesta hora, nada será negado à alma que o pedir»."
-                            ),
-                            style = styles.quote,
-                            color = palette.textPrimary,
-                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                        )
-                        Spacer(Modifier.height(design.spacing.cardGap))
-                        Text(
-                            text = caps(
-                                lang.pick(
-                                    "Diario de Santa Faustina",
-                                    "Diary of Saint Faustina",
-                                    "Diário de Santa Faustina"
-                                )
-                            ),
-                            style = styles.sectionEyebrow,
-                            color = palette.textSecondary
-                        )
-                    }
-                }
-
-                item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
             }
         }
     }
-}
 
-private fun mysteryIcon(type: RosaryMysteryType) = when (type) {
-    RosaryMysteryType.JOYFUL -> Icons.Default.LocalFlorist
-    RosaryMysteryType.SORROWFUL -> Icons.Default.WaterDrop
-    RosaryMysteryType.GLORIOUS -> Icons.Default.AutoAwesome
-    RosaryMysteryType.LUMINOUS -> Icons.Default.LightMode
+    when (sheet) {
+        RosarySheet.MYSTERIES -> MysteriesSheet(
+            lang = lang,
+            selected = selectedMysteryType,
+            today = todayMystery.type,
+            onSelect = { mType ->
+                if (mType != selectedMysteryType) {
+                    selectedMysteryType = mType
+                    rosaryStepIndex = 0
+                }
+                sheet = null
+            },
+            onDismiss = { sheet = null }
+        )
+        RosarySheet.OPTIONS -> OptionsSheet(
+            lang = lang,
+            isRosary = isRosary,
+            guide = guide,
+            step = step,
+            voiceMode = voiceMode,
+            onVoiceMode = { ttsManager.setVoiceMode(it) },
+            onGo = { target -> go(target); sheet = null },
+            onDismiss = { sheet = null }
+        )
+        RosarySheet.MYSTERY -> {
+            val decade = currentMystery.decades.getOrNull(step.section - 1)
+            if (decade == null || !isRosary) {
+                sheet = null
+            } else {
+                MysterySheet(
+                    lang = lang,
+                    type = selectedMysteryType,
+                    position = step.section - 1,
+                    title = decade.title.get(lang),
+                    scriptureRef = decade.scriptureRef,
+                    meditation = decade.meditation.get(lang),
+                    fruit = decade.fruitOfMystery.get(lang),
+                    artPath = artPath,
+                    onDismiss = { sheet = null }
+                )
+            }
+        }
+        null -> Unit
+    }
 }
 
 /**
- * The rail of the whole rosary, the honest progress line and the controls.
- * [extra] closes the card (the Rosary puts its voice-mode chips there).
+ * The practice screen's vertical composition. The stage absorbs whatever the
+ * other blocks and the prayer's target height leave, within limits; on a
+ * small screen or at large type the prayer area holds a minimum and the
+ * whole page scrolls instead.
  */
 @Composable
-private fun GuideControlsCard(
-    eyebrow: String,
-    guide: PrayerGuide,
-    index: Int,
-    lang: AppLanguage,
-    previousLabel: String,
-    nextLabel: String,
-    isPlayingAudio: Boolean,
-    spokenNow: String?,
-    onGo: (Int) -> Unit,
-    onToggleAudio: () -> Unit,
-    railTag: String,
-    previousTag: String,
-    nextTag: String,
-    audioTag: String,
-    // False when a hero already carries the step counter (Holy Rosary).
-    showStepCounter: Boolean = true,
-    extra: @Composable ColumnScope.() -> Unit = {}
+private fun PracticeLayout(
+    viewport: Dp,
+    topInset: Dp,
+    bottomInset: Dp,
+    textTarget: Dp,
+    labelTopPx: androidx.compose.runtime.MutableFloatState,
+    stage: @Composable () -> Unit,
+    topBar: @Composable () -> Unit,
+    label: @Composable () -> Unit,
+    progress: @Composable () -> Unit,
+    reel: @Composable () -> Unit,
+    title: @Composable () -> Unit,
+    prayer: @Composable () -> Unit,
+    transport: @Composable () -> Unit,
+    modifier: Modifier = Modifier
 ) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    val step = guide.steps[index]
+    Layout(
+        contents = listOf(stage, topBar, label, progress, reel, title, prayer, transport),
+        modifier = modifier
+    ) { slots, constraints ->
+        val stageM = slots[0]; val topM = slots[1]; val labelM = slots[2]; val progressM = slots[3]
+        val reelM = slots[4]; val titleM = slots[5]; val prayerM = slots[6]; val transportM = slots[7]
+        val w = constraints.maxWidth
+        val loose = Constraints(maxWidth = w)
+        val topP = topM.first().measure(loose)
+        val labelP = labelM.first().measure(loose)
+        val progressP = progressM.first().measure(loose)
+        val reelP = reelM.first().measure(loose)
+        val titleP = titleM.first().measure(loose)
+        val transportP = transportM.first().measure(loose)
 
-    AppCard(modifier = Modifier.padding(horizontal = design.spacing.gutter).frostedCardChrome()) {
-        val where = guide.whereLine(step, lang)
-        val count = countLine(step, lang)
-        val stepLabel = lang.pick(
-            "Paso ${index + 1} de ${guide.steps.size}",
-            "Step ${index + 1} of ${guide.steps.size}",
-            "Passo ${index + 1} de ${guide.steps.size}"
-        )
-        // Ive reference: the rosary sits on warm paper with a soft radial
-        // glow behind the rail, like artwork on a lit stage.
-        Box(
-            modifier = Modifier.fillMaxWidth(),
-            contentAlignment = Alignment.Center
-        ) {
-            if (design.language == DesignLanguage.IVE) {
-                Canvas(Modifier.matchParentSize()) {
-                    val centre = Offset(size.width / 2f, size.height / 2f)
-                    val glowR = size.width * 0.62f
-                    drawCircle(
-                        brush = Brush.radialGradient(
-                            0.0f to design.palette.accentMuted.copy(alpha = 0.55f),
-                            0.55f to design.palette.gold.copy(alpha = 0.18f),
-                            1.0f to design.palette.gold.copy(alpha = 0f),
-                            center = centre,
-                            radius = glowR
-                        ),
-                        radius = glowR,
-                        center = centre
-                    )
-                }
-            }
-            BeadRail(
-            beads = guide.beads,
-            activeIndex = step.bead,
-            progress = index.toFloat() / guide.steps.lastIndex.coerceAtLeast(1),
-            count = count,
-            onSelectBead = { bead ->
-                val target = guide.firstStepOn(bead)
-                if (target >= 0) onGo(target)
-            },
-            modifier = Modifier
-                .widthIn(max = when (design.language) {
-                    // Enlarged ~64dp (max 272dp) so the beads read as
-                    // beads, not as texture: the loop geometry below
-                    // grows with this width.
-                    DesignLanguage.APPLE -> 216.dp
-                    DesignLanguage.IVE -> 224.dp
-                })
-                .testTag(railTag)
-                .semantics {
-                    contentDescription = listOfNotNull(where, step.name, count, stepLabel.takeIf { showStepCounter }).joinToString(", ")
-                    customActions = listOf(
-                        CustomAccessibilityAction(previousLabel) {
-                            if (index > 0) { onGo(index - 1); true } else false
-                        },
-                        CustomAccessibilityAction(nextLabel) {
-                            if (index < guide.steps.lastIndex) { onGo(index + 1); true } else false
-                        }
-                    )
-                }
-        )
-        }
+        val gapStage = 14.dp.roundToPx()
+        val gapReel = 2.dp.roundToPx()
+        val gapTitle = 2.dp.roundToPx()
+        val gapTitleText = 8.dp.roundToPx()
+        val gapTransport = 8.dp.roundToPx()
+        val gapBottom = 14.dp.roundToPx()
+        val top = topInset.roundToPx()
+        val bottom = bottomInset.roundToPx()
 
-        // Progress as text, not only as a ring: at 130% text the long
-        // ES/PT where/step labels overflowed the loop's centre, and a
-        // progress that is only colour and arc is invisible to a reader
-        // who cannot see the ring. This line wraps instead of clipping.
-        Spacer(Modifier.height(8.dp))
-        // Eyebrow ink: textSecondary — the "Inicio"/Opening where-line
-        // reads as a secondary label, not as body ink.
-        Text(
-            text = if (design.decor.usesAllCapsLabels) where.uppercase() else where,
-            style = styles.sectionEyebrow,
-            color = design.palette.textSecondary,
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth()
-        )
-        // Step counter only where no hero already shows it (the Holy
-        // Rosary hero owns "Paso N de M"); the repetition count stays.
-        val progressParts = buildList {
-            if (eyebrow.isNotBlank()) add(eyebrow)
-            if (showStepCounter) add(stepLabel)
-            count?.let { add(it) }
+        val fixed = gapStage + progressP.height + gapReel + reelP.height + gapTitle + titleP.height +
+            gapTitleText + gapTransport + transportP.height + gapBottom
+        val avail = viewport.roundToPx() - bottom
+        val stageMin = top + 6.dp.roundToPx() + topP.height + 92.dp.roundToPx() + labelP.height
+        val stageMax = maxOf(stageMin, (avail * 0.56f).roundToInt())
+        val stageH = (avail - fixed - textTarget.roundToPx()).coerceIn(stageMin, stageMax)
+        val textH = maxOf(150.dp.roundToPx(), avail - fixed - stageH)
+        val prayerP = prayerM.first().measure(Constraints.fixed(w, textH))
+        val stageP = stageM.first().measure(Constraints.fixed(w, stageH))
+        val labelTop = stageH - labelP.height
+        labelTopPx.floatValue = labelTop.toFloat()
+
+        val height = stageH + fixed + textH + bottom
+        layout(w, height) {
+            stageP.place(0, 0)
+            topP.place(0, top + 6.dp.roundToPx())
+            labelP.place(0, labelTop)
+            var y = stageH + gapStage
+            progressP.place(0, y); y += progressP.height + gapReel
+            reelP.place(0, y); y += reelP.height + gapTitle
+            titleP.place(0, y); y += titleP.height + gapTitleText
+            prayerP.place(0, y); y += textH + gapTransport
+            transportP.place(0, y)
         }
-        if (progressParts.isNotEmpty()) {
-            Spacer(Modifier.height(2.dp))
-            Text(
-                text = progressParts.joinToString(" · "),
-                style = MaterialTheme.typography.bodyLarge,
-                color = design.palette.textPrimary.copy(alpha = 0.8f),
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth()
-            )
-        }
-        Spacer(Modifier.height(8.dp))
-        TransportCluster(
-            canGoPrevious = index > 0,
-            canGoNext = index < guide.steps.lastIndex,
-            isPlayingAudio = isPlayingAudio,
-            onPrevious = { onGo(index - 1) },
-            onNext = { onGo(index + 1) },
-            onToggleAudio = onToggleAudio,
-            previousTag = previousTag,
-            nextTag = nextTag,
-            audioTag = audioTag
-        )
-        Spacer(Modifier.height(8.dp))
-        PageDots(
-            guide = guide,
-            activeSection = step.section,
-            onGo = onGo
-        )
-        Spacer(Modifier.height(8.dp))
-        // Prayer text on the card tonal surface: the Bible reader sets
-        // scripture in serif ink on the reading surface with no photograph
-        // behind it, and this field follows that - accentMuted at
-        // design.shapes.card (20dp in Ive), no photo, so the serif ink
-        // never competes with an image.
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clip(design.shapes.card)
-                .background(design.palette.accentMuted)
-                .testTag("prayer_text_art")
-        ) {
-            Column(Modifier.padding(design.spacing.cardGap)) {
-                if (step.optional) {
-                    Text(
-                        text = lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
-                        style = styles.rowSubtitle,
-                        color = design.palette.textSecondary
-                    )
-                    Spacer(Modifier.height(2.dp))
-                }
-                Text(
-                    text = step.name,
-                    style = styles.rowTitle,
-                    color = design.palette.textPrimary,
-                    modifier = Modifier.testTag("current_prayer_title").semantics { heading() }
-                )
-                Spacer(Modifier.height(8.dp))
-                PrayerDialogue(
-                    leaderText = step.leader,
-                    responseText = step.response,
-                    leaderSpoken = spokenNow != null && (spokenNow == step.leader || spokenNow == step.narration),
-                    responseSpoken = spokenNow != null && spokenNow == step.response
-                )
-            }
-        }
-        extra()
     }
 }
 
-/** Reflection remains visible; beginners can open instructions when needed. */
-@Composable
-private fun StepCard(step: GuideStep, lang: AppLanguage, spokenNow: String?) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-    var instructionsOpen by remember(step.name, step.rubric) { mutableStateOf(false) }
-    val hasReflection = step.intention != null || step.meditation != null || step.detail != null
-    val leaderSpoken = spokenNow != null && (spokenNow == step.leader || spokenNow == step.narration)
+// ---------------------------------------------------------------- the stage
 
-    Column(Modifier.padding(horizontal = design.spacing.gutter)) {
-        if (hasReflection) {
-            AppCard(modifier = Modifier.frostedCardChrome()) {
-                step.intention?.let {
-                    Text(it, style = styles.rowTitle, color = palette.accent)
+/**
+ * The mystery's painting, full-bleed from the top of the display: cropped on
+ * its focus point, gently desaturated, then dissolving into the canvas —
+ * growing soft (a progressive blur) as it fades — so the label below sits on
+ * mist, never on paint. Crossfades and settles when the mystery changes.
+ */
+@Composable
+private fun MysteryStage(
+    assetPath: String?,
+    labelTopPx: () -> Float,
+    credit: ArtCredit?,
+    inDecade: Boolean,
+    modifier: Modifier = Modifier
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val still = LocalInspectionMode.current
+    val canvas = p.canvasTop
+    Box(
+        modifier
+            .background(canvas)
+            .testTag("rosary_hero_photo")
+            .semantics {
+                if (credit != null) {
+                    contentDescription = listOf(credit.title, credit.artist).filter { it.isNotBlank() }.joinToString(", ")
                 }
-                step.meditation?.let {
-                    if (step.intention != null) Spacer(Modifier.height(8.dp))
-                    Text(
-                        it, style = styles.scripture,
-                        color = if (leaderSpoken) palette.accent else palette.textPrimary,
-                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+            }
+    ) {
+        Crossfade(
+            targetState = assetPath,
+            animationSpec = tween(if (still) 0 else 650),
+            label = "mystery",
+            modifier = Modifier.fillMaxSize().then(if (inDecade) Modifier.testTag("mystery_hero_photo") else Modifier)
+        ) { path ->
+            val sharp = rememberAssetBitmap(path, 1080)
+            val soft = rememberAssetBitmap(path, 40)
+            val meta = rememberHeroMeta(path)
+            val settle = remember(path) { Animatable(if (still) 1f else 1.045f) }
+            LaunchedEffect(path) {
+                if (!still) settle.animateTo(1f, tween(1400, easing = FastOutSlowInEasing))
+            }
+            val matrix = remember(design.isDark) {
+                ColorMatrix().apply { setToSaturation(if (design.isDark) 0.82f else 0.86f) }
+            }
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .graphicsLayer { scaleX = settle.value; scaleY = settle.value }
+            ) {
+                if (sharp != null) {
+                    Image(
+                        bitmap = sharp,
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        alignment = meta.alignment,
+                        colorFilter = ColorFilter.colorMatrix(matrix),
+                        modifier = Modifier.fillMaxSize()
                     )
                 }
-                step.detail?.let {
-                    Spacer(Modifier.height(6.dp))
-                    Text(it, style = styles.rowSubtitle, color = palette.textSecondary)
+                if (soft != null) {
+                    // The same painting, tiny and scaled up: a blur that
+                    // strengthens toward the fade, on every API level.
+                    Image(
+                        bitmap = soft,
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        alignment = meta.alignment,
+                        filterQuality = FilterQuality.Low,
+                        colorFilter = ColorFilter.colorMatrix(matrix),
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
+                            .drawWithContent {
+                                drawContent()
+                                val labelTop = labelTopPx().takeIf { it > 0f } ?: (size.height * 0.62f)
+                                val start = (labelTop - 150.dp.toPx()).coerceAtLeast(0f)
+                                drawRect(
+                                    Brush.verticalGradient(
+                                        0f to Color.Transparent,
+                                        1f to Color.Black,
+                                        startY = start,
+                                        endY = labelTop + 10.dp.toPx()
+                                    ),
+                                    blendMode = BlendMode.DstIn
+                                )
+                            }
+                    )
                 }
             }
-            Spacer(Modifier.height(8.dp))
         }
-        AppSecondaryButton(
-            label = if (instructionsOpen) lang.pick("Ocultar instrucciones", "Hide instructions", "Ocultar instruções")
-                else lang.pick("Instrucciones", "Instructions", "Instruções"),
-            onClick = { instructionsOpen = !instructionsOpen },
-            modifier = Modifier.heightIn(min = 48.dp).testTag("prayer_instructions_toggle").semantics {
-                stateDescription = if (instructionsOpen) lang.pick("Expandido", "Expanded", "Expandido")
-                    else lang.pick("Contraído", "Collapsed", "Recolhido")
-            }
+        // Mist: lift (light) or settle (dark) the paint, veil the status
+        // bar, and dissolve into the canvas above the label.
+        Box(
+            Modifier
+                .fillMaxSize()
+                .drawBehind {
+                    drawRect(if (design.isDark) Color.Black.copy(alpha = 0.20f) else canvas.copy(alpha = 0.10f))
+                    val veil = 120.dp.toPx()
+                    drawRect(
+                        Brush.verticalGradient(
+                            0f to (if (design.isDark) Color.Black.copy(alpha = 0.38f) else Color.Black.copy(alpha = 0.10f)),
+                            1f to Color.Transparent,
+                            startY = 0f, endY = veil
+                        ),
+                        size = androidx.compose.ui.geometry.Size(size.width, veil)
+                    )
+                    val labelTop = labelTopPx().takeIf { it > 0f } ?: (size.height * 0.62f)
+                    val start = (labelTop - 170.dp.toPx()).coerceAtLeast(size.height * 0.18f)
+                    val end = (labelTop + 34.dp.toPx()).coerceAtMost(size.height)
+                    // Eased (smoothstep) so dark paintings never leave a grey band.
+                    val stops = (0..10).map { k ->
+                        val t = k / 10f
+                        val a = t * t * (3f - 2f * t)
+                        val y = start + (end - start) * t
+                        (y / size.height).coerceIn(0f, 1f) to canvas.copy(alpha = a)
+                    }
+                    drawRect(
+                        Brush.verticalGradient(
+                            *(listOf(0f to canvas.copy(alpha = 0f)) + stops + listOf(1f to canvas)).toTypedArray()
+                        )
+                    )
+                }
         )
-        if (instructionsOpen) {
+    }
+}
+
+/** Rosary / Divine Mercy: a compact glass segmented control over the art. */
+@Composable
+private fun DevotionSwitch(lang: AppLanguage, selected: Int, onSelect: (Int) -> Unit) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val style = styles.subhead.copy(fontWeight = FontWeight.SemiBold)
+    val full = listOf(
+        lang.pick("Santo Rosario", "The Holy Rosary", "Santo Terço"),
+        lang.pick("Divina Misericordia", "Divine Mercy", "Divina Misericórdia")
+    )
+    val short = listOf(
+        lang.pick("Rosario", "Rosary", "Terço"),
+        lang.pick("Coronilla", "Chaplet", "Coroinha")
+    )
+    val measurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    BoxWithConstraints(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter), contentAlignment = Alignment.Center) {
+        val room = with(density) { maxWidth.toPx() }
+        val needed = remember(full, style, density) {
+            full.sumOf { measurer.measure(it, style).size.width } + with(density) { (16.dp * 4 + 8.dp + 8.dp).toPx() }.toInt()
+        }
+        val labels = if (needed <= room) full else short
+        val shape = RoundedCornerShape(percent = 50)
+        Row(
+            Modifier
+                .lumenGlass(shape, strong = true)
+                .padding(4.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            labels.forEachIndexed { i, text ->
+                val isSelected = i == selected
+                val thumb by animateColorAsState(
+                    if (isSelected) (if (design.isDark) p.textPrimary.copy(alpha = 0.16f) else p.glassStrong.copy(alpha = 1f)) else Color.Transparent,
+                    tween(200), label = "devotion"
+                )
+                Box(
+                    Modifier
+                        .heightIn(min = 36.dp)
+                        .then(if (isSelected) Modifier.softShadow(shape, p.shadow, 10.dp, 2.dp) else Modifier)
+                        .clip(shape)
+                        .background(thumb)
+                        .clickable(remember { MutableInteractionSource() }, indication = null, role = Role.Tab) { onSelect(i) }
+                        .semantics { this.selected = isSelected }
+                        .padding(horizontal = 16.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text,
+                        style = style.copy(fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium),
+                        color = if (isSelected) p.textPrimary else p.textSecondary,
+                        maxLines = 1
+                    )
+                }
+            }
+        }
+    }
+}
+
+/**
+ * What is being prayed, set in the mist at the foot of the painting: the
+ * mysteries picker (Rosary) or the chaplet's name, then the part of the
+ * devotion — the mystery's title during a decade.
+ */
+@Composable
+private fun StageLabel(
+    lang: AppLanguage,
+    isRosary: Boolean,
+    setName: String,
+    headline: String,
+    inDecade: Boolean,
+    onPickMysteries: () -> Unit,
+    onOpenMystery: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
+        if (isRosary) {
+            val shape = RoundedCornerShape(percent = 50)
+            Row(
+                Modifier
+                    .heightIn(min = 44.dp)
+                    .padding(vertical = 4.dp)
+                    .lumenPress(onPickMysteries, 0.96f)
+                    .lumenGlass(shape, strong = true)
+                    .testTag("rosary_mystery_picker")
+                    .semantics { contentDescription = lang.pick("Misterios: $setName", "Mysteries: $setName", "Mistérios: $setName") }
+                    .padding(start = 14.dp, end = 10.dp, top = 6.dp, bottom = 6.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Text(setName, style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textPrimary, maxLines = 1)
+                Spacer(Modifier.width(4.dp))
+                Icon(Icons.Rounded.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
+            }
+            Spacer(Modifier.height(8.dp))
+        } else {
+            Text(
+                lang.pick("Coronilla de la Divina Misericordia", "Chaplet of Divine Mercy", "Terço da Divina Misericórdia"),
+                style = styles.eyebrow,
+                color = p.textSecondary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
+            )
+            Spacer(Modifier.height(6.dp))
+        }
+        Row(
+            Modifier
+                .then(if (inDecade) Modifier.lumenPress(onOpenMystery, 0.98f) else Modifier)
+                .padding(bottom = 2.dp),
+            verticalAlignment = Alignment.Top
+        ) {
+            Text(
+                headline,
+                style = styles.headline,
+                color = p.textPrimary,
+                maxLines = 3,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier
+                    .weight(1f, fill = false)
+                    .testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title")
+            )
+            if (inDecade) {
+                Icon(
+                    Icons.Rounded.ChevronRight,
+                    lang.pick("Ver el misterio", "About this mystery", "Ver o mistério"),
+                    tint = p.textSecondary,
+                    modifier = Modifier.padding(start = 2.dp, top = 1.dp).size(20.dp)
+                )
+            }
+        }
+    }
+}
+
+// --------------------------------------------------------------- progress
+
+/** A thin bar in the devotion's parts (proportional), with step and part. */
+@Composable
+private fun SectionProgress(
+    guide: PrayerGuide,
+    index: Int,
+    stepText: String,
+    where: String,
+    counterTag: String,
+    onClick: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val step = guide.steps[index]
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .lumenPress(onClick, 0.99f)
+            .heightIn(min = 44.dp)
+            .padding(vertical = 4.dp)
+    ) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .testTag("page_dots")
+                .semantics {
+                    progressBarRangeInfo = ProgressBarRangeInfo((index + 1).toFloat(), 1f..guide.steps.size.toFloat())
+                },
+            horizontalArrangement = Arrangement.spacedBy(3.dp)
+        ) {
+            guide.sections.forEachIndexed { i, s ->
+                val end = guide.sections.getOrNull(i + 1)?.firstStep ?: guide.steps.size
+                val n = (end - s.firstStep).coerceAtLeast(1)
+                val target = when {
+                    s.index < step.section -> 1f
+                    s.index == step.section -> ((index - s.firstStep + 1).toFloat() / n).coerceIn(0f, 1f)
+                    else -> 0f
+                }
+                val fill by animateFloatAsState(target, tween(320), label = "part")
+                Box(
+                    Modifier
+                        .weight(n.toFloat())
+                        .height(4.dp)
+                        .clip(RoundedCornerShape(percent = 50))
+                        .background(p.textPrimary.copy(alpha = if (design.isDark) 0.16f else 0.10f))
+                ) {
+                    Box(
+                        Modifier
+                            .fillMaxWidth(fill)
+                            .fillMaxHeight()
+                            .clip(RoundedCornerShape(percent = 50))
+                            .background(p.textPrimary)
+                    )
+                }
+            }
+        }
+        Spacer(Modifier.height(8.dp))
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            Text(
+                stepText, style = styles.footnote, color = p.textSecondary, maxLines = 1,
+                modifier = Modifier.testTag(counterTag)
+            )
+            Spacer(Modifier.weight(1f).widthIn(min = 12.dp))
+            Text(where, style = styles.footnote, color = p.textSecondary, maxLines = 1, textAlign = TextAlign.End)
+        }
+    }
+}
+
+// ------------------------------------------------------------------ prayer
+
+/** The prayer's name, title2, with its repetition count or a "skip". */
+@Composable
+private fun PrayerTitleRow(step: GuideStep, count: String?, lang: AppLanguage, onSkip: () -> Unit) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    Row(
+        Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            step.name,
+            style = styles.title2,
+            color = p.textPrimary,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier
+                .weight(1f)
+                .testTag("current_prayer_title")
+                .semantics { heading() }
+        )
+        if (count != null) {
+            Spacer(Modifier.width(12.dp))
+            Text(count, style = styles.subhead, color = p.textSecondary, maxLines = 1)
+        }
+        if (step.optional) {
+            Spacer(Modifier.width(8.dp))
+            val shape = RoundedCornerShape(percent = 50)
+            Box(
+                Modifier
+                    .heightIn(min = 44.dp)
+                    .lumenPress(onSkip, 0.95f)
+                    .semantics { contentDescription = lang.pick("Saltar la oración opcional", "Skip the optional prayer", "Pular a oração opcional") }
+                    .testTag("skip_optional_button"),
+                contentAlignment = Alignment.Center
+            ) {
+                Row(
+                    Modifier.lumenGlass(shape, lifted = false).padding(start = 12.dp, end = 6.dp, top = 5.dp, bottom = 5.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(lang.pick("Saltar", "Skip", "Pular"), style = styles.footnote.copy(fontWeight = FontWeight.Medium), color = p.textPrimary)
+                    Icon(Icons.Rounded.ChevronRight, null, tint = p.textSecondary, modifier = Modifier.size(16.dp))
+                }
+            }
+        }
+    }
+}
+
+/** One step's prayer as shown, so an outgoing frame keeps its own text. */
+private data class PrayerFrame(val key: String, val step: GuideStep)
+
+/**
+ * The text to pray, in the reader's font, in a bounded area that scrolls on
+ * its own (long prayers) behind soft fades. While narrating, the half being
+ * spoken stays in ink and the other half steps back, as lyrics do.
+ */
+@Composable
+private fun PrayerArea(
+    step: GuideStep,
+    stepKey: String,
+    lang: AppLanguage,
+    spokenNow: String?,
+    instructionsOn: Boolean
+) {
+    val design = LocalAppDesign.current
+    val still = LocalInspectionMode.current
+    Box(Modifier.fillMaxSize().testTag("prayer_text_art")) {
+        AnimatedContent(
+            targetState = PrayerFrame(stepKey, step),
+            contentKey = { it.key },
+            transitionSpec = {
+                if (still) (fadeIn(tween(0)) togetherWith fadeOut(tween(0)))
+                else (fadeIn(tween(240, delayMillis = 60)) + slideInVertically(tween(300)) { it / 40 }) togetherWith fadeOut(tween(140))
+            },
+            label = "prayer",
+            modifier = Modifier.fillMaxSize()
+        ) { frame ->
+            val key = frame.key
+            val step = frame.step
+            // Each step keeps its own scroll, starting at the top.
+            val scroll = remember(key) { androidx.compose.foundation.ScrollState(0) }
+            val scope = rememberCoroutineScope()
+            val fadePx = with(LocalDensity.current) { 18.dp.toPx() }
+            var responseTop by remember(key) { mutableFloatStateOf(-1f) }
+            val responseSpoken = spokenNow != null && step.response.isNotBlank() && spokenNow == step.response
+            LaunchedEffect(responseSpoken) {
+                if (responseSpoken && responseTop > 0f && responseTop > scroll.value + scroll.viewportSize * 0.5f) {
+                    scope.launch { scroll.animateScrollTo((responseTop - fadePx).roundToInt()) }
+                }
+            }
+            Column(
+                Modifier
+                    .fillMaxSize()
+                    .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
+                    .drawWithContent {
+                        drawContent()
+                        val topA = if (scroll.value > 0) 0f else 1f
+                        val bottomA = if (scroll.canScrollForward) 0f else 1f
+                        drawRect(
+                            Brush.verticalGradient(
+                                0f to Color.Black.copy(alpha = topA),
+                                (fadePx / size.height).coerceIn(0f, 0.5f) to Color.Black,
+                                (1f - fadePx * 1.6f / size.height).coerceIn(0.5f, 1f) to Color.Black,
+                                1f to Color.Black.copy(alpha = bottomA)
+                            ),
+                            blendMode = BlendMode.DstIn
+                        )
+                    }
+                    .verticalScroll(scroll)
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = 2.dp, bottom = 22.dp)
+            ) {
+                PrayerBody(step, lang, spokenNow, instructionsOn, onResponsePlaced = { responseTop = it })
+            }
+        }
+    }
+}
+
+@Composable
+private fun PrayerBody(
+    step: GuideStep,
+    lang: AppLanguage,
+    spokenNow: String?,
+    instructionsOn: Boolean,
+    onResponsePlaced: (Float) -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val reading = styles.reading
+    val leaderSpoken = spokenNow != null && (spokenNow == step.leader || spokenNow == step.narration)
+    val responseSpoken = spokenNow != null && step.response.isNotBlank() && spokenNow == step.response
+
+    if (instructionsOn) {
+        GuideHint(step, lang)
+        Spacer(Modifier.height(14.dp))
+    }
+    if (step.optional) {
+        Text(
+            lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
+            style = styles.footnote, color = p.textSecondary
+        )
+        Spacer(Modifier.height(4.dp))
+    }
+    step.intention?.takeIf { step.meditation == null }?.let {
+        Text(it, style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textSecondary)
+        Spacer(Modifier.height(6.dp))
+    }
+    Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
+        if (step.response.isBlank()) {
+            val ink by animateColorAsState(p.textPrimary, label = "leader")
+            Text(text = step.leader, style = reading, color = ink)
+        } else {
+            val leaderInk by animateColorAsState(if (responseSpoken) p.textSecondary else p.textPrimary, tween(300), label = "leader")
+            val responseInk by animateColorAsState(if (leaderSpoken) p.textSecondary else p.textPrimary, tween(300), label = "response")
+            Text(text = rubricated("℣", step.leader, p.textSecondary), style = reading, color = leaderInk)
             Spacer(Modifier.height(10.dp))
-            Text(step.rubric, style = styles.rowSubtitle, color = palette.textSecondary)
+            Text(
+                text = rubricated("℟", step.response, p.textSecondary),
+                style = reading,
+                color = responseInk,
+                modifier = Modifier.onPlaced { onResponsePlaced(it.positionInParent().y) }
+            )
+        }
+        step.meditation?.let {
+            Spacer(Modifier.height(14.dp))
+            Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary)
+        }
+        step.detail?.let {
+            Spacer(Modifier.height(10.dp))
+            Text(it, style = styles.footnote, color = p.textSecondary)
+        }
+    }
+}
+
+/** What a beginner does here: the rubric, and the ℣/℟ legend. */
+@Composable
+private fun GuideHint(step: GuideStep, lang: AppLanguage) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    Row(
+        Modifier
+            .fillMaxWidth()
+            .lumenGlass(RoundedCornerShape(20.dp), lifted = false)
+            .padding(horizontal = 16.dp, vertical = 14.dp)
+            .testTag("prayer_instructions_text")
+    ) {
+        Icon(Icons.Outlined.Lightbulb, null, tint = p.textSecondary, modifier = Modifier.padding(top = 1.dp).size(18.dp))
+        Spacer(Modifier.width(10.dp))
+        Column {
+            Text(step.rubric, style = styles.callout, color = p.textPrimary)
             if (step.response.isNotBlank()) {
-                Spacer(Modifier.height(8.dp))
+                Spacer(Modifier.height(6.dp))
                 Text(
                     lang.pick(
                         "℣ dice quien guía · ℟ responden todos. Si rezas solo, di las dos partes.",
                         "℣ the leader says · ℟ everyone answers. Praying alone? Say both parts.",
                         "℣ diz quem conduz · ℟ todos respondem. Rezando sozinho? Diga as duas partes."
                     ),
-                    style = styles.rowSubtitle,
-                    color = palette.textSecondary
+                    style = styles.footnote, color = p.textSecondary
                 )
             }
         }
     }
 }
 
-/**
- * The whole rosary drawn as the thing itself, compact and centred: the loop of
- * five decades strung on one thread, the medal where it closes, and the pendant
- * hanging to a drawn crucifix. Beads still to pray are soft tinted pearls with a
- * rim; prayed beads are filled solid and the thread between them is inked, so
- * the progress reads at a glance; the bead in hand stands proud in the accent
- * with a halo and a ring. Around the loop runs the devotion's overall progress
- * in each identity's idiom: a Fitness-style ring (Apple), an expressive wavy
- * indicator (Material), a ruled gilt band with a rubric arc (Vatican).
- */
+// --------------------------------------------------------------- transport
+
+/** Guide toggle · glass transport (previous / pray aloud / next) · more. */
 @Composable
-private fun BeadRail(
-    beads: List<BeadSpec>,
-    activeIndex: Int,
-    progress: Float,
-    count: String?,
-    onSelectBead: (Int) -> Unit,
-    modifier: Modifier = Modifier
-) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-    val haptics = LocalHapticFeedback.current
-    val density = LocalDensity.current
-
-    val engraved = design.depth.cardBorderWidth > 0.dp
-    val idiom = design.language
-    val dark = design.isDark
-    val thread = if (engraved) palette.gold.copy(alpha = 0.45f) else palette.textTertiary.copy(alpha = if (dark) 0.42f else 0.34f)
-    val pearl = if (engraved) {
-        palette.gold.copy(alpha = if (dark) 0.20f else 0.16f)
-    } else {
-        palette.textTertiary.copy(alpha = if (dark) 0.30f else 0.20f)
-    }
-    val rim = if (engraved) palette.gold.copy(alpha = 0.85f) else palette.textTertiary.copy(alpha = if (dark) 0.70f else 0.55f)
-    val told = if (engraved) palette.gold else palette.accent
-    val toldThread = if (engraved) palette.gold else palette.accent.copy(alpha = 0.85f)
-    val current = palette.accent
-    val halo = palette.accent.copy(alpha = if (dark) 0.22f else 0.14f)
-    val track = palette.accent.copy(alpha = if (dark) 0.20f else 0.12f)
-    val corpusInk = palette.raised
-    val stroke = maxOf(design.depth.cardBorderWidth, 1.dp)
-
-    // One position for the whole rail: a spring carries it from bead to bead.
-    val position = remember { Animatable(activeIndex.toFloat()) }
-    val sweep = remember { Animatable(progress) }
-    // A ring that blooms once from the bead just reached, then fades.
-    val bloom = remember { Animatable(1f) }
-    LaunchedEffect(activeIndex, progress) {
-        launch {
-            sweep.animateTo(progress, tween(design.motion.slowMillis, easing = design.motion.standardEasing))
-        }
-        if (position.targetValue != activeIndex.toFloat()) {
-            launch {
-                position.animateTo(
-                    activeIndex.toFloat(),
-                    spring(dampingRatio = 0.72f, stiffness = Spring.StiffnessMediumLow)
-                )
-            }
-            bloom.snapTo(0f)
-            bloom.animateTo(
-                1f,
-                tween(durationMillis = design.motion.slowMillis * 2, easing = design.motion.standardEasing)
-            )
-        }
-    }
-
-    BoxWithConstraints(modifier.fillMaxWidth()) {
-        val geometry = remember(beads, maxWidth, density) {
-            with(density) { RosaryGeometry.layout(beads, maxWidth.toPx(), this) }
-        }
-        val heightDp = with(density) { geometry.height.toDp() }.coerceAtMost(240.dp)
-        val loopTop = with(density) { (geometry.centre.y - geometry.radius).toDp() }
-        val loopSize = with(density) { (geometry.radius * 2).toDp() }
-
-        Box(
-            Modifier
-                .fillMaxWidth()
-                .height(heightDp)
-        ) {
-            Canvas(
-                Modifier
-                    .matchParentSize()
-                    .pointerInput(geometry) {
-                        detectTapGestures { tap ->
-                            val reach = 24.dp.toPx()
-                            val hit = geometry.centres.indices.minByOrNull {
-                                (geometry.centres[it] - tap).getDistance()
-                            }
-                            if (hit != null && (geometry.centres[hit] - tap).getDistance() <= reach) {
-                                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                                onSelectBead(hit)
-                            }
-                        }
-                    }
-            ) {
-                val pos = position.value
-                val strokePx = stroke.toPx()
-
-                // The devotion's progress, round the outside of the loop,
-                // starting at the medal and running the way the decades run.
-                val ringR = geometry.ringRadius
-                val ringTopLeft = Offset(geometry.centre.x - ringR, geometry.centre.y - ringR)
-                val ringSize = Size(ringR * 2, ringR * 2)
-                val f = sweep.value.coerceIn(0f, 1f)
-                when (idiom) {
-                    DesignLanguage.APPLE -> {
-                        val w = 7.dp.toPx()
-                        drawCircle(track, radius = ringR, center = geometry.centre, style = Stroke(w))
-                        if (f > 0f) {
-                            drawArc(
-                                color = current,
-                                startAngle = 90f,
-                                sweepAngle = 360f * f,
-                                useCenter = false,
-                                topLeft = ringTopLeft,
-                                size = ringSize,
-                                style = Stroke(w, cap = StrokeCap.Round)
-                            )
-                        }
-                        // The ring's head: a bright cap where it has reached.
-                        val head = (PI / 2 + 2 * PI * f).toFloat()
-                        drawCircle(
-                            current,
-                            radius = w / 2,
-                            center = Offset(
-                                geometry.centre.x + ringR * cos(head),
-                                geometry.centre.y + ringR * sin(head)
-                            )
-                        )
-                    }
-
-                    DesignLanguage.IVE -> {
-                        val w = 4.dp.toPx()
-                        val amp = 2.2.dp.toPx()
-                        val waves = 36
-                        val gapAngle = if (f in 0.001f..0.999f) 0.06f else 0f
-                        val startA = (PI / 2).toFloat()
-                        val endA = startA + (2 * PI).toFloat() * f
-                        // Track: the unprayed remainder, flat.
-                        if (f < 1f) {
-                            drawArc(
-                                color = track,
-                                startAngle = Math.toDegrees((endA + gapAngle).toDouble()).toFloat(),
-                                sweepAngle = (360f * (1f - f) - Math.toDegrees(2.0 * gapAngle).toFloat()).coerceAtLeast(0f),
-                                useCenter = false,
-                                topLeft = ringTopLeft,
-                                size = ringSize,
-                                style = Stroke(w, cap = StrokeCap.Round)
-                            )
-                        }
-                        // Progress: the expressive wave.
-                        if (f > 0f) {
-                            val wave = Path()
-                            val steps = (240 * f).toInt().coerceAtLeast(8)
-                            for (k in 0..steps) {
-                                val a = startA + (endA - startA) * k / steps
-                                val rr = ringR + amp * sin(waves * (a - startA))
-                                val pt = Offset(geometry.centre.x + rr * cos(a), geometry.centre.y + rr * sin(a))
-                                if (k == 0) wave.moveTo(pt.x, pt.y) else wave.lineTo(pt.x, pt.y)
-                            }
-                            drawPath(wave, current, style = Stroke(w, cap = StrokeCap.Round, join = StrokeJoin.Round))
-                        } else {
-                            drawCircle(current, radius = w / 2, center = Offset(geometry.centre.x, geometry.centre.y + ringR))
-                        }
-                    }
-
-                }
-
-                // The thread, trimmed at every bead so no ring is crossed; the
-                // stretch already prayed is inked.
-                geometry.loopRuns.forEach { (from, to) ->
-                    val fromAngle = geometry.angles.getValue(from)
-                    var toAngle = geometry.angles.getValue(to)
-                    // The run that closes the loop comes back to the medal a full turn on.
-                    if (toAngle <= fromAngle) toAngle += (2 * PI).toFloat()
-                    val a = fromAngle + geometry.reach(from) / geometry.radius
-                    val b = toAngle - geometry.reach(to) / geometry.radius
-                    val prayed = maxOf(from, to) <= pos
-                    if (b > a) {
-                        drawArc(
-                            color = if (prayed) toldThread else thread,
-                            startAngle = Math.toDegrees(a.toDouble()).toFloat(),
-                            sweepAngle = Math.toDegrees((b - a).toDouble()).toFloat(),
-                            useCenter = false,
-                            topLeft = Offset(
-                                geometry.centre.x - geometry.radius,
-                                geometry.centre.y - geometry.radius
-                            ),
-                            size = Size(geometry.radius * 2, geometry.radius * 2),
-                            style = Stroke(width = if (prayed) strokePx * 2f else strokePx * 1.1f, cap = StrokeCap.Round)
-                        )
-                    }
-                }
-                geometry.pendantRuns.forEach { (upper, lower) ->
-                    val top = geometry.centres[upper].y + geometry.reach(upper)
-                    val bottom = geometry.centres[lower].y - geometry.reach(lower)
-                    val prayed = maxOf(upper, lower) <= pos
-                    if (bottom > top) {
-                        drawLine(
-                            color = if (prayed) toldThread else thread,
-                            start = Offset(geometry.centre.x, top),
-                            end = Offset(geometry.centre.x, bottom),
-                            strokeWidth = if (prayed) strokePx * 2f else strokePx * 1.1f,
-                            cap = StrokeCap.Round
-                        )
-                    }
-                }
-
-                // The halo travels with the position, between beads mid-glide.
-                val lower = pos.toInt().coerceIn(0, beads.lastIndex)
-                val upper = (lower + 1).coerceAtMost(beads.lastIndex)
-                val haloAt = lerp(geometry.centres[lower], geometry.centres[upper], pos - lower)
-                val onCrucifix = beads[activeIndex].kind == BeadKind.CRUCIFIX
-                val haloRadius = if (onCrucifix) geometry.crucifixHeight * 0.64f else geometry.large * 2.4f
-                drawCircle(halo, radius = haloRadius, center = haloAt)
-                if (bloom.value < 1f) {
-                    drawCircle(
-                        color = current.copy(alpha = 0.4f * (1f - bloom.value)),
-                        radius = haloRadius * (0.7f + 0.9f * bloom.value),
-                        center = geometry.centres[activeIndex],
-                        style = Stroke(width = strokePx * 1.5f)
-                    )
-                }
-
-                beads.forEachIndexed { index, bead ->
-                    val emphasis = (1f - abs(index - pos)).coerceIn(0f, 1f)
-                    val toldness = (pos - index).coerceIn(0f, 1f)
-                    val scale = 1f + 0.45f * emphasis
-                    val fill = lerp(lerp(pearl, told, toldness), current, emphasis)
-                    val rimAlpha = (1f - maxOf(toldness, emphasis)).coerceIn(0f, 1f)
-                    val centre = geometry.centres[index]
-                    when (bead.kind) {
-                        BeadKind.CRUCIFIX -> {
-                            val ink = lerp(lerp(rim, told, toldness), current, emphasis)
-                            drawCrucifix(
-                                centre = centre,
-                                height = geometry.crucifixHeight * (1f + 0.08f * emphasis),
-                                ink = ink,
-                                corpus = corpusInk
-                            )
-                        }
-
-                        BeadKind.MEDAL -> {
-                            val r = geometry.medal * scale
-                            val lozenge = Path().apply {
-                                moveTo(centre.x, centre.y - r)
-                                lineTo(centre.x + r * 0.8f, centre.y)
-                                lineTo(centre.x, centre.y + r)
-                                lineTo(centre.x - r * 0.8f, centre.y)
-                                close()
-                            }
-                            drawPath(lozenge, fill)
-                            drawPath(
-                                lozenge,
-                                lerp(rim, told, maxOf(toldness, emphasis)),
-                                style = Stroke(width = strokePx * 1.2f, join = StrokeJoin.Round)
-                            )
-                            // A small cross struck on the medal's face.
-                            val c = r * 0.36f
-                            drawLine(corpusInk.copy(alpha = 0.9f), Offset(centre.x, centre.y - c), Offset(centre.x, centre.y + c), strokePx * 1.2f)
-                            drawLine(corpusInk.copy(alpha = 0.9f), Offset(centre.x - c * 0.66f, centre.y - c * 0.2f), Offset(centre.x + c * 0.66f, centre.y - c * 0.2f), strokePx * 1.2f)
-                        }
-
-                        else -> {
-                            val base = if (bead.kind == BeadKind.LARGE) geometry.large else geometry.small
-                            val r = base * scale
-                            drawCircle(fill, radius = r, center = centre)
-                            if (rimAlpha > 0f) {
-                                drawCircle(
-                                    rim.copy(alpha = rim.alpha * rimAlpha),
-                                    radius = r - strokePx * 0.6f,
-                                    center = centre,
-                                    style = Stroke(width = strokePx * 1.2f)
-                                )
-                            }
-                            if (emphasis > 0.5f) {
-                                // The bead in hand: a ring around it and a point of light.
-                                drawCircle(
-                                    current.copy(alpha = emphasis),
-                                    radius = r + 3.dp.toPx(),
-                                    center = centre,
-                                    style = Stroke(width = strokePx * 1.4f)
-                                )
-                                drawCircle(
-                                    Color.White.copy(alpha = 0.55f * emphasis),
-                                    radius = r * 0.32f,
-                                    center = centre + Offset(-r * 0.3f, -r * 0.3f)
-                                )
-                            }
-                        }
-                    }
-                }
-            }
-
-            // Where you are, set inside the loop.
-            Box(
-                modifier = Modifier
-                    .align(Alignment.TopCenter)
-                    .padding(top = loopTop)
-                    .size(loopSize),
-                contentAlignment = Alignment.Center
-            ) {
-                // Only the short repetition count stays in the loop; the
-                // where/step progress is set as wrapping text below the rail.
-                if (count != null) {
-                    Text(
-                        text = count,
-                        style = styles.rowTitle,
-                        color = palette.accent,
-                        textAlign = TextAlign.Center,
-                        modifier = Modifier.widthIn(max = loopSize * 0.72f)
-                    )
-                }
-            }
-        }
-    }
-}
-
-/**
- * A small crucifix: a Latin cross with budded (trefoil) ends and the corpus
- * cut out of it in the card's own colour, so it reads as a crucifix and never
- * as a plus sign.
- */
-private fun androidx.compose.ui.graphics.drawscope.DrawScope.drawCrucifix(
-    centre: Offset,
-    height: Float,
-    ink: Color,
-    corpus: Color
-) {
-    val top = centre.y - height / 2
-    val bottom = centre.y + height / 2
-    val stem = height * 0.13f
-    val barY = top + height * 0.30f
-    val half = height * 0.37f
-    val bud = stem * 0.6f
-    val corner = androidx.compose.ui.geometry.CornerRadius(stem * 0.25f)
-    // Upright and arms.
-    drawRoundRect(ink, Offset(centre.x - stem / 2, top + bud * 0.6f), Size(stem, bottom - top - bud * 0.6f), corner)
-    drawRoundRect(ink, Offset(centre.x - half + bud * 0.6f, barY - stem / 2), Size(2 * half - bud * 1.2f, stem), corner)
-    // Budded ends: three lobes at the head and at each arm.
-    // `out` points from the crossing towards this end.
-    fun trefoil(at: Offset, out: Offset) {
-        val side = Offset(-out.y, out.x)
-        drawCircle(ink, bud, at + out * (bud * 0.5f))
-        drawCircle(ink, bud * 0.62f, at + side * (bud * 1.05f) - out * (bud * 0.25f))
-        drawCircle(ink, bud * 0.62f, at - side * (bud * 1.05f) - out * (bud * 0.25f))
-    }
-    trefoil(Offset(centre.x, top + bud * 1.1f), Offset(0f, -1f))
-    trefoil(Offset(centre.x - half + bud * 1.1f, barY), Offset(-1f, 0f))
-    trefoil(Offset(centre.x + half - bud * 1.1f, barY), Offset(1f, 0f))
-    // The foot widens a little, as the cross is planted.
-    drawRoundRect(ink, Offset(centre.x - stem * 0.85f, bottom - stem * 0.7f), Size(stem * 1.7f, stem * 0.7f), corner)
-
-    // The corpus: head, outstretched arms, body and legs.
-    val thin = stem * 0.36f
-    val headR = stem * 0.36f
-    drawCircle(corpus, headR, Offset(centre.x, barY - stem * 0.95f))
-    drawLine(corpus, Offset(centre.x - half + bud * 1.1f, barY - thin * 0.2f), Offset(centre.x, barY + thin * 0.5f), thin, StrokeCap.Round)
-    drawLine(corpus, Offset(centre.x + half - bud * 1.1f, barY - thin * 0.2f), Offset(centre.x, barY + thin * 0.5f), thin, StrokeCap.Round)
-    drawLine(corpus, Offset(centre.x, barY - stem * 0.5f), Offset(centre.x, barY + height * 0.30f), thin * 1.25f, StrokeCap.Round)
-    drawLine(corpus, Offset(centre.x, barY + height * 0.30f), Offset(centre.x, bottom - stem * 1.1f), thin * 0.9f, StrokeCap.Round)
-}
-
-/**
- * Where every bead sits, in pixels. The loop carries the decades clockwise from
- * just beside the medal; the pendant hangs straight down from the medal with
- * the crucifix at its foot, so the first prayers are said climbing towards it.
- */
-private class RosaryGeometry(
-    val centres: List<Offset>,
-    /** Angle on the loop, in radians, of each loop bead and of the medal. */
-    val angles: Map<Int, Float>,
-    /** Consecutive loop beads (including the medal at either end) to thread. */
-    val loopRuns: List<Pair<Int, Int>>,
-    /** Consecutive pendant beads, upper then lower, to thread. */
-    val pendantRuns: List<Pair<Int, Int>>,
-    val kinds: List<BeadKind>,
-    val centre: Offset,
-    val radius: Float,
-    /** Radius of the progress ring drawn outside the loop. */
-    val ringRadius: Float,
-    val small: Float,
-    val large: Float,
-    val medal: Float,
-    val crucifixHeight: Float,
-    val height: Float
-) {
-    /** How far the thread stops short of a bead's centre. */
-    fun reach(index: Int): Float = when (kinds[index]) {
-        BeadKind.CRUCIFIX -> crucifixHeight / 2
-        BeadKind.LARGE -> large
-        BeadKind.SMALL -> small
-        BeadKind.MEDAL -> medal
-    } + small * 0.3f
-
-    companion object {
-        fun layout(beads: List<BeadSpec>, width: Float, density: Density): RosaryGeometry = with(density) {
-            val ringInset = 10.dp.toPx()
-            val top = 8.dp.toPx() + ringInset
-            // Compact rail so hero, beads, prayer text and transport fit
-            // one screen: at a 224dp rail the loop radius is 64dp and the
-            // small bead is 3.0dp in radius (6.0dp across), so the beads
-            // still read as beads. Radius and beads shrank together so the
-            // loop spacing (arc minus diameters) stays positive.
-            // Geometry height stays well under 240dp and the prayer text
-            // below starts clear of the rail.
-            val radius = minOf(width / 2 - ringInset - 10.dp.toPx(), 64.dp.toPx())
-            val small = 3.0.dp.toPx()
-            val large = 4.4.dp.toPx()
-            val medal = 6.5.dp.toPx()
-            val crucifixHeight = 22.dp.toPx()
-            val centre = Offset(width / 2, top + radius)
-
-            val kinds = beads.map { it.kind }
-            val medalIndex = beads.indexOfLast { it.kind == BeadKind.MEDAL }
-            val pendant = beads.indices.filter { beads[it].row == 0 }
-            val loop = beads.indices.filter { beads[it].row != 0 && it != medalIndex }
-
-            fun r(i: Int) = when (kinds[i]) {
-                BeadKind.LARGE -> large
-                BeadKind.MEDAL -> medal
-                BeadKind.CRUCIFIX -> crucifixHeight / 2
-                BeadKind.SMALL -> small
-            }
-
-            val centres = MutableList(beads.size) { Offset.Zero }
-            val angles = mutableMapOf<Int, Float>()
-            val bottom = (PI / 2).toFloat()
-            val gap = (medal + small * 3.0f) / radius
-            val start = bottom + gap
-            val end = bottom + (2 * PI).toFloat() - gap
-            val arc = (end - start) * radius
-            val diameters = loop.sumOf { 2.0 * r(it) }.toFloat()
-            val spacing = if (loop.size > 1) (arc - diameters) / (loop.size - 1) else 0f
-            var run = 0f
-            loop.forEach { i ->
-                val angle = start + (run + r(i)) / radius
-                angles[i] = angle
-                centres[i] = Offset(centre.x + radius * cos(angle), centre.y + radius * sin(angle))
-                run += 2 * r(i) + spacing
-            }
-
-            var y = centre.y + radius
-            if (medalIndex >= 0) {
-                angles[medalIndex] = bottom
-                centres[medalIndex] = Offset(centre.x, y)
-            }
-            // The pendant hangs from the medal, its last bead highest; the
-            // first gap clears the progress ring. Pitch is a clear visual
-            // gap of at least 6dp between bead edges (not centre pitch).
-            val pitch = 7.dp.toPx()
-            var previous = medalIndex.takeIf { it >= 0 }?.let { medal } ?: 0f
-            val pendantRuns = mutableListOf<Pair<Int, Int>>()
-            var upper: Int? = medalIndex.takeIf { it >= 0 }
-            var first = true
-            pendant.reversed().forEach { i ->
-                val extra = 0f // 6dp pitch gap already clears the ring
-                y += previous + pitch + extra + r(i)
-                centres[i] = Offset(centre.x, y)
-                previous = r(i)
-                upper?.let { pendantRuns += it to i }
-                upper = i
-                first = false
-            }
-            val height = y + previous + 8.dp.toPx()
-
-            val ring = buildList {
-                if (medalIndex >= 0) add(medalIndex)
-                addAll(loop)
-            }
-            val loopRuns = ring.zipWithNext().toMutableList()
-            if (medalIndex >= 0 && loop.isNotEmpty()) {
-                // Close the loop back to the medal, a full turn on.
-                loopRuns += loop.last() to medalIndex
-            }
-
-            RosaryGeometry(
-                centres = centres,
-                angles = angles,
-                loopRuns = loopRuns,
-                pendantRuns = pendantRuns,
-                kinds = kinds,
-                centre = centre,
-                radius = radius,
-                ringRadius = radius + ringInset,
-                small = small,
-                large = large,
-                medal = medal,
-                crucifixHeight = crucifixHeight,
-                height = height
-            )
-        }
-    }
-}
-
-/**
- * Ive reference transport: a big circular play/pause button (64dp) flanked
- * by 44dp frosted circular step buttons. This integrated cluster is the one
- * transport on the guide card; it carries the devotion's prev/next/audio
- * testTags, so there is no second Anterior/Siguiente row below the prayer
- * text (the former RecitationControls duplicate was removed).
- */
-@Composable
-private fun TransportCluster(
+private fun TransportRow(
+    lang: AppLanguage,
+    instructionsOn: Boolean,
+    onToggleInstructions: () -> Unit,
     canGoPrevious: Boolean,
     canGoNext: Boolean,
-    isPlayingAudio: Boolean,
+    isPlaying: Boolean,
     onPrevious: () -> Unit,
     onNext: () -> Unit,
     onToggleAudio: () -> Unit,
+    onMore: () -> Unit,
+    previousLabel: String,
+    nextLabel: String,
     previousTag: String,
     nextTag: String,
     audioTag: String
 ) {
     val design = LocalAppDesign.current
-    val palette = design.palette
-    val haptics = LocalHapticFeedback.current
-    // The play circle is the card's one narration toggle, kept as a large
-    // frosted/raised transport control — same 64dp size and toggle logic.
-    val playBg = palette.raised
-    val playFg = palette.textPrimary
-    val flankBg = palette.raised
-
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        IconButton(
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                onPrevious()
-            },
-            enabled = canGoPrevious,
-            modifier = Modifier
-                .size(44.dp)
-                .clip(CircleShape)
-                .background(flankBg)
-                .testTag(previousTag)
-        ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = null,
-                tint = if (canGoPrevious) palette.textPrimary else palette.textTertiary
+    val p = design.palette
+    BoxWithConstraints(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
+        val compact = maxWidth < 330.dp
+        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+            AppGlassIconButton(
+                icon = if (instructionsOn) Icons.Filled.Lightbulb else Icons.Outlined.Lightbulb,
+                contentDescription = lang.pick("Instrucciones", "Instructions", "Instruções"),
+                onClick = onToggleInstructions,
+                tag = "prayer_instructions_toggle",
+                modifier = Modifier.semantics {
+                    selected = instructionsOn
+                    stateDescription = if (instructionsOn) lang.pick("Expandido", "Expanded", "Expandido")
+                    else lang.pick("Contraído", "Collapsed", "Recolhido")
+                }
             )
-        }
-        Spacer(Modifier.width(20.dp))
-        IconButton(
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                onToggleAudio()
-            },
-            modifier = Modifier
-                .size(64.dp)
-                .clip(CircleShape)
-                .background(playBg)
-                .testTag(audioTag)
-        ) {
-            Icon(
-                imageVector = if (isPlayingAudio) Icons.Default.Pause else Icons.Default.PlayArrow,
-                contentDescription = null,
-                tint = playFg,
-                modifier = Modifier.size(30.dp)
-            )
-        }
-        Spacer(Modifier.width(20.dp))
-        IconButton(
-            onClick = {
-                haptics.performHapticFeedback(HapticFeedbackType.LongPress)
-                onNext()
-            },
-            enabled = canGoNext,
-            modifier = Modifier
-                .size(44.dp)
-                .clip(CircleShape)
-                .background(flankBg)
-                .testTag(nextTag)
-        ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                contentDescription = null,
-                tint = if (canGoNext) palette.textPrimary else palette.textTertiary
-            )
-        }
-    }
-}
-
-/**
- * Ive reference page dots: one dot per part of the devotion (opening,
- * decades, closing). The current part is a pill; tapping a dot jumps to
- * that part's first step.
- */
-@Composable
-private fun PageDots(
-    guide: PrayerGuide,
-    activeSection: Int,
-    onGo: (Int) -> Unit
-) {
-    val palette = LocalAppDesign.current.palette
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .testTag("page_dots"),
-        horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        guide.sections.forEach { section ->
-            val active = section.index == activeSection
-            Box(
-                modifier = Modifier
-                    .padding(horizontal = 3.dp, vertical = 6.dp)
-                    .height(6.dp)
-                    .width(if (active) 16.dp else 6.dp)
-                    .clip(CircleShape)
-                    .background(
-                        // Active dot in the accent; inactive dots darker
-                        // for contrast — textSecondary at 40% instead of the
-                        // washed-out tertiary tint.
-                        if (active) palette.accent else palette.textSecondary.copy(alpha = 0.40f)
+            Spacer(Modifier.weight(1f))
+            val shape = RoundedCornerShape(percent = 50)
+            Row(
+                Modifier
+                    .lumenGlass(shape)
+                    .padding(horizontal = if (compact) 4.dp else 8.dp, vertical = 6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(if (compact) 4.dp else 14.dp)
+            ) {
+                TransportKey(Icons.Rounded.SkipPrevious, previousLabel, canGoPrevious, onPrevious, previousTag)
+                Box(
+                    Modifier
+                        .size(60.dp)
+                        .lumenPress(onToggleAudio, 0.92f)
+                        .semantics {
+                            contentDescription = if (isPlaying) lang.pick("Pausar la voz", "Pause narration", "Pausar a voz")
+                            else lang.pick("Rezar en voz alta", "Pray aloud", "Rezar em voz alta")
+                            stateDescription = if (isPlaying) lang.pick("Rezando en voz alta", "Praying aloud", "Rezando em voz alta")
+                            else lang.pick("En silencio", "Silent", "Em silêncio")
+                        }
+                        .testTag(audioTag)
+                        .softShadow(CircleShape, p.shadow, 16.dp, 5.dp)
+                        .then(
+                            if (isPlaying) Modifier.background(p.action, CircleShape)
+                            else Modifier.lumenGlass(CircleShape, strong = true, lifted = false)
+                        ),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        if (isPlaying) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
+                        null,
+                        tint = if (isPlaying) p.onAction else p.textPrimary,
+                        modifier = Modifier.size(30.dp)
                     )
-                    .clickable(role = Role.Button) { onGo(section.firstStep) }
-                    .semantics { contentDescription = section.title }
+                }
+                TransportKey(Icons.Rounded.SkipNext, nextLabel, canGoNext, onNext, nextTag)
+            }
+            Spacer(Modifier.weight(1f))
+            AppGlassIconButton(
+                icon = Icons.Outlined.MoreHoriz,
+                contentDescription = lang.pick("Opciones del rosario", "Rosary options", "Opções do terço"),
+                onClick = onMore,
+                tag = "rosary_options_button"
             )
         }
     }
 }
 
-/**
- * The text to pray. With a response, leader and people are marked ℣ and ℟, the
- * signs set in rubric as a missal prints them;
- * a prayer said straight through is set plain. The line being spoken is in rubric.
- */
 @Composable
-private fun PrayerDialogue(
-    leaderText: String,
-    responseText: String,
-    leaderSpoken: Boolean,
-    responseSpoken: Boolean
+private fun TransportKey(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String, enabled: Boolean, onClick: () -> Unit, tag: String) {
+    val p = LocalAppDesign.current.palette
+    Box(
+        Modifier
+            .size(52.dp)
+            .lumenPress(onClick, 0.88f, enabled = enabled)
+            .semantics { contentDescription = label }
+            .testTag(tag),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(icon, null, tint = if (enabled) p.textPrimary else p.inkQuiet, modifier = Modifier.size(30.dp))
+    }
+}
+
+// ------------------------------------------------------------------ sheets
+
+@Composable
+private fun SheetLabel(text: String) {
+    val design = LocalAppDesign.current
+    Text(
+        text,
+        style = LocalAppTextStyles.current.footnote.copy(fontWeight = FontWeight.Medium),
+        color = design.palette.textSecondary,
+        modifier = Modifier.padding(start = design.spacing.gutter + 16.dp, end = design.spacing.gutter, top = 8.dp, bottom = 8.dp)
+    )
+}
+
+/** The four sets of mysteries, each with its first painting and its days. */
+@Composable
+private fun MysteriesSheet(
+    lang: AppLanguage,
+    selected: RosaryMysteryType,
+    today: RosaryMysteryType,
+    onSelect: (RosaryMysteryType) -> Unit,
+    onDismiss: () -> Unit
 ) {
     val design = LocalAppDesign.current
-    val palette = design.palette
+    val p = design.palette
     val styles = LocalAppTextStyles.current
+    AppSheet(onDismiss = onDismiss, title = lang.pick("Misterios", "Mysteries", "Mistérios"), tag = "rosary_mysteries_sheet") {
+        Column(
+            Modifier
+                .fillMaxWidth()
+                .padding(horizontal = design.spacing.gutter)
+                .lumenGlass(RoundedCornerShape(20.dp), lifted = false)
+        ) {
+            val types = RosaryMysteryType.entries
+            types.forEachIndexed { i, type ->
+                val isSelected = type == selected
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .lumenPress({ onSelect(type) }, 0.99f)
+                        .semantics { this.selected = isSelected }
+                        .testTag("rosary_mystery_option_${type.name.lowercase()}")
+                        .heightIn(min = 76.dp)
+                        .padding(horizontal = 14.dp, vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    ArtThumb(mysteryArt(type, 0), Modifier.size(56.dp))
+                    Spacer(Modifier.width(14.dp))
+                    Column(Modifier.weight(1f)) {
+                        Text(type.displayName.get(lang), style = styles.body, color = p.textPrimary)
+                        Spacer(Modifier.height(2.dp))
+                        val days = type.recommendedDays.get(lang)
+                        Text(
+                            if (type == today) lang.pick("Hoy", "Today", "Hoje") + " · " + days else days,
+                            style = styles.footnote, color = p.textSecondary
+                        )
+                    }
+                    if (isSelected) {
+                        Spacer(Modifier.width(10.dp))
+                        Icon(Icons.Rounded.Check, null, tint = p.accent, modifier = Modifier.size(22.dp))
+                    }
+                }
+                if (i < types.lastIndex) {
+                    Box(Modifier.fillMaxWidth().padding(start = 84.dp).height(0.5.dp).background(p.separator))
+                }
+            }
+        }
+        Spacer(Modifier.height(12.dp))
+    }
+}
 
-    Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
-        if (responseText.isBlank()) {
-            Text(
-                text = leaderText,
-                style = styles.scripture,
-                color = if (leaderSpoken) palette.accent else palette.textPrimary
-            )
-        } else {
-            Text(
-                text = rubricated("\u2123", leaderText, palette.accent),
-                style = styles.scripture,
-                color = if (leaderSpoken) palette.accent else palette.textPrimary
-            )
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-            Text(
-                text = rubricated("\u211F", responseText, palette.accent),
-                style = styles.scripture,
-                color = if (responseSpoken) palette.accent else palette.textSecondary
-            )
+@Composable
+private fun ArtThumb(path: String, modifier: Modifier) {
+    val p = LocalAppDesign.current.palette
+    val bitmap = rememberAssetBitmap(path, 240)
+    val meta = rememberHeroMeta(path)
+    Box(modifier.clip(RoundedCornerShape(12.dp)).background(p.glass)) {
+        if (bitmap != null) {
+            Image(bitmap, null, contentScale = ContentScale.Crop, alignment = meta.alignment, modifier = Modifier.fillMaxSize())
         }
     }
 }
 
-/** An eyebrow over a card, with its reference or count on the line below. */
+/** Voices, and the parts of the devotion as a map and a list to jump to. */
 @Composable
-private fun CardHeading(eyebrow: String, detail: String?) {
+private fun OptionsSheet(
+    lang: AppLanguage,
+    isRosary: Boolean,
+    guide: PrayerGuide,
+    step: GuideStep,
+    voiceMode: RecitationVoiceMode,
+    onVoiceMode: (RecitationVoiceMode) -> Unit,
+    onGo: (Int) -> Unit,
+    onDismiss: () -> Unit
+) {
     val design = LocalAppDesign.current
+    val p = design.palette
     val styles = LocalAppTextStyles.current
-
-    Column {
-        Text(
-            text = if (design.decor.usesAllCapsLabels) eyebrow.uppercase() else eyebrow,
-            style = styles.sectionEyebrow,
-            color = design.palette.textSecondary
+    val modes = listOf(RecitationVoiceMode.DUAL_DIALOGUE, RecitationVoiceMode.MALE, RecitationVoiceMode.FEMALE)
+    AppSheet(
+        onDismiss = onDismiss,
+        title = if (isRosary) lang.pick("Santo Rosario", "Holy Rosary", "Santo Terço")
+        else lang.pick("Coronilla", "Chaplet", "Coroinha"),
+        tag = "rosary_options_sheet"
+    ) {
+        SheetLabel(lang.pick("Voces", "Voices", "Vozes"))
+        AppSegmentedTabs(
+            options = listOf(
+                lang.pick("Diálogo", "Dialogue", "Diálogo"),
+                lang.pick("Quien guía", "Leader", "Quem conduz"),
+                lang.pick("Respuesta", "Response", "Resposta")
+            ),
+            selectedIndex = modes.indexOf(voiceMode).coerceAtLeast(0),
+            onSelect = { onVoiceMode(modes[it]) },
+            modifier = Modifier.testTag("rosary_voice_mode_picker")
         )
-        if (detail != null) {
-            Spacer(Modifier.height(design.spacing.cardGap / 3))
+        Text(
+            when (voiceMode) {
+                RecitationVoiceMode.DUAL_DIALOGUE -> lang.pick(
+                    "La voz reza las dos partes, en dos voces.",
+                    "The narrator prays both parts, in two voices.",
+                    "A voz reza as duas partes, em duas vozes."
+                )
+                RecitationVoiceMode.MALE -> lang.pick(
+                    "La voz guía la primera parte; tú respondes.",
+                    "The narrator leads the first part; you answer.",
+                    "A voz conduz a primeira parte; você responde."
+                )
+                RecitationVoiceMode.FEMALE -> lang.pick(
+                    "Tú guías la primera parte; la voz responde.",
+                    "You lead the first part; the narrator answers.",
+                    "Você conduz a primeira parte; a voz responde."
+                )
+            },
+            style = styles.footnote,
+            color = p.textSecondary,
+            modifier = Modifier.padding(horizontal = design.spacing.gutter + 16.dp, vertical = 8.dp)
+        )
+        Spacer(Modifier.height(16.dp))
+        SheetLabel(
+            if (isRosary) lang.pick("Partes del Rosario", "Parts of the Rosary", "Partes do Rosário")
+            else lang.pick("Pasos de la coronilla", "Steps of the chaplet", "Passos da coroinha")
+        )
+        RosaryLoopMap(
+            beads = guide.beads.map { it.kind },
+            activeBead = step.bead,
+            onSelectBead = { bead -> guide.firstStepOn(bead).takeIf { it >= 0 }?.let(onGo) },
+            modifier = Modifier
+                .padding(horizontal = 72.dp, vertical = 4.dp)
+                .testTag("rosary_loop_map")
+        )
+        Spacer(Modifier.height(12.dp))
+        val prayed = lang.pick("Rezado", "Prayed", "Rezado")
+        val now = lang.pick("Ahora", "Now", "Agora")
+        AppListGroup {
+            guide.sections.forEach { s ->
+                AppListRow(
+                    title = s.title,
+                    subtitle = s.subtitle,
+                    trailingText = when {
+                        s.index < step.section -> prayed
+                        s.index == step.section -> now
+                        else -> null
+                    },
+                    showsNavigationAffordance = false,
+                    selected = s.index == step.section,
+                    onClick = { onGo(s.firstStep) },
+                    modifier = Modifier.heightIn(min = 52.dp)
+                )
+            }
+        }
+        if (!isRosary) {
+            Spacer(Modifier.height(24.dp))
+            Column(Modifier.padding(horizontal = design.spacing.gutter + 8.dp)) {
+                Text(
+                    lang.pick(
+                        "«A las tres de la tarde implora mi misericordia… En esta hora nada le será negado al alma que lo pida».",
+                        "“At three o'clock, implore My mercy… In this hour nothing will be denied the soul that makes a request of Me.”",
+                        "«Às três horas da tarde, implora a minha misericórdia… Nesta hora, nada será negado à alma que o pedir»."
+                    ),
+                    style = styles.reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic),
+                    color = p.textPrimary
+                )
+                Spacer(Modifier.height(8.dp))
+                Text(
+                    lang.pick("Diario de Santa Faustina", "Diary of Saint Faustina", "Diário de Santa Faustina"),
+                    style = styles.footnote, color = p.textSecondary
+                )
+            }
+        }
+        Spacer(Modifier.height(16.dp))
+    }
+}
+
+/** The mystery in full: its painting, Scripture, meditation, fruit and credit. */
+@Composable
+private fun MysterySheet(
+    lang: AppLanguage,
+    type: RosaryMysteryType,
+    position: Int,
+    title: String,
+    scriptureRef: String,
+    meditation: String,
+    fruit: String,
+    artPath: String?,
+    onDismiss: () -> Unit
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val context = LocalContext.current
+    val credit = remember(artPath) { artPath?.let { ArtCredits.of(context, it) } }
+    AppSheet(onDismiss = onDismiss, tag = "rosary_mystery_sheet") {
+        Column(Modifier.padding(horizontal = design.spacing.gutter)) {
+            if (artPath != null) {
+                val bitmap = rememberAssetBitmap(artPath, 1080)
+                val meta = rememberHeroMeta(artPath)
+                Box(
+                    Modifier
+                        .fillMaxWidth()
+                        .height(240.dp)
+                        .clip(RoundedCornerShape(22.dp))
+                        .background(p.glass)
+                ) {
+                    if (bitmap != null) {
+                        Image(bitmap, null, contentScale = ContentScale.Crop, alignment = meta.alignment, modifier = Modifier.fillMaxSize())
+                    }
+                }
+                Spacer(Modifier.height(18.dp))
+            }
             Text(
-                text = detail,
-                style = styles.rowSubtitle,
-                color = design.palette.textSecondary
+                mysteryAnnouncement(lang, type, position, "").substringBefore(":"),
+                style = styles.eyebrow, color = p.textSecondary
             )
+            Spacer(Modifier.height(4.dp))
+            Text(title, style = styles.title1, color = p.textPrimary)
+            Spacer(Modifier.height(6.dp))
+            Text(scriptureRef, style = styles.subhead, color = p.textSecondary)
+            Spacer(Modifier.height(16.dp))
+            Text(meditation, style = styles.reading, color = p.textPrimary)
+            Spacer(Modifier.height(14.dp))
+            Text(fruit, style = styles.callout.copy(fontWeight = FontWeight.Medium), color = p.textPrimary)
+            if (credit != null) {
+                Spacer(Modifier.height(18.dp))
+                Text(
+                    listOf(credit.artist, credit.title, credit.year).filter { it.isNotBlank() }.joinToString(" · "),
+                    style = styles.footnote, color = p.textSecondary
+                )
+            }
+            Spacer(Modifier.height(16.dp))
         }
     }
 }
 
 /** A run of litany lines set as call and answer, one pair to a paragraph. */
 private fun litanyText(lines: List<LitanyLine>): String =
-    lines.joinToString("\n\n") { "${it.call}\n    \u211F ${it.response}" }
+    lines.joinToString("\n\n") { "${it.call}\n    ℟ ${it.response}" }
 
-/** A versicle or response sign in the rubric colour, then the words in ink. */
+/** A versicle or response sign in a quieter ink, then the words. */
 private fun rubricated(sign: String, text: String, rubric: Color): AnnotatedString =
     buildAnnotatedString {
         withStyle(SpanStyle(color = rubric, fontWeight = FontWeight.SemiBold)) { append(sign) }
-        append("\u2002")
+        append(" ")
         append(text)
     }
-
-/**
- * Frosted-card chrome matching Home cards (see HomeScreen): a soft shadow
- * plus a 1dp hairline stroke drawn over AppCard frosted groupedSurface at
- * design.shapes.card (20dp in Ive). The same values Home uses, so the
- * guide/bead-rail cards share the one card system.
- */
-@Composable
-private fun Modifier.frostedCardChrome(): Modifier {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val radius = if (design.language == DesignLanguage.IVE) 20.dp else 12.dp
-    val width = design.depth.cardBorderWidth.coerceAtLeast(1.dp)
-    return this
-        .shadow(6.dp, design.shapes.card)
-        .drawWithContent {
-            drawContent()
-            drawRoundRect(
-                color = palette.hairline,
-                topLeft = Offset.Zero,
-                size = size,
-                cornerRadius = CornerRadius(radius.toPx()),
-                style = Stroke(width = width.toPx())
-            )
-        }
-}
-
-/**
- * Photographic hero art bundled under assets/heroes/. Decoded once per asset
- * path; a missing or undecodable asset draws nothing, so the surface beneath
- * shows through and text legibility never depends on the photo loading.
- */
-@Composable
-private fun AssetPhoto(
-    assetPath: String,
-    contentDescription: String?,
-    modifier: Modifier = Modifier,
-    alignment: Alignment = Alignment.Center
-) {
-    val context = LocalContext.current
-    val bitmap = remember(assetPath) {
-        runCatching {
-            context.assets.open(assetPath).use { BitmapFactory.decodeStream(it) }?.asImageBitmap()
-        }.getOrNull()
-    }
-    if (bitmap != null) {
-        Image(
-            bitmap = bitmap,
-            contentDescription = contentDescription,
-            contentScale = ContentScale.Crop,
-            alignment = alignment,
-            modifier = modifier
-        )
-    }
-}

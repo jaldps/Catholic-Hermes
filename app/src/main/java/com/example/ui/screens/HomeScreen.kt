@@ -1,36 +1,19 @@
 package com.example.ui.screens
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.icons.outlined.*
-import androidx.compose.material3.Icon
-import com.example.ui.design.*
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.produceState
-import com.example.data.liturgy.LiturgicalCalendar
-import com.example.data.news.VaticanGospelFetcher
-import com.example.data.news.ReadingsResult
-import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
-import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -44,97 +27,108 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AutoStories
-import androidx.compose.material.icons.filled.Church
-import androidx.compose.material.icons.filled.FormatQuote
-import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
-import androidx.compose.material.icons.filled.LightMode
-import androidx.compose.material.icons.filled.LocationOn
-import androidx.compose.material.icons.filled.MenuBook
-import androidx.compose.material.icons.filled.NightsStay
-import androidx.compose.material.icons.filled.Place
-import androidx.compose.material.icons.filled.Restaurant
-import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.filled.Share
-import androidx.compose.material.icons.outlined.Checklist
-import com.example.ui.design.DevotionalGlyphs
-import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.TaskAlt
-import androidx.compose.material.icons.filled.WbTwilight
-import androidx.compose.material3.Card
-import androidx.compose.material3.CardDefaults
+import androidx.compose.material.icons.outlined.AutoStories
+import androidx.compose.material.icons.outlined.Bookmark
+import androidx.compose.material.icons.outlined.Church
+import androidx.compose.material.icons.outlined.ExpandMore
+import androidx.compose.material.icons.outlined.GridView
+import androidx.compose.material.icons.outlined.IosShare
+import androidx.compose.material.icons.outlined.LightMode
+import androidx.compose.material.icons.outlined.MenuBook
+import androidx.compose.material.icons.outlined.NightsStay
+import androidx.compose.material.icons.outlined.NotificationsNone
+import androidx.compose.material.icons.outlined.Place
+import androidx.compose.material.icons.outlined.Spa
+import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.semantics.stateDescription
-import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.semantics.semantics
-import androidx.compose.ui.geometry.CornerRadius
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.drawWithContent
-import androidx.compose.ui.graphics.Brush
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.asImageBitmap
-import androidx.compose.ui.graphics.drawscope.Stroke
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import com.example.data.fidelity.FidelityStore
+import com.example.data.liturgy.LiturgicalCalendar
+import com.example.data.local.SanctaFidesDao
+import com.example.data.local.SinOvercomeLogEntity
 import com.example.data.models.ApologeticsQuestion
 import com.example.data.models.AppLanguage
 import com.example.data.models.DailyMassReading
 import com.example.data.models.LiturgicalCalendarDay
 import com.example.data.models.SaintOfTheDay
 import com.example.data.models.VerseOfTheDay
-import com.example.data.local.SanctaFidesDao
-import com.example.data.local.SinOvercomeLogEntity
-import com.example.data.fidelity.FidelityStore
+import com.example.data.news.ReadingsResult
+import com.example.data.news.VaticanGospelFetcher
+import com.example.data.prefs.ReadingPosition
+import com.example.data.repository.BibleData
+import com.example.data.repository.PilgrimageAndHabitsData
+import com.example.data.temptation.TemptationStore
 import com.example.data.verse.DailyVerseFetcher
 import com.example.data.verse.DailyVerseRotation
 import com.example.data.verse.DailyVerseStore
-import com.example.data.temptation.TemptationStore
-import com.example.data.repository.PilgrimageAndHabitsData
-import com.example.data.repository.BibleData
-import com.example.data.prefs.ReadingPosition
+import com.example.ui.components.TextFormat
 import com.example.ui.design.AppCard
-import com.example.ui.design.AppDivider
+import com.example.ui.design.AppCategoryTile
+import com.example.ui.design.AppChevron
+import com.example.ui.design.AppEdgeToEdge
+import com.example.ui.design.AppGlassIconButton
+import com.example.ui.design.AppGlassSurface
+import com.example.ui.design.AppGrid
+import com.example.ui.design.AppHeroHeader
+import com.example.ui.design.AppHeroImage
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
-import com.example.ui.design.AppPrimaryButton
-import com.example.ui.design.AppSecondaryButton
-import com.example.ui.components.TextFormat
+import com.example.ui.design.AppPrimaryCapsule
+import com.example.ui.design.AppProgressRing
+import com.example.ui.design.AppRoundPlayButton
+import com.example.ui.design.AppSeasonCard
+import com.example.ui.design.AppSecondaryCapsule
 import com.example.ui.design.AppSectionHeader
-import com.example.ui.theme.DesignLanguage
+import com.example.ui.design.DevotionalGlyphs
+import com.example.ui.design.lumenLiturgicalColor
+import com.example.ui.design.rememberFirstAsset
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
+import java.time.LocalDate
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
+/** Space before a section header; the header adds 10dp more, so sections sit 32dp apart. */
+private val SectionLead = 22.dp
+
+/** Gap between sibling cards in one cluster. */
+private val ClusterGap = 12.dp
+
 /**
- * The app's front door: today's liturgical day, the Mass of the day, the verse
- * and saint of the day, the daily routine and the gateways to the rest of the
- * app — all of it set in whichever identity is in force.
+ * The app's front door (Hoy): a misted sacred-art hero with the date and
+ * "Hoy", the liturgical day riding over its fade, the Mass of the day built
+ * around the Word (Gospel in reading type, one primary action), the verse, the
+ * prayer of the hour, today's fidelity, the saint, the question and the
+ * gateways to the rest of the app.
  */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun HomeScreen(
     dailyReading: DailyMassReading,
@@ -160,14 +154,9 @@ fun HomeScreen(
     onNavigateToMore: () -> Unit = {},
     onOpenAppearance: () -> Unit = {},
     onOpenFontPicker: () -> Unit = {},
-    // Pregunta del día data + entry point. MainApp wiring: pass
-    // repository.catholicQuestions and onOpenQuestions = { index ->
-    // questionsInitialIndex = index; go(AppDestination.QUESTIONS) } so
-    // "Leer respuesta" opens the Questions tab at the SPECIFIC question's
-    // answer (DoctrineAndHistoryScreen initialQuestionIndex), not the
-    // general Doctrine area.
-    // Defaults keep previews/screenshot callers compiling; the card renders
-    // only when the list is non-empty.
+    // Pregunta del día data + entry point: "Leer respuesta" opens the Questions
+    // tab at the SPECIFIC question's answer (DoctrineAndHistoryScreen
+    // initialQuestionIndex). The card renders only when the list is non-empty.
     catholicQuestions: List<ApologeticsQuestion> = emptyList(),
     onOpenQuestions: (Int) -> Unit = {},
     // Nullable so previews/screenshot callers that pass no database keep
@@ -177,6 +166,8 @@ fun HomeScreen(
     onOpenReminders: () -> Unit = {},
     onNavigateToChurches: () -> Unit = onNavigateToDoctrine,
     ttsManager: com.example.data.audio.LiturgicalTtsManager? = null,
+    /** "Santuarios" tile; defaults to the calendar destination (MainApp opens the shrines tab). */
+    onNavigateToShrines: () -> Unit = onNavigateToPilgrimage,
     modifier: Modifier = Modifier
 ) {
     val context = LocalContext.current
@@ -184,26 +175,15 @@ fun HomeScreen(
     val palette = design.palette
     val styles = LocalAppTextStyles.current
 
-    // Photographic heroes (assets/heroes/), decoded once off the composition
-    // path. Hoisted unconditionally to the top of HomeScreen — never inside
-    // a LazyColumn item or a conditional branch (slot-table crash). Photo
-    // for both identities: no vector gate, the same hero reads in Ive and
-    // Apple. Null (asset missing / decode failure in a test host) falls
-    // back to the canvas gradient band, keeping the header tag present.
-    // Hoisted out of the list so the disclosure survives being scrolled off.
-    var meditationExpanded by rememberSaveable { mutableStateOf(false) }
-
     fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
         AppLanguage.ES -> es
         AppLanguage.EN -> en
         AppLanguage.PT -> pt
     }
 
-    // Both of these are empty on a ferial weekday the bundled lectionary does
-    // not carry, so the day's gospel line and its disclosure appear only when
-    // there is something behind them.
-    val meditation = liturgicalDay.missalMeditation?.get(currentLanguage)
-        ?.takeIf { it.isNotBlank() }
+    var meditationExpanded by rememberSaveable { mutableStateOf(false) }
+
+    val meditation = liturgicalDay.missalMeditation?.get(currentLanguage)?.takeIf { it.isNotBlank() }
     val resumeReading = remember(currentLanguage) {
         ReadingPosition.load(context)?.let { position ->
             BibleData.catholicCanonBooks.firstOrNull { it.id == position.bookId }
@@ -211,43 +191,39 @@ fun HomeScreen(
         }
     }
 
-    // Today's readings from the Vatican's own feed, the same source the Missal
-    // tab uses; the bundled lectionary is the offline fallback.
+    // One lectionary source, the same in every theme and offline: the bundled
+    // lectionary for the day. Only a day it does not carry (some ferial days)
+    // falls back to the Vatican's own feed, the source the Mass tab opens.
+    val bundledGospel = dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
+    val bundledFirst = dailyReading.firstReadingRef.takeIf { it.isNotBlank() }
+    val needsFeed = bundledGospel == null || bundledFirst == null
     val isoToday = remember {
         val d = LiturgicalCalendar.today()
         "%04d-%02d-%02d".format(d.year, d.month, d.day)
     }
-    val vaticanResult by produceState<ReadingsResult?>(null, currentLanguage, isoToday) {
-        value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+    val vaticanResult by produceState<ReadingsResult?>(null, currentLanguage, isoToday, needsFeed) {
+        value = if (needsFeed) VaticanGospelFetcher().today(currentLanguage, isoToday) else null
     }
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
+    val feedGospel = vatican?.sections?.lastOrNull()
+    val feedFirst = vatican?.sections?.firstOrNull()
 
-    val gospel = vatican?.sections?.lastOrNull()
-    val firstSection = vatican?.sections?.firstOrNull()
-    val gospelReference = gospel?.citation?.takeIf { it.isNotBlank() } ?: dailyReading.gospelRef
-    val gospelExcerpt = gospel?.text?.takeIf { it.isNotBlank() }
-        ?: dailyReading.gospelText.get(currentLanguage).takeIf { it.isNotBlank() }
+    val gospelReference = scriptureRef(
+        if (bundledGospel != null) dailyReading.gospelRef.takeIf { it.isNotBlank() } ?: feedGospel?.citation.orEmpty()
+        else feedGospel?.citation?.takeIf { it.isNotBlank() } ?: dailyReading.gospelRef,
+        currentLanguage
+    )
+    val gospelExcerpt = bundledGospel ?: feedGospel?.text?.takeIf { it.isNotBlank() }
     val gospelPreview = remember(gospelExcerpt, currentLanguage) {
-        gospelExcerpt?.let { normalizeExcerptQuotes(firstSentenceOf(it), currentLanguage) }
+        gospelExcerpt?.let { firstSentenceOf(cleanScripture(it, currentLanguage)) }?.takeIf { it.isNotBlank() }
     }
-    // First reading from the same missal data the "Read Mass" destination
-    // opens (dailyReading, with the Vatican feed's first section preferred
-    // when it has landed), so the card is populated offline and immediately
-    // instead of showing a fixed-height skeleton.
-    val firstReadingReference = firstSection?.citation?.takeIf { it.isNotBlank() }
-        ?: dailyReading.firstReadingRef
-    val firstReadingExcerpt = firstSection?.text?.takeIf { it.isNotBlank() }
-        ?: dailyReading.firstReadingText.get(currentLanguage).takeIf { it.isNotBlank() }
-    val firstReadingPreview = remember(firstReadingExcerpt, currentLanguage) {
-        firstReadingExcerpt?.let { normalizeExcerptQuotes(firstSentenceOf(it), currentLanguage) }
-    }
-    val hasReadings = firstReadingPreview != null || gospelPreview != null
+    val firstReadingReference = scriptureRef(
+        bundledFirst ?: feedFirst?.citation?.takeIf { it.isNotBlank() }.orEmpty(),
+        currentLanguage
+    )
 
-    // Pregunta del día: deterministic by date, no stored state — the index is
-    // dayOfYear % question count (101 with the full bundled list), so every
-    // reader sees the same question on the same day. The index is passed to
-    // onOpenQuestions so "Leer respuesta" deep-links to THIS question's
-    // answer, not the general Doctrine area.
+    // Pregunta del día: deterministic by date, so every reader sees the same
+    // question on the same day; its index deep-links to THIS answer.
     val dayOfYear = remember { Calendar.getInstance().get(Calendar.DAY_OF_YEAR) }
     val dailyQuestionIndex = remember(catholicQuestions, dayOfYear) {
         if (catholicQuestions.isEmpty()) -1 else dayOfYear % catholicQuestions.size
@@ -277,12 +253,9 @@ fun HomeScreen(
         Unit
     }
 
-    // Verse of the day refinement: the passed verse is the offline baseline
-    // (already rotated daily by the repository from the bundled Bible); when
-    // online, bible-api.com text for the same reference replaces it and is
-    // cached per date, so the verse still changes daily without a network
-    // and never re-downloads the same day's verse.
-    val verseToday = remember { java.time.LocalDate.now() }
+    // Verse of the day: the repository's baseline, refined by bible-api.com text
+    // for the same reference when online (cached per date).
+    val verseToday = remember { LocalDate.now() }
     val verseReferenceId = remember(verseToday) { DailyVerseRotation.referenceFor(verseToday) }
     val verseCache = remember(context) { DailyVerseStore(context.applicationContext) }
     val verseFetcher = remember { DailyVerseFetcher() }
@@ -313,38 +286,26 @@ fun HomeScreen(
         }
     }
 
-    // Time-based daily prayer: same list style as before (AppListGroup of
-    // AppListRows), but the hour decides WHICH content shows — the current
-    // hour's prayer first, then the next upcoming one, then the rule of
-    // life. `morning -> Morning Prayers` is the 5am slot before the 6am
-    // Laudes; the small hours stay on the traditional night prayers.
+    // Time-based daily prayer: the hour decides which prayer is "now" and which
+    // is next. 5am is Morning Prayers (before the 6am Laudes); the small hours
+    // stay on the traditional night prayers.
     val prayerHour = remember { Calendar.getInstance().get(Calendar.HOUR_OF_DAY) }
     val currentPrayerSlot = dailyPrayerSlotForHour(prayerHour)
     val nextPrayerSlot = nextDailyPrayerSlot(currentPrayerSlot)
 
     @Composable
-    fun DailyPrayerRow(slot: DailyPrayerSlot) {
+    fun DailyPrayerRow(slot: DailyPrayerSlot, caption: String) {
         val title = when (slot) {
             DailyPrayerSlot.MORNING_PRAYERS ->
                 strings("Oraciones de la mañana", "Morning Prayers", "Orações da manhã")
             DailyPrayerSlot.LAUDES ->
                 strings("Laudes", "Morning Prayer", "Laudes")
-            DailyPrayerSlot.ANGELUS ->
+            DailyPrayerSlot.ANGELUS, DailyPrayerSlot.ANGELUS_EVENING ->
                 strings("El Ángelus", "The Angelus", "O Angelus")
             DailyPrayerSlot.CORONILLA ->
-                strings(
-                    "Coronilla de la Divina Misericordia",
-                    "Chaplet of Divine Mercy",
-                    "Coroa da Divina Misericórdia"
-                )
-            DailyPrayerSlot.ANGELUS_EVENING ->
-                strings("El Ángelus", "The Angelus", "O Angelus")
+                strings("Coronilla de la Misericordia", "Divine Mercy Chaplet", "Coroa da Misericórdia")
             DailyPrayerSlot.NIGHT_PRAYERS ->
-                strings(
-                    "Oraciones tradicionales de la noche",
-                    "Traditional night prayers",
-                    "Orações tradicionais da noite"
-                )
+                strings("Oraciones de la noche", "Night prayers", "Orações da noite")
         }
         val (icon, onClick, clockHour, testTag) = when (slot) {
             DailyPrayerSlot.MORNING_PRAYERS ->
@@ -352,18 +313,18 @@ fun HomeScreen(
             DailyPrayerSlot.LAUDES ->
                 Quad(Icons.Outlined.LightMode, onNavigateToLaudes, 6, "home_laudes_tile")
             DailyPrayerSlot.ANGELUS ->
-                Quad(Icons.Outlined.WbTwilight, onNavigateToAngelus, 12, "home_angelus_tile")
+                Quad(DevotionalGlyphs.sunriseOutlined, onNavigateToAngelus, 12, "home_angelus_tile")
             DailyPrayerSlot.CORONILLA ->
                 Quad(DevotionalGlyphs.rosaryOutlined, onNavigateToChaplet, 15, "home_chaplet_tile")
             DailyPrayerSlot.ANGELUS_EVENING ->
-                Quad(Icons.Outlined.WbTwilight, onNavigateToAngelus, 18, "home_angelus_tile")
+                Quad(DevotionalGlyphs.sunriseOutlined, onNavigateToAngelus, 18, "home_angelus_tile")
             DailyPrayerSlot.NIGHT_PRAYERS ->
                 Quad(Icons.Outlined.NightsStay, onNavigateToNightPrayers, 20, "home_night_prayers_tile")
         }
         AppListRow(
             title = title,
+            subtitle = "$caption · ${TextFormat.clock(clockHour, 0, currentLanguage)}",
             leadingIcon = icon,
-            trailingText = TextFormat.clock(clockHour, 0, currentLanguage),
             onClick = onClick,
             modifier = Modifier.testTag(testTag)
         )
@@ -392,15 +353,18 @@ fun HomeScreen(
         modifier = modifier
             .fillMaxSize()
             .testTag("home_screen"),
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = insets.calculateBottomPadding() + 28.dp)
+        // Dock + nav inset + 32dp: the last tile row ends well clear of the bar.
+        contentPadding = PaddingValues(bottom = insets.calculateBottomPadding() + 32.dp)
     ) {
-        // Hero: luminous art from the top of the display, "Hoy" over its fade.
+        // Hero: misted art from the top of the display; the season card rides
+        // 24dp up over its fade.
         item {
             AppHeroHeader(
                 assetPath = heroAsset,
                 title = strings("Hoy", "Today", "Hoje"),
                 eyebrow = dateEyebrow,
-                height = 330.dp,
+                height = 340.dp,
+                overlap = 24.dp,
                 modifier = Modifier.testTag("screen_header_illustration")
             ) {
                 AppGlassIconButton(
@@ -413,214 +377,239 @@ fun HomeScreen(
             }
         }
 
-        // The liturgical day, riding up into the hero's fade.
+        // The liturgical day: the season once, the week and obligation on one line.
         item {
             val seasonName = liturgicalDay.seasonName.get(currentLanguage)
-            val celebrationTitle = liturgicalDay.celebrationTitle.get(currentLanguage)
-            val detail = listOfNotNull(
-                celebrationTitle.takeUnless { it.isBlank() || it.equals(seasonName, ignoreCase = true) },
-                liturgicalDay.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
-            ).joinToString(" · ").ifBlank { null }
+            val detail = seasonDetail(
+                season = seasonName,
+                celebration = liturgicalDay.celebrationTitle.get(currentLanguage),
+                rule = liturgicalDay.fastingRule?.get(currentLanguage)
+            )
             AppSeasonCard(
                 season = seasonName,
                 detail = detail,
                 seasonColor = lumenLiturgicalColor(seasonName, liturgicalDay.liturgicalColorHex),
                 onClick = onNavigateToPilgrimage,
                 tag = "liturgical_calendar_widget",
-                modifier = Modifier
-                    .padding(horizontal = gutter)
-                    .offset(y = (-6).dp)
+                modifier = Modifier.padding(horizontal = gutter)
             )
-            Spacer(Modifier.height(14.dp))
+            Spacer(Modifier.height(ClusterGap))
         }
 
-        // Mass of the day: both readings, one route to the full Missal, and
-        // the Gospel read aloud.
-        item {
-            AppContentCard(
-                title = strings("Misa de hoy", "Today's Mass", "Missa de hoje"),
-                subtitle = strings("Lecturas del día", "Today's readings", "Leituras do dia"),
-                icon = Icons.Outlined.AutoStories,
-                onClick = onNavigateToMissal,
-                tag = "daily_mass_card",
-                modifier = Modifier.padding(horizontal = gutter),
-                trailing = if (ttsManager != null && gospelExcerpt != null) {
-                    {
-                        AppRoundPlayButton(
-                            playing = listeningToGospel && ttsPlaying,
-                            onClick = {
-                                if (listeningToGospel && ttsPlaying) {
-                                    ttsManager.stop(); listeningToGospel = false
-                                } else {
-                                    ttsManager.speakSingle(gospelExcerpt); listeningToGospel = true
-                                }
-                            },
-                            contentDescription = strings("Escuchar el Evangelio", "Listen to the Gospel", "Ouvir o Evangelho"),
-                            tag = "home_gospel_listen"
-                        )
-                    }
-                } else null
-            ) {
-                @Composable
-                fun Reading(reference: String, preview: String?, label: String, lines: Int) {
-                    Text(
-                        text = listOf(label, TextFormat.ranges(reference)).filter { it.isNotBlank() }.joinToString(" · "),
-                        style = styles.footnote,
-                        color = palette.textSecondary
-                    )
-                    if (preview != null) {
-                        Spacer(Modifier.height(4.dp))
-                        Text(
-                            text = guillemets(preview),
-                            style = styles.callout,
-                            color = palette.textPrimary,
-                            maxLines = lines,
-                            overflow = TextOverflow.Ellipsis,
-                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                        )
-                    }
-                }
-                if (hasReadings) {
-                    if (gospelPreview != null) {
-                        Reading(gospelReference, gospelPreview, strings("Evangelio", "Gospel", "Evangelho"), 4)
-                    }
-                    if (firstReadingPreview != null) {
-                        if (gospelPreview != null) Spacer(Modifier.height(14.dp))
-                        Reading(firstReadingReference, firstReadingPreview, strings("Primera lectura", "First reading", "Primeira leitura"), 2)
-                    }
-                } else {
-                    val refs = listOf(firstReadingReference, gospelReference).filter { it.isNotBlank() }
-                    if (refs.isNotEmpty()) {
-                        Text(refs.joinToString(" · ") { TextFormat.ranges(it) }, style = styles.footnote, color = palette.textSecondary)
-                    } else {
-                        val homilyFirstLine = dailyReading.homilyReflection.get(currentLanguage)
-                            .takeIf { it.isNotBlank() }
-                            ?.let { normalizeExcerptQuotes(firstSentenceOf(it), currentLanguage) }
-                        if (!homilyFirstLine.isNullOrBlank()) {
-                            Text(guillemets(homilyFirstLine), style = styles.callout, color = palette.textPrimary)
-                        }
-                    }
-                }
-                Spacer(Modifier.height(18.dp))
-                AppPrimaryCapsule(
-                    label = strings("Leer la Misa", "Read the Mass", "Ler a Missa"),
-                    onClick = onNavigateToMissal,
-                    icon = Icons.Outlined.MenuBook,
-                    fillWidth = false,
-                    tag = "read_mass_full_button"
-                )
-            }
-            Spacer(Modifier.height(14.dp))
-        }
-
-        // Resume the reader's place or open today's reflection.
-        if (meditation != null || resumeReading != null) item {
-            AppListGroup {
-                if (resumeReading != null) {
-                    AppListRow(
-                        title = strings("Seguir leyendo", "Continue reading", "Continuar a ler"),
-                        subtitle = resumeReading,
-                        leadingIcon = Icons.Outlined.Bookmark,
-                        onClick = onNavigateToBible,
-                        modifier = Modifier.testTag("home_continue_reading")
-                    )
-                }
-                if (meditation != null) {
-                    AppListRow(
-                        title = strings("Meditación del día", "Today's reflection", "Meditação do dia"),
-                        leadingIcon = Icons.Outlined.Spa,
-                        trailingText = if (meditationExpanded) strings("Ocultar", "Hide", "Ocultar") else null,
-                        onClick = { meditationExpanded = !meditationExpanded },
-                        modifier = Modifier.testTag("home_continue_row").semantics {
-                            stateDescription = if (meditationExpanded) strings("Expandida", "Expanded", "Expandida")
-                                else strings("Contraída", "Collapsed", "Recolhida")
-                        }
-                    )
-                }
-            }
-            AnimatedVisibility(
-                visible = meditationExpanded && meditation != null,
-                enter = expandVertically(tween(design.motion.mediumMillis, easing = design.motion.standardEasing)) +
-                    fadeIn(tween(design.motion.fastMillis)),
-                exit = shrinkVertically(tween(design.motion.fastMillis, easing = design.motion.standardEasing)) +
-                    fadeOut(tween(design.motion.fastMillis))
-            ) {
-                AppCard(modifier = Modifier.padding(horizontal = gutter).padding(top = 12.dp)) {
-                    Text(
-                        text = meditation.orEmpty(),
-                        style = styles.reading,
-                        color = palette.textPrimary,
-                        modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                    )
-                }
-            }
-            Spacer(Modifier.height(14.dp))
-        }
-
-        // Verse of the day: a quiet pull quote, the screen's devotional core.
+        // Mass of the day, built around the Word: the Gospel in reading type,
+        // the first reading and the reflection as quiet rows, one primary action.
         item {
             AppGlassSurface(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = gutter)
-                    .testTag("verse_of_the_day_card"),
-                contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 22.dp, vertical = 22.dp)
+                    .testTag("daily_mass_card"),
+                onClick = onNavigateToMissal,
+                contentPadding = PaddingValues(design.spacing.cardPadding)
             ) {
                 Column {
                     Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Outlined.FormatQuote, null, tint = palette.textSecondary, modifier = Modifier.size(20.dp))
-                        Spacer(Modifier.width(8.dp))
+                        Icon(Icons.Outlined.AutoStories, null, tint = palette.textPrimary, modifier = Modifier.size(22.dp))
+                        Spacer(Modifier.width(12.dp))
+                        Text(
+                            strings("Misa de hoy", "Today's Mass", "Missa de hoje"),
+                            style = styles.headline,
+                            color = palette.textPrimary
+                        )
+                    }
+                    Spacer(Modifier.height(16.dp))
+                    if (gospelPreview != null) {
+                        Text(
+                            text = listOf(strings("Evangelio", "Gospel", "Evangelho"), TextFormat.ranges(gospelReference))
+                                .filter { it.isNotBlank() }.joinToString(" · "),
+                            style = styles.eyebrow,
+                            color = palette.textSecondary
+                        )
+                        Spacer(Modifier.height(6.dp))
+                        ExcerptText(
+                            text = gospelPreview,
+                            style = styles.reading,
+                            color = palette.textPrimary,
+                            maxLines = 3,
+                            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
+                        )
+                    } else {
+                        val refs = listOf(firstReadingReference, gospelReference).filter { it.isNotBlank() }
+                        if (refs.isNotEmpty()) {
+                            Text(
+                                refs.joinToString(" · ") { TextFormat.ranges(it) },
+                                style = styles.eyebrow,
+                                color = palette.textSecondary
+                            )
+                        } else {
+                            val homilyFirstLine = dailyReading.homilyReflection.get(currentLanguage)
+                                .takeIf { it.isNotBlank() }
+                                ?.let { firstSentenceOf(cleanScripture(it, currentLanguage)) }
+                            if (!homilyFirstLine.isNullOrBlank()) {
+                                ExcerptText(homilyFirstLine, styles.reading, palette.textPrimary, 3)
+                            }
+                        }
+                    }
+
+                    // Quiet rows: first reading (information), reflection (disclosure), resume.
+                    val showFirstRow = gospelPreview != null && firstReadingReference.isNotBlank()
+                    if (showFirstRow || meditation != null || resumeReading != null) Spacer(Modifier.height(14.dp))
+                    if (showFirstRow) {
+                        CardHairline()
+                        Box(Modifier.fillMaxWidth().heightIn(min = 44.dp), contentAlignment = Alignment.CenterStart) {
+                            Text(
+                                text = listOf(strings("Primera lectura", "First reading", "Primeira leitura"), TextFormat.ranges(firstReadingReference))
+                                    .joinToString(" · "),
+                                style = styles.footnote,
+                                color = palette.textSecondary,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        }
+                    }
+                    if (meditation != null) {
+                        CardHairline()
+                        DisclosureRow(
+                            label = strings("Meditación del día", "Today's reflection", "Meditação do dia"),
+                            expanded = meditationExpanded,
+                            onClick = { meditationExpanded = !meditationExpanded },
+                            modifier = Modifier.testTag("home_continue_row").semantics {
+                                stateDescription = if (meditationExpanded) strings("Expandida", "Expanded", "Expandida")
+                                else strings("Contraída", "Collapsed", "Recolhida")
+                            }
+                        )
+                        AnimatedVisibility(
+                            visible = meditationExpanded,
+                            enter = expandVertically(tween(design.motion.mediumMillis, easing = design.motion.standardEasing)) +
+                                fadeIn(tween(design.motion.fastMillis)),
+                            exit = shrinkVertically(tween(design.motion.fastMillis, easing = design.motion.standardEasing)) +
+                                fadeOut(tween(design.motion.fastMillis))
+                        ) {
+                            Text(
+                                text = meditation,
+                                style = styles.reading,
+                                color = palette.textPrimary,
+                                modifier = Modifier.padding(top = 4.dp, bottom = 12.dp).widthIn(max = design.spacing.readingMaxWidth)
+                            )
+                        }
+                    }
+                    if (resumeReading != null) {
+                        CardHairline()
+                        Row(
+                            Modifier
+                                .fillMaxWidth()
+                                .heightIn(min = 52.dp)
+                                .clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null,
+                                    role = Role.Button,
+                                    onClick = onNavigateToBible
+                                )
+                                .testTag("home_continue_reading"),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Icon(Icons.Outlined.Bookmark, null, tint = palette.textPrimary, modifier = Modifier.size(20.dp))
+                            Spacer(Modifier.width(12.dp))
+                            Column(Modifier.weight(1f)) {
+                                Text(
+                                    strings("Seguir leyendo", "Continue reading", "Continuar a ler"),
+                                    style = styles.callout,
+                                    color = palette.textPrimary
+                                )
+                                Text(resumeReading, style = styles.footnote, color = palette.textSecondary)
+                            }
+                            AppChevron(tint = palette.inkQuiet)
+                        }
+                    }
+
+                    // One primary action, with a glass play circle beside it.
+                    Spacer(Modifier.height(16.dp))
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        AppPrimaryCapsule(
+                            label = strings("Leer la Misa", "Read the Mass", "Ler a Missa"),
+                            onClick = onNavigateToMissal,
+                            fillWidth = false,
+                            tag = "read_mass_full_button"
+                        )
+                        if (ttsManager != null && gospelExcerpt != null) {
+                            Spacer(Modifier.width(12.dp))
+                            AppRoundPlayButton(
+                                playing = listeningToGospel && ttsPlaying,
+                                onClick = {
+                                    if (listeningToGospel && ttsPlaying) {
+                                        ttsManager.stop(); listeningToGospel = false
+                                    } else {
+                                        ttsManager.speakSingle(cleanScripture(gospelExcerpt, currentLanguage)); listeningToGospel = true
+                                    }
+                                },
+                                contentDescription = strings("Escuchar el Evangelio", "Listen to the Gospel", "Ouvir o Evangelho"),
+                                tag = "home_gospel_listen"
+                            )
+                        }
+                    }
+                }
+            }
+            Spacer(Modifier.height(ClusterGap))
+        }
+
+        // Verse of the day: a quiet pull quote in the reader face.
+        item {
+            val verseText = remember(dynamicVerse, currentLanguage) {
+                cleanScripture(dynamicVerse.text.get(currentLanguage), currentLanguage)
+            }
+            AppGlassSurface(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = gutter)
+                    .testTag("verse_of_the_day_card"),
+                contentPadding = PaddingValues(design.spacing.cardPadding)
+            ) {
+                Column {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
                         Text(
                             strings("Versículo del día", "Verse of the day", "Versículo do dia"),
-                            style = styles.footnote.copy(fontWeight = FontWeight.Medium),
+                            style = styles.eyebrow,
                             color = palette.textSecondary,
                             modifier = Modifier.weight(1f)
                         )
-                        Text(dynamicVerse.reference, style = styles.footnote, color = palette.textSecondary)
+                        Text(
+                            TextFormat.ranges(scriptureRef(dynamicVerse.reference, currentLanguage)),
+                            style = styles.footnote,
+                            color = palette.textSecondary
+                        )
                     }
-                    Spacer(Modifier.height(14.dp))
+                    Spacer(Modifier.height(12.dp))
                     Text(
-                        text = dynamicVerse.text.get(currentLanguage),
-                        style = styles.reading.copy(fontSize = styles.reading.fontSize * 1.08f, lineHeight = styles.reading.lineHeight * 1.04f),
+                        text = verseText,
+                        style = styles.reading,
                         color = palette.textPrimary,
                         modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                     )
                     val challenge = dynamicVerse.spiritualChallenge.get(currentLanguage)
                     if (challenge.isNotBlank()) {
                         Spacer(Modifier.height(16.dp))
-                        Box(Modifier.fillMaxWidth().height(0.5.dp).background(palette.separator))
+                        CardHairline()
                         Spacer(Modifier.height(14.dp))
-                        Row {
-                            Icon(Icons.Outlined.WbSunny, null, tint = palette.accent, modifier = Modifier.size(18.dp).padding(top = 1.dp))
-                            Spacer(Modifier.width(10.dp))
-                            Text(challenge, style = styles.subhead, color = palette.textSecondary)
-                        }
+                        Text(challenge, style = styles.footnote, color = palette.textSecondary)
                     }
                 }
             }
-            Spacer(Modifier.height(30.dp))
         }
 
-        // The hour's prayer, the next one, and the rule of life.
+        // The hour's prayer and the next one.
         item {
+            Spacer(Modifier.height(SectionLead))
             AppSectionHeader(title = strings("Oración del momento", "Pray now", "Oração do momento"))
             AppListGroup {
-                DailyPrayerRow(currentPrayerSlot)
-                DailyPrayerRow(nextPrayerSlot)
-                AppListRow(
-                    title = strings("Regla de vida", "Rule of life", "Regra de vida"),
-                    leadingIcon = Icons.Outlined.Checklist,
-                    onClick = onNavigateToHabits,
-                    modifier = Modifier.testTag("home_habit_tracker_card")
-                )
+                DailyPrayerRow(currentPrayerSlot, strings("Ahora", "Now", "Agora"))
+                DailyPrayerRow(nextPrayerSlot, strings("Después", "Next", "Depois"))
             }
-            Spacer(Modifier.height(30.dp))
         }
 
         // Today's fidelity: ring summary, quick victory log, monthly view.
         if (dao != null) item {
+            Spacer(Modifier.height(SectionLead))
             FidelityCard(dao = dao, currentLanguage = currentLanguage, onOpenHabits = onNavigateToHabits)
-            Spacer(Modifier.height(30.dp))
         }
 
         // Saint of the day.
@@ -636,6 +625,7 @@ fun HomeScreen(
                 !saintQuote.equals(saintBiography, ignoreCase = true) &&
                 !saintQuote.equals(saintName, ignoreCase = true) &&
                 !saintQuote.equals(saintTitle, ignoreCase = true)
+            Spacer(Modifier.height(SectionLead))
             AppSectionHeader(title = strings("Santo del día", "Saint of the day", "Santo do dia"))
             AppGlassSurface(
                 modifier = Modifier
@@ -664,12 +654,11 @@ fun HomeScreen(
                             Text(saintTitle, style = styles.subhead, color = palette.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
                             Spacer(Modifier.height(10.dp))
                         }
-                        Text(
+                        ExcerptText(
                             text = saintBiography,
                             style = styles.callout,
                             color = palette.textPrimary,
                             maxLines = 5,
-                            overflow = TextOverflow.Ellipsis,
                             modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                         )
                         if (showQuote) {
@@ -679,21 +668,20 @@ fun HomeScreen(
                     }
                 }
             }
-            Spacer(Modifier.height(30.dp))
         }
 
         // Question of the day.
         if (dailyQuestion != null && dailyAnswerFirstLine != null) item {
+            Spacer(Modifier.height(SectionLead))
             AppSectionHeader(title = strings("Pregunta del día", "Question of the day", "Pergunta do dia"))
             AppCard(modifier = Modifier.padding(horizontal = gutter).testTag("home_daily_question")) {
                 Text(dailyQuestion.question.get(currentLanguage), style = styles.title2, color = palette.textPrimary)
                 Spacer(Modifier.height(10.dp))
-                Text(
+                ExcerptText(
                     text = dailyAnswerFirstLine,
                     style = styles.callout,
                     color = palette.textSecondary,
-                    maxLines = 4,
-                    overflow = TextOverflow.Ellipsis,
+                    maxLines = 3,
                     modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                 )
                 Spacer(Modifier.height(18.dp))
@@ -713,20 +701,20 @@ fun HomeScreen(
                     )
                 }
             }
-            Spacer(Modifier.height(30.dp))
         }
 
         // Gateways to the rest of the faith.
         item {
-            data class Gate(val label: String, val icon: androidx.compose.ui.graphics.vector.ImageVector, val onClick: () -> Unit, val tag: String)
+            data class Gate(val label: String, val icon: ImageVector, val onClick: () -> Unit, val tag: String)
             val gates = listOf(
                 Gate(strings("Catecismo", "Catechism", "Catecismo"), Icons.Outlined.MenuBook, onNavigateToCatechism, "home_gate_catechism"),
                 Gate(strings("Iglesias", "Churches", "Igrejas"), Icons.Outlined.Church, onNavigateToChurches, "home_gate_churches"),
-                Gate(strings("Santuarios", "Shrines", "Santuários"), Icons.Outlined.Place, onNavigateToPilgrimage, "home_gate_shrines"),
+                Gate(strings("Santuarios", "Shrines", "Santuários"), Icons.Outlined.Place, onNavigateToShrines, "home_gate_shrines"),
                 Gate(strings("Trivia", "Trivia", "Quiz"), Icons.Outlined.StarOutline, onNavigateToQuiz, "home_gate_trivia"),
                 Gate(strings("Vida interior", "Inner life", "Vida interior"), Icons.Outlined.Spa, onNavigateToSpiritualLife, "home_gate_spiritual"),
                 Gate(strings("Explorar", "Explore", "Explorar"), Icons.Outlined.GridView, onNavigateToMore, "home_more_settings")
             )
+            Spacer(Modifier.height(SectionLead))
             AppSectionHeader(title = strings("Explorar la fe", "Explore the faith", "Explorar a fé"))
             AppGrid(gates, columns = 3) { gate, m ->
                 AppCategoryTile(label = gate.label, icon = gate.icon, onClick = gate.onClick, modifier = m, tag = gate.tag)
@@ -735,84 +723,381 @@ fun HomeScreen(
     }
 }
 
+// ============================================================ small pieces
+
+/** A hairline inside a glass card (the card's own padding supplies the inset). */
+@Composable
+private fun CardHairline() {
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .height(0.5.dp)
+            .background(LocalAppDesign.current.palette.separator)
+    )
+}
+
+/** A tappable row inside a card that shows a rotating chevron. */
+@Composable
+private fun DisclosureRow(
+    label: String,
+    expanded: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val palette = LocalAppDesign.current.palette
+    val styles = LocalAppTextStyles.current
+    Row(
+        modifier
+            .fillMaxWidth()
+            .heightIn(min = 44.dp)
+            .clickable(
+                interactionSource = remember { MutableInteractionSource() },
+                indication = null,
+                role = Role.Button,
+                onClick = onClick
+            ),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(label, style = styles.callout, color = palette.textPrimary, modifier = Modifier.weight(1f))
+        Icon(
+            Icons.Outlined.ExpandMore,
+            contentDescription = null,
+            tint = palette.inkQuiet,
+            modifier = Modifier
+                .size(22.dp)
+                .graphicsLayer { rotationZ = if (expanded) 180f else 0f }
+        )
+    }
+}
+
 /**
- * Frosted-card chrome for [AppCard] on Home: a soft shadow plus a 1dp
- * hairline stroke. `AppCard` (AppleKit) already paints the frosted
- * `groupedSurface` at `design.shapes.card` (20dp in Ive), but its fill is
- * drawn *after* the caller's modifier — so a plain `.border()` passed in
- * would be painted over by that fill. `drawWithContent` strokes after the
- * card's own content instead, so the hairline sits on top at the card's
- * real (gutter-inset) bounds. Radius follows the identity's one card
- * system: 20dp in Ive, 12dp elsewhere.
+ * Text that never ends in the middle of a word: when it would not fit in
+ * [maxLines] it is cut back to the last clause boundary (comma, semicolon,
+ * colon) or word, and closed with an ellipsis. Open guillemets are re-closed.
  */
 @Composable
-private fun Modifier.frostedCardChrome(): Modifier {
+private fun ExcerptText(
+    text: String,
+    style: TextStyle,
+    color: Color,
+    maxLines: Int,
+    modifier: Modifier = Modifier
+) {
+    var budget by remember(text) { mutableIntStateOf((maxLines * 46).coerceAtLeast(60)) }
+    val shown = remember(text, budget) { balanceQuotes(clauseCut(text, budget)) }
+    Text(
+        text = shown,
+        style = style,
+        color = color,
+        maxLines = maxLines,
+        overflow = TextOverflow.Clip,
+        modifier = modifier,
+        onTextLayout = { layout ->
+            if (layout.hasVisualOverflow && budget > 24) {
+                budget = (minOf(budget, shown.length) * 0.88f).toInt()
+            }
+        }
+    )
+}
+
+/** A quote hung off a hairline rule in the margin. One ink: no accent colour. */
+@Composable
+private fun MarginalQuote(text: String) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(IntrinsicSize.Min)
+    ) {
+        Box(
+            Modifier
+                .width(2.dp)
+                .fillMaxHeight()
+                .background(design.palette.inkQuiet)
+        )
+        Column(
+            Modifier
+                .weight(1f)
+                .padding(start = 14.dp)
+                .widthIn(max = design.spacing.readingMaxWidth)
+        ) {
+            Text(text = text, style = styles.quote, color = design.palette.textPrimary)
+        }
+    }
+}
+
+// ============================================================== fidelity
+
+/**
+ * Today's spiritual fidelity from the fixed rule of twelve ([DailyRule], the
+ * same ids and goal as the Habits screen): a ring "N / 12", a designed empty
+ * state, the one-tap "I overcame a temptation" log and the month calendar.
+ */
+@Composable
+private fun FidelityCard(
+    dao: SanctaFidesDao,
+    currentLanguage: AppLanguage,
+    onOpenHabits: () -> Unit
+) {
     val design = LocalAppDesign.current
     val palette = design.palette
-    val radius = if (design.language == DesignLanguage.IVE) 20.dp else 12.dp
-    val width = design.depth.cardBorderWidth.coerceAtLeast(1.dp)
-    return this
-        .shadow(6.dp, design.shapes.card)
-        .drawWithContent {
-            drawContent()
-            drawRoundRect(
-                color = palette.hairline,
-                topLeft = Offset.Zero,
-                size = size,
-                cornerRadius = CornerRadius(radius.toPx()),
-                style = Stroke(width = width.toPx())
+    val styles = LocalAppTextStyles.current
+    val scope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val temptationStore = remember(context) { TemptationStore(context.applicationContext) }
+
+    fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
+    }
+
+    val todayKey = remember { FidelityStore.dateKey(LocalDate.now()) }
+    val completions by dao.getAllCompletions().collectAsState(initial = emptyList())
+    val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
+    var victoryLogged by rememberSaveable { mutableStateOf(false) }
+
+    val ruleCounts = remember(completions) { DailyRule.countsFrom(completions) }
+    val total = DailyRule.size
+    val points = (ruleCounts[todayKey] ?: 0).coerceAtMost(total)
+    val empty = points == 0
+
+    AppSectionHeader(title = strings("Fidelidad de hoy", "Today's fidelity", "Fidelidade de hoje"))
+    AppCard(
+        modifier = Modifier
+            .padding(horizontal = design.spacing.gutter)
+            .testTag("home_fidelity_card")
+    ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            AppProgressRing(
+                progress = points.toFloat() / total,
+                size = 96.dp,
+                stroke = 9.dp
+            ) {
+                Row(verticalAlignment = Alignment.Bottom) {
+                    Text("$points", style = styles.title1, color = palette.textPrimary)
+                    Text(
+                        "/$total",
+                        style = styles.subhead,
+                        color = palette.textSecondary,
+                        modifier = Modifier.padding(bottom = 3.dp)
+                    )
+                }
+            }
+            Spacer(Modifier.width(20.dp))
+            Column(Modifier.weight(1f)) {
+                Text(
+                    text = if (empty) strings("Tu regla de vida", "Your rule of life", "A sua regra de vida")
+                    else strings("Prácticas de hoy", "Today's practices", "Práticas de hoje"),
+                    style = styles.headline,
+                    color = palette.textPrimary,
+                    modifier = Modifier.testTag("home_habit_tracker_card")
+                )
+                Spacer(Modifier.height(2.dp))
+                Text(
+                    text = if (empty) {
+                        strings(
+                            "Aún no has marcado ninguna práctica hoy.",
+                            "You haven't marked any practice yet today.",
+                            "Ainda não marcou nenhuma prática hoje."
+                        )
+                    } else {
+                        strings("$points de $total cumplidas", "$points of $total kept", "$points de $total cumpridas")
+                    },
+                    style = styles.subhead,
+                    color = palette.textSecondary
+                )
+                if (totalVictories > 0) {
+                    Spacer(Modifier.height(2.dp))
+                    Text(
+                        text = strings(
+                            "$totalVictories tentaciones vencidas",
+                            "$totalVictories temptations overcome",
+                            "$totalVictories tentações vencidas"
+                        ),
+                        style = styles.footnote,
+                        color = palette.textSecondary
+                    )
+                }
+                Spacer(Modifier.height(12.dp))
+                if (empty) {
+                    AppSecondaryCapsule(
+                        label = strings("Empezar mi regla", "Start my rule", "Começar a regra"),
+                        onClick = onOpenHabits,
+                        tag = "home_fidelity_open_habits"
+                    )
+                } else {
+                    Row(
+                        Modifier
+                            .heightIn(min = 44.dp)
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null,
+                                role = Role.Button,
+                                onClick = onOpenHabits
+                            )
+                            .testTag("home_fidelity_open_habits"),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            strings("Ver mi regla de vida", "View my rule of life", "Ver a minha regra de vida"),
+                            style = styles.subhead.copy(fontWeight = FontWeight.SemiBold),
+                            color = palette.textPrimary
+                        )
+                        Spacer(Modifier.width(6.dp))
+                        AppChevron(tint = palette.inkQuiet)
+                    }
+                }
+            }
+        }
+        Spacer(Modifier.height(16.dp))
+        AppSecondaryCapsule(
+            label = if (victoryLogged) strings("¡Victoria registrada!", "Victory recorded!", "Vitória registada!")
+            else strings("Vencí una tentación", "I overcame a temptation", "Venci uma tentação"),
+            onClick = {
+                scope.launch {
+                    dao.insertSinOvercomeLog(
+                        SinOvercomeLogEntity(
+                            sinKey = "TEMPTATION",
+                            counterVirtue = "",
+                            prayerUsed = "HAIL_MARY"
+                        )
+                    )
+                    // Same victory, per-day counter for the temptation calendar.
+                    temptationStore.recordVictory()
+                    victoryLogged = true
+                }
+            },
+            fillWidth = true,
+            tag = "home_overcome_temptation_button"
+        )
+        if (victoryLogged) {
+            Text(
+                text = strings("¡Victoria registrada!", "Victory recorded!", "Vitória registada!"),
+                style = styles.caption,
+                color = Color.Transparent,
+                modifier = Modifier.height(1.dp).testTag("home_victory_confirmation")
             )
         }
+        Spacer(Modifier.height(20.dp))
+        CardHairline()
+        Spacer(Modifier.height(16.dp))
+        Text(
+            text = strings("Este mes", "This month", "Este mês"),
+            style = styles.eyebrow,
+            color = palette.textSecondary
+        )
+        Spacer(Modifier.height(8.dp))
+        FidelityCalendar(
+            counts = ruleCounts,
+            currentLanguage = currentLanguage,
+            dailyGoal = DailyRule.size,
+            framed = false
+        )
+    }
+}
+
+// ============================================================ text helpers
+
+/**
+ * Cleans scripture text for display: one pair of guillemets at most (no
+ * doubled «, no outer wrap), no space before punctuation or inside quotes.
+ */
+internal fun cleanScripture(raw: String, language: AppLanguage): String {
+    var t = normalizeExcerptQuotes(raw, language)
+    t = t.replace(Regex("\\s+"), " ").trim()
+    // The outer wrap of the passage is not part of the text.
+    t = t.trimStart('«', '"', '“', ' ')
+    t = t.replace(Regex("«\\s*«+"), "«")
+    t = t.replace(Regex("«\\s+"), "«").replace(Regex("\\s+»"), "»")
+    t = t.replace(Regex("\\s+([.,;:!?…])"), "$1")
+    // A closer left without its opener (the stripped wrap) goes with it.
+    val opens = t.count { it == '«' }
+    var closes = t.count { it == '»' }
+    while (closes > opens && t.endsWith("»")) {
+        t = t.dropLast(1).trimEnd()
+        closes--
+    }
+    return t
+}
+
+/** Appends the closers an excerpt left open. */
+internal fun balanceQuotes(text: String): String {
+    val missing = text.count { it == '«' } - text.count { it == '»' }
+    return if (missing > 0) text + "»".repeat(missing) else text
 }
 
 /**
- * Decodes an asset JPEG down-sampled so its width does not exceed
- * [maxWidthPx] (power-of-two [BitmapFactory.Options.inSampleSize]), so a
- * ~1.7MB photographic hero set never lands full-resolution on memory-
- * constrained devices. Returns null on any failure (missing asset, host
- * without a real decoder in tests) so callers fall back to a plain
- * gradient band instead of crashing.
+ * [text] cut back to [budget] characters at the last clause boundary in its
+ * second half, else at a word, plus an ellipsis; unchanged when it fits.
  */
-private fun decodeSampledBitmap(
-    context: Context,
-    assetPath: String,
-    maxWidthPx: Int = 1080
-): ImageBitmap? = try {
-    val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-    context.assets.open(assetPath).use { BitmapFactory.decodeStream(it, null, bounds) }
-    if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
-        null
-    } else {
-        var sampleSize = 1
-        while (bounds.outWidth / sampleSize > maxWidthPx) sampleSize *= 2
-        val options = BitmapFactory.Options().apply { inSampleSize = sampleSize }
-        val bitmap: Bitmap? = context.assets.open(assetPath).use {
-            BitmapFactory.decodeStream(it, null, options)
-        }
-        bitmap?.asImageBitmap()
+internal fun clauseCut(text: String, budget: Int): String {
+    if (text.length <= budget) return text
+    val head = text.take(budget)
+    val clause = head.indexOfLast { it == ',' || it == ';' || it == ':' || it == '—' }
+    val end = when {
+        clause >= budget / 2 -> clause
+        else -> head.lastIndexOf(' ').takeIf { it > 0 } ?: head.length
     }
-} catch (_: Exception) {
-    null
+    return head.take(end).trimEnd(',', ';', ':', ' ', '—', '-', '«') + "…"
 }
 
-/** Wraps [text] in one pair of « » however the source already quoted it. */
-private fun guillemets(text: String): String =
-    "«" + text.trim().trimStart('«', '"', '“').trimEnd('»', '"', '”').trim() + "»"
-
-/** First sentence of [text]: up to the first sentence-ending punctuation. */
-private fun firstSentenceOf(text: String): String {
+/** First sentence of [text], keeping a closing guillemet that follows its full stop. */
+internal fun firstSentenceOf(text: String): String {
     val trimmed = text.trim()
-    val end = Regex("""[.!?](?=\s|$)""").find(trimmed)?.range?.last
+    val end = Regex("""[.!?]+[»”"’]*(?=\s|$)""").find(trimmed)?.range?.last
     return if (end != null) trimmed.take(end + 1) else trimmed
 }
 
+/** First line of a multi-paragraph answer: its first physical line, cut at the first sentence end. */
+internal fun firstLineOf(text: String): String {
+    val line = text.trim().substringBefore('\n').trim()
+    val end = Regex("""[.!?](?=\s|$)""").find(line)?.range?.last
+    return if (end != null) line.take(end + 1) else line
+}
+
 /**
- * Normalizes quote marks inside a scripture excerpt for display. Spanish
- * (and Portuguese) renderings use « » exclusively, so straight (" ") and
- * curly (“ ”) quotes from the source — e.g. a Lucas gospel passage that
- * mixes them with the « » the card itself adds — are folded to « »,
- * alternating open/close for straight quotes. Other languages keep the
- * source marks. Already-« » passages pass through untouched.
+ * Scripture reference polish: "Salmos 51, 10-12" names one psalm, so it reads
+ * "Salmo 51, 10–12". Ranges take an en dash.
+ */
+internal fun scriptureRef(reference: String, language: AppLanguage): String {
+    var ref = TextFormat.ranges(reference.trim())
+    if (language != AppLanguage.EN) {
+        ref = ref.replace(Regex("^Salmos\\s+(\\d+)(?=\\s*,)"), "Salmo $1")
+    }
+    return ref
+}
+
+/**
+ * Season card detail on one line: the celebration without repeating the
+ * season ("Domingo 32 del Tiempo Ordinario" → "Domingo XXXII") then the rule.
+ */
+internal fun seasonDetail(season: String, celebration: String, rule: String?): String? {
+    val cel = celebration.trim().takeUnless { it.isBlank() || it.equals(season, ignoreCase = true) }
+        ?.let { c ->
+            val stripped = Regex(
+                """\s*(?:del|de la|de|of the|of|do|da|in)?\s*${Regex.escape(season)}""",
+                RegexOption.IGNORE_CASE
+            ).replace(c, "").trim()
+            romanSunday(stripped.ifBlank { c })
+        }
+    return listOfNotNull(cel?.takeIf { it.isNotBlank() }, rule?.trim()?.takeIf { it.isNotBlank() })
+        .joinToString(" · ").ifBlank { null }
+}
+
+/** "Domingo 32" → "Domingo XXXII" (Sundays only; other titles are left as written). */
+private fun romanSunday(text: String): String {
+    val m = Regex("""^(Domingo|Sunday)\s+(\d{1,2})$""", RegexOption.IGNORE_CASE).find(text) ?: return text
+    val n = m.groupValues[2].toInt()
+    return if (n in 1..60) "${m.groupValues[1]} ${TextFormat.roman(n)}" else text
+}
+
+/**
+ * Normalizes quote marks inside a scripture excerpt for display. Spanish and
+ * Portuguese use « » exclusively, so straight (" ") and curly (“ ”) quotes
+ * are folded to « », alternating open/close for straight quotes. Other
+ * languages keep the source marks.
  */
 private fun normalizeExcerptQuotes(text: String, language: AppLanguage): String {
     if (language != AppLanguage.ES && language != AppLanguage.PT) return text
@@ -895,441 +1180,7 @@ private fun stripInlineFeastDate(name: String, feastDate: String): String {
     return trimmed
 }
 
-/**
- * Today's spiritual fidelity: one point per habit completion logged for today
- * (distinct habits kept), the total victories kept in Christ, a one-tap
- * "I overcame a temptation" that writes to the same victory log the Habits
- * screen reads and confirms inline. The generic TEMPTATION key keeps the
- * quick log from inflating any one catalogued vice's count.
- *
- * Daily counter: points are read for today's date only, so the counter
- * resets every new day on its own. Monthly tracker below the card in
- * [FidelityCalendar]: per-date completions from [FidelityStore] with a
- * cumulative monthly total that restarts when the month rolls over.
- */
-@Composable
-private fun FidelityCard(
-    dao: SanctaFidesDao,
-    currentLanguage: AppLanguage,
-    onOpenHabits: () -> Unit
-) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-    val scope = rememberCoroutineScope()
-    val context = LocalContext.current
-    val temptationStore = remember(context) { TemptationStore(context.applicationContext) }
-    // Monthly tracker: per-date completions from the same Room table the
-    // daily points come from, so the two can never disagree.
-    val fidelityStore = remember(dao) { FidelityStore(dao) }
-
-    fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
-        AppLanguage.ES -> es
-        AppLanguage.EN -> en
-        AppLanguage.PT -> pt
-    }
-
-    val todayDateStr = remember {
-        SimpleDateFormat("yyyy-MM-dd", Locale.US).format(Date())
-    }
-    val habits by dao.getAllHabits().collectAsState(initial = emptyList())
-    val todayCompletions by dao.getCompletionsForDate(todayDateStr).collectAsState(initial = emptyList())
-    val fidelityCounts by fidelityStore.counts.collectAsState(initial = emptyMap())
-    val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
-    var victoryLogged by rememberSaveable { mutableStateOf(false) }
-
-    val keptIds = remember(todayCompletions) { todayCompletions.map { it.habitId }.toSet() }
-    val points = keptIds.size
-
-    val total = habits.size
-    AppSectionHeader(title = strings("Fidelidad de hoy", "Today's fidelity", "Fidelidade de hoje"))
-    AppCard(
-        modifier = Modifier
-            .padding(horizontal = design.spacing.gutter)
-            .testTag("home_fidelity_card")
-    ) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            AppProgressRing(
-                progress = if (total > 0) points.toFloat() / total else 0f,
-                size = 104.dp,
-                stroke = 9.dp
-            ) {
-                Row(verticalAlignment = Alignment.Bottom) {
-                    Text("$points", style = styles.title1.copy(fontWeight = FontWeight.Normal), color = palette.ringEnd)
-                    Text("/${total.coerceAtLeast(0)}", style = styles.headline.copy(fontWeight = FontWeight.Normal), color = palette.textSecondary, modifier = Modifier.padding(bottom = 3.dp))
-                }
-            }
-            Spacer(Modifier.width(20.dp))
-            Column(Modifier.weight(1f)) {
-                Text(
-                    text = if (total > 0) strings("Prácticas de hoy", "Today's practices", "Práticas de hoje")
-                        else strings("Tu regla de vida", "Your rule of life", "A sua regra de vida"),
-                    style = styles.headline,
-                    color = palette.textPrimary
-                )
-                Spacer(Modifier.height(4.dp))
-                Text(
-                    text = if (total > 0) {
-                        strings(
-                            "$points de $total cumplidas",
-                            "$points of $total kept",
-                            "$points de $total cumpridas"
-                        )
-                    } else {
-                        strings(
-                            "Aún no hay prácticas en tu regla de vida",
-                            "No practices in your rule of life yet",
-                            "Ainda não há práticas na sua regra de vida"
-                        )
-                    },
-                    style = styles.subhead,
-                    color = palette.textSecondary
-                )
-                if (totalVictories > 0) {
-                    Spacer(Modifier.height(2.dp))
-                    Text(
-                        text = strings(
-                            "$totalVictories tentaciones vencidas",
-                            "$totalVictories temptations overcome",
-                            "$totalVictories tentações vencidas"
-                        ),
-                        style = styles.subhead,
-                        color = palette.textSecondary
-                    )
-                }
-                Spacer(Modifier.height(8.dp))
-                Row(
-                    Modifier
-                        .heightIn(min = 44.dp)
-                        .lumenPress(onOpenHabits, 0.97f)
-                        .testTag("home_fidelity_open_habits"),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        strings("Ver mi regla de vida", "View my rule of life", "Ver a minha regra de vida"),
-                        style = styles.subhead.copy(fontWeight = FontWeight.SemiBold),
-                        color = palette.accent
-                    )
-                    Spacer(Modifier.width(6.dp))
-                    AppChevron(tint = palette.accent)
-                }
-            }
-        }
-        Spacer(Modifier.height(16.dp))
-        AppSecondaryCapsule(
-            label = if (victoryLogged) strings("¡Victoria registrada!", "Victory recorded!", "Vitória registada!")
-                else strings("Vencí una tentación", "I overcame a temptation", "Venci uma tentação"),
-            onClick = {
-                scope.launch {
-                    dao.insertSinOvercomeLog(
-                        SinOvercomeLogEntity(
-                            sinKey = "TEMPTATION",
-                            counterVirtue = "",
-                            prayerUsed = "HAIL_MARY"
-                        )
-                    )
-                    // Same victory, per-day counter for the temptation calendar.
-                    temptationStore.recordVictory()
-                    victoryLogged = true
-                }
-            },
-            icon = Icons.Outlined.TaskAlt,
-            fillWidth = true,
-            tag = "home_overcome_temptation_button"
-        )
-        if (victoryLogged) {
-            Text(
-                text = strings("¡Victoria registrada!", "Victory recorded!", "Vitória registada!"),
-                style = styles.caption,
-                color = Color.Transparent,
-                modifier = Modifier.height(1.dp).testTag("home_victory_confirmation")
-            )
-        }
-        Spacer(Modifier.height(20.dp))
-        Box(Modifier.fillMaxWidth().height(0.5.dp).background(palette.separator))
-        Spacer(Modifier.height(16.dp))
-        Text(
-            text = strings("Este mes", "This month", "Este mês"),
-            style = styles.footnote.copy(fontWeight = FontWeight.Medium),
-            color = palette.textSecondary
-        )
-        Spacer(Modifier.height(8.dp))
-        FidelityCalendar(
-            counts = fidelityCounts,
-            currentLanguage = currentLanguage
-        )
-    }
-}
-
-/**
- * The liturgical season banner, in the Ive reference idiom: a frosted card
- * (translucent `raised` at `design.shapes.card`, 20dp in Ive, with a soft
- * shadow over the warm paper) carrying a pill for the liturgical time — a
- * green dot in the season's own color beside the season name — above the
- * celebration in a serene weight-400 title and any obligation below.
- * Lettering stays in opaque primary/secondary ink for AAA contrast.
- * When [photo] is present (sunrise_mountains.jpg) it heads the card as a
- * cropped strip; when null the banner keeps its existing pill/dot art
- * alone — no layout or tag change either way.
- */
-@Composable
-private fun LiturgicalSeasonBanner(
-    title: String,
-    body: String?,
-    accentColorHex: Long?,
-    modifier: Modifier = Modifier,
-    photo: ImageBitmap? = null
-) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-    val liturgicalColor = accentColorHex?.let { Color(it) } ?: palette.accent
-    val headline = body?.substringBefore('\n')?.takeIf { it.isNotBlank() }
-    val supporting = body?.substringAfter('\n', "")?.takeIf { it.isNotBlank() }
-    Card(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(horizontal = design.spacing.gutter)
-            .shadow(6.dp, design.shapes.card),
-        shape = design.shapes.card,
-        colors = CardDefaults.cardColors(containerColor = palette.raised),
-        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
-        border = BorderStroke(
-            design.depth.cardBorderWidth.coerceAtLeast(1.dp),
-            palette.hairline
-        )
-    ) {
-        Column(
-            modifier = Modifier.padding(design.spacing.cardPadding),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            // Photographic strip (sunrise over mountains, full landscape) heading the banner; the
-            // centre-aligned crop of a landscape with no focal subject cannot
-            // decapitate or crop a subject at the waist — no head to miss.
-            photo?.let { windowPhoto ->
-                Image(
-                    bitmap = windowPhoto,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(128.dp)
-                        .clip(design.shapes.card)
-                        .testTag("liturgical_banner_photo"),
-                    contentScale = ContentScale.Crop,
-                    alignment = Alignment.Center
-                )
-            }
-            // Liturgical-time pill: dot + season name on a tinted capsule.
-            Box(
-                modifier = Modifier
-                    .clip(design.shapes.chip)
-                    .background(palette.accentMuted)
-                    .padding(horizontal = 12.dp, vertical = 6.dp)
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .size(8.dp)
-                            .clip(design.shapes.badge)
-                            .background(liturgicalColor)
-                    )
-                    Text(
-                        text = title,
-                        style = styles.sectionEyebrow,
-                        color = palette.accent,
-                        maxLines = 1
-                    )
-                }
-            }
-            headline?.let {
-                Text(
-                    text = it,
-                    style = styles.rowTitle.copy(fontWeight = FontWeight.W400),
-                    color = palette.textPrimary
-                )
-            }
-            supporting?.let {
-                Text(
-                    text = it,
-                    style = styles.rowSubtitle,
-                    color = palette.textSecondary
-                )
-            }
-        }
-    }
-}
-
-/**
- * Eyebrow line that opens a card, with an optional trailing value. Kept out of
- * [AppSectionHeader] because that component owns the screen gutter and would
- * inset itself a second time inside a card.
- */
-@Composable
-private fun CardHeading(
-    label: String,
-    icon: ImageVector? = null,
-    trailing: String? = null,
-    trailingColor: Color? = null
-) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        if (icon != null) {
-            Icon(
-                imageVector = icon,
-                contentDescription = null,
-                tint = design.palette.accent,
-                modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
-            )
-            Spacer(Modifier.width(8.dp))
-        }
-        Text(
-            text = label.caps(),
-            style = styles.sectionEyebrow,
-            color = design.palette.textSecondary,
-            modifier = Modifier.weight(1f)
-        )
-        if (trailing != null) {
-            Spacer(Modifier.width(12.dp))
-            Text(
-                text = trailing.caps(),
-                style = styles.sectionEyebrow,
-                color = trailingColor ?: design.palette.textSecondary,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis,
-                // Cap the trailing value (e.g. a saint's feast date) so a
-                // long one ellipsizes on one line instead of wrapping or
-                // squeezing the heading label out of the row.
-                modifier = Modifier.widthIn(max = 144.dp)
-            )
-        }
-    }
-}
-
-/**
- * One tonal shortcut tile in the Explore grid. The icon sits in a badge
- * shaped from identity tokens (a circle in Material, square in Vatican),
- * the label wraps to two lines, and the whole tile is a 72dp+ button so
- * the touch target never drops below M3's minimum.
- */
-@Composable
-private fun ShortcutTile(
-    label: String,
-    icon: ImageVector,
-    onClick: () -> Unit,
-    modifier: Modifier = Modifier,
-    trailing: String? = null
-) {
-    val design = LocalAppDesign.current
-    val palette = design.palette
-    val styles = LocalAppTextStyles.current
-    AppCard(
-        modifier = modifier.heightIn(min = 72.dp).frostedCardChrome(),
-        onClick = onClick
-    ) {
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Box(
-                modifier = Modifier
-                    .size(design.decor.rowIconSize * 1.6f)
-                    .clip(design.shapes.badge)
-                    .background(palette.accentMuted),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = null,
-                    tint = palette.accent,
-                    modifier = Modifier.size(design.decor.rowIconSize * 0.8f)
-                )
-            }
-            Spacer(Modifier.width(design.spacing.cardGap))
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = label,
-                    style = styles.rowTitle,
-                    color = palette.textPrimary,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
-                )
-                if (trailing != null) {
-                    Spacer(Modifier.height(design.spacing.cardGap / 2))
-                    Text(
-                        text = trailing,
-                        style = styles.rowSubtitle,
-                        color = palette.textSecondary,
-                        maxLines = 1
-                    )
-                }
-            }
-        }
-    }
-}
-
-/**
- * A quote hung off a rule in the margin. The kit has no pull-quote component,
- * so the rule is drawn from tokens and the voice comes from `styles.quote`,
- * which is a different face in every identity.
- */
-@Composable
-private fun MarginalQuote(text: String, attribution: String? = null) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(IntrinsicSize.Min)
-    ) {
-        Box(
-            Modifier
-                .width(2.dp)
-                .fillMaxHeight()
-                .background(design.palette.accent)
-        )
-        Column(
-            Modifier
-                .weight(1f)
-                .padding(start = design.spacing.iconLabelGap)
-                .widthIn(max = design.spacing.readingMaxWidth)
-        ) {
-            Text(text = text, style = styles.quote, color = design.palette.textPrimary)
-            if (attribution != null) {
-                Spacer(Modifier.height(10.dp))
-                Text(
-                    text = attribution.caps(),
-                    style = styles.sectionEyebrow,
-                    color = design.palette.textSecondary
-                )
-            }
-        }
-    }
-}
-
-/**
- * A badge stating one fact about the liturgical day. The kit's chip is a filter
- * control and demands a click; these are read-only, so they are built from the
- * identity's chip shape, its eyebrow style and a tint.
- */
-/** Tracked capitals where the identity sets its labels that way; as written otherwise. */
-@Composable
-@ReadOnlyComposable
-private fun String.caps(): String =
-    if (LocalAppDesign.current.decor.usesAllCapsLabels) uppercase() else this
-
-/** First line of a multi-paragraph answer: its first physical line, cut at the first sentence end. */
-private fun firstLineOf(text: String): String {
-    val line = text.trim().substringBefore('\n').trim()
-    val end = Regex("""[.!?](?=\s|$)""").find(line)?.range?.last
-    return if (end != null) line.take(end + 1) else line
-}
+// ================================================================ prayers
 
 /** Time-based daily-prayer slot: which prayer the hour calls for. */
 private enum class DailyPrayerSlot {

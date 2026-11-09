@@ -1,68 +1,80 @@
 package com.example.ui.screens
 
-import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.outlined.KeyboardArrowRight
-import androidx.compose.material.icons.outlined.AutoStories
-import androidx.compose.material.icons.outlined.Checklist
 import androidx.compose.material.icons.outlined.Church
-import androidx.compose.material.icons.outlined.Favorite
-import androidx.compose.material.icons.outlined.GridView
-import androidx.compose.material.icons.outlined.Groups
-import androidx.compose.material.icons.outlined.Help
-import androidx.compose.material.icons.outlined.History
-import androidx.compose.material.icons.outlined.HistoryEdu
-import androidx.compose.material.icons.outlined.Home
-import androidx.compose.material.icons.outlined.MenuBook
+import androidx.compose.material.icons.outlined.Collections
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.Newspaper
 import androidx.compose.material.icons.outlined.Place
-import androidx.compose.material.icons.outlined.School
-import androidx.compose.material.icons.outlined.Shield
-import androidx.compose.material.icons.outlined.Spa
-import androidx.compose.material.icons.outlined.Star
 import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.graphics.ColorFilter
+import androidx.compose.ui.graphics.ColorMatrix
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.text.font.FontWeight
+import com.example.BuildConfig
 import com.example.data.models.AppLanguage
+import com.example.data.repository.CatechismOutline
+import com.example.ui.components.ImageCredits
+import com.example.ui.components.ImageCreditsSheet
+import com.example.ui.design.AppChevron
+import com.example.ui.design.AppEdgeToEdge
+import com.example.ui.design.AppHeroHeader
 import com.example.ui.design.AppIconSlot
-import com.example.ui.design.DevotionalGlyphs
-import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppIcons
 import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.lumenGlass
+import com.example.ui.design.lumenPress
+import com.example.ui.design.rememberAssetBitmap
+import com.example.ui.design.rememberFirstAsset
+import com.example.ui.design.rememberHeroMeta
+import com.example.ui.design.softShadow
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import java.text.NumberFormat
+import java.util.Locale
 
 /** One secondary destination as the More screen lists it. */
 data class MoreEntry(
@@ -72,424 +84,439 @@ data class MoreEntry(
     val value: String? = null,
     /** Overrides the slot's glyph, for rows that are settings, not places. */
     val icon: ImageVector? = null,
+    /** Optional one-line description; known destinations carry their own. */
+    val subtitle: String? = null,
     val onOpen: () -> Unit
 )
 
 /** A titled run of [MoreEntry]s. */
 data class MoreSection(val title: String, val entries: List<MoreEntry>)
 
+// Destinations by role. The screen lays itself out from these tags, so it is
+// right whatever grouping the caller sends; anything it does not know keeps
+// its caller's section and still renders (nothing is ever dropped).
+private val StudyTags = listOf(
+    "nav_catechism", "nav_study_doctrine", "nav_study_mary_jesus",
+    "nav_study_history", "nav_questions", "nav_study_orders"
+)
+private val InnerLifeTags = listOf("nav_spiritual", "nav_habits")
+private val ChurchTodayTags = listOf("nav_parishes", "nav_pilgrimage", "nav_churches_news")
+private val SettingsTags = listOf("app_bar_theme_button", "font_settings_button", "app_bar_lang_button")
+
 /**
- * The fifth tab. Everything that does not earn a place in the tab bar is one
- * tap away here, grouped by what the reader is doing rather than listed flat:
- * a tab bar holds five items in iOS and Material alike, and the app has eleven.
+ * Explore — the sixth tab: everything that does not earn a place in the tab
+ * bar, one tap away, with a clear order of weight:
  *
- * Ive treatment, kept inside the shared kit on purpose: the screen paints
- * with nothing but [LocalAppDesign] tokens (warm-paper canvas, spacing, shape
- * via [AppListGroup]) and lets the active identity resolve the frosted grouped
- * surfaces (translucent groupedSurface at the one 20dp card radius in Ive)
- * and the dark palette. No hardcoded colour or dimension, so dark mode is the
- * token's job, not this file's. Titles stay the kit's serene ones:
- * [AppScreenTitle] under a photographic hero band, [AppSectionHeader] over
- * each group.
+ * 1. a quiet hero (Friedrich's meadows) with the "Explorar" title;
+ * 2. **Study** as six art-led cards — the reference's misty card: the
+ *    painting on the trailing side dissolving into glass, the title and a
+ *    one-line promise of what is inside on the leading side, in ink;
+ * 3. **Inner life** and **The Church today** as quiet grouped lists with
+ *    outline glyphs and a footnote of what each holds;
+ * 4. **Settings** (appearance, font, language, image credits) with their
+ *    current values, and the version.
  *
- * Photography (reuse only, `assets/heroes/`): a sunrise band crowns the
- * screen and dissolves into the paper canvas, Doctrine-style, above the
- * title; each named section carries a small 88dp photo strip above its
- * header, matched by title keyword so it follows the section into every
- * language, and a section with no match (Settings, and Estudio — whose
- * stained-glass window strip was removed as a duplicate of the top band)
- * simply gets no strip. The top band carries no text: the kit's
- * [AppScreenTitle] below it is the screen's single "Explorar" title, and
- * each photo strip likewise carries no title — the [AppSectionHeader] under
- * it is its section's single title. All photos are decorative, drawn behind
- * text never over it, decoded once at the top of this screen (never inside
- * a LazyColumn item), down-sampled, and a failed decode falls back to a
- * gradient band so legibility never depends on the photo.
- *
- * Rows are monochrome: each entry gets a distinct outlined glyph in a single
- * tint (palette.textSecondary), never a saturated icon well. The kit's
- * AppListRow paints a per-icon coloured well in the Apple identity, which
- * clashes with the liturgical palette and reuses the same temple glyph for
- * every [AppIconSlot.DOCTRINE] destination; this screen therefore draws its
- * rows directly with one tint and a per-tag glyph, preserving the 48dp
- * floor, the current-value trailing slot, the navigation chevron and every
- * testTag.
+ * Every entry keeps its testTag on its clickable node; the scroll container
+ * keeps `more_screen`.
  */
 @Composable
 fun MoreScreen(
     currentLanguage: AppLanguage,
     sections: List<MoreSection>
 ) {
+    val insets = AppEdgeToEdge()
     val context = LocalContext.current
     val design = LocalAppDesign.current
-    val palette = design.palette
-    val rowMinHeight = maxOf(design.spacing.rowMinHeight, 48.dp)
-
-    // Current values for the Settings rows, read off the tokens so they
-    // follow a theme switch and a light/dark change with no caller rebuild.
-    // e.g. "Material 3 · Oscuro" / "Material 3 · Dark" for Appearance.
-    val appearanceValue = run {
-        val name = design.language.label.get(currentLanguage)
-        val mode = when (currentLanguage) {
-            AppLanguage.ES -> if (design.isDark) "Oscuro" else "Claro"
-            AppLanguage.EN -> if (design.isDark) "Dark" else "Light"
-            AppLanguage.PT -> if (design.isDark) "Escuro" else "Claro"
-        }
-        "$name · $mode"
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    fun pick(es: String, en: String, pt: String) = when (currentLanguage) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
     }
 
-    val titleText = when (currentLanguage) {
-        AppLanguage.ES -> "Explorar"
-        AppLanguage.EN -> "Explore"
-        AppLanguage.PT -> "Explorar"
-    }
+    val all = sections.flatMap { it.entries }
+    val byTag = all.associateBy { it.tag }
+    val known = (StudyTags + InnerLifeTags + ChurchTodayTags + SettingsTags).toSet()
+    val study = StudyTags.mapNotNull { byTag[it] }
+    val innerLife = InnerLifeTags.mapNotNull { byTag[it] }
+    val churchToday = ChurchTodayTags.mapNotNull { byTag[it] }
+    val settings = SettingsTags.mapNotNull { byTag[it] }
+    val leftovers = sections
+        .map { s -> s.copy(entries = s.entries.filter { it.tag !in known }) }
+        .filter { it.entries.isNotEmpty() }
 
-    // Drop empty groups: a header over no rows reads as a broken section
-    // and costs a full section-gap of dead canvas.
-    val visibleSections = sections.filter { it.entries.isNotEmpty() }
+    var showCredits by remember { mutableStateOf(false) }
+    val creditCount = remember { ImageCredits.count(context) }
+    val heroAsset = rememberFirstAsset("heroes/lumen/explore.jpg", "heroes/sunrise_mountains.jpg")
 
-    // Photographic heroes (assets/heroes/), decoded once off the composition
-    // path. Hoisted unconditionally to the top of MoreScreen — never inside
-    // a LazyColumn item or a conditional branch (slot-table crash). Null
-    // (asset missing / decode failure in a test host) draws no photo, so the
-    // gradient fallback and the frosted groups carry the screen alone.
-    val heroPhoto = remember(context) {
-        decodeSampledBitmap(context, "heroes/sunrise_mountains.jpg", maxWidthPx = 1080)
-    }
-    // No church_window_light strip for Estudio: it repeated the top band's
-    // job (the screen already shows two photographs and two titles without
-    // it), so Estudio now goes straight to its section header.
-    val innerLifePhoto = remember(context) {
-        decodeSampledBitmap(context, "heroes/votive_candles.jpg", maxWidthPx = 720)
-    }
-    val placesPhoto = remember(context) {
-        decodeSampledBitmap(context, "heroes/cathedral_dome.jpg", maxWidthPx = 720)
-    }
-    // One photo per visible section, matched by title keyword so it follows
-    // the section across ES/EN/PT; an unmatched section (Settings, Estudio)
-    // gets none.
-    val sectionPhotos = remember(visibleSections, innerLifePhoto, placesPhoto) {
-        visibleSections.map { section ->
-            val t = section.title
-            when {
-                t.contains("Vida interior", ignoreCase = true) ||
-                    t.contains("Inner life", ignoreCase = true) -> innerLifePhoto
-                t.contains("Lugares", ignoreCase = true) ||
-                    t.contains("Places", ignoreCase = true) -> placesPhoto
-                else -> null
-            }
-        }
-    }
+    // Appearance value when the caller sends none: the mode in force.
+    val modeFallback = if (design.isDark) pick("Oscuro", "Dark", "Escuro") else pick("Claro", "Light", "Claro")
 
     LazyColumn(
         Modifier
             .fillMaxSize()
-            .background(palette.canvas)
-            .testTag("more_screen")
+            .testTag("more_screen"),
+        contentPadding = PaddingValues(bottom = insets.calculateBottomPadding() + 24.dp)
     ) {
         item(key = "more_hero") {
-            // Photographic hero: a full-bleed sunrise band dissolving into the
-            // warm paper canvas through a vertical gradient. The serene
-            // screen title rides overlaid low in the faded zone
-            // (Home-style) — no second title, no black scrim.
-            Box(
+            AppHeroHeader(
+                assetPath = heroAsset,
+                title = pick("Explorar", "Explore", "Explorar"),
+                height = 232.dp,
+                titleTag = "more_title",
+                modifier = Modifier.testTag("more_hero_photo")
+            )
+        }
+
+        var sectionIndex = 0
+        fun header(key: String, title: String) {
+            val index = sectionIndex++
+            item(key = "more_header_$key") {
+                if (index > 0) Spacer(Modifier.height(design.spacing.sectionGap - 8.dp))
+                AppSectionHeader(title = title, modifier = Modifier.testTag("more_section_$index"))
+            }
+        }
+
+        if (study.isNotEmpty()) {
+            header("study", pick("Estudio", "Study", "Estudo"))
+            item(key = "more_study_cards") {
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = design.spacing.gutter)
+                        .testTag("more_section_hero_0"),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    study.forEach { entry ->
+                        val info = studyCardInfo(entry.tag, currentLanguage)
+                        StudyCard(
+                            title = info?.title ?: entry.title,
+                            meta = info?.meta ?: entry.subtitle,
+                            spokenTitle = entry.title,
+                            assetPath = info?.art,
+                            onClick = entry.onOpen,
+                            tag = entry.tag
+                        )
+                    }
+                }
+            }
+        }
+
+        if (innerLife.isNotEmpty()) {
+            header("inner", pick("Vida interior", "Inner life", "Vida interior"))
+            item(key = "more_inner") { EntryGroup(innerLife, currentLanguage, modeFallback) }
+        }
+        if (churchToday.isNotEmpty()) {
+            header("church", pick("La Iglesia hoy", "The Church today", "A Igreja hoje"))
+            item(key = "more_church") { EntryGroup(churchToday, currentLanguage, modeFallback) }
+        }
+        leftovers.forEachIndexed { i, section ->
+            header("other_$i", section.title)
+            item(key = "more_other_$i") { EntryGroup(section.entries, currentLanguage, modeFallback) }
+        }
+
+        header("settings", pick("Ajustes", "Settings", "Ajustes"))
+        item(key = "more_settings") {
+            val creditsEntry = MoreEntry(
+                title = pick("Créditos de las imágenes", "Image credits", "Créditos das imagens"),
+                iconSlot = AppIconSlot.MORE,
+                tag = "image_credits_button",
+                value = creditCount.takeIf { it > 0 }?.toString(),
+                icon = Icons.Outlined.Collections,
+                onOpen = { showCredits = true }
+            )
+            EntryGroup(settings + creditsEntry, currentLanguage, modeFallback)
+        }
+        item(key = "more_footer") {
+            Text(
+                text = "Sancta Fides · ${pick("Versión", "Version", "Versão")} ${BuildConfig.VERSION_NAME}",
+                style = styles.footnote,
+                color = p.textSecondary,
+                textAlign = TextAlign.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(220.dp)
-                    .background(palette.canvas)
-                    .testTag("more_hero_photo")
-            ) {
-                val hero = heroPhoto
-                if (hero != null) {
-                    Image(
-                        bitmap = hero,
-                        contentDescription = null,
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .alpha(0.92f),
-                        contentScale = ContentScale.Crop
-                    )
-                } else {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .background(
-                                Brush.verticalGradient(
-                                    listOf(
-                                        palette.accentMuted,
-                                        palette.canvas
-                                    )
-                                )
-                            )
-                    )
-                }
-                // Fade: clear over the upper photo, canvas by the foot of
-                // the band, so the hero dissolves into the page.
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .background(
-                            Brush.verticalGradient(
-                                colors = listOf(
-                                    Color.Transparent,
-                                    palette.canvas
-                                )
-                            )
-                        )
-                )
-                // Light scrim behind the title zone: the title stays
-                // palette.textPrimary, so the photo is lightened to the
-                // paper canvas under it rather than darkened.
-                Box(
-                    modifier = Modifier
-                        .align(Alignment.BottomCenter)
-                        .fillMaxWidth()
-                        .height(160.dp)
-                        .background(
-                            Brush.verticalGradient(
-                                colors = listOf(
-                                    Color.Transparent,
-                                    palette.canvas.copy(alpha = 0.55f),
-                                    palette.canvas.copy(alpha = 0.92f),
-                                    palette.canvas
-                                )
-                            )
-                        )
-                )
-                // Title overlaid at BottomStart with gutter + 24dp vertical
-                // padding, Home-style.
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .align(Alignment.BottomStart)
-                        .padding(
-                            horizontal = design.spacing.gutter,
-                            vertical = 24.dp
-                        ),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(
-                        text = titleText,
-                        style = LocalAppTextStyles.current.screenTitle.copy(fontWeight = FontWeight.W400),
-                        color = palette.textPrimary,
-                        maxLines = 1
-                    )
-                }
-            }
+                    .padding(horizontal = design.spacing.gutter, vertical = 20.dp)
+                    .testTag("more_version")
+            )
         }
-        visibleSections.forEachIndexed { sectionIndex, section ->
-            if (sectionIndex > 0) {
-                item(key = "more_section_gap_$sectionIndex") {
-                    Spacer(Modifier.height(design.spacing.sectionGap))
-                }
-            }
-            item(key = "more_section_$sectionIndex") {
-                // Mini-hero per section: a small clipped photograph above the
-                // header, only where the section has one. No photo means no
-                // strip and no spacer, so an unmatched section leaves no gap.
-                val photo = sectionPhotos.getOrNull(sectionIndex)
-                if (photo != null) {
-                    Box(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = design.spacing.gutter)
-                            .height(88.dp)
-                            .clip(design.shapes.thumbnail)
-                            .testTag("more_section_hero_$sectionIndex")
-                    ) {
-                        Image(
-                            bitmap = photo,
-                            contentDescription = null,
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .alpha(0.92f),
-                            contentScale = ContentScale.Crop
-                        )
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .background(
-                                    Brush.verticalGradient(
-                                        colors = listOf(
-                                            Color.Transparent,
-                                            palette.canvas.copy(alpha = 0.35f)
-                                        )
-                                    )
-                                )
-                        )
-                        Box(
-                            modifier = Modifier
-                                .fillMaxSize()
-                                .background(
-                                    Brush.verticalGradient(
-                                        colors = listOf(
-                                            Color.Transparent,
-                                            Color.Black.copy(alpha = 0.55f)
-                                        )
-                                    )
-                                )
-                        )
-                        // Photo strip carries no title: the section heading
-                        // below (AppSectionHeader) is the single instance,
-                        // so it never repeats in the same 150px window.
-                    }
-                }
-                AppSectionHeader(title = section.title)
-                AppListGroup {
-                    section.entries.forEach { entry ->
-                        val icon = distinctIconFor(entry)
-                        // The trailing slot is the current value, not
-                        // decoration: Font/Language arrive with one from
-                        // the caller; Appearance/Language fall back to
-                        // what this screen can know on its own (the
-                        // identity in force + dark mode, the active
-                        // language) so the row never shows a bare title.
-                        val trailingText = entry.value ?: settingsFallbackValue(
-                            entry = entry,
-                            appearanceValue = appearanceValue,
-                            currentLanguage = currentLanguage
-                        )
-                        // Monochrome row: distinct outlined glyph in
-                        // palette.textSecondary, no saturated well. Keeps
-                        // the 48dp floor, testTag and chevron affordance
-                        // the kit's row provided.
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .heightIn(min = rowMinHeight)
-                                .clickable(onClick = entry.onOpen)
-                                .padding(
-                                    horizontal = design.spacing.gutter,
-                                    vertical = 12.dp
-                                )
-                                .testTag(entry.tag),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(12.dp)
-                        ) {
-                            Icon(
-                                imageVector = icon,
-                                contentDescription = null,
-                                tint = palette.textSecondary,
-                                modifier = Modifier.size(20.dp)
-                            )
-                            Text(
-                                text = entry.title,
-                                color = palette.textPrimary,
-                                style = MaterialTheme.typography.bodyLarge,
-                                maxLines = 2,
-                                modifier = Modifier.weight(1f, fill = true)
-                            )
-                            if (!trailingText.isNullOrBlank()) {
-                                Text(
-                                    text = trailingText,
-                                    color = palette.textSecondary,
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    maxLines = 1,
-                                    modifier = Modifier.widthIn(max = 120.dp)
-                                )
-                            }
-                            Icon(
-                                imageVector = Icons.AutoMirrored.Outlined.KeyboardArrowRight,
-                                contentDescription = null,
-                                tint = palette.textSecondary,
-                                modifier = Modifier.size(20.dp)
-                            )
-                        }
-                    }
-                }
-            }
+    }
+
+    if (showCredits) {
+        ImageCreditsSheet(currentLanguage = currentLanguage, onDismiss = { showCredits = false })
+    }
+}
+
+// ---------------------------------------------------------------- study cards
+
+private data class StudyCardInfo(val art: String, val title: String, val meta: String)
+
+private fun studyCardInfo(tag: String, language: AppLanguage): StudyCardInfo? {
+    fun pick(es: String, en: String, pt: String) = when (language) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
+    }
+    return when (tag) {
+        "nav_catechism" -> {
+            val n = CatechismOutline.totalParagraphs
+            // Spanish and Portuguese leave four-digit numbers unseparated.
+            val count = if (language == AppLanguage.EN) NumberFormat.getIntegerInstance(Locale.US).format(n) else n.toString()
+            StudyCardInfo(
+                "heroes/lumen/catechism.jpg",
+                pick("Catecismo", "Catechism", "Catecismo"),
+                pick("El texto completo: $count puntos", "The full text: $count paragraphs", "O texto completo: $count parágrafos")
+            )
         }
-        item(key = "more_bottom_gap") {
-            Spacer(Modifier.height(design.spacing.contentBottomGap))
-        }
+        "nav_study_doctrine" -> StudyCardInfo(
+            "heroes/lumen/doctrine.jpg",
+            pick("Doctrina", "Doctrine", "Doutrina"),
+            pick("Mandamientos, virtudes y la Didaché", "Commandments, virtues and the Didache", "Mandamentos, virtudes e a Didaché")
+        )
+        "nav_study_mary_jesus" -> StudyCardInfo(
+            "heroes/lumen/mary_jesus.jpg",
+            pick("María y Jesús", "Mary & Jesus", "Maria e Jesus"),
+            pick("Devociones a Nuestra Señora y a Cristo", "Devotions to Our Lady and to Christ", "Devoções a Nossa Senhora e a Cristo")
+        )
+        "nav_study_history" -> StudyCardInfo(
+            "heroes/lumen/history.jpg",
+            pick("Historia", "History", "História"),
+            pick("Concilios, papas y los grandes cismas", "Councils, popes and the great schisms", "Concílios, papas e os grandes cismas")
+        )
+        "nav_questions" -> StudyCardInfo(
+            "heroes/lumen/questions.jpg",
+            pick("101 preguntas", "101 Questions", "101 perguntas"),
+            pick("Sobre la fe católica, con sus fuentes", "On the Catholic faith, with sources", "Sobre a fé católica, com as fontes")
+        )
+        "nav_study_orders" -> StudyCardInfo(
+            "heroes/lumen/orders.jpg",
+            pick("Órdenes y oficios", "Orders & Offices", "Ordens e ofícios"),
+            pick("Órdenes religiosas y oficios de la Iglesia", "Religious orders and Church offices", "Ordens religiosas e ofícios da Igreja")
+        )
+        else -> null
     }
 }
 
 /**
- * One distinct outlined glyph per destination, from the single monochrome
- * line family. Caller-supplied overrides (Settings: Palette/TextFields/
- * Language — all Icons.Outlined in the caller) win; section rows resolve by
- * testTag so the five DOCTRINE-slot entries never reuse the temple glyph;
- * unknown tags fall back to the slot's own outlined glyph, never the active
- * identity's filled/rounded/sharp variant, so every row stays one line weight.
+ * The reference's misty art card: the painting fills the trailing ~70%,
+ * dissolving into opaque glass on the leading side where the title and its
+ * promise sit in ink — legible on any painting, in light and dark.
  */
 @Composable
-private fun distinctIconFor(entry: MoreEntry): ImageVector {
-    entry.icon?.let { return it }
-    return when (entry.tag) {
-        "nav_catechism" -> Icons.Outlined.MenuBook
-        "nav_study_doctrine" -> Icons.Outlined.School
-        "nav_study_mary_jesus" -> Icons.Outlined.Favorite
-        "nav_study_history" -> Icons.Outlined.History
-        "nav_questions" -> Icons.Outlined.Help
-        "nav_study_orders" -> Icons.Outlined.Groups
-        "nav_churches_news" -> Icons.Outlined.Newspaper
-        "nav_habits" -> Icons.Outlined.Checklist
-        "nav_spiritual" -> Icons.Outlined.Spa
-        "nav_parishes" -> Icons.Outlined.Church
-        "nav_pilgrimage" -> Icons.Outlined.Place
-        else -> when (entry.iconSlot) {
-            AppIconSlot.HOME -> Icons.Outlined.Home
-            AppIconSlot.HABITS -> Icons.Outlined.Shield
-            AppIconSlot.BIBLE -> Icons.Outlined.AutoStories
-            AppIconSlot.CATECHISM -> Icons.Outlined.MenuBook
-            AppIconSlot.ROSARY -> DevotionalGlyphs.rosaryOutlined
-            AppIconSlot.PRAYERS -> DevotionalGlyphs.candleOutlined
-            AppIconSlot.PILGRIMAGE -> Icons.Outlined.Place
-            AppIconSlot.PARISH -> Icons.Outlined.Church
-            AppIconSlot.DOCTRINE -> Icons.Outlined.HistoryEdu
-            AppIconSlot.NEWS -> Icons.Outlined.Newspaper
-            AppIconSlot.JOURNAL -> Icons.Outlined.Star
-            AppIconSlot.MORE -> Icons.Outlined.GridView
+private fun StudyCard(
+    title: String,
+    meta: String?,
+    spokenTitle: String,
+    assetPath: String?,
+    onClick: () -> Unit,
+    tag: String
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val p = design.palette
+    val shape = RoundedCornerShape(22.dp)
+    val bitmap = rememberAssetBitmap(assetPath, 900)
+    val focus = rememberHeroMeta(assetPath)
+    // Opaque glass (the translucent glass composited over the canvas), so the
+    // text never depends on what the painting does underneath.
+    val mist = p.groupedSurface
+
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .heightIn(min = 118.dp)
+            .lumenPress(onClick, 0.97f)
+            .softShadow(shape, p.shadow, blur = if (design.isDark) 20.dp else 26.dp, offsetY = if (design.isDark) 4.dp else 8.dp)
+            .clip(shape)
+            .background(mist)
+            .semantics { contentDescription = listOfNotNull(spokenTitle, meta).joinToString(". ") }
+            .testTag(tag)
+    ) {
+        Box(Modifier.matchParentSize()) {
+            if (bitmap != null) {
+                Image(
+                    bitmap = bitmap,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    alignment = focus.alignment,
+                    colorFilter = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0.86f) }),
+                    modifier = Modifier
+                        .fillMaxHeight()
+                        .fillMaxWidth(0.70f)
+                        .align(Alignment.CenterEnd)
+                )
+                // Night: settle the painting so it never glows on the dark canvas.
+                if (design.isDark) {
+                    Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.16f)))
+                } else {
+                    Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.08f)))
+                }
+            }
+            Box(
+                Modifier.fillMaxSize().background(
+                    Brush.horizontalGradient(
+                        0f to mist,
+                        0.42f to mist,
+                        0.56f to mist.copy(alpha = 0.82f),
+                        0.70f to mist.copy(alpha = 0.32f),
+                        0.86f to mist.copy(alpha = 0f)
+                    )
+                )
+            )
+        }
+        Column(
+            Modifier
+                .fillMaxWidth(0.58f)
+                .align(Alignment.CenterStart)
+                .padding(start = design.spacing.cardPadding, end = 4.dp, top = 18.dp, bottom = 18.dp)
+        ) {
+            Text(title, style = styles.title2, color = p.textPrimary, maxLines = 2)
+            if (meta != null) {
+                Spacer(Modifier.height(4.dp))
+                Text(meta, style = styles.subhead, color = p.textSecondary, maxLines = 3)
+            }
+        }
+        // The lit glass edge, drawn over the art.
+        Box(
+            Modifier
+                .matchParentSize()
+                .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), shape)
+        )
+    }
+}
+
+// ----------------------------------------------------------------- list rows
+
+private data class RowInfo(val title: String, val subtitle: String?)
+
+private fun rowInfo(tag: String, language: AppLanguage): RowInfo? {
+    fun pick(es: String, en: String, pt: String) = when (language) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
+    }
+    return when (tag) {
+        "nav_spiritual" -> RowInfo(
+            pick("Vida espiritual", "Spiritual Life", "Vida espiritual"),
+            pick("Diario, Vía Crucis y canto gregoriano", "Journal, Stations and Gregorian chant", "Diário, Via-Sacra e canto gregoriano")
+        )
+        "nav_habits" -> RowInfo(
+            pick("Hábitos y virtudes", "Habits & Virtues", "Hábitos e virtudes"),
+            pick("Tu regla de vida, día a día", "Your rule of life, day by day", "Sua regra de vida, dia a dia")
+        )
+        "nav_parishes" -> RowInfo(
+            pick("Parroquias", "Parishes", "Paróquias"),
+            pick("Misas y confesiones cerca de ti", "Masses and confession near you", "Missas e confissões perto de você")
+        )
+        "nav_pilgrimage" -> RowInfo(
+            pick("Calendario y santuarios", "Calendar & Shrines", "Calendário e santuários"),
+            pick("Días santos y peregrinaciones", "Feast days and pilgrimages", "Dias santos e peregrinações")
+        )
+        "nav_churches_news" -> RowInfo(
+            pick("Noticias", "News", "Notícias"),
+            pick("Lo último de Vatican News", "The latest from Vatican News", "O mais recente do Vatican News")
+        )
+        else -> null
+    }
+}
+
+@Composable
+private fun glyphFor(entry: MoreEntry): ImageVector = when (entry.tag) {
+    "nav_spiritual" -> Icons.Outlined.FavoriteBorder
+    // The same glyph as the Habits tab, so the two read as one place.
+    "nav_habits" -> AppIcons.pair(AppIconSlot.HABITS).first
+    "nav_parishes" -> Icons.Outlined.Church
+    "nav_pilgrimage" -> Icons.Outlined.Place
+    "nav_churches_news" -> Icons.Outlined.Newspaper
+    else -> entry.icon ?: AppIcons.pair(entry.iconSlot).first
+}
+
+/** A glass group of [entries]: outline glyph, title, footnote, value, chevron. */
+@Composable
+private fun EntryGroup(entries: List<MoreEntry>, language: AppLanguage, modeFallback: String) {
+    val design = LocalAppDesign.current
+    val shape = design.shapes.listGroup
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .padding(horizontal = design.spacing.gutter)
+            .lumenGlass(shape)
+            .clip(shape)
+    ) {
+        entries.forEachIndexed { i, entry ->
+            val info = rowInfo(entry.tag, language)
+            EntryRow(
+                icon = glyphFor(entry),
+                title = info?.title ?: entry.title,
+                subtitle = info?.subtitle ?: entry.subtitle,
+                value = entry.value ?: if (entry.tag == "app_bar_theme_button") modeFallback else null,
+                onClick = entry.onOpen,
+                tag = entry.tag,
+                showDivider = i < entries.lastIndex
+            )
         }
     }
 }
 
-/**
- * Decodes an asset JPEG down-sampled so its width does not exceed
- * [maxWidthPx] (power-of-two [BitmapFactory.Options.inSampleSize]), so a
- * photographic hero set never lands full-resolution on memory-constrained
- * devices. Returns null on any failure (missing asset, host without a real
- * decoder in tests) so callers fall back to a plain gradient band instead of
- * crashing.
- */
-private fun decodeSampledBitmap(
-    context: Context,
-    assetPath: String,
-    maxWidthPx: Int = 1080
-): ImageBitmap? = try {
-    val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-    context.assets.open(assetPath).use { BitmapFactory.decodeStream(it, null, bounds) }
-    if (bounds.outWidth <= 0 || bounds.outHeight <= 0) {
-        null
-    } else {
-        var sampleSize = 1
-        while (bounds.outWidth / sampleSize > maxWidthPx) sampleSize *= 2
-        val options = BitmapFactory.Options().apply { inSampleSize = sampleSize }
-        val bitmap: Bitmap? = context.assets.open(assetPath).use {
-            BitmapFactory.decodeStream(it, null, options)
-        }
-        bitmap?.asImageBitmap()
-    }
-} catch (_: Exception) {
-    null
-}
+private val RowInset: Dp = 18.dp
+private val GlyphSize: Dp = 22.dp
+private val GlyphGap: Dp = 16.dp
 
-/**
- * Current-value text for the Settings rows whose caller does not supply one.
- * Only the three settings entries are recognised, by their preserved test
- * tags; destination rows always keep a null trailing slot.
- */
-private fun settingsFallbackValue(
-    entry: MoreEntry,
-    appearanceValue: String,
-    currentLanguage: AppLanguage
-): String? = when (entry.tag) {
-    "app_bar_theme_button" -> appearanceValue
-    "app_bar_lang_button" -> currentLanguage.displayName
-    // Font is caller-supplied (the stored FontChoice label); with no value
-    // there is nothing honest to show, so leave the slot empty rather than
-    // guessing a typeface.
-    "font_settings_button" -> null
-    else -> null
+@Composable
+private fun EntryRow(
+    icon: ImageVector,
+    title: String,
+    subtitle: String?,
+    value: String?,
+    onClick: () -> Unit,
+    tag: String,
+    showDivider: Boolean
+) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val p = design.palette
+    val source = remember { MutableInteractionSource() }
+    val pressed by source.collectIsPressedAsState()
+    val fill by animateColorAsState(
+        if (pressed) p.textPrimary.copy(alpha = 0.06f) else Color.Transparent,
+        if (pressed) tween(0) else tween(design.motion.mediumMillis),
+        label = "exploreRowFill"
+    )
+    Column(Modifier.fillMaxWidth()) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .heightIn(min = if (subtitle != null) 64.dp else design.spacing.rowMinHeight)
+                .background(fill)
+                .clickable(source, indication = null, role = Role.Button, onClick = onClick)
+                .testTag(tag)
+                .padding(horizontal = RowInset, vertical = 11.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(icon, contentDescription = null, tint = p.textPrimary, modifier = Modifier.size(GlyphSize))
+            Spacer(Modifier.width(GlyphGap))
+            Column(Modifier.weight(1f)) {
+                Text(title, style = styles.body, color = p.textPrimary)
+                if (subtitle != null) {
+                    Spacer(Modifier.height(2.dp))
+                    Text(subtitle, style = styles.footnote, color = p.textSecondary)
+                }
+            }
+            if (!value.isNullOrBlank()) {
+                Spacer(Modifier.width(12.dp))
+                Text(value, style = styles.body, color = p.textSecondary, maxLines = 1)
+            }
+            Spacer(Modifier.width(10.dp))
+            AppChevron()
+        }
+        if (showDivider) {
+            Box(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(start = RowInset + GlyphSize + GlyphGap)
+                    .height(0.5.dp)
+                    .background(p.separator)
+            )
+        }
+    }
 }

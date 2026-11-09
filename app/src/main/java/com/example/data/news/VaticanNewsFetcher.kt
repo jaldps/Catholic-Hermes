@@ -16,7 +16,9 @@ data class VaticanNewsItem(
     val title: String,
     val summary: String,
     val link: String,
-    val publishedAt: String
+    val publishedAt: String,
+    /** The story's photo (`media:content`), when the feed carries one. */
+    val imageUrl: String? = null
 )
 
 sealed interface NewsResult {
@@ -90,6 +92,7 @@ class VaticanNewsFetcher(
         var description = ""
         var link = ""
         var date = ""
+        var image = ""
         var current = ""
 
         var event = parser.eventType
@@ -99,7 +102,13 @@ class VaticanNewsFetcher(
                     current = parser.name.orEmpty()
                     if (current.equals("item", ignoreCase = true)) {
                         inItem = true
-                        title = ""; description = ""; link = ""; date = ""
+                        title = ""; description = ""; link = ""; date = ""; image = ""
+                    } else if (inItem && image.isEmpty() &&
+                        (current.equals("media:content", true) || current.equals("media:thumbnail", true))
+                    ) {
+                        val url = parser.getAttributeValue(null, "url").orEmpty().trim()
+                        val medium = parser.getAttributeValue(null, "medium").orEmpty()
+                        if (url.startsWith("http") && (medium.isEmpty() || medium.equals("image", true))) image = url
                     }
                 }
 
@@ -121,7 +130,8 @@ class VaticanNewsFetcher(
                                 title = title.stripHtml(),
                                 summary = description.stripHtml(),
                                 link = link.trim(),
-                                publishedAt = date.trim()
+                                publishedAt = date.trim(),
+                                imageUrl = image.ifEmpty { null }
                             )
                         }
                     }

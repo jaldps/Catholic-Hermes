@@ -1,126 +1,83 @@
 package com.example.ui.components
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.Icon
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.example.data.models.AppLanguage
+import com.example.ui.design.AppSheet
 
+/**
+ * Language as a Lumen sheet: each language under its own name, with its
+ * name in the current language beneath (iOS's language list), an ink check
+ * on the active one. No flags: a flag names a country, not a language.
+ * A tap applies the language and closes the sheet, as before.
+ */
 @Composable
 fun LanguageSelectorDialog(
     currentLanguage: AppLanguage,
     onLanguageSelected: (AppLanguage) -> Unit,
     onDismissRequest: () -> Unit
 ) {
-    AlertDialog(
-        onDismissRequest = onDismissRequest,
-        title = {
-            Text(
-                text = when (currentLanguage) {
-                    AppLanguage.ES -> "Seleccionar Idioma"
-                    AppLanguage.EN -> "Select Language"
-                    AppLanguage.PT -> "Selecionar Idioma"
-                },
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                color = MaterialTheme.colorScheme.primary
-            )
-        },
-        text = {
-            Column(
-                modifier = Modifier.fillMaxWidth(),
-                verticalArrangement = Arrangement.spacedBy(10.dp)
-            ) {
-                AppLanguage.values().forEach { lang ->
-                    val isSelected = lang == currentLanguage
-                    val borderColor = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline.copy(alpha = 0.5f)
-                    val bgColor = if (isSelected) MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f) else MaterialTheme.colorScheme.surface
-
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .testTag("lang_option_${lang.code}")
-                            .clip(RoundedCornerShape(12.dp))
-                            .border(1.dp, borderColor, RoundedCornerShape(12.dp))
-                            .background(bgColor)
-                            .clickable {
-                                onLanguageSelected(lang)
-                                onDismissRequest()
-                            }
-                            .padding(horizontal = 14.dp, vertical = 12.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text(text = lang.flag, fontSize = 22.sp)
-                            Spacer(modifier = Modifier.width(12.dp))
-                            Column {
-                                Text(
-                                    text = lang.displayName,
-                                    fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
-                                    fontSize = 16.sp,
-                                    color = MaterialTheme.colorScheme.onSurface
-                                )
-                                Text(
-                                    text = when (lang) {
-                                        AppLanguage.ES -> "Traducciones católicas oficiales"
-                                        AppLanguage.EN -> "Official Catholic translations"
-                                        AppLanguage.PT -> "Traduções católicas oficiais"
-                                    },
-                                    fontSize = 12.sp,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            }
-                        }
-
-                        if (isSelected) {
-                            Icon(
-                                imageVector = Icons.Default.Check,
-                                contentDescription = "Selected",
-                                tint = MaterialTheme.colorScheme.primary
-                            )
-                        }
-                    }
-                }
-            }
-        },
-        confirmButton = {
-            TextButton(
-                onClick = onDismissRequest,
-                modifier = Modifier.testTag("close_language_dialog")
-            ) {
-                Text(
-                    text = when (currentLanguage) {
-                        AppLanguage.ES -> "Cerrar"
-                        AppLanguage.EN -> "Close"
-                        AppLanguage.PT -> "Fechar"
+    fun pick(es: String, en: String, pt: String) = when (currentLanguage) {
+        AppLanguage.ES -> es
+        AppLanguage.EN -> en
+        AppLanguage.PT -> pt
+    }
+    AppSheet(onDismiss = onDismissRequest, tag = "language_sheet") {
+        LumenSheetHeader(
+            title = pick("Idioma", "Language", "Idioma"),
+            doneLabel = pick("Listo", "Done", "Concluir"),
+            onDone = onDismissRequest,
+            doneTag = "close_language_dialog"
+        )
+        SheetGroup(Modifier.selectableGroup()) {
+            val options = AppLanguage.entries
+            options.forEachIndexed { i, lang ->
+                val localized = localizedName(lang, currentLanguage)
+                SheetChoiceRow(
+                    title = lang.displayName,
+                    // The active language's row already reads in that language.
+                    subtitle = localized.takeIf { it != lang.displayName },
+                    selected = lang == currentLanguage,
+                    onClick = {
+                        onLanguageSelected(lang)
+                        onDismissRequest()
                     },
-                    fontWeight = FontWeight.Bold
+                    showDivider = i < options.lastIndex,
+                    modifier = Modifier.testTag("lang_option_${lang.code}")
                 )
             }
         }
-    )
+        SheetNote(
+            pick(
+                "Las lecturas, las oraciones y el Catecismo usan traducciones católicas oficiales.",
+                "Readings, prayers and the Catechism use official Catholic translations.",
+                "As leituras, as orações e o Catecismo usam traduções católicas oficiais."
+            )
+        )
+        Spacer(Modifier.height(8.dp))
+    }
+}
+
+/** [lang]'s name as written in [ui]. */
+private fun localizedName(lang: AppLanguage, ui: AppLanguage): String = when (ui) {
+    AppLanguage.ES -> when (lang) {
+        AppLanguage.ES -> "Español"
+        AppLanguage.EN -> "Inglés"
+        AppLanguage.PT -> "Portugués"
+    }
+    AppLanguage.EN -> when (lang) {
+        AppLanguage.ES -> "Spanish"
+        AppLanguage.EN -> "English"
+        AppLanguage.PT -> "Portuguese"
+    }
+    AppLanguage.PT -> when (lang) {
+        AppLanguage.ES -> "Espanhol"
+        AppLanguage.EN -> "Inglês"
+        AppLanguage.PT -> "Português"
+    }
 }
