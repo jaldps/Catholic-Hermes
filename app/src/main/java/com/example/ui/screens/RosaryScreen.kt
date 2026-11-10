@@ -151,7 +151,7 @@ private const val HailMarysPerDecade = 10
 
 
 /** One physical bead on the rail; [row] groups the pendant, each decade and the medal. */
-private data class BeadSpec(val kind: BeadKind, val row: Int)
+internal data class BeadSpec(val kind: BeadKind, val row: Int)
 
 /**
  * One thing to pray, said once.
@@ -159,7 +159,7 @@ private data class BeadSpec(val kind: BeadKind, val row: Int)
  * A prayer said N times in a row (three Hail Marys, ten Hail Marys) is N steps,
  * each knowing it is [repetition] of [count], so every bead can be marked.
  */
-private data class GuideStep(
+internal data class GuideStep(
     /** Short name of the prayer: "Hail Mary". */
     val name: String,
     /** What this saying is offered for, or the mystery it announces. */
@@ -186,7 +186,7 @@ private data class GuideStep(
     val narration: String get() = listOfNotNull(leader, meditation).joinToString("\n\n")
 }
 
-private data class GuideSection(
+internal data class GuideSection(
     val index: Int,
     val title: String,
     val subtitle: String,
@@ -194,13 +194,20 @@ private data class GuideSection(
 )
 
 /** A whole devotion: the steps, the beads they sit on, and its parts. */
-private class PrayerGuide(
+internal class PrayerGuide(
     val steps: List<GuideStep>,
     val beads: List<BeadSpec>,
     val sections: List<GuideSection>,
     val decadeCount: Int
-) {
+) : StepMap {
+    override val stepCount: Int get() = steps.size
+    override fun isOptional(index: Int): Boolean = steps[index].optional
+
     fun firstStepOn(bead: Int): Int = steps.indexOfFirst { it.bead == bead }
+
+    /** Moving one step forward from [from] to [to] completes a decade (a firmer haptic tick). */
+    fun finishesDecade(from: Int, to: Int): Boolean =
+        to == from + 1 && steps[to].section != steps[from].section && steps[from].section in 1..decadeCount
 }
 
 private class GuideBuilder {
@@ -221,7 +228,7 @@ private class GuideBuilder {
 }
 
 /** A prayer's two halves: what the leader says and what all answer. */
-private data class Said(val leader: String, val response: String = "")
+internal data class Said(val leader: String, val response: String = "")
 
 // ---------------------------------------------------------------------------
 // Prayer texts, in the traditional wording of each language
@@ -434,7 +441,7 @@ private fun mysteryAnnouncement(
  * bead and ten small for each decade; then the centre medal for the closing.
  * Each Glory Be and Fatima Prayer sits on the last bead of what it closes.
  */
-private fun buildRosaryGuide(mystery: RosaryMystery, creed: Said, lang: AppLanguage): PrayerGuide {
+internal fun buildRosaryGuide(mystery: RosaryMystery, creed: Said, lang: AppLanguage): PrayerGuide {
     val g = GuideBuilder()
     val decadeCount = mystery.decades.size
 
@@ -719,7 +726,7 @@ private fun buildRosaryGuide(mystery: RosaryMystery, creed: Said, lang: AppLangu
  * bead (Our Father), two small (Hail Mary, Creed); five decades of one large and
  * ten small; then the medal for the Holy God and the close.
  */
-private fun buildMercyGuide(
+internal fun buildMercyGuide(
     creed: Said,
     opening: Said?,
     lang: AppLanguage
@@ -898,7 +905,7 @@ private fun buildMercyGuide(
 }
 
 /** "Decade 3 of 5": the part of the devotion a step belongs to. */
-private fun PrayerGuide.whereLine(step: GuideStep, lang: AppLanguage): String = when {
+internal fun PrayerGuide.whereLine(step: GuideStep, lang: AppLanguage): String = when {
     step.section == 0 -> openingTitle(lang)
     step.section <= decadeCount -> lang.pick(
         "Década ${step.section} de $decadeCount",
@@ -909,7 +916,7 @@ private fun PrayerGuide.whereLine(step: GuideStep, lang: AppLanguage): String = 
 }
 
 /** "4 of 10" for a prayer said several times in a row, otherwise nothing. */
-private fun countLine(step: GuideStep, lang: AppLanguage): String? =
+internal fun countLine(step: GuideStep, lang: AppLanguage): String? =
     if (step.count > 1) {
         lang.pick(
             "${step.repetition} de ${step.count}",
@@ -999,20 +1006,20 @@ fun RosaryScreen(
     val view = LocalView.current
     val density = LocalDensity.current
 
-    var selectedTab by rememberSaveable { mutableIntStateOf(initialTab.coerceIn(0, 1)) }
+    // One saved value for everything the person has done (see RosarySession).
+    var session by rememberSaveable(stateSaver = RosarySession.Saver) {
+        mutableStateOf(RosarySession.opening(initialTab))
+    }
     val todayMystery = remember { repository.getTodayRosaryMystery() }
-    var selectedMysteryType by rememberSaveable { mutableStateOf(todayMystery.type) }
-    var rosaryStepIndex by rememberSaveable { mutableIntStateOf(0) }
-    var mercyStepIndex by rememberSaveable { mutableIntStateOf(0) }
+    val selectedMysteryType = session.mysterySet(todayMystery.type)
+    val selectedTab = session.devotion.tab
     // Beginner guidance stays on from step to step once turned on.
-    var instructionsOn by rememberSaveable { mutableStateOf(false) }
+    val instructionsOn = session.instructionsOn
     var sheet by remember { mutableStateOf<RosarySheet?>(null) }
 
     val voiceMode by ttsManager.voiceMode.collectAsState()
     val currentlySpeaking by ttsManager.currentlySpeaking.collectAsState()
-    // Persistent pray-aloud flag: stays true from the play press until the
-    // pause press, so every step change speaks.
-    var narrationActive by remember { mutableStateOf(false) }
+    val engineReady by ttsManager.isReady.collectAsState()
 
     val creedSource = remember { repository.vaticanPrayers.firstOrNull { it.id == "creed" } }
     val mercySource = remember { repository.divineMercySteps }
@@ -1024,9 +1031,9 @@ fun RosaryScreen(
     val rosaryGuide = remember(selectedMysteryType, lang) { buildRosaryGuide(currentMystery, creed, lang) }
     val mercyGuide = remember(lang) { buildMercyGuide(creed, opening, lang) }
 
-    val rosaryIndex = rosaryStepIndex.coerceIn(0, rosaryGuide.steps.lastIndex)
-    val mercyIndex = mercyStepIndex.coerceIn(0, mercyGuide.steps.lastIndex)
-    val isRosary = selectedTab == 0
+    val rosaryIndex = session.rosaryStep.coerceIn(0, rosaryGuide.steps.lastIndex)
+    val mercyIndex = session.mercyStep.coerceIn(0, mercyGuide.steps.lastIndex)
+    val isRosary = session.devotion == Devotion.ROSARY
     val guide = if (isRosary) rosaryGuide else mercyGuide
     val index = if (isRosary) rosaryIndex else mercyIndex
     val step = guide.steps[index]
@@ -1038,39 +1045,49 @@ fun RosaryScreen(
         else ttsManager.speakDialogue(s.leader, s.response)
     }
 
+    // Pray-aloud mode: an explicit state machine (see RosaryNarration.kt).
+    // It stays on from the play press to the pause press, so every step change
+    // speaks; leaving the screen ends it and stops the voice.
+    val narrateCurrent by rememberUpdatedState({ narrate(step) })
+    val narration = remember {
+        NarrationController(object : NarrationSink {
+            override fun speak(target: NarrationTarget) = narrateCurrent()
+            override fun stop() = ttsManager.stop()
+        })
+    }
+    val narrationTarget = NarrationTarget(
+        devotion = session.devotion,
+        mysterySet = selectedMysteryType.takeIf { isRosary },
+        step = index,
+        lang = lang,
+        voice = voiceMode
+    )
     LaunchedEffect(lang) { ttsManager.setLanguage(lang) }
-    LaunchedEffect(narrationActive, selectedTab, selectedMysteryType, lang, rosaryIndex, mercyIndex, voiceMode) {
-        if (narrationActive) narrate(step)
-    }
-    // Leaving the tab ends the recitation instead of orphaning it.
-    val narrating by rememberUpdatedState(narrationActive)
+    LaunchedEffect(narrationTarget) { narration.dispatch(NarrationEvent.TargetChanged(narrationTarget)) }
+    LaunchedEffect(engineReady) { if (engineReady) narration.dispatch(NarrationEvent.EngineReady) }
     DisposableEffect(Unit) {
-        onDispose { if (narrating) ttsManager.stop() }
+        onDispose { narration.dispatch(NarrationEvent.ScreenLeft) }
     }
 
-    fun toggleNarration() {
-        if (narrationActive) {
-            narrationActive = false
-            ttsManager.stop()
-        } else {
-            narrationActive = true
+    fun toggleNarration() = narration.dispatch(NarrationEvent.Toggle(narrationTarget))
+
+    fun dispatch(event: RosaryEvent) {
+        val before = session
+        val after = before.reduce(event, guide, todayMystery.type)
+        if (event is RosaryEvent.Move) {
+            val to = after.step
+            if (to == index) return
+            // A decade completed: a firmer tick than a bead.
+            view.performHapticFeedback(
+                if (guide.finishesDecade(index, to)) {
+                    if (Build.VERSION.SDK_INT >= 30) HapticFeedbackConstants.CONFIRM else HapticFeedbackConstants.LONG_PRESS
+                } else HapticFeedbackConstants.KEYBOARD_TAP
+            )
         }
+        if (after != before) session = after
     }
 
-    fun go(target: Int) {
-        val clamped = target.coerceIn(0, guide.steps.lastIndex)
-        if (clamped == index) return
-        val from = guide.steps[index]
-        val to = guide.steps[clamped]
-        // A decade completed: a firmer tick than a bead.
-        val finishedDecade = clamped == index + 1 && to.section != from.section && from.section in 1..guide.decadeCount
-        view.performHapticFeedback(
-            if (finishedDecade) {
-                if (Build.VERSION.SDK_INT >= 30) HapticFeedbackConstants.CONFIRM else HapticFeedbackConstants.LONG_PRESS
-            } else HapticFeedbackConstants.KEYBOARD_TAP
-        )
-        if (isRosary) rosaryStepIndex = clamped else mercyStepIndex = clamped
-    }
+    fun go(target: Int) = dispatch(RosaryEvent.GoTo(target))
 
     val previousLabel = lang.pick("Anterior", "Back", "Anterior")
     val nextLabel = lang.pick("Siguiente", "Next", "Seguinte")
@@ -1128,7 +1145,7 @@ fun RosaryScreen(
             DevotionSwitch(
                 lang = lang,
                 selected = selectedTab,
-                onSelect = { if (it != selectedTab) selectedTab = it }
+                onSelect = { dispatch(RosaryEvent.SelectDevotion(Devotion.fromTab(it))) }
             )
         }
         val label: @Composable () -> Unit = {
@@ -1180,10 +1197,7 @@ fun RosaryScreen(
                 step = step,
                 count = count,
                 lang = lang,
-                onSkip = {
-                    val next = (index + 1 until guide.steps.size).firstOrNull { !guide.steps[it].optional }
-                    if (next != null) go(next)
-                }
+                onSkip = { dispatch(RosaryEvent.SkipOptional) }
             )
         }
         val prayer: @Composable () -> Unit = {
@@ -1199,10 +1213,10 @@ fun RosaryScreen(
             TransportRow(
                 lang = lang,
                 instructionsOn = instructionsOn,
-                onToggleInstructions = { instructionsOn = !instructionsOn },
+                onToggleInstructions = { dispatch(RosaryEvent.ToggleInstructions) },
                 canGoPrevious = index > 0,
                 canGoNext = index < guide.steps.lastIndex,
-                isPlaying = narrationActive,
+                isPlaying = narration.isSpeaking,
                 onPrevious = { go(index - 1) },
                 onNext = { go(index + 1) },
                 onToggleAudio = {
@@ -1282,10 +1296,7 @@ fun RosaryScreen(
             selected = selectedMysteryType,
             today = todayMystery.type,
             onSelect = { mType ->
-                if (mType != selectedMysteryType) {
-                    selectedMysteryType = mType
-                    rosaryStepIndex = 0
-                }
+                dispatch(RosaryEvent.PickMysterySet(mType))
                 sheet = null
             },
             onDismiss = { sheet = null }

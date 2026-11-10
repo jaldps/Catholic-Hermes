@@ -40,7 +40,7 @@ class ViaCrucisDataTest {
             for ((name, text) in listOf("title" to s.title, "meditation" to s.meditation, "prayer" to s.prayer)) {
                 assertEquals("station ${s.stationNumber} $name", 3, text.all().toSet().size)
             }
-            assertTrue("station ${s.stationNumber} scripture", s.scripture.all().all { Regex("\d").containsMatchIn(it) })
+            assertTrue("station ${s.stationNumber} scripture", s.scripture.all().all { Regex("[0-9]").containsMatchIn(it) })
         }
     }
 }

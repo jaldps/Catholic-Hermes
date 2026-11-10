@@ -189,16 +189,7 @@ class CatholicDataRepository(
     }
 
     // Rosary & Divine Mercy
-    fun getTodayRosaryMystery(): RosaryMystery {
-        val dayOfWeek = Calendar.getInstance().get(Calendar.DAY_OF_WEEK)
-        return when (dayOfWeek) {
-            Calendar.MONDAY, Calendar.SATURDAY -> PrayerAndNovenaData.joyfulMysteries
-            Calendar.TUESDAY, Calendar.FRIDAY -> PrayerAndNovenaData.sorrowfulMysteries
-            Calendar.WEDNESDAY, Calendar.SUNDAY -> PrayerAndNovenaData.gloriousMysteries
-            Calendar.THURSDAY -> PrayerAndNovenaData.luminousMysteries
-            else -> PrayerAndNovenaData.joyfulMysteries
-        }
-    }
+    fun getTodayRosaryMystery(): RosaryMystery = getRosaryMystery(RosaryMysterySchedule.today())
 
     fun getRosaryMystery(type: RosaryMysteryType): RosaryMystery {
         return when (type) {

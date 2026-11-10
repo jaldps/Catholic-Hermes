@@ -50,6 +50,10 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     private var tts: TextToSpeech? = null
     private var isInitialized = false
 
+    /** True once the engine has started; flips at most once. */
+    private val _isReady = MutableStateFlow(false)
+    val isReady: StateFlow<Boolean> = _isReady.asStateFlow()
+
     private val _isPlaying = MutableStateFlow(false)
     val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
 
@@ -67,11 +71,13 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     /** User narration speed multiplier (Settings › Narración). */
     @Volatile private var speedMultiplier: Float = 1.0f
 
-    /** Bumped by [stop]: callbacks from an older recitation are ignored. */
-    @Volatile private var generation = 0
-    /** Full text of each queued utterance id, for [currentlySpeaking]. */
-    private val partOfUtterance = java.util.concurrent.ConcurrentHashMap<String, String>()
-    @Volatile private var lastUtteranceId: String? = null
+    /** Bumped by [stop] so utterance ids are never reused across recitations. */
+    private var generation = 0
+    /**
+     * What is being read, as one state machine; callbacks from an older
+     * recitation find nothing registered and are ignored.
+     */
+    private val tracker = SpeechTracker()
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
 
@@ -99,39 +105,32 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
             isInitialized = true
+            _isReady.value = true
             applyLanguage(requestedLanguage ?: AppLanguage.ES)
             tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
                 override fun onStart(utteranceId: String?) {
                     val id = utteranceId ?: return
-                    mainHandler.post {
-                        if (!id.startsWith("g$generation:")) return@post
-                        _isPlaying.value = true
-                        partOfUtterance[id]?.let { _currentlySpeaking.value = it }
-                    }
+                    mainHandler.post { tracker.onStart(id); publish() }
                 }
 
                 override fun onDone(utteranceId: String?) {
                     val id = utteranceId ?: return
-                    mainHandler.post {
-                        if (id == lastUtteranceId) finished()
-                    }
+                    mainHandler.post { tracker.onDone(id); publish() }
                 }
 
                 @Deprecated("Deprecated in Java")
                 override fun onError(utteranceId: String?) {
                     val id = utteranceId ?: return
-                    mainHandler.post {
-                        if (id == lastUtteranceId || id.startsWith("g$generation:")) finished()
-                    }
+                    mainHandler.post { tracker.onError(id); publish() }
                 }
             })
         }
     }
 
-    private fun finished() {
-        _isPlaying.value = false
-        _currentlySpeaking.value = null
-        lastUtteranceId = null
+    /** Mirrors the tracker into the public flows. */
+    private fun publish() {
+        _isPlaying.value = tracker.playing
+        _currentlySpeaking.value = tracker.speaking
     }
 
     fun setLanguage(lang: AppLanguage) {
@@ -163,8 +162,8 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         if (!isInitialized || text.isBlank()) return
         stop()
         val gen = generation
-        _currentlySpeaking.value = text
-        _isPlaying.value = true
+        tracker.begin(text)
+        publish()
         queuePart(gen, "single", text, female = isFemaleVoice, flush = true)
     }
 
@@ -186,8 +185,8 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         val readResponse = hasResponse && mode != RecitationVoiceMode.MALE
 
         playSacredChime()
-        _isPlaying.value = true
-        _currentlySpeaking.value = if (readLeader) leaderText else responseText
+        tracker.begin(if (readLeader) leaderText else responseText)
+        publish()
 
         // A short silence lets the chime ring before the first word.
         silence(gen, "pre", 350, flush = true)
@@ -208,9 +207,14 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         val chunks = chunk(text, maxInput())
         chunks.forEachIndexed { i, piece ->
             val id = "g$gen:$part:$i"
-            partOfUtterance[id] = text
-            lastUtteranceId = id
-            engine.speak(piece, if (flush && i == 0) TextToSpeech.QUEUE_FLUSH else TextToSpeech.QUEUE_ADD, null, id)
+            tracker.register(id, text)
+            val result = engine.speak(piece, if (flush && i == 0) TextToSpeech.QUEUE_FLUSH else TextToSpeech.QUEUE_ADD, null, id)
+            // A refused request never reports back; without this the narrator
+            // would look busy forever.
+            if (result == TextToSpeech.ERROR) {
+                tracker.onError(id)
+                publish()
+            }
         }
     }
 
@@ -228,11 +232,9 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     fun stop() {
         generation++
         mainHandler.removeCallbacksAndMessages(null)
-        partOfUtterance.clear()
-        lastUtteranceId = null
+        tracker.stop()
         tts?.stop()
-        _isPlaying.value = false
-        _currentlySpeaking.value = null
+        publish()
     }
 
     fun release() {

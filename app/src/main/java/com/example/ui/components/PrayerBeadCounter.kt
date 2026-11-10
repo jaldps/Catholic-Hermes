@@ -211,6 +211,43 @@ private fun restRadius(kind: BeadKind): Float = when (kind) {
 }
 
 /**
+ * The reel's gesture decisions as pure functions (no Compose, no Android),
+ * so what a tap or the end of a drag means can be tested on the JVM.
+ *
+ * The reel is always in one of three phases: resting on its bead, being
+ * dragged (the strand is ahead of the bead in hand), or settling (animating
+ * to it). A drag always ends in exactly one of two ways: the strand lands on
+ * another bead and the parent is asked to go there ([DragEnd.Select]), or it
+ * is pulled back to the bead in hand ([DragEnd.SnapBack]).
+ */
+internal object ReelGesture {
+    sealed interface DragEnd {
+        data class Select(val bead: Int) : DragEnd
+        object SnapBack : DragEnd
+    }
+
+    /** The bead the strand is nearest to at [position]. */
+    fun landed(position: Float, lastIndex: Int): Int = position.roundToInt().coerceIn(0, lastIndex)
+
+    fun onDragEnd(position: Float, target: Int, lastIndex: Int): DragEnd {
+        val landed = landed(position, lastIndex)
+        return if (landed != target) DragEnd.Select(landed) else DragEnd.SnapBack
+    }
+
+    /**
+     * The bead under a tap at [tapX] (px), or null when none is within
+     * [slopDp]. [along] are bead offsets in dp along the strand; the strand
+     * is centred on [centreAlong] at the middle of [widthPx].
+     */
+    fun hit(along: FloatArray, centreAlong: Float, density: Float, widthPx: Float, tapX: Float, slopDp: Float = 22f): Int? {
+        if (along.isEmpty()) return null
+        fun dx(i: Int) = abs((along[i] - centreAlong) * density + widthPx / 2f - tapX)
+        val hit = along.indices.minByOrNull(::dx) ?: return null
+        return hit.takeIf { dx(it) <= slopDp * density }
+    }
+}
+
+/**
  * The bead reel: the whole rosary strung on one gently sagging thread, with
  * the bead in hand always at the centre, larger, and ringed in the liturgical
  * accent. Prayed beads (left) are "told" — filled; beads to come (right) are
@@ -278,13 +315,8 @@ fun BeadReel(
                 .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
                 .pointerInput(beads, widthPx) {
                     detectTapGestures { tap ->
-                        val dpx = density.density
-                        val centreAlong = alongAt(position.value)
-                        val hit = beads.indices.minByOrNull { i ->
-                            abs((along[i] - centreAlong) * dpx + widthPx / 2f - tap.x)
-                        } ?: return@detectTapGestures
-                        val dx = abs((along[hit] - centreAlong) * dpx + widthPx / 2f - tap.x)
-                        if (dx <= 22f * dpx) {
+                        val hit = ReelGesture.hit(along, alongAt(position.value), density.density, widthPx, tap.x)
+                        if (hit != null) {
                             view.performHapticFeedback(HapticFeedbackConstants.CLOCK_TICK)
                             select(hit)
                         }
@@ -295,9 +327,11 @@ fun BeadReel(
                     detectHorizontalDragGestures(
                         onDragStart = { lastTick = position.value.roundToInt() },
                         onDragEnd = {
-                            val landed = position.value.roundToInt().coerceIn(0, beads.lastIndex)
-                            if (landed != target) select(landed)
-                            else scope.launch { position.animateTo(target.toFloat(), spring(0.82f, 300f)) }
+                            when (val end = ReelGesture.onDragEnd(position.value, target, beads.lastIndex)) {
+                                is ReelGesture.DragEnd.Select -> select(end.bead)
+                                ReelGesture.DragEnd.SnapBack ->
+                                    scope.launch { position.animateTo(target.toFloat(), spring(0.82f, 300f)) }
+                            }
                         },
                         onDragCancel = {
                             scope.launch { position.animateTo(target.toFloat(), spring(0.82f, 300f)) }
