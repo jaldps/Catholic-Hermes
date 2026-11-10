@@ -141,7 +141,7 @@ fun AppGlassIconButton(
                 .lumenGlass(CircleShape, strong = true, lifted = !design.isDark),
             contentAlignment = Alignment.Center
         ) {
-            Icon(icon, contentDescription = null, tint = tint ?: p.textPrimary, modifier = Modifier.size(20.dp))
+            Icon(icon, contentDescription = null, tint = tint ?: p.textPrimary, modifier = Modifier.size(24.dp))
         }
     }
 }
@@ -200,9 +200,9 @@ fun AppHeroImage(
             gradeMatrix(0.85f, 0.93f, 0.93f, 0.93f, 18f, 18f, 18f)
         } else if (meta.tone == "light") {
             // About -0.6 EV with a warm cast.
-            gradeMatrix(0.72f, 0.66f, 0.62f, 0.54f, 4f, 2f, -4f)
+            gradeMatrix(0.66f, 0.46f, 0.43f, 0.37f, 3f, 2f, -2f)
         } else {
-            gradeMatrix(0.78f, 0.86f, 0.82f, 0.72f, 3f, 1f, -3f)
+            gradeMatrix(0.74f, 0.74f, 0.70f, 0.62f, 3f, 1f, -3f)
         }
         ColorFilter.colorMatrix(grade)
     }
@@ -264,7 +264,8 @@ fun AppHeroImage(
                         0f to Color.Transparent,
                         fadeStart to Color.Transparent,
                         (fadeStart + span * 0.30f) to p.canvasTop.copy(alpha = 0.55f),
-                        (fadeStart + span * 0.58f) to p.canvasTop.copy(alpha = 0.88f),
+                        (fadeStart + span * 0.58f) to p.canvasTop.copy(alpha = 0.80f),
+                        (fadeStart + span * 0.86f) to p.canvasTop.copy(alpha = 0.94f),
                         1f to p.canvasTop
                     )
                 )
@@ -302,7 +303,8 @@ fun AppHeroHeader(
     Box(
         modifier
             .fillMaxWidth()
-            .height(height + top)
+            // The overlap trim is applied OUTSIDE the fixed height: inside it, the
+            // parent would centre the shorter box and leave a band above the art.
             .then(
                 if (overlap > 0.dp) Modifier.layout { measurable, constraints ->
                     val placeable = measurable.measure(constraints)
@@ -311,11 +313,12 @@ fun AppHeroHeader(
                     }
                 } else Modifier
             )
+            .height(height + top)
     ) {
         AppHeroImage(assetPath, Modifier.fillMaxSize())
         // 40dp glass circle, 44dp target, 8dp below the status bar on the gutter.
         Row(
-            Modifier.align(Alignment.TopEnd).padding(top = top + 6.dp, end = design.spacing.gutter - 2.dp),
+            Modifier.align(Alignment.TopEnd).padding(top = top + 8.dp - 2.dp, end = design.spacing.gutter - 2.dp),
             horizontalArrangement = Arrangement.spacedBy(4.dp),
             verticalAlignment = Alignment.CenterVertically,
             content = actions
@@ -324,7 +327,7 @@ fun AppHeroHeader(
             Modifier
                 .align(Alignment.BottomStart)
                 .padding(horizontal = design.spacing.gutter)
-                .padding(bottom = 18.dp + overlap)
+                .padding(bottom = 16.dp + overlap)
         ) {
             if (eyebrow != null) {
                 Text(
@@ -965,13 +968,14 @@ fun AppProgressRing(
 ) {
     val p = LocalAppDesign.current.palette
     val animated by animateFloatAsState(progress.coerceIn(0f, 1f), tween(600), label = "ring")
+    val trackColor = if (LocalAppDesign.current.isDark) Color.White.copy(alpha = 0.14f) else Color.Black.copy(alpha = 0.09f)
     Box(modifier.size(size), contentAlignment = Alignment.Center) {
         Canvas(Modifier.fillMaxSize()) {
             val w = stroke.toPx()
             val inset = w / 2f
             val arcSize = androidx.compose.ui.geometry.Size(this.size.width - w, this.size.height - w)
             drawArc(
-                color = p.separator.copy(alpha = (p.separator.alpha * 1.6f).coerceAtMost(1f)),
+                color = trackColor,
                 startAngle = 0f, sweepAngle = 360f, useCenter = false,
                 topLeft = androidx.compose.ui.geometry.Offset(inset, inset), size = arcSize,
                 style = Stroke(w)

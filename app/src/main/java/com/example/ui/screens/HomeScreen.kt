@@ -61,10 +61,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.example.data.fidelity.FidelityStore
@@ -408,24 +410,22 @@ fun HomeScreen(
                 contentPadding = PaddingValues(design.spacing.cardPadding)
             ) {
                 Column {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Outlined.AutoStories, null, tint = palette.textPrimary, modifier = Modifier.size(22.dp))
-                        Spacer(Modifier.width(12.dp))
-                        Text(
-                            strings("Misa de hoy", "Today's Mass", "Missa de hoje"),
-                            style = styles.headline,
-                            color = palette.textPrimary
-                        )
+                    val homilyFirstLine = if (gospelPreview == null) {
+                        dailyReading.homilyReflection.get(currentLanguage)
+                            .takeIf { it.isNotBlank() }
+                            ?.let { firstSentenceOf(cleanScripture(it, currentLanguage)) }
+                    } else null
+                    val headerRef = when {
+                        gospelPreview != null ->
+                            listOf(strings("Evangelio", "Gospel", "Evangelho"), TextFormat.ranges(gospelReference))
+                                .filter { it.isNotBlank() }.joinToString(" · ")
+                        else -> listOf(firstReadingReference, gospelReference).filter { it.isNotBlank() }
+                            .joinToString(" · ") { TextFormat.ranges(it) }
+                            .ifBlank { if (!homilyFirstLine.isNullOrBlank()) strings("Reflexión", "Reflection", "Reflexão") else "" }
                     }
-                    Spacer(Modifier.height(16.dp))
+                    CardHeader(strings("Misa de hoy", "Today's Mass", "Missa de hoje"), headerRef)
+                    Spacer(Modifier.height(12.dp))
                     if (gospelPreview != null) {
-                        Text(
-                            text = listOf(strings("Evangelio", "Gospel", "Evangelho"), TextFormat.ranges(gospelReference))
-                                .filter { it.isNotBlank() }.joinToString(" · "),
-                            style = styles.eyebrow,
-                            color = palette.textSecondary
-                        )
-                        Spacer(Modifier.height(6.dp))
                         ExcerptText(
                             text = gospelPreview,
                             style = styles.reading,
@@ -433,22 +433,8 @@ fun HomeScreen(
                             maxLines = 3,
                             modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                         )
-                    } else {
-                        val refs = listOf(firstReadingReference, gospelReference).filter { it.isNotBlank() }
-                        if (refs.isNotEmpty()) {
-                            Text(
-                                refs.joinToString(" · ") { TextFormat.ranges(it) },
-                                style = styles.eyebrow,
-                                color = palette.textSecondary
-                            )
-                        } else {
-                            val homilyFirstLine = dailyReading.homilyReflection.get(currentLanguage)
-                                .takeIf { it.isNotBlank() }
-                                ?.let { firstSentenceOf(cleanScripture(it, currentLanguage)) }
-                            if (!homilyFirstLine.isNullOrBlank()) {
-                                ExcerptText(homilyFirstLine, styles.reading, palette.textPrimary, 3)
-                            }
-                        }
+                    } else if (!homilyFirstLine.isNullOrBlank()) {
+                        ExcerptText(homilyFirstLine, styles.reading, palette.textPrimary, 3)
                     }
 
                     // Quiet rows: first reading (information), reflection (disclosure), resume.
@@ -456,15 +442,29 @@ fun HomeScreen(
                     if (showFirstRow || meditation != null || resumeReading != null) Spacer(Modifier.height(14.dp))
                     if (showFirstRow) {
                         CardHairline()
-                        Box(Modifier.fillMaxWidth().heightIn(min = 44.dp), contentAlignment = Alignment.CenterStart) {
+                        Row(
+                            Modifier
+                                .fillMaxWidth()
+                                .heightIn(min = 44.dp)
+                                .clickable(
+                                    interactionSource = remember { MutableInteractionSource() },
+                                    indication = null,
+                                    role = Role.Button,
+                                    onClick = onNavigateToMissal
+                                )
+                                .testTag("home_first_reading_row"),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
                             Text(
                                 text = listOf(strings("Primera lectura", "First reading", "Primeira leitura"), TextFormat.ranges(firstReadingReference))
                                     .joinToString(" · "),
-                                style = styles.footnote,
-                                color = palette.textSecondary,
+                                style = styles.callout,
+                                color = palette.textPrimary,
                                 maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
+                                overflow = TextOverflow.Ellipsis,
+                                modifier = Modifier.weight(1f)
                             )
+                            AppChevron(tint = palette.inkQuiet)
                         }
                     }
                     if (meditation != null) {
@@ -562,35 +562,26 @@ fun HomeScreen(
                     .fillMaxWidth()
                     .padding(horizontal = gutter)
                     .testTag("verse_of_the_day_card"),
+                onClick = onNavigateToBible,
                 contentPadding = PaddingValues(design.spacing.cardPadding)
             ) {
                 Column {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text(
-                            strings("Versículo del día", "Verse of the day", "Versículo do dia"),
-                            style = styles.eyebrow,
-                            color = palette.textSecondary,
-                            modifier = Modifier.weight(1f)
-                        )
-                        Text(
-                            TextFormat.ranges(scriptureRef(dynamicVerse.reference, currentLanguage)),
-                            style = styles.footnote,
-                            color = palette.textSecondary
-                        )
-                    }
-                    Spacer(Modifier.height(12.dp))
-                    Text(
+                    CardHeader(
+                        strings("Versículo del día", "Verse of the day", "Versículo do dia"),
+                        TextFormat.ranges(scriptureRef(dynamicVerse.reference, currentLanguage))
+                    )
+                    Spacer(Modifier.height(10.dp))
+                    ExcerptText(
                         text = verseText,
                         style = styles.reading,
                         color = palette.textPrimary,
+                        maxLines = 4,
                         modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                     )
                     val challenge = dynamicVerse.spiritualChallenge.get(currentLanguage)
                     if (challenge.isNotBlank()) {
-                        Spacer(Modifier.height(16.dp))
-                        CardHairline()
-                        Spacer(Modifier.height(14.dp))
-                        Text(challenge, style = styles.footnote, color = palette.textSecondary)
+                        Spacer(Modifier.height(10.dp))
+                        ExcerptText(challenge, styles.footnote, palette.textSecondary, 1)
                     }
                 }
             }
@@ -724,6 +715,36 @@ fun HomeScreen(
 }
 
 // ============================================================ small pieces
+
+/**
+ * The one card-header pattern: the title (headline) on the left, its reference
+ * (footnote, secondary ink) on the right, on one baseline. No icon.
+ */
+@Composable
+private fun CardHeader(title: String, reference: String) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Bottom) {
+        Text(
+            title,
+            style = styles.headline,
+            color = design.palette.textPrimary,
+            modifier = Modifier.semantics { heading() }
+        )
+        if (reference.isNotBlank()) {
+            Spacer(Modifier.width(12.dp))
+            Text(
+                reference,
+                style = styles.footnote,
+                color = design.palette.textSecondary,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                textAlign = TextAlign.End,
+                modifier = Modifier.weight(1f).padding(bottom = 1.dp)
+            )
+        }
+    }
+}
 
 /** A hairline inside a glass card (the card's own padding supplies the inset). */
 @Composable
@@ -873,7 +894,7 @@ private fun FidelityCard(
             AppProgressRing(
                 progress = points.toFloat() / total,
                 size = 96.dp,
-                stroke = 9.dp
+                stroke = 7.dp
             ) {
                 Row(verticalAlignment = Alignment.Bottom) {
                     Text("$points", style = styles.title1, color = palette.textPrimary)
@@ -890,7 +911,7 @@ private fun FidelityCard(
                 Text(
                     text = if (empty) strings("Tu regla de vida", "Your rule of life", "A sua regra de vida")
                     else strings("Prácticas de hoy", "Today's practices", "Práticas de hoje"),
-                    style = styles.headline,
+                    style = styles.headline.copy(fontWeight = FontWeight.Medium),
                     color = palette.textPrimary,
                     modifier = Modifier.testTag("home_habit_tracker_card")
                 )
@@ -1005,7 +1026,7 @@ private fun FidelityCard(
  * doubled «, no outer wrap), no space before punctuation or inside quotes.
  */
 internal fun cleanScripture(raw: String, language: AppLanguage): String {
-    var t = normalizeExcerptQuotes(raw, language)
+    var t = normalizeExcerptQuotes(raw, language).replace("...", "…").replace(" …", "…")
     t = t.replace(Regex("\\s+"), " ").trim()
     // The outer wrap of the passage is not part of the text.
     t = t.trimStart('«', '"', '“', ' ')

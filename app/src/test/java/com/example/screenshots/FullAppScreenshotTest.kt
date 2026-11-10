@@ -155,6 +155,10 @@ class FullAppScreenshotTest {
                     renderApp = true
                 }
                 compose.waitForIdle()
+                // Bundled art decodes on Dispatchers.IO: give it time to land so a
+                // cold cache never captures the canvas without its hero.
+                Thread.sleep(2500)
+                compose.waitForIdle()
                 compose.runOnIdle {
                     val view = appComposeView()
                     // Keep custom viewport dimensions through any subsequent

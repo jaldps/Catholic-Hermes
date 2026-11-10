@@ -28,35 +28,35 @@ internal object DevotionalGlyphs {
     }
 
     /**
-     * A rosary: a loop of beads open at the bottom, a medal, and a Latin
-     * cross hanging from it (the classic chaplet silhouette, so it never reads
-     * as a magnifier). Strokes match Material's outlined weight.
+     * A rosary: a loop of beads open at the bottom, two beads on a short
+     * stem and a Latin crucifix hanging from it. Drawn inside a 2dp margin so
+     * it carries the same optical size as Material's outlined glyphs, with a
+     * 1.5 stroke for the cross.
      */
     private fun rosary(name: String, filled: Boolean, sharp: Boolean): ImageVector =
         ImageVector.Builder(name, 24.dp, 24.dp, 24f, 24f).apply {
             val cx = 12f
-            val cy = 7.6f
-            val r = 5.4f
-            val beadR = if (filled) 1.5f else 1.25f
+            val cy = 6.9f
+            val r = 4.7f
+            val beadR = if (filled) 1.1f else 0.95f
             val ink = SolidColor(Color.Black)
-            val count = 9
-            val gap = Math.toRadians(24.0)
+            val count = 10
+            val gap = Math.toRadians(30.0)
             path(fill = ink) {
                 for (k in 0 until count) {
                     val t = Math.PI / 2 + gap + (2 * Math.PI - 2 * gap) * k / (count - 1)
                     circle(cx + r * cos(t).toFloat(), cy + r * sin(t).toFloat(), beadR)
                 }
+                // Two beads of the stem that joins the loop to the crucifix.
+                circle(cx, cy + r + 0.9f, beadR)
             }
             val join = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
             val cap = if (sharp) StrokeCap.Butt else StrokeCap.Round
-            val w = if (filled) 2.2f else 1.8f
-            // The medal that joins the loop to the cross.
-            if (filled) path(fill = ink) { circle(cx, cy + r + 1.7f, 1.35f) }
-            else path(stroke = ink, strokeLineWidth = 1.5f) { circle(cx, cy + r + 1.7f, 1.1f) }
-            // The cross.
+            val w = if (filled) 2.0f else 1.5f
+            // The crucifix.
             path(stroke = ink, strokeLineWidth = w, strokeLineCap = cap, strokeLineJoin = join) {
-                moveTo(cx, cy + r + 3.4f); lineTo(cx, 22.8f)
-                moveTo(cx - 2.5f, 18.4f); lineTo(cx + 2.5f, 18.4f)
+                moveTo(cx, cy + r + 2.4f); lineTo(cx, 21.8f)
+                moveTo(cx - 3.1f, 15.6f); lineTo(cx + 3.1f, 15.6f)
             }
         }.build()
 
@@ -72,12 +72,12 @@ internal object DevotionalGlyphs {
                 close()
             }
             if (filled) path(fill = ink, pathBuilder = sun)
-            else path(stroke = ink, strokeLineWidth = 1.8f, strokeLineCap = cap, strokeLineJoin = join, pathBuilder = sun)
-            path(stroke = ink, strokeLineWidth = 1.8f, strokeLineCap = cap) {
-                moveTo(3f, 19.5f); lineTo(21f, 19.5f)
-                moveTo(12f, 4f); lineTo(12f, 6.2f)
-                moveTo(4.7f, 8.9f); lineTo(6.3f, 10.4f)
-                moveTo(19.3f, 8.9f); lineTo(17.7f, 10.4f)
+            else path(stroke = ink, strokeLineWidth = 1.5f, strokeLineCap = cap, strokeLineJoin = join, pathBuilder = sun)
+            path(stroke = ink, strokeLineWidth = 1.5f, strokeLineCap = cap) {
+                moveTo(3.5f, 19f); lineTo(20.5f, 19f)
+                moveTo(12f, 4.2f); lineTo(12f, 6.4f)
+                moveTo(5.2f, 9.2f); lineTo(6.7f, 10.7f)
+                moveTo(18.8f, 9.2f); lineTo(17.3f, 10.7f)
             }
         }.build()
 

@@ -164,8 +164,8 @@ object LumenKit : AppKit {
                         // canvas over 20dp above the dock and is quiet behind it, so
                         // nothing ghosts through the bar.
                         if (!chrome.dockHidden) {
-                            val total = bottom + 20.dp
-                            val lift = 20.dp / total
+                            val total = bottom + 24.dp
+                            val lift = 24.dp / total
                             Box(
                                 Modifier
                                     .align(Alignment.BottomCenter)
@@ -540,7 +540,7 @@ object LumenKit : AppKit {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 if (leadingIcon != null) {
-                    Icon(leadingIcon, null, tint = if (selected) scheme.primary else p.textPrimary, modifier = Modifier.size(22.dp))
+                    Icon(leadingIcon, null, tint = if (selected) scheme.primary else p.textPrimary, modifier = Modifier.size(24.dp))
                     Spacer(Modifier.width(16.dp))
                 }
                 Column(Modifier.weight(1f)) {
