@@ -111,6 +111,7 @@ import com.example.ui.design.AppConfirmDialog
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppGlassIconButton
+import com.example.ui.design.AppHeroHeader
 import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppGrid
 import com.example.ui.design.AppGroupedRow
@@ -350,7 +351,13 @@ fun PrayersAndNovenasScreen(
     // The tab root's title and view switcher, as the first rows of each list.
     val header: LazyListScope.() -> Unit = {
         item(key = "prayers_screen_title") {
-            AppLargeTitleHeader(title = currentLanguage.pick("Oraciones", "Prayers", "Orações")) {
+            AppHeroHeader(
+                assetPath = "heroes/lumen/prayers_lily.jpg",
+                title = currentLanguage.pick("Oraciones", "Prayers", "Orações"),
+                eyebrow = currentLanguage.pick("Ora sin cesar", "Pray without ceasing", "Orai sem cessar"),
+                height = 260.dp,
+                titleTag = "prayers_title"
+            ) {
                 if (selectedTab != 2) {
                     val open = if (selectedTab == 0) prayerSearchOpen else novenaSearchOpen
                     AppGlassIconButton(
@@ -365,6 +372,7 @@ fun PrayersAndNovenasScreen(
                                 if (open) novenaSearchQuery = ""
                             }
                         },
+                        onImage = true,
                         tag = "prayers_search_toggle"
                     )
                 }

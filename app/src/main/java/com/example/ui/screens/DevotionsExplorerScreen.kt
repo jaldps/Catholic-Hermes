@@ -35,6 +35,7 @@ import com.example.data.models.MarianApparition
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppFilterChips
+import com.example.ui.design.AppFilterMenu
 import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppSearchBar
 import com.example.ui.design.AppSecondaryCapsule
@@ -151,11 +152,12 @@ internal fun DevotionsExplorerScreen(
                 tag = "devotions_search_input"
             )
             Spacer(Modifier.height(12.dp))
-            AppFilterChips(
+            AppFilterMenu(
+                prefix = language.tr("Región", "Region", "Região"),
                 options = regionKeys.map { regionLabel(it, language) },
                 selectedIndex = regionIndex,
                 onSelect = { region = regionKeys[it] },
-                modifier = Modifier.testTag("devotions_region_picker")
+                tag = "devotions_region_picker"
             )
         }
 

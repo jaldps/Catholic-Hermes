@@ -15,6 +15,7 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -1548,15 +1549,19 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, onSelect: (Int) -> 
         val labels = if (needed <= room) full else short
         val shape = RoundedCornerShape(percent = 50)
         Row(
+            // Fixed dark track: this control always sits over the painting, in light and dark mode,
+            // so white labels keep >= 4.5:1 whatever the art underneath.
             Modifier
-                .lumenGlass(shape, strong = true)
+                .clip(shape)
+                .background(Color.Black.copy(alpha = 0.62f))
+                .border(1.dp, Color.White.copy(alpha = 0.22f), shape)
                 .padding(4.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             labels.forEachIndexed { i, text ->
                 val isSelected = i == selected
                 val thumb by animateColorAsState(
-                    if (isSelected) (if (design.isDark) p.textPrimary.copy(alpha = 0.16f) else p.glassStrong.copy(alpha = 1f)) else Color.Transparent,
+                    if (isSelected) Color.White.copy(alpha = 0.96f) else Color.Transparent,
                     tween(200), label = "devotion"
                 )
                 Box(
@@ -1573,7 +1578,7 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, onSelect: (Int) -> 
                     Text(
                         text,
                         style = style.copy(fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium),
-                        color = if (isSelected) p.textPrimary else p.textSecondary,
+                        color = if (isSelected) Color(0xFF111111) else Color.White.copy(alpha = 0.94f),
                         maxLines = 1
                     )
                 }

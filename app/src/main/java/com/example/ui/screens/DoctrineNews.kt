@@ -88,69 +88,18 @@ internal fun ChurchesNewsRoot(
     repository: CatholicDataRepository,
     language: AppLanguage,
     spec: RootSpec,
-    initialSection: Int,
     newsLoader: suspend (AppLanguage) -> NewsResult,
     nav: DoctrineNav
 ) {
     val design = LocalAppDesign.current
     val state = rememberLazyListState()
     val context = LocalContext.current
-    // 0 = news, 1 = church directory.
-    var section by rememberSaveable { mutableStateOf(initialSection.coerceIn(0, 1)) }
     var retry by rememberSaveable { mutableStateOf(0) }
-
-    var query by rememberSaveable { mutableStateOf("") }
-    var kind by rememberSaveable { mutableStateOf(0) }
-    var country by rememberSaveable { mutableStateOf(ANY_PLACE) }
-    var regionSel by rememberSaveable { mutableStateOf(ANY_PLACE) }
-    var city by rememberSaveable { mutableStateOf(ANY_PLACE) }
 
     val news by produceState<NewsResult?>(initialValue = null, language, retry) {
         value = null
         value = newsLoader(language)
     }
-
-    val parishes = repository.nearbyParishes
-    val allCountries = remember(repository) {
-        listOf(ANY_PLACE) + parishes.map { it.country }.filter { it.isNotBlank() }.distinct().sorted()
-    }
-    val availableRegions = remember(country) {
-        val scoped = if (country == ANY_PLACE) parishes else parishes.filter { it.country == country }
-        listOf(ANY_PLACE) + scoped.map { it.stateOrRegion }.filter { it.isNotBlank() }.distinct().sorted()
-    }
-    val availableCities = remember(country, regionSel) {
-        var list = parishes
-        if (country != ANY_PLACE) list = list.filter { it.country == country }
-        if (regionSel != ANY_PLACE) list = list.filter { it.stateOrRegion == regionSel }
-        listOf(ANY_PLACE) + list.map { it.city }.filter { it.isNotBlank() }.distinct().sorted()
-    }
-    LaunchedEffect(country) {
-        if (regionSel !in availableRegions) regionSel = ANY_PLACE
-        if (city !in availableCities) city = ANY_PLACE
-    }
-    LaunchedEffect(regionSel) { if (city !in availableCities) city = ANY_PLACE }
-
-    val filtered = remember(query, kind, country, regionSel, city, language, parishes) {
-        parishes.filter { parish ->
-            val matchesQuery = parish.name.contains(query, true) || parish.diocese.contains(query, true) ||
-                parish.address.contains(query, true) || parish.city.contains(query, true) ||
-                parish.country.contains(query, true) ||
-                ParishScheduleText.country(parish.country, language).contains(query, true)
-            val matchesPlace = (country == ANY_PLACE || parish.country == country) &&
-                (regionSel == ANY_PLACE || parish.stateOrRegion == regionSel) &&
-                (city == ANY_PLACE || parish.city == city)
-            // These read the bundled directory's own wording, not anything shown to the reader.
-            val matchesKind = when (kind) {
-                1 -> !parish.confessionTimes.contains("No disponible", true)
-                2 -> parish.isPerpetualAdoration || parish.adorationTimes.contains("24", true) ||
-                    parish.adorationTimes.contains("Perpetua", true) || parish.adorationTimes.contains("Jueves", true)
-                3 -> listOf("Catedral", "Basílica", "Cathedral", "Cathédrale", "Basilica").any { parish.name.contains(it, true) }
-                else -> true
-            }
-            matchesQuery && matchesPlace && matchesKind
-        }
-    }
-    val anyLabel = language.tr("Todos", "All", "Todos")
 
     LazyColumn(
         state = state,
@@ -158,138 +107,9 @@ internal fun ChurchesNewsRoot(
         contentPadding = PaddingValues(bottom = LocalBottomPad.current)
     ) {
         item(key = "hero", contentType = "hero") { RootHeader(spec) }
-        item(key = "tabs") {
-            Spacer(Modifier.height(4.dp))
-            AppSegmentedTabs(
-                options = listOf(
-                    language.tr("Noticias", "News", "Notícias"),
-                    language.tr("Iglesias", "Churches", "Igrejas")
-                ),
-                selectedIndex = section,
-                onSelect = { section = it },
-                modifier = Modifier.testTag("churches_news_tabs")
-            )
-            Spacer(Modifier.height(20.dp))
-        }
-
-        if (section == 0) {
-            newsItems(news, language, onRetry = { retry++ }, onOpenSite = { context.openUri("https://www.vaticannews.va") }) { link ->
-                context.openUri(link)
-            }
-        } else {
-            item(key = "search") {
-                AppSearchBar(
-                    value = query,
-                    onValueChange = { query = it },
-                    placeholder = language.tr("Nombre, ciudad o diócesis", "Name, city or diocese", "Nome, cidade ou diocese"),
-                    tag = "parish_search_input"
-                )
-                Spacer(Modifier.height(12.dp))
-                AppFilterChips(
-                    options = listOf(
-                        language.tr("Todas", "All", "Todas"),
-                        language.tr("Con confesiones", "With confessions", "Com confissões"),
-                        language.tr("Con adoración", "With adoration", "Com adoração"),
-                        language.tr("Catedrales y basílicas", "Cathedrals & basilicas", "Catedrais e basílicas")
-                    ),
-                    selectedIndex = kind,
-                    onSelect = { kind = it },
-                    modifier = Modifier.testTag("parish_kind_picker")
-                )
-                Spacer(Modifier.height(16.dp))
-                AppListGroup {
-                    MenuPickerRow(
-                        title = language.tr("País", "Country", "País"),
-                        options = allCountries.map {
-                            it to if (it == ANY_PLACE) anyLabel else ParishScheduleText.country(it, language)
-                        },
-                        selected = country,
-                        onSelect = { country = it; regionSel = ANY_PLACE; city = ANY_PLACE },
-                        testTag = "parish_country_dropdown"
-                    )
-                    if (country != ANY_PLACE) {
-                        MenuPickerRow(
-                            title = language.tr("Región", "Region", "Região"),
-                            options = availableRegions.map {
-                                it to if (it == ANY_PLACE) language.tr("Todas", "All", "Todas") else it
-                            },
-                            selected = regionSel,
-                            onSelect = { regionSel = it; city = ANY_PLACE },
-                            testTag = "parish_region_dropdown"
-                        )
-                    }
-                    MenuPickerRow(
-                        title = language.tr("Ciudad", "City", "Cidade"),
-                        options = availableCities.map {
-                            it to if (it == ANY_PLACE) language.tr("Todas", "All", "Todas") else it
-                        },
-                        selected = city,
-                        onSelect = { city = it },
-                        testTag = "parish_city_dropdown"
-                    )
-                }
-            }
-
-            if (filtered.isEmpty()) {
-                item(key = "none") {
-                    AppEmptyState(
-                        title = language.tr("Ninguna iglesia coincide", "No matching churches", "Nenhuma igreja corresponde"),
-                        body = language.tr(
-                            "Prueba otro nombre o amplía el lugar.",
-                            "Try another name or widen the place.",
-                            "Tente outro nome ou amplie o lugar."
-                        ),
-                        icon = Icons.Outlined.Church
-                    )
-                    Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                        AppSecondaryCapsule(
-                            label = language.tr("Ver todas", "Show all", "Ver todas"),
-                            onClick = {
-                                query = ""; kind = 0; country = ANY_PLACE; regionSel = ANY_PLACE; city = ANY_PLACE
-                            }
-                        )
-                    }
-                }
-            } else {
-                item(key = "results_header") {
-                    SectionHeader(
-                        language.tr("Iglesias", "Churches", "Igrejas"),
-                        trailing = "${filtered.size}",
-                        topGap = 24.dp
-                    )
-                }
-                itemsIndexed(filtered, key = { _, it -> "p_${it.id}" }, contentType = { _, _ -> "parish" }) { i, parish ->
-                    LeadRow(
-                        title = parish.name,
-                        subtitle = "${parish.city}, ${ParishScheduleText.country(parish.country, language)}",
-                        leading = {
-                            Icon(
-                                Icons.Outlined.Church, null,
-                                tint = design.palette.textPrimary, modifier = Modifier.size(22.dp)
-                            )
-                        },
-                        leadingWidth = 24.dp,
-                        position = groupPosition(i, filtered.size),
-                        onClick = { nav.open("parish:${parish.id}") },
-                        tag = "parish_card_${parish.id}"
-                    )
-                }
-            }
-
-            item(key = "maps") {
-                Spacer(Modifier.height(24.dp))
-                Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                    AppSecondaryCapsule(
-                        label = language.tr("Buscar en Google Maps", "Search Google Maps", "Buscar no Google Maps"),
-                        icon = Icons.Outlined.Map,
-                        onClick = {
-                            val where = listOf(city, regionSel, country).filter { it != ANY_PLACE }.joinToString(", ")
-                            context.openUri("https://www.google.com/maps/search/" + Uri.encode("catholic church $where".trim()))
-                        },
-                        tag = "parish_open_maps"
-                    )
-                }
-            }
+        item(key = "news_top") { Spacer(Modifier.height(16.dp)) }
+        newsItems(news, language, onRetry = { retry++ }, onOpenSite = { context.openUri("https://www.vaticannews.va") }) { link ->
+            context.openUri(link)
         }
     }
 }

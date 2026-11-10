@@ -68,8 +68,8 @@ internal fun rootSpec(topTab: Int, language: AppLanguage, repository: CatholicDa
     )
     5 -> RootSpec(
         "heroes/lumen/news.jpg",
-        language.tr("Iglesias y Noticias", "Churches & News", "Igrejas e Notícias"),
-        language.tr("Vatican News · iglesias", "Vatican News · churches", "Vatican News · igrejas")
+        language.tr("Noticias", "News", "Notícias"),
+        language.tr("Vatican News", "Vatican News", "Vatican News")
     )
     else -> RootSpec(
         "heroes/lumen/doctrine.jpg",
@@ -116,8 +116,8 @@ fun DoctrineAndHistoryScreen(
      * del día" uses). When set, the screen opens on that answer.
      */
     initialQuestionIndex: Int? = null,
-    /** On Churches & News: 0 opens the news, 1 the church directory. */
-    initialChurchesSection: Int = 0,
+    /** Kept for source compatibility; the church directory tab was removed (Parishes opens Google Maps). */
+    @Suppress("UNUSED_PARAMETER") initialChurchesSection: Int = 0,
     /** Opens straight on an entry such as "qa:12" (deep links, previews, tests). */
     initialEntry: String? = null,
     newsLoader: suspend (AppLanguage) -> NewsResult = defaultNewsLoader
@@ -184,7 +184,6 @@ fun DoctrineAndHistoryScreen(
                             4 -> OrdersRoot(repository, currentLanguage, nav, spec)
                             else -> ChurchesNewsRoot(
                                 repository, currentLanguage, spec,
-                                initialSection = initialChurchesSection,
                                 newsLoader = newsLoader,
                                 nav = nav
                             )

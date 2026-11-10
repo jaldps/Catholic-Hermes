@@ -112,6 +112,7 @@ import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppFilterChips
+import com.example.ui.design.AppFilterMenu
 import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppHideTabBar
 import com.example.ui.design.AppInlineTitle
@@ -2189,11 +2190,12 @@ private fun CccCompendiumPage(
             }
         }
         item(key = "compendium_filters") {
-            AppFilterChips(
+            AppFilterMenu(
+                prefix = lang.pick("Parte", "Part", "Parte"),
                 options = compendiumPartChips(lang),
                 selectedIndex = partFilter,
                 onSelect = onPartFilter,
-                modifier = Modifier.testTag("compendium_part_picker")
+                tag = "compendium_part_picker"
             )
         }
         item(key = "compendium_count") {

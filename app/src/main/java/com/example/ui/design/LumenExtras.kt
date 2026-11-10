@@ -26,6 +26,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.navigationBars
+import androidx.compose.foundation.layout.systemGestures
 import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -69,6 +70,7 @@ import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
@@ -442,12 +444,11 @@ fun AppSheet(
             ) {
                 val shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
                 Column(
-                    modifier.fillMaxWidth().heightIn(max = 680.dp)
+                    modifier.fillMaxWidth().heightIn(max = (LocalConfiguration.current.screenHeightDp * 0.9f).dp)
                         .clip(shape)
                         .background(Brush.verticalGradient(listOf(p.canvasTop, p.canvasBottom)))
                         .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, Color.Transparent)), shape)
                         .tag(tag)
-                        .padding(bottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding() + 16.dp)
                 ) {
                     Box(Modifier.fillMaxWidth().padding(top = 10.dp), contentAlignment = Alignment.Center) {
                         Box(Modifier.size(width = 38.dp, height = 5.dp).clip(RoundedCornerShape(percent = 50)).background(p.inkQuiet.copy(alpha = 0.5f)))
@@ -456,7 +457,17 @@ fun AppSheet(
                         Text(title, style = styles.headline, color = p.textPrimary, textAlign = TextAlign.Center,
                             modifier = Modifier.fillMaxWidth().padding(top = 14.dp, bottom = 8.dp))
                     }
-                    Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(top = 8.dp), content = content)
+                    // Content scrolls when taller than the sheet; the trailing spacer keeps the last row
+                    // clear of the gesture / navigation bar (the Dialog window can report a 0 inset).
+                    val navInset = maxOf(
+                        WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding(),
+                        WindowInsets.systemGestures.asPaddingValues().calculateBottomPadding(),
+                        24.dp
+                    )
+                    Column(Modifier.fillMaxWidth().weight(1f, fill = false).verticalScroll(rememberScrollState()).padding(top = 8.dp)) {
+                        content()
+                        Spacer(Modifier.height(navInset + 16.dp))
+                    }
                 }
             }
         }
@@ -519,6 +530,30 @@ fun AppMenuChip(label: String, items: List<AppMenuItem>, modifier: Modifier = Mo
             Icon(Icons.Outlined.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
         }
         AppMenu(open, { open = false }, items)
+    }
+}
+
+/**
+ * "Región: Todas ⌄" style single-chip dropdown replacing a long horizontally scrolling chip row.
+ * [prefix] is the label before the selected option (e.g. "Región"); gutter margins included.
+ */
+@Composable
+fun AppFilterMenu(
+    prefix: String,
+    options: List<String>,
+    selectedIndex: Int,
+    onSelect: (Int) -> Unit,
+    modifier: Modifier = Modifier,
+    tag: String? = null
+) {
+    val gutter = LocalAppDesign.current.spacing.gutter
+    val current = options.getOrElse(selectedIndex) { options.firstOrNull().orEmpty() }
+    Box(modifier.fillMaxWidth().padding(horizontal = gutter, vertical = 4.dp)) {
+        AppMenuChip(
+            label = "$prefix: $current",
+            items = options.mapIndexed { i, o -> AppMenuItem(o, selected = i == selectedIndex) { onSelect(i) } },
+            tag = tag
+        )
     }
 }
 

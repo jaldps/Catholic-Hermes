@@ -114,6 +114,7 @@ import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppFilterChips
+import com.example.ui.design.AppFilterMenu
 import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppGrid
@@ -495,7 +496,7 @@ private fun SpiritualHub(
                             val labels = listOf(language.pick("Todas", "All", "Todas")) +
                                 JournalCategories.map { language.pick(it.pluralEs, it.pluralEn, it.pluralPt) } +
                                 language.pick("Concedidas", "Granted", "Concedidas")
-                            AppFilterChips(labels, filterIndex, onFilter)
+                            AppFilterMenu(language.pick("Mostrar", "Show", "Mostrar"), labels, filterIndex, onFilter, tag = "journal_filter_menu")
                             Spacer(Modifier.height(8.dp))
                         }
                     }
@@ -1214,7 +1215,10 @@ private fun StationPage(
         item {
             AppDetailHeader(
                 title = stationDisplayTitle(station.title.get(language)),
-                assetPath = hero,
+                assetPath = rememberFirstAsset(
+                    "heroes/viacrucis/station_%02d.jpg".format(station.stationNumber),
+                    *listOfNotNull(hero).toTypedArray()
+                ),
                 eyebrow = label,
                 imageHeight = 280.dp
             )

@@ -109,6 +109,7 @@ import com.example.ui.design.AppChip
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppGlassIconButton
+import com.example.ui.design.AppHeroHeader
 import com.example.ui.design.AppImageCard
 import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppLargeTitleHeader
@@ -586,15 +587,18 @@ private fun HabitsRoot(
         contentPadding = PaddingValues(bottom = insets.calculateBottomPadding() + 24.dp)
     ) {
         item(key = "header") {
-            AppLargeTitleHeader(
+            AppHeroHeader(
+                assetPath = "heroes/lumen/habits.jpg",
                 title = title,
                 eyebrow = longDate(today, lang),
+                height = 260.dp,
                 titleTag = "habits_title"
             ) {
                 AppGlassIconButton(
                     icon = Icons.Outlined.BarChart,
                     contentDescription = lang.pick3("Resumen", "Summary", "Resumo"),
                     onClick = onOpenSummary,
+                    onImage = true,
                     tag = "habits_stats_button"
                 )
             }
