@@ -27,6 +27,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.asPaddingValues
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -1252,7 +1255,7 @@ private fun ChapterReader(
             visible = showChrome,
             enter = slideInVertically(tween(260)) { it / 2 } + fadeIn(tween(220)),
             exit = slideOutVertically(tween(260)) { it / 2 } + fadeOut(tween(200)),
-            modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = bottomInset + 16.dp)
+            modifier = Modifier.align(Alignment.BottomCenter)
         ) {
             ReaderBar(
                 book = book,
@@ -1456,6 +1459,7 @@ private fun ReaderBar(
             .fillMaxWidth()
             .height(64.dp)
             .lumenGlass(shape, strong = true)
+            .background(p.glassStrong.copy(alpha = (p.glassStrong.alpha + 0.12f).coerceAtMost(1f)), shape)
             .padding(horizontal = 6.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -1630,7 +1634,8 @@ private fun ChapterSheet(
         Spacer(Modifier.height(18.dp))
         if (tab == 0) {
             val columns = 6
-            Column(Modifier.padding(horizontal = design.spacing.gutter), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            val sheetBottom = WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding() + 24.dp
+            Column(Modifier.padding(start = design.spacing.gutter, end = design.spacing.gutter, bottom = sheetBottom), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 (1..count).chunked(columns).forEach { row ->
                     Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                         row.forEach { n ->
@@ -1687,6 +1692,7 @@ private fun ChapterSheet(
                 }
                 Spacer(Modifier.height(16.dp))
             }
+            Spacer(Modifier.height(WindowInsets.navigationBars.asPaddingValues().calculateBottomPadding() + 24.dp))
         }
         Spacer(Modifier.height(12.dp))
     }
