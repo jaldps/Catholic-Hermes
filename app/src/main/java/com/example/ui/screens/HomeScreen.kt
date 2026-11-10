@@ -621,7 +621,16 @@ fun HomeScreen(
             val saintTitle = saintOfTheDay.title.get(currentLanguage).trim()
             val saintBiography = saintOfTheDay.biography.get(currentLanguage).trim()
             val saintQuote = saintOfTheDay.iconicQuote.get(currentLanguage).trim()
-            val showTitle = saintTitle.isNotBlank() && !saintTitle.equals(saintName, ignoreCase = true)
+            // "San León Magno" as the title; "Papa y doctor de la Iglesia · 10 de noviembre" under it.
+            val heading = saintHeading(saintName, currentLanguage)
+            val saintMeta = listOfNotNull(
+                heading.role,
+                feastDateLocalized?.takeIf { it.isNotBlank() && !saintName.contains(it, ignoreCase = true) }
+            ).joinToString(" · ").takeIf { it.isNotBlank() }
+            val showTitle = saintTitle.isNotBlank() &&
+                !saintTitle.equals(saintName, ignoreCase = true) &&
+                !saintTitle.equals(heading.title, ignoreCase = true) &&
+                !saintTitle.equals(heading.role, ignoreCase = true)
             val showQuote = saintQuote.isNotBlank() &&
                 !saintQuote.equals(saintBiography, ignoreCase = true) &&
                 !saintQuote.equals(saintName, ignoreCase = true) &&
@@ -638,16 +647,17 @@ fun HomeScreen(
                     Box(Modifier.fillMaxWidth().height(150.dp)) {
                         AppHeroImage(saintAsset, Modifier.fillMaxSize(), fadeStart = 0.15f, topVeil = false, maxWidthPx = 900)
                         Column(Modifier.align(Alignment.BottomStart).padding(horizontal = 20.dp, vertical = 4.dp)) {
-                            feastDateLocalized
-                                ?.takeIf { it.isNotBlank() && !saintName.contains(it, ignoreCase = true) }
-                                ?.let { Text(it, style = styles.eyebrow, color = palette.textSecondary) }
                             Text(
-                                saintName,
+                                heading.title,
                                 style = styles.title2,
                                 color = palette.textPrimary,
                                 maxLines = 2,
                                 overflow = TextOverflow.Ellipsis
                             )
+                            if (saintMeta != null) {
+                                Spacer(Modifier.height(2.dp))
+                                Text(saintMeta, style = styles.footnote, color = palette.textSecondary, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                            }
                         }
                     }
                     Column(Modifier.padding(start = 20.dp, end = 20.dp, top = 6.dp, bottom = 20.dp)) {

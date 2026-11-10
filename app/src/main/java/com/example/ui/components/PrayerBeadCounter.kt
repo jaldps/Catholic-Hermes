@@ -94,7 +94,7 @@ private fun pearlInks(): PearlInks {
         PearlInks(
             todoFill = lerp(p.glassStrong.copy(alpha = 1f), p.canvasBottom, 0.35f),
             todoHighlight = p.glassStrong.copy(alpha = 1f),
-            todoEdge = p.textPrimary.copy(alpha = 0.12f),
+            todoEdge = p.textPrimary.copy(alpha = 0.18f),
             toldFill = p.textSecondary,
             currentFill = p.action,
             ring = p.accent,
@@ -112,11 +112,11 @@ private fun pearlInks(): PearlInks {
  * A pearl: soft contact shadow, body, lit edge (to-come beads) and a
  * highlight up and to the left, so it reads as a bead, not a dot.
  */
-private fun DrawScope.drawPearl(centre: Offset, r: Float, fill: Color, inks: PearlInks, todo: Boolean) {
+private fun DrawScope.drawPearl(centre: Offset, r: Float, fill: Color, inks: PearlInks, todo: Boolean, a: Float = 1f) {
     if (inks.shadow.alpha > 0f) {
-        drawCircle(inks.shadow, radius = r * 1.02f, center = centre + Offset(0f, r * 0.22f))
+        drawCircle(inks.shadow, radius = r * 1.02f, center = centre + Offset(0f, r * 0.22f), alpha = a)
     }
-    drawCircle(fill, radius = r, center = centre)
+    drawCircle(fill, radius = r, center = centre, alpha = a)
     if (todo) {
         drawCircle(
             Brush.radialGradient(
@@ -125,9 +125,9 @@ private fun DrawScope.drawPearl(centre: Offset, r: Float, fill: Color, inks: Pea
                 center = centre + Offset(-r * 0.32f, -r * 0.38f),
                 radius = r * 0.95f
             ),
-            radius = r, center = centre
+            radius = r, center = centre, alpha = a
         )
-        drawCircle(inks.todoEdge, radius = r - 0.5f, center = centre, style = Stroke(1f.coerceAtLeast(r * 0.07f)))
+        drawCircle(inks.todoEdge, radius = r - 0.5f, center = centre, style = Stroke(1f.coerceAtLeast(r * 0.07f)), alpha = a)
     } else {
         drawCircle(
             Brush.radialGradient(
@@ -136,13 +136,13 @@ private fun DrawScope.drawPearl(centre: Offset, r: Float, fill: Color, inks: Pea
                 center = centre + Offset(-r * 0.32f, -r * 0.38f),
                 radius = r * 0.7f
             ),
-            radius = r, center = centre
+            radius = r, center = centre, alpha = a
         )
     }
 }
 
 /** The centre medal: a rounded lozenge with a small cross struck on it. */
-private fun DrawScope.drawMedal(centre: Offset, r: Float, fill: Color, inks: PearlInks, todo: Boolean) {
+private fun DrawScope.drawMedal(centre: Offset, r: Float, fill: Color, inks: PearlInks, todo: Boolean, a: Float = 1f) {
     val lozenge = Path().apply {
         moveTo(centre.x, centre.y - r)
         quadraticBezierTo(centre.x + r * 0.15f, centre.y - r * 0.15f, centre.x + r * 0.78f, centre.y)
@@ -152,51 +152,35 @@ private fun DrawScope.drawMedal(centre: Offset, r: Float, fill: Color, inks: Pea
         close()
     }
     if (inks.shadow.alpha > 0f) {
-        drawPath(lozenge, inks.shadow, alpha = 1f)
+        drawPath(lozenge, inks.shadow, alpha = a)
     }
-    drawPath(lozenge, fill)
-    if (todo) drawPath(lozenge, inks.todoEdge, style = Stroke(r * 0.08f, join = StrokeJoin.Round))
+    drawPath(lozenge, fill, alpha = a)
+    if (todo) drawPath(lozenge, inks.todoEdge, style = Stroke(r * 0.08f, join = StrokeJoin.Round), alpha = a)
     val c = r * 0.36f
     val ink = if (todo) inks.toldFill else inks.corpus
-    drawLine(ink, Offset(centre.x, centre.y - c), Offset(centre.x, centre.y + c), r * 0.11f, StrokeCap.Round)
-    drawLine(ink, Offset(centre.x - c * 0.62f, centre.y - c * 0.22f), Offset(centre.x + c * 0.62f, centre.y - c * 0.22f), r * 0.11f, StrokeCap.Round)
+    drawLine(ink, Offset(centre.x, centre.y - c), Offset(centre.x, centre.y + c), r * 0.11f, StrokeCap.Round, alpha = a)
+    drawLine(ink, Offset(centre.x - c * 0.62f, centre.y - c * 0.22f), Offset(centre.x + c * 0.62f, centre.y - c * 0.22f), r * 0.11f, StrokeCap.Round, alpha = a)
 }
 
 /**
- * A Latin cross with budded (trefoil) ends and the corpus cut out of it in
- * the canvas colour, so it reads as a crucifix and never as a plus sign.
+ * The crucifix on the strand: a 1.5dp-class outline Latin cross in ink, drawn
+ * like the Rosary tab's glyph (same proportions, round caps), not a budded
+ * filled cross.
  */
-private fun DrawScope.drawCrucifix(centre: Offset, height: Float, ink: Color, corpus: Color) {
+private fun DrawScope.drawCrucifix(centre: Offset, height: Float, inkIn: Color, a: Float = 1f) {
+    val ink = inkIn.copy(alpha = inkIn.alpha * a)
     val top = centre.y - height / 2
     val bottom = centre.y + height / 2
-    val stem = height * 0.13f
     val barY = top + height * 0.30f
-    val half = height * 0.37f
-    val bud = stem * 0.6f
-    val corner = CornerRadius(stem * 0.25f)
-    drawRoundRect(ink, Offset(centre.x - stem / 2, top + bud * 0.6f), Size(stem, bottom - top - bud * 0.6f), corner)
-    drawRoundRect(ink, Offset(centre.x - half + bud * 0.6f, barY - stem / 2), Size(2 * half - bud * 1.2f, stem), corner)
-    fun trefoil(at: Offset, out: Offset) {
-        val side = Offset(-out.y, out.x)
-        drawCircle(ink, bud, at + out * (bud * 0.5f))
-        drawCircle(ink, bud * 0.62f, at + side * (bud * 1.05f) - out * (bud * 0.25f))
-        drawCircle(ink, bud * 0.62f, at - side * (bud * 1.05f) - out * (bud * 0.25f))
-    }
-    trefoil(Offset(centre.x, top + bud * 1.1f), Offset(0f, -1f))
-    trefoil(Offset(centre.x - half + bud * 1.1f, barY), Offset(-1f, 0f))
-    trefoil(Offset(centre.x + half - bud * 1.1f, barY), Offset(1f, 0f))
-    drawRoundRect(ink, Offset(centre.x - stem * 0.85f, bottom - stem * 0.7f), Size(stem * 1.7f, stem * 0.7f), corner)
-    val thin = stem * 0.36f
-    drawCircle(corpus, stem * 0.36f, Offset(centre.x, barY - stem * 0.95f))
-    drawLine(corpus, Offset(centre.x - half + bud * 1.1f, barY - thin * 0.2f), Offset(centre.x, barY + thin * 0.5f), thin, StrokeCap.Round)
-    drawLine(corpus, Offset(centre.x + half - bud * 1.1f, barY - thin * 0.2f), Offset(centre.x, barY + thin * 0.5f), thin, StrokeCap.Round)
-    drawLine(corpus, Offset(centre.x, barY - stem * 0.5f), Offset(centre.x, barY + height * 0.30f), thin * 1.25f, StrokeCap.Round)
-    drawLine(corpus, Offset(centre.x, barY + height * 0.30f), Offset(centre.x, bottom - stem * 1.1f), thin * 0.9f, StrokeCap.Round)
+    val half = height * 0.30f
+    val stroke = (height * 0.075f).coerceAtLeast(1.5f * density)
+    drawLine(ink, Offset(centre.x, top), Offset(centre.x, bottom), stroke, StrokeCap.Round)
+    drawLine(ink, Offset(centre.x - half, barY), Offset(centre.x + half, barY), stroke, StrokeCap.Round)
 }
 
 /** Half the drawn extent of a bead along the strand, in dp. */
 private fun halfExtent(kind: BeadKind): Float = when (kind) {
-    BeadKind.CRUCIFIX -> 15f
+    BeadKind.CRUCIFIX -> 13f
     BeadKind.LARGE -> 10.5f
     BeadKind.SMALL -> 7f
     BeadKind.MEDAL -> 12f
@@ -204,7 +188,7 @@ private fun halfExtent(kind: BeadKind): Float = when (kind) {
 
 /** Radius (or half height) of a bead at rest, in dp. */
 private fun restRadius(kind: BeadKind): Float = when (kind) {
-    BeadKind.CRUCIFIX -> 15f
+    BeadKind.CRUCIFIX -> 12f
     BeadKind.LARGE -> 10f
     BeadKind.SMALL -> 7f
     BeadKind.MEDAL -> 11f
@@ -265,7 +249,7 @@ fun BeadReel(
     modifier: Modifier = Modifier,
     subStepCount: Int = 1,
     subStepIndex: Int = 0,
-    height: Dp = 76.dp
+    height: Dp = 70.dp
 ) {
     if (beads.isEmpty()) return
     val inks = pearlInks()
@@ -312,7 +296,6 @@ fun BeadReel(
             Modifier
                 .fillMaxWidth()
                 .height(height)
-                .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
                 .pointerInput(beads, widthPx) {
                     detectTapGestures { tap ->
                         val hit = ReelGesture.hit(along, alongAt(position.value), density.density, widthPx, tap.x)
@@ -354,13 +337,21 @@ fun BeadReel(
             val half = w / 2f
             val pos = position.value
             val centreAlong = alongAt(pos)
-            val baseY = size.height * 0.42f
+            val baseY = size.height * 0.37f
             val sag = 9f * dpx
 
             fun xOf(i: Int) = (along[i] - centreAlong) * dpx + half
             fun yOf(x: Float): Float {
                 val d = ((x - half) / half).coerceIn(-1.4f, 1.4f)
                 return baseY + sag * (1f - d * d)
+            }
+            // The strand dissolves into the canvas at both gutters: each bead and
+            // each run of thread fades by its distance from the edge, so no
+            // offscreen mask is needed.
+            val fadeW = 52f * dpx
+            fun edge(x: Float): Float {
+                val t = (minOf(x, w - x) / fadeW).coerceIn(0f, 1f)
+                return t * t * (3f - 2f * t)
             }
             fun falloff(x: Float): Float {
                 val d = (abs(x - half) / half).coerceIn(0f, 1.3f)
@@ -386,7 +377,8 @@ fun BeadReel(
                     val pt = Offset(x, yOf(x))
                     drawLine(
                         if (prayed) inks.toldThread else inks.thread, prev, pt,
-                        strokeWidth = (if (prayed) 1.6f else 1.2f) * dpx, cap = StrokeCap.Round
+                        strokeWidth = (if (prayed) 1.6f else 1.2f) * dpx, cap = StrokeCap.Round,
+                        alpha = edge((prev.x + pt.x) / 2f)
                     )
                     prev = pt
                 }
@@ -400,21 +392,22 @@ fun BeadReel(
                 val scale = falloff(x) * (1f + 0.42f * emphasis)
                 val r = restRadius(beads[i]) * dpx * scale
                 val c = Offset(x, yOf(x))
+                val a = edge(x)
                 val todo = told < 0.5f && emphasis < 0.5f
                 val fill = lerp(lerp(inks.todoFill, inks.toldFill, told), inks.currentFill, emphasis)
                 when (beads[i]) {
                     BeadKind.CRUCIFIX -> drawCrucifix(
                         c, r * 2f,
-                        lerp(lerp(inks.toldFill, inks.toldFill, told), inks.currentFill, emphasis),
-                        inks.corpus
+                        lerp(inks.toldFill, inks.currentFill, emphasis),
+                        a
                     )
-                    BeadKind.MEDAL -> drawMedal(c, r, fill, inks, todo)
-                    else -> drawPearl(c, r, fill, inks, todo)
+                    BeadKind.MEDAL -> drawMedal(c, r, fill, inks, todo, a)
+                    else -> drawPearl(c, r, fill, inks, todo, a)
                 }
                 if (emphasis > 0.02f) {
-                    val ringR = if (beads[i] == BeadKind.CRUCIFIX) r * 1.18f else r + 4.5f * dpx
+                    val ringR = r + (if (beads[i] == BeadKind.CRUCIFIX) 5f else 4.5f) * dpx
                     drawCircle(
-                        inks.ring.copy(alpha = inks.ring.alpha * emphasis),
+                        inks.ring.copy(alpha = inks.ring.alpha * emphasis * a),
                         radius = ringR, center = c,
                         style = Stroke(2f * dpx)
                     )
@@ -425,7 +418,7 @@ fun BeadReel(
             if (subStepCount > 1) {
                 val pitch = 8f * dpx
                 val total = pitch * (subStepCount - 1)
-                val y = size.height - 6f * dpx
+                val y = size.height - 4.5f * dpx
                 for (k in 0 until subStepCount) {
                     val cx = half - total / 2f + k * pitch
                     drawCircle(
@@ -435,18 +428,6 @@ fun BeadReel(
                     )
                 }
             }
-
-            // The strand dissolves into the canvas at both gutters.
-            val fade = 44f * dpx
-            drawRect(
-                Brush.horizontalGradient(
-                    0f to Color.Transparent,
-                    (fade / w) to Color.Black,
-                    (1f - fade / w) to Color.Black,
-                    1f to Color.Transparent
-                ),
-                blendMode = BlendMode.DstIn
-            )
         }
     }
 }
@@ -610,7 +591,7 @@ fun RosaryLoopMap(
                 val fill = when { current -> inks.currentFill; told -> inks.toldFill; else -> inks.todoFill }
                 val todo = !current && !told
                 when (kind) {
-                    BeadKind.CRUCIFIX -> drawCrucifix(c, g.crucifixHeight, if (current) inks.currentFill else inks.toldFill, inks.corpus)
+                    BeadKind.CRUCIFIX -> drawCrucifix(c, g.crucifixHeight, if (current) inks.currentFill else inks.toldFill)
                     BeadKind.MEDAL -> drawMedal(c, g.medal, fill, inks, todo)
                     BeadKind.LARGE -> drawPearl(c, g.large, fill, inks, todo)
                     BeadKind.SMALL -> drawPearl(c, g.small, fill, inks, todo)

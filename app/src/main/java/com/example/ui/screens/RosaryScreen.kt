@@ -13,6 +13,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -33,13 +34,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Lightbulb
-import androidx.compose.material.icons.outlined.Lightbulb
+import com.example.ui.design.DevotionalGlyphs
 import androidx.compose.material.icons.outlined.MoreHoriz
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.ChevronRight
@@ -75,10 +76,19 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.graphics.CompositingStrategy
 import androidx.compose.ui.graphics.FilterQuality
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.drawscope.DrawScope
+import androidx.compose.ui.layout.layout
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.foundation.layout.RowScope
+import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.Layout
+import androidx.compose.ui.layout.findRootCoordinates
+import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.onPlaced
+import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.layout.positionInParent
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
@@ -91,6 +101,7 @@ import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.customActions
 import androidx.compose.ui.semantics.heading
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.progressBarRangeInfo
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
@@ -105,7 +116,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.Constraints
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.IntOffset
+import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.audio.RecitationVoiceMode
 import com.example.data.models.AppLanguage
@@ -535,7 +549,7 @@ internal fun buildRosaryGuide(mystery: RosaryMystery, creed: Said, lang: AppLang
             ),
             leader = mysteryAnnouncement(lang, mystery.type, d, title),
             meditation = decade.meditation.get(lang),
-            detail = "${decade.scriptureRef} · ${decade.fruitOfMystery.get(lang)}",
+            detail = "${decade.scriptureRef} · ${sentenceCaseFruit(decade.fruitOfMystery.get(lang), lang)}",
             bead = large,
             section = section
         )
@@ -939,6 +953,14 @@ internal fun countLine(step: GuideStep, lang: AppLanguage): String? =
 
 private enum class RosarySheet { MYSTERIES, OPTIONS, MYSTERY }
 
+/** The quiet "then …" line under the prayer text. */
+/** Title row to text, and text to the "then" line. */
+private val PrayerTitleGap = 12.dp
+private val PrayerThenGap = 24.dp
+
+/** What the prayer block adds around the text: title row, gaps, the "then" line, paddings. */
+private val PrayerChrome = 104.dp
+
 private val MysteryArtNames = mapOf(
     RosaryMysteryType.JOYFUL to listOf("annunciation", "visitation", "nativity", "presentation", "finding"),
     RosaryMysteryType.SORROWFUL to listOf("agony", "scourging", "crowning", "carrying", "crucifixion"),
@@ -1101,6 +1123,15 @@ fun RosaryScreen(
     val artMeta = rememberHeroMeta(artPath)
     AppStatusBarGlyphs(lightGlyphs = design.isDark || artMeta.tone == "dark")
 
+    // A decade's label is the mystery (title and fruit); the opening, the
+    // closing and every part of the chaplet are named by the part itself.
+    val labelInDecade = isRosary && step.section in 1..guide.decadeCount
+    val decadeFruit = if (labelInDecade) currentMystery.decades.getOrNull(step.section - 1)?.fruitOfMystery?.get(lang)?.let { sentenceCaseFruit(it, lang) } else null
+
+    // The next different prayer, so the end of a run of Hail Marys is never a surprise.
+    val upNextName = guide.steps.drop(index + 1).firstOrNull { it.name != step.name }?.name
+    val upNext = upNextName?.let { lang.pick("Después", "Then", "Depois") + " · " + it }
+
     val stepsOnBead = remember(guide, step.bead) { guide.steps.indices.filter { guide.steps[it].bead == step.bead } }
 
     // Shared between the stage's mist and the layout: where the label begins.
@@ -1125,11 +1156,11 @@ fun RosaryScreen(
         val textWidthPx = with(density) { (columnWidth - gutter * 2).roundToPx().coerceAtLeast(1) }
         val readingStyle = styles.reading
         val textTarget = remember(isRosary, lang, textWidthPx, readingStyle, density) {
-            val said = if (isRosary) ourFather(lang) else eternalFather(lang)
+            val said = if (isRosary) hailMary(lang) else eternalFather(lang)
             val c = Constraints(maxWidth = textWidthPx)
-            val a = measurer.measure(rubricated("℣", said.leader, Color.Unspecified), readingStyle, constraints = c).size.height
-            val b = measurer.measure(rubricated("℟", said.response, Color.Unspecified), readingStyle, constraints = c).size.height
-            with(density) { (a + b).toDp() } + 10.dp + 22.dp
+            val a = measurer.measure(said.leader, readingStyle, constraints = c).size.height
+            val b = measurer.measure(said.response, readingStyle, constraints = c).size.height
+            with(density) { (a + b).toDp() } + 10.dp + PrayerChrome
         }
 
         val stage: @Composable () -> Unit = {
@@ -1138,6 +1169,7 @@ fun RosaryScreen(
                 labelTopPx = { labelTopPx.floatValue },
                 credit = artPath?.let { ArtCredits.of(LocalContext.current, it) },
                 inDecade = isRosary && step.section in 1..guide.decadeCount,
+                screenHeight = viewport,
                 modifier = Modifier.fillMaxSize()
             )
         }
@@ -1145,6 +1177,7 @@ fun RosaryScreen(
             DevotionSwitch(
                 lang = lang,
                 selected = selectedTab,
+                darkArt = design.isDark || artMeta.tone == "dark",
                 onSelect = { dispatch(RosaryEvent.SelectDevotion(Devotion.fromTab(it))) }
             )
         }
@@ -1153,8 +1186,9 @@ fun RosaryScreen(
                 lang = lang,
                 isRosary = isRosary,
                 setName = selectedMysteryType.displayName.get(lang),
-                headline = section.subtitle,
-                inDecade = isRosary && step.section in 1..guide.decadeCount,
+                title = if (labelInDecade) section.subtitle else where,
+                subtitle = if (labelInDecade) decadeFruit else section.subtitle,
+                inDecade = labelInDecade,
                 onPickMysteries = { sheet = RosarySheet.MYSTERIES },
                 onOpenMystery = { sheet = RosarySheet.MYSTERY }
             )
@@ -1164,7 +1198,7 @@ fun RosaryScreen(
                 guide = guide,
                 index = index,
                 stepText = stepText,
-                where = where,
+                where = where.takeIf { labelInDecade },
                 counterTag = if (isRosary) "rosary_hero_step_counter" else "mercy_hero_step_counter",
                 onClick = { sheet = RosarySheet.OPTIONS }
             )
@@ -1193,12 +1227,8 @@ fun RosaryScreen(
             )
         }
         val title: @Composable () -> Unit = {
-            PrayerTitleRow(
-                step = step,
-                count = count,
-                lang = lang,
-                onSkip = { dispatch(RosaryEvent.SkipOptional) }
-            )
+            // The prayer's title lives inside the prayer block (see PrayerArea).
+            Spacer(Modifier.height(0.dp))
         }
         val prayer: @Composable () -> Unit = {
             PrayerArea(
@@ -1206,7 +1236,11 @@ fun RosaryScreen(
                 stepKey = "$selectedTab/$selectedMysteryType/$index",
                 lang = lang,
                 spokenNow = currentlySpeaking,
-                instructionsOn = instructionsOn
+                instructionsOn = instructionsOn,
+                upNext = upNext,
+                count = count,
+                showName = !nameRepeatsText(step),
+                onSkip = { dispatch(RosaryEvent.SkipOptional) }
             )
         }
         val transport: @Composable () -> Unit = {
@@ -1323,7 +1357,7 @@ fun RosaryScreen(
                     title = decade.title.get(lang),
                     scriptureRef = decade.scriptureRef,
                     meditation = decade.meditation.get(lang),
-                    fruit = decade.fruitOfMystery.get(lang),
+                    fruit = sentenceCaseFruit(decade.fruitOfMystery.get(lang), lang),
                     artPath = artPath,
                     onDismiss = { sheet = null }
                 )
@@ -1371,12 +1405,12 @@ private fun PracticeLayout(
         val titleP = titleM.first().measure(loose)
         val transportP = transportM.first().measure(loose)
 
-        val gapStage = 14.dp.roundToPx()
+        val gapStage = 4.dp.roundToPx()
         val gapReel = 2.dp.roundToPx()
-        val gapTitle = 2.dp.roundToPx()
-        val gapTitleText = 8.dp.roundToPx()
+        val gapTitle = 6.dp.roundToPx()
+        val gapTitleText = 0
         val gapTransport = 8.dp.roundToPx()
-        val gapBottom = 14.dp.roundToPx()
+        val gapBottom = 20.dp.roundToPx()
         val top = topInset.roundToPx()
         val bottom = bottomInset.roundToPx()
 
@@ -1384,9 +1418,9 @@ private fun PracticeLayout(
             gapTitleText + gapTransport + transportP.height + gapBottom
         val avail = viewport.roundToPx() - bottom
         val stageMin = top + 6.dp.roundToPx() + topP.height + 92.dp.roundToPx() + labelP.height
-        val stageMax = maxOf(stageMin, (avail * 0.56f).roundToInt())
+        val stageMax = maxOf(stageMin, (avail * 0.5f).roundToInt())
         val stageH = (avail - fixed - textTarget.roundToPx()).coerceIn(stageMin, stageMax)
-        val textH = maxOf(150.dp.roundToPx(), avail - fixed - stageH)
+        val textH = maxOf(190.dp.roundToPx(), avail - fixed - stageH)
         val prayerP = prayerM.first().measure(Constraints.fixed(w, textH))
         val stageP = stageM.first().measure(Constraints.fixed(w, stageH))
         val labelTop = stageH - labelP.height
@@ -1421,12 +1455,17 @@ private fun MysteryStage(
     labelTopPx: () -> Float,
     credit: ArtCredit?,
     inDecade: Boolean,
+    screenHeight: Dp,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
     val still = LocalInspectionMode.current
     val canvas = p.canvasTop
+    // The Divine Mercy image's whole meaning is its red and pale rays: it keeps
+    // full colour and never gets a lift. Paintings are not lifted in light mode;
+    // a scrim behind the top control keeps the status bar legible instead.
+    val isMercyArt = assetPath?.endsWith("divine_mercy.jpg") == true
     Box(
         modifier
             .background(canvas)
@@ -1450,52 +1489,48 @@ private fun MysteryStage(
             LaunchedEffect(path) {
                 if (!still) settle.animateTo(1f, tween(1400, easing = FastOutSlowInEasing))
             }
-            val matrix = remember(design.isDark) {
-                ColorMatrix().apply { setToSaturation(if (design.isDark) 0.82f else 0.86f) }
+            val matrix = remember(isMercyArt, design.isDark) {
+                ColorMatrix().apply {
+                    setToSaturation(if (isMercyArt) 1f else 0.92f)
+                    // Dark mode: -0.3 EV, so the art sits under the UI instead of glowing.
+                    if (design.isDark) {
+                        val g = 0.81f
+                        timesAssign(ColorMatrix(floatArrayOf(g, 0f, 0f, 0f, 0f, 0f, g, 0f, 0f, 0f, 0f, 0f, g, 0f, 0f, 0f, 0f, 0f, 1f, 0f)))
+                    }
+                }
             }
             Box(
                 Modifier
                     .fillMaxSize()
                     .graphicsLayer { scaleX = settle.value; scaleY = settle.value }
             ) {
-                if (sharp != null) {
-                    Image(
-                        bitmap = sharp,
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                        alignment = meta.alignment,
-                        colorFilter = ColorFilter.colorMatrix(matrix),
-                        modifier = Modifier.fillMaxSize()
-                    )
-                }
-                if (soft != null) {
-                    // The same painting, tiny and scaled up: a blur that
-                    // strengthens toward the fade, on every API level.
-                    Image(
-                        bitmap = soft,
-                        contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                        alignment = meta.alignment,
-                        filterQuality = FilterQuality.Low,
-                        colorFilter = ColorFilter.colorMatrix(matrix),
-                        modifier = Modifier
-                            .fillMaxSize()
-                            .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
-                            .drawWithContent {
-                                drawContent()
-                                val labelTop = labelTopPx().takeIf { it > 0f } ?: (size.height * 0.62f)
-                                val start = (labelTop - 150.dp.toPx()).coerceAtLeast(0f)
-                                drawRect(
-                                    Brush.verticalGradient(
-                                        0f to Color.Transparent,
-                                        1f to Color.Black,
-                                        startY = start,
-                                        endY = labelTop + 10.dp.toPx()
-                                    ),
-                                    blendMode = BlendMode.DstIn
-                                )
+                // The painting, then the same painting tiny and scaled up
+                // (a blur) laid over in bands whose strength grows toward the
+                // label: a progressive blur that needs no offscreen layer, so
+                // it draws the same on every API level and in previews.
+                Canvas(Modifier.fillMaxSize()) {
+                    val filter = ColorFilter.colorMatrix(matrix)
+                    if (sharp != null) drawCropped(sharp, meta.focusX, meta.focusY, 1f, filter, FilterQuality.Medium)
+                    if (soft != null) {
+                        val labelTop = labelTopPx().takeIf { it > 0f } ?: (size.height * 0.62f)
+                        val from = (labelTop - (if (isMercyArt) 62 else 46).dp.toPx()).coerceAtLeast(0f)
+                        val to = (labelTop + (if (isMercyArt) 40 else 72).dp.toPx()).coerceAtMost(size.height)
+                        val bands = 18
+                        for (k in 0 until bands) {
+                            val t = (k + 0.5f) / bands
+                            val alpha = t * t * (3f - 2f * t)
+                            val y0 = from + (to - from) * k / bands
+                            val y1 = from + (to - from) * (k + 1) / bands
+                            clipRect(0f, y0, size.width, y1) {
+                                drawCropped(soft, meta.focusX, meta.focusY, alpha, filter, FilterQuality.Low)
                             }
-                    )
+                        }
+                        if (to < size.height) {
+                            clipRect(0f, to, size.width, size.height) {
+                                drawCropped(soft, meta.focusX, meta.focusY, 1f, filter, FilterQuality.Low)
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -1505,29 +1540,33 @@ private fun MysteryStage(
             Modifier
                 .fillMaxSize()
                 .drawBehind {
-                    drawRect(if (design.isDark) Color.Black.copy(alpha = 0.20f) else canvas.copy(alpha = 0.10f))
-                    val veil = 120.dp.toPx()
+                    val veil = 130.dp.toPx()
                     drawRect(
                         Brush.verticalGradient(
-                            0f to (if (design.isDark) Color.Black.copy(alpha = 0.38f) else Color.Black.copy(alpha = 0.10f)),
+                            0f to Color.Black.copy(alpha = if (design.isDark) 0.38f else 0.35f),
                             1f to Color.Transparent,
                             startY = 0f, endY = veil
                         ),
                         size = androidx.compose.ui.geometry.Size(size.width, veil)
                     )
                     val labelTop = labelTopPx().takeIf { it > 0f } ?: (size.height * 0.62f)
-                    val start = (labelTop - 170.dp.toPx()).coerceAtLeast(size.height * 0.18f)
-                    val end = (labelTop + 34.dp.toPx()).coerceAtMost(size.height)
+                    // Clear painting down to the label, dissolving under its first line.
+                    val start = (labelTop - (if (isMercyArt) 52 else 36).dp.toPx()).coerceAtLeast(size.height * 0.30f)
+                    val end = (labelTop + (if (isMercyArt) 26 else 56).dp.toPx()).coerceAtMost(size.height)
                     // Eased (smoothstep) so dark paintings never leave a grey band.
+                    // Fade into the screen's own canvas gradient at that height,
+                    // so the stage's lower edge leaves no seam.
+                    val screenPx = screenHeight.toPx().coerceAtLeast(1f)
+                    fun canvasAt(y: Float) = androidx.compose.ui.graphics.lerp(p.canvasTop, p.canvasBottom, (y / screenPx).coerceIn(0f, 1f))
                     val stops = (0..10).map { k ->
                         val t = k / 10f
                         val a = t * t * (3f - 2f * t)
                         val y = start + (end - start) * t
-                        (y / size.height).coerceIn(0f, 1f) to canvas.copy(alpha = a)
+                        (y / size.height).coerceIn(0f, 1f) to canvasAt(y).copy(alpha = a)
                     }
                     drawRect(
                         Brush.verticalGradient(
-                            *(listOf(0f to canvas.copy(alpha = 0f)) + stops + listOf(1f to canvas)).toTypedArray()
+                            *(listOf(0f to canvasAt(0f).copy(alpha = 0f)) + stops + listOf(1f to canvasAt(size.height))).toTypedArray()
                         )
                     )
                 }
@@ -1535,9 +1574,36 @@ private fun MysteryStage(
     }
 }
 
+/**
+ * Draws [image] to fill the canvas like ContentScale.Crop, keeping the
+ * painting's focus point ([focusX], [focusY], 0..1) in view.
+ */
+private fun DrawScope.drawCropped(
+    image: ImageBitmap,
+    focusX: Float,
+    focusY: Float,
+    alpha: Float,
+    filter: ColorFilter,
+    quality: FilterQuality
+) {
+    val scale = maxOf(size.width / image.width, size.height / image.height)
+    val w = image.width * scale
+    val h = image.height * scale
+    clipRect(0f, 0f, size.width, size.height) {
+        drawImage(
+            image,
+            dstOffset = IntOffset(((size.width - w) * focusX).roundToInt(), ((size.height - h) * focusY).roundToInt()),
+            dstSize = IntSize(w.roundToInt() + 1, h.roundToInt() + 1),
+            alpha = alpha,
+            colorFilter = filter,
+            filterQuality = quality
+        )
+    }
+}
+
 /** Rosary / Divine Mercy: a compact glass segmented control over the art. */
 @Composable
-private fun DevotionSwitch(lang: AppLanguage, selected: Int, onSelect: (Int) -> Unit) {
+private fun DevotionSwitch(lang: AppLanguage, selected: Int, darkArt: Boolean, onSelect: (Int) -> Unit) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
@@ -1560,19 +1626,19 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, onSelect: (Int) -> 
         val labels = if (needed <= room) full else short
         val shape = RoundedCornerShape(percent = 50)
         Row(
-            // Fixed dark track: this control always sits over the painting, in light and dark mode,
-            // so white labels keep >= 4.5:1 whatever the art underneath.
+            // Over dark art: dark glass (black 38%) and white labels. Over light art:
+            // light glass (white 72%, lit edge) and ink labels with a charcoal thumb.
             Modifier
                 .clip(shape)
-                .background(Color.Black.copy(alpha = 0.62f))
-                .border(1.dp, Color.White.copy(alpha = 0.22f), shape)
+                .background(if (darkArt) Color.Black.copy(alpha = 0.38f) else Color.White.copy(alpha = 0.72f))
+                .border(1.dp, if (darkArt) Color.White.copy(alpha = 0.22f) else Color.White.copy(alpha = 0.9f), shape)
                 .padding(4.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             labels.forEachIndexed { i, text ->
                 val isSelected = i == selected
                 val thumb by animateColorAsState(
-                    if (isSelected) Color.White.copy(alpha = 0.96f) else Color.Transparent,
+                    if (isSelected) (if (darkArt) Color.White.copy(alpha = 0.96f) else p.action) else Color.Transparent,
                     tween(200), label = "devotion"
                 )
                 Box(
@@ -1589,7 +1655,12 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, onSelect: (Int) -> 
                     Text(
                         text,
                         style = style.copy(fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium),
-                        color = if (isSelected) Color(0xFF111111) else Color.White.copy(alpha = 0.94f),
+                        color = when {
+                            darkArt && isSelected -> Color(0xFF111111)
+                            darkArt -> Color.White.copy(alpha = 0.94f)
+                            isSelected -> p.onAction
+                            else -> p.textPrimary
+                        },
                         maxLines = 1
                     )
                 }
@@ -1600,15 +1671,17 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, onSelect: (Int) -> 
 
 /**
  * What is being prayed, set in the mist at the foot of the painting: the
- * mysteries picker (Rosary) or the chaplet's name, then the part of the
- * devotion — the mystery's title during a decade.
+ * mysteries picker (Rosary) or the chaplet's name, then a calm title (the
+ * mystery during a decade, otherwise the part of the devotion) and one
+ * quieter line under it (the mystery's fruit, or what the part contains).
  */
 @Composable
 private fun StageLabel(
     lang: AppLanguage,
     isRosary: Boolean,
     setName: String,
-    headline: String,
+    title: String,
+    subtitle: String?,
     inDecade: Boolean,
     onPickMysteries: () -> Unit,
     onOpenMystery: () -> Unit
@@ -1634,39 +1707,38 @@ private fun StageLabel(
                 Spacer(Modifier.width(4.dp))
                 Icon(Icons.Rounded.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(18.dp))
             }
-            Spacer(Modifier.height(8.dp))
-        } else {
-            Text(
-                lang.pick("Coronilla de la Divina Misericordia", "Chaplet of Divine Mercy", "Terço da Divina Misericórdia"),
-                style = styles.eyebrow,
-                color = p.textSecondary,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            Spacer(Modifier.height(6.dp))
         }
-        Row(
-            Modifier
-                .then(if (inDecade) Modifier.lumenPress(onOpenMystery, 0.98f) else Modifier)
-                .padding(bottom = 2.dp),
-            verticalAlignment = Alignment.Top
-        ) {
-            Text(
-                headline,
-                style = styles.headline,
-                color = p.textPrimary,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis,
-                modifier = Modifier
-                    .weight(1f, fill = false)
-                    .testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title")
-            )
-            if (inDecade) {
-                Icon(
-                    Icons.Rounded.ChevronRight,
-                    lang.pick("Ver el misterio", "About this mystery", "Ver o mistério"),
-                    tint = p.textSecondary,
-                    modifier = Modifier.padding(start = 2.dp, top = 1.dp).size(20.dp)
+        Column(Modifier.then(if (inDecade) Modifier.lumenPress(onOpenMystery, 0.98f) else Modifier)) {
+            Spacer(Modifier.height(if (isRosary) 6.dp else 0.dp))
+            Row(verticalAlignment = Alignment.Top) {
+                Text(
+                    title,
+                    style = styles.title2.copy(fontSize = 22.sp, lineHeight = 28.sp, fontWeight = FontWeight.Normal),
+                    color = p.textPrimary,
+                    maxLines = 3,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier
+                        .weight(1f, fill = false)
+                        .testTag(if (isRosary) "rosary_hero_title" else "mercy_hero_title")
+                )
+                if (inDecade) {
+                    Icon(
+                        Icons.Rounded.ChevronRight,
+                        lang.pick("Ver el misterio", "About this mystery", "Ver o mistério"),
+                        tint = p.textSecondary,
+                        modifier = Modifier.padding(start = 2.dp, top = 4.dp).size(20.dp)
+                    )
+                }
+            }
+            if (!subtitle.isNullOrBlank()) {
+                Spacer(Modifier.height(4.dp))
+                // The whole fruit, never cut: footnote, up to three lines, for a
+                // mystery (it is also in the mystery sheet); a part's plan in subhead.
+                Text(
+                    subtitle,
+                    style = if (inDecade) styles.footnote else styles.subhead,
+                    color = p.textSecondary,
+                    maxLines = 3
                 )
             }
         }
@@ -1681,7 +1753,7 @@ private fun SectionProgress(
     guide: PrayerGuide,
     index: Int,
     stepText: String,
-    where: String,
+    where: String?,
     counterTag: String,
     onClick: () -> Unit
 ) {
@@ -1739,7 +1811,7 @@ private fun SectionProgress(
                 modifier = Modifier.testTag(counterTag)
             )
             Spacer(Modifier.weight(1f).widthIn(min = 12.dp))
-            Text(where, style = styles.footnote, color = p.textSecondary, maxLines = 1, textAlign = TextAlign.End)
+            if (where != null) Text(where, style = styles.footnote, color = p.textSecondary, maxLines = 1, textAlign = TextAlign.End)
         }
     }
 }
@@ -1748,15 +1820,15 @@ private fun SectionProgress(
 
 /** The prayer's name, title2, with its repetition count or a "skip". */
 @Composable
-private fun PrayerTitleRow(step: GuideStep, count: String?, lang: AppLanguage, onSkip: () -> Unit) {
+private fun PrayerTitleRow(step: GuideStep, count: String?, lang: AppLanguage, showName: Boolean, onSkip: () -> Unit, padded: Boolean = true) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
     Row(
-        Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
+        Modifier.fillMaxWidth().heightIn(min = 32.dp).then(if (padded) Modifier.padding(horizontal = design.spacing.gutter) else Modifier),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Text(
+        if (showName) Text(
             step.name,
             style = styles.title2,
             color = p.textPrimary,
@@ -1766,10 +1838,17 @@ private fun PrayerTitleRow(step: GuideStep, count: String?, lang: AppLanguage, o
                 .weight(1f)
                 .testTag("current_prayer_title")
                 .semantics { heading() }
+        ) else Text(
+            // The first line already names the prayer: the count ("5 de 10") is the title.
+            count.orEmpty(),
+            style = styles.title2.copy(fontWeight = FontWeight.Medium),
+            color = p.textPrimary,
+            maxLines = 1,
+            modifier = Modifier.weight(1f)
         )
-        if (count != null) {
+        if (count != null && showName) {
             Spacer(Modifier.width(12.dp))
-            Text(count, style = styles.subhead, color = p.textSecondary, maxLines = 1)
+            Text(count, style = styles.footnote, color = p.textSecondary, maxLines = 1)
         }
         if (step.optional) {
             Spacer(Modifier.width(8.dp))
@@ -1795,12 +1874,15 @@ private fun PrayerTitleRow(step: GuideStep, count: String?, lang: AppLanguage, o
 }
 
 /** One step's prayer as shown, so an outgoing frame keeps its own text. */
-private data class PrayerFrame(val key: String, val step: GuideStep)
+private data class PrayerFrame(val key: String, val step: GuideStep, val count: String?, val showName: Boolean)
 
 /**
- * The text to pray, in the reader's font, in a bounded area that scrolls on
- * its own (long prayers) behind soft fades. While narrating, the half being
- * spoken stays in ink and the other half steps back, as lyrics do.
+ * The prayer: its title, the text to pray (in the reader's font, scrolling on
+ * its own behind soft fades when it is long) and the quiet "then" line, as ONE
+ * block. Title 12dp above the text, "then" line 24dp below it. A short prayer
+ * holds the whole block at 40/60 in the spare room; a long one starts at the
+ * top. The "then" line is outside the step crossfade (it is the same through
+ * ten Hail Marys), in secondary ink.
  */
 @Composable
 private fun PrayerArea(
@@ -1808,29 +1890,41 @@ private fun PrayerArea(
     stepKey: String,
     lang: AppLanguage,
     spokenNow: String?,
-    instructionsOn: Boolean
+    instructionsOn: Boolean,
+    upNext: String?,
+    count: String?,
+    showName: Boolean,
+    onSkip: () -> Unit
 ) {
     val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
     val still = LocalInspectionMode.current
-    Box(Modifier.fillMaxSize().testTag("prayer_text_art")) {
+    // Where the scrolling text sits on the screen, so its edge mist can match
+    // the canvas gradient behind it exactly (no offscreen mask needed).
+    var areaTop by remember { mutableFloatStateOf(0f) }
+    var areaBottom by remember { mutableFloatStateOf(0f) }
+    var rootHeight by remember { mutableFloatStateOf(1f) }
+    val topShare = if (isShortPrayer(step)) 0.4f else 0f
+
+    val block: @Composable () -> Unit = {
         AnimatedContent(
-            targetState = PrayerFrame(stepKey, step),
+            targetState = PrayerFrame(stepKey, step, count, showName),
             contentKey = { it.key },
             transitionSpec = {
                 if (still) (fadeIn(tween(0)) togetherWith fadeOut(tween(0)))
                 else (fadeIn(tween(240, delayMillis = 60)) + slideInVertically(tween(300)) { it / 40 }) togetherWith fadeOut(tween(140))
             },
-            label = "prayer",
-            modifier = Modifier.fillMaxSize()
+            label = "prayer"
         ) { frame ->
             val key = frame.key
-            val step = frame.step
+            val frameStep = frame.step
             // Each step keeps its own scroll, starting at the top.
             val scroll = remember(key) { androidx.compose.foundation.ScrollState(0) }
             val scope = rememberCoroutineScope()
             val fadePx = with(LocalDensity.current) { 18.dp.toPx() }
             var responseTop by remember(key) { mutableFloatStateOf(-1f) }
-            val responseSpoken = spokenNow != null && step.response.isNotBlank() && spokenNow == step.response
+            val responseSpoken = spokenNow != null && frameStep.response.isNotBlank() && spokenNow == frameStep.response
             LaunchedEffect(responseSpoken) {
                 if (responseSpoken && responseTop > 0f && responseTop > scroll.value + scroll.viewportSize * 0.5f) {
                     scope.launch { scroll.animateScrollTo((responseTop - fadePx).roundToInt()) }
@@ -1838,28 +1932,65 @@ private fun PrayerArea(
             }
             Column(
                 Modifier
-                    .fillMaxSize()
-                    .graphicsLayer { compositingStrategy = CompositingStrategy.Offscreen }
+                    .fillMaxWidth()
+                    .onGloballyPositioned { c ->
+                        areaTop = c.positionInRoot().y
+                        areaBottom = areaTop + c.size.height
+                        rootHeight = c.findRootCoordinates().size.height.toFloat().coerceAtLeast(1f)
+                    }
                     .drawWithContent {
                         drawContent()
-                        val topA = if (scroll.value > 0) 0f else 1f
-                        val bottomA = if (scroll.canScrollForward) 0f else 1f
-                        drawRect(
-                            Brush.verticalGradient(
-                                0f to Color.Black.copy(alpha = topA),
-                                (fadePx / size.height).coerceIn(0f, 0.5f) to Color.Black,
-                                (1f - fadePx * 1.6f / size.height).coerceIn(0.5f, 1f) to Color.Black,
-                                1f to Color.Black.copy(alpha = bottomA)
-                            ),
-                            blendMode = BlendMode.DstIn
-                        )
+                        fun canvasAt(y: Float) = androidx.compose.ui.graphics.lerp(p.canvasTop, p.canvasBottom, (y / rootHeight).coerceIn(0f, 1f))
+                        if (scroll.value > 4) {
+                            val c = canvasAt(areaTop)
+                            drawRect(Brush.verticalGradient(0f to c, 1f to c.copy(alpha = 0f), startY = 0f, endY = fadePx))
+                        }
+                        if (scroll.maxValue > 12 && scroll.value < scroll.maxValue - 4) {
+                            val c = canvasAt(areaBottom)
+                            drawRect(
+                                Brush.verticalGradient(0f to c.copy(alpha = 0f), 1f to c, startY = size.height - fadePx * 1.6f, endY = size.height),
+                                topLeft = androidx.compose.ui.geometry.Offset(0f, size.height - fadePx * 1.6f),
+                                size = androidx.compose.ui.geometry.Size(size.width, fadePx * 1.6f)
+                            )
+                        }
                     }
                     .verticalScroll(scroll)
                     .padding(horizontal = design.spacing.gutter)
-                    .padding(top = 2.dp, bottom = 22.dp)
+                    .padding(top = 2.dp, bottom = 4.dp)
             ) {
-                PrayerBody(step, lang, spokenNow, instructionsOn, onResponsePlaced = { responseTop = it })
+                PrayerTitleRow(frameStep, frame.count, lang, frame.showName, onSkip, padded = false)
+                Spacer(Modifier.height(PrayerTitleGap))
+                PrayerBody(frameStep, lang, spokenNow, instructionsOn, onResponsePlaced = { responseTop = it })
             }
+        }
+    }
+    val then: @Composable () -> Unit = {
+        Text(
+            upNext.orEmpty(),
+            style = styles.footnote,
+            color = p.textSecondary,
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.padding(horizontal = design.spacing.gutter)
+        )
+    }
+    Layout(
+        contents = listOf(block, then),
+        modifier = Modifier.fillMaxSize().testTag("prayer_text_art")
+    ) { slots, c ->
+        val blockM = slots[0]
+        val thenM = slots[1]
+        val w = c.maxWidth
+        val h = c.maxHeight
+        val gap = if (upNext != null) PrayerThenGap.roundToPx() else 0
+        val thenP = thenM.first().measure(Constraints(maxWidth = w))
+        val thenH = if (upNext != null) thenP.height else 0
+        val blockP = blockM.first().measure(Constraints(maxWidth = w, maxHeight = (h - thenH - gap).coerceAtLeast(0)))
+        val total = blockP.height + gap + thenH
+        val top = ((h - total).coerceAtLeast(0) * topShare).roundToInt()
+        layout(w, h) {
+            blockP.place(0, top)
+            if (upNext != null) thenP.place(0, top + blockP.height + gap)
         }
     }
 }
@@ -1875,49 +2006,89 @@ private fun PrayerBody(
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    val reading = styles.reading
+    // A short prayer (the Sign of the Cross, a chaplet decade) is set larger,
+    // like a lyric, so the screen is never a few small lines over empty space.
+    val short = isShortPrayer(step)
+    val reading = if (short) styles.reading.let { it.copy(fontSize = it.fontSize * 1.35f, lineHeight = it.lineHeight * 1.35f) } else styles.reading
     val leaderSpoken = spokenNow != null && (spokenNow == step.leader || spokenNow == step.narration)
     val responseSpoken = spokenNow != null && step.response.isNotBlank() && spokenNow == step.response
 
-    if (instructionsOn) {
-        GuideHint(step, lang)
-        Spacer(Modifier.height(14.dp))
-    }
-    if (step.optional) {
-        Text(
-            lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
-            style = styles.footnote, color = p.textSecondary
-        )
-        Spacer(Modifier.height(4.dp))
-    }
-    step.intention?.takeIf { step.meditation == null }?.let {
-        Text(it, style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textSecondary)
-        Spacer(Modifier.height(6.dp))
-    }
-    Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
-        if (step.response.isBlank()) {
-            val ink by animateColorAsState(p.textPrimary, label = "leader")
-            Text(text = step.leader, style = reading, color = ink)
-        } else {
-            val leaderInk by animateColorAsState(if (responseSpoken) p.textSecondary else p.textPrimary, tween(300), label = "leader")
-            val responseInk by animateColorAsState(if (leaderSpoken) p.textSecondary else p.textPrimary, tween(300), label = "response")
-            Text(text = rubricated("℣", step.leader, p.textSecondary), style = reading, color = leaderInk)
-            Spacer(Modifier.height(10.dp))
-            Text(
-                text = rubricated("℟", step.response, p.textSecondary),
-                style = reading,
-                color = responseInk,
-                modifier = Modifier.onPlaced { onResponsePlaced(it.positionInParent().y) }
-            )
-        }
-        step.meditation?.let {
+    Column {
+        if (instructionsOn) {
+            GuideHint(step, lang)
             Spacer(Modifier.height(14.dp))
-            Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary)
         }
-        step.detail?.let {
-            Spacer(Modifier.height(10.dp))
-            Text(it, style = styles.footnote, color = p.textSecondary)
+        if (step.optional) {
+            Text(
+                lang.pick("Oración opcional", "Optional prayer", "Oração opcional"),
+                style = styles.footnote, color = p.textSecondary
+            )
+            Spacer(Modifier.height(4.dp))
         }
+        step.intention?.takeIf { step.meditation == null }?.let {
+            Text(it, style = styles.subhead.copy(fontWeight = FontWeight.Medium), color = p.textSecondary)
+            Spacer(Modifier.height(6.dp))
+        }
+        Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
+            if (step.response.isBlank()) {
+                val ink by animateColorAsState(p.textPrimary, label = "leader")
+                Text(text = step.leader, style = reading, color = ink)
+            } else {
+                val leaderInk by animateColorAsState(if (responseSpoken) p.textSecondary else p.textPrimary, tween(300), label = "leader")
+                val responseInk by animateColorAsState(if (leaderSpoken) p.textSecondary else p.textPrimary, tween(300), label = "response")
+                HungVoice("V.", step.leader, reading, leaderInk, p.textSecondary)
+                Spacer(Modifier.height(10.dp))
+                HungVoice(
+                    "R.", step.response, reading, responseInk, p.textSecondary,
+                    Modifier.onPlaced { onResponsePlaced(it.positionInParent().y) }
+                )
+            }
+            step.meditation?.let {
+                Spacer(Modifier.height(14.dp))
+                Text(it, style = reading.copy(fontStyle = androidx.compose.ui.text.font.FontStyle.Italic), color = p.textSecondary)
+            }
+            step.detail?.let {
+                Spacer(Modifier.height(10.dp))
+                Text(it, style = styles.footnote, color = p.textSecondary)
+            }
+        }
+    }
+}
+
+/**
+ * One voice of a dialogue: the text on the gutter, and its "V." / "R." mark in
+ * the reading face (0.72em, secondary ink, on the first baseline) right-aligned
+ * in a 14dp hang, so it starts 6dp from the screen edge and the column never moves.
+ */
+@Composable
+private fun HungVoice(mark: String, text: String, style: TextStyle, ink: Color, markInk: Color, modifier: Modifier = Modifier) {
+    // 14dp hang: the mark starts 6dp from the screen edge and keeps 4dp clear of the text.
+    // It is 0.72em; at large type (where it would pass 10dp) it steps down to 0.66em.
+    val hang = 14.dp
+    val em = if (LocalDensity.current.fontScale > 1.15f) 0.66f else 0.72f
+    val markStyle = LocalAppTextStyles.current.reading.let { it.copy(fontSize = it.fontSize * em, fontWeight = FontWeight.Medium) }
+    Row(
+        modifier.layout { measurable, c ->
+            val h = hang.roundToPx()
+            val placeable = measurable.measure(c.copy(minWidth = 0, maxWidth = c.maxWidth + h))
+            layout(c.maxWidth, placeable.height) { placeable.place(-h, 0) }
+        }
+    ) {
+        Text(
+            mark,
+            style = markStyle,
+            color = markInk,
+            textAlign = TextAlign.End,
+            maxLines = 1,
+            softWrap = false,
+            overflow = TextOverflow.Visible,
+            modifier = Modifier
+                .width(hang)
+                .padding(end = 4.dp)
+                .alignByBaseline()
+                .clearAndSetSemantics { }
+        )
+        Text(text, style = style, color = ink, modifier = Modifier.weight(1f).alignByBaseline())
     }
 }
 
@@ -1934,7 +2105,7 @@ private fun GuideHint(step: GuideStep, lang: AppLanguage) {
             .padding(horizontal = 16.dp, vertical = 14.dp)
             .testTag("prayer_instructions_text")
     ) {
-        Icon(Icons.Outlined.Lightbulb, null, tint = p.textSecondary, modifier = Modifier.padding(top = 1.dp).size(18.dp))
+        Icon(DevotionalGlyphs.bookOutlined, null, tint = p.textSecondary, modifier = Modifier.padding(top = 1.dp).size(18.dp))
         Spacer(Modifier.width(10.dp))
         Column {
             Text(step.rubric, style = styles.callout, color = p.textPrimary)
@@ -1942,9 +2113,9 @@ private fun GuideHint(step: GuideStep, lang: AppLanguage) {
                 Spacer(Modifier.height(6.dp))
                 Text(
                     lang.pick(
-                        "℣ dice quien guía · ℟ responden todos. Si rezas solo, di las dos partes.",
-                        "℣ the leader says · ℟ everyone answers. Praying alone? Say both parts.",
-                        "℣ diz quem conduz · ℟ todos respondem. Rezando sozinho? Diga as duas partes."
+                        "V. dice quien guía · R. responden todos. Si rezas solo, di las dos partes.",
+                        "V. the leader says · R. everyone answers. Praying alone? Say both parts.",
+                        "V. diz quem conduz · R. todos respondem. Rezando sozinho? Diga as duas partes."
                     ),
                     style = styles.footnote, color = p.textSecondary
                 )
@@ -1980,7 +2151,7 @@ private fun TransportRow(
         val compact = maxWidth < 330.dp
         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
             AppGlassIconButton(
-                icon = if (instructionsOn) Icons.Filled.Lightbulb else Icons.Outlined.Lightbulb,
+                icon = if (instructionsOn) DevotionalGlyphs.bookFilled else DevotionalGlyphs.bookOutlined,
                 contentDescription = lang.pick("Instrucciones", "Instructions", "Instruções"),
                 onClick = onToggleInstructions,
                 tag = "prayer_instructions_toggle",
@@ -2012,16 +2183,13 @@ private fun TransportRow(
                         }
                         .testTag(audioTag)
                         .softShadow(CircleShape, p.shadow, 16.dp, 5.dp)
-                        .then(
-                            if (isPlaying) Modifier.background(p.action, CircleShape)
-                            else Modifier.lumenGlass(CircleShape, strong = true, lifted = false)
-                        ),
+                        .background(p.action, CircleShape),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
                         if (isPlaying) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
                         null,
-                        tint = if (isPlaying) p.onAction else p.textPrimary,
+                        tint = p.onAction,
                         modifier = Modifier.size(30.dp)
                     )
                 }
@@ -2311,9 +2479,3 @@ private fun litanyText(lines: List<LitanyLine>): String =
     lines.joinToString("\n\n") { "${it.call}\n    ℟ ${it.response}" }
 
 /** A versicle or response sign in a quieter ink, then the words. */
-private fun rubricated(sign: String, text: String, rubric: Color): AnnotatedString =
-    buildAnnotatedString {
-        withStyle(SpanStyle(color = rubric, fontWeight = FontWeight.SemiBold)) { append(sign) }
-        append(" ")
-        append(text)
-    }
