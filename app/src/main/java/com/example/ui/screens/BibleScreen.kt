@@ -1252,7 +1252,7 @@ private fun ChapterReader(
             visible = showChrome,
             enter = slideInVertically(tween(260)) { it / 2 } + fadeIn(tween(220)),
             exit = slideOutVertically(tween(260)) { it / 2 } + fadeOut(tween(200)),
-            modifier = Modifier.align(Alignment.BottomCenter)
+            modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = bottomInset + 16.dp)
         ) {
             ReaderBar(
                 book = book,
