@@ -66,6 +66,10 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -581,7 +585,13 @@ fun HomeScreen(
                     val challenge = dynamicVerse.spiritualChallenge.get(currentLanguage)
                     if (challenge.isNotBlank()) {
                         Spacer(Modifier.height(10.dp))
-                        ExcerptText(challenge, styles.footnote, palette.textSecondary, 1)
+                        Text(
+                            text = hintClause(challenge),
+                            style = styles.footnote,
+                            color = palette.textSecondary,
+                            maxLines = 1,
+                            overflow = TextOverflow.Clip
+                        )
                     }
                 }
             }
@@ -806,8 +816,20 @@ private fun ExcerptText(
 ) {
     var budget by remember(text) { mutableIntStateOf((maxLines * 46).coerceAtLeast(60)) }
     val shown = remember(text, budget) { balanceQuotes(clauseCut(text, budget)) }
+    val uiFace = LocalAppTextStyles.current.footnote.fontFamily
+    val annotated = remember(shown, uiFace) {
+        buildAnnotatedString {
+            val i = shown.indexOf('…')
+            if (i < 0) append(shown) else {
+                append(shown.substring(0, i))
+                // U+2026, set open in the UI face so it never reads as "...".
+                withStyle(SpanStyle(fontFamily = uiFace, letterSpacing = 1.sp)) { append("…") }
+                append(shown.substring(i + 1))
+            }
+        }
+    }
     Text(
-        text = shown,
+        text = annotated,
         style = style,
         color = color,
         maxLines = maxLines,
@@ -852,8 +874,9 @@ private fun MarginalQuote(text: String) {
 
 /**
  * Today's spiritual fidelity from the fixed rule of twelve ([DailyRule], the
- * same ids and goal as the Habits screen): a ring "N / 12", a designed empty
- * state, the one-tap "I overcame a temptation" log and the month calendar.
+ * same ids and goal as the Habits screen): a ring "N / 12", one line of copy
+ * and ONE capsule that opens Habits (where the temptation log and the month
+ * calendar live).
  */
 @Composable
 private fun FidelityCard(
@@ -864,9 +887,6 @@ private fun FidelityCard(
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
-    val scope = rememberCoroutineScope()
-    val context = LocalContext.current
-    val temptationStore = remember(context) { TemptationStore(context.applicationContext) }
 
     fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
         AppLanguage.ES -> es
@@ -876,8 +896,6 @@ private fun FidelityCard(
 
     val todayKey = remember { FidelityStore.dateKey(LocalDate.now()) }
     val completions by dao.getAllCompletions().collectAsState(initial = emptyList())
-    val totalVictories by dao.getTotalVictoriesCount().collectAsState(initial = 0)
-    var victoryLogged by rememberSaveable { mutableStateOf(false) }
 
     val ruleCounts = remember(completions) { DailyRule.countsFrom(completions) }
     val total = DailyRule.size
@@ -893,7 +911,7 @@ private fun FidelityCard(
         Row(verticalAlignment = Alignment.CenterVertically) {
             AppProgressRing(
                 progress = points.toFloat() / total,
-                size = 96.dp,
+                size = 88.dp,
                 stroke = 7.dp
             ) {
                 Row(verticalAlignment = Alignment.Bottom) {
@@ -929,93 +947,15 @@ private fun FidelityCard(
                     style = styles.subhead,
                     color = palette.textSecondary
                 )
-                if (totalVictories > 0) {
-                    Spacer(Modifier.height(2.dp))
-                    Text(
-                        text = strings(
-                            "$totalVictories tentaciones vencidas",
-                            "$totalVictories temptations overcome",
-                            "$totalVictories tentações vencidas"
-                        ),
-                        style = styles.footnote,
-                        color = palette.textSecondary
-                    )
-                }
                 Spacer(Modifier.height(12.dp))
-                if (empty) {
-                    AppSecondaryCapsule(
-                        label = strings("Empezar mi regla", "Start my rule", "Começar a regra"),
-                        onClick = onOpenHabits,
-                        tag = "home_fidelity_open_habits"
-                    )
-                } else {
-                    Row(
-                        Modifier
-                            .heightIn(min = 44.dp)
-                            .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null,
-                                role = Role.Button,
-                                onClick = onOpenHabits
-                            )
-                            .testTag("home_fidelity_open_habits"),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            strings("Ver mi regla de vida", "View my rule of life", "Ver a minha regra de vida"),
-                            style = styles.subhead.copy(fontWeight = FontWeight.SemiBold),
-                            color = palette.textPrimary
-                        )
-                        Spacer(Modifier.width(6.dp))
-                        AppChevron(tint = palette.inkQuiet)
-                    }
-                }
+                AppSecondaryCapsule(
+                    label = if (empty) strings("Empezar mi regla", "Start my rule", "Começar a regra")
+                    else strings("Ver mi regla", "View my rule", "Ver a regra"),
+                    onClick = onOpenHabits,
+                    tag = "home_fidelity_open_habits"
+                )
             }
         }
-        Spacer(Modifier.height(16.dp))
-        AppSecondaryCapsule(
-            label = if (victoryLogged) strings("¡Victoria registrada!", "Victory recorded!", "Vitória registada!")
-            else strings("Vencí una tentación", "I overcame a temptation", "Venci uma tentação"),
-            onClick = {
-                scope.launch {
-                    dao.insertSinOvercomeLog(
-                        SinOvercomeLogEntity(
-                            sinKey = "TEMPTATION",
-                            counterVirtue = "",
-                            prayerUsed = "HAIL_MARY"
-                        )
-                    )
-                    // Same victory, per-day counter for the temptation calendar.
-                    temptationStore.recordVictory()
-                    victoryLogged = true
-                }
-            },
-            fillWidth = true,
-            tag = "home_overcome_temptation_button"
-        )
-        if (victoryLogged) {
-            Text(
-                text = strings("¡Victoria registrada!", "Victory recorded!", "Vitória registada!"),
-                style = styles.caption,
-                color = Color.Transparent,
-                modifier = Modifier.height(1.dp).testTag("home_victory_confirmation")
-            )
-        }
-        Spacer(Modifier.height(20.dp))
-        CardHairline()
-        Spacer(Modifier.height(16.dp))
-        Text(
-            text = strings("Este mes", "This month", "Este mês"),
-            style = styles.eyebrow,
-            color = palette.textSecondary
-        )
-        Spacer(Modifier.height(8.dp))
-        FidelityCalendar(
-            counts = ruleCounts,
-            currentLanguage = currentLanguage,
-            dailyGoal = DailyRule.size,
-            framed = false
-        )
     }
 }
 
@@ -1041,6 +981,18 @@ internal fun cleanScripture(raw: String, language: AppLanguage): String {
         closes--
     }
     return t
+}
+
+/**
+ * A hint cut to its first clause so it fits one line with no ellipsis:
+ * "Hoy relee este versículo despacio tres veces, deteniéndote…" becomes
+ * "Hoy relee este versículo despacio tres veces."
+ */
+internal fun hintClause(text: String): String {
+    val t = text.trim()
+    val end = t.indexOfFirst { it == ',' || it == ';' || it == ':' || it == '.' || it == '!' || it == '?' }
+    val clause = (if (end > 8) t.take(end) else t).trimEnd(',', ';', ':', ' ')
+    return if (clause.endsWith(".") || clause.endsWith("!") || clause.endsWith("?")) clause else "$clause."
 }
 
 /** Appends the closers an excerpt left open. */

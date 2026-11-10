@@ -28,35 +28,34 @@ internal object DevotionalGlyphs {
     }
 
     /**
-     * A rosary: a loop of beads open at the bottom, two beads on a short
-     * stem and a Latin crucifix hanging from it. Drawn inside a 2dp margin so
-     * it carries the same optical size as Material's outlined glyphs, with a
-     * 1.5 stroke for the cross.
+     * A rosary: a necklace of beads drooping from the top corners, closing on
+     * a stem bead, with a Latin crucifix hanging from it. It spans the 24 grid
+     * (a 22dp visible glyph) and the cross uses a 1.5 stroke, so it reads as a
+     * rosary and not as a magnifier or a venus sign.
      */
     private fun rosary(name: String, filled: Boolean, sharp: Boolean): ImageVector =
         ImageVector.Builder(name, 24.dp, 24.dp, 24f, 24f).apply {
             val cx = 12f
-            val cy = 6.9f
-            val r = 4.7f
-            val beadR = if (filled) 1.1f else 0.95f
+            val cy = 2.4f
+            val r = 7.2f
+            val beadR = if (filled) 1.2f else 1.0f
             val ink = SolidColor(Color.Black)
-            val count = 10
-            val gap = Math.toRadians(30.0)
+            val count = 9
             path(fill = ink) {
                 for (k in 0 until count) {
-                    val t = Math.PI / 2 + gap + (2 * Math.PI - 2 * gap) * k / (count - 1)
+                    val t = Math.toRadians(14.0 + (152.0) * k / (count - 1))
                     circle(cx + r * cos(t).toFloat(), cy + r * sin(t).toFloat(), beadR)
                 }
-                // Two beads of the stem that joins the loop to the crucifix.
-                circle(cx, cy + r + 0.9f, beadR)
+                // The stem bead under the loop.
+                circle(cx, cy + r + 1.8f, beadR)
             }
             val join = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
             val cap = if (sharp) StrokeCap.Butt else StrokeCap.Round
             val w = if (filled) 2.0f else 1.5f
             // The crucifix.
             path(stroke = ink, strokeLineWidth = w, strokeLineCap = cap, strokeLineJoin = join) {
-                moveTo(cx, cy + r + 2.4f); lineTo(cx, 21.8f)
-                moveTo(cx - 3.1f, 15.6f); lineTo(cx + 3.1f, 15.6f)
+                moveTo(cx, cy + r + 3.5f); lineTo(cx, 23f)
+                moveTo(cx - 4.2f, 16.2f); lineTo(cx + 4.2f, 16.2f)
             }
         }.build()
 
@@ -67,17 +66,17 @@ internal object DevotionalGlyphs {
             val cap = if (sharp) StrokeCap.Butt else StrokeCap.Round
             val join = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
             val sun: PathBuilder.() -> Unit = {
-                moveTo(6.5f, 16f)
-                arcTo(5.5f, 5.5f, 0f, false, true, 17.5f, 16f)
+                moveTo(4.8f, 17f)
+                arcTo(7.2f, 7.2f, 0f, false, true, 19.2f, 17f)
                 close()
             }
             if (filled) path(fill = ink, pathBuilder = sun)
             else path(stroke = ink, strokeLineWidth = 1.5f, strokeLineCap = cap, strokeLineJoin = join, pathBuilder = sun)
             path(stroke = ink, strokeLineWidth = 1.5f, strokeLineCap = cap) {
-                moveTo(3.5f, 19f); lineTo(20.5f, 19f)
-                moveTo(12f, 4.2f); lineTo(12f, 6.4f)
-                moveTo(5.2f, 9.2f); lineTo(6.7f, 10.7f)
-                moveTo(18.8f, 9.2f); lineTo(17.3f, 10.7f)
+                moveTo(1.8f, 20.5f); lineTo(22.2f, 20.5f)
+                moveTo(12f, 2.6f); lineTo(12f, 5.4f)
+                moveTo(4.4f, 8.4f); lineTo(6.4f, 10.4f)
+                moveTo(19.6f, 8.4f); lineTo(17.6f, 10.4f)
             }
         }.build()
 

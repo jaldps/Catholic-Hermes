@@ -200,7 +200,7 @@ fun AppHeroImage(
             gradeMatrix(0.85f, 0.93f, 0.93f, 0.93f, 18f, 18f, 18f)
         } else if (meta.tone == "light") {
             // About -0.6 EV with a warm cast.
-            gradeMatrix(0.66f, 0.46f, 0.43f, 0.37f, 3f, 2f, -2f)
+            gradeMatrix(0.64f, 0.37f, 0.35f, 0.30f, 3f, 2f, -2f)
         } else {
             gradeMatrix(0.74f, 0.74f, 0.70f, 0.62f, 3f, 1f, -3f)
         }
@@ -263,9 +263,9 @@ fun AppHeroImage(
                     Brush.verticalGradient(
                         0f to Color.Transparent,
                         fadeStart to Color.Transparent,
-                        (fadeStart + span * 0.30f) to p.canvasTop.copy(alpha = 0.55f),
-                        (fadeStart + span * 0.58f) to p.canvasTop.copy(alpha = 0.80f),
-                        (fadeStart + span * 0.86f) to p.canvasTop.copy(alpha = 0.94f),
+                        (fadeStart + span * 0.30f) to p.canvasTop.copy(alpha = 0.50f),
+                        (fadeStart + span * 0.58f) to p.canvasTop.copy(alpha = 0.72f),
+                        (fadeStart + span * 0.86f) to p.canvasTop.copy(alpha = 0.82f),
                         1f to p.canvasTop
                     )
                 )
@@ -873,11 +873,23 @@ fun AppSecondaryCapsule(
     Row(
         modifier
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
-            .heightIn(min = 48.dp)
+            .heightIn(min = 44.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled)
-            .lumenGlass(shape, strong = true)
+            // Flat tint, no shadow: black 5% in light, white 12% with a lit
+            // 14% -> 4% edge in dark.
+            .background(
+                if (design.isDark) Color.White.copy(alpha = 0.12f) else Color.Black.copy(alpha = 0.05f),
+                shape
+            )
+            .then(
+                if (design.isDark) Modifier.border(
+                    1.dp,
+                    Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.14f), Color.White.copy(alpha = 0.04f))),
+                    shape
+                ) else Modifier
+            )
             .tagged(tag)
-            .padding(horizontal = 22.dp, vertical = 12.dp),
+            .padding(horizontal = 20.dp, vertical = 10.dp),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -968,7 +980,7 @@ fun AppProgressRing(
 ) {
     val p = LocalAppDesign.current.palette
     val animated by animateFloatAsState(progress.coerceIn(0f, 1f), tween(600), label = "ring")
-    val trackColor = if (LocalAppDesign.current.isDark) Color.White.copy(alpha = 0.14f) else Color.Black.copy(alpha = 0.09f)
+    val trackColor = if (LocalAppDesign.current.isDark) Color.White.copy(alpha = 0.14f) else Color.Black.copy(alpha = 0.13f)
     Box(modifier.size(size), contentAlignment = Alignment.Center) {
         Canvas(Modifier.fillMaxSize()) {
             val w = stroke.toPx()

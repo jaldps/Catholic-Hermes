@@ -107,7 +107,7 @@ fun Modifier.lumenGlass(shape: Shape, strong: Boolean = false, lifted: Boolean =
     // reads as lit glass and not a flat white card.
     val fill = Brush.verticalGradient(
         listOf(
-            base.copy(alpha = (base.alpha * 1.12f).coerceAtMost(1f)),
+            base.copy(alpha = if (design.isDark) base.alpha * 1.12f else base.alpha),
             base.copy(alpha = base.alpha * 0.9f)
         )
     )
@@ -128,6 +128,9 @@ fun Modifier.lumenGlass(shape: Shape, strong: Boolean = false, lifted: Boolean =
         )
         .background(fill, shape)
         .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), shape)
+        // Light mode: a warm outer hairline so the lit white edge has something
+        // to be lit against (white on a near-white canvas would vanish).
+        .then(if (design.isDark) Modifier else Modifier.border(0.5.dp, Color(0x243B2F22), shape))
 }
 
 /**

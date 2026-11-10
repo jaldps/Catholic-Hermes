@@ -540,8 +540,8 @@ object LumenKit : AppKit {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 if (leadingIcon != null) {
-                    Icon(leadingIcon, null, tint = if (selected) scheme.primary else p.textPrimary, modifier = Modifier.size(24.dp))
-                    Spacer(Modifier.width(16.dp))
+                    Icon(leadingIcon, null, tint = if (selected) scheme.primary else p.textPrimary, modifier = Modifier.size(26.dp))
+                    Spacer(Modifier.width(14.dp))
                 }
                 Column(Modifier.weight(1f)) {
                     Text(title, style = styles.body, color = if (selected) scheme.primary else p.textPrimary)
