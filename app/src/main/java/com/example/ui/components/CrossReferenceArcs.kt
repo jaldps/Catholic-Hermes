@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import android.graphics.Paint
 import android.graphics.RectF
 import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Box
@@ -49,24 +50,27 @@ import kotlinx.coroutines.withContext
 import kotlin.math.abs
 
 /**
- * The inks the arcs are drawn in, per identity: the Old Testament and the New
- * each get their own, so a verse's reach across the two reads at a glance.
- * Apple and Material take the tint and a tonal partner; the Vatican draws in
- * gold leaf and rubric red, as a missal would.
+ * The two inks the arcs are drawn in — data, not decoration: the Old
+ * Testament in gold, the New in the page's own ink, so a verse's reach across
+ * the two reads at a glance. Both come from the palette and are tuned for
+ * light and dark.
  */
 private data class ArcInks(val oldTestament: Color, val newTestament: Color, val baseline: Color, val focus: Color)
 
 @Composable
 private fun arcInks(): ArcInks {
-    val design = LocalAppDesign.current
-    val p = design.palette
-    val scheme = androidx.compose.material3.MaterialTheme.colorScheme
-    return when (design.language) {
-        DesignLanguage.APPLE -> ArcInks(Color(0xFFFF9F0A), scheme.primary, p.hairline, p.textPrimary)
-        DesignLanguage.MATERIAL -> ArcInks(scheme.tertiary, scheme.primary, scheme.outlineVariant, scheme.onSurface)
-        DesignLanguage.VATICAN -> ArcInks(p.gold, p.accent, p.hairline, p.textPrimary)
-    }
+    val p = LocalAppDesign.current.palette
+    return ArcInks(
+        oldTestament = p.gold,
+        newTestament = p.textPrimary.copy(alpha = 0.78f),
+        baseline = p.separator,
+        focus = p.textPrimary
+    )
 }
+
+/** Old- and New-Testament inks, for a legend beside the arcs. */
+@Composable
+fun crossReferenceInks(): Pair<Color, Color> = arcInks().let { it.oldTestament to it.newTestament }
 
 /** Canonical order puts Matthew first among the New Testament books. */
 private fun BibleLine.newTestamentStart(): Int = books.firstOrNull { it.first == "mat" }?.second ?: total
@@ -113,7 +117,7 @@ fun CrossReferenceArcStrip(
     val inks = arcInks()
     val still = LocalInspectionMode.current
     val reveal = remember(source) { Animatable(if (still) 1f else 0f) }
-    LaunchedEffect(source) { reveal.animateTo(1f, tween(900)) }
+    LaunchedEffect(source) { reveal.animateTo(1f, tween(600, easing = FastOutSlowInEasing)) }
     val from = line.fraction(source)
     val nt = line.newTestamentStart()
     val points = remember(targets, line) {
@@ -148,6 +152,7 @@ fun BibleArcsPanel(
     bookLabel: (String) -> String
 ) {
     val inks = arcInks()
+    val labelInk = LocalAppDesign.current.palette.textSecondary
     val dark = LocalAppDesign.current.isDark
     val density = LocalDensity.current
     val measurer = rememberTextMeasurer()
@@ -156,7 +161,7 @@ fun BibleArcsPanel(
     BoxWithConstraints(modifier) {
         val canvasSize = IntSize(constraints.maxWidth, constraints.maxHeight)
         val still = LocalInspectionMode.current
-        val faintAlpha = if (dark) 0.028f else 0.022f
+        val faintAlpha = if (dark) 0.035f else 0.022f
         val bottomInset = with(density) { 22.dp.toPx() }
         // Previews and screenshots draw in one pass; the app renders the web of
         // all connections off the main thread and fades the focus in.
@@ -171,7 +176,7 @@ fun BibleArcsPanel(
         }
         val faint = faintNow ?: faintLater
         val reveal = remember(focus) { Animatable(if (still) 1f else 0f) }
-        LaunchedEffect(focus) { reveal.animateTo(1f, tween(700)) }
+        LaunchedEffect(focus) { reveal.animateTo(1f, tween(500, easing = FastOutSlowInEasing)) }
 
         Canvas(Modifier.fillMaxSize()) {
             faint?.let { drawImage(it) }
@@ -188,10 +193,10 @@ fun BibleArcsPanel(
             focus.firstOrNull()?.first?.let { line.position(it) }?.let {
                 drawCircle(inks.focus, 4.5.dp.toPx(), Offset(it.toFloat() / line.total * w, base + 1.5.dp.toPx()))
             }
-            drawBookLabels(line, measurer, styles.navLabel.copy(fontSize = 10.sp), inks, base + 8.dp.toPx(), bookLabel)
+            drawBookLabels(line, measurer, styles.caption, labelInk, base + 6.dp.toPx(), bookLabel)
             if (focusLabel != null) {
-                val text = measurer.measure(focusLabel, styles.rowTitle.copy(color = inks.focus))
-                drawText(text, topLeft = Offset(12.dp.toPx(), 8.dp.toPx()))
+                val text = measurer.measure(focusLabel, styles.headline.copy(color = inks.focus))
+                drawText(text, topLeft = Offset(16.dp.toPx(), 14.dp.toPx()))
             }
         }
     }
@@ -203,15 +208,15 @@ private fun DrawScope.drawBookLabels(
     line: BibleLine,
     measurer: TextMeasurer,
     style: androidx.compose.ui.text.TextStyle,
-    inks: ArcInks,
+    ink: Color,
     y: Float,
     bookLabel: (String) -> String
 ) {
     var lastRight = -1f
     line.books.filter { it.first in LabelledBooks }.forEach { (id, start, _) ->
         val x = start.toFloat() / line.total * size.width
-        val layout = measurer.measure(bookLabel(id), style.copy(color = inks.focus.copy(alpha = 0.6f)))
-        if (x > lastRight + 4f && x + layout.size.width < size.width) {
+        val layout = measurer.measure(bookLabel(id), style.copy(color = ink))
+        if (x > lastRight + 8f && x + layout.size.width < size.width) {
             drawText(layout, topLeft = Offset(x, y))
             lastRight = x + layout.size.width
         }

@@ -16,6 +16,8 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.calculateEndPadding
+import androidx.compose.foundation.layout.calculateStartPadding
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -92,6 +94,7 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
@@ -204,6 +207,10 @@ object AppleKit : AppKit {
     @Composable
     private fun accentFill(): Color {
         val design = LocalAppDesign.current
+        // Ive reference: primary CTAs are black (cream in dark), not green.
+        if (design.language == DesignLanguage.IVE) {
+            return if (design.isDark) Color(0xFFF5F1EA) else Color(0xFF1C1C1E)
+        }
         val primary = MaterialTheme.colorScheme.primary
         return remember(primary, design.isDark) {
             val hsv = FloatArray(3)
@@ -221,10 +228,16 @@ object AppleKit : AppKit {
         }
     }
 
-    /** White, always: [accentFill] is struck so that white passes on it. */
-    @Suppress("FunctionOnlyReturningConstant")
+    /**
+     * White, except on Ive's cream dark fill (F5F1EA) where white is
+     * white-on-white — there the label is black. Light Ive fill is
+     * near-black, so white passes at well over 4.5:1 there.
+     */
     @Composable
-    private fun onAccentFill(): Color = Color.White
+    private fun onAccentFill(): Color {
+        val design = LocalAppDesign.current
+        return if (design.language == DesignLanguage.IVE && design.isDark) Color.Black else Color.White
+    }
 
     /**
      * The iOS system colours, light and dark, that Settings strikes its icon
@@ -397,7 +410,7 @@ object AppleKit : AppKit {
     /** The disclosure chevron's grey: iOS's tertiary label, a touch firmer. */
     @Composable
     private fun chevronGrey(): Color =
-        if (LocalAppDesign.current.isDark) Color(0xFF5E5E63) else Color(0xFFB8B8BE)
+        LocalAppDesign.current.palette.textSecondary
 
     /**
      * UIKit's fill colours are translucent greys, not opaque swatches: the
@@ -747,7 +760,7 @@ object AppleKit : AppKit {
                             )
                             .border(
                                 HairlineWeight,
-                                if (design.isDark) Color.White.copy(alpha = 0.14f) else Color.White.copy(alpha = 0.96f),
+                                if (design.isDark) Color.White.copy(alpha = 0.14f) else Color.Black.copy(alpha = 0.05f),
                                 dockShape
                             )
                             .padding(5.dp)
@@ -844,6 +857,8 @@ object AppleKit : AppKit {
                             .fillMaxSize()
                             .nestedScroll(scrollWatcher)
                     ) {
+                        // The scaffold's bottomBar slot already reserves the
+                        // floating dock's height; content uses it as-is.
                         content(padding)
                         // Only the scrolled navigation edge needs a veil.
                         // The floating dock has its own material: fading the
@@ -1331,16 +1346,21 @@ object AppleKit : AppKit {
         modifier: Modifier
     ) {
         val design = LocalAppDesign.current
+        val palette = design.palette
         val styles = LocalAppTextStyles.current
         val scheme = MaterialTheme.colorScheme
-        // iOS's tinted button: the accent at low alpha, label in the accent.
-        // Derived from the live accent rather than from palette.accentMuted,
-        // which is keyed to the palette's own iOS blue and turns this button
-        // blue in a green app.
-        val wash = scheme.primary.copy(alpha = if (design.isDark) 0.24f else 0.12f)
+        val isIve = design.language == DesignLanguage.IVE
+        // Ive: an opaque accentMuted wash (a translucent scheme.primary at
+        // 12% over a white card is invisible) with a label struck to >=4.5:1
+        // on that wash via inkOn — never the raw tint at 12%.
+        // Apple: iOS's tinted button: the accent at low alpha, label in
+        // the accent.
+        val wash = if (isIve) palette.accentMuted else scheme.primary.copy(alpha = if (design.isDark) 0.24f else 0.12f)
         val source = remember { MutableInteractionSource() }
         val pressed by source.collectIsPressedAsState()
-        val content = if (enabled) scheme.primary else design.palette.textTertiary
+        val content = if (enabled) {
+            if (isIve) inkOn(palette.accent, wash, 4.5f) else scheme.primary
+        } else design.palette.textTertiary
         Row(
             modifier
                 .pressScale(pressed)
@@ -1438,7 +1458,9 @@ object AppleKit : AppKit {
         val count = options.size.coerceAtLeast(1)
         val track = systemFill(2)
         val pill = if (design.isDark) Color(0xFF636366) else Color.White
-        val shape = RoundedCornerShape(8.dp)
+        // 12dp system radius (design.shapes.button) for the track — the
+        // previous 8dp track / 6dp pill mismatched the button system.
+        val shape = design.shapes.button
         val labelStyle = styles.labelMedium.copy(fontWeight = FontWeight.Medium)
 
         BoxWithConstraints(modifier.fillMaxWidth()) {
@@ -1467,8 +1489,8 @@ object AppleKit : AppKit {
                 Box(
                     Modifier.offset(x = pillOffset).width(segment).height(targetHeight)
                         .padding(horizontal = 2.dp, vertical = 6.dp)
-                        .shadow(if (design.isDark) 0.dp else 1.dp, RoundedCornerShape(6.dp))
-                        .clip(RoundedCornerShape(6.dp)).background(pill)
+                        .shadow(if (design.isDark) 0.dp else 1.dp, design.shapes.button)
+                        .clip(design.shapes.button).background(pill)
                 )
                 Row(Modifier.fillMaxSize(), verticalAlignment = Alignment.CenterVertically) {
                     options.forEachIndexed { index, option ->

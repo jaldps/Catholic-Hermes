@@ -87,7 +87,5 @@ class CrossReferenceScreenshotTest {
     }
 
     @Test @Config(sdk = [34], qualifiers = "w411dp-h891dp-xhdpi") fun appleLight() = shots(DesignLanguage.APPLE, false)
-    @Test @Config(sdk = [34], qualifiers = "w411dp-h891dp-xhdpi") fun materialDark() = shots(DesignLanguage.MATERIAL, true)
-    @Test @Config(sdk = [34], qualifiers = "w411dp-h891dp-xhdpi") fun vaticanLight() = shots(DesignLanguage.VATICAN, false)
-    @Test @Config(sdk = [34], qualifiers = "w411dp-h891dp-xhdpi") fun vaticanDark() = shots(DesignLanguage.VATICAN, true)
+    @Test @Config(sdk = [34], qualifiers = "w411dp-h891dp-xhdpi") fun materialDark() = shots(DesignLanguage.IVE, true)
 }

@@ -69,6 +69,21 @@ class VaticanNewsTest {
     }
 
     @Test
+    fun readsEachStoryPhoto() = runBlocking {
+        val items = (fetcherServing(feed).latest(AppLanguage.ES, limit = 25) as NewsResult.Success).items
+        val withPhoto = items.filter { it.imageUrl != null }
+        assertTrue("the captured feed carries photos", withPhoto.isNotEmpty())
+        for (item in withPhoto) {
+            assertTrue("photo is not an https url: ${item.imageUrl}", item.imageUrl!!.startsWith("https://"))
+        }
+        // A story without media:content simply has no photo.
+        val bare = """<rss><channel><item><title>T</title><link>https://www.vaticannews.va/a</link>
+            <description>d</description><pubDate>Fri, 30 Oct 2026 13:55:00 +0100</pubDate></item></channel></rss>"""
+        val one = (fetcherServing(bare).latest(AppLanguage.ES) as NewsResult.Success).items.single()
+        assertEquals(null, one.imageUrl)
+    }
+
+    @Test
     fun respectsTheRequestedLimit() = runBlocking {
         val result = fetcherServing(feed).latest(AppLanguage.ES, limit = 5)
         assertEquals(5, (result as NewsResult.Success).items.size)

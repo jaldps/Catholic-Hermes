@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -109,9 +110,9 @@ import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
@@ -126,38 +127,38 @@ import com.example.ui.theme.LocalAppTextStyles
  * is separated from what is behind it by a tone step alone, so the hierarchy
  * survives dark mode where a shadow does not.
  *
- * ### Why the colour is computed here rather than read from the scheme
+ * ### Why the colour is read from the scheme
  *
- * The shared palette hands Material a *baseline-purple* neutral family
- * (`raised` #F3EDF7, `accentMuted` #EADDFF, `selectionTint` #E8DEF8) while
- * `primary` is the app's liturgical accent. That is not what M3 does: in a
- * seeded scheme every neutral is struck from the seed at low chroma and every
- * container is struck from the seed's tonal palette, so surfaces and accent are
- * always the same family. Reading `primaryContainer`/`secondaryContainer`
- * straight out of the scheme is what produced green glyphs sitting in lilac
- * circles. So the four roles this identity leans on hardest — the surface
- * ladder, the two tonal container tints and the outline — are derived from
- * `primary` here, the way a seeded scheme would derive them. The palette tokens
- * themselves want the same fix; see the report.
+ * The scheme built in `Theme.kt` is the single source of truth: its
+ * `surfaceContainer` ladder is stepped from the palette canvas toward the
+ * palette's deep surface tone, and its tonal containers are struck from the
+ * accent itself, the way a seeded M3 scheme derives them. [roles] therefore
+ * reads the scheme roles directly instead of re-deriving a parallel ladder
+ * here — a second derivation is what produced surfaces that drifted from
+ * the scheme (and, in the baseline palette, green glyphs sitting in lilac
+ * circles). The `hsl`/`tone`/`readableOn` helpers below are retained only
+ * for [Banner], which harmonizes a screen-supplied liturgical colour that
+ * has no scheme role of its own; they no longer feed [roles].
  */
 object MaterialKit : AppKit {
 
     // ------------------------------------------------------------------ colour
 
     /**
-     * The roles this identity actually paints with. Everything is derived from
-     * the canvas lightness and the accent hue, so the surfaces, the tonal
-     * circles and the accent all belong to one tonal family.
+     * The roles this identity paints with, read straight from the
+     * `MaterialTheme` colour scheme (see [roles]). The scheme — not this
+     * file — owns the tonal derivation, so these can never drift from the
+     * surfaces M3 components draw from the same scheme.
      */
     @Immutable
     private data class Roles(
-        /** Background / top app bar, M3 `surface` at tone 98 (light) / 6 (dark). */
+        /** Background / top app bar, scheme `surface`. */
         val canvas: Color,
         /** `surfaceContainerLow`. */
         val low: Color,
-        /** `surfaceContainer`: list rows, the navigation bar. */
+        /** `surfaceContainer`: list rows. */
         val container: Color,
-        /** `surfaceContainerHigh`: the search field, metric tiles. */
+        /** `surfaceContainerHigh`: the search field, metric tiles, navigation bar. */
         val high: Color,
         /** `surfaceContainerHighest`. */
         val highest: Color,
@@ -167,11 +168,12 @@ object MaterialKit : AppKit {
         /** `secondaryContainer`: nav pill, selection, verse number, active segment. */
         val accentSofter: Color,
         val onAccentSofter: Color,
-        /** `outlineVariant`: dividers and the chip/segment hairline. */
+        /** Scheme `outline`: dividers and the chip/segment hairline. */
         val outline: Color
     )
 
-    private fun Color.luma(): Float = 0.2126f * red + 0.7152f * green + 0.0722f * blue
+    // Retained for Banner (below), which harmonizes a screen-supplied
+    // liturgical colour and solves legible text on it. Not used by roles().
 
     /** Relative luminance, for the WCAG ratio the on-colours are solved against. */
     private fun Color.relativeLuminance(): Float {
@@ -207,27 +209,6 @@ object MaterialKit : AppKit {
         return candidate
     }
 
-    /** Strips a colour of its hue, keeping only its lightness. */
-    private fun Color.neutralised(): Color = luma().let { Color(it, it, it, alpha) }
-
-    /**
-     * Pushes a colour along [hue]'s chroma direction without moving its
-     * lightness — the cheap stand-in for "neutral palette at the seed's hue,
-     * chroma 4" that a real M3 scheme generator produces.
-     */
-    private fun Color.tintedBy(hue: Color, amount: Float): Color {
-        val l = hue.luma()
-        return Color(
-            (red + (hue.red - l) * amount).coerceIn(0f, 1f),
-            (green + (hue.green - l) * amount).coerceIn(0f, 1f),
-            (blue + (hue.blue - l) * amount).coerceIn(0f, 1f),
-            alpha
-        )
-    }
-
-    private fun Color.step(ink: Color, alpha: Float): Color =
-        ink.copy(alpha = alpha).compositeOver(this)
-
     /** Hue (0..360), saturation and lightness of an sRGB colour. */
     private fun Color.hsl(): FloatArray {
         val max = maxOf(red, green, blue)
@@ -258,52 +239,18 @@ object MaterialKit : AppKit {
 
     @Composable
     private fun roles(): Roles {
-        val design = LocalAppDesign.current
-        val dark = design.isDark
-        val accent = MaterialTheme.colorScheme.primary
-        val ink = design.palette.textPrimary
-
-        // The canvas: the identity's own lightness, re-struck at the accent's
-        // hue. Light sits at M3's tone 98 (above every container) rather than at
-        // the token's tone 96, so cards can step *down* and still stay bright.
-        val canvas = if (dark) {
-            design.palette.canvas.neutralised().tintedBy(accent, 0.10f)
-        } else {
-            Color(0.976f, 0.976f, 0.976f).tintedBy(accent, 0.10f)
-        }
-
-        // The surfaceContainer ladder. The alphas reproduce M3's own tone steps
-        // (98→96→94→92→90 light, 6→10→12→17→22 dark) measured off the baseline
-        // scheme, so four distinct steps are visible in both modes with no
-        // shadow doing any of the work.
-        // Dark runs a deeper ladder than the baseline (≈6→11→14→19→24): at
-        // M3's own 10/12 steps a filled card on a phone at night was nearly
-        // indistinguishable from the surface it sat on.
-        val a = if (dark) floatArrayOf(0.055f, 0.088f, 0.135f, 0.185f)
-        else floatArrayOf(0.031f, 0.050f, 0.082f, 0.109f)
-
-        val high = canvas.step(ink, a[2])
-        // The two containers are struck as tones of the accent's hue, the
-        // way a seeded scheme picks tone 90 (light) / 30 (dark) out of the
-        // primary and secondary palettes. Compositing the accent at low alpha
-        // over a grey canvas — what this did before — lands on a desaturated
-        // sage that reads as "disabled", not as "container".
-        val accentSoft = if (dark) accent.tone(0.40f, 0.24f) else accent.tone(0.50f, 0.85f)
-        val accentSofter = if (dark) accent.tone(0.16f, 0.25f) else accent.tone(0.30f, 0.875f)
-        val onAccentSoft = if (dark) accent.tone(0.55f, 0.86f) else accent.tone(0.70f, 0.17f)
-        val onAccentSofter = if (dark) accent.tone(0.25f, 0.89f) else accent.tone(0.35f, 0.12f)
-
+        val scheme = MaterialTheme.colorScheme
         return Roles(
-            canvas = canvas,
-            low = canvas.step(ink, a[0]),
-            container = canvas.step(ink, a[1]),
-            high = high,
-            highest = canvas.step(ink, a[3]),
-            accentSoft = accentSoft,
-            onAccentSoft = onAccentSoft.readableOn(accentSoft),
-            accentSofter = accentSofter,
-            onAccentSofter = onAccentSofter.readableOn(accentSofter),
-            outline = canvas.step(ink, if (dark) 0.30f else 0.24f)
+            canvas = scheme.surface,
+            low = scheme.surfaceContainerLow,
+            container = scheme.surfaceContainer,
+            high = scheme.surfaceContainerHigh,
+            highest = scheme.surfaceContainerHighest,
+            accentSoft = scheme.primaryContainer,
+            onAccentSoft = scheme.onPrimaryContainer,
+            accentSofter = scheme.secondaryContainer,
+            onAccentSofter = scheme.onSecondaryContainer,
+            outline = scheme.outline
         )
     }
 
@@ -323,7 +270,7 @@ object MaterialKit : AppKit {
     private val GroupInnerCorner = 4.dp
 
     /** Outer corner of a segmented list group, and the gap between its rows. */
-    private val GroupOuterCorner = 20.dp
+    private val GroupOuterCorner = 16.dp
     private val GroupGap = 2.dp
 
     /**
@@ -420,7 +367,11 @@ object MaterialKit : AppKit {
         val labelHeight = with(density) {
             (items.maxOfOrNull { measurer.measure(it.label, labelStyle, maxLines = 1).size.height } ?: 0).toDp()
         }
-        Surface(color = c.container) {
+        // surfaceContainerHigh, not surfaceContainer: the bar must read as a
+        // separate surface over the canvas (surface) and the rows it sits
+        // below (surfaceContainer), in light and dark alike, by tone alone —
+        // shadowElevation stays 0dp, per the tonal-only depth rule above.
+        Surface(color = c.high, shadowElevation = 0.dp) {
             BoxWithConstraints(Modifier.fillMaxWidth().navigationBarsPadding().testTag("bottom_nav_bar")) {
                 val expanded = maxWidth >= 600.dp
                 val barHeight = maxOf(64.dp, labelHeight + if (expanded) 24.dp else 48.dp)
@@ -628,7 +579,7 @@ object MaterialKit : AppKit {
                             IconButton(onClick = onBack, modifier = Modifier.testTag("nav_back")) {
                                 Icon(
                                     Icons.AutoMirrored.Rounded.ArrowBack,
-                                    contentDescription = backLabel,
+                                    contentDescription = backLabel ?: "Back",
                                     tint = palette.textPrimary
                                 )
                             }
@@ -732,7 +683,7 @@ object MaterialKit : AppKit {
                     Text(
                         text = title,
                         style = MaterialTheme.typography.titleLarge,
-                        color = palette.textPrimary,
+                        color = MaterialTheme.colorScheme.onSurface,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -740,7 +691,7 @@ object MaterialKit : AppKit {
                         Text(
                             text = subtitle,
                             style = MaterialTheme.typography.bodyMedium,
-                            color = palette.textSecondary,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
@@ -752,7 +703,7 @@ object MaterialKit : AppKit {
                     IconButton(onClick = onBack) {
                         Icon(
                             Icons.AutoMirrored.Rounded.ArrowBack,
-                            contentDescription = null
+                            contentDescription = "Back"
                         )
                     }
                 }
@@ -760,9 +711,9 @@ object MaterialKit : AppKit {
             actions = actions,
             colors = TopAppBarDefaults.topAppBarColors(
                 containerColor = c.canvas,
-                titleContentColor = palette.textPrimary,
-                actionIconContentColor = palette.textSecondary,
-                navigationIconContentColor = palette.textSecondary
+                titleContentColor = MaterialTheme.colorScheme.onSurface,
+                actionIconContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                navigationIconContentColor = MaterialTheme.colorScheme.onSurfaceVariant
             )
         )
     }
@@ -830,7 +781,7 @@ object MaterialKit : AppKit {
         Column(
             modifier.fillMaxWidth().then(
                 if (inCard) Modifier.padding(bottom = 8.dp)
-                else Modifier.padding(horizontal = design.spacing.gutter + 16.dp)
+                else Modifier.padding(horizontal = design.spacing.gutter)
                     .padding(top = 16.dp, bottom = 8.dp)
             )
         ) {
@@ -852,7 +803,7 @@ object MaterialKit : AppKit {
                 }
             }
             if (subtitle != null && !shortAside) {
-                Spacer(Modifier.height(2.dp))
+                Spacer(Modifier.height(4.dp))
                 Text(
                     text = subtitle,
                     style = MaterialTheme.typography.bodyMedium,
@@ -872,7 +823,7 @@ object MaterialKit : AppKit {
         val c = roles()
         val inGroup = LocalInListGroup.current
         val interaction = remember { MutableInteractionSource() }
-        val rest = if (inGroup) GroupInnerCorner else 24.dp
+        val rest = if (inGroup) GroupInnerCorner else 12.dp
         val corner = pressMorph(interaction, onClick != null, rest, rest + 12.dp)
         FilledCard(
             modifier = modifier.fillMaxWidth(),
@@ -930,7 +881,7 @@ object MaterialKit : AppKit {
                 if (selected) Modifier.semantics { this.selected = true } else Modifier
             ),
             container = container,
-            shape = RoundedCornerShape(if (LocalInListGroup.current) GroupInnerCorner else 16.dp),
+            shape = if (LocalInListGroup.current) RoundedCornerShape(GroupInnerCorner) else design.shapes.card,
             onClick = onClick
         ) {
             androidx.compose.material3.ListItem(
@@ -956,7 +907,7 @@ object MaterialKit : AppKit {
                             if (showsNavigationAffordance && onClick != null) {
                                 Icon(
                                     Icons.AutoMirrored.Rounded.KeyboardArrowRight,
-                                    contentDescription = null, tint = secondary, modifier = Modifier.size(20.dp)
+                                    contentDescription = null, tint = secondary, modifier = Modifier.size(24.dp)
                                 )
                             }
                         }
@@ -975,7 +926,7 @@ object MaterialKit : AppKit {
         HorizontalDivider(
             modifier = modifier.fillMaxWidth(),
             thickness = 1.dp,
-            color = roles().outline
+            color = MaterialTheme.colorScheme.outlineVariant
         )
     }
 
@@ -1005,7 +956,9 @@ object MaterialKit : AppKit {
             interactionSource = interaction,
             colors = ButtonDefaults.buttonColors(
                 containerColor = scheme.primary,
-                contentColor = scheme.onPrimary
+                contentColor = scheme.onPrimary,
+                disabledContainerColor = scheme.onSurface.copy(alpha = 0.12f),
+                disabledContentColor = scheme.onSurface.copy(alpha = 0.38f)
             ),
             // 24dp ends, 16dp before the label when a button leads with an
             // icon: the spec's own button insets.
@@ -1033,6 +986,7 @@ object MaterialKit : AppKit {
         modifier: Modifier
     ) {
         val c = roles()
+        val scheme = MaterialTheme.colorScheme
         val interaction = remember { MutableInteractionSource() }
         FilledTonalButton(
             onClick = onClick,
@@ -1042,7 +996,9 @@ object MaterialKit : AppKit {
             interactionSource = interaction,
             colors = ButtonDefaults.filledTonalButtonColors(
                 containerColor = c.accentSofter,
-                contentColor = c.onAccentSofter
+                contentColor = c.onAccentSofter,
+                disabledContainerColor = scheme.onSurface.copy(alpha = 0.12f),
+                disabledContentColor = scheme.onSurface.copy(alpha = 0.38f)
             ),
             contentPadding = PaddingValues(
                 start = if (leadingIcon != null) 16.dp else 24.dp,
@@ -1088,7 +1044,7 @@ object MaterialKit : AppKit {
                 Icon(
                     Icons.Rounded.Search,
                     contentDescription = null,
-                    tint = palette.textSecondary,
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(start = 4.dp).size(24.dp)
                 )
             },
@@ -1097,8 +1053,8 @@ object MaterialKit : AppKit {
                     IconButton(onClick = { onValueChange("") }) {
                         Icon(
                             Icons.Rounded.Close,
-                            contentDescription = null,
-                            tint = palette.textSecondary
+                            contentDescription = "Clear",
+                            tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }
@@ -1109,13 +1065,14 @@ object MaterialKit : AppKit {
             // loudest "not a Google app" signal the screen gives off.
             shape = RoundedCornerShape(percent = 50),
             singleLine = true,
+            keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
             colors = TextFieldDefaults.colors(
                 focusedContainerColor = c.high,
-                unfocusedContainerColor = c.high,
-                disabledContainerColor = c.high,
-                focusedIndicatorColor = Color.Transparent,
-                unfocusedIndicatorColor = Color.Transparent,
-                disabledIndicatorColor = Color.Transparent,
+                unfocusedContainerColor = c.container,
+                disabledContainerColor = c.container,
+                focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                unfocusedIndicatorColor = c.outline,
+                disabledIndicatorColor = c.outline,
                 focusedTextColor = palette.textPrimary,
                 unfocusedTextColor = palette.textPrimary,
                 cursorColor = MaterialTheme.colorScheme.primary
@@ -1253,7 +1210,7 @@ object MaterialKit : AppKit {
                     HorizontalDivider(
                         modifier = Modifier.align(Alignment.BottomStart).fillMaxWidth(),
                         thickness = 1.dp,
-                        color = c.highest
+                        color = MaterialTheme.colorScheme.outlineVariant
                     )
                     if (fixedTabs) {
                         PrimaryTabRow(
@@ -1440,7 +1397,7 @@ object MaterialKit : AppKit {
             shape = design.shapes.chip,
             colors = FilterChipDefaults.filterChipColors(
                 containerColor = Color.Transparent,
-                labelColor = palette.textSecondary,
+                labelColor = MaterialTheme.colorScheme.onSurfaceVariant,
                 selectedContainerColor = if (design.isDark) c.accentSoft else c.accentSofter,
                 selectedLabelColor = if (design.isDark) c.onAccentSoft else c.onAccentSofter,
                 selectedLeadingIconColor = if (design.isDark) c.onAccentSoft else c.onAccentSofter
@@ -1449,7 +1406,7 @@ object MaterialKit : AppKit {
                 enabled = true,
                 selected = selected,
                 borderColor = c.outline,
-                selectedBorderColor = Color.Transparent
+                selectedBorderColor = c.outline
             )
         )
     }
@@ -1474,7 +1431,7 @@ object MaterialKit : AppKit {
             modifier
                 .fillMaxWidth()
                 .widthIn(max = design.spacing.readingMaxWidth)
-                .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+                .then(if (onClick != null) Modifier.clickable(role = Role.Button, onClick = onClick) else Modifier)
                 // decor.usesDropCaps is false, so a chapter opens with air
                 // rather than with an initial.
                 .padding(top = if (isFirstOfChapter) 16.dp else 6.dp)
@@ -1490,7 +1447,7 @@ object MaterialKit : AppKit {
             ) {
                 Text(
                     text = "$number",
-                    style = MaterialTheme.typography.labelSmall,
+                    style = styles.verseNumber,
                     color = palette.textSecondary,
                     textAlign = TextAlign.Center,
                     maxLines = 1
@@ -1507,7 +1464,7 @@ object MaterialKit : AppKit {
                 Spacer(Modifier.width(8.dp))
                 Icon(
                     Icons.Rounded.AutoAwesome,
-                    contentDescription = null,
+                    contentDescription = "Has commentary",
                     tint = MaterialTheme.colorScheme.primary,
                     // 6dp drops the 16dp glyph onto the optical centre of the
                     // 28sp first line rather than its ascender.
@@ -1662,7 +1619,7 @@ object MaterialKit : AppKit {
         FilledCard(
             modifier = modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
             container = container,
-            shape = RoundedCornerShape(28.dp),
+            shape = design.shapes.dialog,
             onClick = onClick
         ) {
             Row(

@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.example.data.models.LocalizedText
 
 /**
- * The three visual identities the app can wear. Each one re-specifies the whole
+ * The two visual identities the app can wear. Each one re-specifies the whole
  * surface — type, shape, spacing, depth, motion, navigation pattern, list
  * idiom, iconography and ornament — not merely the palette.
  */
@@ -35,30 +35,24 @@ enum class DesignLanguage(
     ),
 
     /** Material 3: tonal surfaces, stadium buttons, pill navigation indicator. */
-    MATERIAL(
-        "MATERIAL",
-        LocalizedText("Material 3", "Material 3", "Material 3"),
+    /**
+     * Translucency, iOS 7 and on: frosted surfaces at ~90% opacity, vibrant
+     * full-saturation accent, hairlines instead of shadows, SF-like type.
+     * Surfaces let the wallpaper breathe through; ink stays opaque.
+     */
+    IVE(
+        "IVE",
+        LocalizedText("Ive", "Ive", "Ive"),
         LocalizedText(
-            "Superficies tonales, formas generosas y movimiento enfático de Material Design 3.",
-            "Tonal surfaces, generous shapes and the emphasised motion of Material Design 3.",
-            "Superfícies tonais, formas generosas e movimento enfático do Material Design 3."
-        )
-    ),
-
-    /** Vatican: Roman capitals, parchment, gold rules, centred folio composition. */
-    VATICAN(
-        "VATICAN",
-        LocalizedText("Vaticano", "Vatican", "Vaticano"),
-        LocalizedText(
-            "Capitales romanas, pergamino, filetes de oro y composición centrada de folio.",
-            "Roman capitals, parchment, gold rules and centred folio composition.",
-            "Capitais romanas, pergaminho, filetes de ouro e composição centrada de fólio."
+            "Papel cálido, tarjetas frosted, títulos serenos y verde litúrgico al estilo de la referencia iOS.",
+            "Warm paper, frosted cards, serene titles and liturgical green in the iOS reference style.",
+            "Papel quente, cartões foscos, títulos serenos e verde litúrgico no estilo da referência iOS."
         )
     );
 
     companion object {
         fun fromId(id: String?): DesignLanguage =
-            entries.firstOrNull { it.id == id } ?: VATICAN
+            entries.firstOrNull { it.id == id } ?: APPLE
     }
 }
 
@@ -157,7 +151,32 @@ data class AppPalette(
     val textSecondary: Color,
     val textTertiary: Color,
     val scrim: Color,
-    val selectionTint: Color
+    val selectionTint: Color,
+    // ---- Lumen surface roles. Defaults keep older constructors compiling.
+    /** Top and bottom of the full-screen canvas gradient. */
+    val canvasTop: Color = canvas,
+    val canvasBottom: Color = canvas,
+    /** Translucent frosted fill of cards, tiles, groups and chips. */
+    val glass: Color = groupedSurface,
+    /** Denser glass for floating controls and the segmented thumb. */
+    val glassStrong: Color = raised,
+    /** The lit edge of a glass surface, drawn top to bottom. */
+    val glassEdgeTop: Color = hairline,
+    val glassEdgeBottom: Color = hairline,
+    /** Colour of the soft lift shadow under glass. */
+    val shadow: Color = Color.Black.copy(alpha = 0.08f),
+    /** Inset hairline between rows. */
+    val separator: Color = hairline,
+    /** Primary capsule, selected chip: charcoal in light, ivory in dark. */
+    val action: Color = textPrimary,
+    val onAction: Color = canvas,
+    /** Completed habit checks. */
+    val success: Color = accent,
+    /** Progress ring gradient. */
+    val ringStart: Color = accentMuted,
+    val ringEnd: Color = accent,
+    /** Decorative-only ink (placeholders, disabled glyphs); never body text. */
+    val inkQuiet: Color = textTertiary
 )
 
 @Immutable
@@ -173,7 +192,7 @@ data class AppDesign(
 )
 
 val LocalAppDesign = staticCompositionLocalOf {
-    DesignTokens.of(DesignLanguage.VATICAN, isDark = false)
+    DesignTokens.of(DesignLanguage.APPLE, isDark = false)
 }
 
 object DesignTokens {
@@ -184,10 +203,10 @@ object DesignTokens {
         card = RoundedCornerShape(12.dp),
         cardLarge = RoundedCornerShape(16.dp),
         button = RoundedCornerShape(12.dp),
-        buttonSmall = RoundedCornerShape(8.dp),
+        buttonSmall = RoundedCornerShape(12.dp),
         field = RoundedCornerShape(10.dp),
-        // Filter buttons are capsules in every current Apple app.
-        chip = RoundedCornerShape(percent = 50),
+        // One visual language for every button-like control: 12dp.
+        chip = RoundedCornerShape(12.dp),
         sheet = RoundedCornerShape(topStart = 14.dp, topEnd = 14.dp),
         dialog = RoundedCornerShape(14.dp),
         thumbnail = RoundedCornerShape(10.dp),
@@ -197,13 +216,38 @@ object DesignTokens {
         listGroup = RoundedCornerShape(12.dp)
     )
 
-    private val MaterialShapes = AppShapes(
-        card = RoundedCornerShape(16.dp),
-        cardLarge = RoundedCornerShape(28.dp),
-        button = RoundedCornerShape(percent = 50),
-        buttonSmall = RoundedCornerShape(percent = 50),
+    /**
+     * Ive: the reference's geometry — 20dp frosted cards, 12dp buttons/chips
+     * (one straight, slightly rounded language for every button), 16dp tiles,
+     * generous 20dp screen gutters.
+     */
+    private val IveShapes = AppShapes(
+        card = RoundedCornerShape(20.dp),
+        cardLarge = RoundedCornerShape(20.dp),
+        button = RoundedCornerShape(12.dp),
+        buttonSmall = RoundedCornerShape(12.dp),
         field = RoundedCornerShape(16.dp),
-        chip = RoundedCornerShape(8.dp),
+        chip = RoundedCornerShape(12.dp),
+        sheet = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
+        dialog = RoundedCornerShape(20.dp),
+        thumbnail = RoundedCornerShape(16.dp),
+        badge = RoundedCornerShape(percent = 50),
+        listGroup = RoundedCornerShape(20.dp)
+    )
+
+    private val MaterialShapes = AppShapes(
+        // M3 shape scale: extraSmall 4, small 8, medium 12, large 16,
+        // extraLarge 28, full. card = medium (12) for filled/modest cards,
+        // cardLarge = large→extraLarge (16/28): metric tiles and banners use
+        // 16/28. Buttons and chips share the one 12dp language; fields use
+        // the text-field corner (4dp) — the *search* stadium is shaped at
+        // use site.
+        card = RoundedCornerShape(12.dp),
+        cardLarge = RoundedCornerShape(16.dp),
+        button = RoundedCornerShape(12.dp),
+        buttonSmall = RoundedCornerShape(12.dp),
+        field = RoundedCornerShape(4.dp),
+        chip = RoundedCornerShape(12.dp),
         sheet = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
         dialog = RoundedCornerShape(28.dp),
         thumbnail = RoundedCornerShape(12.dp),
@@ -211,21 +255,6 @@ object DesignTokens {
         listGroup = RoundedCornerShape(16.dp)
     )
 
-    private val VaticanShapes = AppShapes(
-        card = RoundedCornerShape(3.dp),
-        cardLarge = RoundedCornerShape(4.dp),
-        button = RoundedCornerShape(2.dp),
-        buttonSmall = RoundedCornerShape(2.dp),
-        field = RoundedCornerShape(2.dp),
-        // Paper has no radius: anything the screens cut from these tokens
-        // (day badges, sigla, swatches) is square like a set rule box.
-        chip = RoundedCornerShape(0.dp),
-        sheet = RoundedCornerShape(topStart = 4.dp, topEnd = 4.dp),
-        dialog = RoundedCornerShape(4.dp),
-        thumbnail = RoundedCornerShape(0.dp),
-        badge = RoundedCornerShape(0.dp),
-        listGroup = RoundedCornerShape(3.dp)
-    )
 
     // --------------------------------------------------------------- spacing
 
@@ -250,37 +279,24 @@ object DesignTokens {
     private val MaterialSpacing = AppSpacing(
         gutter = 16.dp,
         // 16, not 24: every section break is this gap *plus* the section
-        // header's own 20dp top, and 24 put 44dp of dead canvas between a
+        // header's own 16dp top, and 24 put 40dp of dead canvas between a
         // segmented group and the next header — twice Settings' rhythm.
         sectionGap = 16.dp,
         cardPadding = 16.dp,
-        cardGap = 12.dp,
+        // 8dp grid: card spacing uses the spacing scale, not 12dp.
+        cardGap = 8.dp,
         // 72dp is M3's two-line list item; 56dp is the one-line height and was
         // squeezing every row that carries a subtitle.
         rowMinHeight = 72.dp,
-        rowPaddingVertical = 12.dp,
+        rowPaddingVertical = 8.dp,
         listItemGap = 8.dp,
-        headerTopGap = 12.dp,
-        contentBottomGap = 28.dp,
-        iconLabelGap = 16.dp,
+        headerTopGap = 8.dp,
+        contentBottomGap = 24.dp,
+        iconLabelGap = 8.dp,
         insetGroupGap = 16.dp,
         readingMaxWidth = 680.dp
     )
 
-    private val VaticanSpacing = AppSpacing(
-        gutter = 24.dp,
-        sectionGap = 40.dp,
-        cardPadding = 24.dp,
-        cardGap = 20.dp,
-        rowMinHeight = 52.dp,
-        rowPaddingVertical = 14.dp,
-        listItemGap = 0.dp,
-        headerTopGap = 20.dp,
-        contentBottomGap = 48.dp,
-        iconLabelGap = 16.dp,
-        insetGroupGap = 32.dp,
-        readingMaxWidth = 600.dp
-    )
 
     // ----------------------------------------------------------------- depth
 
@@ -306,15 +322,6 @@ object DesignTokens {
         usesHairlines = false
     )
 
-    private val VaticanDepth = AppDepth(
-        cardElevation = 0.dp,
-        cardBorderWidth = 1.dp,
-        appBarElevation = 0.dp,
-        navElevation = 0.dp,
-        sheetElevation = 0.dp,
-        usesTonalFill = false,
-        usesHairlines = true
-    )
 
     // ---------------------------------------------------------------- motion
 
@@ -334,13 +341,6 @@ object DesignTokens {
         emphasizedEasing = CubicBezierEasing(0.05f, 0.7f, 0.1f, 1f)
     )
 
-    private val VaticanMotion = AppMotion(
-        fastMillis = 240,
-        mediumMillis = 420,
-        slowMillis = 620,
-        standardEasing = CubicBezierEasing(0.4f, 0f, 0.2f, 1f),
-        emphasizedEasing = CubicBezierEasing(0.33f, 0f, 0.15f, 1f)
-    )
 
     // ----------------------------------------------------------------- decor
 
@@ -376,21 +376,6 @@ object DesignTokens {
         titleAlignment = Alignment.Start
     )
 
-    private val VaticanDecor = AppDecor(
-        headerStyle = HeaderStyle.CREST,
-        navStyle = NavStyle.FOLIO_RAIL,
-        listStyle = ListStyle.RULED_FOLIO,
-        dividerStyle = DividerStyle.ENGRAVED_RULE,
-        backgroundStyle = BackgroundStyle.PARCHMENT,
-        iconVariant = IconVariant.SHARP,
-        navIconSize = 22.dp,
-        rowIconSize = 20.dp,
-        usesChevrons = false,
-        usesDropCaps = true,
-        usesAllCapsLabels = true,
-        usesOrnaments = true,
-        titleAlignment = Alignment.CenterHorizontally
-    )
 
     // --------------------------------------------------------------- palette
 
@@ -400,16 +385,17 @@ object DesignTokens {
         groupedSurface = Color(0xFFFFFFFF),
         raised = Color(0xFFFFFFFF),
         hairline = Color(0xFFC6C6C8),
-        accent = Color(0xFF007AFF),
+        accent = Color(0xFF0066CC),
         accentMuted = Color(0xFFE5F0FF),
         gold = Color(0xFFB8860B),
         textPrimary = Color(0xFF000000),
         // secondaryLabel at 60% measures 3.5:1 on white and reads as a
         // ghost in captions; struck firmer to clear 4.5:1 on the grouped
-        // canvas, and tertiary lifted to where a disabled label is still
-        // legible.
+        // canvas. Tertiary is the opaque iOS gray 6E6E73 (4.54:1 on canvas,
+        // 5.07:1 on groupedSurface): the old 3C3C43 at 55% composited to
+        // 2.92:1 on canvas, unreadable as caption/meta text.
         textSecondary = Color(0xC23C3C43),
-        textTertiary = Color(0x8C3C3C43),
+        textTertiary = Color(0xFF6E6E73),
         scrim = Color(0x66000000),
         selectionTint = Color(0xFFD1D1D6)
     )
@@ -419,7 +405,7 @@ object DesignTokens {
         groupedSurface = Color(0xFF1C1C1E),
         raised = Color(0xFF2C2C2E),
         hairline = Color(0xFF38383A),
-        accent = Color(0xFF0A84FF),
+        accent = Color(0xFF409CFF),
         accentMuted = Color(0xFF13243B),
         gold = Color(0xFFD4AF37),
         textPrimary = Color(0xFFFFFFFF),
@@ -429,121 +415,185 @@ object DesignTokens {
         selectionTint = Color(0xFF3A3A3C)
     )
 
-    // Material 3 tonal surfaces. In a seeded M3 scheme every container and
-    // neutral is struck from the seed's tonal palette, so these are the
-    // liturgical accent at neutral chroma rather than the baseline purple —
-    // baseline containers under a green primary produced lilac discs holding
-    // green glyphs, a pairing no M3 app has. The same goes for the ink: the
-    // baseline onSurface #1D1B20 / #E6E0E9 is violet-neutral, so text is
-    // struck from the green-neutral palette too (tone 10 / 90).
+    // Translucency, iOS 7+: frosted surfaces over the canvas. Inks stay
+    // opaque (contrast), surfaces sit at ~88-95% so the ground reads
+    // through like iOS frosted glass.
     private val MaterialPaletteLight = AppPalette(
-        canvas = Color(0xFFF4FBF6),
-        groupedSurface = Color(0xFFFCFFFD),
-        raised = Color(0xFFEBF2ED),
-        hairline = Color(0xFFC2CCC5),
-        accent = Color(0xFF2C6B3E),
-        accentMuted = Color(0xFFC0DEC9),
-        gold = Color(0xFF8A6B12),
-        textPrimary = Color(0xFF171D19),
-        textSecondary = Color(0xFF414941),
-        textTertiary = Color(0xFF717A74),
+        canvas = Color(0xFFF7F3ED),
+        groupedSurface = Color(0xD9FFFFFF),
+        raised = Color(0xE6FFFFFF),
+        hairline = Color(0x14000000),
+        accent = Color(0xFF35751A),
+        accentMuted = Color(0xFFE7F2DC),
+        gold = Color(0xFFC9A86A),
+        textPrimary = Color(0xFF1C1C1E),
+        // Ive light secondary ink: darkened 5F5A52 -> 56524C so captions
+        // stop reading washed-out; still clears 4.5:1 on canvas/raised.
+        textSecondary = Color(0xFF56524C),
+        // Darkened from 717A74 (4.22:1 on canvas / 4.40:1 grouped) to
+        // clear 4.5:1 on every tonal surface (5.30:1 canvas, 4.90:1 raised).
+        textTertiary = Color(0xFF6B665E),
         scrim = Color(0x52000000),
         selectionTint = Color(0xFFDAE8DE)
     )
 
     private val MaterialPaletteDark = AppPalette(
-        canvas = Color(0xFF0E1410),
-        groupedSurface = Color(0xFF161D18),
-        raised = Color(0xFF212A24),
-        hairline = Color(0xFF414A44),
-        accent = Color(0xFF81C784),
-        accentMuted = Color(0xFF2A4432),
-        gold = Color(0xFFE5C158),
-        textPrimary = Color(0xFFDEE4DD),
+        canvas = Color(0xFF171512),
+        groupedSurface = Color(0xD92A2723),
+        raised = Color(0xE6332F2A),
+        hairline = Color(0xFF3A352F),
+        accent = Color(0xFF9ADE6B),
+        accentMuted = Color(0xFF2C3A22),
+        gold = Color(0xFFD4B78F),
+        textPrimary = Color(0xFFF5F1EA),
         textSecondary = Color(0xFFC2CCC5),
-        textTertiary = Color(0xFF8C968F),
+        textTertiary = Color(0xFFA8B0A6),
         scrim = Color(0x7A000000),
         selectionTint = Color(0xFF34453A)
     )
 
     // Parchment, ink and gold leaf.
-    private val VaticanPaletteLight = AppPalette(
-        canvas = Color(0xFFF4EDDF),
-        groupedSurface = Color(0xFFFCF8F0),
-        raised = Color(0xFFFFFDF8),
-        hairline = Color(0xFFD9C9A3),
-        // Missal rubric: a vermilion-crimson, not a wine. 7.4:1 on parchment.
-        accent = Color(0xFF951D1C),
-        accentMuted = Color(0xFFF0E2D5),
-        gold = Color(0xFFAC852B),
-        textPrimary = Color(0xFF1F1A17),
-        textSecondary = Color(0xFF5B4F42),
-        textTertiary = Color(0xFF756652),
-        scrim = Color(0x801F1A17),
-        selectionTint = Color(0xFFEADFC6)
+
+
+    // ----------------------------------------------------------------- Lumen
+
+    /**
+     * Lumen: one radius per element type — cards 24, groups and tiles 20,
+     * image cards 22, sheets 28, and every button-like control a capsule.
+     */
+    private val LumenShapes = AppShapes(
+        card = RoundedCornerShape(24.dp),
+        cardLarge = RoundedCornerShape(24.dp),
+        button = RoundedCornerShape(percent = 50),
+        buttonSmall = RoundedCornerShape(percent = 50),
+        field = RoundedCornerShape(percent = 50),
+        chip = RoundedCornerShape(percent = 50),
+        sheet = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp),
+        dialog = RoundedCornerShape(28.dp),
+        thumbnail = RoundedCornerShape(16.dp),
+        badge = RoundedCornerShape(percent = 50),
+        listGroup = RoundedCornerShape(20.dp)
     )
 
-    private val VaticanPaletteDark = AppPalette(
-        // A codex by candlelight: umber vellum, cinnabar rubrics (not pink),
-        // and burnished rather than lemon gold.
-        // Deep warm umber, not black; one deep vermilion (4.5:1 on the
-        // ground) that stays red by candle rather than drifting to coral.
-        canvas = Color(0xFF1B140E),
-        groupedSurface = Color(0xFF221A12),
-        raised = Color(0xFF2A2017),
-        hairline = Color(0xFF55452F),
-        // A clear vermilion with sufficient luminance for small rubrics on umber.
-        accent = Color(0xFFEF5945),
-        accentMuted = Color(0xFF34201A),
-        gold = Color(0xFFD4AD55),
-        textPrimary = Color(0xFFECE0CA),
-        textSecondary = Color(0xFFBDAC92),
-        textTertiary = Color(0xFFAE9A7C),
-        scrim = Color(0xB3000000),
-        selectionTint = Color(0xFF332A20)
+    private val LumenSpacing = AppSpacing(
+        gutter = 20.dp,
+        sectionGap = 28.dp,
+        cardPadding = 20.dp,
+        cardGap = 14.dp,
+        rowMinHeight = 52.dp,
+        rowPaddingVertical = 14.dp,
+        listItemGap = 0.dp,
+        headerTopGap = 12.dp,
+        contentBottomGap = 40.dp,
+        iconLabelGap = 14.dp,
+        insetGroupGap = 28.dp,
+        readingMaxWidth = 640.dp
     )
 
-    fun of(language: DesignLanguage, isDark: Boolean): AppDesign = when (language) {
-        DesignLanguage.APPLE -> AppDesign(
-            language = language,
-            isDark = isDark,
-            shapes = AppleShapes,
-            spacing = AppleSpacing,
-            depth = AppleDepth,
-            motion = AppleMotion,
-            decor = AppleDecor,
-            palette = if (isDark) ApplePaletteDark else ApplePaletteLight
-        )
+    private val LumenDepth = AppDepth(
+        cardElevation = 0.dp,
+        cardBorderWidth = 1.dp,
+        appBarElevation = 0.dp,
+        navElevation = 0.dp,
+        sheetElevation = 0.dp,
+        usesTonalFill = false,
+        usesHairlines = true
+    )
 
-        DesignLanguage.MATERIAL -> AppDesign(
-            language = language,
-            isDark = isDark,
-            shapes = MaterialShapes,
-            spacing = MaterialSpacing,
-            depth = MaterialDepth,
-            motion = MaterialMotion,
-            decor = MaterialDecor,
-            palette = if (isDark) MaterialPaletteDark else MaterialPaletteLight
-        )
+    private val LumenMotion = AppMotion(
+        fastMillis = 200,
+        mediumMillis = 300,
+        slowMillis = 420,
+        standardEasing = CubicBezierEasing(0.25f, 0.1f, 0.25f, 1f),
+        emphasizedEasing = CubicBezierEasing(0.32f, 0.72f, 0f, 1f)
+    )
 
-        DesignLanguage.VATICAN -> AppDesign(
-            language = language,
-            isDark = isDark,
-            shapes = VaticanShapes,
-            spacing = VaticanSpacing,
-            depth = VaticanDepth,
-            motion = VaticanMotion,
-            decor = VaticanDecor,
-            palette = if (isDark) VaticanPaletteDark else VaticanPaletteLight
-        )
-    }
+    /**
+     * Warm daylight. Glass is drawn translucent ([AppPalette.glass]); the
+     * opaque [AppPalette.groupedSurface]/[AppPalette.raised] are that glass
+     * composited over the canvas, for code that needs a solid colour and for
+     * contrast checks. Every ink clears 4.5:1 on canvas and glass.
+     */
+    private val LumenLight = AppPalette(
+        canvas = Color(0xFFF2F0ED),
+        groupedSurface = Color(0xFFFBFAF9),
+        raised = Color(0xFFFFFFFF),
+        hairline = Color(0x0F000000),
+        accent = Color(0xFF2F7A3E),
+        accentMuted = Color(0xFFE3EEDF),
+        gold = Color(0xFF8A6A1F),
+        textPrimary = Color(0xFF1D1C1A),
+        textSecondary = Color(0xFF6B6661),
+        textTertiary = Color(0xFF706B66),
+        scrim = Color(0x52000000),
+        selectionTint = Color(0xFFE8E4DE),
+        canvasTop = Color(0xFFF6F4F1),
+        canvasBottom = Color(0xFFECE9E5),
+        glass = Color(0xB8FFFFFF),
+        glassStrong = Color(0xE0FFFFFF),
+        glassEdgeTop = Color(0xF2FFFFFF),
+        glassEdgeBottom = Color(0x59FFFFFF),
+        shadow = Color(0x143B2F22),
+        separator = Color(0x0F000000),
+        action = Color(0xFF2B2A28),
+        onAction = Color(0xFFFFFFFF),
+        success = Color(0xFF43A047),
+        ringStart = Color(0xFFCFE6C6),
+        ringEnd = Color(0xFF4E9F4A),
+        inkQuiet = Color(0xFF9C968F)
+    )
+
+    /** Night chapel: warm charcoal, quiet glass, nothing glows. */
+    private val LumenDark = AppPalette(
+        canvas = Color(0xFF131211),
+        groupedSurface = Color(0xFF242321),
+        raised = Color(0xFF2E2D2B),
+        hairline = Color(0x14FFFFFF),
+        accent = Color(0xFF7FC48A),
+        accentMuted = Color(0xFF223326),
+        gold = Color(0xFFD9BC7A),
+        textPrimary = Color(0xFFF3F0EB),
+        textSecondary = Color(0xFFA8A29B),
+        textTertiary = Color(0xFF9A958F),
+        scrim = Color(0x8C000000),
+        selectionTint = Color(0xFF34322F),
+        canvasTop = Color(0xFF171614),
+        canvasBottom = Color(0xFF0E0D0C),
+        glass = Color(0x12FFFFFF),
+        glassStrong = Color(0x1FFFFFFF),
+        glassEdgeTop = Color(0x24FFFFFF),
+        glassEdgeBottom = Color(0x0AFFFFFF),
+        shadow = Color(0x73000000),
+        separator = Color(0x14FFFFFF),
+        action = Color(0xFFF3F0EB),
+        onAction = Color(0xFF171614),
+        success = Color(0xFF5DB762),
+        ringStart = Color(0xFF2C4A2E),
+        ringEnd = Color(0xFF7FC48A),
+        inkQuiet = Color(0xFF77726C)
+    )
+
+    /**
+     * Both stored identities now render Lumen. The enum stays so saved
+     * preferences keep resolving; the identity picker is hidden.
+     */
+    fun of(language: DesignLanguage, isDark: Boolean): AppDesign = AppDesign(
+        language = language,
+        isDark = isDark,
+        shapes = LumenShapes,
+        spacing = LumenSpacing,
+        depth = LumenDepth,
+        motion = LumenMotion,
+        decor = AppleDecor.copy(navIconSize = 24.dp, rowIconSize = 22.dp),
+        palette = if (isDark) LumenDark else LumenLight
+    )
 
     /** Material [androidx.compose.material3.Shapes] derived from an identity. */
     fun materialShapes(shapes: AppShapes) = androidx.compose.material3.Shapes(
-        extraSmall = shapes.buttonSmall,
-        small = shapes.chip,
-        medium = shapes.card,
-        large = shapes.cardLarge,
-        extraLarge = shapes.dialog
+        extraSmall = shapes.buttonSmall, // 12dp — M3 defaults can read this
+        small = shapes.button,           // 12dp — M3 Button/chips read this
+        medium = shapes.card,          // 12dp cards
+        large = shapes.cardLarge,      // 16dp large cards
+        extraLarge = RoundedCornerShape(28.dp) // 28dp prominent cards / dialogs
     )
 }

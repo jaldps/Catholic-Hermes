@@ -80,7 +80,17 @@ class FullAppScreenshotTest {
     private fun appComposeView(): ComposeView =
         compose.activity.findViewById<ViewGroup>(android.R.id.content).getChildAt(0) as ComposeView
 
+    /**
+     * Both stored identities render Lumen, so by default only APPLE renders.
+     * -Pshots.identity=all|apple|ive and -Pshots.mode=light|dark narrow or
+     * widen a run (renders are slow on the review PC).
+     */
+    private val identityFilter = System.getProperty("shots.identity")?.trim()?.lowercase() ?: "apple"
+    private val modeFilter = System.getProperty("shots.mode")?.trim()?.lowercase()
+
     private fun render(identity: DesignLanguage, dark: Boolean) {
+        if (identityFilter != "all" && identity.id.lowercase() != identityFilter) return
+        if (modeFilter != null && modeFilter != (if (dark) "dark" else "light")) return
         val destinations = AppDestination.entries.filter { only == null || it.name.lowercase() in only }
         if (destinations.isEmpty()) return
 
@@ -145,6 +155,10 @@ class FullAppScreenshotTest {
                     renderApp = true
                 }
                 compose.waitForIdle()
+                // Bundled art decodes on Dispatchers.IO: give it time to land so a
+                // cold cache never captures the canvas without its hero.
+                Thread.sleep(2500)
+                compose.waitForIdle()
                 compose.runOnIdle {
                     val view = appComposeView()
                     // Keep custom viewport dimensions through any subsequent
@@ -197,8 +211,6 @@ class FullAppScreenshotTest {
 
     @Test fun appleLight() = render(DesignLanguage.APPLE, false)
     @Test fun appleDark() = render(DesignLanguage.APPLE, true)
-    @Test fun materialLight() = render(DesignLanguage.MATERIAL, false)
-    @Test fun materialDark() = render(DesignLanguage.MATERIAL, true)
-    @Test fun vaticanLight() = render(DesignLanguage.VATICAN, false)
-    @Test fun vaticanDark() = render(DesignLanguage.VATICAN, true)
+    @Test fun materialLight() = render(DesignLanguage.IVE, false)
+    @Test fun materialDark() = render(DesignLanguage.IVE, true)
 }

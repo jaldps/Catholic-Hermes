@@ -158,15 +158,11 @@ class AppScreenshotTest {
         }
 
     @Test fun homeApple() = home(DesignLanguage.APPLE, false)
-    @Test fun homeMaterial() = home(DesignLanguage.MATERIAL, false)
-    @Test fun homeVatican() = home(DesignLanguage.VATICAN, false)
-    @Test fun homeVaticanDark() = home(DesignLanguage.VATICAN, true)
+    @Test fun homeMaterial() = home(DesignLanguage.IVE, false)
 
     @Test fun catechismApple() = catechism(DesignLanguage.APPLE, false)
-    @Test fun catechismMaterial() = catechism(DesignLanguage.MATERIAL, false)
-    @Test fun catechismVatican() = catechism(DesignLanguage.VATICAN, false)
+    @Test fun catechismMaterial() = catechism(DesignLanguage.IVE, false)
 
     @Test fun parishesApple() = parishes(DesignLanguage.APPLE, false)
-    @Test fun parishesMaterial() = parishes(DesignLanguage.MATERIAL, false)
-    @Test fun parishesVatican() = parishes(DesignLanguage.VATICAN, false)
+    @Test fun parishesMaterial() = parishes(DesignLanguage.IVE, false)
 }

@@ -4,7 +4,7 @@ gradle.beforeProject { project ->
         project.android.buildTypes.named('debug') {
             applicationIdSuffix = '.catholicgpt'
             versionNameSuffix = '-CatholicGPT'
-            resValue 'string', 'app_name', 'CatholicGPT'
+            resValue 'string', 'app_name', 'Catholic Hermes'
         }
     }
 }

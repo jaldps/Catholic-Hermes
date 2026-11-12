@@ -1,0 +1,212 @@
+{
+  "joyful_1_annunciation.jpg": {
+    "focusX": 0.35,
+    "focusY": 0.45,
+    "tone": "light",
+    "title": "The Annunciation",
+    "artist": "Carl Bloch",
+    "year": "c. 1865–1879",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_The_Annunciation.jpg"
+  },
+  "joyful_2_visitation.jpg": {
+    "focusX": 0.45,
+    "focusY": 0.4,
+    "tone": "dark",
+    "title": "The Visitation",
+    "artist": "Mariotto Albertinelli",
+    "year": "1503",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albertinelli_-_Visitazione_(nella_predella_Episodi_dell%E2%80%99Infanzia_di_Cristo),_1503,_1890_n.1587_(cropped).jpg"
+  },
+  "joyful_3_nativity.jpg": {
+    "focusX": 0.35,
+    "focusY": 0.55,
+    "tone": "dark",
+    "title": "The Adoration of the Shepherds",
+    "artist": "Bartolomé Esteban Murillo",
+    "year": "c. 1650",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Adoration_of_the_Shepherds,_Murillo_(Prado_Museum).jpg"
+  },
+  "joyful_4_presentation.jpg": {
+    "focusX": 0.45,
+    "focusY": 0.55,
+    "tone": "dark",
+    "title": "The Presentation in the Temple",
+    "artist": "Fra Bartolomeo",
+    "year": "1516",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Baccio_della_Porta,_gen._Fra_Bartolomeo,_Kunsthistorisches_Museum_Wien,_Gem%C3%A4ldegalerie_-_Darbringung_Christi_im_Tempel_-_GG_207_-_Kunsthistorisches_Museum.jpg"
+  },
+  "joyful_5_finding.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.48,
+    "tone": "dark",
+    "title": "Jesus among the Doctors",
+    "artist": "Jean-Auguste-Dominique Ingres",
+    "year": "1842–1862",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_Ingres-Bourdelle_-_J%C3%A9sus_parmi_les_docteurs_-_Ingres_-_Joconde06070001450.jpg"
+  },
+  "luminous_1_baptism.jpg": {
+    "focusX": 0.48,
+    "focusY": 0.55,
+    "tone": "dark",
+    "title": "The Baptism of Christ",
+    "artist": "Piero della Francesca",
+    "year": "c. 1450s",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Piero_della_Francesca_-_Battesimo_di_Cristo_(National_Gallery,_London).jpg"
+  },
+  "luminous_2_cana.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.45,
+    "tone": "dark",
+    "title": "The Wedding at Cana",
+    "artist": "Carl Bloch",
+    "year": "c. 1870",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:CarlBloch_weddingatCana.jpg"
+  },
+  "luminous_3_proclamation.jpg": {
+    "focusX": 0.45,
+    "focusY": 0.4,
+    "tone": "dark",
+    "title": "Let the Little Children Come unto Me",
+    "artist": "Carl Bloch",
+    "year": "c. 1865–1879",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_Suffer_the_Children.jpg"
+  },
+  "luminous_4_transfiguration.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.14,
+    "tone": "dark",
+    "title": "The Transfiguration",
+    "artist": "Raphael",
+    "year": "1516–1520",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rapha%C3%ABl,_La_Transfiguration,_1518%E2%80%931520,_huile_sur_bois,_405_%C3%97_278_cm,_Mus%C3%A9es_du_Vatican,_Pinacoth%C3%A8que,_inv._4.jpg"
+  },
+  "luminous_5_eucharist.jpg": {
+    "focusX": 0.48,
+    "focusY": 0.32,
+    "tone": "dark",
+    "title": "The Last Supper",
+    "artist": "Juan de Juanes",
+    "year": "c. 1562",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_%C3%9Altima_Cena_(Juan_de_Juanes)_(restaurada).jpg"
+  },
+  "sorrowful_1_agony.jpg": {
+    "focusX": 0.48,
+    "focusY": 0.55,
+    "tone": "dark",
+    "title": "Christ in Gethsemane",
+    "artist": "Carl Bloch",
+    "year": "1873",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gethsemane_Carl_Bloch.jpg"
+  },
+  "sorrowful_2_scourging.jpg": {
+    "focusX": 0.48,
+    "focusY": 0.45,
+    "tone": "dark",
+    "title": "The Flagellation of Our Lord Jesus Christ",
+    "artist": "William-Adolphe Bouguereau",
+    "year": "1880",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:William-Adolphe_Bouguereau_(1825-1905)_-_The_Flagellation_of_Our_Lord_Jesus_Christ_(1880).jpg"
+  },
+  "sorrowful_3_crowning.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.42,
+    "tone": "dark",
+    "title": "Christ Crowned with Thorns",
+    "artist": "Anthony van Dyck",
+    "year": "c. 1620",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Anthonis_van_Dyck_004.jpg"
+  },
+  "sorrowful_4_carrying.jpg": {
+    "focusX": 0.45,
+    "focusY": 0.65,
+    "tone": "dark",
+    "title": "Christ Falls on the Way to Calvary (Lo Spasimo)",
+    "artist": "Raphael",
+    "year": "1517",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Raphael_SpasimoFXD.jpg"
+  },
+  "sorrowful_5_crucifixion.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.26,
+    "tone": "dark",
+    "title": "Christ Crucified",
+    "artist": "Diego Velázquez",
+    "year": "c. 1632",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cristo_crucificado.jpg"
+  },
+  "glorious_1_resurrection.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.22,
+    "tone": "light",
+    "title": "The Resurrection",
+    "artist": "Carl Bloch",
+    "year": "1875",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_The_Resurrection.jpg"
+  },
+  "glorious_2_ascension.jpg": {
+    "focusX": 0.48,
+    "focusY": 0.3,
+    "tone": "dark",
+    "title": "The Ascension",
+    "artist": "John Singleton Copley",
+    "year": "1775",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jesus_ascending_to_heaven.jpg"
+  },
+  "glorious_3_pentecost.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.35,
+    "tone": "dark",
+    "title": "Pentecost",
+    "artist": "Juan Bautista Maíno",
+    "year": "1620–1625",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Maino_Pentecost%C3%A9s,_1620-1625._Museo_del_Prado.jpg"
+  },
+  "glorious_4_assumption.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.3,
+    "tone": "dark",
+    "title": "The Assumption of the Virgin",
+    "artist": "Nicolas Poussin",
+    "year": "c. 1630–1632",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nicolas_Poussin,_The_Assumption_of_the_Virgin,_c._1630-1632,_NGA_46470.jpg"
+  },
+  "glorious_5_coronation.jpg": {
+    "focusX": 0.48,
+    "focusY": 0.35,
+    "tone": "dark",
+    "title": "The Coronation of the Virgin",
+    "artist": "Diego Velázquez",
+    "year": "1635–1636",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_-_Coronation_of_the_Virgin_-_Prado.jpg"
+  },
+  "divine_mercy.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.02,
+    "tone": "dark",
+    "title": "Divine Mercy (Jesus, I trust in You)",
+    "artist": "Eugeniusz Kazimirowski",
+    "year": "1934",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Divina_Misericordia_(Eugeniusz_Kazimirowski,_1934).jpg"
+  }
+}

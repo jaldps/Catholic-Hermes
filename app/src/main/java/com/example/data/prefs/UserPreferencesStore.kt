@@ -37,7 +37,7 @@ data class UserPreferences(
     val hasChosenLanguage: Boolean
 ) {
     companion object {
-        const val DEFAULT_DESIGN_LANGUAGE = "VATICAN"
+        const val DEFAULT_DESIGN_LANGUAGE = "APPLE"
         const val DEFAULT_THEME_PRESET = "LITURGICAL_DYNAMIC"
         const val DEFAULT_DARK_MODE = "SYSTEM"
         const val DEFAULT_FONT_FAMILY = "IDENTITY_DEFAULT"
@@ -60,6 +60,60 @@ class UserPreferencesStore(
         val NARRATION_SPEED = floatPreferencesKey("audio_narration_speed")
         val BIBLE_TRANSLATION = stringPreferencesKey("active_bible_translation_id")
         val FULL_CCC_DOWNLOADED = booleanPreferencesKey("is_full_ccc_downloaded")
+        /** Guided learning tracks: highest reached question number per track,
+         *  encoded "trackIndex:questionNumber,trackIndex:questionNumber". */
+        val TRACK_PROGRESS = stringPreferencesKey("track_progress")
+    }
+
+    /** Track index for a 1-based question number in the three guided tracks
+     *  (Fundamentos Q1-30, Iglesia y sacramentos Q41-60, Vida y moral Q61-100);
+     *  null when the question is outside every track. */
+    fun trackIndexForQuestion(questionNumber: Int): Int? = when (questionNumber) {
+        in 1..30 -> 0
+        in 41..60 -> 1
+        in 61..100 -> 2
+        else -> null
+    }
+
+    fun parseTrackProgress(raw: String?): Map<Int, Int> =
+        raw.orEmpty().split(',').mapNotNull { entry ->
+            val parts = entry.split(':')
+            if (parts.size != 2) return@mapNotNull null
+            val track = parts[0].trim().toIntOrNull() ?: return@mapNotNull null
+            val reached = parts[1].trim().toIntOrNull() ?: return@mapNotNull null
+            track to reached
+        }.toMap()
+
+    /** Highest reached question number per guided track (1-based; 0/absent = not started). */
+    val trackProgress: Flow<Map<Int, Int>> = dataStore.data
+        .catch { cause ->
+            if (cause is IOException) emit(emptyPreferences()) else throw cause
+        }
+        .map { parseTrackProgress(it[Keys.TRACK_PROGRESS]) }
+
+    /** Records [questionNumber] (1-based) as reached for its track, never lowering it. */
+    suspend fun recordTrackProgress(questionNumber: Int) {
+        val track = trackIndexForQuestion(questionNumber) ?: return
+        dataStore.edit { prefs ->
+            val current = parseTrackProgress(prefs[Keys.TRACK_PROGRESS])
+            val merged = current.toMutableMap()
+            merged[track] = maxOf(merged[track] ?: 0, questionNumber)
+            prefs[Keys.TRACK_PROGRESS] = merged.entries
+                .sortedBy { it.key }
+                .joinToString(",") { "${it.key}:${it.value}" }
+        }
+    }
+
+    /** Direct setter for one track's reached question number (never lowers it). */
+    suspend fun setTrackProgress(trackIndex: Int, questionNumber: Int) {
+        dataStore.edit { prefs ->
+            val current = parseTrackProgress(prefs[Keys.TRACK_PROGRESS])
+            val merged = current.toMutableMap()
+            merged[trackIndex] = maxOf(merged[trackIndex] ?: 0, questionNumber)
+            prefs[Keys.TRACK_PROGRESS] = merged.entries
+                .sortedBy { it.key }
+                .joinToString(",") { "${it.key}:${it.value}" }
+        }
     }
 
     /**

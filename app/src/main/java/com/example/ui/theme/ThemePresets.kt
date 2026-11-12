@@ -22,11 +22,6 @@ enum class AppThemePreset(val id: String, val label: LocalizedText, val previewP
         LocalizedText("Monástico Minimalista (Sobriedad y Piedra)", "Monastic Minimalist (Sober Slate & Ivory)", "Monástico Minimalista (Ardósia e Marfim)"),
         Color(0xFF334155)
     ),
-    VATICAN_NAVY(
-        "VATICAN_NAVY",
-        LocalizedText("Vaticano Azul y Plata (Pontificio)", "Vatican Navy & Silver (Pontifical)", "Vaticano Azul e Prata (Pontifício)"),
-        Color(0xFF1E3A8A)
-    ),
     SACRED_BURGUNDY(
         "SACRED_BURGUNDY",
         LocalizedText("Borgoña Sagrado y Oro (Tradicional)", "Sacred Burgundy & Gold (Imperial)", "Borgonha Sagrado e Ouro (Imperial)"),
@@ -111,42 +106,8 @@ object ThemePalettes {
         outline = Color(0xFF283548)
     )
 
-    // 3. Vatican Navy & Silver
-    val VaticanNavyLight = lightColorScheme(
-        primary = Color(0xFF1E3A8A),
-        onPrimary = Color.White,
-        primaryContainer = Color(0xFFDBEAFE),
-        onPrimaryContainer = Color(0xFF172554),
-        secondary = Color(0xFFC59B27),
-        onSecondary = Color.White,
-        secondaryContainer = Color(0xFFFEF3C7),
-        onSecondaryContainer = Color(0xFF78350F),
-        background = Color(0xFFF8FAFC),
-        onBackground = Color(0xFF0F172A),
-        surface = Color(0xFFEFF6FF),
-        onSurface = Color(0xFF0F172A),
-        surfaceVariant = Color(0xFFFFFFFF),
-        onSurfaceVariant = Color(0xFF475569),
-        outline = Color(0xFFBFDBFE)
-    )
 
-    val VaticanNavyDark = darkColorScheme(
-        primary = Color(0xFF60A5FA),
-        onPrimary = Color(0xFF172554),
-        primaryContainer = Color(0xFF1E3A8A),
-        onPrimaryContainer = Color(0xFFDBEAFE),
-        secondary = Color(0xFFFCD34D),
-        onSecondary = Color.Black,
-        background = Color(0xFF0A0F1D),
-        onBackground = Color(0xFFF8FAFC),
-        surface = Color(0xFF111827),
-        onSurface = Color(0xFFF8FAFC),
-        surfaceVariant = Color(0xFF1F2937),
-        onSurfaceVariant = Color(0xFF9CA3AF),
-        outline = Color(0xFF374151)
-    )
-
-    // 4. Sacred Burgundy & Gold
+    // 3. Sacred Burgundy & Gold
     val SacredBurgundyLightScheme = lightColorScheme(
         primary = SacredBurgundy,
         onPrimary = Color.White,
@@ -187,7 +148,7 @@ object ThemePalettes {
         outline = BorderDarkSanctuary
     )
 
-    // 5. Marian Azure & Celestial
+    // 4. Marian Azure & Celestial
     val MarianAzureLight = lightColorScheme(
         primary = Color(0xFF0284C7),
         onPrimary = Color.White,
@@ -225,7 +186,6 @@ object ThemePalettes {
     fun getColorScheme(presetId: String, isDark: Boolean): ColorScheme {
         return when (presetId) {
             "MONASTIC_MINIMALIST" -> if (isDark) MonasticDark else MonasticLight
-            "VATICAN_NAVY" -> if (isDark) VaticanNavyDark else VaticanNavyLight
             "SACRED_BURGUNDY" -> if (isDark) SacredBurgundyDarkScheme else SacredBurgundyLightScheme
             "MARIAN_AZURE" -> if (isDark) MarianAzureDark else MarianAzureLight
             else -> if (isDark) LiturgicalGreenDark else LiturgicalGreenLight

@@ -276,7 +276,7 @@ object DoctrineAndSpiritualData {
     val viaCrucisStations: List<ViaCrucisStation> = listOf(
         ViaCrucisStation(
             stationNumber = 1,
-            title = LocalizedText("I Estación: Jesús es condenado a muerte", "1st Station: Jesus is Condemned to Death", "1ª Estação: Jesus é condenado à morte"),
+            title = LocalizedText("I Estación: Jesús es condenado a muerte", "1st Station: Jesus Is Condemned to Death", "1ª Estação: Jesus é condenado à morte"),
             scripture = LocalizedText("Mateo 27, 26: «Pilato les soltó a Barrabás y a Jesús, después de azotarlo, lo entregó para que fuera crucificado».", "Matthew 27:26: “Pilate released Barabbas to them; but after having Jesus scourged, he handed Him over to be crucified.”", "Mateus 27, 26: “Pilatos soltou-lhes Barrabás e entregou Jesus para ser crucificado.”"),
             meditation = LocalizedText(
                 "Considera cómo Jesús, inocente y sin culpa, comparece manso ante Pilato y acepta la sentencia de muerte por nuestros pecados.",
@@ -307,7 +307,7 @@ object DoctrineAndSpiritualData {
         ViaCrucisStation(
             stationNumber = 3,
             title = LocalizedText("III Estación: Jesús cae por primera vez bajo la Cruz", "3rd Station: Jesus Falls the First Time", "3ª Estação: Jesus cai pela primeira vez"),
-            scripture = LocalizedText("Isaías 53, 4: «Él soportó nuestros sufrimientos y aguantó nuestros dolores».", "Isaiah 53:4: “Yet it was our infirmities that He bore, our sufferings that He endured.”", "Isaías 53, 4: “Ele tomou sobre si as nossas dores e suportou as nossas enfermidades.”"),
+            scripture = LocalizedText("Isaías 53, 4 (texto profético; las caídas son tradición piadosa): «Él soportó nuestros sufrimientos y aguantó nuestros dolores».", "Isaiah 53:4 (prophetic text; the falls are a pious tradition): “Yet it was our infirmities that He bore, our sufferings that He endured.”", "Isaías 53, 4 (texto profético; as quedas são tradição piedosa): “Ele tomou sobre si as nossas dores e suportou as nossas enfermidades.”"),
             meditation = LocalizedText(
                 "La pérdida de sangre por los azotes y las espinas hace que el Salvador caiga al suelo. Sin embargo, se levanta de nuevo.",
                 "Weakened by torture and agonizing loss of blood, the Savior collapses, yet rises out of burning love.",
@@ -317,6 +317,215 @@ object DoctrineAndSpiritualData {
                 "Señor, no permitas que me quede postrado en mis caídas; alcánzame la gracia de levantarme siempre.",
                 "Lord, never let me despair after falling into sin; grant me the grace to rise promptly in repentance.",
                 "Senhor, levantai-me de minhas quedas e livrai-me do pecado."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 4,
+            title = LocalizedText("IV Estación: Jesús encuentra a su Madre santísima", "4th Station: Jesus Meets His Mother", "4ª Estação: Jesus encontra sua Mãe santíssima"),
+            scripture = LocalizedText(
+                "Lucas 2, 35 (el encuentro en el camino es tradición piadosa; el texto evoca el dolor de María): «Y a ti misma una espada te traspasará el alma».",
+                "Luke 2:35 (the meeting on the road is a pious tradition; the text evokes Mary's sorrow): “and you yourself a sword will pierce.”",
+                "Lucas 2, 35 (o encontro no caminho é tradição piedosa; o texto evoca a dor de Maria): “e uma espada transpassará a tua alma.”"
+            ),
+            meditation = LocalizedText(
+                "Considera el encuentro de Jesús con su Madre: sus miradas se cruzan y cada una atraviesa el corazón de la otra. María, que lo llevó en su seno, comparte ahora su dolor y no se aparta de él.",
+                "Consider the meeting of Jesus and his Mother: their eyes meet, and each look pierces the heart of the other. Mary, who bore him in her womb, now shares his sorrow and does not leave his side.",
+                "Considera o encontro de Jesus com sua Mãe: os seus olhares se cruzam, e cada um transpassa o coração do outro. Maria, que o trouxe em seu seio, partilha agora a sua dor e não se afasta dele."
+            ),
+            prayer = LocalizedText(
+                "Madre dolorosa, alcánzame la gracia de acompañar a tu Hijo con compasión sincera y de permanecer fiel a él en la prueba.",
+                "Sorrowful Mother, obtain for me the grace to accompany your Son with a compassionate heart and to remain faithful to him in trial.",
+                "Mãe dolorosa, alcançai-me a graça de acompanhar vosso Filho com compaixão sincera e de permanecer fiel a ele na provação."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 5,
+            title = LocalizedText("V Estación: El Cireneo ayuda a Jesús a llevar la Cruz", "5th Station: Simon of Cyrene Helps Jesus Carry the Cross", "5ª Estação: Simão Cireneu ajuda Jesus a carregar a Cruz"),
+            scripture = LocalizedText(
+                "Lucas 23, 26: «Cuando lo llevaban, echaron mano de un tal Simón de Cirene, que venía del campo, y le cargaron la cruz para que la llevara detrás de Jesús».",
+                "Luke 23:26: “As they led him away they took hold of a certain Simon, a Cyrenian, who was coming in from the country; and after laying the cross on him, they made him carry it behind Jesus.”",
+                "Lucas 23, 26: “Enquanto o conduziam, pegaram um certo Simão de Cirene, que voltava do campo, e puseram-lhe a cruz às costas, para que a carregasse atrás de Jesus.”"
+            ),
+            meditation = LocalizedText(
+                "Considera que los verdugos, temiendo que Jesús muera en el camino, fuerzan a Simón de Cirene a llevar la Cruz tras él. Lo que empezó como una obligación se convierte, junto a Jesús, en una gracia.",
+                "Consider how the soldiers, afraid that Jesus will die before reaching Calvary, force Simon of Cyrene to carry the Cross behind him. What began as compulsion becomes, at the side of Jesus, a grace.",
+                "Considera como os soldados, temendo que Jesus morra antes de chegar ao Calvário, obrigam Simão Cireneu a levar a Cruz atrás dele. O que começou como obrigação torna-se, ao lado de Jesus, uma graça."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, no quiero llevar mi cruz a regañadientes; enséñame a cargarla contigo y a ayudar a quienes sufren a mi alrededor.",
+                "My Jesus, I do not want to carry my cross grudgingly; teach me to bear it with you and to help those who suffer around me.",
+                "Jesus meu, não quero carregar a minha cruz de má vontade; ensinai-me a levá-la convosco e a ajudar os que sofrem ao meu redor."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 6,
+            title = LocalizedText("VI Estación: La Verónica enjuga el rostro de Jesús", "6th Station: Veronica Wipes the Face of Jesus", "6ª Estação: Verônica enxuga o rosto de Jesus"),
+            scripture = LocalizedText(
+                "Salmo 27, 8-9 (la Verónica es tradición piadosa, no aparece en los Evangelios): «Tu rostro, Señor, es lo que busco; no me ocultes tu rostro».",
+                "Psalm 27:8-9 (Veronica is a pious tradition, not found in the Gospels): “Your presence, LORD, I seek. Do not hide your face from me.”",
+                "Salmo 27, 8-9 (Verônica é tradição piedosa, não aparece nos Evangelhos): “É a tua face, Senhor, que eu procuro. Não me escondas a tua face.”"
+            ),
+            meditation = LocalizedText(
+                "Considera la valentía de una mujer piadosa que se abre paso entre la multitud y enjuga con un lienzo el rostro de Jesús, cubierto de sudor y sangre. La tradición cuenta que el Señor dejó impresa en él su santa imagen, como premio a su compasión.",
+                "Consider the courage of a devout woman who makes her way through the crowd and wipes the face of Jesus, covered with sweat and blood, with a cloth. Tradition tells that the Lord left the imprint of his holy face upon it as a reward for her compassion.",
+                "Considera a coragem de uma mulher piedosa que se abre caminho entre a multidão e enxuga com um pano o rosto de Jesus, coberto de suor e sangue. A tradição conta que o Senhor deixou nele impressa a sua santa face, como recompensa de sua compaixão."
+            ),
+            prayer = LocalizedText(
+                "Señor, imprime en mi corazón la imagen de tu rostro doliente y dame un amor valiente que no tema consolarte en los más pequeños.",
+                "Lord, imprint upon my heart the image of your suffering face, and give me a courageous love that does not fear to console you in the least of your brethren.",
+                "Senhor, imprimi em meu coração a imagem do vosso rosto sofredor e dai-me um amor corajoso, que não tema consolar-vos nos menores dos vossos irmãos."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 7,
+            title = LocalizedText("VII Estación: Jesús cae por segunda vez", "7th Station: Jesus Falls the Second Time", "7ª Estação: Jesus cai pela segunda vez"),
+            scripture = LocalizedText(
+                "Isaías 53, 5 (texto profético; las caídas son tradición piadosa): «Fue traspasado por nuestras rebeldías y triturado por nuestros pecados; el castigo que nos da la paz cayó sobre él, y por sus llagas hemos sido curados».",
+                "Isaiah 53:5 (prophetic text; the falls are a pious tradition): “He was pierced for our offenses, crushed for our sins; upon him was the chastisement that makes us whole, by his stripes we were healed.”",
+                "Isaías 53, 5 (texto profético; as quedas são tradição piedosa): “Foi transpassado por causa das nossas transgressões, esmagado por causa das nossas iniquidades; o castigo que nos traz a paz caiu sobre ele, e pelas suas feridas fomos curados.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo Jesús, agotado por el camino, cae por segunda vez bajo el peso de la Cruz. Nuestras recaídas lo derriban de nuevo, pero él se levanta otra vez, paciente con nuestra debilidad.",
+                "Consider how Jesus, exhausted by the road, falls a second time beneath the weight of the Cross. Our relapses bring him to the ground again, yet he rises once more, patient with our weakness.",
+                "Considera como Jesus, esgotado pelo caminho, cai pela segunda vez sob o peso da Cruz. As nossas recaídas o derrubam de novo, mas ele se levanta outra vez, paciente com a nossa fraqueza."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, por esta segunda caída, perdona mis recaídas y dame la perseverancia de volver a ti cuantas veces haga falta.",
+                "My Jesus, by this second fall, forgive my relapses and give me the perseverance to return to you as often as I need.",
+                "Jesus meu, por esta segunda queda, perdoai as minhas recaídas e dai-me a perseverança de voltar a vós quantas vezes for preciso."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 8,
+            title = LocalizedText("VIII Estación: Jesús consuela a las mujeres de Jerusalén", "8th Station: Jesus Meets the Women of Jerusalem", "8ª Estação: Jesus consola as mulheres de Jerusalém"),
+            scripture = LocalizedText(
+                "Lucas 23, 27-28: «Lo seguía una gran multitud del pueblo y de mujeres que se golpeaban el pecho y se lamentaban por él. Jesús se volvió hacia ellas y les dijo: “Hijas de Jerusalén, no lloren por mí; lloren más bien por ustedes y por sus hijos”».",
+                "Luke 23:27-28: “A large crowd of people followed Jesus, including many women who mourned and lamented him. Jesus turned to them and said, ‘Daughters of Jerusalem, do not weep for me; weep instead for yourselves and for your children.’”",
+                "Lucas 23, 27-28: “Seguia-o uma grande multidão do povo e de mulheres que batiam no peito e se lamentavam por ele. Jesus voltou-se para elas e disse: ‘Filhas de Jerusalém, não choreis por mim; chorai antes por vós mesmas e por vossos filhos.’”"
+            ),
+            meditation = LocalizedText(
+                "Considera la compasión de las mujeres de Jerusalén, que lloran al ver sufrir al Señor. Olvidándose de sí mismo, Jesús las invita a llorar por sus pecados y los de sus hijos: las lágrimas que Dios espera son las del arrepentimiento.",
+                "Consider the compassion of the women of Jerusalem, who weep at the sight of the Lord's suffering. Forgetting himself, Jesus bids them weep for their own sins and those of their children: the tears God asks for are those of repentance.",
+                "Considera a compaixão das mulheres de Jerusalém, que choram ao ver o Senhor sofrer. Esquecendo-se de si mesmo, Jesus as convida a chorar pelos seus pecados e pelos de seus filhos: as lágrimas que Deus espera são as do arrependimento."
+            ),
+            prayer = LocalizedText(
+                "Señor, dame lágrimas de verdadero arrepentimiento por mis pecados y un corazón que sepa compadecerse de quien sufre.",
+                "Lord, give me tears of true repentance for my sins, and a heart that knows how to feel for those who suffer.",
+                "Senhor, dai-me lágrimas de sincero arrependimento pelos meus pecados e um coração que saiba compadecer-se de quem sofre."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 9,
+            title = LocalizedText("IX Estación: Jesús cae por tercera vez", "9th Station: Jesus Falls the Third Time", "9ª Estação: Jesus cai pela terceira vez"),
+            scripture = LocalizedText(
+                "Lamentaciones 1, 12 (texto profético; las caídas son tradición piadosa): «Ustedes, los que pasan por el camino, miren y vean si hay dolor semejante a mi dolor».",
+                "Lamentations 1:12 (prophetic text; the falls are a pious tradition): “Come, all you who pass by the way, look and see whether there is any suffering like my suffering.”",
+                "Lamentações 1, 12 (texto profético; as quedas são tradição piedosa): “Vós todos, que passais pelo caminho, olhai e vede se existe dor semelhante à minha dor.”"
+            ),
+            meditation = LocalizedText(
+                "Considera la tercera caída de Jesús, ya cerca del Calvario, cuando las fuerzas casi lo abandonan. Su dolor es inmenso, pero su amor es mayor: quiere llegar hasta el final para salvarnos, aunque le cueste el último aliento.",
+                "Consider the third fall of Jesus, close to Calvary, when his strength almost fails him. His pain is immense, but his love is greater: he wants to reach the end to save us, even at the cost of his last breath.",
+                "Considera a terceira queda de Jesus, já perto do Calvário, quando as forças quase o abandonam. A sua dor é imensa, mas o seu amor é maior: quer chegar até o fim para nos salvar, ainda que isso lhe custe o último alento."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, que nunca me rinda ante el cansancio ni la tibieza; sostén mi fe cuando ya no tenga fuerzas para levantarme.",
+                "My Jesus, never let me yield to weariness or lukewarmness; sustain my faith when I have no strength left to rise.",
+                "Jesus meu, que eu nunca me renda ao cansaço nem à tibieza; sustentai a minha fé quando já não tiver forças para me levantar."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 10,
+            title = LocalizedText("X Estación: Jesús es despojado de sus vestiduras", "10th Station: Jesus Is Stripped of His Garments", "10ª Estação: Jesus é despojado de suas vestes"),
+            scripture = LocalizedText(
+                "Juan 19, 23: «Cuando los soldados crucificaron a Jesús, tomaron sus vestidos y los repartieron en cuatro partes, una para cada soldado».",
+                "John 19:23: “When the soldiers had crucified Jesus, they took his clothes and divided them into four shares, a share for each soldier.”",
+                "João 19, 23: “Os soldados, depois de crucificarem Jesus, tomaram as suas vestes e fizeram quatro partes, uma para cada soldado.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo los soldados arrancan a Jesús sus vestiduras, pegadas a las heridas, y reabren así sus llagas. Sin nada que lo cubra, el Rey del universo se ofrece pobre y humillado, para revestirnos de su gracia.",
+                "Consider how the soldiers tear the garments from Jesus, clinging to his wounds, and reopen his sores. Stripped of everything, the King of the universe offers himself poor and humiliated, to clothe us with his grace.",
+                "Considera como os soldados arrancam de Jesus as suas vestes, coladas às feridas, e reabrem assim as suas chagas. Sem nada que o cubra, o Rei do universo oferece-se pobre e humilhado, para nos revestir da sua graça."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, despójame de todo apego desordenado y vísteme con tu gracia, para que pertenezca solo a ti.",
+                "My Jesus, strip me of every disordered attachment and clothe me with your grace, that I may belong to you alone.",
+                "Jesus meu, despojai-me de todo apego desordenado e revesti-me da vossa graça, para que eu pertença somente a vós."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 11,
+            title = LocalizedText("XI Estación: Jesús es clavado en la Cruz", "11th Station: Jesus Is Nailed to the Cross", "11ª Estação: Jesus é pregado na Cruz"),
+            scripture = LocalizedText(
+                "Lucas 23, 33: «Cuando llegaron al lugar llamado Calvario, lo crucificaron allí, a él y a los malhechores, uno a la derecha y otro a la izquierda».",
+                "Luke 23:33: “When they came to the place called the Skull, they crucified him and the criminals there, one on his right, the other on his left.”",
+                "Lucas 23, 33: “Quando chegaram ao lugar chamado Calvário, ali o crucificaram, e também os malfeitores, um à direita e outro à esquerda.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo Jesús se tiende sobre la Cruz y entrega sus manos y sus pies a los clavos. Cada golpe del martillo resuena como una oración de perdón por quienes lo crucifican, y por nosotros.",
+                "Consider how Jesus stretches himself upon the Cross and surrenders his hands and feet to the nails. Every blow of the hammer echoes as a prayer of forgiveness for those who crucify him, and for us.",
+                "Considera como Jesus se estende sobre a Cruz e entrega as suas mãos e os seus pés aos cravos. Cada golpe do martelo ressoa como uma oração de perdão por aqueles que o crucificam e por nós."
+            ),
+            prayer = LocalizedText(
+                "Señor, clava mi voluntad a la tuya y no permitas que me separe jamás de ti.",
+                "Lord, nail my will to yours and never let me be separated from you.",
+                "Senhor, pregai a minha vontade à vossa e não permitais que eu me separe jamais de vós."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 12,
+            title = LocalizedText("XII Estación: Jesús muere en la Cruz", "12th Station: Jesus Dies on the Cross", "12ª Estação: Jesus morre na Cruz"),
+            scripture = LocalizedText(
+                "Lucas 23, 46: «Jesús, clamando con voz fuerte, dijo: “Padre, en tus manos encomiendo mi espíritu”. Y, dicho esto, expiró».",
+                "Luke 23:46: “Jesus cried out in a loud voice, ‘Father, into your hands I commend my spirit’; and when he had said this he breathed his last.”",
+                "Lucas 23, 46: “Jesus, dando um grande grito, disse: ‘Pai, nas tuas mãos entrego o meu espírito.’ Dito isto, expirou.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo Jesús, después de tres horas de agonía, inclina la cabeza y entrega su espíritu al Padre. El cielo se oscurece y la tierra tiembla: el Hijo de Dios ha muerto por amor a los pecadores.",
+                "Consider how Jesus, after three hours of agony, bows his head and gives up his spirit to the Father. The sky darkens and the earth trembles: the Son of God has died out of love for sinners.",
+                "Considera como Jesus, depois de três horas de agonia, inclina a cabeça e entrega o espírito ao Pai. O céu escurece e a terra treme: o Filho de Deus morreu por amor dos pecadores."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, tú que moriste por mí, haz que yo muera al pecado y viva solo para ti.",
+                "My Jesus, who died for me, grant that I may die to sin and live for you alone.",
+                "Jesus meu, que morrestes por mim, fazei que eu morra para o pecado e viva somente para vós."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 13,
+            title = LocalizedText("XIII Estación: Jesús es bajado de la Cruz y entregado a su Madre", "13th Station: Jesus Is Taken Down from the Cross", "13ª Estação: Jesus é descido da Cruz e entregue a sua Mãe"),
+            scripture = LocalizedText(
+                "Juan 19, 38 (la tradición coloca el cuerpo en brazos de María): «José de Arimatea pidió a Pilato que le permitiera retirar el cuerpo de Jesús. Pilato se lo concedió, y José fue y lo retiró».",
+                "John 19:38 (tradition places the body in Mary's arms): “Joseph of Arimathea asked Pilate if he could remove the body of Jesus. And Pilate permitted it. So he came and took his body.”",
+                "João 19, 38 (a tradição coloca o corpo nos braços de Maria): “José de Arimateia pediu a Pilatos para retirar o corpo de Jesus. Pilatos permitiu, e José foi retirar o corpo.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo los discípulos bajan de la Cruz el cuerpo sin vida de Jesús y lo ponen en los brazos de su Madre. María estrecha al Hijo que concibió por obra del Espíritu Santo, ahora muerto; su dolor es la espada de la que habló Simeón.",
+                "Consider how the disciples take the lifeless body of Jesus down from the Cross and place it in the arms of his Mother. Mary holds the Son she conceived by the Holy Spirit, now dead; her sorrow is the sword of which Simeon spoke.",
+                "Considera como os discípulos descem da Cruz o corpo sem vida de Jesus e o colocam nos braços de sua Mãe. Maria acolhe o Filho que concebeu por obra do Espírito Santo, agora morto; a sua dor é a espada de que falou Simeão."
+            ),
+            prayer = LocalizedText(
+                "Madre dolorosa, ruega por mí; que tus lágrimas me obtengan un verdadero dolor de mis pecados.",
+                "Sorrowful Mother, pray for me; may your tears obtain for me true sorrow for my sins.",
+                "Mãe dolorosa, rogai por mim; que as vossas lágrimas me alcancem verdadeira dor dos meus pecados."
+            )
+        ),
+        ViaCrucisStation(
+            stationNumber = 14,
+            title = LocalizedText("XIV Estación: Jesús es colocado en el sepulcro", "14th Station: Jesus Is Laid in the Tomb", "14ª Estação: Jesus é colocado no sepulcro"),
+            scripture = LocalizedText(
+                "Juan 19, 41-42: «En el lugar donde fue crucificado había un huerto, y en el huerto una tumba nueva, en la que todavía no habían puesto a nadie. Allí pusieron a Jesús».",
+                "John 19:41-42: “Now in the place where he had been crucified there was a garden, and in the garden a new tomb, in which no one had yet been buried. So they laid Jesus there.”",
+                "João 19, 41-42: “No lugar onde Jesus foi crucificado havia um jardim e, no jardim, um sepulcro novo, onde ninguém ainda fora colocado. Foi ali que puseram Jesus.”"
+            ),
+            meditation = LocalizedText(
+                "Considera cómo el cuerpo de Jesús es envuelto en lienzos con aromas y colocado en un sepulcro nuevo. Todo parece terminado, pero la tumba es solo el lugar donde el grano de trigo cae en tierra para dar fruto. Espera con María la Resurrección.",
+                "Consider how the body of Jesus is wrapped in linen with spices and laid in a new tomb. All seems finished, yet the tomb is only where the grain of wheat falls to the earth in order to bear fruit. Wait with Mary for the Resurrection.",
+                "Considera como o corpo de Jesus é envolvido em panos com aromas e colocado num sepulcro novo. Tudo parece acabado, mas o sepulcro é apenas o lugar onde o grão de trigo cai na terra para dar fruto. Espera com Maria a Ressurreição."
+            ),
+            prayer = LocalizedText(
+                "Jesús mío, sepulta mis pecados en tu tumba y, cuando llegue mi hora, haz que repose en ti y resucite contigo. Amén.",
+                "My Jesus, bury my sins in your tomb, and when my hour comes, let me rest in you and rise with you. Amen.",
+                "Jesus meu, sepultai os meus pecados no vosso sepulcro e, quando chegar a minha hora, fazei que eu repouse em vós e ressuscite convosco. Amém."
             )
         )
     )
@@ -384,7 +593,1320 @@ object DoctrineAndSpiritualData {
                 "Christ gave Simon the name Peter (Rock) and conferred upon him the keys of the Kingdom of Heaven.",
                 "Jesus confiou as chaves do Reino a Pedro para apascentar o rebanho universal."
             )
-        )
+        ),
+        TriviaQuestion(
+            id = "t4",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Cuál es el primer libro de la Biblia?", "What is the first book of the Bible?", "Qual é o primeiro livro da Bíblia?"),
+            options = listOf(
+                LocalizedText("Éxodo", "Exodus", "Êxodo"),
+                LocalizedText("Salmos", "Psalms", "Salmos"),
+                LocalizedText("Isaías", "Isaiah", "Isaías"),
+                LocalizedText("Génesis", "Genesis", "Gênesis"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El Génesis narra la creación del mundo y del ser humano, y la historia de los patriarcas.", "Genesis tells the creation of the world and humanity and the story of the patriarchs.", "O Gênesis relata a criação do mundo e do homem e a história dos patriarcas.")
+        ),
+        TriviaQuestion(
+            id = "t5",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Cuál es el último libro de la Biblia Católica?", "What is the last book of the Catholic Bible?", "Qual é o último livro da Bíblia Católica?"),
+            options = listOf(
+                LocalizedText("Romanos", "Romans", "Romanos"),
+                LocalizedText("Judas", "Jude", "Judas"),
+                LocalizedText("Apocalipsis", "Revelation", "Apocalipse"),
+                LocalizedText("Hechos de los Apóstoles", "Acts of the Apostles", "Atos dos Apóstolos"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("El Apocalipsis, de San Juan, cierra la Escritura con la visión de la Jerusalén celestial.", "Revelation, by Saint John, closes Scripture with the vision of the heavenly Jerusalem.", "O Apocalipse, de São João, fecha a Escritura com a visão da Jerusalém celestial.")
+        ),
+        TriviaQuestion(
+            id = "t6",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Cuántos libros del Antiguo Testamento hay en la Biblia Católica?", "How many Old Testament books are in the Catholic Bible?", "Quantos livros do Antigo Testamento há na Bíblia Católica?"),
+            options = listOf(
+                LocalizedText("43 libros", "43 books", "43 livros"),
+                LocalizedText("39 libros", "39 books", "39 livros"),
+                LocalizedText("46 libros", "46 books", "46 livros"),
+                LocalizedText("50 libros", "50 books", "50 livros"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("La Biblia Católica conserva 46 libros del Antiguo Testamento, incluidos los deuterocanónicos.", "The Catholic Bible preserves 46 Old Testament books, including the deuterocanonical books.", "A Bíblia Católica preserva 46 livros do Antigo Testamento, incluindo os deuterocanônicos.")
+        ),
+        TriviaQuestion(
+            id = "t7",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Quién construyó el arca para salvar a su familia del diluvio?", "Who built the ark to save his family from the flood?", "Quem construiu a arca para salvar sua família do dilúvio?"),
+            options = listOf(
+                LocalizedText("Noé", "Noah", "Noé"),
+                LocalizedText("Jacob", "Jacob", "Jacó"),
+                LocalizedText("Abraham", "Abraham", "Abraão"),
+                LocalizedText("Moisés", "Moses", "Moisés"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Dios mandó a Noé construir el arca; él y su familia se salvaron con los animales.", "God commanded Noah to build the ark; he, his family, and the animals were saved.", "Deus mandou Noé construir a arca; ele, sua família e os animais foram salvos.")
+        ),
+        TriviaQuestion(
+            id = "t8",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Dónde recibió Moisés los Diez Mandamientos?", "Where did Moses receive the Ten Commandments?", "Onde Moisés recebeu os Dez Mandamentos?"),
+            options = listOf(
+                LocalizedText("Monte de los Olivos", "Mount of Olives", "Monte das Oliveiras"),
+                LocalizedText("Monte Tabor", "Mount Tabor", "Monte Tabor"),
+                LocalizedText("Monte Carmelo", "Mount Carmel", "Monte Carmelo"),
+                LocalizedText("Monte Sinaí", "Mount Sinai", "Monte Sinai"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Moisés subió al Sinaí y recibió las tablas de la Ley de Dios.", "Moses ascended Sinai and received God's tablets of the Law.", "Moisés subiu ao Sinai e recebeu as tábuas da Lei de Deus.")
+        ),
+        TriviaQuestion(
+            id = "t9",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Cómo venció David al gigante Goliat?", "How did David defeat the giant Goliath?", "Como Davi venceu o gigante Golias?"),
+            options = listOf(
+                LocalizedText("Con una honda y una piedra", "With a sling and a stone", "Com uma funda e uma pedra"),
+                LocalizedText("Con una lanza", "With a spear", "Com uma lança"),
+                LocalizedText("Con una flecha", "With an arrow", "Com uma flecha"),
+                LocalizedText("Con una espada", "With a sword", "Com uma espada"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("David, joven pastor, venció a Goliat con una honda y una piedra, confiando en Dios.", "David, a young shepherd, defeated Goliath with a sling and a stone, trusting in God.", "Davi, jovem pastor, venceu Golias com uma funda e uma pedra, confiando em Deus.")
+        ),
+        TriviaQuestion(
+            id = "t10",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Qué rey pidió sabiduría a Dios y construyó el primer Templo de Jerusalén?", "Which king asked God for wisdom and built the first Temple in Jerusalem?", "Qual rei pediu sabedoria a Deus e construiu o primeiro Templo de Jerusalém?"),
+            options = listOf(
+                LocalizedText("David", "David", "Davi"),
+                LocalizedText("Salomón", "Solomon", "Salomão"),
+                LocalizedText("Saúl", "Saul", "Saul"),
+                LocalizedText("Roboam", "Rehoboam", "Roboão"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("Salomón pidió sabiduría y erigió el Templo de Jerusalén.", "Solomon asked for wisdom and erected the Temple of Jerusalem.", "Salomão pediu sabedoria e ergueu o Templo de Jerusalém.")
+        ),
+        TriviaQuestion(
+            id = "t11",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Qué profeta fue tragado por un gran pez por desobedecer a Dios?", "Which prophet was swallowed by a great fish for disobeying God?", "Qual profeta foi engolido por um grande peixe por desobedecer a Deus?"),
+            options = listOf(
+                LocalizedText("Jeremías", "Jeremiah", "Jeremias"),
+                LocalizedText("Jonás", "Jonah", "Jonas"),
+                LocalizedText("Elías", "Elijah", "Elias"),
+                LocalizedText("Isaías", "Isaiah", "Isaías"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("Jonás huyó del llamado divino, fue tragado por el pez y luego predicó en Nínive.", "Jonah fled God's call, was swallowed by the fish, and later preached in Nineveh.", "Jonas fugiu do chamado divino, foi engolido pelo peixe e depois pregou em Nínive.")
+        ),
+        TriviaQuestion(
+            id = "t12",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Quién fue echado al foso de los leones por orar a Dios?", "Who was thrown into the lions' den for praying to God?", "Quem foi lançado na cova dos leões por orar a Deus?"),
+            options = listOf(
+                LocalizedText("David", "David", "Davi"),
+                LocalizedText("Daniel", "Daniel", "Daniel"),
+                LocalizedText("José", "Joseph", "José"),
+                LocalizedText("Moisés", "Moses", "Moisés"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("Daniel oró a pesar de la prohibición del rey y Dios cerró la boca de los leones.", "Daniel prayed despite the king's ban and God shut the lions' mouths.", "Daniel orou apesar da proibição do rei e Deus fechou a boca dos leões.")
+        ),
+        TriviaQuestion(
+            id = "t13",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Qué reina judía salvó a su pueblo ante el rey Asuero?", "Which Jewish queen saved her people before King Ahasuerus?", "Qual rainha judia salvou seu povo diante do rei Assuero?"),
+            options = listOf(
+                LocalizedText("Rut", "Ruth", "Rute"),
+                LocalizedText("Débora", "Deborah", "Débora"),
+                LocalizedText("Ester", "Esther", "Ester"),
+                LocalizedText("Judith", "Judith", "Judite"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Ester intercedió ante el rey y salvó a los judíos de la destrucción.", "Esther interceded with the king and saved the Jews from destruction.", "Ester intercedeu junto ao rei e salvou os judeus da destruição.")
+        ),
+        TriviaQuestion(
+            id = "t14",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Qué mujer fue leal a su suegra Noemí y es antepasada de Jesús?", "Which woman was loyal to her mother-in-law Naomi and is an ancestor of Jesus?", "Qual mulher foi fiel à sua sogra Noemi e é antepassada de Jesus?"),
+            options = listOf(
+                LocalizedText("Rut", "Ruth", "Rute"),
+                LocalizedText("Ana", "Hannah", "Ana"),
+                LocalizedText("Sara", "Sarah", "Sara"),
+                LocalizedText("Ester", "Esther", "Ester"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Rut dijo: «Tu pueblo será mi pueblo, tu Dios será mi Dios».", "Ruth said: 'Your people shall be my people, your God my God.'", "Rute disse: 'Teu povo será meu povo, teu Deus será meu Deus.'")
+        ),
+        TriviaQuestion(
+            id = "t15",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿A quién se atribuyen tradicionalmente los Salmos?", "To whom are the Psalms traditionally attributed?", "A quem são tradicionalmente atribuídos os Salmos?"),
+            options = listOf(
+                LocalizedText("Moisés", "Moses", "Moisés"),
+                LocalizedText("Salomón", "Solomon", "Salomão"),
+                LocalizedText("David", "David", "Davi"),
+                LocalizedText("Elías", "Elijah", "Elias"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Muchos Salmos se atribuyen al rey David, músico y poeta sagrado.", "Many Psalms are attributed to King David, musician and sacred poet.", "Muitos Salmos são atribuídos ao rei Davi, músico e poeta sagrado.")
+        ),
+        TriviaQuestion(
+            id = "t16",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿En qué libro leemos el Sermón de la Montaña y las Bienaventuranzas?", "In which book do we read the Sermon on the Mount and the Beatitudes?", "Em qual livro lemos o Sermão da Montanha e as Bem-aventuranças?"),
+            options = listOf(
+                LocalizedText("Marcos", "Mark", "Marcos"),
+                LocalizedText("Lucas", "Luke", "Lucas"),
+                LocalizedText("Juan", "John", "João"),
+                LocalizedText("Mateo", "Matthew", "Mateus"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Mateo recoge las Bienaventuranzas: «Bienaventurados los pobres de espíritu…».", "Matthew records the Beatitudes: 'Blessed are the poor in spirit…'", "Mateus registra as Bem-aventuranças: 'Bem-aventurados os pobres em espírito…'")
+        ),
+        TriviaQuestion(
+            id = "t17",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Cuál fue el primer milagro de Jesús, en las bodas de Caná?", "What was Jesus' first miracle, at the wedding of Cana?", "Qual foi o primeiro milagre de Jesus, nas bodas de Caná?"),
+            options = listOf(
+                LocalizedText("Calmar la tormenta", "Calming the storm", "Acalmar a tempestade"),
+                LocalizedText("Curar a un enfermo", "Healing a sick man", "Curar um enfermo"),
+                LocalizedText("Multiplicar los panes", "Multiplying the loaves", "Multiplicar os pães"),
+                LocalizedText("Convertir el agua en vino", "Turning water into wine", "Transformar água em vinho"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Jesús convirtió el agua en vino, el primer signo de su gloria.", "Jesus turned water into wine, the first sign of His glory.", "Jesus transformou água em vinho, o primeiro sinal de sua glória.")
+        ),
+        TriviaQuestion(
+            id = "t18",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿En qué ciudad nació Jesús?", "In which city was Jesus born?", "Em qual cidade Jesus nasceu?"),
+            options = listOf(
+                LocalizedText("Jerusalén", "Jerusalem", "Jerusalém"),
+                LocalizedText("Caná", "Cana", "Caná"),
+                LocalizedText("Nazaret", "Nazareth", "Nazaré"),
+                LocalizedText("Belén", "Bethlehem", "Belém"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Jesús nació en Belén de Judea, como anunciaron los profetas.", "Jesus was born in Bethlehem of Judea, as the prophets foretold.", "Jesus nasceu em Belém da Judeia, como profetizaram os profetas.")
+        ),
+        TriviaQuestion(
+            id = "t19",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿A qué apóstoles llamó Jesús pescando junto al mar de Galilea?", "Which apostles did Jesus call while fishing by the Sea of Galilee?", "Quais apóstolos Jesus chamou pescando junto ao mar da Galileia?"),
+            options = listOf(
+                LocalizedText("Pablo y Bernabé", "Paul and Barnabas", "Paulo e Barnabé"),
+                LocalizedText("Santiago y Juan", "James and John", "Santiago e João"),
+                LocalizedText("Andrés y Tomás", "Andrew and Thomas", "André e Tomé"),
+                LocalizedText("Pedro y Juan", "Peter and John", "Pedro e João"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("Jesús llamó a Santiago y a Juan, hijos de Zebedeo, para ser pescadores de hombres.", "Jesus called James and John, sons of Zebedee, to be fishers of men.", "Jesus chamou Santiago e João, filhos de Zebedeu, para serem pescadores de homens.")
+        ),
+        TriviaQuestion(
+            id = "t20",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Qué instituyó Jesús en la Última Cena?", "What did Jesus institute at the Last Supper?", "O que Jesus instituiu na Última Ceia?"),
+            options = listOf(
+                LocalizedText("La Eucaristía", "The Eucharist", "A Eucaristia"),
+                LocalizedText("La Confirmación", "Confirmation", "A Confirmação"),
+                LocalizedText("La Unción de los enfermos", "Anointing of the Sick", "A Unção dos Enfermos"),
+                LocalizedText("El Bautismo", "Baptism", "O Batismo"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Jesús tomó el pan y el vino y los convirtió en su Cuerpo y su Sangre.", "Jesus took bread and wine and made them His Body and Blood.", "Jesus tomou o pão e o vinho e os tornou seu Corpo e seu Sangue.")
+        ),
+        TriviaQuestion(
+            id = "t21",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Dónde se convirtió San Pablo, camino de Damasco?", "Where was Saint Paul converted, on the road to Damascus?", "Onde São Paulo se converteu, no caminho de Damasco?"),
+            options = listOf(
+                LocalizedText("Una nube luminosa", "He saw a bright cloud", "Uma nuvem luminosa"),
+                LocalizedText("Un terremoto", "An earthquake", "Um terremoto"),
+                LocalizedText("Un rayo del cielo y una voz", "Lightning from heaven and a voice", "Um relâmpago do céu e uma voz"),
+                LocalizedText("Un ángel", "An angel", "Um anjo"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Pablo cayó a tierra y oyó: «Saulo, Saulo, ¿por qué me persigues?».", "Paul fell to the ground and heard: 'Saul, Saul, why do you persecute Me?'", "Paulo caiu por terra e ouviu: 'Saulo, Saulo, por que me persegues?'")
+        ),
+        TriviaQuestion(
+            id = "t22",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Quién escribió el libro de los Hechos de los Apóstoles?", "Who wrote the Book of Acts of the Apostles?", "Quem escreveu o livro dos Atos dos Apóstolos?"),
+            options = listOf(
+                LocalizedText("San Juan", "Saint John", "São João"),
+                LocalizedText("San Pedro", "Saint Peter", "São Pedro"),
+                LocalizedText("San Pablo", "Saint Paul", "São Paulo"),
+                LocalizedText("San Lucas", "Saint Luke", "São Lucas"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("San Lucas, compañero de Pablo, escribió los Hechos y el Evangelio que lleva su nombre.", "Saint Luke, Paul's companion, wrote Acts and the Gospel bearing his name.", "São Lucas, companheiro de Paulo, escreveu os Atos e o Evangelho que leva seu nome.")
+        ),
+        TriviaQuestion(
+            id = "t23",
+            category = LocalizedText("Sagrada Escritura", "Sacred Scripture", "Sagrada Escritura"),
+            question = LocalizedText("¿Qué acontecimiento narra el capítulo 2 de los Hechos?", "What event does Acts chapter 2 recount?", "Qual evento narra o capítulo 2 dos Atos?"),
+            options = listOf(
+                LocalizedText("La conversión de Pablo", "Paul's conversion", "A conversão de Paulo"),
+                LocalizedText("El bautismo de Jesús", "Jesus' baptism", "O batismo de Jesus"),
+                LocalizedText("La resurrección", "The Resurrection", "A ressurreição"),
+                LocalizedText("Pentecostés", "Pentecost", "Pentecostes"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("En Pentecostés descendió el Espíritu Santo sobre los apóstoles en Jerusalén.", "At Pentecost the Holy Spirit descended on the apostles in Jerusalem.", "No Pentecostes o Espírito Santo desceu sobre os apóstolos em Jerusalém.")
+        ),
+        TriviaQuestion(
+            id = "t24",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santo de Asís, amante de la pobreza, es patrono de los animales?", "Which saint of Assisi, lover of poverty, is patron of animals?", "Qual santo de Assis, amante da pobreza, é padroeiro dos animais?"),
+            options = listOf(
+                LocalizedText("San Martín", "Saint Martin", "São Martinho"),
+                LocalizedText("San Roque", "Saint Roch", "São Roque"),
+                LocalizedText("San Antonio", "Saint Anthony", "São Antônio"),
+                LocalizedText("San Francisco de Asís", "Saint Francis of Assisi", "São Francisco de Assis"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("San Francisco predicó a los animales y vivió en extrema pobreza.", "Saint Francis preached to animals and lived in extreme poverty.", "São Francisco pregou aos animais e viveu em extrema pobreza.")
+        ),
+        TriviaQuestion(
+            id = "t25",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santa española, mística y doctora de la Iglesia, reformó el Carmelo?", "Which Spanish saint, mystic and Doctor of the Church, reformed Carmel?", "Qual santa espanhola, mística e doutora da Igreja, reformou o Carmelo?"),
+            options = listOf(
+                LocalizedText("Santa Teresita", "Saint Thérèse", "Santa Teresinha"),
+                LocalizedText("Santa Clara", "Saint Clare", "Santa Clara"),
+                LocalizedText("Santa Rosa", "Saint Rose", "Santa Rosa"),
+                LocalizedText("Santa Teresa de Jesús", "Saint Teresa of Jesus", "Santa Teresa de Jesus"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Santa Teresa fundó conventos renovados y escribió «Camino de perfección».", "Saint Teresa founded reformed convents and wrote 'The Way of Perfection.'", "Santa Teresa fundou conventos reformados e escreveu 'Caminho de perfeição.'")
+        ),
+        TriviaQuestion(
+            id = "t26",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santa de Lisieux enseñó el «camino de la infancia espiritual»?", "Which saint of Lisieux taught the 'Little Way' of spiritual childhood?", "Qual santa de Lisieux ensinou o 'caminho da infância espiritual'?"),
+            options = listOf(
+                LocalizedText("Santa Teresa de Ávila", "Saint Teresa of Avila", "Santa Teresa de Ávila"),
+                LocalizedText("Santa Clara", "Saint Clare", "Santa Clara"),
+                LocalizedText("Santa Teresita de Lisieux", "Saint Thérèse of Lisieux", "Santa Teresinha de Lisieux"),
+                LocalizedText("Santa Catalina", "Saint Catherine", "Santa Catarina"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Santa Teresita vivió la santidad en las cosas pequeñas con gran confianza.", "Saint Thérèse lived holiness in small things with great trust.", "Santa Teresinha viveu a santidade nas coisas pequenas com grande confiança.")
+        ),
+        TriviaQuestion(
+            id = "t27",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santo español fundó la Compañía de Jesús (jesuitas)?", "Which Spanish saint founded the Society of Jesus (Jesuits)?", "Qual santo espanhol fundou a Companhia de Jesus (jesuítas)?"),
+            options = listOf(
+                LocalizedText("San José", "Saint Joseph", "São José"),
+                LocalizedText("San Ignacio de Loyola", "Saint Ignatius of Loyola", "São Inácio de Loyola"),
+                LocalizedText("San Domingo", "Saint Dominic", "São Domingos"),
+                LocalizedText("San Francisco Javier", "Saint Francis Xavier", "São Francisco Xavier"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("San Ignacio escribió los Ejercicios Espirituales y fundó los jesuitas.", "Saint Ignatius wrote the Spiritual Exercises and founded the Jesuits.", "São Inácio escreveu os Exercícios Espirituais e fundou os jesuítas.")
+        ),
+        TriviaQuestion(
+            id = "t28",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santo fundó la Orden de Predicadores (dominicos)?", "Which saint founded the Order of Preachers (Dominicans)?", "Qual santo fundou a Ordem dos Pregadores (dominicanos)?"),
+            options = listOf(
+                LocalizedText("San Agustín", "Saint Augustine", "São Agostinho"),
+                LocalizedText("San Francisco", "Saint Francis", "São Francisco"),
+                LocalizedText("San Benito", "Saint Benedict", "São Bento"),
+                LocalizedText("San Domingo de Guzmán", "Saint Dominic de Guzmán", "São Domingos de Gusmão"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Santo Domingo fundó los dominicos para predicar la verdad de Jesucristo.", "Saint Dominic founded the Dominicans to preach the truth of Christ.", "São Domingos fundou os dominicanos para pregar a verdade de Cristo.")
+        ),
+        TriviaQuestion(
+            id = "t29",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santa de Asís fundó las Hermanas Clarisas?", "Which saint of Assisi founded the Poor Clares?", "Qual santa de Assis fundou as Clarissas?"),
+            options = listOf(
+                LocalizedText("Santa Inés", "Saint Agnes", "Santa Inês"),
+                LocalizedText("Santa Marta", "Saint Martha", "Santa Marta"),
+                LocalizedText("Santa Clara", "Saint Clare", "Santa Clara"),
+                LocalizedText("Santa Isabel", "Saint Elizabeth", "Santa Isabel"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Santa Clara vivió en clausura en San Damián, junto a San Francisco.", "Saint Clare lived in enclosure at San Damiano, beside Saint Francis.", "Santa Clara viveu em clausura em São Damião, junto a São Francisco.")
+        ),
+        TriviaQuestion(
+            id = "t30",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santo franciscano es invocado para hallar objetos perdidos?", "Which Franciscan saint is invoked to find lost objects?", "Qual santo franciscano é invocado para encontrar objetos perdidos?"),
+            options = listOf(
+                LocalizedText("San Francisco", "Saint Francis", "São Francisco"),
+                LocalizedText("San Buenaventura", "Saint Bonaventure", "São Boaventura"),
+                LocalizedText("San Elías", "Saint Elijah", "São Elias"),
+                LocalizedText("San Antonio de Padua", "Saint Anthony of Padua", "São Antônio de Pádua"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("San Antonio, gran predicador, es patrono de los objetos perdidos.", "Saint Anthony, a great preacher, is patron of lost objects.", "São Antônio, grande pregador, é padroeiro dos objetos perdidos.")
+        ),
+        TriviaQuestion(
+            id = "t31",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Quién fue el esposo de María y padre adoptivo de Jesús?", "Who was Mary's husband and Jesus' adoptive father?", "Quem foi o esposo de Maria e pai adotivo de Jesus?"),
+            options = listOf(
+                LocalizedText("San José", "Saint Joseph", "São José"),
+                LocalizedText("San Joaquín", "Saint Joachim", "São Joaquim"),
+                LocalizedText("Zacarías", "Zechariah", "Zacarias"),
+                LocalizedText("Simón", "Simon", "Simão"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("San José, carpintero, custodio de la Sagrada Familia.", "Saint Joseph, carpenter, guardian of the Holy Family.", "São José, carpinteiro, guardião da Sagrada Família.")
+        ),
+        TriviaQuestion(
+            id = "t32",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué papa polaco, de largo pontificado, convocó las Jornadas Mundiales de la Juventud?", "Which Polish pope, with a long pontificate, called the World Youth Days?", "Qual papa polonês, de longo pontificado, convocou as Jornadas Mundiais da Juventude?"),
+            options = listOf(
+                LocalizedText("San Pablo VI", "Saint Paul VI", "São Paulo VI"),
+                LocalizedText("San Juan Pablo II", "Saint John Paul II", "São João Paulo II"),
+                LocalizedText("Pío XII", "Pius XII", "Pio XII"),
+                LocalizedText("Juan XXIII", "John XXIII", "João XXIII"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("Juan Pablo II, papa de 1978 a 2005, reunió a millones de jóvenes.", "John Paul II, pope from 1978 to 2005, gathered millions of young people.", "João Paulo II, papa de 1978 a 2005, reuniu milhões de jovens.")
+        ),
+        TriviaQuestion(
+            id = "t33",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santa de Calcuta fundó las Misioneras de la Caridad?", "Which saint of Calcutta founded the Missionaries of Charity?", "Qual santa de Calcutá fundou as Missionárias da Caridade?"),
+            options = listOf(
+                LocalizedText("Santa Catalina", "Saint Catherine", "Santa Catarina"),
+                LocalizedText("Santa Teresa de Calcuta", "Saint Teresa of Calcutta", "Santa Teresa de Calcutá"),
+                LocalizedText("Santa Faustina", "Saint Faustina", "Santa Faustina"),
+                LocalizedText("Santa Isabel", "Saint Elizabeth", "Santa Isabel"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("La Madre Teresa dedicó su vida a los más pobres de los pobres en la India.", "Mother Teresa devoted her life to the poorest of the poor in India.", "A Madre Teresa dedicou sua vida aos mais pobres dos pobres na Índia.")
+        ),
+        TriviaQuestion(
+            id = "t34",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santo escribió la Regla benedictina, base del monacato occidental?", "Which saint wrote the Benedictine Rule, basis of Western monasticism?", "Qual santo escreveu a Regra beneditina, base do monacato ocidental?"),
+            options = listOf(
+                LocalizedText("San Roberto", "Saint Robert", "São Roberto"),
+                LocalizedText("San Bernardo", "Saint Bernard", "São Bernardo"),
+                LocalizedText("San Benito", "Saint Benedict", "São Bento"),
+                LocalizedText("San Bruno", "Saint Bruno", "São Bruno"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("San Benito: «Ora y trabaja», lema de los monasterios benedictinos.", "Saint Benedict: 'Pray and work,' motto of Benedictine monasteries.", "São Bento: 'Ora e trabalha', lema dos mosteiros beneditinos.")
+        ),
+        TriviaQuestion(
+            id = "t35",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué obispo de Hipona escribió «Confesiones»?", "Which Bishop of Hippo wrote the 'Confessions'?", "Qual bispo de Hipona escreveu as 'Confissões'?"),
+            options = listOf(
+                LocalizedText("San Agustín", "Saint Augustine", "São Agostinho"),
+                LocalizedText("San Jerónimo", "Saint Jerome", "São Jerônimo"),
+                LocalizedText("San Gregorio", "Saint Gregory", "São Gregório"),
+                LocalizedText("San Ambrosio", "Saint Ambrose", "São Ambrósio"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("San Agustín, doctor de la Iglesia, escribió Confesiones y La ciudad de Dios.", "Saint Augustine, Doctor of the Church, wrote the Confessions and The City of God.", "São Agostinho, doutor da Igreja, escreveu Confissões e A Cidade de Deus.")
+        ),
+        TriviaQuestion(
+            id = "t36",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santo dominico escribió la «Suma Teológica»?", "Which Dominican saint wrote the 'Summa Theologiae'?", "Qual santo dominicano escreveu a 'Suma Teológica'?"),
+            options = listOf(
+                LocalizedText("Santo Tomás de Aquino", "Saint Thomas Aquinas", "São Tomás de Aquino"),
+                LocalizedText("San Domingo", "Saint Dominic", "São Domingos"),
+                LocalizedText("San Vicente Ferrer", "Saint Vincent Ferrer", "São Vicente Ferrer"),
+                LocalizedText("San Alberto Magno", "Saint Albert the Great", "São Alberto Magno"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Santo Tomás, Doctor Angélico, armonizó fe y razón.", "Saint Thomas, the Angelic Doctor, harmonized faith and reason.", "São Tomás, Doutor Angélico, harmonizou fé e razão.")
+        ),
+        TriviaQuestion(
+            id = "t37",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santo franciscano murió en Auschwitz tras ofrecerse por un prisionero?", "Which Franciscan saint died at Auschwitz after offering himself for a prisoner?", "Qual santo franciscano morreu em Auschwitz após oferecer-se por um prisioneiro?"),
+            options = listOf(
+                LocalizedText("San Maximiliano Kolbe", "Saint Maximilian Kolbe", "São Maximiliano Kolbe"),
+                LocalizedText("San Padre Pío", "Saint Padre Pio", "São Padre Pio"),
+                LocalizedText("San Antonio", "Saint Anthony", "São Antônio"),
+                LocalizedText("San Roque", "Saint Roch", "São Roque"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("San Maximiliano Kolbe entregó su vida por un padre de familia condenado a morir.", "Saint Maximilian Kolbe gave his life for a father condemned to die.", "São Maximiliano Kolbe entregou sua vida por um pai de família condenado a morrer.")
+        ),
+        TriviaQuestion(
+            id = "t38",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué sacerdote capuchino italiano recibió los estigmas de Cristo?", "Which Italian Capuchin priest received the stigmata of Christ?", "Qual sacerdote capuchinho italiano recebeu os estigmas de Cristo?"),
+            options = listOf(
+                LocalizedText("San Félix", "Saint Felix", "São Félix"),
+                LocalizedText("San Pío de Pietrelcina (Padre Pío)", "Saint Pio of Pietrelcina (Padre Pio)", "São Pio de Pietrelcina (Padre Pio)"),
+                LocalizedText("San Juan Bosco", "Saint John Bosco", "São João Bosco"),
+                LocalizedText("San Leopoldo", "Saint Leopold", "São Leopoldo"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("El Padre Pío llevó las llagas de Cristo durante 50 años.", "Padre Pio bore Christ's wounds for 50 years.", "O Padre Pio carregou as chagas de Cristo por 50 anos.")
+        ),
+        TriviaQuestion(
+            id = "t39",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué santa polaca recibió las revelaciones de la Divina Misericordia?", "Which Polish saint received the revelations of Divine Mercy?", "Qual santa polonesa recebeu as revelações da Divina Misericórdia?"),
+            options = listOf(
+                LocalizedText("Santa Kinga", "Saint Kinga", "Santa Kinga"),
+                LocalizedText("Santa Jadwiga", "Saint Jadwiga", "Santa Jadwiga"),
+                LocalizedText("Santa Faustina Kowalska", "Saint Faustina Kowalska", "Santa Faustina Kowalska"),
+                LocalizedText("Santa Edwiges", "Saint Hedwig", "Santa Edwiges"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Santa Faustina oyó a Jesús: «Dile a la humanidad que no puede haber paz hasta que se vuelva a Mi Misericordia».", "Saint Faustina heard Jesus say: 'Tell mankind there can be no peace until it turns to My Mercy.'", "Santa Faustina ouviu Jesus dizer: 'Dize à humanidade que não haverá paz até que volte à Minha Misericórdia.'")
+        ),
+        TriviaQuestion(
+            id = "t40",
+            category = LocalizedText("Santos y Santas", "Saints", "Santos e Santas"),
+            question = LocalizedText("¿Qué mártir romano fue asaetado con flechas?", "Which Roman martyr was shot with arrows?", "Qual mártir romano foi morto por flechas?"),
+            options = listOf(
+                LocalizedText("San Lorenzo", "Saint Lawrence", "São Lourenço"),
+                LocalizedText("San Esteban", "Saint Stephen", "São Estêvão"),
+                LocalizedText("San Sebastián", "Saint Sebastian", "São Sebastião"),
+                LocalizedText("San Jorge", "Saint George", "São Jorge"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("San Sebastián, soldado, fue atado a un árbol y asaetado por su fe.", "Saint Sebastian, a soldier, was tied to a tree and shot with arrows for his faith.", "São Sebastião, soldado, foi amarrado a uma árvore e morto por flechas pela fé.")
+        ),
+        TriviaQuestion(
+            id = "t41",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Cuántos sacramentos hay en la Iglesia Católica?", "How many sacraments are there in the Catholic Church?", "Quantos sacramentos há na Igreja Católica?"),
+            options = listOf(
+                LocalizedText("Seis", "Six", "Seis"),
+                LocalizedText("Siete", "Seven", "Sete"),
+                LocalizedText("Diez", "Ten", "Dez"),
+                LocalizedText("Cinco", "Five", "Cinco"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("Hay siete sacramentos: Bautismo, Confirmación, Eucaristía, Penitencia, Unción, Matrimonio y Orden.", "There are seven sacraments: Baptism, Confirmation, Eucharist, Penance, Anointing, Matrimony and Orders.", "São sete sacramentos: Batismo, Crisma, Eucaristia, Penitência, Unção, Matrimônio e Ordem.")
+        ),
+        TriviaQuestion(
+            id = "t42",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué sacramento borra el pecado original?", "Which sacrament washes away original sin?", "Qual sacramento apaga o pecado original?"),
+            options = listOf(
+                LocalizedText("La Eucaristía", "The Eucharist", "A Eucaristia"),
+                LocalizedText("El Bautismo", "Baptism", "O Batismo"),
+                LocalizedText("La Confirmación", "Confirmation", "A Confirmação"),
+                LocalizedText("El Matrimonio", "Marriage", "O Matrimônio"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("En el Bautismo el niño es lavado del pecado original y nace a la vida divina.", "In Baptism the child is washed from original sin and born to divine life.", "No Batismo a criança é lavada do pecado original e nasce para a vida divina.")
+        ),
+        TriviaQuestion(
+            id = "t43",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué sacramento imprime el don del Espíritu Santo con el crisma?", "Which sacrament impresses the gift of the Holy Spirit with chrism?", "Qual sacramento imprime o dom do Espírito Santo com o crisma?"),
+            options = listOf(
+                LocalizedText("La Penitencia", "Penance", "A Penitência"),
+                LocalizedText("El Bautismo", "Baptism", "O Batismo"),
+                LocalizedText("El Matrimonio", "Matrimony", "O Matrimônio"),
+                LocalizedText("La Confirmación", "Confirmation", "A Confirmação"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("La Confirmación fortalece la gracia bautismal y nos hace testigos de Cristo.", "Confirmation strengthens baptismal grace and makes us witnesses of Christ.", "A Confirmação fortalece a graça batismal e nos faz testemunhas de Cristo.")
+        ),
+        TriviaQuestion(
+            id = "t44",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué ocurre en la consagración eucarística según la fe católica?", "What happens at the Eucharistic consecration according to Catholic faith?", "O que acontece na consagração eucarística segundo a fé católica?"),
+            options = listOf(
+                LocalizedText("Solo cambia el vino", "Only the wine changes", "Só o vinho muda"),
+                LocalizedText("El pan y el vino se convierten en Cuerpo y Sangre de Cristo", "Bread and wine become Christ's Body and Blood", "O pão e o vinho se tornam Corpo e Sangue de Cristo"),
+                LocalizedText("El pan y el vino son solo símbolos", "Bread and wine are only symbols", "O pão e o vinho são apenas símbolos"),
+                LocalizedText("Solo cambia el pan", "Only the bread changes", "Só o pão muda"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("La Iglesia enseña la transubstanciación: permanece Cristo entero bajo las especies.", "The Church teaches transubstantiation: the whole Christ remains under the species.", "A Igreja ensina a transubstanciação: Cristo inteiro permanece sob as espécies.")
+        ),
+        TriviaQuestion(
+            id = "t45",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Quién puede absolver los pecados en el sacramento de la Reconciliación?", "Who can absolve sins in the Sacrament of Reconciliation?", "Quem pode absolver os pecados no sacramento da Reconciliação?"),
+            options = listOf(
+                LocalizedText("Un catequista", "Catechist", "Um catequista"),
+                LocalizedText("La persona misma", "The person oneself", "A própria pessoa"),
+                LocalizedText("Cualquier diácono", "Any deacon", "Qualquer diácono"),
+                LocalizedText("Un sacerdote u obispo", "Priest or bishop", "Um sacerdote ou bispo"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Solo el sacerdote, ministro ordenado, puede absolver en nombre de Cristo.", "Only a priest, an ordained minister, can absolve in Christ's name.", "Somente o sacerdote, ministro ordenado, pode absolver em nome de Cristo.")
+        ),
+        TriviaQuestion(
+            id = "t46",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué sacramento administra la unción con óleo a los enfermos graves?", "Which sacrament anoints seriously ill persons with oil?", "Qual sacramento unge os doentes graves com óleo?"),
+            options = listOf(
+                LocalizedText("La Unción de los Enfermos", "Anointing of the Sick", "Unção dos Enfermos"),
+                LocalizedText("El Bautismo", "Baptism", "O Batismo"),
+                LocalizedText("El Orden", "Orders", "A Ordem"),
+                LocalizedText("La Confirmación", "Confirmation", "A Confirmação"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Santiago 5,14 exhorta a ungir a los enfermos y orar por ellos.", "James 5:14 urges to anoint the sick and pray for them.", "Tiago 5,14 exorta a ungir os enfermos e orar por eles.")
+        ),
+        TriviaQuestion(
+            id = "t47",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué sacramento une a un hombre y una mujer en alianza de amor?", "Which sacrament unites a man and woman in covenant of love?", "Qual sacramento une um homem e uma mulher em aliança de amor?"),
+            options = listOf(
+                LocalizedText("El Matrimonio", "Matrimony", "O Matrimônio"),
+                LocalizedText("El Bautismo", "Baptism", "O Batismo"),
+                LocalizedText("La Penitencia", "Penance", "A Penitência"),
+                LocalizedText("La Eucaristía", "Eucharist", "A Eucaristia"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("El Matrimonio es un sacramento: los dos serán una sola carne.", "Matrimony is a sacrament: the two become one flesh.", "O Matrimônio é um sacramento: os dois serão uma só carne.")
+        ),
+        TriviaQuestion(
+            id = "t48",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué sacramento ordena obispos, sacerdotes y diáconos?", "Which sacrament ordains bishops, priests, and deacons?", "Qual sacramento ordena bispos, sacerdotes e diáconos?"),
+            options = listOf(
+                LocalizedText("La Confirmación", "Confirmation", "A Confirmação"),
+                LocalizedText("El Matrimonio", "Matrimony", "O Matrimônio"),
+                LocalizedText("El Orden Sacerdotal", "Holy Orders", "A Ordem Sacerdotal"),
+                LocalizedText("La Unción", "Anointing", "A Unção"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("El Orden confiere el ministerio apostólico al servicio de la Iglesia.", "Holy Orders confers apostolic ministry at the service of the Church.", "A Ordem confere o ministério apostólico a serviço da Igreja.")
+        ),
+        TriviaQuestion(
+            id = "t49",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Cómo se llama la Eucaristía recibida por un moribundo?", "What is the Eucharist received by a dying person called?", "Como se chama a Eucaristia recebida por um moribundo?"),
+            options = listOf(
+                LocalizedText("Sacrificio", "Sacrifice", "Sacrifício"),
+                LocalizedText("Cena", "Supper", "Ceia"),
+                LocalizedText("Viático", "Viaticum", "Viático"),
+                LocalizedText("Maná", "Manna", "Maná"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("El viático es el alimento para el camino hacia la vida eterna.", "Viaticum is food for the journey to eternal life.", "O viático é o alimento para a jornada à vida eterna.")
+        ),
+        TriviaQuestion(
+            id = "t50",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué palabras se pronuncian al bautizar?", "What words are spoken when baptizing?", "Quais palavras se pronunciam ao batizar?"),
+            options = listOf(
+                LocalizedText("«Yo te perdono»", "'I forgive you'", "'Eu te perdoo'"),
+                LocalizedText("«Paz a ti»", "'Peace be with you'", "'Paz a ti'"),
+                LocalizedText("«En el nombre del Padre, y del Hijo, y del Espíritu Santo»", "'In the name of the Father, and of the Son, and of the Holy Spirit'", "'Em nome do Pai, e do Filho, e do Espírito Santo'"),
+                LocalizedText("«En el nombre de Jesús»", "'In the name of Jesus'", "'Em nome de Jesus'"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("La fórmula trinitaria del Bautismo está en Mateo 28,19.", "Baptism's Trinitarian formula is in Matthew 28:19.", "A fórmula trinitária do Batismo está em Mateus 28,19.")
+        ),
+        TriviaQuestion(
+            id = "t51",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿A qué edad aproximada se suele recibir la Primera Comunión?", "At about what age is First Communion usually received?", "Com que idade aproximadamente se costuma receber a Primeira Comunhão?"),
+            options = listOf(
+                LocalizedText("A los tres años", "At three", "Com três anos"),
+                LocalizedText("Hacia los siete años", "About age seven", "Perto dos sete anos"),
+                LocalizedText("A los dieciséis", "At sixteen", "Com dezesseis anos"),
+                LocalizedText("Al nacer", "At birth", "Ao nascer"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("La Iglesia pide que el niño tenga uso de razón, hacia los siete años.", "The Church asks the child to have the use of reason, around age seven.", "A Igreja pede que a criança tenha uso de razão, por volta dos sete anos.")
+        ),
+        TriviaQuestion(
+            id = "t52",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Con qué se unge la frente en la Confirmación?", "With what is the forehead anointed at Confirmation?", "Com o que se unge a testa na Confirmação?"),
+            options = listOf(
+                LocalizedText("Aceite común", "Common oil", "Azeite comum"),
+                LocalizedText("Santo Crisma", "Sacred Chrism", "Crisma sagrado"),
+                LocalizedText("Vino", "Wine", "Vinho"),
+                LocalizedText("Agua bendita", "Holy water", "Água benta"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("El obispo unge con Santo Crisma en forma de cruz.", "The bishop anoints with sacred Chrism in the form of a cross.", "O bispo unge com Crisma sagrado em forma de cruz.")
+        ),
+        TriviaQuestion(
+            id = "t53",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué garantiza el «sello» de la confesión?", "What does the 'seal' of confession guarantee?", "O que garante o 'sigilo' da confissão?"),
+            options = listOf(
+                LocalizedText("Que el sacerdote puede contar el pecado", "The priest may tell the sin", "Que o sacerdote pode contar o pecado"),
+                LocalizedText("Inviolabilidad absoluta de lo confesado", "Absolute inviolability of what is confessed", "Inviolabilidade absoluta do que foi confessado"),
+                LocalizedText("Que la confesión es pública", "Confession is public", "A confissão é pública"),
+                LocalizedText("Que no hay perdón", "There is no forgiveness", "Não há perdão"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("El sigilo sacramental obliga al sacerdote a guardar silencio absoluto.", "The sacramental seal binds the priest to absolute silence.", "O sigilo sacramental obriga o sacerdote ao silêncio absoluto.")
+        ),
+        TriviaQuestion(
+            id = "t54",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Qué es esencial en el Matrimonio cristiano?", "What is essential in Christian Matrimony?", "O que é essencial no Matrimônio cristão?"),
+            options = listOf(
+                LocalizedText("El vestido blanco", "The white dress", "O vestido branco"),
+                LocalizedText("El anillo", "The ring", "A aliança"),
+                LocalizedText("El consentimiento libre de los esposos", "The free consent of the spouses", "O consentimento livre dos esposos"),
+                LocalizedText("La fiesta", "The party", "A festa"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Los esposos se dan libremente el consentimiento ante Dios y la Iglesia.", "The spouses freely give consent before God and the Church.", "Os esposos dão livremente o consentimento diante de Deus e da Igreja.")
+        ),
+        TriviaQuestion(
+            id = "t55",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Dónde se unge con óleo en la Unción de los Enfermos?", "Where is oil applied in the Anointing of the Sick?", "Onde se aplica o óleo na Unção dos Enfermos?"),
+            options = listOf(
+                LocalizedText("El pecho", "The chest", "O peito"),
+                LocalizedText("El corazón", "The heart", "O coração"),
+                LocalizedText("Los pies", "The feet", "Os pés"),
+                LocalizedText("Frente y manos", "Forehead and hands", "Testa e mãos"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Se unge la frente y las manos, partes de la persona que actúa y siente.", "The forehead and hands are anointed, parts by which a person acts and feels.", "Ungem-se a testa e as mãos, partes com que a pessoa age e sente.")
+        ),
+        TriviaQuestion(
+            id = "t56",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Cuáles son los tres sacramentos de iniciación cristiana?", "Which are the three sacraments of Christian initiation?", "Quais são os três sacramentos da iniciação cristã?"),
+            options = listOf(
+                LocalizedText("Matrimonio, Orden y Unción", "Matrimony, Orders and Anointing", "Matrimônio, Ordem e Unção"),
+                LocalizedText("Eucaristía, Penitencia y Bautismo", "Eucharist, Penance and Baptism", "Eucaristia, Penitência e Batismo"),
+                LocalizedText("Penitencia, Unción y Matrimonio", "Penance, Anointing and Matrimony", "Penitência, Unção e Matrimônio"),
+                LocalizedText("Bautismo, Confirmación y Eucaristía", "Baptism, Confirmation and Eucharist", "Batismo, Confirmação e Eucaristia"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Estos tres forman la base de la vida cristiana del bautizado.", "These three form the foundation of the baptized person's Christian life.", "Estes três formam a base da vida cristã do batizado.")
+        ),
+        TriviaQuestion(
+            id = "t57",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Cuáles son los dos sacramentos al servicio de la comunión?", "Which are the two sacraments at the service of communion?", "Quais são os dois sacramentos a serviço da comunhão?"),
+            options = listOf(
+                LocalizedText("Matrimonio y Orden Sacerdotal", "Matrimony and Holy Orders", "Matrimônio e Ordem Sacerdotal"),
+                LocalizedText("Eucaristía y Unción", "Eucharist and Anointing", "Eucaristia e Unção"),
+                LocalizedText("Penitencia y Bautismo", "Penance and Baptism", "Penitência e Batismo"),
+                LocalizedText("Bautismo y Confirmación", "Baptism and Confirmation", "Batismo e Confirmação"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Matrimonio y Orden sirven a la edificación de la comunidad eclesial.", "Matrimony and Orders serve to build up the ecclesial community.", "Matrimônio e Ordem servem à edificação da comunidade eclesial.")
+        ),
+        TriviaQuestion(
+            id = "t58",
+            category = LocalizedText("Sacramentos", "Sacraments", "Sacramentos"),
+            question = LocalizedText("¿Cuál es la materia del Bautismo?", "What is the matter of Baptism?", "Qual é a matéria do Batismo?"),
+            options = listOf(
+                LocalizedText("El aceite", "Oil", "O óleo"),
+                LocalizedText("El agua", "Water", "A água"),
+                LocalizedText("El pan", "Bread", "O pão"),
+                LocalizedText("La sal", "Salt", "O sal"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("El agua natural, derramada o vertida, es la materia del Bautismo.", "Natural water, poured or immersed, is the matter of Baptism.", "A água natural, derramada ou por imersão, é a matéria do Batismo.")
+        ),
+        TriviaQuestion(
+            id = "t59",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué color litúrgico se usa en Adviento?", "Which liturgical color is used in Advent?", "Qual cor litúrgica se usa no Advento?"),
+            options = listOf(
+                LocalizedText("Blanco", "White", "Branco"),
+                LocalizedText("Verde", "Green", "Verde"),
+                LocalizedText("Rojo", "Red", "Vermelho"),
+                LocalizedText("Morado", "Purple", "Roxo"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El morado es color de penitencia, espera y preparación.", "Purple is the color of penance, expectation, and preparation.", "O roxo é cor de penitência, espera e preparação.")
+        ),
+        TriviaQuestion(
+            id = "t60",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué color se usa en la fiesta de Navidad?", "Which color is used on Christmas?", "Qual cor se usa na festa de Natal?"),
+            options = listOf(
+                LocalizedText("Negro", "Black", "Preto"),
+                LocalizedText("Blanco o dorado", "White or gold", "Branco ou dourado"),
+                LocalizedText("Morado", "Purple", "Roxo"),
+                LocalizedText("Verde", "Green", "Verde"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("El blanco manifiesta la alegría y la gloria de Cristo.", "White expresses the joy and glory of Christ.", "O branco expressa a alegria e a glória de Cristo.")
+        ),
+        TriviaQuestion(
+            id = "t61",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué color se usa el Domingo de Ramos y el Viernes Santo?", "Which color is used on Palm Sunday and Good Friday?", "Qual cor se usa no Domingo de Ramos e na Sexta-feira Santa?"),
+            options = listOf(
+                LocalizedText("Blanco", "White", "Branco"),
+                LocalizedText("Azul", "Blue", "Azul"),
+                LocalizedText("Verde", "Green", "Verde"),
+                LocalizedText("Rojo", "Red", "Vermelho"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El rojo recuerda la Pasión y la sangre de Cristo.", "Red recalls Christ's Passion and Blood.", "O vermelho lembra a Paixão e o Sangue de Cristo.")
+        ),
+        TriviaQuestion(
+            id = "t62",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué color se usa en Tiempo Ordinario?", "Which color is used in Ordinary Time?", "Qual cor se usa no Tempo Comum?"),
+            options = listOf(
+                LocalizedText("Morado", "Purple", "Roxo"),
+                LocalizedText("Rojo", "Red", "Vermelho"),
+                LocalizedText("Negro", "Black", "Preto"),
+                LocalizedText("Verde", "Green", "Verde"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El verde es el color del crecimiento y de la esperanza.", "Green is the color of growth and hope.", "O verde é a cor do crescimento e da esperança.")
+        ),
+        TriviaQuestion(
+            id = "t63",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué color se usa en las fiestas de los mártires?", "Which color is used on martyrs' feasts?", "Qual cor se usa nas festas dos mártires?"),
+            options = listOf(
+                LocalizedText("Blanco", "White", "Branco"),
+                LocalizedText("Verde", "Green", "Verde"),
+                LocalizedText("Rojo", "Red", "Vermelho"),
+                LocalizedText("Morado", "Purple", "Roxo"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("El rojo simboliza la sangre derramada por la fe.", "Red symbolizes blood shed for the faith.", "O vermelho simboliza o sangue derramado pela fé.")
+        ),
+        TriviaQuestion(
+            id = "t64",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué color se usa en las solemnidades de la Virgen María?", "Which color is used on Marian solemnities?", "Qual cor se usa nas solenidades da Virgem Maria?"),
+            options = listOf(
+                LocalizedText("Blanco", "White", "Branco"),
+                LocalizedText("Rojo", "Red", "Vermelho"),
+                LocalizedText("Verde", "Green", "Verde"),
+                LocalizedText("Morado", "Purple", "Roxo"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Las fiestas de María, no mártir, se celebran en blanco.", "Mary's feasts, as non-martyr, are celebrated in white.", "As festas de Maria, não mártir, são celebradas em branco.")
+        ),
+        TriviaQuestion(
+            id = "t65",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Cuántas semanas dura el Adviento?", "How many weeks does Advent last?", "Quantas semanas dura o Advento?"),
+            options = listOf(
+                LocalizedText("Seis", "Six", "Seis"),
+                LocalizedText("Dos", "Two", "Duas"),
+                LocalizedText("Tres", "Three", "Três"),
+                LocalizedText("Cuatro", "Four", "Quatro"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El Adviento dura cuatro semanas de preparación para Navidad.", "Advent lasts four weeks of preparation for Christmas.", "O Advento dura quatro semanas de preparação para o Natal.")
+        ),
+        TriviaQuestion(
+            id = "t66",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Cuántos días dura la Cuaresma de penitencia?", "How many days does Lent of penance last?", "Quantos dias dura a Quaresma de penitência?"),
+            options = listOf(
+                LocalizedText("Diez", "Ten", "Dez"),
+                LocalizedText("Cincuenta", "Fifty", "Cinquenta"),
+                LocalizedText("Treinta", "Thirty", "Trinta"),
+                LocalizedText("Cuarenta", "Forty", "Quarenta"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("La Cuaresma imita los cuarenta días de Jesús en el desierto.", "Lent imitates Jesus' forty days in the desert.", "A Quaresma imita os quarenta dias de Jesus no deserto.")
+        ),
+        TriviaQuestion(
+            id = "t67",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué semana comienza con el Domingo de Ramos?", "Which week begins with Palm Sunday?", "Qual semana começa com o Domingo de Ramos?"),
+            options = listOf(
+                LocalizedText("Semana de Pascua", "Easter Week", "Semana da Páscoa"),
+                LocalizedText("Semana de Adviento", "Advent Week", "Semana do Advento"),
+                LocalizedText("Semana de Pentecostés", "Pentecost Week", "Semana de Pentecostes"),
+                LocalizedText("Semana Santa", "Holy Week", "Semana Santa"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("La Semana Santa celebra la Pasión y Resurrección del Señor.", "Holy Week celebrates the Lord's Passion and Resurrection.", "A Semana Santa celebra a Paixão e Ressurreição do Senhor.")
+        ),
+        TriviaQuestion(
+            id = "t68",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué fiesta celebra la presencia eucarística de Cristo?", "Which feast celebrates Christ's Eucharistic presence?", "Qual festa celebra a presença eucarística de Cristo?"),
+            options = listOf(
+                LocalizedText("San Valentín", "Saint Valentine's Day", "São Valentim"),
+                LocalizedText("Carnaval", "Carnival", "Carnaval"),
+                LocalizedText("Fiesta de la Cosecha", "Harvest Festival", "Festa da Colheita"),
+                LocalizedText("Corpus Christi", "Corpus Christi", "Corpus Christi"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El Corpus Christi honra el Cuerpo y Sangre de Cristo en la Eucaristía.", "Corpus Christi honors Christ's Body and Blood in the Eucharist.", "Corpus Christi honra o Corpo e Sangue de Cristo na Eucaristia.")
+        ),
+        TriviaQuestion(
+            id = "t69",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿En qué fecha se celebra la Asunción de María?", "On what date is the Assumption of Mary celebrated?", "Em que data se celebra a Assunção de Maria?"),
+            options = listOf(
+                LocalizedText("15 de agosto", "August 15", "15 de agosto"),
+                LocalizedText("8 de diciembre", "December 8", "8 de dezembro"),
+                LocalizedText("1 de noviembre", "November 1", "1 de novembro"),
+                LocalizedText("25 de marzo", "March 25", "25 de março"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("La Asunción, el 15 de agosto, celebra que María fue llevada al cielo en cuerpo y alma.", "The Assumption, on August 15, celebrates that Mary was taken to heaven body and soul.", "A Assunção, em 15 de agosto, celebra que Maria foi levada ao céu de corpo e alma.")
+        ),
+        TriviaQuestion(
+            id = "t70",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Cuándo se celebra la fiesta de Todos los Santos?", "When is the Feast of All Saints celebrated?", "Quando se celebra a festa de Todos os Santos?"),
+            options = listOf(
+                LocalizedText("6 de enero", "January 6", "6 de janeiro"),
+                LocalizedText("1 de noviembre", "November 1", "1 de novembro"),
+                LocalizedText("2 de noviembre", "November 2", "2 de novembro"),
+                LocalizedText("24 de diciembre", "December 24", "24 de dezembro"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("El 1 de noviembre honramos a todos los santos del cielo.", "On November 1 we honor all the saints in heaven.", "Em 1 de novembro honramos todos os santos do céu.")
+        ),
+        TriviaQuestion(
+            id = "t71",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Cuándo se celebra la Conmemoración de los Fieles Difuntos?", "When is the Commemoration of All the Faithful Departed celebrated?", "Quando se celebra a Comemoração de Todos os Fiéis Defuntos?"),
+            options = listOf(
+                LocalizedText("15 de agosto", "August 15", "15 de agosto"),
+                LocalizedText("31 de octubre", "October 31", "31 de outubro"),
+                LocalizedText("1 de noviembre", "November 1", "1 de novembro"),
+                LocalizedText("2 de noviembre", "November 2", "2 de novembro"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El 2 de noviembre rezamos por las almas del purgatorio.", "On November 2 we pray for the souls in purgatory.", "Em 2 de novembro rezamos pelas almas do purgatório.")
+        ),
+        TriviaQuestion(
+            id = "t72",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Cuándo se celebra la Inmaculada Concepción de María?", "When is the Immaculate Conception of Mary celebrated?", "Quando se celebra a Imaculada Conceição de Maria?"),
+            options = listOf(
+                LocalizedText("12 de octubre", "October 12", "12 de outubro"),
+                LocalizedText("7 de diciembre", "December 7", "7 de dezembro"),
+                LocalizedText("8 de diciembre", "December 8", "8 de dezembro"),
+                LocalizedText("15 de agosto", "August 15", "15 de agosto"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("El 8 de diciembre celebra a María concebida sin pecado original.", "December 8 celebrates Mary conceived without original sin.", "Em 8 de dezembro celebramos Maria concebida sem pecado original.")
+        ),
+        TriviaQuestion(
+            id = "t73",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Cuántos días después de la Pascua se celebra Pentecostés?", "How many days after Easter is Pentecost celebrated?", "Quantos dias depois da Páscoa se celebra Pentecostes?"),
+            options = listOf(
+                LocalizedText("Cuarenta", "Forty", "Quarenta"),
+                LocalizedText("Cincuenta", "Fifty", "Cinquenta"),
+                LocalizedText("Sesenta", "Sixty", "Sessenta"),
+                LocalizedText("Treinta", "Thirty", "Trinta"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("Pentecostés cae cincuenta días después de la Resurrección.", "Pentecost falls fifty days after the Resurrection.", "Pentecostes cai cinquenta dias depois da Ressurreição.")
+        ),
+        TriviaQuestion(
+            id = "t74",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Con qué símbolo se marca la frente el Miércoles de Ceniza?", "With what symbol is the forehead marked on Ash Wednesday?", "Com qual símbolo se marca a testa na Quarta-feira de Cinzas?"),
+            options = listOf(
+                LocalizedText("Ceniza en forma de cruz", "Ashes in form of a cross", "Cinzas em forma de cruz"),
+                LocalizedText("Agua", "Water", "Água"),
+                LocalizedText("Aceite", "Oil", "Óleo"),
+                LocalizedText("Tinta", "Ink", "Tinta"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("La ceniza recuerda: «Polvo eres y al polvo volverás».", "Ashes recall: 'Dust you are and to dust you shall return.'", "As cinzas lembram: 'Pó és e em pó te tornarás.'")
+        ),
+        TriviaQuestion(
+            id = "t75",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué día del Señor es el domingo para los cristianos?", "Which is the Lord's Day for Christians?", "Qual é o Dia do Senhor para os cristãos?"),
+            options = listOf(
+                LocalizedText("El lunes", "Monday", "Segunda-feira"),
+                LocalizedText("El sábado", "Saturday", "Sábado"),
+                LocalizedText("El domingo", "Sunday", "Domingo"),
+                LocalizedText("El viernes", "Friday", "Sexta-feira"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("El domingo recuerda la Resurrección y es día de descanso y Misa.", "Sunday recalls the Resurrection and is a day of rest and Mass.", "O domingo lembra a Ressurreição e é dia de descanso e Missa.")
+        ),
+        TriviaQuestion(
+            id = "t76",
+            category = LocalizedText("Liturgia", "Liturgy", "Liturgia"),
+            question = LocalizedText("¿Qué oración se reza antes de la Comunión en la Misa?", "Which prayer is said before Communion at Mass?", "Qual oração se reza antes da Comunhão na Missa?"),
+            options = listOf(
+                LocalizedText("El Credo", "The Creed", "O Credo"),
+                LocalizedText("El Padrenuestro", "The Our Father", "O Pai-Nosso"),
+                LocalizedText("El Avemaría", "The Hail Mary", "A Ave-Maria"),
+                LocalizedText("El Ángelus", "The Angelus", "O Angelus"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("La Misa incluye el Padrenuestro antes de la Comunión.", "Mass includes the Our Father before Communion.", "A Missa inclui o Pai-Nosso antes da Comunhão.")
+        ),
+        TriviaQuestion(
+            id = "t77",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Dónde descendió el Espíritu Santo en Pentecostés?", "Where did the Holy Spirit descend at Pentecost?", "Onde o Espírito Santo desceu no Pentecostes?"),
+            options = listOf(
+                LocalizedText("Roma", "Rome", "Roma"),
+                LocalizedText("Atenas", "Athens", "Atenas"),
+                LocalizedText("Belén", "Bethlehem", "Belém"),
+                LocalizedText("Jerusalén", "Jerusalem", "Jerusalém"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Los apóstoles estaban reunidos en Jerusalén cuando vino el Espíritu Santo.", "The apostles were gathered in Jerusalem when the Holy Spirit came.", "Os apóstolos estavam reunidos em Jerusalém quando veio o Espírito Santo.")
+        ),
+        TriviaQuestion(
+            id = "t78",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué concilio definió la consustancialidad del Hijo con el Padre?", "Which council defined the consubstantiality of the Son with the Father?", "Qual concílio definiu a consubstancialidade do Filho com o Pai?"),
+            options = listOf(
+                LocalizedText("Calcedonia", "Chalcedon", "Calcedônia"),
+                LocalizedText("Cartago", "Carthage", "Cartago"),
+                LocalizedText("Éfeso", "Ephesus", "Éfeso"),
+                LocalizedText("Nicea (325)", "Nicaea (325)", "Niceia (325)"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El Concilio de Nicea condenó el arrianismo y proclamó el Credo.", "The Council of Nicaea condemned Arianism and proclaimed the Creed.", "O Concílio de Niceia condenou o arianismo e proclamou o Credo.")
+        ),
+        TriviaQuestion(
+            id = "t79",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué edicto legalizó el cristianismo en el Imperio romano?", "Which edict legalized Christianity in the Roman Empire?", "Qual edito legalizou o cristianismo no Império Romano?"),
+            options = listOf(
+                LocalizedText("Edicto de Milán (313)", "Edict of Milan (313)", "Edito de Milão (313)"),
+                LocalizedText("Edicto de Tesalónica", "Edict of Thessalonica", "Edito de Tessalônica"),
+                LocalizedText("Edicto de Diocleciano", "Edict of Diocletian", "Edito de Diocleciano"),
+                LocalizedText("Edicto de Claudius", "Edict of Claudius", "Edito de Cláudio"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Constantino promulgó el Edicto de Milán en 313.", "Constantine issued the Edict of Milan in 313.", "Constantino promulgou o Edito de Milão em 313.")
+        ),
+        TriviaQuestion(
+            id = "t80",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿En qué año ocurrió el Gran Cisma entre Oriente y Occidente?", "In what year did the Great Schism between East and West occur?", "Em que ano ocorreu o Grande Cisma entre Oriente e Ocidente?"),
+            options = listOf(
+                LocalizedText("1054", "1054", "1054"),
+                LocalizedText("1492", "1492", "1492"),
+                LocalizedText("1517", "1517", "1517"),
+                LocalizedText("1215", "1215", "1215"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("En 1054 se separaron la Iglesia de Oriente y la de Occidente.", "In 1054 the Churches of East and West separated.", "Em 1054 separaram-se as Igrejas do Oriente e do Ocidente.")
+        ),
+        TriviaQuestion(
+            id = "t81",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué concilio definió la infalibilidad del Papa?", "Which council defined papal infallibility?", "Qual concílio definiu a infalibilidade do Papa?"),
+            options = listOf(
+                LocalizedText("Nicea", "Nicaea", "Niceia"),
+                LocalizedText("Vaticano I", "Vatican I", "Vaticano I"),
+                LocalizedText("Vaticano II", "Vatican II", "Vaticano II"),
+                LocalizedText("Trento", "Trent", "Trento"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("El Vaticano I (1869-1870) definió la infalibilidad papal.", "Vatican I (1869-1870) defined papal infallibility.", "O Vaticano I (1869-1870) definiu a infalibilidade papal.")
+        ),
+        TriviaQuestion(
+            id = "t82",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué papa convocó el Concilio Vaticano II?", "Which pope convoked Vatican II?", "Qual papa convocou o Concílio Vaticano II?"),
+            options = listOf(
+                LocalizedText("Pablo VI", "Paul VI", "Paulo VI"),
+                LocalizedText("Juan Pablo I", "John Paul I", "João Paulo I"),
+                LocalizedText("Pío XII", "Pius XII", "Pio XII"),
+                LocalizedText("Juan XXIII", "John XXIII", "João XXIII"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Juan XXIII abrió el Vaticano II en 1962.", "John XXIII opened Vatican II in 1962.", "João XXIII abriu o Vaticano II em 1962.")
+        ),
+        TriviaQuestion(
+            id = "t83",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Quién es el primer papa jesuita y americano?", "Who is the first Jesuit and American pope?", "Quem é o primeiro papa jesuíta e americano?"),
+            options = listOf(
+                LocalizedText("Benedicto XVI", "Benedict XVI", "Bento XVI"),
+                LocalizedText("Juan Pablo II", "John Paul II", "João Paulo II"),
+                LocalizedText("Pablo VI", "Paul VI", "Paulo VI"),
+                LocalizedText("Papa Francisco", "Pope Francis", "Papa Francisco"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Francisco, argentino, fue el primer papa de América.", "Francis, from Argentina, was the first pope from the Americas.", "Francisco, argentino, foi o primeiro papa das Américas.")
+        ),
+        TriviaQuestion(
+            id = "t84",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué papa renunció en 2013, hecho inusual en siglos?", "Which pope resigned in 2013, unusual for centuries?", "Qual papa renunciou em 2013, fato incomum há séculos?"),
+            options = listOf(
+                LocalizedText("Benedicto XVI", "Benedict XVI", "Bento XVI"),
+                LocalizedText("Juan Pablo II", "John Paul II", "João Paulo II"),
+                LocalizedText("Pío XI", "Pius XI", "Pio XI"),
+                LocalizedText("Pablo VI", "Paul VI", "Paulo VI"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Benedicto XVI renunció en 2013, el primer papa en renunciar en casi 600 años.", "Benedict XVI resigned in 2013, the first pope to resign in nearly 600 years.", "Bento XVI renunciou em 2013, o primeiro papa a renunciar em quase 600 anos.")
+        ),
+        TriviaQuestion(
+            id = "t85",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué papa instituyó las Jornadas Mundiales de la Juventud?", "Which pope instituted World Youth Day?", "Qual papa instituiu as Jornadas Mundiais da Juventude?"),
+            options = listOf(
+                LocalizedText("Juan Pablo II", "John Paul II", "João Paulo II"),
+                LocalizedText("Pablo VI", "Paul VI", "Paulo VI"),
+                LocalizedText("Benedicto XVI", "Benedict XVI", "Bento XVI"),
+                LocalizedText("Francisco", "Francis", "Francisco"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Juan Pablo II instituyó la JMJ en 1984.", "John Paul II instituted World Youth Day in 1984.", "João Paulo II instituiu a JMJ em 1984.")
+        ),
+        TriviaQuestion(
+            id = "t86",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué papa, llamado «el Grande», renovó Roma y el canto gregoriano?", "Which pope, called 'the Great,' renewed Rome and Gregorian chant?", "Qual papa, chamado 'o Grande', renovou Roma e o canto gregoriano?"),
+            options = listOf(
+                LocalizedText("San Pío", "Saint Pius", "São Pio"),
+                LocalizedText("San Gregorio Magno", "Saint Gregory the Great", "São Gregório Magno"),
+                LocalizedText("San León", "Saint Leo", "São Leão"),
+                LocalizedText("San Inocencio", "Saint Innocent", "São Inocêncio"),
+            ),
+            correctIndex = 1,
+            doctrinalExplanation = LocalizedText("Gregorio Magno (590-604) dio nombre al canto gregoriano.", "Gregory the Great (590-604) gave his name to Gregorian chant.", "Gregório Magno (590-604) deu nome ao canto gregoriano.")
+        ),
+        TriviaQuestion(
+            id = "t87",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué misionero es llamado Apóstol de Alemania?", "Which missionary is called the Apostle of Germany?", "Qual missionário é chamado Apóstolo da Alemanha?"),
+            options = listOf(
+                LocalizedText("San Agustín", "Saint Augustine", "São Agostinho"),
+                LocalizedText("San Francisco", "Saint Francis", "São Francisco"),
+                LocalizedText("San Bonifacio", "Saint Boniface", "São Bonifácio"),
+                LocalizedText("San Patricio", "Saint Patrick", "São Patrício"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("San Bonifacio evangelizó a los pueblos germánicos en el siglo VIII.", "Saint Boniface evangelized the Germanic peoples in the 8th century.", "São Bonifácio evangelizou os povos germânicos no século VIII.")
+        ),
+        TriviaQuestion(
+            id = "t88",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué abadía, fundada en 910, impulsó la reforma monástica de Cluny?", "Which abbey, founded in 910, drove the Cluniac monastic reform?", "Qual abadia, fundada em 910, impulsionou a reforma monástica de Cluny?"),
+            options = listOf(
+                LocalizedText("San Galo", "St. Gall", "São Galo"),
+                LocalizedText("Fontenay", "Fontenay", "Fontenay"),
+                LocalizedText("Cluny", "Cluny", "Cluny"),
+                LocalizedText("Montecasino", "Monte Cassino", "Monte Cassino"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("La abadía de Cluny renovó la vida monástica en la Europa medieval.", "The abbey of Cluny renewed monastic life in medieval Europe.", "A abadia de Cluny renovou a vida monástica na Europa medieval.")
+        ),
+        TriviaQuestion(
+            id = "t89",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Quién imprimió la Biblia de Gutenberg hacia 1450?", "Who printed the Gutenberg Bible around 1450?", "Quem imprimiu a Bíblia de Gutenberg por volta de 1450?"),
+            options = listOf(
+                LocalizedText("Johannes Gutenberg", "Johannes Gutenberg", "Johannes Gutenberg"),
+                LocalizedText("Isaac Newton", "Isaac Newton", "Isaac Newton"),
+                LocalizedText("Galileo Galilei", "Galileo Galilei", "Galileo Galilei"),
+                LocalizedText("Leonardo da Vinci", "Leonardo da Vinci", "Leonardo da Vinci"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Gutenberg inventó la imprenta de tipos móviles en Europa.", "Gutenberg invented the movable-type printing press in Europe.", "Gutenberg inventou a imprensa de tipos móveis na Europa.")
+        ),
+        TriviaQuestion(
+            id = "t90",
+            category = LocalizedText("Historia de la Iglesia", "Church History", "História da Igreja"),
+            question = LocalizedText("¿Qué concilio aprobó la Vulgata como texto oficial de la Biblia latina?", "Which council approved the Vulgate as the official Latin Bible?", "Qual concílio aprovou a Vulgata como texto oficial da Bíblia latina?"),
+            options = listOf(
+                LocalizedText("Trento", "Trent", "Trento"),
+                LocalizedText("Vaticano II", "Vatican II", "Vaticano II"),
+                LocalizedText("Nicea", "Nicaea", "Niceia"),
+                LocalizedText("Calcedonia", "Chalcedon", "Calcedônia"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("El Concilio de Trento (1546) confirmó la Vulgata de San Jerónimo.", "The Council of Trent (1546) confirmed Saint Jerome's Vulgate.", "O Concílio de Trento (1546) confirmou a Vulgata de São Jerônimo.")
+        ),
+        TriviaQuestion(
+            id = "t91",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿En cuántas Personas es un solo Dios según la fe católica?", "Into how many Persons is the one God?", "Em quantas Pessoas é um só Deus segundo a fé católica?"),
+            options = listOf(
+                LocalizedText("Diez", "Ten", "Dez"),
+                LocalizedText("Una", "One", "Uma"),
+                LocalizedText("Dos", "Two", "Duas"),
+                LocalizedText("Tres: Padre, Hijo y Espíritu Santo", "Three: Father, Son and Holy Spirit", "Três: Pai, Filho e Espírito Santo"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Dios es uno en tres Personas, misterio central del cristianismo.", "God is one in three Persons, the central mystery of Christianity.", "Deus é um em três Pessoas, mistério central do cristianismo.")
+        ),
+        TriviaQuestion(
+            id = "t92",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Cuántos Mandamientos dio Dios a Moisés?", "How many Commandments did God give to Moses?", "Quantos Mandamentos Deus deu a Moisés?"),
+            options = listOf(
+                LocalizedText("Cinco", "Five", "Cinco"),
+                LocalizedText("Siete", "Seven", "Sete"),
+                LocalizedText("Diez", "Ten", "Dez"),
+                LocalizedText("Doce", "Twelve", "Doze"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Los Diez Mandamientos resumen el amor a Dios y al prójimo.", "The Ten Commandments summarize love of God and neighbor.", "Os Dez Mandamentos resumem o amor a Deus e ao próximo.")
+        ),
+        TriviaQuestion(
+            id = "t93",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Cuántas son las Bienaventuranzas?", "How many are the Beatitudes?", "Quantas são as Bem-aventuranças?"),
+            options = listOf(
+                LocalizedText("Diez", "Ten", "Dez"),
+                LocalizedText("Cuatro", "Four", "Quatro"),
+                LocalizedText("Siete", "Seven", "Sete"),
+                LocalizedText("Ocho", "Eight", "Oito"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Jesús proclamó ocho Bienaventuranzas en el Sermón de la Montaña.", "Jesus proclaimed eight Beatitudes in the Sermon on the Mount.", "Jesus proclamou oito Bem-aventuranças no Sermão da Montanha.")
+        ),
+        TriviaQuestion(
+            id = "t94",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Cómo comienza la oración que Jesús enseñó a sus discípulos?", "How does the prayer Jesus taught His disciples begin?", "Como começa a oração que Jesus ensinou a seus discípulos?"),
+            options = listOf(
+                LocalizedText("«Ave María»", "'Hail Mary'", "'Ave-Maria'"),
+                LocalizedText("«Señor, ten piedad»", "'Lord, have mercy'", "'Senhor, tende piedade'"),
+                LocalizedText("«Amén»", "'Amen'", "'Amém'"),
+                LocalizedText("«Padre nuestro»", "'Our Father'", "'Pai-nosso'"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("El Padrenuestro es la oración perfecta enseñada por Cristo.", "The Our Father is the perfect prayer taught by Christ.", "O Pai-Nosso é a oração perfeita ensinada por Cristo.")
+        ),
+        TriviaQuestion(
+            id = "t95",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Qué oración comienza así: «Dios te salve, María…»?", "Which prayer begins: 'Hail, Mary…'", "Qual oração começa: 'Ave, Maria…??'"),
+            options = listOf(
+                LocalizedText("El Avemaría", "The Hail Mary", "A Ave-Maria"),
+                LocalizedText("El Padrenuestro", "The Our Father", "O Pai-Nosso"),
+                LocalizedText("El Credo", "The Creed", "O Credo"),
+                LocalizedText("La Salve", "The Salve", "A Salve"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("El Avemaría saluda a María con las palabras del ángel Gabriel.", "The Hail Mary greets Mary with the angel Gabriel's words.", "A Ave-Maria saúda Maria com as palavras do anjo Gabriel.")
+        ),
+        TriviaQuestion(
+            id = "t96",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Qué cuatro notas caracterizan a la Iglesia?", "Which four marks characterize the Church?", "Quais quatro marcas caracterizam a Igreja?"),
+            options = listOf(
+                LocalizedText("Una, Santa, Católica y Apostólica", "One, Holy, Catholic and Apostolic", "Una, Santa, Católica e Apostólica"),
+                LocalizedText("Grande, fuerte, rica y nueva", "Great, strong, rich and new", "Grande, forte, rica e nova"),
+                LocalizedText("Antigua, joven, popular y moderna", "Ancient, young, popular and modern", "Antiga, jovem, popular e moderna"),
+                LocalizedText("Silenciosa, solemne, pública y antigua", "Silent, solemn, public and ancient", "Silenciosa, solene, pública e antiga"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Una, Santa, Católica y Apostólica: las marcas del Credo.", "One, Holy, Catholic and Apostolic: the marks of the Creed.", "Uma, Santa, Católica e Apostólica: as marcas do Credo.")
+        ),
+        TriviaQuestion(
+            id = "t97",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Cuántos son los dones del Espíritu Santo?", "How many gifts of the Holy Spirit are there?", "Quantos são os dons do Espírito Santo?"),
+            options = listOf(
+                LocalizedText("Tres", "Three", "Três"),
+                LocalizedText("Cinco", "Five", "Cinco"),
+                LocalizedText("Siete", "Siete", "Sete"),
+                LocalizedText("Diez", "Ten", "Dez"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Los siete dones: sabiduría, ciencia, consejo, fortaleza, piedad, temor de Dios y entendimiento.", "The seven gifts: wisdom, knowledge, counsel, fortitude, piety, fear of God and understanding.", "Os sete dons: sabedoria, ciência, conselho, fortaleza, piedade, temor de Deus e entendimento.")
+        ),
+        TriviaQuestion(
+            id = "t98",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Cuáles son las tres virtudes teologales?", "Which are the three theological virtues?", "Quais são as três virtudes teologais?"),
+            options = listOf(
+                LocalizedText("Pobreza, Castidad y Obediencia", "Poverty, Chastity and Obedience", "Pobreza, Castidade e Obediência"),
+                LocalizedText("Fe, Obediencia y Humildad", "Faith, Obedience and Humility", "Fé, Obediência e Humildade"),
+                LocalizedText("Fe, Esperanza y Caridad", "Faith, Hope and Charity", "Fé, Esperança e Caridade"),
+                LocalizedText("Prudencia, Justicia y Templanza", "Prudence, Justice and Temperance", "Prudência, Justiça e Temperança"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("Fe, Esperanza y Caridad nos unen a Dios.", "Faith, Hope and Charity unite us to God.", "Fé, Esperança e Caridade nos unem a Deus.")
+        ),
+        TriviaQuestion(
+            id = "t99",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Cuáles son las cuatro virtudes cardinales?", "Which are the four cardinal virtues?", "Quais são as quatro virtudes cardeais?"),
+            options = listOf(
+                LocalizedText("Prudencia, Justicia, Templanza y Fortaleza", "Prudence, Justice, Temperance and Fortitude", "Prudência, Justiça, Temperança e Fortaleza"),
+                LocalizedText("Sabiduría, Ciencia, Piedad y Temor", "Wisdom, Knowledge, Piety and Fear", "Sabedoria, Ciência, Piedade e Temor"),
+                LocalizedText("Paciencia, Humildad, Obediencia y Silencio", "Patience, Humility, Obedience and Silence", "Paciência, Humildade, Obediência e Silêncio"),
+                LocalizedText("Fe, Esperanza, Caridad y Pureza", "Faith, Hope, Charity and Purity", "Fé, Esperança, Caridade e Pureza"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Las cardinales son eje de la vida moral cristiana.", "The cardinal virtues are the hinges of Christian moral life.", "As cardeais são o eixo da vida moral cristã.")
+        ),
+        TriviaQuestion(
+            id = "t100",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Quiénes cometieron el pecado original?", "Who committed original sin?", "Quem cometeu o pecado original?"),
+            options = listOf(
+                LocalizedText("Caín y Abel", "Cain and Abel", "Caim e Abel"),
+                LocalizedText("Noé y su familia", "Noah and his family", "Noé e sua família"),
+                LocalizedText("David y Betsabé", "David and Bathsheba", "Davi e Betsabé"),
+                LocalizedText("Adán y Eva", "Adam and Eve", "Adão e Eva"),
+            ),
+            correctIndex = 3,
+            doctrinalExplanation = LocalizedText("Adán y Eva desobedecieron a Dios en el paraíso.", "Adam and Eve disobeyed God in paradise.", "Adão e Eva desobedeceram a Deus no paraíso.")
+        ),
+        TriviaQuestion(
+            id = "t101",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Qué profesamos al final del Credo de los Apóstoles?", "What do we profess at the end of the Apostles' Creed?", "O que professamos no final do Creio dos Apóstolos?"),
+            options = listOf(
+                LocalizedText("La vida eterna", "Life everlasting", "A vida eterna"),
+                LocalizedText("La pobreza", "Poverty", "A pobreza"),
+                LocalizedText("El silencio", "Silence", "O silêncio"),
+                LocalizedText("La obediencia", "Obedience", "A obediência"),
+            ),
+            correctIndex = 0,
+            doctrinalExplanation = LocalizedText("Creemos en «la resurrección de la carne y la vida eterna».", "We believe in 'the resurrection of the body and life everlasting.'", "Cremos na 'ressurreição da carne e na vida eterna.'")
+        ),
+        TriviaQuestion(
+            id = "t102",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Qué es el purgatorio según el Catecismo?", "What is purgatory according to the Catechism?", "O que é o purgatório segundo o Catecismo?"),
+            options = listOf(
+                LocalizedText("Un estado sin Dios", "A state without God", "Um estado sem Deus"),
+                LocalizedText("Un lugar de gozo eterno", "A place of eternal joy", "Um lugar de gozo eterno"),
+                LocalizedText("Purificación de las almas antes del cielo", "Purification of souls before heaven", "Purificação das almas antes do céu"),
+                LocalizedText("El infierno", "Hell", "O inferno"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("El purgatorio purifica a quienes mueren en gracia antes del cielo.", "Purgatory purifies those who die in grace before heaven.", "O purgatório purifica os que morrem em graça antes do céu.")
+        ),
+        TriviaQuestion(
+            id = "t103",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Qué sacramento perdona los pecados y restaura la gracia?", "Which sacrament forgives sins and restores grace?", "Qual sacramento perdoa os pecados e restaura a graça?"),
+            options = listOf(
+                LocalizedText("La Eucaristía", "Eucharist", "A Eucaristia"),
+                LocalizedText("La Confirmación", "Confirmation", "A Confirmação"),
+                LocalizedText("La Penitencia (Confesión)", "Penance (Confession)", "A Penitência (Confissão)"),
+                LocalizedText("El Bautismo", "Baptism", "O Batismo"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("En la Confesión, el pecador arrepentido recibe la absolución.", "In Confession, the repentant sinner receives absolution.", "Na Confissão, o pecador arrependido recebe a absolvição.")
+        ),
+        TriviaQuestion(
+            id = "t104",
+            category = LocalizedText("Catecismo", "Catechism", "Catecismo"),
+            question = LocalizedText("¿Qué misterio celebramos al rezar el rosario?", "What mystery do we celebrate when praying the rosary?", "Qual mistério celebramos ao rezar o rosário?"),
+            options = listOf(
+                LocalizedText("La historia de Roma", "The history of Rome", "A história de Roma"),
+                LocalizedText("La naturaleza", "Nature", "A natureza"),
+                LocalizedText("La vida de Jesús y María", "The life of Jesus and Mary", "A vida de Jesus e Maria"),
+                LocalizedText("Solo la Creación", "Only Creation", "Somente a Criação"),
+            ),
+            correctIndex = 2,
+            doctrinalExplanation = LocalizedText("El rosario medita los misterios gozosos, dolorosos, gloriosos y luminosos.", "The rosary meditates on the joyful, sorrowful, glorious and luminous mysteries.", "O rosário medita os mistérios gozosos, dolorosos, gloriosos e luminosos.")
+        ),
     )
 
     val nearbyParishes: List<NearbyParish> = listOf(

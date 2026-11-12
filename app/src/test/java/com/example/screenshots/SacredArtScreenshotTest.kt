@@ -64,7 +64,7 @@ class SacredArtScreenshotTest {
                         androidx.compose.ui.platform.LocalInspectionMode provides true
                     ) {
                         val design = LocalAppDesign.current
-                        val clip = if (identity == DesignLanguage.VATICAN) Modifier else Modifier.clip(design.shapes.cardLarge)
+                        val clip = Modifier.clip(design.shapes.cardLarge)
                         Column(
                             Modifier
                                 .fillMaxSize()
@@ -114,8 +114,6 @@ class SacredArtScreenshotTest {
 
     @Test fun appleLight() = render(DesignLanguage.APPLE, false)
     @Test fun appleDark() = render(DesignLanguage.APPLE, true)
-    @Test fun materialLight() = render(DesignLanguage.MATERIAL, false)
-    @Test fun materialDark() = render(DesignLanguage.MATERIAL, true)
-    @Test fun vaticanLight() = render(DesignLanguage.VATICAN, false)
-    @Test fun vaticanDark() = render(DesignLanguage.VATICAN, true)
+    @Test fun materialLight() = render(DesignLanguage.IVE, false)
+    @Test fun materialDark() = render(DesignLanguage.IVE, true)
 }

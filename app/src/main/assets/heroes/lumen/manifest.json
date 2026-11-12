@@ -1,0 +1,215 @@
+{
+  "home.jpg": {
+    "focusX": 0.64,
+    "focusY": 0.49,
+    "zoom": 1.65,
+    "anchorX": 0.74,
+    "anchorY": 0.36,
+    "tone": "light",
+    "title": "Morning in the Riesengebirge",
+    "artist": "Caspar David Friedrich",
+    "year": "1810–1811",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich,_Morgen_im_Riesengebirge.jpg"
+  },
+  "prayers_lily.jpg": {
+    "focusX": 0.55,
+    "focusY": 0.27,
+    "tone": "light",
+    "title": "Lilium candidum (Les Liliacées)",
+    "artist": "Pierre-Joseph Redouté",
+    "year": "1802–1816",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lilium_candidum_in_Les_liliacees.jpg"
+  },
+  "mary.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.3,
+    "tone": "dark",
+    "title": "The Virgin in Prayer",
+    "artist": "Giovanni Battista Salvi da Sassoferrato",
+    "year": "1640–1650",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:SASSOFERRATO_-_Virgen_rezando_(National_Gallery,_Londres,_1640-50).jpg"
+  },
+  "christ_thorns.jpg": {
+    "focusX": 0.42,
+    "focusY": 0.36,
+    "tone": "dark",
+    "title": "Ecce Homo (Christ with the Reed)",
+    "artist": "Guido Reni",
+    "year": "c. 1639–1640",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Reni_-_Le_Christ_au_roseau,_dit_aussi_Ecce_Homo,_INV_528_;_MR_280.jpg"
+  },
+  "rosary.jpg": {
+    "focusX": 0.6,
+    "focusY": 0.62,
+    "tone": "light",
+    "title": "Rosary of Queen Marie-Amélie",
+    "artist": "Anonymous (French jeweller)",
+    "year": "19th century",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chapelet_de_la_reine_Marie-Am%C3%A9lie,_2013.11.1.jpg"
+  },
+  "bible.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.4,
+    "tone": "dark",
+    "title": "Old Woman Reading (Rembrandt's Mother)",
+    "artist": "Gerrit Dou",
+    "year": "c. 1631–1632",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gerard_Dou_005.jpg"
+  },
+  "mass.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.45,
+    "tone": "dark",
+    "title": "The Last Supper",
+    "artist": "Leonardo da Vinci",
+    "year": "1495–1498",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_(1452-1519)_-_The_Last_Supper_(1495-1498).jpg"
+  },
+  "angelus.jpg": {
+    "focusX": 0.52,
+    "focusY": 0.42,
+    "tone": "dark",
+    "title": "The Angelus",
+    "artist": "Jean-François Millet",
+    "year": "1857–1859",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg"
+  },
+  "night.jpg": {
+    "focusX": 0.42,
+    "focusY": 0.4,
+    "tone": "dark",
+    "title": "The Cross beside the Baltic",
+    "artist": "Caspar David Friedrich",
+    "year": "c. 1815",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Kreuz_an_der_Ostsee_-_Schloss_Carlottenburg,_Neuer_Pavillon.jpg"
+  },
+  "habits.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.5,
+    "tone": "light",
+    "title": "Morning (Times of Day cycle)",
+    "artist": "Caspar David Friedrich",
+    "year": "1821–1822",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Tageszeitenzyklus,_Der_Morgen_(1821-22).jpg"
+  },
+  "catechism.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.4,
+    "tone": "light",
+    "title": "Disputation of the Holy Sacrament",
+    "artist": "Raphael",
+    "year": "1509–1510",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Disputa_del_Sacramento_(Rafael).jpg"
+  },
+  "doctrine.jpg": {
+    "focusX": 0.52,
+    "focusY": 0.6,
+    "tone": "dark",
+    "title": "Interior of St. Peter's, Rome",
+    "artist": "Giovanni Paolo Panini",
+    "year": "1750",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giovanni_Paolo_Panini_-_Interior_of_St._Peter%27s,_Rome_-_56.43_-_Detroit_Institute_of_Arts.jpg"
+  },
+  "history.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.45,
+    "tone": "dark",
+    "title": "Interior of the Pantheon, Rome",
+    "artist": "Giovanni Paolo Panini",
+    "year": "c. 1734",
+    "license": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Giovanni_Paolo_Panini,_Interior_of_the_Pantheon,_Rome,_c._1734,_NGA_165.jpg"
+  },
+  "mary_jesus.jpg": {
+    "focusX": 0.52,
+    "focusY": 0.2,
+    "tone": "dark",
+    "title": "Immaculate Conception of Los Venerables (Soult)",
+    "artist": "Bartolomé Esteban Murillo",
+    "year": "c. 1660–1665",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Murillo_-_Inmaculada_Concepci%C3%B3n_de_los_Venerables_o_de_Soult_(Museo_del_Prado,_1678).jpg"
+  },
+  "questions.jpg": {
+    "focusX": 0.4,
+    "focusY": 0.45,
+    "tone": "light",
+    "title": "Norham Castle, Sunrise",
+    "artist": "J. M. W. Turner",
+    "year": "c. 1845",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_-_Norham_Castle,_Sunrise_-_WGA23182.jpg"
+  },
+  "orders.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.6,
+    "tone": "dark",
+    "title": "Monks in the Cloister of the Church of Gesù e Maria, Rome",
+    "artist": "François Marius Granet",
+    "year": "1808",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Monks_in_the_Cloister_of_the_Church_of_Ges%C3%B9_e_Maria,_Rome.jpg"
+  },
+  "spiritual.jpg": {
+    "focusX": 0.62,
+    "focusY": 0.3,
+    "tone": "dark",
+    "title": "The Sermon on the Mount",
+    "artist": "Carl Bloch",
+    "year": "1877",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bloch-SermonOnTheMount.jpg"
+  },
+  "pilgrimage.jpg": {
+    "focusX": 0.5,
+    "focusY": 0.32,
+    "tone": "light",
+    "title": "Wanderer above the Sea of Fog",
+    "artist": "Caspar David Friedrich",
+    "year": "c. 1818",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_Sea_of_Fog.jpeg"
+  },
+  "parishes.jpg": {
+    "focusX": 0.45,
+    "focusY": 0.42,
+    "tone": "light",
+    "title": "Chartres Cathedral",
+    "artist": "Jean-Baptiste Camille Corot",
+    "year": "1830",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Corot_-_La_cath%C3%A9drale_de_Chartres._RF_1614.jpg"
+  },
+  "news.jpg": {
+    "focusX": 0.45,
+    "focusY": 0.4,
+    "tone": "light",
+    "title": "View of Rome: The Bridge and Castel Sant'Angelo with the Cupola of St. Peter's",
+    "artist": "Jean-Baptiste Camille Corot",
+    "year": "1826–1827",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Rome_-_The_Bridge_and_Castel_Sant%27Angelo_with_the_Cupola_of_St._Peter%27s.jpg"
+  },
+  "explore.jpg": {
+    "focusX": 0.6,
+    "focusY": 0.5,
+    "tone": "light",
+    "title": "Meadows near Greifswald",
+    "artist": "Caspar David Friedrich",
+    "year": "c. 1821–1822",
+    "license": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wiesen_bei_Greifswald_(1821-1822)_-_Caspar_David_Friedrich_(Hamburger_Kunsthalle).jpg"
+  }
+}

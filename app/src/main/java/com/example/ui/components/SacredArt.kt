@@ -113,10 +113,7 @@ fun SacredArt(
     val inks = ArtInks(
         language = design.language,
         dark = design.isDark,
-        key = accent ?: when (design.language) {
-            DesignLanguage.VATICAN -> palette.accent
-            else -> scheme.primary
-        },
+        key = accent ?: scheme.primary,
         gold = palette.gold,
         ink = palette.textPrimary,
         surface = scheme.surface,
@@ -152,8 +149,7 @@ fun SacredArt(
                 val stage = Stage(size, density)
                 val painter = when (inks.language) {
                     DesignLanguage.APPLE -> ApplePainter(stage, inks, transparentBackground)
-                    DesignLanguage.MATERIAL -> MaterialPainter(stage, inks, transparentBackground)
-                    DesignLanguage.VATICAN -> VaticanPainter(stage, inks)
+                    DesignLanguage.IVE -> MaterialPainter(stage, inks, transparentBackground)
                 }
                 when (subject) {
                     SacredSubject.DAY -> painter.day()

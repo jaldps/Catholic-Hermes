@@ -9,15 +9,17 @@ import org.junit.Test
 
 class DesignContrastTest {
     @Test fun liturgicalCaptionsAndRubricsRemainReadableOnEveryPaperSurface() {
-        for (dark in listOf(false, true)) {
-            val palette = DesignTokens.of(DesignLanguage.VATICAN, dark).palette
+        for (identity in DesignLanguage.entries) {
+         for (dark in listOf(false, true)) {
+            val palette = DesignTokens.of(identity, dark).palette
             for (surface in listOf(palette.canvas, palette.groupedSurface, palette.raised)) {
                 for (ink in listOf(palette.textSecondary, palette.textTertiary, palette.accent)) {
                     val ratio = contrast(ink, surface)
-                    assertTrue("Small liturgical text must reach 4.5:1 (dark=$dark, ratio=$ratio)", ratio >= 4.5f)
+                    assertTrue("Small liturgical text must reach 4.5:1 (${identity.id}, dark=$dark, ratio=$ratio)", ratio >= 4.5f)
                 }
             }
         }
+         }
     }
 
     private fun contrast(a: Color, b: Color): Float {

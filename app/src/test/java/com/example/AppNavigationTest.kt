@@ -104,14 +104,15 @@ class AppNavigationTest(private val identity: DesignLanguage) {
             "nav_bible" to "bible_screen",
             "nav_rosary" to "rosary_screen",
             "nav_prayers" to "prayers_and_novenas_screen",
+            "nav_habits" to "habits_and_virtues_screen",
             "nav_more" to "more_screen"
         ).forEach { (tab, screen) ->
             compose.onNodeWithTag(tab).assertHasClickAction().performClick()
             compose.onNodeWithTag(screen).assertIsDisplayed()
             if (tab == "nav_bible") {
-                if (identity == DesignLanguage.MATERIAL) {
-                    compose.onNodeWithTag("screen_header_illustration", useUnmergedTree = true).assertIsDisplayed()
-                }
+                // Lumen: the Bible opens on its large title and the
+                // continue-reading card instead of the identity illustration.
+                compose.onNodeWithTag("bible_continue_reading").assertIsDisplayed()
                 compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()
                 compose.onNodeWithTag("bible_canon_2").performClick()
                 compose.onNodeWithText("Matthew").assertIsDisplayed()
@@ -123,15 +124,20 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("bible_screen").assertIsDisplayed()
         compose.onNodeWithTag("daily_missal_screen").assertIsDisplayed()
         compose.onNodeWithText("Today's Mass", ignoreCase = true).assertIsDisplayed()
-        compose.onNodeWithTag("nav_more").performClick()
+        // More is a tab (nav_more above) and is also reached via the Home tile.
+        goToMoreFromHome()
 
         clickMoreRow("nav_catechism")
         compose.onNodeWithTag("catechism_screen").assertIsDisplayed()
         pressBackToMore()
 
+        // Habits is a tab now, so opening it from More and pressing back
+        // lands on Home (a tab back goes Home), not back on More.
         clickMoreRow("nav_habits")
         compose.onNodeWithTag("habits_and_virtues_screen").assertIsDisplayed()
-        pressBackToMore()
+        pressBackToHome()
+
+        goToMoreFromHome()
 
         clickMoreRow("nav_parishes")
         compose.onNodeWithTag("parish_finder_screen").assertIsDisplayed()
@@ -175,18 +181,32 @@ class AppNavigationTest(private val identity: DesignLanguage) {
                 }
         }
         assertReadingFamily(AppFonts.Inter)
-        compose.onNodeWithTag("bible_reader_font_choice").assertIsDisplayed().performClick()
+        // The reader's face lives in its "Aa" sheet.
+        compose.onNodeWithTag("bible_reader_text_button").assertIsDisplayed().performClick()
+        compose.onNodeWithTag("bible_reader_font_choice").assertIsDisplayed()
+        compose.onNodeWithTag("bible_reader_font_SERIF").performClick()
         compose.onNodeWithTag("verse_1").performScrollTo()
         assertReadingFamily(AppFonts.EbGaramond)
     }
 
     private fun clickableMoreRow(tag: String) = compose.onNode(
-        hasClickAction() and (hasTestTag(tag) or hasAnyAncestor(hasTestTag(tag)))
+        hasClickAction() and (hasTestTag(tag) or hasAnyAncestor(hasTestTag(tag))) and
+            hasAnyAncestor(hasTestTag("more_screen"))
     )
 
     private fun revealMoreRow(tag: String) {
         compose.onNodeWithTag("more_screen").performScrollToNode(hasTestTag(tag))
-        compose.onNodeWithTag(tag).assertIsDisplayed()
+        compose.onNode(hasTestTag(tag) and hasAnyAncestor(hasTestTag("more_screen")))
+            .assertIsDisplayed()
+    }
+
+    private fun goToMoreFromHome() {
+        compose.onNodeWithTag("nav_home").performClick()
+        compose.onNodeWithTag("home_screen").assertIsDisplayed()
+        compose.onNodeWithTag("home_screen")
+            .performScrollToNode(hasTestTag("home_more_settings"))
+        compose.onNodeWithTag("home_more_settings").performClick()
+        compose.onNodeWithTag("more_screen").assertIsDisplayed()
     }
 
     private fun clickMoreRow(tag: String) {
@@ -197,6 +217,11 @@ class AppNavigationTest(private val identity: DesignLanguage) {
     private fun pressBackToMore() {
         compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
         compose.onNodeWithTag("more_screen").assertIsDisplayed()
+    }
+
+    private fun pressBackToHome() {
+        compose.runOnUiThread { compose.activity.onBackPressedDispatcher.onBackPressed() }
+        compose.onNodeWithTag("home_screen").assertIsDisplayed()
     }
 
     companion object {

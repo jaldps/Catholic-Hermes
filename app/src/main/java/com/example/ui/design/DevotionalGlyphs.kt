@@ -27,43 +27,59 @@ internal object DevotionalGlyphs {
         close()
     }
 
-    /** A chaplet of beads hanging to one side, a pendant and a Latin cross. */
+    /**
+     * A rosary, drawn as the object: a closed oval loop of eight beads, a
+     * two-bead stem and a 7-unit Latin cross hanging from it. The loop is
+     * closed so it cannot collapse into a "Y" at 22dp, the way an open
+     * necklace does; the cross is the only stroke and the only straight line.
+     */
     private fun rosary(name: String, filled: Boolean, sharp: Boolean): ImageVector =
         ImageVector.Builder(name, 24.dp, 24.dp, 24f, 24f).apply {
-            val cx = 9.6f
-            val cy = 8.6f
-            val r = 6.2f
-            val open = Math.PI / 4
-            val beadR = if (filled) 1.45f else 1.25f
+            val cx = 12f
+            val cy = 6.1f
+            val rx = 5.4f
+            val ry = 4.4f
+            val beadR = if (filled) 1.28f else 1.12f
             val ink = SolidColor(Color.Black)
-            val beads: PathBuilder.() -> Unit = {
-                for (k in 1 until 12) {
-                    val t = open + Math.PI * 2 * k / 12
-                    circle(cx + r * cos(t).toFloat(), cy + r * sin(t).toFloat(), beadR)
-                }
-            }
-            if (filled) path(fill = ink, pathBuilder = beads)
-            else path(
-                stroke = ink, strokeLineWidth = 1.5f,
-                pathBuilder = beads
-            )
-            val mx = cx + r * cos(open).toFloat()
-            val my = cy + r * sin(open).toFloat()
+            val count = 8
             path(fill = ink) {
-                // The centre medal and two pendant beads.
-                moveTo(mx, my - 1.5f); lineTo(mx + 1.5f, my); lineTo(mx, my + 1.5f); lineTo(mx - 1.5f, my); close()
-                circle(mx + 1.85f, my + 1.85f, 0.95f)
+                for (k in 0 until count) {
+                    // Starts at the bottom (where the stem hangs) and goes round.
+                    val t = Math.PI / 2.0 + 2.0 * Math.PI * k / count
+                    circle(cx + rx * cos(t).toFloat(), cy + ry * sin(t).toFloat(), beadR)
+                }
+                // The two stem beads.
+                circle(cx, cy + ry + 3.0f, beadR * 0.85f)
+                circle(cx, cy + ry + 5.8f, beadR * 0.85f)
             }
-            // The cross, stroked so its arms keep the identity's joins.
-            path(
-                stroke = ink,
-                strokeLineWidth = if (filled) 2.2f else 1.9f,
-                strokeLineCap = if (sharp) StrokeCap.Butt else StrokeCap.Round,
-                strokeLineJoin = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
-            ) {
-                val x = mx + 3.5f
-                moveTo(x, my + 3.1f); lineTo(x, 23f)
-                moveTo(x - 2.7f, my + 5.9f); lineTo(x + 2.7f, my + 5.9f)
+            val join = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
+            val cap = if (sharp) StrokeCap.Butt else StrokeCap.Round
+            val w = if (filled) 1.9f else 1.5f
+            // The Latin cross, 7 units tall.
+            path(stroke = ink, strokeLineWidth = w, strokeLineCap = cap, strokeLineJoin = join) {
+                moveTo(cx, 17.9f); lineTo(cx, 23.4f)
+                moveTo(cx - 2.5f, 19.9f); lineTo(cx + 2.5f, 19.9f)
+            }
+        }.build()
+
+    /** The Angelus hour: a sun at the horizon, in the same outline weight as the rest. */
+    private fun sunrise(name: String, filled: Boolean, sharp: Boolean): ImageVector =
+        ImageVector.Builder(name, 24.dp, 24.dp, 24f, 24f).apply {
+            val ink = SolidColor(Color.Black)
+            val cap = if (sharp) StrokeCap.Butt else StrokeCap.Round
+            val join = if (sharp) StrokeJoin.Miter else StrokeJoin.Round
+            val sun: PathBuilder.() -> Unit = {
+                moveTo(4.8f, 17f)
+                arcTo(7.2f, 7.2f, 0f, false, true, 19.2f, 17f)
+                close()
+            }
+            if (filled) path(fill = ink, pathBuilder = sun)
+            else path(stroke = ink, strokeLineWidth = 1.5f, strokeLineCap = cap, strokeLineJoin = join, pathBuilder = sun)
+            path(stroke = ink, strokeLineWidth = 1.5f, strokeLineCap = cap) {
+                moveTo(1.8f, 20.5f); lineTo(22.2f, 20.5f)
+                moveTo(12f, 2.6f); lineTo(12f, 5.4f)
+                moveTo(4.4f, 8.4f); lineTo(6.4f, 10.4f)
+                moveTo(19.6f, 8.4f); lineTo(17.6f, 10.4f)
             }
         }.build()
 
@@ -106,9 +122,35 @@ internal object DevotionalGlyphs {
             }
         }.build()
 
+    /** An open book: a thin outline when off, solid pages when on (the guide toggle). */
+    private fun book(name: String, filled: Boolean): ImageVector =
+        ImageVector.Builder(name, 24.dp, 24.dp, 24f, 24f).apply {
+            val ink = SolidColor(Color.Black)
+            if (filled) {
+                path(fill = ink) {
+                    moveTo(11.2f, 7.7f); curveTo(9.7f, 6.5f, 6.9f, 6.1f, 3.6f, 6.4f); lineTo(3.6f, 17.6f)
+                    curveTo(6.9f, 17.3f, 9.7f, 17.7f, 11.2f, 18.9f); close()
+                    moveTo(12.8f, 7.7f); curveTo(14.3f, 6.5f, 17.1f, 6.1f, 20.4f, 6.4f); lineTo(20.4f, 17.6f)
+                    curveTo(17.1f, 17.3f, 14.3f, 17.7f, 12.8f, 18.9f); close()
+                }
+            } else {
+                path(stroke = ink, strokeLineWidth = 1.5f, strokeLineCap = StrokeCap.Round, strokeLineJoin = StrokeJoin.Round) {
+                    moveTo(12f, 7.7f); curveTo(10.3f, 6.2f, 7.1f, 5.7f, 3.6f, 6.1f); lineTo(3.6f, 17.9f)
+                    curveTo(7.1f, 17.5f, 10.3f, 18.1f, 12f, 19.6f)
+                    curveTo(13.7f, 18.1f, 16.9f, 17.5f, 20.4f, 17.9f); lineTo(20.4f, 6.1f)
+                    curveTo(16.9f, 5.7f, 13.7f, 6.2f, 12f, 7.7f); close()
+                    moveTo(12f, 7.7f); lineTo(12f, 19.6f)
+                }
+            }
+        }.build()
+
+    val bookOutlined by lazy { book("book.outlined", filled = false) }
+    val bookFilled by lazy { book("book.filled", filled = true) }
     val rosaryOutlined by lazy { rosary("rosary.outlined", filled = false, sharp = false) }
     val rosaryFilled by lazy { rosary("rosary.filled", filled = true, sharp = false) }
     val rosarySharp by lazy { rosary("rosary.sharp", filled = true, sharp = true) }
+    val sunriseOutlined by lazy { sunrise("sunrise.outlined", filled = false, sharp = false) }
+    val sunriseFilled by lazy { sunrise("sunrise.filled", filled = true, sharp = false) }
     val candleOutlined by lazy { candle("candle.outlined", filled = false, sharp = false) }
     val candleFilled by lazy { candle("candle.filled", filled = true, sharp = false) }
     val candleSharp by lazy { candle("candle.sharp", filled = true, sharp = true) }

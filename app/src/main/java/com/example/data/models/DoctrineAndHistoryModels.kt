@@ -76,3 +76,38 @@ data class CatholicNewsArticle(
     val summary: LocalizedText,
     val readTimeMinutes: Int
 )
+
+/** One chapter (1-16) of the Didache, in all three languages. */
+data class DidacheChapter(
+    val number: Int,
+    val heading: LocalizedText,
+    val body: LocalizedText
+)
+
+/** One apologetics Q&A (101 Catholic Questions): Respuesta/Fundamento/Aclaración. */
+data class ApologeticsQuestion(
+    val number: Int,
+    val section: LocalizedText,
+    val question: LocalizedText,
+    val answer: LocalizedText,
+    val foundation: LocalizedText,
+    val clarification: LocalizedText
+)
+
+/** A religious order/congregation in the Study compendium. */
+data class ReligiousOrder(
+    val id: String,
+    val name: LocalizedText,
+    val abbreviation: String,
+    val foundationYear: String,
+    val founder: LocalizedText,
+    val description: LocalizedText,
+    val charism: LocalizedText
+)
+
+/** A rank/office in the Church hierarchy guide. */
+data class ChurchOffice(
+    val id: String,
+    val name: LocalizedText,
+    val description: LocalizedText
+)

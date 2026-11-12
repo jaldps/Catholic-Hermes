@@ -4,66 +4,86 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.widget.Toast
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.IntrinsicSize
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.LazyListScope
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.CalendarMonth
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Directions
-import androidx.compose.material.icons.filled.MenuBook
-import androidx.compose.material.icons.filled.Place
-import androidx.compose.material.icons.filled.RadioButtonUnchecked
-import androidx.compose.material.icons.outlined.Checklist
-import androidx.compose.material.icons.outlined.TaskAlt
-import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.outlined.CalendarMonth
+import androidx.compose.material.icons.outlined.Church
+import androidx.compose.material.icons.outlined.Directions
+import androidx.compose.material.icons.outlined.Lightbulb
+import androidx.compose.material.icons.outlined.MenuBook
+import androidx.compose.material.icons.outlined.NoFood
+import androidx.compose.material.icons.outlined.Place
+import androidx.compose.material.icons.outlined.Verified
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
+import com.example.data.liturgy.CalendarDate
+import com.example.data.liturgy.LiturgicalCalendar
+import com.example.data.liturgy.LiturgicalColor
 import com.example.data.models.AppLanguage
 import com.example.data.models.CatholicPilgrimageSanctuary
 import com.example.data.models.LiturgicalCalendarDay
-import com.example.data.models.SpiritualHabitItem
 import com.example.data.repository.CatholicDataRepository
-import com.example.ui.design.AppBanner
-import com.example.ui.design.AppCard
+import com.example.ui.components.TextFormat
+import com.example.ui.design.AppBackHandler
+import com.example.ui.design.AppContentCard
+import com.example.ui.design.AppDetailHeader
+import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppEmptyState
+import com.example.ui.design.AppGlassSurface
+import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
-import com.example.ui.design.AppMetricTile
-import com.example.ui.design.AppOrnament
-import com.example.ui.components.TextFormat
-import com.example.ui.design.AppScreenTitle
-import com.example.ui.design.AppSecondaryButton
-import com.example.ui.design.AppSectionHeader
+import com.example.ui.design.AppPrimaryCapsule
 import com.example.ui.design.AppSegmentedTabs
-import com.example.ui.theme.DesignLanguage
+import com.example.ui.design.AppSeasonDot
+import com.example.ui.design.appDockInset
+import com.example.ui.design.lumenLiturgicalColor
+import com.example.ui.design.rememberFirstAsset
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
+import java.util.Locale
 
 private fun AppLanguage.pick(es: String, en: String, pt: String): String = when (this) {
     AppLanguage.ES -> es
@@ -71,427 +91,543 @@ private fun AppLanguage.pick(es: String, en: String, pt: String): String = when 
     AppLanguage.PT -> pt
 }
 
+/** Tab indexes of [PilgrimageAndHabitsScreen]'s `initialTab`. */
+const val PILGRIMAGE_TAB_CALENDAR = 0
+const val PILGRIMAGE_TAB_SHRINES = 1
+
 /**
- * The sanctuary destination: a catalogue of shrines, the liturgical days around
- * today, and the rule of life that shares the tab strip with them.
+ * The Church's calendar and the world's shrines.
  *
- * Everything here is read-only bundled data except the habit ticks, which are
- * deliberately in-memory — this screen offers the day's checklist, while the
- * kept history lives on the habits screen.
+ * Calendar opens on today's celebration, then the days worth knowing about in
+ * the next four weeks. Shrines is a short list; each shrine is its own reading
+ * page. The habits that once shared this screen live on Habits & Virtues.
+ *
+ * [initialTab] is 0 for the calendar and 1 for the shrines (Home's
+ * "Santuarios y Fe" tile opens the latter).
  */
 @Composable
 fun PilgrimageAndHabitsScreen(
     repository: CatholicDataRepository,
     currentLanguage: AppLanguage,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    initialTab: Int = PILGRIMAGE_TAB_CALENDAR
 ) {
-    var selectedMainTab by remember { mutableIntStateOf(0) }
-    val design = LocalAppDesign.current
-
-    val habitCompletionMap = remember {
-        mutableStateMapOf<String, Boolean>().apply {
-            repository.spiritualHabitsList.forEach { habit ->
-                put(habit.id, false)
-            }
-        }
+    AppEdgeToEdge()
+    var selectedTab by rememberSaveable(initialTab) {
+        mutableStateOf(initialTab.coerceIn(PILGRIMAGE_TAB_CALENDAR, PILGRIMAGE_TAB_SHRINES))
     }
+    var openShrineId by rememberSaveable { mutableStateOf<String?>(null) }
+    AppBackHandler(enabled = openShrineId != null) { openShrineId = null }
 
-    val tabs = listOf(
-        // The daily habits live in Habits & Virtues; here, only the year and
-        // the places.
-        currentLanguage.pick("Calendario", "Calendar", "Calendário"),
-        currentLanguage.pick("Santuarios", "Shrines", "Santuários")
-    )
-    val tabsInset = segmentedTabsInset()
-
-    // The screen's one large title, then the selector; both scroll away with
-    // the pane. Each pane opens on a section header, never a second title.
-    val header: LazyListScope.() -> Unit = {
-        item(key = "pilgrimage_title") {
-            AppScreenTitle(
-                title = currentLanguage.pick(
-                    "Calendario y Santuarios",
-                    "Calendar & Shrines",
-                    "Calendário e Santuários"
-                ),
-                subtitle = null
-            )
-        }
-        item(key = "pilgrimage_tabs") {
-            AppSegmentedTabs(
-                options = tabs,
-                selectedIndex = selectedMainTab,
-                onSelect = { selectedMainTab = it },
-                modifier = Modifier.padding(horizontal = tabsInset)
-            )
-            Spacer(Modifier.height(design.spacing.cardGap / 2))
-        }
-    }
+    val sanctuaries = repository.globalPilgrimages
+    val days = remember { repository.liturgicalCalendarDays }
+    val hero = rememberFirstAsset("heroes/lumen/pilgrimage.jpg", "heroes/votive_candles.jpg")
 
     Box(
-        modifier = modifier
+        modifier
             .fillMaxSize()
             .testTag("pilgrimage_and_habits_screen")
     ) {
-        when (selectedMainTab) {
-            0 -> LiturgicalCalendarTab(
-                days = repository.liturgicalCalendarDays,
-                currentLanguage = currentLanguage,
-                header = header
-            )
+        AnimatedContent(
+            targetState = openShrineId,
+            transitionSpec = {
+                val forward = targetState != null
+                val dir = if (forward) 1 else -1
+                (slideInHorizontally(tween(300)) { dir * it / 3 } + fadeIn(tween(300))) togetherWith
+                    (slideOutHorizontally(tween(300)) { -dir * it / 3 } + fadeOut(tween(200)))
+            },
+            label = "shrinePage"
+        ) { shrineId ->
+            val shrine = shrineId?.let { id -> sanctuaries.firstOrNull { it.id == id } }
+            if (shrine != null) {
+                ShrineDetail(shrine = shrine, currentLanguage = currentLanguage, hero = hero)
+            } else {
+                PilgrimageHome(
+                    selectedTab = selectedTab,
+                    onSelectTab = { selectedTab = it },
+                    days = days,
+                    sanctuaries = sanctuaries,
+                    currentLanguage = currentLanguage,
+                    hero = hero,
+                    onOpenShrine = { openShrineId = it.id }
+                )
+            }
+        }
+    }
+}
 
-            else -> SanctuariesTab(
-                sanctuaries = repository.globalPilgrimages,
-                currentLanguage = currentLanguage,
-                header = header
+// ------------------------------------------------------------------ home page
+
+@Composable
+private fun PilgrimageHome(
+    selectedTab: Int,
+    onSelectTab: (Int) -> Unit,
+    days: List<LiturgicalCalendarDay>,
+    sanctuaries: List<CatholicPilgrimageSanctuary>,
+    currentLanguage: AppLanguage,
+    hero: String?,
+    onOpenShrine: (CatholicPilgrimageSanctuary) -> Unit
+) {
+    val design = LocalAppDesign.current
+    val dock = appDockInset()
+    val title = currentLanguage.pick("Calendario y Santuarios", "Calendar & Shrines", "Calendário e Santuários")
+
+    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = dock + 24.dp)) {
+        item(key = "pilgrimage_header") {
+            AppDetailHeader(title = title, assetPath = hero, imageHeight = 248.dp)
+        }
+        item(key = "pilgrimage_tabs") {
+            AppSegmentedTabs(
+                options = listOf(
+                    currentLanguage.pick("Calendario", "Calendar", "Calendário"),
+                    currentLanguage.pick("Santuarios", "Shrines", "Santuários")
+                ),
+                selectedIndex = selectedTab,
+                onSelect = onSelectTab,
+                modifier = Modifier.padding(horizontal = design.spacing.gutter)
             )
+            Spacer(Modifier.height(design.spacing.sectionGap - 8.dp))
+        }
+        if (selectedTab == PILGRIMAGE_TAB_CALENDAR) {
+            calendarItems(days, currentLanguage)
+        } else {
+            shrineItems(sanctuaries, currentLanguage, onOpenShrine)
         }
     }
 }
 
 // ------------------------------------------------------------------- calendar
 
-@Composable
-private fun LiturgicalCalendarTab(
+private fun androidx.compose.foundation.lazy.LazyListScope.calendarItems(
     days: List<LiturgicalCalendarDay>,
-    currentLanguage: AppLanguage,
-    header: LazyListScope.() -> Unit
+    language: AppLanguage
 ) {
-    val design = LocalAppDesign.current
+    if (days.isEmpty()) {
+        item(key = "calendar_empty") {
+            AppEmptyState(
+                title = language.pick("Sin celebraciones", "No celebrations", "Sem celebrações"),
+                body = language.pick(
+                    "El calendario no tiene días próximos cargados.",
+                    "The calendar has no upcoming days loaded.",
+                    "O calendário não tem dias próximos carregados."
+                ),
+                icon = Icons.Outlined.CalendarMonth
+            )
+        }
+        return
+    }
 
-    LazyColumn(Modifier.fillMaxSize()) {
-        header()
+    val dates = datesFor(days)
+    val today = days.first()
+    val upcoming = days.drop(1).mapIndexed { i, d -> d to dates.getOrNull(i + 1) }
 
-        if (days.isEmpty()) {
-            item {
-                AppEmptyState(
-                    title = currentLanguage.pick(
-                        "Sin celebraciones",
-                        "No celebrations",
-                        "Sem celebrações"
-                    ),
-                    body = currentLanguage.pick(
-                        "El calendario no tiene días próximos cargados.",
-                        "The calendar has no upcoming days loaded.",
-                        "O calendário não tem dias próximos carregados."
-                    ),
-                    icon = Icons.Default.CalendarMonth
-                )
-            }
-        } else {
-            item {
-                AppSectionHeader(
-                    title = currentLanguage.pick(
-                        "Próximas celebraciones",
-                        "Upcoming celebrations",
-                        "Próximas celebrações"
-                    ),
-                    subtitle = null
-                )
-            }
+    item(key = "calendar_today") {
+        TodayCard(today, dates.firstOrNull(), language)
+    }
 
-            itemsIndexed(
-                items = days,
-                key = { _, day -> "${day.monthName}_${day.dayOfMonth}" }
-            ) { index, day ->
-                if (index > 0) Spacer(Modifier.height(design.spacing.sectionGap))
-                LiturgicalDayEntry(day = day, currentLanguage = currentLanguage)
+    if (upcoming.isNotEmpty()) {
+        item(key = "calendar_upcoming_title") {
+            SectionHeadline(language.pick("Próximas celebraciones", "Upcoming celebrations", "Próximas celebrações"))
+        }
+        val byMonth = upcoming.groupBy { (_, date) -> date?.month ?: 0 }
+        val showMonths = byMonth.size > 1
+        byMonth.entries.forEachIndexed { groupIndex, (month, entries) ->
+            item(key = "calendar_group_$groupIndex") {
+                Column {
+                    if (showMonths && month != 0) {
+                        Text(
+                            text = monthName(month, language),
+                            style = LocalAppTextStyles.current.footnote,
+                            color = LocalAppDesign.current.palette.textSecondary,
+                            modifier = Modifier.padding(
+                                start = LocalAppDesign.current.spacing.gutter + 4.dp,
+                                bottom = 8.dp,
+                                top = if (groupIndex == 0) 0.dp else 20.dp
+                            )
+                        )
+                    } else if (groupIndex > 0) {
+                        Spacer(Modifier.height(20.dp))
+                    }
+                    AppListGroup {
+                        entries.forEach { (day, date) -> CalendarDayRow(day, date, language) }
+                    }
+                }
             }
         }
-
-        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
 @Composable
-private fun LiturgicalDayEntry(day: LiturgicalCalendarDay, currentLanguage: AppLanguage) {
-    // One card per celebration: the liturgical colour is data, so it travels
-    // as the banner's accent; the rank rides in its eyebrow; the body names the
-    // feast first, then its precept as a line of its own, and closes with the
-    // day's Gospel, so no detached mini-card trails beneath the hero.
-    val gospel = day.gospelVerseRef.takeIf { it.isNotBlank() }?.let {
-        currentLanguage.pick("Evangelio", "Gospel", "Evangelho") + " · " + TextFormat.ranges(it)
-    }
-    val precept = day.fastingRule?.get(currentLanguage)?.takeIf { it.isNotBlank() }
-    AppBanner(
-        title = currentLanguage.pick(
-            "${day.dayOfMonth} de ${day.monthName.lowercase()}",
-            "${day.monthName} ${day.dayOfMonth}",
-            "${day.dayOfMonth} de ${day.monthName.lowercase()}"
-        ) + " · " + day.rank.get(currentLanguage),
-        body = listOfNotNull(day.celebrationTitle.get(currentLanguage), precept, gospel).joinToString("\n"),
-        accentColorHex = day.liturgicalColorHex,
-        modifier = Modifier.testTag("calendar_day_${day.monthName}_${day.dayOfMonth}")
+private fun SectionHeadline(text: String) {
+    val design = LocalAppDesign.current
+    Text(
+        text = text,
+        style = LocalAppTextStyles.current.headline,
+        color = design.palette.textPrimary,
+        modifier = Modifier
+            .padding(horizontal = design.spacing.gutter)
+            .padding(top = design.spacing.sectionGap, bottom = 12.dp)
     )
 }
 
-// --------------------------------------------------------------------- habits
-
-@Composable
-private fun HolyHabitsTab(
-    habits: List<SpiritualHabitItem>,
-    isCompleted: (String) -> Boolean,
-    onToggle: (String) -> Unit,
-    currentLanguage: AppLanguage,
-    header: LazyListScope.() -> Unit
-) {
-    val design = LocalAppDesign.current
-    val completedCount = habits.count { isCompleted(it.id) }
-
-    LazyColumn(Modifier.fillMaxSize()) {
-        header()
-
-        if (habits.isEmpty()) {
-            item {
-                AppEmptyState(
-                    title = currentLanguage.pick("Sin hábitos", "No habits", "Sem hábitos"),
-                    body = currentLanguage.pick(
-                        "La regla de vida no tiene prácticas cargadas.",
-                        "The rule of life has no practices loaded.",
-                        "A regra de vida não tem práticas carregadas."
-                    ),
-                    icon = Icons.Outlined.Checklist
-                )
-            }
-        } else {
-            item {
-                AppSectionHeader(
-                    title = currentLanguage.pick(
-                        "Regla de vida",
-                        "Rule of life",
-                        "Regra de vida"
-                    ),
-                    subtitle = currentLanguage.pick(
-                        "La santificación diaria, paso a paso. Toca una práctica al cumplirla.",
-                        "Daily sanctification, step by step. Tap a practice once it is kept.",
-                        "A santificação diária, passo a passo. Toque numa prática ao cumpri-la."
-                    )
-                )
-            }
-
-            item {
-                AppMetricTile(
-                    value = currentLanguage.pick(
-                        "$completedCount de ${habits.size}",
-                        "$completedCount of ${habits.size}",
-                        "$completedCount de ${habits.size}"
-                    ),
-                    caption = currentLanguage.pick(
-                        "Cumplidos hoy",
-                        "Kept today",
-                        "Cumpridos hoje"
-                    ),
-                    icon = Icons.Outlined.TaskAlt,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(horizontal = design.spacing.gutter)
-                        .testTag("habit_progress_tile")
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-            }
-
-            items(habits, key = { it.id }) { habit ->
-                HabitEntry(
-                    habit = habit,
-                    completed = isCompleted(habit.id),
-                    currentLanguage = currentLanguage,
-                    onToggle = { onToggle(habit.id) }
-                )
-                Spacer(Modifier.height(design.spacing.cardGap))
-            }
-        }
-
-        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
-    }
+/** The accent a liturgical colour takes in Lumen, and its spoken name. */
+private fun liturgicalAccent(hex: Long, language: AppLanguage): Pair<Color, String> {
+    val named = LiturgicalColor.entries.firstOrNull { it.hex == hex }
+    return lumenLiturgicalColor(named?.displayName?.en, hex) to
+        (named?.displayName?.get(language) ?: "")
 }
 
-/**
- * One practice of the rule of life. Kept as a card rather than a list row
- * because the row contract holds title and subtitle to a single line in
- * Material, and the description is the half of this entry worth reading.
- */
 @Composable
-private fun HabitEntry(
-    habit: SpiritualHabitItem,
-    completed: Boolean,
-    currentLanguage: AppLanguage,
-    onToggle: () -> Unit
-) {
+private fun TodayCard(day: LiturgicalCalendarDay, date: CalendarDate?, language: AppLanguage) {
     val design = LocalAppDesign.current
+    val p = design.palette
     val styles = LocalAppTextStyles.current
+    val (accent, colourName) = liturgicalAccent(day.liturgicalColorHex, language)
+    val dateLine = date?.let { longDate(it, language) }
+        ?: language.pick(
+            "${day.dayOfMonth} de ${day.monthName.lowercase()}",
+            "${day.monthName} ${day.dayOfMonth}",
+            "${day.dayOfMonth} de ${day.monthName.lowercase()}"
+        )
+    val eyebrow = language.pick("Hoy", "Today", "Hoje") + " · " + dateLine
+    val isSunday = date?.isSunday == true
+    val meta = listOfNotNull(
+        day.rank.get(language).takeIf { day.rank != ferialRank },
+        day.seasonName.get(language),
+        (if (isSunday) day.sundayCycle else day.weekdayCycle)?.get(language)
+    ).joinToString(" · ")
+    val precept = day.fastingRule?.get(language)?.takeIf { it.isNotBlank() }
+    val gospel = day.gospelVerseRef.takeIf { it.isNotBlank() }?.let {
+        language.pick("Evangelio", "Gospel", "Evangelho") + " · " + TextFormat.ranges(it)
+    }
+    val colourLabel = language.pick("Color litúrgico", "Liturgical colour", "Cor litúrgica") + ": " + colourName.lowercase()
+    val spoken = listOfNotNull(eyebrow, day.celebrationTitle.get(language), meta, precept, gospel, colourLabel)
+        .joinToString(". ")
 
-    AppCard(
+    AppGlassSurface(
         modifier = Modifier
+            .fillMaxWidth()
             .padding(horizontal = design.spacing.gutter)
-            .testTag("habit_card_${habit.id}"),
-        onClick = onToggle
+            .testTag("calendar_day_${day.monthName}_${day.dayOfMonth}")
+            .semantics(mergeDescendants = true) { contentDescription = spoken },
+        contentPadding = PaddingValues(design.spacing.cardPadding)
     ) {
-        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.Top) {
-            Icon(
-                imageVector = if (completed) {
-                    Icons.Default.CheckCircle
-                } else {
-                    Icons.Default.RadioButtonUnchecked
-                },
-                contentDescription = null,
-                tint = if (completed) design.palette.accent else design.palette.textTertiary,
-                modifier = Modifier
-                    // Nudged onto the title's x-height instead of its cap line.
-                    .padding(top = 2.dp)
-                    .size(design.decor.rowIconSize)
+        Row(Modifier.height(IntrinsicSize.Min)) {
+            Box(
+                Modifier
+                    .width(3.dp)
+                    .fillMaxHeight()
+                    .clip(RoundedCornerShape(percent = 50))
+                    .background(accent)
             )
-            Spacer(Modifier.width(design.spacing.iconLabelGap))
+            Spacer(Modifier.width(16.dp))
             Column(Modifier.weight(1f)) {
-                Text(
-                    text = habit.title.get(currentLanguage),
-                    style = styles.rowTitle,
-                    color = if (completed) design.palette.accent else design.palette.textPrimary
-                )
+                Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
                 Spacer(Modifier.height(6.dp))
-                Text(
-                    text = habit.description.get(currentLanguage),
-                    style = styles.rowSubtitle,
-                    color = design.palette.textSecondary,
-                    modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-                )
-                Spacer(Modifier.height(10.dp))
-                Text(
-                    text = caps(
-                        habit.category.get(currentLanguage) + " · " + com.example.data.models.localizedHabitTime(habit.timeSuggestion, currentLanguage)
-                    ),
-                    style = styles.sectionEyebrow,
-                    color = design.palette.textSecondary
-                )
-            }
-        }
-    }
-}
-
-// ---------------------------------------------------------------- sanctuaries
-
-@Composable
-private fun SanctuariesTab(
-    sanctuaries: List<CatholicPilgrimageSanctuary>,
-    currentLanguage: AppLanguage,
-    header: LazyListScope.() -> Unit
-) {
-    val context = LocalContext.current
-    val design = LocalAppDesign.current
-
-    LazyColumn(Modifier.fillMaxSize()) {
-        header()
-
-        if (sanctuaries.isEmpty()) {
-            item {
-                AppEmptyState(
-                    title = currentLanguage.pick(
-                        "Sin santuarios",
-                        "No shrines",
-                        "Sem santuários"
-                    ),
-                    body = currentLanguage.pick(
-                        "La guía de peregrinaciones no tiene lugares cargados.",
-                        "The pilgrimage guide has no places loaded.",
-                        "O guia de peregrinações não tem lugares carregados."
-                    ),
-                    icon = Icons.Default.Place
-                )
-            }
-        } else {
-            item {
-                AppSectionHeader(
-                    title = currentLanguage.pick(
-                        "Santuarios del mundo",
-                        "Shrines worldwide",
-                        "Santuários do mundo"
-                    ),
-                    subtitle = currentLanguage.pick(
-                        "Lugares santos, su historia y la indulgencia plenaria que ofrecen.",
-                        "Holy places, their history and the plenary indulgence they offer.",
-                        "Lugares santos, a sua história e a indulgência plenária que oferecem."
+                Text(day.celebrationTitle.get(language), style = styles.title2, color = p.textPrimary)
+                if (meta.isNotBlank()) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(meta, style = styles.footnote, color = p.textSecondary)
+                }
+                if (precept != null) {
+                    Spacer(Modifier.height(14.dp))
+                    IconLine(
+                        icon = if (day.isFastOrAbstinence) Icons.Outlined.NoFood else Icons.Outlined.Church,
+                        text = precept
                     )
-                )
-            }
-
-            itemsIndexed(sanctuaries, key = { _, shrine -> shrine.id }) { index, shrine ->
-                if (index > 0) AppOrnament()
-                SanctuaryEntry(
-                    shrine = shrine,
-                    currentLanguage = currentLanguage,
-                    onNavigateMap = { openOnMap(context, shrine, currentLanguage) }
-                )
+                }
+                if (gospel != null) {
+                    Spacer(Modifier.height(if (precept != null) 8.dp else 14.dp))
+                    IconLine(icon = Icons.Outlined.MenuBook, text = gospel)
+                }
             }
         }
-
-        item { Spacer(Modifier.height(design.spacing.contentBottomGap)) }
     }
 }
 
 @Composable
-private fun SanctuaryEntry(
-    shrine: CatholicPilgrimageSanctuary,
-    currentLanguage: AppLanguage,
-    onNavigateMap: () -> Unit
-) {
+private fun IconLine(icon: ImageVector, text: String) {
+    val p = LocalAppDesign.current.palette
+    Row(verticalAlignment = Alignment.Top) {
+        Icon(icon, null, tint = p.textPrimary, modifier = Modifier.padding(top = 1.dp).size(20.dp))
+        Spacer(Modifier.width(10.dp))
+        Text(text, style = LocalAppTextStyles.current.subhead, color = p.textPrimary)
+    }
+}
+
+@Composable
+private fun CalendarDayRow(day: LiturgicalCalendarDay, date: CalendarDate?, language: AppLanguage) {
     val design = LocalAppDesign.current
+    val p = design.palette
     val styles = LocalAppTextStyles.current
-    val place = placeParts(shrine.cityCountry.get(currentLanguage))
+    val (accent, colourName) = liturgicalAccent(day.liturgicalColorHex, language)
+    val gospel = day.gospelVerseRef.takeIf { it.isNotBlank() }?.let {
+        language.pick("Evangelio", "Gospel", "Evangelho") + " · " + TextFormat.ranges(it)
+    }
+    val precept = day.fastingRule?.get(language)?.takeIf { it.isNotBlank() }
+    val redundantRank = day.rank == ferialRank || day.rank == sundayRank
+    val detail = listOfNotNull(
+        day.rank.get(language).takeIf { !redundantRank },
+        precept,
+        gospel
+    ).joinToString(" · ")
+    val spoken = listOfNotNull(
+        date?.let { longDate(it, language) } ?: "${day.dayOfMonth} ${day.monthName}",
+        day.celebrationTitle.get(language),
+        detail.takeIf { it.isNotBlank() },
+        language.pick("Color litúrgico", "Liturgical colour", "Cor litúrgica") + ": " + colourName.lowercase()
+    ).joinToString(". ")
 
-    Column(Modifier.testTag("shrine_card_${shrine.id}")) {
-        AppListGroup {
-            AppListRow(
-                title = shrine.name.get(currentLanguage),
-                subtitle = place.locality,
-                leadingIcon = Icons.Default.Place,
-                trailingText = place.region,
-                onClick = onNavigateMap
-            )
-        }
-
-        Spacer(Modifier.height(design.spacing.cardGap))
-
-        Column(
-            modifier = Modifier.padding(horizontal = design.spacing.gutter),
-            verticalArrangement = Arrangement.spacedBy(design.spacing.cardGap)
-        ) {
-            Text(
-                text = shrine.historicalOrigin.get(currentLanguage),
-                style = styles.scripture,
-                color = design.palette.textPrimary,
-                modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-            )
-            Apparatus(
-                label = currentLanguage.pick("Reliquias", "Relics", "Relíquias"),
-                text = shrine.relicsAndPatron.get(currentLanguage)
-            )
-            Apparatus(
-                label = currentLanguage.pick(
-                    "Indulgencia Plenaria y Gracia",
-                    "Plenary Indulgence & Grace",
-                    "Indulgência Plenária e Graça"
-                ),
-                text = shrine.plenaryIndulgenceNote.get(currentLanguage)
-            )
-        }
-
-        Spacer(Modifier.height(design.spacing.sectionGap / 2))
-
-        // Its own full-width row: "Ver ubicación en Mapa" set in tracked Roman
-        // capitals has no business sharing a line with anything.
-        AppSecondaryButton(
-            label = currentLanguage.pick(
-                "Ver ubicación en Mapa",
-                "View location on Map",
-                "Ver localização no Mapa"
-            ),
-            onClick = onNavigateMap,
-            leadingIcon = Icons.Default.Directions,
-            modifier = Modifier
+    Column(
+        Modifier
+            .fillMaxWidth()
+            .testTag("calendar_day_${day.monthName}_${day.dayOfMonth}")
+            .semantics(mergeDescendants = true) { contentDescription = spoken }
+    ) {
+        Row(
+            Modifier
                 .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-                .testTag("shrine_map_button_${shrine.id}")
+                .heightIn(min = 64.dp)
+                .padding(horizontal = 18.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(Modifier.width(44.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                if (date != null) {
+                    Text(shortWeekday(date, language), style = styles.caption, color = p.textSecondary, maxLines = 1)
+                }
+                Text(day.dayOfMonth.toString(), style = styles.title2, color = p.textPrimary, maxLines = 1)
+            }
+            Spacer(Modifier.width(16.dp))
+            Column(Modifier.weight(1f)) {
+                Text(day.celebrationTitle.get(language), style = styles.body, color = p.textPrimary, maxLines = 3)
+                if (detail.isNotBlank()) {
+                    Spacer(Modifier.height(2.dp))
+                    Text(detail, style = styles.footnote, color = p.textSecondary)
+                }
+            }
+            Spacer(Modifier.width(12.dp))
+            AppSeasonDot(accent, size = 8.dp)
+        }
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .padding(start = 18.dp + 44.dp + 16.dp)
+                .height(0.5.dp)
+                .background(p.separator)
         )
     }
+}
+
+private val ferialRank = com.example.data.liturgy.CelebrationRank.FERIAL.displayName
+private val sundayRank = com.example.data.liturgy.CelebrationRank.SUNDAY.displayName
+
+/**
+ * The list is today plus a subsequence of the next 28 days, in order, so each
+ * entry is the first date from the cursor on with the same day of the month.
+ * The model carries no date of its own.
+ */
+private fun datesFor(days: List<LiturgicalCalendarDay>): List<CalendarDate?> {
+    val today = LiturgicalCalendar.today()
+    var cursor = 0
+    return days.map { day ->
+        var found: CalendarDate? = null
+        while (cursor < 29 && found == null) {
+            val candidate = today.plusDays(cursor)
+            cursor++
+            if (candidate.day == day.dayOfMonth) found = candidate
+        }
+        found
+    }
+}
+
+private val MonthsEs = listOf("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+private val MonthsEn = listOf("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+private val MonthsPt = listOf("janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro")
+private val WeekdaysEs = listOf("lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo")
+private val WeekdaysEn = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+private val WeekdaysPt = listOf("segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado", "domingo")
+private val ShortEs = listOf("lun.", "mar.", "mié.", "jue.", "vie.", "sáb.", "dom.")
+private val ShortEn = listOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+private val ShortPt = listOf("seg.", "ter.", "qua.", "qui.", "sex.", "sáb.", "dom.")
+
+private fun monthName(month: Int, language: AppLanguage): String {
+    val i = (month - 1).coerceIn(0, 11)
+    val name = language.pick(MonthsEs[i], MonthsEn[i], MonthsPt[i])
+    return name.replaceFirstChar { it.uppercase() }
+}
+
+private fun shortWeekday(date: CalendarDate, language: AppLanguage): String {
+    val i = date.isoDayOfWeek - 1
+    return language.pick(ShortEs[i], ShortEn[i], ShortPt[i])
+}
+
+/** "domingo 8 de noviembre" · "Sunday, November 8" · "domingo, 8 de novembro". */
+private fun longDate(date: CalendarDate, language: AppLanguage): String {
+    val wd = date.isoDayOfWeek - 1
+    val m = date.month - 1
+    return language.pick(
+        "${WeekdaysEs[wd]} ${date.day} de ${MonthsEs[m]}",
+        "${WeekdaysEn[wd]}, ${MonthsEn[m]} ${date.day}",
+        "${WeekdaysPt[wd]}, ${date.day} de ${MonthsPt[m]}"
+    )
+}
+
+// -------------------------------------------------------------------- shrines
+
+private fun androidx.compose.foundation.lazy.LazyListScope.shrineItems(
+    sanctuaries: List<CatholicPilgrimageSanctuary>,
+    language: AppLanguage,
+    onOpen: (CatholicPilgrimageSanctuary) -> Unit
+) {
+    if (sanctuaries.isEmpty()) {
+        item(key = "shrines_empty") {
+            AppEmptyState(
+                title = language.pick("Sin santuarios", "No shrines", "Sem santuários"),
+                body = language.pick(
+                    "La guía de peregrinaciones no tiene lugares cargados.",
+                    "The pilgrimage guide has no places loaded.",
+                    "O guia de peregrinações não tem lugares carregados."
+                ),
+                icon = Icons.Outlined.Place
+            )
+        }
+        return
+    }
+    item(key = "shrines_intro") {
+        val design = LocalAppDesign.current
+        Text(
+            text = language.pick(
+                "Lugares santos, su historia y la indulgencia plenaria que ofrecen.",
+                "Holy places, their history and the plenary indulgence they offer.",
+                "Lugares santos, a sua história e a indulgência plenária que oferecem."
+            ),
+            style = LocalAppTextStyles.current.subhead,
+            color = design.palette.textSecondary,
+            modifier = Modifier
+                .padding(horizontal = design.spacing.gutter + 4.dp)
+                .padding(bottom = 16.dp)
+        )
+    }
+    item(key = "shrines_list") {
+        AppListGroup {
+            sanctuaries.forEach { shrine ->
+                val place = placeLine(shrine.cityCountry.get(language))
+                AppListRow(
+                    title = shrine.name.get(language),
+                    subtitle = place,
+                    leadingIcon = Icons.Outlined.Place,
+                    onClick = { onOpen(shrine) },
+                    modifier = Modifier
+                        .heightIn(min = 64.dp)
+                        .testTag("shrine_card_${shrine.id}")
+                )
+            }
+        }
+    }
+}
+
+/** "Ciudad del Vaticano / Roma, Italia" → "Ciudad del Vaticano / Roma · Italia". */
+private fun placeLine(place: String): String {
+    val cut = place.lastIndexOf(',')
+    if (cut <= 0) return place.trim()
+    return place.take(cut).trim() + " · " + place.substring(cut + 1).trim()
+}
+
+@Composable
+private fun ShrineDetail(
+    shrine: CatholicPilgrimageSanctuary,
+    currentLanguage: AppLanguage,
+    hero: String?
+) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    val context = LocalContext.current
+    val dock = appDockInset()
+    val name = shrine.name.get(currentLanguage)
+    AppInlineTitle(name)
+
+    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = dock + 24.dp)) {
+        item(key = "shrine_header") {
+            AppDetailHeader(
+                title = name,
+                assetPath = hero,
+                meta = placeLine(shrine.cityCountry.get(currentLanguage)),
+                metaIcon = Icons.Outlined.Place,
+                imageHeight = 248.dp
+            )
+        }
+        item(key = "shrine_body") {
+            Column(
+                Modifier.padding(horizontal = design.spacing.gutter),
+                verticalArrangement = Arrangement.spacedBy(design.spacing.sectionGap)
+            ) {
+                ReadingSection(
+                    currentLanguage.pick("Historia", "History", "História"),
+                    shrine.historicalOrigin.get(currentLanguage)
+                )
+                ReadingSection(
+                    currentLanguage.pick("Significado espiritual", "Spiritual significance", "Significado espiritual"),
+                    shrine.spiritualSignificance.get(currentLanguage)
+                )
+                ReadingSection(
+                    currentLanguage.pick("Reliquias y patronazgo", "Relics and patronage", "Relíquias e patrocínio"),
+                    shrine.relicsAndPatron.get(currentLanguage)
+                )
+                AppContentCard(
+                    title = currentLanguage.pick("Indulgencia plenaria", "Plenary indulgence", "Indulgência plenária"),
+                    icon = Icons.Outlined.Verified
+                ) {
+                    Text(
+                        shrine.plenaryIndulgenceNote.get(currentLanguage),
+                        style = styles.reading,
+                        color = p.textPrimary
+                    )
+                }
+                AppContentCard(
+                    title = currentLanguage.pick("Consejo para el peregrino", "Advice for the pilgrim", "Conselho ao peregrino"),
+                    icon = Icons.Outlined.Lightbulb
+                ) {
+                    Text(
+                        shrine.practicalPilgrimAdvice.get(currentLanguage),
+                        style = styles.reading,
+                        color = p.textPrimary
+                    )
+                }
+                Text(
+                    text = coordinates(shrine.coordinateLatLong, currentLanguage),
+                    style = styles.footnote,
+                    color = p.textSecondary
+                )
+                AppPrimaryCapsule(
+                    label = currentLanguage.pick("Ver en el mapa", "View on map", "Ver no mapa"),
+                    onClick = { openOnMap(context, shrine, currentLanguage) },
+                    icon = Icons.Outlined.Directions,
+                    tag = "shrine_map_button_${shrine.id}"
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun ReadingSection(title: String, text: String) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    Column(Modifier.widthIn(max = design.spacing.readingMaxWidth)) {
+        Text(title, style = styles.headline, color = design.palette.textPrimary)
+        Spacer(Modifier.height(10.dp))
+        Text(text, style = styles.reading, color = design.palette.textPrimary)
+    }
+}
+
+/** "41,9022° N · 12,4539° E" (decimal comma in Spanish and Portuguese). */
+private fun coordinates(latLon: Pair<Double, Double>, language: AppLanguage): String {
+    val locale = if (language == AppLanguage.EN) Locale.US else Locale("es")
+    val (lat, lon) = latLon
+    val ns = if (lat >= 0) "N" else "S"
+    val ew = if (lon >= 0) "E" else if (language == AppLanguage.EN) "W" else "O"
+    return String.format(locale, "%.4f° %s · %.4f° %s", kotlin.math.abs(lat), ns, kotlin.math.abs(lon), ew)
 }
 
 /**
@@ -515,64 +651,4 @@ private fun openOnMap(
                 Toast.LENGTH_LONG
             ).show()
         }
-}
-
-// ---------------------------------------------------------------- scaffolding
-
-/**
- * A labelled note of the kind printed under a catalogue entry. The kit's banner
- * is the one hero strip on a page, so hanging one under every shrine would
- * overstate it; this is an eyebrow over its text, built from tokens.
- */
-@Composable
-private fun Apparatus(label: String, text: String, modifier: Modifier = Modifier) {
-    val design = LocalAppDesign.current
-    val styles = LocalAppTextStyles.current
-
-    Column(modifier.fillMaxWidth()) {
-        Text(
-            text = caps(label),
-            style = styles.sectionEyebrow,
-            color = design.palette.textSecondary
-        )
-        Spacer(Modifier.height(6.dp))
-        Text(
-            text = text,
-            style = styles.rowSubtitle,
-            color = design.palette.textPrimary,
-            modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
-        )
-    }
-}
-
-/** Labels are cut as capitals only where the identity sets them so. */
-@Composable
-private fun caps(text: String): String =
-    if (LocalAppDesign.current.decor.usesAllCapsLabels) text.uppercase() else text
-
-private data class PlaceParts(val locality: String?, val region: String?)
-
-/**
- * "Lourdes, Altos Pirineos, Francia" is a locality plus the country that belongs
- * in a row's trailing slot. A place named in one part keeps the whole line, so
- * the country is never printed twice.
- */
-private fun placeParts(place: String): PlaceParts {
-    val cut = place.lastIndexOf(',')
-    if (cut <= 0) return PlaceParts(place.trim().ifEmpty { null }, null)
-    return PlaceParts(
-        locality = place.take(cut).trim().ifEmpty { null },
-        region = place.substring(cut + 1).trim().ifEmpty { null }
-    )
-}
-
-/**
- * No kit insets its own segmented control, so the gutter is the caller's to
- * give. Vatican is the exception: its strip is a ruled band whose hairline runs
- * the full width of the leaf, and inset it stops meeting the edges.
- */
-@Composable
-private fun segmentedTabsInset(): Dp {
-    val design = LocalAppDesign.current
-    return if (design.language == DesignLanguage.VATICAN) 0.dp else design.spacing.gutter
 }
