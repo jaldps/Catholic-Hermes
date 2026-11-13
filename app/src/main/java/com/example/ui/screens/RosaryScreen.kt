@@ -1014,7 +1014,9 @@ fun RosaryScreen(
     var session by rememberSaveable(stateSaver = RosarySession.Saver) {
         val saved = RosarySessionStore.load(context)
         mutableStateOf((saved ?: RosarySession.opening(initialTab).copy(instructionsOn = true)).let {
-            val restored = if (initialTab == 1) it.copy(devotion = Devotion.MERCY) else it
+            // Explicit entry cards choose a devotion, while both saved step
+            // positions remain intact. The other guide must not override it.
+            val restored = it.copy(devotion = Devotion.fromTab(initialTab))
             restored.copy(mysterySelection = MysterySelection.Picked(restored.mysterySet(todayMystery.type)))
         })
     }

@@ -1995,9 +1995,9 @@ private fun DailyMissalView(
             if (offline) {
                 Text(
                     currentLanguage.pick(
-                        "Sin conexión · lecturas del leccionario incluido",
-                        "Offline · readings from the bundled lectionary",
-                        "Sem conexão · leituras do lecionário incluído"
+                        "Lecturas en línea no disponibles · selecciones bíblicas incluidas",
+                                "Online readings unavailable · bundled Scripture selections",
+                        "Leituras online indisponíveis · seleções bíblicas incluídas"
                     ),
                     style = styles.footnote, color = p.textSecondary,
                     modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp).padding(top = 10.dp)
@@ -2052,11 +2052,11 @@ private fun DailyMissalView(
         } else if (lessons.isEmpty()) {
             item(key = "mass_empty") {
                 AppEmptyState(
-                    title = currentLanguage.pick("Feria sin lecturas propias", "Ferial day without proper readings", "Féria sem leituras próprias"),
+                    title = currentLanguage.pick("Lecturas de hoy no disponibles aquí", "Today's readings are unavailable here", "Leituras de hoje indisponíveis aqui"),
                     body = currentLanguage.pick(
-                        "El leccionario incluido no trae las lecturas de esta feria. El día litúrgico es el de arriba; consulta el misal oficial para las lecturas de hoy.",
-                        "The bundled lectionary carries no readings for this ferial day. The liturgical day stands above; see the official missal for today's readings.",
-                        "O lecionário incluído não traz as leituras desta féria. O dia litúrgico é o de cima; consulte o missal oficial para as leituras de hoje."
+                        "No hemos podido cargar las lecturas de hoy y no hay una selección incluida para esta fecha. Consulta el misal de tu comunidad o una fuente litúrgica oficial.",
+                        "Today's readings could not be loaded and no bundled selection is available for this date. Consult your community's missal or an official liturgical source.",
+                        "Não foi possível carregar as leituras de hoje e não há uma seleção incluída para esta data. Consulte o missal de sua comunidade ou uma fonte litúrgica oficial."
                     ),
                     icon = Icons.AutoMirrored.Outlined.MenuBook
                 )

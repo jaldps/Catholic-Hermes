@@ -58,6 +58,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -75,6 +76,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.example.data.fidelity.FidelityStore
 import com.example.data.liturgy.LiturgicalCalendar
+import com.example.data.liturgy.ScriptureReference
 import com.example.data.local.SanctaFidesDao
 import com.example.data.local.SinOvercomeLogEntity
 import com.example.data.models.ApologeticsQuestion
@@ -89,9 +91,7 @@ import com.example.data.prefs.ReadingPosition
 import com.example.data.repository.BibleData
 import com.example.data.repository.PilgrimageAndHabitsData
 import com.example.data.temptation.TemptationStore
-import com.example.data.verse.DailyVerseFetcher
 import com.example.data.verse.DailyVerseRotation
-import com.example.data.verse.DailyVerseStore
 import com.example.ui.components.TextFormat
 import com.example.ui.design.AppCard
 import com.example.ui.design.AppCategoryTile
@@ -157,6 +157,11 @@ fun HomeScreen(
     onNavigateToCatechism: () -> Unit = {},
     onNavigateToPilgrimage: () -> Unit = {},
     onNavigateToHabits: () -> Unit = {},
+    onOpenTemptations: () -> Unit = onNavigateToHabits,
+    /** Receives the canonical daily rotation target, never the localized display citation. */
+    onOpenDailyVerse: (String, Int, Int) -> Unit = { _, _, _ -> onNavigateToBible() },
+    /** Supplied with the same date as [verseOfTheDay] by MainApp. */
+    dailyVerseCanonicalReference: String? = null,
     onNavigateToMore: () -> Unit = {},
     onOpenAppearance: () -> Unit = {},
     onOpenFontPicker: () -> Unit = {},
@@ -263,37 +268,15 @@ fun HomeScreen(
         Unit
     }
 
-    // Verse of the day: the repository's baseline, refined by bible-api.com text
-    // for the same reference when online (cached per date).
+    // Display and reader use the same bundled edition. An online replacement
+    // could silently change translations between the card and its deep link.
     val verseToday = now.toLocalDate()
-    val verseReferenceId = remember(verseToday) { DailyVerseRotation.referenceFor(verseToday) }
-    val verseCache = remember(context) { DailyVerseStore(context.applicationContext) }
-    val verseFetcher = remember { DailyVerseFetcher() }
-    fun verseWithText(verse: VerseOfTheDay, language: AppLanguage, text: String): VerseOfTheDay =
-        verse.copy(
-            text = when (language) {
-                AppLanguage.ES -> verse.text.copy(es = text)
-                AppLanguage.EN -> verse.text.copy(en = text)
-                AppLanguage.PT -> verse.text.copy(pt = text)
-            }
-        )
-    val dynamicVerse by produceState(
-        initialValue = verseOfTheDay,
-        verseOfTheDay,
-        currentLanguage,
-        verseToday,
-        verseReferenceId
-    ) {
-        val cached = verseCache.cachedText(verseToday, currentLanguage)
-        if (cached != null) {
-            value = verseWithText(verseOfTheDay, currentLanguage, cached)
-        } else {
-            val fetched = verseFetcher.fetchText(verseReferenceId, currentLanguage)
-            if (fetched != null) {
-                verseCache.saveText(verseToday, currentLanguage, fetched)
-                value = verseWithText(verseOfTheDay, currentLanguage, fetched)
-            }
-        }
+    val verseReferenceId = remember(verseToday, dailyVerseCanonicalReference) {
+        dailyVerseCanonicalReference ?: DailyVerseRotation.referenceFor(verseToday)
+    }
+    val dailyVerseTarget = remember(verseReferenceId) { ScriptureReference.parse(verseReferenceId) }
+    val openDailyVerse: () -> Unit = {
+        dailyVerseTarget?.let { onOpenDailyVerse(it.bookId, it.chapter, it.verseStart ?: 1) }
     }
 
     // Time-based daily prayer: the hour decides which prayer is "now" and which
@@ -362,9 +345,11 @@ fun HomeScreen(
     LazyColumn(
         modifier = modifier
             .fillMaxSize()
+            // The hero still reaches the top edge; scroll-to and keyboard
+            // focus stop above the floating dock, where actions can be tapped.
+            .padding(bottom = insets.calculateBottomPadding())
             .testTag("home_screen"),
-        // Dock + nav inset + 32dp: the last tile row ends well clear of the bar.
-        contentPadding = PaddingValues(bottom = insets.calculateBottomPadding() + 32.dp)
+        contentPadding = PaddingValues(bottom = 32.dp)
     ) {
         // Hero: misted art from the top of the display; the season card rides
         // 24dp up over its fade.
@@ -387,33 +372,6 @@ fun HomeScreen(
             }
         }
 
-        item(key = "today_invitation") {
-            AppCard(Modifier.padding(horizontal = gutter).testTag("today_next_action")) {
-                Text(strings("Un momento con Dios", "A moment with God", "Um momento com Deus"), style = styles.title2, color = palette.textPrimary)
-                Spacer(Modifier.height(6.dp))
-                Text(strings("${journeyStore.minutes} min · Un paso sencillo, a tu ritmo", "${journeyStore.minutes} min · One simple step, at your pace", "${journeyStore.minutes} min · Um passo simples, no seu ritmo"), style = styles.callout, color = palette.textSecondary)
-                Spacer(Modifier.height(16.dp))
-                AppPrimaryCapsule(strings("Comenzar", "Begin", "Começar"), onClick = onOpenBeginner, tag = "today_begin")
-                if (!welcomed) {
-                    Spacer(Modifier.height(8.dp))
-                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                        androidx.compose.material3.TextButton(onClick = { showWelcome = true }, modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("welcome_personalize")) { Text(strings("Elige tu ritmo", "Choose your pace", "Escolha seu ritmo"), style = styles.footnote) }
-                        androidx.compose.material3.TextButton(onClick = { journeyStore.welcome(0, 5); welcomed = true }, modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("welcome_skip")) { Text(strings("Ahora no", "Not now", "Agora não"), style = styles.footnote) }
-                    }
-                }
-            }
-            Spacer(Modifier.height(ClusterGap))
-        }
-        item(key = "today_continue_rosary") {
-            val session = remember(now) { RosarySessionStore.load(context) }
-            if (session != null && (session.rosaryStep > 0 || session.mercyStep > 0)) {
-                AppListGroup {
-                    AppListRow(strings("Continuar mi oración", "Continue my prayer", "Continuar minha oração"), strings("Tu lugar en el Rosario o la Coronilla está guardado", "Your place in the Rosary or Chaplet is saved", "Seu lugar no Terço ou na Coroa está salvo"), onClick = onNavigateToRosary, modifier = Modifier.testTag("today_continue_prayer"))
-                }
-                Spacer(Modifier.height(ClusterGap))
-            }
-        }
-
         // The liturgical day: the season once, the week and obligation on one line.
         item {
             val seasonName = liturgicalDay.seasonName.get(currentLanguage)
@@ -430,6 +388,21 @@ fun HomeScreen(
                 tag = "liturgical_calendar_widget",
                 modifier = Modifier.padding(horizontal = gutter)
             )
+            Spacer(Modifier.height(ClusterGap))
+        }
+
+        // The hour's prayer and the next one.
+        item(key = "prayer_of_the_moment") {
+            AppSectionHeader(title = strings("Oración del momento", "Pray now", "Oração do momento"), modifier = Modifier.testTag("home_prayer_moment_heading"))
+            AppListGroup {
+                DailyPrayerRow(currentPrayerSlot, strings("Ahora", "Now", "Agora"))
+                DailyPrayerRow(nextPrayerSlot, strings("Después", "Next", "Depois"))
+            }
+            Spacer(Modifier.height(ClusterGap))
+        }
+
+        if (dao != null) item(key = "my_practices") {
+            FidelityCard(dao = dao, currentLanguage = currentLanguage, onOpenHabits = onNavigateToHabits, onOpenTemptations = onOpenTemptations)
             Spacer(Modifier.height(ClusterGap))
         }
 
@@ -457,7 +430,7 @@ fun HomeScreen(
                             .joinToString(" · ") { TextFormat.ranges(it) }
                             .ifBlank { if (!homilyFirstLine.isNullOrBlank()) strings("Reflexión", "Reflection", "Reflexão") else "" }
                     }
-                    CardHeader(strings("Evangelio de hoy", "Today's Gospel", "Evangelho de hoje"), headerRef)
+                    CardHeader(strings("Liturgia de hoy", "Today's liturgy", "Liturgia de hoje"), headerRef)
                     val sourceLabel = when {
                         bundledGospel != null -> strings("Escritura para la reflexión", "Scripture for reflection", "Escritura para reflexão")
                         feedGospel?.text?.isNotBlank() == true -> "Vatican News"
@@ -488,7 +461,7 @@ fun HomeScreen(
                         Row(
                             Modifier
                                 .fillMaxWidth()
-                                .heightIn(min = 44.dp)
+                                .heightIn(min = 48.dp)
                                 .clickable(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null,
@@ -569,7 +542,7 @@ fun HomeScreen(
                     Spacer(Modifier.height(16.dp))
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         AppPrimaryCapsule(
-                            label = strings("Leer el Evangelio", "Read the Gospel", "Ler o Evangelho"),
+                            label = strings("Ver la liturgia de hoy", "Open today’s liturgy", "Ver a liturgia de hoje"),
                             onClick = onNavigateToMissal,
                             fillWidth = false,
                             tag = "read_mass_full_button"
@@ -595,10 +568,6 @@ fun HomeScreen(
             Spacer(Modifier.height(ClusterGap))
         }
 
-        if (dao != null) item(key = "my_practices") {
-            Spacer(Modifier.height(SectionLead))
-            FidelityCard(dao = dao, currentLanguage = currentLanguage, onOpenHabits = onNavigateToHabits)
-        }
         item(key = "today_more_toggle") {
             AppListGroup {
                 AppListRow(strings("Más para hoy", "More for today", "Mais para hoje"), subtitle = strings("Santo, otras lecturas y oraciones", "Saint, more Scripture and prayers", "Santo, mais leituras e orações"), onClick = { showMoreToday = !showMoreToday }, modifier = Modifier.testTag("today_more_toggle").semantics { stateDescription = if (showMoreToday) strings("Expandido", "Expanded", "Expandido") else strings("Contraído", "Collapsed", "Recolhido") })
@@ -607,21 +576,21 @@ fun HomeScreen(
         if (showMoreToday) {
         // Verse of the day: a quiet pull quote in the reader face.
         item {
-            val verseText = remember(dynamicVerse, currentLanguage) {
-                cleanScripture(dynamicVerse.text.get(currentLanguage), currentLanguage)
+            val verseText = remember(verseOfTheDay, currentLanguage) {
+                cleanScripture(verseOfTheDay.text.get(currentLanguage), currentLanguage)
             }
             AppGlassSurface(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = gutter)
                     .testTag("verse_of_the_day_card"),
-                onClick = onNavigateToBible,
+                onClick = openDailyVerse,
                 contentPadding = PaddingValues(design.spacing.cardPadding)
             ) {
                 Column {
                     CardHeader(
                         strings("Versículo del día", "Verse of the day", "Versículo do dia"),
-                        TextFormat.ranges(scriptureRef(dynamicVerse.reference, currentLanguage))
+                        TextFormat.ranges(scriptureRef(verseOfTheDay.reference, currentLanguage))
                     )
                     Spacer(Modifier.height(10.dp))
                     ExcerptText(
@@ -631,7 +600,7 @@ fun HomeScreen(
                         maxLines = 4,
                         modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                     )
-                    val challenge = dynamicVerse.spiritualChallenge.get(currentLanguage)
+                    val challenge = verseOfTheDay.spiritualChallenge.get(currentLanguage)
                     if (challenge.isNotBlank()) {
                         Spacer(Modifier.height(10.dp))
                         Text(
@@ -642,17 +611,41 @@ fun HomeScreen(
                             overflow = TextOverflow.Clip
                         )
                     }
+                    Spacer(Modifier.height(12.dp))
+                    AppSecondaryCapsule(
+                        label = strings("Leer este pasaje", "Read this passage", "Ler esta passagem"),
+                        onClick = openDailyVerse,
+                        fillWidth = true,
+                        tag = "home_read_daily_verse"
+                    )
                 }
             }
         }
 
-        // The hour's prayer and the next one.
-        item {
-            Spacer(Modifier.height(SectionLead))
-            AppSectionHeader(title = strings("Oración del momento", "Pray now", "Oração do momento"))
-            AppListGroup {
-                DailyPrayerRow(currentPrayerSlot, strings("Ahora", "Now", "Agora"))
-                DailyPrayerRow(nextPrayerSlot, strings("Después", "Next", "Depois"))
+        item(key = "today_invitation") {
+            AppCard(Modifier.padding(horizontal = gutter).testTag("today_next_action")) {
+                Text(strings("Un momento con Dios", "A moment with God", "Um momento com Deus"), style = styles.title2, color = palette.textPrimary)
+                Spacer(Modifier.height(6.dp))
+                Text(strings("${journeyStore.minutes} min · Un paso sencillo, a tu ritmo", "${journeyStore.minutes} min · One simple step, at your pace", "${journeyStore.minutes} min · Um passo simples, no seu ritmo"), style = styles.callout, color = palette.textSecondary)
+                Spacer(Modifier.height(16.dp))
+                AppSecondaryCapsule(strings("Comenzar", "Begin", "Começar"), onClick = onOpenBeginner, tag = "today_begin")
+                if (!welcomed) {
+                    Spacer(Modifier.height(8.dp))
+                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                        androidx.compose.material3.TextButton(onClick = { showWelcome = true }, modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("welcome_personalize")) { Text(strings("Elige tu ritmo", "Choose your pace", "Escolha seu ritmo"), style = styles.footnote) }
+                        androidx.compose.material3.TextButton(onClick = { journeyStore.welcome(0, 5); welcomed = true }, modifier = Modifier.weight(1f).heightIn(min = 48.dp).testTag("welcome_skip")) { Text(strings("Ahora no", "Not now", "Agora não"), style = styles.footnote) }
+                    }
+                }
+            }
+            Spacer(Modifier.height(ClusterGap))
+        }
+        item(key = "today_continue_rosary") {
+            val session = remember(now) { RosarySessionStore.load(context) }
+            if (session != null && (session.rosaryStep > 0 || session.mercyStep > 0)) {
+                AppListGroup {
+                    AppListRow(strings("Continuar mi oración", "Continue my prayer", "Continuar minha oração"), strings("Tu lugar en el Rosario o la Coronilla está guardado", "Your place in the Rosary or Chaplet is saved", "Seu lugar no Terço ou na Coroa está salvo"), onClick = if (session.devotion == Devotion.MERCY) onNavigateToChaplet else onNavigateToRosary, modifier = Modifier.testTag("today_continue_prayer"))
+                }
+                Spacer(Modifier.height(ClusterGap))
             }
         }
 
@@ -835,7 +828,7 @@ private fun DisclosureRow(
     Row(
         modifier
             .fillMaxWidth()
-            .heightIn(min = 44.dp)
+            .heightIn(min = 48.dp)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
@@ -937,11 +930,13 @@ private fun MarginalQuote(text: String) {
 private fun FidelityCard(
     dao: SanctaFidesDao,
     currentLanguage: AppLanguage,
-    onOpenHabits: () -> Unit
+    onOpenHabits: () -> Unit,
+    onOpenTemptations: () -> Unit
 ) {
     val design = LocalAppDesign.current
     val palette = design.palette
     val styles = LocalAppTextStyles.current
+    val largeLabels = styles.body.fontSize.value * LocalDensity.current.fontScale > 22f
 
     fun strings(es: String, en: String, pt: String) = when (currentLanguage) {
         AppLanguage.ES -> es
@@ -953,13 +948,30 @@ private fun FidelityCard(
     val todayKey = FidelityStore.dateKey(today)
     val completions by dao.getAllCompletions().collectAsState(initial = emptyList())
     val points = remember(completions, todayKey) { DailyRule.countsFrom(completions)[todayKey] ?: 0 }
-    AppSectionHeader(title = strings("Mis prácticas", "My practices", "Minhas práticas"))
+    val total = DailyRule.habits.size
+    AppSectionHeader(title = strings("Mis prácticas", "My practices", "Minhas práticas"), modifier = Modifier.testTag("home_practices_heading"))
     AppCard(Modifier.padding(horizontal = design.spacing.gutter).testTag("home_fidelity_card")) {
-        Text(strings("Un ritmo de oración y caridad", "A rhythm of prayer and charity", "Um ritmo de oração e caridade"), style = styles.headline, color = palette.textPrimary, modifier = Modifier.testTag("home_habit_tracker_card"))
-        Spacer(Modifier.height(8.dp))
-        Text(if (points == 0) strings("Elige algo pequeño para hoy. Siempre puedes volver a empezar.", "Choose something small for today. You can always begin again.", "Escolha algo pequeno para hoje. Você sempre pode recomeçar.") else strings("$points prácticas registradas hoy. Este registro no mide tu valor ante Dios.", "$points practices recorded today. This record does not measure your worth before God.", "$points práticas registradas hoje. Este registro não mede seu valor diante de Deus."), style = styles.callout, color = palette.textSecondary)
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.testTag("home_habit_tracker_card")) {
+            AppProgressRing(progress = points.toFloat() / total, size = 76.dp, stroke = 5.dp) {
+                Text("$points", style = styles.title2, color = palette.textPrimary, modifier = Modifier.testTag("home_fidelity_count"))
+            }
+            Spacer(Modifier.width(16.dp))
+            Column(Modifier.weight(1f)) {
+                Text(if (largeLabels) strings("de $total", "of $total", "de $total") else strings("de $total hoy", "of $total today", "de $total hoje"), style = styles.headline, color = palette.textPrimary)
+                Spacer(Modifier.height(4.dp))
+                Text(if (largeLabels) strings("Hoy", "Today", "Hoje") else strings("Oración y caridad, a tu ritmo", "Prayer and charity, at your pace", "Oração e caridade, no seu ritmo"), style = styles.callout, color = palette.textSecondary)
+            }
+        }
         Spacer(Modifier.height(12.dp))
-        AppSecondaryCapsule(strings("Ver mis prácticas", "View my practices", "Ver minhas práticas"), onClick = onOpenHabits, tag = "home_fidelity_open_habits")
+        AppPrimaryCapsule(strings("Ver mis prácticas", "View my practices", "Ver minhas práticas"), onClick = onOpenHabits, tag = "home_fidelity_open_habits")
+        Spacer(Modifier.height(4.dp))
+        AppListRow(
+            title = if (largeLabels) strings("Caídas y victorias", "Falls and victories", "Quedas e vitórias") else strings("Tentaciones y victorias", "Temptations and victories", "Tentações e vitórias"),
+            subtitle = if (largeLabels) strings("Ayuda y oración", "Help and prayer", "Ajuda e oração") else strings("Registra una caída o una victoria", "Record a fall or a victory", "Registre uma queda ou uma vitória"),
+            leadingIcon = if (largeLabels) null else Icons.Outlined.Spa,
+            onClick = onOpenTemptations,
+            modifier = Modifier.testTag("home_open_temptations")
+        )
     }
 }
 

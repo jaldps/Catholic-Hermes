@@ -74,6 +74,8 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
@@ -224,7 +226,9 @@ fun PrayersAndNovenasScreen(
     initialNightOfficeTab: Int = 0,
     /** Opens the Divine Mercy chaplet on arrival instead of the prayers list. */
     initialOpenChaplet: Boolean = false,
-    onOpenRosary: () -> Unit = {}
+    onOpenRosary: () -> Unit = {},
+    /** Opens the full guide; the devotional page remains available below. */
+    onOpenGuidedChaplet: (() -> Unit)? = null
 ) {
     val insets = AppEdgeToEdge()
     val scope = rememberCoroutineScope()
@@ -354,7 +358,9 @@ fun PrayersAndNovenasScreen(
         item(key = "prayers_screen_title") {
             AppHeroHeader(
                 assetPath = "heroes/lumen/prayers_lily.jpg",
-                title = currentLanguage.pick("Oraciones", "Prayers", "Orações"),
+                title = if (LocalAppTextStyles.current.body.fontSize.value * LocalDensity.current.fontScale > 22f)
+                    currentLanguage.pick("Orar", "Pray", "Orar")
+                else currentLanguage.pick("Oraciones", "Prayers", "Orações"),
                 eyebrow = currentLanguage.pick("Ora sin cesar", "Pray without ceasing", "Orai sem cessar"),
                 height = 260.dp,
                 titleTag = "prayers_title"
@@ -380,16 +386,33 @@ fun PrayersAndNovenasScreen(
             }
         }
         if (selectedTab == 0) item(key = "pray_start_here") {
-            com.example.ui.design.AppCard(Modifier.padding(horizontal = LocalAppDesign.current.spacing.gutter)) {
-                Text(currentLanguage.pick("Ayúdame a orar", "Help me pray", "Ajude-me a rezar"), style = LocalAppTextStyles.current.title2, color = LocalAppDesign.current.palette.textPrimary)
-                Spacer(Modifier.height(8.dp))
-                Text(currentLanguage.pick("Empieza con el Padre Nuestro. No necesitas saber las palabras de memoria.", "Begin with the Lord’s Prayer. You do not need to know the words by heart.", "Comece com o Pai-Nosso. Você não precisa saber as palavras de cor."), style = LocalAppTextStyles.current.callout, color = LocalAppDesign.current.palette.textSecondary)
-                Spacer(Modifier.height(12.dp))
-                AppPrimaryCapsule(currentLanguage.pick("Rezar el Padre Nuestro", "Pray the Lord’s Prayer", "Rezar o Pai-Nosso"), onClick = { openPrayerId = "our_father" }, tag = "pray_beginner_start")
-                Spacer(Modifier.height(8.dp))
-                com.example.ui.design.AppListRow(currentLanguage.pick("Rosario guiado", "Guided Rosary", "Terço guiado"), subtitle = currentLanguage.pick("Medita la vida de Jesús con María, una oración a la vez", "Reflect on Jesus’ life with Mary, one prayer at a time", "Medite a vida de Jesus com Maria, uma oração de cada vez"), onClick = onOpenRosary, modifier = Modifier.testTag("nav_rosary"))
+            val twoColumns = LocalConfiguration.current.screenWidthDp >= 360 && LocalDensity.current.fontScale < 1.4f
+            data class Guide(val title: String, val asset: String, val action: () -> Unit, val tag: String)
+            val guides = listOf(
+                Guide(currentLanguage.pick("Rosario", "Rosary", "Terço"), ArtMary, onOpenRosary, "nav_rosary"),
+                Guide(currentLanguage.pick("Coronilla", "Divine Mercy", "Coroa da Misericórdia"), ArtDivineMercy, onOpenGuidedChaplet ?: { showChaplet = true }, "open_chaplet_row")
+            )
+            AppGrid(guides, columns = if (twoColumns) 2 else 1, modifier = Modifier.testTag("pray_primary_guides")) { guide, cell ->
+                AppImageCard(
+                    title = guide.title,
+                    meta = currentLanguage.pick("Oración guiada", "Guided prayer", "Oração guiada"),
+                    assetPath = guide.asset,
+                    onClick = guide.action,
+                    aspectRatio = if (twoColumns) 0.95f else 1.35f,
+                    modifier = cell,
+                    tag = guide.tag
+                )
             }
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(8.dp))
+            com.example.ui.design.AppListGroup(Modifier.testTag("pray_beginner_start")) {
+                com.example.ui.design.AppListRow(
+                    currentLanguage.pick("Ayúdame a orar", "Help me pray", "Ajude-me a rezar"),
+                    subtitle = currentLanguage.pick("Una guía sencilla para empezar", "A simple guide to begin", "Um guia simples para começar"),
+                    onClick = { showHowTo = true },
+                    modifier = Modifier.testTag("how_to_pray_toggle")
+                )
+            }
+            Spacer(Modifier.height(12.dp))
         }
         item(key = "prayers_screen_tabs") {
             AppSegmentedTabs(
@@ -453,7 +476,6 @@ fun PrayersAndNovenasScreen(
                     onOpenPrayer = { openPrayerId = it.id },
                     onOpenCategory = { categoryKey = it },
                     onOpenChaplet = { showChaplet = true },
-                    onOpenHowTo = { showHowTo = true },
                     bottomPadding = bottomPadding
                 )
 
@@ -643,7 +665,6 @@ private fun PrayersLanding(
     onOpenPrayer: (VaticanPrayer) -> Unit,
     onOpenCategory: (String) -> Unit,
     onOpenChaplet: () -> Unit,
-    onOpenHowTo: () -> Unit,
     bottomPadding: Dp
 ) {
     val design = LocalAppDesign.current
@@ -654,7 +675,7 @@ private fun PrayersLanding(
         all.firstOrNull { it.id == id } ?: all.firstOrNull { it.id == "our_father" } ?: all.firstOrNull()
     }
 
-    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = bottomPadding)) {
+    LazyColumn(Modifier.fillMaxSize().testTag("prayers_landing"), contentPadding = PaddingValues(bottom = bottomPadding)) {
         header()
 
         if (searchQuery.isNotBlank()) {
@@ -749,37 +770,13 @@ private fun PrayersLanding(
         }
 
         item(key = "guided") {
-            PrayerSectionHeader(currentLanguage.pick("Guiadas", "Guided", "Guiadas"))
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("how_to_pray_section"),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                AppImageCard(
-                    title = currentLanguage.pick(
-                        "Coronilla de la Divina Misericordia",
-                        "Chaplet of Divine Mercy",
-                        "Terço da Divina Misericórdia"
-                    ),
-                    onClick = onOpenChaplet,
-                    assetPath = rememberFirstAsset(ArtDivineMercy, "heroes/divine_mercy.jpg"),
-                    meta = currentLanguage.pick("5 decenas", "5 decades", "5 dezenas"),
-                    aspectRatio = 0.86f,
-                    modifier = Modifier.weight(1f),
-                    tag = "open_chaplet_row"
-                )
-                AppImageCard(
-                    title = currentLanguage.pick("Cómo orar", "How to pray", "Como orar"),
-                    onClick = onOpenHowTo,
-                    assetPath = rememberFirstAsset(ArtSunrise, "heroes/sunrise_mountains.jpg"),
-                    meta = currentLanguage.pick("5 pasos", "5 steps", "5 passos"),
-                    aspectRatio = 0.86f,
-                    modifier = Modifier.weight(1f),
-                    tag = "how_to_pray_toggle"
-                )
-            }
+            PrayerSectionHeader(currentLanguage.pick("Para profundizar", "Go deeper", "Para aprofundar"))
+            AppGroupedRow(
+                title = currentLanguage.pick("Coronilla: oraciones y devoción", "Chaplet: prayers and devotion", "Coroa: orações e devoção"),
+                position = GroupPosition.Single,
+                onClick = onOpenChaplet,
+                tag = "chaplet_devotion_row"
+            )
         }
 
         item(key = "seasons") {

@@ -35,17 +35,19 @@ class RetainedNavigationTest {
     @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
     private var database: SanctaFidesDatabase? = null
     private var narration: LiturgicalTtsManager? = null
+    private var contentRepository: CatholicDataRepository? = null
 
     @After fun close() {
         compose.runOnUiThread { compose.activity.setContent {} }
         compose.waitForIdle()
         narration?.release()
+        contentRepository?.close()
         database?.close()
     }
 
     private fun launch(): CatholicDataRepository {
         val context = ApplicationProvider.getApplicationContext<Application>()
-        val repository = CatholicDataRepository(context).apply { setLanguage(AppLanguage.EN) }
+        val repository = CatholicDataRepository(context).apply { setLanguage(AppLanguage.EN) }.also { contentRepository = it }
         val db = Room.inMemoryDatabaseBuilder(context, SanctaFidesDatabase::class.java).allowMainThreadQueries().build().also { database = it }
         val tts = LiturgicalTtsManager(context).also { narration = it }
         val store = UserPreferencesStore(context)
@@ -61,7 +63,8 @@ class RetainedNavigationTest {
     @Test fun ordinaryPrayerReaderSurvivesReadTabRoundTrip() {
         launch()
         compose.onNodeWithTag("nav_prayers").performClick()
-        compose.onNodeWithTag("pray_beginner_start").performScrollTo().performClick()
+        compose.onNodeWithTag("prayers_landing").performScrollToNode(hasTestTag("prayer_row_our_father"))
+        compose.onNodeWithTag("prayer_row_our_father").performClick()
         compose.onNodeWithTag("prayer_detail_our_father").assertIsDisplayed()
         compose.onNodeWithTag("nav_bible").performClick()
         compose.onNodeWithTag("bible_screen").assertIsDisplayed()

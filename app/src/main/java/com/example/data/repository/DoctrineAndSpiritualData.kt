@@ -204,8 +204,9 @@ object DoctrineAndSpiritualData {
             capitalSin = LocalizedText("Gula", "Gluttony", "Gula"),
             sinMeaning = LocalizedText("Deseo desordenado en el comer o beber por encima de la templanza.", "Inordinate appetite for food or drink exceeding bodily reason.", "Excesso e apego desordenado à comida e à bebida."),
             opposingVirtue = LocalizedText("Templanza / Sobriedad", "Temperance / Sobriety", "Temperança / Sobriedade"),
-            virtueRemedy = LocalizedText("Comer para vivir y glorificar a Dios, practicando el ayuno cristiano.", "Eating to sustain life and glorifying God through fasting.", "Praticar o jejum e a moderação nas refeições."),
-            practicalAdvice = LocalizedText("Renuncia a un gusto voluntario en cada comida en señal de penitencia.", "Fast from sweets or snacks once a week as an act of prayer.", "Faça pequenas renúncias voluntárias nas refeições.")
+            // Temperance includes care for health (CCC 2288–2290), not deprivation of needed food.
+            virtueRemedy = LocalizedText("Practica la moderación sin descuidar el alimento que necesitas. Adapta el ayuno a tu salud y situación personal.", "Practice moderation while taking the nourishment you need. Adapt fasting to your health and personal circumstances.", "Pratique a moderação sem descuidar da alimentação de que precisa. Adapte o jejum à sua saúde e situação pessoal."),
+            practicalAdvice = LocalizedText("Elige una pequeña renuncia compatible con tu salud y ofrécela a Dios; también puedes dedicar tiempo al servicio de alguien.", "Choose a small sacrifice compatible with your health and offer it to God; you can also give time to serving someone.", "Escolha uma pequena renúncia compatível com a sua saúde e ofereça-a a Deus; também pode dedicar tempo a servir alguém.")
         ),
         CapitalSinVsVirtue(
             capitalSin = LocalizedText("Envidia", "Envy", "Inveja"),
@@ -219,7 +220,8 @@ object DoctrineAndSpiritualData {
             sinMeaning = LocalizedText("Desgana o apatía culpable ante las exigencias del amor a Dios y al prójimo.", "Spiritual lethargy and resistance to the divine demands of charity.", "Frieza espiritual e desânimo culpável no serviço de Deus."),
             opposingVirtue = LocalizedText("Diligencia / Celo por Dios", "Diligence / Holy Fervor", "Diligência / Fervor"),
             virtueRemedy = LocalizedText("Cumplir con amor y puntualidad los deberes diarios y la oración personal.", "Faithfulness in daily routine and persevering prayer.", "Perseverança na vida de oração e nos deveres cotidianos."),
-            practicalAdvice = LocalizedText("Comienza tu oración a una hora fija sin postergarla jamás.", "Set fixed times for prayer and stick to them faithfully.", "Estabeleça horários certos para rezar e não os adie.")
+            // Acedia is not a diagnosis of fatigue or illness; responsibility can be diminished (CCC 1735, 1860).
+            practicalAdvice = LocalizedText("Da un pequeño paso posible hacia la oración o tu deber. El cansancio y la enfermedad no son por sí mismos pereza: cuida también el descanso y busca ayuda cuando la necesites.", "Take one manageable step toward prayer or your duty. Fatigue and illness are not in themselves sloth: care for your need for rest and seek help when needed.", "Dê um pequeno passo possível na oração ou no seu dever. O cansaço e a doença não são, por si mesmos, preguiça: cuide também do descanso e procure ajuda quando precisar.")
         )
     )
 
@@ -236,7 +238,7 @@ object DoctrineAndSpiritualData {
         ),
         mortalThreeConditions = listOf(
             LocalizedText("1. Materia Grave: Que la acción sea intrínsecamente grave (ej. homicidio, adulterio, blasfemia, robo importante).", "1. Grave Matter: The act itself is a serious transgression of the Ten Commandments.", "1. Matéria Grave: A falta deve ser grave segundo a Lei de Deus."),
-            LocalizedText("2. Plena Conciencia (Conocimiento): Que la persona sepa con certeza que lo que va a hacer es pecado grave.", "2. Full Knowledge: Knowing clearly that the act is sinful and opposed to God's will.", "2. Pleno Conhecimento: Saber conscientemente que a ação é pecado grave."),
+            LocalizedText("2. Pleno conocimiento: Conocer el carácter pecaminoso de la acción y su oposición a la ley de Dios (CIC 1859).", "2. Full knowledge: Knowing the sinful character of the act and its opposition to God's law (CCC 1859).", "2. Pleno conhecimento: Conhecer o caráter pecaminoso da ação e sua oposição à lei de Deus (CIC 1859)."),
             LocalizedText("3. Deliberado Consentimiento: Que la voluntad sea libre y decida cometerlo a pesar de todo.", "3. Deliberate Consent: A sufficiently deliberate choice of the will to commit the act.", "3. Pleno Consentimento: Vontade livre e decidida em realizar o ato.")
         ),
         confessionExamenGuide = LocalizedText(

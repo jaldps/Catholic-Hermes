@@ -106,11 +106,11 @@ import com.example.data.temptation.TemptationStore
 import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppChevron
 import com.example.ui.design.AppChip
+import com.example.ui.design.AppContentCard
 import com.example.ui.design.AppDetailHeader
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppHeroHeader
-import com.example.ui.design.AppImageCard
 import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppLargeTitleHeader
 import com.example.ui.design.AppListGroup
@@ -305,11 +305,7 @@ private fun rememberToday(): LocalDate {
 
 private enum class HabitsPage { ROOT, TEMPTATION, SUMMARY, REMINDERS }
 
-private sealed interface TemptationSheet {
-    data class Victory(val option: SinAvoiderOption?) : TemptationSheet
-    data class Root(val option: SinAvoiderOption) : TemptationSheet
-    data object Fall : TemptationSheet
-}
+private enum class TemptationSheet { VICTORY, ROOT, FALL }
 
 private fun hailMary(language: AppLanguage): String = language.pick3(
     "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.",
@@ -323,8 +319,8 @@ private const val TEMPTATION_ART = "heroes/mysteries/sorrowful_1_agony.jpg"
 
 /**
  * Habits & Virtues: the twelve-practice rule of life with today's ring, the
- * month as Fitness-style rings, and — one tap away, never on the root — the
- * help in temptation, the remedy virtues and the record of victories.
+ * month as practice rings, with discreet access to help in temptation,
+ * the remedy virtues and the reader's optional private records.
  *
  * Everything here is the reader's own history (Room + DataStore); the
  * persistence is the point. Sub-pages (temptation, summary, reminders) are
@@ -347,7 +343,11 @@ fun HabitsAndVirtuesScreen(
     /** Open the Night office; 0 = Compline, 1 = Examen, 2 = Traditional. */
     onOpenNight: (Int) -> Unit = { _ -> },
     /** Open the Reminders destination; null keeps a local pushed page. */
-    onOpenReminders: (() -> Unit)? = null
+    onOpenReminders: (() -> Unit)? = null,
+    /** A Home shortcut opens the existing support page without changing any records. */
+    initialOpenTemptations: Boolean = false,
+    /** Read the existing explanation of sin and sacramental confession. */
+    onOpenSinAndConfession: (() -> Unit)? = null
 ) {
     val insets = AppEdgeToEdge()
     val design = LocalAppDesign.current
@@ -379,8 +379,14 @@ fun HabitsAndVirtuesScreen(
     val ruleCounts = remember(allCompletions) { DailyRule.countsFrom(allCompletions) }
     val catalog = repository.sinAvoiderCatalog
 
-    var page by rememberSaveable { mutableStateOf(HabitsPage.ROOT) }
-    var sheet by remember { mutableStateOf<TemptationSheet?>(null) }
+    var page by rememberSaveable(initialOpenTemptations) {
+        mutableStateOf(if (initialOpenTemptations) HabitsPage.TEMPTATION else HabitsPage.ROOT)
+    }
+    // Save routes and catalog keys, never catalog objects or private history.
+    var sheet by rememberSaveable { mutableStateOf<TemptationSheet?>(null) }
+    var sheetRootKey by rememberSaveable { mutableStateOf<String?>(null) }
+    val sheetRoot = catalog.firstOrNull { it.sinKey == sheetRootKey }
+    var recording by remember { mutableStateOf(false) }
     var toast by remember { mutableStateOf<String?>(null) }
     val rootState = rememberLazyListState()
 
@@ -429,21 +435,34 @@ fun HabitsAndVirtuesScreen(
     }
 
     fun recordVictory(option: SinAvoiderOption?, note: String) {
+        if (recording) return
+        recording = true
         scope.launch {
-            dao.insertSinOvercomeLog(TemptationLog.victory(option, lang, note))
-            temptationStore.recordVictory()
-            ttsManager.stop()
-            sheet = null
-            toast = lang.pick3("Victoria registrada. Gracias a Dios.", "Victory recorded. Thanks be to God.", "Vitória registada. Graças a Deus.")
+            try {
+                val recordedDate = LocalDate.now()
+                dao.insertSinOvercomeLog(TemptationLog.victory(option, lang, note))
+                temptationStore.recordVictory(recordedDate)
+                ttsManager.stop()
+                sheet = null
+                toast = lang.pick3("Victoria registrada. Gracias a Dios.", "Victory recorded. Thanks be to God.", "Vitória registada. Graças a Deus.")
+            } finally {
+                recording = false
+            }
         }
     }
 
     fun recordFall() {
+        if (recording) return
+        recording = true
         scope.launch {
-            temptationStore.recordFall()
-            ttsManager.stop()
-            sheet = null
-            toast = lang.pick3("Anotado. Vuelve a empezar con confianza.", "Noted. Begin again with trust.", "Anotado. Recomece com confiança.")
+            try {
+                temptationStore.recordFall(LocalDate.now())
+                ttsManager.stop()
+                sheet = null
+                toast = lang.pick3("Anotado. Vuelve a empezar con confianza.", "Noted. Begin again with trust.", "Anotado. Recomece com confiança.")
+            } finally {
+                recording = false
+            }
         }
     }
 
@@ -482,20 +501,23 @@ fun HabitsAndVirtuesScreen(
                     onOpen = { open(it) },
                     onOpenSummary = { page = HabitsPage.SUMMARY },
                     onOpenTemptation = { page = HabitsPage.TEMPTATION },
+                    onVictory = { sheetRootKey = null; sheet = TemptationSheet.VICTORY },
+                    onFall = { sheet = TemptationSheet.FALL },
                     onOpenReminders = { onOpenReminders?.invoke() ?: run { page = HabitsPage.REMINDERS } }
                 )
                 HabitsPage.TEMPTATION -> TemptationPage(
                     insets = insets,
                     lang = lang,
+                    today = today,
                     ttsManager = ttsManager,
                     catalog = catalog,
                     sinLogs = sinLogs,
                     totalVictories = totalVictories,
                     victories = victories,
                     falls = falls,
-                    onVictory = { sheet = TemptationSheet.Victory(null) },
-                    onFall = { sheet = TemptationSheet.Fall },
-                    onRoot = { sheet = TemptationSheet.Root(it) },
+                    onVictory = { sheetRootKey = null; sheet = TemptationSheet.VICTORY },
+                    onFall = { sheet = TemptationSheet.FALL },
+                    onRoot = { sheetRootKey = it.sinKey; sheet = TemptationSheet.ROOT },
                     onOpenPrayer = onOpenPrayer
                 )
                 HabitsPage.SUMMARY -> SummaryPage(
@@ -532,28 +554,29 @@ fun HabitsAndVirtuesScreen(
     }
 
     // Sheets of the temptation flow.
-    when (val s = sheet) {
+    when (sheet) {
         null -> {}
-        is TemptationSheet.Victory -> VictorySheet(
+        TemptationSheet.VICTORY -> VictorySheet(
             lang = lang,
             catalog = catalog,
-            preselected = s.option,
+            preselected = sheetRoot,
             onDismiss = { sheet = null },
             onRecord = { option, note -> recordVictory(option, note) }
         )
-        is TemptationSheet.Root -> RootSheet(
+        TemptationSheet.ROOT -> sheetRoot?.let { option -> RootSheet(
             lang = lang,
-            option = s.option,
+            option = option,
             ttsManager = ttsManager,
             onDismiss = { ttsManager.stop(); sheet = null },
-            onRecord = { note -> recordVictory(s.option, note) },
-            onFell = { ttsManager.stop(); sheet = TemptationSheet.Fall }
-        )
-        TemptationSheet.Fall -> FallSheet(
+            onRecord = { note -> recordVictory(option, note) },
+            onFell = { ttsManager.stop(); sheet = TemptationSheet.FALL }
+        ) }
+        TemptationSheet.FALL -> FallSheet(
             lang = lang,
             onDismiss = { sheet = null },
             onRecord = { recordFall() },
-            onContrition = { sheet = null; onOpenPrayer("act_of_contrition") }
+            onContrition = { sheet = null; onOpenPrayer("act_of_contrition") },
+            onOpenSinAndConfession = onOpenSinAndConfession
         )
     }
 }
@@ -574,6 +597,8 @@ private fun HabitsRoot(
     onOpen: (DailyHabitAction) -> Unit,
     onOpenSummary: () -> Unit,
     onOpenTemptation: () -> Unit,
+    onVictory: () -> Unit,
+    onFall: () -> Unit,
     onOpenReminders: () -> Unit,
 ) {
     val design = LocalAppDesign.current
@@ -605,8 +630,52 @@ private fun HabitsRoot(
             }
         }
 
+        item(key = "temptation_card") {
+            AppContentCard(
+                title = lang.pick3("Tentaciones y victorias", "Temptations and victories", "Tentações e vitórias"),
+                subtitle = lang.pick3(
+                    "La tentación en sí no es pecado. Tu registro es privado y opcional.",
+                    "Temptation itself is not sin. Your record is private and optional.",
+                    "A tentação em si não é pecado. Seu registro é privado e opcional."
+                ),
+                modifier = Modifier.padding(horizontal = design.spacing.gutter, vertical = 12.dp).testTag("fidelity_card_photo"),
+                tag = "temptation_entry_card"
+            ) {
+                AppSecondaryCapsule(
+                    label = lang.pick3("Registrar victoria", "Record victory", "Registrar vitória"),
+                    onClick = onVictory,
+                    fillWidth = true,
+                    tag = "habits_record_victory"
+                )
+                Spacer(Modifier.height(8.dp))
+                AppSecondaryCapsule(
+                    label = lang.pick3("Registrar caída", "Record a fall", "Registrar queda"),
+                    onClick = onFall,
+                    fillWidth = true,
+                    tag = "habits_record_fall"
+                )
+                Spacer(Modifier.height(8.dp))
+                AppSecondaryCapsule(
+                    label = lang.pick3("Cómo vencer una tentación", "Help to overcome temptation", "Como vencer uma tentação"),
+                    onClick = onOpenTemptation,
+                    fillWidth = true,
+                    tag = "open_temptation"
+                )
+            }
+        }
+
         item(key = "ring") {
             TodayRing(done = keptIds.size, total = DailyRule.size, loaded = loaded, lang = lang)
+            Text(
+                lang.pick3(
+                    "Una propuesta para tu oración personal. Leer las lecturas no sustituye la obligación de la Misa dominical.",
+                    "A suggested personal rule of prayer. Scripture reading does not replace the Sunday Mass obligation.",
+                    "Uma proposta para a sua oração pessoal. Ler as leituras não substitui a obrigação da Missa dominical."
+                ),
+                style = styles.footnote,
+                color = p.textSecondary,
+                modifier = Modifier.padding(horizontal = design.spacing.gutter, vertical = 12.dp)
+            )
         }
 
         DailyRule.groups.forEachIndexed { groupIndex, habits ->
@@ -635,30 +704,6 @@ private fun HabitsRoot(
                         )
                     }
                 }
-            }
-        }
-
-        item(key = "temptation_card") {
-            Box(
-                Modifier
-                    .padding(top = design.spacing.sectionGap + 4.dp)
-                    .padding(horizontal = design.spacing.gutter)
-                    .testTag("fidelity_card_photo")
-            ) {
-                AppImageCard(
-                    title = lang.pick3("En la tentación", "In temptation", "Na tentação"),
-                    onClick = onOpenTemptation,
-                    assetPath = TEMPTATION_ART,
-                    eyebrow = lang.pick3("Velad y orad · Mt 26,41", "Watch and pray · Mt 26:41", "Vigiai e orai · Mt 26,41"),
-                    meta = lang.pick3(
-                        "Reza un Ave María y vence con la gracia",
-                        "Pray a Hail Mary and overcome with grace",
-                        "Reze uma Ave Maria e vença com a graça"
-                    ),
-                    aspectRatio = 2.05f,
-                    tag = "open_temptation",
-                    modifier = Modifier.fillMaxWidth()
-                )
             }
         }
 
@@ -760,9 +805,9 @@ private fun TodayRing(done: Int, total: Int, loaded: Boolean, lang: AppLanguage)
         Spacer(Modifier.height(18.dp))
         val message = when {
             fraction >= 1f -> lang.pick3(
-                "¡Día consagrado en plenitud!",
-                "A day consecrated in full!",
-                "Dia consagrado em plenitude!"
+                "Has marcado las prácticas de hoy.",
+                "You have marked today's practices.",
+                "Você marcou as práticas de hoje."
             )
             fraction >= 0.5f -> lang.pick3(
                 "Buen camino, persevera hasta la noche.",
@@ -1146,6 +1191,7 @@ private fun PracticeMonthRow(title: String, days: Int, elapsed: Int, lang: AppLa
 private fun TemptationPage(
     insets: PaddingValues,
     lang: AppLanguage,
+    today: LocalDate,
     ttsManager: LiturgicalTtsManager,
     catalog: List<SinAvoiderOption>,
     sinLogs: List<SinOvercomeLogEntity>,
@@ -1166,8 +1212,10 @@ private fun TemptationPage(
     DisposableEffect(Unit) { onDispose { ttsManager.stop() } }
 
     LazyColumn(
-        modifier = Modifier.fillMaxSize().testTag("tab_sin_avoider"),
-        contentPadding = PaddingValues(bottom = insets.calculateBottomPadding() + 24.dp)
+        modifier = Modifier.fillMaxSize()
+            .padding(bottom = insets.calculateBottomPadding())
+            .testTag("tab_sin_avoider"),
+        contentPadding = PaddingValues(bottom = 24.dp)
     ) {
         item(key = "header") {
             AppDetailHeader(
@@ -1180,6 +1228,49 @@ private fun TemptationPage(
                 ),
                 imageHeight = 200.dp,
                 titleTag = "temptation_title"
+            )
+        }
+
+        item(key = "actions") {
+            Column(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = design.spacing.gutter)
+                    .padding(top = 16.dp),
+                verticalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                Text(
+                    lang.pick3(
+                        "La tentación en sí no es pecado. Registrar es opcional: las cifras no juzgan tu culpabilidad ni tu santidad (CIC 2847, 1861).",
+                        "Temptation itself is not sin. Recording is optional: these counts do not judge your guilt or holiness (CCC 2847, 1861).",
+                        "A tentação em si não é pecado. Registrar é opcional: os números não julgam a sua culpabilidade nem a sua santidade (CIC 2847, 1861)."
+                    ),
+                    style = styles.callout,
+                    color = p.textSecondary,
+                    modifier = Modifier.testTag("temptation_context")
+                )
+                AppPrimaryCapsule(
+                    label = lang.pick3("Registrar victoria", "Record victory", "Registrar vitória"),
+                    onClick = onVictory,
+                    tag = "emergency_overcome_button"
+                )
+                AppSecondaryCapsule(
+                    label = lang.pick3("Registrar caída", "Record a fall", "Registrar queda"),
+                    onClick = onFall,
+                    fillWidth = true,
+                    tag = "temptation_fell_button"
+                )
+            }
+            Text(
+                text = lang.pick3(
+                    "Anótalo solo para ti: queda en este dispositivo.",
+                    "Noted only for you: it stays on this device.",
+                    "Anotado só para si: fica neste dispositivo."
+                ),
+                style = styles.footnote,
+                color = p.textSecondary,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter, vertical = 10.dp)
             )
         }
 
@@ -1218,54 +1309,9 @@ private fun TemptationPage(
             }
         }
 
-        item(key = "actions") {
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = design.spacing.gutter)
-                    .padding(top = 16.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                AppPrimaryCapsule(
-                    label = lang.pick3("Vencí", "I overcame", "Venci"),
-                    onClick = onVictory,
-                    modifier = Modifier.weight(1f),
-                    tag = "emergency_overcome_button"
-                )
-                AppSecondaryCapsule(
-                    label = lang.pick3("Caí", "I fell", "Caí"),
-                    onClick = onFall,
-                    fillWidth = true,
-                    modifier = Modifier.weight(1f),
-                    tag = "temptation_fell_button"
-                )
-            }
-            Text(
-                text = lang.pick3(
-                    "Anótalo solo para ti: queda en este dispositivo.",
-                    "Noted only for you: it stays on this device.",
-                    "Anotado só para si: fica neste dispositivo."
-                ),
-                style = styles.footnote,
-                color = p.textSecondary,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter, vertical = 10.dp)
-            )
-        }
-
-        item(key = "stats") {
-            GroupHeader(lang.pick3("Tu camino", "Your path", "O seu caminho"), null, design.spacing.sectionGap - 8.dp)
-            StatsGrid(lang = lang, victories = victories, falls = falls)
-        }
-
-        item(key = "calendar") {
-            Spacer(Modifier.height(14.dp))
-            TemptationCalendar(counts = victories, currentLanguage = lang, fellCounts = falls)
-        }
-
         item(key = "virtues_header") {
             GroupHeader(
-                lang.pick3("Virtudes contrarias", "Remedy virtues", "Virtudes contrárias"),
+                lang.pick3("Cómo vencer cada tentación", "Help for each temptation", "Como vencer cada tentação"),
                 null,
                 design.spacing.sectionGap
             )
@@ -1289,14 +1335,24 @@ private fun TemptationPage(
             }
             Text(
                 text = lang.pick3(
-                    "Una para cada pecado capital. Toca para pedir su gracia.",
-                    "One for each capital sin. Tap to ask for its grace.",
-                    "Uma para cada pecado capital. Toque para pedir a sua graça."
+                    "Elige una para leer un consejo, cultivar una virtud y rezar.",
+                    "Choose one for practical guidance, a virtue to cultivate and prayer.",
+                    "Escolha uma para ler um conselho, cultivar uma virtude e rezar."
                 ),
                 style = styles.footnote,
                 color = p.textSecondary,
                 modifier = Modifier.padding(horizontal = design.spacing.gutter + 18.dp, vertical = 8.dp)
             )
+        }
+
+        item(key = "stats") {
+            GroupHeader(lang.pick3("Tu registro opcional", "Your optional record", "O seu registro opcional"), null, design.spacing.sectionGap - 8.dp)
+            StatsGrid(lang = lang, today = today, victories = victories, falls = falls)
+        }
+
+        item(key = "calendar") {
+            Spacer(Modifier.height(14.dp))
+            TemptationCalendar(counts = victories, currentLanguage = lang, fellCounts = falls)
         }
 
         item(key = "st_michael") {
@@ -1319,7 +1375,7 @@ private fun TemptationPage(
 
         item(key = "history_header") {
             GroupHeader(
-                lang.pick3("Victorias en Cristo", "Victories in Christ", "Vitórias em Cristo"),
+                lang.pick3("Victorias registradas", "Recorded victories", "Vitórias registradas"),
                 if (totalVictories > 0) "$totalVictories" else null,
                 design.spacing.sectionGap
             )
@@ -1360,11 +1416,10 @@ private fun TemptationPage(
 
 /** Vencí / Caí × hoy / semana / mes, all six visible at once. */
 @Composable
-private fun StatsGrid(lang: AppLanguage, victories: Map<String, Int>, falls: Map<String, Int>) {
+private fun StatsGrid(lang: AppLanguage, today: LocalDate, victories: Map<String, Int>, falls: Map<String, Int>) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    val today = LocalDate.now()
     val columns = listOf(
         lang.pick3("Hoy", "Today", "Hoje"),
         lang.pick3("Semana", "Week", "Semana"),
@@ -1425,8 +1480,9 @@ private fun VictorySheet(
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    var choice by remember { mutableStateOf(preselected) }
-    var note by remember { mutableStateOf("") }
+    var choiceKey by rememberSaveable { mutableStateOf(preselected?.sinKey) }
+    val choice = catalog.firstOrNull { it.sinKey == choiceKey }
+    var note by rememberSaveable { mutableStateOf("") }
     AppSheet(onDismiss = onDismiss, tag = "victory_sheet") {
         Column(Modifier.padding(horizontal = design.spacing.gutter)) {
             Text(lang.pick3("Gracias a Dios", "Thanks be to God", "Graças a Deus"), style = styles.title2, color = p.textPrimary)
@@ -1451,13 +1507,15 @@ private fun VictorySheet(
                 AppChip(
                     label = lang.pick3("Sin especificar", "Unspecified", "Sem especificar"),
                     selected = choice == null,
-                    onClick = { choice = null }
+                    onClick = { choiceKey = null },
+                    modifier = Modifier.heightIn(min = 48.dp)
                 )
                 catalog.forEach { option ->
                     AppChip(
                         label = option.title.get(lang).substringBefore(" / "),
                         selected = choice?.sinKey == option.sinKey,
-                        onClick = { choice = option }
+                        onClick = { choiceKey = option.sinKey },
+                        modifier = Modifier.heightIn(min = 48.dp)
                     )
                 }
             }
@@ -1484,7 +1542,8 @@ private fun FallSheet(
     lang: AppLanguage,
     onDismiss: () -> Unit,
     onRecord: () -> Unit,
-    onContrition: () -> Unit
+    onContrition: () -> Unit,
+    onOpenSinAndConfession: (() -> Unit)? = null
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -1495,9 +1554,9 @@ private fun FallSheet(
             Spacer(Modifier.height(10.dp))
             Text(
                 lang.pick3(
-                    "Dios no se cansa de perdonar. Pide perdón con un acto de contrición y vuelve a empezar; si la falta es grave, acude a la confesión.",
-                    "God never tires of forgiving. Ask for pardon with an act of contrition and begin again; if the sin is grave, go to confession.",
-                    "Deus não se cansa de perdoar. Peça perdão com um ato de contrição e recomece; se a falta for grave, procure a confissão."
+                    "Confía en la misericordia de Dios y vuelve a empezar. Haz un acto sincero de contrición; recitar una oración no equivale a recibir la absolución sacramental. Si eres consciente de pecado grave, busca la confesión. Si tienes dudas, pide orientación a un sacerdote (CIC 1451–1453, 1857–1861).",
+                    "Trust in God's mercy and begin again. Make a sincere act of contrition; reciting a prayer is not the same as receiving sacramental absolution. If you are conscious of grave sin, seek confession. If you are unsure, ask a priest for guidance (CCC 1451–1453, 1857–1861).",
+                    "Confie na misericórdia de Deus e recomece. Faça um ato sincero de contrição; recitar uma oração não equivale a receber a absolvição sacramental. Se tem consciência de pecado grave, procure a confissão. Se tem dúvidas, peça orientação a um sacerdote (CIC 1451–1453, 1857–1861)."
                 ),
                 style = styles.reading,
                 color = p.textPrimary
@@ -1511,6 +1570,13 @@ private fun FallSheet(
                 onClick = onContrition,
                 modifier = Modifier.testTag("fall_contrition")
             )
+            if (onOpenSinAndConfession != null) {
+                AppListRow(
+                    title = lang.pick3("Pecado y confesión", "Sin and Confession", "Pecado e confissão"),
+                    onClick = onOpenSinAndConfession,
+                    modifier = Modifier.testTag("fall_sin_and_confession")
+                )
+            }
         }
         Column(Modifier.padding(horizontal = design.spacing.gutter)) {
             Spacer(Modifier.height(20.dp))
@@ -1523,7 +1589,8 @@ private fun FallSheet(
             AppSecondaryCapsule(
                 label = lang.pick3("Cancelar", "Cancel", "Cancelar"),
                 onClick = onDismiss,
-                fillWidth = true
+                fillWidth = true,
+                tag = "fall_cancel_button"
             )
             Spacer(Modifier.height(4.dp))
         }
@@ -1542,7 +1609,7 @@ private fun RootSheet(
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    var note by remember { mutableStateOf("") }
+    var note by rememberSaveable(option.sinKey) { mutableStateOf("") }
     val playing by ttsManager.isPlaying.collectAsState()
     AppSheet(onDismiss = onDismiss, tag = "root_sheet") {
         Column(Modifier.padding(horizontal = design.spacing.gutter)) {

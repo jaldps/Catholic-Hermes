@@ -1,0 +1,35 @@
+{
+  "version": "1.5-quality-preview",
+  "versionCode": 6,
+  "samePreviewSigner": true,
+  "apkSha256": "046af2180c5686533a309e0333ad93bfa9a1c250f686f53b02171b5271e2aa5f",
+  "focused": {
+    "tests": 16,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 3
+  },
+  "functional": {
+    "tests": 273,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 51
+  },
+  "normal": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 1
+  },
+  "finalCompactContext": {
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "frames": 8,
+    "homeBehaviorTests": 8
+  }
+}

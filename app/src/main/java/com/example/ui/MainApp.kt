@@ -185,6 +185,7 @@ fun MainApp(
         mutableStateOf(if (initialDestination in AppDestination.tabs) "" else AppDestination.MORE.name)
     }
     val current = AppDestination.valueOf(currentName)
+    val screenStateHolder = rememberSaveableStateHolder()
     val stack = stackNames.split(',').filter { it.isNotEmpty() }.map { AppDestination.valueOf(it) }
     val origin = stack.firstOrNull { it in AppDestination.tabs }
         ?: if (current in AppDestination.tabs) current else AppDestination.MORE
@@ -194,6 +195,17 @@ fun MainApp(
         currentName = destination.name
     }
     var spiritualLifeInitialTab by rememberSaveable { mutableIntStateOf(0) }
+    var habitsInitialOpenTemptations by rememberSaveable { mutableStateOf(false) }
+    var habitsEntryId by rememberSaveable { mutableIntStateOf(0) }
+    fun openHabits(temptations: Boolean = false) {
+        if (current != AppDestination.HABITS_VIRTUES) {
+            screenStateHolder.removeState("${AppDestination.HABITS_VIRTUES.name}:$habitsEntryId:$habitsInitialOpenTemptations")
+        }
+        habitsInitialOpenTemptations = temptations
+        habitsEntryId++
+        go(AppDestination.HABITS_VIRTUES)
+    }
+    var doctrineInitialEntry by rememberSaveable { mutableStateOf<String?>(null) }
     var bibleInitialTab by rememberSaveable { mutableIntStateOf(0) }
     // Deep-link state: set by onOpenBible/onOpenCatechism (Doctrine screen
     // calls these once it exposes them), consumed as the initial params of
@@ -225,6 +237,15 @@ fun MainApp(
     // initialQuestionIndex). Cleared on the next direct nav.
     var questionsInitialIndex by rememberSaveable { mutableStateOf<Int?>(null) }
     var rosaryInitialTab by rememberSaveable { mutableIntStateOf(0) }
+    var rosaryEntryId by rememberSaveable { mutableIntStateOf(0) }
+    fun openRosary(tab: Int) {
+        if (current != AppDestination.ROSARY) screenStateHolder.removeState("${AppDestination.ROSARY.name}:$rosaryEntryId")
+        rosaryInitialTab = tab
+        // A new entry loads both latest prayer positions from the shared
+        // durable session, rather than restoring an older per-devotion copy.
+        rosaryEntryId++
+        go(AppDestination.ROSARY)
+    }
     // Home's "Santuarios" tile opens Calendar & Shrines on its shrines tab
     // (PilgrimageAndHabitsScreen initialTab); every other entry opens the calendar.
     var pilgrimageInitialTab by rememberSaveable { mutableIntStateOf(0) }
@@ -240,7 +261,6 @@ fun MainApp(
     val design = LocalAppDesign.current
     val tabs = AppDestination.tabs
     val isPushed = stack.isNotEmpty() || current !in tabs
-    val screenStateHolder = rememberSaveableStateHolder()
 
     val largeNavigationText = LocalAppTextStyles.current.navLabel.fontSize.value * androidx.compose.ui.platform.LocalDensity.current.fontScale > 18f
     val navItems = tabs.map { destination ->
@@ -362,6 +382,9 @@ fun MainApp(
               screenStateHolder.SaveableStateProvider(when (target) {
                   AppDestination.BIBLE -> "${target.name}:$bibleInitialTab:$bibleInitialBook:$bibleInitialChapter:$bibleInitialVerse"
                   AppDestination.PRAYERS -> "${target.name}:$prayersInitialTab:$prayersInitialPrayerId:$prayersInitialNightTab:$prayersInitialOpenChaplet"
+                  AppDestination.ROSARY -> "${target.name}:$rosaryEntryId"
+                  AppDestination.HABITS_VIRTUES -> "${target.name}:$habitsEntryId:$habitsInitialOpenTemptations"
+                  AppDestination.DOCTRINE -> "${target.name}:$doctrineInitialEntry"
                   else -> target.name
               }) {
               val frame = remember(target) { ScreenFrame() }
@@ -402,7 +425,13 @@ fun MainApp(
                         onOpenFontPicker = { showFontPicker = true },
                         onNavigateToMore = { go(AppDestination.MORE) },
                         onOpenBeginner = { go(AppDestination.BEGINNER) },
-                        onNavigateToHabits = { go(AppDestination.HABITS_VIRTUES) },
+                        onNavigateToHabits = { openHabits() },
+                        onOpenTemptations = { openHabits(temptations = true) },
+                        onOpenDailyVerse = { bookId, chapter, verseStart ->
+                            repository.selectBibleEdition("bundled")
+                            onOpenBible(bookId, chapter, verseStart)
+                        },
+                        dailyVerseCanonicalReference = com.example.data.verse.DailyVerseRotation.referenceFor(localToday),
                         onNavigateToBible = {
                             bibleInitialBook = null
                             bibleInitialChapter = null
@@ -421,16 +450,13 @@ fun MainApp(
                             catechismInitialParagraph = null
                             go(AppDestination.CATECHISM)
                         },
-                        onNavigateToRosary = { go(AppDestination.ROSARY) },
+                        onNavigateToRosary = { openRosary(0) },
                         onNavigateToPrayers = { go(AppDestination.PRAYERS) },
                         onNavigateToLaudes = { onOpenPrayer("laudes") },
                         onNavigateToAngelus = { onOpenPrayer("angelus") },
                         onNavigateToMorningPrayers = { onOpenPrayer("morning_offering") },
                         onNavigateToChaplet = {
-                            prayersInitialPrayerId = null
-                            prayersInitialTab = 0
-                            prayersInitialOpenChaplet = true
-                            go(AppDestination.PRAYERS)
+                            openRosary(1)
                         },
                         onNavigateToNightPrayers = {
                             prayersInitialPrayerId = null
@@ -447,7 +473,7 @@ fun MainApp(
                             pilgrimageInitialTab = 1
                             go(AppDestination.PILGRIMAGE_HABITS)
                         },
-                        onNavigateToDoctrine = { go(AppDestination.DOCTRINE) },
+                        onNavigateToDoctrine = { doctrineInitialEntry = null; go(AppDestination.DOCTRINE) },
                         onNavigateToSpiritualLife = {
                             spiritualLifeInitialTab = 0
                             go(AppDestination.SPIRITUAL_LIFE)
@@ -466,14 +492,18 @@ fun MainApp(
                         dao = dao,
                         ttsManager = ttsManager,
                         onOpenPrayer = onOpenPrayer,
+                        initialOpenTemptations = habitsInitialOpenTemptations,
+                        onOpenSinAndConfession = {
+                            doctrineInitialEntry = "grav:0"
+                            go(AppDestination.DOCTRINE)
+                        },
                         onOpenPrayers = {
                             prayersInitialPrayerId = null
                             prayersInitialTab = 0
                             go(AppDestination.PRAYERS)
                         },
                         onOpenRosary = { tab ->
-                            rosaryInitialTab = tab
-                            go(AppDestination.ROSARY)
+                            openRosary(tab)
                         },
                         onOpenMissal = {
                             bibleInitialBook = null
@@ -524,7 +554,8 @@ fun MainApp(
                         initialPrayerId = prayersInitialPrayerId,
                         initialTab = prayersInitialTab,
                         initialNightOfficeTab = prayersInitialNightTab,
-                        onOpenRosary = { go(AppDestination.ROSARY) },
+                        onOpenRosary = { openRosary(0) },
+                        onOpenGuidedChaplet = { openRosary(1) },
                         initialOpenChaplet = prayersInitialOpenChaplet
                     )
 
@@ -538,6 +569,7 @@ fun MainApp(
                         repository = repository,
                         currentLanguage = currentLanguage,
                         initialTopTab = 0,
+                        initialEntry = doctrineInitialEntry,
                         showTabs = false,
                         onOpenBible = onOpenBible,
                         onOpenCatechism = onOpenCatechism,
@@ -635,6 +667,11 @@ fun MainApp(
                         onOpenBeginner = { go(AppDestination.BEGINNER) },
                         sections = moreSections(currentLanguage) { destination ->
                             if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
+                            if (destination == AppDestination.HABITS_VIRTUES) {
+                                screenStateHolder.removeState("${AppDestination.HABITS_VIRTUES.name}:$habitsEntryId:$habitsInitialOpenTemptations")
+                                habitsInitialOpenTemptations = false
+                                habitsEntryId++
+                            }
                             if (destination == AppDestination.QUESTIONS) questionsInitialIndex = null
                             if (destination == AppDestination.PILGRIMAGE_HABITS) pilgrimageInitialTab = 0
                             if (destination == AppDestination.BIBLE) {
@@ -710,7 +747,7 @@ fun MainApp(
         when {
             id.startsWith("angelus_") -> onOpenPrayer("angelus")
             id == "morning_prayer" -> onOpenPrayer("morning_offering")
-            id == "coronilla" -> { rosaryInitialTab = 1; go(AppDestination.ROSARY) }
+            id == "coronilla" -> openRosary(1)
             id == "night_prayer" -> { prayersInitialTab = 2; prayersInitialNightTab = 2; go(AppDestination.PRAYERS) }
             id == "daily_reading" -> { bibleInitialTab = 1; go(AppDestination.BIBLE) }
         }

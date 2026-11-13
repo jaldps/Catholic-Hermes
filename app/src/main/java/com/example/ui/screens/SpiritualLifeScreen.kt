@@ -13,10 +13,10 @@ import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -84,8 +84,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
@@ -119,9 +121,10 @@ import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppGrid
 import com.example.ui.design.AppInlineTitle
-import com.example.ui.design.AppKitChip
 import com.example.ui.design.AppLargeTitleHeader
 import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppMenu
+import com.example.ui.design.AppMenuItem
 import com.example.ui.design.AppPrimaryCapsule
 import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppRoundPlayButton
@@ -165,7 +168,7 @@ private data class JournalCategory(
 
 private val JournalCategories = listOf(
     JournalCategory("Intención", "Intención", "Intention", "Intenção", "Intenciones", "Intentions", "Intenções"),
-    JournalCategory("Agradecimiento", "Agradecimiento", "Thanksgiving", "Agradecimento", "Agradecimientos", "Thanksgivings", "Agradecimentos"),
+    JournalCategory("Agradecimiento", "Agradecimiento", "Gratitude", "Agradecimento", "Agradecimientos", "Gratitude", "Agradecimentos"),
     JournalCategory("Examen", "Examen", "Examen", "Exame", "Exámenes", "Examens", "Exames"),
     JournalCategory("Gracia", "Gracia", "Grace", "Graça", "Gracias", "Graces", "Graças")
 )
@@ -794,60 +797,8 @@ private fun JournalComposer(
                     .navigationBarsPadding()
                     .testTag("journal_composer")
             ) {
-                Row(
-                    Modifier.fillMaxWidth().padding(horizontal = 8.dp).heightIn(min = 56.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Box(
-                        Modifier
-                            .heightIn(min = 48.dp)
-                            .lumenPress(onDismiss, 0.96f)
-                            .padding(horizontal = 12.dp)
-                            .testTag("journal_cancel_button"),
-                        contentAlignment = Alignment.CenterStart
-                    ) {
-                        Text(language.pick("Cancelar", "Cancel", "Cancelar"), style = styles.body, color = p.textPrimary)
-                    }
-                    Text(
-                        language.pick("Nueva entrada", "New entry", "Nova entrada"),
-                        style = styles.headline,
-                        color = p.textPrimary,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                        modifier = Modifier.weight(1f)
-                    )
-                    Box(
-                        Modifier
-                            .heightIn(min = 48.dp)
-                            .lumenPress(onSave, 0.96f, enabled = canSave)
-                            .padding(horizontal = 12.dp)
-                            .testTag("journal_save_button"),
-                        contentAlignment = Alignment.CenterEnd
-                    ) {
-                        Text(
-                            language.pick("Guardar", "Save", "Salvar"),
-                            style = styles.headline,
-                            color = if (canSave) p.textPrimary else p.inkQuiet
-                        )
-                    }
-                }
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .horizontalScroll(rememberScrollState())
-                        .padding(horizontal = design.spacing.gutter, vertical = 4.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    JournalCategories.forEach { option ->
-                        AppKitChip(
-                            label = language.pick(option.es, option.en, option.pt),
-                            selected = category == option.key,
-                            onClick = { onCategoryChange(option.key) },
-                            modifier = Modifier.heightIn(min = 44.dp)
-                        )
-                    }
-                }
+                JournalComposerHeader(language, canSave, onSave, onDismiss)
+                JournalCategoryDropdown(language, category, onCategoryChange)
                 Spacer(Modifier.height(12.dp))
                 Box(Modifier.padding(horizontal = design.spacing.gutter)) {
                     if (title.isEmpty()) {
@@ -903,6 +854,130 @@ private fun JournalComposer(
             }
         }
         }
+    }
+}
+
+/** Large text gets its own title row and whole-width actions, never squeezed labels. */
+@Composable
+private fun JournalComposerHeader(language: AppLanguage, canSave: Boolean, onSave: () -> Unit, onDismiss: () -> Unit) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    BoxWithConstraints(Modifier.fillMaxWidth().testTag("journal_composer_header")) {
+        val stacked = maxWidth < 360.dp || styles.body.fontSize.value * LocalDensity.current.fontScale > 22f
+        val headingLabel = language.pick("Nueva entrada", "New entry", "Nova entrada")
+        val cancelLabel = language.pick("Cancelar", "Cancel", "Cancelar")
+        val saveLabel = language.pick("Guardar", "Save", "Salvar")
+        if (stacked) {
+            Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter, vertical = 8.dp)) {
+                Text(
+                    headingLabel,
+                    style = styles.headline,
+                    color = p.textPrimary,
+                    modifier = Modifier.fillMaxWidth().semantics { heading() }.testTag("journal_composer_heading")
+                )
+                JournalComposerAction(cancelLabel, "journal_cancel", onDismiss, modifier = Modifier.fillMaxWidth())
+                JournalComposerAction(saveLabel, "journal_save", onSave, enabled = canSave, prominent = true, modifier = Modifier.fillMaxWidth())
+            }
+        } else {
+            Row(
+                Modifier.fillMaxWidth().padding(horizontal = 8.dp).heightIn(min = 56.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                JournalComposerAction(cancelLabel, "journal_cancel", onDismiss)
+                Text(
+                    headingLabel,
+                    style = styles.headline,
+                    color = p.textPrimary,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                    modifier = Modifier.weight(1f).semantics { heading() }.testTag("journal_composer_heading")
+                )
+                JournalComposerAction(saveLabel, "journal_save", onSave, enabled = canSave, prominent = true)
+            }
+        }
+    }
+}
+
+@Composable
+private fun JournalComposerAction(
+    label: String,
+    tagPrefix: String,
+    onClick: () -> Unit,
+    enabled: Boolean = true,
+    prominent: Boolean = false,
+    modifier: Modifier = Modifier
+) {
+    val p = LocalAppDesign.current.palette
+    val styles = LocalAppTextStyles.current
+    Box(
+        modifier.heightIn(min = 48.dp).testTag("${tagPrefix}_button")
+            .lumenPress(onClick, 0.96f, enabled = enabled).padding(horizontal = 12.dp, vertical = 8.dp),
+        contentAlignment = if (prominent) Alignment.CenterEnd else Alignment.CenterStart,
+        // Whole-width stacked actions also give their labels the available width.
+        // Otherwise a no-wrap paragraph can retain the wide constraint while its
+        // Text measures to the natural label width, reporting visual overflow.
+        propagateMinConstraints = true
+    ) {
+        Text(
+            label,
+            style = if (prominent) styles.headline else styles.body,
+            color = if (enabled) p.textPrimary else p.inkQuiet,
+            softWrap = false,
+            textAlign = if (prominent) androidx.compose.ui.text.style.TextAlign.End else androidx.compose.ui.text.style.TextAlign.Start,
+            modifier = Modifier.testTag("${tagPrefix}_label")
+        )
+    }
+}
+
+/** One labelled, wrapping field; category keys stay unchanged in Room. */
+@Composable
+private fun JournalCategoryDropdown(language: AppLanguage, category: String, onSelect: (String) -> Unit) {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val styles = LocalAppTextStyles.current
+    var expanded by rememberSaveable { mutableStateOf(false) }
+    val label = language.pick("Categoría", "Category", "Categoria")
+    val current = journalCategoryLabel(category, language)
+    Box(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter, vertical = 4.dp)) {
+        Row(
+            Modifier
+                .fillMaxWidth()
+                .clip(design.shapes.card)
+                .background(p.raised)
+                .border(1.dp, p.separator, design.shapes.card)
+                .clickable(role = Role.Button) { expanded = true }
+                .heightIn(min = 56.dp)
+                .semantics {
+                    stateDescription = current + ", " + if (expanded) {
+                        language.pick("Expandida", "Expanded", "Expandida")
+                    } else {
+                        language.pick("Contraída", "Collapsed", "Recolhida")
+                    }
+                }
+                .testTag("journal_category_dropdown")
+                .padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(Modifier.weight(1f)) {
+                Text(label, style = styles.footnote, color = p.textSecondary)
+                Text(current, style = styles.body, color = p.textPrimary, modifier = Modifier.testTag("journal_category_value"))
+            }
+            Spacer(Modifier.width(12.dp))
+            AppChevron(Modifier.graphicsLayer { rotationZ = if (expanded) 270f else 90f })
+        }
+        // Retain an unknown legacy value until the writer explicitly chooses another.
+        val options = JournalCategories.map { option ->
+            AppMenuItem(
+                label = language.pick(option.es, option.en, option.pt),
+                selected = category == option.key,
+                tag = "journal_category_${option.key}"
+            ) { onSelect(option.key) }
+        } + if (JournalCategories.none { it.key == category }) {
+            listOf(AppMenuItem(current, selected = true) { onSelect(category) })
+        } else emptyList()
+        AppMenu(expanded, { expanded = false }, options)
     }
 }
 

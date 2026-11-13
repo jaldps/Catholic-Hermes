@@ -188,7 +188,7 @@ object NightPrayerData {
             ),
             guidedPrayer = LocalizedText(
                 "«Bajo tu manto maternal pongo mi descanso esta noche, Santa Madre de Dios. Mañana, con tu ayuda, amaré y serviré mejor a tu Hijo Jesús. Amén».",
-                "“Under Your mantle I place my rest tonight, Holy Mother of God. Tomorrow, by Your grace, I will love and serve Your Son better. Amen.”",
+                "“Under your mantle I place my rest tonight, Holy Mother of God. Tomorrow, by God's grace and with your prayers, I will love and serve your Son better. Amen.”",
                 "“Em Vossas mãos maternas entrego o meu sono e o meu amanhã, ó Mãe Santíssima. Guardai-me sempre no Coração de Jesus. Amém.”"
             )
         )

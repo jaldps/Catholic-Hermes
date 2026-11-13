@@ -118,6 +118,7 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         }
 
         compose.onNodeWithTag("nav_home").performClick()
+        compose.onNodeWithTag("home_screen").performScrollToNode(hasTestTag("read_mass_full_button"))
         compose.onNodeWithTag("read_mass_full_button").performScrollTo().performClick()
         compose.onNodeWithTag("bible_screen").assertIsDisplayed()
         compose.onNodeWithTag("daily_missal_screen").assertIsDisplayed()

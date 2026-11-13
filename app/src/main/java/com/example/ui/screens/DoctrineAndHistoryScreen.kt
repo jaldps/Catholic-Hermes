@@ -142,7 +142,9 @@ fun DoctrineAndHistoryScreen(
 
     val entries = stack.split('|').filter { it.isNotEmpty() }
     val top = entries.lastOrNull()
-    AppBackHandler(enabled = entries.isNotEmpty()) {
+    // A contextual entry (for example Habits → Sin and Confession) returns
+    // to its caller. Entries opened from inside that reader still pop first.
+    AppBackHandler(enabled = entries.isNotEmpty() && (initialEntry == null || entries.size > 1)) {
         stack = stack.split('|').filter { it.isNotEmpty() }.dropLast(1).joinToString("|")
     }
     LaunchedEffect(top) { voice.stop() }

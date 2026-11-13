@@ -532,9 +532,8 @@ class CatholicDataRepository(
      * state. Text is resolved from the bundled Bible (the same source as the
      * lectionary passages) in all three languages; a verse that cannot be
      * resolved falls back to the curated trilingual text so the card never
-     * renders blank. The home screen refines the text from bible-api.com
-     * when online (see DailyVerseFetcher/Store) with this as the offline
-     * baseline.
+     * renders blank. Home displays this bundled text unchanged so the exact
+     * verse link opens the same passage and edition in the reader.
      */
     val verseOfTheDay: VerseOfTheDay
         get() = dailyVerseFor(LiturgicalCalendar.today())

@@ -1,4 +1,16 @@
-# Catholic Hermes — Briefing completo (rama `material-aaa-design`)
+# Catholic Hermes — CatholicGPT
+
+Versión actual: **1.5**, con Lumen y Sanctuary, Inicio / Orar / Leer / Explorar, recorridos de oración conservados y acceso directo a las prácticas y al apoyo ante la tentación.
+
+- [Descargar el APK actual para Android](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-quality-preview.apk).
+- [Instalación y actualización](dist/README.md).
+- [Cambios y verificaciones de la versión 1.5](docs/quality/DEVOTIONAL-PRIORITIES.md).
+- [Revisión pastoral y prioridades de contenido](docs/quality/PASTORAL-REVIEW-2.md).
+- [Integridad y procedencia del Catecismo](docs/content/CONTENT-INTEGRITY.md).
+
+El siguiente briefing describe una iteración anterior de noviembre de 2026. Sus nombres de temas, paquetes, pantallas y resultados de pruebas son históricos; la documentación enlazada arriba describe la entrega actual.
+
+## Briefing histórico (rama `material-aaa-design`)
 
 Guía exhaustiva de **cada cosa** que hace la app y **cómo funciona por dentro**: qué datos usa, de dónde vienen, cómo se calculan, qué se guarda y cómo se ve. Última actualización: 2026-11-07.
 

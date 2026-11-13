@@ -245,9 +245,9 @@ object PilgrimageAndHabitsData {
             title = LocalizedText("Gula / Apetito Desmedido", "Gluttony / Overeating", "Gula / Excesso"),
             counterVirtue = LocalizedText("Templanza y Ayuno Santo", "Temperance & Holy Fasting", "Temperança e Jejum"),
             advice = LocalizedText(
-                "«Renuncia a un gusto superfluo y ofrécelo por las almas en recuerdo de la sed de Cristo en la Cruz».",
-                "“Deny yourself a snack or luxury and offer it up for holy souls, recalling Christ's thirst on the Cross.”",
-                "“Faça uma pequena renúncia voluntária e ofereça a Cristo crucificado que teve sede no Calvário.”"
+                "«Elige una pequeña renuncia compatible con tu salud y ofrécela por las almas. No te prives del alimento necesario; también puedes ofrecer un gesto de servicio».",
+                "“Choose a small sacrifice compatible with your health and offer it for the holy souls. Keep the nourishment you need; an act of service is also an offering.”",
+                "“Escolha uma pequena renúncia compatível com a sua saúde e ofereça-a pelas almas. Não se prive do alimento necessário; também pode oferecer um gesto de serviço.”"
             ),
             iconName = "restaurant"
         ),
@@ -256,9 +256,9 @@ object PilgrimageAndHabitsData {
             title = LocalizedText("Pereza / Acedia Espiritual", "Sloth / Spiritual Acedia", "Preguiça / Acídia"),
             counterVirtue = LocalizedText("Diligencia y Fervor Santo", "Diligence & Holy Fervor", "Diligência e Fervor"),
             advice = LocalizedText(
-                "«Comienza tu deber u oración de inmediato sin esperar a sentir ganas; la fidelidad se forja en el sacrificio».",
-                "“Begin your duty or prayer immediately without waiting to 'feel like it'; fidelity is proven in sacrifice.”",
-                "“Levante-se e cumpra o seu dever agora mesmo; o amor a Deus se prova na fidelidade diária.”"
+                "«Da un pequeño paso posible hacia tu deber u oración. El cansancio y la enfermedad no son por sí mismos pereza: descansa y busca ayuda cuando la necesites».",
+                "“Take one manageable step toward your duty or prayer. Fatigue and illness are not in themselves sloth: rest and seek help when you need it.”",
+                "“Dê um pequeno passo possível no seu dever ou na oração. O cansaço e a doença não são, por si mesmos, preguiça: descanse e procure ajuda quando precisar.”"
             ),
             iconName = "bolt"
         ),
