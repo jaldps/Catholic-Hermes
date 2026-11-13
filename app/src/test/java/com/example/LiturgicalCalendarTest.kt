@@ -250,9 +250,10 @@ class LiturgicalCalendarTest {
         assertTrue(lentFriday.isAbstinenceDay)
         assertTrue(!lentFriday.isFastDay)
 
-        // A Friday in Ordinary Time carries neither.
+        // Ordinary Fridays are penitential; national conferences may permit substitution.
         val ordinaryFriday = LiturgicalCalendar.dayInfo(date(2026, 10, 30))
         assertTrue(!ordinaryFriday.isFastDay)
+        assertTrue(ordinaryFriday.isAbstinenceDay)
     }
 
     @Test

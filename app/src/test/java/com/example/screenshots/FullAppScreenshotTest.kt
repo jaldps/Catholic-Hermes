@@ -85,11 +85,12 @@ class FullAppScreenshotTest {
      * -Pshots.identity=all|apple|ive and -Pshots.mode=light|dark narrow or
      * widen a run (renders are slow on the review PC).
      */
-    private val identityFilter = System.getProperty("shots.identity")?.trim()?.lowercase() ?: "apple"
+    private val identityFilter = System.getProperty("shots.identity")?.trim()?.lowercase() ?: "all"
     private val modeFilter = System.getProperty("shots.mode")?.trim()?.lowercase()
 
     private fun render(identity: DesignLanguage, dark: Boolean) {
-        if (identityFilter != "all" && identity.id.lowercase() != identityFilter) return
+        if (identityFilter != "all" && identity.id.lowercase() != identityFilter &&
+            !(identityFilter == "apple" && identity == DesignLanguage.APPLE)) return
         if (modeFilter != null && modeFilter != (if (dark) "dark" else "light")) return
         val destinations = AppDestination.entries.filter { only == null || it.name.lowercase() in only }
         if (destinations.isEmpty()) return
@@ -108,7 +109,7 @@ class FullAppScreenshotTest {
             themePreset = UserPreferences.DEFAULT_THEME_PRESET,
             darkModeSetting = if (dark) "DARK" else "LIGHT",
             fontFamilyChoice = System.getProperty("shots.font") ?: UserPreferences.DEFAULT_FONT_FAMILY,
-            fontSizeScale = System.getProperty("shots.scale")?.toFloatOrNull()?.coerceIn(0.8f, 1.6f) ?: 1f,
+            fontSizeScale = System.getProperty("shots.scale")?.toFloatOrNull()?.coerceIn(0.8f, 2.0f) ?: 1f,
             audioNarrationSpeed = 1f,
             activeBibleTranslationId = "",
             isFullCccDownloaded = false,
@@ -204,6 +205,7 @@ class FullAppScreenshotTest {
                     tts.release()
                 } finally {
                     db.close()
+                    repository.close()
                 }
             }
         }
@@ -211,6 +213,6 @@ class FullAppScreenshotTest {
 
     @Test fun appleLight() = render(DesignLanguage.APPLE, false)
     @Test fun appleDark() = render(DesignLanguage.APPLE, true)
-    @Test fun materialLight() = render(DesignLanguage.IVE, false)
-    @Test fun materialDark() = render(DesignLanguage.IVE, true)
+    @Test fun sanctuaryLight() = render(DesignLanguage.SANCTUARY, false)
+    @Test fun sanctuaryDark() = render(DesignLanguage.SANCTUARY, true)
 }

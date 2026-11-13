@@ -182,11 +182,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -433,11 +429,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1190,11 +1182,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1441,11 +1429,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2198,11 +2182,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2449,11 +2429,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3206,11 +3182,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3457,11 +3429,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -4214,11 +4182,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -4465,11 +4429,7 @@ Blessed and praised be the Most Holy Sacrament of the Altar, in Heaven, on earth
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

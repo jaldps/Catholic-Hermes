@@ -9,7 +9,8 @@ import okhttp3.Request
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserFactory
 import java.io.StringReader
-import java.util.concurrent.TimeUnit
+import java.time.LocalDate
+import kotlinx.coroutines.CancellationException
 
 /** One reading of the day: its heading, its citation, and its text. */
 data class MassSection(
@@ -148,10 +149,7 @@ class VaticanGospelFetcher(
         }
     }
 
-    /**
-     * Today's readings, or the most recent day the feed carries when today's
-     * has not been published yet.
-     */
+    /** Readings for the requested civil date; an absent day is unavailable. */
     suspend fun today(language: AppLanguage, isoDate: String): ReadingsResult =
         withContext(Dispatchers.IO) {
             withTimeoutOrNull(TIMEOUT_MS) { fetch(language, isoDate) }
@@ -170,15 +168,24 @@ class VaticanGospelFetcher(
                     ?: return@use ReadingsResult.Failure("empty response")
                 parse(body, isoDate)
             }
-        }.getOrElse { ReadingsResult.Failure(it.message ?: it::class.java.simpleName) }
+        }.getOrElse {
+            if (it is CancellationException) throw it
+            ReadingsResult.Failure(it.message ?: it::class.java.simpleName)
+        }
     }
 
-    /** Picks the item for [isoDate] ("2026-10-31") by its link, else the newest. */
+    /** The dated link identifies the liturgical day; publication time may differ. */
     fun parse(xml: String, isoDate: String): ReadingsResult {
-        val items = items(xml)
+        val date = runCatching { LocalDate.parse(isoDate) }.getOrNull()
+            ?: return ReadingsResult.Failure("invalid requested date")
+        val items = runCatching { items(xml) }.getOrElse {
+            return ReadingsResult.Failure("invalid readings feed")
+        }
         if (items.isEmpty()) return ReadingsResult.Failure("no readings in feed")
-        val datePath = isoDate.replace('-', '/')
-        val chosen = items.firstOrNull { it.link.contains(datePath) } ?: items.first()
+        val datePath = date.toString().replace('-', '/')
+        val datedPath = Regex("/" + Regex.escape(datePath) + "(?:\\.html)?(?:[?#].*)?$")
+        val chosen = items.firstOrNull { datedPath.containsMatchIn(it.link) }
+            ?: return ReadingsResult.Failure("readings unavailable for $isoDate")
         val sections = sectionsFrom(chosen.description)
         if (sections.isEmpty()) return ReadingsResult.Failure("no readings in item")
         return ReadingsResult.Success(

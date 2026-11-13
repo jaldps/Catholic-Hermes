@@ -67,6 +67,8 @@ import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.selected
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
+import androidx.compose.ui.semantics.toggleableState
+import androidx.compose.ui.state.ToggleableState
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -97,7 +99,7 @@ fun AppGlassSurface(
     Box(
         modifier
             .lumenPress(onClick, 0.98f)
-            .lumenGlass(s, strong, lifted)
+            .then(if (strong) Modifier.lumenGlass(s, strong = true, lifted = lifted) else Modifier.appContentSurface(s))
             .clip(s)
             .padding(contentPadding),
         content = content
@@ -122,7 +124,7 @@ fun AppGlassIconButton(
     val p = design.palette
     Box(
         modifier
-            .size(44.dp)
+            .size(48.dp)
             .lumenPress(onClick, 0.92f)
             .semantics { if (contentDescription != null) this.contentDescription = contentDescription }
             .tagged(tag),
@@ -195,8 +197,10 @@ fun AppHeroImage(
     val p = design.palette
     val bitmap = rememberAssetBitmap(assetPath, maxWidthPx)
     val meta = rememberHeroMeta(assetPath)
-    val filter = remember(design.isDark, meta.tone) {
-        val grade = if (!design.isDark) {
+    val filter = remember(design.isDark, design.isSanctuary, meta.tone) {
+        val grade = if (design.isSanctuary) {
+            gradeMatrix(0.94f, 0.96f, 0.93f, 0.88f, 3f, 2f, 0f)
+        } else if (!design.isDark) {
             gradeMatrix(0.85f, 0.93f, 0.93f, 0.93f, 18f, 18f, 18f)
         } else if (meta.tone == "light") {
             // About -0.6 EV with a warm cast.
@@ -241,8 +245,8 @@ fun AppHeroImage(
         }
         // Light mist: lift the art toward the paper so a saturated painting
         // never shouts. Dark needs none beyond the grade above.
-        if (!design.isDark) {
-            Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.16f)))
+        if (!design.isDark && !design.isSanctuary) {
+            Box(Modifier.fillMaxSize().background(p.canvasTop.copy(alpha = 0.10f)))
         }
         if (topVeil) {
             Box(
@@ -295,11 +299,35 @@ fun AppHeroHeader(
     overlap: Dp = 0.dp,
     actions: @Composable RowScope.() -> Unit = {}
 ) {
-    AppEdgeToEdge()
+    val headerInsets = AppEdgeToEdge()
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val top = statusBarHeight()
+    val statusTop = statusBarHeight()
+    val largeText = styles.eyebrow.fontSize.value * androidx.compose.ui.platform.LocalDensity.current.fontScale >= 20f
+    val top = if (design.isSanctuary || largeText) maxOf(statusTop, headerInsets.calculateTopPadding()) else statusTop
+    if (design.isSanctuary || largeText) {
+        Column(modifier.fillMaxWidth().padding(top = top + 8.dp)) {
+            Row(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter),
+                verticalAlignment = Alignment.CenterVertically) {
+                Column(Modifier.weight(1f)) {
+                    if (eyebrow != null) Text(eyebrow, style = styles.eyebrow, color = p.textSecondary)
+                    Text(title, style = styles.largeTitle, color = p.textPrimary,
+                        modifier = Modifier.semantics { heading() }.tagged(titleTag))
+                }
+                Row(horizontalArrangement = Arrangement.spacedBy(4.dp), content = actions)
+            }
+            Spacer(Modifier.height(14.dp))
+            Box(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)
+                .height((height * 0.56f).coerceIn(120.dp, 220.dp))
+                .border(0.75.dp, p.hairline, design.shapes.thumbnail)
+                .padding(5.dp).clip(design.shapes.thumbnail)) {
+                AppHeroImage(assetPath, Modifier.fillMaxSize(), fadeToCanvas = false, topVeil = false)
+            }
+            Spacer(Modifier.height(20.dp))
+        }
+        return
+    }
     Box(
         modifier
             .fillMaxWidth()
@@ -797,11 +825,11 @@ fun AppKitChip(label: String, selected: Boolean, onClick: () -> Unit, modifier: 
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val shape = RoundedCornerShape(percent = 50)
-    val fill by animateColorAsState(if (selected) p.action else p.glass, tween(design.motion.fastMillis), label = "chip")
+    val shape = design.shapes.button
+    val fill by animateColorAsState(if (selected) p.action else p.groupedSurface, tween(design.motion.fastMillis), label = "chip")
     Box(
         modifier
-            .heightIn(min = 36.dp)
+            .heightIn(min = 48.dp)
             .lumenPress(onClick, 0.95f, Role.Tab)
             .then(if (selected) Modifier.softShadow(shape, p.shadow, 16.dp, 4.dp) else Modifier.lumenGlass(shape, lifted = false))
             .clip(shape)
@@ -833,7 +861,7 @@ fun AppPrimaryCapsule(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val shape = RoundedCornerShape(percent = 50)
+    val shape = design.shapes.button
     Row(
         modifier
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
@@ -851,7 +879,7 @@ fun AppPrimaryCapsule(
             Icon(icon, null, tint = p.onAction, modifier = Modifier.size(20.dp))
             Spacer(Modifier.width(10.dp))
         }
-        Text(label, style = styles.buttonLabel, color = p.onAction, maxLines = 1)
+        Text(label, style = styles.buttonLabel, color = p.onAction, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
     }
 }
 
@@ -869,11 +897,11 @@ fun AppSecondaryCapsule(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    val shape = RoundedCornerShape(percent = 50)
+    val shape = design.shapes.button
     Row(
         modifier
             .then(if (fillWidth) Modifier.fillMaxWidth() else Modifier)
-            .heightIn(min = 44.dp)
+            .heightIn(min = 48.dp)
             .lumenPress(onClick, 0.97f, enabled = enabled)
             // Flat tint, no shadow: black 5% in light, white 12% with a lit
             // 14% -> 4% edge in dark.
@@ -898,7 +926,7 @@ fun AppSecondaryCapsule(
             Icon(icon, null, tint = ink, modifier = Modifier.size(20.dp))
             Spacer(Modifier.width(10.dp))
         }
-        Text(label, style = styles.buttonLabel.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Medium), color = ink, maxLines = 1)
+        Text(label, style = styles.buttonLabel.copy(fontWeight = androidx.compose.ui.text.font.FontWeight.Medium), color = ink, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
     }
 }
 
@@ -921,7 +949,7 @@ fun AppTransportBar(
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
-    val shape = RoundedCornerShape(percent = 50)
+    val shape = design.shapes.button
     Row(
         modifier
             .lumenGlass(shape)
@@ -979,7 +1007,7 @@ fun AppProgressRing(
     center: @Composable BoxScope.() -> Unit = {}
 ) {
     val p = LocalAppDesign.current.palette
-    val animated by animateFloatAsState(progress.coerceIn(0f, 1f), tween(600), label = "ring")
+    val animated by animateFloatAsState(progress.coerceIn(0f, 1f), tween(if (LocalAppDesign.current.reduceMotion) 0 else 600), label = "ring")
     val trackColor = if (LocalAppDesign.current.isDark) Color.White.copy(alpha = 0.14f) else Color.Black.copy(alpha = 0.13f)
     Box(modifier.size(size), contentAlignment = Alignment.Center) {
         Canvas(Modifier.fillMaxSize()) {
@@ -1018,7 +1046,7 @@ fun AppProgressBar(
     height: Dp = 4.dp
 ) {
     val p = LocalAppDesign.current.palette
-    val animated by animateFloatAsState(progress.coerceIn(0f, 1f), tween(400), label = "bar")
+    val animated by animateFloatAsState(progress.coerceIn(0f, 1f), tween(if (LocalAppDesign.current.reduceMotion) 0 else 400), label = "bar")
     Box(
         modifier
             .fillMaxWidth()
@@ -1067,11 +1095,12 @@ fun AppCheckRow(
         ) {
             Box(
                 Modifier
-                    .size(44.dp)
+                    .size(48.dp)
                     .lumenPress(onToggle, 0.88f, Role.Checkbox)
                     .semantics {
                         this.selected = checked
-                        stateDescription = if (checked) "✓" else ""
+                        toggleableState = if (checked) ToggleableState.On else ToggleableState.Off
+                        contentDescription = label
                     }
                     .tagged(checkTag),
                 contentAlignment = Alignment.Center
@@ -1156,7 +1185,7 @@ fun AppStepList(
  */
 @Composable
 fun AppActionBar(modifier: Modifier = Modifier, content: @Composable RowScope.() -> Unit) {
-    val shape = RoundedCornerShape(percent = 50)
+    val shape = LocalAppDesign.current.shapes.button
     Row(
         modifier.lumenGlass(shape, strong = true).padding(horizontal = 8.dp, vertical = 4.dp),
         horizontalArrangement = Arrangement.SpaceEvenly,

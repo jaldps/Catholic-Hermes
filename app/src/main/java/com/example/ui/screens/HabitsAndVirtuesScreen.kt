@@ -350,6 +350,7 @@ fun HabitsAndVirtuesScreen(
     onOpenReminders: (() -> Unit)? = null
 ) {
     val insets = AppEdgeToEdge()
+    val design = LocalAppDesign.current
     val lang by repository.currentLanguage.collectAsState()
     val context = LocalContext.current
     val app = context.applicationContext
@@ -458,11 +459,11 @@ fun HabitsAndVirtuesScreen(
             targetState = page,
             transitionSpec = {
                 if (targetState != HabitsPage.ROOT) {
-                    (slideInHorizontally(tween(280)) { it / 4 } + fadeIn(tween(220)))
-                        .togetherWith(slideOutHorizontally(tween(280)) { -it / 10 } + fadeOut(tween(180)))
+                    (slideInHorizontally(tween(if (design.reduceMotion) 0 else 280)) { it / 4 } + fadeIn(tween(if (design.reduceMotion) 0 else 220)))
+                        .togetherWith(slideOutHorizontally(tween(if (design.reduceMotion) 0 else 280)) { -it / 10 } + fadeOut(tween(if (design.reduceMotion) 0 else 180)))
                 } else {
-                    (slideInHorizontally(tween(280)) { -it / 10 } + fadeIn(tween(220)))
-                        .togetherWith(slideOutHorizontally(tween(280)) { it / 4 } + fadeOut(tween(180)))
+                    (slideInHorizontally(tween(if (design.reduceMotion) 0 else 280)) { -it / 10 } + fadeIn(tween(if (design.reduceMotion) 0 else 220)))
+                        .togetherWith(slideOutHorizontally(tween(if (design.reduceMotion) 0 else 280)) { it / 4 } + fadeOut(tween(if (design.reduceMotion) 0 else 180)))
                 }
             },
             label = "habitsPage"
@@ -514,8 +515,8 @@ fun HabitsAndVirtuesScreen(
         // Quiet confirmation toast above the dock.
         AnimatedVisibility(
             visible = toast != null,
-            enter = fadeIn(tween(200)) + slideInVertically(tween(260)) { it / 2 },
-            exit = fadeOut(tween(200)) + slideOutVertically(tween(260)) { it / 2 },
+            enter = fadeIn(tween(if (design.reduceMotion) 0 else 200)) + slideInVertically(tween(if (design.reduceMotion) 0 else 260)) { it / 2 },
+            exit = fadeOut(tween(if (design.reduceMotion) 0 else 200)) + slideOutVertically(tween(if (design.reduceMotion) 0 else 260)) { it / 2 },
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(bottom = insets.calculateBottomPadding() + 16.dp)
@@ -720,7 +721,7 @@ private fun TodayRing(done: Int, total: Int, loaded: Boolean, lang: AppLanguage)
         "$done of $total kept today",
         "$done de $total cumpridos hoje"
     )
-    val sproutScale by animateFloatAsState(0.86f + 0.14f * fraction, spring(0.7f, 200f), label = "sprout")
+    val sproutScale by animateFloatAsState(if (design.reduceMotion) 1f else 0.86f + 0.14f * fraction, if (design.reduceMotion) tween(0) else spring(0.7f, 200f), label = "sprout")
     Column(
         Modifier
             .fillMaxWidth()
@@ -774,7 +775,7 @@ private fun TodayRing(done: Int, total: Int, loaded: Boolean, lang: AppLanguage)
                 "Comece com um oferecimento de obras."
             )
         }
-        Crossfade(targetState = message, animationSpec = tween(300), label = "message") { m ->
+        Crossfade(targetState = message, animationSpec = tween(if (design.reduceMotion) 0 else 300), label = "message") { m ->
             Text(
                 text = m,
                 style = styles.subhead,
@@ -869,7 +870,7 @@ private fun RuleRow(
     val rowPressed by rowSource.collectIsPressedAsState()
     val rowFill by animateColorAsState(
         if (rowPressed) p.textPrimary.copy(alpha = 0.06f) else Color.Transparent,
-        if (rowPressed) tween(0) else tween(250),
+        if (rowPressed) tween(0) else tween(if (design.reduceMotion) 0 else 250),
         label = "rowFill"
     )
     Column(Modifier.fillMaxWidth().testTag("habit_card_${habit.id}")) {
@@ -919,12 +920,12 @@ private fun CheckCircle(checked: Boolean, stateLabel: String, tag: String, onTog
     val p = design.palette
     val source = remember { MutableInteractionSource() }
     val pressed by source.collectIsPressedAsState()
-    val press by animateFloatAsState(if (pressed) 0.86f else 1f, spring(0.8f, 600f), label = "checkPress")
-    val fill by animateColorAsState(if (checked) p.success else Color.Transparent, tween(180), label = "checkFill")
-    val tick by animateFloatAsState(if (checked) 1f else 0f, spring(0.55f, 500f), label = "tick")
+    val press by animateFloatAsState(if (pressed && !design.reduceMotion) 0.86f else 1f, if (design.reduceMotion) tween(0) else spring(0.8f, 600f), label = "checkPress")
+    val fill by animateColorAsState(if (checked) p.action else Color.Transparent, tween(if (design.reduceMotion) 0 else 180), label = "checkFill")
+    val tick by animateFloatAsState(if (checked) 1f else 0f, if (design.reduceMotion) tween(0) else spring(0.55f, 500f), label = "tick")
     Box(
         Modifier
-            .size(44.dp)
+            .size(48.dp)
             .graphicsLayer { scaleX = press; scaleY = press }
             .toggleable(
                 value = checked,
@@ -942,14 +943,14 @@ private fun CheckCircle(checked: Boolean, stateLabel: String, tag: String, onTog
                 .size(26.dp)
                 .clip(CircleShape)
                 .background(fill)
-                .border(1.5.dp, if (checked) p.success else p.textTertiary, CircleShape),
+                .border(1.5.dp, if (checked) p.action else p.textTertiary, CircleShape),
             contentAlignment = Alignment.Center
         ) {
             if (tick > 0.02f) {
                 Icon(
                     Icons.Filled.Check,
                     contentDescription = null,
-                    tint = p.onAction.takeIf { !design.isDark } ?: p.canvasBottom,
+                    tint = p.onAction,
                     modifier = Modifier.size(17.dp).graphicsLayer {
                         scaleX = 0.4f + 0.6f * tick
                         scaleY = 0.4f + 0.6f * tick
@@ -1010,7 +1011,7 @@ private fun SummaryPage(
                 StatTile(
                     value = "$keptToday/${DailyRule.size}",
                     label = lang.pick3("Hoy", "Today", "Hoje"),
-                    modifier = Modifier.weight(1f).semantics { stateDescription = "today $keptToday/${DailyRule.size}" }
+                    modifier = Modifier.weight(1f).semantics { stateDescription = lang.pick3("Hoy: $keptToday de ${DailyRule.size} prácticas realizadas", "Today: $keptToday of ${DailyRule.size} practices completed", "Hoje: $keptToday de ${DailyRule.size} práticas realizadas") }
                 )
                 StatTile(
                     value = "${pairs.size}/$possible",
@@ -1036,7 +1037,7 @@ private fun SummaryPage(
                 AppProgressBar(
                     progress = monthRate,
                     color = p.success,
-                    modifier = Modifier.semantics { stateDescription = "${pairs.size}/$possible" }
+                    modifier = Modifier.semantics { stateDescription = lang.pick3("${pairs.size} de $possible prácticas realizadas", "${pairs.size} of $possible practices completed", "${pairs.size} de $possible práticas realizadas") }
                 )
                 Spacer(Modifier.height(8.dp))
                 Text(
@@ -1177,7 +1178,7 @@ private fun TemptationPage(
                     "“Watch and pray that you may not enter into temptation” · Mt 26:41",
                     "«Vigiai e orai para não cairdes em tentação» · Mt 26,41"
                 ),
-                imageHeight = 280.dp,
+                imageHeight = 200.dp,
                 titleTag = "temptation_title"
             )
         }

@@ -26,6 +26,7 @@ import androidx.compose.material.icons.automirrored.outlined.OpenInNew
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.key
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
@@ -246,6 +247,7 @@ private val thumbCache = object : android.util.LruCache<String, ImageBitmap>(4 *
 @Composable
 private fun rememberCreditThumb(path: String): ImageBitmap? {
     val context = LocalContext.current
+    return key(path) {
     val state by produceState(thumbCache.get(path), path) {
         if (value == null) {
             value = withContext(Dispatchers.IO) {
@@ -261,5 +263,6 @@ private fun rememberCreditThumb(path: String): ImageBitmap? {
             }
         }
     }
-    return state
+    state
+    }
 }

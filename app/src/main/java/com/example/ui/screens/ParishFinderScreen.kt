@@ -103,15 +103,15 @@ fun ParishFinderScreen(
             AppDetailHeader(
                 title = strings("Parroquias", "Parishes", "Paróquias"),
                 assetPath = hero,
-                imageHeight = 248.dp
+                imageHeight = 180.dp
             )
         }
         item(key = "parish_intro") {
             Text(
                 strings(
-                    "Encuentra misas y parroquias cercanas en Google Maps.",
-                    "Find Mass times and nearby parishes in Google Maps.",
-                    "Encontre missas e paróquias próximas no Google Maps."
+                    "Busca parroquias en Google Maps. Los resultados no son horarios verificados: confirma los horarios actuales de misa y confesión con la parroquia.",
+                    "Search for parishes in Google Maps. Results are not verified schedules: confirm current Mass and Confession times with the parish.",
+                    "Busque paróquias no Google Maps. Os resultados não são horários verificados: confirme os horários atuais de missa e confissão com a paróquia."
                 ),
                 style = styles.body,
                 color = p.textSecondary,

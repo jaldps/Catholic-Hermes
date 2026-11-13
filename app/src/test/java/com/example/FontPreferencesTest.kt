@@ -70,4 +70,36 @@ class FontPreferencesTest {
             assertEquals("IDENTITY_DEFAULT", store.preferences.first().fontFamilyChoice)
         } finally { job.cancelAndJoin() }
     }
+    @Test fun legacyIdentitiesMigrateAndChangingStylePreservesReadingAndAccessibilityChoices() = runBlocking {
+        val context = ApplicationProvider.getApplicationContext<Context>()
+        val job = SupervisorJob()
+        val data = PreferenceDataStoreFactory.create(scope = CoroutineScope(Dispatchers.IO + job)) {
+            folder.newFolder().resolve("appearance-migration.preferences_pb")
+        }
+        try {
+            val store = UserPreferencesStore(context, data)
+            store.setFontFamilyChoice("EB_GARAMOND")
+            store.setFontSizeScale(0.9f)
+            store.setAudioNarrationSpeed(0.75f)
+            store.setDarkModeSetting("DARK")
+            store.setReduceMotion(true)
+            store.setReduceTransparency(true)
+            store.setHighContrast(true)
+            for (legacyId in listOf("APPLE", "IVE", "LUMEN")) {
+                data.edit { it[stringPreferencesKey("design_language")] = legacyId }
+                assertEquals("LUMEN", store.preferences.first().designLanguage)
+            }
+            store.setDesignLanguage("SANCTUARY")
+            val appearance = store.preferences.first()
+            assertEquals("SANCTUARY", appearance.designLanguage)
+            assertEquals("EB_GARAMOND", appearance.fontFamilyChoice)
+            assertEquals(0.9f, appearance.fontSizeScale, 0f)
+            assertEquals(0.75f, appearance.audioNarrationSpeed, 0f)
+            assertEquals("DARK", appearance.darkModeSetting)
+            org.junit.Assert.assertTrue(appearance.reduceMotion)
+            org.junit.Assert.assertTrue(appearance.reduceTransparency)
+            org.junit.Assert.assertTrue(appearance.highContrast)
+        } finally { job.cancelAndJoin() }
+    }
+
 }

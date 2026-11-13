@@ -24,6 +24,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -34,6 +35,7 @@ import com.example.ui.design.ScreenFrame
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveableStateHolder
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
@@ -80,12 +82,12 @@ enum class AppDestination(
     val iconSlot: AppIconSlot,
     val tag: String
 ) {
-    HOME("Inicio", "Home", "Início", AppIconSlot.HOME, "nav_home"),
+    HOME("Hoy", "Today", "Hoje", AppIconSlot.HOME, "nav_home"),
     HABITS_VIRTUES("Hábitos y Virtudes", "Habits & Virtues", "Hábitos e Virtudes", AppIconSlot.HABITS, "nav_habits"),
-    BIBLE("Biblia", "Bible", "Bíblia", AppIconSlot.BIBLE, "nav_bible"),
+    BIBLE("Leer", "Read", "Ler", AppIconSlot.BIBLE, "nav_bible"),
     CATECHISM("Catecismo", "Catechism", "Catecismo", AppIconSlot.CATECHISM, "nav_catechism"),
     ROSARY("Rosario", "Rosary", "Terço", AppIconSlot.ROSARY, "nav_rosary"),
-    PRAYERS("Oraciones", "Prayers", "Orações", AppIconSlot.PRAYERS, "nav_prayers"),
+    PRAYERS("Orar", "Pray", "Orar", AppIconSlot.PRAYERS, "nav_prayers"),
     PILGRIMAGE_HABITS("Calendario y Santuarios", "Calendar & Shrines", "Calendário e Santuários", AppIconSlot.PILGRIMAGE, "nav_pilgrimage"),
     DOCTRINE("Doctrina e Historia", "Doctrine & History", "Doutrina e História", AppIconSlot.DOCTRINE, "nav_doctrine"),
     PARISHES("Parroquias", "Parishes", "Paróquias", AppIconSlot.PARISH, "nav_parishes"),
@@ -97,6 +99,7 @@ enum class AppDestination(
     STUDY_ORDERS("Órdenes y oficios", "Orders & Offices", "Ordens e ofícios", AppIconSlot.DOCTRINE, "nav_study_orders"),
     SPIRITUAL_LIFE("Vida espiritual", "Spiritual Life", "Vida espiritual", AppIconSlot.JOURNAL, "nav_spiritual"),
     REMINDERS("Recordatorios", "Reminders", "Lembretes", AppIconSlot.HABITS, "nav_reminders"),
+    BEGINNER("Primeros pasos", "Start here", "Primeiros passos", AppIconSlot.DOCTRINE, "nav_beginner"),
     MORE("Explorar", "Explore", "Explorar", AppIconSlot.MORE, "nav_more");
 
     companion object {
@@ -105,7 +108,7 @@ enum class AppDestination(
          * first-class tab, and [MORE] (with Settings) is the sixth tab;
          * everything else is reached by pushing from a tab.
          */
-        val tabs = listOf(HOME, BIBLE, ROSARY, PRAYERS, HABITS_VIRTUES, MORE)
+        val tabs = listOf(HOME, PRAYERS, BIBLE, MORE)
     }
 
     fun title(language: AppLanguage): String = when (language) {
@@ -122,14 +125,14 @@ enum class AppDestination(
      */
     fun tabLabel(language: AppLanguage): String = when (this) {
         HOME -> when (language) {
-            AppLanguage.ES -> "Inicio"
-            AppLanguage.EN -> "Home"
-            AppLanguage.PT -> "Início"
+            AppLanguage.ES -> "Hoy"
+            AppLanguage.EN -> "Today"
+            AppLanguage.PT -> "Hoje"
         }
         BIBLE -> when (language) {
-            AppLanguage.ES -> "Biblia"
-            AppLanguage.EN -> "Bible"
-            AppLanguage.PT -> "Bíblia"
+            AppLanguage.ES -> "Leer"
+            AppLanguage.EN -> "Read"
+            AppLanguage.PT -> "Ler"
         }
         ROSARY -> when (language) {
             AppLanguage.ES -> "Rosario"
@@ -137,9 +140,9 @@ enum class AppDestination(
             AppLanguage.PT -> "Terço"
         }
         PRAYERS -> when (language) {
-            AppLanguage.ES -> "Oraciones"
-            AppLanguage.EN -> "Prayers"
-            AppLanguage.PT -> "Orações"
+            AppLanguage.ES -> "Orar"
+            AppLanguage.EN -> "Pray"
+            AppLanguage.PT -> "Orar"
         }
         HABITS_VIRTUES -> when (language) {
             AppLanguage.ES -> "Hábitos"
@@ -147,9 +150,9 @@ enum class AppDestination(
             AppLanguage.PT -> "Hábitos"
         }
         MORE -> when (language) {
-            AppLanguage.ES -> "Más"
-            AppLanguage.EN -> "More"
-            AppLanguage.PT -> "Mais"
+            AppLanguage.ES -> "Explorar"
+            AppLanguage.EN -> "Explore"
+            AppLanguage.PT -> "Explorar"
         }
         else -> title(language)
     }
@@ -162,9 +165,16 @@ fun MainApp(
     ttsManager: LiturgicalTtsManager,
     preferencesStore: UserPreferencesStore,
     preferences: UserPreferences,
-    initialDestination: AppDestination = AppDestination.HOME
+    initialDestination: AppDestination = AppDestination.HOME,
+    initialReminderId: String? = null,
+    onReminderConsumed: () -> Unit = {}
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
+    val localToday = com.example.ui.screens.rememberLifecycleClock().toLocalDate()
+    val today = com.example.data.liturgy.CalendarDate(localToday.year, localToday.monthValue, localToday.dayOfMonth)
+    val todayContent by repository.dailyContent.collectAsState()
+    val todayReading = todayContent?.takeIf { it.date == today }?.reading ?: repository.emptyMassReading(today)
+    val todayLiturgy = todayContent?.takeIf { it.date == today }?.liturgicalDay ?: repository.getCurrentLiturgicalDay()
     // Bundled saint while the feed loads, then the feed's saint for today.
     val saintOfTheDay by repository.saintOfTheDayFlow.collectAsState()
     // A real back stack, saved across rotation and process death: pushing
@@ -183,39 +193,41 @@ fun MainApp(
         stackNames = if (destination in AppDestination.tabs) "" else (stack + current).joinToString(",") { it.name }
         currentName = destination.name
     }
-    var spiritualLifeInitialTab by remember { mutableIntStateOf(0) }
-    var bibleInitialTab by remember { mutableIntStateOf(0) }
+    var spiritualLifeInitialTab by rememberSaveable { mutableIntStateOf(0) }
+    var bibleInitialTab by rememberSaveable { mutableIntStateOf(0) }
     // Deep-link state: set by onOpenBible/onOpenCatechism (Doctrine screen
     // calls these once it exposes them), consumed as the initial params of
     // BibleScreen/CatechismScreen.
-    var bibleInitialBook by remember { mutableStateOf<String?>(null) }
-    var bibleInitialChapter by remember { mutableStateOf<Int?>(null) }
-    var bibleInitialVerse by remember { mutableStateOf<Int?>(null) }
-    var catechismInitialParagraph by remember { mutableStateOf<Int?>(null) }
+    var bibleInitialBook by rememberSaveable { mutableStateOf<String?>(null) }
+    var bibleInitialChapter by rememberSaveable { mutableStateOf<Int?>(null) }
+    var bibleInitialVerse by rememberSaveable { mutableStateOf<Int?>(null) }
+    var catechismInitialParagraph by rememberSaveable { mutableStateOf<Int?>(null) }
     val onOpenBible: (bookId: String, chapter: Int, verseStart: Int?) -> Unit =
         { bookId, chapter, verseStart ->
             bibleInitialBook = bookId
             bibleInitialChapter = chapter
             bibleInitialVerse = verseStart
             bibleInitialTab = 0
-            go(AppDestination.BIBLE)
+            // References are contextual pushes, even though Read is also a tab.
+            stackNames = (stack + current).joinToString(",") { it.name }
+            currentName = AppDestination.BIBLE.name
         }
     val onOpenCatechism: (paragraph: Int) -> Unit = { paragraph ->
         catechismInitialParagraph = paragraph
         go(AppDestination.CATECHISM)
     }
-    var prayersInitialPrayerId by remember { mutableStateOf<String?>(null) }
-    var prayersInitialTab by remember { mutableIntStateOf(0) }
-    var prayersInitialNightTab by remember { mutableIntStateOf(0) }
-    var prayersInitialOpenChaplet by remember { mutableStateOf(false) }
+    var prayersInitialPrayerId by rememberSaveable { mutableStateOf<String?>(null) }
+    var prayersInitialTab by rememberSaveable { mutableIntStateOf(0) }
+    var prayersInitialNightTab by rememberSaveable { mutableIntStateOf(0) }
+    var prayersInitialOpenChaplet by rememberSaveable { mutableStateOf(false) }
     // Deep link from Home's "Pregunta del día": the 0-based index of the
     // question whose answer opens directly (DoctrineAndHistoryScreen
     // initialQuestionIndex). Cleared on the next direct nav.
-    var questionsInitialIndex by remember { mutableStateOf<Int?>(null) }
-    var rosaryInitialTab by remember { mutableIntStateOf(0) }
+    var questionsInitialIndex by rememberSaveable { mutableStateOf<Int?>(null) }
+    var rosaryInitialTab by rememberSaveable { mutableIntStateOf(0) }
     // Home's "Santuarios" tile opens Calendar & Shrines on its shrines tab
     // (PilgrimageAndHabitsScreen initialTab); every other entry opens the calendar.
-    var pilgrimageInitialTab by remember { mutableIntStateOf(0) }
+    var pilgrimageInitialTab by rememberSaveable { mutableIntStateOf(0) }
     val onOpenPrayer: (prayerId: String) -> Unit = { prayerId ->
         prayersInitialPrayerId = prayerId
         prayersInitialTab = 0
@@ -227,12 +239,16 @@ fun MainApp(
 
     val design = LocalAppDesign.current
     val tabs = AppDestination.tabs
-    val isPushed = current !in tabs
+    val isPushed = stack.isNotEmpty() || current !in tabs
+    val screenStateHolder = rememberSaveableStateHolder()
 
+    val largeNavigationText = LocalAppTextStyles.current.navLabel.fontSize.value * androidx.compose.ui.platform.LocalDensity.current.fontScale > 18f
     val navItems = tabs.map { destination ->
         val (resting, active) = AppIcons.pair(destination.iconSlot)
         AppNavItem(
-            label = destination.tabLabel(currentLanguage),
+            label = if (destination == AppDestination.MORE && largeNavigationText) when (currentLanguage) {
+                AppLanguage.ES -> "Más"; AppLanguage.EN -> "More"; AppLanguage.PT -> "Mais"
+            } else destination.tabLabel(currentLanguage),
             icon = resting,
             selectedIcon = active,
             tag = destination.tag
@@ -264,20 +280,13 @@ fun MainApp(
         onNavSelected = {
             val dest = tabs[it]
             if (dest == AppDestination.BIBLE) {
-                bibleInitialBook = null
-                bibleInitialChapter = null
-                bibleInitialVerse = null
-            } else if (dest == AppDestination.CATECHISM) {
-                catechismInitialParagraph = null
-            } else if (dest == AppDestination.PRAYERS) {
-                prayersInitialPrayerId = null
-                prayersInitialTab = 0
-                prayersInitialNightTab = 0
-                prayersInitialOpenChaplet = false
-            } else if (dest == AppDestination.ROSARY) {
-                rosaryInitialTab = 0
+                bibleInitialBook = null; bibleInitialChapter = null; bibleInitialVerse = null; bibleInitialTab = 0
             }
-            go(dest)
+            if (dest == AppDestination.PRAYERS) {
+                prayersInitialPrayerId = null; prayersInitialTab = 0; prayersInitialNightTab = 0; prayersInitialOpenChaplet = false
+            }
+            stackNames = ""
+            currentName = dest.name
         },
         onBack = if (isPushed) ({ pop() }) else null,
         backLabel = if (isPushed) (stack.lastOrNull() ?: origin).title(currentLanguage) else null
@@ -350,6 +359,11 @@ fun MainApp(
                 },
                 label = "screen_transition"
             ) { target ->
+              screenStateHolder.SaveableStateProvider(when (target) {
+                  AppDestination.BIBLE -> "${target.name}:$bibleInitialTab:$bibleInitialBook:$bibleInitialChapter:$bibleInitialVerse"
+                  AppDestination.PRAYERS -> "${target.name}:$prayersInitialTab:$prayersInitialPrayerId:$prayersInitialNightTab:$prayersInitialOpenChaplet"
+                  else -> target.name
+              }) {
               val frame = remember(target) { ScreenFrame() }
               if (frame.insets != innerPadding) frame.insets = innerPadding
               CompositionLocalProvider(LocalScreenFrame provides frame) {
@@ -372,11 +386,11 @@ fun MainApp(
               ) {
                 when (target) {
                     AppDestination.HOME -> HomeScreen(
-                        dailyReading = repository.dailyMassReading,
-                        verseOfTheDay = repository.verseOfTheDay,
+                        dailyReading = todayReading,
+                        verseOfTheDay = todayContent?.takeIf { it.date == today }?.verse ?: repository.emptyVerseOfTheDay(),
                         saintOfTheDay = saintOfTheDay,
                         currentLanguage = currentLanguage,
-                        liturgicalDay = repository.getCurrentLiturgicalDay(),
+                        liturgicalDay = todayLiturgy,
                         dao = dao,
                         catholicQuestions = repository.catholicQuestions,
                         onOpenQuestions = { index ->
@@ -387,6 +401,7 @@ fun MainApp(
                         onOpenAppearance = { showCustomizerModal = true },
                         onOpenFontPicker = { showFontPicker = true },
                         onNavigateToMore = { go(AppDestination.MORE) },
+                        onOpenBeginner = { go(AppDestination.BEGINNER) },
                         onNavigateToHabits = { go(AppDestination.HABITS_VIRTUES) },
                         onNavigateToBible = {
                             bibleInitialBook = null
@@ -481,6 +496,7 @@ fun MainApp(
                         currentLanguage = currentLanguage,
                         dao = dao,
                         ttsManager = ttsManager,
+                        onExitContext = if (stack.isNotEmpty() && bibleInitialBook != null) ({ pop() }) else null,
                         initialMainTab = bibleInitialTab,
                         initialBookId = bibleInitialBook,
                         initialChapter = bibleInitialChapter,
@@ -508,6 +524,7 @@ fun MainApp(
                         initialPrayerId = prayersInitialPrayerId,
                         initialTab = prayersInitialTab,
                         initialNightOfficeTab = prayersInitialNightTab,
+                        onOpenRosary = { go(AppDestination.ROSARY) },
                         initialOpenChaplet = prayersInitialOpenChaplet
                     )
 
@@ -606,8 +623,16 @@ fun MainApp(
                         onBack = { pop() }
                     )
 
+                    AppDestination.BEGINNER -> com.example.ui.screens.BeginnerJourneyScreen(
+                        currentLanguage = currentLanguage,
+                        onOpenBible = { onOpenBible("joh", 1, 35) },
+                        onOpenPrayer = { onOpenPrayer("our_father") },
+                        onOpenParishes = { go(AppDestination.PARISHES) }
+                    )
+
                     AppDestination.MORE -> MoreScreen(
                         currentLanguage = currentLanguage,
+                        onOpenBeginner = { go(AppDestination.BEGINNER) },
                         sections = moreSections(currentLanguage) { destination ->
                             if (destination == AppDestination.SPIRITUAL_LIFE) spiritualLifeInitialTab = 0
                             if (destination == AppDestination.QUESTIONS) questionsInitialIndex = null
@@ -673,10 +698,23 @@ fun MainApp(
                 }
               }
               }
+              }
             }
         }
     }
 
+    }
+
+    LaunchedEffect(initialReminderId) {
+        val id = initialReminderId ?: return@LaunchedEffect
+        when {
+            id.startsWith("angelus_") -> onOpenPrayer("angelus")
+            id == "morning_prayer" -> onOpenPrayer("morning_offering")
+            id == "coronilla" -> { rosaryInitialTab = 1; go(AppDestination.ROSARY) }
+            id == "night_prayer" -> { prayersInitialTab = 2; prayersInitialNightTab = 2; go(AppDestination.PRAYERS) }
+            id == "daily_reading" -> { bibleInitialTab = 1; go(AppDestination.BIBLE) }
+        }
+        onReminderConsumed()
     }
 
     if (showLanguageSelector) {

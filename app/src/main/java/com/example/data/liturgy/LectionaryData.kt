@@ -1,32 +1,32 @@
 package com.example.data.liturgy
 
+import com.example.data.models.AppLanguage
+
 /**
- * The readings appointed for one celebration.
- *
- * Citations are [ScriptureReference] strings — canonical book id, chapter, and
- * an optional verse range — resolved against the bundled Douay-Rheims text.
- * Two consequences follow from that translation, and they shape the whole table:
- *
- *  - Psalms carry **Vulgate** numbers, which for Psalms 10–146 run one behind the
- *    Hebrew numbers the modern lectionary prints (its Ps 23 is `psa 22` here).
- *    Psalms are therefore cited whole, without a verse range: the Vulgate counts
- *    a psalm's title as a verse inconsistently, so a range copied from the
- *    lectionary would silently land on the wrong lines, while a whole psalm
- *    always resolves to the right text.
- *  - A reading that the lectionary spreads over two chapters is narrowed to the
- *    chapter that carries it, and a reading made of several fragments is given as
- *    the span that covers them, since a reference holds one chapter and one range.
+ * Devotional Scripture selections associated with a celebration, in bundled
+ * editions. This is not an approved liturgical lectionary. Some legacy entries
+ * include surrounding verses, whole psalms, or whole verses where the Mass
+ * appoints verse parts. No entry should be advertised as the complete Mass
+ * readings. Exact multi-range citations are used where verified; psalm chapter
+ * numbers follow the Vulgate, and edition-specific title offsets need explicit
+ * mapping, never a global shift.
  */
 data class LectionaryEntry(
     val firstReading: String,
     val responsorialPsalm: String,
     val secondReading: String?,   // null on most weekdays
-    val gospel: String
-)
+    val gospel: String,
+    val responsorialPsalmByLanguage: Map<AppLanguage, String> = emptyMap(),
+    val sourceUrl: String? = null,
+    /** No approved liturgical translation, response, or verse-part guarantees. */
+    val isCompleteAppointedReadings: Boolean = false
+) {
+    fun psalmFor(language: AppLanguage): String = responsorialPsalmByLanguage[language] ?: responsorialPsalm
+}
 
 /**
- * The Sunday and Solemnity readings of the *Lectionary for Mass* (Ordinary Form,
- * General Roman Calendar), keyed by the `lectionaryKey` that
+ * Selections following Sunday and Solemnity themes of the Roman Rite,
+ * General Roman Calendar, keyed by the `lectionaryKey` that
  * [LiturgicalDayInfo] carries.
  *
  * Only celebrations whose readings are proper to the day are listed; a weekday
@@ -37,32 +37,40 @@ object LectionaryData {
     /** Keyed by "<lectionaryKey>" for celebrations that do not vary by cycle. */
     val fixed: Map<String, LectionaryEntry> = mapOf(
         // Christmas and its octave
-        "christmas_day" to LectionaryEntry("isa 52:7-10", "psa 97", "heb 1:1-6", "joh 1:1-18"),
+        "christmas_day" to LectionaryEntry("isa 52:7-10", "psa 97:1-6", "heb 1:1-6", "joh 1:1-18", sourceUrl = "https://bible.usccb.org/bible/readings/122524-day.cfm"),
         "st_stephen" to LectionaryEntry("act 7:54-59", "psa 30", null, "mat 10:17-22"),
         "st_john" to LectionaryEntry("1jo 1:1-4", "psa 96", null, "joh 20:2-8"),
         "holy_innocents" to LectionaryEntry("1jo 1:5-10", "psa 123", null, "mat 2:13-18"),
         "mary_mother_of_god" to LectionaryEntry("num 6:22-27", "psa 66", "gal 4:4-7", "luk 2:16-21"),
-        "epiphany" to LectionaryEntry("isa 60:1-6", "psa 71", "eph 3:2-6", "mat 2:1-12"),
+        "epiphany" to LectionaryEntry("isa 60:1-6", "psa 71", "eph 3:2-3,5-6", "mat 2:1-12"),
         // The Baptism takes the Year A set; its Gospel alone varies by cycle.
-        "baptism_of_the_lord" to LectionaryEntry("isa 42:1-7", "psa 28", "act 10:34-38", "mat 3:13-17"),
+        "baptism_of_the_lord" to LectionaryEntry("isa 42:1-4,6-7", "psa 28", "act 10:34-38", "mat 3:13-17"),
 
         // Lent and the Triduum
-        "ash_wednesday" to LectionaryEntry("joe 2:12-18", "psa 50", "2co 5:20-21", "mat 6:1-18"),
-        // The Passion runs John 18:1—19:42; the chapter of the Crucifixion is given.
-        "good_friday" to LectionaryEntry("isa 53:1-12", "psa 30", "heb 4:14-16", "joh 19"),
+        "ash_wednesday" to LectionaryEntry("joe 2:12-18", "psa 50", "2co 5:20-6:2", "mat 6:1-6,16-18"),
+        // USCCB Good Friday 2024: all three readings, including both Passion
+        // chapters. The Psalm's verse indices are mapped per bundled edition.
+        "good_friday" to LectionaryEntry(
+            "isa 52:13-53:12", "psa 30:1,5,11-12,14-16,24", "heb 4:14-16; 5:7-9", "joh 18:1-19:42",
+            responsorialPsalmByLanguage = mapOf(
+                AppLanguage.ES to "psa 30:2,6,12-13,15-17,25",
+                AppLanguage.PT to "psa 30:2,6,12-13,15-17,25"
+            ),
+            sourceUrl = "https://bible.usccb.org/bible/readings/032924.cfm"
+        ),
         "easter_sunday" to LectionaryEntry("act 10:34-43", "psa 117", "col 3:1-4", "joh 20:1-9"),
 
         // Solemnities and Feasts of the Lord and of the Blessed Virgin Mary
         "presentation" to LectionaryEntry("mal 3:1-4", "psa 23", "heb 2:14-18", "luk 2:22-40"),
         "st_joseph" to LectionaryEntry("2sa 7:4-16", "psa 88", "rom 4:13-22", "mat 1:18-24"),
-        "annunciation" to LectionaryEntry("isa 7:10-14", "psa 39", "heb 10:4-10", "luk 1:26-38"),
+        "annunciation" to LectionaryEntry("isa 7:10-14; 8:10", "psa 39", "heb 10:4-10", "luk 1:26-38"),
         "sacred_heart" to LectionaryEntry("deu 7:6-11", "psa 102", "1jo 4:7-16", "mat 11:25-30"),
         "immaculate_heart" to LectionaryEntry("isa 61:9-11", "1sa 2:1-8", null, "luk 2:41-51"),
         "john_baptist_nativity" to LectionaryEntry("isa 49:1-6", "psa 138", "act 13:22-26", "luk 1:57-80"),
         "peter_and_paul" to LectionaryEntry("act 12:1-11", "psa 33", "2ti 4:6-18", "mat 16:13-19"),
         // The Transfiguration keeps one set of readings; its Gospel varies by cycle.
         "transfiguration" to LectionaryEntry("dan 7:9-14", "psa 96", "2pe 1:16-19", "mat 17:1-9"),
-        "assumption" to LectionaryEntry("rev 12:1-6", "psa 44", "1co 15:20-27", "luk 1:39-56"),
+        "assumption" to LectionaryEntry("rev 11:19; 12:1-6,10", "psa 44", "1co 15:20-27", "luk 1:39-56"),
         "holy_cross" to LectionaryEntry("num 21:4-9", "psa 77", "phi 2:6-11", "joh 3:13-17"),
         "all_saints" to LectionaryEntry("rev 7:2-14", "psa 23", "1jo 3:1-3", "mat 5:1-12"),
         // All Souls offers a wide choice; the first option of each slot is given.
@@ -162,7 +170,7 @@ private val cycleB: Map<String, LectionaryEntry> = mapOf(
     "advent_4_sunday" to LectionaryEntry("2sa 7:1-16", "psa 88", "rom 16:25-27", "luk 1:26-38"),
 
     // Christmas
-    "holy_family" to LectionaryEntry("gen 15:1-6", "psa 104", "heb 11:8-19", "luk 2:22-40"),
+    "holy_family" to LectionaryEntry("gen 15:1-6; 21:1-3", "psa 104", "heb 11:8,11-12,17-19", "luk 2:22-40"),
 
     // Lent
     "lent_1_sunday" to LectionaryEntry("gen 9:8-15", "psa 24", "1pe 3:18-22", "mar 1:12-15"),
@@ -197,7 +205,7 @@ private val cycleB: Map<String, LectionaryEntry> = mapOf(
     "ot_6_sunday" to LectionaryEntry("lev 13:1-46", "psa 31", "1co 10:31-33", "mar 1:40-45"),
     "ot_7_sunday" to LectionaryEntry("isa 43:18-25", "psa 40", "2co 1:18-22", "mar 2:1-12"),
     "ot_8_sunday" to LectionaryEntry("hos 2:14-20", "psa 102", "2co 3:1-6", "mar 2:18-22"),
-    "ot_9_sunday" to LectionaryEntry("deu 5:12-15", "psa 80", "2co 4:6-11", "mar 2:23-28"),
+    "ot_9_sunday" to LectionaryEntry("deu 5:12-15", "psa 80", "2co 4:6-11", "mar 2:23-3:6"),
     "ot_10_sunday" to LectionaryEntry("gen 3:9-15", "psa 129", "2co 4:13-18", "mar 3:20-35"),
     "ot_11_sunday" to LectionaryEntry("eze 17:22-24", "psa 91", "2co 5:6-10", "mar 4:26-34"),
     "ot_12_sunday" to LectionaryEntry("job 38:1-11", "psa 106", "2co 5:14-17", "mar 4:35-40"),
@@ -227,18 +235,18 @@ private val cycleB: Map<String, LectionaryEntry> = mapOf(
 
 private val cycleC: Map<String, LectionaryEntry> = mapOf(
     // Advent
-    "advent_1_sunday" to LectionaryEntry("jer 33:14-16", "psa 24", "1th 3:12-13", "luk 21:25-36"),
+    "advent_1_sunday" to LectionaryEntry("jer 33:14-16", "psa 24", "1th 3:12-4:2", "luk 21:25-28,34-36"),
     "advent_2_sunday" to LectionaryEntry("bar 5:1-9", "psa 125", "phi 1:4-11", "luk 3:1-6"),
     // The response is the canticle of Isaiah rather than a psalm.
     "advent_3_sunday" to LectionaryEntry("zep 3:14-18", "isa 12:2-6", "phi 4:4-7", "luk 3:10-18"),
     "advent_4_sunday" to LectionaryEntry("mic 5:2-5", "psa 79", "heb 10:5-10", "luk 1:39-45"),
 
     // Christmas
-    "holy_family" to LectionaryEntry("1sa 1:20-28", "psa 83", "1jo 3", "luk 2:41-52"),
+    "holy_family" to LectionaryEntry("1sa 1:20-22,24-28", "psa 83", "1jo 3:1-2,21-24", "luk 2:41-52"),
 
     // Lent
     "lent_1_sunday" to LectionaryEntry("deu 26:4-10", "psa 90", "rom 10:8-13", "luk 4:1-13"),
-    "lent_2_sunday" to LectionaryEntry("gen 15:5-18", "psa 26", "phi 3:17-21", "luk 9:28-36"),
+    "lent_2_sunday" to LectionaryEntry("gen 15:5-18", "psa 26", "phi 3:17-4:1", "luk 9:28-36"),
     "lent_3_sunday" to LectionaryEntry("exo 3:1-15", "psa 102", "1co 10:1-12", "luk 13:1-9"),
     "lent_4_sunday" to LectionaryEntry("jos 5:9-12", "psa 33", "2co 5:17-21", "luk 15:1-32"),
     "lent_5_sunday" to LectionaryEntry("isa 43:16-21", "psa 125", "phi 3:8-14", "joh 8:1-11"),

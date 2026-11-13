@@ -49,6 +49,13 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.withContext
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -64,6 +71,16 @@ class CatholicDataRepository(
     private val bibleProvider: BibleTextProvider? = context?.let { BibleTextProvider(it) }
     val bibleDownloadManager: BibleDownloadManager? = context?.let { BibleDownloadManager(it) }
 
+    /** Resolves lectionary citations against the bundled Bible. */
+    private val scriptureResolver by lazy { ScriptureResolver(
+        bookName = { bookId, language ->
+            BibleData.catholicCanonBooks.firstOrNull { it.id == bookId }?.name?.get(language)
+        },
+        versesOf = { bookId, chapter, language ->
+            bibleProvider?.getVerses(bookId, chapter, language) ?: emptyList()
+        }
+    ) }
+
     private val canonIds: List<String> by lazy { BibleData.catholicCanonBooks.map { it.id } }
     private val crossReferenceIndex: CrossReferenceIndex? by lazy {
         context?.let { CrossReferenceIndex(it, canonIds) }
@@ -72,6 +89,48 @@ class CatholicDataRepository(
 
     private val _currentLanguage = MutableStateFlow(detectInitialLanguage())
     val currentLanguage: StateFlow<AppLanguage> = _currentLanguage.asStateFlow()
+
+    private val _activeBibleEditionId = MutableStateFlow("bundled")
+    val activeBibleEditionId: StateFlow<String> = _activeBibleEditionId.asStateFlow()
+
+    /** Reader selection never changes the edition used for liturgical selections. */
+    fun selectBibleEdition(id: String) {
+        val selected = id.takeIf { candidate ->
+            bibleDownloadManager?.specs?.any { it.id == candidate } == true &&
+                bibleDownloadManager.isDownloaded(candidate)
+        } ?: "bundled"
+        _activeBibleEditionId.value = selected
+        preferencesStore?.let { store -> scope.launch { store.setActiveBibleTranslationId(selected) } }
+    }
+
+    data class DailyContent(
+        val date: CalendarDate,
+        val reading: DailyMassReading,
+        val verse: VerseOfTheDay,
+        val liturgicalDay: com.example.data.models.LiturgicalCalendarDay
+    )
+
+    private val _dailyContent = MutableStateFlow<DailyContent?>(null)
+    val dailyContent: StateFlow<DailyContent?> = _dailyContent.asStateFlow()
+    private val readingCache = java.util.concurrent.ConcurrentHashMap<Pair<CalendarDate, AppLanguage>, DailyMassReading>()
+    private val verseCache = java.util.concurrent.ConcurrentHashMap<Pair<CalendarDate, AppLanguage>, VerseOfTheDay>()
+
+    fun emptyVerseOfTheDay(): VerseOfTheDay = DevotionsAndHistoryData.verseOfTheDay.copy(
+        reference = "", text = LocalizedText("", "", "")
+    )
+
+    /** Loading state contains no other day's text or invented reflection. */
+    fun emptyMassReading(date: CalendarDate): DailyMassReading {
+        val info = LiturgicalCalendar.dayInfo(date)
+        val empty = LocalizedText("", "", "")
+        return BibleData.todayMassReading.copy(
+            dateDisplay = date.toString(), liturgicalSeason = info.season.displayName,
+            liturgicalColorHex = info.color.hex, feastTitle = info.title,
+            firstReadingRef = "", firstReadingText = empty, responsorialPsalmRef = "", responsorialPsalmText = empty,
+            secondReadingRef = null, secondReadingText = null, gospelRef = "", gospelText = empty,
+            homilyReflection = empty, saintOfFeast = info.title, sourceName = "", sourceUrl = ""
+        )
+    }
 
     private fun detectInitialLanguage(): AppLanguage {
         val lang = Locale.getDefault().language.lowercase()
@@ -120,6 +179,8 @@ class CatholicDataRepository(
      */
     fun getMassReading(date: CalendarDate): DailyMassReading {
         val language = _currentLanguage.value
+        val key = date to language
+        readingCache[key]?.let { return it }
         val info = LiturgicalCalendar.dayInfo(date)
         val entry = LectionaryData.entryFor(info.lectionaryKey, info.sundayCycle)
         val fallback = BibleData.todayMassReading
@@ -146,17 +207,24 @@ class CatholicDataRepository(
             feastTitle = info.title,
             firstReadingRef = citation(entry?.firstReading),
             firstReadingText = passage(entry?.firstReading) ?: empty,
-            responsorialPsalmRef = citation(entry?.responsorialPsalm),
-            responsorialPsalmText = passage(entry?.responsorialPsalm) ?: empty,
+            responsorialPsalmRef = citation(entry?.psalmFor(language)),
+            responsorialPsalmText = passage(entry?.psalmFor(language)) ?: empty,
             secondReadingRef = entry?.secondReading?.let { citation(it) },
             secondReadingText = passage(entry?.secondReading),
             gospelRef = citation(entry?.gospel),
             gospelText = passage(entry?.gospel) ?: empty,
-            homilyReflection = fallback.homilyReflection,
+            homilyReflection = empty,
             saintOfFeast = info.title,
-            sourceName = "Lectionary for Mass · Douay-Rheims",
-            sourceUrl = fallback.sourceUrl
-        )
+            sourceName = when (language) {
+                AppLanguage.ES -> "Selecciones bíblicas · edición de lectura, no leccionario litúrgico"
+                AppLanguage.EN -> "Scripture selections · reading edition, not a liturgical lectionary"
+                AppLanguage.PT -> "Seleções bíblicas · edição de leitura, não lecionário litúrgico"
+            },
+            sourceUrl = entry?.sourceUrl ?: fallback.sourceUrl
+        ).also {
+            if (readingCache.size > 6) readingCache.clear()
+            readingCache[key] = it
+        }
     }
 
     fun getChapter(
@@ -164,7 +232,7 @@ class CatholicDataRepository(
         chapterNumber: Int,
         language: AppLanguage = _currentLanguage.value
     ): BibleChapter {
-        val verses = bibleProvider?.getVerses(bookId, chapterNumber, language)
+        val verses = bibleProvider?.getVerses(bookId, chapterNumber, language, _activeBibleEditionId.value)
             ?: BibleData.getVersesForBookAndChapter(bookId, chapterNumber)
         return BibleChapter(
             bookId = bookId,
@@ -175,7 +243,9 @@ class CatholicDataRepository(
 
     /** Chapters actually available for [bookId], falling back to the declared count. */
     fun getChapterCount(bookId: String, language: AppLanguage = _currentLanguage.value): Int {
-        val fromAssets = bibleProvider?.chapterCount(bookId, language) ?: 0
+        val editionId = _activeBibleEditionId.value
+        val fromAssets = bibleProvider?.chapterCount(bookId, language, editionId) ?: 0
+        if (editionId != "bundled") return fromAssets
         if (fromAssets > 0) return fromAssets
         return BibleData.catholicCanonBooks.firstOrNull { it.id == bookId }?.chaptersCount ?: 0
     }
@@ -185,7 +255,7 @@ class CatholicDataRepository(
         limit: Int = 50,
         language: AppLanguage = _currentLanguage.value
     ): List<Triple<String, Int, com.example.data.models.BibleVerse>> {
-        return bibleProvider?.search(query, language, limit) ?: emptyList()
+        return bibleProvider?.search(query, language, limit, _activeBibleEditionId.value) ?: emptyList()
     }
 
     // Rosary & Divine Mercy
@@ -240,7 +310,36 @@ class CatholicDataRepository(
 
     init {
         refreshSaintOfTheDay(_currentLanguage.value)
+        preferencesStore?.let { store ->
+            scope.launch {
+                store.preferences.collectLatest { preferences ->
+                    val id = preferences.activeBibleTranslationId
+                    _activeBibleEditionId.value = id.takeIf { candidate ->
+                        bibleDownloadManager?.specs?.any { it.id == candidate } == true &&
+                            bibleDownloadManager.isDownloaded(candidate)
+                    } ?: "bundled"
+                }
+            }
+        }
+        scope.launch {
+            val dates = flow {
+                while (true) {
+                    emit(LiturgicalCalendar.today())
+                    delay(30_000)
+                }
+            }.distinctUntilChanged()
+            combine(currentLanguage, dates) { language, date -> language to date }
+                .collectLatest { (language, date) ->
+                    _dailyContent.value = null
+                    val loaded = withContext(Dispatchers.Default) {
+                        DailyContent(date, getMassReading(date), dailyVerseFor(date), getLiturgicalDay(date))
+                    }
+                    if (_currentLanguage.value == language) _dailyContent.value = loaded
+                }
+        }
     }
+
+    fun close() { scope.cancel() }
 
     /**
      * (Re)fetches today's saint in [language] and pushes it into
@@ -441,6 +540,8 @@ class CatholicDataRepository(
         get() = dailyVerseFor(LiturgicalCalendar.today())
 
     fun dailyVerseFor(date: CalendarDate): VerseOfTheDay {
+        val key = date to _currentLanguage.value
+        verseCache[key]?.let { return it }
         val referenceId = DailyVerseRotation.referenceFor(
             java.time.LocalDate.of(date.year, date.month, date.day)
         )
@@ -458,7 +559,10 @@ class CatholicDataRepository(
             text = text,
             meditation = DailyVerseMeditation.meditation,
             spiritualChallenge = DailyVerseMeditation.challenge
-        )
+        ).also {
+            if (verseCache.size > 6) verseCache.clear()
+            verseCache[key] = it
+        }
     }
     val marianApparitions: List<MarianApparition> get() = DevotionsAndHistoryData.marianApparitions
     val christManifestations: List<ChristManifestation> get() = DevotionsAndHistoryData.christManifestations
@@ -557,13 +661,13 @@ class CatholicDataRepository(
 
         val fasting = when {
             info.isFastDay && info.isAbstinenceDay -> LocalizedText(
-                "Ayuno y abstinencia de carne", "Fast and abstinence from meat", "Jejum e abstinência de carne"
+                "Disciplina romana de ayuno y abstinencia: edad y normas locales aplicables", "Roman fasting and abstinence discipline: age and local rules apply", "Disciplina romana de jejum e abstinência: aplicam-se idade e normas locais"
             )
             info.isAbstinenceDay -> LocalizedText(
-                "Abstinencia de carne", "Abstinence from meat", "Abstinência de carne"
+                "Abstinencia: consulta las normas locales", "Abstinence: check local norms", "Abstinência: consulte as normas locais"
             )
             info.isHolyDayOfObligation -> LocalizedText(
-                "Precepto de Santa Misa", "Mass obligation", "Preceito da Santa Missa"
+                "Domingo: día de la Eucaristía", "Sunday: the day of the Eucharist", "Domingo: dia da Eucaristia"
             )
             else -> null
         }
@@ -591,15 +695,7 @@ class CatholicDataRepository(
         )
     }
 
-    /** Resolves lectionary citations against the bundled Bible. */
-    private val scriptureResolver = ScriptureResolver(
-        bookName = { bookId, language ->
-            BibleData.catholicCanonBooks.firstOrNull { it.id == bookId }?.name?.get(language)
-        },
-        versesOf = { bookId, chapter, language ->
-            bibleProvider?.getVerses(bookId, chapter, language) ?: emptyList()
-        }
-    )
+
 
     // Vatican Scripture Study Course
     val scriptureStudyTracks: List<com.example.data.models.ScriptureCourseTrack> get() = ScriptureStudyData.tracks

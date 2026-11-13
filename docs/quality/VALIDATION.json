@@ -1,0 +1,17 @@
+{
+  "functional-final": {
+    "tests": 261,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 49
+  },
+  "compact-final": {
+    "tests": 14,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "suites": 3
+  },
+  "apk_sha256": "fef57aae50852060a8e28c0cfbfe0c84e7182a81e4bca57e6d2ea1e1b630b253"
+}

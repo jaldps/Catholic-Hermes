@@ -233,6 +233,7 @@ fun SpiritualLifeScreen(
     modifier: Modifier = Modifier
 ) {
     AppEdgeToEdge()
+    val design = LocalAppDesign.current
     val scope = rememberCoroutineScope()
     val journal by remember(dao) { dao.getAllJournalEntries() }
         .collectAsState<List<JournalEntryEntity>, List<JournalEntryEntity>?>(initial = null)
@@ -272,8 +273,8 @@ fun SpiritualLifeScreen(
             transitionSpec = {
                 val forward = targetState != PAGE_HUB
                 val dir = if (forward) 1 else -1
-                (slideInHorizontally(tween(300)) { dir * it / 3 } + fadeIn(tween(300))) togetherWith
-                    (slideOutHorizontally(tween(300)) { -dir * it / 3 } + fadeOut(tween(200)))
+                (slideInHorizontally(tween(if (design.reduceMotion) 0 else 300)) { dir * it / 3 } + fadeIn(tween(if (design.reduceMotion) 0 else 300))) togetherWith
+                    (slideOutHorizontally(tween(if (design.reduceMotion) 0 else 300)) { -dir * it / 3 } + fadeOut(tween(if (design.reduceMotion) 0 else 200)))
             },
             label = "spiritualPage"
         ) { shown ->
@@ -332,7 +333,6 @@ fun SpiritualLifeScreen(
                         } else {
                             if (isPlayingAudio) ttsManager.stop()
                             playingSource = "chant:${chant.id}"
-                            ttsManager.playSacredChime()
                             ttsManager.speakSingle(chant.latinLyrics)
                         }
                     }
@@ -441,7 +441,7 @@ private fun SpiritualHub(
                 AppDetailHeader(
                     title = language.pick("Vida espiritual", "Spiritual life", "Vida espiritual"),
                     assetPath = hero,
-                    imageHeight = 248.dp
+                    imageHeight = 180.dp
                 )
             }
             item(key = "life_practices") {
@@ -734,11 +734,11 @@ private fun GrantedToggle(granted: Boolean, language: AppLanguage, onToggle: () 
             Modifier
                 .size(24.dp)
                 .clip(CircleShape)
-                .background(if (granted) p.success else Color.Transparent)
+                .background(if (granted) p.action else Color.Transparent)
                 .border(1.5.dp, if (granted) p.success else p.textSecondary, CircleShape),
             contentAlignment = Alignment.Center
         ) {
-            if (granted) Icon(Icons.Filled.Check, null, tint = Color.White, modifier = Modifier.size(16.dp))
+            if (granted) Icon(Icons.Filled.Check, null, tint = p.onAction, modifier = Modifier.size(16.dp))
         }
         Spacer(Modifier.width(10.dp))
         Text(label, style = styles.subhead, color = p.textPrimary)
@@ -1080,7 +1080,7 @@ private fun QuizOptionRow(text: String, visual: OptionVisual, stateLabel: String
                 Modifier
                     .size(24.dp)
                     .clip(CircleShape)
-                    .background(if (visual == OptionVisual.Correct) p.success else Color.Transparent)
+                    .background(if (visual == OptionVisual.Correct) p.action else Color.Transparent)
                     .border(
                         1.5.dp,
                         when (visual) {
@@ -1094,7 +1094,7 @@ private fun QuizOptionRow(text: String, visual: OptionVisual, stateLabel: String
                 contentAlignment = Alignment.Center
             ) {
                 when (visual) {
-                    OptionVisual.Correct -> Icon(Icons.Filled.Check, null, tint = Color.White, modifier = Modifier.size(16.dp))
+                    OptionVisual.Correct -> Icon(Icons.Filled.Check, null, tint = p.onAction, modifier = Modifier.size(16.dp))
                     OptionVisual.Wrong -> Icon(Icons.Outlined.Close, null, tint = p.textPrimary, modifier = Modifier.size(14.dp))
                     else -> Unit
                 }
@@ -1130,7 +1130,7 @@ private fun StationsPage(
     if (stations.isEmpty()) {
         LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = dock + 24.dp)) {
             item {
-                AppDetailHeader(title = label, assetPath = hero, imageHeight = 248.dp)
+                AppDetailHeader(title = label, assetPath = hero, imageHeight = 180.dp)
             }
             item {
                 AppEmptyState(
@@ -1220,7 +1220,7 @@ private fun StationPage(
                     *listOfNotNull(hero).toTypedArray()
                 ),
                 eyebrow = label,
-                imageHeight = 280.dp
+                imageHeight = 200.dp
             )
         }
         item {
@@ -1356,7 +1356,7 @@ private fun ChantPage(
                     "${chants.size} ${if (chants.size == 1) "chant" else "chants"}",
                     "${chants.size} ${if (chants.size == 1) "canto" else "cantos"}"
                 ),
-                imageHeight = 248.dp
+                imageHeight = 180.dp
             )
         }
         if (chants.isEmpty()) {
@@ -1426,11 +1426,17 @@ private fun ChantCard(
                     playing = playing,
                     onClick = onTogglePlayback,
                     contentDescription = if (playing) language.pick("Detener", "Stop", "Parar")
-                    else language.pick("Escuchar $name", "Listen to $name", "Ouvir $name")
+                    else language.pick("Leer letra latina de $name · voz sintética", "Read Latin lyrics of $name · synthetic voice", "Ler letra latina de $name · voz sintética")
                 )
             }
             Spacer(Modifier.height(12.dp))
             Text(chant.description.get(language), style = styles.subhead, color = p.textSecondary)
+            Spacer(Modifier.height(8.dp))
+            Text(
+                language.pick("Lectura de la letra latina con voz sintética; no es canto grabado.", "Latin lyrics read by a synthetic voice; this is not recorded singing.", "Leitura da letra latina com voz sintética; não é canto gravado."),
+                style = styles.footnote,
+                color = p.textSecondary
+            )
             Spacer(Modifier.height(14.dp))
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text(

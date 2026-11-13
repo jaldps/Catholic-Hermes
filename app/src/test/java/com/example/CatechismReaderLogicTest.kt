@@ -75,8 +75,8 @@ class CatechismReaderLogicTest {
     @Test
     fun englishParagraphIsJoinedAndFreeOfFootnoteDigits() {
         val raw = CatechismFullData.contentByNumber.getValue(2).en
-        assertTrue(raw.contains('\n'))
-        val clean = cccDisplayText(raw, AppLanguage.EN)
+        // The verified source is normalized; exercise display joining explicitly.
+        val clean = cccDisplayText(raw.replace("Strengthened", "\nStrengthened"), AppLanguage.EN)
         assertFalse(clean.contains('\n'))
         assertFalse(clean.contains("\" 4 Strengthened"))
         assertTrue(clean.contains("age.\" Strengthened by this mission"))

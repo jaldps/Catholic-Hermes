@@ -85,6 +85,13 @@ enum class WeekdayCycle(val displayName: LocalizedText) {
     II(LocalizedText("Año II", "Year II", "Ano II"))
 }
 
+/** Explicit transfer rules; these do not identify a country or its obligations. */
+data class CalendarRules(
+    val epiphanyOnSunday: Boolean = false,
+    val ascensionOnSunday: Boolean = false,
+    val corpusChristiOnSunday: Boolean = false
+)
+
 /** Everything the app needs to know about one day of the Church's year. */
 data class LiturgicalDayInfo(
     val date: CalendarDate,
@@ -97,20 +104,26 @@ data class LiturgicalDayInfo(
     val liturgicalYear: Int,
     val sundayCycle: SundayCycle,
     val weekdayCycle: WeekdayCycle,
+    /** Sundays only until a local calendar and obligation law are configured. */
     val isHolyDayOfObligation: Boolean,
+    /** Universal Latin discipline; age, health and local adaptations apply. */
     val isFastDay: Boolean,
+    /** CIC 1251; episcopal conferences may substitute under CIC 1253. */
     val isAbstinenceDay: Boolean,
     /** Stable key into the lectionary, e.g. `ot_30_sunday` or `christmas_day`. */
-    val lectionaryKey: String
+    val lectionaryKey: String,
+    /** Canon 1246 list: a candidate, not a determination of local obligation. */
+    val isUniversalHolyDayCandidate: Boolean = false,
+    val calendarNeedsLocalConfirmation: Boolean = true
 )
 
 /**
- * Computes the Roman Rite calendar (Ordinary Form, General Roman Calendar) for
- * any date, from the date of Easter outward. Nothing here is table-driven by
- * year, so it is correct past and future rather than only for a seeded range.
- *
- * Regional transfers are not applied: Ascension is given on its Thursday and
- * Epiphany on 6 January, as in the General Calendar.
+ * Computes the principal celebrations of the contemporary General Roman Calendar.
+ * This is not a historical calendar or a complete diocesan sanctoral calendar.
+ * Defaults retain Epiphany on 6 January, Ascension on Thursday, and Corpus
+ * Christi on Thursday. Explicit transfer rules may be supplied; language never
+ * determines a jurisdiction. Local obligations and personal age requirements
+ * must be confirmed separately (CIC 1246–1253).
  */
 object LiturgicalCalendar {
 
@@ -146,13 +159,18 @@ object LiturgicalCalendar {
         return adventFour.plusDays(-21)
     }
 
-    /** Baptism of the Lord: the Sunday after Epiphany, or 7 January's Monday. */
-    fun baptismOfTheLord(year: Int): CalendarDate {
-        val epiphany = CalendarDate(year, 1, 6)
-        val dow = epiphany.isoDayOfWeek
-        // Sunday after 6 January; when Epiphany itself is a Sunday the feast
-        // falls on the following day.
-        return if (dow == 7) epiphany.plusDays(1) else epiphany.plusDays(7 - dow)
+    fun epiphany(year: Int, rules: CalendarRules = CalendarRules()): CalendarDate {
+        val januarySix = CalendarDate(year, 1, 6)
+        if (!rules.epiphanyOnSunday) return januarySix
+        val januaryTwo = CalendarDate(year, 1, 2)
+        return januaryTwo.plusDays(7 - januaryTwo.isoDayOfWeek)
+    }
+
+    /** Monday exception applies only where Epiphany is transferred to Jan 7/8. */
+    fun baptismOfTheLord(year: Int, rules: CalendarRules = CalendarRules()): CalendarDate {
+        val epiphany = epiphany(year, rules)
+        return if (rules.epiphanyOnSunday && epiphany.day >= 7) epiphany.plusDays(1)
+        else epiphany.plusDays(7 - epiphany.isoDayOfWeek % 7)
     }
 
     fun ashWednesday(year: Int): CalendarDate = easter(year).plusDays(-46)
@@ -161,10 +179,12 @@ object LiturgicalCalendar {
     fun goodFriday(year: Int): CalendarDate = easter(year).plusDays(-2)
     fun holySaturday(year: Int): CalendarDate = easter(year).plusDays(-1)
     fun divineMercySunday(year: Int): CalendarDate = easter(year).plusDays(7)
-    fun ascension(year: Int): CalendarDate = easter(year).plusDays(39)
+    fun ascension(year: Int, rules: CalendarRules = CalendarRules()): CalendarDate =
+        easter(year).plusDays(if (rules.ascensionOnSunday) 42 else 39)
     fun pentecost(year: Int): CalendarDate = easter(year).plusDays(49)
     fun trinitySunday(year: Int): CalendarDate = easter(year).plusDays(56)
-    fun corpusChristi(year: Int): CalendarDate = easter(year).plusDays(63)
+    fun corpusChristi(year: Int, rules: CalendarRules = CalendarRules()): CalendarDate =
+        easter(year).plusDays(if (rules.corpusChristiOnSunday) 63 else 60)
     fun sacredHeart(year: Int): CalendarDate = easter(year).plusDays(68)
     fun immaculateHeart(year: Int): CalendarDate = easter(year).plusDays(69)
 
@@ -222,7 +242,7 @@ object LiturgicalCalendar {
         ),
         3 to 19 to Fixed(
             LocalizedText("San José, Esposo de la Virgen María", "Saint Joseph, Spouse of the Blessed Virgin Mary", "São José, Esposo da Virgem Maria"),
-            CelebrationRank.SOLEMNITY, LiturgicalColor.WHITE, key = "st_joseph"
+            CelebrationRank.SOLEMNITY, LiturgicalColor.WHITE, obligation = true, key = "st_joseph"
         ),
         3 to 25 to Fixed(
             LocalizedText("Anunciación del Señor", "The Annunciation of the Lord", "Anunciação do Senhor"),
@@ -234,7 +254,7 @@ object LiturgicalCalendar {
         ),
         6 to 29 to Fixed(
             LocalizedText("San Pedro y San Pablo, Apóstoles", "Saints Peter and Paul, Apostles", "São Pedro e São Paulo, Apóstolos"),
-            CelebrationRank.SOLEMNITY, LiturgicalColor.RED, key = "peter_and_paul"
+            CelebrationRank.SOLEMNITY, LiturgicalColor.RED, obligation = true, key = "peter_and_paul"
         ),
         8 to 6 to Fixed(
             LocalizedText("Transfiguración del Señor", "The Transfiguration of the Lord", "Transfiguração do Senhor"),
@@ -278,6 +298,39 @@ object LiturgicalCalendar {
         )
     )
 
+    /** UNLYC 5, 60 and the proper March solemnity transfer rubrics. */
+    private fun fixedFor(date: CalendarDate, rules: CalendarRules): Fixed? {
+        val year = date.year
+        val palm = palmSunday(year)
+        val easter = easter(year)
+        val transfers = mapOf(
+            (1 to 6) to epiphany(year, rules),
+            (3 to 19) to CalendarDate(year, 3, 19).let {
+                when {
+                    it >= palm && it < easter -> palm.plusDays(-1)
+                    it.isSunday -> it.plusDays(1)
+                    else -> it
+                }
+            },
+            (3 to 25) to CalendarDate(year, 3, 25).let {
+                when {
+                    it >= palm && it <= easter.plusDays(7) -> easter.plusDays(8)
+                    it.isSunday -> it.plusDays(1)
+                    else -> it
+                }
+            },
+            (12 to 8) to CalendarDate(year, 12, 8).let { if (it.isSunday) it.plusDays(1) else it },
+            // General-calendar decree for concurrence with the Sacred Heart;
+            // local patronal exceptions require the local calendar.
+            (6 to 24) to CalendarDate(year, 6, 24).let {
+                if (it == sacredHeart(year)) it.plusDays(-1) else it
+            }
+        )
+        transfers.entries.firstOrNull { it.value == date }?.let { return fixedDays[it.key] }
+        val key = date.month to date.day
+        return if (key in transfers) null else fixedDays[key]
+    }
+
     private val ordinals = mapOf(
         1 to Triple("I", "1st", "1º"), 2 to Triple("II", "2nd", "2º"),
         3 to Triple("III", "3rd", "3º"), 4 to Triple("IV", "4th", "4º"),
@@ -298,6 +351,9 @@ object LiturgicalCalendar {
             )
             LiturgicalSeason.EASTER -> LocalizedText(
                 "Domingo $roman de Pascua", "$english Sunday of Easter", "$portuguese Domingo da Páscoa"
+            )
+            LiturgicalSeason.CHRISTMAS -> LocalizedText(
+                "Domingo II después de Navidad", "Second Sunday after the Nativity", "Segundo Domingo depois do Natal"
             )
             else -> LocalizedText(
                 "Domingo $week del Tiempo Ordinario",
@@ -322,6 +378,15 @@ object LiturgicalCalendar {
         val dayEs = listOf("Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo")[date.isoDayOfWeek - 1]
         val dayEn = listOf("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")[date.isoDayOfWeek - 1]
         val dayPt = listOf("Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo")[date.isoDayOfWeek - 1]
+        if (season == LiturgicalSeason.HOLY_WEEK) return LocalizedText(
+            "$dayEs de Semana Santa", "$dayEn of Holy Week", "$dayPt da Semana Santa"
+        )
+        if (season == LiturgicalSeason.LENT && week == 0) return LocalizedText(
+            "$dayEs después de Ceniza", "$dayEn after Ash Wednesday", "$dayPt depois das Cinzas"
+        )
+        if (season == LiturgicalSeason.CHRISTMAS) return LocalizedText(
+            "$dayEs del tiempo de Navidad", "$dayEn of Christmas Time", "$dayPt do Tempo do Natal"
+        )
         val seasonEs = season.displayName.es
         val seasonEn = season.displayName.en
         val seasonPt = season.displayName.pt
@@ -359,7 +424,7 @@ object LiturgicalCalendar {
     }
 
     /** The full description of [date]. */
-    fun dayInfo(date: CalendarDate): LiturgicalDayInfo {
+    fun dayInfo(date: CalendarDate, rules: CalendarRules = CalendarRules()): LiturgicalDayInfo {
         val year = date.year
         val liturgicalYear = liturgicalYearOf(date)
         val sundayCycle = sundayCycleOf(liturgicalYear)
@@ -372,50 +437,56 @@ object LiturgicalCalendar {
         val holySat = holySaturday(year)
         val pentecost = pentecost(year)
         val adventStart = firstSundayOfAdvent(year)
-        val baptism = baptismOfTheLord(year)
-        val lentFirstSunday = ash.plusDays(4)
+        val baptism = baptismOfTheLord(year, rules)
 
         // Movable celebrations outrank the seasonal day they fall on.
-        movableFor(date, year)?.let { movable ->
+        val fixedToday = fixedFor(date, rules)
+        movableFor(date, year, rules)?.takeUnless {
+            it.rank == CelebrationRank.MEMORIAL && fixedToday != null
+        }?.let { movable ->
             return movable.toInfo(
                 date, liturgicalYear, sundayCycle, weekdayCycle,
-                weekOfSeason = weekOfSeason(date, year, movable.season)
+                weekOfSeason = weekOfSeason(date, year, movable.season, rules)
             )
         }
 
-        // Then fixed solemnities and feasts, except inside Holy Week and the
-        // Triduum, which nothing in the General Calendar displaces.
-        val inHolyWeekOrTriduum = date >= palm && date < easter
-        if (!inHolyWeekOrTriduum) {
-            fixedDays[date.month to date.day]?.let { fixed ->
+        // UNLYC precedence table: seasonal Sundays, Holy Week and the Easter
+        // octave outrank fixed solemnities; feasts of saints also yield to Sundays.
+        val season = seasonOf(date, year, rules)
+        val protectedDay = (date >= palm && date <= easter.plusDays(7)) || date == ash ||
+            (date.isSunday && season in setOf(LiturgicalSeason.ADVENT, LiturgicalSeason.LENT, LiturgicalSeason.EASTER))
+        val lordFeasts = setOf("presentation", "transfiguration", "holy_cross")
+        if (!protectedDay) {
+            fixedToday?.takeUnless {
+                date.isSunday && it.rank == CelebrationRank.FEAST && it.key !in lordFeasts
+            }?.let { fixed ->
                 return LiturgicalDayInfo(
                     date = date,
-                    season = seasonOf(date, year),
+                    season = seasonOf(date, year, rules),
                     color = fixed.color,
                     rank = fixed.rank,
                     title = fixed.title,
-                    weekOfSeason = weekOfSeason(date, year, seasonOf(date, year)),
+                    weekOfSeason = weekOfSeason(date, year, season, rules),
                     liturgicalYear = liturgicalYear,
                     sundayCycle = sundayCycle,
                     weekdayCycle = weekdayCycle,
-                    isHolyDayOfObligation = fixed.obligation || date.isSunday,
+                    isHolyDayOfObligation = date.isSunday,
+                    isUniversalHolyDayCandidate = fixed.obligation,
                     isFastDay = false,
-                    isAbstinenceDay = false,
+                    isAbstinenceDay = date.isFriday && fixed.rank != CelebrationRank.SOLEMNITY,
                     lectionaryKey = fixed.key
                 )
             }
         }
 
-        val season = seasonOf(date, year)
-        val week = weekOfSeason(date, year, season)
+        val week = weekOfSeason(date, year, season, rules)
 
-        val isLentFriday = season == LiturgicalSeason.LENT && date.isFriday && date >= lentFirstSunday
         val color = when {
             season == LiturgicalSeason.ADVENT && week == 3 && date.isSunday -> LiturgicalColor.ROSE
             season == LiturgicalSeason.LENT && week == 4 && date.isSunday -> LiturgicalColor.ROSE
             season == LiturgicalSeason.ADVENT || season == LiturgicalSeason.LENT -> LiturgicalColor.VIOLET
-            season == LiturgicalSeason.HOLY_WEEK -> LiturgicalColor.RED
-            season == LiturgicalSeason.TRIDUUM -> if (date == holySat) LiturgicalColor.WHITE else LiturgicalColor.RED
+            season == LiturgicalSeason.HOLY_WEEK -> if (date == palm) LiturgicalColor.RED else LiturgicalColor.VIOLET
+            season == LiturgicalSeason.TRIDUUM -> if (date == holyThu || date == holySat) LiturgicalColor.WHITE else LiturgicalColor.RED
             season == LiturgicalSeason.CHRISTMAS || season == LiturgicalSeason.EASTER -> LiturgicalColor.WHITE
             else -> LiturgicalColor.GREEN
         }
@@ -455,7 +526,7 @@ object LiturgicalCalendar {
             weekdayCycle = weekdayCycle,
             isHolyDayOfObligation = date.isSunday,
             isFastDay = date == ash,
-            isAbstinenceDay = date == ash || isLentFriday,
+            isAbstinenceDay = date == ash || date.isFriday,
             lectionaryKey = lectionaryKey(season, week, date, easter, adventStart, baptism, pentecost)
         )
     }
@@ -486,14 +557,15 @@ object LiturgicalCalendar {
             liturgicalYear = liturgicalYear,
             sundayCycle = sundayCycle,
             weekdayCycle = weekdayCycle,
-            isHolyDayOfObligation = obligation || date.isSunday,
+            isHolyDayOfObligation = date.isSunday,
+            isUniversalHolyDayCandidate = obligation,
             isFastDay = fast,
             isAbstinenceDay = abstinence,
             lectionaryKey = key
         )
     }
 
-    private fun movableFor(date: CalendarDate, year: Int): Movable? = when (date) {
+    private fun movableFor(date: CalendarDate, year: Int, rules: CalendarRules): Movable? = when (date) {
         easter(year) -> Movable(
             LocalizedText("Domingo de Pascua de Resurrección", "Easter Sunday of the Resurrection of the Lord", "Domingo de Páscoa da Ressurreição"),
             CelebrationRank.SOLEMNITY, LiturgicalColor.WHITE, LiturgicalSeason.EASTER, "easter_sunday", obligation = true
@@ -512,7 +584,7 @@ object LiturgicalCalendar {
             LocalizedText("Domingo de la Divina Misericordia", "Divine Mercy Sunday", "Domingo da Divina Misericórdia"),
             CelebrationRank.SUNDAY, LiturgicalColor.WHITE, LiturgicalSeason.EASTER, "divine_mercy", obligation = true
         )
-        ascension(year) -> Movable(
+        ascension(year, rules) -> Movable(
             LocalizedText("Ascensión del Señor", "The Ascension of the Lord", "Ascensão do Senhor"),
             CelebrationRank.SOLEMNITY, LiturgicalColor.WHITE, LiturgicalSeason.EASTER, "ascension", obligation = true
         )
@@ -524,7 +596,7 @@ object LiturgicalCalendar {
             LocalizedText("Santísima Trinidad", "The Most Holy Trinity", "Santíssima Trindade"),
             CelebrationRank.SOLEMNITY, LiturgicalColor.WHITE, LiturgicalSeason.ORDINARY_TIME, "trinity", obligation = true
         )
-        corpusChristi(year) -> Movable(
+        corpusChristi(year, rules) -> Movable(
             LocalizedText("Santísimo Cuerpo y Sangre de Cristo", "The Most Holy Body and Blood of Christ", "Santíssimo Corpo e Sangue de Cristo"),
             CelebrationRank.SOLEMNITY, LiturgicalColor.WHITE, LiturgicalSeason.ORDINARY_TIME, "corpus_christi", obligation = true
         )
@@ -544,26 +616,26 @@ object LiturgicalCalendar {
             LocalizedText("Sagrada Familia de Jesús, María y José", "The Holy Family of Jesus, Mary and Joseph", "Sagrada Família de Jesus, Maria e José"),
             CelebrationRank.FEAST, LiturgicalColor.WHITE, LiturgicalSeason.CHRISTMAS, "holy_family"
         )
-        baptismOfTheLord(year) -> Movable(
+        baptismOfTheLord(year, rules) -> Movable(
             LocalizedText("Bautismo del Señor", "The Baptism of the Lord", "Batismo do Senhor"),
             CelebrationRank.FEAST, LiturgicalColor.WHITE, LiturgicalSeason.CHRISTMAS, "baptism_of_the_lord"
         )
         else -> null
     }
 
-    fun seasonOf(date: CalendarDate, year: Int = date.year): LiturgicalSeason {
+    fun seasonOf(date: CalendarDate, year: Int = date.year, rules: CalendarRules = CalendarRules()): LiturgicalSeason {
         val easter = easter(year)
         val ash = ashWednesday(year)
         val palm = palmSunday(year)
         val holyThu = holyThursday(year)
         val pentecost = pentecost(year)
         val adventStart = firstSundayOfAdvent(year)
-        val baptism = baptismOfTheLord(year)
-        // Ordered earliest-to-latest through the year; each branch therefore
-        // only has to rule out the one before it.
+        val baptism = baptismOfTheLord(year, rules)
+        // Late-December Christmas must be tested before the Advent interval;
+        // early-January Christmas ends with the Baptism under these rules.
         return when {
-            date >= adventStart -> LiturgicalSeason.ADVENT
             date >= CalendarDate(year, 12, 25) -> LiturgicalSeason.CHRISTMAS
+            date >= adventStart -> LiturgicalSeason.ADVENT
             date <= baptism -> LiturgicalSeason.CHRISTMAS
             date < ash -> LiturgicalSeason.ORDINARY_TIME
             date < palm -> LiturgicalSeason.LENT
@@ -574,7 +646,7 @@ object LiturgicalCalendar {
         }
     }
 
-    private fun weekOfSeason(date: CalendarDate, year: Int, season: LiturgicalSeason): Int {
+    private fun weekOfSeason(date: CalendarDate, year: Int, season: LiturgicalSeason, rules: CalendarRules): Int {
         return when (season) {
             LiturgicalSeason.ADVENT ->
                 weeksBetween(firstSundayOfAdvent(year), date) + 1
@@ -589,7 +661,7 @@ object LiturgicalCalendar {
             LiturgicalSeason.EASTER ->
                 weeksBetween(easter(year), date) + 1
 
-            LiturgicalSeason.ORDINARY_TIME -> ordinaryTimeWeek(date, year)
+            LiturgicalSeason.ORDINARY_TIME -> ordinaryTimeWeek(date, year, rules)
 
             else -> 0
         }
@@ -600,12 +672,12 @@ object LiturgicalCalendar {
      * first picks up after the Baptism of the Lord, the second is counted
      * backwards from week 34, which always starts at Christ the King.
      */
-    private fun ordinaryTimeWeek(date: CalendarDate, year: Int): Int {
-        val baptism = baptismOfTheLord(year)
+    private fun ordinaryTimeWeek(date: CalendarDate, year: Int, rules: CalendarRules): Int {
+        val baptism = baptismOfTheLord(year, rules)
         val ash = ashWednesday(year)
         return if (date < ash) {
             // Week 1 is the week the Baptism closes; the next Sunday opens week 2.
-            val sundayAfterBaptism = baptism.plusDays(7)
+            val sundayAfterBaptism = baptism.plusDays(7 - baptism.isoDayOfWeek % 7)
             if (date < sundayAfterBaptism) 1 else weeksBetween(sundayAfterBaptism, date) + 2
         } else {
             val king = christTheKing(year)

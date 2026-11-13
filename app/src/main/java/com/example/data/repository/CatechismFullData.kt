@@ -3,6 +3,16 @@ package com.example.data.repository
 import com.example.data.models.LocalizedText
 
 object CatechismFullData {
+    const val sourceRetrievedOn = "2026-11-12"
+    const val officialEnglishSource = "https://www.vatican.va/archive/ENG0015/_INDEX.HTM"
+    const val officialSpanishSource = "https://www.vatican.va/archive/catechism_sp/index_sp.html"
+    const val officialPortugueseSource = "https://www.vatican.va/archive/cathechism_po/index_new/prima-pagina-cic_po.html"
+    val sourceNotice = LocalizedText(
+        "Texto del Catecismo de la Iglesia Católica publicado por la Santa Sede, consultado el 12 de noviembre de 2026; incluye la revisión de 2018 del §2267. Se normalizó el formato HTML. Las notas completas se consultan en la fuente oficial.",
+        "Catechism of the Catholic Church text published by the Holy See, retrieved 12 November 2026; includes the 2018 revision of §2267. HTML formatting has been normalized. Consult the official source for full footnotes.",
+        "Texto do Catecismo da Igreja Católica publicado pela Santa Sé, consultado em 12 de novembro de 2026; inclui a revisão de 2018 do §2267. A formatação HTML foi normalizada. Consulte a fonte oficial para as notas completas."
+    )
+
     val contentByNumber: Map<Int, LocalizedText> = buildMap {
         putAll(CatechismFullData00.entries)
         putAll(CatechismFullData01.entries)

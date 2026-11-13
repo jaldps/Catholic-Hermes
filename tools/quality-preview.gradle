@@ -1,0 +1,12 @@
+// Separate review installation. Existing production and historical preview
+// application IDs/signing configuration remain untouched.
+gradle.beforeProject { project ->
+    project.pluginManager.withPlugin('com.android.application') {
+        project.android.buildFeatures.resValues = true
+        project.android.buildTypes.named('debug') {
+            applicationIdSuffix = '.qualitypreview'
+            versionNameSuffix = '-quality-preview'
+            resValue 'string', 'app_name', 'Catholic Hermes Preview'
+        }
+    }
+}

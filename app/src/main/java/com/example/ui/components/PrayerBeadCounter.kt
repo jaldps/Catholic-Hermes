@@ -255,7 +255,7 @@ fun BeadReel(
     val inks = pearlInks()
     val density = LocalDensity.current
     val view = LocalView.current
-    val still = LocalInspectionMode.current
+    val still = LocalInspectionMode.current || LocalAppDesign.current.reduceMotion
     val scope = rememberCoroutineScope()
     val select by rememberUpdatedState(onSelectBead)
     val target = activeBead.coerceIn(0, beads.lastIndex)

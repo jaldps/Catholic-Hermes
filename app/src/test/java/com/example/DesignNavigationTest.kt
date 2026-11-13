@@ -32,7 +32,7 @@ import org.robolectric.ParameterizedRobolectricTestRunner
 import org.robolectric.annotation.Config
 import org.robolectric.annotation.GraphicsMode
 
-/** Interaction and touch-target contracts shared by the three independent kits. */
+/** Interaction and touch-target contracts shared by the two selectable identities. */
 @RunWith(ParameterizedRobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(sdk = [34])
@@ -74,7 +74,7 @@ class DesignNavigationTest(private val identity: DesignLanguage, private val dar
     companion object {
         @JvmStatic
         @ParameterizedRobolectricTestRunner.Parameters(name = "{0}, dark={1}")
-        fun identities(): List<Array<Any>> = DesignLanguage.entries.flatMap { identity ->
+        fun identities(): List<Array<Any>> = DesignLanguage.selectable.flatMap { identity ->
             listOf(arrayOf<Any>(identity, false), arrayOf<Any>(identity, true))
         }
     }

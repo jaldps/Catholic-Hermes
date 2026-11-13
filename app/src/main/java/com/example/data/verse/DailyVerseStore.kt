@@ -88,7 +88,8 @@ object DailyVerseRotation {
  *
  * Primary source is bible-api.com (free, no key, CORS-open static JSON):
  * `https://bible-api.com/{book chapter:verses}?translation={...}` where the
- * translation is `clementina` (ES, the Vulgate), `web` (EN) and `almeida` (PT).
+ * translation is `web` (EN) and `almeida` (PT). Spanish uses its bundled
+ * edition: clementina is Latin, and no matching Spanish API edition is vetted.
  * The response's `text` field is the verse. Any failure (offline, HTTP error,
  * parse miss) returns null so callers fall back to the bundled-Bible passage
  * via [DailyVerseRotation] — the verse still changes daily without a network.
@@ -106,7 +107,7 @@ class DailyVerseStore(
 
     /** Cached verse text for [date] in [language], or null on first open. */
     suspend fun cachedText(date: LocalDate, language: AppLanguage): String? =
-        dataStore.data
+        if (language == AppLanguage.ES) null else dataStore.data
             .catch { e -> if (e is IOException) emit(emptyPreferences()) else throw e }
             .map { it[keyFor(date, language)] }
             .first()
@@ -114,7 +115,7 @@ class DailyVerseStore(
 
     /** Stores [text] as today's verse in [language]. */
     suspend fun saveText(date: LocalDate, language: AppLanguage, text: String) {
-        if (text.isBlank()) return
+        if (text.isBlank() || language == AppLanguage.ES) return
         dataStore.edit { prefs -> prefs[keyFor(date, language)] = text.trim() }
     }
 
@@ -169,7 +170,7 @@ class DailyVerseFetcher(
             ?: return null
         val query = "$englishName $chapterVerses".replace(" ", "%20").replace(":", "%3A")
         val translation = when (language) {
-            AppLanguage.ES -> "clementina"
+            AppLanguage.ES -> return null // Preserve bundled Spanish; never label Latin as Spanish.
             AppLanguage.EN -> "web"
             AppLanguage.PT -> "almeida"
         }

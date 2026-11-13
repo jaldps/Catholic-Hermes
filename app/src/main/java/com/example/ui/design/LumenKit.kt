@@ -3,12 +3,18 @@ package com.example.ui.design
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
@@ -63,7 +69,6 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.layout
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.contentDescription
@@ -83,7 +88,7 @@ import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 
 /**
- * Lumen — the redesign's single identity (docs/redesign/DESIGN.md).
+ * The shared Lumen / Sanctuary kit (docs/quality/DESIGN.md).
  *
  * Warm canvas, frosted glass, regular-weight display type, one accent at a
  * time, charcoal capsules for primary actions. The owner's floating six-tab
@@ -146,8 +151,8 @@ object LumenKit : AppKit {
                     bottomBar = {
                         androidx.compose.animation.AnimatedVisibility(
                             visible = !chrome.dockHidden,
-                            enter = androidx.compose.animation.slideInVertically { it } + androidx.compose.animation.fadeIn(),
-                            exit = androidx.compose.animation.slideOutVertically { it } + androidx.compose.animation.fadeOut()
+                            enter = if (design.reduceMotion) androidx.compose.animation.EnterTransition.None else androidx.compose.animation.slideInVertically(tween(design.motion.mediumMillis)) { it } + androidx.compose.animation.fadeIn(tween(design.motion.fastMillis)),
+                            exit = if (design.reduceMotion) androidx.compose.animation.ExitTransition.None else androidx.compose.animation.slideOutVertically(tween(design.motion.mediumMillis)) { it } + androidx.compose.animation.fadeOut(tween(design.motion.fastMillis))
                         ) { Dock(navItems, selectedNavIndex, onNavSelected) }
                     }
                 ) { padding ->
@@ -242,101 +247,60 @@ object LumenKit : AppKit {
         }
     }
 
-    /**
-     * The owner's floating dock: six labelled tabs on one capsule. Layout,
-     * labels and order are the owner's. Material: a near-opaque warm sheet
-     * (light #F2F0ED @ 94%, dark #1E1C1A @ 92%) with a lit edge, so content
-     * never ghosts through it. One outline glyph family at 22dp in ink; the
-     * selected tab turns to its filled twin on a quiet pill (no accent colour).
-     * Labels are one line at 11sp with one shared size that steps down to a
-     * 9.5sp floor when any label would overflow its slot.
-     */
+    /** Four primary destinations. Captions reflow and always retain their type size. */
     @Composable
     private fun Dock(navItems: List<AppNavItem>, selectedNavIndex: Int, onNavSelected: (Int) -> Unit) {
         val design = LocalAppDesign.current
-        val palette = design.palette
+        val p = design.palette
         val styles = LocalAppTextStyles.current
-        val dockShape = RoundedCornerShape(32.dp)
-        var labelSize by remember(navItems.map { it.label }) { mutableFloatStateOf(11f) }
+        val sanctuary = design.isSanctuary
+        val shape = if (sanctuary) RoundedCornerShape(0.dp) else RoundedCornerShape(28.dp)
         Box(
-            Modifier
-                .fillMaxWidth()
-                .navigationBarsPadding()
-                .padding(start = 12.dp, end = 12.dp, top = 8.dp, bottom = 8.dp)
+            Modifier.fillMaxWidth().navigationBarsPadding()
+                .padding(horizontal = if (sanctuary) 0.dp else 12.dp,
+                    vertical = if (sanctuary) 0.dp else 8.dp),
+            contentAlignment = Alignment.Center
         ) {
-            Row(
-                Modifier
-                    .fillMaxWidth()
-                    .softShadow(dockShape, palette.shadow.copy(alpha = (palette.shadow.alpha * 1.4f).coerceAtMost(1f)), 32.dp, 10.dp)
-                    .clip(dockShape)
-                    .background(
-                        Brush.verticalGradient(
-                            if (design.isDark) listOf(Color(0xEB252321), Color(0xEB1E1C1A))
-                            else listOf(Color(0xF0F5F3F0), Color(0xF0F0EEEA))
-                        )
-                    )
-                    .border(1.dp, Brush.verticalGradient(listOf(palette.glassEdgeTop, palette.glassEdgeBottom)), dockShape)
-                    .padding(horizontal = 4.dp, vertical = 5.dp)
-                    .testTag("bottom_nav_bar"),
-                verticalAlignment = Alignment.CenterVertically
+            Column(
+                Modifier.widthIn(max = 680.dp).fillMaxWidth()
+                    .then(if (sanctuary) Modifier.background(p.glassStrong)
+                        else Modifier.lumenGlass(shape, strong = true))
+                    .clip(shape).testTag("bottom_nav_bar")
             ) {
-                navItems.forEachIndexed { index, item ->
-                    val isSelected = index == selectedNavIndex
-                    val tint by animateColorAsState(
-                        if (isSelected) palette.textPrimary else palette.textSecondary,
-                        tween(design.motion.fastMillis), label = "tabTint"
-                    )
-                    val tabFill by animateColorAsState(
-                        if (isSelected) palette.textPrimary.copy(alpha = if (design.isDark) 0.12f else 0.07f) else Color.Transparent,
-                        tween(design.motion.fastMillis), label = "tabFill"
-                    )
-                    val source = remember { MutableInteractionSource() }
-                    val pressed by source.collectIsPressedAsState()
-                    val scale by animateFloatAsState(if (pressed) 0.94f else 1f, label = "tabPress")
-                    Column(
-                        Modifier
-                            .weight(1f)
-                            .heightIn(min = 52.dp)
-                            .graphicsLayer { scaleX = scale; scaleY = scale }
-                            .clip(RoundedCornerShape(27.dp))
-                            .background(tabFill)
-                            .clickable(source, indication = null, role = Role.Tab, onClick = { onNavSelected(index) })
-                            .semantics { selected = isSelected }
-                            .padding(horizontal = 1.dp, vertical = 5.dp)
-                            .testTag(item.tag),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center
-                    ) {
-                        Icon(
-                            imageVector = when {
-                                item.tag == "nav_more" -> Icons.Filled.MoreHoriz
-                                isSelected -> solidGlyph(item.selectedIcon)
-                                else -> item.icon
-                            },
-                            contentDescription = null,
-                            tint = tint,
-                            modifier = Modifier.size(22.dp)
-                        )
-                        Spacer(Modifier.height(3.dp))
-                        Text(
-                            text = item.label,
-                            style = styles.navLabel.copy(
-                                fontSize = labelSize.sp,
-                                lineHeight = (labelSize + 3f).sp,
-                                letterSpacing = (-0.2).sp,
-                                fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium
-                            ),
-                            color = tint,
-                            textAlign = TextAlign.Center,
-                            maxLines = 1,
-                            softWrap = false,
-                            overflow = TextOverflow.Clip,
-                            onTextLayout = { layout ->
-                                if (layout.hasVisualOverflow && labelSize > 9.5f) {
-                                    labelSize = (labelSize - 0.25f).coerceAtLeast(9.5f)
-                                }
+                if (sanctuary) Box(Modifier.fillMaxWidth().height(1.dp).background(p.hairline))
+                Row(
+                    Modifier.fillMaxWidth().height(IntrinsicSize.Min)
+                        .padding(horizontal = if (sanctuary) 12.dp else 4.dp, vertical = if (sanctuary) 6.dp else 5.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    navItems.forEachIndexed { index, item ->
+                        val active = index == selectedNavIndex
+                        val tint by animateColorAsState(
+                            if (active) (if (sanctuary) p.accent else p.textPrimary) else p.textSecondary,
+                            tween(design.motion.fastMillis), label = "tabTint")
+                        Column(
+                            Modifier.weight(1f).heightIn(min = 64.dp)
+                                .clip(if (sanctuary) RoundedCornerShape(6.dp) else RoundedCornerShape(24.dp))
+                                .background(if (active && !sanctuary) p.selectionTint else Color.Transparent)
+                                .lumenPress({ onNavSelected(index) }, 0.97f, Role.Tab)
+                                .semantics { selected = active }
+                                .testTag(item.tag)
+                                .padding(horizontal = 4.dp, vertical = 6.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            Icon(if (active) solidGlyph(item.selectedIcon) else item.icon, null,
+                                tint = tint, modifier = Modifier.size(24.dp))
+                            Spacer(Modifier.height(4.dp))
+                            Text(item.label, style = styles.navLabel.copy(
+                                fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
+                                color = tint, textAlign = TextAlign.Center)
+                            if (sanctuary) {
+                                Spacer(Modifier.height(5.dp))
+                                Box(Modifier.width(20.dp).height(2.dp)
+                                    .background(if (active) p.accent else Color.Transparent))
                             }
-                        )
+                        }
                     }
                 }
             }
@@ -466,7 +430,7 @@ object LumenKit : AppKit {
             modifier
                 .fillMaxWidth()
                 .lumenPress(onClick, 0.98f)
-                .lumenGlass(shape)
+                .appContentSurface(shape)
                 .clip(shape)
                 .padding(design.spacing.cardPadding)
         ) {
@@ -483,7 +447,7 @@ object LumenKit : AppKit {
             modifier
                 .fillMaxWidth()
                 .padding(horizontal = design.spacing.gutter)
-                .lumenGlass(shape)
+                .appContentSurface(shape)
                 .clip(shape)
         ) {
             // The last row's separator falls outside the clip.
@@ -594,7 +558,14 @@ object LumenKit : AppKit {
     /** Lumen's ornament is space. */
     @Composable
     override fun Ornament(modifier: Modifier) {
-        Spacer(modifier.height(8.dp))
+        val design = LocalAppDesign.current
+        if (design.isSanctuary) Row(modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter, vertical = 10.dp),
+            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+            Box(Modifier.weight(1f).height(0.5.dp).background(design.palette.hairline))
+            Text("✦", style = LocalAppTextStyles.current.caption, color = design.palette.gold,
+                modifier = Modifier.semantics { contentDescription = "" })
+            Box(Modifier.weight(1f).height(0.5.dp).background(design.palette.hairline))
+        } else Spacer(modifier.height(8.dp))
     }
 
     // -------------------------------------------------------------- inputs
@@ -614,7 +585,7 @@ object LumenKit : AppKit {
         val design = LocalAppDesign.current
         val p = design.palette
         val styles = LocalAppTextStyles.current
-        val shape = RoundedCornerShape(percent = 50)
+        val shape = design.shapes.field
         Row(
             modifier
                 .fillMaxWidth()
@@ -648,54 +619,37 @@ object LumenKit : AppKit {
         val design = LocalAppDesign.current
         val p = design.palette
         val styles = LocalAppTextStyles.current
-        val track = RoundedCornerShape(percent = 50)
-        BoxWithConstraints(
-            modifier
-                .fillMaxWidth()
-                .padding(horizontal = design.spacing.gutter)
-        ) {
-            val count = options.size.coerceAtLeast(1)
-            val segment = (maxWidth - 8.dp) / count
-            val offset by androidx.compose.animation.core.animateDpAsState(
-                segment * selectedIndex.coerceIn(0, count - 1),
-                androidx.compose.animation.core.spring(dampingRatio = 0.85f, stiffness = 500f),
-                label = "segment"
-            )
-            Box(
-                Modifier
-                    .fillMaxWidth()
-                    .heightIn(min = 44.dp)
-                    .lumenGlass(track, lifted = false)
-                    .padding(4.dp)
+        val shape = design.shapes.buttonSmall
+        if (options.isEmpty()) return
+        BoxWithConstraints(modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
+            val density = LocalDensity.current
+            val measure = rememberTextMeasurer()
+            val widths = options.map { label ->
+                (measure.measure(AnnotatedString(label), styles.subhead.copy(fontWeight = FontWeight.SemiBold), maxLines = 1).size.width / density.density + 24f).coerceAtLeast(48f)
+            }
+            val slotWidth = (maxWidth.value - 8f - (options.size - 1) * 4f) / options.size
+            val scrolling = widths.any { it > slotWidth }
+            val initialOffset = if (scrolling) ((widths.take(selectedIndex.coerceAtLeast(0)).sum() + selectedIndex * 4f) * density.density).toInt() else 0
+            val scrollState = rememberScrollState(initial = initialOffset)
+            Row(
+                Modifier.fillMaxWidth().height(IntrinsicSize.Min).lumenGlass(shape, lifted = false)
+                    .clip(shape).then(if (scrolling) Modifier.horizontalScroll(scrollState) else Modifier).padding(4.dp),
+                horizontalArrangement = Arrangement.spacedBy(4.dp)
             ) {
-                Box(
-                    Modifier
-                        .offset(x = offset)
-                        .width(segment)
-                        .height(36.dp)
-                        .softShadow(track, p.shadow, 12.dp, 3.dp)
-                        .background(if (design.isDark) Color.White.copy(alpha = 0.16f) else Color.White, track)
-                )
-                Row(Modifier.fillMaxWidth().height(36.dp)) {
-                    options.forEachIndexed { i, label ->
-                        val isSelected = i == selectedIndex
-                        Box(
-                            Modifier
-                                .weight(1f)
-                                .fillMaxSize()
-                                .clip(track)
-                                .clickable(remember { MutableInteractionSource() }, indication = null, role = Role.Tab) { onSelect(i) }
-                                .semantics { selected = isSelected },
-                            contentAlignment = Alignment.Center
-                        ) {
-                            Text(
-                                label,
-                                style = styles.subhead.copy(fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium),
-                                color = if (isSelected) p.textPrimary else p.textSecondary,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        }
+                options.forEachIndexed { index, label ->
+                    val active = index == selectedIndex
+                    Box(
+                        (if (scrolling) Modifier.widthIn(min = 48.dp) else Modifier.weight(1f)).heightIn(min = 48.dp)
+                            .clip(shape)
+                            .background(if (active) p.action else Color.Transparent)
+                            .lumenPress({ onSelect(index) }, role = Role.Tab)
+                            .semantics { selected = active }
+                            .padding(horizontal = 12.dp, vertical = 11.dp),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Text(label, style = styles.subhead.copy(fontWeight = if (active) FontWeight.SemiBold else FontWeight.Medium),
+                            color = if (active) p.onAction else p.textSecondary,
+                            maxLines = 1, textAlign = TextAlign.Center)
                     }
                 }
             }
@@ -755,7 +709,7 @@ object LumenKit : AppKit {
         val styles = LocalAppTextStyles.current
         Column(
             modifier
-                .lumenGlass(design.shapes.listGroup)
+                .appContentSurface(design.shapes.listGroup)
                 .clip(design.shapes.listGroup)
                 .padding(horizontal = 16.dp, vertical = 16.dp)
         ) {

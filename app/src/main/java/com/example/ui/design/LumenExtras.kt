@@ -12,6 +12,7 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -222,7 +223,7 @@ enum class GroupPosition { First, Middle, Last, Single }
 @Composable
 fun Modifier.groupedItem(position: GroupPosition): Modifier {
     val design = LocalAppDesign.current
-    val r = 20.dp
+    val r = if (design.isSanctuary) 8.dp else 20.dp
     val shape = when (position) {
         GroupPosition.First -> RoundedCornerShape(topStart = r, topEnd = r)
         GroupPosition.Middle -> RoundedCornerShape(0.dp)
@@ -233,7 +234,7 @@ fun Modifier.groupedItem(position: GroupPosition): Modifier {
         .fillMaxWidth()
         .padding(horizontal = design.spacing.gutter)
         .clip(shape)
-        .background(design.palette.glass)
+        .background(design.palette.groupedSurface)
 }
 
 /** A list row usable as a lazy item; see [groupedItem]. */
@@ -300,24 +301,22 @@ fun AppGroupedRow(
 /** iOS-style switch: success green when on. */
 @Composable
 fun AppSwitch(checked: Boolean, onCheckedChange: (Boolean) -> Unit, modifier: Modifier = Modifier, tag: String? = null) {
-    val p = LocalAppDesign.current.palette
-    val track by animateColorAsState(if (checked) p.success else p.textPrimary.copy(alpha = 0.14f), tween(180), label = "switch")
-    val knob by animateDpAsState(if (checked) 20.dp else 0.dp, tween(180), label = "knob")
-    Box(
-        modifier
-            .size(width = 51.dp, height = 31.dp)
-            .clip(RoundedCornerShape(percent = 50))
-            .background(track)
-            .clickable(remember { MutableInteractionSource() }, null, role = Role.Switch) { onCheckedChange(!checked) }
-            .semantics { this.selected = checked; stateDescription = if (checked) "On" else "Off" }
-            .tag(tag)
-            .padding(2.dp)
-    ) {
-        Box(
-            Modifier.offset(x = knob).size(27.dp)
-                .softShadow(CircleShape, Color.Black.copy(alpha = 0.18f), 6.dp, 2.dp)
-                .background(Color.White, CircleShape)
-        )
+    val design = LocalAppDesign.current
+    val p = design.palette
+    val track by animateColorAsState(if (checked) p.success else p.textPrimary.copy(alpha = 0.18f),
+        tween(design.motion.fastMillis), label = "switch")
+    val knob by animateDpAsState(if (checked) 20.dp else 0.dp, tween(design.motion.fastMillis), label = "knob")
+    Box(modifier.size(width = 56.dp, height = 48.dp)
+        .toggleable(value = checked, role = Role.Switch, onValueChange = onCheckedChange)
+        .tag(tag), contentAlignment = Alignment.Center) {
+        Box(Modifier.size(width = 51.dp, height = 31.dp)
+            .clip(RoundedCornerShape(percent = 50)).background(track)
+            .border(if (design.highContrast) 1.5.dp else 0.5.dp, p.hairline, RoundedCornerShape(percent = 50))
+            .padding(2.dp)) {
+            Box(Modifier.offset(x = knob).size(27.dp)
+                .softShadow(CircleShape, Color.Black.copy(alpha = 0.14f), 4.dp, 1.dp)
+                .background(Color.White, CircleShape))
+        }
     }
 }
 
@@ -351,7 +350,7 @@ fun AppToggleRow(
                 if (subtitle != null) Text(subtitle, style = styles.footnote, color = p.textSecondary)
             }
             Spacer(Modifier.width(12.dp))
-            AppSwitch(checked, onCheckedChange, tag = switchTag)
+            AppSwitch(checked, onCheckedChange, modifier = Modifier.semantics { contentDescription = title }, tag = switchTag)
         }
         if (showDivider) {
             Box(Modifier.fillMaxWidth().padding(start = 18.dp + if (leadingIcon != null) 38.dp else 0.dp)
@@ -375,7 +374,7 @@ fun AppSearchBar(
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
-    val shape = RoundedCornerShape(percent = 50)
+    val shape = design.shapes.field
     Row(
         modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter).heightIn(min = 48.dp)
             .lumenGlass(shape, lifted = false).semantics { contentDescription = placeholder }
@@ -399,7 +398,7 @@ fun AppSearchBar(
         }
         if (value.isNotEmpty()) {
             Box(
-                Modifier.size(40.dp).clickable(remember { MutableInteractionSource() }, null, role = Role.Button) { onValueChange("") }
+                Modifier.size(48.dp).clickable(remember { MutableInteractionSource() }, null, role = Role.Button) { onValueChange("") }
                     .semantics { contentDescription = "Clear" },
                 contentAlignment = Alignment.Center
             ) { Icon(Icons.Filled.Cancel, null, tint = p.inkQuiet, modifier = Modifier.size(18.dp)) }
@@ -438,11 +437,11 @@ fun AppSheet(
             )
             AnimatedVisibility(
                 visible = shown,
-                enter = slideInVertically(tween(320)) { it / 3 } + fadeIn(tween(200)),
-                exit = slideOutVertically { it / 3 } + fadeOut(),
+                enter = if (design.reduceMotion) androidx.compose.animation.EnterTransition.None else slideInVertically(tween(design.motion.mediumMillis)) { it / 3 } + fadeIn(tween(design.motion.fastMillis)),
+                exit = if (design.reduceMotion) androidx.compose.animation.ExitTransition.None else slideOutVertically(tween(design.motion.mediumMillis)) { it / 3 } + fadeOut(tween(design.motion.fastMillis)),
                 modifier = Modifier.align(Alignment.BottomCenter)
             ) {
-                val shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
+                val shape = design.shapes.sheet
                 Column(
                     modifier.fillMaxWidth().heightIn(max = (LocalConfiguration.current.screenHeightDp * 0.9f).dp)
                         .clip(shape)
@@ -618,7 +617,7 @@ fun AppSegmentedProgress(count: Int, current: Int, fraction: Float, modifier: Mo
 /** Hero art that crossfades when [assetPath] changes (mystery paintings). */
 @Composable
 fun AppCrossfadeArt(assetPath: String?, modifier: Modifier = Modifier, fadeToCanvas: Boolean = true, fadeStart: Float = 0.45f) {
-    Crossfade(targetState = assetPath, animationSpec = tween(450), label = "art", modifier = modifier) { path ->
+    Crossfade(targetState = assetPath, animationSpec = tween(if (LocalAppDesign.current.reduceMotion) 0 else 450), label = "art", modifier = modifier) { path ->
         AppHeroImage(path, Modifier.fillMaxSize(), fadeToCanvas = fadeToCanvas, fadeStart = fadeStart)
     }
 }

@@ -9,6 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.unit.dp
 import com.example.ui.design.AppScreenTitle
@@ -24,8 +26,11 @@ fun IllustratedScreenHeader(
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
+    val compactArt = LocalDensity.current.fontScale > 1.3f
+    val narrow = LocalConfiguration.current.screenWidthDp < 360
+    val artSize = if (compactArt) 48.dp else if (narrow) 64.dp else if (design.isSanctuary) 104.dp else 88.dp
     when (design.language) {
-        DesignLanguage.APPLE -> Row(
+        DesignLanguage.SANCTUARY -> Row(
             modifier.fillMaxWidth().padding(end = design.spacing.gutter, bottom = 12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
@@ -33,10 +38,10 @@ fun IllustratedScreenHeader(
             // Clipped, inset frame: the art's glow/flame can never paint to
             // the screen's right edge.
             Box(Modifier.clipToBounds().padding(end = 4.dp), contentAlignment = Alignment.Center) {
-                SacredArt(subject, Modifier.size(112.dp), transparentBackground = true)
+                SacredArt(subject, Modifier.size(artSize).testTag("screen_header_illustration"), transparentBackground = true)
             }
         }
-        DesignLanguage.IVE -> {
+        DesignLanguage.APPLE, DesignLanguage.IVE -> {
             // One flexible bar owns the title, date and illustration together.
             // Search and reading follow immediately instead of another banner.
             AppScreenTitle(title, subtitle, modifier, trailingContent = {
@@ -49,7 +54,7 @@ fun IllustratedScreenHeader(
                 ) {
                     SacredArt(
                         subject,
-                        Modifier.size(96.dp).testTag("screen_header_illustration"),
+                        Modifier.size(artSize).testTag("screen_header_illustration"),
                         transparentBackground = true
                     )
                 }

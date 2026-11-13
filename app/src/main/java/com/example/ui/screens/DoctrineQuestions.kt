@@ -624,7 +624,7 @@ private fun QuestionPage(
         parseFoundation(foundationText, language, repository.catholicBooks)
     }
     val level = remember(refs, clarificationText) { foundationLevelFor(refs, clarificationText) }
-    var expandedKey by remember(index, language) { mutableStateOf<String?>(null) }
+    var expandedKey by rememberSaveable(index, language) { mutableStateOf<String?>(null) }
 
     val speak = buildString {
         append(questionText); append("\n\n"); append(answerLabel); append(": "); append(answerText)

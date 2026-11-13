@@ -413,8 +413,8 @@ object PrayerAndNovenaData {
         ),
         VaticanPrayer(
             id = "laudes",
-            title = LocalizedText("Laudes (Oración de la mañana)", "Laudes (Morning Prayer)", "Laudes (Oração da manhã)"),
-            latinTitle = "Laudes",
+            title = LocalizedText("Oración de la mañana · selección abreviada", "Morning prayer · abridged selection", "Oração da manhã · seleção abreviada"),
+            latinTitle = null,
             category = PrayerCategory.MORNING_NIGHT,
             leaderText = LocalizedText(
                 "V/. Dios mío, ven en mi ayuda. R/. Señor, date prisa en socorrerme. Gloria al Padre, y al Hijo, y al Espíritu Santo. Como era en el principio, ahora y siempre, por los siglos de los siglos. Amén. Aleluya.\n\nHimno: Canta el gallo ya su aviso, la luz de la aurora viene; Jesús líbranos del sueño de la culpa y del pecado.\n\nSalmo 95: Venid, adoremos a Cristo, el Señor, porque es nuestro. Cantemos al Señor con alegría, aclamemos a la Roca que nos salva.\n\nLectura (Lc 1, 68-70): Bendito sea el Señor, Dios de Israel, porque ha visitado y redimido a su pueblo, suscitando una fuerza de salvación en la casa de David, su siervo, según lo había prometido desde antiguo por boca de sus santos profetas.",
@@ -426,7 +426,7 @@ object PrayerAndNovenaData {
                 "Canticle (Lk 1:79): Through the tender mercy of our God, the dawn from on high will visit us, to give light to those who sit in darkness and in the shadow of death, and to guide our feet into the way of peace. Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.\n\nOur Father: Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth, as it is in heaven. Give us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.\n\nLet us pray: Lord, let the grace of your Holy Spirit fill us and guide us this day, that, walking in your light, we may praise you with all our hearts. Through Christ our Lord. Amen.",
                 "Cântico (Lc 1, 79): Pela paternal misericórdia do nosso Deus, o sol que nasce do alto nos visitará, para iluminar os que jazem nas trevas e sombras da morte e guiar os nossos passos pelo caminho da paz. Glória ao Pai, ao Filho e ao Espírito Santo. Como era no princípio, agora e sempre, pelos séculos dos séculos. Amém.\n\nPai Nosso: Pai nosso, que estais nos céus, santificado seja o vosso nome; venha a nós o vosso reino; seja feita a vossa vontade, assim na terra como no céu. O pão nosso de cada dia dai-nos hoje; perdoai-nos as nossas ofensas, assim como nós perdoamos a quem nos tem ofendido; e não nos deixeis cair em tentação, mas livrai-nos do mal. Amém.\n\nOremos: Senhor, que a graça do Espírito Santo nos encha e nos guie neste dia, para que, caminhando na vossa luz, vos louvemos de todo o coração. Por Cristo, nosso Senhor. Amém."
             ),
-            whenToPray = LocalizedText("Oración de la mañana (Liturgia de las Horas — Laudes), al amanecer.", "Morning prayer (Liturgy of the Hours — Laudes), at daybreak.", "Oração da manhã (Liturgia das Horas — Laudes), ao amanhecer."),
+            whenToPray = LocalizedText("Para la oración personal al amanecer. Selección devocional inspirada en Laudes; no es el oficio completo ni los textos propios del día de la Liturgia de las Horas.", "For personal prayer at daybreak. A devotional selection inspired by Lauds; this is not the complete office or the appointed texts for today in the Liturgy of the Hours.", "Para a oração pessoal ao amanhecer. Seleção devocional inspirada nas Laudes; não é o ofício completo nem os textos próprios do dia da Liturgia das Horas."),
             thematicTags = listOf("daily_routine", "morning", "office")
         ),
         VaticanPrayer(

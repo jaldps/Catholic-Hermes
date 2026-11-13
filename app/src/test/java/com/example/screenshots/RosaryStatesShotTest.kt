@@ -24,6 +24,7 @@ import com.example.data.repository.CatholicDataRepository
 import com.example.ui.AppDestination
 import com.example.ui.MainApp
 import com.example.ui.theme.SanctaFidesTheme
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -48,6 +49,10 @@ class RosaryStatesShotTest {
     private val widthDp = System.getProperty("shots.width")?.toIntOrNull() ?: 411
     private val heightDp = System.getProperty("shots.height")?.toIntOrNull() ?: 891
 
+    private val textScale = System.getProperty("shots.scale")?.toFloatOrNull()?.coerceIn(0.8f,2f) ?: 1f
+    @Before fun configureViewport() { org.robolectric.RuntimeEnvironment.setQualifiers("w${widthDp}dp-h${heightDp}dp-xhdpi") }
+    private var identity = "LUMEN"
+
     private fun capture(name: String, dark: Boolean) {
         val w = widthDp * 2
         val h = heightDp * 2
@@ -65,7 +70,7 @@ class RosaryStatesShotTest {
             val view = compose.activity.findViewById<ViewGroup>(android.R.id.content).getChildAt(0) as ComposeView
             Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888).also { view.draw(Canvas(it)) }
         }
-        val file = File(outputDir, "${if (dark) "dark" else "light"}_$name.png")
+        val file = File(outputDir, "${identity.lowercase()}_${if (dark) "dark" else "light"}_${name}_${language.code}_w${widthDp}_scale${(textScale * 100).toInt()}.png")
         file.outputStream().use { bitmap.compress(Bitmap.CompressFormat.PNG, 100, it) }
         println("WROTE ${file.absolutePath}")
     }
@@ -75,15 +80,16 @@ class RosaryStatesShotTest {
         compose.waitForIdle()
     }
 
-    private fun run(dark: Boolean) {
+    private fun run(dark: Boolean, selectedIdentity: String = "LUMEN") {
         if (!enabled) return
+        identity = selectedIdentity
         val context = ApplicationProvider.getApplicationContext<android.app.Application>()
         val repository = CatholicDataRepository(context).apply { setLanguage(language) }
         val db = Room.inMemoryDatabaseBuilder(context, SanctaFidesDatabase::class.java).allowMainThreadQueries().build()
         val tts = LiturgicalTtsManager(context)
         val store = UserPreferencesStore(context)
         val prefs = UserPreferences(
-            language = language, designLanguage = "APPLE", themePreset = UserPreferences.DEFAULT_THEME_PRESET,
+            language = language, designLanguage = identity, themePreset = UserPreferences.DEFAULT_THEME_PRESET,
             darkModeSetting = if (dark) "DARK" else "LIGHT",
             fontFamilyChoice = UserPreferences.DEFAULT_FONT_FAMILY, fontSizeScale = 1f, audioNarrationSpeed = 1f,
             activeBibleTranslationId = "", isFullCccDownloaded = false, hasChosenLanguage = true
@@ -92,7 +98,7 @@ class RosaryStatesShotTest {
             compose.setContent {
                 SanctaFidesTheme(
                     designLanguage = prefs.designLanguage, themePreset = prefs.themePreset,
-                    darkModeSetting = prefs.darkModeSetting, fontFamilyChoice = prefs.fontFamilyChoice, fontScale = 1f
+                    darkModeSetting = prefs.darkModeSetting, fontFamilyChoice = prefs.fontFamilyChoice, fontScale = textScale
                 ) {
                     CompositionLocalProvider(LocalInspectionMode provides true) {
                         MainApp(
@@ -130,9 +136,12 @@ class RosaryStatesShotTest {
         } finally {
             tts.release()
             db.close()
+            repository.close()
         }
     }
 
     @Test fun light() = run(false)
     @Test fun dark() = run(true)
+    @Test fun sanctuaryLight() = run(false, "SANCTUARY")
+    @Test fun sanctuaryDark() = run(true, "SANCTUARY")
 }

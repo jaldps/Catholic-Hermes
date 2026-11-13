@@ -35,6 +35,9 @@ fun SanctaFidesTheme(
     isSerif: Boolean = true,
     fontScale: Float = 1.0f,
     fontFamilyChoice: String? = null,
+    reduceMotion: Boolean = false,
+    reduceTransparency: Boolean = false,
+    highContrast: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val systemDark = isSystemInDarkTheme()
@@ -50,8 +53,16 @@ fun SanctaFidesTheme(
 
     // The preset only tints: Lumen calibrates each preset's ink so it clears
     // 4.5:1 on canvas and glass in both modes.
-    val accent = lumenAccent(themePreset, isDark)
-    val design = base.copy(palette = base.palette.copy(accent = accent, ringEnd = if (themePreset == "LITURGICAL_DYNAMIC") base.palette.ringEnd else accent))
+    val accent = if (identity == DesignLanguage.SANCTUARY && themePreset == "LITURGICAL_DYNAMIC") base.palette.accent else lumenAccent(themePreset, isDark)
+    val tinted = base.palette.copy(accent = accent, ringEnd = if (themePreset == "LITURGICAL_DYNAMIC") base.palette.ringEnd else accent)
+    val accessible = if (highContrast) tinted.copy(
+        textSecondary = tinted.textPrimary, textTertiary = tinted.textPrimary,
+        hairline = if (isDark) Color(0xFFAC9F92) else Color(0xFF827364),
+        separator = if (isDark) Color(0xFF8C8074) else Color(0xFF948575)
+    ) else tinted
+    val design = base.copy(palette = accessible, reduceMotion = reduceMotion,
+        reduceTransparency = reduceTransparency, highContrast = highContrast,
+        motion = if (reduceMotion) base.motion.copy(fastMillis = 0, mediumMillis = 0, slowMillis = 0) else base.motion)
     val colorScheme = buildColorScheme(identity, design.palette, isDark, accent)
 
     // Edge-to-edge: system bar glyphs follow the app's own mode, not the
@@ -95,7 +106,7 @@ private fun lumenAccent(preset: String, isDark: Boolean): Color = when (preset) 
     "MONASTIC_MINIMALIST" -> if (isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
     "SACRED_BURGUNDY" -> if (isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
     "MARIAN_AZURE" -> if (isDark) Color(0xFF8FC2EC) else Color(0xFF2A6597)
-    else -> if (isDark) Color(0xFF7FC48A) else Color(0xFF2F7A3E)
+    else -> if (isDark) Color(0xFF7FC48A) else Color(0xFF2D743B)
 }
 
 /**
@@ -114,7 +125,7 @@ private fun buildColorScheme(
     val base = if (isDark) darkColorScheme() else lightColorScheme()
 
     return when (identity) {
-        DesignLanguage.APPLE, DesignLanguage.IVE -> base.copy(
+        DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.SANCTUARY -> base.copy(
             primary = accent,
             onPrimary = onAccent,
             primaryContainer = palette.accentMuted,
@@ -124,7 +135,7 @@ private fun buildColorScheme(
             secondaryContainer = palette.selectionTint,
             onSecondaryContainer = palette.textPrimary,
             tertiary = palette.gold,
-            onTertiary = Color.White,
+            onTertiary = if (palette.gold.contrastsBetterWithWhite()) Color.White else Color.Black,
             background = palette.canvas,
             onBackground = palette.textPrimary,
             surface = palette.groupedSurface,

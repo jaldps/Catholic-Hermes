@@ -102,6 +102,7 @@ import com.example.data.prefs.UserPreferences
 import com.example.data.repository.CatechismData
 import com.example.data.repository.CatechismOutlineSection
 import com.example.data.repository.CatholicDataRepository
+import com.example.data.repository.CatechismCompendiumData
 import com.example.data.repository.CompendiumQA
 import com.example.ui.components.InAppBrowserDialog
 import com.example.ui.design.AppActionBar
@@ -159,6 +160,7 @@ fun CatechismScreen(
     modifier: Modifier = Modifier
 ) {
     val insets = AppEdgeToEdge()
+    val design = LocalAppDesign.current
     val context = LocalContext.current
     val lang = currentLanguage
 
@@ -209,7 +211,7 @@ fun CatechismScreen(
     ) {
         AnimatedContent(
             targetState = top,
-            transitionSpec = { fadeIn(tween(250)) togetherWith fadeOut(tween(180)) },
+            transitionSpec = { fadeIn(tween(if (design.reduceMotion) 0 else 250)) togetherWith fadeOut(tween(if (design.reduceMotion) 0 else 180)) },
             label = "catechismPage"
         ) { page ->
             when (page) {
@@ -450,7 +452,7 @@ private val STRAY_CLOSE = Regex("""\s+\)""")
 private val SPACE_BEFORE_PUNCT = Regex("""\s+([,;])""")
 private val SPACE_AFTER_CLOSER = Regex("""(?<=[)»”"])\s+([.,;:])""")
 private val PT_NOTE_MARKER = Regex("""\s?\(\d{1,3}\)""")
-private val FOOTNOTE_DIGITS = Regex("""((?:["”’)][.,;:!?]?|[.!?]["”’)]?))\s+(\d{1,3})(?=\s+[A-Za-z]|\s*$)""")
+private val FOOTNOTE_DIGITS = Regex("""((?:["”’)][.,;:!?]?|[.!?]["”’)]?))\s*(\d{1,3})(?=\s+[A-Za-z]|\s*$)""")
 private val ABBREVIATION_BEFORE = Regex("""(?i)(?:^|[\s(])(?:cf|st|sts|no|nos|n|nn|art|arts|vol|p|pp|ch|chap|sess|sec|ibid)\.$""")
 private val NOTES_START = Regex("""\s1\.\s+(?=\p{Lu})""")
 private val NOTE_NUMBER = Regex("""\s\d{1,3}\.\s""")
@@ -848,7 +850,7 @@ private fun CatSearchField(
         if (value.isNotEmpty()) {
             Box(
                 Modifier
-                    .size(44.dp)
+                    .size(48.dp)
                     .clickable(
                         interactionSource = remember { MutableInteractionSource() },
                         indication = null,
@@ -943,7 +945,7 @@ private fun CccIndexPage(
                 title = lang.pick("Catecismo", "Catechism", "Catecismo"),
                 assetPath = "heroes/lumen/catechism.jpg",
                 meta = lang.pick("de la Iglesia Católica", "of the Catholic Church", "da Igreja Católica"),
-                imageHeight = 300.dp,
+                imageHeight = 220.dp,
                 modifier = Modifier.testTag("catechism_hero_photo")
             )
         }
@@ -1121,8 +1123,8 @@ private fun CccIndexPage(
             item(key = "study_group") {
                 AppListGroup {
                     CatRow(
-                        title = lang.pick("Compendio", "Compendium", "Compêndio"),
-                        subtitle = lang.pick("Preguntas y respuestas", "Questions and answers", "Perguntas e respostas"),
+                        title = CatechismCompendiumData.editorialTitle.get(lang),
+                        subtitle = lang.pick("Resúmenes editoriales", "Editorial summaries", "Resumos editoriais"),
                         leadingIcon = Icons.Outlined.QuestionAnswer,
                         minHeight = 64.dp,
                         onClick = onOpenCompendium,
@@ -1606,7 +1608,7 @@ private fun CccReaderPage(
     Box(Modifier.fillMaxSize()) {
         LazyColumn(
             state = listState,
-            modifier = Modifier.fillMaxSize().graphicsLayer { alpha = if (ready) 1f else 0f },
+            modifier = Modifier.fillMaxSize().testTag("catechism_reader_scroll").graphicsLayer { alpha = if (ready) 1f else 0f },
             contentPadding = PaddingValues(top = topInset, bottom = dockInset + 104.dp)
         ) {
             item(key = "paragraph_range_title") {
@@ -1794,7 +1796,7 @@ private fun ParagraphBlock(
     LaunchedEffect(focused) {
         if (focused) {
             delay(1200)
-            wash.animateTo(0f, tween(300))
+            wash.animateTo(0f, tween(if (design.reduceMotion) 0 else 300))
         }
     }
     val clean = remember(number, lang) { cleanParagraph(repository, number, lang) }
@@ -2129,7 +2131,7 @@ private fun CccCompendiumPage(
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
     val p = design.palette
-    AppInlineTitle(lang.pick("Compendio", "Compendium", "Compêndio"))
+    AppInlineTitle(CatechismCompendiumData.editorialTitle.get(lang))
 
     val groups = remember(repository) { compendiumGroups(repository.compendiumQAEntries) }
     val totalNumbers = remember(groups) { groups.sumOf { it.size } }
@@ -2154,18 +2156,14 @@ private fun CccCompendiumPage(
             MeasureColumn {
                 Column(Modifier.padding(horizontal = design.spacing.gutter)) {
                     Text(
-                        lang.pick("Compendio", "Compendium", "Compêndio"),
+                        CatechismCompendiumData.editorialTitle.get(lang),
                         style = styles.title1,
                         color = p.textPrimary,
                         modifier = Modifier.semantics { heading() }
                     )
                     Spacer(Modifier.height(6.dp))
                     Text(
-                        lang.pick(
-                            "Preguntas y respuestas del Catecismo",
-                            "Questions and answers from the Catechism",
-                            "Perguntas e respostas do Catecismo"
-                        ),
+                        CatechismCompendiumData.editorialNotice.get(lang),
                         style = styles.subhead,
                         color = p.textSecondary
                     )
@@ -2291,7 +2289,7 @@ private fun CccAnswerPage(
     val index = groups.indexOfFirst { first in it.first..it.last }.coerceAtLeast(0)
     val group = groups.getOrNull(index)
     val question = group?.entry?.question?.get(lang)?.withoutQuestionPrefix().orEmpty()
-    AppInlineTitle(lang.pick("Compendio", "Compendium", "Compêndio"))
+    AppInlineTitle(CatechismCompendiumData.editorialTitle.get(lang))
 
     LazyColumn(
         Modifier.fillMaxSize(),
@@ -2307,7 +2305,7 @@ private fun CccAnswerPage(
             MeasureColumn {
                 Column(Modifier.padding(horizontal = design.spacing.gutter)) {
                     Text(
-                        lang.pick("Compendio", "Compendium", "Compêndio") + " · " +
+                        CatechismCompendiumData.editorialTitle.get(lang) + " · " +
                             if (group.size > 1) {
                                 lang.pick("Preguntas", "Questions", "Perguntas") + " " + rangeLabel(group.first, group.last)
                             } else {
@@ -2325,6 +2323,8 @@ private fun CccAnswerPage(
                     )
                     Spacer(Modifier.height(18.dp))
                     Text(entry.answer.get(lang), style = styles.reading, color = p.textPrimary)
+                    Spacer(Modifier.height(18.dp))
+                    Text(CatechismCompendiumData.editorialNotice.get(lang), style = styles.footnote, color = p.textSecondary)
                     Spacer(Modifier.height(18.dp))
                     Text(
                         CccStructure.ordinal(entry.part.coerceIn(1, 4), lang) + " · " +

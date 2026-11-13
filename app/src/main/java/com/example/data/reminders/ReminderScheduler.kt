@@ -15,16 +15,31 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeout
+import kotlinx.coroutines.CancellationException
 import java.util.Calendar
 
 const val REMINDER_CHANNEL_ID = "devotion_reminders"
 
 object ReminderScheduler {
+    const val ACTION_OPEN_REMINDER = "com.example.action.OPEN_REMINDER"
     const val ACTION_FIRE = "com.example.action.REMINDER_FIRE"
     const val EXTRA_ID = "reminder_id"
     const val EXTRA_TITLE = "reminder_title"
     const val EXTRA_BODY = "reminder_body"
     const val EXTRA_LANG = "reminder_lang"
+
+    /** Explicit immutable activity intent; the ID is resolved against ReminderCatalog in the UI. */
+    fun contentIntent(context: Context, reminderId: String? = null): PendingIntent = PendingIntent.getActivity(
+        context,
+        reminderId?.hashCode() ?: 0,
+        Intent(context, com.example.MainActivity::class.java).apply {
+            action = ACTION_OPEN_REMINDER
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            reminderId?.let { putExtra(EXTRA_ID, it) }
+        },
+        PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+    )
 
     private fun intentFor(context: Context, reminder: DevotionReminder, language: String): Intent =
         Intent(context, ReminderReceiver::class.java).apply {
@@ -45,6 +60,7 @@ object ReminderScheduler {
 
     /** Next local trigger strictly after [now] for [hour]:[minute]. */
     fun nextTriggerMillis(hour: Int, minute: Int, now: Calendar = Calendar.getInstance()): Long {
+        require(hour in 0..23 && minute in 0..59) { "Invalid reminder time" }
         val c = (now.clone() as Calendar).apply {
             set(Calendar.HOUR_OF_DAY, hour)
             set(Calendar.MINUTE, minute)
@@ -98,6 +114,8 @@ object ReminderScheduler {
             if (pref.enabled) {
                 schedule(app, reminder, pref.hour, pref.minute, language)
                 scheduled++
+            } else {
+                cancel(app, reminder, language)
             }
         }
         return scheduled
@@ -131,6 +149,7 @@ object ReminderScheduler {
             .setContentTitle(title)
             .setContentText(body)
             .setStyle(NotificationCompat.BigTextStyle().bigText(body))
+            .setContentIntent(contentIntent(context))
             .setAutoCancel(true)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .build()
@@ -143,36 +162,48 @@ object ReminderScheduler {
     }
 }
 
+/** Broadcast work stays within Android's receiver window, including DataStore reads. */
+private fun BroadcastReceiver.finishAsync(work: suspend () -> Unit) {
+    val pending = goAsync()
+    CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
+        try {
+            withTimeout(8_000) { work() }
+        } catch (cancelled: CancellationException) {
+            throw cancelled
+        } catch (_: Exception) {
+            // A failed alarm is retried by the next app start/system reschedule.
+        } finally {
+            pending.finish()
+        }
+    }
+}
+
 class ReminderReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         if (intent?.action != ReminderScheduler.ACTION_FIRE) return
         val id = intent.getStringExtra(ReminderScheduler.EXTRA_ID) ?: return
-        val title = intent.getStringExtra(ReminderScheduler.EXTRA_TITLE) ?: "Oración"
-        val body = intent.getStringExtra(ReminderScheduler.EXTRA_BODY) ?: ""
-        ReminderScheduler.ensureChannel(context)
-        val notification = NotificationCompat.Builder(context, REMINDER_CHANNEL_ID)
-            .setSmallIcon(android.R.drawable.ic_dialog_info)
-            .setContentTitle(title)
-            .setContentText(body)
-            .setStyle(NotificationCompat.BigTextStyle().bigText(body))
-            .setAutoCancel(true)
-            .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            .build()
-        try {
-            NotificationManagerCompat.from(context).notify(id.hashCode(), notification)
-        } catch (_: SecurityException) {
-            // POST_NOTIFICATIONS not granted — the exact alarm still fired; nothing to show.
-        }
-        // Chain the next daily occurrence.
         val reminder = ReminderCatalog.byId(id) ?: return
+        val app = context.applicationContext
         val language = intent.getStringExtra(ReminderScheduler.EXTRA_LANG) ?: "es"
-        val store = ReminderStore(context.applicationContext)
-        CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
-            val pref = store.reminders.first()[id] ?: return@launch
-            if (pref.enabled) {
-                ReminderScheduler.schedule(
-                    context.applicationContext, reminder, pref.hour, pref.minute, language,
-                )
+        finishAsync {
+            val pref = ReminderStore(app).reminders.first()[id] ?: return@finishAsync
+            if (!pref.enabled) return@finishAsync
+            // Chain first, so a refused notification cannot interrupt the next occurrence.
+            ReminderScheduler.schedule(app, reminder, pref.hour, pref.minute, language)
+            ReminderScheduler.ensureChannel(app)
+            val notification = NotificationCompat.Builder(app, REMINDER_CHANNEL_ID)
+                .setSmallIcon(android.R.drawable.ic_dialog_info)
+                .setContentTitle(reminder.title(language))
+                .setContentText(reminder.body(language))
+                .setStyle(NotificationCompat.BigTextStyle().bigText(reminder.body(language)))
+                .setContentIntent(ReminderScheduler.contentIntent(app, id))
+                .setAutoCancel(true)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .build()
+            try {
+                NotificationManagerCompat.from(app).notify(id.hashCode(), notification)
+            } catch (_: SecurityException) {
+                // Notification permission can be declined independently of reminders.
             }
         }
     }
@@ -180,13 +211,13 @@ class ReminderReceiver : BroadcastReceiver() {
 
 class ReminderBootReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
-        if (intent?.action != Intent.ACTION_BOOT_COMPLETED) return
+        if (intent?.action !in setOf(Intent.ACTION_BOOT_COMPLETED, Intent.ACTION_TIME_CHANGED,
+                Intent.ACTION_TIMEZONE_CHANGED, Intent.ACTION_MY_PACKAGE_REPLACED)) return
         val app = context.applicationContext
-        CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
-            val language = runCatching {
-                com.example.data.prefs.UserPreferencesStore(app).preferences.first().language.code
-            }.getOrNull() ?: "es"
-            ReminderScheduler.rescheduleAll(app, language)
+        finishAsync {
+            val language = com.example.data.prefs.UserPreferencesStore(app).preferences.first().language.code
+            // Await the actual scheduling; a nested fire-and-forget job would outlive goAsync.
+            ReminderScheduler.scheduleEnabled(app, language)
         }
     }
 }

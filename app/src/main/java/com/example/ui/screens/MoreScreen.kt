@@ -122,7 +122,8 @@ private val SettingsTags = listOf("app_bar_theme_button", "font_settings_button"
 @Composable
 fun MoreScreen(
     currentLanguage: AppLanguage,
-    sections: List<MoreSection>
+    sections: List<MoreSection>,
+    onOpenBeginner: () -> Unit = {}
 ) {
     val insets = AppEdgeToEdge()
     val context = LocalContext.current
@@ -178,6 +179,22 @@ fun MoreScreen(
             }
         }
 
+        item(key = "more_beginner") {
+            com.example.ui.design.AppCard(Modifier.padding(horizontal = design.spacing.gutter).testTag("explore_start_here")) {
+                Text(pick("Empieza aquí", "Start here", "Comece aqui"), style = styles.title2, color = p.textPrimary)
+                Spacer(Modifier.height(8.dp))
+                Text(pick("Jesús, oración, primera Misa y confesión. Siete pasos a tu ritmo.", "Jesus, prayer, first Mass and confession. Seven steps at your pace.", "Jesus, oração, primeira Missa e confissão. Sete passos no seu ritmo."), style = styles.callout, color = p.textSecondary)
+                Spacer(Modifier.height(12.dp))
+                com.example.ui.design.AppPrimaryCapsule(pick("Dar un primer paso", "Take a first step", "Dar um primeiro passo"), onClick = onOpenBeginner, tag = "nav_beginner")
+            }
+        }
+        if (churchToday.isNotEmpty()) {
+            header("church_first", pick("Misa y comunidad", "Mass & community", "Missa e comunidade"))
+            item(key = "more_church_first") { EntryGroup(churchToday, currentLanguage, modeFallback) }
+        }
+        header("settings_first", pick("Ajustes", "Settings", "Ajustes"))
+        item(key = "more_settings_first") { EntryGroup(settings, currentLanguage, modeFallback) }
+
         if (study.isNotEmpty()) {
             header("study", pick("Estudio", "Study", "Estudo"))
             item(key = "more_study_cards") {
@@ -207,10 +224,6 @@ fun MoreScreen(
             header("inner", pick("Vida interior", "Inner life", "Vida interior"))
             item(key = "more_inner") { EntryGroup(innerLife, currentLanguage, modeFallback) }
         }
-        if (churchToday.isNotEmpty()) {
-            header("church", pick("La Iglesia hoy", "The Church today", "A Igreja hoje"))
-            item(key = "more_church") { EntryGroup(churchToday, currentLanguage, modeFallback) }
-        }
         leftovers.forEachIndexed { i, section ->
             header("other_$i", section.title)
             item(key = "more_other_$i") { EntryGroup(section.entries, currentLanguage, modeFallback) }
@@ -226,7 +239,7 @@ fun MoreScreen(
                 icon = Icons.Outlined.Collections,
                 onOpen = { showCredits = true }
             )
-            EntryGroup(settings + creditsEntry, currentLanguage, modeFallback)
+            EntryGroup(listOf(creditsEntry), currentLanguage, modeFallback)
         }
         item(key = "more_footer") {
             Text(

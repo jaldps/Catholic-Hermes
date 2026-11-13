@@ -416,11 +416,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1017,11 +1013,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2824,11 +2816,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3425,11 +3413,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -5232,11 +5216,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -5833,11 +5813,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -7640,11 +7616,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -8241,11 +8213,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -10048,11 +10016,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -10649,11 +10613,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

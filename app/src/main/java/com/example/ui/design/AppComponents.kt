@@ -11,13 +11,13 @@ import com.example.ui.theme.DesignLanguage
 import com.example.ui.theme.LocalAppDesign
 
 /**
- * The kit in force. Lumen is the app's single identity; both stored
- * [DesignLanguage] values resolve to it.
+ * Shared kit with complete identity-driven geometry, type, material and chrome.
+ * Navigation, semantics and content remain identical when appearance changes.
  */
 @Composable
 @ReadOnlyComposable
 fun appKit(): AppKit = when (LocalAppDesign.current.language) {
-    DesignLanguage.APPLE, DesignLanguage.IVE -> LumenKit
+    DesignLanguage.APPLE, DesignLanguage.IVE, DesignLanguage.SANCTUARY -> LumenKit
 }
 
 // Screens call these. They carry the default arguments an interface cannot, and

@@ -11,6 +11,8 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
+import androidx.compose.ui.test.performScrollToNode
+import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.performTextInput
@@ -24,6 +26,7 @@ import com.example.ui.screens.compendiumGroups
 import com.example.ui.screens.firstCccRange
 import com.example.ui.theme.SanctaFidesTheme
 import org.junit.Assert.assertTrue
+import org.junit.After
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -45,8 +48,11 @@ class CatechismInteractionTest {
 
     private val context get() = ApplicationProvider.getApplicationContext<Application>()
 
+    private val repositories = mutableListOf<CatholicDataRepository>()
+    @After fun closeRepositories() { repositories.forEach { it.close() } }
+
     private fun show(initialParagraph: Int? = null, language: AppLanguage = AppLanguage.EN) {
-        val repository = CatholicDataRepository(context).apply { setLanguage(language) }
+        val repository = CatholicDataRepository(context).apply { setLanguage(language); repositories.add(this) }
         val store = UserPreferencesStore(context)
         compose.setContent {
             SanctaFidesTheme(designLanguage = "APPLE", darkModeSetting = "LIGHT") {
@@ -94,7 +100,8 @@ class CatechismInteractionTest {
         tag("catechism_search_result_1324").performClick()
         waitForTag("catechism_article_1324")
         compose.onNodeWithContentDescription("Current paragraph § 1324").assertExists()
-        tag("catechism_cross_references").assertExists()
+        tag("catechism_reader_scroll").performScrollToNode(hasTestTag("catechism_cross_references"))
+        tag("catechism_cross_references").assertIsDisplayed()
     }
 
     @Test fun aTopicListsTappableResults() {
@@ -105,7 +112,7 @@ class CatechismInteractionTest {
         // Result rows carry per-paragraph tags; open the first.
         val firstTag = (1..2865).firstOrNull { exists("catechism_search_result_$it") }
         assertTrue("a result row exists", firstTag != null)
-        tag("catechism_search_result_$firstTag").performClick()
+        tag("catechism_search_result_$firstTag").performScrollTo().performClick()
         waitForTag("catechism_article_$firstTag")
     }
 
@@ -128,7 +135,8 @@ class CatechismInteractionTest {
         compose.onNodeWithContentDescription("Current paragraph § 1324").assertExists()
         tag("catechism_reading_progress").assertExists()
         // The section header names the real section, once.
-        tag("catechism_cross_references").assertExists()
+        tag("catechism_reader_scroll").performScrollToNode(hasTestTag("catechism_cross_references"))
+        tag("catechism_cross_references").assertIsDisplayed()
     }
 
     @Test fun contentsSheetReachesAnyParagraph() {

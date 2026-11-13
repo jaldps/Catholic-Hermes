@@ -6,6 +6,7 @@ import android.os.Build
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.snap
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -18,6 +19,7 @@ import androidx.compose.foundation.layout.statusBars
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.Stable
+import androidx.compose.runtime.key
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
@@ -102,35 +104,30 @@ fun Modifier.softShadow(shape: Shape, color: Color, blur: Dp = 30.dp, offsetY: D
 fun Modifier.lumenGlass(shape: Shape, strong: Boolean = false, lifted: Boolean = true): Modifier = composed {
     val design = LocalAppDesign.current
     val p = design.palette
-    val base = if (strong) p.glassStrong else p.glass
-    // A faint sheen: a touch denser at the top, lighter below, so the surface
-    // reads as lit glass and not a flat white card.
-    val fill = Brush.verticalGradient(
-        listOf(
-            base.copy(alpha = if (design.isDark) base.alpha * 1.12f else base.alpha),
-            base.copy(alpha = base.alpha * 0.9f)
-        )
-    )
+    val solid = design.isSanctuary || design.reduceTransparency || design.highContrast
+    val base = if (solid) p.raised else if (strong) p.glassStrong else p.glass
+    val fill = Brush.verticalGradient(listOf(
+        base.copy(alpha = if (solid) 1f else base.alpha),
+        base.copy(alpha = if (solid) 1f else (base.alpha * 0.96f).coerceIn(0f, 1f))
+    ))
     this
-        .then(
-            if (lifted) softShadow(
-                shape,
-                p.shadow,
-                blur = if (design.isDark) 24.dp else 30.dp,
-                offsetY = if (design.isDark) 6.dp else 10.dp
-            ) else Modifier
-        )
-        // Light mode only: a tight contact shadow so the edge is defined
-        // (the wide lift alone reads as a blurry halo).
-        .then(
-            if (lifted && !design.isDark) softShadow(shape, p.shadow.copy(alpha = p.shadow.alpha * 0.7f), blur = 6.dp, offsetY = 1.dp)
-            else Modifier
-        )
+        .then(if (lifted && !design.isSanctuary && !design.highContrast) softShadow(
+            shape, p.shadow.copy(alpha = if (design.isDark) 0.22f else 0.07f),
+            blur = 20.dp, offsetY = 5.dp
+        ) else Modifier)
         .background(fill, shape)
-        .border(1.dp, Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), shape)
-        // Light mode: a warm outer hairline so the lit white edge has something
-        // to be lit against (white on a near-white canvas would vanish).
-        .then(if (design.isDark) Modifier else Modifier.border(0.5.dp, Color(0x243B2F22), shape))
+        .border(if (design.highContrast) 1.5.dp else 0.75.dp,
+            if (solid) Brush.verticalGradient(listOf(p.hairline, p.hairline))
+            else Brush.verticalGradient(listOf(p.glassEdgeTop, p.glassEdgeBottom)), shape)
+}
+
+/** Stable opaque reading/content material. Glass remains on transient controls. */
+fun Modifier.appContentSurface(shape: Shape): Modifier = composed {
+    val design = LocalAppDesign.current
+    val p = design.palette
+    background(p.groupedSurface, shape)
+        .border(if (design.highContrast) 1.5.dp else if (design.isSanctuary) 0.75.dp else 0.5.dp,
+            if (design.highContrast || design.isSanctuary) p.hairline else p.separator, shape)
 }
 
 /**
@@ -145,9 +142,10 @@ fun Modifier.lumenPress(
 ): Modifier = if (onClick == null) this else composed {
     val source = remember { MutableInteractionSource() }
     val pressed by source.collectIsPressedAsState()
+    val reduceMotion = LocalAppDesign.current.reduceMotion
     val s by animateFloatAsState(
-        if (pressed && enabled) scale else 1f,
-        spring(dampingRatio = 0.8f, stiffness = 600f),
+        if (pressed && enabled && !reduceMotion) scale else 1f,
+        if (reduceMotion) snap() else spring(dampingRatio = 0.8f, stiffness = 600f),
         label = "lumenPress"
     )
     graphicsLayer { scaleX = s; scaleY = s }
@@ -157,8 +155,25 @@ fun Modifier.lumenPress(
 /** Full-screen canvas gradient. */
 @Composable
 fun Modifier.lumenCanvas(): Modifier {
-    val p = LocalAppDesign.current.palette
+    val design = LocalAppDesign.current
+    val p = design.palette
     return background(Brush.verticalGradient(listOf(p.canvasTop, p.canvasBottom)))
+        .then(if (design.isSanctuary && !design.highContrast) Modifier.drawBehind {
+            // Static, barely visible paper fibres. No bitmap allocation or animation.
+            val step = 5.dp.toPx()
+            var row = 0
+            var y = 0f
+            while (y < size.height) {
+                val start = ((row * 37) % 113) / 113f * size.width
+                val length = 10.dp.toPx() + ((row * 17) % 29).dp.toPx()
+                drawLine(p.textPrimary.copy(alpha = 0.018f),
+                    androidx.compose.ui.geometry.Offset(start, y),
+                    androidx.compose.ui.geometry.Offset((start + length).coerceAtMost(size.width), y),
+                    strokeWidth = 0.35.dp.toPx())
+                row++
+                y += step
+            }
+        } else Modifier)
 }
 
 // ------------------------------------------------------------- screen frame
@@ -315,17 +330,21 @@ private object HeroCache {
 @Composable
 fun rememberAssetBitmap(assetPath: String?, maxWidthPx: Int = 1080): ImageBitmap? {
     val context = LocalContext.current
+    val request = assetPath to maxWidthPx
     val state = produceState(
-        initialValue = assetPath?.let { HeroCache.peek(it, maxWidthPx) },
+        initialValue = request to assetPath?.let { HeroCache.peek(it, maxWidthPx) },
         assetPath, maxWidthPx
     ) {
-        if (assetPath == null) {
-            value = null
-        } else if (value == null) {
-            value = withContext(Dispatchers.IO) { HeroCache.bitmap(context, assetPath, maxWidthPx) }
+        val cached = assetPath?.let { HeroCache.peek(it, maxWidthPx) }
+        value = request to cached
+        if (assetPath != null && cached == null) {
+            val decoded = withContext(Dispatchers.IO) { HeroCache.bitmap(context, assetPath, maxWidthPx) }
+            value = request to decoded
         }
     }
-    return state.value
+    // The producer restarts after composition; never expose a previous request's
+    // image during that frame, even when the previous bitmap was non-null.
+    return state.value.takeIf { it.first == request }?.second
 }
 
 /** Focus point and tone for a bundled hero, from its folder's `manifest.json`. */

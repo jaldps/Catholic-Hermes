@@ -1,11 +1,14 @@
 package com.example
 
 import android.os.Bundle
+import android.content.Intent
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.lifecycleScope
 import com.example.data.audio.LiturgicalTtsManager
 import com.example.data.local.SanctaFidesDatabase
@@ -19,6 +22,9 @@ import kotlinx.coroutines.launch
 
 class MainActivity : ComponentActivity() {
 
+    private var pendingReminderId by mutableStateOf<String?>(null)
+    private var appReady by mutableStateOf(false)
+
     private lateinit var preferencesStore: UserPreferencesStore
     private lateinit var repository: CatholicDataRepository
     private lateinit var ttsManager: LiturgicalTtsManager
@@ -26,9 +32,10 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        acceptReminderIntent(intent)
 
         preferencesStore = UserPreferencesStore(applicationContext)
-        repository = CatholicDataRepository(this, preferencesStore)
+        repository = CatholicDataRepository(applicationContext, preferencesStore)
         ttsManager = LiturgicalTtsManager(this)
         val database = SanctaFidesDatabase.getInstance(this)
         val dao = database.dao()
@@ -46,6 +53,7 @@ class MainActivity : ComponentActivity() {
                 repository.applyPersistedLanguage(stored.language)
                 ttsManager.setLanguage(stored.language)
             }
+            appReady = true
             // Reminders that are ON by default (midday Angelus, Chaplet) are
             // scheduled at app start, not only after a reboot; idempotent.
             com.example.data.reminders.ReminderScheduler.rescheduleAll(
@@ -55,20 +63,9 @@ class MainActivity : ComponentActivity() {
         }
 
         setContent {
-            val preferences by preferencesStore.preferences.collectAsState(
-                initial = UserPreferences(
-                    language = repository.currentLanguage.value,
-                    designLanguage = UserPreferences.DEFAULT_DESIGN_LANGUAGE,
-                    themePreset = UserPreferences.DEFAULT_THEME_PRESET,
-                    darkModeSetting = UserPreferences.DEFAULT_DARK_MODE,
-                    fontFamilyChoice = UserPreferences.DEFAULT_FONT_FAMILY,
-                    fontSizeScale = 1.0f,
-                    audioNarrationSpeed = 1.0f,
-                    activeBibleTranslationId = "jerusalem",
-                    isFullCccDownloaded = false,
-                    hasChosenLanguage = false
-                )
-            )
+            val storedPreferences by preferencesStore.preferences.collectAsState<UserPreferences, UserPreferences?>(initial = null)
+            val preferences = storedPreferences
+            if (!appReady || preferences == null) return@setContent
 
             SanctaFidesTheme(
                 designLanguage = preferences.designLanguage,
@@ -76,21 +73,39 @@ class MainActivity : ComponentActivity() {
                 darkModeSetting = preferences.darkModeSetting,
                 isSerif = preferences.fontFamilyChoice == "SERIF",
                 fontScale = preferences.fontSizeScale,
-                fontFamilyChoice = preferences.fontFamilyChoice
+                fontFamilyChoice = preferences.fontFamilyChoice,
+                reduceMotion = preferences.reduceMotion,
+                reduceTransparency = preferences.reduceTransparency,
+                highContrast = preferences.highContrast
             ) {
                 MainApp(
                     repository = repository,
                     dao = dao,
                     ttsManager = ttsManager,
                     preferencesStore = preferencesStore,
-                    preferences = preferences
+                    preferences = preferences,
+                    initialReminderId = pendingReminderId,
+                    onReminderConsumed = { pendingReminderId = null }
                 )
             }
+        }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        acceptReminderIntent(intent)
+    }
+
+    private fun acceptReminderIntent(intent: Intent?) {
+        if (intent?.action == com.example.data.reminders.ReminderScheduler.ACTION_OPEN_REMINDER) {
+            pendingReminderId = intent.getStringExtra(com.example.data.reminders.ReminderScheduler.EXTRA_ID)
         }
     }
 
     override fun onDestroy() {
         super.onDestroy()
         ttsManager.release()
+        repository.close()
     }
 }

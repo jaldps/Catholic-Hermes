@@ -102,9 +102,7 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         listOf(
             "nav_home" to "home_screen",
             "nav_bible" to "bible_screen",
-            "nav_rosary" to "rosary_screen",
             "nav_prayers" to "prayers_and_novenas_screen",
-            "nav_habits" to "habits_and_virtues_screen",
             "nav_more" to "more_screen"
         ).forEach { (tab, screen) ->
             compose.onNodeWithTag(tab).assertHasClickAction().performClick()
@@ -131,11 +129,10 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("catechism_screen").assertIsDisplayed()
         pressBackToMore()
 
-        // Habits is a tab now, so opening it from More and pressing back
-        // lands on Home (a tab back goes Home), not back on More.
+        // Practices is a secondary screen and returns to its Explore origin.
         clickMoreRow("nav_habits")
         compose.onNodeWithTag("habits_and_virtues_screen").assertIsDisplayed()
-        pressBackToHome()
+        pressBackToMore()
 
         goToMoreFromHome()
 
@@ -169,6 +166,9 @@ class AppNavigationTest(private val identity: DesignLanguage) {
         compose.onNodeWithTag("nav_bible").performClick()
         compose.onNode(hasText("Bible", ignoreCase = true) and hasClickAction() and
             hasAnyAncestor(hasTestTag("bible_screen"))).performClick()
+        // The earlier New Testament filter is intentionally retained across tabs.
+        compose.onNodeWithTag("bible_canon_filter").performScrollTo().performClick()
+        compose.onNodeWithTag("bible_canon_0").performClick()
         compose.onNodeWithTag("book_item_gen").performScrollTo().performClick()
         compose.onNodeWithTag("verse_1").performScrollTo()
         fun assertReadingFamily(expected: FontFamily) {
@@ -201,11 +201,7 @@ class AppNavigationTest(private val identity: DesignLanguage) {
     }
 
     private fun goToMoreFromHome() {
-        compose.onNodeWithTag("nav_home").performClick()
-        compose.onNodeWithTag("home_screen").assertIsDisplayed()
-        compose.onNodeWithTag("home_screen")
-            .performScrollToNode(hasTestTag("home_more_settings"))
-        compose.onNodeWithTag("home_more_settings").performClick()
+        compose.onNodeWithTag("nav_more").performClick()
         compose.onNodeWithTag("more_screen").assertIsDisplayed()
     }
 

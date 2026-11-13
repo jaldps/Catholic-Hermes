@@ -21,6 +21,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.selected
@@ -32,6 +33,8 @@ import com.example.data.prefs.UserPreferencesStore
 import com.example.ui.design.AppSegmentedTabs
 import com.example.ui.design.AppSheet
 import com.example.ui.design.lumenPress
+import com.example.ui.theme.DesignLanguage
+import com.example.ui.design.AppToggleRow
 import com.example.ui.theme.AppThemePreset
 import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
@@ -70,6 +73,20 @@ fun GuiCustomizerModal(
     }
 
     AppSheet(onDismiss = onDismiss, title = t("Apariencia", "Appearance", "Aparência"), tag = "gui_customizer_sheet") {
+        Label(t("Estilo", "Style", "Estilo"))
+        val identities = DesignLanguage.selectable
+        AppSegmentedTabs(
+            options = identities.map { it.label.get(currentLanguage) },
+            selectedIndex = identities.indexOf(DesignLanguage.fromId(preferences.designLanguage)).coerceAtLeast(0),
+            onSelect = { i -> scope.launch { preferencesStore.setDesignLanguage(identities[i].id) } },
+            modifier = Modifier.testTag("appearance_identity")
+        )
+        Text(
+            DesignLanguage.fromId(preferences.designLanguage).tagline.get(currentLanguage),
+            style = styles.footnote, color = p.textSecondary,
+            modifier = Modifier.padding(horizontal = design.spacing.gutter + 4.dp, vertical = 8.dp)
+        )
+
         Label(t("Modo", "Mode", "Modo"))
         val modes = listOf("SYSTEM", "LIGHT", "DARK")
         AppSegmentedTabs(
@@ -90,7 +107,7 @@ fun GuiCustomizerModal(
                     "MONASTIC_MINIMALIST" -> if (design.isDark) Color(0xFFAEB8C6) else Color(0xFF465163)
                     "SACRED_BURGUNDY" -> if (design.isDark) Color(0xFFE59AA6) else Color(0xFF8A2D3B)
                     "MARIAN_AZURE" -> if (design.isDark) Color(0xFF8FC2EC) else Color(0xFF2A6597)
-                    else -> if (design.isDark) Color(0xFF7FC48A) else Color(0xFF2F7A3E)
+                    else -> if (design.isSanctuary) (if (design.isDark) Color(0xFFE5A4AE) else Color(0xFF7A293A)) else if (design.isDark) Color(0xFF7FC48A) else Color(0xFF2D743B)
                 }
                 Box(
                     Modifier
@@ -111,7 +128,7 @@ fun GuiCustomizerModal(
                             .background(swatch, CircleShape),
                         contentAlignment = Alignment.Center
                     ) {
-                        if (selected) Icon(Icons.Filled.Check, null, tint = Color.White, modifier = Modifier.size(16.dp))
+                        if (selected) Icon(Icons.Filled.Check, null, tint = if (swatch.luminance() > 0.35f) Color(0xFF211D19) else Color.White, modifier = Modifier.size(16.dp))
                     }
                 }
             }
@@ -121,7 +138,7 @@ fun GuiCustomizerModal(
         val scales = listOf(0.9f, 1.0f, 1.15f, 1.3f)
         AppSegmentedTabs(
             options = listOf("A−", "A", "A+", "A++"),
-            selectedIndex = scales.indexOfFirst { kotlin.math.abs(it - preferences.fontSizeScale) < 0.03f }.coerceAtLeast(1),
+            selectedIndex = scales.indexOfFirst { kotlin.math.abs(it - preferences.fontSizeScale) < 0.03f }.let { if (it < 0) 1 else it },
             onSelect = { i -> scope.launch { preferencesStore.setFontSizeScale(scales[i]) } },
             modifier = Modifier.testTag("appearance_text_size")
         )
@@ -130,9 +147,28 @@ fun GuiCustomizerModal(
         val speeds = listOf(0.75f, 1.0f, 1.25f, 1.5f)
         AppSegmentedTabs(
             options = listOf("0.75×", "1×", "1.25×", "1.5×"),
-            selectedIndex = speeds.indexOfFirst { kotlin.math.abs(it - preferences.audioNarrationSpeed) < 0.03f }.coerceAtLeast(1),
+            selectedIndex = speeds.indexOfFirst { kotlin.math.abs(it - preferences.audioNarrationSpeed) < 0.03f }.let { if (it < 0) 1 else it },
             onSelect = { i -> scope.launch { preferencesStore.setAudioNarrationSpeed(speeds[i]) } },
             modifier = Modifier.testTag("appearance_narration_speed")
+        )
+        Label(t("Accesibilidad", "Accessibility", "Acessibilidade"))
+        AppToggleRow(
+            title = t("Reducir movimiento", "Reduce motion", "Reduzir movimento"),
+            checked = preferences.reduceMotion,
+            onCheckedChange = { value -> scope.launch { preferencesStore.setReduceMotion(value) } },
+            modifier = Modifier.testTag("appearance_reduce_motion")
+        )
+        AppToggleRow(
+            title = t("Reducir transparencia", "Reduce transparency", "Reduzir transparência"),
+            checked = preferences.reduceTransparency,
+            onCheckedChange = { value -> scope.launch { preferencesStore.setReduceTransparency(value) } },
+            modifier = Modifier.testTag("appearance_reduce_transparency")
+        )
+        AppToggleRow(
+            title = t("Mayor contraste", "Higher contrast", "Maior contraste"),
+            checked = preferences.highContrast,
+            onCheckedChange = { value -> scope.launch { preferencesStore.setHighContrast(value) } },
+            modifier = Modifier.testTag("appearance_high_contrast")
         )
         Spacer(Modifier.height(20.dp))
     }

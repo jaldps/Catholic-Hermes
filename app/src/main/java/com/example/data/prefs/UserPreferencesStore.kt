@@ -34,10 +34,13 @@ data class UserPreferences(
     val activeBibleTranslationId: String,
     val isFullCccDownloaded: Boolean,
     /** False until the user has picked a language themselves. */
-    val hasChosenLanguage: Boolean
+    val hasChosenLanguage: Boolean,
+    val reduceMotion: Boolean = false,
+    val reduceTransparency: Boolean = false,
+    val highContrast: Boolean = false
 ) {
     companion object {
-        const val DEFAULT_DESIGN_LANGUAGE = "APPLE"
+        const val DEFAULT_DESIGN_LANGUAGE = "LUMEN"
         const val DEFAULT_THEME_PRESET = "LITURGICAL_DYNAMIC"
         const val DEFAULT_DARK_MODE = "SYSTEM"
         const val DEFAULT_FONT_FAMILY = "IDENTITY_DEFAULT"
@@ -54,6 +57,9 @@ class UserPreferencesStore(
         val HAS_CHOSEN_LANGUAGE = booleanPreferencesKey("has_chosen_language")
         val DESIGN_LANGUAGE = stringPreferencesKey("design_language")
         val THEME_PRESET = stringPreferencesKey("theme_preset")
+        val REDUCE_MOTION = booleanPreferencesKey("reduce_motion")
+        val REDUCE_TRANSPARENCY = booleanPreferencesKey("reduce_transparency")
+        val HIGH_CONTRAST = booleanPreferencesKey("high_contrast")
         val DARK_MODE = stringPreferencesKey("dark_mode_setting")
         val FONT_FAMILY = stringPreferencesKey("font_family_choice")
         val FONT_SCALE = floatPreferencesKey("font_size_scale")
@@ -131,8 +137,10 @@ class UserPreferencesStore(
                 // AppLanguage.fromCode falls back to the device locale when unset.
                 language = AppLanguage.fromCode(code ?: ""),
                 hasChosenLanguage = stored[Keys.HAS_CHOSEN_LANGUAGE] ?: (code != null),
-                designLanguage = stored[Keys.DESIGN_LANGUAGE]
-                    ?: UserPreferences.DEFAULT_DESIGN_LANGUAGE,
+                designLanguage = canonicalDesign(stored[Keys.DESIGN_LANGUAGE]),
+                reduceMotion = stored[Keys.REDUCE_MOTION] ?: false,
+                reduceTransparency = stored[Keys.REDUCE_TRANSPARENCY] ?: false,
+                highContrast = stored[Keys.HIGH_CONTRAST] ?: false,
                 themePreset = stored[Keys.THEME_PRESET]
                     ?: UserPreferences.DEFAULT_THEME_PRESET,
                 darkModeSetting = stored[Keys.DARK_MODE]
@@ -154,7 +162,24 @@ class UserPreferencesStore(
     }
 
     suspend fun setDesignLanguage(id: String) {
-        dataStore.edit { it[Keys.DESIGN_LANGUAGE] = id }
+        dataStore.edit { it[Keys.DESIGN_LANGUAGE] = canonicalDesign(id) }
+    }
+
+    private fun canonicalDesign(id: String?): String = when (id) {
+        "SANCTUARY", "VATICAN" -> "SANCTUARY"
+        else -> UserPreferences.DEFAULT_DESIGN_LANGUAGE
+    }
+
+    suspend fun setReduceMotion(value: Boolean) {
+        dataStore.edit { it[Keys.REDUCE_MOTION] = value }
+    }
+
+    suspend fun setReduceTransparency(value: Boolean) {
+        dataStore.edit { it[Keys.REDUCE_TRANSPARENCY] = value }
+    }
+
+    suspend fun setHighContrast(value: Boolean) {
+        dataStore.edit { it[Keys.HIGH_CONTRAST] = value }
     }
 
     suspend fun setThemePreset(id: String) {
@@ -196,7 +221,7 @@ class UserPreferencesStore(
         updateFontFamily: Boolean = true
     ) {
         dataStore.edit {
-            it[Keys.DESIGN_LANGUAGE] = designLanguage
+            it[Keys.DESIGN_LANGUAGE] = canonicalDesign(designLanguage)
             it[Keys.THEME_PRESET] = themePreset
             it[Keys.DARK_MODE] = darkModeSetting
             if (updateFontFamily) it[Keys.FONT_FAMILY] = com.example.data.models.FontChoice.fromId(fontFamilyChoice).id

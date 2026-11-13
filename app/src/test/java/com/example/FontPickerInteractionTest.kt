@@ -66,6 +66,6 @@ class FontPickerInteractionTest(private val identity: DesignLanguage, private va
     companion object {
         @JvmStatic
         @ParameterizedRobolectricTestRunner.Parameters(name = "{0}, dark={1}")
-        fun identities(): List<Array<Any>> = DesignLanguage.entries.flatMap { listOf(arrayOf<Any>(it, false), arrayOf<Any>(it, true)) }
+        fun identities(): List<Array<Any>> = DesignLanguage.selectable.flatMap { listOf(arrayOf<Any>(it, false), arrayOf<Any>(it, true)) }
     }
 }

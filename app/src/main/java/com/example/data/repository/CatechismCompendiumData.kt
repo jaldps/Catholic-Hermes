@@ -19,6 +19,15 @@ data class DoctrineFormula(
 
 object CatechismCompendiumData {
 
+    val editorialTitle = LocalizedText("Resúmenes de estudio del Catecismo", "Catechism study summaries", "Resumos de estudo do Catecismo")
+    val editorialNotice = LocalizedText(
+        "Resúmenes editoriales para el estudio, basados en el Catecismo. Las respuestas se han abreviado y algunas se repiten por tema. La numeración es una guía de estudio; no reproduce las 598 preguntas y respuestas del Compendio oficial. Consulte los párrafos citados y el texto oficial.",
+        "Editorial study summaries based on the Catechism. Answers are abridged and some repeat by topic. Numbering is a study aid; this does not reproduce the 598 questions and answers of the official Compendium. Consult the cited paragraphs and the official text.",
+        "Resumos editoriais de estudo baseados no Catecismo. As respostas foram abreviadas e algumas se repetem por tema. A numeração é um guia de estudo; não reproduz as 598 perguntas e respostas do Compêndio oficial. Consulte os parágrafos citados e o texto oficial."
+    )
+    const val officialCompendiumUrl = "https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html"
+
+
     val compendiumPartTitles = listOf(
         LocalizedText("Primera Parte: La Profesión de la Fe (El Credo)", "Part One: The Profession of Faith (Creed)", "Primeira Parte: A Profissão da Fé (O Credo)"),
         LocalizedText("Segunda Parte: La Celebración del Misterio Cristiano (Sacramentos)", "Part Two: The Celebration of the Christian Mystery (Sacraments)", "Segunda Parte: A Celebração do Mistério Cristão (Sacramentos)"),
@@ -26,7 +35,7 @@ object CatechismCompendiumData {
         LocalizedText("Cuarta Parte: La Oración Cristiana (El Padre Nuestro)", "Part Four: Christian Prayer (The Lord's Prayer)", "Quarta Parte: A Oração Cristã (O Pai Nosso)")
     )
 
-    // Curated highlighted questions across all 4 parts of the Vatican Compendium
+    // Editorially abridged study questions across the four parts of the Catechism.
     private val curatedCompendiumEntries: List<CompendiumQA> = listOf(
         // PART 1
         CompendiumQA(
@@ -340,7 +349,8 @@ object CatechismCompendiumData {
     }
 
     /**
-     * Authoritative answer for each of the 598 questions of the official Vatican Compendium.
+     * Editorial study summary indexed by the legacy 1–598 study numbering.
+     * These abridged topic summaries are not verbatim official Compendium answers.
      */
     fun getCompendiumQA(questionNumber: Int): CompendiumQA {
         val existing = curatedCompendiumEntries.firstOrNull { it.number == questionNumber }

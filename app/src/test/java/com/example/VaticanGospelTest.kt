@@ -69,8 +69,21 @@ class VaticanGospelTest {
     }
 
     @Test
-    fun fallsBackToNewestWhenTheDayIsMissing() {
+    fun absentRequestedDayIsUnavailableInsteadOfRelabelingNewestItem() {
         val r = VaticanGospelFetcher().parse(feed("es"), "1999-01-01")
-        assertTrue(r is ReadingsResult.Success)
+        assertTrue(r is ReadingsResult.Failure)
+        assertTrue((r as ReadingsResult.Failure).reason.contains("1999-01-01"))
+    }
+    @Test
+    fun malformedFeedOrDateIsReportedAsFailure() {
+        val fetcher = VaticanGospelFetcher()
+        assertTrue(fetcher.parse("<rss><item>", "2026-10-31") is ReadingsResult.Failure)
+        assertTrue(fetcher.parse(feed("en"), "2026-02-30") is ReadingsResult.Failure)
+    }
+
+    @Test
+    fun dateMustBeTheDatedItemPathNotAnUnrelatedSubstring() {
+        val wrongPath = feed("es").replace("/2026/10/31.html", "/2026/10/31.html/other")
+        assertTrue(VaticanGospelFetcher().parse(wrongPath, "2026-10-31") is ReadingsResult.Failure)
     }
 }

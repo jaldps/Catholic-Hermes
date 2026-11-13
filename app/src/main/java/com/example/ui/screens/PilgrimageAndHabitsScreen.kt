@@ -113,6 +113,7 @@ fun PilgrimageAndHabitsScreen(
     initialTab: Int = PILGRIMAGE_TAB_CALENDAR
 ) {
     AppEdgeToEdge()
+    val design = LocalAppDesign.current
     var selectedTab by rememberSaveable(initialTab) {
         mutableStateOf(initialTab.coerceIn(PILGRIMAGE_TAB_CALENDAR, PILGRIMAGE_TAB_SHRINES))
     }
@@ -133,8 +134,8 @@ fun PilgrimageAndHabitsScreen(
             transitionSpec = {
                 val forward = targetState != null
                 val dir = if (forward) 1 else -1
-                (slideInHorizontally(tween(300)) { dir * it / 3 } + fadeIn(tween(300))) togetherWith
-                    (slideOutHorizontally(tween(300)) { -dir * it / 3 } + fadeOut(tween(200)))
+                (slideInHorizontally(tween(if (design.reduceMotion) 0 else 300)) { dir * it / 3 } + fadeIn(tween(if (design.reduceMotion) 0 else 300))) togetherWith
+                    (slideOutHorizontally(tween(if (design.reduceMotion) 0 else 300)) { -dir * it / 3 } + fadeOut(tween(if (design.reduceMotion) 0 else 200)))
             },
             label = "shrinePage"
         ) { shrineId ->
@@ -174,7 +175,7 @@ private fun PilgrimageHome(
 
     LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = dock + 24.dp)) {
         item(key = "pilgrimage_header") {
-            AppDetailHeader(title = title, assetPath = hero, imageHeight = 248.dp)
+            AppDetailHeader(title = title, assetPath = hero, imageHeight = 180.dp)
         }
         item(key = "pilgrimage_tabs") {
             AppSegmentedTabs(
@@ -554,7 +555,7 @@ private fun ShrineDetail(
                 assetPath = hero,
                 meta = placeLine(shrine.cityCountry.get(currentLanguage)),
                 metaIcon = Icons.Outlined.Place,
-                imageHeight = 248.dp
+                imageHeight = 180.dp
             )
         }
         item(key = "shrine_body") {

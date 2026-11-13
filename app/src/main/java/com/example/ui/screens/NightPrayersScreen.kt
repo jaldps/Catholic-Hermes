@@ -149,6 +149,7 @@ fun NightPrayersScreen(
     openOffice: Int = -1,
     onOpenOffice: (Int) -> Unit = {}
 ) {
+    val design = LocalAppDesign.current
     val compline = repository.complineOffice
     val examenSteps = repository.ignatianExamenSteps
     val prayers = repository.vaticanPrayers
@@ -168,7 +169,7 @@ fun NightPrayersScreen(
             .fillMaxSize()
             .testTag("night_prayers_screen")
     ) {
-        Crossfade(targetState = openOffice, animationSpec = tween(300), label = "nightOffice") { office ->
+        Crossfade(targetState = openOffice, animationSpec = tween(if (design.reduceMotion) 0 else 300), label = "nightOffice") { office ->
             when (office) {
                 0 -> {
                     AppBackHandler { onOpenOffice(-1) }
@@ -474,7 +475,7 @@ private fun ComplineView(
                     "The Church's official liturgy before the night's rest",
                     "Liturgia oficial da Igreja antes do repouso da noite"
                 ),
-                imageHeight = 340.dp
+                imageHeight = 220.dp
             ) {
                 AppGlassIconButton(
                     icon = Icons.Outlined.TextFields,
@@ -732,8 +733,8 @@ private fun OfficePart(
     Column(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
         AnimatedVisibility(
             visible = latinShown,
-            enter = expandVertically(tween(260)) + fadeIn(tween(260)),
-            exit = shrinkVertically(tween(220)) + fadeOut(tween(160))
+            enter = expandVertically(tween(if (design.reduceMotion) 0 else 260)) + fadeIn(tween(if (design.reduceMotion) 0 else 260)),
+            exit = shrinkVertically(tween(if (design.reduceMotion) 0 else 220)) + fadeOut(tween(if (design.reduceMotion) 0 else 160))
         ) {
             Column {
                 LiturgicalText(text = latinText, muted = true, latin = true)
@@ -1072,8 +1073,8 @@ private fun GuidedOfficeView(
                     contentPadding = PaddingValues(horizontal = 24.dp, vertical = 28.dp)
                 ) {
                     Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-                        Box(Modifier.size(40.dp).background(p.success, CircleShape), contentAlignment = Alignment.Center) {
-                            Icon(Icons.Filled.Check, null, tint = Color.White, modifier = Modifier.size(22.dp))
+                        Box(Modifier.size(40.dp).background(p.action, CircleShape), contentAlignment = Alignment.Center) {
+                            Icon(Icons.Filled.Check, null, tint = p.onAction, modifier = Modifier.size(22.dp))
                         }
                         Spacer(Modifier.height(14.dp))
                         Text(completionTitle, style = styles.title2, color = p.textPrimary, textAlign = TextAlign.Center,

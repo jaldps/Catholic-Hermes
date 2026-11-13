@@ -578,11 +578,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1303,11 +1299,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -3482,11 +3474,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -4207,11 +4195,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -6382,11 +6366,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -7107,11 +7087,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -9286,11 +9262,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -10011,11 +9983,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -12186,11 +12154,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -12911,11 +12875,7 @@ But I will not be content with merely uttering your name. Let my love for you pr
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

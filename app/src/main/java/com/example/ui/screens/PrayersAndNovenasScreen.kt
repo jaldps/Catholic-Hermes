@@ -223,7 +223,8 @@ fun PrayersAndNovenasScreen(
     /** Night office opened on arrival when [initialTab] is 2. */
     initialNightOfficeTab: Int = 0,
     /** Opens the Divine Mercy chaplet on arrival instead of the prayers list. */
-    initialOpenChaplet: Boolean = false
+    initialOpenChaplet: Boolean = false,
+    onOpenRosary: () -> Unit = {}
 ) {
     val insets = AppEdgeToEdge()
     val scope = rememberCoroutineScope()
@@ -377,6 +378,18 @@ fun PrayersAndNovenasScreen(
                     )
                 }
             }
+        }
+        if (selectedTab == 0) item(key = "pray_start_here") {
+            com.example.ui.design.AppCard(Modifier.padding(horizontal = LocalAppDesign.current.spacing.gutter)) {
+                Text(currentLanguage.pick("Ayúdame a orar", "Help me pray", "Ajude-me a rezar"), style = LocalAppTextStyles.current.title2, color = LocalAppDesign.current.palette.textPrimary)
+                Spacer(Modifier.height(8.dp))
+                Text(currentLanguage.pick("Empieza con el Padre Nuestro. No necesitas saber las palabras de memoria.", "Begin with the Lord’s Prayer. You do not need to know the words by heart.", "Comece com o Pai-Nosso. Você não precisa saber as palavras de cor."), style = LocalAppTextStyles.current.callout, color = LocalAppDesign.current.palette.textSecondary)
+                Spacer(Modifier.height(12.dp))
+                AppPrimaryCapsule(currentLanguage.pick("Rezar el Padre Nuestro", "Pray the Lord’s Prayer", "Rezar o Pai-Nosso"), onClick = { openPrayerId = "our_father" }, tag = "pray_beginner_start")
+                Spacer(Modifier.height(8.dp))
+                com.example.ui.design.AppListRow(currentLanguage.pick("Rosario guiado", "Guided Rosary", "Terço guiado"), subtitle = currentLanguage.pick("Medita la vida de Jesús con María, una oración a la vez", "Reflect on Jesus’ life with Mary, one prayer at a time", "Medite a vida de Jesus com Maria, uma oração de cada vez"), onClick = onOpenRosary, modifier = Modifier.testTag("nav_rosary"))
+            }
+            Spacer(Modifier.height(16.dp))
         }
         item(key = "prayers_screen_tabs") {
             AppSegmentedTabs(

@@ -8,7 +8,7 @@ object NovenaData000 {
     val novena: Novena = Novena(
         id = """novena-a-cristo-rey""",
         title = LocalizedText("""Novena a Cristo Rey""", """Christ the King Novena""", """Novena a Cristo Rei"""),
-        patron = LocalizedText("""Santo patrón de el Reino de Jesús""", """Patron saint of the Kingdom of Jesus""", """Novena a Cristo Rei"""),
+        patron = LocalizedText("""Jesucristo, Rey del Universo""", """Jesus Christ, King of the Universe""", """Jesus Cristo, Rei do Universo"""),
         category = LocalizedText("""Novenas""", """Novenas""", """Novenas"""),
         description = LocalizedText("""Proclama el reinado de Cristo sobre toda la creación. Reza ahora esta novena y experimenta la paz que viene de entregarse al Rey de reyes y Señor de señores.""", """Proclaim Christ’s reign over all creation. Pray this novena now and experience the peace that comes from surrendering to the King of Kings and Lord of Lords.""", """Proclame o reinado de Cristo sobre toda a criação. Reze agora esta novena e experimente a paz que vem de se entregar ao Rei dos reis e Senhor dos senhores."""),
         miraculousHistory = LocalizedText("", "", ""),
@@ -110,11 +110,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -253,11 +249,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -686,11 +678,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -829,11 +817,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1262,11 +1246,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1405,11 +1385,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1838,11 +1814,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1981,11 +1953,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2414,11 +2382,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -2557,11 +2521,7 @@ Amen.
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 

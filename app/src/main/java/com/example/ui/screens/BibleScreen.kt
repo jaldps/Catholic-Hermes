@@ -66,8 +66,9 @@ import androidx.compose.material.icons.outlined.Translate
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.Stable
@@ -97,6 +98,7 @@ import androidx.compose.ui.input.nestedscroll.NestedScrollConnection
 import androidx.compose.ui.input.nestedscroll.NestedScrollSource
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.layout.onSizeChanged
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
@@ -139,6 +141,7 @@ import com.example.data.repository.BibleData
 import com.example.data.repository.BibleDownloadManager
 import com.example.data.repository.CatholicDataRepository
 import com.example.data.xref.VerseRef
+import com.example.ui.design.AppPrimaryCapsule
 import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppEdgeToEdge
 import com.example.ui.design.AppEmptyState
@@ -358,6 +361,11 @@ internal fun rememberSpeechQueue(tts: LiturgicalTtsManager?): SpeechQueue {
 
 // ------------------------------------------------------------------ screen
 
+internal fun verseIndexForVisibleItem(itemIndex: Int, headerCount: Int, verseCount: Int): Int? =
+    if (verseCount <= 0) null else (itemIndex - headerCount).coerceIn(0, verseCount - 1)
+
+private val LocalBibleEditionLabel = staticCompositionLocalOf { "" }
+
 @Composable
 fun BibleScreen(
     repository: CatholicDataRepository,
@@ -372,10 +380,12 @@ fun BibleScreen(
     initialChapter: Int? = null,
     /** Deep-link: verse to highlight/scroll to on open, or null for none. */
     initialVerseStart: Int? = null,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onExitContext: (() -> Unit)? = null
 ) {
     val context = LocalContext.current
     val insets = AppEdgeToEdge()
+    val activeEdition by repository.activeBibleEditionId.collectAsState()
 
     var selectedMainTab by rememberSaveable(initialMainTab) { mutableIntStateOf(initialMainTab) }
     // Deep-link state is keyed so a new link re-preselects, while ordinary
@@ -443,6 +453,9 @@ fun BibleScreen(
     }
     val listBottom = PaddingValues(bottom = insets.calculateBottomPadding() + 32.dp)
 
+    val editionLabel = repository.bibleDownloadManager?.specs?.firstOrNull { it.id == activeEdition }?.name
+        ?: when(currentLanguage) { AppLanguage.ES -> "Biblia Platense · Español"; AppLanguage.EN -> "Douay-Rheims-Challoner · English"; AppLanguage.PT -> "Matos Soares · Português" }
+    CompositionLocalProvider(LocalBibleEditionLabel provides editionLabel) {
     ReadingTypography(settings) {
         Box(modifier.fillMaxSize().testTag("bible_screen")) {
             val book = selectedBook
@@ -451,7 +464,9 @@ fun BibleScreen(
                     versions = repository.bibleVersions,
                     downloadManager = repository.bibleDownloadManager,
                     currentLanguage = currentLanguage,
-                    onBack = { selectedMainTab = 0 }
+                    onBack = { selectedMainTab = 0 },
+                    activeEditionId = activeEdition,
+                    onSelectEdition = { repository.selectBibleEdition(it) }
                 )
 
                 selectedMainTab == 0 && book != null -> ReaderHost(
@@ -495,6 +510,8 @@ fun BibleScreen(
                             focusVerse = previous[2].toIntOrNull()
                             studyVerse = focusVerse
                             scrollVerse = null
+                        } else if (onExitContext != null) {
+                            onExitContext()
                         } else {
                             trail = ""
                             selectedBookId = null
@@ -563,6 +580,7 @@ fun BibleScreen(
             }
         }
     }
+    }
 }
 
 // ------------------------------------------------------------------ directory
@@ -587,7 +605,8 @@ private fun BookDirectory(
 
     // The declared chapter count and the one actually present in the assets can
     // differ, so the directory reports what the repaired data really holds.
-    val chapterCounts = remember(currentLanguage) {
+    val activeEdition by repository.activeBibleEditionId.collectAsState()
+    val chapterCounts = remember(currentLanguage, activeEdition) {
         repository.catholicBooks.associate { it.id to repository.getChapterCount(it.id, currentLanguage) }
     }
     val booksById = remember { repository.catholicBooks.associateBy { it.id } }
@@ -597,7 +616,7 @@ private fun BookDirectory(
 
     val query = searchQuery.trim()
     val searching = query.isNotEmpty()
-    val filteredBooks = remember(query, selectedFilter, currentLanguage) {
+    val filteredBooks = remember(query, selectedFilter, currentLanguage, activeEdition) {
         repository.catholicBooks.filter { book ->
             val testamentName = if (book.testament == Testament.OLD) {
                 currentLanguage.pick("Antiguo Testamento", "Old Testament", "Antigo Testamento")
@@ -617,13 +636,13 @@ private fun BookDirectory(
                 3 -> book.isDeuterocanonical
                 else -> true
             }
-            matchesSearch && matchesTab
+            matchesSearch && matchesTab && (chapterCounts[book.id] ?: 0) > 0
         }
     }
 
     // Full-text search runs off the composition thread: it walks the whole
     // bundled bible and would otherwise stall every keystroke.
-    val verseMatchesState by produceState<List<Triple<String, Int, BibleVerse>>?>(null, query, currentLanguage) {
+    val verseMatchesState by produceState<List<Triple<String, Int, BibleVerse>>?>(null, query, currentLanguage, activeEdition) {
         value = null
         value = if (query.length < MinSearchLength) emptyList()
         else withContext(Dispatchers.Default) { repository.searchBible(query, 20, currentLanguage) }
@@ -898,7 +917,7 @@ private fun ContinueReadingCard(
     val art = rememberFirstAsset("heroes/lumen/bible.jpg", "heroes/church_window_light.jpg")
     val bitmap = rememberAssetBitmap(art, 900)
     val meta = rememberHeroMeta(art)
-    val shape = RoundedCornerShape(22.dp)
+    val shape = design.shapes.card
     val title = if (firstRun) {
         currentLanguage.pick("Evangelio según San Juan", "The Gospel of John", "Evangelho segundo São João")
     } else "${book.shortName(currentLanguage)} $chapter"
@@ -906,7 +925,7 @@ private fun ContinueReadingCard(
         Modifier
             .fillMaxWidth()
             .padding(horizontal = design.spacing.gutter)
-            .height(196.dp)
+            .heightIn(min = 196.dp)
             .lumenPress({ onOpen(book, chapter) }, 0.98f)
             .softShadow(shape, p.shadow)
             .clip(shape)
@@ -920,11 +939,11 @@ private fun ContinueReadingCard(
                 contentScale = ContentScale.Crop,
                 alignment = meta.alignment,
                 colorFilter = ColorFilter.colorMatrix(ColorMatrix().apply { setToSaturation(0.86f) }),
-                modifier = Modifier.fillMaxSize().testTag("bible_hero_photo")
+                modifier = Modifier.matchParentSize().testTag("bible_hero_photo")
             )
         }
         Box(
-            Modifier.fillMaxSize().background(
+            Modifier.matchParentSize().background(
                 Brush.verticalGradient(
                     0f to Color.Black.copy(alpha = 0.05f),
                     0.38f to Color.Transparent,
@@ -932,11 +951,10 @@ private fun ContinueReadingCard(
                 )
             )
         )
-        Row(
-            Modifier.align(Alignment.BottomStart).fillMaxWidth().padding(start = 18.dp, end = 14.dp, bottom = 16.dp),
-            verticalAlignment = Alignment.Bottom
-        ) {
-            Column(Modifier.weight(1f)) {
+        val configuration = LocalConfiguration.current
+        val stacked = configuration.screenWidthDp < 360 || styles.subhead.fontSize.value * LocalDensity.current.fontScale > 22f
+        val readingDetails: @Composable (Modifier) -> Unit = { detailsModifier ->
+            Column(detailsModifier) {
                 Text(
                     if (firstRun) currentLanguage.pick("Empieza aquí", "Start here", "Comece aqui")
                     else currentLanguage.pick("Seguir leyendo", "Continue reading", "Continuar a ler"),
@@ -944,10 +962,10 @@ private fun ContinueReadingCard(
                     color = Color.White.copy(alpha = 0.86f)
                 )
                 Spacer(Modifier.height(2.dp))
-                Text(title, style = styles.title2, color = Color.White, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                Text(title, style = styles.title2, color = Color.White, modifier = Modifier.testTag("bible_continue_title"))
                 Spacer(Modifier.height(2.dp))
                 Text(
-                    if (firstRun) currentLanguage.pick("Una buena primera lectura", "A good place to begin", "Um bom começo")
+                    if (firstRun) currentLanguage.pick("Toca para leer · Juan 1", "Tap to read · John 1", "Toque para ler · João 1")
                     else currentLanguage.pick(
                         "Capítulo $chapter de $chapterCount",
                         "Chapter $chapter of $chapterCount",
@@ -967,14 +985,35 @@ private fun ContinueReadingCard(
                     )
                 }
             }
-            Spacer(Modifier.width(12.dp))
-            AppGlassIconButton(
-                icon = Icons.Filled.PlayArrow,
-                contentDescription = currentLanguage.pick("Escuchar el capítulo", "Listen to the chapter", "Ouvir o capítulo"),
-                onClick = { onListen(book, chapter) },
-                onImage = true,
-                tag = "bible_continue_listen"
-            )
+        }
+        val listenControl: @Composable () -> Unit = {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                AppGlassIconButton(
+                    icon = Icons.Filled.PlayArrow,
+                    contentDescription = currentLanguage.pick("Escuchar el capítulo", "Listen to the chapter", "Ouvir o capítulo"),
+                    onClick = { onListen(book, chapter) },
+                    onImage = true,
+                    tag = "bible_continue_listen"
+                )
+                Spacer(Modifier.height(4.dp))
+                Text(currentLanguage.pick("Escuchar", "Listen", "Ouvir"), style = styles.footnote, color = Color.White)
+            }
+        }
+        if (stacked) {
+            Column(Modifier.align(Alignment.BottomStart).fillMaxWidth().padding(18.dp)) {
+                readingDetails(Modifier.fillMaxWidth())
+                Spacer(Modifier.height(12.dp))
+                listenControl()
+            }
+        } else {
+            Row(
+                Modifier.align(Alignment.BottomStart).fillMaxWidth().padding(start = 18.dp, end = 14.dp, bottom = 16.dp),
+                verticalAlignment = Alignment.Bottom
+            ) {
+                readingDetails(Modifier.weight(1f))
+                Spacer(Modifier.width(12.dp))
+                listenControl()
+            }
         }
     }
 }
@@ -1011,9 +1050,21 @@ private fun ReaderHost(
     val context = LocalContext.current
     val landscape = LocalConfiguration.current.orientation == Configuration.ORIENTATION_LANDSCAPE
     val countOf: (String) -> Int = { id -> repository.getChapterCount(id, currentLanguage) }
-    val chapterCount = remember(book.id, currentLanguage) { countOf(book.id).coerceAtLeast(1) }
+    val activeEdition by repository.activeBibleEditionId.collectAsState()
+    val availableChapters = remember(book.id, currentLanguage, activeEdition) { countOf(book.id) }
+    if (availableChapters == 0) {
+        AppBackHandler(onBack = onBack)
+        Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+            Text(currentLanguage.pick("Libro no disponible en esta edición", "Book unavailable in this edition", "Livro indisponível nesta edição"), style = LocalAppTextStyles.current.title2, color = LocalAppDesign.current.palette.textPrimary)
+            Text(currentLanguage.pick("Esta edición no contiene este libro. Elige la Biblia católica incluida para leerlo.", "This edition does not contain this book. Choose the included Catholic Bible to read it.", "Esta edição não contém este livro. Escolha a Bíblia católica incluída para lê-lo."), style = LocalAppTextStyles.current.callout, color = LocalAppDesign.current.palette.textSecondary)
+            AppPrimaryCapsule(currentLanguage.pick("Usar Biblia incluida", "Use included Bible", "Usar Bíblia incluída"), onClick = { repository.selectBibleEdition("bundled") }, tag = "bible_use_bundled")
+            AppSecondaryCapsule(currentLanguage.pick("Volver", "Back", "Voltar"), onClick = onBack)
+        }
+        return
+    }
+    val chapterCount = availableChapters
     val chapterNumber = chapterRequest.coerceIn(1, chapterCount)
-    val verses = remember(book.id, chapterNumber, currentLanguage) {
+    val verses = remember(book.id, chapterNumber, currentLanguage, activeEdition) {
         repository.getChapter(book.id, chapterNumber, currentLanguage).verses
     }
     var verseForSheet by remember { mutableStateOf<BibleVerse?>(null) }
@@ -1034,7 +1085,7 @@ private fun ReaderHost(
     }
 
     val reader: @Composable (Modifier) -> Unit = { m ->
-        key(book.id, chapterNumber) {
+        key(book.id, chapterNumber, activeEdition) {
             ChapterReader(
                 book = book,
                 chapterNumber = chapterNumber,
@@ -1140,6 +1191,7 @@ private fun ChapterReader(
     val listState = rememberLazyListState()
     val top = appScreenInsets().calculateTopPadding()
     val bottomInset = appDockInset()
+    var readerBarHeight by remember { mutableStateOf(bottomInset + 88.dp) }
     val owner = "${book.id}:$chapterNumber"
     val playingIndex = if (speech.owner == owner) speech.index else null
     val listening = speech.isPlaying(owner)
@@ -1159,7 +1211,7 @@ private fun ChapterReader(
     // Remember the exact verse at the top of the page for "Continue reading".
     LaunchedEffect(listState, verses) {
         snapshotFlow { listState.firstVisibleItemIndex }.collect { index ->
-            val verse = verses.getOrNull(index - leading + 1) ?: return@collect
+            val verse = verses.getOrNull(verseIndexForVisibleItem(index, leading, verses.size) ?: return@collect) ?: return@collect
             BibleReaderStore.saveVerse(context, book.id, chapterNumber, verse.number)
         }
     }
@@ -1198,10 +1250,12 @@ private fun ChapterReader(
         LazyColumn(
             state = listState,
             modifier = Modifier.fillMaxSize().testTag("bible_reader"),
-            contentPadding = PaddingValues(top = top + 4.dp, bottom = bottomInset + 120.dp),
+            contentPadding = PaddingValues(top = top + 4.dp, bottom = readerBarHeight + 32.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             item(key = "opening") {
+                val edition = LocalBibleEditionLabel.current
+                Text(edition, style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(horizontal = ReadingInset).testTag("bible_active_edition"))
                 ChapterOpening(book, chapterNumber, chapterCount, currentLanguage)
             }
             if (verses.isEmpty()) {
@@ -1209,9 +1263,9 @@ private fun ChapterReader(
                     AppEmptyState(
                         title = currentLanguage.pick("Capítulo no disponible", "Chapter unavailable", "Capítulo não disponível"),
                         body = currentLanguage.pick(
-                            "Este capítulo no está en la edición incluida en este idioma.",
-                            "This chapter is not in the bundled edition for this language.",
-                            "Este capítulo não está na edição incluída neste idioma."
+                            "Este capítulo no está disponible en la edición seleccionada.",
+                            "This chapter is not available in the selected edition.",
+                            "Este capítulo não está disponível na edição selecionada."
                         ),
                         icon = Icons.Outlined.AutoStories
                     )
@@ -1280,7 +1334,9 @@ private fun ChapterReader(
                 },
                 onChooseChapter = onChooseChapter,
                 onOpenText = onOpenText,
-                modifier = Modifier.padding(bottom = bottomInset + 12.dp)
+                modifier = Modifier
+                    .onSizeChanged { readerBarHeight = with(density) { it.height.toDp() } }
+                    .padding(bottom = bottomInset + 12.dp)
             )
         }
     }
@@ -1443,8 +1499,9 @@ private fun ReaderBar(
     val styles = LocalAppTextStyles.current
     val shape = RoundedCornerShape(percent = 50)
     val pulse = remember { Animatable(1f) }
-    LaunchedEffect(pulseNext) {
-        if (pulseNext) {
+    LaunchedEffect(pulseNext, design.reduceMotion) {
+        pulse.snapTo(1f)
+        if (pulseNext && !design.reduceMotion) {
             pulse.animateTo(1.14f, tween(160))
             pulse.animateTo(1f, spring(dampingRatio = 0.5f, stiffness = 500f))
         }
@@ -1452,89 +1509,100 @@ private fun ReaderBar(
     val chapterLabel = currentLanguage.pick("Cap. $chapterNumber / $chapterCount", "Ch. $chapterNumber / $chapterCount", "Cap. $chapterNumber / $chapterCount")
     fun place(target: Pair<BibleBook, Int>?) = target?.let { "${it.first.shortName(currentLanguage)} ${it.second}" } ?: ""
 
-    Row(
-        modifier
-            .padding(horizontal = design.spacing.gutter)
-            .widthIn(max = 560.dp)
-            .fillMaxWidth()
-            .height(64.dp)
-            .lumenGlass(shape, strong = true)
-            .background(p.glassStrong.copy(alpha = (p.glassStrong.alpha + 0.12f).coerceAtMost(1f)), shape)
-            .padding(horizontal = 6.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        BarGlyph(
-            onClick = onPrevious,
-            enabled = previous != null,
-            description = currentLanguage.pick("Capítulo anterior: ", "Previous chapter: ", "Capítulo anterior: ") + place(previous),
-            tag = "prev_chapter_button"
-        ) { tint -> Icon(Icons.AutoMirrored.Outlined.ArrowBackIos, null, tint = tint, modifier = Modifier.size(18.dp).offset(x = 3.dp)) }
-
-        // The chapter, which opens the chapter sheet, over the book's progress.
-        Column(
-            Modifier
-                .weight(1f)
-                .heightIn(min = 48.dp)
-                .clip(RoundedCornerShape(16.dp))
-                .clickable(role = Role.Button, onClick = onChooseChapter)
-                .semantics {
-                    contentDescription = currentLanguage.pick(
-                        "Elegir capítulo. ${book.name.get(currentLanguage)}, capítulo $chapterNumber de $chapterCount",
-                        "Choose chapter. ${book.name.get(currentLanguage)}, chapter $chapterNumber of $chapterCount",
-                        "Escolher capítulo. ${book.name.get(currentLanguage)}, capítulo $chapterNumber de $chapterCount"
-                    )
-                }
-                .testTag("choose_chapter_header_button")
-                .padding(horizontal = 8.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                FittedPlace(
-                    full = "${book.shortName(currentLanguage)} $chapterNumber",
-                    short = "${book.abbreviation} $chapterNumber",
-                    style = styles.subhead.copy(fontWeight = FontWeight.SemiBold),
-                    color = p.textPrimary,
-                    modifier = Modifier.weight(1f, fill = false)
-                )
-                Spacer(Modifier.width(2.dp))
-                Icon(Icons.Outlined.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(16.dp))
-            }
-            Spacer(Modifier.height(6.dp))
-            AppProgressBar(
-                progress = progress,
-                modifier = Modifier
-                    .fillMaxWidth(0.9f)
-                    .semantics {
-                        contentDescription = chapterLabel
-                        stateDescription = currentLanguage.pick("Progreso en el libro", "Progress through the book", "Progresso no livro")
-                    }
-                    .testTag("bible_reader_progress"),
-                color = p.textPrimary.copy(alpha = 0.72f),
-                track = p.separator,
-                height = 3.dp
-            )
-        }
-
-        if (canListen) {
-            Box(
+    BoxWithConstraints(modifier.padding(horizontal = design.spacing.gutter).widthIn(max = 560.dp).fillMaxWidth()) {
+        val stacked = maxWidth < 320.dp || styles.subhead.fontSize.value * LocalDensity.current.fontScale > 22f
+        val barShape = if (stacked) RoundedCornerShape(24.dp) else shape
+        val chapterControl: @Composable (Modifier) -> Unit = { chapterModifier ->
+            // The chapter, which opens the chapter sheet, over the book's progress.
+            Column(
                 Modifier
-                    .size(48.dp)
-                    .lumenPress(onListen, 0.9f)
+                    .then(chapterModifier)
+                    .heightIn(min = 48.dp)
+                    .clip(RoundedCornerShape(16.dp))
+                    .clickable(role = Role.Button, onClick = onChooseChapter)
                     .semantics {
-                        contentDescription = if (listening) currentLanguage.pick("Pausar la lectura", "Pause reading", "Pausar a leitura")
-                        else currentLanguage.pick("Escuchar el capítulo", "Listen to the chapter", "Ouvir o capítulo")
+                        contentDescription = currentLanguage.pick(
+                            "Elegir capítulo. ${book.name.get(currentLanguage)}, capítulo $chapterNumber de $chapterCount",
+                            "Choose chapter. ${book.name.get(currentLanguage)}, chapter $chapterNumber of $chapterCount",
+                            "Escolher capítulo. ${book.name.get(currentLanguage)}, capítulo $chapterNumber de $chapterCount"
+                        )
                     }
-                    .testTag("bible_reader_listen"),
-                contentAlignment = Alignment.Center
+                    .testTag("choose_chapter_header_button")
+                    .padding(horizontal = 8.dp),
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Box(Modifier.size(44.dp).clip(CircleShape).background(p.action), contentAlignment = Alignment.Center) {
-                    Icon(
-                        if (listening) Icons.Filled.Pause else Icons.Filled.PlayArrow,
-                        null, tint = p.onAction, modifier = Modifier.size(24.dp)
-                    )
+                Row(
+                    modifier = if (stacked) Modifier.fillMaxWidth() else Modifier,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    if (stacked) {
+                        Text(
+                            "${book.shortName(currentLanguage)} $chapterNumber",
+                            style = styles.subhead.copy(fontWeight = FontWeight.SemiBold),
+                            color = p.textPrimary,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier.weight(1f).testTag("bible_reader_chapter_title")
+                        )
+                    } else {
+                        FittedPlace(
+                            full = "${book.shortName(currentLanguage)} $chapterNumber",
+                            short = "${book.abbreviation} $chapterNumber",
+                            style = styles.subhead.copy(fontWeight = FontWeight.SemiBold),
+                            color = p.textPrimary,
+                            modifier = Modifier.weight(1f, fill = false)
+                        )
+                    }
+                    Spacer(Modifier.width(2.dp))
+                    Icon(Icons.Outlined.KeyboardArrowDown, null, tint = p.textSecondary, modifier = Modifier.size(16.dp))
                 }
+                Spacer(Modifier.height(6.dp))
+                AppProgressBar(
+                    progress = progress,
+                    modifier = Modifier
+                        .fillMaxWidth(0.9f)
+                        .semantics {
+                            contentDescription = chapterLabel
+                            stateDescription = currentLanguage.pick("Progreso en el libro", "Progress through the book", "Progresso no livro")
+                        }
+                        .testTag("bible_reader_progress"),
+                    color = p.textPrimary.copy(alpha = 0.72f),
+                    track = p.separator,
+                    height = 3.dp
+                )
             }
+        }
+        val previousControl: @Composable () -> Unit = {
+            BarGlyph(
+                onClick = onPrevious,
+                enabled = previous != null,
+                description = currentLanguage.pick("Capítulo anterior: ", "Previous chapter: ", "Capítulo anterior: ") + place(previous),
+                tag = "prev_chapter_button"
+            ) { tint -> Icon(Icons.AutoMirrored.Outlined.ArrowBackIos, null, tint = tint, modifier = Modifier.size(18.dp).offset(x = 3.dp)) }
+
+
+        }
+        val remainingControls: @Composable () -> Unit = {
+
+            if (canListen) {
+                Box(
+                    Modifier
+                        .size(48.dp)
+                        .lumenPress(onListen, 0.9f)
+                        .semantics {
+                            contentDescription = if (listening) currentLanguage.pick("Pausar la lectura", "Pause reading", "Pausar a leitura")
+                            else currentLanguage.pick("Escuchar el capítulo", "Listen to the chapter", "Ouvir o capítulo")
+                        }
+                        .testTag("bible_reader_listen"),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Box(Modifier.size(44.dp).clip(CircleShape).background(p.action), contentAlignment = Alignment.Center) {
+                        Icon(
+                            if (listening) Icons.Filled.Pause else Icons.Filled.PlayArrow,
+                            null, tint = p.onAction, modifier = Modifier.size(24.dp)
+                        )
+                    }
+                }
         }
         BarGlyph(
             onClick = onOpenText,
@@ -1549,6 +1617,26 @@ private fun ReaderBar(
                 description = currentLanguage.pick("Capítulo siguiente: ", "Next chapter: ", "Próximo capítulo: ") + place(next),
                 tag = "next_chapter_button"
             ) { tint -> Icon(Icons.AutoMirrored.Outlined.ArrowForwardIos, null, tint = tint, modifier = Modifier.size(18.dp)) }
+        }
+        }
+        val surface = Modifier.fillMaxWidth()
+            .lumenGlass(barShape, strong = true)
+            .background(p.glassStrong.copy(alpha = (p.glassStrong.alpha + 0.12f).coerceAtMost(1f)), barShape)
+            .padding(horizontal = 6.dp)
+        if (stacked) {
+            Column(surface.padding(vertical = 8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                chapterControl(Modifier.fillMaxWidth().padding(vertical = 4.dp))
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly, verticalAlignment = Alignment.CenterVertically) {
+                    previousControl()
+                    remainingControls()
+                }
+            }
+        } else {
+            Row(surface.height(64.dp), verticalAlignment = Alignment.CenterVertically) {
+                previousControl()
+                chapterControl(Modifier.weight(1f))
+                remainingControls()
+            }
         }
     }
 }
@@ -2181,7 +2269,9 @@ private fun VersionsView(
     versions: List<BibleVersionInfo>,
     downloadManager: BibleDownloadManager?,
     currentLanguage: AppLanguage,
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    activeEditionId: String = "bundled",
+    onSelectEdition: (String) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -2209,6 +2299,12 @@ private fun VersionsView(
                 )
             }
         }
+        item(key = "select_included") {
+            AppListGroup {
+                AppListRow(currentLanguage.pick("Biblia católica incluida · 73 libros", "Included Catholic Bible · 73 books", "Bíblia católica incluída · 73 livros"), subtitle = when(currentLanguage) { AppLanguage.ES -> "Biblia Platense · Español"; AppLanguage.EN -> "Douay-Rheims-Challoner · English"; AppLanguage.PT -> "Matos Soares · Português" }, selected = activeEditionId == "bundled", onClick = { onSelectEdition("bundled") }, modifier = Modifier.testTag("bible_edition_bundled"))
+            }
+            Spacer(Modifier.height(16.dp))
+        }
         item(key = "versions_label") {
             Text(
                 currentLanguage.pick("Traducciones", "Translations", "Traduções"),
@@ -2224,7 +2320,7 @@ private fun VersionsView(
         }
         if (downloadManager != null) {
             item(key = "downloads") {
-                OfflineBibleDownloadsView(manager = downloadManager, currentLanguage = currentLanguage)
+                OfflineBibleDownloadsView(manager = downloadManager, currentLanguage = currentLanguage, activeEditionId = activeEditionId, onSelectEdition = onSelectEdition)
             }
         }
     }
@@ -2273,7 +2369,9 @@ private fun VersionCard(version: BibleVersionInfo, currentLanguage: AppLanguage)
 @Composable
 fun OfflineBibleDownloadsView(
     manager: BibleDownloadManager,
-    currentLanguage: AppLanguage
+    currentLanguage: AppLanguage,
+    activeEditionId: String = "bundled",
+    onSelectEdition: (String) -> Unit = {}
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -2301,7 +2399,10 @@ fun OfflineBibleDownloadsView(
                 var downloading by remember(spec.id) { mutableStateOf(false) }
                 var progress by remember(spec.id) { mutableFloatStateOf(0f) }
                 var status by remember(spec.id) { mutableStateOf("") }
-                val downloaded = remember(spec.id, downloading) { manager.isDownloaded(spec.id) }
+                var revision by remember(spec.id) { mutableIntStateOf(0) }
+                var downloadJob by remember(spec.id) { mutableStateOf<kotlinx.coroutines.Job?>(null) }
+                val downloadStatus = remember(spec.id, downloading, revision) { manager.status(spec.id) }
+                val downloaded = downloadStatus.complete
                 Column {
                     Row(
                         Modifier.fillMaxWidth().heightIn(min = 64.dp).padding(start = 18.dp, end = 10.dp, top = 10.dp, bottom = 10.dp),
@@ -2312,7 +2413,7 @@ fun OfflineBibleDownloadsView(
                             Spacer(Modifier.height(2.dp))
                             Text(
                                 if (downloaded) currentLanguage.pick("Descargado · disponible sin conexión", "Downloaded · available offline", "Baixado · disponível offline")
-                                else status.ifBlank { currentLanguage.pick("No descargado", "Not downloaded", "Não baixado") },
+                                else status.ifBlank { if (downloadStatus.partial) currentLanguage.pick("Parcial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} libros", "Partial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} books", "Parcial: ${downloadStatus.completedBooks}/${downloadStatus.totalBooks} livros") else currentLanguage.pick("No descargado", "Not downloaded", "Não baixado") },
                                 style = styles.footnote, color = p.textSecondary
                             )
                         }
@@ -2333,19 +2434,27 @@ fun OfflineBibleDownloadsView(
                                 onClick = {
                                     if (!downloading) {
                                         downloading = true
-                                        scope.launch {
+                                        downloadJob = scope.launch {
+                                            try {
                                             val ok = manager.download(spec.id) { fraction, message ->
                                                 progress = fraction
                                                 status = message
                                             }
-                                            downloading = false
                                             status = if (ok) currentLanguage.pick("Completado", "Completed", "Concluído") else status
+                                            } finally { downloading = false; revision++ }
                                         }
                                     }
                                 },
                                 tag = "bible_download_${spec.id}"
                             )
                         }
+                    }
+                    if (downloaded) AppListRow(currentLanguage.pick("Leer esta edición", "Read this edition", "Ler esta edição"), selected = activeEditionId == spec.id, onClick = { onSelectEdition(spec.id) }, modifier = Modifier.testTag("bible_edition_${spec.id}"))
+                    Row(Modifier.padding(horizontal = 18.dp)) {
+                        if (downloading) androidx.compose.material3.TextButton(onClick = { downloadJob?.cancel() }, modifier = Modifier.heightIn(min = 48.dp).testTag("bible_cancel_${spec.id}")) { Text(currentLanguage.pick("Cancelar", "Cancel", "Cancelar")) }
+                        if (!downloading && downloadStatus.completedBooks > 0) androidx.compose.material3.TextButton(onClick = {
+                            scope.launch { if (activeEditionId == spec.id) onSelectEdition("bundled"); manager.delete(spec.id); revision++; status = "" }
+                        }, modifier = Modifier.heightIn(min = 48.dp).testTag("bible_delete_${spec.id}")) { Text(currentLanguage.pick("Eliminar descarga", "Delete download", "Excluir download")) }
                     }
                     if (index < manager.specs.lastIndex) {
                         Box(Modifier.fillMaxWidth().padding(start = 18.dp).height(0.5.dp).background(p.separator))

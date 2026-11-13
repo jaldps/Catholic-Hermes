@@ -78,11 +78,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -173,11 +169,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -462,11 +454,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -557,11 +545,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -846,11 +830,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -941,11 +921,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1230,11 +1206,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1325,11 +1297,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1614,11 +1582,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
@@ -1709,11 +1673,7 @@ I sincerely desire from this moment to love Him with all my heart, and serve Him
 
 In the Name of the Father, and of the Son, and of the Holy Spirit.
 
-Amen.""", """Continue esta novena no app
-
-Configure lembretes para não perder nenhum dia
-
-Em nome do Pai, do Filho e do Espírito Santo.
+Amen.""", """Em nome do Pai, do Filho e do Espírito Santo.
 
 Amém.
 
