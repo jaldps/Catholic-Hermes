@@ -157,7 +157,8 @@ fun CatechismScreen(
     currentLanguage: AppLanguage,
     /** Deep link: a CCC paragraph (§) to open on entry, or null for the book's cover. */
     initialParagraph: Int? = null,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onExitContext: (() -> Unit)? = null
 ) {
     val insets = AppEdgeToEdge()
     val design = LocalAppDesign.current
@@ -187,7 +188,10 @@ fun CatechismScreen(
     LaunchedEffect(stack) { lastRead = readLastParagraph(context) }
     var webUrl by remember { mutableStateOf<String?>(null) }
 
-    AppBackHandler(enabled = pages.isNotEmpty()) { pop() }
+    AppBackHandler(enabled = pages.isNotEmpty()) {
+        if (onExitContext != null && initialParagraph != null && stack == initialStack(initialParagraph, repository)) onExitContext()
+        else pop()
+    }
 
     // The scaffold's scroll-edge bar follows accumulated scroll; reset it to
     // the new page's own position whenever a page is pushed or popped.

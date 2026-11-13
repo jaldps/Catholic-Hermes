@@ -530,13 +530,15 @@ fun MainApp(
                         initialMainTab = bibleInitialTab,
                         initialBookId = bibleInitialBook,
                         initialChapter = bibleInitialChapter,
-                        initialVerseStart = bibleInitialVerse
+                        initialVerseStart = bibleInitialVerse,
+                        onOpenCatechism = onOpenCatechism
                     )
 
                     AppDestination.CATECHISM -> CatechismScreen(
                         repository = repository,
                         currentLanguage = currentLanguage,
-                        initialParagraph = catechismInitialParagraph
+                        initialParagraph = catechismInitialParagraph,
+                        onExitContext = if (stack.lastOrNull() == AppDestination.BIBLE && catechismInitialParagraph != null) ({ pop() }) else null
                     )
 
                     AppDestination.ROSARY -> RosaryScreen(
@@ -678,6 +680,7 @@ fun MainApp(
                                 bibleInitialBook = null
                                 bibleInitialChapter = null
                                 bibleInitialVerse = null
+                                bibleInitialTab = 3
                             } else if (destination == AppDestination.CATECHISM) {
                                 catechismInitialParagraph = null
                             }
@@ -795,6 +798,7 @@ private fun moreSections(
         MoreSection(
             pick("Estudio", "Study", "Estudo"),
             listOf(
+                MoreEntry(pick("Cursos bíblicos", "Scripture courses", "Cursos bíblicos"), AppDestination.BIBLE.iconSlot, "nav_scripture_study") { open(AppDestination.BIBLE) },
                 entry(AppDestination.CATECHISM),
                 entry(AppDestination.STUDY_DOCTRINE),
                 entry(AppDestination.STUDY_MARY_JESUS),

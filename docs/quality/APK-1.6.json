@@ -1,0 +1,12 @@
+{
+  "version_name": "1.6-quality-preview",
+  "version_code": 7,
+  "package": "com.aistudio.sanctafides.qvmrpx.qualitypreview",
+  "sha256": "d31f909a01e231b130aa1456505bba5bc72c2ec3d451eb814a9d4bc6e11a19c6",
+  "bytes": 63577955,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "signer_matches_previous_quality_preview": true,
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

@@ -24,6 +24,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.CircleShape
@@ -36,7 +37,6 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Church
-import androidx.compose.material.icons.outlined.Verified
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -71,12 +71,14 @@ import com.example.data.local.ScriptureStudyProgressEntity
 import com.example.data.models.AppLanguage
 import com.example.data.models.ScriptureCourseTrack
 import com.example.data.models.ScriptureLesson
+import com.example.data.models.StudyCourseLevel
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppChevron
 import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppInlineTitle
+import com.example.ui.design.AppKitChip
 import com.example.ui.design.AppPrimaryCapsule
 import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppProgressRing
@@ -116,7 +118,8 @@ fun ScriptureStudyScreen(
     currentLanguage: AppLanguage,
     modifier: Modifier = Modifier,
     /** The host screen's title and view switcher, set as the first rows. */
-    header: LazyListScope.() -> Unit = {}
+    header: LazyListScope.() -> Unit = {},
+    onOpenCatechism: ((Int) -> Unit)? = null
 ) {
     val tracks = repository.scriptureStudyTracks
     var selectedTrackIndex by rememberSaveable { mutableIntStateOf(0) }
@@ -164,9 +167,18 @@ fun ScriptureStudyScreen(
         } else {
             val isLessonDone = completedLessonIds.contains(lesson.id)
             val currentEntity = allProgress.firstOrNull { it.lessonId == lesson.id }
-            AppBackHandler { activeLessonId = null }
+            AppBackHandler {
+                selectedTrackIndex = tracks.indexOfFirst { it.id == lesson.trackId }.coerceAtLeast(0)
+                activeLessonId = null
+            }
             LessonDetailView(
                 lesson = lesson,
+                passage = remember(lesson.id, currentLanguage) { repository.studyScriptureText(lesson, currentLanguage) },
+                edition = if (lesson.scriptureReferences.isNotEmpty()) repository.studyBibleEdition(currentLanguage) else null,
+                scriptureLabel = if (lesson.scriptureReferences.isNotEmpty()) lesson.scriptureReferences.joinToString(" · ") { repository.studyScriptureLabel(it, currentLanguage) } else lesson.biblicalReference,
+                onOpenCatechism = onOpenCatechism,
+                nextLesson = tracks.first { it.id == lesson.trackId }.lessons.firstOrNull { it.lessonNumber == lesson.lessonNumber + 1 },
+                onNextLesson = { activeLessonId = it.id },
                 isCompleted = isLessonDone,
                 existingNotes = currentEntity?.personalNotes ?: "",
                 ttsManager = ttsManager,
@@ -232,7 +244,7 @@ private fun TrackOverviewView(
     )
     val nextLesson = track.lessons.firstOrNull { !completedLessonIds.contains(it.id) }
 
-    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = bottom)) {
+    LazyColumn(Modifier.fillMaxSize().padding(bottom = bottom - 32.dp).testTag("study_overview_page"), contentPadding = PaddingValues(bottom = 32.dp)) {
         header()
 
         // The itineraries as cards: each shows how far it has been read and
@@ -263,16 +275,30 @@ private fun TrackOverviewView(
                 Text(track.description.get(currentLanguage), style = styles.callout, color = p.textSecondary)
                 Spacer(Modifier.height(12.dp))
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Icon(Icons.Outlined.Verified, null, tint = p.textSecondary, modifier = Modifier.size(16.dp))
+                    Icon(Icons.Outlined.AutoStories, null, tint = p.textSecondary, modifier = Modifier.size(16.dp))
                     Spacer(Modifier.width(6.dp))
                     Text(
                         currentLanguage.pick(
-                            "Alineado con el Catecismo y Dei Verbum del Vaticano",
-                            "Aligned with the Catechism and the Vatican's Dei Verbum",
-                            "Alinhado com o Catecismo e a Dei Verbum do Vaticano"
+                            "Contenido editorial · referencias en cada lección",
+                            "Editorial content · references in each lesson",
+                            "Conteúdo editorial · referências em cada lição"
                         ),
                         style = styles.footnote, color = p.textSecondary
                     )
+                }
+                Spacer(Modifier.height(14.dp))
+                val level = when (track.level) {
+                    StudyCourseLevel.FOUNDATION -> currentLanguage.pick("Fundamentos · sin conocimientos previos", "Foundations · no prior knowledge required", "Fundamentos · sem conhecimentos prévios")
+                    StudyCourseLevel.INTERMEDIATE -> currentLanguage.pick("Profundización", "Further study", "Aprofundamento")
+                    StudyCourseLevel.UNSPECIFIED -> currentLanguage.pick("Aplicación bíblica y vida cristiana", "Biblical application and Christian life", "Aplicação bíblica e vida cristã")
+                }
+                Text(listOfNotNull(level, track.estimatedMinutes?.let { currentLanguage.pick("$it min orientativos", "About $it min", "$it min sugeridos") }).joinToString(" · "), style = styles.footnote, color = p.textSecondary)
+                if (track.objectives.isNotEmpty()) {
+                    Spacer(Modifier.height(16.dp))
+                    Text(currentLanguage.pick("Qué aprenderás", "What you will learn", "O que vai aprender"), style = styles.headline, color = p.textPrimary)
+                    track.objectives.forEach { objective ->
+                        Text("• ${objective.get(currentLanguage)}", style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 8.dp))
+                    }
                 }
                 Spacer(Modifier.height(20.dp))
                 AppProgressBar(
@@ -356,7 +382,7 @@ private fun TrackCard(
     Box(
         Modifier
             .width(252.dp)
-            .height(184.dp)
+            .heightIn(min = 184.dp)
             .lumenPress(onClick, 0.97f, Role.Tab)
             .lumenGlass(shape, strong = selected)
             .then(if (selected) Modifier.border(1.5.dp, p.textPrimary, shape) else Modifier)
@@ -364,17 +390,16 @@ private fun TrackCard(
             .testTag("track_row_${track.id}")
             .padding(18.dp)
     ) {
-        Column(Modifier.fillMaxSize()) {
+        Column {
             AppProgressRing(progress = read.toFloat() / total, size = 44.dp, stroke = 3.dp) {
                 Icon(trackIcon(track), null, tint = p.textPrimary, modifier = Modifier.size(20.dp))
             }
-            Spacer(Modifier.weight(1f))
+            Spacer(Modifier.height(18.dp))
             Text(
                 track.title.get(currentLanguage),
                 style = styles.headline,
                 color = p.textPrimary,
-                maxLines = 3,
-                overflow = TextOverflow.Ellipsis
+                modifier = Modifier.semantics { heading() }
             )
             Spacer(Modifier.height(4.dp))
             Text(
@@ -437,6 +462,12 @@ private fun LessonRow(
 @Composable
 private fun LessonDetailView(
     lesson: ScriptureLesson,
+    passage: String,
+    edition: String?,
+    scriptureLabel: String,
+    onOpenCatechism: ((Int) -> Unit)?,
+    nextLesson: ScriptureLesson?,
+    onNextLesson: (ScriptureLesson) -> Unit,
     isCompleted: Boolean,
     existingNotes: String,
     ttsManager: LiturgicalTtsManager,
@@ -448,32 +479,40 @@ private fun LessonDetailView(
     val p = design.palette
     val styles = LocalAppTextStyles.current
     val insets = appScreenInsets()
-    var notesText by remember(lesson.id) { mutableStateOf(existingNotes) }
+    var notesText by rememberSaveable(lesson.id) { mutableStateOf(existingNotes) }
+    var notesEdited by rememberSaveable(lesson.id) { mutableStateOf(false) }
+    LaunchedEffect(existingNotes) { if (!notesEdited) notesText = existingNotes }
     var savedFlash by remember(lesson.id) { mutableIntStateOf(0) }
-    val passage = lesson.biblicalPassageText.get(currentLanguage)
     val speaking by ttsManager.currentlySpeaking.collectAsState()
     val playing by ttsManager.isPlaying.collectAsState()
     val readingPassage = playing && speaking == passage
     val inset = design.spacing.gutter + 4.dp
+    val listState = rememberSaveable(lesson.id, saver = LazyListState.Saver) { LazyListState() }
+    val sectionScope = rememberCoroutineScope()
+    val sourceIndex = 2 + (if (lesson.historicalContext != null) 1 else 0) + lesson.teachingSections.size
+    val reviewIndex = sourceIndex + 1
+    val prayerIndex = reviewIndex + lesson.reviewQuestions.size
 
     AppInlineTitle(lesson.title.get(currentLanguage))
     LaunchedEffect(savedFlash) { if (savedFlash > 0) { delay(1600); savedFlash = 0 } }
 
     LazyColumn(
-        Modifier.fillMaxSize().imePadding(),
-        contentPadding = PaddingValues(top = insets.calculateTopPadding(), bottom = insets.calculateBottomPadding() + 40.dp)
+        Modifier.fillMaxSize().padding(bottom = insets.calculateBottomPadding()).imePadding().testTag("study_lesson_page"),
+        state = listState,
+        contentPadding = PaddingValues(top = insets.calculateTopPadding(), bottom = 40.dp)
     ) {
         item(key = "lesson_head") {
             Column(Modifier.padding(horizontal = inset).padding(top = 8.dp)) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Column {
                     Text(
                         currentLanguage.pick("Lección ${lesson.lessonNumber}", "Lesson ${lesson.lessonNumber}", "Lição ${lesson.lessonNumber}"),
-                        style = styles.eyebrow, color = p.textSecondary, modifier = Modifier.weight(1f)
+                        style = styles.eyebrow, color = p.textSecondary
                     )
+                    Spacer(Modifier.height(12.dp))
                     // Done / not done, one tap either way.
                     Row(
                         Modifier
-                            .heightIn(min = 40.dp)
+                            .heightIn(min = 48.dp)
                             .lumenPress({ onToggleComplete(notesText) }, 0.96f)
                             .then(
                                 if (isCompleted) Modifier.clip(RoundedCornerShape(percent = 50)).background(p.success)
@@ -501,7 +540,24 @@ private fun LessonDetailView(
                 Spacer(Modifier.height(6.dp))
                 Text(lesson.title.get(currentLanguage), style = styles.title1, color = p.textPrimary, modifier = Modifier.semantics { heading() })
                 Spacer(Modifier.height(6.dp))
-                Text(lesson.biblicalReference, style = styles.subhead, color = p.textSecondary)
+                Text(scriptureLabel, style = styles.subhead, color = p.textSecondary)
+                lesson.estimatedMinutes?.let { minutes ->
+                    Text(currentLanguage.pick("Unos $minutes minutos, a tu ritmo", "About $minutes minutes, at your pace", "Cerca de $minutes minutos, no seu ritmo"), style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(top = 8.dp))
+                }
+                Spacer(Modifier.height(16.dp))
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    val links = listOfNotNull(
+                        currentLanguage.pick("Leer", "Read", "Ler") to 1,
+                        currentLanguage.pick("Comprender", "Understand", "Compreender") to if (lesson.historicalContext != null || lesson.teachingSections.isNotEmpty()) 2 else sourceIndex,
+                        currentLanguage.pick("Fuentes", "Sources", "Fontes") to sourceIndex,
+                        if (lesson.reviewQuestions.isNotEmpty()) currentLanguage.pick("Repasar", "Review", "Rever") to reviewIndex else null,
+                        currentLanguage.pick("Orar", "Pray", "Rezar") to prayerIndex,
+                        currentLanguage.pick("Mis notas", "My notes", "Minhas notas") to prayerIndex + 1
+                    )
+                    links.forEach { (label, index) ->
+                        AppKitChip(label, selected = false, onClick = { sectionScope.launch { listState.animateScrollToItem(index) } })
+                    }
+                }
             }
         }
 
@@ -511,12 +567,13 @@ private fun LessonDetailView(
                 eyebrow = currentLanguage.pick("Paso 1 · Lectio", "Step 1 · Lectio", "Passo 1 · Lectio"),
                 title = currentLanguage.pick("Lectura de la Escritura", "Reading of Scripture", "Leitura da Escritura")
             ) {
+                edition?.let { Text(it, style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(bottom = 12.dp)) }
                 Text(
-                    passage, style = styles.reading, color = p.textPrimary,
+                    passage.ifBlank { currentLanguage.pick("El pasaje no está disponible aquí; consulta la referencia en la Biblia incluida.", "The passage is unavailable here; consult the reference in the included Bible.", "A passagem não está disponível aqui; consulte a referência na Bíblia incluída.") }, style = styles.reading, color = p.textPrimary,
                     modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                 )
                 Spacer(Modifier.height(16.dp))
-                AppSecondaryCapsule(
+                if (passage.isNotBlank()) AppSecondaryCapsule(
                     label = if (readingPassage) currentLanguage.pick("Detener", "Stop", "Parar")
                     else currentLanguage.pick("Escuchar", "Listen", "Ouvir"),
                     onClick = { if (readingPassage) ttsManager.stop() else ttsManager.speakSingle(passage) },
@@ -526,13 +583,26 @@ private fun LessonDetailView(
             }
         }
 
+        lesson.historicalContext?.let { context ->
+            item(key = "lesson_historical_context") {
+                LessonSection(currentLanguage.pick("Comprender", "Understand", "Compreender"), currentLanguage.pick("Contexto del pasaje", "Context of the passage", "Contexto da passagem")) {
+                    Text(context.get(currentLanguage), style = styles.callout, color = p.textPrimary)
+                }
+            }
+        }
+        itemsIndexed(lesson.teachingSections, key = { index, _ -> "teaching_$index" }) { index, section ->
+            LessonSection(currentLanguage.pick("Profundizar · ${index + 1}", "Explore · ${index + 1}", "Aprofundar · ${index + 1}"), section.title.get(currentLanguage)) {
+                Text(section.body.get(currentLanguage), style = styles.reading, color = p.textPrimary, modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth).testTag("study_teaching_$index"))
+            }
+        }
+
         item(key = "lesson_magisterium") {
             LessonSection(
                 eyebrow = currentLanguage.pick("Contexto", "Context", "Contexto"),
                 title = currentLanguage.pick(
-                    "Magisterio del Vaticano y Catecismo",
-                    "Vatican Magisterium & Catechism",
-                    "Magistério do Vaticano e Catecismo"
+                    "Comentario editorial y referencias",
+                    "Editorial commentary and references",
+                    "Comentário editorial e referências"
                 )
             ) {
                 if (lesson.catechismRefs.isNotEmpty()) {
@@ -550,6 +620,27 @@ private fun LessonDetailView(
                     lesson.vaticanContext.get(currentLanguage), style = styles.callout, color = p.textPrimary,
                     modifier = Modifier.widthIn(max = design.spacing.readingMaxWidth)
                 )
+                lesson.sourceReferences.forEach { source ->
+                    Spacer(Modifier.height(12.dp))
+                    if (source.catechismStart != null && onOpenCatechism != null) {
+                        AppSecondaryCapsule(
+                            label = source.title.get(currentLanguage),
+                            onClick = { onOpenCatechism(source.catechismStart) },
+                            tag = "study_source_${source.id}"
+                        )
+                    } else Text(source.title.get(currentLanguage), style = styles.footnote, color = p.textSecondary)
+                }
+            }
+        }
+
+        itemsIndexed(lesson.reviewQuestions, key = { index, _ -> "review_$index" }) { index, question ->
+            var revealed by rememberSaveable(lesson.id, index) { mutableStateOf(false) }
+            LessonSection(currentLanguage.pick("Comprueba tu comprensión · ${index + 1}", "Check your understanding · ${index + 1}", "Confira sua compreensão · ${index + 1}"), question.prompt.get(currentLanguage)) {
+                AppSecondaryCapsule(
+                    label = if (revealed) currentLanguage.pick("Ocultar explicación", "Hide explanation", "Ocultar explicação") else currentLanguage.pick("Ver explicación", "Show explanation", "Ver explicação"),
+                    onClick = { revealed = !revealed }, tag = "study_review_$index"
+                )
+                if (revealed) Text(question.answer.get(currentLanguage), style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 14.dp).testTag("study_review_answer_$index"))
             }
         }
 
@@ -567,7 +658,8 @@ private fun LessonDetailView(
                         Triple("Lectio", currentLanguage.pick("¿Qué dice el texto sagrado?", "What does the sacred text say?", "O que diz o texto sagrado?"), lesson.lectioStep),
                         Triple("Meditatio", currentLanguage.pick("¿Qué me dice Dios hoy a mí a través de este pasaje?", "What is God saying to me today through this passage?", "O que Deus me diz hoje através desta passagem?"), lesson.meditatioStep),
                         Triple("Oratio", currentLanguage.pick("¿Qué le respondo a Dios en mi corazón?", "What do I answer God in my heart?", "O que respondo a Deus no meu coração?"), lesson.oratioStep),
-                        Triple("Contemplatio", currentLanguage.pick("¿Cómo transforma mi vida esta verdad hoy?", "How does this truth change my life today?", "Como esta verdade transforma a minha vida hoje?"), lesson.contemplatioStep)
+                        Triple("Contemplatio", currentLanguage.pick("Permanecer ante Dios en silencio", "Remain quietly before God", "Permanecer diante de Deus em silêncio"), if (lesson.actionStep != null) lesson.contemplatioStep else com.example.data.models.LocalizedText("Quédate un momento en silencio ante Dios, sin exigirte una emoción o una idea nueva.", "Remain quietly before God for a moment, without demanding a feeling or new idea.", "Fique um momento em silêncio diante de Deus, sem exigir uma emoção ou ideia nova.")),
+                        Triple("Actio", currentLanguage.pick("Una respuesta concreta", "A practical response", "Uma resposta concreta"), lesson.actionStep ?: lesson.contemplatioStep)
                     )
                     steps.forEachIndexed { i, (name, question, content) ->
                         LectioStep(number = i + 1, name = name, question = question, content = content.get(currentLanguage))
@@ -595,7 +687,7 @@ private fun LessonDetailView(
                 Spacer(Modifier.height(12.dp))
                 NotesField(
                     value = notesText,
-                    onValueChange = { notesText = it },
+                    onValueChange = { notesText = it; notesEdited = true },
                     placeholder = currentLanguage.pick("Mi resolución de hoy…", "My resolution for today…", "A minha resolução de hoje…"),
                     modifier = Modifier.testTag("lesson_notes_field")
                 )
@@ -615,6 +707,13 @@ private fun LessonDetailView(
                         Spacer(Modifier.width(6.dp))
                         Text(currentLanguage.pick("Guardado", "Saved", "Guardado"), style = styles.footnote, color = p.textSecondary)
                     }
+                }
+                nextLesson?.let { next ->
+                    Spacer(Modifier.height(20.dp))
+                    AppSecondaryCapsule(
+                        label = currentLanguage.pick("Guardar notas y seguir · ${next.lessonNumber}", "Save notes and continue · ${next.lessonNumber}", "Guardar notas e continuar · ${next.lessonNumber}"),
+                        onClick = { onSaveNotes(notesText); onNextLesson(next) }, tag = "study_next_lesson"
+                    )
                 }
             }
         }

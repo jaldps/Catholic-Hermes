@@ -17,7 +17,11 @@ class ExampleRobolectricTest {
   fun `read string from context`() {
     val context = ApplicationProvider.getApplicationContext<Context>()
     val appName = context.getString(R.string.app_name)
-    val expectedName = if (context.packageName.endsWith(".catholicgpt")) "CatholicGPT" else "Sancta Fides"
+    val expectedName = when {
+      context.packageName.endsWith(".qualitypreview") -> "Catholic Hermes Preview"
+      context.packageName.endsWith(".catholicgpt") -> "CatholicGPT"
+      else -> "Sancta Fides"
+    }
     assertEquals(expectedName, appName)
   }
 
@@ -168,10 +172,11 @@ class ExampleRobolectricTest {
   }
 
   @Test
-  fun `verify vatican scripture study course tracks and lectio divina`() {
+  fun `verify editorial scripture study retains original tracks and lectio divina`() {
     val repo = com.example.data.repository.CatholicDataRepository()
     val tracks = repo.scriptureStudyTracks
-    org.junit.Assert.assertEquals(3, tracks.size)
+    org.junit.Assert.assertTrue(tracks.map { it.id }.containsAll(listOf("track_sacraments", "track_parables", "track_apostolic")))
+    org.junit.Assert.assertTrue(tracks.any { it.level == com.example.data.models.StudyCourseLevel.FOUNDATION })
 
     val sacramentsTrack = tracks.first { it.id == "track_sacraments" }
     org.junit.Assert.assertTrue(sacramentsTrack.lessons.size >= 6)

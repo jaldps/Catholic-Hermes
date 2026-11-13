@@ -1,10 +1,12 @@
 # Catholic Hermes — CatholicGPT
 
-Versión actual: **1.5**, con Lumen y Sanctuary, Inicio / Orar / Leer / Explorar, recorridos de oración conservados y acceso directo a las prácticas y al apoyo ante la tentación.
+Versión actual: **1.6**, con Lumen y Sanctuary, correcciones editoriales y un Estudio más desarrollado: cuatro cursos y veinte lecciones, con un nuevo recorrido completo para aprender a leer la Biblia.
 
 - [Descargar el APK actual para Android](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-quality-preview.apk).
 - [Instalación y actualización](dist/README.md).
-- [Cambios y verificaciones de la versión 1.5](docs/quality/DEVOTIONAL-PRIORITIES.md).
+- [Cambios, verificaciones y límites de la versión 1.6](docs/quality/DELIVERY-1.6.md).
+- [Plan escalonado de contenido](docs/quality/CONTENT-DELIVERY-PLAN.md).
+- [Contenido y experiencia de Estudio](docs/quality/STUDY-DELIVERY.md).
 - [Revisión pastoral y prioridades de contenido](docs/quality/PASTORAL-REVIEW-2.md).
 - [Integridad y procedencia del Catecismo](docs/content/CONTENT-INTEGRITY.md).
 

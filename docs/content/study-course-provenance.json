@@ -1,0 +1,67 @@
+{
+  "course_id": "track_catholic_bible",
+  "status": "implemented_scoped_validation_passed",
+  "authorship": "Original editorial teaching, context, review answers and prayer guidance; not a Vatican-authored course or an ecclesiastically approved publication.",
+  "languages": [
+    "es",
+    "en",
+    "pt"
+  ],
+  "scripture_source": "Resolved at runtime from existing included 73-book editions. No new Bible translation or third-party full text imported.",
+  "psalm_numbering": "Shepherd psalm uses psa 22:1-6 in all three included editions; commonly Psalm 23 in Hebrew numbering.",
+  "catechism_ranges": [
+    [
+      80,
+      87
+    ],
+    [
+      101,
+      104
+    ],
+    [
+      120,
+      123
+    ],
+    [
+      128,
+      130
+    ],
+    [
+      109,
+      114
+    ],
+    [
+      116,
+      116
+    ],
+    [
+      115,
+      119
+    ],
+    [
+      131,
+      133
+    ],
+    [
+      2653,
+      2654
+    ],
+    [
+      2705,
+      2708
+    ],
+    [
+      2715,
+      2717
+    ]
+  ],
+  "catechism_provenance": "catechism-provenance.json",
+  "source_indexes": {
+    "es": "https://www.vatican.va/archive/catechism_sp/index_sp.html",
+    "en": "https://www.vatican.va/archive/ENG0015/_INDEX.HTM",
+    "pt": "https://www.vatican.va/archive/cathechism_po/index_new/prima-pagina-cic_po.html"
+  },
+  "scope": "Five complete foundation lessons; Jesus/Paschal course and remaining roadmap not implemented in this increment.",
+  "editorial_review": "Coordinator compared cited Catechism paragraphs and ES/EN/PT content; all course citations resolve. Independent final review pending after usage-limit interruption.",
+  "course_file_sha256": "4591c1109321e2c324efa634ece859cb64beddc66b252a49415d24068724a1be"
+}

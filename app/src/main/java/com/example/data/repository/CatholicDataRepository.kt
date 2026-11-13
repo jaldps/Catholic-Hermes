@@ -697,7 +697,26 @@ class CatholicDataRepository(
 
 
     // Vatican Scripture Study Course
-    val scriptureStudyTracks: List<com.example.data.models.ScriptureCourseTrack> get() = ScriptureStudyData.tracks
+    val scriptureStudyTracks: List<com.example.data.models.ScriptureCourseTrack>
+        get() = listOf(CatholicBibleCourseData.track) + ScriptureStudyData.tracks
+
+    /** Study citations always resolve against the included edition, independent of optional downloads. */
+    fun studyScriptureText(lesson: com.example.data.models.ScriptureLesson, language: AppLanguage): String {
+        if (lesson.scriptureReferences.isEmpty()) return lesson.biblicalPassageText.get(language)
+        val passages = lesson.scriptureReferences.map { raw ->
+            val text = scriptureResolver.passage(raw, language) ?: return ""
+            "${scriptureResolver.display(raw, language)}\n$text"
+        }
+        return passages.joinToString("\n\n")
+    }
+
+    fun studyScriptureLabel(raw: String, language: AppLanguage): String = scriptureResolver.display(raw, language)
+
+    fun studyBibleEdition(language: AppLanguage): String = when (language) {
+        AppLanguage.ES -> "Biblia Platense · edición incluida"
+        AppLanguage.EN -> "Douay-Rheims-Challoner · included edition"
+        AppLanguage.PT -> "Matos Soares · edição incluída"
+    }
 
     // Official Vatican Night Prayer (Compline & Examen)
     val complineOffice: com.example.data.models.ComplineOffice get() = NightPrayerData.complineOffice

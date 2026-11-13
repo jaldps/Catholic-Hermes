@@ -7,6 +7,15 @@ import com.example.data.models.SpiritualHabitItem
 
 object PilgrimageAndHabitsData {
 
+    // Common conditions do not establish a grant for any particular sanctuary or date.
+    // Sources: Apostolic Penitentiary, The Gift of the Indulgence (2000), 3–5;
+    // Paul VI, Indulgentiarum doctrina (1967), norm 7. URLs in M1-LITURGY-FIXES.md.
+    private val indulgenceGuidance = LocalizedText(
+        "La visita por sí sola no garantiza una indulgencia plenaria. Esta ficha no documenta una concesión concreta: verifica con el santuario su fuente oficial, vigencia, fechas y obra prescrita. Además de realizar esa obra con intención de obtener la indulgencia, se requiere estar en gracia y cumplir estas condiciones: confesión sacramental, Comunión eucarística, oración por las intenciones del Papa y desapego de todo pecado, incluso venial. Fuentes generales: Penitenciaría Apostólica, El don de la indulgencia (2000); Indulgentiarum doctrina, norma 7.",
+        "A visit alone does not guarantee a plenary indulgence. This entry does not document a specific grant: check its official source, validity, dates and prescribed work with the sanctuary. In addition to performing that work with the intention of gaining the indulgence, the state of grace, sacramental Confession, Holy Communion, prayer for the Pope's intentions and complete detachment from every sin, even venial, are required. General sources: Apostolic Penitentiary, The Gift of the Indulgence (2000); Indulgentiarum doctrina, norm 7.",
+        "A visita por si só não garante uma indulgência plenária. Esta ficha não documenta uma concessão concreta: confirme com o santuário a fonte oficial, a vigência, as datas e a obra prescrita. Além de realizar essa obra com intenção de obter a indulgência, é necessário estar em graça e cumprir estas condições: confissão sacramental, Comunhão eucarística, oração pelas intenções do Papa e desapego de todo pecado, mesmo venial. Fontes gerais: Penitenciaria Apostólica, O dom da indulgência (2000); Indulgentiarum doctrina, norma 7."
+    )
+
     val globalPilgrimages: List<CatholicPilgrimageSanctuary> = listOf(
         CatholicPilgrimageSanctuary(
             id = "rome_vatican",
@@ -27,11 +36,7 @@ object PilgrimageAndHabitsData {
                 "Tomb of St. Peter, St. John Paul II, St. John XXIII, and relic of the True Cross.",
                 "Túmulo de São Pedro Apóstolo e dos Santos Papas João Paulo II e João XXIII."
             ),
-            plenaryIndulgenceNote = LocalizedText(
-                "Indulgencia plenaria concedida a los peregrinos que visitan la basílica, rezan el Credo y el Padre Nuestro por el Papa y confiesan.",
-                "Plenary indulgence available under standard conditions (Confession, Communion, prayer for the Pope).",
-                "Indulgência plenária aos peregrinos que rezam com devoção diante do túmulo do Apóstolo."
-            ),
+            plenaryIndulgenceNote = indulgenceGuidance,
             practicalPilgrimAdvice = LocalizedText(
                 "Asistir a la bendición dominical del Ángelus en la Plaza de San Pedro y reservar con antelación la visita a la Necrópolis Vaticana (Scavi).",
                 "Attend the Sunday Angelus in St. Peter's Square and reserve the Scavi excavations tour in advance.",
@@ -54,7 +59,7 @@ object PilgrimageAndHabitsData {
                 "O local mais sagrado do cristianismo: onde ocorreu a Redenção da humanidade e a vitória sobre a morte."
             ),
             relicsAndPatron = LocalizedText("La Roca del Calvario, la Piedra de la Unción y el Edículo del Santo Sepulcro Vacío.", "The Rock of Calvary, Stone of Anointing, and the Edicule of the Empty Tomb.", "A Rocha do Gólgota e o Santo Sepulcro Vazio."),
-            plenaryIndulgenceNote = LocalizedText("Indulgencia plenaria visitando devotamente el Santo Sepulcro en peregrinación santa.", "Plenary indulgence for holy pilgrims venerating the site of Christ's Passion and Resurrection.", "Indulgência plenária aos peregrinos na Terra Santa."),
+            plenaryIndulgenceNote = indulgenceGuidance,
             practicalPilgrimAdvice = LocalizedText("Rezar el Vía Crucis a lo largo de la Vía Dolorosa en la Ciudad Vieja culminando dentro del Sepulcro.", "Walk the Via Dolorosa early in the morning and attend the daily Eucharistic liturgy at the Edicule.", "Percorra a Via Dolorosa e viva a Santa Missa diante do sepulcro vazio."),
             coordinateLatLong = Pair(31.7785, 35.2296)
         ),
@@ -73,7 +78,7 @@ object PilgrimageAndHabitsData {
                 "Altar do mundo para a oração contínua pela paz e conversão dos povos."
             ),
             relicsAndPatron = LocalizedText("Tumbas de San Francisco Marto, Santa Jacinta Marto y la Sierva de Dios Hermana Lucía.", "Tombs of St. Francisco, St. Jacinta, and Sister Lucia in the Basilica of Our Lady of the Rosary.", "Túmulos dos Santos Francisco e Jacinta Marto e da Irmã Lúcia."),
-            plenaryIndulgenceNote = LocalizedText("Indulgencia plenaria en la Capilla de las Apariciones en las fiestas marianas solemnes.", "Plenary indulgence available for devout pilgrims at the Chapel of Apparitions.", "Indulgência plenária na Capelinha das Aparições."),
+            plenaryIndulgenceNote = indulgenceGuidance,
             practicalPilgrimAdvice = LocalizedText("Participar en la conmovedora Procesión de las Velas nocturna rezando el Santo Rosario en varios idiomas.", "Join the breathtaking nightly candlelight procession with thousands of pilgrims.", "Participe da Procissão das Velas à noite com a recitação do Santo Terço."),
             coordinateLatLong = Pair(39.6312, -8.6733)
         ),
@@ -92,7 +97,7 @@ object PilgrimageAndHabitsData {
                 "Capital espiritual da consolação e cura para todos os doentes do corpo e da alma."
             ),
             relicsAndPatron = LocalizedText("La Gruta milagrosa de Massabielle y reliquias de Santa Bernardita Soubirous.", "The miraculous Grotto of Massabielle and relics of St. Bernadette.", "A Gruta de Massabielle e o manancial de águas benditas."),
-            plenaryIndulgenceNote = LocalizedText("Indulgencia plenaria en el santuario cumpliendo las condiciones de la Iglesia.", "Plenary indulgence granted to pilgrims who pray before the Grotto and receive sacraments.", "Indulgência plenária aos peregrinos que rezam na Gruta."),
+            plenaryIndulgenceNote = indulgenceGuidance,
             practicalPilgrimAdvice = LocalizedText("Asistir a la Bendición con el Santísimo Sacramento a los enfermos por la tarde.", "Participate in the afternoon Eucharistic Procession and blessing of the sick.", "Participe da Bênção dos Enfermos com o Santíssimo Sacramento."),
             coordinateLatLong = Pair(43.0975, -0.0583)
         ),
@@ -111,7 +116,7 @@ object PilgrimageAndHabitsData {
                 "Símbolo da peregrinação da fé e da comunhão fraterna entre os povos."
             ),
             relicsAndPatron = LocalizedText("Sepulcro del Apóstol Santiago el Mayor y el célebre incensario Botafumeiro.", "Tomb and relics of Saint James the Apostle.", "Relíquias veneráveis de São Tiago e o impressionante Botafumeiro."),
-            plenaryIndulgenceNote = LocalizedText("Indulgencia plenaria plenísima en los Años Santos Compostelanos (cuando el 25 de julio cae en domingo).", "Jubilee plenary indulgence granted to pilgrims arriving via the Camino.", "Indulgência plenária concedida aos peregrinos que alcançam a Catedral."),
+            plenaryIndulgenceNote = indulgenceGuidance,
             practicalPilgrimAdvice = LocalizedText("Visitar la Misa del Peregrino a las 12:00 PM y dar el tradicional abrazo a la imagen del Apóstol en el camarín.", "Attend the daily 12:00 PM Pilgrim Mass and embrace the venerable statue of Saint James.", "Participe da Missa do Peregrino e faça a oração aos pés do Apóstolo."),
             coordinateLatLong = Pair(42.8806, -8.5447)
         )

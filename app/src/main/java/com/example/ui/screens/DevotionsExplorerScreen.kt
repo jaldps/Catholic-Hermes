@@ -280,7 +280,7 @@ private fun ChristPage(item: ChristManifestation, language: AppLanguage, nav: Do
         promises = item.promises.get(language),
         miraclesLabel = language.tr("Milagros", "Miracles", "Milagres"),
         miracles = item.recordedMiracles.get(language),
-        prayerTitle = language.tr("Oración oficial", "Official prayer", "Oração oficial"),
+        prayerTitle = language.tr("Oración devocional", "Devotional prayer", "Oração devocional"),
         prayer = item.officialPrayer.get(language)
     )
 }

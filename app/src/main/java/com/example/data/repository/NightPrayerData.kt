@@ -9,9 +9,9 @@ object NightPrayerData {
 
     val complineOffice = ComplineOffice(
         title = LocalizedText(
-            "Completas - Oración Oficial de la Noche de la Iglesia",
-            "Compline - Official Night Prayer of the Catholic Church",
-            "Completas - Oração Oficial da Noite da Igreja Católica"
+            "Oración de la noche inspirada en Completas",
+            "Night prayer inspired by Compline",
+            "Oração da noite inspirada nas Completas"
         ),
         openingVerseLatin = "V/. Deus, in adiutórium meum inténde.\nR/. Dómine, ad adiuvándum me festína.\nGlória Patri, et Fílio, et Spirítui Sancto. Sicut erat in princípio, et nunc et semper, et in saécula saeculórum. Amen. Allelúia.",
         openingVerseTranslation = LocalizedText(
@@ -36,8 +36,8 @@ object NightPrayerData {
             "Before the ending of the day, Creator of the world, we pray that with Thy wonted favor Thou wouldst be our Guard and Keeper now. From evil dreams defend our sight, from fears and terrors of the night; tread underfoot our deadly foe, that we no sinful thought may know. O Father, that we ask be done, through Jesus Christ, Thine only Son; who, with the Holy Ghost and Thee, doth live and reign eternally. Amen.",
             "Antes que a luz se apague, ó Criador de tudo, Vos pedimos com Vossa habitual bondade que sejais nosso guarda e proteção. Afastai para longe os maus sonhos e as ilusões da noite. Concedei-nos isto, Pai onipotente, por Jesus Cristo Nosso Senhor. Amém."
         ),
-        psalmTitle = LocalizedText("Salmodia: Salmo 91 (90) - A la sombra del Omnipotente", "Psalmody: Psalm 91 - Under God's Protection", "Salmodia: Salmo 91 - Sob a Proteção do Altíssimo"),
-        psalmReference = "Salmo 91 (90), 1-16",
+        psalmTitle = LocalizedText("Extracto del Salmo 91 (90) - A la sombra del Omnipotente", "Psalm 91 (90) excerpt - Under God's Protection", "Trecho do Salmo 91 (90) - Sob a Proteção do Altíssimo"),
+        psalmReference = "91 (90)",
         psalmAntiphon = LocalizedText(
             "Antífona: Te cubrirá con sus plumas y bajo sus alas encontrarás refugio.",
             "Antiphon: He will conceal you with His pinions, and under His wings you will trust.",
@@ -118,6 +118,11 @@ object NightPrayerData {
                     "Rainha do Céu, alegrai-vos, aleluia.\nPorque Aquele que merecestes trazer em vosso seio, aleluia,\nRessuscitou como disse, aleluia.\nRogai por nós a Deus, aleluia."
                 )
             )
+        ),
+        selectionNote = LocalizedText(
+            "Selección devocional abreviada inspirada en Completas, con extractos de distinta extensión según el idioma. No es el oficio litúrgico completo del día ni sigue todas sus rúbricas o variaciones del calendario. En la celebración litúrgica se omite el Aleluya durante la Cuaresma.",
+            "An abbreviated devotional selection inspired by Compline, with excerpts of different lengths by language. It is not the complete liturgical office of the day and does not follow all its rubrics or calendar variations. In liturgical celebration, Alleluia is omitted during Lent.",
+            "Seleção devocional abreviada inspirada nas Completas, com trechos de extensão diferente conforme o idioma. Não é o ofício litúrgico completo do dia nem segue todas as suas rubricas ou variações do calendário. Na celebração litúrgica, omite-se o Aleluia durante a Quaresma."
         )
     )
 

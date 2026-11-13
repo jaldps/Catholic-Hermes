@@ -309,7 +309,7 @@ private fun NightOverview(
                 ) {
                     AppImageCard(
                         title = currentLanguage.pick("Completas", "Compline", "Completas"),
-                        eyebrow = currentLanguage.pick("Liturgia de las Horas", "Liturgy of the Hours", "Liturgia das Horas"),
+                        eyebrow = currentLanguage.pick("Selección devocional abreviada", "Abbreviated devotional selection", "Seleção devocional abreviada"),
                         meta = listOfNotNull(
                             currentLanguage.pick("8 partes", "8 parts", "8 partes"),
                             antiphon?.titleLatin
@@ -471,9 +471,9 @@ private fun ComplineView(
                 assetPath = rememberFirstAsset(NightArt, NightArtFallback),
                 eyebrow = currentLanguage.pick("Oración de la noche", "Night prayer", "Oração da noite"),
                 meta = currentLanguage.pick(
-                    "Liturgia oficial de la Iglesia antes del reposo de la noche",
-                    "The Church's official liturgy before the night's rest",
-                    "Liturgia oficial da Igreja antes do repouso da noite"
+                    "Selección devocional abreviada inspirada en Completas",
+                    "Abbreviated devotional selection inspired by Compline",
+                    "Seleção devocional abreviada inspirada nas Completas"
                 ),
                 imageHeight = 220.dp
             ) {
@@ -488,9 +488,15 @@ private fun ComplineView(
         }
         item(key = "listen") {
             Column(Modifier.padding(horizontal = design.spacing.gutter)) {
+                Text(
+                    text = compline.selectionNote.get(currentLanguage),
+                    style = styles.footnote,
+                    color = p.textSecondary
+                )
+                Spacer(Modifier.height(16.dp))
                 AppSecondaryCapsule(
                     label = if (isNarrating) currentLanguage.pick("Detener", "Stop", "Parar")
-                    else currentLanguage.pick("Escuchar el oficio", "Listen to the office", "Ouvir o ofício"),
+                    else currentLanguage.pick("Escuchar la oración", "Listen to the prayer", "Ouvir a oração"),
                     onClick = { if (isNarrating) ttsManager.stop() else ttsManager.speakSingle(officeText) },
                     icon = if (isNarrating) Icons.Filled.Stop else Icons.Outlined.Headphones,
                     tag = "compline_tts_button",
@@ -502,7 +508,7 @@ private fun ComplineView(
                 if (isNarrating) {
                     Spacer(Modifier.height(8.dp))
                     Text(
-                        currentLanguage.pick("Narrando el oficio…", "Reading the office aloud…", "Narrando o ofício…"),
+                        currentLanguage.pick("Narrando la oración…", "Reading the prayer aloud…", "Narrando a oração…"),
                         style = styles.footnote,
                         color = p.textSecondary
                     )
@@ -547,7 +553,7 @@ private fun ComplineView(
         item(key = "part4") {
             OfficePart(
                 number = 4,
-                caption = currentLanguage.pick("Salmodia de la noche", "Psalmody of the night", "Salmodia da noite"),
+                caption = currentLanguage.pick("Extracto del salmo", "Psalm excerpt", "Trecho do salmo"),
                 reference = compline.psalmReference,
                 latinText = PsalmLatin,
                 latinShown = 4 in latinParts,

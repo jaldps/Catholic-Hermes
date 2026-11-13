@@ -3,9 +3,9 @@ package com.example.data.models
 enum class NightPrayerType(val displayName: LocalizedText) {
     ROMAN_COMPLINE(
         LocalizedText(
-            "Completas del Breviario Romano (Liturgia de las Horas)",
-            "Roman Breviary Compline (Liturgy of the Hours)",
-            "Completas do Breviário Romano (Liturgia das Horas)"
+            "Oración de la noche inspirada en Completas",
+            "Night prayer inspired by Compline",
+            "Oração da noite inspirada nas Completas"
         )
     ),
     IGNATIAN_EXAMEN(
@@ -39,7 +39,8 @@ data class ComplineOffice(
     val canticleOfSimeonTranslation: LocalizedText,
     val concludingPrayer: LocalizedText,
     val blessing: LocalizedText,
-    val marianAntiphons: List<MarianAntiphonItem>
+    val marianAntiphons: List<MarianAntiphonItem>,
+    val selectionNote: LocalizedText
 )
 
 data class MarianAntiphonItem(

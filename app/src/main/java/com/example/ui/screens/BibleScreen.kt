@@ -381,7 +381,8 @@ fun BibleScreen(
     /** Deep-link: verse to highlight/scroll to on open, or null for none. */
     initialVerseStart: Int? = null,
     modifier: Modifier = Modifier,
-    onExitContext: (() -> Unit)? = null
+    onExitContext: (() -> Unit)? = null,
+    onOpenCatechism: ((Int) -> Unit)? = null
 ) {
     val context = LocalContext.current
     val insets = AppEdgeToEdge()
@@ -539,7 +540,8 @@ fun BibleScreen(
                                 repository = repository,
                                 dao = dao,
                                 ttsManager = ttsManager,
-                                currentLanguage = currentLanguage
+                                currentLanguage = currentLanguage,
+                                onOpenCatechism = onOpenCatechism
                             )
                         } else {
                             LazyColumn(Modifier.fillMaxSize(), contentPadding = listBottom) {

@@ -1,0 +1,425 @@
+{
+  "base_commit": "d172a7f77643c0a77894a77fd82fd6938cc26b60",
+  "production_source_tree_sha256": "fe39019bc8981efb95974dbcb82a675d9c10474b89934ac968d41c58c4598b40",
+  "first_full_regression": {
+    "totals": {
+      "tests": 277,
+      "failures": 2,
+      "errors": 0,
+      "skipped": 0
+    },
+    "suite_count": 53,
+    "known_stale_expectations": [
+      {
+        "suite": "com.example.ExampleRobolectricTest",
+        "test": "verify vatican scripture study course tracks and lectio divina",
+        "message": [
+          "java.lang.AssertionError: expected:<3> but was:<4>"
+        ]
+      },
+      {
+        "suite": "com.example.ExampleRobolectricTest",
+        "test": "read string from context",
+        "message": [
+          "org.junit.ComparisonFailure: expected:<[Sancta Fides]> but was:<[Catholic Hermes Preview]>"
+        ]
+      }
+    ],
+    "resolution": "Both expectations updated; entire affected class passed in final focused run. Production source later changed only for the additional Explore entry and overview tag, covered by focused journeys and final render checks.",
+    "raw_workspace_report": "/workspace/reports/study-first-full-batch.json"
+  },
+  "final_focused_revalidation": {
+    "suites": [
+      {
+        "name": "com.example.StudyCourseIntegrityTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.example.AppNavigationTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.example.StudyJourneyTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.example.RetainedNavigationTest",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "com.example.ExampleRobolectricTest",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "totals": {
+      "tests": 18,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "result": "passed",
+    "scope": "Final production source; corrected stale expectations; original navigation, retained context and both Study entry points, course citations and persistence."
+  },
+  "followup_functional_revalidation": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "note": "StudyJourneyTest repeated after adding overview tag; passed with compact render batch."
+  },
+  "normal_render": {
+    "methods": 4,
+    "failures": 0,
+    "frames": 20,
+    "language": "es",
+    "identities": [
+      "Lumen",
+      "Sanctuary"
+    ],
+    "modes": [
+      "light",
+      "dark"
+    ],
+    "log": "/tmp/catholic-study-normal-final.log"
+  },
+  "compact_render": {
+    "methods": 4,
+    "failures": 0,
+    "frames": 12,
+    "language": "es",
+    "viewport_dp": [
+      320,
+      760
+    ],
+    "font_scale": 2,
+    "geometric_assertion": "Continue action bottom <= Read dock-item top in every mode",
+    "log": "/tmp/catholic-study-compact-final.log"
+  },
+  "frames": [
+    {
+      "file": "app/build/screenshots/bible/study_lumen_light_es.png",
+      "sha256": "b53b24e7a997a4c7730c28199c80d0e9cc28a51b002564175bc2d66515962cab",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lesson_lumen_light_es.png",
+      "sha256": "763a55c8083a6536d05aa2dc132140b3e41d5bf5f21ef6628c85939306fa33be",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_teaching_lumen_light_es.png",
+      "sha256": "d7b4c621ebc85da690d0a023f3c262ee085ccd078f9667f0e86ee034323b84ea",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_review_lumen_light_es.png",
+      "sha256": "f6c8e5ba2ab41a5377cb7c12ab80bbc2c70bf5cddbd9deb784410287deda6dc6",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_actions_lumen_light_es.png",
+      "sha256": "626cb0faaeb4454fcabb9b9b88d396ca0431d55e0fd9537a23ee708d343e2c51",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lumen_dark_es.png",
+      "sha256": "4199ed4a05b13c55d638e0a4a2ac1c1644a0d74ae12a30085096c36ffe7c4292",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lesson_lumen_dark_es.png",
+      "sha256": "dbb3cfbe3c2e48e62c53ec9392ca4190058c63ba267d61c1ad1f489cc378d3c5",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_teaching_lumen_dark_es.png",
+      "sha256": "c0fe58e9321c17f68d3dc8064a0a3d9f03dcf05502e16a8c2b42e5d6f2dd80c3",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_review_lumen_dark_es.png",
+      "sha256": "9caa5ca02132a8ca8093539a98f74e313f17fb889a9d248c6f228716078c60ae",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_actions_lumen_dark_es.png",
+      "sha256": "3945d6f9637eedc46bd391dd01b0afd21c621c59e45fc093eab45acb1cb1620d",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lesson_lumen_light_es_scale_200_w320_h760.png",
+      "sha256": "3bae08f684aa7670cba105b28e3e1176bf5c45cbf02cae9591d46aedfee48cd0",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lesson_lumen_dark_es_scale_200_w320_h760.png",
+      "sha256": "7b0fbda8eac244498ae08b9eb0091262bc68092efebd387f0b95afc6415a79e6",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_review_lumen_light_es_scale_200_w320_h760.png",
+      "sha256": "2d99d01cf6b5ff23cba388da5549ddb1ef1a185e65733070f02336a68454885d",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_review_lumen_dark_es_scale_200_w320_h760.png",
+      "sha256": "42e1b2f15835c39c48a1bb13f6fb081fc8b8920b941cf2d50de7c8dd3a7c21e2",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_actions_lumen_light_es_scale_200_w320_h760.png",
+      "sha256": "3e111f19af707468dc6438750efa43081ec0a67979e9ed323add19373174980c",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_actions_lumen_dark_es_scale_200_w320_h760.png",
+      "sha256": "f2d9cc0cf6c226260f74c94ae5d7675fbf48e29640f376c2072297134f3bcafe",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_sanctuary_light_es.png",
+      "sha256": "62726118a27a76d5f3c2902e4f1aaca47221e9c4476c8f93706c136a96e3a715",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lesson_sanctuary_light_es.png",
+      "sha256": "26079fa71193c49dc676d51d88d987b318af5879298b1950599ac730b958c899",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_teaching_sanctuary_light_es.png",
+      "sha256": "60634b04adb23514aacbb2425637111cfcf9b8c596c34daaebb13f361b92e6a8",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_review_sanctuary_light_es.png",
+      "sha256": "5e782bd875811e0352f6d686b70d0928b943a22197fe06799a056d23b00a5f41",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_actions_sanctuary_light_es.png",
+      "sha256": "54ba1014d1293675cf267df50e5a6129650d601068f9c429fefef4db4c0ca91b",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_sanctuary_dark_es.png",
+      "sha256": "1b39af85a9f46525a00237253a9847ca1f8d62db542726286556ce8fe7496b7b",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lesson_sanctuary_dark_es.png",
+      "sha256": "4af780075642f9711a1202f8159f2347868b7ac8824f37a2100f18a0b629e98a",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_teaching_sanctuary_dark_es.png",
+      "sha256": "7edfe9af8e4699f08dd22f5929bf1c1d6e29403173cb3eb51034ce50175f83f5",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_review_sanctuary_dark_es.png",
+      "sha256": "83ee853f1722f86fb49bff6e75f8c12f5a2cc4ac80389fc24fd22a0a09b4595a",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_actions_sanctuary_dark_es.png",
+      "sha256": "6c020d9501bcb254c8fb7e7baed8e7bf4c1d7f5faf7e571e63e27dfd3489bd47",
+      "viewport_dp": [
+        411,
+        891
+      ],
+      "font_scale": 1
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lesson_sanctuary_light_es_scale_200_w320_h760.png",
+      "sha256": "b8b47c5ced0385c70897d4b4d87af898453535f47685dd7fe0a751f27916d303",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_lesson_sanctuary_dark_es_scale_200_w320_h760.png",
+      "sha256": "b6aa4467a51692e19af2f838028bb1c5ac9e14506e7587cac6e0e8db45af17a2",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_review_sanctuary_light_es_scale_200_w320_h760.png",
+      "sha256": "e5e40c306606f569fc86921a3360616a3bc65022a4d65195e444dfbdbf9d876f",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_review_sanctuary_dark_es_scale_200_w320_h760.png",
+      "sha256": "d08a7a3171220df8c0b17f7291b9cb1a263f9cead0d9cd8dd24f14a22d09fab9",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_actions_sanctuary_light_es_scale_200_w320_h760.png",
+      "sha256": "caff0ac69152ce35a8a03a4bf9f95c36bfd7c187cb77483f04566253dc1951a9",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    },
+    {
+      "file": "app/build/screenshots/bible/study_actions_sanctuary_dark_es_scale_200_w320_h760.png",
+      "sha256": "aa255dfcf92cbec494ac2c49e8bda01600b1e40206ead96141d92adbba16cb35",
+      "viewport_dp": [
+        320,
+        760
+      ],
+      "font_scale": 2
+    }
+  ],
+  "corpus_verification": "PASS: 2865 paragraphs x3, source digests, 246 novena sequences",
+  "apk": {
+    "version_name": "1.6-quality-preview",
+    "version_code": 7,
+    "package": "com.aistudio.sanctafides.qvmrpx.qualitypreview",
+    "sha256": "d31f909a01e231b130aa1456505bba5bc72c2ec3d451eb814a9d4bc6e11a19c6",
+    "bytes": 63577955,
+    "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+    "signer_matches_previous_quality_preview": true,
+    "min_sdk": 24,
+    "target_sdk": 36,
+    "device_installation_tested": false
+  },
+  "independent_final_review": "pending: agent usage limit interrupted review",
+  "visual_review": "coordinator reviewed normal and compact montages; no blocking clipped action or dock overlap in captured Study states",
+  "limits": [
+    "No physical device installation",
+    "No full keyboard or TalkBack verification",
+    "UI captures ES only; new course data/citations checked ES/EN/PT",
+    "Legacy corpus provenance and complete roadmap remain pending",
+    "First full regression had two stale expectations; corrected and rerun in focused batch, not falsely reported as a single 277-green run"
+  ]
+}

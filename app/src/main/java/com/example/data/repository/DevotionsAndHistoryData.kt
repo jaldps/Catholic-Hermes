@@ -467,19 +467,19 @@ object DevotionsAndHistoryData {
             location = LocalizedText("Gruta de Massabielle, Lourdes, Francia", "Grotto of Massabielle, Lourdes, France", "Gruta de Massabielle, Lourdes, França"),
             primarySanctuary = LocalizedText("Santuario de Nuestra Señora de Lourdes", "Sanctuary of Our Lady of Lourdes", "Santuário de Nossa Senhora de Lourdes"),
             historyAndApparition = LocalizedText(
-                "La Virgen María se apareció en 18 ocasiones a la humilde campesina Santa Bernardita Soubirous. Vestida de blanco con una cinta azul y una rosa dorada en cada pie, la Señora confirmó el dogma recién proclamado por el Beato Pío IX diciendo en dialecto occitano: 'Yo soy la Inmaculada Concepción'. Hizo brotar una fuente milagrosa que continúa manando agua sanadora.",
-                "Our Lady appeared 18 times to 14-year-old Bernadette Soubirous at the grotto of Massabielle. Revealing her identity as 'The Immaculate Conception', she unsealed a miraculous spring of water that has been the instrument of thousands of medically documented cures.",
-                "Nossa Senhora apareceu a Santa Bernadete na gruta de Massabielle, revelando: 'Eu sou a Imaculada Conceição'. Fez jorrar uma fonte de água onde ocorrem milagres de cura física e espiritual até hoje."
+                "La Virgen María se apareció en 18 ocasiones a la humilde campesina Santa Bernardita Soubirous. Vestida de blanco con una cinta azul y una rosa dorada en cada pie, la Señora confirmó el dogma recién proclamado por el Beato Pío IX diciendo en dialecto occitano: 'Yo soy la Inmaculada Concepción'. Según el relato de las apariciones, Bernardita descubrió una fuente que hoy forma parte de la oración de los peregrinos.",
+                "Our Lady appeared 18 times to 14-year-old Bernadette Soubirous at the grotto of Massabielle. Revealing her identity as 'The Immaculate Conception', the apparition directed Bernadette to a spring that is now part of pilgrims' prayer.",
+                "Nossa Senhora apareceu a Santa Bernadete na gruta de Massabielle, revelando: 'Eu sou a Imaculada Conceição'. Segundo o relato das aparições, Bernadete descobriu uma fonte que hoje faz parte da oração dos peregrinos."
             ),
             promises = LocalizedText(
-                "«No te prometo hacerte feliz en este mundo, sino en el otro». Promesa de sanación física y consuelo a los enfermos.",
-                "“I do not promise to make you happy in this life, but in the next.” Comfort for all suffering in body and spirit.",
-                "Consolo imenso aos enfermos e a promessa de vida eterna aos que perseverarem na fé."
+                "Según el relato de Bernardita: «No te prometo hacerte feliz en este mundo, sino en el otro». La devoción invita a la oración y al consuelo de los enfermos; no garantiza la curación personal.",
+                "According to Bernadette’s account: “I do not promise to make you happy in this life, but in the next.” The devotion invites prayer and comfort for the sick; it does not guarantee personal healing.",
+                "Segundo o relato de Bernadete: “Não prometo fazer-te feliz neste mundo, mas no outro.” A devoção convida à oração e ao consolo dos enfermos; não garante a cura pessoal."
             ),
             recordedMiracles = LocalizedText(
-                "Más de 70 curaciones declaradas milagrosas e inexplicables por el riguroso Comité Médico Internacional de Lourdes (CMIL).",
-                "Over 70 medically verified, scientifically inexplicable physical cures certified by the International Medical Bureau of Lourdes.",
-                "Mais de 70 milagres de curas físicas comprovados cientificamente pelo rigoroso Comitê Médico de Lourdes."
+                "En Lourdes se han reconocido curaciones como milagrosas por la Iglesia. La Oficina Médica y el Comité Médico Internacional de Lourdes (CMIL) evalúan las curaciones según el conocimiento médico actual; el reconocimiento como milagro corresponde al obispo competente, no al comité médico.",
+                "The Church has recognized healings at Lourdes as miraculous. The Medical Bureau and the International Medical Committee of Lourdes (CMIL) assess healings in light of current medical knowledge; recognition as a miracle belongs to the competent bishop, not the medical committee.",
+                "A Igreja reconheceu curas em Lourdes como milagrosas. O Departamento Médico e o Comitê Médico Internacional de Lourdes (CMIL) avaliam as curas à luz do conhecimento médico atual; o reconhecimento como milagre cabe ao bispo competente, não ao comitê médico."
             ),
             venerationPrayer = LocalizedText(
                 "Nuestra Señora de Lourdes, consuelo de los afligidos y salud de los enfermos: toca con tu amor maternal a quienes hoy sufren en el cuerpo o en el espíritu. Amén.",
@@ -1415,14 +1415,14 @@ object DevotionsAndHistoryData {
             title = LocalizedText("Cristo de los Milagros (Señor de los Milagros de Chile)", "Christ of the Miracles (Chile)", "Cristo dos Milagres (Chile)"),
             feastDay = LocalizedText("Segundo Domingo de Noviembre", "Second Sunday of November", "Segundo domingo de novembro"),
             originHistory = LocalizedText(
-                "Imagen pintada en el lienzo del siglo XVIII del templo de San Agustín en Santiago, salvada por prodigio del terremoto de 1647 que arruinó la ciudad. El muro y el lienzo permanecieron intactos.",
-                "Painting from the 18th century of St. Augustine's church in Santiago, saved miraculously from the 1647 earthquake that ruined the city; wall and canvas stood intact.",
-                "Quadro do século XVIII em Santiago, salvo milagrosamente do terremoto de 1647 que destruiu a cidade."
+                "Ficha devocional sobre Cristo bajo la advocación del Señor de los Milagros en Chile. La fecha y el origen de la imagen requieren verificación documental.",
+                "Devotional entry on Christ under the title Lord of Miracles in Chile. The date and origin of the image require documentary verification.",
+                "Ficha devocional sobre Cristo sob o título de Senhor dos Milagres no Chile. A data e a origem da imagem precisam de verificação documental."
             ),
             promises = LocalizedText(
-                "Amparo ante terremotos, curación de enfermos y reconstrucción espiritual de las naciones.",
-                "Protection in earthquakes, healing of the sick, and spiritual rebuilding of nations.",
-                "Proteção nos terremotos, cura dos enfermos e reconstrução espiritual das nações."
+                "Intenciones de oración por quienes sufren terremotos o enfermedad y por la renovación de la comunidad; esta ficha no acredita promesas particulares de protección o curación.",
+                "Prayer intentions for people suffering from earthquakes or illness and for community renewal; this entry does not establish particular promises of protection or healing.",
+                "Intenções de oração por quem sofre com terremotos ou doença e pela renovação da comunidade; esta ficha não comprova promessas particulares de proteção ou cura."
             ),
             theologicalMeaning = LocalizedText(
                 "La Cruz como trono de misericordia: Dios es más grande que la naturaleza y la muerte; en ella, los milagros.",
@@ -1438,9 +1438,9 @@ object DevotionsAndHistoryData {
             country = LocalizedText("Chile", "Chile", "Chile"),
             primarySanctuary = LocalizedText("Templo de San Agustín (Santiago, Chile)", "St. Augustine's Church, Santiago, Chile", "Igreja de Santo Agostinho em Santiago"),
             recordedMiracles = LocalizedText(
-                "El lienzo intacto tras el terremoto de 1647 y la reconstrucción de Santiago tras la obra de la Virgen.",
-                "The canvas intact after the 1647 earthquake and the rebuilding of Santiago.",
-                "O quadro intacto após o terremoto de 1647."
+                "No se incluye un relato de milagro verificado documentalmente para esta ficha.",
+                "No miracle account supported by documentary evidence is included for this entry.",
+                "Esta ficha não inclui um relato de milagre verificado documentalmente."
             )
         ),
         ChristManifestation(

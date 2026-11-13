@@ -279,19 +279,19 @@ object BibleData {
         ),
         BibleVersionInfo(
             id = "douay_rheims",
-            name = "Douay-Rheims Bible / Nova Vulgata",
+            name = "Douay-Rheims-Challoner",
             abbreviation = "DRB",
-            language = "English / Latin",
+            language = "English",
             isCatholicCanon = true,
             description = LocalizedText(
-                "Traducción tradicional histórica católica de la Vulgata Latina de San Jerónimo declarada auténtica por el Concilio de Trento.",
-                "The venerable traditional Catholic translation of the Latin Vulgate, faithful to St. Jerome's fourth-century rendering.",
-                "Tradução tradicional a partir da Vulgata Latina de São Jerônimo, de grande valor litúrgico e teológico."
+                "Texto inglés local identificado como Douay-Rheims, revisión de Challoner, traducido de la Vulgata latina. La procedencia y las transformaciones de este corpus digital requieren verificación documental.",
+                "Bundled English text identified as the Douay-Rheims, Challoner revision, translated from the Latin Vulgate. The provenance and transformations of this digital corpus still require documentary verification.",
+                "Texto inglês local identificado como Douay-Rheims, revisão de Challoner, traduzido da Vulgata latina. A procedência e as transformações deste corpus digital ainda requerem verificação documental."
             ),
             canonicalDifferenceNote = LocalizedText(
-                "Conserva inalterados los 73 libros canónicos de la tradición apostólica.",
-                "Maintains all 73 books without any omission of the deuterocanonicals.",
-                "Conserva inalterados todos os 73 livros canônicos bíblicos."
+                "Incluye los 73 libros del canon católico, con las adiciones de Ester y Daniel.",
+                "Includes the 73 books of the Catholic canon, with the additions to Esther and Daniel.",
+                "Inclui os 73 livros do cânon católico, com as adições de Ester e Daniel."
             )
         ),
         BibleVersionInfo(

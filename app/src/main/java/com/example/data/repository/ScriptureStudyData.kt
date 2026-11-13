@@ -15,9 +15,9 @@ object ScriptureStudyData {
                 "Os Sacramentos da Graça na Escritura"
             ),
             description = LocalizedText(
-                "Curso bíblico de 6 lecciones que recorre los fundamentos apostólicos y vaticanos de los siete sacramentos instituidos por Jesucristo.",
-                "6-lesson Vatican study course exploring the biblical roots of the seven Sacraments instituted by Jesus Christ.",
-                "Curso bíblico de 6 lições sobre os fundamentos dos sacramentos da Igreja instituídos por Cristo."
+                "Curso editorial de 6 lecciones sobre las raíces bíblicas de los siete sacramentos instituidos por Jesucristo.",
+                "6-lesson editorial course exploring the biblical roots of the seven Sacraments instituted by Jesus Christ.",
+                "Curso editorial de 6 lições sobre as raízes bíblicas dos sete sacramentos instituídos por Jesus Cristo."
             ),
             iconName = "Church",
             lessons = listOf(
@@ -504,7 +504,7 @@ object ScriptureStudyData {
             ),
             description = LocalizedText(
                 "Profundización en las epístolas del Nuevo Testamento sobre la justificación, la caridad cristiana, la armadura espiritual y la esperanza de la resurrección.",
-                "In-depth Vatican study of apostolic theology: justification, the hymn of charity, the armor of God, and resurrection hope.",
+                "Editorial study of apostolic theology: justification, the hymn of charity, the armor of God, and resurrection hope.",
                 "Estudo teológico e pastoral das cartas de São Paulo sobre a fé, a caridade e a vida em Cristo."
             ),
             iconName = "MenuBook",
