@@ -1,14 +1,21 @@
-// Catholic Hermes 1.8+ preview: a separate installation signed with the
-// committed preview key in tools/signing/hermes-preview.keystore (copy it to
-// ./debug.keystore before building). Production and historical preview
-// application IDs/signing remain untouched.
+// Catholic Hermes 1.8 preview: separate package (.hermes) installable beside 1.7.
+// Usage: ./gradlew -I tools/hermes-preview.gradle :app:assembleDebug
+// Production applicationId, signing and version stay untouched.
+def HERMES_VERSION_CODE = 9
+def HERMES_VERSION_NAME = '1.8'
+
 gradle.beforeProject { project ->
     project.pluginManager.withPlugin('com.android.application') {
         project.android.buildFeatures.resValues = true
         project.android.buildTypes.named('debug') {
             applicationIdSuffix = '.hermes'
-            versionNameSuffix = '-hermes'
-            resValue 'string', 'app_name', 'Catholic Hermes 1.8'
+            resValue 'string', 'app_name', "Catholic Hermes ${HERMES_VERSION_NAME}"
+        }
+        project.androidComponents.onVariants(project.androidComponents.selector().withBuildType('debug')) { variant ->
+            variant.outputs.each { output ->
+                output.versionCode.set(HERMES_VERSION_CODE)
+                output.versionName.set(HERMES_VERSION_NAME)
+            }
         }
     }
 }

@@ -1,5 +1,13 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8 (en desarrollo)
+
+[Descargar Catholic Hermes 1.8](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermes`, versión `1.8`, código 9.
+
+Es una app aparte, firmada con una clave nueva: se instala junto a la anterior y empieza sin el progreso guardado. Novedades de esta entrega (M1): el filtro «A quién se reza» de las novenas es un desplegable, y cada tentación (Inicio → Mis prácticas → Tentaciones) tiene un botón **«Más: cómo vencerla»** con una guía completa: cómo actúa, por qué cuesta, señales, qué hacer en el momento, rutina diaria, plan de 40 días, Escritura, sabiduría de los santos con fuente, sacramentos, cuándo pedir ayuda y fuentes. Metadatos: [release-1.8/APK.json](../docs/quality/release-1.8/APK.json). No se ha probado la instalación en un dispositivo real.
+
+## Versión anterior
+
 [Descargar Catholic Hermes Preview 1.6](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-quality-preview.apk).
 
 Abre el archivo `.apk` en tu teléfono Android y permite la instalación desde el navegador si Android lo solicita. Busca **Catholic Hermes Preview** en el teléfono.

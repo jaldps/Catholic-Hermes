@@ -47,6 +47,9 @@ import androidx.compose.material.icons.outlined.LocalFireDepartment
 import androidx.compose.material.icons.outlined.LocalFlorist
 import androidx.compose.material.icons.outlined.NotificationsNone
 import androidx.compose.material.icons.outlined.People
+import androidx.compose.material.icons.outlined.Groups
+import androidx.compose.material.icons.outlined.Savings
+import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.SearchOff
 import androidx.compose.material.icons.outlined.Shield
@@ -1788,6 +1791,14 @@ private fun novenaFallbackArt(novena: Novena): String = when {
     }
 }
 
+private fun kindIcon(kind: NovenaKind): ImageVector = when (kind) {
+    NovenaKind.ALL -> Icons.Outlined.AllInclusive
+    NovenaKind.POPULAR -> Icons.Outlined.StarOutline
+    NovenaKind.MARY -> Icons.Outlined.LocalFlorist
+    NovenaKind.JESUS -> Icons.Outlined.FavoriteBorder
+    NovenaKind.SAINTS -> Icons.Outlined.Groups
+}
+
 private fun intentionIcon(tag: String?): ImageVector = when (tag) {
     "impossible" -> Icons.Outlined.Shield
     "blessings" -> Icons.Outlined.AutoAwesome
@@ -1796,6 +1807,7 @@ private fun intentionIcon(tag: String?): ImageVector = when (tag) {
     "family" -> Icons.Outlined.People
     "peace" -> Icons.Outlined.WbTwilight
     "comfort" -> Icons.Outlined.VolunteerActivism
+    "money" -> Icons.Outlined.Savings
     else -> Icons.Outlined.LocalFlorist
 }
 
@@ -1892,14 +1904,14 @@ private fun NovenaIndexView(
 
         item(key = "novena_filters") {
             Spacer(Modifier.height(16.dp))
-            Row(
+            @OptIn(androidx.compose.foundation.layout.ExperimentalLayoutApi::class)
+            androidx.compose.foundation.layout.FlowRow(
                 Modifier
                     .fillMaxWidth()
-                    .horizontalScroll(rememberScrollState())
                     .padding(horizontal = design.spacing.gutter, vertical = 4.dp)
                     .testTag("novena_filter_chips"),
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 val kindLabels = listOf(
                     NovenaKind.ALL to currentLanguage.pick("Todas", "All", "Todas"),
@@ -1908,14 +1920,20 @@ private fun NovenaIndexView(
                     NovenaKind.JESUS to currentLanguage.pick("Jesús", "Jesus", "Jesus"),
                     NovenaKind.SAINTS to currentLanguage.pick("Santos", "Saints", "Santos")
                 )
-                kindLabels.forEach { (k, label) ->
-                    AppKitChip(
-                        label = label,
-                        selected = kind == k,
-                        onClick = { onKind(k) },
-                        modifier = Modifier.testTag("novena_filter_${k.name.lowercase()}")
-                    )
-                }
+                val kindPrefix = currentLanguage.pick("A quién", "To whom", "A quem")
+                AppMenuChip(
+                    label = "$kindPrefix: ${kindLabels.first { it.first == kind }.second}",
+                    icon = kindIcon(kind),
+                    tag = "novena_kind_picker",
+                    items = kindLabels.map { (k, label) ->
+                        AppMenuItem(
+                            label = label,
+                            icon = if (kind == k) Icons.Filled.Check else kindIcon(k),
+                            selected = kind == k,
+                            tag = "novena_filter_${k.name.lowercase()}"
+                        ) { onKind(k) }
+                    }
+                )
                 AppMenuChip(
                     label = selectedTag?.let { tagLabels[it] } ?: currentLanguage.pick("Intención", "Intention", "Intenção"),
                     icon = if (selectedTag != null) intentionIcon(selectedTag) else null,

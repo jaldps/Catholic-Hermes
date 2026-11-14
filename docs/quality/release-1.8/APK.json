@@ -1,0 +1,16 @@
+{
+  "version_name": "1.8",
+  "version_code": 9,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermes",
+  "app_label": "Catholic Hermes 1.8",
+  "sha256": "f910ef0b4f2248bc35d86002f4940d9fb7fefbd5695df4b84ba86865b4bef13c",
+  "bytes": 62916855,
+  "signing_certificate_sha256": "07efd6dbd2c9005998114aba185ae5c7230e9637c3b300e221ba413b6be47908",
+  "signer_note": "New preview key (CN=Catholic Hermes Preview); separate app from 1.7, progress does not carry over. Key kept outside the repository.",
+  "build": "./gradlew -I tools/hermes-preview.gradle :app:assembleDebug",
+  "milestone": "M1: novena 'to whom' dropdown; 'More' long-form guides for the 7 temptations (ES/EN/PT)",
+  "tests": ["TemptationGuidesDataTest", "TemptationGuideInteractionTest", "JournalTemptationInteractionTest", "HabitsLogicTest", "NovenaIndexJourneyTest", "screenshots.TemptationGuideScreenshotTest", "screenshots.PrayersScreenshotTest"],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}
