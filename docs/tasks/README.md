@@ -1,0 +1,35 @@
+# Encargos para agentes externos (Hermes, Codex)
+
+El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la rama `CatholicGPT`. Los agentes externos los ejecutan en el PC de Jose y entregan su trabajo en una rama propia. El coordinador revisa e integra; **nadie más escribe en `CatholicGPT`**.
+
+## Protocolo
+
+1. **Elegir un encargo.** Busca en `docs/tasks/T-*.md` uno con `Estado: ABIERTO` y `Asignado: <tu nombre>`.
+2. **Partir de lo último.** Ejecuta `git fetch origin && git switch -c ext/T-00N origin/CatholicGPT`. Si la rama ya existe, haz `git switch ext/T-00N` y luego `git merge origin/CatholicGPT`.
+3. **Trabajar.** Haz solo lo que pide el encargo y toca solo los archivos que nombra. Lee siempre antes `docs/content/EDITORIAL-RULES-1.8.md` y la especificación que cite el encargo.
+4. **Validar.** Ejecuta el validador del encargo hasta que salga con `0 errors`. Si tienes Android SDK y Java 21, puedes compilar con `./gradlew :app:testDebugUnitTest --tests <clase>`. No es obligatorio: el coordinador compila aquí.
+5. **Informar.** Escribe `docs/tasks/T-00N-REPORT.md` con:
+   - qué hiciste;
+   - el resultado del validador (las últimas líneas);
+   - las fuentes que consultaste;
+   - los datos que **no** pudiste verificar;
+   - las preguntas para el coordinador.
+6. **Entregar.** Haz commit con `T-00N: <resumen>` y `git push -u origin ext/T-00N`. Puedes subir entregas parciales: cada push es un punto de revisión.
+7. **Correcciones.** El coordinador responde en `docs/tasks/T-00N-REVIEW.md`, dentro de tu rama o en `CatholicGPT`. Si pide cambios, corrígelos en la misma rama y vuelve a hacer push.
+
+## Reglas fijas
+
+- No hagas push a `CatholicGPT` ni a `main`. No hagas force-push sobre ramas ajenas.
+- Nunca subas claves (`*.keystore`, `*.jks`), APK, `local.properties`, tokens ni contraseñas.
+- No inventes nada: citas, fechas, aprobaciones, indulgencias, números de concesión, promesas ni milagros. Si no puedes verificar un dato, omítelo o di «según la tradición» y anótalo en el informe.
+- Textos con derechos de autor (traducciones litúrgicas modernas, libros, webs): no se copian. Usa textos de dominio público o redacción y traducción propias, y márcalo en `textNote`.
+- Tres idiomas completos y naturales. Español; inglés; portugués de Brasil.
+- Mantén los ids, claves y formatos exactos del contrato. El validador es la referencia.
+
+## Encargos
+
+| Encargo | Asignado | Estado | Tema |
+|---|---|---|---|
+| [T-001](T-001.md) | Hermes | ABIERTO | M3 · detalles de 34 oraciones básicas → `assets/prayers/details-a.json` |
+| [T-002](T-002.md) | Codex | ABIERTO | M3 · detalles de 34 oraciones especializadas → `assets/prayers/details-b.json` |
+| [T-003](T-003.md) | Codex | ABIERTO | M3 · ~30 oraciones nuevas, reales y documentadas → `assets/prayers/extra.json` |
