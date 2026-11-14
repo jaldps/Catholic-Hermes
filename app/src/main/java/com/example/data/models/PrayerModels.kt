@@ -61,7 +61,8 @@ data class Novena(
     val promises: LocalizedText,
     val days: List<NovenaDay>,
     val imageUrl: String? = null,
-    val tags: List<String> = emptyList()
+    val tags: List<String> = emptyList(),
+    val provenance: NovenaProvenance? = null
 )
 
 enum class PrayerCategory(val title: LocalizedText) {

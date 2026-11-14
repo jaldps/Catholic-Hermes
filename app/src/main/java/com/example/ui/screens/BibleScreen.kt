@@ -2094,20 +2094,21 @@ private fun DailyMissalView(
                         Spacer(Modifier.height(14.dp))
                     }
                     if (lessons.size > 1) {
-                        Row(
-                            Modifier.fillMaxWidth()
-                                .horizontalScroll(rememberScrollState())
-                                .padding(horizontal = design.spacing.gutter),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            shortLabels.forEachIndexed { i, label ->
-                                AppKitChip(
-                                    label = label,
-                                    selected = i == currentLesson,
-                                    onClick = { scope.launch { listState.animateScrollToItem(lessonsStart + i) } },
-                                    modifier = Modifier.testTag("missal_jump_$i")
-                                )
-                            }
+                        Box(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
+                            AppMenuChip(
+                                label = currentLanguage.pick("Ir a la lectura", "Jump to reading", "Ir à leitura") + " · " + shortLabels.getOrElse(currentLesson) { "" },
+                                icon = Icons.Outlined.AutoStories,
+                                tag = "missal_jump_picker",
+                                items = shortLabels.mapIndexed { i, label ->
+                                    AppMenuItem(
+                                        label = label,
+                                        icon = Icons.Outlined.AutoStories,
+                                        selected = i == currentLesson,
+                                        tag = "missal_jump_$i",
+                                        onClick = { scope.launch { listState.animateScrollToItem(lessonsStart + i) } }
+                                    )
+                                }
+                            )
                         }
                     }
                 }

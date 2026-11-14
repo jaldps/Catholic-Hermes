@@ -37,6 +37,11 @@ import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.outlined.AutoStories
 import androidx.compose.material.icons.outlined.Church
+import androidx.compose.material.icons.outlined.EditNote
+import androidx.compose.material.icons.outlined.FormatListBulleted
+import androidx.compose.material.icons.outlined.Lightbulb
+import androidx.compose.material.icons.outlined.Quiz
+import androidx.compose.material.icons.outlined.VolunteerActivism
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -81,6 +86,8 @@ import com.example.ui.design.AppEmptyState
 import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppKitChip
+import com.example.ui.design.AppMenuChip
+import com.example.ui.design.AppMenuItem
 import com.example.ui.design.AppPrimaryCapsule
 import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppProgressRing
@@ -543,19 +550,28 @@ private fun LessonDetailView(
                     Text(currentLanguage.pick("Unos $minutes minutos, a tu ritmo", "About $minutes minutes, at your pace", "Cerca de $minutes minutos, no seu ritmo"), style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(top = 8.dp))
                 }
                 Spacer(Modifier.height(16.dp))
-                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    val links = listOfNotNull(
-                        currentLanguage.pick("Leer", "Read", "Ler") to 1,
-                        currentLanguage.pick("Comprender", "Understand", "Compreender") to if (lesson.historicalContext != null || lesson.teachingSections.isNotEmpty()) 2 else sourceIndex,
-                        currentLanguage.pick("Fuentes", "Sources", "Fontes") to sourceIndex,
-                        if (lesson.reviewQuestions.isNotEmpty()) currentLanguage.pick("Repasar", "Review", "Rever") to reviewIndex else null,
-                        currentLanguage.pick("Orar", "Pray", "Rezar") to prayerIndex,
-                        currentLanguage.pick("Mis notas", "My notes", "Minhas notas") to prayerIndex + 1
-                    )
-                    links.forEach { (label, index) ->
-                        AppKitChip(label, selected = false, onClick = { sectionScope.launch { listState.animateScrollToItem(index) } })
+                val lessonLinks = listOfNotNull(
+                    Triple("lesson_jump_read", currentLanguage.pick("Leer", "Read", "Ler"), 1) to Icons.AutoMirrored.Outlined.MenuBook,
+                    Triple("lesson_jump_understand", currentLanguage.pick("Comprender", "Understand", "Compreender"), if (lesson.historicalContext != null || lesson.teachingSections.isNotEmpty()) 2 else sourceIndex) to Icons.Outlined.Lightbulb,
+                    Triple("lesson_jump_sources", currentLanguage.pick("Fuentes", "Sources", "Fontes"), sourceIndex) to Icons.Outlined.AutoStories,
+                    if (lesson.reviewQuestions.isNotEmpty()) Triple("lesson_jump_review", currentLanguage.pick("Repasar", "Review", "Rever"), reviewIndex) to Icons.Outlined.Quiz else null,
+                    Triple("lesson_jump_pray", currentLanguage.pick("Orar", "Pray", "Rezar"), prayerIndex) to Icons.Outlined.VolunteerActivism,
+                    Triple("lesson_jump_notes", currentLanguage.pick("Mis notas", "My notes", "Minhas notas"), prayerIndex + 1) to Icons.Outlined.EditNote
+                )
+                AppMenuChip(
+                    label = currentLanguage.pick("Contenido de la lección", "Lesson contents", "Conteúdo da lição"),
+                    icon = Icons.Outlined.FormatListBulleted,
+                    tag = "lesson_section_picker",
+                    items = lessonLinks.mapIndexed { n, (link, icon) ->
+                        val (tag, label, index) = link
+                        AppMenuItem(
+                            label = "${n + 1} · $label",
+                            icon = icon,
+                            tag = tag,
+                            onClick = { sectionScope.launch { listState.animateScrollToItem(index) } }
+                        )
                     }
-                }
+                )
             }
         }
 

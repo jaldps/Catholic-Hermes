@@ -1,0 +1,23 @@
+{
+  "version_name": "1.8.2",
+  "version_code": 11,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.2",
+  "sha256": "f97bdcc734020b51e2e93ad0435cbe9e4c5bb72075d39a228c234e948d3d3195",
+  "bytes": 63464827,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "updates": "1.8.1 (same package and key)",
+  "build": "./gradlew -I tools/hermes-preview.gradle -PhermesSigningKeystore=<private path> :app:assembleDebug",
+  "changes": [
+    "Novenas: provenance for all 262 novenas (history, origin, verifiable approval, promise with kind/attribution/source/conditions, commercial additions flagged, pastoral notes), ES/EN/PT, reviewed by an Opus content reviewer.",
+    "16 new novenas with original text: Aparecida, Luján, Pilar, Chiquinquirá, Coromoto, Altagracia, Copacabana, Suyapa, Señor de los Milagros, Cristo Negro de Esquipulas, Divino Niño del 20 de Julio, San Ramón Nonato, San Pancracio, Santa Eduviges, São Benedito, San José Gregorio Hernández.",
+    "Grouped pickers: 101 Questions foundations, Bible-course lesson contents, Mass readings jump, final Marian antiphon.",
+    "Includes 1.8 (temptation guides, novena 'to whom' dropdown) and 1.8.1 (Liquid Glass selector, Sacred Heart promises)."
+  ],
+  "tests": ["NovenaProvenanceTest", "NovenaProvenanceUiTest", "NovenaCatalogLoadingTest", "NovenaAssetIntegrityTest", "EditorialReliabilityTest", "NovenaIndexJourneyTest", "GroupedPickersTest", "RetainedNavigationTest", "DesignNavigationTest", "TemptationGuideInteractionTest"],
+  "tests_passed": 21,
+  "known_limitations": ["Enchiridion Indulgentiarum (1999) concession numbers 22 and 29 cited from secondary sources; primary text not consulted.", "Full unit-test suite not run for this checkpoint."],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false
+}

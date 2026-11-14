@@ -109,6 +109,18 @@ class PrayersScreenshotTest {
             scrollTo("novena_card_novena-a-la-divina-misericordia")
             tap("novena_card_novena-a-la-divina-misericordia")
         },
+        "novena_history" to {
+            tapText(segNovenas)
+            scrollTo("novena_card_novena-a-la-divina-misericordia")
+            tap("novena_card_novena-a-la-divina-misericordia")
+            scrollTo("novena_history")
+        },
+        "novena_promise" to {
+            tapText(segNovenas)
+            scrollTo("novena_card_novena-a-la-divina-misericordia")
+            tap("novena_card_novena-a-la-divina-misericordia")
+            scrollTo("novena_promise")
+        },
         "novena_day" to {
             tapText(segNovenas)
             scrollTo("novena_card_novena-a-la-divina-misericordia")

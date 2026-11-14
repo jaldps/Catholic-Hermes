@@ -12,12 +12,12 @@ class NovenaCatalogLoadingTest {
         val catalog=NovenaCatalog { name -> opened += name
             NovenaCatalogLoadingTest::class.java.classLoader!!.getResourceAsStream(name)!! }
         val entries=catalog.allNovenas
-        assertEquals(246,entries.size)
-        assertEquals(3068,entries.sumOf {it.dayNumbers().size})
+        assertEquals(262,entries.size)
+        assertEquals(3212,entries.sumOf {it.dayNumbers().size})
         assertTrue(entries.all {it.days.size == it.dayNumbers().size})
-        assertEquals(listOf("index.json"),opened)
+        assertEquals(listOf("index.json"),opened.filterNot { it.startsWith("provenance/") })
         val selected=catalog.preload(entries.first().id)
-        assertEquals(2,opened.size)
+        assertEquals(2,opened.filterNot { it.startsWith("provenance/") }.size)
         assertTrue(selected.days.first().prayer.es.isNotBlank())
         assertEquals(1,catalog.cachedBodyCount())
         // The reader owns its snapshot even if the catalog later evicts its body.

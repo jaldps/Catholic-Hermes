@@ -68,6 +68,8 @@ import com.example.ui.design.AppChevron
 import com.example.ui.design.AppGlassSurface
 import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppListGroup
+import com.example.ui.design.AppMenuChip
+import com.example.ui.design.AppMenuItem
 import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppProgressRing
 import com.example.ui.design.AppSearchBar
@@ -618,7 +620,7 @@ private fun QuestionPage(
         parseFoundation(foundationText, language, repository.catholicBooks)
     }
     val level = remember(refs, clarificationText) { foundationLevelFor(refs, clarificationText) }
-    var expandedKey by rememberSaveable(index, language) { mutableStateOf<String?>(null) }
+    var expandedKey by rememberSaveable(index, language) { mutableStateOf<String?>(refs.firstOrNull()?.let { refKeyOf(it) }) }
 
     val speak = buildString {
         append(questionText); append("\n\n"); append(answerLabel); append(": "); append(answerText)
@@ -662,25 +664,29 @@ private fun QuestionPage(
                     )
                 }
                 if (refs.isNotEmpty()) {
-                    FlowRow(
+                    val pickedRef = refs.firstOrNull { refKeyOf(it) == expandedKey } ?: refs.first()
+                    Box(
                         Modifier
                             .fillMaxWidth()
                             .padding(horizontal = design.spacing.gutter)
-                            .semantics { contentDescription = foundationText },
-                        horizontalArrangement = Arrangement.spacedBy(8.dp),
-                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                            .semantics { contentDescription = foundationText }
                     ) {
-                        refs.forEach { ref ->
-                            val key = refKeyOf(ref)
-                            val label = refLabel(ref, repository, language)
-                            RefChip(
-                                label = label,
-                                icon = if (ref is FoundationRef.BibleRef) Icons.Outlined.MenuBook else Icons.Outlined.AutoStories,
-                                selected = expandedKey == key,
-                                onClick = { expandedKey = if (expandedKey == key) null else key },
-                                tag = "foundation_ref_$key"
-                            )
-                        }
+                        AppMenuChip(
+                            label = refLabel(pickedRef, repository, language) +
+                                if (refs.size > 1) " · " + language.tr("${refs.indexOf(pickedRef) + 1} de ${refs.size}", "${refs.indexOf(pickedRef) + 1} of ${refs.size}", "${refs.indexOf(pickedRef) + 1} de ${refs.size}") else "",
+                            icon = if (pickedRef is FoundationRef.BibleRef) Icons.Outlined.MenuBook else Icons.Outlined.AutoStories,
+                            tag = "foundation_ref_picker",
+                            items = refs.map { ref ->
+                                val key = refKeyOf(ref)
+                                AppMenuItem(
+                                    label = refLabel(ref, repository, language),
+                                    icon = if (ref is FoundationRef.BibleRef) Icons.Outlined.MenuBook else Icons.Outlined.AutoStories,
+                                    selected = pickedRef === ref,
+                                    tag = "foundation_ref_$key",
+                                    onClick = { expandedKey = key }
+                                )
+                            }
+                        )
                     }
                     val open = refs.firstOrNull { refKeyOf(it) == expandedKey }
                     if (open != null) {

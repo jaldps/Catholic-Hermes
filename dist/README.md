@@ -1,5 +1,17 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.2
+
+[Descargar Catholic Hermes 1.8.2](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.2.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.2`, código 11. **Actualiza la 1.8.1** (misma firma y paquete) y conserva su progreso.
+
+Novedades:
+- Cada novena (262) muestra **Historia** (origen, aprobación verificable, fuentes) y **Promesa** con su tipo (con fuente, concesión de la Iglesia, tradición popular o sin promesa), atribución, fuente y condiciones; se señalan los añadidos comerciales («nunca falla», «publícala») como ajenos a la devoción y se añaden notas pastorales donde hace falta.
+- 16 novenas nuevas con texto propio: Aparecida, Luján, Pilar, Chiquinquirá, Coromoto, Altagracia, Copacabana, Suyapa, Señor de los Milagros, Cristo Negro de Esquipulas, Divino Niño del 20 de Julio, San Ramón Nonato, San Pancracio, Santa Eduviges, São Benedito y San José Gregorio Hernández.
+- Botones agrupados en desplegables: Fundamentos de las 101 preguntas, Contenido de la lección del curso bíblico, lecturas de la Misa y antífona mariana de Completas.
+- Incluye 1.8 (guías de tentaciones) y 1.8.1 (selector Liquid Glass, promesas del Sagrado Corazón).
+
+[Metadatos](../docs/quality/release-1.8.2/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8.1 — edición independiente
 
 [Descargar Catholic Hermes 1.8.1](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.1.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.1`, código 10.

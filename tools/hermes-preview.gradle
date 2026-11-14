@@ -1,8 +1,8 @@
-// Catholic Hermes 1.8.1 preview: stable separate package installable beside 1.7 and 1.8.
+// Catholic Hermes 1.8.x preview: stable separate package installable beside 1.7 and 1.8.
 // Usage: ./gradlew -I tools/hermes-preview.gradle :app:assembleDebug
 // Production applicationId, signing and version stay untouched.
-def HERMES_VERSION_CODE = 10
-def HERMES_VERSION_NAME = '1.8.1'
+def HERMES_VERSION_CODE = 11
+def HERMES_VERSION_NAME = '1.8.2'
 
 gradle.beforeProject { project ->
     project.pluginManager.withPlugin('com.android.application') {
@@ -10,7 +10,10 @@ gradle.beforeProject { project ->
         // Reuse the available preview key; keep private keys outside Git.
         def privateKeystore = project.providers.gradleProperty('hermesSigningKeystore').orNull
         if (privateKeystore != null) {
-            project.android.signingConfigs.getByName('debugConfig').storeFile = project.file(privateKeystore)
+            // finalizeDsl runs after app/build.gradle.kts has created debugConfig.
+            project.androidComponents.finalizeDsl { ext ->
+                ext.signingConfigs.getByName('debugConfig').storeFile = project.file(privateKeystore)
+            }
         }
         project.android.buildTypes.named('debug') {
             applicationIdSuffix = '.hermespreview'

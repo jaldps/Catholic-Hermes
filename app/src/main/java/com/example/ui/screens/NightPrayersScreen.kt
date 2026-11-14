@@ -78,6 +78,8 @@ import com.example.ui.design.AppHideTabBar
 import com.example.ui.design.AppImageCard
 import com.example.ui.design.AppInlineTitle
 import com.example.ui.design.AppKitChip
+import com.example.ui.design.AppMenuChip
+import com.example.ui.design.AppMenuItem
 import com.example.ui.design.AppPrimaryCapsule
 import com.example.ui.design.AppProgressBar
 import com.example.ui.design.AppSecondaryCapsule
@@ -635,22 +637,20 @@ private fun ComplineView(
                     reference = currentAntiphon.seasonTag.get(currentLanguage),
                     trailing = null
                 )
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .horizontalScroll(rememberScrollState())
-                        .padding(horizontal = design.spacing.gutter)
-                        .testTag("marian_antiphon_picker"),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    compline.marianAntiphons.forEachIndexed { index, antiphon ->
-                        AppKitChip(
-                            label = antiphon.titleLatin,
-                            selected = index == selectedMarianAntiphonIndex,
-                            onClick = { selectedMarianAntiphonIndex = index },
-                            modifier = Modifier.testTag("marian_antiphon_$index")
-                        )
-                    }
+                Box(Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter)) {
+                    AppMenuChip(
+                        label = currentAntiphon.titleLatin,
+                        icon = Icons.Outlined.NightsStay,
+                        tag = "marian_antiphon_picker",
+                        items = compline.marianAntiphons.mapIndexed { index, antiphon ->
+                            AppMenuItem(
+                                label = antiphon.titleLatin,
+                                selected = index == selectedMarianAntiphonIndex,
+                                tag = "marian_antiphon_$index",
+                                onClick = { selectedMarianAntiphonIndex = index }
+                            )
+                        }
+                    )
                 }
                 Spacer(Modifier.height(16.dp))
                 AppGlassSurface(

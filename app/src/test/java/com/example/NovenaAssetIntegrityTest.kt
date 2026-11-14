@@ -11,7 +11,7 @@ class NovenaAssetIntegrityTest {
         val loader=javaClass.classLoader!!
         val adapter=Moshi.Builder().build().adapter(List::class.java)
         val entries=loader.getResourceAsStream("novena-body-hashes.json")!!.bufferedReader().use {adapter.fromJson(it.readText())}!!
-        assertEquals(246,entries.size)
+        assertEquals(262,entries.size)
         for(row in entries) {
             val map=row as Map<*,*>
             val name=map["file"] as String

@@ -5,7 +5,7 @@ Lee primero `docs/content/EDITORIAL-RULES-1.8.md` (obligatorias). Este documento
 ## 1. Contrato de datos (procedencia)
 
 Archivos JSON nuevos en `app/src/main/assets/novenas/provenance/`:
-`p1.json` (índices 0–61), `p2.json` (62–122), `p3.json` (123–184), `p4.json` (185–245), `new.json` (novenas nuevas, índices ≥ 246).
+`p1.json` (índices 0–61), `p2.json` (62–122), `p3.json` (123–184), `p4.json` (185–245), `new-a.json` y `new-b.json` (novenas nuevas). La lista de archivos es fija (el cargador no lista directorios).
 El índice es la posición en `assets/novenas/index.json` (ver lista en el encargo). Cada archivo es un array de objetos:
 
 ```json
@@ -52,20 +52,21 @@ Significado y reglas:
 
 Trilingüe: ES, EN y PT completos y naturales. Mismo contenido sustancial.
 
-## 2. Novenas clásicas nuevas (`new.json` + cuerpos 246…)
+## 2. Novenas clásicas nuevas (`new-a.json`/`new-b.json` + cuerpos nuevos)
 
 Antes de crear una, comprueba en `index.json` que no exista con otro título.
 Candidatas (unas 15–20, prioriza las de fuerte arraigo y fuente clara):
 Aparecida, Luján, Pilar, Señor de los Milagros, Chiquinquirá, Coromoto, Altagracia, Copacabana, Cristo de Esquipulas, Divino Niño (Bogotá), San Ramón Nonato, San Pancracio, Santa Eduviges, São Benedito, Nazaré (Círio), San José Gregorio Hernández, Merced, Suyapa, Santa Bárbara.
 
+Escritor A: cuerpos `246.json`–`255.json`; escritor B: `256.json`–`265.json` (usar en orden, sin saltos dentro del propio rango).
 Cada novena nueva:
-- Entrada en `index.json` (mismo formato que las existentes, `bodyFile` `246.json`, `247.json`…, `imageUrl` null, `tags` de la lista existente, `promises`/`miraculousHistory` vacíos, `description` sobria, sin tono comercial).
+- Entrada de índice **en staging**, no en `index.json`: `docs/content/m2-staging/index-add-a.json` (o `-b`), array con el mismo formato que `index.json` (`bodyFile` según el rango, `imageUrl` null, `tags` de la lista existente, `promises`/`miraculousHistory` vacíos, `description` sobria, sin tono comercial).
 - Cuerpo `NNN.json` con 9 días (`dayNumber`, `theme`, `scripture` referencia, `meditation`, `prayer`, `intentionGuidance`), texto de dominio público o redacción propia. Estructura de cada día: señal de la cruz, oración inicial común, consideración del día (~80–150 palabras), petición, Padre nuestro/Avemaría/Gloria, oración final común.
-- Entrada de procedencia en `new.json`.
+- Entrada de procedencia en `provenance/new-a.json` (o `new-b.json`). El coordinador fusiona el índice.
 
 ## 3. Integración (código)
 
-- `NovenaCatalog`: cargar opcionalmente `provenance/p1..p4.json` y `provenance/new.json` (si falta un archivo, ignorarlo) y adjuntar `provenance: NovenaProvenance?` al modelo `Novena` (campo nuevo con valor por defecto `null`). Modelos Kotlin en `data/models/NovenaProvenance.kt`, con `PromiseKind` enum.
+- `NovenaCatalog`: cargar opcionalmente `provenance/p1..p4.json`, `provenance/new-a.json` y `provenance/new-b.json` (si falta un archivo, ignorarlo) y adjuntar `provenance: NovenaProvenance?` al modelo `Novena` (campo nuevo con valor por defecto `null`). Modelos Kotlin en `data/models/NovenaProvenance.kt`, con `PromiseKind` enum.
 - Resumen de la novena (`PrayersAndNovenasScreen.kt`, sección actual «Promesas y milagros registrados», ~l.2333/2435) se sustituye/amplía con wrappers del kit (`AppCard`, `AppSectionHeader`, `AppBanner`):
   - «Historia» (`novena_history`): `origin` en pie, `history`, `approval` si existe.
   - «Promesa» (`novena_promise`): insignia de tipo (Con fuente / Concesión de la Iglesia / Tradición popular / Sin promesa), texto, atribución, fuente y condiciones.

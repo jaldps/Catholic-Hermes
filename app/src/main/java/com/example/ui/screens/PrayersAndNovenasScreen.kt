@@ -104,11 +104,16 @@ import com.example.data.local.NovenaProgressEntity
 import com.example.data.local.SanctaFidesDao
 import com.example.data.models.AppLanguage
 import com.example.data.models.Novena
+import com.example.data.models.NovenaProvenance
+import com.example.data.models.PromiseKind
 import com.example.data.models.PrayerCategory
 import com.example.data.models.VaticanPrayer
 import com.example.data.prefs.UserPreferences
 import com.example.data.repository.CatholicDataRepository
 import com.example.ui.design.AppActionBar
+import com.example.ui.design.AppBanner
+import com.example.ui.design.AppCard
+import com.example.ui.design.AppSectionHeader
 import com.example.ui.design.AppActionBarItem
 import com.example.ui.design.AppBackHandler
 import com.example.ui.design.AppCategoryTile
@@ -2304,7 +2309,7 @@ private val GenericDayTheme = Regex("^(D[ií]a|Day)\\s*\\d+$", RegexOption.IGNOR
 private fun dayTitle(language: AppLanguage, day: Int) = language.pick("Día $day", "Day $day", "Dia $day")
 
 @Composable
-private fun NovenaOverviewView(
+internal fun NovenaOverviewView(
     novena: Novena,
     currentLanguage: AppLanguage,
     daysPrayed: Set<Int>,
@@ -2432,15 +2437,20 @@ private fun NovenaOverviewView(
                 )
             }
         }
-        if (promises.isNotBlank() || history.isNotBlank()) {
-            item(key = "promises") {
-                PrayerSectionHeader(
-                    currentLanguage.pick("Promesas y milagros registrados", "Recorded promises and miracles", "Promessas e milagres registrados")
-                )
-                Column(Modifier.padding(horizontal = design.spacing.gutter)) {
-                    if (promises.isNotBlank()) PrayerReadingParagraphs(promises)
-                    if (promises.isNotBlank() && history.isNotBlank()) Spacer(Modifier.height(16.dp))
-                    if (history.isNotBlank()) Text(history, style = styles.callout, color = p.textSecondary)
+        val provenance = novena.provenance
+        if (provenance != null) {
+            item(key = "provenance") { NovenaProvenanceSections(provenance, currentLanguage) }
+        } else {
+            if (promises.isNotBlank() || history.isNotBlank()) {
+                item(key = "promises") {
+                    PrayerSectionHeader(
+                        currentLanguage.pick("Promesas y milagros registrados", "Recorded promises and miracles", "Promessas e milagres registrados")
+                    )
+                    Column(Modifier.padding(horizontal = design.spacing.gutter)) {
+                        if (promises.isNotBlank()) PrayerReadingParagraphs(promises)
+                        if (promises.isNotBlank() && history.isNotBlank()) Spacer(Modifier.height(16.dp))
+                        if (history.isNotBlank()) Text(history, style = styles.callout, color = p.textSecondary)
+                    }
                 }
             }
         }
@@ -2476,6 +2486,90 @@ private fun NovenaOverviewView(
             destructive = true,
             tag = "restart_novena_dialog"
         )
+    }
+}
+
+@Composable
+private fun NovenaProvenanceSections(provenance: NovenaProvenance, language: AppLanguage) {
+    val design = LocalAppDesign.current
+    val styles = LocalAppTextStyles.current
+    val p = design.palette
+    val gutter = Modifier.padding(horizontal = design.spacing.gutter)
+    @Composable fun Labelled(label: String, value: String) {
+        if (value.isNotBlank()) Column(Modifier.fillMaxWidth().padding(top = 10.dp)) {
+            Text(label, style = styles.footnote, color = p.textSecondary)
+            Text(value, style = styles.callout, color = p.textPrimary)
+        }
+    }
+    Column(Modifier.fillMaxWidth().testTag("novena_history")) {
+        AppSectionHeader(language.pick("Historia", "History", "História"))
+        Column(gutter) {
+            PrayerReadingParagraphs(provenance.history.get(language))
+            provenance.origin.get(language).takeIf { it.isNotBlank() }?.let {
+                Text(it, style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(top = 12.dp))
+            }
+            provenance.approval.get(language).takeIf { it.isNotBlank() }?.let {
+                Text(
+                    language.pick("Aprobación", "Approval", "Aprovação") + ": " + it,
+                    style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(top = 8.dp)
+                )
+            }
+            provenance.sources.forEach {
+                Text(it, style = styles.footnote, color = p.textSecondary, modifier = Modifier.padding(top = 4.dp))
+            }
+        }
+    }
+    val promise = provenance.promise
+    Column(Modifier.fillMaxWidth().testTag("novena_promise")) {
+        AppSectionHeader(language.pick("Promesa", "Promise", "Promessa"))
+        Column(gutter) {
+            AppCard(Modifier.fillMaxWidth()) {
+                val kindLabel = when (promise.kind) {
+                    PromiseKind.SOURCED -> language.pick("Promesa con fuente", "Sourced promise", "Promessa com fonte")
+                    PromiseKind.ECCLESIAL_GRANT -> language.pick("Concesión de la Iglesia", "Church grant", "Concessão da Igreja")
+                    PromiseKind.TRADITIONAL -> language.pick("Tradición popular", "Popular tradition", "Tradição popular")
+                    PromiseKind.NONE -> language.pick("Sin promesa asociada", "No associated promise", "Sem promessa associada")
+                }
+                Text(kindLabel, style = styles.footnote, color = p.accent, modifier = Modifier.testTag("novena_promise_kind"))
+                if (promise.kind == PromiseKind.NONE) {
+                    Text(
+                        language.pick(
+                            "Esta novena no tiene una promesa atribuida: se reza con confianza, sin esperar resultados automáticos.",
+                            "This novena has no attributed promise: pray it with trust, not expecting automatic results.",
+                            "Esta novena não tem promessa atribuída: reze-a com confiança, sem esperar resultados automáticos."
+                        ),
+                        style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 8.dp)
+                    )
+                } else {
+                    Text(promise.text.get(language), style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 8.dp))
+                    Labelled(language.pick("Atribución", "Attribution", "Atribuição"), promise.attribution.get(language))
+                    Labelled(language.pick("Fuente", "Source", "Fonte"), promise.source.get(language))
+                    Labelled(language.pick("Condiciones", "Conditions", "Condições"), promise.conditions.get(language))
+                }
+            }
+        }
+    }
+    provenance.commercialAdditions.get(language).takeIf { it.isNotBlank() }?.let {
+        Spacer(Modifier.height(design.spacing.sectionGap))
+        AppBanner(
+            title = language.pick(
+                "Añadidos que no forman parte de la devoción",
+                "Additions that are not part of the devotion",
+                "Acréscimos que não fazem parte da devoção"
+            ),
+            body = it,
+            accentColorHex = 0xFFB26A00,
+            modifier = Modifier.padding(horizontal = design.spacing.gutter).testTag("novena_commercial_warning")
+        )
+    }
+    provenance.pastoralNote.get(language).takeIf { it.isNotBlank() }?.let {
+        Spacer(Modifier.height(design.spacing.sectionGap))
+        Column(gutter.testTag("novena_pastoral_note")) {
+            AppCard(Modifier.fillMaxWidth()) {
+                Text(language.pick("Nota pastoral", "Pastoral note", "Nota pastoral"), style = styles.footnote, color = p.textSecondary)
+                Text(it, style = styles.callout, color = p.textPrimary, modifier = Modifier.padding(top = 6.dp))
+            }
+        }
     }
 }
 
