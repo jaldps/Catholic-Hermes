@@ -1,0 +1,15 @@
+{
+  "package": "com.aistudio.sanctafides.qvmrpx.qualitypreview",
+  "versionCode": 8,
+  "versionName": "1.7-quality-preview",
+  "previousVersionCode": 7,
+  "sameSigningCertificate": true,
+  "signingCertificateSha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "sha256": "5072d9636eed0a47c0a14c166ae07f6d3e45cdeb83357b6da54763bb8290c1e6",
+  "bytes": 62769415,
+  "verifiedNovenaBodies": 246,
+  "sourceCommit": "23f6350712154f36e355e330319802c3fc2955f0",
+  "fullSuite": "Stopped at user request to conserve quota; not certified complete",
+  "observedFullSuitePassesBeforeStop": 49,
+  "observedFullSuiteFailuresBeforeStop": 0
+}
