@@ -305,7 +305,7 @@ private fun rememberToday(): LocalDate {
     return today
 }
 
-private enum class HabitsPage { ROOT, TEMPTATION, SUMMARY, REMINDERS }
+private enum class HabitsPage { ROOT, TEMPTATION, SUMMARY, REMINDERS, GUIDE }
 
 private enum class TemptationSheet { VICTORY, ROOT, FALL }
 
@@ -392,9 +392,11 @@ fun HabitsAndVirtuesScreen(
     var toast by remember { mutableStateOf<String?>(null) }
     val rootState = rememberLazyListState()
 
+    var guideKey by rememberSaveable { mutableStateOf<String?>(null) }
+
     fun closePage() {
         ttsManager.stop()
-        page = HabitsPage.ROOT
+        page = if (page == HabitsPage.GUIDE) HabitsPage.TEMPTATION else HabitsPage.ROOT
     }
     AppBackHandler(enabled = page != HabitsPage.ROOT && page != HabitsPage.REMINDERS) { closePage() }
 
@@ -527,6 +529,17 @@ fun HabitsAndVirtuesScreen(
                     keptToday = keptIds.size,
                     allCompletions = allCompletions
                 )
+                HabitsPage.GUIDE -> {
+                    val guide = guideKey?.let { com.example.data.repository.TemptationGuidesData.forKey(it) }
+                    val option = catalog.firstOrNull { it.sinKey == guideKey }
+                    if (guide != null && option != null) {
+                        TemptationGuidePage(
+                            lang = lang, guide = guide,
+                            sinTitle = option.title.get(lang), virtue = option.counterVirtue.get(lang),
+                            insets = insets
+                        )
+                    } else LaunchedEffect(Unit) { page = HabitsPage.TEMPTATION }
+                }
                 HabitsPage.REMINDERS -> RemindersScreen(
                     repository = repository,
                     onBack = { page = HabitsPage.ROOT }
@@ -569,7 +582,8 @@ fun HabitsAndVirtuesScreen(
             ttsManager = ttsManager,
             onDismiss = { ttsManager.stop(); sheet = null },
             onRecord = { note -> recordVictory(option, note) },
-            onFell = { ttsManager.stop(); sheet = TemptationSheet.FALL }
+            onFell = { ttsManager.stop(); sheet = TemptationSheet.FALL },
+            onMore = { ttsManager.stop(); sheet = null; guideKey = option.sinKey; page = HabitsPage.GUIDE }
         ) }
         TemptationSheet.FALL -> FallSheet(
             lang = lang,
@@ -1606,7 +1620,8 @@ private fun RootSheet(
     ttsManager: LiturgicalTtsManager,
     onDismiss: () -> Unit,
     onRecord: (String) -> Unit,
-    onFell: () -> Unit
+    onFell: () -> Unit,
+    onMore: () -> Unit
 ) {
     val design = LocalAppDesign.current
     val p = design.palette
@@ -1624,6 +1639,15 @@ private fun RootSheet(
             )
             Spacer(Modifier.height(14.dp))
             Text(option.advice.get(lang), style = styles.reading, color = p.textPrimary)
+            if (com.example.data.repository.TemptationGuidesData.forKey(option.sinKey) != null) {
+                Spacer(Modifier.height(12.dp))
+                AppSecondaryCapsule(
+                    label = lang.pick3("Más: cómo vencerla", "More: how to overcome it", "Mais: como vencê-la"),
+                    onClick = onMore,
+                    fillWidth = true,
+                    tag = "root_more_button"
+                )
+            }
             Spacer(Modifier.height(16.dp))
             Box(Modifier.fillMaxWidth().height(0.5.dp).background(p.separator))
             Spacer(Modifier.height(12.dp))
