@@ -5,92 +5,72 @@ import android.content.ContentValues
 import android.content.Context
 import android.provider.CalendarContract
 
-/**
- * Phase 2: writes a daily recurring event into the user's own Google
- * Calendar through Android's CalendarContract. No API key, no OAuth, no
- * server — it uses the Google account already signed in on the device and
- * the READ/WRITE_CALENDAR permissions the user grants at runtime.
- */
+/** Android CalendarContract integration. The user explicitly chooses the account/calendar. */
 object GoogleCalendarSync {
+    data class WritableCalendar(val id: Long, val name: String, val account: String)
 
-    fun interface Callback {
-        fun onResult(success: Boolean, message: String)
-    }
-
-    /** First calendar the user can write to (their Google calendar), or null. */
-    fun firstWritableCalendarId(context: Context): Long? {
-        val uri = CalendarContract.Calendars.CONTENT_URI
-        val projection = arrayOf(
-            CalendarContract.Calendars._ID,
-            CalendarContract.Calendars.CALENDAR_ACCESS_LEVEL,
-        )
-        return context.contentResolver.query(uri, projection, null, null, null)?.use { cursor ->
-            val idCol = cursor.getColumnIndex(CalendarContract.Calendars._ID)
-            val accessCol = cursor.getColumnIndex(CalendarContract.Calendars.CALENDAR_ACCESS_LEVEL)
-            while (cursor.moveToNext()) {
-                val access = cursor.getInt(accessCol)
-                // CalendarContract.CalendarColumns.CAL_ACCESS_CALENDAR == 700
-                if (access >= 700) {
-                    return@use cursor.getLong(idCol)
+    fun writableCalendars(context: Context): List<WritableCalendar> {
+        val fields=arrayOf(CalendarContract.Calendars._ID,CalendarContract.Calendars.CALENDAR_DISPLAY_NAME,
+            CalendarContract.Calendars.ACCOUNT_NAME,CalendarContract.Calendars.CALENDAR_ACCESS_LEVEL)
+        return context.contentResolver.query(CalendarContract.Calendars.CONTENT_URI,fields,null,null,null)?.use { cursor ->
+            buildList {
+                while(cursor.moveToNext()) {
+                    if(cursor.getInt(3)>=CalendarContract.Calendars.CAL_ACCESS_CONTRIBUTOR) {
+                        add(WritableCalendar(cursor.getLong(0),cursor.getString(1).orEmpty(),cursor.getString(2).orEmpty()))
+                    }
                 }
-            }
-            null
-        }
+            }.sortedWith(compareBy<WritableCalendar>{it.account}.thenBy{it.name}.thenBy{it.id})
+        }.orEmpty()
     }
 
-    /**
-     * Writes one daily recurring event (15 min) starting at the next
-     * [hour]:[minute], with a popup reminder at event time, and returns its
-     * event id (null on failure).
-     *
-     * When [existingEventId] still names an event in the calendar, that event
-     * is updated in place (new time, title, description) instead of inserting
-     * a second copy, so tapping "Add to Google Calendar" twice never leaves
-     * duplicate daily events behind.
-     */
-    fun syncReminder(
-        context: Context,
-        reminder: DevotionReminder,
-        hour: Int,
-        minute: Int,
-        language: String,
-        existingEventId: Long? = null,
-    ): Long? {
-        val start = ReminderScheduler.nextTriggerMillis(hour, minute)
-        // Recurring events take a DURATION, not a DTEND (CalendarContract).
-        val values = ContentValues().apply {
-            put(CalendarContract.Events.TITLE, reminder.calendarTitle(language))
-            put(CalendarContract.Events.DESCRIPTION, reminder.calendarBody(language))
-            put(CalendarContract.Events.DTSTART, start)
-            put(CalendarContract.Events.DURATION, "PT15M")
-            put(CalendarContract.Events.EVENT_TIMEZONE, java.util.TimeZone.getDefault().id)
-            put(CalendarContract.Events.RRULE, "FREQ=DAILY")
-        }
+    fun calendarForEvent(context: Context, eventId: Long): Long? = context.contentResolver.query(
+        ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI,eventId),
+        arrayOf(CalendarContract.Events.CALENDAR_ID),"${CalendarContract.Events.DELETED} = 0",null,null
+    )?.use { if(it.moveToFirst())it.getLong(0) else null }
 
-        if (existingEventId != null) {
-            val updated = runCatching {
-                context.contentResolver.update(
-                    ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, existingEventId),
-                    values,
-                    "${CalendarContract.Events.DELETED} = 0",
-                    null
-                )
-            }.getOrDefault(0)
-            if (updated > 0) return existingEventId
-        }
+    /** A stable provider-side marker makes retries safe even if saving the local event ID failed. */
+    private fun existingManagedEvent(context: Context, calendarId: Long, marker: String): Long? =
+        context.contentResolver.query(CalendarContract.Events.CONTENT_URI,arrayOf(CalendarContract.Events._ID),
+            "${CalendarContract.Events.CALENDAR_ID} = ? AND ${CalendarContract.Events.CUSTOM_APP_PACKAGE} = ? AND ${CalendarContract.Events.CUSTOM_APP_URI} = ? AND ${CalendarContract.Events.DELETED} = 0",
+            arrayOf(calendarId.toString(),context.packageName,marker),CalendarContract.Events._ID+" ASC")
+            ?.use { if(it.moveToFirst())it.getLong(0) else null }
 
-        val calendarId = firstWritableCalendarId(context) ?: return null
-        values.put(CalendarContract.Events.CALENDAR_ID, calendarId)
-        val eventUri = context.contentResolver.insert(CalendarContract.Events.CONTENT_URI, values)
-            ?: return null
-        val eventId = eventUri.lastPathSegment?.toLongOrNull() ?: return null
-
-        val reminderValues = ContentValues().apply {
-            put(CalendarContract.Reminders.EVENT_ID, eventId)
-            put(CalendarContract.Reminders.MINUTES, 0)
-            put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT)
+    fun syncReminder(context: Context, reminder: DevotionReminder, hour: Int, minute: Int, language: String,
+        calendarId: Long, existingEventId: Long? = null): Long? {
+        if(writableCalendars(context).none {it.id==calendarId})return null
+        val marker="catholic-hermes://reminder/${reminder.id}"
+        val values=ContentValues().apply {
+            put(CalendarContract.Events.TITLE,reminder.calendarTitle(language))
+            put(CalendarContract.Events.DESCRIPTION,reminder.calendarBody(language))
+            put(CalendarContract.Events.DTSTART,ReminderScheduler.nextTriggerMillis(hour,minute))
+            put(CalendarContract.Events.DURATION,"PT15M")
+            put(CalendarContract.Events.EVENT_TIMEZONE,java.util.TimeZone.getDefault().id)
+            put(CalendarContract.Events.RRULE,"FREQ=DAILY")
+            put(CalendarContract.Events.CUSTOM_APP_PACKAGE,context.packageName)
+            put(CalendarContract.Events.CUSTOM_APP_URI,marker)
         }
-        context.contentResolver.insert(CalendarContract.Reminders.CONTENT_URI, reminderValues)
+        val existing=existingEventId?.takeIf {calendarForEvent(context,it)==calendarId}
+            ?: existingManagedEvent(context,calendarId,marker)
+        val eventId=if(existing!=null) {
+            val count=context.contentResolver.update(ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI,existing),
+                values,"${CalendarContract.Events.CALENDAR_ID} = ? AND ${CalendarContract.Events.DELETED} = 0",arrayOf(calendarId.toString()))
+            if(count<=0)return null
+            existing
+        } else {
+            values.put(CalendarContract.Events.CALENDAR_ID,calendarId)
+            context.contentResolver.insert(CalendarContract.Events.CONTENT_URI,values)?.lastPathSegment?.toLongOrNull() ?: return null
+        }
+        val hasAlarm=context.contentResolver.query(CalendarContract.Reminders.CONTENT_URI,
+            arrayOf(CalendarContract.Reminders._ID),"${CalendarContract.Reminders.EVENT_ID} = ?",arrayOf(eventId.toString()),null)
+            ?.use {it.moveToFirst()} ?: false
+        if(!hasAlarm) {
+            val alarm=ContentValues().apply {
+                put(CalendarContract.Reminders.EVENT_ID,eventId)
+                put(CalendarContract.Reminders.MINUTES,0)
+                put(CalendarContract.Reminders.METHOD,CalendarContract.Reminders.METHOD_ALERT)
+            }
+            checkNotNull(context.contentResolver.insert(CalendarContract.Reminders.CONTENT_URI,alarm))
+        }
         return eventId
     }
 }

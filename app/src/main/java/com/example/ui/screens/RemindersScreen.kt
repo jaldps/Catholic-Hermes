@@ -102,6 +102,7 @@ import com.example.ui.theme.LocalAppDesign
 import com.example.ui.theme.LocalAppTextStyles
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.withTimeout
 import kotlinx.coroutines.launch
@@ -119,7 +120,7 @@ import java.time.format.DateTimeFormatter
  * Persistence is [ReminderStore] (DataStore, on device only). Toggling flips
  * the stored preference and (re)schedules or cancels the exact daily alarm
  * through [ReminderScheduler]; the first ON asks for POST_NOTIFICATIONS on
- * Android 13+. "Add to Google Calendar" writes one daily recurring event via
+ * Android 13+. "Choose calendar" writes one daily recurring event via
  * CalendarContract ([GoogleCalendarSync]) after READ/WRITE_CALENDAR, and a
  * second tap updates that event instead of adding a duplicate.
  */
@@ -157,6 +158,7 @@ fun RemindersScreen(
     var toast by remember { mutableStateOf<String?>(null) }
     var sheetFor by remember { mutableStateOf<DevotionReminder?>(null) }
     var gcalPending by remember { mutableStateOf<DevotionReminder?>(null) }
+    var calendarRequest by remember {mutableStateOf<Triple<DevotionReminder,Int,Int>?>(null)}
     var gcalError by remember { mutableStateOf<Pair<DevotionReminder, String>?>(null) }
     var novenaName by remember { mutableStateOf("") }
 
@@ -198,33 +200,8 @@ fun RemindersScreen(
     }
 
     fun syncToCalendar(reminder: DevotionReminder, hour: Int, minute: Int) {
-        val existing = calendarEvents[reminder.id]
-        scope.launch(Dispatchers.IO) {
-            val eventId = runCatching {
-                GoogleCalendarSync.syncReminder(app, reminder, hour, minute, languageCode, existing)
-            }.getOrNull()
-            if (eventId != null) store.setCalendarEvent(reminder.id, eventId)
-            withContext(Dispatchers.Main) {
-                gcalPending = null
-                if (eventId != null) {
-                    toast = if (existing != null && existing == eventId) lang.pick3(
-                        "«${reminder.title(languageCode)}» actualizado en tu calendario.",
-                        "“${reminder.title(languageCode)}” updated in your calendar.",
-                        "“${reminder.title(languageCode)}” atualizado no seu calendário."
-                    ) else lang.pick3(
-                        "«${reminder.title(languageCode)}» añadido a tu calendario.",
-                        "“${reminder.title(languageCode)}” added to your calendar.",
-                        "“${reminder.title(languageCode)}” adicionado ao seu calendário."
-                    )
-                } else {
-                    gcalError = reminder to lang.pick3(
-                        "No se pudo añadir «${reminder.title(languageCode)}». Revisa que tengas un calendario de Google disponible.",
-                        "Could not add “${reminder.title(languageCode)}”. Check that a Google calendar is available.",
-                        "Não foi possível adicionar “${reminder.title(languageCode)}”. Verifique se há um calendário do Google disponível."
-                    )
-                }
-            }
-        }
+        calendarRequest=Triple(reminder,hour,minute)
+        gcalPending=null
     }
 
     val notificationLauncher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { permissionTick++ }
@@ -322,6 +299,7 @@ fun RemindersScreen(
 
             item(key = "reminder_write_status") {
                 com.example.ui.components.SaveFailureNotice("reminders",lang)
+                com.example.ui.components.SaveFailureNotice("calendar-sync",lang)
             }
             if (readFailure || schedulingError) item(key = "reminder_read_error") {
                 Column(Modifier.padding(horizontal = design.spacing.gutter, vertical = 12.dp)) {
@@ -416,9 +394,9 @@ fun RemindersScreen(
                     }
                 }
                 Footnote(lang.pick3(
-                    "Toca un recordatorio para cambiar la hora o añadirlo a Google Calendar.",
-                    "Tap a reminder to change its time or add it to Google Calendar.",
-                    "Toque num lembrete para mudar o horário ou adicioná-lo ao Google Calendar."
+                    "Toca un recordatorio para cambiar la hora o añadirlo a tu calendario.",
+                    "Tap a reminder to change its time or add it to your calendar.",
+                    "Toque num lembrete para mudar o horário ou adicioná-lo ao seu calendário."
                 ))
             }
 
@@ -495,9 +473,9 @@ fun RemindersScreen(
                     )
                 }
                 Footnote(lang.pick3(
-                    "Tus recordatorios se guardan solo en este dispositivo.",
-                    "Your reminders are stored only on this device.",
-                    "Os seus lembretes ficam guardados só neste dispositivo."
+                    "Los avisos de la app son locales. Los eventos que exportes se guardan en el calendario que elijas.",
+                    "App alerts are local. Events you export are stored in the calendar you choose.",
+                    "Os avisos do app são locais. Os eventos exportados ficam no calendário escolhido."
                 ))
             }
         }
@@ -511,6 +489,22 @@ fun RemindersScreen(
         LaunchedEffect(toast) {
             if (toast != null) { delay(2600); toast = null }
         }
+    }
+
+    calendarRequest?.let { request ->
+        com.example.ui.components.CalendarPickerSheet(lang,calendarEvents[request.first.id],onChoose={calendarId ->
+            calendarRequest=null
+            com.example.data.persistence.PersonalDataCommands.submit("calendar-sync") {
+                val links=store.calendarEventSnapshot.first()
+                if(!links.available)throw java.io.IOException("Calendar links unavailable")
+                val event=GoogleCalendarSync.syncReminder(app,request.first,request.second,request.third,languageCode,
+                    calendarId=calendarId,existingEventId=links.events[request.first.id])
+                    ?: throw java.io.IOException("Calendar update failed")
+                store.setCalendarEvent(request.first.id,event)
+                withContext(Dispatchers.Main) {toast=lang.pick3("Recordatorio guardado en el calendario elegido.","Reminder saved in your chosen calendar.","Lembrete guardado no calendário escolhido.")}
+            }
+        },onDismiss={calendarRequest=null;gcalPending=null},
+            summary=request.first.calendarTitle(languageCode)+" · "+clock(request.second,request.third,is24h,lang))
     }
 
     // ---- reminder sheet: time wheel, preview, calendar.
@@ -542,7 +536,7 @@ fun RemindersScreen(
             AppListGroup {
                 AppListRow(
                     title = if (open.id in calendarEvents) lang.pick3("Actualizar en Google Calendar", "Update in Google Calendar", "Atualizar no Google Calendar")
-                    else lang.pick3("Añadir a Google Calendar", "Add to Google Calendar", "Adicionar ao Google Calendar"),
+                    else lang.pick3("Elegir calendario", "Choose calendar", "Escolher calendário"),
                     subtitle = if (open.id in calendarEvents) lang.pick3("Ya está en tu calendario", "Already in your calendar", "Já está no seu calendário") else null,
                     leadingIcon = Icons.Outlined.CalendarMonth,
                     onClick = {
@@ -641,7 +635,7 @@ private fun ReminderRow(
                         Spacer(Modifier.width(6.dp))
                         Icon(
                             Icons.Outlined.CalendarMonth,
-                            contentDescription = lang.pick3("En Google Calendar", "In Google Calendar", "No Google Calendar"),
+                            contentDescription = lang.pick3("En tu calendario", "In your calendar", "No seu calendário"),
                             tint = p.textSecondary,
                             modifier = Modifier.size(14.dp)
                         )

@@ -30,6 +30,8 @@ private val Context.reminderDataStore: DataStore<Preferences> by preferencesData
  * Persists reminder toggles/times and the active novena in DataStore.
  * No database, no account, no network — the data never leaves the device.
  */
+data class CalendarEventSnapshot(val available: Boolean, val events: Map<String, Long>)
+
 data class ReminderPreferenceSnapshot(val available: Boolean, val reminders: Map<String, ReminderPref>)
 
 class ReminderStore(
@@ -92,12 +94,14 @@ class ReminderStore(
      * id`). Kept so a second "Add to Google Calendar" updates that event
      * instead of inserting a duplicate daily event.
      */
-    val calendarEvents: Flow<Map<String, Long>> = safeData
+    val calendarEventSnapshot: Flow<CalendarEventSnapshot> = safeData
         .map { prefs ->
-            ReminderCatalog.DEFAULTS.mapNotNull { r ->
+            val events = ReminderCatalog.DEFAULTS.mapNotNull { r ->
                 prefs[calendarEventKey(r.id)]?.let { r.id to it }
             }.toMap()
+            CalendarEventSnapshot(prefs[Keys.READ_FAILED] != true,events)
         }
+    val calendarEvents: Flow<Map<String,Long>> = calendarEventSnapshot.map {it.events}
 
     suspend fun setCalendarEvent(id: String, eventId: Long?) {
         dataStore.edit {
