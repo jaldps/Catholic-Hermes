@@ -8,6 +8,9 @@ import androidx.activity.compose.setContent
 import androidx.compose.runtime.*
 import androidx.compose.runtime.snapshots.Snapshot
 import androidx.compose.ui.test.*
+import androidx.compose.ui.semantics.SemanticsActions
+import androidx.compose.ui.text.TextLayoutResult
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.core.app.ApplicationProvider
 import com.example.FakeCalendarProvider
@@ -49,11 +52,21 @@ class RecoverySheetsScreenshotTest(private val identity: DesignLanguage, private
         narration?.release()
         provider?.database?.close()
     }
+    private fun assertFullHeading(title: String, closeTag: String) {
+        compose.onNodeWithText(title, useUnmergedTree = true)
+            .performSemanticsAction(SemanticsActions.GetTextLayoutResult) { get ->
+                val layouts = mutableListOf<TextLayoutResult>()
+                get(layouts)
+                org.junit.Assert.assertFalse("Clipped sheet title: " + title, layouts.single().hasVisualOverflow)
+            }
+        compose.onNodeWithTag(closeTag).assertHeightIsAtLeast(48.dp).assertWidthIsAtLeast(48.dp)
+    }
+
     private fun capture(kind: String) {
         compose.waitForIdle()
         compose.runOnIdle {
             val view = requireNotNull(requireNotNull(ShadowDialog.getLatestDialog()).window).decorView
-            check(view.width > 0 && view.height > 0)
+            check(view.width == width * 2 && view.height == height * 2) { "Unexpected capture viewport" }
             val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
             view.draw(Canvas(bitmap))
             val file = File("build/screenshots/recovery/${kind}_${identity.id.lowercase()}_${if (dark) "dark" else "light"}${suffix}.png")
@@ -82,13 +95,18 @@ class RecoverySheetsScreenshotTest(private val identity: DesignLanguage, private
         }
         compose.onNodeWithTag("calendar_option_2").performScrollTo().performClick()
         compose.onNodeWithTag("confirm_calendar_choice").assertIsEnabled()
+        assertFullHeading("Elegir calendario", "close_calendar_picker")
         capture("calendar")
         compose.runOnUiThread { sheet = 1 }
         compose.onNodeWithTag("narration_recovery_sheet").assertIsDisplayed()
+        assertFullHeading("Voz de lectura", "close_narration_recovery")
         capture("voice")
         compose.runOnUiThread { sheet = 2 }
         compose.onNodeWithTag("preferences_recovery_sheet").assertIsDisplayed()
+        assertFullHeading("Datos y ajustes", "close_preferences_recovery")
         capture("preferences")
+        compose.onNodeWithTag("retry_preferences_write").performScrollTo().assertIsDisplayed()
+        capture("preferences_actions")
     }
     companion object {
         @JvmStatic

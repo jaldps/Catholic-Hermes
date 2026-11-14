@@ -1,0 +1,16 @@
+[
+  {
+    "class": "com.example.FontPickerInteractionTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  {
+    "class": "com.example.screenshots.RecoverySheetsScreenshotTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+]

@@ -84,3 +84,9 @@ Application-owned startup seeding exposes write failures. Edition validation/per
 Validation: **40 distinct passing cases** across eight classes from the 34-case editorial/body-integrity run and the final10-case controller/navigation/compact-render run. All 246 prayer-body hashes and 3,068 days remain unchanged; index descriptions/tags are intentionally curated. Normal411dp dialog frames were readable. Review of the12compact320x760/130% frames caught clipped shared sheet titles; the adaptive header is the next visual correction, so those pre-fix frames are diagnostic, not acceptance.
 
 Sources: Catechism67,120,253–255,405,478,552–553,1030–1032,1374,1385,1461–1462,1857–1859,2447; PiusXII, Haurietis aquas (1956); Paschalis sollemnitatis44/78 for Holy Thursday and the nocturnal Vigil. These changes are not ecclesiastical approval or a complete authorized lectionary.
+
+## Stage 6 — compact layout gate
+
+The shared sheet header measures title/action width, keeps a centered title when it fits, and switches to a wrapping row when it does not. It no longer reserves a fixed192dp that clips titles at enlarged text sizes. Tags, heading semantics and close/Done actions are preserved.
+
+Validation: **8 passed**, zero failures/errors across the font selector and recovery-sheet classes. The 320x760dp/130% frames verify full text layout for all three sheet titles and touch targets of at least48dp. All four identity/appearance combinations render, and the final retry action is reachable by scrolling. The component contact sheet is retained in stage-6-compact/recovery-compact.png; physical-phone display is not inferred.

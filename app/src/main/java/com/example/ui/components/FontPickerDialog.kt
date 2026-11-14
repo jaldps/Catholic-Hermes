@@ -7,6 +7,8 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -34,11 +36,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -223,41 +228,48 @@ internal fun LumenSheetHeader(
 ) {
     val design = LocalAppDesign.current
     val styles = LocalAppTextStyles.current
-    val p = design.palette
-    Box(
-        Modifier
-            .fillMaxWidth()
-            .padding(horizontal = design.spacing.gutter - 8.dp)
-            .padding(top = 6.dp, bottom = 10.dp)
-            .heightIn(min = 48.dp)
-    ) {
-        Text(
-            title,
-            style = styles.headline,
-            color = p.textPrimary,
-            textAlign = TextAlign.Center,
-            maxLines = 1,
-            modifier = Modifier
-                .align(Alignment.Center)
-                .padding(horizontal = 96.dp)
-                .semantics { heading() }
-        )
+    val palette = design.palette
+    val density = LocalDensity.current
+    val measurer = rememberTextMeasurer()
+    val actionStyle = styles.body.copy(fontWeight = FontWeight.SemiBold)
+    val actionWidth = maxOf(48.dp, with(density) {
+        measurer.measure(AnnotatedString(doneLabel), actionStyle, softWrap = false).size.width.toDp()
+    } + 24.dp)
+    val titleWidth = with(density) {
+        measurer.measure(AnnotatedString(title), styles.headline, softWrap = false).size.width.toDp()
+    }
+    val action: @Composable (Modifier) -> Unit = { modifier ->
         Box(
-            Modifier
-                .align(Alignment.CenterEnd)
-                .heightIn(min = 48.dp)
+            modifier.heightIn(min = 48.dp).widthIn(min = 48.dp)
                 .clip(androidx.compose.foundation.shape.RoundedCornerShape(percent = 50))
                 .clickable(role = Role.Button, onClick = onDone)
                 .then(if (doneTag != null) Modifier.testTag(doneTag) else Modifier)
                 .padding(horizontal = 12.dp),
             contentAlignment = Alignment.Center
         ) {
-            Text(
-                doneLabel,
-                style = styles.body.copy(fontWeight = FontWeight.SemiBold),
-                color = p.textPrimary,
-                maxLines = 1
-            )
+            Text(doneLabel, style = actionStyle, color = palette.textPrimary, maxLines = 1)
+        }
+    }
+    BoxWithConstraints(
+        Modifier.fillMaxWidth().padding(horizontal = design.spacing.gutter - 8.dp)
+            .padding(top = 6.dp, bottom = 10.dp).heightIn(min = 48.dp)
+    ) {
+        if (titleWidth + actionWidth * 2 + 16.dp <= maxWidth) {
+            Box(Modifier.fillMaxWidth().heightIn(min = 48.dp)) {
+                Text(title, style = styles.headline, color = palette.textPrimary,
+                    textAlign = TextAlign.Center, maxLines = 1,
+                    modifier = Modifier.align(Alignment.Center).padding(horizontal = actionWidth + 8.dp)
+                        .semantics { heading() })
+                action(Modifier.align(Alignment.CenterEnd))
+            }
+        } else {
+            Row(Modifier.fillMaxWidth().heightIn(min = 48.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Text(title, style = styles.headline, color = palette.textPrimary,
+                    modifier = Modifier.weight(1f).padding(start = 8.dp).semantics { heading() })
+                action(Modifier)
+            }
         }
     }
 }
