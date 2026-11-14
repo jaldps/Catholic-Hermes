@@ -21,6 +21,7 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 
 - No hagas push a `CatholicGPT` ni a `main`. No hagas force-push sobre ramas ajenas.
 - Nunca subas claves (`*.keystore`, `*.jks`), APK, `local.properties`, tokens ni contraseñas.
+- Oraciones y novenas **reales**: su texto debe existir en una fuente localizable; nunca se componen textos nuevos.
 - No inventes nada: citas, fechas, aprobaciones, indulgencias, números de concesión, promesas ni milagros. Si no puedes verificar un dato, omítelo o di «según la tradición» y anótalo en el informe.
 - Textos con derechos de autor (traducciones litúrgicas modernas, libros, webs): no se copian. Usa textos de dominio público o redacción y traducción propias, y márcalo en `textNote`.
 - Tres idiomas completos y naturales. Español; inglés; portugués de Brasil.
@@ -33,3 +34,4 @@ El coordinador (Claude, en la nube) publica aquí encargos autocontenidos en la 
 | [T-001](T-001.md) | Hermes | ABIERTO | M3 · detalles de 34 oraciones básicas → `assets/prayers/details-a.json` |
 | [T-002](T-002.md) | Codex | ABIERTO | M3 · detalles de 34 oraciones especializadas → `assets/prayers/details-b.json` |
 | [T-003](T-003.md) | Codex | ABIERTO | M3 · ~30 oraciones nuevas, reales y documentadas → `assets/prayers/extra.json` |
+| [T-004](T-004.md) | Codex | ABIERTO | Textos auténticos (no redactados) para las 16 novenas nuevas de 1.8.2 |
