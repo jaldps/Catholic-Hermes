@@ -1,5 +1,13 @@
 # Instalar la versión actual en Android
 
+## Catholic Hermes 1.8.1 — edición independiente
+
+[Descargar Catholic Hermes 1.8.1](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.1.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermespreview`, versión `1.8.1`, código 10.
+
+Abre la APK en Android y permite instalar desde el navegador si se solicita. Busca **Catholic Hermes 1.8.1**. Se instala junto a 1.8: conserva la app anterior y sus datos, y comienza con progreso independiente.
+
+Novedades: selector Rosario/Divina Misericordia con una implementación propia de Liquid Glass inspirada en el repositorio compartido; doce promesas tradicionales del Sagrado Corazón con atribución, fuentes y condiciones en ES/EN/PT. La refracción requiere Android 13 o posterior y aceleración gráfica; las versiones anteriores utilizan vidrio esmerilado. No integra todas las funciones de la biblioteca de referencia. [Cambios y verificaciones](../docs/quality/release-1.8.1/README.md) · [Metadatos de la APK](../docs/quality/release-1.8.1/APK.json). No se ha probado en un teléfono físico.
+
 ## Catholic Hermes 1.8 (en desarrollo)
 
 [Descargar Catholic Hermes 1.8](https://github.com/jaldps/Catholic-Hermes/raw/refs/heads/CatholicGPT/dist/Catholic-Hermes-1.8.apk) · paquete `com.aistudio.sanctafides.qvmrpx.hermes`, versión `1.8`, código 9.

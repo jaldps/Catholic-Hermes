@@ -1,0 +1,27 @@
+{
+  "version_name": "1.8.1",
+  "version_code": 10,
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
+  "app_label": "Catholic Hermes 1.8.1",
+  "sha256": "96ef08c792c8f3708ccfab003d62690f5ef2f8f4954978fbbb4ab302c31e806e",
+  "bytes": 62933255,
+  "signing_certificate_sha256": "b634b6b8a98206f9f5a7251b892103e5ddc504ef38a7cc84a0330e4e612c83d9",
+  "signer_note": "Available preview key, matching 1.7; separate package authorized because the 1.8 private key is unavailable. Installs alongside 1.8 with independent data.",
+  "implementation_commit": "9ad3bcea0bf625633d6f930c646b63f0a45a6bf8",
+  "build": "./gradlew -I tools/hermes-preview.gradle :app:assembleDebug",
+  "changes": [
+    "Rosary/Divine Mercy selector: original Compose glass material inspired by QWEA0/Liquid-Glass-Android; not the complete upstream library.",
+    "Sacred Heart: twelve traditional attributed promises, sources and conditions, ES/EN/PT."
+  ],
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "device_installation_tested": false,
+  "physical_gpu_refraction_tested": false,
+  "liquid_glass_refraction_min_sdk": 33,
+  "older_android_material": "Frosted glass fallback",
+  "updates_1_8": false,
+  "automatic_progress_migration": false,
+  "test_results": "test-results.json",
+  "tests_passed": 13,
+  "build_profile_sha256": "7cb67004b9e0028b278b9cd093d868f75334b0faddf65be68f2895a240f32705"
+}

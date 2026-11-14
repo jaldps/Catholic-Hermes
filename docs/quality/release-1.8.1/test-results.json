@@ -1,5 +1,6 @@
 {
   "scope": "1.8.1: devotional glass selector and Sacred Heart promises",
+  "package": "com.aistudio.sanctafides.qvmrpx.hermespreview",
   "classes": [
     {
       "class": "com.example.DevotionalGlassShaderTest",
