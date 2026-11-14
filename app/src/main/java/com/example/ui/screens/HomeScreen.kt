@@ -294,7 +294,9 @@ fun HomeScreen(
             DailyPrayerSlot.LAUDES ->
                 strings("Laudes", "Morning Prayer", "Laudes")
             DailyPrayerSlot.ANGELUS, DailyPrayerSlot.ANGELUS_EVENING ->
-                strings("El Ángelus", "The Angelus", "O Angelus")
+                com.example.data.liturgy.SeasonalMarianPrayer.forDate(
+                    com.example.data.liturgy.CalendarDate(now.year, now.monthValue, now.dayOfMonth)
+                ).title.get(currentLanguage)
             DailyPrayerSlot.CORONILLA ->
                 strings("Coronilla de la Misericordia", "Divine Mercy Chaplet", "Coroa da Misericórdia")
             DailyPrayerSlot.NIGHT_PRAYERS ->

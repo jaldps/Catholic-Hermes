@@ -12,6 +12,7 @@ import androidx.datastore.preferences.core.stringSetPreferencesKey
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.data.models.AppLanguage
+import com.example.data.liturgy.CalendarRules
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
@@ -39,7 +40,8 @@ data class UserPreferences(
     val hasChosenLanguage: Boolean,
     val reduceMotion: Boolean = false,
     val reduceTransparency: Boolean = false,
-    val highContrast: Boolean = false
+    val highContrast: Boolean = false,
+    val calendarRules: CalendarRules = CalendarRules()
 ) {
     companion object {
         const val DEFAULT_DESIGN_LANGUAGE = "LUMEN"
@@ -55,6 +57,9 @@ class UserPreferencesStore(
 ) {
 
     private object Keys {
+        val EPIPHANY_SUNDAY = booleanPreferencesKey("calendar_epiphany_sunday")
+        val ASCENSION_SUNDAY = booleanPreferencesKey("calendar_ascension_sunday")
+        val CORPUS_SUNDAY = booleanPreferencesKey("calendar_corpus_sunday")
         val LANGUAGE = stringPreferencesKey("language")
         val HAS_CHOSEN_LANGUAGE = booleanPreferencesKey("has_chosen_language")
         val DESIGN_LANGUAGE = stringPreferencesKey("design_language")
@@ -156,6 +161,8 @@ class UserPreferencesStore(
                 // AppLanguage.fromCode falls back to the device locale when unset.
                 language = AppLanguage.fromCode(code ?: ""),
                 hasChosenLanguage = stored[Keys.HAS_CHOSEN_LANGUAGE] ?: (code != null),
+                calendarRules = CalendarRules(stored[Keys.EPIPHANY_SUNDAY] ?: false,
+                    stored[Keys.ASCENSION_SUNDAY] ?: false, stored[Keys.CORPUS_SUNDAY] ?: false),
                 designLanguage = canonicalDesign(stored[Keys.DESIGN_LANGUAGE]),
                 reduceMotion = stored[Keys.REDUCE_MOTION] ?: false,
                 reduceTransparency = stored[Keys.REDUCE_TRANSPARENCY] ?: false,
@@ -172,6 +179,24 @@ class UserPreferencesStore(
                 isFullCccDownloaded = stored[Keys.FULL_CCC_DOWNLOADED] ?: false
             )
         }
+
+    suspend fun setCalendarRules(rules: CalendarRules) {
+        dataStore.edit {
+            it[Keys.EPIPHANY_SUNDAY] = rules.epiphanyOnSunday
+            it[Keys.ASCENSION_SUNDAY] = rules.ascensionOnSunday
+            it[Keys.CORPUS_SUNDAY] = rules.corpusChristiOnSunday
+        }
+    }
+
+    suspend fun setCalendarTransfer(celebration: String, onSunday: Boolean) {
+        val key = when (celebration) {
+            "epiphany" -> Keys.EPIPHANY_SUNDAY
+            "ascension" -> Keys.ASCENSION_SUNDAY
+            "corpus" -> Keys.CORPUS_SUNDAY
+            else -> error("Unknown calendar transfer")
+        }
+        dataStore.edit { it[key] = onSunday }
+    }
 
     suspend fun setLanguage(language: AppLanguage) {
         dataStore.edit {

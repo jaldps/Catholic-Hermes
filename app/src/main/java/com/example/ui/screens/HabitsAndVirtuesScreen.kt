@@ -153,7 +153,9 @@ data class DailyHabit(
     val subtitlePt: String,
     val action: DailyHabitAction
 ) {
-    fun title(language: AppLanguage): String = language.pick3(titleEs, titleEn, titlePt)
+    fun title(language: AppLanguage): String = if (action == DailyHabitAction.ANGELUS)
+        com.example.data.liturgy.SeasonalMarianPrayer.forDate(com.example.data.liturgy.LiturgicalCalendar.today()).title.get(language)
+        else language.pick3(titleEs, titleEn, titlePt)
     fun subtitle(language: AppLanguage): String = language.pick3(subtitleEs, subtitleEn, subtitlePt)
 }
 
@@ -424,7 +426,8 @@ fun HabitsAndVirtuesScreen(
         when (action) {
             DailyHabitAction.HOW_TO_PRAY -> onOpenPrayers()
             DailyHabitAction.MISSAL -> onOpenMissal()
-            DailyHabitAction.ANGELUS -> onOpenPrayer("angelus")
+            DailyHabitAction.ANGELUS -> onOpenPrayer(com.example.data.liturgy.SeasonalMarianPrayer.forDate(
+                com.example.data.liturgy.CalendarDate(today.year, today.monthValue, today.dayOfMonth)).id)
             DailyHabitAction.CHAPLET -> onOpenRosary(1)
             DailyHabitAction.JACULATORY -> onOpenPrayer("jesus_prayer")
             DailyHabitAction.EXAMEN -> onOpenNight(1)

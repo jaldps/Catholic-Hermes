@@ -387,6 +387,9 @@ fun BibleScreen(
     val context = LocalContext.current
     val insets = AppEdgeToEdge()
     val activeEdition by repository.activeBibleEditionId.collectAsState()
+    val currentDate by repository.currentDate.collectAsState()
+    val dailyContent by repository.dailyContent.collectAsState()
+    val calendarRules by repository.calendarRules.collectAsState()
 
     var selectedMainTab by rememberSaveable(initialMainTab) { mutableIntStateOf(initialMainTab) }
     // Deep-link state is keyed so a new link re-preselects, while ordinary
@@ -528,7 +531,9 @@ fun BibleScreen(
                     when (segment) {
                         1 -> DailyMissalView(
                             header = header,
-                            reading = repository.dailyMassReading,
+                            reading = dailyContent?.takeIf { it.date == currentDate && it.language == currentLanguage && it.rules == calendarRules }?.reading ?: repository.emptyMassReading(currentDate),
+                            date = currentDate,
+                            useVatican = repository.vaticanCalendarMatches(currentDate, calendarRules),
                             currentLanguage = currentLanguage,
                             speech = speech,
                             contentPadding = listBottom
@@ -1927,6 +1932,8 @@ private fun shortLessonLabel(heading: String, readingOrdinal: Int, language: App
 private fun DailyMissalView(
     header: LazyListScope.() -> Unit,
     reading: DailyMassReading,
+    date: com.example.data.liturgy.CalendarDate,
+    useVatican: Boolean,
     currentLanguage: AppLanguage,
     speech: SpeechQueue,
     contentPadding: PaddingValues
@@ -1940,15 +1947,14 @@ private fun DailyMissalView(
 
     // The day's readings come from the Vatican's own feed, read natively; the
     // bundled lectionary is the offline fallback.
-    val isoToday = remember {
-        val d = LiturgicalCalendar.today()
-        "%04d-%02d-%02d".format(d.year, d.month, d.day)
-    }
-    val vaticanResult by produceState<ReadingsResult?>(null, currentLanguage, isoToday) {
-        value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+    val isoToday = "%04d-%02d-%02d".format(java.util.Locale.ROOT, date.year, date.month, date.day)
+    val vaticanResult by androidx.compose.runtime.key(currentLanguage, isoToday, useVatican) {
+        produceState<ReadingsResult?>(null) {
+            if (useVatican) value = VaticanGospelFetcher().today(currentLanguage, isoToday)
+        }
     }
     val vatican = (vaticanResult as? ReadingsResult.Success)?.readings
-    val loadingVatican = vaticanResult == null
+    val loadingVatican = useVatican && vaticanResult == null
     val offline = vaticanResult is ReadingsResult.Failure
 
     // On a ferial weekday the bundled lectionary legitimately has no entry;
@@ -1994,9 +2000,13 @@ private fun DailyMissalView(
         header()
         item(key = "mass_card") {
             TodayMassCard(reading, currentLanguage, seasonColor)
-            if (offline) {
+            if (offline || !useVatican) {
                 Text(
-                    currentLanguage.pick(
+                    if (!useVatican) currentLanguage.pick(
+                        "Selecciones de la celebración según los traslados elegidos. El calendario local puede tener otras particularidades.",
+                        "Selections for the celebration under your chosen transfers. Your local calendar may have other propers.",
+                        "Seleções da celebração conforme as transferências escolhidas. O calendário local pode ter outros próprios."
+                    ) else currentLanguage.pick(
                         "Lecturas en línea no disponibles · selecciones bíblicas incluidas",
                                 "Online readings unavailable · bundled Scripture selections",
                         "Leituras online indisponíveis · seleções bíblicas incluídas"

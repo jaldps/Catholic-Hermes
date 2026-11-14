@@ -1,6 +1,7 @@
 package com.example.data.news
 
 import com.example.data.models.AppLanguage
+import com.example.data.network.awaitText
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeoutOrNull
@@ -199,44 +200,32 @@ class DailySaintsFetcher(
     }
 
     /** Today's Vatican News saint in [language], or null on any failure. */
-    suspend fun fetchVaticanSaint(language: AppLanguage): VaticanSaint? =
+    suspend fun fetchVaticanSaint(language: AppLanguage, monthDay: String = todayMonthDay()): VaticanSaint? =
         withContext(Dispatchers.IO) {
             withTimeoutOrNull(TIMEOUT_MS) {
-                fetchVatican(vaticanUrlFor(language, todayMonthDay()))
+                fetchVatican(vaticanUrlFor(language, monthDay))
             }
         }
 
-    private fun fetchVatican(url: String): VaticanSaint? {
+    private suspend fun fetchVatican(url: String): VaticanSaint? {
         val request = Request.Builder()
             .url(url)
             .header("User-Agent", "SanctaFides/1.0 (Catholic companion app)")
             .build()
-        return runCatching {
-            client.newCall(request).execute().use { response ->
-                if (!response.isSuccessful) return@use null
-                val body = response.body?.string() ?: return@use null
-                parseVatican(body)
-            }
-        }.getOrNull()
+        return client.awaitText(request)?.let(::parseVatican)
     }
 
     /** Today's saints from the daily-saints API, or null on any failure. */
-    suspend fun fetchToday(): DailySaintsDay? =
+    suspend fun fetchToday(monthDay: String = todayMonthDay()): DailySaintsDay? =
         withContext(Dispatchers.IO) {
-            withTimeoutOrNull(TIMEOUT_MS) { fetch(todayMonthDay()) }
+            withTimeoutOrNull(TIMEOUT_MS) { fetch(monthDay)?.takeIf { it.date.takeLast(5) == monthDay } }
         }
 
-    private fun fetch(monthDay: String): DailySaintsDay? {
+    private suspend fun fetch(monthDay: String): DailySaintsDay? {
         val request = Request.Builder()
             .url(urlFor(monthDay))
             .header("User-Agent", "SanctaFides/1.0 (Catholic companion app)")
             .build()
-        return runCatching {
-            client.newCall(request).execute().use { response ->
-                if (!response.isSuccessful) return@use null
-                val body = response.body?.string() ?: return@use null
-                parse(body)
-            }
-        }.getOrNull()
+        return client.awaitText(request)?.let(::parse)
     }
 }

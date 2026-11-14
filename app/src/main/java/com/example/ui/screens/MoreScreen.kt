@@ -101,7 +101,7 @@ private val StudyTags = listOf(
 )
 private val InnerLifeTags = listOf("nav_spiritual", "nav_habits")
 private val ChurchTodayTags = listOf("nav_parishes", "nav_pilgrimage", "nav_churches_news")
-private val SettingsTags = listOf("app_bar_theme_button", "font_settings_button", "app_bar_lang_button")
+private val SettingsTags = listOf("app_bar_theme_button", "font_settings_button", "calendar_rules_settings", "app_bar_lang_button")
 
 /**
  * Explore — the sixth tab: everything that does not earn a place in the tab

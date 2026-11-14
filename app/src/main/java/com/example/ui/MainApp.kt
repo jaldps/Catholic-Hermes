@@ -53,6 +53,9 @@ import com.example.ui.components.GuiCustomizerModal
 import com.example.ui.components.FontPickerDialog
 import com.example.data.models.FontChoice
 import com.example.ui.components.LanguageSelectorDialog
+import androidx.compose.material.icons.outlined.DateRange
+import com.example.ui.components.CalendarRulesSheet
+import com.example.data.liturgy.SeasonalMarianPrayer
 import com.example.ui.design.AppIconSlot
 import com.example.ui.design.AppIcons
 import com.example.ui.design.AppNavItem
@@ -170,11 +173,11 @@ fun MainApp(
     onReminderConsumed: () -> Unit = {}
 ) {
     val currentLanguage by repository.currentLanguage.collectAsState()
-    val localToday = com.example.ui.screens.rememberLifecycleClock().toLocalDate()
-    val today = com.example.data.liturgy.CalendarDate(localToday.year, localToday.monthValue, localToday.dayOfMonth)
+    val today by repository.currentDate.collectAsState()
+    val activeCalendarRules by repository.calendarRules.collectAsState()
     val todayContent by repository.dailyContent.collectAsState()
-    val todayReading = todayContent?.takeIf { it.date == today }?.reading ?: repository.emptyMassReading(today)
-    val todayLiturgy = todayContent?.takeIf { it.date == today }?.liturgicalDay ?: repository.getCurrentLiturgicalDay()
+    val todayReading = todayContent?.takeIf { it.date == today && it.language == currentLanguage && it.rules == activeCalendarRules }?.reading ?: repository.emptyMassReading(today)
+    val todayLiturgy = todayContent?.takeIf { it.date == today && it.language == currentLanguage && it.rules == activeCalendarRules }?.liturgicalDay ?: repository.getLiturgicalDay(today, includeText = false)
     // Bundled saint while the feed loads, then the feed's saint for today.
     val saintOfTheDay by repository.saintOfTheDayFlow.collectAsState()
     // A real back stack, saved across rotation and process death: pushing
@@ -255,6 +258,7 @@ fun MainApp(
         go(AppDestination.PRAYERS)
     }
     var showLanguageSelector by remember { mutableStateOf(false) }
+    var showCalendarRules by remember { mutableStateOf(false) }
     var showCustomizerModal by remember { mutableStateOf(false) }
     var showFontPicker by remember { mutableStateOf(false) }
 
@@ -410,7 +414,7 @@ fun MainApp(
                 when (target) {
                     AppDestination.HOME -> HomeScreen(
                         dailyReading = todayReading,
-                        verseOfTheDay = todayContent?.takeIf { it.date == today }?.verse ?: repository.emptyVerseOfTheDay(),
+                        verseOfTheDay = todayContent?.takeIf { it.date == today && it.language == currentLanguage && it.rules == activeCalendarRules }?.verse ?: repository.emptyVerseOfTheDay(),
                         saintOfTheDay = saintOfTheDay,
                         currentLanguage = currentLanguage,
                         liturgicalDay = todayLiturgy,
@@ -431,7 +435,7 @@ fun MainApp(
                             repository.selectBibleEdition("bundled")
                             onOpenBible(bookId, chapter, verseStart)
                         },
-                        dailyVerseCanonicalReference = com.example.data.verse.DailyVerseRotation.referenceFor(localToday),
+                        dailyVerseCanonicalReference = com.example.data.verse.DailyVerseRotation.referenceFor(java.time.LocalDate.of(today.year, today.month, today.day)),
                         onNavigateToBible = {
                             bibleInitialBook = null
                             bibleInitialChapter = null
@@ -453,7 +457,7 @@ fun MainApp(
                         onNavigateToRosary = { openRosary(0) },
                         onNavigateToPrayers = { go(AppDestination.PRAYERS) },
                         onNavigateToLaudes = { onOpenPrayer("laudes") },
-                        onNavigateToAngelus = { onOpenPrayer("angelus") },
+                        onNavigateToAngelus = { onOpenPrayer(SeasonalMarianPrayer.forDate(today).id) },
                         onNavigateToMorningPrayers = { onOpenPrayer("morning_offering") },
                         onNavigateToChaplet = {
                             openRosary(1)
@@ -721,6 +725,12 @@ fun MainApp(
                                     icon = Icons.Outlined.TextFields
                                 ),
                                 MoreEntry(
+                                    title = when (currentLanguage) { AppLanguage.ES -> "Calendario litúrgico"; AppLanguage.EN -> "Liturgical calendar"; AppLanguage.PT -> "Calendário litúrgico" },
+                                    value = when (currentLanguage) { AppLanguage.ES -> "Traslados"; AppLanguage.EN -> "Transfers"; AppLanguage.PT -> "Transferências" },
+                                    iconSlot = AppIconSlot.MORE, tag = "calendar_rules_settings",
+                                    onOpen = { showCalendarRules = true }, icon = Icons.Outlined.DateRange
+                                ),
+                                MoreEntry(
                                     title = when (currentLanguage) {
                                         AppLanguage.ES -> "Idioma"
                                         AppLanguage.EN -> "Language"
@@ -748,13 +758,17 @@ fun MainApp(
     LaunchedEffect(initialReminderId) {
         val id = initialReminderId ?: return@LaunchedEffect
         when {
-            id.startsWith("angelus_") -> onOpenPrayer("angelus")
+            id.startsWith("angelus_") -> onOpenPrayer(SeasonalMarianPrayer.forDate(today).id)
             id == "morning_prayer" -> onOpenPrayer("morning_offering")
             id == "coronilla" -> openRosary(1)
             id == "night_prayer" -> { prayersInitialTab = 2; prayersInitialNightTab = 2; go(AppDestination.PRAYERS) }
             id == "daily_reading" -> { bibleInitialTab = 1; go(AppDestination.BIBLE) }
         }
         onReminderConsumed()
+    }
+
+    if (showCalendarRules) {
+        CalendarRulesSheet(currentLanguage, activeCalendarRules, preferencesStore) { showCalendarRules = false }
     }
 
     if (showLanguageSelector) {

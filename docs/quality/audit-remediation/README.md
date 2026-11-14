@@ -24,3 +24,9 @@ Complete human citation ranges and common aliases, strict rejection of malformed
 Validation: **41 passed**, zero failures/errors across five classes (counts in stage-2a/tests.json). The previous November 3 test expected a plain feria; it now verifies St Martin de Porres as optional while preserving Ordinary Time week 31 and the ferial reading key.
 
 Calendar facts/localizations: Romcal MIT, pinned 0671305334e0a5ae7eec8f50a46c7a21e3e40347, https://github.com/romcal/romcal. The import script executes no external code; its license is bundled. Cross-check fixtures: USCCB 2025/2027 calendars and GNLY 24/CIC 1251. This is contemporary general calendar support, not historical calendars or complete diocesan propers. The devotional selections remain explicitly distinct from an approved complete lectionary; full ferial I/II and Vigil services remain expansion work.
+
+## Stage 2b
+
+One date/language/transfer-policy key drives daily content and saint refresh. Requests and mapping use a captured date; old results cannot publish after rollover. Cancellable HTTP reads have bounded response bodies. Mass view keys its online state by date/language and avoids a mismatched general-calendar feed on transferred celebrations. Calendar transfers persist from Explore → Settings and are explicitly distinct from complete local propers/obligation law. Home/Habits/reminder deep links select Regina Caeli in Eastertide.
+
+Validation: **20 passed**, zero failures/errors. Includes simulated rollover, dated saint requests, policy-specific reading cache, body-size limit, seasonal prayer boundaries and the actual settings journey with persistence across closing/reopening. A missing localToday reference was caught during compilation and corrected before these final checks. No physical alarm/audio verification is implied.

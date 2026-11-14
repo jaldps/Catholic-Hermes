@@ -49,6 +49,7 @@ class MainActivity : ComponentActivity() {
         // flashes the device-locale default over the user's own choice.
         lifecycleScope.launch {
             val stored = preferencesStore.preferences.first()
+            repository.applyCalendarRules(stored.calendarRules)
             if (stored.hasChosenLanguage) {
                 repository.applyPersistedLanguage(stored.language)
                 ttsManager.setLanguage(stored.language)

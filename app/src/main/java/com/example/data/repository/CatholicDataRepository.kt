@@ -31,6 +31,7 @@ import com.example.data.verse.DailyVerseMeditation
 import com.example.data.verse.DailyVerseRotation
 import com.example.data.models.ViaCrucisStation
 import com.example.data.liturgy.CalendarDate
+import com.example.data.liturgy.CalendarRules
 import com.example.data.xref.BibleLine
 import com.example.data.xref.CrossReference
 import com.example.data.xref.CrossReferenceIndex
@@ -65,7 +66,10 @@ import java.util.Locale
 class CatholicDataRepository(
     private val context: Context? = null,
     private val preferencesStore: UserPreferencesStore? = null,
-    private val scope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private val scope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.IO),
+    private val dateProvider: () -> CalendarDate = LiturgicalCalendar::today,
+    private val dateChanges: kotlinx.coroutines.flow.Flow<CalendarDate>? = null,
+    private val saintFetcher: DailySaintsFetcher = DailySaintsFetcher()
 ) {
 
     private val bibleProvider: BibleTextProvider? = context?.let { BibleTextProvider(it) }
@@ -87,6 +91,14 @@ class CatholicDataRepository(
     }
     private val bibleLines = HashMap<AppLanguage, BibleLine>()
 
+    private val _currentDate = MutableStateFlow(dateProvider())
+    val currentDate: StateFlow<CalendarDate> = _currentDate.asStateFlow()
+    private val _calendarRules = MutableStateFlow(CalendarRules())
+    val calendarRules: StateFlow<CalendarRules> = _calendarRules.asStateFlow()
+    fun applyCalendarRules(rules: CalendarRules) { _calendarRules.value = rules }
+    fun vaticanCalendarMatches(date: CalendarDate, rules: CalendarRules = _calendarRules.value): Boolean =
+        LiturgicalCalendar.dayInfo(date, rules).lectionaryKey == LiturgicalCalendar.dayInfo(date).lectionaryKey
+
     private val _currentLanguage = MutableStateFlow(detectInitialLanguage())
     val currentLanguage: StateFlow<AppLanguage> = _currentLanguage.asStateFlow()
 
@@ -107,12 +119,14 @@ class CatholicDataRepository(
         val date: CalendarDate,
         val reading: DailyMassReading,
         val verse: VerseOfTheDay,
-        val liturgicalDay: com.example.data.models.LiturgicalCalendarDay
+        val liturgicalDay: com.example.data.models.LiturgicalCalendarDay,
+        val language: AppLanguage,
+        val rules: CalendarRules
     )
 
     private val _dailyContent = MutableStateFlow<DailyContent?>(null)
     val dailyContent: StateFlow<DailyContent?> = _dailyContent.asStateFlow()
-    private val readingCache = java.util.concurrent.ConcurrentHashMap<Pair<CalendarDate, AppLanguage>, DailyMassReading>()
+    private val readingCache = java.util.concurrent.ConcurrentHashMap<Triple<CalendarDate, AppLanguage, CalendarRules>, DailyMassReading>()
     private val verseCache = java.util.concurrent.ConcurrentHashMap<Pair<CalendarDate, AppLanguage>, VerseOfTheDay>()
 
     fun emptyVerseOfTheDay(): VerseOfTheDay = DevotionsAndHistoryData.verseOfTheDay.copy(
@@ -121,7 +135,7 @@ class CatholicDataRepository(
 
     /** Loading state contains no other day's text or invented reflection. */
     fun emptyMassReading(date: CalendarDate): DailyMassReading {
-        val info = LiturgicalCalendar.dayInfo(date)
+        val info = LiturgicalCalendar.dayInfo(date, _calendarRules.value)
         val empty = LocalizedText("", "", "")
         return BibleData.todayMassReading.copy(
             dateDisplay = date.toString(), liturgicalSeason = info.season.displayName,
@@ -152,20 +166,20 @@ class CatholicDataRepository(
             scope.launch { store.setLanguage(language) }
         }
         // The saint page is language-specific: refetch in the new language.
-        if (changed) refreshSaintOfTheDay(language)
+        // The shared date/language flow owns saint refreshes.
     }
 
     /** Applies a language restored from storage without writing it back. */
     fun applyPersistedLanguage(language: AppLanguage) {
         val changed = _currentLanguage.value != language
         _currentLanguage.value = language
-        if (changed) refreshSaintOfTheDay(language)
+        // The shared date/language flow owns saint refreshes.
     }
 
     // Bible & Liturgical Mass
     val catholicBooks: List<BibleBook> get() = BibleData.catholicCanonBooks
     val bibleVersions: List<BibleVersionInfo> get() = BibleData.bibleVersions
-    val dailyMassReading: DailyMassReading get() = getMassReading(LiturgicalCalendar.today())
+    val dailyMassReading: DailyMassReading get() = getMassReading(dateProvider())
 
     /**
      * The Mass of [date], assembled from the computed liturgical day and the
@@ -179,9 +193,10 @@ class CatholicDataRepository(
      */
     fun getMassReading(date: CalendarDate): DailyMassReading {
         val language = _currentLanguage.value
-        val key = date to language
+        val rules = _calendarRules.value
+        val key = Triple(date, language, rules)
         readingCache[key]?.let { return it }
-        val info = LiturgicalCalendar.dayInfo(date)
+        val info = LiturgicalCalendar.dayInfo(date, rules)
         val entry = LectionaryData.entryFor(info.lectionaryKey, info.sundayCycle)
         val fallback = BibleData.todayMassReading
 
@@ -303,16 +318,16 @@ class CatholicDataRepository(
      * saint in the active language. [saintOfTheDay] above is kept for
      * sync callers.
      */
-    private val _saintOfTheDay = MutableStateFlow(DevotionsAndHistoryData.getTodaySaint())
+    private val _saintOfTheDay = MutableStateFlow(DevotionsAndHistoryData.getTodaySaint(calendarFor(dateProvider())))
     val saintOfTheDayFlow: StateFlow<SaintOfTheDay> = _saintOfTheDay.asStateFlow()
 
     private var saintFetchJob: kotlinx.coroutines.Job? = null
 
     init {
-        refreshSaintOfTheDay(_currentLanguage.value)
         preferencesStore?.let { store ->
             scope.launch {
                 store.preferences.collectLatest { preferences ->
+                    _calendarRules.value = preferences.calendarRules
                     val id = preferences.activeBibleTranslationId
                     _activeBibleEditionId.value = id.takeIf { candidate ->
                         bibleDownloadManager?.specs?.any { it.id == candidate } == true &&
@@ -322,19 +337,21 @@ class CatholicDataRepository(
             }
         }
         scope.launch {
-            val dates = flow {
+            val dates = dateChanges ?: flow {
                 while (true) {
-                    emit(LiturgicalCalendar.today())
+                    emit(dateProvider())
                     delay(30_000)
                 }
             }.distinctUntilChanged()
-            combine(currentLanguage, dates) { language, date -> language to date }
-                .collectLatest { (language, date) ->
+            combine(currentLanguage, dates, calendarRules) { language, date, rules -> Triple(language, date, rules) }
+                .collectLatest { (language, date, rules) ->
+                    _currentDate.value = date
+                    refreshSaintOfTheDay(language, date)
                     _dailyContent.value = null
-                    val loaded = withContext(Dispatchers.Default) {
-                        DailyContent(date, getMassReading(date), dailyVerseFor(date), getLiturgicalDay(date))
+                    val loaded = withContext(Dispatchers.IO) {
+                        DailyContent(date, getMassReading(date), dailyVerseFor(date), getLiturgicalDay(date), language, rules)
                     }
-                    if (_currentLanguage.value == language) _dailyContent.value = loaded
+                    if (_currentLanguage.value == language && _calendarRules.value == rules && _currentDate.value == date) _dailyContent.value = loaded
                 }
         }
     }
@@ -346,22 +363,19 @@ class CatholicDataRepository(
      * [_saintOfTheDay]. A still-running fetch is cancelled so an older
      * language cannot overwrite a newer one.
      */
-    private fun refreshSaintOfTheDay(language: AppLanguage) {
+    private fun calendarFor(date: CalendarDate): Calendar = java.util.GregorianCalendar(date.year, date.month - 1, date.day)
+
+    private fun refreshSaintOfTheDay(language: AppLanguage, date: CalendarDate) {
         saintFetchJob?.cancel()
+        val bundled = DevotionsAndHistoryData.getTodaySaint(calendarFor(date))
+        _saintOfTheDay.value = bundled
         saintFetchJob = scope.launch {
-            val bundled = DevotionsAndHistoryData.getTodaySaint()
-            // 1. Vatican News (trilingual, primary).
-            DailySaintsFetcher().fetchVaticanSaint(language)?.let { vatican ->
-                _saintOfTheDay.value = mapVaticanSaint(vatican, bundled, language)
-                return@launch
-            }
-            // 2. Daily-saints API (English fallback).
-            val day = DailySaintsFetcher().fetchToday()
-            if (day != null) {
-                _saintOfTheDay.value = mapDailySaints(day, bundled)
-            } else {
-                // 3. Bundled entry as the last resort.
-                _saintOfTheDay.value = bundled
+            val monthDay = "%02d-%02d".format(java.util.Locale.ROOT, date.month, date.day)
+            val vatican = saintFetcher.fetchVaticanSaint(language, monthDay)
+            val saint = if (vatican != null) mapVaticanSaint(vatican, bundled, language, date)
+                else saintFetcher.fetchToday(monthDay)?.let { mapDailySaints(it, bundled) } ?: bundled
+            if (_currentLanguage.value == language && _currentDate.value == date && dateProvider() == date) {
+                _saintOfTheDay.value = saint
             }
         }
     }
@@ -374,7 +388,7 @@ class CatholicDataRepository(
      * is invented here). [SaintOfTheDay.feastDate] is today's date
      * rendered for the active language.
      */
-    internal fun mapVaticanSaint(vatican: VaticanSaint, bundled: SaintOfTheDay, language: AppLanguage): SaintOfTheDay {
+    internal fun mapVaticanSaint(vatican: VaticanSaint, bundled: SaintOfTheDay, language: AppLanguage, date: CalendarDate = dateProvider()): SaintOfTheDay {
         val curated = !bundled.id.startsWith("saint_day_")
         val bundledMatch = curated && (namesMatch(vatican.name, bundled.name.get(language)) || namesMatch(vatican.name, bundled.name.en))
 
@@ -388,7 +402,7 @@ class CatholicDataRepository(
         }
 
         val prayerEn = "Saint ${vatican.name}, pray for us."
-        val today = Calendar.getInstance()
+        val today = calendarFor(date)
         return SaintOfTheDay(
             id = "vatican_${language.code}_${"%04d-%02d-%02d".format(today.get(Calendar.YEAR), today.get(Calendar.MONTH) + 1, today.get(Calendar.DAY_OF_MONTH))}_" +
                 vatican.name.lowercase().replace(Regex("[^a-z0-9]+"), "_").trim('_'),
@@ -536,7 +550,7 @@ class CatholicDataRepository(
      * verse link opens the same passage and edition in the reader.
      */
     val verseOfTheDay: VerseOfTheDay
-        get() = dailyVerseFor(LiturgicalCalendar.today())
+        get() = dailyVerseFor(dateProvider())
 
     fun dailyVerseFor(date: CalendarDate): VerseOfTheDay {
         val key = date to _currentLanguage.value
@@ -625,9 +639,9 @@ class CatholicDataRepository(
      */
     val liturgicalCalendarDays: List<com.example.data.models.LiturgicalCalendarDay>
         get() {
-            val today = LiturgicalCalendar.today()
+            val today = dateProvider()
             return (0 until 28).map { today.plusDays(it) }.filter { date ->
-                val info = LiturgicalCalendar.dayInfo(date)
+                val info = LiturgicalCalendar.dayInfo(date, _calendarRules.value)
                 date == today || date.isSunday || info.isHolyDayOfObligation ||
                     info.isFastDay || info.isAbstinenceDay && !date.isFriday ||
                     info.rank == CelebrationRank.SOLEMNITY || info.rank == CelebrationRank.FEAST ||
@@ -643,10 +657,10 @@ class CatholicDataRepository(
      * seeded list, so it stays correct in any year.
      */
     fun getCurrentLiturgicalDay(): com.example.data.models.LiturgicalCalendarDay =
-        getLiturgicalDay(LiturgicalCalendar.today())
+        getLiturgicalDay(dateProvider())
 
-    fun getLiturgicalDay(date: CalendarDate): com.example.data.models.LiturgicalCalendarDay {
-        val info = LiturgicalCalendar.dayInfo(date)
+    fun getLiturgicalDay(date: CalendarDate, includeText: Boolean = true): com.example.data.models.LiturgicalCalendarDay {
+        val info = LiturgicalCalendar.dayInfo(date, _calendarRules.value)
         val monthNames = listOf(
             Triple("Enero", "January", "Janeiro"), Triple("Febrero", "February", "Fevereiro"),
             Triple("Marzo", "March", "Março"), Triple("Abril", "April", "Abril"),
@@ -689,7 +703,7 @@ class CatholicDataRepository(
             ),
             weekdayCycle = info.weekdayCycle.displayName,
             isFastOrAbstinence = info.isFastDay || info.isAbstinenceDay,
-            missalMeditation = reading?.gospel?.let { scriptureResolver.passage(it, _currentLanguage.value) }
+            missalMeditation = if (!includeText) null else reading?.gospel?.let { scriptureResolver.passage(it, _currentLanguage.value) }
                 ?.let { LocalizedText(it, it, it) }
         )
     }
