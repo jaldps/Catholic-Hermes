@@ -1,12 +1,17 @@
-// Catholic Hermes 1.8 preview: separate package (.hermes) installable beside 1.7.
+// Catholic Hermes 1.8.1 preview: separate package (.hermes) installable beside 1.7.
 // Usage: ./gradlew -I tools/hermes-preview.gradle :app:assembleDebug
 // Production applicationId, signing and version stay untouched.
-def HERMES_VERSION_CODE = 9
-def HERMES_VERSION_NAME = '1.8'
+def HERMES_VERSION_CODE = 10
+def HERMES_VERSION_NAME = '1.8.1'
 
 gradle.beforeProject { project ->
     project.pluginManager.withPlugin('com.android.application') {
         project.android.buildFeatures.resValues = true
+        // Keep the private Hermes1.8 keystore outside Git; use its existing password/alias configuration.
+        def privateKeystore = project.providers.gradleProperty('hermesSigningKeystore').orNull
+        if (privateKeystore != null) {
+            project.android.signingConfigs.getByName('debugConfig').storeFile = project.file(privateKeystore)
+        }
         project.android.buildTypes.named('debug') {
             applicationIdSuffix = '.hermes'
             resValue 'string', 'app_name', "Catholic Hermes ${HERMES_VERSION_NAME}"
@@ -15,6 +20,22 @@ gradle.beforeProject { project ->
             variant.outputs.each { output ->
                 output.versionCode.set(HERMES_VERSION_CODE)
                 output.versionName.set(HERMES_VERSION_NAME)
+            }
+        }
+    }
+}
+
+gradle.projectsEvaluated {
+    def app = gradle.rootProject.findProject(':app')
+    app.tasks.matching { it.name == 'packageDebug' }.configureEach {
+        doFirst {
+            def signing = app.android.buildTypes.getByName('debug').signingConfig
+            def store = java.security.KeyStore.getInstance(signing.storeFile, signing.storePassword.toCharArray())
+            def certificate = store.getCertificate(signing.keyAlias)
+            if (certificate == null) throw new GradleException('No se encontró el alias de la firma Hermes1.8.')
+            def fingerprint = java.security.MessageDigest.getInstance('SHA-256').digest(certificate.encoded).encodeHex().toString()
+            if (fingerprint != '07efd6dbd2c9005998114aba185ae5c7230e9637c3b300e221ba413b6be47908') {
+                throw new GradleException('La clave no corresponde a Hermes1.8. Indica -PhermesSigningKeystore=/ruta/privada/clave.keystore antes de crear la APK1.8.1.')
             }
         }
     }

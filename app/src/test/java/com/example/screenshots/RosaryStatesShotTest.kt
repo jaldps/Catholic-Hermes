@@ -126,8 +126,7 @@ class RosaryStatesShotTest {
             compose.waitForIdle()
             compose.onNodeWithTag("rosary_mystery_picker").performClick()
             compose.waitForIdle()
-            val joyful = if (language == AppLanguage.ES) "Misterios Gozosos" else if (language == AppLanguage.PT) "Mistérios Gozosos" else "Joyful Mysteries"
-            compose.onNodeWithText(joyful, substring = true).performClick()
+            compose.onNodeWithTag("rosary_mystery_option_joyful").performClick()
             compose.waitForIdle()
             capture("5_light_art", dark)
             compose.onNodeWithTag("prayer_instructions_toggle").performClick()

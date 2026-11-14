@@ -1122,11 +1122,7 @@ object DevotionsAndHistoryData {
                 "Formally revealed to Saint Margaret Mary Alacoque at the convent of the Visitation in Paray-le-Monial. Christ unveiled His divine heart encircled with thorns, aflame with unquenchable charity for mankind.",
                 "Revelado a Santa Margarida Maria Alacoque na França. Jesus mostrou Seu Coração cercado de espinhos e em chamas de amor por toda a humanidade."
             ),
-            promises = LocalizedText(
-                "La tradición de los nueve primeros viernes, difundida por santa Margarita María de Alacoque, expresa confianza en la gracia de la perseverancia y del arrepentimiento final. Requiere una vida de fe y recepción de la Comunión con la debida disposición; no es una garantía automática de salvación por cumplir nueve actos. Las revelaciones privadas no completan la Revelación de Cristo (Catecismo 67, 1385). Para el fundamento de esta devoción: Pío XII, Haurietis aquas (1956); Catecismo 478.",
-                "The Nine First Fridays tradition, spread by Saint Margaret Mary Alacoque, expresses trust in the grace of perseverance and final repentance. It calls for a life of faith and Communion received with proper disposition; nine acts do not automatically guarantee salvation. Private revelations do not complete Christ’s Revelation (Catechism 67, 1385). For the foundation of this devotion: Pius XII, Haurietis aquas (1956); Catechism 478.",
-                "A tradição das nove primeiras sextas-feiras, difundida por santa Margarida Maria Alacoque, expressa confiança na graça da perseverança e do arrependimento final. Requer uma vida de fé e a Comunhão recebida com a devida disposição; nove atos não garantem automaticamente a salvação. As revelações privadas não completam a Revelação de Cristo (Catecismo 67, 1385). Fundamento desta devoção: Pio XII, Haurietis aquas (1956); Catecismo 478."
-            ),
+            promises = SacredHeartPromisesData.text,
             theologicalMeaning = LocalizedText(
                 "El Corazón de Jesús es el símbolo supremo y la fuente real del amor redentor con que el Hijo de Dios amó a su Padre y a todos los hombres hasta el extremo de la Cruz.",
                 "The Sacred Heart is the theological and physical center of Christ's infinite charity and the sacrificial source of the Sacraments.",

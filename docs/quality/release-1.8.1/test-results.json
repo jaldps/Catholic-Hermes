@@ -1,0 +1,33 @@
+{
+  "scope": "1.8.1: devotional glass selector and Sacred Heart promises",
+  "classes": [
+    {
+      "class": "com.example.DevotionalGlassShaderTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "com.example.RosaryInteractionTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "com.example.SacredHeartPromisesTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "com.example.screenshots.RosaryStatesShotTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ]
+}

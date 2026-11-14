@@ -121,6 +121,11 @@ import com.example.ui.design.AppGlassIconButton
 import com.example.ui.design.AppListGroup
 import com.example.ui.design.AppListRow
 import com.example.ui.design.AppSegmentedTabs
+import com.example.ui.design.DevotionalBackdrop
+import com.example.ui.design.LiquidGlassDevotionTrack
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.boundsInRoot
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import com.example.ui.design.AppSheet
 import com.example.ui.design.AppStatusBarGlyphs
 import com.example.ui.design.lumenGlass
@@ -1119,6 +1124,13 @@ fun RosaryScreen(
     val artCandidate = if (isRosary) mysteryArt(selectedMysteryType, (step.section - 1).coerceIn(0, guide.decadeCount - 1)) else MercyArt
     val artPath = rememberFirstAsset(artCandidate, if (isRosary) "heroes/lumen/rosary.jpg" else "heroes/divine_mercy.jpg", "heroes/mary_statue.jpg")
     val artMeta = rememberHeroMeta(artPath)
+    var glassFrame by remember { mutableStateOf(androidx.compose.ui.geometry.Rect.Zero) }
+    val glassImage = rememberAssetBitmap(artPath, 1080)
+    val glassSoftImage = rememberAssetBitmap(artPath, 40)
+    val glassBackdrop = DevotionalBackdrop(glassImage, glassSoftImage, glassFrame,
+        artMeta.focusX, artMeta.focusY, if (artPath?.endsWith("divine_mercy.jpg") == true) 1f else 0.92f,
+        if (design.isDark) 0.81f else 1f)
+
     AppStatusBarGlyphs(lightGlyphs = design.isDark || artMeta.tone == "dark")
 
     // A decade's label is the mystery (title and fruit); the opening, the
@@ -1152,6 +1164,7 @@ fun RosaryScreen(
                 credit = artPath?.let { ArtCredits.of(LocalContext.current, it) },
                 inDecade = isRosary && step.section in 1..guide.decadeCount,
                 screenHeight = viewport,
+                onFrame = { glassFrame = it },
                 modifier = Modifier.fillMaxSize()
                     .then(if (design.isSanctuary) Modifier.padding(horizontal = gutter, vertical = 8.dp).clip(RoundedCornerShape(8.dp)) else Modifier)
             )
@@ -1160,6 +1173,7 @@ fun RosaryScreen(
             DevotionSwitch(
                 lang = lang,
                 selected = selectedTab,
+                backdrop = glassBackdrop,
                 darkArt = design.isDark || artMeta.tone == "dark",
                 onSelect = { dispatch(RosaryEvent.SelectDevotion(Devotion.fromTab(it))) }
             )
@@ -1348,6 +1362,7 @@ private fun MysteryStage(
     credit: ArtCredit?,
     inDecade: Boolean,
     screenHeight: Dp,
+    onFrame: (androidx.compose.ui.geometry.Rect) -> Unit,
     modifier: Modifier = Modifier
 ) {
     val design = LocalAppDesign.current
@@ -1372,7 +1387,8 @@ private fun MysteryStage(
             targetState = assetPath,
             animationSpec = tween(if (still) 0 else 650),
             label = "mystery",
-            modifier = Modifier.fillMaxSize().then(if (inDecade) Modifier.testTag("mystery_hero_photo") else Modifier)
+            modifier = Modifier.fillMaxSize().onGloballyPositioned { onFrame(it.boundsInRoot()) }
+                .then(if (inDecade) Modifier.testTag("mystery_hero_photo") else Modifier)
         ) { path ->
             val sharp = rememberAssetBitmap(path, 1080)
             val soft = rememberAssetBitmap(path, 40)
@@ -1495,7 +1511,7 @@ private fun DrawScope.drawCropped(
 
 /** Rosary / Divine Mercy: a compact glass segmented control over the art. */
 @Composable
-private fun DevotionSwitch(lang: AppLanguage, selected: Int, darkArt: Boolean, onSelect: (Int) -> Unit) {
+private fun DevotionSwitch(lang: AppLanguage, selected: Int, backdrop: DevotionalBackdrop, darkArt: Boolean, onSelect: (Int) -> Unit) {
     val design = LocalAppDesign.current
     val p = design.palette
     val styles = LocalAppTextStyles.current
@@ -1517,30 +1533,19 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, darkArt: Boolean, o
         }
         val labels = if (needed <= room) full else short
         val labelStyle = if (needed <= room) style else styles.caption.copy(fontWeight = FontWeight.SemiBold)
-        val shape = if (design.isSanctuary) RoundedCornerShape(8.dp) else RoundedCornerShape(percent = 50)
-        Row(
-            // Over dark art: dark glass (black 38%) and white labels. Over light art:
-            // light glass (white 72%, lit edge) and ink labels with a charcoal thumb.
-            Modifier.fillMaxWidth()
-                .clip(shape)
-                .background(if (design.isSanctuary) p.glass else if (darkArt) Color.Black.copy(alpha = 0.38f) else Color.White.copy(alpha = 0.72f))
-                .border(1.dp, if (design.isSanctuary) p.separator else if (darkArt) Color.White.copy(alpha = 0.22f) else Color.White.copy(alpha = 0.9f), shape)
-                .padding(4.dp),
-            verticalAlignment = Alignment.CenterVertically
+        val sources = remember { List(2) { MutableInteractionSource() } }
+        val firstPressed by sources[0].collectIsPressedAsState()
+        val secondPressed by sources[1].collectIsPressedAsState()
+        val opaque = design.reduceTransparency || design.highContrast
+        LiquidGlassDevotionTrack(
+            selected = selected, pressed = firstPressed || secondPressed,
+            darkArt = darkArt, backdrop = backdrop, modifier = Modifier.fillMaxWidth()
         ) {
             labels.forEachIndexed { i, text ->
                 val isSelected = i == selected
-                val thumb by animateColorAsState(
-                    if (isSelected) (if (design.isSanctuary) p.action else if (darkArt) Color.White.copy(alpha = 0.96f) else p.action) else Color.Transparent,
-                    tween(if (design.reduceMotion) 0 else 200), label = "devotion"
-                )
                 Box(
-                    Modifier.weight(1f)
-                        .heightIn(min = 48.dp)
-                        .then(if (isSelected && !design.isSanctuary) Modifier.softShadow(shape, p.shadow, 10.dp, 2.dp) else Modifier)
-                        .clip(shape)
-                        .background(thumb)
-                        .clickable(remember { MutableInteractionSource() }, indication = null, role = Role.Tab) { onSelect(i) }
+                    Modifier.weight(1f).fillMaxHeight().heightIn(min = 48.dp)
+                        .clickable(sources[i], indication = null, role = Role.Tab) { onSelect(i) }
                         .semantics { this.selected = isSelected }
                         .padding(horizontal = 8.dp, vertical = 4.dp),
                     contentAlignment = Alignment.Center
@@ -1549,16 +1554,14 @@ private fun DevotionSwitch(lang: AppLanguage, selected: Int, darkArt: Boolean, o
                         text,
                         style = labelStyle.copy(fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Medium),
                         color = when {
-                            design.isSanctuary && isSelected -> p.onAction
-                            design.isSanctuary -> p.textPrimary
-                            darkArt && isSelected -> Color(0xFF111111)
-                            darkArt -> Color.White.copy(alpha = 0.94f)
-                            isSelected -> p.onAction
-                            else -> p.textPrimary
+                            opaque && isSelected -> p.onAction
+                            opaque -> p.textPrimary
+                            darkArt -> Color.White.copy(alpha = if (isSelected) 1f else 0.9f)
+                            else -> Color(0xFF171A20).copy(alpha = if (isSelected) 1f else 0.88f)
                         },
                         textAlign = TextAlign.Center,
-                        maxLines = 1,
-                        softWrap = false
+                        maxLines = 2,
+                        softWrap = true
                     )
                 }
             }
