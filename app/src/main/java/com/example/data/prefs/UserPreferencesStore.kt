@@ -3,6 +3,7 @@ package com.example.data.prefs
 import android.content.Context
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.MutablePreferences
 import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.emptyPreferences
@@ -14,6 +15,11 @@ import androidx.datastore.preferences.preferencesDataStore
 import com.example.data.models.AppLanguage
 import com.example.data.liturgy.CalendarRules
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.onEach
+import com.example.data.persistence.PersonalDataCommands
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import java.io.IOException
@@ -24,7 +30,7 @@ private val Context.preferencesDataStore: DataStore<Preferences> by preferencesD
 
 /**
  * Every user-facing preference, persisted with DataStore so it survives process
- * death and the Room database's destructive migrations.
+ * death, independently of Room schema upgrades.
  */
 data class UserPreferences(
     val language: AppLanguage,
@@ -41,7 +47,9 @@ data class UserPreferences(
     val reduceMotion: Boolean = false,
     val reduceTransparency: Boolean = false,
     val highContrast: Boolean = false,
-    val calendarRules: CalendarRules = CalendarRules()
+    val calendarRules: CalendarRules = CalendarRules(),
+    /** False means preferences could not be read, not that the user reset them. */
+    val storageAvailable: Boolean = true
 ) {
     companion object {
         const val DEFAULT_DESIGN_LANGUAGE = "LUMEN"
@@ -55,6 +63,24 @@ class UserPreferencesStore(
     private val context: Context,
     private val dataStore: DataStore<Preferences> = context.preferencesDataStore
 ) {
+
+    private data class ReadSnapshot(val available: Boolean, val data: Preferences)
+    private val readRevision = MutableStateFlow(0)
+    @Volatile private var lastGood: Preferences? = null
+
+    @OptIn(ExperimentalCoroutinesApi::class)
+    private val snapshots: Flow<ReadSnapshot> = readRevision.flatMapLatest {
+        dataStore.data.map { ReadSnapshot(true, it) }.catch { error ->
+            if (error is IOException) emit(ReadSnapshot(false, lastGood ?: emptyPreferences()))
+            else throw error
+        }
+    }.onEach { if (it.available) lastGood = it.data }
+
+    fun retryRead() { readRevision.value++ }
+
+    private suspend fun editPreference(key: String, transform: suspend (MutablePreferences) -> Unit) {
+        PersonalDataCommands.execute("preferences:$key") { dataStore.edit(transform); retryRead() }
+    }
 
     private object Keys {
         val EPIPHANY_SUNDAY = booleanPreferencesKey("calendar_epiphany_sunday")
@@ -100,26 +126,22 @@ class UserPreferencesStore(
         }.toMap()
 
     /** Highest reached question number per guided track (1-based; 0/absent = not started). */
-    val trackProgress: Flow<Map<Int, Int>> = dataStore.data
-        .catch { cause ->
-            if (cause is IOException) emit(emptyPreferences()) else throw cause
-        }
-        .map { parseTrackProgress(it[Keys.TRACK_PROGRESS]) }
+    val trackProgress: Flow<Map<Int, Int>> = snapshots.map { parseTrackProgress(it.data[Keys.TRACK_PROGRESS]) }
 
     /** Legacy high-water marks prove their endpoint was opened, not all earlier questions. */
     private fun readQuestions(prefs: Preferences): Set<Int> =
         prefs[Keys.READ_QUESTIONS]?.mapNotNull { it.toIntOrNull()?.takeIf { n -> n in 1..101 } }?.toSet()
             ?: parseTrackProgress(prefs[Keys.TRACK_PROGRESS]).values.filter { it in 1..101 }.toSet()
 
-    val visitedQuestions: Flow<Set<Int>> = dataStore.data.map { readQuestions(it) }
-    val lastReadQuestion: Flow<Int?> = dataStore.data.map {
-        it[Keys.LAST_QUESTION] ?: parseTrackProgress(it[Keys.TRACK_PROGRESS]).values.maxOrNull()
+    val visitedQuestions: Flow<Set<Int>> = snapshots.map { readQuestions(it.data) }
+    val lastReadQuestion: Flow<Int?> = snapshots.map {
+        it.data[Keys.LAST_QUESTION] ?: parseTrackProgress(it.data[Keys.TRACK_PROGRESS]).values.maxOrNull()
     }
 
     /** Records [questionNumber] (1-based) as reached for its track, never lowering it. */
     suspend fun recordTrackProgress(questionNumber: Int) {
         val track = trackIndexForQuestion(questionNumber) ?: return
-        dataStore.edit { prefs ->
+        editPreference("recordTrackProgress") { prefs ->
             prefs[Keys.READ_QUESTIONS] = (readQuestions(prefs) + questionNumber).map { it.toString() }.toSet()
             prefs[Keys.LAST_QUESTION] = questionNumber
             val current = parseTrackProgress(prefs[Keys.TRACK_PROGRESS])
@@ -134,7 +156,7 @@ class UserPreferencesStore(
     /** Direct setter for one track's reached question number (never lowers it). */
     suspend fun setTrackProgress(trackIndex: Int, questionNumber: Int) {
         require(trackIndexForQuestion(questionNumber) == trackIndex)
-        dataStore.edit { prefs ->
+        editPreference("setTrackProgress") { prefs ->
             prefs[Keys.READ_QUESTIONS] = (readQuestions(prefs) + questionNumber).map { it.toString() }.toSet()
             prefs[Keys.LAST_QUESTION] = questionNumber
             val current = parseTrackProgress(prefs[Keys.TRACK_PROGRESS])
@@ -148,18 +170,17 @@ class UserPreferencesStore(
 
     /**
      * Emits the stored preferences, falling back to defaults for anything unset.
-     * A read failure yields defaults rather than propagating, so a corrupt file
-     * cannot keep the app from starting.
+     * A failed read keeps the last known values (or temporary defaults) and
+     * explicitly marks storage unavailable. Reading never resets the file.
      */
-    val preferences: Flow<UserPreferences> = dataStore.data
-        .catch { cause ->
-            if (cause is IOException) emit(emptyPreferences()) else throw cause
-        }
-        .map { stored ->
+    val preferences: Flow<UserPreferences> = snapshots
+        .map { snapshot ->
+            val stored = snapshot.data
             val code = stored[Keys.LANGUAGE]
             UserPreferences(
                 // AppLanguage.fromCode falls back to the device locale when unset.
                 language = AppLanguage.fromCode(code ?: ""),
+                storageAvailable = snapshot.available,
                 hasChosenLanguage = stored[Keys.HAS_CHOSEN_LANGUAGE] ?: (code != null),
                 calendarRules = CalendarRules(stored[Keys.EPIPHANY_SUNDAY] ?: false,
                     stored[Keys.ASCENSION_SUNDAY] ?: false, stored[Keys.CORPUS_SUNDAY] ?: false),
@@ -181,7 +202,7 @@ class UserPreferencesStore(
         }
 
     suspend fun setCalendarRules(rules: CalendarRules) {
-        dataStore.edit {
+        editPreference("setCalendarRules") {
             it[Keys.EPIPHANY_SUNDAY] = rules.epiphanyOnSunday
             it[Keys.ASCENSION_SUNDAY] = rules.ascensionOnSunday
             it[Keys.CORPUS_SUNDAY] = rules.corpusChristiOnSunday
@@ -195,18 +216,18 @@ class UserPreferencesStore(
             "corpus" -> Keys.CORPUS_SUNDAY
             else -> error("Unknown calendar transfer")
         }
-        dataStore.edit { it[key] = onSunday }
+        editPreference("setCalendarTransfer") { it[key] = onSunday }
     }
 
     suspend fun setLanguage(language: AppLanguage) {
-        dataStore.edit {
+        editPreference("setLanguage") {
             it[Keys.LANGUAGE] = language.code
             it[Keys.HAS_CHOSEN_LANGUAGE] = true
         }
     }
 
     suspend fun setDesignLanguage(id: String) {
-        dataStore.edit { it[Keys.DESIGN_LANGUAGE] = canonicalDesign(id) }
+        editPreference("setDesignLanguage") { it[Keys.DESIGN_LANGUAGE] = canonicalDesign(id) }
     }
 
     private fun canonicalDesign(id: String?): String = when (id) {
@@ -215,43 +236,43 @@ class UserPreferencesStore(
     }
 
     suspend fun setReduceMotion(value: Boolean) {
-        dataStore.edit { it[Keys.REDUCE_MOTION] = value }
+        editPreference("setReduceMotion") { it[Keys.REDUCE_MOTION] = value }
     }
 
     suspend fun setReduceTransparency(value: Boolean) {
-        dataStore.edit { it[Keys.REDUCE_TRANSPARENCY] = value }
+        editPreference("setReduceTransparency") { it[Keys.REDUCE_TRANSPARENCY] = value }
     }
 
     suspend fun setHighContrast(value: Boolean) {
-        dataStore.edit { it[Keys.HIGH_CONTRAST] = value }
+        editPreference("setHighContrast") { it[Keys.HIGH_CONTRAST] = value }
     }
 
     suspend fun setThemePreset(id: String) {
-        dataStore.edit { it[Keys.THEME_PRESET] = id }
+        editPreference("setThemePreset") { it[Keys.THEME_PRESET] = id }
     }
 
     suspend fun setDarkModeSetting(setting: String) {
-        dataStore.edit { it[Keys.DARK_MODE] = setting }
+        editPreference("setDarkModeSetting") { it[Keys.DARK_MODE] = setting }
     }
 
     suspend fun setFontFamilyChoice(choice: String) {
-        dataStore.edit { it[Keys.FONT_FAMILY] = com.example.data.models.FontChoice.fromId(choice).id }
+        editPreference("setFontFamilyChoice") { it[Keys.FONT_FAMILY] = com.example.data.models.FontChoice.fromId(choice).id }
     }
 
     suspend fun setFontSizeScale(scale: Float) {
-        dataStore.edit { it[Keys.FONT_SCALE] = scale }
+        editPreference("setFontSizeScale") { it[Keys.FONT_SCALE] = scale }
     }
 
     suspend fun setAudioNarrationSpeed(speed: Float) {
-        dataStore.edit { it[Keys.NARRATION_SPEED] = speed }
+        editPreference("setAudioNarrationSpeed") { it[Keys.NARRATION_SPEED] = speed }
     }
 
     suspend fun setActiveBibleTranslationId(id: String) {
-        dataStore.edit { it[Keys.BIBLE_TRANSLATION] = id }
+        editPreference("setActiveBibleTranslationId") { it[Keys.BIBLE_TRANSLATION] = id }
     }
 
     suspend fun setFullCccDownloaded(downloaded: Boolean) {
-        dataStore.edit { it[Keys.FULL_CCC_DOWNLOADED] = downloaded }
+        editPreference("setFullCccDownloaded") { it[Keys.FULL_CCC_DOWNLOADED] = downloaded }
     }
 
     /** Writes an entire appearance selection in one transaction. */
@@ -264,7 +285,7 @@ class UserPreferencesStore(
         audioNarrationSpeed: Float,
         updateFontFamily: Boolean = true
     ) {
-        dataStore.edit {
+        editPreference("saveAppearance") {
             it[Keys.DESIGN_LANGUAGE] = canonicalDesign(designLanguage)
             it[Keys.THEME_PRESET] = themePreset
             it[Keys.DARK_MODE] = darkModeSetting

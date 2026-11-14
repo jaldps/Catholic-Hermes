@@ -14,6 +14,9 @@ import java.util.concurrent.atomic.AtomicLong
 import java.util.concurrent.ConcurrentHashMap
 import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.ensureActive
+import kotlinx.coroutines.withContext
+import kotlin.coroutines.AbstractCoroutineContextElement
+import kotlin.coroutines.CoroutineContext
 
 /** Application-owned writes survive a composable leaving the screen. Nothing private is logged. */
 object PersonalDataCommands {
@@ -27,7 +30,24 @@ object PersonalDataCommands {
     private val _states = MutableStateFlow<Map<String, State>>(emptyMap())
     val states = _states.asStateFlow()
 
-    init { scope.launch { for (work in queue) work() } }
+    private object CommandContext : AbstractCoroutineContextElement(Key) {
+        object Key : CoroutineContext.Key<CommandContext>
+    }
+
+    init { scope.launch { for (work in queue) withContext(CommandContext) { work() } } }
+
+    /** Await an accepted application-owned write without nesting an awaited queue submission. */
+    suspend fun execute(key: String, write: suspend () -> Unit) {
+        if (currentCoroutineContext()[CommandContext.Key] != null) {
+            write()
+            return
+        }
+        val done = CompletableDeferred<Unit>()
+        submit(key) {
+            try { write() } finally { done.complete(Unit) }
+        }
+        done.await()
+    }
 
     fun submit(key: String, write: suspend () -> Unit) {
         val command = Command(key, revisions.incrementAndGet(), write)

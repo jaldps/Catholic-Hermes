@@ -259,6 +259,13 @@ fun MainApp(
     }
     var showLanguageSelector by remember { mutableStateOf(false) }
     var showCalendarRules by remember { mutableStateOf(false) }
+    var showPreferenceRecovery by remember { mutableStateOf(false) }
+    val preferenceWrites by com.example.data.persistence.PersonalDataCommands.states.collectAsState()
+    val failedPreferenceKeys = preferenceWrites.filter { (key, state) -> state.status == com.example.data.persistence.PersonalDataCommands.Status.ERROR }.keys.toList()
+    val preferenceFailureRevision = failedPreferenceKeys.maxOfOrNull { preferenceWrites.getValue(it).revision } ?: 0L
+    LaunchedEffect(preferences.storageAvailable, preferenceFailureRevision) {
+        if (!preferences.storageAvailable || failedPreferenceKeys.isNotEmpty()) showPreferenceRecovery = true
+    }
     var showCustomizerModal by remember { mutableStateOf(false) }
     var showFontPicker by remember { mutableStateOf(false) }
 
@@ -696,7 +703,12 @@ fun MainApp(
                                 AppLanguage.EN -> "Settings"
                                 AppLanguage.PT -> "Ajustes"
                             },
-                            listOf(
+                            listOfNotNull(
+                                if (!preferences.storageAvailable || failedPreferenceKeys.isNotEmpty()) MoreEntry(
+                                    title = when (currentLanguage) { AppLanguage.ES -> "Revisar cambios no guardados"; AppLanguage.EN -> "Review unsaved changes"; AppLanguage.PT -> "Revisar alterações não salvas" },
+                                    iconSlot = AppIconSlot.MORE, tag = "preferences_recovery_settings",
+                                    onOpen = { showPreferenceRecovery = true }
+                                ) else null,
                                 MoreEntry(
                                     title = when (currentLanguage) {
                                         AppLanguage.ES -> "Apariencia"
@@ -771,6 +783,12 @@ fun MainApp(
     val narrationIssue by ttsManager.playbackIssue.collectAsState()
     narrationIssue?.let { issue ->
         com.example.ui.components.NarrationRecoverySheet(ttsManager, issue, currentLanguage)
+    }
+
+    if (showPreferenceRecovery) {
+        com.example.ui.components.PreferencesRecoverySheet(preferencesStore, preferences.storageAvailable, failedPreferenceKeys, currentLanguage,
+            onDismiss = { showPreferenceRecovery = false },
+            saving = preferenceWrites.values.any { it.status == com.example.data.persistence.PersonalDataCommands.Status.SAVING })
     }
 
     if (showCalendarRules) {
