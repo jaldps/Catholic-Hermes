@@ -45,14 +45,37 @@ enum class RecitationVoiceMode {
  * [currentlySpeaking] always carries the full text of the part being read
  * (never a chunk), so callers can compare it with what they display.
  */
+enum class VoiceAvailability { INITIALIZING, READY, MISSING_DATA, UNSUPPORTED, ENGINE_ERROR, PLAYBACK_ERROR }
+
 class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitListener {
 
     private var tts: TextToSpeech? = null
     private var isInitialized = false
 
-    /** True once the engine has started; flips at most once. */
+    /** Ready only when the requested app language is supported by the engine. */
     private val _isReady = MutableStateFlow(false)
     val isReady: StateFlow<Boolean> = _isReady.asStateFlow()
+    private val _availability = MutableStateFlow(VoiceAvailability.INITIALIZING)
+    val availability = _availability.asStateFlow()
+    private val _playbackIssue = MutableStateFlow<VoiceAvailability?>(null)
+    val playbackIssue = _playbackIssue.asStateFlow()
+
+    fun dismissPlaybackIssue() { _playbackIssue.value = null }
+
+    fun requestPlayback(): Boolean {
+        if (_isReady.value) return true
+        _playbackIssue.value = _availability.value
+        return false
+    }
+
+    fun refreshAvailability() {
+        if (isInitialized) applyLanguage(requestedLanguage ?: deviceLanguage())
+        else if (_availability.value == VoiceAvailability.ENGINE_ERROR) {
+            _availability.value = VoiceAvailability.INITIALIZING
+            tts?.shutdown()
+            tts = TextToSpeech(context.applicationContext, this)
+        }
+    }
 
     private val _isPlaying = MutableStateFlow(false)
     val isPlaying: StateFlow<Boolean> = _isPlaying.asStateFlow()
@@ -105,8 +128,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
             isInitialized = true
-            _isReady.value = true
-            applyLanguage(requestedLanguage ?: AppLanguage.ES)
+            applyLanguage(requestedLanguage ?: deviceLanguage())
             tts?.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
                 override fun onStart(utteranceId: String?) {
                     val id = utteranceId ?: return
@@ -121,9 +143,13 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
                 @Deprecated("Deprecated in Java")
                 override fun onError(utteranceId: String?) {
                     val id = utteranceId ?: return
-                    mainHandler.post { tracker.onError(id); publish() }
+                    mainHandler.post { tracker.onError(id); publish(); _playbackIssue.value = VoiceAvailability.PLAYBACK_ERROR }
                 }
             })
+        } else {
+            isInitialized = false
+            _isReady.value = false
+            _availability.value = VoiceAvailability.ENGINE_ERROR
         }
     }
 
@@ -134,6 +160,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     }
 
     fun setLanguage(lang: AppLanguage) {
+        if (requestedLanguage != lang && _isPlaying.value) stop()
         requestedLanguage = lang
         if (!isInitialized) return
         applyLanguage(lang)
@@ -145,7 +172,15 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
             AppLanguage.EN -> Locale("en", "US")
             AppLanguage.PT -> Locale("pt", "BR")
         }
-        runCatching { tts?.language = targetLocale }
+        val result = runCatching { tts?.setLanguage(targetLocale) }.getOrNull()
+        _availability.value = when {
+            result == null -> VoiceAvailability.ENGINE_ERROR
+            result >= TextToSpeech.LANG_AVAILABLE -> VoiceAvailability.READY
+            result == TextToSpeech.LANG_MISSING_DATA -> VoiceAvailability.MISSING_DATA
+            result == TextToSpeech.LANG_NOT_SUPPORTED -> VoiceAvailability.UNSUPPORTED
+            else -> VoiceAvailability.ENGINE_ERROR
+        }
+        _isReady.value = _availability.value == VoiceAvailability.READY
     }
 
     fun setVoiceMode(mode: RecitationVoiceMode) {
@@ -159,7 +194,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
     }
 
     fun speakSingle(text: String, isFemaleVoice: Boolean = false) {
-        if (!isInitialized || text.isBlank()) return
+        if (text.isBlank() || !requestPlayback()) return
         stop()
         val gen = generation
         tracker.begin(text)
@@ -174,8 +209,8 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
      * response is always read in full).
      */
     fun speakDialogue(leaderText: String, responseText: String) {
-        if (!isInitialized) return
         if (leaderText.isBlank() && responseText.isBlank()) return
+        if (!requestPlayback()) return
         stop()
         val gen = generation
         val mode = _voiceMode.value
@@ -214,6 +249,7 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
             if (result == TextToSpeech.ERROR) {
                 tracker.onError(id)
                 publish()
+                _playbackIssue.value = VoiceAvailability.PLAYBACK_ERROR
             }
         }
     }
@@ -242,11 +278,18 @@ class LiturgicalTtsManager(private val context: Context) : TextToSpeech.OnInitLi
         scope.cancel()
         tts?.shutdown()
         tts = null
+        isInitialized = false
+        _isReady.value = false
         toneGenerator?.release()
         toneGenerator = null
     }
 
     companion object {
+        private fun deviceLanguage(): AppLanguage = when (Locale.getDefault().language) {
+            "es" -> AppLanguage.ES
+            "pt" -> AppLanguage.PT
+            else -> AppLanguage.EN
+        }
         /**
          * Splits [text] into pieces no longer than [limit], preferring
          * paragraph, then sentence, then word boundaries.

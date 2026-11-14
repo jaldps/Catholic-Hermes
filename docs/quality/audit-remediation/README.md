@@ -54,3 +54,11 @@ Validation: **12 passed**, zero failures/errors across reminder regression/sched
 Calendar export requires an explicitly selected writable calendar and confirmation, including contributor access. A stable provider-side reminder marker prevents duplicate events when the local event-link write was interrupted. An event in another calendar is preserved, with a warning before creating a new selected-calendar copy. Account discovery and writes run on IO; failures are recoverable. Local app notifications and calendar-managed alerts are clearly distinguished.
 
 Validation: **9 passed**, zero failures/errors, including a real Compose selection/confirmation journey and a SQLite-backed CalendarContract fake that executes actual projections/selections. The initial UI test stalled on the loading view; the screen now reads its explicit load state at the owning composition, and the native test drains paused Android/snapshot/frame scheduling while awaiting background work. No real account calendar was read or changed during testing.
+
+## Stage 4c
+
+Narration uses the resolved app language even before an explicit language choice. Engine readiness requires support for that language; initialization/language/playback failures expose an on-demand recovery sheet with Android voice settings and retry. The Bible queue and Rosary do not enter playback mode when voice is unavailable. Voice installation/resume rechecks availability without automatically starting prayer. Existing chunking, stop/generation tracking and Rosary positions remain intact.
+
+The internal browser allows HTTPS navigation, disables local file/content access and mixed content, and limits page JavaScript/storage to the supported Google Maps origins. User-initiated top-level mail/telephone/map actions may open their Android handlers; executable/custom schemes are blocked. Main-frame HTTP errors use the existing recovery view.
+
+Validation: **29 passed**, zero failures/errors across voice availability, browser policy and existing Rosary narration/interaction tests. Engine language failure/recovery and a rejected Bible playback request are exercised. These are simulated Android engine/Compose checks, not real audio or live WebView website compatibility measurements.

@@ -97,6 +97,7 @@ fun InAppBrowserDialog(
     var progress by remember { mutableIntStateOf(0) }
     var loading by remember { mutableStateOf(true) }
     var failed by remember { mutableStateOf(false) }
+    var blocked by remember { mutableStateOf(false) }
 
     val host = remember(currentUrl) {
         runCatching { Uri.parse(currentUrl).host.orEmpty().removePrefix("www.") }.getOrDefault("")
@@ -104,6 +105,7 @@ fun InAppBrowserDialog(
     val secure = currentUrl.startsWith("https://")
 
     fun openExternally() {
+        if (WebNavigationPolicy.destination(currentUrl) != WebNavigationPolicy.Destination.EMBEDDED) return
         runCatching {
             context.startActivity(
                 Intent(Intent.ACTION_VIEW, Uri.parse(currentUrl)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -212,8 +214,7 @@ fun InAppBrowserDialog(
                     factory = { ctx ->
                         WebView(ctx).apply {
                             setBackgroundColor(p.canvas.toArgb())
-                            settings.javaScriptEnabled = true
-                            settings.domStorageEnabled = true
+                            WebNavigationPolicy.configure(settings, url)
                             if (readerMode) settings.textZoom = 150
                             if (Build.VERSION.SDK_INT >= 33) {
                                 settings.isAlgorithmicDarkeningAllowed = design.isDark
@@ -229,9 +230,37 @@ fun InAppBrowserDialog(
                                 }
                             }
                             webViewClient = object : WebViewClient() {
+                                override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest): Boolean {
+                                    return when (WebNavigationPolicy.destination(request.url.toString(), request.hasGesture(), request.isForMainFrame)) {
+                                        WebNavigationPolicy.Destination.EMBEDDED -> false
+                                        WebNavigationPolicy.Destination.EXTERNAL -> {
+                                            runCatching { ctx.startActivity(Intent(Intent.ACTION_VIEW, request.url).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)) }
+                                            true
+                                        }
+                                        WebNavigationPolicy.Destination.BLOCKED -> {
+                                            if (request.isForMainFrame) { blocked = true; failed = true; loading = false }
+                                            true
+                                        }
+                                    }
+                                }
+
+                                @Deprecated("Legacy WebView callback")
+                                override fun shouldOverrideUrlLoading(view: WebView?, target: String): Boolean =
+                                    WebNavigationPolicy.destination(target) != WebNavigationPolicy.Destination.EMBEDDED
+
+                                override fun onReceivedHttpError(view: WebView?, request: WebResourceRequest?, response: android.webkit.WebResourceResponse?) {
+                                    if (request?.isForMainFrame == true) { failed = true; loading = false }
+                                }
                                 override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                                    if (url == null || WebNavigationPolicy.destination(url) != WebNavigationPolicy.Destination.EMBEDDED) {
+                                        view?.stopLoading(); blocked = true; failed = true; loading = false
+                                        return
+                                    }
+                                    view?.settings?.let { WebNavigationPolicy.configure(it, url) }
                                     loading = true
-                                    url?.let { currentUrl = it }
+                                    blocked = false
+                                    failed = false
+                                    currentUrl = url
                                 }
 
                                 override fun onPageFinished(view: WebView?, url: String?) {
@@ -263,7 +292,8 @@ fun InAppBrowserDialog(
                                     }
                                 }
                             }
-                            loadUrl(url)
+                            if (WebNavigationPolicy.destination(url) == WebNavigationPolicy.Destination.EMBEDDED) loadUrl(url)
+                            else { blocked = true; failed = true; loading = false }
                             webView = this
                         }
                     },
@@ -302,7 +332,7 @@ fun InAppBrowserDialog(
                         )
                         Spacer(Modifier.height(8.dp))
                         Text(
-                            pick(
+                            if (blocked) pick("Este enlace no se puede abrir aquí. Solo se permiten páginas HTTPS.", "This link cannot open here. Only HTTPS pages are allowed.", "Este link não pode ser aberto aqui. Apenas páginas HTTPS são permitidas.") else pick(
                                 "Comprueba tu conexión e inténtalo de nuevo.",
                                 "Check your connection and try again.",
                                 "Verifique sua conexão e tente de novo."

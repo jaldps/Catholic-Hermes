@@ -768,6 +768,11 @@ fun MainApp(
         onReminderConsumed()
     }
 
+    val narrationIssue by ttsManager.playbackIssue.collectAsState()
+    narrationIssue?.let { issue ->
+        com.example.ui.components.NarrationRecoverySheet(ttsManager, issue, currentLanguage)
+    }
+
     if (showCalendarRules) {
         CalendarRulesSheet(currentLanguage, activeCalendarRules, preferencesStore) { showCalendarRules = false }
     }

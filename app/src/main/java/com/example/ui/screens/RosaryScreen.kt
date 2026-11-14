@@ -1085,7 +1085,11 @@ fun RosaryScreen(
         onDispose { narration.dispatch(NarrationEvent.ScreenLeft) }
     }
 
-    fun toggleNarration() = narration.dispatch(NarrationEvent.Toggle(narrationTarget))
+    fun toggleNarration() {
+        if (narration.isSpeaking || ttsManager.requestPlayback()) {
+            narration.dispatch(NarrationEvent.Toggle(narrationTarget))
+        }
+    }
 
     fun dispatch(event: RosaryEvent) {
         val before = session

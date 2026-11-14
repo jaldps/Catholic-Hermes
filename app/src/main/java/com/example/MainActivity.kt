@@ -52,8 +52,8 @@ class MainActivity : ComponentActivity() {
             repository.applyCalendarRules(stored.calendarRules)
             if (stored.hasChosenLanguage) {
                 repository.applyPersistedLanguage(stored.language)
-                ttsManager.setLanguage(stored.language)
             }
+            ttsManager.setLanguage(repository.currentLanguage.value)
             appReady = true
             // Reminders that are ON by default (midday Angelus, Chaplet) are
             // scheduled at app start, not only after a reboot; idempotent.
@@ -94,6 +94,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onResume() {
         super.onResume()
+        if (::ttsManager.isInitialized) ttsManager.refreshAvailability()
         if (appReady) com.example.data.reminders.ReminderScheduler.rescheduleAll(applicationContext, repository.currentLanguage.value.code)
     }
 

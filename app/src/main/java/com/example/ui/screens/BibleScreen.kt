@@ -311,7 +311,7 @@ internal class SpeechQueue(val tts: LiturgicalTtsManager?) {
     val available: Boolean get() = tts != null
 
     fun play(owner: String, list: List<String>, from: Int = 0) {
-        if (tts == null || list.isEmpty()) return
+        if (tts == null || list.isEmpty() || !tts.requestPlayback()) return
         this.owner = owner
         segments = list
         index = from.coerceIn(0, list.lastIndex)
